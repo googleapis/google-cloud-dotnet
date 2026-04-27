@@ -58,82 +58,84 @@ namespace Google.Cloud.Bigtable.V2 {
             "dGFydF92YWx1ZV9jbG9zZWQYASABKAxIABIaChBzdGFydF92YWx1ZV9vcGVu",
             "GAIgASgMSAASGgoQZW5kX3ZhbHVlX2Nsb3NlZBgDIAEoDEgBEhgKDmVuZF92",
             "YWx1ZV9vcGVuGAQgASgMSAFCDQoLc3RhcnRfdmFsdWVCCwoJZW5kX3ZhbHVl",
-            "It8ICglSb3dGaWx0ZXISNAoFY2hhaW4YASABKAsyIy5nb29nbGUuYmlndGFi",
-            "bGUudjIuUm93RmlsdGVyLkNoYWluSAASPgoKaW50ZXJsZWF2ZRgCIAEoCzIo",
-            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXIuSW50ZXJsZWF2ZUgAEjwK",
-            "CWNvbmRpdGlvbhgDIAEoCzInLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0",
-            "ZXIuQ29uZGl0aW9uSAASDgoEc2luaxgQIAEoCEgAEhkKD3Bhc3NfYWxsX2Zp",
-            "bHRlchgRIAEoCEgAEhoKEGJsb2NrX2FsbF9maWx0ZXIYEiABKAhIABIeChRy",
-            "b3dfa2V5X3JlZ2V4X2ZpbHRlchgEIAEoDEgAEhsKEXJvd19zYW1wbGVfZmls",
-            "dGVyGA4gASgBSAASIgoYZmFtaWx5X25hbWVfcmVnZXhfZmlsdGVyGAUgASgJ",
-            "SAASJwodY29sdW1uX3F1YWxpZmllcl9yZWdleF9maWx0ZXIYBiABKAxIABI+",
-            "ChNjb2x1bW5fcmFuZ2VfZmlsdGVyGAcgASgLMh8uZ29vZ2xlLmJpZ3RhYmxl",
-            "LnYyLkNvbHVtblJhbmdlSAASRAoWdGltZXN0YW1wX3JhbmdlX2ZpbHRlchgI",
-            "IAEoCzIiLmdvb2dsZS5iaWd0YWJsZS52Mi5UaW1lc3RhbXBSYW5nZUgAEhwK",
-            "EnZhbHVlX3JlZ2V4X2ZpbHRlchgJIAEoDEgAEjwKEnZhbHVlX3JhbmdlX2Zp",
-            "bHRlchgPIAEoCzIeLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZVJhbmdlSAAS",
-            "JQobY2VsbHNfcGVyX3Jvd19vZmZzZXRfZmlsdGVyGAogASgFSAASJAoaY2Vs",
-            "bHNfcGVyX3Jvd19saW1pdF9maWx0ZXIYCyABKAVIABInCh1jZWxsc19wZXJf",
-            "Y29sdW1uX2xpbWl0X2ZpbHRlchgMIAEoBUgAEiEKF3N0cmlwX3ZhbHVlX3Ry",
-            "YW5zZm9ybWVyGA0gASgISAASIQoXYXBwbHlfbGFiZWxfdHJhbnNmb3JtZXIY",
-            "EyABKAlIABo3CgVDaGFpbhIuCgdmaWx0ZXJzGAEgAygLMh0uZ29vZ2xlLmJp",
-            "Z3RhYmxlLnYyLlJvd0ZpbHRlcho8CgpJbnRlcmxlYXZlEi4KB2ZpbHRlcnMY",
-            "ASADKAsyHS5nb29nbGUuYmlndGFibGUudjIuUm93RmlsdGVyGq0BCglDb25k",
-            "aXRpb24SNwoQcHJlZGljYXRlX2ZpbHRlchgBIAEoCzIdLmdvb2dsZS5iaWd0",
-            "YWJsZS52Mi5Sb3dGaWx0ZXISMgoLdHJ1ZV9maWx0ZXIYAiABKAsyHS5nb29n",
-            "bGUuYmlndGFibGUudjIuUm93RmlsdGVyEjMKDGZhbHNlX2ZpbHRlchgDIAEo",
-            "CzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXJCCAoGZmlsdGVyIq0I",
-            "CghNdXRhdGlvbhI4CghzZXRfY2VsbBgBIAEoCzIkLmdvb2dsZS5iaWd0YWJs",
-            "ZS52Mi5NdXRhdGlvbi5TZXRDZWxsSAASPQoLYWRkX3RvX2NlbGwYBSABKAsy",
-            "Ji5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24uQWRkVG9DZWxsSAASQQoN",
-            "bWVyZ2VfdG9fY2VsbBgGIAEoCzIoLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRh",
-            "dGlvbi5NZXJnZVRvQ2VsbEgAEksKEmRlbGV0ZV9mcm9tX2NvbHVtbhgCIAEo",
-            "CzItLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbi5EZWxldGVGcm9tQ29s",
-            "dW1uSAASSwoSZGVsZXRlX2Zyb21fZmFtaWx5GAMgASgLMi0uZ29vZ2xlLmJp",
-            "Z3RhYmxlLnYyLk11dGF0aW9uLkRlbGV0ZUZyb21GYW1pbHlIABJFCg9kZWxl",
-            "dGVfZnJvbV9yb3cYBCABKAsyKi5nb29nbGUuYmlndGFibGUudjIuTXV0YXRp",
-            "b24uRGVsZXRlRnJvbVJvd0gAGmEKB1NldENlbGwSEwoLZmFtaWx5X25hbWUY",
-            "ASABKAkSGAoQY29sdW1uX3F1YWxpZmllchgCIAEoDBIYChB0aW1lc3RhbXBf",
-            "bWljcm9zGAMgASgDEg0KBXZhbHVlGAQgASgMGq0BCglBZGRUb0NlbGwSEwoL",
-            "ZmFtaWx5X25hbWUYASABKAkSMwoQY29sdW1uX3F1YWxpZmllchgCIAEoCzIZ",
-            "Lmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRIsCgl0aW1lc3RhbXAYAyABKAsy",
-            "GS5nb29nbGUuYmlndGFibGUudjIuVmFsdWUSKAoFaW5wdXQYBCABKAsyGS5n",
-            "b29nbGUuYmlndGFibGUudjIuVmFsdWUarwEKC01lcmdlVG9DZWxsEhMKC2Zh",
-            "bWlseV9uYW1lGAEgASgJEjMKEGNvbHVtbl9xdWFsaWZpZXIYAiABKAsyGS5n",
-            "b29nbGUuYmlndGFibGUudjIuVmFsdWUSLAoJdGltZXN0YW1wGAMgASgLMhku",
-            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlZhbHVlEigKBWlucHV0GAQgASgLMhkuZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyLlZhbHVlGnkKEERlbGV0ZUZyb21Db2x1bW4SEwoL",
-            "ZmFtaWx5X25hbWUYASABKAkSGAoQY29sdW1uX3F1YWxpZmllchgCIAEoDBI2",
-            "Cgp0aW1lX3JhbmdlGAMgASgLMiIuZ29vZ2xlLmJpZ3RhYmxlLnYyLlRpbWVz",
-            "dGFtcFJhbmdlGicKEERlbGV0ZUZyb21GYW1pbHkSEwoLZmFtaWx5X25hbWUY",
-            "ASABKAkaDwoNRGVsZXRlRnJvbVJvd0IKCghtdXRhdGlvbiKAAQoTUmVhZE1v",
-            "ZGlmeVdyaXRlUnVsZRITCgtmYW1pbHlfbmFtZRgBIAEoCRIYChBjb2x1bW5f",
-            "cXVhbGlmaWVyGAIgASgMEhYKDGFwcGVuZF92YWx1ZRgDIAEoDEgAEhoKEGlu",
-            "Y3JlbWVudF9hbW91bnQYBCABKANIAEIGCgRydWxlIkIKD1N0cmVhbVBhcnRp",
-            "dGlvbhIvCglyb3dfcmFuZ2UYASABKAsyHC5nb29nbGUuYmlndGFibGUudjIu",
-            "Um93UmFuZ2UiVwoYU3RyZWFtQ29udGludWF0aW9uVG9rZW5zEjsKBnRva2Vu",
-            "cxgBIAMoCzIrLmdvb2dsZS5iaWd0YWJsZS52Mi5TdHJlYW1Db250aW51YXRp",
-            "b25Ub2tlbiJgChdTdHJlYW1Db250aW51YXRpb25Ub2tlbhI2CglwYXJ0aXRp",
-            "b24YASABKAsyIy5nb29nbGUuYmlndGFibGUudjIuU3RyZWFtUGFydGl0aW9u",
-            "Eg0KBXRva2VuGAIgASgJIg0KC1Byb3RvRm9ybWF0IkYKDkNvbHVtbk1ldGFk",
-            "YXRhEgwKBG5hbWUYASABKAkSJgoEdHlwZRgCIAEoCzIYLmdvb2dsZS5iaWd0",
-            "YWJsZS52Mi5UeXBlIkIKC1Byb3RvU2NoZW1hEjMKB2NvbHVtbnMYASADKAsy",
-            "Ii5nb29nbGUuYmlndGFibGUudjIuQ29sdW1uTWV0YWRhdGEiVgoRUmVzdWx0",
-            "U2V0TWV0YWRhdGESNwoMcHJvdG9fc2NoZW1hGAEgASgLMh8uZ29vZ2xlLmJp",
-            "Z3RhYmxlLnYyLlByb3RvU2NoZW1hSABCCAoGc2NoZW1hIjYKCVByb3RvUm93",
-            "cxIpCgZ2YWx1ZXMYAiADKAsyGS5nb29nbGUuYmlndGFibGUudjIuVmFsdWUi",
-            "JAoOUHJvdG9Sb3dzQmF0Y2gSEgoKYmF0Y2hfZGF0YRgBIAEoDCLVAQoQUGFy",
-            "dGlhbFJlc3VsdFNldBI+ChBwcm90b19yb3dzX2JhdGNoGAMgASgLMiIuZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyLlByb3RvUm93c0JhdGNoSAASGwoOYmF0Y2hfY2hl",
-            "Y2tzdW0YBiABKA1IAYgBARIUCgxyZXN1bWVfdG9rZW4YBSABKAwSDQoFcmVz",
-            "ZXQYByABKAgSHAoUZXN0aW1hdGVkX2JhdGNoX3NpemUYBCABKAVCDgoMcGFy",
-            "dGlhbF9yb3dzQhEKD19iYXRjaF9jaGVja3N1bSJMCgtJZGVtcG90ZW5jeRIN",
-            "CgV0b2tlbhgBIAEoDBIuCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEKzAQoWY29tLmdvb2dsZS5iaWd0YWJsZS52MkIJ",
-            "RGF0YVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vYmlndGFibGUvYXBp",
-            "djIvYmlndGFibGVwYjtiaWd0YWJsZXBiqgIYR29vZ2xlLkNsb3VkLkJpZ3Rh",
-            "YmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy6gIbR29vZ2xlOjpD",
-            "bG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
+            "IiEKDFZhbHVlQml0bWFzaxIRCgRtYXNrGAEgASgMQgPgQQIioQkKCVJvd0Zp",
+            "bHRlchI0CgVjaGFpbhgBIAEoCzIjLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dG",
+            "aWx0ZXIuQ2hhaW5IABI+CgppbnRlcmxlYXZlGAIgASgLMiguZ29vZ2xlLmJp",
+            "Z3RhYmxlLnYyLlJvd0ZpbHRlci5JbnRlcmxlYXZlSAASPAoJY29uZGl0aW9u",
+            "GAMgASgLMicuZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlci5Db25kaXRp",
+            "b25IABIOCgRzaW5rGBAgASgISAASGQoPcGFzc19hbGxfZmlsdGVyGBEgASgI",
+            "SAASGgoQYmxvY2tfYWxsX2ZpbHRlchgSIAEoCEgAEh4KFHJvd19rZXlfcmVn",
+            "ZXhfZmlsdGVyGAQgASgMSAASGwoRcm93X3NhbXBsZV9maWx0ZXIYDiABKAFI",
+            "ABIiChhmYW1pbHlfbmFtZV9yZWdleF9maWx0ZXIYBSABKAlIABInCh1jb2x1",
+            "bW5fcXVhbGlmaWVyX3JlZ2V4X2ZpbHRlchgGIAEoDEgAEj4KE2NvbHVtbl9y",
+            "YW5nZV9maWx0ZXIYByABKAsyHy5nb29nbGUuYmlndGFibGUudjIuQ29sdW1u",
+            "UmFuZ2VIABJEChZ0aW1lc3RhbXBfcmFuZ2VfZmlsdGVyGAggASgLMiIuZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLlRpbWVzdGFtcFJhbmdlSAASHAoSdmFsdWVfcmVn",
+            "ZXhfZmlsdGVyGAkgASgMSAASPAoSdmFsdWVfcmFuZ2VfZmlsdGVyGA8gASgL",
+            "Mh4uZ29vZ2xlLmJpZ3RhYmxlLnYyLlZhbHVlUmFuZ2VIABIlChtjZWxsc19w",
+            "ZXJfcm93X29mZnNldF9maWx0ZXIYCiABKAVIABIkChpjZWxsc19wZXJfcm93",
+            "X2xpbWl0X2ZpbHRlchgLIAEoBUgAEicKHWNlbGxzX3Blcl9jb2x1bW5fbGlt",
+            "aXRfZmlsdGVyGAwgASgFSAASIQoXc3RyaXBfdmFsdWVfdHJhbnNmb3JtZXIY",
+            "DSABKAhIABIhChdhcHBseV9sYWJlbF90cmFuc2Zvcm1lchgTIAEoCUgAEkAK",
+            "FHZhbHVlX2JpdG1hc2tfZmlsdGVyGBQgASgLMiAuZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLlZhbHVlQml0bWFza0gAGjcKBUNoYWluEi4KB2ZpbHRlcnMYASADKAsy",
+            "HS5nb29nbGUuYmlndGFibGUudjIuUm93RmlsdGVyGjwKCkludGVybGVhdmUS",
+            "LgoHZmlsdGVycxgBIAMoCzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0",
+            "ZXIarQEKCUNvbmRpdGlvbhI3ChBwcmVkaWNhdGVfZmlsdGVyGAEgASgLMh0u",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlchIyCgt0cnVlX2ZpbHRlchgC",
+            "IAEoCzIdLmdvb2dsZS5iaWd0YWJsZS52Mi5Sb3dGaWx0ZXISMwoMZmFsc2Vf",
+            "ZmlsdGVyGAMgASgLMh0uZ29vZ2xlLmJpZ3RhYmxlLnYyLlJvd0ZpbHRlckII",
+            "CgZmaWx0ZXIirQgKCE11dGF0aW9uEjgKCHNldF9jZWxsGAEgASgLMiQuZ29v",
+            "Z2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uLlNldENlbGxIABI9CgthZGRfdG9f",
+            "Y2VsbBgFIAEoCzImLmdvb2dsZS5iaWd0YWJsZS52Mi5NdXRhdGlvbi5BZGRU",
+            "b0NlbGxIABJBCg1tZXJnZV90b19jZWxsGAYgASgLMiguZ29vZ2xlLmJpZ3Rh",
+            "YmxlLnYyLk11dGF0aW9uLk1lcmdlVG9DZWxsSAASSwoSZGVsZXRlX2Zyb21f",
+            "Y29sdW1uGAIgASgLMi0uZ29vZ2xlLmJpZ3RhYmxlLnYyLk11dGF0aW9uLkRl",
+            "bGV0ZUZyb21Db2x1bW5IABJLChJkZWxldGVfZnJvbV9mYW1pbHkYAyABKAsy",
+            "LS5nb29nbGUuYmlndGFibGUudjIuTXV0YXRpb24uRGVsZXRlRnJvbUZhbWls",
+            "eUgAEkUKD2RlbGV0ZV9mcm9tX3JvdxgEIAEoCzIqLmdvb2dsZS5iaWd0YWJs",
+            "ZS52Mi5NdXRhdGlvbi5EZWxldGVGcm9tUm93SAAaYQoHU2V0Q2VsbBITCgtm",
+            "YW1pbHlfbmFtZRgBIAEoCRIYChBjb2x1bW5fcXVhbGlmaWVyGAIgASgMEhgK",
+            "EHRpbWVzdGFtcF9taWNyb3MYAyABKAMSDQoFdmFsdWUYBCABKAwarQEKCUFk",
+            "ZFRvQ2VsbBITCgtmYW1pbHlfbmFtZRgBIAEoCRIzChBjb2x1bW5fcXVhbGlm",
+            "aWVyGAIgASgLMhkuZ29vZ2xlLmJpZ3RhYmxlLnYyLlZhbHVlEiwKCXRpbWVz",
+            "dGFtcBgDIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRIoCgVpbnB1",
+            "dBgEIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRqvAQoLTWVyZ2VU",
+            "b0NlbGwSEwoLZmFtaWx5X25hbWUYASABKAkSMwoQY29sdW1uX3F1YWxpZmll",
+            "chgCIAEoCzIZLmdvb2dsZS5iaWd0YWJsZS52Mi5WYWx1ZRIsCgl0aW1lc3Rh",
+            "bXAYAyABKAsyGS5nb29nbGUuYmlndGFibGUudjIuVmFsdWUSKAoFaW5wdXQY",
+            "BCABKAsyGS5nb29nbGUuYmlndGFibGUudjIuVmFsdWUaeQoQRGVsZXRlRnJv",
+            "bUNvbHVtbhITCgtmYW1pbHlfbmFtZRgBIAEoCRIYChBjb2x1bW5fcXVhbGlm",
+            "aWVyGAIgASgMEjYKCnRpbWVfcmFuZ2UYAyABKAsyIi5nb29nbGUuYmlndGFi",
+            "bGUudjIuVGltZXN0YW1wUmFuZ2UaJwoQRGVsZXRlRnJvbUZhbWlseRITCgtm",
+            "YW1pbHlfbmFtZRgBIAEoCRoPCg1EZWxldGVGcm9tUm93QgoKCG11dGF0aW9u",
+            "IoABChNSZWFkTW9kaWZ5V3JpdGVSdWxlEhMKC2ZhbWlseV9uYW1lGAEgASgJ",
+            "EhgKEGNvbHVtbl9xdWFsaWZpZXIYAiABKAwSFgoMYXBwZW5kX3ZhbHVlGAMg",
+            "ASgMSAASGgoQaW5jcmVtZW50X2Ftb3VudBgEIAEoA0gAQgYKBHJ1bGUiQgoP",
+            "U3RyZWFtUGFydGl0aW9uEi8KCXJvd19yYW5nZRgBIAEoCzIcLmdvb2dsZS5i",
+            "aWd0YWJsZS52Mi5Sb3dSYW5nZSJXChhTdHJlYW1Db250aW51YXRpb25Ub2tl",
+            "bnMSOwoGdG9rZW5zGAEgAygLMisuZ29vZ2xlLmJpZ3RhYmxlLnYyLlN0cmVh",
+            "bUNvbnRpbnVhdGlvblRva2VuImAKF1N0cmVhbUNvbnRpbnVhdGlvblRva2Vu",
+            "EjYKCXBhcnRpdGlvbhgBIAEoCzIjLmdvb2dsZS5iaWd0YWJsZS52Mi5TdHJl",
+            "YW1QYXJ0aXRpb24SDQoFdG9rZW4YAiABKAkiDQoLUHJvdG9Gb3JtYXQiRgoO",
+            "Q29sdW1uTWV0YWRhdGESDAoEbmFtZRgBIAEoCRImCgR0eXBlGAIgASgLMhgu",
+            "Z29vZ2xlLmJpZ3RhYmxlLnYyLlR5cGUiQgoLUHJvdG9TY2hlbWESMwoHY29s",
+            "dW1ucxgBIAMoCzIiLmdvb2dsZS5iaWd0YWJsZS52Mi5Db2x1bW5NZXRhZGF0",
+            "YSJWChFSZXN1bHRTZXRNZXRhZGF0YRI3Cgxwcm90b19zY2hlbWEYASABKAsy",
+            "Hy5nb29nbGUuYmlndGFibGUudjIuUHJvdG9TY2hlbWFIAEIICgZzY2hlbWEi",
+            "NgoJUHJvdG9Sb3dzEikKBnZhbHVlcxgCIAMoCzIZLmdvb2dsZS5iaWd0YWJs",
+            "ZS52Mi5WYWx1ZSIkCg5Qcm90b1Jvd3NCYXRjaBISCgpiYXRjaF9kYXRhGAEg",
+            "ASgMItUBChBQYXJ0aWFsUmVzdWx0U2V0Ej4KEHByb3RvX3Jvd3NfYmF0Y2gY",
+            "AyABKAsyIi5nb29nbGUuYmlndGFibGUudjIuUHJvdG9Sb3dzQmF0Y2hIABIb",
+            "Cg5iYXRjaF9jaGVja3N1bRgGIAEoDUgBiAEBEhQKDHJlc3VtZV90b2tlbhgF",
+            "IAEoDBINCgVyZXNldBgHIAEoCBIcChRlc3RpbWF0ZWRfYmF0Y2hfc2l6ZRgE",
+            "IAEoBUIOCgxwYXJ0aWFsX3Jvd3NCEQoPX2JhdGNoX2NoZWNrc3VtIkwKC0lk",
+            "ZW1wb3RlbmN5Eg0KBXRva2VuGAEgASgMEi4KCnN0YXJ0X3RpbWUYAiABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQrMBChZjb20uZ29vZ2xlLmJp",
+            "Z3RhYmxlLnYyQglEYXRhUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9i",
+            "aWd0YWJsZS9hcGl2Mi9iaWd0YWJsZXBiO2JpZ3RhYmxlcGKqAhhHb29nbGUu",
+            "Q2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmlndGFibGVcVjLq",
+            "AhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Bigtable.V2.TypesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -148,7 +150,8 @@ namespace Google.Cloud.Bigtable.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ColumnRange), global::Google.Cloud.Bigtable.V2.ColumnRange.Parser, new[]{ "FamilyName", "StartQualifierClosed", "StartQualifierOpen", "EndQualifierClosed", "EndQualifierOpen" }, new[]{ "StartQualifier", "EndQualifier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.TimestampRange), global::Google.Cloud.Bigtable.V2.TimestampRange.Parser, new[]{ "StartTimestampMicros", "EndTimestampMicros" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ValueRange), global::Google.Cloud.Bigtable.V2.ValueRange.Parser, new[]{ "StartValueClosed", "StartValueOpen", "EndValueClosed", "EndValueOpen" }, new[]{ "StartValue", "EndValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter), global::Google.Cloud.Bigtable.V2.RowFilter.Parser, new[]{ "Chain", "Interleave", "Condition", "Sink", "PassAllFilter", "BlockAllFilter", "RowKeyRegexFilter", "RowSampleFilter", "FamilyNameRegexFilter", "ColumnQualifierRegexFilter", "ColumnRangeFilter", "TimestampRangeFilter", "ValueRegexFilter", "ValueRangeFilter", "CellsPerRowOffsetFilter", "CellsPerRowLimitFilter", "CellsPerColumnLimitFilter", "StripValueTransformer", "ApplyLabelTransformer" }, new[]{ "Filter" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain.Parser, new[]{ "Filters" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.ValueBitmask), global::Google.Cloud.Bigtable.V2.ValueBitmask.Parser, new[]{ "Mask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter), global::Google.Cloud.Bigtable.V2.RowFilter.Parser, new[]{ "Chain", "Interleave", "Condition", "Sink", "PassAllFilter", "BlockAllFilter", "RowKeyRegexFilter", "RowSampleFilter", "FamilyNameRegexFilter", "ColumnQualifierRegexFilter", "ColumnRangeFilter", "TimestampRangeFilter", "ValueRegexFilter", "ValueRangeFilter", "CellsPerRowOffsetFilter", "CellsPerRowLimitFilter", "CellsPerColumnLimitFilter", "StripValueTransformer", "ApplyLabelTransformer", "ValueBitmaskFilter" }, new[]{ "Filter" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain.Parser, new[]{ "Filters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave.Parser, new[]{ "Filters" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition), global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition.Parser, new[]{ "PredicateFilter", "TrueFilter", "FalseFilter" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation), global::Google.Cloud.Bigtable.V2.Mutation.Parser, new[]{ "SetCell", "AddToCell", "MergeToCell", "DeleteFromColumn", "DeleteFromFamily", "DeleteFromRow" }, new[]{ "Mutation" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell), global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell.Parser, new[]{ "FamilyName", "ColumnQualifier", "TimestampMicros", "Value" }, null, null, null, null),
@@ -4039,6 +4042,213 @@ namespace Google.Cloud.Bigtable.V2 {
   }
 
   /// <summary>
+  /// Restricts the output to cells whose values match the given bitmask.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ValueBitmask : pb::IMessage<ValueBitmask>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ValueBitmask> _parser = new pb::MessageParser<ValueBitmask>(() => new ValueBitmask());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ValueBitmask> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ValueBitmask() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ValueBitmask(ValueBitmask other) : this() {
+      mask_ = other.mask_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ValueBitmask Clone() {
+      return new ValueBitmask(this);
+    }
+
+    /// <summary>Field number for the "mask" field.</summary>
+    public const int MaskFieldNumber = 1;
+    private pb::ByteString mask_ = pb::ByteString.Empty;
+    /// <summary>
+    /// Required. Mask applied to the value.
+    /// Evaluated as: `(value &amp; mask) == mask`
+    /// The mask length must exactly match the value length, otherwise the cell is
+    /// not considered a match.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pb::ByteString Mask {
+      get { return mask_; }
+      set {
+        mask_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ValueBitmask);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ValueBitmask other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Mask != other.Mask) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Mask.Length != 0) hash ^= Mask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Mask.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Mask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Mask.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteBytes(Mask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Mask.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeBytesSize(Mask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ValueBitmask other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Mask.Length != 0) {
+        Mask = other.Mask;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Mask = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Mask = input.ReadBytes();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Takes a row as input and produces an alternate view of the row based on
   /// specified rules. For example, a RowFilter might trim down a row to include
   /// just the cells from columns matching a given regular expression, or might
@@ -4088,7 +4298,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4165,6 +4375,9 @@ namespace Google.Cloud.Bigtable.V2 {
           break;
         case FilterOneofCase.ApplyLabelTransformer:
           ApplyLabelTransformer = other.ApplyLabelTransformer;
+          break;
+        case FilterOneofCase.ValueBitmaskFilter:
+          ValueBitmaskFilter = other.ValueBitmaskFilter.Clone();
           break;
       }
 
@@ -4749,6 +4962,24 @@ namespace Google.Cloud.Bigtable.V2 {
       }
     }
 
+    /// <summary>Field number for the "value_bitmask_filter" field.</summary>
+    public const int ValueBitmaskFilterFieldNumber = 20;
+    /// <summary>
+    /// Matches only cells with values that satisfy the condition `(value &amp; mask)
+    /// == mask`.
+    /// The mask length must exactly match the value length, otherwise the cell
+    /// is not considered a match.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.V2.ValueBitmask ValueBitmaskFilter {
+      get { return filterCase_ == FilterOneofCase.ValueBitmaskFilter ? (global::Google.Cloud.Bigtable.V2.ValueBitmask) filter_ : null; }
+      set {
+        filter_ = value;
+        filterCase_ = value == null ? FilterOneofCase.None : FilterOneofCase.ValueBitmaskFilter;
+      }
+    }
+
     private object filter_;
     /// <summary>Enum of possible cases for the "filter" oneof.</summary>
     public enum FilterOneofCase {
@@ -4772,6 +5003,7 @@ namespace Google.Cloud.Bigtable.V2 {
       CellsPerColumnLimitFilter = 12,
       StripValueTransformer = 13,
       ApplyLabelTransformer = 19,
+      ValueBitmaskFilter = 20,
     }
     private FilterOneofCase filterCase_ = FilterOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4821,6 +5053,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (CellsPerColumnLimitFilter != other.CellsPerColumnLimitFilter) return false;
       if (StripValueTransformer != other.StripValueTransformer) return false;
       if (ApplyLabelTransformer != other.ApplyLabelTransformer) return false;
+      if (!object.Equals(ValueBitmaskFilter, other.ValueBitmaskFilter)) return false;
       if (FilterCase != other.FilterCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4848,6 +5081,7 @@ namespace Google.Cloud.Bigtable.V2 {
       if (HasCellsPerColumnLimitFilter) hash ^= CellsPerColumnLimitFilter.GetHashCode();
       if (HasStripValueTransformer) hash ^= StripValueTransformer.GetHashCode();
       if (HasApplyLabelTransformer) hash ^= ApplyLabelTransformer.GetHashCode();
+      if (filterCase_ == FilterOneofCase.ValueBitmaskFilter) hash ^= ValueBitmaskFilter.GetHashCode();
       hash ^= (int) filterCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4943,6 +5177,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(154, 1);
         output.WriteString(ApplyLabelTransformer);
       }
+      if (filterCase_ == FilterOneofCase.ValueBitmaskFilter) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(ValueBitmaskFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5029,6 +5267,10 @@ namespace Google.Cloud.Bigtable.V2 {
         output.WriteRawTag(154, 1);
         output.WriteString(ApplyLabelTransformer);
       }
+      if (filterCase_ == FilterOneofCase.ValueBitmaskFilter) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(ValueBitmaskFilter);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5095,6 +5337,9 @@ namespace Google.Cloud.Bigtable.V2 {
       }
       if (HasApplyLabelTransformer) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ApplyLabelTransformer);
+      }
+      if (filterCase_ == FilterOneofCase.ValueBitmaskFilter) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ValueBitmaskFilter);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5183,6 +5428,12 @@ namespace Google.Cloud.Bigtable.V2 {
           break;
         case FilterOneofCase.ApplyLabelTransformer:
           ApplyLabelTransformer = other.ApplyLabelTransformer;
+          break;
+        case FilterOneofCase.ValueBitmaskFilter:
+          if (ValueBitmaskFilter == null) {
+            ValueBitmaskFilter = new global::Google.Cloud.Bigtable.V2.ValueBitmask();
+          }
+          ValueBitmaskFilter.MergeFrom(other.ValueBitmaskFilter);
           break;
       }
 
@@ -5311,6 +5562,15 @@ namespace Google.Cloud.Bigtable.V2 {
             ApplyLabelTransformer = input.ReadString();
             break;
           }
+          case 162: {
+            global::Google.Cloud.Bigtable.V2.ValueBitmask subBuilder = new global::Google.Cloud.Bigtable.V2.ValueBitmask();
+            if (filterCase_ == FilterOneofCase.ValueBitmaskFilter) {
+              subBuilder.MergeFrom(ValueBitmaskFilter);
+            }
+            input.ReadMessage(subBuilder);
+            ValueBitmaskFilter = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -5434,6 +5694,15 @@ namespace Google.Cloud.Bigtable.V2 {
           }
           case 154: {
             ApplyLabelTransformer = input.ReadString();
+            break;
+          }
+          case 162: {
+            global::Google.Cloud.Bigtable.V2.ValueBitmask subBuilder = new global::Google.Cloud.Bigtable.V2.ValueBitmask();
+            if (filterCase_ == FilterOneofCase.ValueBitmaskFilter) {
+              subBuilder.MergeFrom(ValueBitmaskFilter);
+            }
+            input.ReadMessage(subBuilder);
+            ValueBitmaskFilter = subBuilder;
             break;
           }
         }
@@ -6203,7 +6472,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8448,7 +8717,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8842,7 +9111,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9058,7 +9327,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9253,7 +9522,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9507,7 +9776,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9671,7 +9940,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9924,7 +10193,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10117,7 +10386,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10368,7 +10637,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10563,7 +10832,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10804,7 +11073,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11274,7 +11543,7 @@ namespace Google.Cloud.Bigtable.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
