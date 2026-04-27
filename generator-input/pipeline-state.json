@@ -4161,12 +4161,12 @@
         },
         {
             "id": "Google.Cloud.Iam.V3Beta",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T22:14:29.384867892Z",
+            "releaseTimestamp": "2026-04-27T18:51:36.909512971Z",
             "lastGeneratedCommit": "ef576481d03c4c969c0c930cf6998c0176f47015",
-            "lastReleasedCommit": "c1c2f3e01e494b6fa004ff543cec2a8d84120717",
+            "lastReleasedCommit": "ef576481d03c4c969c0c930cf6998c0176f47015",
             "apiPaths": [
                 "google/iam/v3beta"
             ],
