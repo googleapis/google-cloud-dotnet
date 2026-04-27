@@ -426,6 +426,74 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetHealth</summary>
+        public void GetHealthRequestObject()
+        {
+            // Snippet: GetHealth(GetHealthRegionHealthSourceRequest, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            GetHealthRegionHealthSourceRequest request = new GetHealthRegionHealthSourceRequest
+            {
+                Region = "",
+                Project = "",
+                HealthSource = "",
+            };
+            // Make the request
+            HealthSourceHealth response = regionHealthSourcesClient.GetHealth(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealthAsync</summary>
+        public async Task GetHealthRequestObjectAsync()
+        {
+            // Snippet: GetHealthAsync(GetHealthRegionHealthSourceRequest, CallSettings)
+            // Additional: GetHealthAsync(GetHealthRegionHealthSourceRequest, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetHealthRegionHealthSourceRequest request = new GetHealthRegionHealthSourceRequest
+            {
+                Region = "",
+                Project = "",
+                HealthSource = "",
+            };
+            // Make the request
+            HealthSourceHealth response = await regionHealthSourcesClient.GetHealthAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealth</summary>
+        public void GetHealth()
+        {
+            // Snippet: GetHealth(string, string, string, CallSettings)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = RegionHealthSourcesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string healthSource = "";
+            // Make the request
+            HealthSourceHealth response = regionHealthSourcesClient.GetHealth(project, region, healthSource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealthAsync</summary>
+        public async Task GetHealthAsync()
+        {
+            // Snippet: GetHealthAsync(string, string, string, CallSettings)
+            // Additional: GetHealthAsync(string, string, string, CancellationToken)
+            // Create client
+            RegionHealthSourcesClient regionHealthSourcesClient = await RegionHealthSourcesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string healthSource = "";
+            // Make the request
+            HealthSourceHealth response = await regionHealthSourcesClient.GetHealthAsync(project, region, healthSource);
+            // End snippet
+        }
+
         /// <summary>Snippet for Insert</summary>
         public void InsertRequestObject()
         {

@@ -78,6 +78,8 @@ namespace Google.Cloud.Compute.V1
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
             UpdateSettings = existing.UpdateSettings;
             UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
+            UpdateKmsKeySettings = existing.UpdateKmsKeySettings;
+            UpdateKmsKeyOperationsSettings = existing.UpdateKmsKeyOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -573,6 +575,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>DisksClient.UpdateKmsKey</c>
+        ///  and <c>DisksClient.UpdateKmsKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateKmsKeySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DisksClient.UpdateKmsKey</c> and
+        /// <c>DisksClient.UpdateKmsKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateKmsKeyOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -2992,6 +3024,137 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateAsync(string project, string zone, string disk, Disk diskResource, st::CancellationToken cancellationToken) =>
             UpdateAsync(project, zone, disk, diskResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Rotates the customer-managed
+        /// encryption key to the latest version for the specified persistent disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> UpdateKmsKey(UpdateKmsKeyDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Rotates the customer-managed
+        /// encryption key to the latest version for the specified persistent disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateKmsKeyAsync(UpdateKmsKeyDiskRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Rotates the customer-managed
+        /// encryption key to the latest version for the specified persistent disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateKmsKeyAsync(UpdateKmsKeyDiskRequest request, st::CancellationToken cancellationToken) =>
+            UpdateKmsKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateKmsKey</c>.</summary>
+        public virtual lro::OperationsClient UpdateKmsKeyOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateKmsKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdateKmsKey(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateKmsKeyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateKmsKey</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateKmsKeyAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateKmsKeyOperationsClient, callSettings);
+
+        /// <summary>
+        /// Rotates the customer-managed
+        /// encryption key to the latest version for the specified persistent disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="disk">
+        /// Name of the Disk resource, should conform to RFC1035.
+        /// </param>
+        /// <param name="diskUpdateKmsKeyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> UpdateKmsKey(string project, string zone, string disk, DiskUpdateKmsKeyRequest diskUpdateKmsKeyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateKmsKey(new UpdateKmsKeyDiskRequest
+            {
+                Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
+                DiskUpdateKmsKeyRequestResource = gax::GaxPreconditions.CheckNotNull(diskUpdateKmsKeyRequestResource, nameof(diskUpdateKmsKeyRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rotates the customer-managed
+        /// encryption key to the latest version for the specified persistent disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="disk">
+        /// Name of the Disk resource, should conform to RFC1035.
+        /// </param>
+        /// <param name="diskUpdateKmsKeyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateKmsKeyAsync(string project, string zone, string disk, DiskUpdateKmsKeyRequest diskUpdateKmsKeyRequestResource, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateKmsKeyAsync(new UpdateKmsKeyDiskRequest
+            {
+                Disk = gax::GaxPreconditions.CheckNotNullOrEmpty(disk, nameof(disk)),
+                DiskUpdateKmsKeyRequestResource = gax::GaxPreconditions.CheckNotNull(diskUpdateKmsKeyRequestResource, nameof(diskUpdateKmsKeyRequestResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Rotates the customer-managed
+        /// encryption key to the latest version for the specified persistent disk.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="disk">
+        /// Name of the Disk resource, should conform to RFC1035.
+        /// </param>
+        /// <param name="diskUpdateKmsKeyRequestResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateKmsKeyAsync(string project, string zone, string disk, DiskUpdateKmsKeyRequest diskUpdateKmsKeyRequestResource, st::CancellationToken cancellationToken) =>
+            UpdateKmsKeyAsync(project, zone, disk, diskUpdateKmsKeyRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Disks client wrapper implementation, for convenient use.</summary>
@@ -3038,6 +3201,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<UpdateDiskRequest, Operation> _callUpdate;
 
+        private readonly gaxgrpc::ApiCall<UpdateKmsKeyDiskRequest, Operation> _callUpdateKmsKey;
+
         /// <summary>
         /// Constructs a client wrapper for the Disks service, with the specified gRPC client and settings.
         /// </summary>
@@ -3066,6 +3231,7 @@ namespace Google.Cloud.Compute.V1
             StopAsyncReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StopAsyncReplicationOperationsSettings, logger);
             StopGroupAsyncReplicationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.StopGroupAsyncReplicationOperationsSettings, logger);
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateOperationsSettings, logger);
+            UpdateKmsKeyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForZoneOperations(), effectiveSettings.UpdateKmsKeyOperationsSettings, logger);
             _callAddResourcePolicies = clientHelper.BuildApiCall<AddResourcePoliciesDiskRequest, Operation>("AddResourcePolicies", grpcClient.AddResourcePoliciesAsync, grpcClient.AddResourcePolicies, effectiveSettings.AddResourcePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("disk", request => request.Disk);
             Modify_ApiCall(ref _callAddResourcePolicies);
             Modify_AddResourcePoliciesApiCall(ref _callAddResourcePolicies);
@@ -3123,6 +3289,9 @@ namespace Google.Cloud.Compute.V1
             _callUpdate = clientHelper.BuildApiCall<UpdateDiskRequest, Operation>("Update", grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("disk", request => request.Disk);
             Modify_ApiCall(ref _callUpdate);
             Modify_UpdateApiCall(ref _callUpdate);
+            _callUpdateKmsKey = clientHelper.BuildApiCall<UpdateKmsKeyDiskRequest, Operation>("UpdateKmsKey", grpcClient.UpdateKmsKeyAsync, grpcClient.UpdateKmsKey, effectiveSettings.UpdateKmsKeySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("disk", request => request.Disk);
+            Modify_ApiCall(ref _callUpdateKmsKey);
+            Modify_UpdateKmsKeyApiCall(ref _callUpdateKmsKey);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3166,6 +3335,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_UpdateApiCall(ref gaxgrpc::ApiCall<UpdateDiskRequest, Operation> call);
 
+        partial void Modify_UpdateKmsKeyApiCall(ref gaxgrpc::ApiCall<UpdateKmsKeyDiskRequest, Operation> call);
+
         partial void OnConstruction(Disks.DisksClient grpcClient, DisksSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Disks client</summary>
@@ -3208,6 +3379,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_TestIamPermissionsDiskRequest(ref TestIamPermissionsDiskRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateDiskRequest(ref UpdateDiskRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateKmsKeyDiskRequest(ref UpdateKmsKeyDiskRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>AddResourcePolicies</c>.</summary>
         public override lro::OperationsClient AddResourcePoliciesOperationsClient { get; }
@@ -3836,6 +4009,41 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateKmsKey</c>.</summary>
+        public override lro::OperationsClient UpdateKmsKeyOperationsClient { get; }
+
+        /// <summary>
+        /// Rotates the customer-managed
+        /// encryption key to the latest version for the specified persistent disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> UpdateKmsKey(UpdateKmsKeyDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateKmsKeyDiskRequest(ref request, ref callSettings);
+            Operation response = _callUpdateKmsKey.Sync(request, callSettings);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateKmsKeyOperationsClient);
+        }
+
+        /// <summary>
+        /// Rotates the customer-managed
+        /// encryption key to the latest version for the specified persistent disk.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateKmsKeyAsync(UpdateKmsKeyDiskRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateKmsKeyDiskRequest(ref request, ref callSettings);
+            Operation response = await _callUpdateKmsKey.Async(request, callSettings).ConfigureAwait(false);
+            GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateKmsKeyOperationsClient);
         }
     }
 

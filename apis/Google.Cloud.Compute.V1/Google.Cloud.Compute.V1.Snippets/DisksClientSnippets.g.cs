@@ -2481,5 +2481,143 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for UpdateKmsKey</summary>
+        public void UpdateKmsKeyRequestObject()
+        {
+            // Snippet: UpdateKmsKey(UpdateKmsKeyDiskRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            UpdateKmsKeyDiskRequest request = new UpdateKmsKeyDiskRequest
+            {
+                Disk = "",
+                Zone = "",
+                RequestId = "",
+                DiskUpdateKmsKeyRequestResource = new DiskUpdateKmsKeyRequest(),
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.UpdateKmsKey(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceUpdateKmsKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKmsKeyAsync</summary>
+        public async Task UpdateKmsKeyRequestObjectAsync()
+        {
+            // Snippet: UpdateKmsKeyAsync(UpdateKmsKeyDiskRequest, CallSettings)
+            // Additional: UpdateKmsKeyAsync(UpdateKmsKeyDiskRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateKmsKeyDiskRequest request = new UpdateKmsKeyDiskRequest
+            {
+                Disk = "",
+                Zone = "",
+                RequestId = "",
+                DiskUpdateKmsKeyRequestResource = new DiskUpdateKmsKeyRequest(),
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.UpdateKmsKeyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceUpdateKmsKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKmsKey</summary>
+        public void UpdateKmsKey()
+        {
+            // Snippet: UpdateKmsKey(string, string, string, DiskUpdateKmsKeyRequest, CallSettings)
+            // Create client
+            DisksClient disksClient = DisksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string disk = "";
+            DiskUpdateKmsKeyRequest diskUpdateKmsKeyRequestResource = new DiskUpdateKmsKeyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = disksClient.UpdateKmsKey(project, zone, disk, diskUpdateKmsKeyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = disksClient.PollOnceUpdateKmsKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKmsKeyAsync</summary>
+        public async Task UpdateKmsKeyAsync()
+        {
+            // Snippet: UpdateKmsKeyAsync(string, string, string, DiskUpdateKmsKeyRequest, CallSettings)
+            // Additional: UpdateKmsKeyAsync(string, string, string, DiskUpdateKmsKeyRequest, CancellationToken)
+            // Create client
+            DisksClient disksClient = await DisksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string disk = "";
+            DiskUpdateKmsKeyRequest diskUpdateKmsKeyRequestResource = new DiskUpdateKmsKeyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await disksClient.UpdateKmsKeyAsync(project, zone, disk, diskUpdateKmsKeyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await disksClient.PollOnceUpdateKmsKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

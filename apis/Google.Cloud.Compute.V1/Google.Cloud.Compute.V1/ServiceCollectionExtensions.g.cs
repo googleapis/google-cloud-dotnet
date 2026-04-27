@@ -1030,6 +1030,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::InstantSnapshotGroupsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInstantSnapshotGroupsClient(this IServiceCollection services, sys::Action<gccv::InstantSnapshotGroupsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::InstantSnapshotGroupsClientBuilder builder = new gccv::InstantSnapshotGroupsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::InstantSnapshotGroupsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddInstantSnapshotGroupsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::InstantSnapshotGroupsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::InstantSnapshotGroupsClientBuilder builder = new gccv::InstantSnapshotGroupsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::InstantSnapshotsClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -1962,6 +1998,42 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionBackendBucketsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionBackendBucketsClient(this IServiceCollection services, sys::Action<gccv::RegionBackendBucketsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionBackendBucketsClientBuilder builder = new gccv::RegionBackendBucketsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionBackendBucketsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionBackendBucketsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::RegionBackendBucketsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionBackendBucketsClientBuilder builder = new gccv::RegionBackendBucketsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::RegionBackendServicesClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -2282,6 +2354,44 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionInstanceGroupManagerResizeRequestsClient"/> to
+        /// <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionInstanceGroupManagerResizeRequestsClient(this IServiceCollection services, sys::Action<gccv::RegionInstanceGroupManagerResizeRequestsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionInstanceGroupManagerResizeRequestsClientBuilder builder = new gccv::RegionInstanceGroupManagerResizeRequestsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionInstanceGroupManagerResizeRequestsClient"/> to
+        /// <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionInstanceGroupManagerResizeRequestsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::RegionInstanceGroupManagerResizeRequestsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionInstanceGroupManagerResizeRequestsClientBuilder builder = new gccv::RegionInstanceGroupManagerResizeRequestsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::RegionInstanceGroupManagersClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -2421,6 +2531,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::RegionInstancesClientBuilder builder = new gccv::RegionInstancesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionInstantSnapshotGroupsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionInstantSnapshotGroupsClient(this IServiceCollection services, sys::Action<gccv::RegionInstantSnapshotGroupsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionInstantSnapshotGroupsClientBuilder builder = new gccv::RegionInstantSnapshotGroupsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionInstantSnapshotGroupsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionInstantSnapshotGroupsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::RegionInstantSnapshotGroupsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionInstantSnapshotGroupsClientBuilder builder = new gccv::RegionInstantSnapshotGroupsClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
@@ -2637,6 +2783,78 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::RegionSecurityPoliciesClientBuilder builder = new gccv::RegionSecurityPoliciesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionSnapshotSettingsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionSnapshotSettingsClient(this IServiceCollection services, sys::Action<gccv::RegionSnapshotSettingsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionSnapshotSettingsClientBuilder builder = new gccv::RegionSnapshotSettingsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionSnapshotSettingsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionSnapshotSettingsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::RegionSnapshotSettingsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionSnapshotSettingsClientBuilder builder = new gccv::RegionSnapshotSettingsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionSnapshotsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionSnapshotsClient(this IServiceCollection services, sys::Action<gccv::RegionSnapshotsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionSnapshotsClientBuilder builder = new gccv::RegionSnapshotsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::RegionSnapshotsClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRegionSnapshotsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::RegionSnapshotsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RegionSnapshotsClientBuilder builder = new gccv::RegionSnapshotsClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
@@ -3905,6 +4123,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::ZoneOperationsClientBuilder builder = new gccv::ZoneOperationsClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::ZoneVmExtensionPoliciesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddZoneVmExtensionPoliciesClient(this IServiceCollection services, sys::Action<gccv::ZoneVmExtensionPoliciesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ZoneVmExtensionPoliciesClientBuilder builder = new gccv::ZoneVmExtensionPoliciesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::ZoneVmExtensionPoliciesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddZoneVmExtensionPoliciesClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::ZoneVmExtensionPoliciesClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::ZoneVmExtensionPoliciesClientBuilder builder = new gccv::ZoneVmExtensionPoliciesClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });

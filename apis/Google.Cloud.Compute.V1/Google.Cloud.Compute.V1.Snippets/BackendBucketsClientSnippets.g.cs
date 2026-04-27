@@ -21,6 +21,7 @@ namespace GoogleCSharpSnippets
     using Google.Api.Gax;
     using Google.Cloud.Compute.V1;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
     using lro = Google.LongRunning;
 
@@ -158,6 +159,202 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 Operation retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedListRequestObject()
+        {
+            // Snippet: AggregatedList(AggregatedListBackendBucketsRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            AggregatedListBackendBucketsRequest request = new AggregatedListBackendBucketsRequest
+            {
+                OrderBy = "",
+                Project = "",
+                ServiceProjectNumber = 0L,
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<BackendBucketAggregatedList, KeyValuePair<string, BackendBucketsScopedList>> response = backendBucketsClient.AggregatedList(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, BackendBucketsScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (BackendBucketAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, BackendBucketsScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, BackendBucketsScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, BackendBucketsScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListRequestObjectAsync()
+        {
+            // Snippet: AggregatedListAsync(AggregatedListBackendBucketsRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            AggregatedListBackendBucketsRequest request = new AggregatedListBackendBucketsRequest
+            {
+                OrderBy = "",
+                Project = "",
+                ServiceProjectNumber = 0L,
+                Filter = "",
+                IncludeAllScopes = false,
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<BackendBucketAggregatedList, KeyValuePair<string, BackendBucketsScopedList>> response = backendBucketsClient.AggregatedListAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (KeyValuePair<string, BackendBucketsScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (BackendBucketAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, BackendBucketsScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, BackendBucketsScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, BackendBucketsScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedList</summary>
+        public void AggregatedList()
+        {
+            // Snippet: AggregatedList(string, string, int?, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedEnumerable<BackendBucketAggregatedList, KeyValuePair<string, BackendBucketsScopedList>> response = backendBucketsClient.AggregatedList(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (KeyValuePair<string, BackendBucketsScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (BackendBucketAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, BackendBucketsScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, BackendBucketsScopedList>> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, BackendBucketsScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for AggregatedListAsync</summary>
+        public async Task AggregatedListAsync()
+        {
+            // Snippet: AggregatedListAsync(string, string, int?, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedAsyncEnumerable<BackendBucketAggregatedList, KeyValuePair<string, BackendBucketsScopedList>> response = backendBucketsClient.AggregatedListAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (KeyValuePair<string, BackendBucketsScopedList> item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (BackendBucketAggregatedList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (KeyValuePair<string, BackendBucketsScopedList> item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<KeyValuePair<string, BackendBucketsScopedList>> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (KeyValuePair<string, BackendBucketsScopedList> item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
 
@@ -852,6 +1049,198 @@ namespace GoogleCSharpSnippets
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
             await foreach (BackendBucketList page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendBucket> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsable</summary>
+        public void ListUsableRequestObject()
+        {
+            // Snippet: ListUsable(ListUsableBackendBucketsRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            ListUsableBackendBucketsRequest request = new ListUsableBackendBucketsRequest
+            {
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<BackendBucketListUsable, BackendBucket> response = backendBucketsClient.ListUsable(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackendBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (BackendBucketListUsable page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendBucket> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsableAsync</summary>
+        public async Task ListUsableRequestObjectAsync()
+        {
+            // Snippet: ListUsableAsync(ListUsableBackendBucketsRequest, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListUsableBackendBucketsRequest request = new ListUsableBackendBucketsRequest
+            {
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<BackendBucketListUsable, BackendBucket> response = backendBucketsClient.ListUsableAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackendBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (BackendBucketListUsable page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendBucket> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsable</summary>
+        public void ListUsable()
+        {
+            // Snippet: ListUsable(string, string, int?, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = BackendBucketsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedEnumerable<BackendBucketListUsable, BackendBucket> response = backendBucketsClient.ListUsable(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (BackendBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (BackendBucketListUsable page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (BackendBucket item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<BackendBucket> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (BackendBucket item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListUsableAsync</summary>
+        public async Task ListUsableAsync()
+        {
+            // Snippet: ListUsableAsync(string, string, int?, CallSettings)
+            // Create client
+            BackendBucketsClient backendBucketsClient = await BackendBucketsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            // Make the request
+            PagedAsyncEnumerable<BackendBucketListUsable, BackendBucket> response = backendBucketsClient.ListUsableAsync(project);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (BackendBucket item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (BackendBucketListUsable page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");

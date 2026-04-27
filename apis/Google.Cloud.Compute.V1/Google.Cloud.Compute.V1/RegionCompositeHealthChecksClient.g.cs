@@ -52,6 +52,7 @@ namespace Google.Cloud.Compute.V1
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
+            GetHealthSettings = existing.GetHealthSettings;
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
@@ -135,6 +136,28 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RegionCompositeHealthChecksClient.GetHealth</c> and <c>RegionCompositeHealthChecksClient.GetHealthAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetHealthSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -683,6 +706,100 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, region, compositeHealthCheck, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Gets the most recent health check results for this
+        /// regional CompositeHealthCheck.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompositeHealthCheckHealth GetHealth(GetHealthRegionCompositeHealthCheckRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the most recent health check results for this
+        /// regional CompositeHealthCheck.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompositeHealthCheckHealth> GetHealthAsync(GetHealthRegionCompositeHealthCheckRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the most recent health check results for this
+        /// regional CompositeHealthCheck.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompositeHealthCheckHealth> GetHealthAsync(GetHealthRegionCompositeHealthCheckRequest request, st::CancellationToken cancellationToken) =>
+            GetHealthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the most recent health check results for this
+        /// regional CompositeHealthCheck.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="compositeHealthCheck">
+        /// Name of the CompositeHealthCheck resource to get health for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompositeHealthCheckHealth GetHealth(string project, string region, string compositeHealthCheck, gaxgrpc::CallSettings callSettings = null) =>
+            GetHealth(new GetHealthRegionCompositeHealthCheckRequest
+            {
+                CompositeHealthCheck = gax::GaxPreconditions.CheckNotNullOrEmpty(compositeHealthCheck, nameof(compositeHealthCheck)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the most recent health check results for this
+        /// regional CompositeHealthCheck.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="compositeHealthCheck">
+        /// Name of the CompositeHealthCheck resource to get health for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompositeHealthCheckHealth> GetHealthAsync(string project, string region, string compositeHealthCheck, gaxgrpc::CallSettings callSettings = null) =>
+            GetHealthAsync(new GetHealthRegionCompositeHealthCheckRequest
+            {
+                CompositeHealthCheck = gax::GaxPreconditions.CheckNotNullOrEmpty(compositeHealthCheck, nameof(compositeHealthCheck)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the most recent health check results for this
+        /// regional CompositeHealthCheck.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region scoping this request.
+        /// </param>
+        /// <param name="compositeHealthCheck">
+        /// Name of the CompositeHealthCheck resource to get health for.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompositeHealthCheckHealth> GetHealthAsync(string project, string region, string compositeHealthCheck, st::CancellationToken cancellationToken) =>
+            GetHealthAsync(project, region, compositeHealthCheck, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Create a CompositeHealthCheck in the specified project in the given region
         /// using the parameters that are included in the request.
         /// </summary>
@@ -1152,6 +1269,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<GetRegionCompositeHealthCheckRequest, CompositeHealthCheck> _callGet;
 
+        private readonly gaxgrpc::ApiCall<GetHealthRegionCompositeHealthCheckRequest, CompositeHealthCheckHealth> _callGetHealth;
+
         private readonly gaxgrpc::ApiCall<InsertRegionCompositeHealthCheckRequest, Operation> _callInsert;
 
         private readonly gaxgrpc::ApiCall<ListRegionCompositeHealthChecksRequest, CompositeHealthCheckList> _callList;
@@ -1190,6 +1309,9 @@ namespace Google.Cloud.Compute.V1
             _callGet = clientHelper.BuildApiCall<GetRegionCompositeHealthCheckRequest, CompositeHealthCheck>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("composite_health_check", request => request.CompositeHealthCheck);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
+            _callGetHealth = clientHelper.BuildApiCall<GetHealthRegionCompositeHealthCheckRequest, CompositeHealthCheckHealth>("GetHealth", grpcClient.GetHealthAsync, grpcClient.GetHealth, effectiveSettings.GetHealthSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("composite_health_check", request => request.CompositeHealthCheck);
+            Modify_ApiCall(ref _callGetHealth);
+            Modify_GetHealthApiCall(ref _callGetHealth);
             _callInsert = clientHelper.BuildApiCall<InsertRegionCompositeHealthCheckRequest, Operation>("Insert", grpcClient.InsertAsync, grpcClient.Insert, effectiveSettings.InsertSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region);
             Modify_ApiCall(ref _callInsert);
             Modify_InsertApiCall(ref _callInsert);
@@ -1213,6 +1335,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetRegionCompositeHealthCheckRequest, CompositeHealthCheck> call);
 
+        partial void Modify_GetHealthApiCall(ref gaxgrpc::ApiCall<GetHealthRegionCompositeHealthCheckRequest, CompositeHealthCheckHealth> call);
+
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<InsertRegionCompositeHealthCheckRequest, Operation> call);
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListRegionCompositeHealthChecksRequest, CompositeHealthCheckList> call);
@@ -1231,6 +1355,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_DeleteRegionCompositeHealthCheckRequest(ref DeleteRegionCompositeHealthCheckRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRegionCompositeHealthCheckRequest(ref GetRegionCompositeHealthCheckRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetHealthRegionCompositeHealthCheckRequest(ref GetHealthRegionCompositeHealthCheckRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_InsertRegionCompositeHealthCheckRequest(ref InsertRegionCompositeHealthCheckRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1329,6 +1455,32 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetRegionCompositeHealthCheckRequest(ref request, ref callSettings);
             return _callGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the most recent health check results for this
+        /// regional CompositeHealthCheck.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CompositeHealthCheckHealth GetHealth(GetHealthRegionCompositeHealthCheckRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetHealthRegionCompositeHealthCheckRequest(ref request, ref callSettings);
+            return _callGetHealth.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the most recent health check results for this
+        /// regional CompositeHealthCheck.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CompositeHealthCheckHealth> GetHealthAsync(GetHealthRegionCompositeHealthCheckRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetHealthRegionCompositeHealthCheckRequest(ref request, ref callSettings);
+            return _callGetHealth.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>Insert</c>.</summary>

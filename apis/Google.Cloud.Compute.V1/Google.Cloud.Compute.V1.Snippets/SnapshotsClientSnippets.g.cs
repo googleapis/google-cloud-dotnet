@@ -876,5 +876,139 @@ namespace GoogleCSharpSnippets
             TestPermissionsResponse response = await snapshotsClient.TestIamPermissionsAsync(project, resource, testPermissionsRequestResource);
             // End snippet
         }
+
+        /// <summary>Snippet for UpdateKmsKey</summary>
+        public void UpdateKmsKeyRequestObject()
+        {
+            // Snippet: UpdateKmsKey(UpdateKmsKeySnapshotRequest, CallSettings)
+            // Create client
+            SnapshotsClient snapshotsClient = SnapshotsClient.Create();
+            // Initialize request argument(s)
+            UpdateKmsKeySnapshotRequest request = new UpdateKmsKeySnapshotRequest
+            {
+                RequestId = "",
+                SnapshotUpdateKmsKeyRequestResource = new SnapshotUpdateKmsKeyRequest(),
+                Project = "",
+                Snapshot = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = snapshotsClient.UpdateKmsKey(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = snapshotsClient.PollOnceUpdateKmsKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKmsKeyAsync</summary>
+        public async Task UpdateKmsKeyRequestObjectAsync()
+        {
+            // Snippet: UpdateKmsKeyAsync(UpdateKmsKeySnapshotRequest, CallSettings)
+            // Additional: UpdateKmsKeyAsync(UpdateKmsKeySnapshotRequest, CancellationToken)
+            // Create client
+            SnapshotsClient snapshotsClient = await SnapshotsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateKmsKeySnapshotRequest request = new UpdateKmsKeySnapshotRequest
+            {
+                RequestId = "",
+                SnapshotUpdateKmsKeyRequestResource = new SnapshotUpdateKmsKeyRequest(),
+                Project = "",
+                Snapshot = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await snapshotsClient.UpdateKmsKeyAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await snapshotsClient.PollOnceUpdateKmsKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKmsKey</summary>
+        public void UpdateKmsKey()
+        {
+            // Snippet: UpdateKmsKey(string, string, SnapshotUpdateKmsKeyRequest, CallSettings)
+            // Create client
+            SnapshotsClient snapshotsClient = SnapshotsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string snapshot = "";
+            SnapshotUpdateKmsKeyRequest snapshotUpdateKmsKeyRequestResource = new SnapshotUpdateKmsKeyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = snapshotsClient.UpdateKmsKey(project, snapshot, snapshotUpdateKmsKeyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = snapshotsClient.PollOnceUpdateKmsKey(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateKmsKeyAsync</summary>
+        public async Task UpdateKmsKeyAsync()
+        {
+            // Snippet: UpdateKmsKeyAsync(string, string, SnapshotUpdateKmsKeyRequest, CallSettings)
+            // Additional: UpdateKmsKeyAsync(string, string, SnapshotUpdateKmsKeyRequest, CancellationToken)
+            // Create client
+            SnapshotsClient snapshotsClient = await SnapshotsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string snapshot = "";
+            SnapshotUpdateKmsKeyRequest snapshotUpdateKmsKeyRequestResource = new SnapshotUpdateKmsKeyRequest();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await snapshotsClient.UpdateKmsKeyAsync(project, snapshot, snapshotUpdateKmsKeyRequestResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await snapshotsClient.PollOnceUpdateKmsKeyAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

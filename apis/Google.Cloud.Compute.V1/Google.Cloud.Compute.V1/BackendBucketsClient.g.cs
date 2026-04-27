@@ -48,6 +48,7 @@ namespace Google.Cloud.Compute.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             AddSignedUrlKeySettings = existing.AddSignedUrlKeySettings;
             AddSignedUrlKeyOperationsSettings = existing.AddSignedUrlKeyOperationsSettings.Clone();
+            AggregatedListSettings = existing.AggregatedListSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             DeleteSignedUrlKeySettings = existing.DeleteSignedUrlKeySettings;
@@ -57,6 +58,7 @@ namespace Google.Cloud.Compute.V1
             InsertSettings = existing.InsertSettings;
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
+            ListUsableSettings = existing.ListUsableSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
             SetEdgeSecurityPolicySettings = existing.SetEdgeSecurityPolicySettings;
@@ -99,6 +101,27 @@ namespace Google.Cloud.Compute.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackendBucketsClient.AggregatedList</c> and <c>BackendBucketsClient.AggregatedListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregatedListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>BackendBucketsClient.Delete</c>
@@ -252,6 +275,27 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BackendBucketsClient.ListUsable</c> and <c>BackendBucketsClient.ListUsableAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListUsableSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>BackendBucketsClient.Patch</c>
@@ -633,6 +677,110 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> AddSignedUrlKeyAsync(string project, string backendBucket, SignedUrlKey signedUrlKeyResource, st::CancellationToken cancellationToken) =>
             AddSignedUrlKeyAsync(project, backendBucket, signedUrlKeyResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the list of all BackendBucket resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendBucketAggregatedList, scg::KeyValuePair<string, BackendBucketsScopedList>> AggregatedList(AggregatedListBackendBucketsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all BackendBucket resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<BackendBucketAggregatedList, scg::KeyValuePair<string, BackendBucketsScopedList>> AggregatedListAsync(AggregatedListBackendBucketsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the list of all BackendBucket resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendBucketAggregatedList, scg::KeyValuePair<string, BackendBucketsScopedList>> AggregatedList(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListBackendBucketsRequest request = new AggregatedListBackendBucketsRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedList(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all BackendBucket resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="project">
+        /// Name of the project scoping this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<BackendBucketAggregatedList, scg::KeyValuePair<string, BackendBucketsScopedList>> AggregatedListAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            AggregatedListBackendBucketsRequest request = new AggregatedListBackendBucketsRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return AggregatedListAsync(request, callSettings);
+        }
 
         /// <summary>
         /// Deletes the specified BackendBucket resource.
@@ -1219,6 +1367,90 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Retrieves a list of all usable backend buckets in the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackendBucket"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendBucketListUsable, BackendBucket> ListUsable(ListUsableBackendBucketsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of all usable backend buckets in the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendBucket"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<BackendBucketListUsable, BackendBucket> ListUsableAsync(ListUsableBackendBucketsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of all usable backend buckets in the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackendBucket"/> resources.</returns>
+        public virtual gax::PagedEnumerable<BackendBucketListUsable, BackendBucket> ListUsable(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableBackendBucketsRequest request = new ListUsableBackendBucketsRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsable(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of all usable backend buckets in the specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendBucket"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<BackendBucketListUsable, BackendBucket> ListUsableAsync(string project, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListUsableBackendBucketsRequest request = new ListUsableBackendBucketsRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListUsableAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Updates the specified BackendBucket resource with the data included in the
         /// request. This method supportsPATCH
         /// semantics and uses theJSON merge
@@ -1779,6 +2011,8 @@ namespace Google.Cloud.Compute.V1
     {
         private readonly gaxgrpc::ApiCall<AddSignedUrlKeyBackendBucketRequest, Operation> _callAddSignedUrlKey;
 
+        private readonly gaxgrpc::ApiCall<AggregatedListBackendBucketsRequest, BackendBucketAggregatedList> _callAggregatedList;
+
         private readonly gaxgrpc::ApiCall<DeleteBackendBucketRequest, Operation> _callDelete;
 
         private readonly gaxgrpc::ApiCall<DeleteSignedUrlKeyBackendBucketRequest, Operation> _callDeleteSignedUrlKey;
@@ -1790,6 +2024,8 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<InsertBackendBucketRequest, Operation> _callInsert;
 
         private readonly gaxgrpc::ApiCall<ListBackendBucketsRequest, BackendBucketList> _callList;
+
+        private readonly gaxgrpc::ApiCall<ListUsableBackendBucketsRequest, BackendBucketListUsable> _callListUsable;
 
         private readonly gaxgrpc::ApiCall<PatchBackendBucketRequest, Operation> _callPatch;
 
@@ -1826,6 +2062,9 @@ namespace Google.Cloud.Compute.V1
             _callAddSignedUrlKey = clientHelper.BuildApiCall<AddSignedUrlKeyBackendBucketRequest, Operation>("AddSignedUrlKey", grpcClient.AddSignedUrlKeyAsync, grpcClient.AddSignedUrlKey, effectiveSettings.AddSignedUrlKeySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_bucket", request => request.BackendBucket);
             Modify_ApiCall(ref _callAddSignedUrlKey);
             Modify_AddSignedUrlKeyApiCall(ref _callAddSignedUrlKey);
+            _callAggregatedList = clientHelper.BuildApiCall<AggregatedListBackendBucketsRequest, BackendBucketAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callAggregatedList);
+            Modify_AggregatedListApiCall(ref _callAggregatedList);
             _callDelete = clientHelper.BuildApiCall<DeleteBackendBucketRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_bucket", request => request.BackendBucket);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
@@ -1844,6 +2083,9 @@ namespace Google.Cloud.Compute.V1
             _callList = clientHelper.BuildApiCall<ListBackendBucketsRequest, BackendBucketList>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callListUsable = clientHelper.BuildApiCall<ListUsableBackendBucketsRequest, BackendBucketListUsable>("ListUsable", grpcClient.ListUsableAsync, grpcClient.ListUsable, effectiveSettings.ListUsableSettings).WithGoogleRequestParam("project", request => request.Project);
+            Modify_ApiCall(ref _callListUsable);
+            Modify_ListUsableApiCall(ref _callListUsable);
             _callPatch = clientHelper.BuildApiCall<PatchBackendBucketRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("backend_bucket", request => request.BackendBucket);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
@@ -1866,6 +2108,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_AddSignedUrlKeyApiCall(ref gaxgrpc::ApiCall<AddSignedUrlKeyBackendBucketRequest, Operation> call);
 
+        partial void Modify_AggregatedListApiCall(ref gaxgrpc::ApiCall<AggregatedListBackendBucketsRequest, BackendBucketAggregatedList> call);
+
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteBackendBucketRequest, Operation> call);
 
         partial void Modify_DeleteSignedUrlKeyApiCall(ref gaxgrpc::ApiCall<DeleteSignedUrlKeyBackendBucketRequest, Operation> call);
@@ -1877,6 +2121,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_InsertApiCall(ref gaxgrpc::ApiCall<InsertBackendBucketRequest, Operation> call);
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListBackendBucketsRequest, BackendBucketList> call);
+
+        partial void Modify_ListUsableApiCall(ref gaxgrpc::ApiCall<ListUsableBackendBucketsRequest, BackendBucketListUsable> call);
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchBackendBucketRequest, Operation> call);
 
@@ -1895,6 +2141,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_AddSignedUrlKeyBackendBucketRequest(ref AddSignedUrlKeyBackendBucketRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_AggregatedListBackendBucketsRequest(ref AggregatedListBackendBucketsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteBackendBucketRequest(ref DeleteBackendBucketRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSignedUrlKeyBackendBucketRequest(ref DeleteSignedUrlKeyBackendBucketRequest request, ref gaxgrpc::CallSettings settings);
@@ -1906,6 +2154,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_InsertBackendBucketRequest(ref InsertBackendBucketRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListBackendBucketsRequest(ref ListBackendBucketsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListUsableBackendBucketsRequest(ref ListUsableBackendBucketsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchBackendBucketRequest(ref PatchBackendBucketRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1950,6 +2200,40 @@ namespace Google.Cloud.Compute.V1
             GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AddSignedUrlKeyOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all BackendBucket resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.</returns>
+        public override gax::PagedEnumerable<BackendBucketAggregatedList, scg::KeyValuePair<string, BackendBucketsScopedList>> AggregatedList(AggregatedListBackendBucketsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListBackendBucketsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregatedListBackendBucketsRequest, BackendBucketAggregatedList, scg::KeyValuePair<string, BackendBucketsScopedList>>(_callAggregatedList, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the list of all BackendBucket resources, regional and global,
+        /// available to the specified project.
+        /// 
+        /// To prevent failure, it is recommended that you set the
+        /// `returnPartialSuccess` parameter to `true`.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="scg::KeyValuePair{TKey,TValue}"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<BackendBucketAggregatedList, scg::KeyValuePair<string, BackendBucketsScopedList>> AggregatedListAsync(AggregatedListBackendBucketsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregatedListBackendBucketsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregatedListBackendBucketsRequest, BackendBucketAggregatedList, scg::KeyValuePair<string, BackendBucketsScopedList>>(_callAggregatedList, request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>Delete</c>.</summary>
@@ -2131,6 +2415,30 @@ namespace Google.Cloud.Compute.V1
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackendBucketsRequest, BackendBucketList, BackendBucket>(_callList, request, callSettings);
         }
 
+        /// <summary>
+        /// Retrieves a list of all usable backend buckets in the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackendBucket"/> resources.</returns>
+        public override gax::PagedEnumerable<BackendBucketListUsable, BackendBucket> ListUsable(ListUsableBackendBucketsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUsableBackendBucketsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListUsableBackendBucketsRequest, BackendBucketListUsable, BackendBucket>(_callListUsable, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of all usable backend buckets in the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackendBucket"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<BackendBucketListUsable, BackendBucket> ListUsableAsync(ListUsableBackendBucketsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListUsableBackendBucketsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListUsableBackendBucketsRequest, BackendBucketListUsable, BackendBucket>(_callListUsable, request, callSettings);
+        }
+
         /// <summary>The long-running operations client for <c>Patch</c>.</summary>
         public override lro::OperationsClient PatchOperationsClient { get; }
 
@@ -2289,6 +2597,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class AggregatedListBackendBucketsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class ListBackendBucketsRequest : gaxgrpc::IPageRequest
     {
         /// <inheritdoc/>
@@ -2299,7 +2617,34 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class ListUsableBackendBucketsRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
+    public partial class BackendBucketAggregatedList : gaxgrpc::IPageResponse<scg::KeyValuePair<string, BackendBucketsScopedList>>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<scg::KeyValuePair<string, BackendBucketsScopedList>> GetEnumerator() =>
+            Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class BackendBucketList : gaxgrpc::IPageResponse<BackendBucket>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackendBucket> GetEnumerator() => Items.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class BackendBucketListUsable : gaxgrpc::IPageResponse<BackendBucket>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BackendBucket> GetEnumerator() => Items.GetEnumerator();

@@ -426,6 +426,74 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetHealth</summary>
+        public void GetHealthRequestObject()
+        {
+            // Snippet: GetHealth(GetHealthRegionCompositeHealthCheckRequest, CallSettings)
+            // Create client
+            RegionCompositeHealthChecksClient regionCompositeHealthChecksClient = RegionCompositeHealthChecksClient.Create();
+            // Initialize request argument(s)
+            GetHealthRegionCompositeHealthCheckRequest request = new GetHealthRegionCompositeHealthCheckRequest
+            {
+                Region = "",
+                Project = "",
+                CompositeHealthCheck = "",
+            };
+            // Make the request
+            CompositeHealthCheckHealth response = regionCompositeHealthChecksClient.GetHealth(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealthAsync</summary>
+        public async Task GetHealthRequestObjectAsync()
+        {
+            // Snippet: GetHealthAsync(GetHealthRegionCompositeHealthCheckRequest, CallSettings)
+            // Additional: GetHealthAsync(GetHealthRegionCompositeHealthCheckRequest, CancellationToken)
+            // Create client
+            RegionCompositeHealthChecksClient regionCompositeHealthChecksClient = await RegionCompositeHealthChecksClient.CreateAsync();
+            // Initialize request argument(s)
+            GetHealthRegionCompositeHealthCheckRequest request = new GetHealthRegionCompositeHealthCheckRequest
+            {
+                Region = "",
+                Project = "",
+                CompositeHealthCheck = "",
+            };
+            // Make the request
+            CompositeHealthCheckHealth response = await regionCompositeHealthChecksClient.GetHealthAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealth</summary>
+        public void GetHealth()
+        {
+            // Snippet: GetHealth(string, string, string, CallSettings)
+            // Create client
+            RegionCompositeHealthChecksClient regionCompositeHealthChecksClient = RegionCompositeHealthChecksClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string compositeHealthCheck = "";
+            // Make the request
+            CompositeHealthCheckHealth response = regionCompositeHealthChecksClient.GetHealth(project, region, compositeHealthCheck);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetHealthAsync</summary>
+        public async Task GetHealthAsync()
+        {
+            // Snippet: GetHealthAsync(string, string, string, CallSettings)
+            // Additional: GetHealthAsync(string, string, string, CancellationToken)
+            // Create client
+            RegionCompositeHealthChecksClient regionCompositeHealthChecksClient = await RegionCompositeHealthChecksClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string compositeHealthCheck = "";
+            // Make the request
+            CompositeHealthCheckHealth response = await regionCompositeHealthChecksClient.GetHealthAsync(project, region, compositeHealthCheck);
+            // End snippet
+        }
+
         /// <summary>Snippet for Insert</summary>
         public void InsertRequestObject()
         {
