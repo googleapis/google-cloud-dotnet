@@ -2004,10 +2004,10 @@
         },
         {
             "id": "Google.Cloud.Logging.NLog",
-            "currentVersion": "6.0.0",
+            "currentVersion": "6.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-02-05T17:02:43.908558104Z",
+            "releaseTimestamp": "2026-04-27T14:18:44.592096972Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Logging.NLog/Google.Cloud.Logging.NLog"
             ]
