@@ -2659,12 +2659,12 @@
         },
         {
             "id": "Google.Cloud.PubSub.V1",
-            "currentVersion": "3.33.0",
+            "currentVersion": "3.34.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-09T14:09:25.316329326Z",
+            "releaseTimestamp": "2026-04-27T14:23:00.084780232Z",
             "lastGeneratedCommit": "8c6e40489b4ab4f1886154a32ece2f0b5db52b27",
-            "lastReleasedCommit": "23ec7b6ee94a2fe364cdb5a212949f1cf37f85ad",
+            "lastReleasedCommit": "8c6e40489b4ab4f1886154a32ece2f0b5db52b27",
             "apiPaths": [
                 "google/pubsub/v1"
             ],
@@ -2749,12 +2749,12 @@
         },
         {
             "id": "Google.Cloud.Redis.Cluster.V1",
-            "currentVersion": "1.6.0",
+            "currentVersion": "1.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-04-06T14:13:39.182175707Z",
+            "releaseTimestamp": "2026-04-27T18:50:13.820338412Z",
             "lastGeneratedCommit": "c7d917ce502e669569fdf9dbf6701291ceb7929f",
-            "lastReleasedCommit": "96eea0c3ab6e7d104e26d04914ce26a93959ba1a",
+            "lastReleasedCommit": "c7d917ce502e669569fdf9dbf6701291ceb7929f",
             "apiPaths": [
                 "google/cloud/redis/cluster/v1"
             ],

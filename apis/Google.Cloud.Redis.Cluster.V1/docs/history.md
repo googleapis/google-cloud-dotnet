@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.7.0, released 2026-04-27
+
+### New features
+
+- [Memorystore for Redis Cluster] Updating new node types added
+
 ## Version 1.6.0, released 2026-04-06
 
 ### New features
