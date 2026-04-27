@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.16.0, released 2026-04-27
+
+### New features
+
+- Add ScaleType for Storage Pools and LargeCapacityConfig for Volumes
+
+### Documentation improvements
+
+- A comment for field `large_capacity` in message `.google.cloud.netapp.v1.Volume` is changed
+
 ## Version 1.15.0, released 2026-03-30
 
 ### New features
