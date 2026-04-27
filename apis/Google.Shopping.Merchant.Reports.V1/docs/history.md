@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.2.0, released 2026-04-27
+
+### New features
+
+- Add `store_type` to `product_performance_view`
+- Add `status_per_reporting_context` to `product_view`
+
+### Documentation improvements
+
+- Update comments for `SearchRequest`, `ProductView`, and `AggregatedReportingContextStatus`
+
 ## Version 1.1.0, released 2025-11-06
 
 ### New features

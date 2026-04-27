@@ -4652,12 +4652,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Reports.V1",
-            "currentVersion": "1.1.0",
+            "currentVersion": "1.2.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T22:00:56.816092103Z",
+            "releaseTimestamp": "2026-04-27T18:53:41.125865113Z",
             "lastGeneratedCommit": "114cd0bbdca6dfc245873fbf1d00ca2f4532db12",
-            "lastReleasedCommit": "4d8abb3f02f14d2906b2bb1f478e17afd95ec4fc",
+            "lastReleasedCommit": "114cd0bbdca6dfc245873fbf1d00ca2f4532db12",
             "apiPaths": [
                 "google/shopping/merchant/reports/v1"
             ],
