@@ -58,88 +58,100 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             "bXBldGl0aXZlVmlzaWJpbGl0eVRvcE1lcmNoYW50VmlldxJ2CiVjb21wZXRp",
             "dGl2ZV92aXNpYmlsaXR5X2JlbmNobWFya192aWV3GAogASgLMkcuZ29vZ2xl",
             "LnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuQ29tcGV0aXRpdmVWaXNp",
-            "YmlsaXR5QmVuY2htYXJrVmlldyK9CgoWUHJvZHVjdFBlcmZvcm1hbmNlVmll",
+            "YmlsaXR5QmVuY2htYXJrVmlldyKjCwoWUHJvZHVjdFBlcmZvcm1hbmNlVmll",
             "dxJnChBtYXJrZXRpbmdfbWV0aG9kGAEgASgOMkguZ29vZ2xlLnNob3BwaW5n",
             "Lm1lcmNoYW50LnJlcG9ydHMudjEuTWFya2V0aW5nTWV0aG9kLk1hcmtldGlu",
             "Z01ldGhvZEVudW1IAIgBARIfCgRkYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUu",
             "RGF0ZRIfCgR3ZWVrGAMgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRIiChVjdXN0",
-            "b21lcl9jb3VudHJ5X2NvZGUYBCABKAlIAYgBARIVCghvZmZlcl9pZBgFIAEo",
-            "CUgCiAEBEhIKBXRpdGxlGAYgASgJSAOIAQESEgoFYnJhbmQYByABKAlIBIgB",
-            "ARIYCgtjYXRlZ29yeV9sMRgIIAEoCUgFiAEBEhgKC2NhdGVnb3J5X2wyGAkg",
-            "ASgJSAaIAQESGAoLY2F0ZWdvcnlfbDMYCiABKAlIB4gBARIYCgtjYXRlZ29y",
-            "eV9sNBgLIAEoCUgIiAEBEhgKC2NhdGVnb3J5X2w1GAwgASgJSAmIAQESHAoP",
-            "cHJvZHVjdF90eXBlX2wxGA0gASgJSAqIAQESHAoPcHJvZHVjdF90eXBlX2wy",
-            "GA4gASgJSAuIAQESHAoPcHJvZHVjdF90eXBlX2wzGA8gASgJSAyIAQESHAoP",
-            "cHJvZHVjdF90eXBlX2w0GBAgASgJSA2IAQESHAoPcHJvZHVjdF90eXBlX2w1",
-            "GBEgASgJSA6IAQESGgoNY3VzdG9tX2xhYmVsMBgSIAEoCUgPiAEBEhoKDWN1",
-            "c3RvbV9sYWJlbDEYEyABKAlIEIgBARIaCg1jdXN0b21fbGFiZWwyGBQgASgJ",
-            "SBGIAQESGgoNY3VzdG9tX2xhYmVsMxgVIAEoCUgSiAEBEhoKDWN1c3RvbV9s",
-            "YWJlbDQYFiABKAlIE4gBARITCgZjbGlja3MYFyABKANIFIgBARIYCgtpbXBy",
-            "ZXNzaW9ucxgYIAEoA0gViAEBEh8KEmNsaWNrX3Rocm91Z2hfcmF0ZRgZIAEo",
-            "AUgWiAEBEhgKC2NvbnZlcnNpb25zGBogASgBSBeIAQESNQoQY29udmVyc2lv",
-            "bl92YWx1ZRgbIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEhwK",
-            "D2NvbnZlcnNpb25fcmF0ZRgcIAEoAUgYiAEBQhMKEV9tYXJrZXRpbmdfbWV0",
-            "aG9kQhgKFl9jdXN0b21lcl9jb3VudHJ5X2NvZGVCCwoJX29mZmVyX2lkQggK",
-            "Bl90aXRsZUIICgZfYnJhbmRCDgoMX2NhdGVnb3J5X2wxQg4KDF9jYXRlZ29y",
-            "eV9sMkIOCgxfY2F0ZWdvcnlfbDNCDgoMX2NhdGVnb3J5X2w0Qg4KDF9jYXRl",
-            "Z29yeV9sNUISChBfcHJvZHVjdF90eXBlX2wxQhIKEF9wcm9kdWN0X3R5cGVf",
-            "bDJCEgoQX3Byb2R1Y3RfdHlwZV9sM0ISChBfcHJvZHVjdF90eXBlX2w0QhIK",
-            "EF9wcm9kdWN0X3R5cGVfbDVCEAoOX2N1c3RvbV9sYWJlbDBCEAoOX2N1c3Rv",
-            "bV9sYWJlbDFCEAoOX2N1c3RvbV9sYWJlbDJCEAoOX2N1c3RvbV9sYWJlbDNC",
-            "EAoOX2N1c3RvbV9sYWJlbDRCCQoHX2NsaWNrc0IOCgxfaW1wcmVzc2lvbnNC",
-            "FQoTX2NsaWNrX3Rocm91Z2hfcmF0ZUIOCgxfY29udmVyc2lvbnNCEgoQX2Nv",
-            "bnZlcnNpb25fcmF0ZSKiFwoLUHJvZHVjdFZpZXcSDwoCaWQYASABKAlIAIgB",
-            "ARI/CgdjaGFubmVsGBwgASgOMikuZ29vZ2xlLnNob3BwaW5nLnR5cGUuQ2hh",
-            "bm5lbC5DaGFubmVsRW51bUgBiAEBEhoKDWxhbmd1YWdlX2NvZGUYAiABKAlI",
-            "AogBARIXCgpmZWVkX2xhYmVsGAMgASgJSAOIAQESFQoIb2ZmZXJfaWQYBCAB",
-            "KAlIBIgBARISCgV0aXRsZRgFIAEoCUgFiAEBEhIKBWJyYW5kGAYgASgJSAaI",
-            "AQESGAoLY2F0ZWdvcnlfbDEYByABKAlIB4gBARIYCgtjYXRlZ29yeV9sMhgI",
-            "IAEoCUgIiAEBEhgKC2NhdGVnb3J5X2wzGAkgASgJSAmIAQESGAoLY2F0ZWdv",
-            "cnlfbDQYCiABKAlICogBARIYCgtjYXRlZ29yeV9sNRgLIAEoCUgLiAEBEhwK",
-            "D3Byb2R1Y3RfdHlwZV9sMRgMIAEoCUgMiAEBEhwKD3Byb2R1Y3RfdHlwZV9s",
-            "MhgNIAEoCUgNiAEBEhwKD3Byb2R1Y3RfdHlwZV9sMxgOIAEoCUgOiAEBEhwK",
-            "D3Byb2R1Y3RfdHlwZV9sNBgPIAEoCUgPiAEBEhwKD3Byb2R1Y3RfdHlwZV9s",
-            "NRgQIAEoCUgQiAEBEioKBXByaWNlGBEgASgLMhsuZ29vZ2xlLnNob3BwaW5n",
-            "LnR5cGUuUHJpY2USFgoJY29uZGl0aW9uGBIgASgJSBGIAQESGQoMYXZhaWxh",
-            "YmlsaXR5GBMgASgJSBKIAQESGwoOc2hpcHBpbmdfbGFiZWwYFCABKAlIE4gB",
-            "ARIMCgRndGluGBUgAygJEhoKDWl0ZW1fZ3JvdXBfaWQYFiABKAlIFIgBARIb",
-            "Cg50aHVtYm5haWxfbGluaxgXIAEoCUgViAEBEjEKDWNyZWF0aW9uX3RpbWUY",
-            "GCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEioKD2V4cGlyYXRp",
-            "b25fZGF0ZRgZIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSgwEKI2FnZ3JlZ2F0",
-            "ZWRfcmVwb3J0aW5nX2NvbnRleHRfc3RhdHVzGBogASgOMlEuZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuUHJvZHVjdFZpZXcuQWdncmVn",
-            "YXRlZFJlcG9ydGluZ0NvbnRleHRTdGF0dXNIFogBARJPCgtpdGVtX2lzc3Vl",
-            "cxgbIAMoCzI6Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYx",
-            "LlByb2R1Y3RWaWV3Lkl0ZW1Jc3N1ZRJYCg9jbGlja19wb3RlbnRpYWwYHSAB",
-            "KA4yPy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5Qcm9k",
-            "dWN0Vmlldy5DbGlja1BvdGVudGlhbBIhChRjbGlja19wb3RlbnRpYWxfcmFu",
-            "axgeIAEoA0gXiAEBGp8JCglJdGVtSXNzdWUSVgoEdHlwZRgBIAEoCzJILmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLlByb2R1Y3RWaWV3",
-            "Lkl0ZW1Jc3N1ZS5JdGVtSXNzdWVUeXBlEl4KCHNldmVyaXR5GAIgASgLMkwu",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuUHJvZHVjdFZp",
-            "ZXcuSXRlbUlzc3VlLkl0ZW1Jc3N1ZVNldmVyaXR5EmcKCnJlc29sdXRpb24Y",
-            "AyABKA4yTi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5Q",
-            "cm9kdWN0Vmlldy5JdGVtSXNzdWUuSXRlbUlzc3VlUmVzb2x1dGlvbkgAiAEB",
-            "GmUKDUl0ZW1Jc3N1ZVR5cGUSEQoEY29kZRgBIAEoCUgAiAEBEiAKE2Nhbm9u",
-            "aWNhbF9hdHRyaWJ1dGUYAiABKAlIAYgBAUIHCgVfY29kZUIWChRfY2Fub25p",
-            "Y2FsX2F0dHJpYnV0ZRqPBQoRSXRlbUlzc3VlU2V2ZXJpdHkSlQEKHnNldmVy",
-            "aXR5X3Blcl9yZXBvcnRpbmdfY29udGV4dBgBIAMoCzJtLmdvb2dsZS5zaG9w",
+            "b21lcl9jb3VudHJ5X2NvZGUYBCABKAlIAYgBARJVCgpzdG9yZV90eXBlGCAg",
+            "ASgOMjwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuU3Rv",
+            "cmVUeXBlLlN0b3JlVHlwZUVudW1IAogBARIVCghvZmZlcl9pZBgFIAEoCUgD",
+            "iAEBEhIKBXRpdGxlGAYgASgJSASIAQESEgoFYnJhbmQYByABKAlIBYgBARIY",
+            "CgtjYXRlZ29yeV9sMRgIIAEoCUgGiAEBEhgKC2NhdGVnb3J5X2wyGAkgASgJ",
+            "SAeIAQESGAoLY2F0ZWdvcnlfbDMYCiABKAlICIgBARIYCgtjYXRlZ29yeV9s",
+            "NBgLIAEoCUgJiAEBEhgKC2NhdGVnb3J5X2w1GAwgASgJSAqIAQESHAoPcHJv",
+            "ZHVjdF90eXBlX2wxGA0gASgJSAuIAQESHAoPcHJvZHVjdF90eXBlX2wyGA4g",
+            "ASgJSAyIAQESHAoPcHJvZHVjdF90eXBlX2wzGA8gASgJSA2IAQESHAoPcHJv",
+            "ZHVjdF90eXBlX2w0GBAgASgJSA6IAQESHAoPcHJvZHVjdF90eXBlX2w1GBEg",
+            "ASgJSA+IAQESGgoNY3VzdG9tX2xhYmVsMBgSIAEoCUgQiAEBEhoKDWN1c3Rv",
+            "bV9sYWJlbDEYEyABKAlIEYgBARIaCg1jdXN0b21fbGFiZWwyGBQgASgJSBKI",
+            "AQESGgoNY3VzdG9tX2xhYmVsMxgVIAEoCUgTiAEBEhoKDWN1c3RvbV9sYWJl",
+            "bDQYFiABKAlIFIgBARITCgZjbGlja3MYFyABKANIFYgBARIYCgtpbXByZXNz",
+            "aW9ucxgYIAEoA0gWiAEBEh8KEmNsaWNrX3Rocm91Z2hfcmF0ZRgZIAEoAUgX",
+            "iAEBEhgKC2NvbnZlcnNpb25zGBogASgBSBiIAQESNQoQY29udmVyc2lvbl92",
+            "YWx1ZRgbIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEhwKD2Nv",
+            "bnZlcnNpb25fcmF0ZRgcIAEoAUgZiAEBQhMKEV9tYXJrZXRpbmdfbWV0aG9k",
+            "QhgKFl9jdXN0b21lcl9jb3VudHJ5X2NvZGVCDQoLX3N0b3JlX3R5cGVCCwoJ",
+            "X29mZmVyX2lkQggKBl90aXRsZUIICgZfYnJhbmRCDgoMX2NhdGVnb3J5X2wx",
+            "Qg4KDF9jYXRlZ29yeV9sMkIOCgxfY2F0ZWdvcnlfbDNCDgoMX2NhdGVnb3J5",
+            "X2w0Qg4KDF9jYXRlZ29yeV9sNUISChBfcHJvZHVjdF90eXBlX2wxQhIKEF9w",
+            "cm9kdWN0X3R5cGVfbDJCEgoQX3Byb2R1Y3RfdHlwZV9sM0ISChBfcHJvZHVj",
+            "dF90eXBlX2w0QhIKEF9wcm9kdWN0X3R5cGVfbDVCEAoOX2N1c3RvbV9sYWJl",
+            "bDBCEAoOX2N1c3RvbV9sYWJlbDFCEAoOX2N1c3RvbV9sYWJlbDJCEAoOX2N1",
+            "c3RvbV9sYWJlbDNCEAoOX2N1c3RvbV9sYWJlbDRCCQoHX2NsaWNrc0IOCgxf",
+            "aW1wcmVzc2lvbnNCFQoTX2NsaWNrX3Rocm91Z2hfcmF0ZUIOCgxfY29udmVy",
+            "c2lvbnNCEgoQX2NvbnZlcnNpb25fcmF0ZSLuGgoLUHJvZHVjdFZpZXcSDwoC",
+            "aWQYASABKAlIAIgBARI/CgdjaGFubmVsGBwgASgOMikuZ29vZ2xlLnNob3Bw",
+            "aW5nLnR5cGUuQ2hhbm5lbC5DaGFubmVsRW51bUgBiAEBEhoKDWxhbmd1YWdl",
+            "X2NvZGUYAiABKAlIAogBARIXCgpmZWVkX2xhYmVsGAMgASgJSAOIAQESFQoI",
+            "b2ZmZXJfaWQYBCABKAlIBIgBARISCgV0aXRsZRgFIAEoCUgFiAEBEhIKBWJy",
+            "YW5kGAYgASgJSAaIAQESGAoLY2F0ZWdvcnlfbDEYByABKAlIB4gBARIYCgtj",
+            "YXRlZ29yeV9sMhgIIAEoCUgIiAEBEhgKC2NhdGVnb3J5X2wzGAkgASgJSAmI",
+            "AQESGAoLY2F0ZWdvcnlfbDQYCiABKAlICogBARIYCgtjYXRlZ29yeV9sNRgL",
+            "IAEoCUgLiAEBEhwKD3Byb2R1Y3RfdHlwZV9sMRgMIAEoCUgMiAEBEhwKD3By",
+            "b2R1Y3RfdHlwZV9sMhgNIAEoCUgNiAEBEhwKD3Byb2R1Y3RfdHlwZV9sMxgO",
+            "IAEoCUgOiAEBEhwKD3Byb2R1Y3RfdHlwZV9sNBgPIAEoCUgPiAEBEhwKD3By",
+            "b2R1Y3RfdHlwZV9sNRgQIAEoCUgQiAEBEioKBXByaWNlGBEgASgLMhsuZ29v",
+            "Z2xlLnNob3BwaW5nLnR5cGUuUHJpY2USFgoJY29uZGl0aW9uGBIgASgJSBGI",
+            "AQESGQoMYXZhaWxhYmlsaXR5GBMgASgJSBKIAQESGwoOc2hpcHBpbmdfbGFi",
+            "ZWwYFCABKAlIE4gBARIMCgRndGluGBUgAygJEhoKDWl0ZW1fZ3JvdXBfaWQY",
+            "FiABKAlIFIgBARIbCg50aHVtYm5haWxfbGluaxgXIAEoCUgViAEBEjEKDWNy",
+            "ZWF0aW9uX3RpbWUYGCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "EioKD2V4cGlyYXRpb25fZGF0ZRgZIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUS",
+            "gwEKI2FnZ3JlZ2F0ZWRfcmVwb3J0aW5nX2NvbnRleHRfc3RhdHVzGBogASgO",
+            "MlEuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuUHJvZHVj",
+            "dFZpZXcuQWdncmVnYXRlZFJlcG9ydGluZ0NvbnRleHRTdGF0dXNIFogBARJw",
+            "ChxzdGF0dXNfcGVyX3JlcG9ydGluZ19jb250ZXh0GCAgAygLMkouZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuUHJvZHVjdFZpZXcuU3Rh",
+            "dHVzUGVyUmVwb3J0aW5nQ29udGV4dBJbChFyZXBvcnRpbmdfY29udGV4dBgh",
+            "IAEoDjI7Lmdvb2dsZS5zaG9wcGluZy50eXBlLlJlcG9ydGluZ0NvbnRleHQu",
+            "UmVwb3J0aW5nQ29udGV4dEVudW1IF4gBARJPCgtpdGVtX2lzc3VlcxgbIAMo",
+            "CzI6Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLlByb2R1",
+            "Y3RWaWV3Lkl0ZW1Jc3N1ZRJYCg9jbGlja19wb3RlbnRpYWwYHSABKA4yPy5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5Qcm9kdWN0Vmll",
+            "dy5DbGlja1BvdGVudGlhbBIhChRjbGlja19wb3RlbnRpYWxfcmFuaxgeIAEo",
+            "A0gYiAEBGp8JCglJdGVtSXNzdWUSVgoEdHlwZRgBIAEoCzJILmdvb2dsZS5z",
+            "aG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLlByb2R1Y3RWaWV3Lkl0ZW1J",
+            "c3N1ZS5JdGVtSXNzdWVUeXBlEl4KCHNldmVyaXR5GAIgASgLMkwuZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuUHJvZHVjdFZpZXcuSXRl",
+            "bUlzc3VlLkl0ZW1Jc3N1ZVNldmVyaXR5EmcKCnJlc29sdXRpb24YAyABKA4y",
+            "Ti5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5Qcm9kdWN0",
+            "Vmlldy5JdGVtSXNzdWUuSXRlbUlzc3VlUmVzb2x1dGlvbkgAiAEBGmUKDUl0",
+            "ZW1Jc3N1ZVR5cGUSEQoEY29kZRgBIAEoCUgAiAEBEiAKE2Nhbm9uaWNhbF9h",
+            "dHRyaWJ1dGUYAiABKAlIAYgBAUIHCgVfY29kZUIWChRfY2Fub25pY2FsX2F0",
+            "dHJpYnV0ZRqPBQoRSXRlbUlzc3VlU2V2ZXJpdHkSlQEKHnNldmVyaXR5X3Bl",
+            "cl9yZXBvcnRpbmdfY29udGV4dBgBIAMoCzJtLmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5yZXBvcnRzLnYxLlByb2R1Y3RWaWV3Lkl0ZW1Jc3N1ZS5JdGVt",
+            "SXNzdWVTZXZlcml0eS5Jc3N1ZVNldmVyaXR5UGVyUmVwb3J0aW5nQ29udGV4",
+            "dBKGAQoTYWdncmVnYXRlZF9zZXZlcml0eRgCIAEoDjJkLmdvb2dsZS5zaG9w",
             "cGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLlByb2R1Y3RWaWV3Lkl0ZW1Jc3N1",
-            "ZS5JdGVtSXNzdWVTZXZlcml0eS5Jc3N1ZVNldmVyaXR5UGVyUmVwb3J0aW5n",
-            "Q29udGV4dBKGAQoTYWdncmVnYXRlZF9zZXZlcml0eRgCIAEoDjJkLmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLlByb2R1Y3RWaWV3Lkl0",
-            "ZW1Jc3N1ZS5JdGVtSXNzdWVTZXZlcml0eS5BZ2dyZWdhdGVkSXNzdWVTZXZl",
-            "cml0eUgAiAEBGs8BCiBJc3N1ZVNldmVyaXR5UGVyUmVwb3J0aW5nQ29udGV4",
-            "dBJbChFyZXBvcnRpbmdfY29udGV4dBgBIAEoDjI7Lmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlLlJlcG9ydGluZ0NvbnRleHQuUmVwb3J0aW5nQ29udGV4dEVudW1I",
-            "AIgBARIdChVkaXNhcHByb3ZlZF9jb3VudHJpZXMYAiADKAkSGQoRZGVtb3Rl",
-            "ZF9jb3VudHJpZXMYAyADKAlCFAoSX3JlcG9ydGluZ19jb250ZXh0Im8KF0Fn",
-            "Z3JlZ2F0ZWRJc3N1ZVNldmVyaXR5EikKJUFHR1JFR0FURURfSVNTVUVfU0VW",
-            "RVJJVFlfVU5TUEVDSUZJRUQQABIPCgtESVNBUFBST1ZFRBABEgsKB0RFTU9U",
-            "RUQQAhILCgdQRU5ESU5HEANCFgoUX2FnZ3JlZ2F0ZWRfc2V2ZXJpdHkiaQoT",
-            "SXRlbUlzc3VlUmVzb2x1dGlvbhIlCiFJVEVNX0lTU1VFX1JFU09MVVRJT05f",
-            "VU5TUEVDSUZJRUQQABITCg9NRVJDSEFOVF9BQ1RJT04QARIWChJQRU5ESU5H",
-            "X1BST0NFU1NJTkcQAkINCgtfcmVzb2x1dGlvbiKpAQogQWdncmVnYXRlZFJl",
+            "ZS5JdGVtSXNzdWVTZXZlcml0eS5BZ2dyZWdhdGVkSXNzdWVTZXZlcml0eUgA",
+            "iAEBGs8BCiBJc3N1ZVNldmVyaXR5UGVyUmVwb3J0aW5nQ29udGV4dBJbChFy",
+            "ZXBvcnRpbmdfY29udGV4dBgBIAEoDjI7Lmdvb2dsZS5zaG9wcGluZy50eXBl",
+            "LlJlcG9ydGluZ0NvbnRleHQuUmVwb3J0aW5nQ29udGV4dEVudW1IAIgBARId",
+            "ChVkaXNhcHByb3ZlZF9jb3VudHJpZXMYAiADKAkSGQoRZGVtb3RlZF9jb3Vu",
+            "dHJpZXMYAyADKAlCFAoSX3JlcG9ydGluZ19jb250ZXh0Im8KF0FnZ3JlZ2F0",
+            "ZWRJc3N1ZVNldmVyaXR5EikKJUFHR1JFR0FURURfSVNTVUVfU0VWRVJJVFlf",
+            "VU5TUEVDSUZJRUQQABIPCgtESVNBUFBST1ZFRBABEgsKB0RFTU9URUQQAhIL",
+            "CgdQRU5ESU5HEANCFgoUX2FnZ3JlZ2F0ZWRfc2V2ZXJpdHkiaQoTSXRlbUlz",
+            "c3VlUmVzb2x1dGlvbhIlCiFJVEVNX0lTU1VFX1JFU09MVVRJT05fVU5TUEVD",
+            "SUZJRUQQABITCg9NRVJDSEFOVF9BQ1RJT04QARIWChJQRU5ESU5HX1BST0NF",
+            "U1NJTkcQAkINCgtfcmVzb2x1dGlvbhrkAQoZU3RhdHVzUGVyUmVwb3J0aW5n",
+            "Q29udGV4dBJbChFyZXBvcnRpbmdfY29udGV4dBgBIAEoDjI7Lmdvb2dsZS5z",
+            "aG9wcGluZy50eXBlLlJlcG9ydGluZ0NvbnRleHQuUmVwb3J0aW5nQ29udGV4",
+            "dEVudW1IAIgBARIaChJhcHByb3ZlZF9jb3VudHJpZXMYAiADKAkSHQoVZGlz",
+            "YXBwcm92ZWRfY291bnRyaWVzGAMgAygJEhkKEXBlbmRpbmdfY291bnRyaWVz",
+            "GAQgAygJQhQKEl9yZXBvcnRpbmdfY29udGV4dCKpAQogQWdncmVnYXRlZFJl",
             "cG9ydGluZ0NvbnRleHRTdGF0dXMSMwovQUdHUkVHQVRFRF9SRVBPUlRJTkdf",
             "Q09OVEVYVF9TVEFUVVNfVU5TUEVDSUZJRUQQABIfChtOT1RfRUxJR0lCTEVf",
             "T1JfRElTQVBQUk9WRUQQARILCgdQRU5ESU5HEAISFAoQRUxJR0lCTEVfTElN",
@@ -154,179 +166,182 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             "dHlwZV9sNUIMCgpfY29uZGl0aW9uQg8KDV9hdmFpbGFiaWxpdHlCEQoPX3No",
             "aXBwaW5nX2xhYmVsQhAKDl9pdGVtX2dyb3VwX2lkQhEKD190aHVtYm5haWxf",
             "bGlua0ImCiRfYWdncmVnYXRlZF9yZXBvcnRpbmdfY29udGV4dF9zdGF0dXNC",
-            "FwoVX2NsaWNrX3BvdGVudGlhbF9yYW5rIoEGCh9QcmljZUNvbXBldGl0aXZl",
-            "bmVzc1Byb2R1Y3RWaWV3EiAKE3JlcG9ydF9jb3VudHJ5X2NvZGUYASABKAlI",
-            "AIgBARIPCgJpZBgCIAEoCUgBiAEBEhUKCG9mZmVyX2lkGAMgASgJSAKIAQES",
-            "EgoFdGl0bGUYBCABKAlIA4gBARISCgVicmFuZBgFIAEoCUgEiAEBEhgKC2Nh",
-            "dGVnb3J5X2wxGAYgASgJSAWIAQESGAoLY2F0ZWdvcnlfbDIYByABKAlIBogB",
-            "ARIYCgtjYXRlZ29yeV9sMxgIIAEoCUgHiAEBEhgKC2NhdGVnb3J5X2w0GAkg",
-            "ASgJSAiIAQESGAoLY2F0ZWdvcnlfbDUYCiABKAlICYgBARIcCg9wcm9kdWN0",
-            "X3R5cGVfbDEYCyABKAlICogBARIcCg9wcm9kdWN0X3R5cGVfbDIYDCABKAlI",
-            "C4gBARIcCg9wcm9kdWN0X3R5cGVfbDMYDSABKAlIDIgBARIcCg9wcm9kdWN0",
-            "X3R5cGVfbDQYDiABKAlIDYgBARIcCg9wcm9kdWN0X3R5cGVfbDUYDyABKAlI",
-            "DogBARIqCgVwcmljZRgQIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlBy",
-            "aWNlEjQKD2JlbmNobWFya19wcmljZRgRIAEoCzIbLmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlLlByaWNlQhYKFF9yZXBvcnRfY291bnRyeV9jb2RlQgUKA19pZEIL",
-            "Cglfb2ZmZXJfaWRCCAoGX3RpdGxlQggKBl9icmFuZEIOCgxfY2F0ZWdvcnlf",
-            "bDFCDgoMX2NhdGVnb3J5X2wyQg4KDF9jYXRlZ29yeV9sM0IOCgxfY2F0ZWdv",
-            "cnlfbDRCDgoMX2NhdGVnb3J5X2w1QhIKEF9wcm9kdWN0X3R5cGVfbDFCEgoQ",
-            "X3Byb2R1Y3RfdHlwZV9sMkISChBfcHJvZHVjdF90eXBlX2wzQhIKEF9wcm9k",
-            "dWN0X3R5cGVfbDRCEgoQX3Byb2R1Y3RfdHlwZV9sNSKDCQoYUHJpY2VJbnNp",
-            "Z2h0c1Byb2R1Y3RWaWV3Eg8KAmlkGAEgASgJSACIAQESFQoIb2ZmZXJfaWQY",
-            "AiABKAlIAYgBARISCgV0aXRsZRgDIAEoCUgCiAEBEhIKBWJyYW5kGAQgASgJ",
-            "SAOIAQESGAoLY2F0ZWdvcnlfbDEYBSABKAlIBIgBARIYCgtjYXRlZ29yeV9s",
-            "MhgGIAEoCUgFiAEBEhgKC2NhdGVnb3J5X2wzGAcgASgJSAaIAQESGAoLY2F0",
-            "ZWdvcnlfbDQYCCABKAlIB4gBARIYCgtjYXRlZ29yeV9sNRgJIAEoCUgIiAEB",
-            "EhwKD3Byb2R1Y3RfdHlwZV9sMRgKIAEoCUgJiAEBEhwKD3Byb2R1Y3RfdHlw",
-            "ZV9sMhgLIAEoCUgKiAEBEhwKD3Byb2R1Y3RfdHlwZV9sMxgMIAEoCUgLiAEB",
-            "EhwKD3Byb2R1Y3RfdHlwZV9sNBgNIAEoCUgMiAEBEhwKD3Byb2R1Y3RfdHlw",
-            "ZV9sNRgOIAEoCUgNiAEBEioKBXByaWNlGA8gASgLMhsuZ29vZ2xlLnNob3Bw",
-            "aW5nLnR5cGUuUHJpY2USNAoPc3VnZ2VzdGVkX3ByaWNlGBAgASgLMhsuZ29v",
-            "Z2xlLnNob3BwaW5nLnR5cGUuUHJpY2USMgolcHJlZGljdGVkX2ltcHJlc3Np",
-            "b25zX2NoYW5nZV9mcmFjdGlvbhgRIAEoAUgOiAEBEi0KIHByZWRpY3RlZF9j",
-            "bGlja3NfY2hhbmdlX2ZyYWN0aW9uGBIgASgBSA+IAQESMgolcHJlZGljdGVk",
-            "X2NvbnZlcnNpb25zX2NoYW5nZV9mcmFjdGlvbhgTIAEoAUgQiAEBEmIKDWVm",
-            "ZmVjdGl2ZW5lc3MYFiABKA4ySy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "cmVwb3J0cy52MS5QcmljZUluc2lnaHRzUHJvZHVjdFZpZXcuRWZmZWN0aXZl",
-            "bmVzcyJNCg1FZmZlY3RpdmVuZXNzEh0KGUVGRkVDVElWRU5FU1NfVU5TUEVD",
-            "SUZJRUQQABIHCgNMT1cQARIKCgZNRURJVU0QAhIICgRISUdIEANCBQoDX2lk",
-            "QgsKCV9vZmZlcl9pZEIICgZfdGl0bGVCCAoGX2JyYW5kQg4KDF9jYXRlZ29y",
-            "eV9sMUIOCgxfY2F0ZWdvcnlfbDJCDgoMX2NhdGVnb3J5X2wzQg4KDF9jYXRl",
-            "Z29yeV9sNEIOCgxfY2F0ZWdvcnlfbDVCEgoQX3Byb2R1Y3RfdHlwZV9sMUIS",
-            "ChBfcHJvZHVjdF90eXBlX2wyQhIKEF9wcm9kdWN0X3R5cGVfbDNCEgoQX3By",
-            "b2R1Y3RfdHlwZV9sNEISChBfcHJvZHVjdF90eXBlX2w1QigKJl9wcmVkaWN0",
-            "ZWRfaW1wcmVzc2lvbnNfY2hhbmdlX2ZyYWN0aW9uQiMKIV9wcmVkaWN0ZWRf",
-            "Y2xpY2tzX2NoYW5nZV9mcmFjdGlvbkIoCiZfcHJlZGljdGVkX2NvbnZlcnNp",
-            "b25zX2NoYW5nZV9mcmFjdGlvbiLXCwodQmVzdFNlbGxlcnNQcm9kdWN0Q2x1",
-            "c3RlclZpZXcSJgoLcmVwb3J0X2RhdGUYASABKAsyES5nb29nbGUudHlwZS5E",
-            "YXRlEm0KEnJlcG9ydF9ncmFudWxhcml0eRgCIAEoDjJMLmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLlJlcG9ydEdyYW51bGFyaXR5LlJl",
-            "cG9ydEdyYW51bGFyaXR5RW51bUgAiAEBEiAKE3JlcG9ydF9jb3VudHJ5X2Nv",
-            "ZGUYAyABKAlIAYgBARIfChJyZXBvcnRfY2F0ZWdvcnlfaWQYBCABKANIAogB",
-            "ARISCgV0aXRsZRgGIAEoCUgDiAEBEhIKBWJyYW5kGAcgASgJSASIAQESGAoL",
-            "Y2F0ZWdvcnlfbDEYCCABKAlIBYgBARIYCgtjYXRlZ29yeV9sMhgJIAEoCUgG",
-            "iAEBEhgKC2NhdGVnb3J5X2wzGAogASgJSAeIAQESGAoLY2F0ZWdvcnlfbDQY",
-            "CyABKAlICIgBARIYCgtjYXRlZ29yeV9sNRgMIAEoCUgJiAEBEhUKDXZhcmlh",
-            "bnRfZ3RpbnMYDSADKAkScQoQaW52ZW50b3J5X3N0YXR1cxgOIAEoDjJSLmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLkJlc3RTZWxsZXJz",
-            "UHJvZHVjdENsdXN0ZXJWaWV3LkludmVudG9yeVN0YXR1c0gKiAEBEncKFmJy",
-            "YW5kX2ludmVudG9yeV9zdGF0dXMYDyABKA4yUi5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQucmVwb3J0cy52MS5CZXN0U2VsbGVyc1Byb2R1Y3RDbHVzdGVy",
-            "Vmlldy5JbnZlbnRvcnlTdGF0dXNIC4gBARIRCgRyYW5rGBAgASgDSAyIAQES",
-            "GgoNcHJldmlvdXNfcmFuaxgRIAEoA0gNiAEBEmQKD3JlbGF0aXZlX2RlbWFu",
-            "ZBgSIAEoDjJGLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYx",
-            "LlJlbGF0aXZlRGVtYW5kLlJlbGF0aXZlRGVtYW5kRW51bUgOiAEBEm0KGHBy",
-            "ZXZpb3VzX3JlbGF0aXZlX2RlbWFuZBgTIAEoDjJGLmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5yZXBvcnRzLnYxLlJlbGF0aXZlRGVtYW5kLlJlbGF0aXZl",
-            "RGVtYW5kRW51bUgPiAEBEn8KFnJlbGF0aXZlX2RlbWFuZF9jaGFuZ2UYFCAB",
-            "KA4yWi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5SZWxh",
-            "dGl2ZURlbWFuZENoYW5nZVR5cGUuUmVsYXRpdmVEZW1hbmRDaGFuZ2VUeXBl",
-            "RW51bUgQiAEBImkKD0ludmVudG9yeVN0YXR1cxIgChxJTlZFTlRPUllfU1RB",
-            "VFVTX1VOU1BFQ0lGSUVEEAASDAoISU5fU1RPQ0sQARIQCgxPVVRfT0ZfU1RP",
-            "Q0sQAhIUChBOT1RfSU5fSU5WRU5UT1JZEANCFQoTX3JlcG9ydF9ncmFudWxh",
-            "cml0eUIWChRfcmVwb3J0X2NvdW50cnlfY29kZUIVChNfcmVwb3J0X2NhdGVn",
-            "b3J5X2lkQggKBl90aXRsZUIICgZfYnJhbmRCDgoMX2NhdGVnb3J5X2wxQg4K",
-            "DF9jYXRlZ29yeV9sMkIOCgxfY2F0ZWdvcnlfbDNCDgoMX2NhdGVnb3J5X2w0",
-            "Qg4KDF9jYXRlZ29yeV9sNUITChFfaW52ZW50b3J5X3N0YXR1c0IZChdfYnJh",
-            "bmRfaW52ZW50b3J5X3N0YXR1c0IHCgVfcmFua0IQCg5fcHJldmlvdXNfcmFu",
-            "a0ISChBfcmVsYXRpdmVfZGVtYW5kQhsKGV9wcmV2aW91c19yZWxhdGl2ZV9k",
-            "ZW1hbmRCGQoXX3JlbGF0aXZlX2RlbWFuZF9jaGFuZ2UiwAYKFEJlc3RTZWxs",
-            "ZXJzQnJhbmRWaWV3EiYKC3JlcG9ydF9kYXRlGAEgASgLMhEuZ29vZ2xlLnR5",
-            "cGUuRGF0ZRJtChJyZXBvcnRfZ3JhbnVsYXJpdHkYAiABKA4yTC5nb29nbGUu",
-            "c2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5SZXBvcnRHcmFudWxhcml0",
-            "eS5SZXBvcnRHcmFudWxhcml0eUVudW1IAIgBARIgChNyZXBvcnRfY291bnRy",
-            "eV9jb2RlGAMgASgJSAGIAQESHwoScmVwb3J0X2NhdGVnb3J5X2lkGAQgASgD",
-            "SAKIAQESEgoFYnJhbmQYBiABKAlIA4gBARIRCgRyYW5rGAcgASgDSASIAQES",
-            "GgoNcHJldmlvdXNfcmFuaxgIIAEoA0gFiAEBEmQKD3JlbGF0aXZlX2RlbWFu",
-            "ZBgJIAEoDjJGLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYx",
-            "LlJlbGF0aXZlRGVtYW5kLlJlbGF0aXZlRGVtYW5kRW51bUgGiAEBEm0KGHBy",
-            "ZXZpb3VzX3JlbGF0aXZlX2RlbWFuZBgKIAEoDjJGLmdvb2dsZS5zaG9wcGlu",
-            "Zy5tZXJjaGFudC5yZXBvcnRzLnYxLlJlbGF0aXZlRGVtYW5kLlJlbGF0aXZl",
-            "RGVtYW5kRW51bUgHiAEBEn8KFnJlbGF0aXZlX2RlbWFuZF9jaGFuZ2UYCyAB",
-            "KA4yWi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5SZWxh",
-            "dGl2ZURlbWFuZENoYW5nZVR5cGUuUmVsYXRpdmVEZW1hbmRDaGFuZ2VUeXBl",
-            "RW51bUgIiAEBQhUKE19yZXBvcnRfZ3JhbnVsYXJpdHlCFgoUX3JlcG9ydF9j",
-            "b3VudHJ5X2NvZGVCFQoTX3JlcG9ydF9jYXRlZ29yeV9pZEIICgZfYnJhbmRC",
-            "BwoFX3JhbmtCEAoOX3ByZXZpb3VzX3JhbmtCEgoQX3JlbGF0aXZlX2RlbWFu",
-            "ZEIbChlfcHJldmlvdXNfcmVsYXRpdmVfZGVtYW5kQhkKF19yZWxhdGl2ZV9k",
-            "ZW1hbmRfY2hhbmdlIt8BChlOb25Qcm9kdWN0UGVyZm9ybWFuY2VWaWV3Eh8K",
-            "BGRhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlEh8KBHdlZWsYAiABKAsy",
-            "ES5nb29nbGUudHlwZS5EYXRlEhMKBmNsaWNrcxgDIAEoA0gAiAEBEhgKC2lt",
-            "cHJlc3Npb25zGAQgASgDSAGIAQESHwoSY2xpY2tfdGhyb3VnaF9yYXRlGAUg",
-            "ASgBSAKIAQFCCQoHX2NsaWNrc0IOCgxfaW1wcmVzc2lvbnNCFQoTX2NsaWNr",
-            "X3Rocm91Z2hfcmF0ZSL8BAojQ29tcGV0aXRpdmVWaXNpYmlsaXR5Q29tcGV0",
-            "aXRvclZpZXcSHwoEZGF0ZRgBIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSEwoG",
-            "ZG9tYWluGAIgASgJSACIAQESGwoOaXNfeW91cl9kb21haW4YAyABKAhIAYgB",
-            "ARIgChNyZXBvcnRfY291bnRyeV9jb2RlGAQgASgJSAKIAQESHwoScmVwb3J0",
-            "X2NhdGVnb3J5X2lkGAUgASgDSAOIAQESYQoOdHJhZmZpY19zb3VyY2UYBiAB",
-            "KA4yRC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5UcmFm",
-            "ZmljU291cmNlLlRyYWZmaWNTb3VyY2VFbnVtSASIAQESEQoEcmFuaxgHIAEo",
-            "A0gFiAEBEh4KEWFkc19vcmdhbmljX3JhdGlvGAggASgBSAaIAQESHgoRcGFn",
-            "ZV9vdmVybGFwX3JhdGUYCSABKAFIB4gBARIhChRoaWdoZXJfcG9zaXRpb25f",
-            "cmF0ZRgKIAEoAUgIiAEBEiAKE3JlbGF0aXZlX3Zpc2liaWxpdHkYCyABKAFI",
-            "CYgBAUIJCgdfZG9tYWluQhEKD19pc195b3VyX2RvbWFpbkIWChRfcmVwb3J0",
-            "X2NvdW50cnlfY29kZUIVChNfcmVwb3J0X2NhdGVnb3J5X2lkQhEKD190cmFm",
-            "ZmljX3NvdXJjZUIHCgVfcmFua0IUChJfYWRzX29yZ2FuaWNfcmF0aW9CFAoS",
-            "X3BhZ2Vfb3ZlcmxhcF9yYXRlQhcKFV9oaWdoZXJfcG9zaXRpb25fcmF0ZUIW",
-            "ChRfcmVsYXRpdmVfdmlzaWJpbGl0eSLDBAokQ29tcGV0aXRpdmVWaXNpYmls",
-            "aXR5VG9wTWVyY2hhbnRWaWV3Eh8KBGRhdGUYASABKAsyES5nb29nbGUudHlw",
-            "ZS5EYXRlEhMKBmRvbWFpbhgCIAEoCUgAiAEBEhsKDmlzX3lvdXJfZG9tYWlu",
-            "GAMgASgISAGIAQESIAoTcmVwb3J0X2NvdW50cnlfY29kZRgEIAEoCUgCiAEB",
-            "Eh8KEnJlcG9ydF9jYXRlZ29yeV9pZBgFIAEoA0gDiAEBEmEKDnRyYWZmaWNf",
-            "c291cmNlGAYgASgOMkQuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9y",
-            "dHMudjEuVHJhZmZpY1NvdXJjZS5UcmFmZmljU291cmNlRW51bUgEiAEBEhEK",
-            "BHJhbmsYByABKANIBYgBARIeChFhZHNfb3JnYW5pY19yYXRpbxgIIAEoAUgG",
-            "iAEBEh4KEXBhZ2Vfb3ZlcmxhcF9yYXRlGAkgASgBSAeIAQESIQoUaGlnaGVy",
-            "X3Bvc2l0aW9uX3JhdGUYCiABKAFICIgBAUIJCgdfZG9tYWluQhEKD19pc195",
-            "b3VyX2RvbWFpbkIWChRfcmVwb3J0X2NvdW50cnlfY29kZUIVChNfcmVwb3J0",
-            "X2NhdGVnb3J5X2lkQhEKD190cmFmZmljX3NvdXJjZUIHCgVfcmFua0IUChJf",
-            "YWRzX29yZ2FuaWNfcmF0aW9CFAoSX3BhZ2Vfb3ZlcmxhcF9yYXRlQhcKFV9o",
-            "aWdoZXJfcG9zaXRpb25fcmF0ZSLTAwoiQ29tcGV0aXRpdmVWaXNpYmlsaXR5",
-            "QmVuY2htYXJrVmlldxIfCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
-            "ZRIgChNyZXBvcnRfY291bnRyeV9jb2RlGAIgASgJSACIAQESHwoScmVwb3J0",
-            "X2NhdGVnb3J5X2lkGAMgASgDSAGIAQESYQoOdHJhZmZpY19zb3VyY2UYBCAB",
-            "KA4yRC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5UcmFm",
-            "ZmljU291cmNlLlRyYWZmaWNTb3VyY2VFbnVtSAKIAQESKQoceW91cl9kb21h",
-            "aW5fdmlzaWJpbGl0eV90cmVuZBgFIAEoAUgDiAEBEjAKI2NhdGVnb3J5X2Jl",
-            "bmNobWFya192aXNpYmlsaXR5X3RyZW5kGAYgASgBSASIAQFCFgoUX3JlcG9y",
-            "dF9jb3VudHJ5X2NvZGVCFQoTX3JlcG9ydF9jYXRlZ29yeV9pZEIRCg9fdHJh",
-            "ZmZpY19zb3VyY2VCHwodX3lvdXJfZG9tYWluX3Zpc2liaWxpdHlfdHJlbmRC",
-            "JgokX2NhdGVnb3J5X2JlbmNobWFya192aXNpYmlsaXR5X3RyZW5kImUKD01h",
-            "cmtldGluZ01ldGhvZCJSChNNYXJrZXRpbmdNZXRob2RFbnVtEiUKIU1BUktF",
-            "VElOR19NRVRIT0RfRU5VTV9VTlNQRUNJRklFRBAAEgsKB09SR0FOSUMQARIH",
-            "CgNBRFMQAiJuChFSZXBvcnRHcmFudWxhcml0eSJZChVSZXBvcnRHcmFudWxh",
-            "cml0eUVudW0SJwojUkVQT1JUX0dSQU5VTEFSSVRZX0VOVU1fVU5TUEVDSUZJ",
-            "RUQQABIKCgZXRUVLTFkQARILCgdNT05USExZEAIiiAEKDlJlbGF0aXZlRGVt",
-            "YW5kInYKElJlbGF0aXZlRGVtYW5kRW51bRIkCiBSRUxBVElWRV9ERU1BTkRf",
-            "RU5VTV9VTlNQRUNJRklFRBAAEgwKCFZFUllfTE9XEAoSBwoDTE9XEBQSCgoG",
-            "TUVESVVNEB4SCAoESElHSBAoEg0KCVZFUllfSElHSBAyIo0BChhSZWxhdGl2",
-            "ZURlbWFuZENoYW5nZVR5cGUicQocUmVsYXRpdmVEZW1hbmRDaGFuZ2VUeXBl",
-            "RW51bRIwCixSRUxBVElWRV9ERU1BTkRfQ0hBTkdFX1RZUEVfRU5VTV9VTlNQ",
-            "RUNJRklFRBAAEgoKBlNJTktFUhABEggKBEZMQVQQAhIJCgVSSVNFUhADImgK",
-            "DVRyYWZmaWNTb3VyY2UiVwoRVHJhZmZpY1NvdXJjZUVudW0SIwofVFJBRkZJ",
-            "Q19TT1VSQ0VfRU5VTV9VTlNQRUNJRklFRBAAEgsKB09SR0FOSUMQARIHCgNB",
-            "RFMQAhIHCgNBTEwQAzKQAgoNUmVwb3J0U2VydmljZRK1AQoGU2VhcmNoEjIu",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuU2VhcmNoUmVx",
-            "dWVzdBozLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLlNl",
-            "YXJjaFJlc3BvbnNlIkLaQQZwYXJlbnSC0+STAjMiLi9yZXBvcnRzL3YxL3tw",
-            "YXJlbnQ9YWNjb3VudHMvKn0vcmVwb3J0czpzZWFyY2g6ASoaR8pBGm1lcmNo",
-            "YW50YXBpLmdvb2dsZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jb250ZW50QvgBCidjb20uZ29vZ2xlLnNob3BwaW5nLm1l",
-            "cmNoYW50LnJlcG9ydHMudjFCDFJlcG9ydHNQcm90b1ABWkdjbG91ZC5nb29n",
-            "bGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50L3JlcG9ydHMvYXBpdjEvcmVw",
-            "b3J0c3BiO3JlcG9ydHNwYqoCI0dvb2dsZS5TaG9wcGluZy5NZXJjaGFudC5S",
-            "ZXBvcnRzLlYxygIjR29vZ2xlXFNob3BwaW5nXE1lcmNoYW50XFJlcG9ydHNc",
-            "VjHqAidHb29nbGU6OlNob3BwaW5nOjpNZXJjaGFudDo6UmVwb3J0czo6VjFi",
-            "BnByb3RvMw=="));
+            "FAoSX3JlcG9ydGluZ19jb250ZXh0QhcKFV9jbGlja19wb3RlbnRpYWxfcmFu",
+            "ayKBBgofUHJpY2VDb21wZXRpdGl2ZW5lc3NQcm9kdWN0VmlldxIgChNyZXBv",
+            "cnRfY291bnRyeV9jb2RlGAEgASgJSACIAQESDwoCaWQYAiABKAlIAYgBARIV",
+            "CghvZmZlcl9pZBgDIAEoCUgCiAEBEhIKBXRpdGxlGAQgASgJSAOIAQESEgoF",
+            "YnJhbmQYBSABKAlIBIgBARIYCgtjYXRlZ29yeV9sMRgGIAEoCUgFiAEBEhgK",
+            "C2NhdGVnb3J5X2wyGAcgASgJSAaIAQESGAoLY2F0ZWdvcnlfbDMYCCABKAlI",
+            "B4gBARIYCgtjYXRlZ29yeV9sNBgJIAEoCUgIiAEBEhgKC2NhdGVnb3J5X2w1",
+            "GAogASgJSAmIAQESHAoPcHJvZHVjdF90eXBlX2wxGAsgASgJSAqIAQESHAoP",
+            "cHJvZHVjdF90eXBlX2wyGAwgASgJSAuIAQESHAoPcHJvZHVjdF90eXBlX2wz",
+            "GA0gASgJSAyIAQESHAoPcHJvZHVjdF90eXBlX2w0GA4gASgJSA2IAQESHAoP",
+            "cHJvZHVjdF90eXBlX2w1GA8gASgJSA6IAQESKgoFcHJpY2UYECABKAsyGy5n",
+            "b29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRI0Cg9iZW5jaG1hcmtfcHJpY2UY",
+            "ESABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUIWChRfcmVwb3J0",
+            "X2NvdW50cnlfY29kZUIFCgNfaWRCCwoJX29mZmVyX2lkQggKBl90aXRsZUII",
+            "CgZfYnJhbmRCDgoMX2NhdGVnb3J5X2wxQg4KDF9jYXRlZ29yeV9sMkIOCgxf",
+            "Y2F0ZWdvcnlfbDNCDgoMX2NhdGVnb3J5X2w0Qg4KDF9jYXRlZ29yeV9sNUIS",
+            "ChBfcHJvZHVjdF90eXBlX2wxQhIKEF9wcm9kdWN0X3R5cGVfbDJCEgoQX3By",
+            "b2R1Y3RfdHlwZV9sM0ISChBfcHJvZHVjdF90eXBlX2w0QhIKEF9wcm9kdWN0",
+            "X3R5cGVfbDUigwkKGFByaWNlSW5zaWdodHNQcm9kdWN0VmlldxIPCgJpZBgB",
+            "IAEoCUgAiAEBEhUKCG9mZmVyX2lkGAIgASgJSAGIAQESEgoFdGl0bGUYAyAB",
+            "KAlIAogBARISCgVicmFuZBgEIAEoCUgDiAEBEhgKC2NhdGVnb3J5X2wxGAUg",
+            "ASgJSASIAQESGAoLY2F0ZWdvcnlfbDIYBiABKAlIBYgBARIYCgtjYXRlZ29y",
+            "eV9sMxgHIAEoCUgGiAEBEhgKC2NhdGVnb3J5X2w0GAggASgJSAeIAQESGAoL",
+            "Y2F0ZWdvcnlfbDUYCSABKAlICIgBARIcCg9wcm9kdWN0X3R5cGVfbDEYCiAB",
+            "KAlICYgBARIcCg9wcm9kdWN0X3R5cGVfbDIYCyABKAlICogBARIcCg9wcm9k",
+            "dWN0X3R5cGVfbDMYDCABKAlIC4gBARIcCg9wcm9kdWN0X3R5cGVfbDQYDSAB",
+            "KAlIDIgBARIcCg9wcm9kdWN0X3R5cGVfbDUYDiABKAlIDYgBARIqCgVwcmlj",
+            "ZRgPIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEjQKD3N1Z2dl",
+            "c3RlZF9wcmljZRgQIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNl",
+            "EjIKJXByZWRpY3RlZF9pbXByZXNzaW9uc19jaGFuZ2VfZnJhY3Rpb24YESAB",
+            "KAFIDogBARItCiBwcmVkaWN0ZWRfY2xpY2tzX2NoYW5nZV9mcmFjdGlvbhgS",
+            "IAEoAUgPiAEBEjIKJXByZWRpY3RlZF9jb252ZXJzaW9uc19jaGFuZ2VfZnJh",
+            "Y3Rpb24YEyABKAFIEIgBARJiCg1lZmZlY3RpdmVuZXNzGBYgASgOMksuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuUHJpY2VJbnNpZ2h0",
+            "c1Byb2R1Y3RWaWV3LkVmZmVjdGl2ZW5lc3MiTQoNRWZmZWN0aXZlbmVzcxId",
+            "ChlFRkZFQ1RJVkVORVNTX1VOU1BFQ0lGSUVEEAASBwoDTE9XEAESCgoGTUVE",
+            "SVVNEAISCAoESElHSBADQgUKA19pZEILCglfb2ZmZXJfaWRCCAoGX3RpdGxl",
+            "QggKBl9icmFuZEIOCgxfY2F0ZWdvcnlfbDFCDgoMX2NhdGVnb3J5X2wyQg4K",
+            "DF9jYXRlZ29yeV9sM0IOCgxfY2F0ZWdvcnlfbDRCDgoMX2NhdGVnb3J5X2w1",
+            "QhIKEF9wcm9kdWN0X3R5cGVfbDFCEgoQX3Byb2R1Y3RfdHlwZV9sMkISChBf",
+            "cHJvZHVjdF90eXBlX2wzQhIKEF9wcm9kdWN0X3R5cGVfbDRCEgoQX3Byb2R1",
+            "Y3RfdHlwZV9sNUIoCiZfcHJlZGljdGVkX2ltcHJlc3Npb25zX2NoYW5nZV9m",
+            "cmFjdGlvbkIjCiFfcHJlZGljdGVkX2NsaWNrc19jaGFuZ2VfZnJhY3Rpb25C",
+            "KAomX3ByZWRpY3RlZF9jb252ZXJzaW9uc19jaGFuZ2VfZnJhY3Rpb24i1wsK",
+            "HUJlc3RTZWxsZXJzUHJvZHVjdENsdXN0ZXJWaWV3EiYKC3JlcG9ydF9kYXRl",
+            "GAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRJtChJyZXBvcnRfZ3JhbnVsYXJp",
+            "dHkYAiABKA4yTC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52",
+            "MS5SZXBvcnRHcmFudWxhcml0eS5SZXBvcnRHcmFudWxhcml0eUVudW1IAIgB",
+            "ARIgChNyZXBvcnRfY291bnRyeV9jb2RlGAMgASgJSAGIAQESHwoScmVwb3J0",
+            "X2NhdGVnb3J5X2lkGAQgASgDSAKIAQESEgoFdGl0bGUYBiABKAlIA4gBARIS",
+            "CgVicmFuZBgHIAEoCUgEiAEBEhgKC2NhdGVnb3J5X2wxGAggASgJSAWIAQES",
+            "GAoLY2F0ZWdvcnlfbDIYCSABKAlIBogBARIYCgtjYXRlZ29yeV9sMxgKIAEo",
+            "CUgHiAEBEhgKC2NhdGVnb3J5X2w0GAsgASgJSAiIAQESGAoLY2F0ZWdvcnlf",
+            "bDUYDCABKAlICYgBARIVCg12YXJpYW50X2d0aW5zGA0gAygJEnEKEGludmVu",
+            "dG9yeV9zdGF0dXMYDiABKA4yUi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
+            "cmVwb3J0cy52MS5CZXN0U2VsbGVyc1Byb2R1Y3RDbHVzdGVyVmlldy5JbnZl",
+            "bnRvcnlTdGF0dXNICogBARJ3ChZicmFuZF9pbnZlbnRvcnlfc3RhdHVzGA8g",
+            "ASgOMlIuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9ydHMudjEuQmVz",
+            "dFNlbGxlcnNQcm9kdWN0Q2x1c3RlclZpZXcuSW52ZW50b3J5U3RhdHVzSAuI",
+            "AQESEQoEcmFuaxgQIAEoA0gMiAEBEhoKDXByZXZpb3VzX3JhbmsYESABKANI",
+            "DYgBARJkCg9yZWxhdGl2ZV9kZW1hbmQYEiABKA4yRi5nb29nbGUuc2hvcHBp",
+            "bmcubWVyY2hhbnQucmVwb3J0cy52MS5SZWxhdGl2ZURlbWFuZC5SZWxhdGl2",
+            "ZURlbWFuZEVudW1IDogBARJtChhwcmV2aW91c19yZWxhdGl2ZV9kZW1hbmQY",
+            "EyABKA4yRi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5S",
+            "ZWxhdGl2ZURlbWFuZC5SZWxhdGl2ZURlbWFuZEVudW1ID4gBARJ/ChZyZWxh",
+            "dGl2ZV9kZW1hbmRfY2hhbmdlGBQgASgOMlouZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LnJlcG9ydHMudjEuUmVsYXRpdmVEZW1hbmRDaGFuZ2VUeXBlLlJl",
+            "bGF0aXZlRGVtYW5kQ2hhbmdlVHlwZUVudW1IEIgBASJpCg9JbnZlbnRvcnlT",
+            "dGF0dXMSIAocSU5WRU5UT1JZX1NUQVRVU19VTlNQRUNJRklFRBAAEgwKCElO",
+            "X1NUT0NLEAESEAoMT1VUX09GX1NUT0NLEAISFAoQTk9UX0lOX0lOVkVOVE9S",
+            "WRADQhUKE19yZXBvcnRfZ3JhbnVsYXJpdHlCFgoUX3JlcG9ydF9jb3VudHJ5",
+            "X2NvZGVCFQoTX3JlcG9ydF9jYXRlZ29yeV9pZEIICgZfdGl0bGVCCAoGX2Jy",
+            "YW5kQg4KDF9jYXRlZ29yeV9sMUIOCgxfY2F0ZWdvcnlfbDJCDgoMX2NhdGVn",
+            "b3J5X2wzQg4KDF9jYXRlZ29yeV9sNEIOCgxfY2F0ZWdvcnlfbDVCEwoRX2lu",
+            "dmVudG9yeV9zdGF0dXNCGQoXX2JyYW5kX2ludmVudG9yeV9zdGF0dXNCBwoF",
+            "X3JhbmtCEAoOX3ByZXZpb3VzX3JhbmtCEgoQX3JlbGF0aXZlX2RlbWFuZEIb",
+            "ChlfcHJldmlvdXNfcmVsYXRpdmVfZGVtYW5kQhkKF19yZWxhdGl2ZV9kZW1h",
+            "bmRfY2hhbmdlIsAGChRCZXN0U2VsbGVyc0JyYW5kVmlldxImCgtyZXBvcnRf",
+            "ZGF0ZRgBIAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSbQoScmVwb3J0X2dyYW51",
+            "bGFyaXR5GAIgASgOMkwuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnJlcG9y",
+            "dHMudjEuUmVwb3J0R3JhbnVsYXJpdHkuUmVwb3J0R3JhbnVsYXJpdHlFbnVt",
+            "SACIAQESIAoTcmVwb3J0X2NvdW50cnlfY29kZRgDIAEoCUgBiAEBEh8KEnJl",
+            "cG9ydF9jYXRlZ29yeV9pZBgEIAEoA0gCiAEBEhIKBWJyYW5kGAYgASgJSAOI",
+            "AQESEQoEcmFuaxgHIAEoA0gEiAEBEhoKDXByZXZpb3VzX3JhbmsYCCABKANI",
+            "BYgBARJkCg9yZWxhdGl2ZV9kZW1hbmQYCSABKA4yRi5nb29nbGUuc2hvcHBp",
+            "bmcubWVyY2hhbnQucmVwb3J0cy52MS5SZWxhdGl2ZURlbWFuZC5SZWxhdGl2",
+            "ZURlbWFuZEVudW1IBogBARJtChhwcmV2aW91c19yZWxhdGl2ZV9kZW1hbmQY",
+            "CiABKA4yRi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5S",
+            "ZWxhdGl2ZURlbWFuZC5SZWxhdGl2ZURlbWFuZEVudW1IB4gBARJ/ChZyZWxh",
+            "dGl2ZV9kZW1hbmRfY2hhbmdlGAsgASgOMlouZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LnJlcG9ydHMudjEuUmVsYXRpdmVEZW1hbmRDaGFuZ2VUeXBlLlJl",
+            "bGF0aXZlRGVtYW5kQ2hhbmdlVHlwZUVudW1ICIgBAUIVChNfcmVwb3J0X2dy",
+            "YW51bGFyaXR5QhYKFF9yZXBvcnRfY291bnRyeV9jb2RlQhUKE19yZXBvcnRf",
+            "Y2F0ZWdvcnlfaWRCCAoGX2JyYW5kQgcKBV9yYW5rQhAKDl9wcmV2aW91c19y",
+            "YW5rQhIKEF9yZWxhdGl2ZV9kZW1hbmRCGwoZX3ByZXZpb3VzX3JlbGF0aXZl",
+            "X2RlbWFuZEIZChdfcmVsYXRpdmVfZGVtYW5kX2NoYW5nZSLfAQoZTm9uUHJv",
+            "ZHVjdFBlcmZvcm1hbmNlVmlldxIfCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5",
+            "cGUuRGF0ZRIfCgR3ZWVrGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRITCgZj",
+            "bGlja3MYAyABKANIAIgBARIYCgtpbXByZXNzaW9ucxgEIAEoA0gBiAEBEh8K",
+            "EmNsaWNrX3Rocm91Z2hfcmF0ZRgFIAEoAUgCiAEBQgkKB19jbGlja3NCDgoM",
+            "X2ltcHJlc3Npb25zQhUKE19jbGlja190aHJvdWdoX3JhdGUi/AQKI0NvbXBl",
+            "dGl0aXZlVmlzaWJpbGl0eUNvbXBldGl0b3JWaWV3Eh8KBGRhdGUYASABKAsy",
+            "ES5nb29nbGUudHlwZS5EYXRlEhMKBmRvbWFpbhgCIAEoCUgAiAEBEhsKDmlz",
+            "X3lvdXJfZG9tYWluGAMgASgISAGIAQESIAoTcmVwb3J0X2NvdW50cnlfY29k",
+            "ZRgEIAEoCUgCiAEBEh8KEnJlcG9ydF9jYXRlZ29yeV9pZBgFIAEoA0gDiAEB",
+            "EmEKDnRyYWZmaWNfc291cmNlGAYgASgOMkQuZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LnJlcG9ydHMudjEuVHJhZmZpY1NvdXJjZS5UcmFmZmljU291cmNl",
+            "RW51bUgEiAEBEhEKBHJhbmsYByABKANIBYgBARIeChFhZHNfb3JnYW5pY19y",
+            "YXRpbxgIIAEoAUgGiAEBEh4KEXBhZ2Vfb3ZlcmxhcF9yYXRlGAkgASgBSAeI",
+            "AQESIQoUaGlnaGVyX3Bvc2l0aW9uX3JhdGUYCiABKAFICIgBARIgChNyZWxh",
+            "dGl2ZV92aXNpYmlsaXR5GAsgASgBSAmIAQFCCQoHX2RvbWFpbkIRCg9faXNf",
+            "eW91cl9kb21haW5CFgoUX3JlcG9ydF9jb3VudHJ5X2NvZGVCFQoTX3JlcG9y",
+            "dF9jYXRlZ29yeV9pZEIRCg9fdHJhZmZpY19zb3VyY2VCBwoFX3JhbmtCFAoS",
+            "X2Fkc19vcmdhbmljX3JhdGlvQhQKEl9wYWdlX292ZXJsYXBfcmF0ZUIXChVf",
+            "aGlnaGVyX3Bvc2l0aW9uX3JhdGVCFgoUX3JlbGF0aXZlX3Zpc2liaWxpdHki",
+            "wwQKJENvbXBldGl0aXZlVmlzaWJpbGl0eVRvcE1lcmNoYW50VmlldxIfCgRk",
+            "YXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZRITCgZkb21haW4YAiABKAlI",
+            "AIgBARIbCg5pc195b3VyX2RvbWFpbhgDIAEoCEgBiAEBEiAKE3JlcG9ydF9j",
+            "b3VudHJ5X2NvZGUYBCABKAlIAogBARIfChJyZXBvcnRfY2F0ZWdvcnlfaWQY",
+            "BSABKANIA4gBARJhCg50cmFmZmljX3NvdXJjZRgGIAEoDjJELmdvb2dsZS5z",
+            "aG9wcGluZy5tZXJjaGFudC5yZXBvcnRzLnYxLlRyYWZmaWNTb3VyY2UuVHJh",
+            "ZmZpY1NvdXJjZUVudW1IBIgBARIRCgRyYW5rGAcgASgDSAWIAQESHgoRYWRz",
+            "X29yZ2FuaWNfcmF0aW8YCCABKAFIBogBARIeChFwYWdlX292ZXJsYXBfcmF0",
+            "ZRgJIAEoAUgHiAEBEiEKFGhpZ2hlcl9wb3NpdGlvbl9yYXRlGAogASgBSAiI",
+            "AQFCCQoHX2RvbWFpbkIRCg9faXNfeW91cl9kb21haW5CFgoUX3JlcG9ydF9j",
+            "b3VudHJ5X2NvZGVCFQoTX3JlcG9ydF9jYXRlZ29yeV9pZEIRCg9fdHJhZmZp",
+            "Y19zb3VyY2VCBwoFX3JhbmtCFAoSX2Fkc19vcmdhbmljX3JhdGlvQhQKEl9w",
+            "YWdlX292ZXJsYXBfcmF0ZUIXChVfaGlnaGVyX3Bvc2l0aW9uX3JhdGUi0wMK",
+            "IkNvbXBldGl0aXZlVmlzaWJpbGl0eUJlbmNobWFya1ZpZXcSHwoEZGF0ZRgB",
+            "IAEoCzIRLmdvb2dsZS50eXBlLkRhdGUSIAoTcmVwb3J0X2NvdW50cnlfY29k",
+            "ZRgCIAEoCUgAiAEBEh8KEnJlcG9ydF9jYXRlZ29yeV9pZBgDIAEoA0gBiAEB",
+            "EmEKDnRyYWZmaWNfc291cmNlGAQgASgOMkQuZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LnJlcG9ydHMudjEuVHJhZmZpY1NvdXJjZS5UcmFmZmljU291cmNl",
+            "RW51bUgCiAEBEikKHHlvdXJfZG9tYWluX3Zpc2liaWxpdHlfdHJlbmQYBSAB",
+            "KAFIA4gBARIwCiNjYXRlZ29yeV9iZW5jaG1hcmtfdmlzaWJpbGl0eV90cmVu",
+            "ZBgGIAEoAUgEiAEBQhYKFF9yZXBvcnRfY291bnRyeV9jb2RlQhUKE19yZXBv",
+            "cnRfY2F0ZWdvcnlfaWRCEQoPX3RyYWZmaWNfc291cmNlQh8KHV95b3VyX2Rv",
+            "bWFpbl92aXNpYmlsaXR5X3RyZW5kQiYKJF9jYXRlZ29yeV9iZW5jaG1hcmtf",
+            "dmlzaWJpbGl0eV90cmVuZCJlCg9NYXJrZXRpbmdNZXRob2QiUgoTTWFya2V0",
+            "aW5nTWV0aG9kRW51bRIlCiFNQVJLRVRJTkdfTUVUSE9EX0VOVU1fVU5TUEVD",
+            "SUZJRUQQABILCgdPUkdBTklDEAESBwoDQURTEAIiYQoJU3RvcmVUeXBlIlQK",
+            "DVN0b3JlVHlwZUVudW0SHwobU1RPUkVfVFlQRV9FTlVNX1VOU1BFQ0lGSUVE",
+            "EAASEAoMT05MSU5FX1NUT1JFEAESEAoMTE9DQUxfU1RPUkVTEAIibgoRUmVw",
+            "b3J0R3JhbnVsYXJpdHkiWQoVUmVwb3J0R3JhbnVsYXJpdHlFbnVtEicKI1JF",
+            "UE9SVF9HUkFOVUxBUklUWV9FTlVNX1VOU1BFQ0lGSUVEEAASCgoGV0VFS0xZ",
+            "EAESCwoHTU9OVEhMWRACIogBCg5SZWxhdGl2ZURlbWFuZCJ2ChJSZWxhdGl2",
+            "ZURlbWFuZEVudW0SJAogUkVMQVRJVkVfREVNQU5EX0VOVU1fVU5TUEVDSUZJ",
+            "RUQQABIMCghWRVJZX0xPVxAKEgcKA0xPVxAUEgoKBk1FRElVTRAeEggKBEhJ",
+            "R0gQKBINCglWRVJZX0hJR0gQMiKNAQoYUmVsYXRpdmVEZW1hbmRDaGFuZ2VU",
+            "eXBlInEKHFJlbGF0aXZlRGVtYW5kQ2hhbmdlVHlwZUVudW0SMAosUkVMQVRJ",
+            "VkVfREVNQU5EX0NIQU5HRV9UWVBFX0VOVU1fVU5TUEVDSUZJRUQQABIKCgZT",
+            "SU5LRVIQARIICgRGTEFUEAISCQoFUklTRVIQAyJoCg1UcmFmZmljU291cmNl",
+            "IlcKEVRyYWZmaWNTb3VyY2VFbnVtEiMKH1RSQUZGSUNfU09VUkNFX0VOVU1f",
+            "VU5TUEVDSUZJRUQQABILCgdPUkdBTklDEAESBwoDQURTEAISBwoDQUxMEAMy",
+            "kAIKDVJlcG9ydFNlcnZpY2UStQEKBlNlYXJjaBIyLmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5yZXBvcnRzLnYxLlNlYXJjaFJlcXVlc3QaMy5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucmVwb3J0cy52MS5TZWFyY2hSZXNwb25zZSJC",
+            "2kEGcGFyZW50gtPkkwIzIi4vcmVwb3J0cy92MS97cGFyZW50PWFjY291bnRz",
+            "Lyp9L3JlcG9ydHM6c2VhcmNoOgEqGkfKQRptZXJjaGFudGFwaS5nb29nbGVh",
+            "cGlzLmNvbdJBJ2h0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29u",
+            "dGVudEL4AQonY29tLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5yZXBvcnRz",
+            "LnYxQgxSZXBvcnRzUHJvdG9QAVpHY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9w",
+            "cGluZy9tZXJjaGFudC9yZXBvcnRzL2FwaXYxL3JlcG9ydHNwYjtyZXBvcnRz",
+            "cGKqAiNHb29nbGUuU2hvcHBpbmcuTWVyY2hhbnQuUmVwb3J0cy5WMcoCI0dv",
+            "b2dsZVxTaG9wcGluZ1xNZXJjaGFudFxSZXBvcnRzXFYx6gInR29vZ2xlOjpT",
+            "aG9wcGluZzo6TWVyY2hhbnQ6OlJlcG9ydHM6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.SearchRequest), global::Google.Shopping.Merchant.Reports.V1.SearchRequest.Parser, new[]{ "Parent", "Query", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.SearchResponse), global::Google.Shopping.Merchant.Reports.V1.SearchResponse.Parser, new[]{ "Results", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ReportRow), global::Google.Shopping.Merchant.Reports.V1.ReportRow.Parser, new[]{ "ProductPerformanceView", "NonProductPerformanceView", "ProductView", "PriceCompetitivenessProductView", "PriceInsightsProductView", "BestSellersProductClusterView", "BestSellersBrandView", "CompetitiveVisibilityCompetitorView", "CompetitiveVisibilityTopMerchantView", "CompetitiveVisibilityBenchmarkView" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductPerformanceView), global::Google.Shopping.Merchant.Reports.V1.ProductPerformanceView.Parser, new[]{ "MarketingMethod", "Date", "Week", "CustomerCountryCode", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "Clicks", "Impressions", "ClickThroughRate", "Conversions", "ConversionValue", "ConversionRate" }, new[]{ "MarketingMethod", "CustomerCountryCode", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "Clicks", "Impressions", "ClickThroughRate", "Conversions", "ConversionRate" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView), global::Google.Shopping.Merchant.Reports.V1.ProductView.Parser, new[]{ "Id", "Channel", "LanguageCode", "FeedLabel", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Price", "Condition", "Availability", "ShippingLabel", "Gtin", "ItemGroupId", "ThumbnailLink", "CreationTime", "ExpirationDate", "AggregatedReportingContextStatus", "ItemIssues", "ClickPotential", "ClickPotentialRank" }, new[]{ "Id", "Channel", "LanguageCode", "FeedLabel", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Condition", "Availability", "ShippingLabel", "ItemGroupId", "ThumbnailLink", "AggregatedReportingContextStatus", "ClickPotentialRank" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.AggregatedReportingContextStatus), typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ClickPotential) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Parser, new[]{ "Type", "Severity", "Resolution" }, new[]{ "Resolution" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueResolution) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueType), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueType.Parser, new[]{ "Code", "CanonicalAttribute" }, new[]{ "Code", "CanonicalAttribute" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Parser, new[]{ "SeverityPerReportingContext", "AggregatedSeverity" }, new[]{ "AggregatedSeverity" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.AggregatedIssueSeverity) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.IssueSeverityPerReportingContext), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.IssueSeverityPerReportingContext.Parser, new[]{ "ReportingContext", "DisapprovedCountries", "DemotedCountries" }, new[]{ "ReportingContext" }, null, null, null)})})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductPerformanceView), global::Google.Shopping.Merchant.Reports.V1.ProductPerformanceView.Parser, new[]{ "MarketingMethod", "Date", "Week", "CustomerCountryCode", "StoreType", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "Clicks", "Impressions", "ClickThroughRate", "Conversions", "ConversionValue", "ConversionRate" }, new[]{ "MarketingMethod", "CustomerCountryCode", "StoreType", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "Clicks", "Impressions", "ClickThroughRate", "Conversions", "ConversionRate" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView), global::Google.Shopping.Merchant.Reports.V1.ProductView.Parser, new[]{ "Id", "Channel", "LanguageCode", "FeedLabel", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Price", "Condition", "Availability", "ShippingLabel", "Gtin", "ItemGroupId", "ThumbnailLink", "CreationTime", "ExpirationDate", "AggregatedReportingContextStatus", "StatusPerReportingContext", "ReportingContext", "ItemIssues", "ClickPotential", "ClickPotentialRank" }, new[]{ "Id", "Channel", "LanguageCode", "FeedLabel", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Condition", "Availability", "ShippingLabel", "ItemGroupId", "ThumbnailLink", "AggregatedReportingContextStatus", "ReportingContext", "ClickPotentialRank" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.AggregatedReportingContextStatus), typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ClickPotential) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Parser, new[]{ "Type", "Severity", "Resolution" }, new[]{ "Resolution" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueResolution) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueType), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueType.Parser, new[]{ "Code", "CanonicalAttribute" }, new[]{ "Code", "CanonicalAttribute" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Parser, new[]{ "SeverityPerReportingContext", "AggregatedSeverity" }, new[]{ "AggregatedSeverity" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.AggregatedIssueSeverity) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.IssueSeverityPerReportingContext), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.IssueSeverityPerReportingContext.Parser, new[]{ "ReportingContext", "DisapprovedCountries", "DemotedCountries" }, new[]{ "ReportingContext" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.StatusPerReportingContext), global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.StatusPerReportingContext.Parser, new[]{ "ReportingContext", "ApprovedCountries", "DisapprovedCountries", "PendingCountries" }, new[]{ "ReportingContext" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.PriceCompetitivenessProductView), global::Google.Shopping.Merchant.Reports.V1.PriceCompetitivenessProductView.Parser, new[]{ "ReportCountryCode", "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Price", "BenchmarkPrice" }, new[]{ "ReportCountryCode", "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.PriceInsightsProductView), global::Google.Shopping.Merchant.Reports.V1.PriceInsightsProductView.Parser, new[]{ "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "Price", "SuggestedPrice", "PredictedImpressionsChangeFraction", "PredictedClicksChangeFraction", "PredictedConversionsChangeFraction", "Effectiveness" }, new[]{ "Id", "OfferId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "ProductTypeL1", "ProductTypeL2", "ProductTypeL3", "ProductTypeL4", "ProductTypeL5", "PredictedImpressionsChangeFraction", "PredictedClicksChangeFraction", "PredictedConversionsChangeFraction" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.PriceInsightsProductView.Types.Effectiveness) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.BestSellersProductClusterView), global::Google.Shopping.Merchant.Reports.V1.BestSellersProductClusterView.Parser, new[]{ "ReportDate", "ReportGranularity", "ReportCountryCode", "ReportCategoryId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "VariantGtins", "InventoryStatus", "BrandInventoryStatus", "Rank", "PreviousRank", "RelativeDemand", "PreviousRelativeDemand", "RelativeDemandChange" }, new[]{ "ReportGranularity", "ReportCountryCode", "ReportCategoryId", "Title", "Brand", "CategoryL1", "CategoryL2", "CategoryL3", "CategoryL4", "CategoryL5", "InventoryStatus", "BrandInventoryStatus", "Rank", "PreviousRank", "RelativeDemand", "PreviousRelativeDemand", "RelativeDemandChange" }, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.BestSellersProductClusterView.Types.InventoryStatus) }, null, null),
@@ -336,6 +351,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.CompetitiveVisibilityTopMerchantView), global::Google.Shopping.Merchant.Reports.V1.CompetitiveVisibilityTopMerchantView.Parser, new[]{ "Date", "Domain", "IsYourDomain", "ReportCountryCode", "ReportCategoryId", "TrafficSource", "Rank", "AdsOrganicRatio", "PageOverlapRate", "HigherPositionRate" }, new[]{ "Domain", "IsYourDomain", "ReportCountryCode", "ReportCategoryId", "TrafficSource", "Rank", "AdsOrganicRatio", "PageOverlapRate", "HigherPositionRate" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.CompetitiveVisibilityBenchmarkView), global::Google.Shopping.Merchant.Reports.V1.CompetitiveVisibilityBenchmarkView.Parser, new[]{ "Date", "ReportCountryCode", "ReportCategoryId", "TrafficSource", "YourDomainVisibilityTrend", "CategoryBenchmarkVisibilityTrend" }, new[]{ "ReportCountryCode", "ReportCategoryId", "TrafficSource", "YourDomainVisibilityTrend", "CategoryBenchmarkVisibilityTrend" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.MarketingMethod), global::Google.Shopping.Merchant.Reports.V1.MarketingMethod.Parser, null, null, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.MarketingMethod.Types.MarketingMethodEnum) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.StoreType), global::Google.Shopping.Merchant.Reports.V1.StoreType.Parser, null, null, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.StoreType.Types.StoreTypeEnum) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.ReportGranularity), global::Google.Shopping.Merchant.Reports.V1.ReportGranularity.Parser, null, null, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.ReportGranularity.Types.ReportGranularityEnum) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.RelativeDemand), global::Google.Shopping.Merchant.Reports.V1.RelativeDemand.Parser, null, null, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.RelativeDemand.Types.RelativeDemandEnum) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Reports.V1.RelativeDemandChangeType), global::Google.Shopping.Merchant.Reports.V1.RelativeDemandChangeType.Parser, null, null, new[]{ typeof(global::Google.Shopping.Merchant.Reports.V1.RelativeDemandChangeType.Types.RelativeDemandChangeTypeEnum) }, null, null),
@@ -422,7 +438,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     /// For details on how to construct your query, see the [Query Language
     /// guide](/merchant/api/guides/reports/query-language). For the full list of
     /// available tables and fields, see the [Available
-    /// fields](/merchant/api/reference/rest/reports_v1/accounts.reports).
+    /// fields][google.shopping.merchant.reports.v1.ReportRow].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -438,7 +454,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     private int pageSize_;
     /// <summary>
     /// Optional. Number of `ReportRows` to retrieve in a single page. Defaults to
-    /// 1000. Values above 5000 are coerced to 5000.
+    /// 1000. Values above 100,000 are coerced to 100,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1630,6 +1646,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       date_ = other.date_ != null ? other.date_.Clone() : null;
       week_ = other.week_ != null ? other.week_.Clone() : null;
       customerCountryCode_ = other.customerCountryCode_;
+      storeType_ = other.storeType_;
       offerId_ = other.offerId_;
       title_ = other.title_;
       brand_ = other.brand_;
@@ -1757,6 +1774,40 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCustomerCountryCode() {
       customerCountryCode_ = null;
+    }
+
+    /// <summary>Field number for the "store_type" field.</summary>
+    public const int StoreTypeFieldNumber = 32;
+    private readonly static global::Google.Shopping.Merchant.Reports.V1.StoreType.Types.StoreTypeEnum StoreTypeDefaultValue = global::Google.Shopping.Merchant.Reports.V1.StoreType.Types.StoreTypeEnum.Unspecified;
+
+    private global::Google.Shopping.Merchant.Reports.V1.StoreType.Types.StoreTypeEnum storeType_;
+    /// <summary>
+    /// Store type to which metrics apply. Can be `ONLINE_STORE` or
+    /// `LOCAL_STORES`. Segment.
+    ///
+    /// For `LOCAL_STORES` store type, further segmentation by a specific store
+    /// is not available.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Reports.V1.StoreType.Types.StoreTypeEnum StoreType {
+      get { if ((_hasBits0 & 64) != 0) { return storeType_; } else { return StoreTypeDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        storeType_ = value;
+      }
+    }
+    /// <summary>Gets whether the "store_type" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStoreType {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "store_type" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStoreType() {
+      _hasBits0 &= ~64;
     }
 
     /// <summary>Field number for the "offer_id" field.</summary>
@@ -2498,6 +2549,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       if (!object.Equals(Date, other.Date)) return false;
       if (!object.Equals(Week, other.Week)) return false;
       if (CustomerCountryCode != other.CustomerCountryCode) return false;
+      if (StoreType != other.StoreType) return false;
       if (OfferId != other.OfferId) return false;
       if (Title != other.Title) return false;
       if (Brand != other.Brand) return false;
@@ -2533,6 +2585,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       if (date_ != null) hash ^= Date.GetHashCode();
       if (week_ != null) hash ^= Week.GetHashCode();
       if (HasCustomerCountryCode) hash ^= CustomerCountryCode.GetHashCode();
+      if (HasStoreType) hash ^= StoreType.GetHashCode();
       if (HasOfferId) hash ^= OfferId.GetHashCode();
       if (HasTitle) hash ^= Title.GetHashCode();
       if (HasBrand) hash ^= Brand.GetHashCode();
@@ -2687,6 +2740,10 @@ namespace Google.Shopping.Merchant.Reports.V1 {
         output.WriteRawTag(225, 1);
         output.WriteDouble(ConversionRate);
       }
+      if (HasStoreType) {
+        output.WriteRawTag(128, 2);
+        output.WriteEnum((int) StoreType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2809,6 +2866,10 @@ namespace Google.Shopping.Merchant.Reports.V1 {
         output.WriteRawTag(225, 1);
         output.WriteDouble(ConversionRate);
       }
+      if (HasStoreType) {
+        output.WriteRawTag(128, 2);
+        output.WriteEnum((int) StoreType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2830,6 +2891,9 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       }
       if (HasCustomerCountryCode) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CustomerCountryCode);
+      }
+      if (HasStoreType) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) StoreType);
       }
       if (HasOfferId) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(OfferId);
@@ -2932,6 +2996,9 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       }
       if (other.HasCustomerCountryCode) {
         CustomerCountryCode = other.CustomerCountryCode;
+      }
+      if (other.HasStoreType) {
+        StoreType = other.StoreType;
       }
       if (other.HasOfferId) {
         OfferId = other.OfferId;
@@ -3148,6 +3215,10 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             ConversionRate = input.ReadDouble();
             break;
           }
+          case 256: {
+            StoreType = (global::Google.Shopping.Merchant.Reports.V1.StoreType.Types.StoreTypeEnum) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -3288,6 +3359,10 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             ConversionRate = input.ReadDouble();
             break;
           }
+          case 256: {
+            StoreType = (global::Google.Shopping.Merchant.Reports.V1.StoreType.Types.StoreTypeEnum) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -3298,12 +3373,13 @@ namespace Google.Shopping.Merchant.Reports.V1 {
   /// <summary>
   /// Fields available for query in `product_view` table.
   ///
-  /// Products in the current inventory. Products in this table are the same as in
-  /// Products sub-API but not all product attributes from Products sub-API are
-  /// available for query in this table. In contrast to Products sub-API, this
-  /// table allows to filter the returned list of products by product attributes.
-  /// To retrieve a single product by `id` or list all products, Products sub-API
-  /// should be used.
+  /// Products in the current inventory. Products in this table are the
+  /// same as a [Product resource in Products
+  /// sub-API](https://developers.google.com/merchant/api/reference/rest/products_v1/accounts.products)
+  /// but not all product attributes from Products sub-API are available for query
+  /// in this table. In contrast to Products sub-API, this table allows to filter
+  /// the returned list of products by product attributes. To retrieve a single
+  /// product by `id` or list all products, Products sub-API should be used.
   ///
   /// Values are only set for fields requested explicitly in the request's search
   /// query.
@@ -3372,6 +3448,8 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       creationTime_ = other.creationTime_ != null ? other.creationTime_.Clone() : null;
       expirationDate_ = other.expirationDate_ != null ? other.expirationDate_.Clone() : null;
       aggregatedReportingContextStatus_ = other.aggregatedReportingContextStatus_;
+      statusPerReportingContext_ = other.statusPerReportingContext_.Clone();
+      reportingContext_ = other.reportingContext_;
       itemIssues_ = other.itemIssues_.Clone();
       clickPotential_ = other.clickPotential_;
       clickPotentialRank_ = other.clickPotentialRank_;
@@ -4108,7 +4186,10 @@ namespace Google.Shopping.Merchant.Reports.V1 {
 
     private global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.AggregatedReportingContextStatus aggregatedReportingContextStatus_;
     /// <summary>
-    /// Aggregated status.
+    /// Aggregated status across all reporting contexts.
+    ///
+    /// Reporting contexts included in the computation of the aggregated status can
+    /// be restricted using a filter on the `reporting_context` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4130,6 +4211,66 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAggregatedReportingContextStatus() {
       _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "status_per_reporting_context" field.</summary>
+    public const int StatusPerReportingContextFieldNumber = 32;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.StatusPerReportingContext> _repeated_statusPerReportingContext_codec
+        = pb::FieldCodec.ForMessage(258, global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.StatusPerReportingContext.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.StatusPerReportingContext> statusPerReportingContext_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.StatusPerReportingContext>();
+    /// <summary>
+    /// Detailed product status per reporting context.
+    ///
+    /// Reporting contexts included in this list can be restricted using a filter
+    /// on the `reporting_context` field.
+    ///
+    /// Equivalent to
+    /// [`ProductStatus.destination_statuses`][google.shopping.merchant.products.v1.ProductStatus]
+    /// in Products API.
+    ///
+    /// **This field cannot be used for sorting or filtering the results.**
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.StatusPerReportingContext> StatusPerReportingContext {
+      get { return statusPerReportingContext_; }
+    }
+
+    /// <summary>Field number for the "reporting_context" field.</summary>
+    public const int ReportingContextFieldNumber = 33;
+    private readonly static global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum ReportingContextDefaultValue = global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum.Unspecified;
+
+    private global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum reportingContext_;
+    /// <summary>
+    /// Reporting context to restrict the query to.
+    ///
+    /// Restricts the reporting contexts returned in `status_per_reporting_context`
+    /// and `item_issues`, and used to compute
+    /// `aggregated_reporting_context_status`.
+    ///
+    /// **This field can only be used in the `WHERE` clause and cannot be selected
+    /// in the `SELECT` clause.**
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum ReportingContext {
+      get { if ((_hasBits0 & 8) != 0) { return reportingContext_; } else { return ReportingContextDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        reportingContext_ = value;
+      }
+    }
+    /// <summary>Gets whether the "reporting_context" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReportingContext {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "reporting_context" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReportingContext() {
+      _hasBits0 &= ~8;
     }
 
     /// <summary>Field number for the "item_issues" field.</summary>
@@ -4174,9 +4315,8 @@ namespace Google.Shopping.Merchant.Reports.V1 {
 
     private long clickPotentialRank_;
     /// <summary>
-    /// Rank of the product based on its click potential. A product with
-    /// `click_potential_rank` 1 has the highest click potential among the
-    /// merchant's products that fulfill the search query conditions.
+    /// Normalized click potential of the product. Values range from 1 to 1000,
+    /// where 1 is the highest click potential and 1000 is the theoretical lowest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4242,6 +4382,8 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       if (!object.Equals(CreationTime, other.CreationTime)) return false;
       if (!object.Equals(ExpirationDate, other.ExpirationDate)) return false;
       if (AggregatedReportingContextStatus != other.AggregatedReportingContextStatus) return false;
+      if(!statusPerReportingContext_.Equals(other.statusPerReportingContext_)) return false;
+      if (ReportingContext != other.ReportingContext) return false;
       if(!itemIssues_.Equals(other.itemIssues_)) return false;
       if (ClickPotential != other.ClickPotential) return false;
       if (ClickPotentialRank != other.ClickPotentialRank) return false;
@@ -4279,6 +4421,8 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       if (creationTime_ != null) hash ^= CreationTime.GetHashCode();
       if (expirationDate_ != null) hash ^= ExpirationDate.GetHashCode();
       if (HasAggregatedReportingContextStatus) hash ^= AggregatedReportingContextStatus.GetHashCode();
+      hash ^= statusPerReportingContext_.GetHashCode();
+      if (HasReportingContext) hash ^= ReportingContext.GetHashCode();
       hash ^= itemIssues_.GetHashCode();
       if (ClickPotential != global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ClickPotential.Unspecified) hash ^= ClickPotential.GetHashCode();
       if (HasClickPotentialRank) hash ^= ClickPotentialRank.GetHashCode();
@@ -4414,6 +4558,11 @@ namespace Google.Shopping.Merchant.Reports.V1 {
         output.WriteRawTag(240, 1);
         output.WriteInt64(ClickPotentialRank);
       }
+      statusPerReportingContext_.WriteTo(output, _repeated_statusPerReportingContext_codec);
+      if (HasReportingContext) {
+        output.WriteRawTag(136, 2);
+        output.WriteEnum((int) ReportingContext);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4538,6 +4687,11 @@ namespace Google.Shopping.Merchant.Reports.V1 {
         output.WriteRawTag(240, 1);
         output.WriteInt64(ClickPotentialRank);
       }
+      statusPerReportingContext_.WriteTo(ref output, _repeated_statusPerReportingContext_codec);
+      if (HasReportingContext) {
+        output.WriteRawTag(136, 2);
+        output.WriteEnum((int) ReportingContext);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4626,6 +4780,10 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       }
       if (HasAggregatedReportingContextStatus) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) AggregatedReportingContextStatus);
+      }
+      size += statusPerReportingContext_.CalculateSize(_repeated_statusPerReportingContext_codec);
+      if (HasReportingContext) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ReportingContext);
       }
       size += itemIssues_.CalculateSize(_repeated_itemIssues_codec);
       if (ClickPotential != global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ClickPotential.Unspecified) {
@@ -4733,6 +4891,10 @@ namespace Google.Shopping.Merchant.Reports.V1 {
       }
       if (other.HasAggregatedReportingContextStatus) {
         AggregatedReportingContextStatus = other.AggregatedReportingContextStatus;
+      }
+      statusPerReportingContext_.Add(other.statusPerReportingContext_);
+      if (other.HasReportingContext) {
+        ReportingContext = other.ReportingContext;
       }
       itemIssues_.Add(other.itemIssues_);
       if (other.ClickPotential != global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ClickPotential.Unspecified) {
@@ -4889,6 +5051,14 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             ClickPotentialRank = input.ReadInt64();
             break;
           }
+          case 258: {
+            statusPerReportingContext_.AddEntriesFrom(input, _repeated_statusPerReportingContext_codec);
+            break;
+          }
+          case 264: {
+            ReportingContext = (global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -5037,6 +5207,14 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             ClickPotentialRank = input.ReadInt64();
             break;
           }
+          case 258: {
+            statusPerReportingContext_.AddEntriesFrom(ref input, _repeated_statusPerReportingContext_codec);
+            break;
+          }
+          case 264: {
+            ReportingContext = (global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -5049,6 +5227,9 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     public static partial class Types {
       /// <summary>
       /// Status of the product aggregated for all reporting contexts.
+      ///
+      /// Reporting contexts included in the computation of the aggregated status can
+      /// be restricted using a filter on the `reporting_context` field.
       ///
       /// Here's an example of how the aggregated status is computed:
       ///
@@ -5066,19 +5247,21 @@ namespace Google.Shopping.Merchant.Reports.V1 {
         /// </summary>
         [pbr::OriginalName("AGGREGATED_REPORTING_CONTEXT_STATUS_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Product is not eligible or is disapproved for all reporting contexts.
+        /// Product is not eligible or is disapproved for all reporting contexts and
+        /// countries.
         /// </summary>
         [pbr::OriginalName("NOT_ELIGIBLE_OR_DISAPPROVED")] NotEligibleOrDisapproved = 1,
         /// <summary>
-        /// Product's status is pending in all reporting contexts.
+        /// Product's status is pending in all reporting contexts and countries.
         /// </summary>
         [pbr::OriginalName("PENDING")] Pending = 2,
         /// <summary>
-        /// Product is eligible for some (but not all) reporting contexts.
+        /// Product is eligible for some (but not all) reporting contexts and
+        /// countries.
         /// </summary>
         [pbr::OriginalName("ELIGIBLE_LIMITED")] EligibleLimited = 3,
         /// <summary>
-        /// Product is eligible for all reporting contexts.
+        /// Product is eligible for all reporting contexts and countries.
         /// </summary>
         [pbr::OriginalName("ELIGIBLE")] Eligible = 4,
       }
@@ -5786,6 +5969,9 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.IssueSeverityPerReportingContext> severityPerReportingContext_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.IssueSeverityPerReportingContext>();
             /// <summary>
             /// Issue severity per reporting context.
+            ///
+            /// Reporting contexts included in this list can be restricted using a
+            /// filter on the `reporting_context` field.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5800,6 +5986,10 @@ namespace Google.Shopping.Merchant.Reports.V1 {
             private global::Google.Shopping.Merchant.Reports.V1.ProductView.Types.ItemIssue.Types.ItemIssueSeverity.Types.AggregatedIssueSeverity aggregatedSeverity_;
             /// <summary>
             /// Aggregated severity of the issue for all reporting contexts it affects.
+            ///
+            /// Reporting contexts included in the computation of the aggregated
+            /// severity can be restricted using a filter on the `reporting_context`
+            /// field.
             ///
             /// **This field can be used for filtering the results.**
             /// </summary>
@@ -6293,6 +6483,324 @@ namespace Google.Shopping.Merchant.Reports.V1 {
 
         }
         #endregion
+
+      }
+
+      /// <summary>
+      /// Status of the product for a specific reporting context.
+      ///
+      /// Equivalent to
+      /// [`DestinationStatus`][google.shopping.merchant.products.v1.ProductStatus.DestinationStatus]
+      /// in Products API.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class StatusPerReportingContext : pb::IMessage<StatusPerReportingContext>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StatusPerReportingContext> _parser = new pb::MessageParser<StatusPerReportingContext>(() => new StatusPerReportingContext());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StatusPerReportingContext> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Reports.V1.ProductView.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusPerReportingContext() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusPerReportingContext(StatusPerReportingContext other) : this() {
+          _hasBits0 = other._hasBits0;
+          reportingContext_ = other.reportingContext_;
+          approvedCountries_ = other.approvedCountries_.Clone();
+          disapprovedCountries_ = other.disapprovedCountries_.Clone();
+          pendingCountries_ = other.pendingCountries_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StatusPerReportingContext Clone() {
+          return new StatusPerReportingContext(this);
+        }
+
+        /// <summary>Field number for the "reporting_context" field.</summary>
+        public const int ReportingContextFieldNumber = 1;
+        private readonly static global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum ReportingContextDefaultValue = global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum.Unspecified;
+
+        private global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum reportingContext_;
+        /// <summary>
+        /// Reporting context the status applies to.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum ReportingContext {
+          get { if ((_hasBits0 & 1) != 0) { return reportingContext_; } else { return ReportingContextDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            reportingContext_ = value;
+          }
+        }
+        /// <summary>Gets whether the "reporting_context" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasReportingContext {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "reporting_context" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearReportingContext() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "approved_countries" field.</summary>
+        public const int ApprovedCountriesFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_approvedCountries_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> approvedCountries_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// List of approved countries in the reporting context, represented in
+        /// [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for
+        /// example, `US`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ApprovedCountries {
+          get { return approvedCountries_; }
+        }
+
+        /// <summary>Field number for the "disapproved_countries" field.</summary>
+        public const int DisapprovedCountriesFieldNumber = 3;
+        private static readonly pb::FieldCodec<string> _repeated_disapprovedCountries_codec
+            = pb::FieldCodec.ForString(26);
+        private readonly pbc::RepeatedField<string> disapprovedCountries_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// List of disapproved countries in the reporting context, represented in
+        /// [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for
+        /// example, `US`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> DisapprovedCountries {
+          get { return disapprovedCountries_; }
+        }
+
+        /// <summary>Field number for the "pending_countries" field.</summary>
+        public const int PendingCountriesFieldNumber = 4;
+        private static readonly pb::FieldCodec<string> _repeated_pendingCountries_codec
+            = pb::FieldCodec.ForString(34);
+        private readonly pbc::RepeatedField<string> pendingCountries_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// List of pending countries in the reporting context, represented in
+        /// [ISO 3166](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2) format, for
+        /// example, `US`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> PendingCountries {
+          get { return pendingCountries_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StatusPerReportingContext);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StatusPerReportingContext other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ReportingContext != other.ReportingContext) return false;
+          if(!approvedCountries_.Equals(other.approvedCountries_)) return false;
+          if(!disapprovedCountries_.Equals(other.disapprovedCountries_)) return false;
+          if(!pendingCountries_.Equals(other.pendingCountries_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasReportingContext) hash ^= ReportingContext.GetHashCode();
+          hash ^= approvedCountries_.GetHashCode();
+          hash ^= disapprovedCountries_.GetHashCode();
+          hash ^= pendingCountries_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasReportingContext) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ReportingContext);
+          }
+          approvedCountries_.WriteTo(output, _repeated_approvedCountries_codec);
+          disapprovedCountries_.WriteTo(output, _repeated_disapprovedCountries_codec);
+          pendingCountries_.WriteTo(output, _repeated_pendingCountries_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasReportingContext) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) ReportingContext);
+          }
+          approvedCountries_.WriteTo(ref output, _repeated_approvedCountries_codec);
+          disapprovedCountries_.WriteTo(ref output, _repeated_disapprovedCountries_codec);
+          pendingCountries_.WriteTo(ref output, _repeated_pendingCountries_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasReportingContext) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReportingContext);
+          }
+          size += approvedCountries_.CalculateSize(_repeated_approvedCountries_codec);
+          size += disapprovedCountries_.CalculateSize(_repeated_disapprovedCountries_codec);
+          size += pendingCountries_.CalculateSize(_repeated_pendingCountries_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StatusPerReportingContext other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasReportingContext) {
+            ReportingContext = other.ReportingContext;
+          }
+          approvedCountries_.Add(other.approvedCountries_);
+          disapprovedCountries_.Add(other.disapprovedCountries_);
+          pendingCountries_.Add(other.pendingCountries_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                ReportingContext = (global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                approvedCountries_.AddEntriesFrom(input, _repeated_approvedCountries_codec);
+                break;
+              }
+              case 26: {
+                disapprovedCountries_.AddEntriesFrom(input, _repeated_disapprovedCountries_codec);
+                break;
+              }
+              case 34: {
+                pendingCountries_.AddEntriesFrom(input, _repeated_pendingCountries_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                ReportingContext = (global::Google.Shopping.Type.ReportingContext.Types.ReportingContextEnum) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                approvedCountries_.AddEntriesFrom(ref input, _repeated_approvedCountries_codec);
+                break;
+              }
+              case 26: {
+                disapprovedCountries_.AddEntriesFrom(ref input, _repeated_disapprovedCountries_codec);
+                break;
+              }
+              case 34: {
+                pendingCountries_.AddEntriesFrom(ref input, _repeated_pendingCountries_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -13398,6 +13906,196 @@ namespace Google.Shopping.Merchant.Reports.V1 {
   }
 
   /// <summary>
+  /// Store where the product is sold (online versus local stores).
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class StoreType : pb::IMessage<StoreType>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StoreType> _parser = new pb::MessageParser<StoreType>(() => new StoreType());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StoreType> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StoreType() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StoreType(StoreType other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StoreType Clone() {
+      return new StoreType(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StoreType);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StoreType other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StoreType other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the StoreType message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Store types.
+      /// </summary>
+      public enum StoreTypeEnum {
+        /// <summary>
+        /// Not specified.
+        /// </summary>
+        [pbr::OriginalName("STORE_TYPE_ENUM_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Online store.
+        /// </summary>
+        [pbr::OriginalName("ONLINE_STORE")] OnlineStore = 1,
+        /// <summary>
+        /// Local (physical) stores.
+        /// </summary>
+        [pbr::OriginalName("LOCAL_STORES")] LocalStores = 2,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Granularity of the Best sellers report. Best sellers reports are computed
   /// over a week and a month timeframe.
   /// </summary>
@@ -13416,7 +14114,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13606,7 +14304,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13814,7 +14512,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14008,7 +14706,7 @@ namespace Google.Shopping.Merchant.Reports.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Shopping.Merchant.Reports.V1.ReportsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
