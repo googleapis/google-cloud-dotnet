@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.33.0, released 2026-04-27
+
+### New features
+
+- Add Editions field to Instance
+
 ## Version 3.32.0, released 2026-03-30
 
 ### New features
