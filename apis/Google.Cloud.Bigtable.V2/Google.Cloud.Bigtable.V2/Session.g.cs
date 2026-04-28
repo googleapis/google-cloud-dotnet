@@ -193,22 +193,21 @@ namespace Google.Cloud.Bigtable.V2 {
             "KAsyJi5nb29nbGUuYmlndGFibGUudjIuT3BlblNlc3Npb25SZXF1ZXN0EkgK",
             "CG1ldGFkYXRhGAIgAygLMjEuZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25S",
             "ZWZyZXNoQ29uZmlnLk1ldGFkYXRhQgPgQQMaMAoITWV0YWRhdGESEAoDa2V5",
-            "GAEgASgJQgPgQQMSEgoFdmFsdWUYAiABKAxCA+BBAyqjAQoLU2Vzc2lvblR5",
+            "GAEgASgJQgPgQQMSEgoFdmFsdWUYAiABKAxCA+BBAyqbAQoLU2Vzc2lvblR5",
             "cGUSFgoSU0VTU0lPTl9UWVBFX1VOU0VUEAASFgoSU0VTU0lPTl9UWVBFX1RB",
             "QkxFEAESIAocU0VTU0lPTl9UWVBFX0FVVEhPUklaRURfVklFVxACEiIKHlNF",
-            "U1NJT05fVFlQRV9NQVRFUklBTElaRURfVklFVxADEh4KEVNFU1NJT05fVFlQ",
-            "RV9URVNUEP///////////wE6XgoRb3Blbl9zZXNzaW9uX3R5cGUSHy5nb29n",
-            "bGUucHJvdG9idWYuTWVzc2FnZU9wdGlvbnMYqtidQiABKA4yHy5nb29nbGUu",
-            "YmlndGFibGUudjIuU2Vzc2lvblR5cGU6XgoRdnJwY19zZXNzaW9uX3R5cGUS",
-            "Hy5nb29nbGUucHJvdG9idWYuTWVzc2FnZU9wdGlvbnMY1d2dQiADKA4yHy5n",
-            "b29nbGUuYmlndGFibGUudjIuU2Vzc2lvblR5cGU6XAoQcnBjX3Nlc3Npb25f",
-            "dHlwZRIeLmdvb2dsZS5wcm90b2J1Zi5NZXRob2RPcHRpb25zGITa5EEgASgO",
-            "Mh8uZ29vZ2xlLmJpZ3RhYmxlLnYyLlNlc3Npb25UeXBlQrYBChZjb20uZ29v",
-            "Z2xlLmJpZ3RhYmxlLnYyQgxTZXNzaW9uUHJvdG9QAVo4Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9iaWd0YWJsZS9hcGl2Mi9iaWd0YWJsZXBiO2JpZ3RhYmxlcGKq",
-            "AhhHb29nbGUuQ2xvdWQuQmlndGFibGUuVjLKAhhHb29nbGVcQ2xvdWRcQmln",
-            "dGFibGVcVjLqAhtHb29nbGU6OkNsb3VkOjpCaWd0YWJsZTo6VjJiBnByb3Rv",
-            "Mw=="));
+            "U1NJT05fVFlQRV9NQVRFUklBTElaRURfVklFVxADEhYKEVNFU1NJT05fVFlQ",
+            "RV9URVNUEI9OOl4KEW9wZW5fc2Vzc2lvbl90eXBlEh8uZ29vZ2xlLnByb3Rv",
+            "YnVmLk1lc3NhZ2VPcHRpb25zGKrYnUIgASgOMh8uZ29vZ2xlLmJpZ3RhYmxl",
+            "LnYyLlNlc3Npb25UeXBlOl4KEXZycGNfc2Vzc2lvbl90eXBlEh8uZ29vZ2xl",
+            "LnByb3RvYnVmLk1lc3NhZ2VPcHRpb25zGNXdnUIgAygOMh8uZ29vZ2xlLmJp",
+            "Z3RhYmxlLnYyLlNlc3Npb25UeXBlOlwKEHJwY19zZXNzaW9uX3R5cGUSHi5n",
+            "b29nbGUucHJvdG9idWYuTWV0aG9kT3B0aW9ucxiE2uRBIAEoDjIfLmdvb2ds",
+            "ZS5iaWd0YWJsZS52Mi5TZXNzaW9uVHlwZUK2AQoWY29tLmdvb2dsZS5iaWd0",
+            "YWJsZS52MkIMU2Vzc2lvblByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "YmlndGFibGUvYXBpdjIvYmlndGFibGVwYjtiaWd0YWJsZXBiqgIYR29vZ2xl",
+            "LkNsb3VkLkJpZ3RhYmxlLlYyygIYR29vZ2xlXENsb3VkXEJpZ3RhYmxlXFYy",
+            "6gIbR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OlYyYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor, global::Google.Cloud.Bigtable.V2.FeatureFlagsReflection.Descriptor, global::Google.Cloud.Bigtable.V2.RequestStatsReflection.Descriptor, global::Google.Protobuf.Reflection.DescriptorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Bigtable.V2.SessionType), }, new pb::Extension[] { SessionExtensions.OpenSessionType, SessionExtensions.VrpcSessionType, SessionExtensions.RpcSessionType }, new pbr::GeneratedClrTypeInfo[] {
@@ -294,7 +293,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// <summary>
     /// For internal protocol testing only.
     /// </summary>
-    [pbr::OriginalName("SESSION_TYPE_TEST")] Test = -1,
+    [pbr::OriginalName("SESSION_TYPE_TEST")] Test = 9999,
   }
 
   #endregion
