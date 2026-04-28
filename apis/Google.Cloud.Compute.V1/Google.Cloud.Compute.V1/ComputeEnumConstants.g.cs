@@ -2587,6 +2587,43 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.CachePolicy"/> message.
+        /// </summary>
+        public static class CachePolicy
+        {
+            /// <summary>
+            /// Constants for wire representations of the
+            /// <see cref="global::Google.Cloud.Compute.V1.CachePolicy.Types.CacheMode"/> enum.
+            /// </summary>
+            public static class CacheMode
+            {
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.CachePolicy.Types.CacheMode.UndefinedCacheMode"/>.
+                /// </summary>
+                public const string UndefinedCacheMode = "UNDEFINED_CACHE_MODE";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.CachePolicy.Types.CacheMode.CacheAllStatic"/>.
+                /// </summary>
+                public const string CacheAllStatic = "CACHE_ALL_STATIC";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.CachePolicy.Types.CacheMode.ForceCacheAll"/>.
+                /// </summary>
+                public const string ForceCacheAll = "FORCE_CACHE_ALL";
+
+                /// <summary>
+                /// Wire representation of
+                /// <see cref="global::Google.Cloud.Compute.V1.CachePolicy.Types.CacheMode.UseOriginHeaders"/>.
+                /// </summary>
+                public const string UseOriginHeaders = "USE_ORIGIN_HEADERS";
+            }
+        }
+
+        /// <summary>
         /// Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.Commitment"/> message.
         /// </summary>
         public static class Commitment
