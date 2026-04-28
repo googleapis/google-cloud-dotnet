@@ -28,24 +28,28 @@ namespace Google.Cloud.Spanner.V1 {
             "b2dsZS5zcGFubmVyLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
             "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGiBnb29nbGUv",
             "c3Bhbm5lci92MS9sb2NhdGlvbi5wcm90bxojZ29vZ2xlL3NwYW5uZXIvdjEv",
-            "dHJhbnNhY3Rpb24ucHJvdG8ikAMKDkNvbW1pdFJlc3BvbnNlEjQKEGNvbW1p",
+            "dHJhbnNhY3Rpb24ucHJvdG8itQQKDkNvbW1pdFJlc3BvbnNlEjQKEGNvbW1p",
             "dF90aW1lc3RhbXAYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "EkMKDGNvbW1pdF9zdGF0cxgCIAEoCzItLmdvb2dsZS5zcGFubmVyLnYxLkNv",
             "bW1pdFJlc3BvbnNlLkNvbW1pdFN0YXRzEk4KD3ByZWNvbW1pdF90b2tlbhgE",
             "IAEoCzIzLmdvb2dsZS5zcGFubmVyLnYxLk11bHRpcGxleGVkU2Vzc2lvblBy",
             "ZWNvbW1pdFRva2VuSAASNgoSc25hcHNob3RfdGltZXN0YW1wGAUgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI5CgxjYWNoZV91cGRhdGUYBiAB",
-            "KAsyHi5nb29nbGUuc3Bhbm5lci52MS5DYWNoZVVwZGF0ZUID4EEBGiUKC0Nv",
-            "bW1pdFN0YXRzEhYKDm11dGF0aW9uX2NvdW50GAEgASgDQhkKF011bHRpcGxl",
-            "eGVkU2Vzc2lvblJldHJ5QrYBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCE0Nv",
-            "bW1pdFJlc3BvbnNlUHJvdG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFu",
-            "bmVyL2FwaXYxL3NwYW5uZXJwYjtzcGFubmVycGKqAhdHb29nbGUuQ2xvdWQu",
-            "U3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx6gIaR29vZ2xl",
-            "OjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
+            "KAsyHi5nb29nbGUuc3Bhbm5lci52MS5DYWNoZVVwZGF0ZUID4EEBEk0KD2lz",
+            "b2xhdGlvbl9sZXZlbBgHIAEoDjI0Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5z",
+            "YWN0aW9uT3B0aW9ucy5Jc29sYXRpb25MZXZlbBJUCg5yZWFkX2xvY2tfbW9k",
+            "ZRgIIAEoDjI8Lmdvb2dsZS5zcGFubmVyLnYxLlRyYW5zYWN0aW9uT3B0aW9u",
+            "cy5SZWFkV3JpdGUuUmVhZExvY2tNb2RlGiUKC0NvbW1pdFN0YXRzEhYKDm11",
+            "dGF0aW9uX2NvdW50GAEgASgDQhkKF011bHRpcGxleGVkU2Vzc2lvblJldHJ5",
+            "QrYBChVjb20uZ29vZ2xlLnNwYW5uZXIudjFCE0NvbW1pdFJlc3BvbnNlUHJv",
+            "dG9QAVo1Y2xvdWQuZ29vZ2xlLmNvbS9nby9zcGFubmVyL2FwaXYxL3NwYW5u",
+            "ZXJwYjtzcGFubmVycGKqAhdHb29nbGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dv",
+            "b2dsZVxDbG91ZFxTcGFubmVyXFYx6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5l",
+            "cjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Cloud.Spanner.V1.LocationReflection.Descriptor, global::Google.Cloud.Spanner.V1.TransactionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse), global::Google.Cloud.Spanner.V1.CommitResponse.Parser, new[]{ "CommitTimestamp", "CommitStats", "PrecommitToken", "SnapshotTimestamp", "CacheUpdate" }, new[]{ "MultiplexedSessionRetry" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats), global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats.Parser, new[]{ "MutationCount" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse), global::Google.Cloud.Spanner.V1.CommitResponse.Parser, new[]{ "CommitTimestamp", "CommitStats", "PrecommitToken", "SnapshotTimestamp", "CacheUpdate", "IsolationLevel", "ReadLockMode" }, new[]{ "MultiplexedSessionRetry" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats), global::Google.Cloud.Spanner.V1.CommitResponse.Types.CommitStats.Parser, new[]{ "MutationCount" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -94,6 +98,8 @@ namespace Google.Cloud.Spanner.V1 {
       commitStats_ = other.commitStats_ != null ? other.commitStats_.Clone() : null;
       snapshotTimestamp_ = other.snapshotTimestamp_ != null ? other.snapshotTimestamp_.Clone() : null;
       cacheUpdate_ = other.cacheUpdate_ != null ? other.cacheUpdate_.Clone() : null;
+      isolationLevel_ = other.isolationLevel_;
+      readLockMode_ = other.readLockMode_;
       switch (other.MultiplexedSessionRetryCase) {
         case MultiplexedSessionRetryOneofCase.PrecommitToken:
           PrecommitToken = other.PrecommitToken.Clone();
@@ -195,6 +201,36 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "isolation_level" field.</summary>
+    public const int IsolationLevelFieldNumber = 7;
+    private global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel isolationLevel_ = global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified;
+    /// <summary>
+    /// The isolation level used for the read-write transaction.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel IsolationLevel {
+      get { return isolationLevel_; }
+      set {
+        isolationLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "read_lock_mode" field.</summary>
+    public const int ReadLockModeFieldNumber = 8;
+    private global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode readLockMode_ = global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified;
+    /// <summary>
+    /// The read lock mode used for the read-write transaction.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode ReadLockMode {
+      get { return readLockMode_; }
+      set {
+        readLockMode_ = value;
+      }
+    }
+
     private object multiplexedSessionRetry_;
     /// <summary>Enum of possible cases for the "MultiplexedSessionRetry" oneof.</summary>
     public enum MultiplexedSessionRetryOneofCase {
@@ -235,6 +271,8 @@ namespace Google.Cloud.Spanner.V1 {
       if (!object.Equals(PrecommitToken, other.PrecommitToken)) return false;
       if (!object.Equals(SnapshotTimestamp, other.SnapshotTimestamp)) return false;
       if (!object.Equals(CacheUpdate, other.CacheUpdate)) return false;
+      if (IsolationLevel != other.IsolationLevel) return false;
+      if (ReadLockMode != other.ReadLockMode) return false;
       if (MultiplexedSessionRetryCase != other.MultiplexedSessionRetryCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -248,6 +286,8 @@ namespace Google.Cloud.Spanner.V1 {
       if (multiplexedSessionRetryCase_ == MultiplexedSessionRetryOneofCase.PrecommitToken) hash ^= PrecommitToken.GetHashCode();
       if (snapshotTimestamp_ != null) hash ^= SnapshotTimestamp.GetHashCode();
       if (cacheUpdate_ != null) hash ^= CacheUpdate.GetHashCode();
+      if (IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) hash ^= IsolationLevel.GetHashCode();
+      if (ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) hash ^= ReadLockMode.GetHashCode();
       hash ^= (int) multiplexedSessionRetryCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -287,6 +327,14 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(CacheUpdate);
       }
+      if (IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) IsolationLevel);
+      }
+      if (ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) ReadLockMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -317,6 +365,14 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(CacheUpdate);
       }
+      if (IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) IsolationLevel);
+      }
+      if (ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) ReadLockMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -341,6 +397,12 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (cacheUpdate_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CacheUpdate);
+      }
+      if (IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IsolationLevel);
+      }
+      if (ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ReadLockMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -377,6 +439,12 @@ namespace Google.Cloud.Spanner.V1 {
           CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
         }
         CacheUpdate.MergeFrom(other.CacheUpdate);
+      }
+      if (other.IsolationLevel != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel.Unspecified) {
+        IsolationLevel = other.IsolationLevel;
+      }
+      if (other.ReadLockMode != global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode.Unspecified) {
+        ReadLockMode = other.ReadLockMode;
       }
       switch (other.MultiplexedSessionRetryCase) {
         case MultiplexedSessionRetryOneofCase.PrecommitToken:
@@ -443,6 +511,14 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(CacheUpdate);
             break;
           }
+          case 56: {
+            IsolationLevel = (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            ReadLockMode = (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -497,6 +573,14 @@ namespace Google.Cloud.Spanner.V1 {
               CacheUpdate = new global::Google.Cloud.Spanner.V1.CacheUpdate();
             }
             input.ReadMessage(CacheUpdate);
+            break;
+          }
+          case 56: {
+            IsolationLevel = (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.IsolationLevel) input.ReadEnum();
+            break;
+          }
+          case 64: {
+            ReadLockMode = (global::Google.Cloud.Spanner.V1.TransactionOptions.Types.ReadWrite.Types.ReadLockMode) input.ReadEnum();
             break;
           }
         }
