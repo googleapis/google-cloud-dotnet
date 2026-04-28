@@ -143,29 +143,34 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
             "ZXMYAyADKAsyNS5nb29nbGUuY2xvdWQuc3RvcmFnZWJhdGNob3BlcmF0aW9u",
             "cy52MS5FcnJvckxvZ0VudHJ5QgPgQQIiSgoNRXJyb3JMb2dFbnRyeRIaCgpv",
             "YmplY3RfdXJpGAEgASgJQgbgQQLgQQMSHQoNZXJyb3JfZGV0YWlscxgDIAMo",
-            "CUIG4EEB4EEDIq0BCghDb3VudGVycxIfChJ0b3RhbF9vYmplY3RfY291bnQY",
+            "CUIG4EEB4EEDIqwDCghDb3VudGVycxIfChJ0b3RhbF9vYmplY3RfY291bnQY",
             "ASABKANCA+BBAxIjChZzdWNjZWVkZWRfb2JqZWN0X2NvdW50GAIgASgDQgPg",
             "QQMSIAoTZmFpbGVkX29iamVjdF9jb3VudBgDIAEoA0ID4EEDEiMKEXRvdGFs",
-            "X2J5dGVzX2ZvdW5kGAQgASgDQgPgQQNIAIgBAUIUChJfdG90YWxfYnl0ZXNf",
-            "Zm91bmQi9QIKDUxvZ2dpbmdDb25maWcSXgoLbG9nX2FjdGlvbnMYASADKA4y",
-            "RC5nb29nbGUuY2xvdWQuc3RvcmFnZWJhdGNob3BlcmF0aW9ucy52MS5Mb2dn",
-            "aW5nQ29uZmlnLkxvZ2dhYmxlQWN0aW9uQgPgQQISaQoRbG9nX2FjdGlvbl9z",
-            "dGF0ZXMYAiADKA4ySS5nb29nbGUuY2xvdWQuc3RvcmFnZWJhdGNob3BlcmF0",
-            "aW9ucy52MS5Mb2dnaW5nQ29uZmlnLkxvZ2dhYmxlQWN0aW9uU3RhdGVCA+BB",
-            "AiJACg5Mb2dnYWJsZUFjdGlvbhIfChtMT0dHQUJMRV9BQ1RJT05fVU5TUEVD",
-            "SUZJRUQQABINCglUUkFOU0ZPUk0QBiJXChNMb2dnYWJsZUFjdGlvblN0YXRl",
-            "EiUKIUxPR0dBQkxFX0FDVElPTl9TVEFURV9VTlNQRUNJRklFRBAAEg0KCVNV",
-            "Q0NFRURFRBABEgoKBkZBSUxFRBACQq0DCipjb20uZ29vZ2xlLmNsb3VkLnN0",
-            "b3JhZ2ViYXRjaG9wZXJhdGlvbnMudjFCIFN0b3JhZ2VCYXRjaE9wZXJhdGlv",
-            "bnNUeXBlc1Byb3RvUAFaYmNsb3VkLmdvb2dsZS5jb20vZ28vc3RvcmFnZWJh",
-            "dGNob3BlcmF0aW9ucy9hcGl2MS9zdG9yYWdlYmF0Y2hvcGVyYXRpb25zcGI7",
-            "c3RvcmFnZWJhdGNob3BlcmF0aW9uc3BiqgImR29vZ2xlLkNsb3VkLlN0b3Jh",
-            "Z2VCYXRjaE9wZXJhdGlvbnMuVjHKAiZHb29nbGVcQ2xvdWRcU3RvcmFnZUJh",
-            "dGNoT3BlcmF0aW9uc1xWMeoCKUdvb2dsZTo6Q2xvdWQ6OlN0b3JhZ2VCYXRj",
-            "aE9wZXJhdGlvbnM6OlYx6kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9D",
-            "cnlwdG9LZXkSU3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9rZXlSaW5ncy97a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19r",
-            "ZXl9YgZwcm90bzM="));
+            "X2J5dGVzX2ZvdW5kGAQgASgDQgPgQQNIAIgBARIwCh5vYmplY3RfY3VzdG9t",
+            "X2NvbnRleHRzX2NyZWF0ZWQYBSABKANCA+BBA0gBiAEBEjAKHm9iamVjdF9j",
+            "dXN0b21fY29udGV4dHNfZGVsZXRlZBgGIAEoA0ID4EEDSAKIAQESMAoeb2Jq",
+            "ZWN0X2N1c3RvbV9jb250ZXh0c191cGRhdGVkGAcgASgDQgPgQQNIA4gBAUIU",
+            "ChJfdG90YWxfYnl0ZXNfZm91bmRCIQofX29iamVjdF9jdXN0b21fY29udGV4",
+            "dHNfY3JlYXRlZEIhCh9fb2JqZWN0X2N1c3RvbV9jb250ZXh0c19kZWxldGVk",
+            "QiEKH19vYmplY3RfY3VzdG9tX2NvbnRleHRzX3VwZGF0ZWQi9QIKDUxvZ2dp",
+            "bmdDb25maWcSXgoLbG9nX2FjdGlvbnMYASADKA4yRC5nb29nbGUuY2xvdWQu",
+            "c3RvcmFnZWJhdGNob3BlcmF0aW9ucy52MS5Mb2dnaW5nQ29uZmlnLkxvZ2dh",
+            "YmxlQWN0aW9uQgPgQQISaQoRbG9nX2FjdGlvbl9zdGF0ZXMYAiADKA4ySS5n",
+            "b29nbGUuY2xvdWQuc3RvcmFnZWJhdGNob3BlcmF0aW9ucy52MS5Mb2dnaW5n",
+            "Q29uZmlnLkxvZ2dhYmxlQWN0aW9uU3RhdGVCA+BBAiJACg5Mb2dnYWJsZUFj",
+            "dGlvbhIfChtMT0dHQUJMRV9BQ1RJT05fVU5TUEVDSUZJRUQQABINCglUUkFO",
+            "U0ZPUk0QBiJXChNMb2dnYWJsZUFjdGlvblN0YXRlEiUKIUxPR0dBQkxFX0FD",
+            "VElPTl9TVEFURV9VTlNQRUNJRklFRBAAEg0KCVNVQ0NFRURFRBABEgoKBkZB",
+            "SUxFRBACQq0DCipjb20uZ29vZ2xlLmNsb3VkLnN0b3JhZ2ViYXRjaG9wZXJh",
+            "dGlvbnMudjFCIFN0b3JhZ2VCYXRjaE9wZXJhdGlvbnNUeXBlc1Byb3RvUAFa",
+            "YmNsb3VkLmdvb2dsZS5jb20vZ28vc3RvcmFnZWJhdGNob3BlcmF0aW9ucy9h",
+            "cGl2MS9zdG9yYWdlYmF0Y2hvcGVyYXRpb25zcGI7c3RvcmFnZWJhdGNob3Bl",
+            "cmF0aW9uc3BiqgImR29vZ2xlLkNsb3VkLlN0b3JhZ2VCYXRjaE9wZXJhdGlv",
+            "bnMuVjHKAiZHb29nbGVcQ2xvdWRcU3RvcmFnZUJhdGNoT3BlcmF0aW9uc1xW",
+            "MeoCKUdvb2dsZTo6Q2xvdWQ6OlN0b3JhZ2VCYXRjaE9wZXJhdGlvbnM6OlYx",
+            "6kF4CiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXkSU3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97",
+            "a2V5X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.CodeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -184,7 +189,7 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageBatchOperations.V1.UpdateObjectCustomContext), global::Google.Cloud.StorageBatchOperations.V1.UpdateObjectCustomContext.Parser, new[]{ "CustomContextUpdates", "ClearAll" }, new[]{ "Action" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageBatchOperations.V1.ErrorSummary), global::Google.Cloud.StorageBatchOperations.V1.ErrorSummary.Parser, new[]{ "ErrorCode", "ErrorCount", "ErrorLogEntries" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageBatchOperations.V1.ErrorLogEntry), global::Google.Cloud.StorageBatchOperations.V1.ErrorLogEntry.Parser, new[]{ "ObjectUri", "ErrorDetails" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageBatchOperations.V1.Counters), global::Google.Cloud.StorageBatchOperations.V1.Counters.Parser, new[]{ "TotalObjectCount", "SucceededObjectCount", "FailedObjectCount", "TotalBytesFound" }, new[]{ "TotalBytesFound" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageBatchOperations.V1.Counters), global::Google.Cloud.StorageBatchOperations.V1.Counters.Parser, new[]{ "TotalObjectCount", "SucceededObjectCount", "FailedObjectCount", "TotalBytesFound", "ObjectCustomContextsCreated", "ObjectCustomContextsDeleted", "ObjectCustomContextsUpdated" }, new[]{ "TotalBytesFound", "ObjectCustomContextsCreated", "ObjectCustomContextsDeleted", "ObjectCustomContextsUpdated" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.StorageBatchOperations.V1.LoggingConfig), global::Google.Cloud.StorageBatchOperations.V1.LoggingConfig.Parser, new[]{ "LogActions", "LogActionStates" }, null, new[]{ typeof(global::Google.Cloud.StorageBatchOperations.V1.LoggingConfig.Types.LoggableAction), typeof(global::Google.Cloud.StorageBatchOperations.V1.LoggingConfig.Types.LoggableActionState) }, null, null)
           }));
     }
@@ -6130,6 +6135,9 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       succeededObjectCount_ = other.succeededObjectCount_;
       failedObjectCount_ = other.failedObjectCount_;
       totalBytesFound_ = other.totalBytesFound_;
+      objectCustomContextsCreated_ = other.objectCustomContextsCreated_;
+      objectCustomContextsDeleted_ = other.objectCustomContextsDeleted_;
+      objectCustomContextsUpdated_ = other.objectCustomContextsUpdated_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -6173,7 +6181,8 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
     public const int FailedObjectCountFieldNumber = 3;
     private long failedObjectCount_;
     /// <summary>
-    /// Output only. Number of objects failed.
+    /// Output only. The number of objects that failed due to user errors or
+    /// service errors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6215,6 +6224,101 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       _hasBits0 &= ~1;
     }
 
+    /// <summary>Field number for the "object_custom_contexts_created" field.</summary>
+    public const int ObjectCustomContextsCreatedFieldNumber = 5;
+    private readonly static long ObjectCustomContextsCreatedDefaultValue = 0L;
+
+    private long objectCustomContextsCreated_;
+    /// <summary>
+    /// Output only. Number of object custom contexts created. This field is only
+    /// populated for jobs with the UpdateObjectCustomContext transformation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ObjectCustomContextsCreated {
+      get { if ((_hasBits0 & 2) != 0) { return objectCustomContextsCreated_; } else { return ObjectCustomContextsCreatedDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        objectCustomContextsCreated_ = value;
+      }
+    }
+    /// <summary>Gets whether the "object_custom_contexts_created" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasObjectCustomContextsCreated {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "object_custom_contexts_created" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearObjectCustomContextsCreated() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "object_custom_contexts_deleted" field.</summary>
+    public const int ObjectCustomContextsDeletedFieldNumber = 6;
+    private readonly static long ObjectCustomContextsDeletedDefaultValue = 0L;
+
+    private long objectCustomContextsDeleted_;
+    /// <summary>
+    /// Output only. Number of object custom contexts deleted. This field is only
+    /// populated for jobs with the UpdateObjectCustomContext transformation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ObjectCustomContextsDeleted {
+      get { if ((_hasBits0 & 4) != 0) { return objectCustomContextsDeleted_; } else { return ObjectCustomContextsDeletedDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        objectCustomContextsDeleted_ = value;
+      }
+    }
+    /// <summary>Gets whether the "object_custom_contexts_deleted" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasObjectCustomContextsDeleted {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "object_custom_contexts_deleted" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearObjectCustomContextsDeleted() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "object_custom_contexts_updated" field.</summary>
+    public const int ObjectCustomContextsUpdatedFieldNumber = 7;
+    private readonly static long ObjectCustomContextsUpdatedDefaultValue = 0L;
+
+    private long objectCustomContextsUpdated_;
+    /// <summary>
+    /// Output only. Number of object custom contexts updated. This counter tracks
+    /// custom contexts where the key already existed, but the payload was
+    /// modified. This field is only populated for jobs with the
+    /// UpdateObjectCustomContext transformation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long ObjectCustomContextsUpdated {
+      get { if ((_hasBits0 & 8) != 0) { return objectCustomContextsUpdated_; } else { return ObjectCustomContextsUpdatedDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        objectCustomContextsUpdated_ = value;
+      }
+    }
+    /// <summary>Gets whether the "object_custom_contexts_updated" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasObjectCustomContextsUpdated {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "object_custom_contexts_updated" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearObjectCustomContextsUpdated() {
+      _hasBits0 &= ~8;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -6234,6 +6338,9 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       if (SucceededObjectCount != other.SucceededObjectCount) return false;
       if (FailedObjectCount != other.FailedObjectCount) return false;
       if (TotalBytesFound != other.TotalBytesFound) return false;
+      if (ObjectCustomContextsCreated != other.ObjectCustomContextsCreated) return false;
+      if (ObjectCustomContextsDeleted != other.ObjectCustomContextsDeleted) return false;
+      if (ObjectCustomContextsUpdated != other.ObjectCustomContextsUpdated) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -6245,6 +6352,9 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       if (SucceededObjectCount != 0L) hash ^= SucceededObjectCount.GetHashCode();
       if (FailedObjectCount != 0L) hash ^= FailedObjectCount.GetHashCode();
       if (HasTotalBytesFound) hash ^= TotalBytesFound.GetHashCode();
+      if (HasObjectCustomContextsCreated) hash ^= ObjectCustomContextsCreated.GetHashCode();
+      if (HasObjectCustomContextsDeleted) hash ^= ObjectCustomContextsDeleted.GetHashCode();
+      if (HasObjectCustomContextsUpdated) hash ^= ObjectCustomContextsUpdated.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6279,6 +6389,18 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
         output.WriteRawTag(32);
         output.WriteInt64(TotalBytesFound);
       }
+      if (HasObjectCustomContextsCreated) {
+        output.WriteRawTag(40);
+        output.WriteInt64(ObjectCustomContextsCreated);
+      }
+      if (HasObjectCustomContextsDeleted) {
+        output.WriteRawTag(48);
+        output.WriteInt64(ObjectCustomContextsDeleted);
+      }
+      if (HasObjectCustomContextsUpdated) {
+        output.WriteRawTag(56);
+        output.WriteInt64(ObjectCustomContextsUpdated);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -6305,6 +6427,18 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
         output.WriteRawTag(32);
         output.WriteInt64(TotalBytesFound);
       }
+      if (HasObjectCustomContextsCreated) {
+        output.WriteRawTag(40);
+        output.WriteInt64(ObjectCustomContextsCreated);
+      }
+      if (HasObjectCustomContextsDeleted) {
+        output.WriteRawTag(48);
+        output.WriteInt64(ObjectCustomContextsDeleted);
+      }
+      if (HasObjectCustomContextsUpdated) {
+        output.WriteRawTag(56);
+        output.WriteInt64(ObjectCustomContextsUpdated);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -6326,6 +6460,15 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       }
       if (HasTotalBytesFound) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(TotalBytesFound);
+      }
+      if (HasObjectCustomContextsCreated) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ObjectCustomContextsCreated);
+      }
+      if (HasObjectCustomContextsDeleted) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ObjectCustomContextsDeleted);
+      }
+      if (HasObjectCustomContextsUpdated) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(ObjectCustomContextsUpdated);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -6350,6 +6493,15 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
       }
       if (other.HasTotalBytesFound) {
         TotalBytesFound = other.TotalBytesFound;
+      }
+      if (other.HasObjectCustomContextsCreated) {
+        ObjectCustomContextsCreated = other.ObjectCustomContextsCreated;
+      }
+      if (other.HasObjectCustomContextsDeleted) {
+        ObjectCustomContextsDeleted = other.ObjectCustomContextsDeleted;
+      }
+      if (other.HasObjectCustomContextsUpdated) {
+        ObjectCustomContextsUpdated = other.ObjectCustomContextsUpdated;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -6386,6 +6538,18 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
             TotalBytesFound = input.ReadInt64();
             break;
           }
+          case 40: {
+            ObjectCustomContextsCreated = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            ObjectCustomContextsDeleted = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            ObjectCustomContextsUpdated = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -6419,6 +6583,18 @@ namespace Google.Cloud.StorageBatchOperations.V1 {
           }
           case 32: {
             TotalBytesFound = input.ReadInt64();
+            break;
+          }
+          case 40: {
+            ObjectCustomContextsCreated = input.ReadInt64();
+            break;
+          }
+          case 48: {
+            ObjectCustomContextsDeleted = input.ReadInt64();
+            break;
+          }
+          case 56: {
+            ObjectCustomContextsUpdated = input.ReadInt64();
             break;
           }
         }
