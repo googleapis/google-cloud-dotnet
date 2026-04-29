@@ -72,6 +72,12 @@ namespace Google.Cloud.ClientTesting
         public static bool IsLinux() => RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
 
         /// <summary>
+        /// Returns true if this is a "restricted" environment
+        /// (crudely detected by the absence of the GOOGLE_APPLICATION_CREDENTIALS environment variable).
+        /// </summary>
+        public static bool IsRestrictedEnvironment() => string.IsNullOrEmpty(Environment.GetEnvironmentVariable(GoogleApplicationCredentialsEnvironmentVariable));
+
+        /// <summary>
         /// Throws a <see cref="SkipException"/> if the tests are running in a VPC-SC constrained environment.
         /// Note that tests can be skipped in this situation even if the MUST_NOT_SKIP_TESTS environment variable is set.
         /// </summary>
@@ -90,7 +96,7 @@ namespace Google.Cloud.ClientTesting
         /// </summary>
         public static void SkipOnRestrictedEnvironment()
         {
-            if (string.IsNullOrEmpty(Environment.GetEnvironmentVariable(GoogleApplicationCredentialsEnvironmentVariable)))
+            if (IsRestrictedEnvironment())
             {
                 throw new SkipException("Test skipped in restricted environment");
             }

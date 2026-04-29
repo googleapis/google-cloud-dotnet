@@ -1,4 +1,4 @@
-﻿// Copyright 2021 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -110,11 +110,14 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 yield return new object[] { (Func<IHostBuilder>)DefaultHostBuilder.CreateHostBuilder };
                 yield return new object[] { (Func<IHostBuilder>)WithOptionsHostBuilder.CreateHostBuilder };
                 yield return new object[] { (Func<IHostBuilder>)WithServiceOptionsHostBuilder.CreateHostBuilder };
-                // Skip these tests if we are not running on GCP
-                if (Platform.Instance().Type != PlatformType.Unknown)
+                // Can't test with an unconfigured host builder on restricted environments or when not running on GCP,
+                // because an unconfigured host builder is configured automatically using the environment, e.g. project_id,
+                // ADC, etc.
+                if (TestEnvironment.IsRestrictedEnvironment() || Platform.Instance().Type == PlatformType.Unknown)
                 {
-                    yield return new object[] { (Func<IHostBuilder>)EmptyHostBuilder.CreateHostBuilder };
+                    yield break;
                 }
+                yield return new object[] { (Func<IHostBuilder>) EmptyHostBuilder.CreateHostBuilder };
             }
         }
 

@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -44,6 +44,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
         [SkippableFact]
         public async Task AddGoogleDiagnosticsForAspNetCore_ConfiguresServices_Default()
         {
+            TestEnvironment.SkipOnRestrictedEnvironment();
             Skip.If((await Platform.InstanceAsync()).Type == PlatformType.Unknown,
                 "Default configuration can only be used when running on GCP.");
 
