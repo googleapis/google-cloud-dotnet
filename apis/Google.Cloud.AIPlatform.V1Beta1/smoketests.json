@@ -62,13 +62,5 @@
       "parent": "projects/${PROJECT_ID}/locations/us-east1"
     },
     "endpoint": "us-east1-aiplatform.googleapis.com"
-  },
-  {
-    "method": "ListSpecialistPools",
-    "client": "SpecialistPoolServiceClient",
-    "arguments": {
-      "parent": "projects/${PROJECT_ID}/locations/us-east1"
-    },
-    "endpoint": "us-east1-aiplatform.googleapis.com"
   }
 ]
