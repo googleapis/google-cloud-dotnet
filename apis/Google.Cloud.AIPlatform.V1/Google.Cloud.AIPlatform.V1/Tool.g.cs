@@ -29,7 +29,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxooZ29vZ2xl",
             "L2Nsb3VkL2FpcGxhdGZvcm0vdjEvb3BlbmFwaS5wcm90bxocZ29vZ2xlL3By",
             "b3RvYnVmL3N0cnVjdC5wcm90bxoYZ29vZ2xlL3R5cGUvbGF0bG5nLnByb3Rv",
-            "IqsKCgRUb29sElMKFWZ1bmN0aW9uX2RlY2xhcmF0aW9ucxgBIAMoCzIvLmdv",
+            "It8LCgRUb29sElMKFWZ1bmN0aW9uX2RlY2xhcmF0aW9ucxgBIAMoCzIvLmdv",
             "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZ1bmN0aW9uRGVjbGFyYXRpb25C",
             "A+BBARI9CglyZXRyaWV2YWwYAiABKAsyJS5nb29nbGUuY2xvdWQuYWlwbGF0",
             "Zm9ybS52MS5SZXRyaWV2YWxCA+BBARJJCg1nb29nbGVfc2VhcmNoGAcgASgL",
@@ -39,15 +39,19 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bEID4EEBEkAKC2dvb2dsZV9tYXBzGAUgASgLMiYuZ29vZ2xlLmNsb3VkLmFp",
             "cGxhdGZvcm0udjEuR29vZ2xlTWFwc0ID4EEBElMKFWVudGVycHJpc2Vfd2Vi",
             "X3NlYXJjaBgGIAEoCzIvLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVu",
-            "dGVycHJpc2VXZWJTZWFyY2hCA+BBARJLCg5jb2RlX2V4ZWN1dGlvbhgEIAEo",
-            "CzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRvb2wuQ29kZUV4ZWN1",
-            "dGlvbkID4EEBEkAKC3VybF9jb250ZXh0GAogASgLMiYuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuVXJsQ29udGV4dEID4EEBEkcKDGNvbXB1dGVyX3Vz",
-            "ZRgLIAEoCzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRvb2wuQ29t",
-            "cHV0ZXJVc2VCA+BBARqhAQoMR29vZ2xlU2VhcmNoEhwKD2V4Y2x1ZGVfZG9t",
-            "YWlucxgDIAMoCUID4EEBElsKE2Jsb2NraW5nX2NvbmZpZGVuY2UYBCABKA4y",
-            "NC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Ub29sLlBoaXNoQmxvY2tU",
-            "aHJlc2hvbGRCA+BBAUgAiAEBQhYKFF9ibG9ja2luZ19jb25maWRlbmNlGg8K",
+            "dGVycHJpc2VXZWJTZWFyY2hCA+BBARJSChJwYXJhbGxlbF9haV9zZWFyY2gY",
+            "DSABKAsyMS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Ub29sLlBhcmFs",
+            "bGVsQWlTZWFyY2hCA+BBARJLCg5jb2RlX2V4ZWN1dGlvbhgEIAEoCzIuLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRvb2wuQ29kZUV4ZWN1dGlvbkID",
+            "4EEBEkAKC3VybF9jb250ZXh0GAogASgLMiYuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuVXJsQ29udGV4dEID4EEBEkcKDGNvbXB1dGVyX3VzZRgLIAEo",
+            "CzIsLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRvb2wuQ29tcHV0ZXJV",
+            "c2VCA+BBARqhAQoMR29vZ2xlU2VhcmNoEhwKD2V4Y2x1ZGVfZG9tYWlucxgD",
+            "IAMoCUID4EEBElsKE2Jsb2NraW5nX2NvbmZpZGVuY2UYBCABKA4yNC5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Ub29sLlBoaXNoQmxvY2tUaHJlc2hv",
+            "bGRCA+BBAUgAiAEBQhYKFF9ibG9ja2luZ19jb25maWRlbmNlGl4KEFBhcmFs",
+            "bGVsQWlTZWFyY2gSFAoHYXBpX2tleRgBIAEoCUID4EEBEjQKDmN1c3RvbV9j",
+            "b25maWdzGAMgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBGg8K",
             "DUNvZGVFeGVjdXRpb24a0gEKC0NvbXB1dGVyVXNlElIKC2Vudmlyb25tZW50",
             "GAEgASgOMjguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVG9vbC5Db21w",
             "dXRlclVzZS5FbnZpcm9ubWVudEID4EECEioKHWV4Y2x1ZGVkX3ByZWRlZmlu",
@@ -163,7 +167,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tool), global::Google.Cloud.AIPlatform.V1.Tool.Parser, new[]{ "FunctionDeclarations", "Retrieval", "GoogleSearch", "GoogleSearchRetrieval", "GoogleMaps", "EnterpriseWebSearch", "CodeExecution", "UrlContext", "ComputerUse" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Tool.Types.PhishBlockThreshold) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tool.Types.GoogleSearch), global::Google.Cloud.AIPlatform.V1.Tool.Types.GoogleSearch.Parser, new[]{ "ExcludeDomains", "BlockingConfidence" }, new[]{ "BlockingConfidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tool), global::Google.Cloud.AIPlatform.V1.Tool.Parser, new[]{ "FunctionDeclarations", "Retrieval", "GoogleSearch", "GoogleSearchRetrieval", "GoogleMaps", "EnterpriseWebSearch", "ParallelAiSearch", "CodeExecution", "UrlContext", "ComputerUse" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Tool.Types.PhishBlockThreshold) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tool.Types.GoogleSearch), global::Google.Cloud.AIPlatform.V1.Tool.Types.GoogleSearch.Parser, new[]{ "ExcludeDomains", "BlockingConfidence" }, new[]{ "BlockingConfidence" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tool.Types.ParallelAiSearch), global::Google.Cloud.AIPlatform.V1.Tool.Types.ParallelAiSearch.Parser, new[]{ "ApiKey", "CustomConfigs" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tool.Types.CodeExecution), global::Google.Cloud.AIPlatform.V1.Tool.Types.CodeExecution.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Tool.Types.ComputerUse), global::Google.Cloud.AIPlatform.V1.Tool.Types.ComputerUse.Parser, new[]{ "Environment", "ExcludedPredefinedFunctions" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Tool.Types.ComputerUse.Types.Environment) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.UrlContext), global::Google.Cloud.AIPlatform.V1.UrlContext.Parser, null, null, null, null, null),
@@ -245,6 +250,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       googleSearchRetrieval_ = other.googleSearchRetrieval_ != null ? other.googleSearchRetrieval_.Clone() : null;
       googleMaps_ = other.googleMaps_ != null ? other.googleMaps_.Clone() : null;
       enterpriseWebSearch_ = other.enterpriseWebSearch_ != null ? other.enterpriseWebSearch_.Clone() : null;
+      parallelAiSearch_ = other.parallelAiSearch_ != null ? other.parallelAiSearch_.Clone() : null;
       codeExecution_ = other.codeExecution_ != null ? other.codeExecution_.Clone() : null;
       urlContext_ = other.urlContext_ != null ? other.urlContext_.Clone() : null;
       computerUse_ = other.computerUse_ != null ? other.computerUse_.Clone() : null;
@@ -361,6 +367,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "parallel_ai_search" field.</summary>
+    public const int ParallelAiSearchFieldNumber = 13;
+    private global::Google.Cloud.AIPlatform.V1.Tool.Types.ParallelAiSearch parallelAiSearch_;
+    /// <summary>
+    /// Optional. If specified, Vertex AI will use Parallel.ai to search for
+    /// information to answer user queries. The search results will be grounded on
+    /// Parallel.ai and presented to the model for response generation
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.Tool.Types.ParallelAiSearch ParallelAiSearch {
+      get { return parallelAiSearch_; }
+      set {
+        parallelAiSearch_ = value;
+      }
+    }
+
     /// <summary>Field number for the "code_execution" field.</summary>
     public const int CodeExecutionFieldNumber = 4;
     private global::Google.Cloud.AIPlatform.V1.Tool.Types.CodeExecution codeExecution_;
@@ -430,6 +453,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(GoogleSearchRetrieval, other.GoogleSearchRetrieval)) return false;
       if (!object.Equals(GoogleMaps, other.GoogleMaps)) return false;
       if (!object.Equals(EnterpriseWebSearch, other.EnterpriseWebSearch)) return false;
+      if (!object.Equals(ParallelAiSearch, other.ParallelAiSearch)) return false;
       if (!object.Equals(CodeExecution, other.CodeExecution)) return false;
       if (!object.Equals(UrlContext, other.UrlContext)) return false;
       if (!object.Equals(ComputerUse, other.ComputerUse)) return false;
@@ -446,6 +470,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (googleSearchRetrieval_ != null) hash ^= GoogleSearchRetrieval.GetHashCode();
       if (googleMaps_ != null) hash ^= GoogleMaps.GetHashCode();
       if (enterpriseWebSearch_ != null) hash ^= EnterpriseWebSearch.GetHashCode();
+      if (parallelAiSearch_ != null) hash ^= ParallelAiSearch.GetHashCode();
       if (codeExecution_ != null) hash ^= CodeExecution.GetHashCode();
       if (urlContext_ != null) hash ^= UrlContext.GetHashCode();
       if (computerUse_ != null) hash ^= ComputerUse.GetHashCode();
@@ -500,6 +525,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(ComputerUse);
       }
+      if (parallelAiSearch_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ParallelAiSearch);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -543,6 +572,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(ComputerUse);
       }
+      if (parallelAiSearch_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(ParallelAiSearch);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -568,6 +601,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (enterpriseWebSearch_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnterpriseWebSearch);
+      }
+      if (parallelAiSearch_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ParallelAiSearch);
       }
       if (codeExecution_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CodeExecution);
@@ -620,6 +656,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           EnterpriseWebSearch = new global::Google.Cloud.AIPlatform.V1.EnterpriseWebSearch();
         }
         EnterpriseWebSearch.MergeFrom(other.EnterpriseWebSearch);
+      }
+      if (other.parallelAiSearch_ != null) {
+        if (parallelAiSearch_ == null) {
+          ParallelAiSearch = new global::Google.Cloud.AIPlatform.V1.Tool.Types.ParallelAiSearch();
+        }
+        ParallelAiSearch.MergeFrom(other.ParallelAiSearch);
       }
       if (other.codeExecution_ != null) {
         if (codeExecution_ == null) {
@@ -718,6 +760,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(ComputerUse);
             break;
           }
+          case 106: {
+            if (parallelAiSearch_ == null) {
+              ParallelAiSearch = new global::Google.Cloud.AIPlatform.V1.Tool.Types.ParallelAiSearch();
+            }
+            input.ReadMessage(ParallelAiSearch);
+            break;
+          }
         }
       }
     #endif
@@ -795,6 +844,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               ComputerUse = new global::Google.Cloud.AIPlatform.V1.Tool.Types.ComputerUse();
             }
             input.ReadMessage(ComputerUse);
+            break;
+          }
+          case 106: {
+            if (parallelAiSearch_ == null) {
+              ParallelAiSearch = new global::Google.Cloud.AIPlatform.V1.Tool.Types.ParallelAiSearch();
+            }
+            input.ReadMessage(ParallelAiSearch);
             break;
           }
         }
@@ -1099,6 +1155,280 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
+      /// ParallelAiSearch tool type.
+      /// A tool that uses the Parallel.ai search engine for grounding.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ParallelAiSearch : pb::IMessage<ParallelAiSearch>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ParallelAiSearch> _parser = new pb::MessageParser<ParallelAiSearch>(() => new ParallelAiSearch());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ParallelAiSearch> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1.Tool.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ParallelAiSearch() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ParallelAiSearch(ParallelAiSearch other) : this() {
+          apiKey_ = other.apiKey_;
+          customConfigs_ = other.customConfigs_ != null ? other.customConfigs_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ParallelAiSearch Clone() {
+          return new ParallelAiSearch(this);
+        }
+
+        /// <summary>Field number for the "api_key" field.</summary>
+        public const int ApiKeyFieldNumber = 1;
+        private string apiKey_ = "";
+        /// <summary>
+        /// Optional. The API key for ParallelAiSearch.
+        /// If an API key is not provided, the system will attempt to verify access
+        /// by checking for an active Parallel.ai subscription through the Google
+        /// Cloud Marketplace.
+        /// See https://docs.parallel.ai/search/search-quickstart for more details.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ApiKey {
+          get { return apiKey_; }
+          set {
+            apiKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "custom_configs" field.</summary>
+        public const int CustomConfigsFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Struct customConfigs_;
+        /// <summary>
+        /// Optional. Custom configs for ParallelAiSearch.
+        /// This field can be used to pass any parameter from the Parallel.ai
+        /// Search API.
+        /// See the Parallel.ai documentation for the full list of available
+        /// parameters and their usage:
+        /// https://docs.parallel.ai/api-reference/search-beta/search
+        /// Currently only `source_policy`, `excerpts`, `max_results`, `mode`,
+        /// `fetch_policy` can be set via this field. For example:
+        /// {
+        ///   "source_policy": {
+        ///     "include_domains": ["google.com", "wikipedia.org"],
+        ///     "exclude_domains": ["example.com"]
+        ///   },
+        ///   "fetch_policy": {
+        ///     "max_age_seconds": 3600
+        ///   }
+        /// }
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Struct CustomConfigs {
+          get { return customConfigs_; }
+          set {
+            customConfigs_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ParallelAiSearch);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ParallelAiSearch other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (ApiKey != other.ApiKey) return false;
+          if (!object.Equals(CustomConfigs, other.CustomConfigs)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (ApiKey.Length != 0) hash ^= ApiKey.GetHashCode();
+          if (customConfigs_ != null) hash ^= CustomConfigs.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (ApiKey.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ApiKey);
+          }
+          if (customConfigs_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomConfigs);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (ApiKey.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(ApiKey);
+          }
+          if (customConfigs_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CustomConfigs);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (ApiKey.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ApiKey);
+          }
+          if (customConfigs_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomConfigs);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ParallelAiSearch other) {
+          if (other == null) {
+            return;
+          }
+          if (other.ApiKey.Length != 0) {
+            ApiKey = other.ApiKey;
+          }
+          if (other.customConfigs_ != null) {
+            if (customConfigs_ == null) {
+              CustomConfigs = new global::Google.Protobuf.WellKnownTypes.Struct();
+            }
+            CustomConfigs.MergeFrom(other.CustomConfigs);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                ApiKey = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (customConfigs_ == null) {
+                  CustomConfigs = new global::Google.Protobuf.WellKnownTypes.Struct();
+                }
+                input.ReadMessage(CustomConfigs);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                ApiKey = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (customConfigs_ == null) {
+                  CustomConfigs = new global::Google.Protobuf.WellKnownTypes.Struct();
+                }
+                input.ReadMessage(CustomConfigs);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Tool that executes code generated by the model, and automatically returns
       /// the result to the model.
       ///
@@ -1120,7 +1450,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.Tool.Descriptor.NestedTypes[1]; }
+          get { return global::Google.Cloud.AIPlatform.V1.Tool.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1284,7 +1614,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.AIPlatform.V1.Tool.Descriptor.NestedTypes[2]; }
+          get { return global::Google.Cloud.AIPlatform.V1.Tool.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
