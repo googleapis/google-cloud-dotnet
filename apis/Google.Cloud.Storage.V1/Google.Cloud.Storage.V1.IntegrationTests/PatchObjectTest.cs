@@ -61,7 +61,7 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
             var client = _fixture.Client;
             var custom = new Dictionary<string, ObjectCustomContextPayload>
             {
-                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+                  { $"A\u00F1\u03A9\U0001F680-{IdGenerator.FromGuid()}", new ObjectCustomContextPayload { Value = $"Ab\u00F1\u03A9\U0001F680-{IdGenerator.FromGuid()}" } }
             };
 
             var destination = new Object
