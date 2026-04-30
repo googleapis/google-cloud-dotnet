@@ -29,6 +29,78 @@ namespace Microsoft.Extensions.DependencyInjection
     public static partial class ServiceCollectionExtensions
     {
         /// <summary>
+        /// Adds a singleton <see cref="gccv::DashboardChartServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDashboardChartServiceClient(this IServiceCollection services, sys::Action<gccv::DashboardChartServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::DashboardChartServiceClientBuilder builder = new gccv::DashboardChartServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::DashboardChartServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDashboardChartServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::DashboardChartServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::DashboardChartServiceClientBuilder builder = new gccv::DashboardChartServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::DashboardQueryServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDashboardQueryServiceClient(this IServiceCollection services, sys::Action<gccv::DashboardQueryServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::DashboardQueryServiceClientBuilder builder = new gccv::DashboardQueryServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::DashboardQueryServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddDashboardQueryServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::DashboardQueryServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::DashboardQueryServiceClientBuilder builder = new gccv::DashboardQueryServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::DataAccessControlServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -133,6 +205,44 @@ namespace Microsoft.Extensions.DependencyInjection
             });
 
         /// <summary>
+        /// Adds a singleton <see cref="gccv::FeaturedContentNativeDashboardServiceClient"/> to
+        /// <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddFeaturedContentNativeDashboardServiceClient(this IServiceCollection services, sys::Action<gccv::FeaturedContentNativeDashboardServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::FeaturedContentNativeDashboardServiceClientBuilder builder = new gccv::FeaturedContentNativeDashboardServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::FeaturedContentNativeDashboardServiceClient"/> to
+        /// <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddFeaturedContentNativeDashboardServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::FeaturedContentNativeDashboardServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::FeaturedContentNativeDashboardServiceClientBuilder builder = new gccv::FeaturedContentNativeDashboardServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
         /// Adds a singleton <see cref="gccv::InstanceServiceClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
@@ -164,6 +274,42 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::InstanceServiceClientBuilder builder = new gccv::InstanceServiceClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::NativeDashboardServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddNativeDashboardServiceClient(this IServiceCollection services, sys::Action<gccv::NativeDashboardServiceClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::NativeDashboardServiceClientBuilder builder = new gccv::NativeDashboardServiceClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::NativeDashboardServiceClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddNativeDashboardServiceClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::NativeDashboardServiceClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::NativeDashboardServiceClientBuilder builder = new gccv::NativeDashboardServiceClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });

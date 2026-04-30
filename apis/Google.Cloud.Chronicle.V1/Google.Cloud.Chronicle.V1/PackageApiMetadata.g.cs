@@ -55,10 +55,15 @@ namespace Google.Cloud.Chronicle.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return DashboardChartReflection.Descriptor;
+            yield return DashboardQueryReflection.Descriptor;
             yield return DataAccessControlReflection.Descriptor;
             yield return DataTableReflection.Descriptor;
             yield return EntityReflection.Descriptor;
+            yield return FeaturedContentMetadataReflection.Descriptor;
+            yield return FeaturedContentNativeDashboardReflection.Descriptor;
             yield return InstanceReflection.Descriptor;
+            yield return NativeDashboardReflection.Descriptor;
             yield return ReferenceListReflection.Descriptor;
             yield return RuleReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

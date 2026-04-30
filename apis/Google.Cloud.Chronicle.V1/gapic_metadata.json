@@ -5,6 +5,48 @@
   "protoPackage": "google.cloud.chronicle.v1",
   "libraryPackage": "Google.Cloud.Chronicle.V1",
   "services": {
+    "DashboardChartService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DashboardChartServiceClient",
+          "rpcs": {
+            "BatchGetDashboardCharts": {
+              "methods": [
+                "BatchGetDashboardCharts",
+                "BatchGetDashboardChartsAsync"
+              ]
+            },
+            "GetDashboardChart": {
+              "methods": [
+                "GetDashboardChart",
+                "GetDashboardChartAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "DashboardQueryService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DashboardQueryServiceClient",
+          "rpcs": {
+            "ExecuteDashboardQuery": {
+              "methods": [
+                "ExecuteDashboardQuery",
+                "ExecuteDashboardQueryAsync"
+              ]
+            },
+            "GetDashboardQuery": {
+              "methods": [
+                "GetDashboardQuery",
+                "GetDashboardQueryAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DataAccessControlService": {
       "clients": {
         "grpc": {
@@ -212,6 +254,33 @@
         }
       }
     },
+    "FeaturedContentNativeDashboardService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeaturedContentNativeDashboardServiceClient",
+          "rpcs": {
+            "GetFeaturedContentNativeDashboard": {
+              "methods": [
+                "GetFeaturedContentNativeDashboard",
+                "GetFeaturedContentNativeDashboardAsync"
+              ]
+            },
+            "InstallFeaturedContentNativeDashboard": {
+              "methods": [
+                "InstallFeaturedContentNativeDashboard",
+                "InstallFeaturedContentNativeDashboardAsync"
+              ]
+            },
+            "ListFeaturedContentNativeDashboards": {
+              "methods": [
+                "ListFeaturedContentNativeDashboards",
+                "ListFeaturedContentNativeDashboardsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "InstanceService": {
       "clients": {
         "grpc": {
@@ -221,6 +290,87 @@
               "methods": [
                 "GetInstance",
                 "GetInstanceAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "NativeDashboardService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "NativeDashboardServiceClient",
+          "rpcs": {
+            "AddChart": {
+              "methods": [
+                "AddChart",
+                "AddChartAsync"
+              ]
+            },
+            "CreateNativeDashboard": {
+              "methods": [
+                "CreateNativeDashboard",
+                "CreateNativeDashboardAsync"
+              ]
+            },
+            "DeleteNativeDashboard": {
+              "methods": [
+                "DeleteNativeDashboard",
+                "DeleteNativeDashboardAsync"
+              ]
+            },
+            "DuplicateChart": {
+              "methods": [
+                "DuplicateChart",
+                "DuplicateChartAsync"
+              ]
+            },
+            "DuplicateNativeDashboard": {
+              "methods": [
+                "DuplicateNativeDashboard",
+                "DuplicateNativeDashboardAsync"
+              ]
+            },
+            "EditChart": {
+              "methods": [
+                "EditChart",
+                "EditChartAsync"
+              ]
+            },
+            "ExportNativeDashboards": {
+              "methods": [
+                "ExportNativeDashboards",
+                "ExportNativeDashboardsAsync"
+              ]
+            },
+            "GetNativeDashboard": {
+              "methods": [
+                "GetNativeDashboard",
+                "GetNativeDashboardAsync"
+              ]
+            },
+            "ImportNativeDashboards": {
+              "methods": [
+                "ImportNativeDashboards",
+                "ImportNativeDashboardsAsync"
+              ]
+            },
+            "ListNativeDashboards": {
+              "methods": [
+                "ListNativeDashboards",
+                "ListNativeDashboardsAsync"
+              ]
+            },
+            "RemoveChart": {
+              "methods": [
+                "RemoveChart",
+                "RemoveChartAsync"
+              ]
+            },
+            "UpdateNativeDashboard": {
+              "methods": [
+                "UpdateNativeDashboard",
+                "UpdateNativeDashboardAsync"
               ]
             }
           }
