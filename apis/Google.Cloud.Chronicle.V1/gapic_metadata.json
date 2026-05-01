@@ -5,6 +5,33 @@
   "protoPackage": "google.cloud.chronicle.v1",
   "libraryPackage": "Google.Cloud.Chronicle.V1",
   "services": {
+    "BigQueryExportService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "BigQueryExportServiceClient",
+          "rpcs": {
+            "GetBigQueryExport": {
+              "methods": [
+                "GetBigQueryExport",
+                "GetBigQueryExportAsync"
+              ]
+            },
+            "ProvisionBigQueryExport": {
+              "methods": [
+                "ProvisionBigQueryExport",
+                "ProvisionBigQueryExportAsync"
+              ]
+            },
+            "UpdateBigQueryExport": {
+              "methods": [
+                "UpdateBigQueryExport",
+                "UpdateBigQueryExportAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "DashboardChartService": {
       "clients": {
         "grpc": {

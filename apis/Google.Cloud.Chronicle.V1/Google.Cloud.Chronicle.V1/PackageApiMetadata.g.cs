@@ -55,6 +55,7 @@ namespace Google.Cloud.Chronicle.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return BigQueryExportReflection.Descriptor;
             yield return DashboardChartReflection.Descriptor;
             yield return DashboardQueryReflection.Descriptor;
             yield return DataAccessControlReflection.Descriptor;

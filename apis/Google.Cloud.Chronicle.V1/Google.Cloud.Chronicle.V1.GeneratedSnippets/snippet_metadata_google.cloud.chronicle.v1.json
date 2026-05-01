@@ -11,6 +11,780 @@
   },
   "snippets": [
     {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_GetBigQueryExport_sync",
+      "title": "GetBigQueryExportRequestObject",
+      "description": "Snippet for GetBigQueryExport",
+      "file": "BigQueryExportServiceClient.GetBigQueryExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExport",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.GetBigQueryExport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetBigQueryExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BigQueryExport",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.GetBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_GetBigQueryExport_async",
+      "title": "GetBigQueryExportRequestObjectAsync",
+      "description": "Snippet for GetBigQueryExportAsync",
+      "file": "BigQueryExportServiceClient.GetBigQueryExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExportAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.GetBigQueryExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetBigQueryExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BigQueryExport>",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.GetBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_GetBigQueryExport_sync_flattened",
+      "title": "GetBigQueryExport",
+      "description": "Snippet for GetBigQueryExport",
+      "file": "BigQueryExportServiceClient.GetBigQueryExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExport",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.GetBigQueryExport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BigQueryExport",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.GetBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_GetBigQueryExport_async_flattened",
+      "title": "GetBigQueryExportAsync",
+      "description": "Snippet for GetBigQueryExportAsync",
+      "file": "BigQueryExportServiceClient.GetBigQueryExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExportAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.GetBigQueryExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BigQueryExport>",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.GetBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_GetBigQueryExport_sync_flattened_resourceNames",
+      "title": "GetBigQueryExportResourceNames",
+      "description": "Snippet for GetBigQueryExport",
+      "file": "BigQueryExportServiceClient.GetBigQueryExportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExport",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.GetBigQueryExport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BigQueryExportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BigQueryExport",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.GetBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_GetBigQueryExport_async_flattened_resourceNames",
+      "title": "GetBigQueryExportResourceNamesAsync",
+      "description": "Snippet for GetBigQueryExportAsync",
+      "file": "BigQueryExportServiceClient.GetBigQueryExportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBigQueryExportAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.GetBigQueryExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BigQueryExportName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BigQueryExport>",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "GetBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.GetBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_UpdateBigQueryExport_sync",
+      "title": "UpdateBigQueryExportRequestObject",
+      "description": "Snippet for UpdateBigQueryExport",
+      "file": "BigQueryExportServiceClient.UpdateBigQueryExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBigQueryExport",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.UpdateBigQueryExport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateBigQueryExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BigQueryExport",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.UpdateBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_UpdateBigQueryExport_async",
+      "title": "UpdateBigQueryExportRequestObjectAsync",
+      "description": "Snippet for UpdateBigQueryExportAsync",
+      "file": "BigQueryExportServiceClient.UpdateBigQueryExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBigQueryExportAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.UpdateBigQueryExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateBigQueryExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BigQueryExport>",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.UpdateBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_UpdateBigQueryExport_sync_flattened",
+      "title": "UpdateBigQueryExport",
+      "description": "Snippet for UpdateBigQueryExport",
+      "file": "BigQueryExportServiceClient.UpdateBigQueryExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBigQueryExport",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.UpdateBigQueryExport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BigQueryExport",
+            "name": "bigQueryExport"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BigQueryExport",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.UpdateBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_UpdateBigQueryExport_async_flattened",
+      "title": "UpdateBigQueryExportAsync",
+      "description": "Snippet for UpdateBigQueryExportAsync",
+      "file": "BigQueryExportServiceClient.UpdateBigQueryExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBigQueryExportAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.UpdateBigQueryExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.BigQueryExport",
+            "name": "bigQueryExport"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BigQueryExport>",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.UpdateBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_ProvisionBigQueryExport_sync",
+      "title": "ProvisionBigQueryExportRequestObject",
+      "description": "Snippet for ProvisionBigQueryExport",
+      "file": "BigQueryExportServiceClient.ProvisionBigQueryExportRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionBigQueryExport",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.ProvisionBigQueryExport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ProvisionBigQueryExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BigQueryExport",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.ProvisionBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_ProvisionBigQueryExport_async",
+      "title": "ProvisionBigQueryExportRequestObjectAsync",
+      "description": "Snippet for ProvisionBigQueryExportAsync",
+      "file": "BigQueryExportServiceClient.ProvisionBigQueryExportRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionBigQueryExportAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.ProvisionBigQueryExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ProvisionBigQueryExportRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BigQueryExport>",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.ProvisionBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_ProvisionBigQueryExport_sync_flattened",
+      "title": "ProvisionBigQueryExport",
+      "description": "Snippet for ProvisionBigQueryExport",
+      "file": "BigQueryExportServiceClient.ProvisionBigQueryExportSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionBigQueryExport",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.ProvisionBigQueryExport",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BigQueryExport",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.ProvisionBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_ProvisionBigQueryExport_async_flattened",
+      "title": "ProvisionBigQueryExportAsync",
+      "description": "Snippet for ProvisionBigQueryExportAsync",
+      "file": "BigQueryExportServiceClient.ProvisionBigQueryExportAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionBigQueryExportAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.ProvisionBigQueryExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BigQueryExport>",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.ProvisionBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_ProvisionBigQueryExport_sync_flattened_resourceNames",
+      "title": "ProvisionBigQueryExportResourceNames",
+      "description": "Snippet for ProvisionBigQueryExport",
+      "file": "BigQueryExportServiceClient.ProvisionBigQueryExportResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionBigQueryExport",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.ProvisionBigQueryExport",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.BigQueryExport",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.ProvisionBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_BigQueryExportService_ProvisionBigQueryExport_async_flattened_resourceNames",
+      "title": "ProvisionBigQueryExportResourceNamesAsync",
+      "description": "Snippet for ProvisionBigQueryExportAsync",
+      "file": "BigQueryExportServiceClient.ProvisionBigQueryExportResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ProvisionBigQueryExportAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient.ProvisionBigQueryExportAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.BigQueryExport>",
+        "client": {
+          "shortName": "BigQueryExportServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.BigQueryExportServiceClient"
+        },
+        "method": {
+          "shortName": "ProvisionBigQueryExport",
+          "fullName": "google.cloud.chronicle.v1.BigQueryExportService.ProvisionBigQueryExport",
+          "service": {
+            "shortName": "BigQueryExportService",
+            "fullName": "google.cloud.chronicle.v1.BigQueryExportService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chronicle_v1_generated_DashboardChartService_GetDashboardChart_sync",
       "title": "GetDashboardChartRequestObject",
       "description": "Snippet for GetDashboardChart",
