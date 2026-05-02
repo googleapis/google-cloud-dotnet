@@ -2495,6 +2495,138 @@ public class BuildIChatClientTest
     }
 
     [Fact]
+    public async Task IChatClient_GetResponseAsync_WithGroundingMetadata()
+    {
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequest = request =>
+            {
+                GenerateContentResponse response = CreateResponse(new() { Role = "model", Parts = { new Part() { Text = "Grounded answer." } } });
+                response.Candidates[0].GroundingMetadata = new()
+                {
+                    WebSearchQueries = { "weather in Seattle", "Seattle forecast" },
+                    GroundingChunks =
+                    {
+                        new GroundingChunk { Web = new GroundingChunk.Types.Web { Uri = "https://example.com/seattle", Title = "Seattle weather" } },
+                        new GroundingChunk { Web = new GroundingChunk.Types.Web { Uri = "https://example.org/forecast" } },
+                        new GroundingChunk { Web = new GroundingChunk.Types.Web() },
+                    }
+                };
+
+                return response;
+            }
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "What's the weather?")];
+
+        ChatResponse result = await chatClient.GetResponseAsync(messages, new ChatOptions { Tools = [new HostedWebSearchTool()] });
+
+        Assert.NotNull(result);
+        IList<AIContent> contents = result.Messages[0].Contents;
+
+        TextContent textContent = Assert.IsType<TextContent>(contents[0]);
+        Assert.Equal("Grounded answer.", textContent.Text);
+
+        WebSearchToolCallContent call = Assert.IsType<WebSearchToolCallContent>(contents[1]);
+        Assert.Equal(new[] { "weather in Seattle", "Seattle forecast" }, call.Queries);
+        Assert.IsType<GroundingMetadata>(call.RawRepresentation);
+
+        WebSearchToolResultContent webSearchResult = Assert.IsType<WebSearchToolResultContent>(contents[2]);
+        Assert.Equal(call.CallId, webSearchResult.CallId);
+        Assert.NotNull(webSearchResult.Outputs);
+        Assert.Equal(2, webSearchResult.Outputs.Count);
+
+        UriContent first = Assert.IsType<UriContent>(webSearchResult.Outputs[0]);
+        Assert.Equal("https://example.com/seattle", first.Uri.ToString());
+        Assert.NotNull(first.AdditionalProperties);
+        Assert.Equal("Seattle weather", first.AdditionalProperties["title"]);
+
+        UriContent second = Assert.IsType<UriContent>(webSearchResult.Outputs[1]);
+        Assert.Equal("https://example.org/forecast", second.Uri.ToString());
+        Assert.True(second.AdditionalProperties is null || !second.AdditionalProperties.ContainsKey("title"));
+    }
+
+    [Fact]
+    public async Task IChatClient_GetStreamingResponseAsync_WithGroundingMetadata()
+    {
+        GenerateContentResponse[] responses =
+        [
+            new()
+            {
+                Candidates = { new Candidate { Content = new() { Role = "model", Parts = { new Part { Text = "Grounded " } } } } },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
+                ModelVersion = "test-model",
+                ResponseId = "response-1"
+            },
+            new()
+            {
+                Candidates =
+                {
+                    new Candidate
+                    {
+                        Content = new() { Role = "model", Parts = { new Part { Text = "answer." } } },
+                        GroundingMetadata = new()
+                        {
+                            WebSearchQueries = { "weather in Seattle", "Seattle forecast" },
+                            GroundingChunks =
+                            {
+                                new GroundingChunk { Web = new GroundingChunk.Types.Web { Uri = "https://example.com/seattle", Title = "Seattle weather" } },
+                                new GroundingChunk { Web = new GroundingChunk.Types.Web { Uri = "https://example.org/forecast" } },
+                                new GroundingChunk { Web = new GroundingChunk.Types.Web() },
+                            }
+                        }
+                    }
+                },
+                CreateTime = Timestamp.FromDateTime(DateTime.UtcNow),
+                ModelVersion = "test-model",
+                ResponseId = "response-2"
+            }
+        ];
+
+        DelegateCallInvoker invoker = new()
+        {
+            OnGenerateContentRequestStreaming = request => responses
+        };
+
+        IChatClient chatClient = CreateClientBuilder(invoker).BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
+        ChatMessage[] messages = [new(ChatRole.User, "What's the weather?")];
+
+        List<ChatResponseUpdate> updates = [];
+        await foreach (ChatResponseUpdate update in chatClient.GetStreamingResponseAsync(messages, new ChatOptions { Tools = [new HostedWebSearchTool()] }))
+        {
+            updates.Add(update);
+        }
+
+        Assert.Equal(2, updates.Count);
+
+        TextContent firstText = Assert.IsType<TextContent>(Assert.Single(updates[0].Contents));
+        Assert.Equal("Grounded ", firstText.Text);
+
+        IList<AIContent> contents = updates[1].Contents;
+        TextContent secondText = Assert.IsType<TextContent>(contents[0]);
+        Assert.Equal("answer.", secondText.Text);
+
+        WebSearchToolCallContent call = Assert.IsType<WebSearchToolCallContent>(contents[1]);
+        Assert.Equal(new[] { "weather in Seattle", "Seattle forecast" }, call.Queries);
+        Assert.IsType<GroundingMetadata>(call.RawRepresentation);
+
+        WebSearchToolResultContent webSearchResult = Assert.IsType<WebSearchToolResultContent>(contents[2]);
+        Assert.Equal(call.CallId, webSearchResult.CallId);
+        Assert.NotNull(webSearchResult.Outputs);
+        Assert.Equal(2, webSearchResult.Outputs.Count);
+
+        UriContent first = Assert.IsType<UriContent>(webSearchResult.Outputs[0]);
+        Assert.Equal("https://example.com/seattle", first.Uri.ToString());
+        Assert.NotNull(first.AdditionalProperties);
+        Assert.Equal("Seattle weather", first.AdditionalProperties["title"]);
+
+        UriContent second = Assert.IsType<UriContent>(webSearchResult.Outputs[1]);
+        Assert.Equal("https://example.org/forecast", second.Uri.ToString());
+        Assert.True(second.AdditionalProperties is null || !second.AdditionalProperties.ContainsKey("title"));
+    }
+
+    [Fact]
     public async Task IChatClient_GetResponseAsync_NullMessages_ThrowsArgumentNullException()
     {
         IChatClient chatClient = CreateClientBuilder().BuildIChatClient("projects/test-project/locations/us-central1/publishers/google/models/mymodel");
