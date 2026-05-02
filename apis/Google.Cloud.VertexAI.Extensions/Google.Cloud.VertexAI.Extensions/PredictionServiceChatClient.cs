@@ -689,6 +689,41 @@ internal sealed class PredictionServiceChatClient(PredictionServiceClient client
                     ];
                 }
             }
+
+            // Add web search grounding metadata as WebSearchToolCallContent/WebSearchToolResultContent.
+            if (candidate.GroundingMetadata is { } groundingMetadata &&
+                (groundingMetadata.WebSearchQueries is { Count: > 0 } || groundingMetadata.GroundingChunks is { Count: > 0 }))
+            {
+                string searchCallId = Guid.NewGuid().ToString("N");
+
+                responseContents.Add(new WebSearchToolCallContent(searchCallId)
+                {
+                    Queries = groundingMetadata.WebSearchQueries,
+                    RawRepresentation = groundingMetadata,
+                });
+
+                List<AIContent>? searchResults = null;
+                if (groundingMetadata.GroundingChunks is { } chunks)
+                {
+                    foreach (var chunk in chunks)
+                    {
+                        if (chunk.Web is { Uri: { Length: > 0 } } web)
+                        {
+                            UriContent result = new(new Uri(web.Uri));
+                            if (web.Title is { Length: > 0 })
+                            {
+                                (result.AdditionalProperties ??= new())["title"] = web.Title;
+                            }
+                            (searchResults ??= new()).Add(result);
+                        }
+                    }
+                }
+
+                responseContents.Add(new WebSearchToolResultContent(searchCallId)
+                {
+                    Outputs = searchResults,
+                });
+            }
         }
 
         // Populate error information if there is any.
