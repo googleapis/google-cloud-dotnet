@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2026-05-04
+
+### New features
+
+- [Memorystore for Valkey] Updating new node types added
+
 ## Version 1.0.0-beta06, released 2026-04-06
 
 ### New features
