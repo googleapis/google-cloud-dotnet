@@ -4191,12 +4191,12 @@
         },
         {
             "id": "Google.Cloud.Chronicle.V1",
-            "currentVersion": "1.0.0-beta04",
+            "currentVersion": "1.0.0-beta05",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-04-13T15:49:22.338335788Z",
+            "releaseTimestamp": "2026-05-04T19:29:16.076480828Z",
             "lastGeneratedCommit": "2638026851b9110c280d75338581a752a4271340",
-            "lastReleasedCommit": "e182cf5152967047b763fd88f03094cfc836d194",
+            "lastReleasedCommit": "2638026851b9110c280d75338581a752a4271340",
             "apiPaths": [
                 "google/cloud/chronicle/v1"
             ],
