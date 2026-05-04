@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-05-04
+
+### New features
+
+- Adding Client Libraries for BigQueryExportService
+- Support NativeDashboardService, DashboardChartService, DashboardQueryService, FeaturedContentNativeDashboardService, FeaturedContentMetadata for v1
+
 ## Version 1.0.0-beta04, released 2026-04-13
 
 ### New features
