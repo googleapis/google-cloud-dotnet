@@ -4979,7 +4979,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-04-13T15:52:29.171121241Z",
-            "lastGeneratedCommit": "9a832ccde3f3ca4d4e1c39593b1cbf9aa62a75b3",
+            "lastGeneratedCommit": "05cca56fb2037c01576e2d2fdcf00e46eb86c777",
             "lastReleasedCommit": "9a832ccde3f3ca4d4e1c39593b1cbf9aa62a75b3",
             "apiPaths": [
                 "google/cloud/appoptimize/v1beta"
