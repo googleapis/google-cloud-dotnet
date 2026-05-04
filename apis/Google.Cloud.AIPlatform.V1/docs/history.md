@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.71.0, released 2026-05-04
+
+### New features
+
+- Making grounding with parallel.ai available on SDK
+- Add asyncQueryReasoningEngine to aiplatform v1 API
+- Model Registry CopyModel BYOSA
+
 ## Version 3.70.0, released 2026-04-06
 
 ### New features
