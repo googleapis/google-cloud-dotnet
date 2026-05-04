@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.34.0, released 2026-05-04
+
+### Bug fixes
+
+- Increase streaming pull timeout
+
+### Documentation improvements
+
+- Fix documentation URL AIInference MessageTransform service_account_email field
+
 ## Version 3.33.0, released 2026-03-09
 
 ### New features
