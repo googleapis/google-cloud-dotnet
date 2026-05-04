@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.27.0, released 2026-05-04
+
+### New features
+
+- Add value_bitmask_filter to the read API
+- Add session based protocol
+
+### Bug fixes
+
+- Existing value `SESSION_TYPE_TEST = -1` is changed to `SESSION_TYPE_TEST = 9999` in enum `SessionType`
+
+### Documentation improvements
+
+- Update various comments
+
 ## Version 3.26.0, released 2025-11-10
 
 ### New features
