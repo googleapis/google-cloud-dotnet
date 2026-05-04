@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta77, released 2026-05-04
+
+### New features
+
+- Making grounding with parallel.ai available on SDK
+- Add OnlineEvaluator API and update Evaluation API
+- Support VeoLoraTuningSpec in the tuning jobs
+- Add asyncQueryReasoningEngine to aiplatform v1beta1 API
+- New field CopyModelRequest.custome_service_account for Model Registry CopyModel BYOSA
+
 ## Version 1.0.0-beta76, released 2026-04-06
 
 ### New features
