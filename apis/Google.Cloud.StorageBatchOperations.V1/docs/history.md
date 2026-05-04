@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-05-04
+
+### New features
+
+- Add object custom contexts counters
+
+### Documentation improvements
+
+- A comment for field `failed_object_count` in message `.google.cloud.storagebatchoperations.v1.Counters` is changed
+
 ## Version 1.0.0-beta05, released 2026-03-02
 
 ### New features
