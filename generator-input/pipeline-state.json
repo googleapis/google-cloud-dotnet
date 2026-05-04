@@ -4066,12 +4066,12 @@
         },
         {
             "id": "Google.Cloud.Spanner",
-            "currentVersion": "5.13.0-beta04",
+            "currentVersion": "5.13.0-beta05",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-05T07:59:44.634109017Z",
+            "releaseTimestamp": "2026-05-04T18:58:43.356518972Z",
             "lastGeneratedCommit": "a7f4ee2ba387f74da14ca80cf31f43836b3272ea",
-            "lastReleasedCommit": "5c9602dbb5ac6856c07daf83be1fbd001a972ef3",
+            "lastReleasedCommit": "a7f4ee2ba387f74da14ca80cf31f43836b3272ea",
             "apiPaths": [
                 "google/spanner/admin/database/v1",
                 "google/spanner/admin/instance/v1",
