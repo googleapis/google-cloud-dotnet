@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.19.0, released 2026-05-04
+
+### New features
+
+- Support search indexing
+
+### Documentation improvements
+
+- A comment for field `name` in message `.google.firestore.admin.v1.Backup` is changed
+
 ## Version 3.18.0, released 2026-03-30
 
 ### New features
