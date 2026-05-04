@@ -1,5 +1,11 @@
 # Version history
 
+## Version 6.1.0, released 2026-05-04
+
+### Bug fixes
+
+- Correct task tracking to prevent dropped logs on shutdown.
+
 ## Version 6.0.0, released 2026-02-05
 
 ### New features
