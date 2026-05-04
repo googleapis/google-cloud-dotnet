@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.6.0, released 2026-05-04
+
+### New features
+
+- A new optional field `video_links` is added to the `.google.shopping.merchant.products.v1.ProductAttributes` message
+- A new optional field `annual_percentage_rate` is added to the `.google.shopping.merchant.products.v1.ProductInstallment` message
+
+### Documentation improvements
+
+- A comment for field `gtins` in message `.google.shopping.merchant.products.v1.ProductAttributes` is changed
+- A comment for field `mpn` in message `.google.shopping.merchant.products.v1.ProductAttributes` is changed
+
 ## Version 1.5.0, released 2026-04-13
 
 ### New features
