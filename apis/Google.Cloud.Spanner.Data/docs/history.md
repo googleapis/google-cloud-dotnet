@@ -1,5 +1,12 @@
 # Version history
 
+## Version 5.13.0-beta05, released 2026-05-04
+
+### New features
+
+- Add ClientContext to commands (#15534)
+- `isolation_level` and `read_lock_mode` are added to message `.google.spanner.v1.CommitResponse`
+
 ## Version 5.13.0-beta04, released 2026-03-05
 
 ### New features
