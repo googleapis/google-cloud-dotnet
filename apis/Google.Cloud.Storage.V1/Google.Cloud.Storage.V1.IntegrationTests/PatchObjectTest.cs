@@ -59,9 +59,11 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         public void ClearAllObjectContexts()
         {
             var client = _fixture.Client;
+            string contextKey = $"A\u00F1\u03A9\U0001F680-{IdGenerator.FromGuid()}";
+            string contextValue = $"Ab\u00F1\u03A9\U0001F680-{IdGenerator.FromGuid()}";
             var custom = new Dictionary<string, ObjectCustomContextPayload>
             {
-                  { "A\u00F1\u03A9\U0001F680", new ObjectCustomContextPayload { Value = "Ab\u00F1\u03A9\U0001F680" } }
+                  { contextKey, new ObjectCustomContextPayload { Value = contextValue } }
             };
 
             var destination = new Object

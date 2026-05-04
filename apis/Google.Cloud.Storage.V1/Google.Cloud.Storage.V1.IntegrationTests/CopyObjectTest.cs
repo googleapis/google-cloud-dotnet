@@ -126,8 +126,8 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         [Fact]
         public void CopyObjectWithObjectContexts()
         {
-            string contextKey = "A\u00F1\u03A9\U0001F680";
-            string contextValue = "Ab\u00F1\u03A9\U0001F680";
+            string contextKey = $"A\u00F1\u03A9\U0001F680-{IdGenerator.FromGuid()}";
+            string contextValue = $"Ab\u00F1\u03A9\U0001F680-{IdGenerator.FromGuid()}";
             var custom = new Dictionary<string, ObjectCustomContextPayload>
             {
                   { contextKey, new ObjectCustomContextPayload { Value = contextValue } }
