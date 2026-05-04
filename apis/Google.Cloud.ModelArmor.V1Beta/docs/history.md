@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-05-04
+
+### New features
+
+- Add streaming methods StreamSanitizeUserPrompt and StreamSanitizeModelResponse
+- Add GOOGLE_MCP_SERVER enforcement point and McpServerFloorSetting
+- Add ZIP type and file_label to ByteData
+- Add StreamingMode enum and field to sanitize requests
+
+### Documentation improvements
+
+- Update description for ListLocations and various proto comments
+
 ## Version 1.0.0-beta05, released 2025-11-05
 
 ### New features
