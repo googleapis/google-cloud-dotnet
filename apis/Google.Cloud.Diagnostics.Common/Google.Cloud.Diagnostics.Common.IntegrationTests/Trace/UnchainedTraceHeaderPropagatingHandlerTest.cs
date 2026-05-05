@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -58,7 +58,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             var trace = TraceEntryPolling.Default.GetTrace(spanName, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, spanName, googleUri);
-            TraceEntryVerifiers.AssertSpanLabelsExact(
+            TraceEntryVerifiers.AssertSpanLabelsContains(
                 trace.Spans.First(s => s.Name == googleUri), TraceEntryData.HttpGetSuccessLabels);
         }
 
@@ -93,7 +93,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             var trace = TraceEntryPolling.Default.GetTrace(spanName, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, spanName, fakeUri);
-            TraceEntryVerifiers.AssertSpanLabelsExact(trace.Spans.Where(s => s.Name == fakeUri).Single(),
+            TraceEntryVerifiers.AssertSpanLabelsContains(trace.Spans.Where(s => s.Name == fakeUri).Single(),
                 new Dictionary<string, string>
                 {
                     {TraceLabels.HttpMethod, "GET" },

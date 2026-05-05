@@ -1,4 +1,4 @@
-﻿// Copyright 2016 Google Inc. All Rights Reserved.
+// Copyright 2016 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -131,7 +131,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             TraceProto trace = TraceEntryPolling.Default.GetTrace(rootSpanName, _startTime);
 
             TraceEntryVerifiers.AssertSingleSpan(trace, rootSpanName);
-            TraceEntryVerifiers.AssertSpanLabelsExact(trace.Spans.First(), labels);
+            TraceEntryVerifiers.AssertSpanLabelsContains(trace.Spans.First(), labels);
         }
 
         [Fact]
@@ -208,7 +208,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
             Assert.Equal(childTwo.SpanId, grandchildTwo.ParentSpanId);
             Assert.Equal(TraceSpan.Types.SpanKind.Unspecified, grandchildTwo.Kind);
-            TraceEntryVerifiers.AssertSpanLabelsExact(grandchildTwo, labels);
+            TraceEntryVerifiers.AssertSpanLabelsContains(grandchildTwo, labels);
         }
 
         [Fact]

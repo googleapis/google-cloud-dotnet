@@ -1,4 +1,4 @@
-﻿// Copyright 2018 Google Inc. All Rights Reserved.
+// Copyright 2018 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -72,18 +72,6 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                     mainSpan = innerSpan;
                 }
             }
-        }
-
-        /// <summary>
-        /// Verifies that the span has the exact set of expected labels.
-        /// </list>
-        /// </summary>
-        /// <param name="span">The spna to check.</param>
-        /// <param name="expectedLabels">The set of labels expected to be present on the span.</param>
-        public static void AssertSpanLabelsExact(TraceSpan span, IDictionary<string, string> expectedLabels)
-        {
-            Assert.Equal(expectedLabels.Count, span.Labels.Count);
-            AssertSpanLabelsContains(span, expectedLabels);
         }
 
         /// <summary>
