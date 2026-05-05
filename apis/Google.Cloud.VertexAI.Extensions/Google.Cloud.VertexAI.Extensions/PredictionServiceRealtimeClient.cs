@@ -22,7 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 using System.Threading.Tasks;
-using GenAIHttpOptions = Google.Cloud.VertexAI.Extensions.Live.HttpOptions;
+
 using GTypes = Google.Cloud.VertexAI.Extensions.Live;
 
 namespace Google.Cloud.VertexAI.Extensions;
@@ -106,7 +106,7 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
     /// <inheritdoc />
     void IDisposable.Dispose() { /* nop */ }
 
-    /// <summary>Converts MEAI session options to a Google GenAI <see cref="GTypes.LiveConnectConfig"/>.</summary>
+    /// <summary>Converts MEAI session options to a <see cref="GTypes.LiveConnectConfig"/>.</summary>
     internal static GTypes.LiveConnectConfig BuildLiveConnectConfig(RealtimeSessionOptions? options)
     {
         var config = new GTypes.LiveConnectConfig();
@@ -260,7 +260,7 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
             credential = gc;
         }
 
-        GenAIHttpOptions httpOptions = new()
+        GTypes.HttpOptions httpOptions = new()
         {
             ApiVersion = "v1beta1",
         };
