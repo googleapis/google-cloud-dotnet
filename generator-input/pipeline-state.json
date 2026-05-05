@@ -5005,7 +5005,7 @@
             "id": "Google.Maps.MapManagement.V2Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "d23047f4bae1f796aff726e6e3399292d29804ef",
             "apiPaths": [
                 "google/maps/mapmanagement/v2beta"
@@ -5018,7 +5018,7 @@
             "id": "Google.DevicesAndServices.Health.V4",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "283af41e26f6f394a9bfca7b38ce2e698937c7de",
             "apiPaths": [
                 "google/devicesandservices/health/v4"
