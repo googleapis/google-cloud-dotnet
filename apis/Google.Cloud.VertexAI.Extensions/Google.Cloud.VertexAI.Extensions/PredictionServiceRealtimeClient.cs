@@ -31,11 +31,25 @@ namespace Google.Cloud.VertexAI.Extensions;
 #if NET8_0_OR_GREATER
 [System.Diagnostics.CodeAnalysis.Experimental("MEAI001")]
 #endif
-internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBuilder builder, string? defaultModelId) : IRealtimeClient
+internal sealed class PredictionServiceRealtimeClient : IRealtimeClient
 {
-    private readonly PredictionServiceClientBuilder _builder = GaxPreconditions.CheckNotNull(builder, nameof(builder));
-    private readonly string? _defaultModelId = defaultModelId;
+    private readonly ICredential? _credential;
+    private readonly string? _endpoint;
+    private readonly string? _quotaProject;
+    private readonly string? _versionHeader;
+    private readonly string? _defaultModelId;
     private ChatClientMetadata? _metadata;
+
+    internal PredictionServiceRealtimeClient(
+        ICredential? credential, string? endpoint, string? quotaProject,
+        string? versionHeader, string? defaultModelId)
+    {
+        _credential = credential;
+        _endpoint = endpoint;
+        _quotaProject = quotaProject;
+        _versionHeader = versionHeader;
+        _defaultModelId = defaultModelId;
+    }
 
     /// <inheritdoc />
     public async Task<IRealtimeClientSession> CreateSessionAsync(
@@ -87,11 +101,6 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
                     VertexAIExtensions.ProviderName,
                     VertexAIExtensions.ProviderUrl,
                     VertexAIExtensions.ExtractModelIdFromResourceName(_defaultModelId));
-            }
-
-            if (serviceType.IsInstanceOfType(_builder))
-            {
-                return _builder;
             }
 
             if (serviceType.IsInstanceOfType(this))
@@ -229,7 +238,7 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
 
         string? project = endpointName?.ProjectId ?? System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_PROJECT");
         string? location = endpointName?.LocationId ??
-            TryExtractLocationFromEndpoint(_builder.Endpoint) ??
+            TryExtractLocationFromEndpoint(_endpoint) ??
             System.Environment.GetEnvironmentVariable("GOOGLE_CLOUD_LOCATION");
 
         if (string.IsNullOrWhiteSpace(project) || string.IsNullOrWhiteSpace(location))
@@ -239,53 +248,31 @@ internal sealed class PredictionServiceRealtimeClient(PredictionServiceClientBui
                 "Use a full model resource name or configure GOOGLE_CLOUD_PROJECT and GOOGLE_CLOUD_LOCATION.");
         }
 
-        ICredential? credential = _builder.GoogleCredential ?? _builder.Credential;
-#pragma warning disable CS0618 // JsonCredentials is obsolete but still used by consumers
-        if (credential is null && !string.IsNullOrWhiteSpace(_builder.JsonCredentials))
-        {
-            credential = GoogleCredential.FromJson(_builder.JsonCredentials);
-        }
-#pragma warning restore CS0618
-
-        // Ensure the credential has the cloud-platform scope required by Vertex AI.
-        // The gRPC channel builder handles this automatically, but the WebSocket live
-        // path needs it applied explicitly.
-        if (credential is GoogleCredential gc)
-        {
-            gc = gc.CreateScoped(_builder.Scopes ?? PredictionServiceClient.DefaultScopes);
-            if (!string.IsNullOrWhiteSpace(_builder.QuotaProject))
-            {
-                gc = gc.CreateWithQuotaProject(_builder.QuotaProject);
-            }
-            credential = gc;
-        }
-
         GTypes.HttpOptions httpOptions = new()
         {
             ApiVersion = "v1beta1",
         };
 
-        if (!string.IsNullOrWhiteSpace(_builder.Endpoint))
+        if (!string.IsNullOrWhiteSpace(_endpoint))
         {
-            httpOptions.BaseUrl = _builder.Endpoint.IndexOf(Uri.SchemeDelimiter, StringComparison.OrdinalIgnoreCase) >= 0 ?
-                _builder.Endpoint :
-                $"{Uri.UriSchemeHttps}{Uri.SchemeDelimiter}{_builder.Endpoint}";
+            httpOptions.BaseUrl = _endpoint!.IndexOf(Uri.SchemeDelimiter, StringComparison.OrdinalIgnoreCase) >= 0 ?
+                _endpoint :
+                $"{Uri.UriSchemeHttps}{Uri.SchemeDelimiter}{_endpoint}";
         }
 
-        if (!string.IsNullOrWhiteSpace(_builder.QuotaProject))
+        if (!string.IsNullOrWhiteSpace(_quotaProject))
         {
-            (httpOptions.Headers ??= [])[ "x-goog-user-project" ] = _builder.QuotaProject;
+            (httpOptions.Headers ??= [])[ "x-goog-user-project" ] = _quotaProject!;
         }
 
-        string? versionHeader = _builder.Settings?.VersionHeaderBuilder?.ToString();
-        if (!string.IsNullOrWhiteSpace(versionHeader))
+        if (!string.IsNullOrWhiteSpace(_versionHeader))
         {
-            (httpOptions.Headers ??= [])[ "x-goog-api-client" ] = versionHeader!;
+            (httpOptions.Headers ??= [])[ "x-goog-api-client" ] = _versionHeader!;
         }
 
         return new GTypes.Client(
             vertexAI: true,
-            credential: credential,
+            credential: _credential,
             project: project,
             location: location,
             httpOptions: httpOptions);

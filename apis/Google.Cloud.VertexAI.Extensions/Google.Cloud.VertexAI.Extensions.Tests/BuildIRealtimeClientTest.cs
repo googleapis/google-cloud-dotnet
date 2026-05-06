@@ -14,7 +14,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Cloud.AIPlatform.V1;
+using Google.Apis.Auth.OAuth2;
 using Microsoft.Extensions.AI;
 using System;
 using System.Collections.Generic;
@@ -28,34 +28,17 @@ namespace Google.Cloud.VertexAI.Extensions.Tests;
 public class BuildIRealtimeClientTest
 {
     [Fact]
-    public void BuildIRealtimeClient_ValidArguments_CreatesIRealtimeClientSuccessfully()
+    public void Build_ValidArguments_CreatesIRealtimeClientSuccessfully()
     {
-        IRealtimeClient realtimeClient = CreateClientBuilder().BuildIRealtimeClient();
+        IRealtimeClient realtimeClient = CreateRealtimeClientBuilder().Build();
         Assert.NotNull(realtimeClient);
-        Assert.NotNull(realtimeClient.GetService(typeof(PredictionServiceClientBuilder)));
     }
 
     [Fact]
-    public async Task BuildIRealtimeClientAsync_ValidArguments_CreatesIRealtimeClientSuccessfully()
+    public async Task BuildAsync_ValidArguments_CreatesIRealtimeClientSuccessfully()
     {
-        IRealtimeClient realtimeClient = await CreateClientBuilder().BuildIRealtimeClientAsync();
+        IRealtimeClient realtimeClient = await CreateRealtimeClientBuilder().BuildAsync();
         Assert.NotNull(realtimeClient);
-        Assert.NotNull(realtimeClient.GetService(typeof(PredictionServiceClientBuilder)));
-    }
-
-    [Fact]
-    public void BuildIRealtimeClient_InvalidArguments_Throws()
-    {
-        Assert.Throws<ArgumentNullException>("builder", () => VertexAIExtensions.BuildIRealtimeClient(null!));
-    }
-
-    [Fact]
-    public void IRealtimeClient_GetService_InvalidArguments_Throws()
-    {
-        IRealtimeClient realtimeClient = CreateClientBuilder().BuildIRealtimeClient();
-        Assert.NotNull(realtimeClient);
-
-        Assert.Throws<ArgumentNullException>("serviceType", () => realtimeClient.GetService(null!));
     }
 
     [Theory]
@@ -63,12 +46,11 @@ public class BuildIRealtimeClientTest
     [InlineData("projects/test-project/locations/us-central1/publishers/google/models/gemini-2.5-flash-live-preview")]
     public void IRealtimeClient_GetService_ReturnsExpectedInstance(string? defaultModelId)
     {
-        IRealtimeClient realtimeClient = CreateClientBuilder().BuildIRealtimeClient(defaultModelId);
+        var builder = CreateRealtimeClientBuilder();
+        builder.DefaultModelId = defaultModelId;
+        IRealtimeClient realtimeClient = builder.Build();
         Assert.NotNull(realtimeClient);
 
-        Assert.Same(
-            realtimeClient.GetService(typeof(PredictionServiceClientBuilder)),
-            realtimeClient.GetService(typeof(PredictionServiceClientBuilder)));
         Assert.Same(realtimeClient, realtimeClient.GetService(typeof(IRealtimeClient)));
         Assert.Same(realtimeClient, realtimeClient.GetService(typeof(IDisposable)));
 
@@ -80,32 +62,42 @@ public class BuildIRealtimeClientTest
     }
 
     [Fact]
+    public void IRealtimeClient_GetService_InvalidArguments_Throws()
+    {
+        IRealtimeClient realtimeClient = CreateRealtimeClientBuilder().Build();
+        Assert.NotNull(realtimeClient);
+
+        Assert.Throws<ArgumentNullException>("serviceType", () => realtimeClient.GetService(null!));
+    }
+
+    [Fact]
     public void IRealtimeClient_Dispose_Nop()
     {
-        IRealtimeClient realtimeClient = CreateClientBuilder().BuildIRealtimeClient();
+        IRealtimeClient realtimeClient = CreateRealtimeClientBuilder().Build();
         Assert.NotNull(realtimeClient);
 
         realtimeClient.Dispose();
 
-        Assert.NotNull(realtimeClient.GetService(typeof(PredictionServiceClientBuilder)));
+        // Client still functional after dispose (it's a no-op).
+        Assert.NotNull(realtimeClient.GetService(typeof(ChatClientMetadata)));
     }
 
     [Fact]
     public async Task IRealtimeClient_CreateSessionAsync_NoModel_Throws()
     {
-        IRealtimeClient realtimeClient = CreateClientBuilder().BuildIRealtimeClient();
+        IRealtimeClient realtimeClient = CreateRealtimeClientBuilder().Build();
 
         await Assert.ThrowsAsync<InvalidOperationException>(() => realtimeClient.CreateSessionAsync(new RealtimeSessionOptions()));
     }
 
     [Fact]
-    public async Task BuildIRealtimeClientAsync_Cancelled_ReturnsCanceledTask()
+    public async Task BuildAsync_Cancelled_ReturnsCanceledTask()
     {
         using CancellationTokenSource cts = new();
         cts.Cancel();
 
         await Assert.ThrowsAnyAsync<OperationCanceledException>(
-            () => CreateClientBuilder().BuildIRealtimeClientAsync(cancellationToken: cts.Token));
+            () => CreateRealtimeClientBuilder().BuildAsync(cts.Token));
     }
 
     [Fact]
@@ -136,10 +128,18 @@ public class BuildIRealtimeClientTest
         Assert.IsType<InvalidOperationException>(ex.InnerException);
     }
 
-    private static PredictionServiceClientBuilder CreateClientBuilder() =>
+    [Fact]
+    public void Validate_RejectsGrpcSpecificProperties()
+    {
+        var builder = CreateRealtimeClientBuilder();
+        builder.ChannelCredentials = Grpc.Core.ChannelCredentials.Insecure;
+        Assert.Throws<InvalidOperationException>(() => builder.Build());
+    }
+
+    private static PredictionServiceRealtimeClientBuilder CreateRealtimeClientBuilder() =>
         new()
         {
-            ApiKey = "fake-api-key",
+            GoogleCredential = Google.Apis.Auth.OAuth2.GoogleCredential.FromAccessToken("fake-token"),
         };
 
     private static MethodInfo GetNormalizeToolPayloadMethod() =>
