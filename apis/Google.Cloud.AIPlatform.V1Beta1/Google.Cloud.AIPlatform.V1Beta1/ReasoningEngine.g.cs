@@ -88,7 +88,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "GAMgASgJQgPgQQESHgoRcmVxdWlyZW1lbnRzX2ZpbGUYBCABKAlCA+BBAUII",
             "CgZzb3VyY2VCDwoNbGFuZ3VhZ2Vfc3BlYxonCg1Db250YWluZXJTcGVjEhYK",
             "CWltYWdlX3VyaRgBIAEoCUID4EECQhMKEWRlcGxveW1lbnRfc291cmNlQhIK",
-            "EF9zZXJ2aWNlX2FjY291bnQi4gUKD1JlYXNvbmluZ0VuZ2luZRIRCgRuYW1l",
+            "EF9zZXJ2aWNlX2FjY291bnQi/woKD1JlYXNvbmluZ0VuZ2luZRIRCgRuYW1l",
             "GAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQISGAoLZGVz",
             "Y3JpcHRpb24YByABKAlCA+BBARJHCgRzcGVjGAMgASgLMjQuZ29vZ2xlLmNs",
             "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVTcGVjQgPg",
@@ -100,46 +100,60 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "eXB0aW9uX3NwZWMYCyABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
             "MWJldGExLkVuY3J5cHRpb25TcGVjEkwKBmxhYmVscxgRIAMoCzI8Lmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmVhc29uaW5nRW5naW5lLkxh",
-            "YmVsc0VudHJ5Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAE6nwHqQZsBCilhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29t",
-            "L1JlYXNvbmluZ0VuZ2luZRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3JlYXNvbmluZ0VuZ2luZXMve3JlYXNvbmluZ19lbmdp",
-            "bmV9KhByZWFzb25pbmdFbmdpbmVzMg9yZWFzb25pbmdFbmdpbmUi7AgKGlJl",
-            "YXNvbmluZ0VuZ2luZUNvbnRleHRTcGVjEm0KEm1lbW9yeV9iYW5rX2NvbmZp",
-            "ZxgBIAEoCzJMLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmVh",
-            "c29uaW5nRW5naW5lQ29udGV4dFNwZWMuTWVtb3J5QmFua0NvbmZpZ0ID4EEB",
-            "Gt4HChBNZW1vcnlCYW5rQ29uZmlnEn0KEWdlbmVyYXRpb25fY29uZmlnGAEg",
-            "ASgLMl0uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25p",
-            "bmdFbmdpbmVDb250ZXh0U3BlYy5NZW1vcnlCYW5rQ29uZmlnLkdlbmVyYXRp",
-            "b25Db25maWdCA+BBARKKAQoYc2ltaWxhcml0eV9zZWFyY2hfY29uZmlnGAIg",
-            "ASgLMmMuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25p",
-            "bmdFbmdpbmVDb250ZXh0U3BlYy5NZW1vcnlCYW5rQ29uZmlnLlNpbWlsYXJp",
-            "dHlTZWFyY2hDb25maWdCA+BBARJvCgp0dGxfY29uZmlnGAUgASgLMlYuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVD",
-            "b250ZXh0U3BlYy5NZW1vcnlCYW5rQ29uZmlnLlR0bENvbmZpZ0ID4EEBGp4D",
-            "CglUdGxDb25maWcSNQoLZGVmYXVsdF90dGwYASABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb25CA+BBAUgAEowBChNncmFudWxhcl90dGxfY29uZmln",
-            "GAIgASgLMmguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFz",
-            "b25pbmdFbmdpbmVDb250ZXh0U3BlYy5NZW1vcnlCYW5rQ29uZmlnLlR0bENv",
-            "bmZpZy5HcmFudWxhclR0bENvbmZpZ0ID4EEBSAAawwEKEUdyYW51bGFyVHRs",
-            "Q29uZmlnEjIKCmNyZWF0ZV90dGwYASABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb25CA+BBARI8ChRnZW5lcmF0ZV9jcmVhdGVkX3R0bBgCIAEoCzIZ",
-            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjwKFGdlbmVyYXRlX3Vw",
-            "ZGF0ZWRfdHRsGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPg",
-            "QQFCBQoDdHRsGk0KEEdlbmVyYXRpb25Db25maWcSOQoFbW9kZWwYASABKAlC",
-            "KuBBAvpBJAoiYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9FbmRwb2ludBpd",
-            "ChZTaW1pbGFyaXR5U2VhcmNoQ29uZmlnEkMKD2VtYmVkZGluZ19tb2RlbBgB",
-            "IAEoCUIq4EEC+kEkCiJhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VuZHBv",
-            "aW50Qo0DCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIU",
-            "UmVhc29uaW5nRW5naW5lUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9h",
-            "aXBsYXRmb3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1w",
-            "YqoCH0dvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVc",
-            "Q2xvdWRcQUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQ",
-            "bGF0Zm9ybTo6VjFiZXRhMepBngEKMWRldmVsb3BlcmNvbm5lY3QuZ29vZ2xl",
-            "YXBpcy5jb20vR2l0UmVwb3NpdG9yeUxpbmsSaXByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb25uZWN0aW9ucy97Y29ubmVjdGlv",
-            "bn0vZ2l0UmVwb3NpdG9yeUxpbmtzL3tnaXRfcmVwb3NpdG9yeV9saW5rfWIG",
-            "cHJvdG8z"));
+            "YmVsc0VudHJ5ElsKDnRyYWZmaWNfY29uZmlnGBQgASgLMj4uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmUuVHJhZmZp",
+            "Y0NvbmZpZ0ID4EEBGr0ECg1UcmFmZmljQ29uZmlnEnYKFHRyYWZmaWNfc3Bs",
+            "aXRfbWFudWFsGBIgASgLMlEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
+            "ZXRhMS5SZWFzb25pbmdFbmdpbmUuVHJhZmZpY0NvbmZpZy5UcmFmZmljU3Bs",
+            "aXRNYW51YWxCA+BBAUgAEoMBCht0cmFmZmljX3NwbGl0X2Fsd2F5c19sYXRl",
+            "c3QYEyABKAsyVy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlJl",
+            "YXNvbmluZ0VuZ2luZS5UcmFmZmljQ29uZmlnLlRyYWZmaWNTcGxpdEFsd2F5",
+            "c0xhdGVzdEID4EEBSAAagAIKElRyYWZmaWNTcGxpdE1hbnVhbBJpCgd0YXJn",
+            "ZXRzGAEgAygLMlguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5S",
+            "ZWFzb25pbmdFbmdpbmUuVHJhZmZpY0NvbmZpZy5UcmFmZmljU3BsaXRNYW51",
+            "YWwuVGFyZ2V0Gn8KBlRhcmdldBJfChVydW50aW1lX3JldmlzaW9uX25hbWUY",
+            "ASABKAlCQOBBAvpBOgo4YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SZWFz",
+            "b25pbmdFbmdpbmVSdW50aW1lUmV2aXNpb24SFAoHcGVyY2VudBgCIAEoBUID",
+            "4EECGhoKGFRyYWZmaWNTcGxpdEFsd2F5c0xhdGVzdEIPCg10cmFmZmljX3Nw",
+            "bGl0Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAE6nwHqQZsBCilhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL1JlYXNv",
+            "bmluZ0VuZ2luZRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3JlYXNvbmluZ0VuZ2luZXMve3JlYXNvbmluZ19lbmdpbmV9KhBy",
+            "ZWFzb25pbmdFbmdpbmVzMg9yZWFzb25pbmdFbmdpbmUi7AgKGlJlYXNvbmlu",
+            "Z0VuZ2luZUNvbnRleHRTcGVjEm0KEm1lbW9yeV9iYW5rX2NvbmZpZxgBIAEo",
+            "CzJMLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuUmVhc29uaW5n",
+            "RW5naW5lQ29udGV4dFNwZWMuTWVtb3J5QmFua0NvbmZpZ0ID4EEBGt4HChBN",
+            "ZW1vcnlCYW5rQ29uZmlnEn0KEWdlbmVyYXRpb25fY29uZmlnGAEgASgLMl0u",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdp",
+            "bmVDb250ZXh0U3BlYy5NZW1vcnlCYW5rQ29uZmlnLkdlbmVyYXRpb25Db25m",
+            "aWdCA+BBARKKAQoYc2ltaWxhcml0eV9zZWFyY2hfY29uZmlnGAIgASgLMmMu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdp",
+            "bmVDb250ZXh0U3BlYy5NZW1vcnlCYW5rQ29uZmlnLlNpbWlsYXJpdHlTZWFy",
+            "Y2hDb25maWdCA+BBARJvCgp0dGxfY29uZmlnGAUgASgLMlYuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdFbmdpbmVDb250ZXh0",
+            "U3BlYy5NZW1vcnlCYW5rQ29uZmlnLlR0bENvbmZpZ0ID4EEBGp4DCglUdGxD",
+            "b25maWcSNQoLZGVmYXVsdF90dGwYASABKAsyGS5nb29nbGUucHJvdG9idWYu",
+            "RHVyYXRpb25CA+BBAUgAEowBChNncmFudWxhcl90dGxfY29uZmlnGAIgASgL",
+            "MmguZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMS5SZWFzb25pbmdF",
+            "bmdpbmVDb250ZXh0U3BlYy5NZW1vcnlCYW5rQ29uZmlnLlR0bENvbmZpZy5H",
+            "cmFudWxhclR0bENvbmZpZ0ID4EEBSAAawwEKEUdyYW51bGFyVHRsQ29uZmln",
+            "EjIKCmNyZWF0ZV90dGwYASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
+            "b25CA+BBARI8ChRnZW5lcmF0ZV9jcmVhdGVkX3R0bBgCIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjwKFGdlbmVyYXRlX3VwZGF0ZWRf",
+            "dHRsGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQFCBQoD",
+            "dHRsGk0KEEdlbmVyYXRpb25Db25maWcSOQoFbW9kZWwYASABKAlCKuBBAvpB",
+            "JAoiYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9FbmRwb2ludBpdChZTaW1p",
+            "bGFyaXR5U2VhcmNoQ29uZmlnEkMKD2VtYmVkZGluZ19tb2RlbBgBIAEoCUIq",
+            "4EEC+kEkCiJhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VuZHBvaW50Qo0D",
+            "CiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRhMUIUUmVhc29u",
+            "aW5nRW5naW5lUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9nby9haXBsYXRm",
+            "b3JtL2FwaXYxYmV0YTEvYWlwbGF0Zm9ybXBiO2FpcGxhdGZvcm1wYqoCH0dv",
+            "b2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxQmV0YTHKAh9Hb29nbGVcQ2xvdWRc",
+            "QUlQbGF0Zm9ybVxWMWJldGEx6gIiR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9y",
+            "bTo6VjFiZXRhMepBngEKMWRldmVsb3BlcmNvbm5lY3QuZ29vZ2xlYXBpcy5j",
+            "b20vR2l0UmVwb3NpdG9yeUxpbmsSaXByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9jb25uZWN0aW9ucy97Y29ubmVjdGlvbn0vZ2l0",
+            "UmVwb3NpdG9yeUxpbmtzL3tnaXRfcmVwb3NpdG9yeV9saW5rfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -151,7 +165,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.DeveloperConnectSource.Parser, new[]{ "Config" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.PythonSpec.Parser, new[]{ "Version", "EntrypointModule", "EntrypointObject", "RequirementsFile" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.ContainerSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineSpec.Types.ContainerSpec.Parser, new[]{ "ImageUri" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag", "ContextSpec", "EncryptionSpec", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Parser, new[]{ "Name", "DisplayName", "Description", "Spec", "CreateTime", "UpdateTime", "Etag", "ContextSpec", "EncryptionSpec", "Labels", "TrafficConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Parser, new[]{ "TrafficSplitManual", "TrafficSplitAlwaysLatest" }, new[]{ "TrafficSplit" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Parser, new[]{ "Targets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Types.Target), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Types.Target.Parser, new[]{ "RuntimeRevisionName", "Percent" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest.Parser, null, null, null, null, null)}),
+            null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Parser, new[]{ "MemoryBankConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Parser, new[]{ "GenerationConfig", "SimilaritySearchConfig", "TtlConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Parser, new[]{ "DefaultTtl", "GranularTtlConfig" }, new[]{ "Ttl" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.TtlConfig.Types.GranularTtlConfig.Parser, new[]{ "CreateTtl", "GenerateCreatedTtl", "GenerateUpdatedTtl" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.GenerationConfig.Parser, new[]{ "Model" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig), global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineContextSpec.Types.MemoryBankConfig.Types.SimilaritySearchConfig.Parser, new[]{ "EmbeddingModel" }, null, null, null, null)})})
@@ -3463,6 +3479,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       contextSpec_ = other.contextSpec_ != null ? other.contextSpec_.Clone() : null;
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       labels_ = other.labels_.Clone();
+      trafficConfig_ = other.trafficConfig_ != null ? other.trafficConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3627,6 +3644,21 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "traffic_config" field.</summary>
+    public const int TrafficConfigFieldNumber = 20;
+    private global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig trafficConfig_;
+    /// <summary>
+    /// Optional. Traffic distribution configuration for the Reasoning Engine.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig TrafficConfig {
+      get { return trafficConfig_; }
+      set {
+        trafficConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3652,6 +3684,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (!object.Equals(ContextSpec, other.ContextSpec)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (!object.Equals(TrafficConfig, other.TrafficConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3669,6 +3702,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       if (contextSpec_ != null) hash ^= ContextSpec.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (trafficConfig_ != null) hash ^= TrafficConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3724,6 +3758,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(EncryptionSpec);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (trafficConfig_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(TrafficConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3771,6 +3809,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteMessage(EncryptionSpec);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (trafficConfig_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(TrafficConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3809,6 +3851,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (trafficConfig_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(TrafficConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3864,6 +3909,12 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         EncryptionSpec.MergeFrom(other.EncryptionSpec);
       }
       labels_.MergeFrom(other.labels_);
+      if (other.trafficConfig_ != null) {
+        if (trafficConfig_ == null) {
+          TrafficConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig();
+        }
+        TrafficConfig.MergeFrom(other.TrafficConfig);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -3936,6 +3987,13 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           }
           case 138: {
             labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 162: {
+            if (trafficConfig_ == null) {
+              TrafficConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig();
+            }
+            input.ReadMessage(TrafficConfig);
             break;
           }
         }
@@ -4012,10 +4070,953 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
+          case 162: {
+            if (trafficConfig_ == null) {
+              TrafficConfig = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig();
+            }
+            input.ReadMessage(TrafficConfig);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ReasoningEngine message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Traffic distribution configuration.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TrafficConfig : pb::IMessage<TrafficConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TrafficConfig> _parser = new pb::MessageParser<TrafficConfig>(() => new TrafficConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TrafficConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrafficConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrafficConfig(TrafficConfig other) : this() {
+          switch (other.TrafficSplitCase) {
+            case TrafficSplitOneofCase.TrafficSplitManual:
+              TrafficSplitManual = other.TrafficSplitManual.Clone();
+              break;
+            case TrafficSplitOneofCase.TrafficSplitAlwaysLatest:
+              TrafficSplitAlwaysLatest = other.TrafficSplitAlwaysLatest.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrafficConfig Clone() {
+          return new TrafficConfig(this);
+        }
+
+        /// <summary>Field number for the "traffic_split_manual" field.</summary>
+        public const int TrafficSplitManualFieldNumber = 18;
+        /// <summary>
+        /// Optional. Manual traffic distribution configuration, where the user
+        /// specifies the Runtime Revision IDs and the percentage of traffic to
+        /// send to each.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual TrafficSplitManual {
+          get { return trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitManual ? (global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual) trafficSplit_ : null; }
+          set {
+            trafficSplit_ = value;
+            trafficSplitCase_ = value == null ? TrafficSplitOneofCase.None : TrafficSplitOneofCase.TrafficSplitManual;
+          }
+        }
+
+        /// <summary>Field number for the "traffic_split_always_latest" field.</summary>
+        public const int TrafficSplitAlwaysLatestFieldNumber = 19;
+        /// <summary>
+        /// Optional. Traffic distribution configuration, where all traffic is sent
+        /// to the latest Runtime Revision.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest TrafficSplitAlwaysLatest {
+          get { return trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitAlwaysLatest ? (global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest) trafficSplit_ : null; }
+          set {
+            trafficSplit_ = value;
+            trafficSplitCase_ = value == null ? TrafficSplitOneofCase.None : TrafficSplitOneofCase.TrafficSplitAlwaysLatest;
+          }
+        }
+
+        private object trafficSplit_;
+        /// <summary>Enum of possible cases for the "traffic_split" oneof.</summary>
+        public enum TrafficSplitOneofCase {
+          None = 0,
+          TrafficSplitManual = 18,
+          TrafficSplitAlwaysLatest = 19,
+        }
+        private TrafficSplitOneofCase trafficSplitCase_ = TrafficSplitOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TrafficSplitOneofCase TrafficSplitCase {
+          get { return trafficSplitCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearTrafficSplit() {
+          trafficSplitCase_ = TrafficSplitOneofCase.None;
+          trafficSplit_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TrafficConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TrafficConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(TrafficSplitManual, other.TrafficSplitManual)) return false;
+          if (!object.Equals(TrafficSplitAlwaysLatest, other.TrafficSplitAlwaysLatest)) return false;
+          if (TrafficSplitCase != other.TrafficSplitCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitManual) hash ^= TrafficSplitManual.GetHashCode();
+          if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitAlwaysLatest) hash ^= TrafficSplitAlwaysLatest.GetHashCode();
+          hash ^= (int) trafficSplitCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitManual) {
+            output.WriteRawTag(146, 1);
+            output.WriteMessage(TrafficSplitManual);
+          }
+          if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitAlwaysLatest) {
+            output.WriteRawTag(154, 1);
+            output.WriteMessage(TrafficSplitAlwaysLatest);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitManual) {
+            output.WriteRawTag(146, 1);
+            output.WriteMessage(TrafficSplitManual);
+          }
+          if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitAlwaysLatest) {
+            output.WriteRawTag(154, 1);
+            output.WriteMessage(TrafficSplitAlwaysLatest);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitManual) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(TrafficSplitManual);
+          }
+          if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitAlwaysLatest) {
+            size += 2 + pb::CodedOutputStream.ComputeMessageSize(TrafficSplitAlwaysLatest);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TrafficConfig other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.TrafficSplitCase) {
+            case TrafficSplitOneofCase.TrafficSplitManual:
+              if (TrafficSplitManual == null) {
+                TrafficSplitManual = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual();
+              }
+              TrafficSplitManual.MergeFrom(other.TrafficSplitManual);
+              break;
+            case TrafficSplitOneofCase.TrafficSplitAlwaysLatest:
+              if (TrafficSplitAlwaysLatest == null) {
+                TrafficSplitAlwaysLatest = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest();
+              }
+              TrafficSplitAlwaysLatest.MergeFrom(other.TrafficSplitAlwaysLatest);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 146: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual();
+                if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitManual) {
+                  subBuilder.MergeFrom(TrafficSplitManual);
+                }
+                input.ReadMessage(subBuilder);
+                TrafficSplitManual = subBuilder;
+                break;
+              }
+              case 154: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest();
+                if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitAlwaysLatest) {
+                  subBuilder.MergeFrom(TrafficSplitAlwaysLatest);
+                }
+                input.ReadMessage(subBuilder);
+                TrafficSplitAlwaysLatest = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 146: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual();
+                if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitManual) {
+                  subBuilder.MergeFrom(TrafficSplitManual);
+                }
+                input.ReadMessage(subBuilder);
+                TrafficSplitManual = subBuilder;
+                break;
+              }
+              case 154: {
+                global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest subBuilder = new global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitAlwaysLatest();
+                if (trafficSplitCase_ == TrafficSplitOneofCase.TrafficSplitAlwaysLatest) {
+                  subBuilder.MergeFrom(TrafficSplitAlwaysLatest);
+                }
+                input.ReadMessage(subBuilder);
+                TrafficSplitAlwaysLatest = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the TrafficConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Manual traffic distribution configuration, where the user specifies the
+          /// Runtime Revision IDs and the percentage of traffic to send to each.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class TrafficSplitManual : pb::IMessage<TrafficSplitManual>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<TrafficSplitManual> _parser = new pb::MessageParser<TrafficSplitManual>(() => new TrafficSplitManual());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<TrafficSplitManual> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TrafficSplitManual() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TrafficSplitManual(TrafficSplitManual other) : this() {
+              targets_ = other.targets_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TrafficSplitManual Clone() {
+              return new TrafficSplitManual(this);
+            }
+
+            /// <summary>Field number for the "targets" field.</summary>
+            public const int TargetsFieldNumber = 1;
+            private static readonly pb::FieldCodec<global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Types.Target> _repeated_targets_codec
+                = pb::FieldCodec.ForMessage(10, global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Types.Target.Parser);
+            private readonly pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Types.Target> targets_ = new pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Types.Target>();
+            /// <summary>
+            /// A list of traffic targets for the Runtimes Revisions. The sum of
+            /// percentages must equal to 100.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Types.Target> Targets {
+              get { return targets_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as TrafficSplitManual);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(TrafficSplitManual other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if(!targets_.Equals(other.targets_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              hash ^= targets_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              targets_.WriteTo(output, _repeated_targets_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              targets_.WriteTo(ref output, _repeated_targets_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              size += targets_.CalculateSize(_repeated_targets_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(TrafficSplitManual other) {
+              if (other == null) {
+                return;
+              }
+              targets_.Add(other.targets_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    targets_.AddEntriesFrom(input, _repeated_targets_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    targets_.AddEntriesFrom(ref input, _repeated_targets_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+            #region Nested types
+            /// <summary>Container for nested types declared in the TrafficSplitManual message type.</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static partial class Types {
+              /// <summary>
+              /// A single target for the traffic split, specifying a Runtime Revision
+              /// and the percentage of traffic to send to it.
+              /// </summary>
+              [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+              public sealed partial class Target : pb::IMessage<Target>
+              #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  , pb::IBufferMessage
+              #endif
+              {
+                private static readonly pb::MessageParser<Target> _parser = new pb::MessageParser<Target>(() => new Target());
+                private pb::UnknownFieldSet _unknownFields;
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pb::MessageParser<Target> Parser { get { return _parser; } }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public static pbr::MessageDescriptor Descriptor {
+                  get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Types.TrafficSplitManual.Descriptor.NestedTypes[0]; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                pbr::MessageDescriptor pb::IMessage.Descriptor {
+                  get { return Descriptor; }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Target() {
+                  OnConstruction();
+                }
+
+                partial void OnConstruction();
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Target(Target other) : this() {
+                  runtimeRevisionName_ = other.runtimeRevisionName_;
+                  percent_ = other.percent_;
+                  _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public Target Clone() {
+                  return new Target(this);
+                }
+
+                /// <summary>Field number for the "runtime_revision_name" field.</summary>
+                public const int RuntimeRevisionNameFieldNumber = 1;
+                private string runtimeRevisionName_ = "";
+                /// <summary>
+                /// Required. The Runtime Revision name to which to send this portion of
+                /// traffic, if traffic allocation is by Runtime Revision.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public string RuntimeRevisionName {
+                  get { return runtimeRevisionName_; }
+                  set {
+                    runtimeRevisionName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+                  }
+                }
+
+                /// <summary>Field number for the "percent" field.</summary>
+                public const int PercentFieldNumber = 2;
+                private int percent_;
+                /// <summary>
+                /// Required. Specifies percent of the traffic to this Runtime Revision.
+                /// </summary>
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int Percent {
+                  get { return percent_; }
+                  set {
+                    percent_ = value;
+                  }
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override bool Equals(object other) {
+                  return Equals(other as Target);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public bool Equals(Target other) {
+                  if (ReferenceEquals(other, null)) {
+                    return false;
+                  }
+                  if (ReferenceEquals(other, this)) {
+                    return true;
+                  }
+                  if (RuntimeRevisionName != other.RuntimeRevisionName) return false;
+                  if (Percent != other.Percent) return false;
+                  return Equals(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override int GetHashCode() {
+                  int hash = 1;
+                  if (RuntimeRevisionName.Length != 0) hash ^= RuntimeRevisionName.GetHashCode();
+                  if (Percent != 0) hash ^= Percent.GetHashCode();
+                  if (_unknownFields != null) {
+                    hash ^= _unknownFields.GetHashCode();
+                  }
+                  return hash;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public override string ToString() {
+                  return pb::JsonFormatter.ToDiagnosticString(this);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void WriteTo(pb::CodedOutputStream output) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  output.WriteRawMessage(this);
+                #else
+                  if (RuntimeRevisionName.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(RuntimeRevisionName);
+                  }
+                  if (Percent != 0) {
+                    output.WriteRawTag(16);
+                    output.WriteInt32(Percent);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(output);
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+                  if (RuntimeRevisionName.Length != 0) {
+                    output.WriteRawTag(10);
+                    output.WriteString(RuntimeRevisionName);
+                  }
+                  if (Percent != 0) {
+                    output.WriteRawTag(16);
+                    output.WriteInt32(Percent);
+                  }
+                  if (_unknownFields != null) {
+                    _unknownFields.WriteTo(ref output);
+                  }
+                }
+                #endif
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public int CalculateSize() {
+                  int size = 0;
+                  if (RuntimeRevisionName.Length != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeStringSize(RuntimeRevisionName);
+                  }
+                  if (Percent != 0) {
+                    size += 1 + pb::CodedOutputStream.ComputeInt32Size(Percent);
+                  }
+                  if (_unknownFields != null) {
+                    size += _unknownFields.CalculateSize();
+                  }
+                  return size;
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(Target other) {
+                  if (other == null) {
+                    return;
+                  }
+                  if (other.RuntimeRevisionName.Length != 0) {
+                    RuntimeRevisionName = other.RuntimeRevisionName;
+                  }
+                  if (other.Percent != 0) {
+                    Percent = other.Percent;
+                  }
+                  _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+                }
+
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                public void MergeFrom(pb::CodedInputStream input) {
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                  input.ReadRawMessage(this);
+                #else
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                        break;
+                      case 10: {
+                        RuntimeRevisionName = input.ReadString();
+                        break;
+                      }
+                      case 16: {
+                        Percent = input.ReadInt32();
+                        break;
+                      }
+                    }
+                  }
+                #endif
+                }
+
+                #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+                [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+                void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+                  uint tag;
+                  while ((tag = input.ReadTag()) != 0) {
+                  if ((tag & 7) == 4) {
+                    // Abort on any end group tag.
+                    return;
+                  }
+                  switch(tag) {
+                      default:
+                        _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                        break;
+                      case 10: {
+                        RuntimeRevisionName = input.ReadString();
+                        break;
+                      }
+                      case 16: {
+                        Percent = input.ReadInt32();
+                        break;
+                      }
+                    }
+                  }
+                }
+                #endif
+
+              }
+
+            }
+            #endregion
+
+          }
+
+          /// <summary>
+          /// Traffic distribution configuration, where all traffic is sent to the
+          /// latest Runtime Revision.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class TrafficSplitAlwaysLatest : pb::IMessage<TrafficSplitAlwaysLatest>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<TrafficSplitAlwaysLatest> _parser = new pb::MessageParser<TrafficSplitAlwaysLatest>(() => new TrafficSplitAlwaysLatest());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<TrafficSplitAlwaysLatest> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.AIPlatform.V1Beta1.ReasoningEngine.Types.TrafficConfig.Descriptor.NestedTypes[1]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TrafficSplitAlwaysLatest() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TrafficSplitAlwaysLatest(TrafficSplitAlwaysLatest other) : this() {
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public TrafficSplitAlwaysLatest Clone() {
+              return new TrafficSplitAlwaysLatest(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as TrafficSplitAlwaysLatest);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(TrafficSplitAlwaysLatest other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(TrafficSplitAlwaysLatest other) {
+              if (other == null) {
+                return;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 

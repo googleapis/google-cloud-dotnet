@@ -87910,6 +87910,899 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_GetReasoningEngineRuntimeRevision_sync",
+      "title": "GetReasoningEngineRuntimeRevisionRequestObject",
+      "description": "Snippet for GetReasoningEngineRuntimeRevision",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineRuntimeRevision",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetReasoningEngineRuntimeRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.GetReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_GetReasoningEngineRuntimeRevision_async",
+      "title": "GetReasoningEngineRuntimeRevisionRequestObjectAsync",
+      "description": "Snippet for GetReasoningEngineRuntimeRevisionAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineRuntimeRevisionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.GetReasoningEngineRuntimeRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.GetReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_GetReasoningEngineRuntimeRevision_sync_flattened",
+      "title": "GetReasoningEngineRuntimeRevision",
+      "description": "Snippet for GetReasoningEngineRuntimeRevision",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineRuntimeRevision",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.GetReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_GetReasoningEngineRuntimeRevision_async_flattened",
+      "title": "GetReasoningEngineRuntimeRevisionAsync",
+      "description": "Snippet for GetReasoningEngineRuntimeRevisionAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineRuntimeRevisionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.GetReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_GetReasoningEngineRuntimeRevision_sync_flattened_resourceNames",
+      "title": "GetReasoningEngineRuntimeRevisionResourceNames",
+      "description": "Snippet for GetReasoningEngineRuntimeRevision",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineRuntimeRevision",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.GetReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_GetReasoningEngineRuntimeRevision_async_flattened_resourceNames",
+      "title": "GetReasoningEngineRuntimeRevisionResourceNamesAsync",
+      "description": "Snippet for GetReasoningEngineRuntimeRevisionAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetReasoningEngineRuntimeRevisionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.GetReasoningEngineRuntimeRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "GetReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.GetReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_ListReasoningEngineRuntimeRevisions_sync",
+      "title": "ListReasoningEngineRuntimeRevisionsRequestObject",
+      "description": "Snippet for ListReasoningEngineRuntimeRevisions",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngineRuntimeRevisions",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListReasoningEngineRuntimeRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListReasoningEngineRuntimeRevisionsResponse, Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngineRuntimeRevisions",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.ListReasoningEngineRuntimeRevisions",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_ListReasoningEngineRuntimeRevisions_async",
+      "title": "ListReasoningEngineRuntimeRevisionsRequestObjectAsync",
+      "description": "Snippet for ListReasoningEngineRuntimeRevisionsAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngineRuntimeRevisionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ListReasoningEngineRuntimeRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListReasoningEngineRuntimeRevisionsResponse, Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngineRuntimeRevisions",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.ListReasoningEngineRuntimeRevisions",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_ListReasoningEngineRuntimeRevisions_sync_flattened",
+      "title": "ListReasoningEngineRuntimeRevisions",
+      "description": "Snippet for ListReasoningEngineRuntimeRevisions",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngineRuntimeRevisions",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListReasoningEngineRuntimeRevisionsResponse, Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngineRuntimeRevisions",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.ListReasoningEngineRuntimeRevisions",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_ListReasoningEngineRuntimeRevisions_async_flattened",
+      "title": "ListReasoningEngineRuntimeRevisionsAsync",
+      "description": "Snippet for ListReasoningEngineRuntimeRevisionsAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngineRuntimeRevisionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListReasoningEngineRuntimeRevisionsResponse, Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngineRuntimeRevisions",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.ListReasoningEngineRuntimeRevisions",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_ListReasoningEngineRuntimeRevisions_sync_flattened_resourceNames",
+      "title": "ListReasoningEngineRuntimeRevisionsResourceNames",
+      "description": "Snippet for ListReasoningEngineRuntimeRevisions",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngineRuntimeRevisions",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListReasoningEngineRuntimeRevisionsResponse, Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngineRuntimeRevisions",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.ListReasoningEngineRuntimeRevisions",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_ListReasoningEngineRuntimeRevisions_async_flattened_resourceNames",
+      "title": "ListReasoningEngineRuntimeRevisionsResourceNamesAsync",
+      "description": "Snippet for ListReasoningEngineRuntimeRevisionsAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListReasoningEngineRuntimeRevisionsAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.ListReasoningEngineRuntimeRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AIPlatform.V1Beta1.ListReasoningEngineRuntimeRevisionsResponse, Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevision>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "ListReasoningEngineRuntimeRevisions",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.ListReasoningEngineRuntimeRevisions",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_DeleteReasoningEngineRuntimeRevision_sync",
+      "title": "DeleteReasoningEngineRuntimeRevisionRequestObject",
+      "description": "Snippet for DeleteReasoningEngineRuntimeRevision",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineRuntimeRevision",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteReasoningEngineRuntimeRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteReasoningEngineRuntimeRevisionOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.DeleteReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_DeleteReasoningEngineRuntimeRevision_async",
+      "title": "DeleteReasoningEngineRuntimeRevisionRequestObjectAsync",
+      "description": "Snippet for DeleteReasoningEngineRuntimeRevisionAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineRuntimeRevisionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.DeleteReasoningEngineRuntimeRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteReasoningEngineRuntimeRevisionOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.DeleteReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_DeleteReasoningEngineRuntimeRevision_sync_flattened",
+      "title": "DeleteReasoningEngineRuntimeRevision",
+      "description": "Snippet for DeleteReasoningEngineRuntimeRevision",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineRuntimeRevision",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteReasoningEngineRuntimeRevisionOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.DeleteReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_DeleteReasoningEngineRuntimeRevision_async_flattened",
+      "title": "DeleteReasoningEngineRuntimeRevisionAsync",
+      "description": "Snippet for DeleteReasoningEngineRuntimeRevisionAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineRuntimeRevisionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteReasoningEngineRuntimeRevisionOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.DeleteReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_DeleteReasoningEngineRuntimeRevision_sync_flattened_resourceNames",
+      "title": "DeleteReasoningEngineRuntimeRevisionResourceNames",
+      "description": "Snippet for DeleteReasoningEngineRuntimeRevision",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineRuntimeRevision",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteReasoningEngineRuntimeRevisionOperationMetadata>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.DeleteReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineRuntimeRevisionService_DeleteReasoningEngineRuntimeRevision_async_flattened_resourceNames",
+      "title": "DeleteReasoningEngineRuntimeRevisionResourceNamesAsync",
+      "description": "Snippet for DeleteReasoningEngineRuntimeRevisionAsync",
+      "file": "ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteReasoningEngineRuntimeRevisionAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient.DeleteReasoningEngineRuntimeRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AIPlatform.V1Beta1.DeleteReasoningEngineRuntimeRevisionOperationMetadata>>",
+        "client": {
+          "shortName": "ReasoningEngineRuntimeRevisionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1Beta1.ReasoningEngineRuntimeRevisionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteReasoningEngineRuntimeRevision",
+          "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService.DeleteReasoningEngineRuntimeRevision",
+          "service": {
+            "shortName": "ReasoningEngineRuntimeRevisionService",
+            "fullName": "google.cloud.aiplatform.v1beta1.ReasoningEngineRuntimeRevisionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1beta1_generated_ReasoningEngineService_CreateReasoningEngine_sync",
       "title": "CreateReasoningEngineRequestObject",
       "description": "Snippet for CreateReasoningEngine",

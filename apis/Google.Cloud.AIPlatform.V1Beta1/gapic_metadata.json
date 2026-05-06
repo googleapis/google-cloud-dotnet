@@ -2210,6 +2210,33 @@
         }
       }
     },
+    "ReasoningEngineRuntimeRevisionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ReasoningEngineRuntimeRevisionServiceClient",
+          "rpcs": {
+            "DeleteReasoningEngineRuntimeRevision": {
+              "methods": [
+                "DeleteReasoningEngineRuntimeRevision",
+                "DeleteReasoningEngineRuntimeRevisionAsync"
+              ]
+            },
+            "GetReasoningEngineRuntimeRevision": {
+              "methods": [
+                "GetReasoningEngineRuntimeRevision",
+                "GetReasoningEngineRuntimeRevisionAsync"
+              ]
+            },
+            "ListReasoningEngineRuntimeRevisions": {
+              "methods": [
+                "ListReasoningEngineRuntimeRevisions",
+                "ListReasoningEngineRuntimeRevisionsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "ReasoningEngineService": {
       "clients": {
         "grpc": {
