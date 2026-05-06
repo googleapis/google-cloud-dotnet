@@ -64,6 +64,7 @@ namespace Google.Cloud.Spanner.V1
             PartitionQuerySettings = existing.PartitionQuerySettings;
             PartitionReadSettings = existing.PartitionReadSettings;
             BatchWriteSettings = existing.BatchWriteSettings;
+            FetchCacheUpdateSettings = existing.FetchCacheUpdateSettings;
             OnCopy(existing);
         }
 
@@ -377,6 +378,18 @@ namespace Google.Cloud.Spanner.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BatchWriteSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(3600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SpannerClient.FetchCacheUpdate</c> and <c>SpannerClient.FetchCacheUpdateAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FetchCacheUpdateSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SpannerSettings"/> object.</returns>
@@ -2759,6 +2772,74 @@ namespace Google.Cloud.Spanner.V1
                     gax::GaxPreconditions.CheckNotNull(mutationGroups, nameof(mutationGroups)),
                 },
             }, callSettings);
+
+        /// <summary>
+        /// Server streaming methods for <see cref="FetchCacheUpdate(FetchCacheUpdateRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class FetchCacheUpdateStream : gaxgrpc::ServerStreamingBase<CacheUpdate>
+        {
+        }
+
+        /// <summary>
+        /// Retrieves a cache update for a given database.
+        /// 
+        /// This RPC can be used to warm up the client cache by fetching key recipes
+        /// and server information for a given database. It is recommended to call
+        /// this RPC at the beginning of the client's lifecycle, prior to any other
+        /// data plane operations.
+        /// 
+        /// The cache update is returned as a stream because the response can be too
+        /// large to fit into a single `CacheUpdate` message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual FetchCacheUpdateStream FetchCacheUpdate(FetchCacheUpdateRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a cache update for a given database.
+        /// 
+        /// This RPC can be used to warm up the client cache by fetching key recipes
+        /// and server information for a given database. It is recommended to call
+        /// this RPC at the beginning of the client's lifecycle, prior to any other
+        /// data plane operations.
+        /// 
+        /// The cache update is returned as a stream because the response can be too
+        /// large to fit into a single `CacheUpdate` message.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database for which to retrieve the cache update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual FetchCacheUpdateStream FetchCacheUpdate(string database, gaxgrpc::CallSettings callSettings = null) =>
+            FetchCacheUpdate(new FetchCacheUpdateRequest
+            {
+                Database = gax::GaxPreconditions.CheckNotNullOrEmpty(database, nameof(database)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves a cache update for a given database.
+        /// 
+        /// This RPC can be used to warm up the client cache by fetching key recipes
+        /// and server information for a given database. It is recommended to call
+        /// this RPC at the beginning of the client's lifecycle, prior to any other
+        /// data plane operations.
+        /// 
+        /// The cache update is returned as a stream because the response can be too
+        /// large to fit into a single `CacheUpdate` message.
+        /// </summary>
+        /// <param name="database">
+        /// Required. The database for which to retrieve the cache update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual FetchCacheUpdateStream FetchCacheUpdate(gcscv::DatabaseName database, gaxgrpc::CallSettings callSettings = null) =>
+            FetchCacheUpdate(new FetchCacheUpdateRequest
+            {
+                DatabaseAsDatabaseName = gax::GaxPreconditions.CheckNotNull(database, nameof(database)),
+            }, callSettings);
     }
 
     /// <summary>Spanner client wrapper implementation, for convenient use.</summary>
@@ -2801,6 +2882,8 @@ namespace Google.Cloud.Spanner.V1
         private readonly gaxgrpc::ApiCall<PartitionReadRequest, PartitionResponse> _callPartitionRead;
 
         private readonly gaxgrpc::ApiServerStreamingCall<BatchWriteRequest, BatchWriteResponse> _callBatchWrite;
+
+        private readonly gaxgrpc::ApiServerStreamingCall<FetchCacheUpdateRequest, CacheUpdate> _callFetchCacheUpdate;
 
         /// <summary>
         /// Constructs a client wrapper for the Spanner service, with the specified gRPC client and settings.
@@ -2865,6 +2948,9 @@ namespace Google.Cloud.Spanner.V1
             _callBatchWrite = clientHelper.BuildApiCall<BatchWriteRequest, BatchWriteResponse>("BatchWrite", grpcClient.BatchWrite, effectiveSettings.BatchWriteSettings).WithGoogleRequestParam("session", request => request.Session);
             Modify_ApiCall(ref _callBatchWrite);
             Modify_BatchWriteApiCall(ref _callBatchWrite);
+            _callFetchCacheUpdate = clientHelper.BuildApiCall<FetchCacheUpdateRequest, CacheUpdate>("FetchCacheUpdate", grpcClient.FetchCacheUpdate, effectiveSettings.FetchCacheUpdateSettings).WithGoogleRequestParam("database", request => request.Database);
+            Modify_ApiCall(ref _callFetchCacheUpdate);
+            Modify_FetchCacheUpdateApiCall(ref _callFetchCacheUpdate);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2904,6 +2990,8 @@ namespace Google.Cloud.Spanner.V1
 
         partial void Modify_BatchWriteApiCall(ref gaxgrpc::ApiServerStreamingCall<BatchWriteRequest, BatchWriteResponse> call);
 
+        partial void Modify_FetchCacheUpdateApiCall(ref gaxgrpc::ApiServerStreamingCall<FetchCacheUpdateRequest, CacheUpdate> call);
+
         partial void OnConstruction(Spanner.SpannerClient grpcClient, SpannerSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Spanner client</summary>
@@ -2936,6 +3024,8 @@ namespace Google.Cloud.Spanner.V1
         partial void Modify_PartitionReadRequest(ref PartitionReadRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchWriteRequest(ref BatchWriteRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FetchCacheUpdateRequest(ref FetchCacheUpdateRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new session. A session can be used to perform
@@ -3561,6 +3651,35 @@ namespace Google.Cloud.Spanner.V1
         {
             Modify_BatchWriteRequest(ref request, ref callSettings);
             return new BatchWriteStreamImpl(_callBatchWrite.Call(request, callSettings));
+        }
+
+        internal sealed partial class FetchCacheUpdateStreamImpl : FetchCacheUpdateStream
+        {
+            /// <summary>Construct the server streaming method for <c>FetchCacheUpdate</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public FetchCacheUpdateStreamImpl(grpccore::AsyncServerStreamingCall<CacheUpdate> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<CacheUpdate> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Retrieves a cache update for a given database.
+        /// 
+        /// This RPC can be used to warm up the client cache by fetching key recipes
+        /// and server information for a given database. It is recommended to call
+        /// this RPC at the beginning of the client's lifecycle, prior to any other
+        /// data plane operations.
+        /// 
+        /// The cache update is returned as a stream because the response can be too
+        /// large to fit into a single `CacheUpdate` message.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override SpannerClient.FetchCacheUpdateStream FetchCacheUpdate(FetchCacheUpdateRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FetchCacheUpdateRequest(ref request, ref callSettings);
+            return new FetchCacheUpdateStreamImpl(_callFetchCacheUpdate.Call(request, callSettings));
         }
     }
 

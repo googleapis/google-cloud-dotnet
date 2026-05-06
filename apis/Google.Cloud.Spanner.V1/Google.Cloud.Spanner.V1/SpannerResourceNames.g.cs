@@ -469,4 +469,16 @@ namespace Google.Cloud.Spanner.V1
             set => Session = value?.ToString() ?? "";
         }
     }
+
+    public partial class FetchCacheUpdateRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::DatabaseName"/>-typed view over the <see cref="Database"/> resource name property.
+        /// </summary>
+        public gcscv::DatabaseName DatabaseAsDatabaseName
+        {
+            get => string.IsNullOrEmpty(Database) ? null : gcscv::DatabaseName.Parse(Database, allowUnparsed: true);
+            set => Database = value?.ToString() ?? "";
+        }
+    }
 }

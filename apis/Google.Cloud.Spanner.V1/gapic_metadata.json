@@ -64,6 +64,12 @@
                 "ExecuteStreamingSqlAsync"
               ]
             },
+            "FetchCacheUpdate": {
+              "methods": [
+                "FetchCacheUpdate",
+                "FetchCacheUpdateAsync"
+              ]
+            },
             "GetSession": {
               "methods": [
                 "GetSession",
