@@ -44,7 +44,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "MAoHYmF0Y2hlcxgBIAMoCzIfLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5C",
             "YXRjaBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSGAoLdW5yZWFjaGFibGUY",
             "AyADKAlCA+BBAyJJChJEZWxldGVCYXRjaFJlcXVlc3QSMwoEbmFtZRgBIAEo",
-            "CUIl4EEC+kEfCh1kYXRhcHJvYy5nb29nbGVhcGlzLmNvbS9CYXRjaCLICgoF",
+            "CUIl4EEC+kEfCh1kYXRhcHJvYy5nb29nbGVhcGlzLmNvbS9CYXRjaCKfCwoF",
             "QmF0Y2gSEQoEbmFtZRgBIAEoCUID4EEDEhEKBHV1aWQYAiABKAlCA+BBAxI0",
             "CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
             "bXBCA+BBAxJECg1weXNwYXJrX2JhdGNoGAQgASgLMiYuZ29vZ2xlLmNsb3Vk",
@@ -53,64 +53,73 @@ namespace Google.Cloud.Dataproc.V1 {
             "aEID4EEBSAASQwoNc3Bhcmtfcl9iYXRjaBgGIAEoCzIlLmdvb2dsZS5jbG91",
             "ZC5kYXRhcHJvYy52MS5TcGFya1JCYXRjaEID4EEBSAASRwoPc3Bhcmtfc3Fs",
             "X2JhdGNoGAcgASgLMicuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlNwYXJr",
-            "U3FsQmF0Y2hCA+BBAUgAEkAKDHJ1bnRpbWVfaW5mbxgIIAEoCzIlLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcHJvYy52MS5SdW50aW1lSW5mb0ID4EEDEjkKBXN0YXRl",
-            "GAkgASgOMiUuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkJhdGNoLlN0YXRl",
-            "QgPgQQMSGgoNc3RhdGVfbWVzc2FnZRgKIAEoCUID4EEDEjMKCnN0YXRlX3Rp",
-            "bWUYCyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFAoH",
-            "Y3JlYXRvchgMIAEoCUID4EEDEkAKBmxhYmVscxgNIAMoCzIrLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcHJvYy52MS5CYXRjaC5MYWJlbHNFbnRyeUID4EEBEkQKDnJ1",
-            "bnRpbWVfY29uZmlnGA4gASgLMicuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
-            "LlJ1bnRpbWVDb25maWdCA+BBARJMChJlbnZpcm9ubWVudF9jb25maWcYDyAB",
-            "KAsyKy5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuRW52aXJvbm1lbnRDb25m",
-            "aWdCA+BBARIWCglvcGVyYXRpb24YECABKAlCA+BBAxJICg1zdGF0ZV9oaXN0",
-            "b3J5GBEgAygLMiwuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkJhdGNoLlN0",
-            "YXRlSGlzdG9yeUID4EEDGqABCgxTdGF0ZUhpc3RvcnkSOQoFc3RhdGUYASAB",
-            "KA4yJS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQmF0Y2guU3RhdGVCA+BB",
-            "AxIaCg1zdGF0ZV9tZXNzYWdlGAIgASgJQgPgQQMSOQoQc3RhdGVfc3RhcnRf",
-            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxot",
-            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "InIKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxAB",
-            "EgsKB1JVTk5JTkcQAhIOCgpDQU5DRUxMSU5HEAMSDQoJQ0FOQ0VMTEVEEAQS",
-            "DQoJU1VDQ0VFREVEEAUSCgoGRkFJTEVEEAY6W+pBWAodZGF0YXByb2MuZ29v",
-            "Z2xlYXBpcy5jb20vQmF0Y2gSN3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9iYXRjaGVzL3tiYXRjaH1CDgoMYmF0Y2hfY29uZmln",
-            "IrIBCgxQeVNwYXJrQmF0Y2gSIQoUbWFpbl9weXRob25fZmlsZV91cmkYASAB",
-            "KAlCA+BBAhIRCgRhcmdzGAIgAygJQgPgQQESHQoQcHl0aG9uX2ZpbGVfdXJp",
+            "U3FsQmF0Y2hCA+BBAUgAElUKFnB5c3Bhcmtfbm90ZWJvb2tfYmF0Y2gYEyAB",
+            "KAsyLi5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuUHlTcGFya05vdGVib29r",
+            "QmF0Y2hCA+BBAUgAEkAKDHJ1bnRpbWVfaW5mbxgIIAEoCzIlLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcHJvYy52MS5SdW50aW1lSW5mb0ID4EEDEjkKBXN0YXRlGAkg",
+            "ASgOMiUuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkJhdGNoLlN0YXRlQgPg",
+            "QQMSGgoNc3RhdGVfbWVzc2FnZRgKIAEoCUID4EEDEjMKCnN0YXRlX3RpbWUY",
+            "CyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSFAoHY3Jl",
+            "YXRvchgMIAEoCUID4EEDEkAKBmxhYmVscxgNIAMoCzIrLmdvb2dsZS5jbG91",
+            "ZC5kYXRhcHJvYy52MS5CYXRjaC5MYWJlbHNFbnRyeUID4EEBEkQKDnJ1bnRp",
+            "bWVfY29uZmlnGA4gASgLMicuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlJ1",
+            "bnRpbWVDb25maWdCA+BBARJMChJlbnZpcm9ubWVudF9jb25maWcYDyABKAsy",
+            "Ky5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuRW52aXJvbm1lbnRDb25maWdC",
+            "A+BBARIWCglvcGVyYXRpb24YECABKAlCA+BBAxJICg1zdGF0ZV9oaXN0b3J5",
+            "GBEgAygLMiwuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkJhdGNoLlN0YXRl",
+            "SGlzdG9yeUID4EEDGqABCgxTdGF0ZUhpc3RvcnkSOQoFc3RhdGUYASABKA4y",
+            "JS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuQmF0Y2guU3RhdGVCA+BBAxIa",
+            "Cg1zdGF0ZV9tZXNzYWdlGAIgASgJQgPgQQMSOQoQc3RhdGVfc3RhcnRfdGlt",
+            "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBInIK",
+            "BVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgsK",
+            "B1JVTk5JTkcQAhIOCgpDQU5DRUxMSU5HEAMSDQoJQ0FOQ0VMTEVEEAQSDQoJ",
+            "U1VDQ0VFREVEEAUSCgoGRkFJTEVEEAY6W+pBWAodZGF0YXByb2MuZ29vZ2xl",
+            "YXBpcy5jb20vQmF0Y2gSN3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9iYXRjaGVzL3tiYXRjaH1CDgoMYmF0Y2hfY29uZmlnIrIB",
+            "CgxQeVNwYXJrQmF0Y2gSIQoUbWFpbl9weXRob25fZmlsZV91cmkYASABKAlC",
+            "A+BBAhIRCgRhcmdzGAIgAygJQgPgQQESHQoQcHl0aG9uX2ZpbGVfdXJpcxgD",
+            "IAMoCUID4EEBEhoKDWphcl9maWxlX3VyaXMYBCADKAlCA+BBARIWCglmaWxl",
+            "X3VyaXMYBSADKAlCA+BBARIZCgxhcmNoaXZlX3VyaXMYBiADKAlCA+BBASK1",
+            "AQoKU3BhcmtCYXRjaBIgChFtYWluX2phcl9maWxlX3VyaRgBIAEoCUID4EEB",
+            "SAASGQoKbWFpbl9jbGFzcxgCIAEoCUID4EEBSAASEQoEYXJncxgDIAMoCUID",
+            "4EEBEhoKDWphcl9maWxlX3VyaXMYBCADKAlCA+BBARIWCglmaWxlX3VyaXMY",
+            "BSADKAlCA+BBARIZCgxhcmNoaXZlX3VyaXMYBiADKAlCA+BBAUIICgZkcml2",
+            "ZXIicQoLU3BhcmtSQmF0Y2gSHAoPbWFpbl9yX2ZpbGVfdXJpGAEgASgJQgPg",
+            "QQISEQoEYXJncxgCIAMoCUID4EEBEhYKCWZpbGVfdXJpcxgDIAMoCUID4EEB",
+            "EhkKDGFyY2hpdmVfdXJpcxgEIAMoCUID4EEBItoBCg1TcGFya1NxbEJhdGNo",
+            "EhsKDnF1ZXJ5X2ZpbGVfdXJpGAEgASgJQgPgQQISWQoPcXVlcnlfdmFyaWFi",
+            "bGVzGAIgAygLMjsuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlNwYXJrU3Fs",
+            "QmF0Y2guUXVlcnlWYXJpYWJsZXNFbnRyeUID4EEBEhoKDWphcl9maWxlX3Vy",
+            "aXMYAyADKAlCA+BBARo1ChNRdWVyeVZhcmlhYmxlc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEipAIKFFB5U3BhcmtOb3RlYm9va0Jh",
+            "dGNoEh4KEW5vdGVib29rX2ZpbGVfdXJpGAEgASgJQgPgQQISTwoGcGFyYW1z",
+            "GAIgAygLMjouZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlB5U3BhcmtOb3Rl",
+            "Ym9va0JhdGNoLlBhcmFtc0VudHJ5QgPgQQESHQoQcHl0aG9uX2ZpbGVfdXJp",
             "cxgDIAMoCUID4EEBEhoKDWphcl9maWxlX3VyaXMYBCADKAlCA+BBARIWCglm",
             "aWxlX3VyaXMYBSADKAlCA+BBARIZCgxhcmNoaXZlX3VyaXMYBiADKAlCA+BB",
-            "ASK1AQoKU3BhcmtCYXRjaBIgChFtYWluX2phcl9maWxlX3VyaRgBIAEoCUID",
-            "4EEBSAASGQoKbWFpbl9jbGFzcxgCIAEoCUID4EEBSAASEQoEYXJncxgDIAMo",
-            "CUID4EEBEhoKDWphcl9maWxlX3VyaXMYBCADKAlCA+BBARIWCglmaWxlX3Vy",
-            "aXMYBSADKAlCA+BBARIZCgxhcmNoaXZlX3VyaXMYBiADKAlCA+BBAUIICgZk",
-            "cml2ZXIicQoLU3BhcmtSQmF0Y2gSHAoPbWFpbl9yX2ZpbGVfdXJpGAEgASgJ",
-            "QgPgQQISEQoEYXJncxgCIAMoCUID4EEBEhYKCWZpbGVfdXJpcxgDIAMoCUID",
-            "4EEBEhkKDGFyY2hpdmVfdXJpcxgEIAMoCUID4EEBItoBCg1TcGFya1NxbEJh",
-            "dGNoEhsKDnF1ZXJ5X2ZpbGVfdXJpGAEgASgJQgPgQQISWQoPcXVlcnlfdmFy",
-            "aWFibGVzGAIgAygLMjsuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLlNwYXJr",
-            "U3FsQmF0Y2guUXVlcnlWYXJpYWJsZXNFbnRyeUID4EEBEhoKDWphcl9maWxl",
-            "X3VyaXMYAyADKAlCA+BBARo1ChNRdWVyeVZhcmlhYmxlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEynQYKD0JhdGNoQ29udHJvbGxl",
-            "chLqAQoLQ3JlYXRlQmF0Y2gSLC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEu",
-            "Q3JlYXRlQmF0Y2hSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
-            "dGlvbiKNAcpBOAoFQmF0Y2gSL2dvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5C",
-            "YXRjaE9wZXJhdGlvbk1ldGFkYXRh2kEVcGFyZW50LGJhdGNoLGJhdGNoX2lk",
-            "gtPkkwI0IisvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9i",
-            "YXRjaGVzOgViYXRjaBKSAQoIR2V0QmF0Y2gSKS5nb29nbGUuY2xvdWQuZGF0",
-            "YXByb2MudjEuR2V0QmF0Y2hSZXF1ZXN0Gh8uZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "cm9jLnYxLkJhdGNoIjraQQRuYW1lgtPkkwItEisvdjEve25hbWU9cHJvamVj",
-            "dHMvKi9sb2NhdGlvbnMvKi9iYXRjaGVzLyp9EqgBCgtMaXN0QmF0Y2hlcxIs",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5MaXN0QmF0Y2hlc1JlcXVlc3Qa",
-            "LS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuTGlzdEJhdGNoZXNSZXNwb25z",
-            "ZSI82kEGcGFyZW50gtPkkwItEisvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9iYXRjaGVzEo8BCgtEZWxldGVCYXRjaBIsLmdvb2dsZS5j",
-            "bG91ZC5kYXRhcHJvYy52MS5EZWxldGVCYXRjaFJlcXVlc3QaFi5nb29nbGUu",
-            "cHJvdG9idWYuRW1wdHkiOtpBBG5hbWWC0+STAi0qKy92MS97bmFtZT1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qL2JhdGNoZXMvKn0aS8pBF2RhdGFwcm9jLmdv",
-            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybUJrChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
-            "LnYxQgxCYXRjaGVzUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRh",
-            "cHJvYy92Mi9hcGl2MS9kYXRhcHJvY3BiO2RhdGFwcm9jcGJiBnByb3RvMw=="));
+            "ARotCgtQYXJhbXNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
+            "AjgBMp0GCg9CYXRjaENvbnRyb2xsZXIS6gEKC0NyZWF0ZUJhdGNoEiwuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNyZWF0ZUJhdGNoUmVxdWVzdBodLmdv",
+            "b2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ijQHKQTgKBUJhdGNoEi9nb29n",
+            "bGUuY2xvdWQuZGF0YXByb2MudjEuQmF0Y2hPcGVyYXRpb25NZXRhZGF0YdpB",
+            "FXBhcmVudCxiYXRjaCxiYXRjaF9pZILT5JMCNCIrL3YxL3twYXJlbnQ9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKn0vYmF0Y2hlczoFYmF0Y2gSkgEKCEdldEJh",
+            "dGNoEikuZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkdldEJhdGNoUmVxdWVz",
+            "dBofLmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MS5CYXRjaCI62kEEbmFtZYLT",
+            "5JMCLRIrL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovYmF0Y2hl",
+            "cy8qfRKoAQoLTGlzdEJhdGNoZXMSLC5nb29nbGUuY2xvdWQuZGF0YXByb2Mu",
+            "djEuTGlzdEJhdGNoZXNSZXF1ZXN0Gi0uZ29vZ2xlLmNsb3VkLmRhdGFwcm9j",
+            "LnYxLkxpc3RCYXRjaGVzUmVzcG9uc2UiPNpBBnBhcmVudILT5JMCLRIrL3Yx",
+            "L3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vYmF0Y2hlcxKPAQoL",
+            "RGVsZXRlQmF0Y2gSLC5nb29nbGUuY2xvdWQuZGF0YXByb2MudjEuRGVsZXRl",
+            "QmF0Y2hSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjraQQRuYW1l",
+            "gtPkkwItKisvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9iYXRj",
+            "aGVzLyp9GkvKQRdkYXRhcHJvYy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CawocY29t",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcHJvYy52MUIMQmF0Y2hlc1Byb3RvUAFaO2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGF0YXByb2MvdjIvYXBpdjEvZGF0YXByb2Nw",
+            "YjtkYXRhcHJvY3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -119,12 +128,13 @@ namespace Google.Cloud.Dataproc.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListBatchesRequest), global::Google.Cloud.Dataproc.V1.ListBatchesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.ListBatchesResponse), global::Google.Cloud.Dataproc.V1.ListBatchesResponse.Parser, new[]{ "Batches", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.DeleteBatchRequest), global::Google.Cloud.Dataproc.V1.DeleteBatchRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Batch), global::Google.Cloud.Dataproc.V1.Batch.Parser, new[]{ "Name", "Uuid", "CreateTime", "PysparkBatch", "SparkBatch", "SparkRBatch", "SparkSqlBatch", "RuntimeInfo", "State", "StateMessage", "StateTime", "Creator", "Labels", "RuntimeConfig", "EnvironmentConfig", "Operation", "StateHistory" }, new[]{ "BatchConfig" }, new[]{ typeof(global::Google.Cloud.Dataproc.V1.Batch.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Batch.Types.StateHistory), global::Google.Cloud.Dataproc.V1.Batch.Types.StateHistory.Parser, new[]{ "State", "StateMessage", "StateStartTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Batch), global::Google.Cloud.Dataproc.V1.Batch.Parser, new[]{ "Name", "Uuid", "CreateTime", "PysparkBatch", "SparkBatch", "SparkRBatch", "SparkSqlBatch", "PysparkNotebookBatch", "RuntimeInfo", "State", "StateMessage", "StateTime", "Creator", "Labels", "RuntimeConfig", "EnvironmentConfig", "Operation", "StateHistory" }, new[]{ "BatchConfig" }, new[]{ typeof(global::Google.Cloud.Dataproc.V1.Batch.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.Batch.Types.StateHistory), global::Google.Cloud.Dataproc.V1.Batch.Types.StateHistory.Parser, new[]{ "State", "StateMessage", "StateStartTime" }, null, null, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PySparkBatch), global::Google.Cloud.Dataproc.V1.PySparkBatch.Parser, new[]{ "MainPythonFileUri", "Args", "PythonFileUris", "JarFileUris", "FileUris", "ArchiveUris" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkBatch), global::Google.Cloud.Dataproc.V1.SparkBatch.Parser, new[]{ "MainJarFileUri", "MainClass", "Args", "JarFileUris", "FileUris", "ArchiveUris" }, new[]{ "Driver" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkRBatch), global::Google.Cloud.Dataproc.V1.SparkRBatch.Parser, new[]{ "MainRFileUri", "Args", "FileUris", "ArchiveUris" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkSqlBatch), global::Google.Cloud.Dataproc.V1.SparkSqlBatch.Parser, new[]{ "QueryFileUri", "QueryVariables", "JarFileUris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.SparkSqlBatch), global::Google.Cloud.Dataproc.V1.SparkSqlBatch.Parser, new[]{ "QueryFileUri", "QueryVariables", "JarFileUris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch), global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch.Parser, new[]{ "NotebookFileUri", "Params", "PythonFileUris", "JarFileUris", "FileUris", "ArchiveUris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -1602,6 +1612,9 @@ namespace Google.Cloud.Dataproc.V1 {
         case BatchConfigOneofCase.SparkSqlBatch:
           SparkSqlBatch = other.SparkSqlBatch.Clone();
           break;
+        case BatchConfigOneofCase.PysparkNotebookBatch:
+          PysparkNotebookBatch = other.PysparkNotebookBatch.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1716,6 +1729,21 @@ namespace Google.Cloud.Dataproc.V1 {
       set {
         batchConfig_ = value;
         batchConfigCase_ = value == null ? BatchConfigOneofCase.None : BatchConfigOneofCase.SparkSqlBatch;
+      }
+    }
+
+    /// <summary>Field number for the "pyspark_notebook_batch" field.</summary>
+    public const int PysparkNotebookBatchFieldNumber = 19;
+    /// <summary>
+    /// Optional. PySpark notebook batch config.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch PysparkNotebookBatch {
+      get { return batchConfigCase_ == BatchConfigOneofCase.PysparkNotebookBatch ? (global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch) batchConfig_ : null; }
+      set {
+        batchConfig_ = value;
+        batchConfigCase_ = value == null ? BatchConfigOneofCase.None : BatchConfigOneofCase.PysparkNotebookBatch;
       }
     }
 
@@ -1882,6 +1910,7 @@ namespace Google.Cloud.Dataproc.V1 {
       SparkBatch = 5,
       SparkRBatch = 6,
       SparkSqlBatch = 7,
+      PysparkNotebookBatch = 19,
     }
     private BatchConfigOneofCase batchConfigCase_ = BatchConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1919,6 +1948,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (!object.Equals(SparkBatch, other.SparkBatch)) return false;
       if (!object.Equals(SparkRBatch, other.SparkRBatch)) return false;
       if (!object.Equals(SparkSqlBatch, other.SparkSqlBatch)) return false;
+      if (!object.Equals(PysparkNotebookBatch, other.PysparkNotebookBatch)) return false;
       if (!object.Equals(RuntimeInfo, other.RuntimeInfo)) return false;
       if (State != other.State) return false;
       if (StateMessage != other.StateMessage) return false;
@@ -1944,6 +1974,7 @@ namespace Google.Cloud.Dataproc.V1 {
       if (batchConfigCase_ == BatchConfigOneofCase.SparkBatch) hash ^= SparkBatch.GetHashCode();
       if (batchConfigCase_ == BatchConfigOneofCase.SparkRBatch) hash ^= SparkRBatch.GetHashCode();
       if (batchConfigCase_ == BatchConfigOneofCase.SparkSqlBatch) hash ^= SparkSqlBatch.GetHashCode();
+      if (batchConfigCase_ == BatchConfigOneofCase.PysparkNotebookBatch) hash ^= PysparkNotebookBatch.GetHashCode();
       if (runtimeInfo_ != null) hash ^= RuntimeInfo.GetHashCode();
       if (State != global::Google.Cloud.Dataproc.V1.Batch.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (StateMessage.Length != 0) hash ^= StateMessage.GetHashCode();
@@ -2035,6 +2066,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteString(Operation);
       }
       stateHistory_.WriteTo(output, _repeated_stateHistory_codec);
+      if (batchConfigCase_ == BatchConfigOneofCase.PysparkNotebookBatch) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(PysparkNotebookBatch);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2107,6 +2142,10 @@ namespace Google.Cloud.Dataproc.V1 {
         output.WriteString(Operation);
       }
       stateHistory_.WriteTo(ref output, _repeated_stateHistory_codec);
+      if (batchConfigCase_ == BatchConfigOneofCase.PysparkNotebookBatch) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(PysparkNotebookBatch);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2137,6 +2176,9 @@ namespace Google.Cloud.Dataproc.V1 {
       }
       if (batchConfigCase_ == BatchConfigOneofCase.SparkSqlBatch) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SparkSqlBatch);
+      }
+      if (batchConfigCase_ == BatchConfigOneofCase.PysparkNotebookBatch) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PysparkNotebookBatch);
       }
       if (runtimeInfo_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RuntimeInfo);
@@ -2250,6 +2292,12 @@ namespace Google.Cloud.Dataproc.V1 {
             SparkSqlBatch = new global::Google.Cloud.Dataproc.V1.SparkSqlBatch();
           }
           SparkSqlBatch.MergeFrom(other.SparkSqlBatch);
+          break;
+        case BatchConfigOneofCase.PysparkNotebookBatch:
+          if (PysparkNotebookBatch == null) {
+            PysparkNotebookBatch = new global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch();
+          }
+          PysparkNotebookBatch.MergeFrom(other.PysparkNotebookBatch);
           break;
       }
 
@@ -2375,6 +2423,15 @@ namespace Google.Cloud.Dataproc.V1 {
             stateHistory_.AddEntriesFrom(input, _repeated_stateHistory_codec);
             break;
           }
+          case 154: {
+            global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch subBuilder = new global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch();
+            if (batchConfigCase_ == BatchConfigOneofCase.PysparkNotebookBatch) {
+              subBuilder.MergeFrom(PysparkNotebookBatch);
+            }
+            input.ReadMessage(subBuilder);
+            PysparkNotebookBatch = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2495,6 +2552,15 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 138: {
             stateHistory_.AddEntriesFrom(ref input, _repeated_stateHistory_codec);
+            break;
+          }
+          case 154: {
+            global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch subBuilder = new global::Google.Cloud.Dataproc.V1.PySparkNotebookBatch();
+            if (batchConfigCase_ == BatchConfigOneofCase.PysparkNotebookBatch) {
+              subBuilder.MergeFrom(PysparkNotebookBatch);
+            }
+            input.ReadMessage(subBuilder);
+            PysparkNotebookBatch = subBuilder;
             break;
           }
         }
@@ -4184,6 +4250,358 @@ namespace Google.Cloud.Dataproc.V1 {
           }
           case 26: {
             jarFileUris_.AddEntriesFrom(ref input, _repeated_jarFileUris_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A configuration for running a PySpark Notebook batch workload.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PySparkNotebookBatch : pb::IMessage<PySparkNotebookBatch>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PySparkNotebookBatch> _parser = new pb::MessageParser<PySparkNotebookBatch>(() => new PySparkNotebookBatch());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PySparkNotebookBatch> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataproc.V1.BatchesReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PySparkNotebookBatch() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PySparkNotebookBatch(PySparkNotebookBatch other) : this() {
+      notebookFileUri_ = other.notebookFileUri_;
+      params_ = other.params_.Clone();
+      pythonFileUris_ = other.pythonFileUris_.Clone();
+      jarFileUris_ = other.jarFileUris_.Clone();
+      fileUris_ = other.fileUris_.Clone();
+      archiveUris_ = other.archiveUris_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PySparkNotebookBatch Clone() {
+      return new PySparkNotebookBatch(this);
+    }
+
+    /// <summary>Field number for the "notebook_file_uri" field.</summary>
+    public const int NotebookFileUriFieldNumber = 1;
+    private string notebookFileUri_ = "";
+    /// <summary>
+    /// Required. The HCFS URI of the notebook file to execute.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NotebookFileUri {
+      get { return notebookFileUri_; }
+      set {
+        notebookFileUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "params" field.</summary>
+    public const int ParamsFieldNumber = 2;
+    private static readonly pbc::MapField<string, string>.Codec _map_params_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 18);
+    private readonly pbc::MapField<string, string> params_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Optional. The parameters to pass to the notebook.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> Params {
+      get { return params_; }
+    }
+
+    /// <summary>Field number for the "python_file_uris" field.</summary>
+    public const int PythonFileUrisFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_pythonFileUris_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> pythonFileUris_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. HCFS URIs of Python files to pass to the PySpark framework.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> PythonFileUris {
+      get { return pythonFileUris_; }
+    }
+
+    /// <summary>Field number for the "jar_file_uris" field.</summary>
+    public const int JarFileUrisFieldNumber = 4;
+    private static readonly pb::FieldCodec<string> _repeated_jarFileUris_codec
+        = pb::FieldCodec.ForString(34);
+    private readonly pbc::RepeatedField<string> jarFileUris_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. HCFS URIs of jar files to be added to the Spark CLASSPATH.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> JarFileUris {
+      get { return jarFileUris_; }
+    }
+
+    /// <summary>Field number for the "file_uris" field.</summary>
+    public const int FileUrisFieldNumber = 5;
+    private static readonly pb::FieldCodec<string> _repeated_fileUris_codec
+        = pb::FieldCodec.ForString(42);
+    private readonly pbc::RepeatedField<string> fileUris_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. HCFS URIs of files to be placed in the working directory of
+    /// each executor
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> FileUris {
+      get { return fileUris_; }
+    }
+
+    /// <summary>Field number for the "archive_uris" field.</summary>
+    public const int ArchiveUrisFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_archiveUris_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> archiveUris_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. HCFS URIs of archives to be extracted into the working directory
+    /// of each executor. Supported file types:
+    /// `.jar`, `.tar`, `.tar.gz`, `.tgz`, and `.zip`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ArchiveUris {
+      get { return archiveUris_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PySparkNotebookBatch);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PySparkNotebookBatch other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NotebookFileUri != other.NotebookFileUri) return false;
+      if (!Params.Equals(other.Params)) return false;
+      if(!pythonFileUris_.Equals(other.pythonFileUris_)) return false;
+      if(!jarFileUris_.Equals(other.jarFileUris_)) return false;
+      if(!fileUris_.Equals(other.fileUris_)) return false;
+      if(!archiveUris_.Equals(other.archiveUris_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NotebookFileUri.Length != 0) hash ^= NotebookFileUri.GetHashCode();
+      hash ^= Params.GetHashCode();
+      hash ^= pythonFileUris_.GetHashCode();
+      hash ^= jarFileUris_.GetHashCode();
+      hash ^= fileUris_.GetHashCode();
+      hash ^= archiveUris_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (NotebookFileUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NotebookFileUri);
+      }
+      params_.WriteTo(output, _map_params_codec);
+      pythonFileUris_.WriteTo(output, _repeated_pythonFileUris_codec);
+      jarFileUris_.WriteTo(output, _repeated_jarFileUris_codec);
+      fileUris_.WriteTo(output, _repeated_fileUris_codec);
+      archiveUris_.WriteTo(output, _repeated_archiveUris_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NotebookFileUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(NotebookFileUri);
+      }
+      params_.WriteTo(ref output, _map_params_codec);
+      pythonFileUris_.WriteTo(ref output, _repeated_pythonFileUris_codec);
+      jarFileUris_.WriteTo(ref output, _repeated_jarFileUris_codec);
+      fileUris_.WriteTo(ref output, _repeated_fileUris_codec);
+      archiveUris_.WriteTo(ref output, _repeated_archiveUris_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (NotebookFileUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NotebookFileUri);
+      }
+      size += params_.CalculateSize(_map_params_codec);
+      size += pythonFileUris_.CalculateSize(_repeated_pythonFileUris_codec);
+      size += jarFileUris_.CalculateSize(_repeated_jarFileUris_codec);
+      size += fileUris_.CalculateSize(_repeated_fileUris_codec);
+      size += archiveUris_.CalculateSize(_repeated_archiveUris_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PySparkNotebookBatch other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NotebookFileUri.Length != 0) {
+        NotebookFileUri = other.NotebookFileUri;
+      }
+      params_.MergeFrom(other.params_);
+      pythonFileUris_.Add(other.pythonFileUris_);
+      jarFileUris_.Add(other.jarFileUris_);
+      fileUris_.Add(other.fileUris_);
+      archiveUris_.Add(other.archiveUris_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            NotebookFileUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            params_.AddEntriesFrom(input, _map_params_codec);
+            break;
+          }
+          case 26: {
+            pythonFileUris_.AddEntriesFrom(input, _repeated_pythonFileUris_codec);
+            break;
+          }
+          case 34: {
+            jarFileUris_.AddEntriesFrom(input, _repeated_jarFileUris_codec);
+            break;
+          }
+          case 42: {
+            fileUris_.AddEntriesFrom(input, _repeated_fileUris_codec);
+            break;
+          }
+          case 50: {
+            archiveUris_.AddEntriesFrom(input, _repeated_archiveUris_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            NotebookFileUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            params_.AddEntriesFrom(ref input, _map_params_codec);
+            break;
+          }
+          case 26: {
+            pythonFileUris_.AddEntriesFrom(ref input, _repeated_pythonFileUris_codec);
+            break;
+          }
+          case 34: {
+            jarFileUris_.AddEntriesFrom(ref input, _repeated_jarFileUris_codec);
+            break;
+          }
+          case 42: {
+            fileUris_.AddEntriesFrom(ref input, _repeated_fileUris_codec);
+            break;
+          }
+          case 50: {
+            archiveUris_.AddEntriesFrom(ref input, _repeated_archiveUris_codec);
             break;
           }
         }
