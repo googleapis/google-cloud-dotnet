@@ -1514,5 +1514,79 @@ namespace GoogleCSharpSnippets
             // The response stream has completed
             // End snippet
         }
+
+        /// <summary>Snippet for FetchCacheUpdate</summary>
+        public async Task FetchCacheUpdateRequestObject()
+        {
+            // Snippet: FetchCacheUpdate(FetchCacheUpdateRequest, CallSettings)
+            // Create client
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
+            // Initialize request argument(s)
+            gcsv::FetchCacheUpdateRequest request = new gcsv::FetchCacheUpdateRequest
+            {
+                DatabaseAsDatabaseName = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]"),
+                MaxRecipeCount = 0,
+                MaxRangeCount = 0,
+            };
+            // Make the request, returning a streaming response
+            using gcsv::SpannerClient.FetchCacheUpdateStream response = spannerClient.FetchCacheUpdate(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcsv::CacheUpdate> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcsv::CacheUpdate responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchCacheUpdate</summary>
+        public async Task FetchCacheUpdate()
+        {
+            // Snippet: FetchCacheUpdate(string, CallSettings)
+            // Create client
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
+            // Initialize request argument(s)
+            string database = "projects/[PROJECT]/instances/[INSTANCE]/databases/[DATABASE]";
+            // Make the request, returning a streaming response
+            using gcsv::SpannerClient.FetchCacheUpdateStream response = spannerClient.FetchCacheUpdate(database);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcsv::CacheUpdate> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcsv::CacheUpdate responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchCacheUpdate</summary>
+        public async Task FetchCacheUpdateResourceNames()
+        {
+            // Snippet: FetchCacheUpdate(DatabaseName, CallSettings)
+            // Create client
+            gcsv::SpannerClient spannerClient = gcsv::SpannerClient.Create();
+            // Initialize request argument(s)
+            DatabaseName database = DatabaseName.FromProjectInstanceDatabase("[PROJECT]", "[INSTANCE]", "[DATABASE]");
+            // Make the request, returning a streaming response
+            using gcsv::SpannerClient.FetchCacheUpdateStream response = spannerClient.FetchCacheUpdate(database);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<gcsv::CacheUpdate> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                gcsv::CacheUpdate responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
+            // End snippet
+        }
     }
 }

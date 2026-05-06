@@ -3364,6 +3364,148 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_Spanner_FetchCacheUpdate_sync",
+      "title": "FetchCacheUpdateRequestObject",
+      "description": "Snippet for FetchCacheUpdate",
+      "file": "SpannerClient.FetchCacheUpdateRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchCacheUpdate",
+        "fullName": "Google.Cloud.Spanner.V1.SpannerClient.FetchCacheUpdate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.V1.FetchCacheUpdateRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.V1.SpannerClient+FetchCacheUpdateStream",
+        "client": {
+          "shortName": "SpannerClient",
+          "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
+        },
+        "method": {
+          "shortName": "FetchCacheUpdate",
+          "fullName": "google.spanner.v1.Spanner.FetchCacheUpdate",
+          "service": {
+            "shortName": "Spanner",
+            "fullName": "google.spanner.v1.Spanner"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_Spanner_FetchCacheUpdate_sync_flattened",
+      "title": "FetchCacheUpdate",
+      "description": "Snippet for FetchCacheUpdate",
+      "file": "SpannerClient.FetchCacheUpdateSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchCacheUpdate",
+        "fullName": "Google.Cloud.Spanner.V1.SpannerClient.FetchCacheUpdate",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.V1.SpannerClient+FetchCacheUpdateStream",
+        "client": {
+          "shortName": "SpannerClient",
+          "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
+        },
+        "method": {
+          "shortName": "FetchCacheUpdate",
+          "fullName": "google.spanner.v1.Spanner.FetchCacheUpdate",
+          "service": {
+            "shortName": "Spanner",
+            "fullName": "google.spanner.v1.Spanner"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "spanner_v1_generated_Spanner_FetchCacheUpdate_sync_flattened_resourceNames",
+      "title": "FetchCacheUpdateResourceNames",
+      "description": "Snippet for FetchCacheUpdate",
+      "file": "SpannerClient.FetchCacheUpdateResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchCacheUpdate",
+        "fullName": "Google.Cloud.Spanner.V1.SpannerClient.FetchCacheUpdate",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Spanner.Common.V1.DatabaseName",
+            "name": "database"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Spanner.V1.SpannerClient+FetchCacheUpdateStream",
+        "client": {
+          "shortName": "SpannerClient",
+          "fullName": "Google.Cloud.Spanner.V1.SpannerClient"
+        },
+        "method": {
+          "shortName": "FetchCacheUpdate",
+          "fullName": "google.spanner.v1.Spanner.FetchCacheUpdate",
+          "service": {
+            "shortName": "Spanner",
+            "fullName": "google.spanner.v1.Spanner"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 54,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 52,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

@@ -116,6 +116,10 @@ namespace Google.Cloud.Spanner.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchWriteRequest> __Marshaller_google_spanner_v1_BatchWriteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BatchWriteRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.BatchWriteResponse> __Marshaller_google_spanner_v1_BatchWriteResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.BatchWriteResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.FetchCacheUpdateRequest> __Marshaller_google_spanner_v1_FetchCacheUpdateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.FetchCacheUpdateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Spanner.V1.CacheUpdate> __Marshaller_google_spanner_v1_CacheUpdate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Spanner.V1.CacheUpdate.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session> __Method_CreateSession = new grpc::Method<global::Google.Cloud.Spanner.V1.CreateSessionRequest, global::Google.Cloud.Spanner.V1.Session>(
@@ -244,6 +248,14 @@ namespace Google.Cloud.Spanner.V1 {
         "BatchWrite",
         __Marshaller_google_spanner_v1_BatchWriteRequest,
         __Marshaller_google_spanner_v1_BatchWriteResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Spanner.V1.FetchCacheUpdateRequest, global::Google.Cloud.Spanner.V1.CacheUpdate> __Method_FetchCacheUpdate = new grpc::Method<global::Google.Cloud.Spanner.V1.FetchCacheUpdateRequest, global::Google.Cloud.Spanner.V1.CacheUpdate>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "FetchCacheUpdate",
+        __Marshaller_google_spanner_v1_FetchCacheUpdateRequest,
+        __Marshaller_google_spanner_v1_CacheUpdate);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -584,6 +596,27 @@ namespace Google.Cloud.Spanner.V1 {
       /// <returns>A task indicating completion of the handler.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task BatchWrite(global::Google.Cloud.Spanner.V1.BatchWriteRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Spanner.V1.BatchWriteResponse> responseStream, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a cache update for a given database.
+      ///
+      /// This RPC can be used to warm up the client cache by fetching key recipes
+      /// and server information for a given database. It is recommended to call
+      /// this RPC at the beginning of the client's lifecycle, prior to any other
+      /// data plane operations.
+      ///
+      /// The cache update is returned as a stream because the response can be too
+      /// large to fit into a single `CacheUpdate` message.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task FetchCacheUpdate(global::Google.Cloud.Spanner.V1.FetchCacheUpdateRequest request, grpc::IServerStreamWriter<global::Google.Cloud.Spanner.V1.CacheUpdate> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1815,6 +1848,46 @@ namespace Google.Cloud.Spanner.V1 {
       {
         return CallInvoker.AsyncServerStreamingCall(__Method_BatchWrite, null, options, request);
       }
+      /// <summary>
+      /// Retrieves a cache update for a given database.
+      ///
+      /// This RPC can be used to warm up the client cache by fetching key recipes
+      /// and server information for a given database. It is recommended to call
+      /// this RPC at the beginning of the client's lifecycle, prior to any other
+      /// data plane operations.
+      ///
+      /// The cache update is returned as a stream because the response can be too
+      /// large to fit into a single `CacheUpdate` message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.CacheUpdate> FetchCacheUpdate(global::Google.Cloud.Spanner.V1.FetchCacheUpdateRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FetchCacheUpdate(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a cache update for a given database.
+      ///
+      /// This RPC can be used to warm up the client cache by fetching key recipes
+      /// and server information for a given database. It is recommended to call
+      /// this RPC at the beginning of the client's lifecycle, prior to any other
+      /// data plane operations.
+      ///
+      /// The cache update is returned as a stream because the response can be too
+      /// large to fit into a single `CacheUpdate` message.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.Spanner.V1.CacheUpdate> FetchCacheUpdate(global::Google.Cloud.Spanner.V1.FetchCacheUpdateRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_FetchCacheUpdate, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override SpannerClient NewInstance(ClientBaseConfiguration configuration)
@@ -1844,7 +1917,8 @@ namespace Google.Cloud.Spanner.V1 {
           .AddMethod(__Method_Rollback, serviceImpl.Rollback)
           .AddMethod(__Method_PartitionQuery, serviceImpl.PartitionQuery)
           .AddMethod(__Method_PartitionRead, serviceImpl.PartitionRead)
-          .AddMethod(__Method_BatchWrite, serviceImpl.BatchWrite).Build();
+          .AddMethod(__Method_BatchWrite, serviceImpl.BatchWrite)
+          .AddMethod(__Method_FetchCacheUpdate, serviceImpl.FetchCacheUpdate).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1870,6 +1944,7 @@ namespace Google.Cloud.Spanner.V1 {
       serviceBinder.AddMethod(__Method_PartitionQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.PartitionQueryRequest, global::Google.Cloud.Spanner.V1.PartitionResponse>(serviceImpl.PartitionQuery));
       serviceBinder.AddMethod(__Method_PartitionRead, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Spanner.V1.PartitionReadRequest, global::Google.Cloud.Spanner.V1.PartitionResponse>(serviceImpl.PartitionRead));
       serviceBinder.AddMethod(__Method_BatchWrite, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Spanner.V1.BatchWriteRequest, global::Google.Cloud.Spanner.V1.BatchWriteResponse>(serviceImpl.BatchWrite));
+      serviceBinder.AddMethod(__Method_FetchCacheUpdate, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.Spanner.V1.FetchCacheUpdateRequest, global::Google.Cloud.Spanner.V1.CacheUpdate>(serviceImpl.FetchCacheUpdate));
     }
 
   }
