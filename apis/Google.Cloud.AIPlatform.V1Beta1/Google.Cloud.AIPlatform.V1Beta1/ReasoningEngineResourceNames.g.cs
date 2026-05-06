@@ -599,6 +599,34 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             get => string.IsNullOrEmpty(Name) ? null : gcav::ReasoningEngineName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class TrafficConfig
+            {
+                public partial class Types
+                {
+                    public partial class TrafficSplitManual
+                    {
+                        public partial class Types
+                        {
+                            public partial class Target
+                            {
+                                /// <summary>
+                                /// <see cref="ReasoningEngineRuntimeRevisionName"/>-typed view over the
+                                /// <see cref="RuntimeRevisionName"/> resource name property.
+                                /// </summary>
+                                public ReasoningEngineRuntimeRevisionName RuntimeRevisionNameAsReasoningEngineRuntimeRevisionName
+                                {
+                                    get => string.IsNullOrEmpty(RuntimeRevisionName) ? null : ReasoningEngineRuntimeRevisionName.Parse(RuntimeRevisionName, allowUnparsed: true);
+                                    set => RuntimeRevisionName = value?.ToString() ?? "";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
     public partial class ReasoningEngineContextSpec
