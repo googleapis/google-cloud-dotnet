@@ -74,7 +74,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 var entry = Assert.Single(results);
                 AssertTraceContext(entry);
 
-                var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.NoRetry, _testId);
+                var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.Default, _testId);
                 ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowCatchLog));
             });
         }
@@ -105,7 +105,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 var entry = Assert.Single(results);
                 AssertTraceContext(entry);
 
-                var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.NoRetry, _testId);
+                var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.Default, _testId);
                 ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(errorEvent, _testId, nameof(ErrorReportingController.ThrowsException));
             });
         }
@@ -130,7 +130,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
                 Assert.Equal(4, results.Count);
                 Assert.All(results, AssertTraceContext);
 
-                var errorEvents = ErrorEventEntryVerifiers.VerifyMany(ErrorEventEntryPolling.NoRetry, _testId, 4);
+                var errorEvents = ErrorEventEntryVerifiers.VerifyMany(ErrorEventEntryPolling.Default, _testId, 4);
 
                 var exceptionEvents = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsException))).ToList();
                 Assert.Equal(3, exceptionEvents.Count);
