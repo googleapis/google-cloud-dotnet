@@ -72320,6 +72320,103 @@
       ]
     },
     {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineExecutionService_CancelAsyncQueryReasoningEngine_sync",
+      "title": "CancelAsyncQueryReasoningEngineRequestObject",
+      "description": "Snippet for CancelAsyncQueryReasoningEngine",
+      "file": "ReasoningEngineExecutionServiceClient.CancelAsyncQueryReasoningEngineRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAsyncQueryReasoningEngine",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient.CancelAsyncQueryReasoningEngine",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CancelAsyncQueryReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AIPlatform.V1.CancelAsyncQueryReasoningEngineResponse",
+        "client": {
+          "shortName": "ReasoningEngineExecutionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient"
+        },
+        "method": {
+          "shortName": "CancelAsyncQueryReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService.CancelAsyncQueryReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineExecutionService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "aiplatform_v1_generated_ReasoningEngineExecutionService_CancelAsyncQueryReasoningEngine_async",
+      "title": "CancelAsyncQueryReasoningEngineRequestObjectAsync",
+      "description": "Snippet for CancelAsyncQueryReasoningEngineAsync",
+      "file": "ReasoningEngineExecutionServiceClient.CancelAsyncQueryReasoningEngineRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelAsyncQueryReasoningEngineAsync",
+        "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient.CancelAsyncQueryReasoningEngineAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AIPlatform.V1.CancelAsyncQueryReasoningEngineRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AIPlatform.V1.CancelAsyncQueryReasoningEngineResponse>",
+        "client": {
+          "shortName": "ReasoningEngineExecutionServiceClient",
+          "fullName": "Google.Cloud.AIPlatform.V1.ReasoningEngineExecutionServiceClient"
+        },
+        "method": {
+          "shortName": "CancelAsyncQueryReasoningEngine",
+          "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService.CancelAsyncQueryReasoningEngine",
+          "service": {
+            "shortName": "ReasoningEngineExecutionService",
+            "fullName": "google.cloud.aiplatform.v1.ReasoningEngineExecutionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "aiplatform_v1_generated_ReasoningEngineService_CreateReasoningEngine_sync",
       "title": "CreateReasoningEngineRequestObject",
       "description": "Snippet for CreateReasoningEngine",

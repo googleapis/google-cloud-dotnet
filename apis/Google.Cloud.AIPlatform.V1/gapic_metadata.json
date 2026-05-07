@@ -1771,6 +1771,12 @@
                 "AsyncQueryReasoningEngineAsync"
               ]
             },
+            "CancelAsyncQueryReasoningEngine": {
+              "methods": [
+                "CancelAsyncQueryReasoningEngine",
+                "CancelAsyncQueryReasoningEngineAsync"
+              ]
+            },
             "QueryReasoningEngine": {
               "methods": [
                 "QueryReasoningEngine",
