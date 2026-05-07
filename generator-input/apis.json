@@ -3106,6 +3106,27 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.GeminiDataAnalytics.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Data Analytics API with Gemini",
+      "productUrl": "https://cloud.google.com/gemini/docs/conversational-analytics-api/overview",
+      "description": "The Gemini Data Analytics API enables developers to build intelligent data analytics applications. Leverage AI-powered chat interfaces to allow users to interact with and analyze structured data using natural language.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.5.0",
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/geminidataanalytics/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "geminidataanalytics",
+      "serviceConfigFile": "geminidataanalytics_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.GeminiDataAnalytics.V1Beta",
       "version": "1.0.0-beta09",
       "type": "grpc",
