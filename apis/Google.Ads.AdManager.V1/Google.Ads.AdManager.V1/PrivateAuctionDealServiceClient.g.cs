@@ -183,11 +183,13 @@ namespace Google.Ads.AdManager.V1
         /// The default PrivateAuctionDealService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/admanager</description></item>
+        /// <item><description>https://www.googleapis.com/auth/admanager.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/admanager",
+            "https://www.googleapis.com/auth/admanager.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -698,7 +700,7 @@ namespace Google.Ads.AdManager.V1
         /// `PrivateAuctionDeal` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to update.
+        /// Optional. The list of fields to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -706,7 +708,7 @@ namespace Google.Ads.AdManager.V1
             UpdatePrivateAuctionDeal(new UpdatePrivateAuctionDealRequest
             {
                 PrivateAuctionDeal = gax::GaxPreconditions.CheckNotNull(privateAuctionDeal, nameof(privateAuctionDeal)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -719,7 +721,7 @@ namespace Google.Ads.AdManager.V1
         /// `PrivateAuctionDeal` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to update.
+        /// Optional. The list of fields to update.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -727,7 +729,7 @@ namespace Google.Ads.AdManager.V1
             UpdatePrivateAuctionDealAsync(new UpdatePrivateAuctionDealRequest
             {
                 PrivateAuctionDeal = gax::GaxPreconditions.CheckNotNull(privateAuctionDeal, nameof(privateAuctionDeal)),
-                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                UpdateMask = updateMask,
             }, callSettings);
 
         /// <summary>
@@ -740,7 +742,7 @@ namespace Google.Ads.AdManager.V1
         /// `PrivateAuctionDeal` to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The list of fields to update.
+        /// Optional. The list of fields to update.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

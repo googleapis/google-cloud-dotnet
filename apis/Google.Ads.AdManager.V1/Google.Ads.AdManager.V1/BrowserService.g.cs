@@ -37,7 +37,7 @@ namespace Google.Ads.AdManager.V1 {
             "dGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BBARIRCgRza2lw",
             "GAYgASgFQgPgQQEidwoUTGlzdEJyb3dzZXJzUmVzcG9uc2USMgoIYnJvd3Nl",
             "cnMYASADKAsyIC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Ccm93c2VyEhcK",
-            "D25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFMogD",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFMrsD",
             "Cg5Ccm93c2VyU2VydmljZRKLAQoKR2V0QnJvd3NlchIqLmdvb2dsZS5hZHMu",
             "YWRtYW5hZ2VyLnYxLkdldEJyb3dzZXJSZXF1ZXN0GiAuZ29vZ2xlLmFkcy5h",
             "ZG1hbmFnZXIudjEuQnJvd3NlciIv2kEEbmFtZYLT5JMCIhIgL3YxL3tuYW1l",
@@ -45,13 +45,14 @@ namespace Google.Ads.AdManager.V1 {
             "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkxpc3RCcm93c2Vyc1JlcXVlc3QaLS5n",
             "b29nbGUuYWRzLmFkbWFuYWdlci52MS5MaXN0QnJvd3NlcnNSZXNwb25zZSIx",
             "2kEGcGFyZW50gtPkkwIiEiAvdjEve3BhcmVudD1uZXR3b3Jrcy8qfS9icm93",
-            "c2VycxpHykEYYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t0kEpaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXJCxwEKG2NvbS5nb29n",
-            "bGUuYWRzLmFkbWFuYWdlci52MUITQnJvd3NlclNlcnZpY2VQcm90b1ABWkBn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1h",
-            "bmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHK",
-            "AhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1h",
-            "bmFnZXI6OlYxYgZwcm90bzM="));
+            "c2Vycxp6ykEYYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t0kFcaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXIsaHR0cHM6Ly93d3cu",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXIucmVhZG9ubHlCxwEKG2Nv",
+            "bS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUITQnJvd3NlclNlcnZpY2VQcm90",
+            "b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fk",
+            "cy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFn",
+            "ZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRz",
+            "OjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.BrowserMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -380,8 +381,16 @@ namespace Google.Ads.AdManager.V1 {
     private string filter_ = "";
     /// <summary>
     /// Optional. Expression to filter the response.
-    /// See syntax details at
-    /// https://developers.google.com/ad-manager/api/beta/filters
+    ///  See syntax details at
+    ///  https://developers.google.com/ad-manager/api/beta/filters
+    ///
+    /// &lt;b>Filterable fields:&lt;/b>
+    /// &lt;ul style="list-style-type:none">
+    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>majorVersion&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>minorVersion&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
+    /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

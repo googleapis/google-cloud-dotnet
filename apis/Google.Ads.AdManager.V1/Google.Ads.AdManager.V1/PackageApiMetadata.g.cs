@@ -32,6 +32,11 @@ namespace Google.Ads.AdManager.V1
             .WithHttpRuleOverrides(new scg::Dictionary<string, proto::ByteString>
             {
                 {
+                    "google.longrunning.Operations.CancelOperation",
+                    // { "post": "/v1/{name=networks/*/operations/reports/runs/*}:cancel" }
+                    proto::ByteString.FromBase64("IjYvdjEve25hbWU9bmV0d29ya3MvKi9vcGVyYXRpb25zL3JlcG9ydHMvcnVucy8qfTpjYW5jZWw=")
+                },
+                {
                     "google.longrunning.Operations.GetOperation",
                     // { "get": "/v1/{name=networks/*/operations/reports/runs/*}" }
                     proto::ByteString.FromBase64("Ei8vdjEve25hbWU9bmV0d29ya3MvKi9vcGVyYXRpb25zL3JlcG9ydHMvcnVucy8qfQ==")
@@ -49,6 +54,7 @@ namespace Google.Ads.AdManager.V1
             yield return AdUnitMessagesReflection.Descriptor;
             yield return AdUnitServiceReflection.Descriptor;
             yield return AdmanagerErrorReflection.Descriptor;
+            yield return ApplicationEnumsReflection.Descriptor;
             yield return ApplicationMessagesReflection.Descriptor;
             yield return ApplicationServiceReflection.Descriptor;
             yield return AppliedLabelReflection.Descriptor;
@@ -60,6 +66,7 @@ namespace Google.Ads.AdManager.V1
             yield return BrowserLanguageServiceReflection.Descriptor;
             yield return BrowserMessagesReflection.Descriptor;
             yield return BrowserServiceReflection.Descriptor;
+            yield return ChildPublisherMessagesReflection.Descriptor;
             yield return CmsMetadataKeyEnumsReflection.Descriptor;
             yield return CmsMetadataKeyMessagesReflection.Descriptor;
             yield return CmsMetadataKeyServiceReflection.Descriptor;
@@ -109,11 +116,19 @@ namespace Google.Ads.AdManager.V1
             yield return GeoTargetServiceReflection.Descriptor;
             yield return GoalReflection.Descriptor;
             yield return GoalEnumsReflection.Descriptor;
+            yield return LabelEnumsReflection.Descriptor;
             yield return LabelMessagesReflection.Descriptor;
+            yield return LabelServiceReflection.Descriptor;
             yield return LineItemEnumsReflection.Descriptor;
             yield return LineItemMessagesReflection.Descriptor;
             yield return LineItemServiceReflection.Descriptor;
+            yield return LinkedDeviceEnumsReflection.Descriptor;
+            yield return LinkedDeviceMessagesReflection.Descriptor;
+            yield return LinkedDeviceServiceReflection.Descriptor;
             yield return LiveStreamEventMessagesReflection.Descriptor;
+            yield return McmEarningsMessagesReflection.Descriptor;
+            yield return McmEarningsServiceReflection.Descriptor;
+            yield return McmEnumsReflection.Descriptor;
             yield return MobileCarrierMessagesReflection.Descriptor;
             yield return MobileCarrierServiceReflection.Descriptor;
             yield return MobileDeviceMessagesReflection.Descriptor;
@@ -144,6 +159,9 @@ namespace Google.Ads.AdManager.V1
             yield return ReportServiceReflection.Descriptor;
             yield return ReportValueReflection.Descriptor;
             yield return RequestPlatformEnumReflection.Descriptor;
+            yield return RichMediaAdsCompanyEnumsReflection.Descriptor;
+            yield return RichMediaAdsCompanyMessagesReflection.Descriptor;
+            yield return RichMediaAdsCompanyServiceReflection.Descriptor;
             yield return RoleEnumsReflection.Descriptor;
             yield return RoleMessagesReflection.Descriptor;
             yield return RoleServiceReflection.Descriptor;

@@ -29,15 +29,20 @@ namespace Google.Ads.AdManager.V1 {
             "ZXZpZXdDZW50ZXJBZFN0YXR1c0VudW0ibgoWQWRSZXZpZXdDZW50ZXJBZFN0",
             "YXR1cxIqCiZBRF9SRVZJRVdfQ0VOVEVSX0FEX1NUQVRVU19VTlNQRUNJRklF",
             "RBAAEgsKB0FMTE9XRUQQARILCgdCTE9DS0VEEAISDgoKVU5SRVZJRVdFRBAD",
-            "Qs4BChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCGkFkUmV2aWV3Q2Vu",
-            "dGVyQWRFbnVtc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
-            "L2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29n",
-            "bGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx",
-            "6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "IrgBCiBNYW51YWxBZFJldmlld0NlbnRlckFkU3RhdHVzRW51bSKTAQocTWFu",
+            "dWFsQWRSZXZpZXdDZW50ZXJBZFN0YXR1cxIxCi1NQU5VQUxfQURfUkVWSUVX",
+            "X0NFTlRFUl9BRF9TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdBTExPV0VEEAES",
+            "CwoHQkxPQ0tFRBACEgwKCEFSQ0hJVkVEEAMSCwoHUEVORElORxAEEgsKB1NF",
+            "UlZJTkcQBULOAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhpBZFJl",
+            "dmlld0NlbnRlckFkRW51bXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2Vy",
+            "qgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFu",
+            "YWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum), global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum), global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum), global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Parser, null, null, new[]{ typeof(global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus) }, null, null)
           }));
     }
     #endregion
@@ -232,6 +237,209 @@ namespace Google.Ads.AdManager.V1 {
         /// This ad is allowed to serve by default and has not been reviewed.
         /// </summary>
         [pbr::OriginalName("UNREVIEWED")] Unreviewed = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Wrapper message for
+  /// [ManualAdReviewCenterAdStatus][google.ads.admanager.v1.ManualAdReviewCenterAdStatusEnum.ManualAdReviewCenterAdStatus]
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ManualAdReviewCenterAdStatusEnum : pb::IMessage<ManualAdReviewCenterAdStatusEnum>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ManualAdReviewCenterAdStatusEnum> _parser = new pb::MessageParser<ManualAdReviewCenterAdStatusEnum>(() => new ManualAdReviewCenterAdStatusEnum());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ManualAdReviewCenterAdStatusEnum> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.AdReviewCenterAdEnumsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManualAdReviewCenterAdStatusEnum() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManualAdReviewCenterAdStatusEnum(ManualAdReviewCenterAdStatusEnum other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ManualAdReviewCenterAdStatusEnum Clone() {
+      return new ManualAdReviewCenterAdStatusEnum(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ManualAdReviewCenterAdStatusEnum);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ManualAdReviewCenterAdStatusEnum other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ManualAdReviewCenterAdStatusEnum other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ManualAdReviewCenterAdStatusEnum message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Specifies the manual review status of a AdReviewCenterAd.
+      /// </summary>
+      public enum ManualAdReviewCenterAdStatus {
+        /// <summary>
+        /// Not specified value.
+        /// </summary>
+        [pbr::OriginalName("MANUAL_AD_REVIEW_CENTER_AD_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// This ad has been explicitly allowed to serve.
+        /// </summary>
+        [pbr::OriginalName("ALLOWED")] Allowed = 1,
+        /// <summary>
+        /// This ad has been explicitly blocked from serving.
+        /// </summary>
+        [pbr::OriginalName("BLOCKED")] Blocked = 2,
+        /// <summary>
+        /// This ad is implicitly blocked and has been reviewed.
+        /// </summary>
+        [pbr::OriginalName("ARCHIVED")] Archived = 3,
+        /// <summary>
+        /// This ad is implicitly blocked and has not been reviewed.
+        /// </summary>
+        [pbr::OriginalName("PENDING")] Pending = 4,
+        /// <summary>
+        /// This ad is allowed to serve by default and has not been reviewed.
+        /// </summary>
+        [pbr::OriginalName("SERVING")] Serving = 5,
       }
 
     }

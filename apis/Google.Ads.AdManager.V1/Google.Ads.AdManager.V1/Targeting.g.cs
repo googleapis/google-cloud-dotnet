@@ -1654,8 +1654,8 @@ namespace Google.Ads.AdManager.V1 {
   /// <summary>
   /// Bandwidth Targeting.
   ///
-  /// Reach users accessing the internet via various means of connection, such as
-  /// cable, DSL, or dial-up. Can be useful to target campaigns using
+  /// Reach users accessing the internet through various means of connection, such
+  /// as cable, DSL, or dial-up. Can be useful to target campaigns using
   /// low-resolution creatives or text ads for users with low bandwidth.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3723,7 +3723,7 @@ namespace Google.Ads.AdManager.V1 {
     ///
     /// Excluded AUs take precedence over targeted AUs. In fact an AU can be
     /// excluded only if one of its ancestors is targeted. Subsequently child
-    /// AUs of an excluded AU can not be targeted (except via a placement).
+    /// AUs of an excluded AU can not be targeted (except through a Placement).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

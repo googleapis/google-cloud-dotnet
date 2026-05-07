@@ -41,8 +41,8 @@ namespace Google.Ads.AdManager.V1 {
             "dGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIT",
             "CgZsb2NhbGUYCCABKAlCA+BBAxJHChBzY2hlZHVsZV9vcHRpb25zGAkgASgL",
             "MiguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuU2NoZWR1bGVPcHRpb25zQgPg",
-            "QQEiQwoKVmlzaWJpbGl0eRIKCgZISURERU4QABIJCgVEUkFGVBABEg0KBVNB",
-            "VkVEEAIaAggBEgsKB1ZJU0lCTEUQAhoCEAE6X+pBXAofYWRtYW5hZ2VyLmdv",
+            "QQEiQwoKVmlzaWJpbGl0eRIKCgZISURERU4QABIJCgVEUkFGVBABEgsKB1ZJ",
+            "U0lCTEUQAhINCgVTQVZFRBACGgIIARoCEAE6X+pBXAofYWRtYW5hZ2VyLmdv",
             "b2dsZWFwaXMuY29tL1JlcG9ydBIobmV0d29ya3Mve25ldHdvcmtfY29kZX0v",
             "cmVwb3J0cy97cmVwb3J0fSoHcmVwb3J0czIGcmVwb3J0IocFCg9SZXBvcnRE",
             "YXRhVGFibGUanQEKA1JvdxI+ChBkaW1lbnNpb25fdmFsdWVzGAEgAygLMiQu",
@@ -682,15 +682,17 @@ namespace Google.Ads.AdManager.V1 {
         /// </summary>
         [pbr::OriginalName("DRAFT")] Draft = 1,
         /// <summary>
-        /// Reports with saved visibility will appear in the Ad Manager UI by
-        /// default. Alias for VISIBLE and will be replaced in the future.
-        /// </summary>
-        [global::System.ObsoleteAttribute]
-        [pbr::OriginalName("SAVED")] Saved = 2,
-        /// <summary>
         /// Reports with this visibility will appear in the Ad Manager UI.
         /// </summary>
-        [pbr::OriginalName("VISIBLE", PreferredAlias = false)] Visible = 2,
+        [pbr::OriginalName("VISIBLE")] Visible = 2,
+        /// <summary>
+        /// Deprecated: Use `VISIBLE`.
+        /// Reports with saved visibility will appear in the Ad Manager UI by
+        /// default. This is an alias for `VISIBLE` and will be removed in the
+        /// future.
+        /// </summary>
+        [global::System.ObsoleteAttribute]
+        [pbr::OriginalName("SAVED", PreferredAlias = false)] Saved = 2,
       }
 
     }

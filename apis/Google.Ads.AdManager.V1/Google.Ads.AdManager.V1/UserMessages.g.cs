@@ -26,24 +26,24 @@ namespace Google.Ads.AdManager.V1 {
           string.Concat(
             "Citnb29nbGUvYWRzL2FkbWFuYWdlci92MS91c2VyX21lc3NhZ2VzLnByb3Rv",
             "Ehdnb29nbGUuYWRzLmFkbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKEBAoE",
-            "VXNlchIRCgRuYW1lGAEgASgJQgPgQQgSGQoHdXNlcl9pZBgKIAEoA0ID4EED",
-            "SACIAQESHgoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQJIAYgBARIXCgVlbWFp",
-            "bBgDIAEoCUID4EECSAKIAQESOAoEcm9sZRgEIAEoCUIl4EEC+kEfCh1hZG1h",
-            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vUm9sZUgDiAEBEhgKBmFjdGl2ZRgGIAEo",
-            "CEID4EEDSASIAQESHQoLZXh0ZXJuYWxfaWQYByABKAlCA+BBAUgFiAEBEiEK",
-            "D3NlcnZpY2VfYWNjb3VudBgIIAEoCEID4EEDSAaIAQESKwoZb3JkZXJzX3Vp",
-            "X2xvY2FsX3RpbWVfem9uZRgJIAEoCUID4EEBSAeIAQE6VepBUgodYWRtYW5h",
-            "Z2VyLmdvb2dsZWFwaXMuY29tL1VzZXISJG5ldHdvcmtzL3tuZXR3b3JrX2Nv",
-            "ZGV9L3VzZXJzL3t1c2VyfSoFdXNlcnMyBHVzZXJCCgoIX3VzZXJfaWRCDwoN",
-            "X2Rpc3BsYXlfbmFtZUIICgZfZW1haWxCBwoFX3JvbGVCCQoHX2FjdGl2ZUIO",
-            "CgxfZXh0ZXJuYWxfaWRCEgoQX3NlcnZpY2VfYWNjb3VudEIcChpfb3JkZXJz",
-            "X3VpX2xvY2FsX3RpbWVfem9uZULFAQobY29tLmdvb2dsZS5hZHMuYWRtYW5h",
-            "Z2VyLnYxQhFVc2VyTWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5h",
-            "Z2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFk",
-            "TWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90",
-            "bzM="));
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKGBAoE",
+            "VXNlchIRCgRuYW1lGAEgASgJQgPgQQgSGwoHdXNlcl9pZBgKIAEoA0IFGAHg",
+            "QQNIAIgBARIeCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAkgBiAEBEhcKBWVt",
+            "YWlsGAMgASgJQgPgQQJIAogBARI4CgRyb2xlGAQgASgJQiXgQQL6QR8KHWFk",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Sb2xlSAOIAQESGAoGYWN0aXZlGAYg",
+            "ASgIQgPgQQNIBIgBARIdCgtleHRlcm5hbF9pZBgHIAEoCUID4EEBSAWIAQES",
+            "IQoPc2VydmljZV9hY2NvdW50GAggASgIQgPgQQNIBogBARIrChlvcmRlcnNf",
+            "dWlfbG9jYWxfdGltZV96b25lGAkgASgJQgPgQQFIB4gBATpV6kFSCh1hZG1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vVXNlchIkbmV0d29ya3Mve25ldHdvcmtf",
+            "Y29kZX0vdXNlcnMve3VzZXJ9KgV1c2VyczIEdXNlckIKCghfdXNlcl9pZEIP",
+            "Cg1fZGlzcGxheV9uYW1lQggKBl9lbWFpbEIHCgVfcm9sZUIJCgdfYWN0aXZl",
+            "Qg4KDF9leHRlcm5hbF9pZEISChBfc2VydmljZV9hY2NvdW50QhwKGl9vcmRl",
+            "cnNfdWlfbG9jYWxfdGltZV96b25lQsUBChtjb20uZ29vZ2xlLmFkcy5hZG1h",
+            "bmFnZXIudjFCEVVzZXJNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcu",
+            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1h",
+            "bmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNc",
+            "QWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -134,8 +134,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long userId_;
     /// <summary>
-    /// Output only. `User` ID.
+    /// Output only. Deprecated: `User` ID.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
@@ -146,12 +147,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "user_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasUserId {
       get { return (_hasBits0 & 4) != 0; }
     }
     /// <summary>Clears the value of the "user_id" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearUserId() {

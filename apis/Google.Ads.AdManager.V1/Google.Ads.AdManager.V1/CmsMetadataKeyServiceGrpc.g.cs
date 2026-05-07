@@ -3,7 +3,7 @@
 //     source: google/ads/admanager/v1/cms_metadata_key_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -71,6 +71,14 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCmsMetadataKeysRequest> __Marshaller_google_ads_admanager_v1_ListCmsMetadataKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCmsMetadataKeysRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCmsMetadataKeysResponse> __Marshaller_google_ads_admanager_v1_ListCmsMetadataKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCmsMetadataKeysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest> __Marshaller_google_ads_admanager_v1_BatchActivateCmsMetadataKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse> __Marshaller_google_ads_admanager_v1_BatchActivateCmsMetadataKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest> __Marshaller_google_ads_admanager_v1_BatchDeactivateCmsMetadataKeysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse> __Marshaller_google_ads_admanager_v1_BatchDeactivateCmsMetadataKeysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetCmsMetadataKeyRequest, global::Google.Ads.AdManager.V1.CmsMetadataKey> __Method_GetCmsMetadataKey = new grpc::Method<global::Google.Ads.AdManager.V1.GetCmsMetadataKeyRequest, global::Google.Ads.AdManager.V1.CmsMetadataKey>(
@@ -87,6 +95,22 @@ namespace Google.Ads.AdManager.V1 {
         "ListCmsMetadataKeys",
         __Marshaller_google_ads_admanager_v1_ListCmsMetadataKeysRequest,
         __Marshaller_google_ads_admanager_v1_ListCmsMetadataKeysResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest, global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse> __Method_BatchActivateCmsMetadataKeys = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest, global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchActivateCmsMetadataKeys",
+        __Marshaller_google_ads_admanager_v1_BatchActivateCmsMetadataKeysRequest,
+        __Marshaller_google_ads_admanager_v1_BatchActivateCmsMetadataKeysResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse> __Method_BatchDeactivateCmsMetadataKeys = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeactivateCmsMetadataKeys",
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateCmsMetadataKeysRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateCmsMetadataKeysResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -118,6 +142,30 @@ namespace Google.Ads.AdManager.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListCmsMetadataKeysResponse> ListCmsMetadataKeys(global::Google.Ads.AdManager.V1.ListCmsMetadataKeysRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to activate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeys(global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeys(global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -247,6 +295,102 @@ namespace Google.Ads.AdManager.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCmsMetadataKeys, null, options, request);
       }
+      /// <summary>
+      /// API to activate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse BatchActivateCmsMetadataKeys(global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateCmsMetadataKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to activate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse BatchActivateCmsMetadataKeys(global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchActivateCmsMetadataKeys, null, options, request);
+      }
+      /// <summary>
+      /// API to activate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateCmsMetadataKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to activate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchActivateCmsMetadataKeys, null, options, request);
+      }
+      /// <summary>
+      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse BatchDeactivateCmsMetadataKeys(global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateCmsMetadataKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse BatchDeactivateCmsMetadataKeys(global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeactivateCmsMetadataKeys, null, options, request);
+      }
+      /// <summary>
+      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateCmsMetadataKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeactivateCmsMetadataKeys, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CmsMetadataKeyServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -262,7 +406,9 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetCmsMetadataKey, serviceImpl.GetCmsMetadataKey)
-          .AddMethod(__Method_ListCmsMetadataKeys, serviceImpl.ListCmsMetadataKeys).Build();
+          .AddMethod(__Method_ListCmsMetadataKeys, serviceImpl.ListCmsMetadataKeys)
+          .AddMethod(__Method_BatchActivateCmsMetadataKeys, serviceImpl.BatchActivateCmsMetadataKeys)
+          .AddMethod(__Method_BatchDeactivateCmsMetadataKeys, serviceImpl.BatchDeactivateCmsMetadataKeys).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +420,8 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetCmsMetadataKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetCmsMetadataKeyRequest, global::Google.Ads.AdManager.V1.CmsMetadataKey>(serviceImpl.GetCmsMetadataKey));
       serviceBinder.AddMethod(__Method_ListCmsMetadataKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListCmsMetadataKeysRequest, global::Google.Ads.AdManager.V1.ListCmsMetadataKeysResponse>(serviceImpl.ListCmsMetadataKeys));
+      serviceBinder.AddMethod(__Method_BatchActivateCmsMetadataKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysRequest, global::Google.Ads.AdManager.V1.BatchActivateCmsMetadataKeysResponse>(serviceImpl.BatchActivateCmsMetadataKeys));
+      serviceBinder.AddMethod(__Method_BatchDeactivateCmsMetadataKeys, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCmsMetadataKeysResponse>(serviceImpl.BatchDeactivateCmsMetadataKeys));
     }
 
   }

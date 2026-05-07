@@ -29,35 +29,35 @@ namespace Google.Ads.AdManager.V1 {
             "bmFnZXIvdjEvYXBwbGllZF9sYWJlbC5wcm90bxorZ29vZ2xlL2Fkcy9hZG1h",
             "bmFnZXIvdjEvY29tcGFueV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKCCAoHQ29tcGFueRIR",
-            "CgRuYW1lGAEgASgJQgPgQQgSHAoKY29tcGFueV9pZBgCIAEoA0ID4EEDSACI",
-            "AQESHgoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQJIAYgBARJMCgR0eXBlGAQg",
-            "ASgOMjQuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ29tcGFueVR5cGVFbnVt",
-            "LkNvbXBhbnlUeXBlQgPgQQJIAogBARIZCgdhZGRyZXNzGAUgASgJQgPgQQFI",
-            "A4gBARIXCgVlbWFpbBgGIAEoCUID4EEBSASIAQESFQoDZmF4GAcgASgJQgPg",
-            "QQFIBYgBARIXCgVwaG9uZRgIIAEoCUID4EEBSAaIAQESHQoLZXh0ZXJuYWxf",
-            "aWQYCSABKAlCA+BBAUgHiAEBEhkKB2NvbW1lbnQYCiABKAlCA+BBAUgIiAEB",
-            "EmUKDWNyZWRpdF9zdGF0dXMYCyABKA4yRC5nb29nbGUuYWRzLmFkbWFuYWdl",
-            "ci52MS5Db21wYW55Q3JlZGl0U3RhdHVzRW51bS5Db21wYW55Q3JlZGl0U3Rh",
-            "dHVzQgPgQQFICYgBARJCCg5hcHBsaWVkX2xhYmVscxgMIAMoCzIlLmdvb2ds",
-            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkFwcGxpZWRMYWJlbEID4EEBEkYKD3ByaW1h",
-            "cnlfY29udGFjdBgNIAEoCUIo4EEB+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBp",
-            "cy5jb20vQ29udGFjdEgKiAEBEjwKDWFwcGxpZWRfdGVhbXMYDiADKAlCJeBB",
-            "AfpBHwodYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1RlYW0SKAoWdGhpcmRf",
-            "cGFydHlfY29tcGFueV9pZBgQIAEoA0ID4EEBSAuIAQESOQoLdXBkYXRlX3Rp",
-            "bWUYDyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNIDIgB",
-            "ATpm6kFjCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ29tcGFueRIrbmV0",
-            "d29ya3Mve25ldHdvcmtfY29kZX0vY29tcGFuaWVzL3tjb21wYW55fSoJY29t",
-            "cGFuaWVzMgdjb21wYW55Qg0KC19jb21wYW55X2lkQg8KDV9kaXNwbGF5X25h",
-            "bWVCBwoFX3R5cGVCCgoIX2FkZHJlc3NCCAoGX2VtYWlsQgYKBF9mYXhCCAoG",
-            "X3Bob25lQg4KDF9leHRlcm5hbF9pZEIKCghfY29tbWVudEIQCg5fY3JlZGl0",
-            "X3N0YXR1c0ISChBfcHJpbWFyeV9jb250YWN0QhkKF190aGlyZF9wYXJ0eV9j",
-            "b21wYW55X2lkQg4KDF91cGRhdGVfdGltZULIAQobY29tLmdvb2dsZS5hZHMu",
-            "YWRtYW5hZ2VyLnYxQhRDb21wYW55TWVzc2FnZXNQcm90b1ABWkBnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIv",
-            "djE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29n",
-            "bGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6",
-            "OlYxYgZwcm90bzM="));
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKECAoHQ29tcGFueRIR",
+            "CgRuYW1lGAEgASgJQgPgQQgSHgoKY29tcGFueV9pZBgCIAEoA0IFGAHgQQNI",
+            "AIgBARIeCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAkgBiAEBEkwKBHR5cGUY",
+            "BCABKA4yNC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Db21wYW55VHlwZUVu",
+            "dW0uQ29tcGFueVR5cGVCA+BBAkgCiAEBEhkKB2FkZHJlc3MYBSABKAlCA+BB",
+            "AUgDiAEBEhcKBWVtYWlsGAYgASgJQgPgQQFIBIgBARIVCgNmYXgYByABKAlC",
+            "A+BBAUgFiAEBEhcKBXBob25lGAggASgJQgPgQQFIBogBARIdCgtleHRlcm5h",
+            "bF9pZBgJIAEoCUID4EEBSAeIAQESGQoHY29tbWVudBgKIAEoCUID4EEBSAiI",
+            "AQESZQoNY3JlZGl0X3N0YXR1cxgLIAEoDjJELmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLkNvbXBhbnlDcmVkaXRTdGF0dXNFbnVtLkNvbXBhbnlDcmVkaXRT",
+            "dGF0dXNCA+BBAUgJiAEBEkIKDmFwcGxpZWRfbGFiZWxzGAwgAygLMiUuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQXBwbGllZExhYmVsQgPgQQESRgoPcHJp",
+            "bWFyeV9jb250YWN0GA0gASgJQijgQQH6QSIKIGFkbWFuYWdlci5nb29nbGVh",
+            "cGlzLmNvbS9Db250YWN0SAqIAQESPAoNYXBwbGllZF90ZWFtcxgOIAMoCUIl",
+            "4EEB+kEfCh1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVGVhbRIoChZ0aGly",
+            "ZF9wYXJ0eV9jb21wYW55X2lkGBAgASgDQgPgQQFIC4gBARI5Cgt1cGRhdGVf",
+            "dGltZRgPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gM",
+            "iAEBOmbqQWMKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db21wYW55Eitu",
+            "ZXR3b3Jrcy97bmV0d29ya19jb2RlfS9jb21wYW5pZXMve2NvbXBhbnl9Kglj",
+            "b21wYW5pZXMyB2NvbXBhbnlCDQoLX2NvbXBhbnlfaWRCDwoNX2Rpc3BsYXlf",
+            "bmFtZUIHCgVfdHlwZUIKCghfYWRkcmVzc0IICgZfZW1haWxCBgoEX2ZheEII",
+            "CgZfcGhvbmVCDgoMX2V4dGVybmFsX2lkQgoKCF9jb21tZW50QhAKDl9jcmVk",
+            "aXRfc3RhdHVzQhIKEF9wcmltYXJ5X2NvbnRhY3RCGQoXX3RoaXJkX3BhcnR5",
+            "X2NvbXBhbnlfaWRCDgoMX3VwZGF0ZV90aW1lQsgBChtjb20uZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjFCFENvbXBhbnlNZXNzYWdlc1Byb3RvUAFaQGdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdl",
+            "ci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dv",
+            "b2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdl",
+            "cjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AppliedLabelReflection.Descriptor, global::Google.Ads.AdManager.V1.CompanyEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -69,7 +69,7 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// The `Company` resource.
+  /// The [Company][google.ads.admanager.v1.Company] resource.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Company : pb::IMessage<Company>
@@ -137,8 +137,9 @@ namespace Google.Ads.AdManager.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Identifier. The resource name of the `Company`.
-    /// Format: `networks/{network_code}/companies/{company_id}`
+    /// Identifier. The resource name of the
+    /// [Company][google.ads.admanager.v1.Company]. Format:
+    /// `networks/{network_code}/companies/{company_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -155,8 +156,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long companyId_;
     /// <summary>
-    /// Output only. `Company` ID.
+    /// Output only. Deprecated: [Company][google.ads.admanager.v1.Company] ID.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long CompanyId {
@@ -167,12 +169,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "company_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasCompanyId {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "company_id" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCompanyId() {
@@ -185,7 +189,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private string displayName_;
     /// <summary>
-    /// Required. The display name of the `Company`.
+    /// Required. The display name of the
+    /// [Company][google.ads.admanager.v1.Company].
     ///
     /// This value has a maximum length of 127 characters.
     /// </summary>
@@ -216,7 +221,7 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.CompanyTypeEnum.Types.CompanyType type_;
     /// <summary>
-    /// Required. The type of the `Company`.
+    /// Required. The type of the [Company][google.ads.admanager.v1.Company].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -246,7 +251,7 @@ namespace Google.Ads.AdManager.V1 {
 
     private string address_;
     /// <summary>
-    /// Optional. The address for the `Company`.
+    /// Optional. The address for the [Company][google.ads.admanager.v1.Company].
     ///
     /// This value has a maximum length of 1024 characters.
     /// </summary>
@@ -277,7 +282,7 @@ namespace Google.Ads.AdManager.V1 {
 
     private string email_;
     /// <summary>
-    /// Optional. The email for the `Company`.
+    /// Optional. The email for the [Company][google.ads.admanager.v1.Company].
     ///
     /// This value has a maximum length of 128 characters.
     /// </summary>
@@ -308,7 +313,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private string fax_;
     /// <summary>
-    /// Optional. The fax number for the `Company`.
+    /// Optional. The fax number for the
+    /// [Company][google.ads.admanager.v1.Company].
     ///
     /// This value has a maximum length of 63 characters.
     /// </summary>
@@ -339,7 +345,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private string phone_;
     /// <summary>
-    /// Optional. The phone number for the `Company`.
+    /// Optional. The phone number for the
+    /// [Company][google.ads.admanager.v1.Company].
     ///
     /// This value has a maximum length of 63 characters.
     /// </summary>
@@ -370,7 +377,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private string externalId_;
     /// <summary>
-    /// Optional. The external ID for the `Company`.
+    /// Optional. The external ID for the
+    /// [Company][google.ads.admanager.v1.Company].
     ///
     /// This value has a maximum length of 255 characters.
     /// </summary>
@@ -401,7 +409,7 @@ namespace Google.Ads.AdManager.V1 {
 
     private string comment_;
     /// <summary>
-    /// Optional. Comments about the `Company`.
+    /// Optional. Comments about the [Company][google.ads.admanager.v1.Company].
     ///
     /// This value has a maximum length of 1024 characters.
     /// </summary>
@@ -432,10 +440,12 @@ namespace Google.Ads.AdManager.V1 {
 
     private global::Google.Ads.AdManager.V1.CompanyCreditStatusEnum.Types.CompanyCreditStatus creditStatus_;
     /// <summary>
-    /// Optional. The credit status of the `Company`.
+    /// Optional. The credit status of the
+    /// [Company][google.ads.admanager.v1.Company].
     ///
-    /// This attribute defaults to `ACTIVE` if basic settings are enabled and
-    /// `ON_HOLD` if advance settings are enabled.
+    /// This attribute defaults to [CompanyCreditStatus.ACTIVE][] if basic
+    /// settings are enabled and [CompanyCreditStatus.ON_HOLD][] if advance
+    /// settings are enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -465,7 +475,8 @@ namespace Google.Ads.AdManager.V1 {
         = pb::FieldCodec.ForMessage(98, global::Google.Ads.AdManager.V1.AppliedLabel.Parser);
     private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel> appliedLabels_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.AppliedLabel>();
     /// <summary>
-    /// Optional. The labels that are directly applied to the `Company`.
+    /// Optional. The labels that are directly applied to the
+    /// [Company][google.ads.admanager.v1.Company].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -479,8 +490,10 @@ namespace Google.Ads.AdManager.V1 {
 
     private string primaryContact_;
     /// <summary>
-    /// Optional. The resource names of primary Contact of the `Company`.
-    /// Format: "networks/{network_code}/contacts/{contact_id}"
+    /// Optional. The resource names of primary
+    /// [Contact][google.ads.admanager.v1.Contact] of the
+    /// [Company][google.ads.admanager.v1.Company]. Format:
+    /// "networks/{network_code}/contacts/{contact_id}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -510,7 +523,8 @@ namespace Google.Ads.AdManager.V1 {
     private readonly pbc::RepeatedField<string> appliedTeams_ = new pbc::RepeatedField<string>();
     /// <summary>
     /// Optional. The resource names of Teams that are directly associated with the
-    /// `Company`. Format: "networks/{network_code}/teams/{team_id}"
+    /// [Company][google.ads.admanager.v1.Company]. Format:
+    /// "networks/{network_code}/teams/{team_id}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -525,7 +539,7 @@ namespace Google.Ads.AdManager.V1 {
     private long thirdPartyCompanyId_;
     /// <summary>
     /// Optional. The ID of the Google-recognized canonicalized form of the
-    /// `Company`.
+    /// [Company][google.ads.admanager.v1.Company].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -553,7 +567,8 @@ namespace Google.Ads.AdManager.V1 {
     public const int UpdateTimeFieldNumber = 15;
     private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
     /// <summary>
-    /// Output only. The time the `Company` was last modified.
+    /// Output only. The time the [Company][google.ads.admanager.v1.Company] was
+    /// last modified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

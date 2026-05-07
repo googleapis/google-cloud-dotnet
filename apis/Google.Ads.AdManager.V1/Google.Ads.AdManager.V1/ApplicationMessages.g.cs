@@ -25,22 +25,41 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjJnb29nbGUvYWRzL2FkbWFuYWdlci92MS9hcHBsaWNhdGlvbl9tZXNzYWdl",
-            "cy5wcm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaH2dvb2dsZS9hcGkv",
-            "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8iywEKC0FwcGxpY2F0aW9uEhEKBG5hbWUYASABKAlCA+BBCBIeCgxkaXNw",
-            "bGF5X25hbWUYBCABKAlCA+BBAUgAiAEBOnjqQXUKJGFkbWFuYWdlci5nb29n",
-            "bGVhcGlzLmNvbS9BcHBsaWNhdGlvbhIybmV0d29ya3Mve25ldHdvcmtfY29k",
-            "ZX0vYXBwbGljYXRpb25zL3thcHBsaWNhdGlvbn0qDGFwcGxpY2F0aW9uczIL",
-            "YXBwbGljYXRpb25CDwoNX2Rpc3BsYXlfbmFtZULMAQobY29tLmdvb2dsZS5h",
-            "ZHMuYWRtYW5hZ2VyLnYxQhhBcHBsaWNhdGlvbk1lc3NhZ2VzUHJvdG9QAVpA",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRt",
-            "YW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYx",
-            "ygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRN",
-            "YW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "cy5wcm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaL2dvb2dsZS9hZHMv",
+            "YWRtYW5hZ2VyL3YxL2FwcGxpY2F0aW9uX2VudW1zLnByb3RvGh9nb29nbGUv",
+            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
+            "LnByb3RvIoIICgtBcHBsaWNhdGlvbhIRCgRuYW1lGAEgASgJQgPgQQgSHgoM",
+            "ZGlzcGxheV9uYW1lGAQgASgJQgPgQQJIAIgBARIeCgxhcHBfc3RvcmVfaWQY",
+            "BSABKAlCA+BBAUgBiAEBElcKCmFwcF9zdG9yZXMYByADKA4yPi5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5BcHBsaWNhdGlvblN0b3JlRW51bS5BcHBsaWNh",
+            "dGlvblN0b3JlQgPgQQESGgoIYXJjaGl2ZWQYCCABKAhCA+BBA0gCiAEBEigK",
+            "FmFwcF9zdG9yZV9kaXNwbGF5X25hbWUYCSABKAlCA+BBA0gDiAEBEiIKEGFw",
+            "cGxpY2F0aW9uX2NvZGUYCiABKAlCA+BBA0gEiAEBEhsKCWRldmVsb3BlchgL",
+            "IAEoCUID4EEDSAWIAQESYAoIcGxhdGZvcm0YDCABKA4yRC5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5BcHBsaWNhdGlvblBsYXRmb3JtRW51bS5BcHBsaWNh",
+            "dGlvblBsYXRmb3JtQgPgQQNIBogBARIWCgRmcmVlGA0gASgIQgPgQQNIB4gB",
+            "ARIeCgxkb3dubG9hZF91cmwYDiABKAlCA+BBA0gIiAEBEnMKD2FwcHJvdmFs",
+            "X3N0YXR1cxgPIAEoDjJQLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFwcGxp",
+            "Y2F0aW9uQXBwcm92YWxTdGF0dXNFbnVtLkFwcGxpY2F0aW9uQXBwcm92YWxT",
+            "dGF0dXNCA+BBA0gJiAEBEnMKF3dlYnZpZXdfY2xhaW1pbmdfc3RhdHVzGBAg",
+            "ASgOMkguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuV2Vidmlld0NsYWltaW5n",
+            "U3RhdHVzRW51bS5XZWJ2aWV3Q2xhaW1pbmdTdGF0dXNCA+BBA0gKiAEBOnjq",
+            "QXUKJGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BcHBsaWNhdGlvbhIybmV0",
+            "d29ya3Mve25ldHdvcmtfY29kZX0vYXBwbGljYXRpb25zL3thcHBsaWNhdGlv",
+            "bn0qDGFwcGxpY2F0aW9uczILYXBwbGljYXRpb25CDwoNX2Rpc3BsYXlfbmFt",
+            "ZUIPCg1fYXBwX3N0b3JlX2lkQgsKCV9hcmNoaXZlZEIZChdfYXBwX3N0b3Jl",
+            "X2Rpc3BsYXlfbmFtZUITChFfYXBwbGljYXRpb25fY29kZUIMCgpfZGV2ZWxv",
+            "cGVyQgsKCV9wbGF0Zm9ybUIHCgVfZnJlZUIPCg1fZG93bmxvYWRfdXJsQhIK",
+            "EF9hcHByb3ZhbF9zdGF0dXNCGgoYX3dlYnZpZXdfY2xhaW1pbmdfc3RhdHVz",
+            "QswBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCGEFwcGxpY2F0aW9u",
+            "TWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xl",
+            "LkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoC",
+            "Gkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ApplicationEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Application), global::Google.Ads.AdManager.V1.Application.Parser, new[]{ "Name", "DisplayName" }, new[]{ "DisplayName" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Application), global::Google.Ads.AdManager.V1.Application.Parser, new[]{ "Name", "DisplayName", "AppStoreId", "AppStores", "Archived", "AppStoreDisplayName", "ApplicationCode", "Developer", "Platform", "Free", "DownloadUrl", "ApprovalStatus", "WebviewClaimingStatus" }, new[]{ "DisplayName", "AppStoreId", "Archived", "AppStoreDisplayName", "ApplicationCode", "Developer", "Platform", "Free", "DownloadUrl", "ApprovalStatus", "WebviewClaimingStatus" }, null, null, null)
           }));
     }
     #endregion
@@ -59,6 +78,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Application> _parser = new pb::MessageParser<Application>(() => new Application());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Application> Parser { get { return _parser; } }
@@ -86,8 +106,20 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Application(Application other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       displayName_ = other.displayName_;
+      appStoreId_ = other.appStoreId_;
+      appStores_ = other.appStores_.Clone();
+      archived_ = other.archived_;
+      appStoreDisplayName_ = other.appStoreDisplayName_;
+      applicationCode_ = other.applicationCode_;
+      developer_ = other.developer_;
+      platform_ = other.platform_;
+      free_ = other.free_;
+      downloadUrl_ = other.downloadUrl_;
+      approvalStatus_ = other.approvalStatus_;
+      webviewClaimingStatus_ = other.webviewClaimingStatus_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -119,8 +151,7 @@ namespace Google.Ads.AdManager.V1 {
 
     private string displayName_;
     /// <summary>
-    /// Optional. The display name of the application. This attribute is required
-    /// and has a maximum length of 80 characters.
+    /// Required. The display name of the application.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -143,6 +174,323 @@ namespace Google.Ads.AdManager.V1 {
       displayName_ = null;
     }
 
+    /// <summary>Field number for the "app_store_id" field.</summary>
+    public const int AppStoreIdFieldNumber = 5;
+    private readonly static string AppStoreIdDefaultValue = "";
+
+    private string appStoreId_;
+    /// <summary>
+    /// Optional. The app store ID of the app to claim.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AppStoreId {
+      get { return appStoreId_ ?? AppStoreIdDefaultValue; }
+      set {
+        appStoreId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "app_store_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAppStoreId {
+      get { return appStoreId_ != null; }
+    }
+    /// <summary>Clears the value of the "app_store_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAppStoreId() {
+      appStoreId_ = null;
+    }
+
+    /// <summary>Field number for the "app_stores" field.</summary>
+    public const int AppStoresFieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ApplicationStoreEnum.Types.ApplicationStore> _repeated_appStores_codec
+        = pb::FieldCodec.ForEnum(58, x => (int) x, x => (global::Google.Ads.AdManager.V1.ApplicationStoreEnum.Types.ApplicationStore) x);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ApplicationStoreEnum.Types.ApplicationStore> appStores_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ApplicationStoreEnum.Types.ApplicationStore>();
+    /// <summary>
+    /// Optional. The app stores the application belongs to. This attribute is
+    /// mutable to allow for third party app store linking.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ApplicationStoreEnum.Types.ApplicationStore> AppStores {
+      get { return appStores_; }
+    }
+
+    /// <summary>Field number for the "archived" field.</summary>
+    public const int ArchivedFieldNumber = 8;
+    private readonly static bool ArchivedDefaultValue = false;
+
+    private bool archived_;
+    /// <summary>
+    /// Output only. The archival status of the application.
+    ///
+    /// When true, an application cannot be targeted and will not serve ads,
+    /// regardless of its `status`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Archived {
+      get { if ((_hasBits0 & 1) != 0) { return archived_; } else { return ArchivedDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        archived_ = value;
+      }
+    }
+    /// <summary>Gets whether the "archived" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasArchived {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "archived" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearArchived() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "app_store_display_name" field.</summary>
+    public const int AppStoreDisplayNameFieldNumber = 9;
+    private readonly static string AppStoreDisplayNameDefaultValue = "";
+
+    private string appStoreDisplayName_;
+    /// <summary>
+    /// Output only. The name of the application on the app store.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AppStoreDisplayName {
+      get { return appStoreDisplayName_ ?? AppStoreDisplayNameDefaultValue; }
+      set {
+        appStoreDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "app_store_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAppStoreDisplayName {
+      get { return appStoreDisplayName_ != null; }
+    }
+    /// <summary>Clears the value of the "app_store_display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAppStoreDisplayName() {
+      appStoreDisplayName_ = null;
+    }
+
+    /// <summary>Field number for the "application_code" field.</summary>
+    public const int ApplicationCodeFieldNumber = 10;
+    private readonly static string ApplicationCodeDefaultValue = "";
+
+    private string applicationCode_;
+    /// <summary>
+    /// Output only. The application code used to identify the app in the SDK.
+    ///
+    /// Note that the UI refers to this as "App ID".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ApplicationCode {
+      get { return applicationCode_ ?? ApplicationCodeDefaultValue; }
+      set {
+        applicationCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "application_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasApplicationCode {
+      get { return applicationCode_ != null; }
+    }
+    /// <summary>Clears the value of the "application_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearApplicationCode() {
+      applicationCode_ = null;
+    }
+
+    /// <summary>Field number for the "developer" field.</summary>
+    public const int DeveloperFieldNumber = 11;
+    private readonly static string DeveloperDefaultValue = "";
+
+    private string developer_;
+    /// <summary>
+    /// Output only. The name of the developer of the application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Developer {
+      get { return developer_ ?? DeveloperDefaultValue; }
+      set {
+        developer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "developer" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDeveloper {
+      get { return developer_ != null; }
+    }
+    /// <summary>Clears the value of the "developer" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDeveloper() {
+      developer_ = null;
+    }
+
+    /// <summary>Field number for the "platform" field.</summary>
+    public const int PlatformFieldNumber = 12;
+    private readonly static global::Google.Ads.AdManager.V1.ApplicationPlatformEnum.Types.ApplicationPlatform PlatformDefaultValue = global::Google.Ads.AdManager.V1.ApplicationPlatformEnum.Types.ApplicationPlatform.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ApplicationPlatformEnum.Types.ApplicationPlatform platform_;
+    /// <summary>
+    /// Output only. The platform the application runs on.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ApplicationPlatformEnum.Types.ApplicationPlatform Platform {
+      get { if ((_hasBits0 & 2) != 0) { return platform_; } else { return PlatformDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        platform_ = value;
+      }
+    }
+    /// <summary>Gets whether the "platform" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPlatform {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "platform" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPlatform() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "free" field.</summary>
+    public const int FreeFieldNumber = 13;
+    private readonly static bool FreeDefaultValue = false;
+
+    private bool free_;
+    /// <summary>
+    /// Output only. Whether the application is free on the app store it belongs
+    /// to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Free {
+      get { if ((_hasBits0 & 4) != 0) { return free_; } else { return FreeDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        free_ = value;
+      }
+    }
+    /// <summary>Gets whether the "free" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasFree {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "free" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearFree() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "download_url" field.</summary>
+    public const int DownloadUrlFieldNumber = 14;
+    private readonly static string DownloadUrlDefaultValue = "";
+
+    private string downloadUrl_;
+    /// <summary>
+    /// Output only. The download URL of the application on the app store it
+    /// belongs to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DownloadUrl {
+      get { return downloadUrl_ ?? DownloadUrlDefaultValue; }
+      set {
+        downloadUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "download_url" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDownloadUrl {
+      get { return downloadUrl_ != null; }
+    }
+    /// <summary>Clears the value of the "download_url" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDownloadUrl() {
+      downloadUrl_ = null;
+    }
+
+    /// <summary>Field number for the "approval_status" field.</summary>
+    public const int ApprovalStatusFieldNumber = 15;
+    private readonly static global::Google.Ads.AdManager.V1.ApplicationApprovalStatusEnum.Types.ApplicationApprovalStatus ApprovalStatusDefaultValue = global::Google.Ads.AdManager.V1.ApplicationApprovalStatusEnum.Types.ApplicationApprovalStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ApplicationApprovalStatusEnum.Types.ApplicationApprovalStatus approvalStatus_;
+    /// <summary>
+    /// Output only. The approval status for the application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ApplicationApprovalStatusEnum.Types.ApplicationApprovalStatus ApprovalStatus {
+      get { if ((_hasBits0 & 8) != 0) { return approvalStatus_; } else { return ApprovalStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        approvalStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "approval_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasApprovalStatus {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "approval_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearApprovalStatus() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "webview_claiming_status" field.</summary>
+    public const int WebviewClaimingStatusFieldNumber = 16;
+    private readonly static global::Google.Ads.AdManager.V1.WebviewClaimingStatusEnum.Types.WebviewClaimingStatus WebviewClaimingStatusDefaultValue = global::Google.Ads.AdManager.V1.WebviewClaimingStatusEnum.Types.WebviewClaimingStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.WebviewClaimingStatusEnum.Types.WebviewClaimingStatus webviewClaimingStatus_;
+    /// <summary>
+    /// Output only. The webview claiming status for the application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.WebviewClaimingStatusEnum.Types.WebviewClaimingStatus WebviewClaimingStatus {
+      get { if ((_hasBits0 & 16) != 0) { return webviewClaimingStatus_; } else { return WebviewClaimingStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        webviewClaimingStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "webview_claiming_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWebviewClaimingStatus {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "webview_claiming_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWebviewClaimingStatus() {
+      _hasBits0 &= ~16;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -160,6 +508,17 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (AppStoreId != other.AppStoreId) return false;
+      if(!appStores_.Equals(other.appStores_)) return false;
+      if (Archived != other.Archived) return false;
+      if (AppStoreDisplayName != other.AppStoreDisplayName) return false;
+      if (ApplicationCode != other.ApplicationCode) return false;
+      if (Developer != other.Developer) return false;
+      if (Platform != other.Platform) return false;
+      if (Free != other.Free) return false;
+      if (DownloadUrl != other.DownloadUrl) return false;
+      if (ApprovalStatus != other.ApprovalStatus) return false;
+      if (WebviewClaimingStatus != other.WebviewClaimingStatus) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -169,6 +528,17 @@ namespace Google.Ads.AdManager.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasAppStoreId) hash ^= AppStoreId.GetHashCode();
+      hash ^= appStores_.GetHashCode();
+      if (HasArchived) hash ^= Archived.GetHashCode();
+      if (HasAppStoreDisplayName) hash ^= AppStoreDisplayName.GetHashCode();
+      if (HasApplicationCode) hash ^= ApplicationCode.GetHashCode();
+      if (HasDeveloper) hash ^= Developer.GetHashCode();
+      if (HasPlatform) hash ^= Platform.GetHashCode();
+      if (HasFree) hash ^= Free.GetHashCode();
+      if (HasDownloadUrl) hash ^= DownloadUrl.GetHashCode();
+      if (HasApprovalStatus) hash ^= ApprovalStatus.GetHashCode();
+      if (HasWebviewClaimingStatus) hash ^= WebviewClaimingStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -195,6 +565,47 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
+      if (HasAppStoreId) {
+        output.WriteRawTag(42);
+        output.WriteString(AppStoreId);
+      }
+      appStores_.WriteTo(output, _repeated_appStores_codec);
+      if (HasArchived) {
+        output.WriteRawTag(64);
+        output.WriteBool(Archived);
+      }
+      if (HasAppStoreDisplayName) {
+        output.WriteRawTag(74);
+        output.WriteString(AppStoreDisplayName);
+      }
+      if (HasApplicationCode) {
+        output.WriteRawTag(82);
+        output.WriteString(ApplicationCode);
+      }
+      if (HasDeveloper) {
+        output.WriteRawTag(90);
+        output.WriteString(Developer);
+      }
+      if (HasPlatform) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Platform);
+      }
+      if (HasFree) {
+        output.WriteRawTag(104);
+        output.WriteBool(Free);
+      }
+      if (HasDownloadUrl) {
+        output.WriteRawTag(114);
+        output.WriteString(DownloadUrl);
+      }
+      if (HasApprovalStatus) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ApprovalStatus);
+      }
+      if (HasWebviewClaimingStatus) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) WebviewClaimingStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -213,6 +624,47 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
+      if (HasAppStoreId) {
+        output.WriteRawTag(42);
+        output.WriteString(AppStoreId);
+      }
+      appStores_.WriteTo(ref output, _repeated_appStores_codec);
+      if (HasArchived) {
+        output.WriteRawTag(64);
+        output.WriteBool(Archived);
+      }
+      if (HasAppStoreDisplayName) {
+        output.WriteRawTag(74);
+        output.WriteString(AppStoreDisplayName);
+      }
+      if (HasApplicationCode) {
+        output.WriteRawTag(82);
+        output.WriteString(ApplicationCode);
+      }
+      if (HasDeveloper) {
+        output.WriteRawTag(90);
+        output.WriteString(Developer);
+      }
+      if (HasPlatform) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) Platform);
+      }
+      if (HasFree) {
+        output.WriteRawTag(104);
+        output.WriteBool(Free);
+      }
+      if (HasDownloadUrl) {
+        output.WriteRawTag(114);
+        output.WriteString(DownloadUrl);
+      }
+      if (HasApprovalStatus) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) ApprovalStatus);
+      }
+      if (HasWebviewClaimingStatus) {
+        output.WriteRawTag(128, 1);
+        output.WriteEnum((int) WebviewClaimingStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -228,6 +680,37 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasAppStoreId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppStoreId);
+      }
+      size += appStores_.CalculateSize(_repeated_appStores_codec);
+      if (HasArchived) {
+        size += 1 + 1;
+      }
+      if (HasAppStoreDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AppStoreDisplayName);
+      }
+      if (HasApplicationCode) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplicationCode);
+      }
+      if (HasDeveloper) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Developer);
+      }
+      if (HasPlatform) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Platform);
+      }
+      if (HasFree) {
+        size += 1 + 1;
+      }
+      if (HasDownloadUrl) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DownloadUrl);
+      }
+      if (HasApprovalStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ApprovalStatus);
+      }
+      if (HasWebviewClaimingStatus) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) WebviewClaimingStatus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -246,6 +729,37 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
+      }
+      if (other.HasAppStoreId) {
+        AppStoreId = other.AppStoreId;
+      }
+      appStores_.Add(other.appStores_);
+      if (other.HasArchived) {
+        Archived = other.Archived;
+      }
+      if (other.HasAppStoreDisplayName) {
+        AppStoreDisplayName = other.AppStoreDisplayName;
+      }
+      if (other.HasApplicationCode) {
+        ApplicationCode = other.ApplicationCode;
+      }
+      if (other.HasDeveloper) {
+        Developer = other.Developer;
+      }
+      if (other.HasPlatform) {
+        Platform = other.Platform;
+      }
+      if (other.HasFree) {
+        Free = other.Free;
+      }
+      if (other.HasDownloadUrl) {
+        DownloadUrl = other.DownloadUrl;
+      }
+      if (other.HasApprovalStatus) {
+        ApprovalStatus = other.ApprovalStatus;
+      }
+      if (other.HasWebviewClaimingStatus) {
+        WebviewClaimingStatus = other.WebviewClaimingStatus;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -274,6 +788,51 @@ namespace Google.Ads.AdManager.V1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 42: {
+            AppStoreId = input.ReadString();
+            break;
+          }
+          case 58:
+          case 56: {
+            appStores_.AddEntriesFrom(input, _repeated_appStores_codec);
+            break;
+          }
+          case 64: {
+            Archived = input.ReadBool();
+            break;
+          }
+          case 74: {
+            AppStoreDisplayName = input.ReadString();
+            break;
+          }
+          case 82: {
+            ApplicationCode = input.ReadString();
+            break;
+          }
+          case 90: {
+            Developer = input.ReadString();
+            break;
+          }
+          case 96: {
+            Platform = (global::Google.Ads.AdManager.V1.ApplicationPlatformEnum.Types.ApplicationPlatform) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            Free = input.ReadBool();
+            break;
+          }
+          case 114: {
+            DownloadUrl = input.ReadString();
+            break;
+          }
+          case 120: {
+            ApprovalStatus = (global::Google.Ads.AdManager.V1.ApplicationApprovalStatusEnum.Types.ApplicationApprovalStatus) input.ReadEnum();
+            break;
+          }
+          case 128: {
+            WebviewClaimingStatus = (global::Google.Ads.AdManager.V1.WebviewClaimingStatusEnum.Types.WebviewClaimingStatus) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -299,6 +858,51 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 34: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 42: {
+            AppStoreId = input.ReadString();
+            break;
+          }
+          case 58:
+          case 56: {
+            appStores_.AddEntriesFrom(ref input, _repeated_appStores_codec);
+            break;
+          }
+          case 64: {
+            Archived = input.ReadBool();
+            break;
+          }
+          case 74: {
+            AppStoreDisplayName = input.ReadString();
+            break;
+          }
+          case 82: {
+            ApplicationCode = input.ReadString();
+            break;
+          }
+          case 90: {
+            Developer = input.ReadString();
+            break;
+          }
+          case 96: {
+            Platform = (global::Google.Ads.AdManager.V1.ApplicationPlatformEnum.Types.ApplicationPlatform) input.ReadEnum();
+            break;
+          }
+          case 104: {
+            Free = input.ReadBool();
+            break;
+          }
+          case 114: {
+            DownloadUrl = input.ReadString();
+            break;
+          }
+          case 120: {
+            ApprovalStatus = (global::Google.Ads.AdManager.V1.ApplicationApprovalStatusEnum.Types.ApplicationApprovalStatus) input.ReadEnum();
+            break;
+          }
+          case 128: {
+            WebviewClaimingStatus = (global::Google.Ads.AdManager.V1.WebviewClaimingStatusEnum.Types.WebviewClaimingStatus) input.ReadEnum();
             break;
           }
         }

@@ -37,20 +37,21 @@ namespace Google.Ads.AdManager.V1 {
             "A+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBEhEKBHNraXAYBiABKAVCA+BB",
             "ASJxChJMaXN0T3JkZXJzUmVzcG9uc2USLgoGb3JkZXJzGAEgAygLMh4uZ29v",
             "Z2xlLmFkcy5hZG1hbmFnZXIudjEuT3JkZXISFwoPbmV4dF9wYWdlX3Rva2Vu",
-            "GAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUy9gIKDE9yZGVyU2VydmljZRKD",
+            "GAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUyqQMKDE9yZGVyU2VydmljZRKD",
             "AQoIR2V0T3JkZXISKC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5HZXRPcmRl",
             "clJlcXVlc3QaHi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5PcmRlciIt2kEE",
             "bmFtZYLT5JMCIBIeL3YxL3tuYW1lPW5ldHdvcmtzLyovb3JkZXJzLyp9EpYB",
             "CgpMaXN0T3JkZXJzEiouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGlzdE9y",
             "ZGVyc1JlcXVlc3QaKy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5MaXN0T3Jk",
             "ZXJzUmVzcG9uc2UiL9pBBnBhcmVudILT5JMCIBIeL3YxL3twYXJlbnQ9bmV0",
-            "d29ya3MvKn0vb3JkZXJzGkfKQRhhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb23S",
-            "QSlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FkbWFuYWdlckLF",
-            "AQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhFPcmRlclNlcnZpY2VQ",
-            "cm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
-            "L2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1h",
-            "bmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6",
-            "QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "d29ya3MvKn0vb3JkZXJzGnrKQRhhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb23S",
+            "QVxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FkbWFuYWdlcixo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2FkbWFuYWdlci5yZWFk",
+            "b25seULFAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhFPcmRlclNl",
+            "cnZpY2VQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
+            "bGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFk",
+            "cy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdv",
+            "b2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.OrderMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -379,8 +380,31 @@ namespace Google.Ads.AdManager.V1 {
     private string filter_ = "";
     /// <summary>
     /// Optional. Expression to filter the response.
-    /// See syntax details at
-    /// https://developers.google.com/ad-manager/api/beta/filters
+    ///  See syntax details at
+    ///  https://developers.google.com/ad-manager/api/beta/filters
+    ///
+    /// &lt;b>Filterable fields:&lt;/b>
+    /// &lt;ul style="list-style-type:none">
+    ///   &lt;li>&lt;code>advertiser&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>agency&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>appliedTeams&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>archived&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>creator&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>endTime&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>externalOrderId&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>orderId&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>poNumber&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>programmatic&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>salesperson&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>secondarySalespeople&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>secondaryTraffickers&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>startTime&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>trafficker&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>updateTime&lt;/code>&lt;/li>
+    /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

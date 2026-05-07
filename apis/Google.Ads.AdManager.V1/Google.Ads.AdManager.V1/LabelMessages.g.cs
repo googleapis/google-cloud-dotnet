@@ -25,20 +25,25 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvYWRzL2FkbWFuYWdlci92MS9sYWJlbF9tZXNzYWdlcy5wcm90",
-            "bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8idgoF",
-            "TGFiZWwSEQoEbmFtZRgBIAEoCUID4EEIOlrqQVcKHmFkbWFuYWdlci5nb29n",
-            "bGVhcGlzLmNvbS9MYWJlbBImbmV0d29ya3Mve25ldHdvcmtfY29kZX0vbGFi",
-            "ZWxzL3tsYWJlbH0qBmxhYmVsczIFbGFiZWxCxgEKG2NvbS5nb29nbGUuYWRz",
-            "LmFkbWFuYWdlci52MUISTGFiZWxNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92",
-            "MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2ds",
-            "ZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6",
-            "VjFiBnByb3RvMw=="));
+            "bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaKWdvb2dsZS9hZHMvYWRtYW5h",
+            "Z2VyL3YxL2xhYmVsX2VudW1zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
+            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIsQCCgVM",
+            "YWJlbBIRCgRuYW1lGAEgASgJQgPgQQgSHgoMZGlzcGxheV9uYW1lGAMgASgJ",
+            "QgPgQQJIAIgBARIdCgtkZXNjcmlwdGlvbhgEIAEoCUID4EEBSAGIAQESGAoG",
+            "YWN0aXZlGAUgASgIQgPgQQNIAogBARJHCgV0eXBlcxgHIAMoDjIwLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkxhYmVsVHlwZUVudW0uTGFiZWxUeXBlQgbg",
+            "QQLgQQY6WupBVwoeYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0xhYmVsEiZu",
+            "ZXR3b3Jrcy97bmV0d29ya19jb2RlfS9sYWJlbHMve2xhYmVsfSoGbGFiZWxz",
+            "MgVsYWJlbEIPCg1fZGlzcGxheV9uYW1lQg4KDF9kZXNjcmlwdGlvbkIJCgdf",
+            "YWN0aXZlQsYBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCEkxhYmVs",
+            "TWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9n",
+            "b29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xl",
+            "LkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoC",
+            "Gkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.LabelEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Label), global::Google.Ads.AdManager.V1.Label.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Label), global::Google.Ads.AdManager.V1.Label.Parser, new[]{ "Name", "DisplayName", "Description", "Active", "Types_" }, new[]{ "DisplayName", "Description", "Active" }, null, null, null)
           }));
     }
     #endregion
@@ -56,6 +61,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Label> _parser = new pb::MessageParser<Label>(() => new Label());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Label> Parser { get { return _parser; } }
@@ -83,7 +89,12 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Label(Label other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
+      displayName_ = other.displayName_;
+      description_ = other.description_;
+      active_ = other.active_;
+      types_ = other.types_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -109,6 +120,110 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 3;
+    private readonly static string DisplayNameDefaultValue = "";
+
+    private string displayName_;
+    /// <summary>
+    /// Required. Display name of the Label. This attribute has a maximum length of
+    /// 127 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_ ?? DisplayNameDefaultValue; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDisplayName {
+      get { return displayName_ != null; }
+    }
+    /// <summary>Clears the value of the "display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDisplayName() {
+      displayName_ = null;
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 4;
+    private readonly static string DescriptionDefaultValue = "";
+
+    private string description_;
+    /// <summary>
+    /// Optional. A description of the label. This attribute has a maximum length
+    /// of 255 characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_ ?? DescriptionDefaultValue; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "description" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDescription {
+      get { return description_ != null; }
+    }
+    /// <summary>Clears the value of the "description" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDescription() {
+      description_ = null;
+    }
+
+    /// <summary>Field number for the "active" field.</summary>
+    public const int ActiveFieldNumber = 5;
+    private readonly static bool ActiveDefaultValue = false;
+
+    private bool active_;
+    /// <summary>
+    /// Output only. Specifies whether or not the label is active.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Active {
+      get { if ((_hasBits0 & 1) != 0) { return active_; } else { return ActiveDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        active_ = value;
+      }
+    }
+    /// <summary>Gets whether the "active" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActive {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "active" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActive() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "types" field.</summary>
+    public const int Types_FieldNumber = 7;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.LabelTypeEnum.Types.LabelType> _repeated_types_codec
+        = pb::FieldCodec.ForEnum(58, x => (int) x, x => (global::Google.Ads.AdManager.V1.LabelTypeEnum.Types.LabelType) x);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.LabelTypeEnum.Types.LabelType> types_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.LabelTypeEnum.Types.LabelType>();
+    /// <summary>
+    /// Required. Unordered list. The types of the Label.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.LabelTypeEnum.Types.LabelType> Types_ {
+      get { return types_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -125,6 +240,10 @@ namespace Google.Ads.AdManager.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Description != other.Description) return false;
+      if (Active != other.Active) return false;
+      if(!types_.Equals(other.types_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -133,6 +252,10 @@ namespace Google.Ads.AdManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasDescription) hash ^= Description.GetHashCode();
+      if (HasActive) hash ^= Active.GetHashCode();
+      hash ^= types_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -155,6 +278,19 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasDescription) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (HasActive) {
+        output.WriteRawTag(40);
+        output.WriteBool(Active);
+      }
+      types_.WriteTo(output, _repeated_types_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -169,6 +305,19 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (HasDisplayName) {
+        output.WriteRawTag(26);
+        output.WriteString(DisplayName);
+      }
+      if (HasDescription) {
+        output.WriteRawTag(34);
+        output.WriteString(Description);
+      }
+      if (HasActive) {
+        output.WriteRawTag(40);
+        output.WriteBool(Active);
+      }
+      types_.WriteTo(ref output, _repeated_types_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -182,6 +331,16 @@ namespace Google.Ads.AdManager.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
+      if (HasDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasDescription) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (HasActive) {
+        size += 1 + 1;
+      }
+      size += types_.CalculateSize(_repeated_types_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -197,6 +356,16 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
+      if (other.HasDisplayName) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.HasDescription) {
+        Description = other.Description;
+      }
+      if (other.HasActive) {
+        Active = other.Active;
+      }
+      types_.Add(other.types_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -220,6 +389,23 @@ namespace Google.Ads.AdManager.V1 {
             Name = input.ReadString();
             break;
           }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 40: {
+            Active = input.ReadBool();
+            break;
+          }
+          case 58:
+          case 56: {
+            types_.AddEntriesFrom(input, _repeated_types_codec);
+            break;
+          }
         }
       }
     #endif
@@ -241,6 +427,23 @@ namespace Google.Ads.AdManager.V1 {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 26: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 34: {
+            Description = input.ReadString();
+            break;
+          }
+          case 40: {
+            Active = input.ReadBool();
+            break;
+          }
+          case 58:
+          case 56: {
+            types_.AddEntriesFrom(ref input, _repeated_types_codec);
             break;
           }
         }

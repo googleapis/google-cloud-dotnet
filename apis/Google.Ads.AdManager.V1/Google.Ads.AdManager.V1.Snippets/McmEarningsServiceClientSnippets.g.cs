@@ -1,0 +1,312 @@
+// Copyright 2026 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Generated code. DO NOT EDIT!
+
+namespace GoogleCSharpSnippets
+{
+    using Google.Ads.AdManager.V1;
+    using Google.Api.Gax;
+    using Google.Type;
+    using System;
+    using System.Threading.Tasks;
+
+    /// <summary>Generated snippets.</summary>
+    public sealed class AllGeneratedMcmEarningsServiceClientSnippets
+    {
+        /// <summary>Snippet for FetchMcmEarnings</summary>
+        public void FetchMcmEarningsRequestObject()
+        {
+            // Snippet: FetchMcmEarnings(FetchMcmEarningsRequest, CallSettings)
+            // Create client
+            McmEarningsServiceClient mcmEarningsServiceClient = McmEarningsServiceClient.Create();
+            // Initialize request argument(s)
+            FetchMcmEarningsRequest request = new FetchMcmEarningsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Filter = "",
+                OrderBy = "",
+                Skip = 0,
+                Month = new Date(),
+            };
+            // Make the request
+            PagedEnumerable<FetchMcmEarningsResponse, McmEarnings> response = mcmEarningsServiceClient.FetchMcmEarnings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (McmEarnings item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchMcmEarningsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (McmEarnings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<McmEarnings> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (McmEarnings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchMcmEarningsAsync</summary>
+        public async Task FetchMcmEarningsRequestObjectAsync()
+        {
+            // Snippet: FetchMcmEarningsAsync(FetchMcmEarningsRequest, CallSettings)
+            // Create client
+            McmEarningsServiceClient mcmEarningsServiceClient = await McmEarningsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FetchMcmEarningsRequest request = new FetchMcmEarningsRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                Filter = "",
+                OrderBy = "",
+                Skip = 0,
+                Month = new Date(),
+            };
+            // Make the request
+            PagedAsyncEnumerable<FetchMcmEarningsResponse, McmEarnings> response = mcmEarningsServiceClient.FetchMcmEarningsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (McmEarnings item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchMcmEarningsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (McmEarnings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<McmEarnings> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (McmEarnings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchMcmEarnings</summary>
+        public void FetchMcmEarnings()
+        {
+            // Snippet: FetchMcmEarnings(string, string, int?, CallSettings)
+            // Create client
+            McmEarningsServiceClient mcmEarningsServiceClient = McmEarningsServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            // Make the request
+            PagedEnumerable<FetchMcmEarningsResponse, McmEarnings> response = mcmEarningsServiceClient.FetchMcmEarnings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (McmEarnings item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchMcmEarningsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (McmEarnings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<McmEarnings> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (McmEarnings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchMcmEarningsAsync</summary>
+        public async Task FetchMcmEarningsAsync()
+        {
+            // Snippet: FetchMcmEarningsAsync(string, string, int?, CallSettings)
+            // Create client
+            McmEarningsServiceClient mcmEarningsServiceClient = await McmEarningsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            // Make the request
+            PagedAsyncEnumerable<FetchMcmEarningsResponse, McmEarnings> response = mcmEarningsServiceClient.FetchMcmEarningsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (McmEarnings item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchMcmEarningsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (McmEarnings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<McmEarnings> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (McmEarnings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchMcmEarnings</summary>
+        public void FetchMcmEarningsResourceNames()
+        {
+            // Snippet: FetchMcmEarnings(NetworkName, string, int?, CallSettings)
+            // Create client
+            McmEarningsServiceClient mcmEarningsServiceClient = McmEarningsServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            // Make the request
+            PagedEnumerable<FetchMcmEarningsResponse, McmEarnings> response = mcmEarningsServiceClient.FetchMcmEarnings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (McmEarnings item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (FetchMcmEarningsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (McmEarnings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<McmEarnings> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (McmEarnings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for FetchMcmEarningsAsync</summary>
+        public async Task FetchMcmEarningsResourceNamesAsync()
+        {
+            // Snippet: FetchMcmEarningsAsync(NetworkName, string, int?, CallSettings)
+            // Create client
+            McmEarningsServiceClient mcmEarningsServiceClient = await McmEarningsServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            // Make the request
+            PagedAsyncEnumerable<FetchMcmEarningsResponse, McmEarnings> response = mcmEarningsServiceClient.FetchMcmEarningsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (McmEarnings item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (FetchMcmEarningsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (McmEarnings item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<McmEarnings> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (McmEarnings item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+    }
+}

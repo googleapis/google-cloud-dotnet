@@ -27,20 +27,20 @@ namespace Google.Ads.AdManager.V1 {
             "Citnb29nbGUvYWRzL2FkbWFuYWdlci92MS9yb2xlX21lc3NhZ2VzLnByb3Rv",
             "Ehdnb29nbGUuYWRzLmFkbWFuYWdlci52MRooZ29vZ2xlL2Fkcy9hZG1hbmFn",
             "ZXIvdjEvcm9sZV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
-            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byL5AgoEUm9s",
-            "ZRIRCgRuYW1lGAEgASgJQgPgQQgSGQoHcm9sZV9pZBgCIAEoA0ID4EEDSACI",
-            "AQESHgoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQJIAYgBARIdCgtkZXNjcmlw",
-            "dGlvbhgEIAEoCUID4EEBSAKIAQESGgoIYnVpbHRfaW4YBSABKAhCA+BBA0gD",
-            "iAEBEkwKBnN0YXR1cxgGIAEoDjIyLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
-            "LlJvbGVTdGF0dXNFbnVtLlJvbGVTdGF0dXNCA+BBA0gEiAEBOlXqQVIKHWFk",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Sb2xlEiRuZXR3b3Jrcy97bmV0d29y",
-            "a19jb2RlfS9yb2xlcy97cm9sZX0qBXJvbGVzMgRyb2xlQgoKCF9yb2xlX2lk",
-            "Qg8KDV9kaXNwbGF5X25hbWVCDgoMX2Rlc2NyaXB0aW9uQgsKCV9idWlsdF9p",
-            "bkIJCgdfc3RhdHVzQsUBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFC",
-            "EVJvbGVNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
-            "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
-            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byL7AgoEUm9s",
+            "ZRIRCgRuYW1lGAEgASgJQgPgQQgSGwoHcm9sZV9pZBgCIAEoA0IFGAHgQQNI",
+            "AIgBARIeCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAkgBiAEBEh0KC2Rlc2Ny",
+            "aXB0aW9uGAQgASgJQgPgQQFIAogBARIaCghidWlsdF9pbhgFIAEoCEID4EED",
+            "SAOIAQESTAoGc3RhdHVzGAYgASgOMjIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
+            "djEuUm9sZVN0YXR1c0VudW0uUm9sZVN0YXR1c0ID4EEDSASIAQE6VepBUgod",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1JvbGUSJG5ldHdvcmtzL3tuZXR3",
+            "b3JrX2NvZGV9L3JvbGVzL3tyb2xlfSoFcm9sZXMyBHJvbGVCCgoIX3JvbGVf",
+            "aWRCDwoNX2Rpc3BsYXlfbmFtZUIOCgxfZGVzY3JpcHRpb25CCwoJX2J1aWx0",
+            "X2luQgkKB19zdGF0dXNCxQEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MUIRUm9sZU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
+            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
+            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.RoleEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -128,8 +128,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long roleId_;
     /// <summary>
-    /// Output only. `Role` ID.
+    /// Output only. Deprecated: `Role` ID.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long RoleId {
@@ -140,12 +141,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "role_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasRoleId {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "role_id" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearRoleId() {

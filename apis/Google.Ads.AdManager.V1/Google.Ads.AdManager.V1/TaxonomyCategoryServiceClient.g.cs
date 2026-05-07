@@ -154,11 +154,13 @@ namespace Google.Ads.AdManager.V1
         /// The default TaxonomyCategoryService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/admanager</description></item>
+        /// <item><description>https://www.googleapis.com/auth/admanager.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/admanager",
+            "https://www.googleapis.com/auth/admanager.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
