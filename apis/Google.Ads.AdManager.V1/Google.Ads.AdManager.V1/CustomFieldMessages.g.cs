@@ -28,32 +28,32 @@ namespace Google.Ads.AdManager.V1 {
             "ZXMucHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGjBnb29nbGUvYWRz",
             "L2FkbWFuYWdlci92MS9jdXN0b21fZmllbGRfZW51bXMucHJvdG8aH2dvb2ds",
             "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3Vy",
-            "Y2UucHJvdG8ivAYKC0N1c3RvbUZpZWxkEhEKBG5hbWUYASABKAlCA+BBCBIh",
-            "Cg9jdXN0b21fZmllbGRfaWQYAiABKANCA+BBA0gAiAEBEh4KDGRpc3BsYXlf",
-            "bmFtZRgDIAEoCUID4EECSAGIAQESHQoLZGVzY3JpcHRpb24YBCABKAlCA+BB",
-            "AUgCiAEBEloKBnN0YXR1cxgFIAEoDjJALmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
-            "LnYxLkN1c3RvbUZpZWxkU3RhdHVzRW51bS5DdXN0b21GaWVsZFN0YXR1c0ID",
-            "4EEDSAOIAQESZwoLZW50aXR5X3R5cGUYByABKA4ySC5nb29nbGUuYWRzLmFk",
-            "bWFuYWdlci52MS5DdXN0b21GaWVsZEVudGl0eVR5cGVFbnVtLkN1c3RvbUZp",
-            "ZWxkRW50aXR5VHlwZUID4EECSASIAQESYQoJZGF0YV90eXBlGAggASgOMkQu",
-            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tRmllbGREYXRhVHlwZUVu",
-            "dW0uQ3VzdG9tRmllbGREYXRhVHlwZUID4EECSAWIAQESZgoKdmlzaWJpbGl0",
-            "eRgJIAEoDjJILmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbUZpZWxk",
-            "VmlzaWJpbGl0eUVudW0uQ3VzdG9tRmllbGRWaXNpYmlsaXR5QgPgQQJIBogB",
-            "ARJACgdvcHRpb25zGAogAygLMiouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEu",
-            "Q3VzdG9tRmllbGRPcHRpb25CA+BBATp56kF2CiRhZG1hbmFnZXIuZ29vZ2xl",
-            "YXBpcy5jb20vQ3VzdG9tRmllbGQSM25ldHdvcmtzL3tuZXR3b3JrX2NvZGV9",
-            "L2N1c3RvbUZpZWxkcy97Y3VzdG9tX2ZpZWxkfSoMY3VzdG9tRmllbGRzMgtj",
-            "dXN0b21GaWVsZEISChBfY3VzdG9tX2ZpZWxkX2lkQg8KDV9kaXNwbGF5X25h",
-            "bWVCDgoMX2Rlc2NyaXB0aW9uQgkKB19zdGF0dXNCDgoMX2VudGl0eV90eXBl",
-            "QgwKCl9kYXRhX3R5cGVCDQoLX3Zpc2liaWxpdHkiVgoRQ3VzdG9tRmllbGRP",
-            "cHRpb24SJgoWY3VzdG9tX2ZpZWxkX29wdGlvbl9pZBgBIAEoA0IG4EEB4EEH",
-            "EhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECQswBChtjb20uZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjFCGEN1c3RvbUZpZWxkTWVzc2FnZXNQcm90b1ABWkBn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1h",
-            "bmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHK",
-            "AhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1h",
-            "bmFnZXI6OlYxYgZwcm90bzM="));
+            "Y2UucHJvdG8ivgYKC0N1c3RvbUZpZWxkEhEKBG5hbWUYASABKAlCA+BBCBIj",
+            "Cg9jdXN0b21fZmllbGRfaWQYAiABKANCBRgB4EEDSACIAQESHgoMZGlzcGxh",
+            "eV9uYW1lGAMgASgJQgPgQQJIAYgBARIdCgtkZXNjcmlwdGlvbhgEIAEoCUID",
+            "4EEBSAKIAQESWgoGc3RhdHVzGAUgASgOMkAuZ29vZ2xlLmFkcy5hZG1hbmFn",
+            "ZXIudjEuQ3VzdG9tRmllbGRTdGF0dXNFbnVtLkN1c3RvbUZpZWxkU3RhdHVz",
+            "QgPgQQNIA4gBARJnCgtlbnRpdHlfdHlwZRgHIAEoDjJILmdvb2dsZS5hZHMu",
+            "YWRtYW5hZ2VyLnYxLkN1c3RvbUZpZWxkRW50aXR5VHlwZUVudW0uQ3VzdG9t",
+            "RmllbGRFbnRpdHlUeXBlQgPgQQJIBIgBARJhCglkYXRhX3R5cGUYCCABKA4y",
+            "RC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21GaWVsZERhdGFUeXBl",
+            "RW51bS5DdXN0b21GaWVsZERhdGFUeXBlQgPgQQJIBYgBARJmCgp2aXNpYmls",
+            "aXR5GAkgASgOMkguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tRmll",
+            "bGRWaXNpYmlsaXR5RW51bS5DdXN0b21GaWVsZFZpc2liaWxpdHlCA+BBAkgG",
+            "iAEBEkAKB29wdGlvbnMYCiADKAsyKi5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5DdXN0b21GaWVsZE9wdGlvbkID4EEBOnnqQXYKJGFkbWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbS9DdXN0b21GaWVsZBIzbmV0d29ya3Mve25ldHdvcmtfY29k",
+            "ZX0vY3VzdG9tRmllbGRzL3tjdXN0b21fZmllbGR9KgxjdXN0b21GaWVsZHMy",
+            "C2N1c3RvbUZpZWxkQhIKEF9jdXN0b21fZmllbGRfaWRCDwoNX2Rpc3BsYXlf",
+            "bmFtZUIOCgxfZGVzY3JpcHRpb25CCQoHX3N0YXR1c0IOCgxfZW50aXR5X3R5",
+            "cGVCDAoKX2RhdGFfdHlwZUINCgtfdmlzaWJpbGl0eSJWChFDdXN0b21GaWVs",
+            "ZE9wdGlvbhImChZjdXN0b21fZmllbGRfb3B0aW9uX2lkGAEgASgDQgbgQQHg",
+            "QQcSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQJCzAEKG2NvbS5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MUIYQ3VzdG9tRmllbGRNZXNzYWdlc1Byb3RvUAFa",
+            "QGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2Fk",
+            "bWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5W",
+            "McoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFk",
+            "TWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomFieldEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -145,9 +145,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long customFieldId_;
     /// <summary>
-    /// Output only. Unique ID of the CustomField. This attribute is assigned by
-    /// Google.
+    /// Output only. Deprecated: Unique ID of the CustomField.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long CustomFieldId {
@@ -158,12 +158,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "custom_field_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasCustomFieldId {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "custom_field_id" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCustomFieldId() {

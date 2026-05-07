@@ -49,6 +49,8 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetCmsMetadataKeySettings = existing.GetCmsMetadataKeySettings;
             ListCmsMetadataKeysSettings = existing.ListCmsMetadataKeysSettings;
+            BatchActivateCmsMetadataKeysSettings = existing.BatchActivateCmsMetadataKeysSettings;
+            BatchDeactivateCmsMetadataKeysSettings = existing.BatchDeactivateCmsMetadataKeysSettings;
             OnCopy(existing);
         }
 
@@ -79,6 +81,32 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListCmsMetadataKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CmsMetadataKeyServiceClient.BatchActivateCmsMetadataKeys</c> and
+        /// <c>CmsMetadataKeyServiceClient.BatchActivateCmsMetadataKeysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchActivateCmsMetadataKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CmsMetadataKeyServiceClient.BatchDeactivateCmsMetadataKeys</c> and
+        /// <c>CmsMetadataKeyServiceClient.BatchDeactivateCmsMetadataKeysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeactivateCmsMetadataKeysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CmsMetadataKeyServiceSettings"/> object.</returns>
@@ -154,11 +182,13 @@ namespace Google.Ads.AdManager.V1
         /// The default CmsMetadataKeyService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/admanager</description></item>
+        /// <item><description>https://www.googleapis.com/auth/admanager.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/admanager",
+            "https://www.googleapis.com/auth/admanager.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -488,6 +518,314 @@ namespace Google.Ads.AdManager.V1
             }
             return ListCmsMetadataKeysAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCmsMetadataKeysResponse BatchActivateCmsMetadataKeys(BatchActivateCmsMetadataKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(BatchActivateCmsMetadataKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(BatchActivateCmsMetadataKeysRequest request, st::CancellationToken cancellationToken) =>
+            BatchActivateCmsMetadataKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to activate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCmsMetadataKeysResponse BatchActivateCmsMetadataKeys(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCmsMetadataKeys(new BatchActivateCmsMetadataKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to activate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCmsMetadataKeysAsync(new BatchActivateCmsMetadataKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to activate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchActivateCmsMetadataKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to activate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCmsMetadataKeysResponse BatchActivateCmsMetadataKeys(NetworkName parent, scg::IEnumerable<CmsMetadataKeyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCmsMetadataKeys(new BatchActivateCmsMetadataKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CmsMetadataKeyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to activate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(NetworkName parent, scg::IEnumerable<CmsMetadataKeyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCmsMetadataKeysAsync(new BatchActivateCmsMetadataKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CmsMetadataKeyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be activated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to activate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(NetworkName parent, scg::IEnumerable<CmsMetadataKeyName> names, st::CancellationToken cancellationToken) =>
+            BatchActivateCmsMetadataKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCmsMetadataKeysResponse BatchDeactivateCmsMetadataKeys(BatchDeactivateCmsMetadataKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(BatchDeactivateCmsMetadataKeysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(BatchDeactivateCmsMetadataKeysRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCmsMetadataKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to deactivate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCmsMetadataKeysResponse BatchDeactivateCmsMetadataKeys(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCmsMetadataKeys(new BatchDeactivateCmsMetadataKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to deactivate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCmsMetadataKeysAsync(new BatchDeactivateCmsMetadataKeysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to deactivate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCmsMetadataKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to deactivate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCmsMetadataKeysResponse BatchDeactivateCmsMetadataKeys(NetworkName parent, scg::IEnumerable<CmsMetadataKeyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCmsMetadataKeys(new BatchDeactivateCmsMetadataKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CmsMetadataKeyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to deactivate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(NetworkName parent, scg::IEnumerable<CmsMetadataKeyName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCmsMetadataKeysAsync(new BatchDeactivateCmsMetadataKeysRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CmsMetadataKeyNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `CmsMetadataKeys` will be
+        /// deactivated.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The resource names of the `CmsMetadataKey`s to deactivate.
+        /// Format: `networks/{network_code}/cmsMetadataKeys/{cms_metadata_key_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(NetworkName parent, scg::IEnumerable<CmsMetadataKeyName> names, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCmsMetadataKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CmsMetadataKeyService client wrapper implementation, for convenient use.</summary>
@@ -499,6 +837,10 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<GetCmsMetadataKeyRequest, CmsMetadataKey> _callGetCmsMetadataKey;
 
         private readonly gaxgrpc::ApiCall<ListCmsMetadataKeysRequest, ListCmsMetadataKeysResponse> _callListCmsMetadataKeys;
+
+        private readonly gaxgrpc::ApiCall<BatchActivateCmsMetadataKeysRequest, BatchActivateCmsMetadataKeysResponse> _callBatchActivateCmsMetadataKeys;
+
+        private readonly gaxgrpc::ApiCall<BatchDeactivateCmsMetadataKeysRequest, BatchDeactivateCmsMetadataKeysResponse> _callBatchDeactivateCmsMetadataKeys;
 
         /// <summary>
         /// Constructs a client wrapper for the CmsMetadataKeyService service, with the specified gRPC client and
@@ -522,6 +864,12 @@ namespace Google.Ads.AdManager.V1
             _callListCmsMetadataKeys = clientHelper.BuildApiCall<ListCmsMetadataKeysRequest, ListCmsMetadataKeysResponse>("ListCmsMetadataKeys", grpcClient.ListCmsMetadataKeysAsync, grpcClient.ListCmsMetadataKeys, effectiveSettings.ListCmsMetadataKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCmsMetadataKeys);
             Modify_ListCmsMetadataKeysApiCall(ref _callListCmsMetadataKeys);
+            _callBatchActivateCmsMetadataKeys = clientHelper.BuildApiCall<BatchActivateCmsMetadataKeysRequest, BatchActivateCmsMetadataKeysResponse>("BatchActivateCmsMetadataKeys", grpcClient.BatchActivateCmsMetadataKeysAsync, grpcClient.BatchActivateCmsMetadataKeys, effectiveSettings.BatchActivateCmsMetadataKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchActivateCmsMetadataKeys);
+            Modify_BatchActivateCmsMetadataKeysApiCall(ref _callBatchActivateCmsMetadataKeys);
+            _callBatchDeactivateCmsMetadataKeys = clientHelper.BuildApiCall<BatchDeactivateCmsMetadataKeysRequest, BatchDeactivateCmsMetadataKeysResponse>("BatchDeactivateCmsMetadataKeys", grpcClient.BatchDeactivateCmsMetadataKeysAsync, grpcClient.BatchDeactivateCmsMetadataKeys, effectiveSettings.BatchDeactivateCmsMetadataKeysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeactivateCmsMetadataKeys);
+            Modify_BatchDeactivateCmsMetadataKeysApiCall(ref _callBatchDeactivateCmsMetadataKeys);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -531,6 +879,10 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListCmsMetadataKeysApiCall(ref gaxgrpc::ApiCall<ListCmsMetadataKeysRequest, ListCmsMetadataKeysResponse> call);
 
+        partial void Modify_BatchActivateCmsMetadataKeysApiCall(ref gaxgrpc::ApiCall<BatchActivateCmsMetadataKeysRequest, BatchActivateCmsMetadataKeysResponse> call);
+
+        partial void Modify_BatchDeactivateCmsMetadataKeysApiCall(ref gaxgrpc::ApiCall<BatchDeactivateCmsMetadataKeysRequest, BatchDeactivateCmsMetadataKeysResponse> call);
+
         partial void OnConstruction(CmsMetadataKeyService.CmsMetadataKeyServiceClient grpcClient, CmsMetadataKeyServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CmsMetadataKeyService client</summary>
@@ -539,6 +891,10 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetCmsMetadataKeyRequest(ref GetCmsMetadataKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListCmsMetadataKeysRequest(ref ListCmsMetadataKeysRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchActivateCmsMetadataKeysRequest(ref BatchActivateCmsMetadataKeysRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeactivateCmsMetadataKeysRequest(ref BatchDeactivateCmsMetadataKeysRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// API to retrieve a `CmsMetadataKey` object.
@@ -586,6 +942,54 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListCmsMetadataKeysRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCmsMetadataKeysRequest, ListCmsMetadataKeysResponse, CmsMetadataKey>(_callListCmsMetadataKeys, request, callSettings);
+        }
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchActivateCmsMetadataKeysResponse BatchActivateCmsMetadataKeys(BatchActivateCmsMetadataKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateCmsMetadataKeysRequest(ref request, ref callSettings);
+            return _callBatchActivateCmsMetadataKeys.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to activate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchActivateCmsMetadataKeysResponse> BatchActivateCmsMetadataKeysAsync(BatchActivateCmsMetadataKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateCmsMetadataKeysRequest(ref request, ref callSettings);
+            return _callBatchActivateCmsMetadataKeys.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchDeactivateCmsMetadataKeysResponse BatchDeactivateCmsMetadataKeys(BatchDeactivateCmsMetadataKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateCmsMetadataKeysRequest(ref request, ref callSettings);
+            return _callBatchDeactivateCmsMetadataKeys.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchDeactivateCmsMetadataKeysResponse> BatchDeactivateCmsMetadataKeysAsync(BatchDeactivateCmsMetadataKeysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateCmsMetadataKeysRequest(ref request, ref callSettings);
+            return _callBatchDeactivateCmsMetadataKeys.Async(request, callSettings);
         }
     }
 

@@ -27,17 +27,17 @@ namespace Google.Ads.AdManager.V1 {
             "Cihnb29nbGUvYWRzL2FkbWFuYWdlci92MS9nb2FsX2VudW1zLnByb3RvEhdn",
             "b29nbGUuYWRzLmFkbWFuYWdlci52MSJYCgxHb2FsVHlwZUVudW0iSAoIR29h",
             "bFR5cGUSGQoVR09BTF9UWVBFX1VOU1BFQ0lGSUVEEAASCAoETk9ORRABEgwK",
-            "CExJRkVUSU1FEAISCQoFREFJTFkQAyLoAQoMVW5pdFR5cGVFbnVtItcBCghV",
+            "CExJRkVUSU1FEAISCQoFREFJTFkQAyL9AQoMVW5pdFR5cGVFbnVtIuwBCghV",
             "bml0VHlwZRIZChVVTklUX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtJTVBSRVNT",
             "SU9OUxABEgoKBkNMSUNLUxACEiEKHUNMSUNLX1RIUk9VR0hfQ1BBX0NPTlZF",
             "UlNJT05TEAMSIAocVklFV19USFJPVUdIX0NQQV9DT05WRVJTSU9OUxAEEhkK",
             "FVRPVEFMX0NQQV9DT05WRVJTSU9OUxAFEhgKFFZJRVdBQkxFX0lNUFJFU1NJ",
-            "T05TEAYSGQoVSU5fVEFSR0VUX0lNUFJFU1NJT05TEAdCwgEKG2NvbS5nb29n",
-            "bGUuYWRzLmFkbWFuYWdlci52MUIOR29hbEVudW1zUHJvdG9QAVpAZ29vZ2xl",
-            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2Vy",
-            "L3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29v",
-            "Z2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2Vy",
-            "OjpWMWIGcHJvdG8z"));
+            "T05TEAYSGQoVSU5fVEFSR0VUX0lNUFJFU1NJT05TEAcSEwoPQ09NUExFVEVE",
+            "X1ZJRVdTEAhCwgEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIOR29h",
+            "bEVudW1zUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5B",
+            "ZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpH",
+            "b29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -502,6 +502,16 @@ namespace Google.Ads.AdManager.V1 {
         /// [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD].
         /// </summary>
         [pbr::OriginalName("IN_TARGET_IMPRESSIONS")] InTargetImpressions = 7,
+        /// <summary>
+        /// The number of completed views reported by creatives associated with the
+        /// line item. A completed view is defined as having watched the entirety of
+        /// the in-stream video ad and is only supported for standard reservation
+        /// video line items. The
+        /// [LineItem.line_item_type][google.ads.admanager.v1.LineItem.line_item_type]
+        /// must be
+        /// [LineItemTypeEnum.LineItemType.STANDARD][google.ads.admanager.v1.LineItemTypeEnum.LineItemType.STANDARD].
+        /// </summary>
+        [pbr::OriginalName("COMPLETED_VIEWS")] CompletedViews = 8,
       }
 
     }

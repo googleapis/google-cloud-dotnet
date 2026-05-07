@@ -44,7 +44,7 @@ namespace Google.Ads.AdManager.V1 {
             "YWRzLmFkbWFuYWdlci52MS5BZFVuaXRCA+BBAiKCAQoTVXBkYXRlQWRVbml0",
             "UmVxdWVzdBI1CgdhZF91bml0GAEgASgLMh8uZ29vZ2xlLmFkcy5hZG1hbmFn",
             "ZXIudjEuQWRVbml0QgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQIimgEKGUJhdGNoQ3JlYXRlQWRV",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEimgEKGUJhdGNoQ3JlYXRlQWRV",
             "bml0c1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIKIGFkbWFuYWdl",
             "ci5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEkMKCHJlcXVlc3RzGAIgAygLMiwu",
             "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRlQWRVbml0UmVxdWVzdEID",
@@ -74,7 +74,7 @@ namespace Google.Ads.AdManager.V1 {
             "c1JlcXVlc3QSOAoGcGFyZW50GAEgASgJQijgQQL6QSIKIGFkbWFuYWdlci5n",
             "b29nbGVhcGlzLmNvbS9OZXR3b3JrEjYKBW5hbWVzGAIgAygJQifgQQL6QSEK",
             "H2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BZFVuaXQiHQobQmF0Y2hBcmNo",
-            "aXZlQWRVbml0c1Jlc3BvbnNlMoQPCg1BZFVuaXRTZXJ2aWNlEocBCglHZXRB",
+            "aXZlQWRVbml0c1Jlc3BvbnNlMrcPCg1BZFVuaXRTZXJ2aWNlEocBCglHZXRB",
             "ZFVuaXQSKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5HZXRBZFVuaXRSZXF1",
             "ZXN0Gh8uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQWRVbml0Ii7aQQRuYW1l",
             "gtPkkwIhEh8vdjEve25hbWU9bmV0d29ya3MvKi9hZFVuaXRzLyp9EpoBCgtM",
@@ -115,13 +115,14 @@ namespace Google.Ads.AdManager.V1 {
             "YW5hZ2VyLnYxLkJhdGNoQXJjaGl2ZUFkVW5pdHNSZXF1ZXN0GjQuZ29vZ2xl",
             "LmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hBcmNoaXZlQWRVbml0c1Jlc3BvbnNl",
             "IkbaQQxwYXJlbnQsbmFtZXOC0+STAjEiLC92MS97cGFyZW50PW5ldHdvcmtz",
-            "Lyp9L2FkVW5pdHM6YmF0Y2hBcmNoaXZlOgEqGkfKQRhhZG1hbmFnZXIuZ29v",
-            "Z2xlYXBpcy5jb23SQSlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2FkbWFuYWdlckLGAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhJB",
-            "ZFVuaXRTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dv",
-            "b2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJc",
-            "VjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "Lyp9L2FkVW5pdHM6YmF0Y2hBcmNoaXZlOgEqGnrKQRhhZG1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb23SQVxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
+            "L2FkbWFuYWdlcixodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Fk",
+            "bWFuYWdlci5yZWFkb25seULGAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
+            "LnYxQhJBZFVuaXRTZXJ2aWNlUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdl",
+            "cqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1h",
+            "bmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AdUnitMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -464,8 +465,24 @@ namespace Google.Ads.AdManager.V1 {
     private string filter_ = "";
     /// <summary>
     /// Optional. Expression to filter the response.
-    /// See syntax details at
-    /// https://developers.google.com/ad-manager/api/beta/filters
+    ///  See syntax details at
+    ///  https://developers.google.com/ad-manager/api/beta/filters
+    ///
+    /// &lt;b>Filterable fields:&lt;/b>
+    /// &lt;ul style="list-style-type:none">
+    ///   &lt;li>&lt;code>adUnitCode&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>adUnitSizes.canonicalName&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>effectiveAdsenseEnabled&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>explicitlyTargeted&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>externalSetTopBoxChannelId&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>hasChildren&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>parentAdUnit&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>teams&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>updateTime&lt;/code>&lt;/li>
+    /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1378,7 +1395,7 @@ namespace Google.Ads.AdManager.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. The list of fields to update.
+    /// Optional. The list of fields to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

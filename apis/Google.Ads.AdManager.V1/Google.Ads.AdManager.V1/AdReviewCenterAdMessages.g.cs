@@ -29,28 +29,30 @@ namespace Google.Ads.AdManager.V1 {
             "Z2xlL2Fkcy9hZG1hbmFnZXIvdjEvYWRfcmV2aWV3X2NlbnRlcl9hZF9lbnVt",
             "cy5wcm90bxo/Z29vZ2xlL2Fkcy9hZG1hbmFnZXIvdjEvZXhjaGFuZ2Vfc3lu",
             "ZGljYXRpb25fcHJvZHVjdF9lbnVtLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIv4D",
+            "X2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIvsE",
             "ChBBZFJldmlld0NlbnRlckFkEhEKBG5hbWUYASABKAlCA+BBCBIjChZhZF9y",
             "ZXZpZXdfY2VudGVyX2FkX2lkGAIgASgJQgPgQQMSbQoMcHJvZHVjdF90eXBl",
             "GAMgASgOMlIuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRXhjaGFuZ2VTeW5k",
             "aWNhdGlvblByb2R1Y3RFbnVtLkV4Y2hhbmdlU3luZGljYXRpb25Qcm9kdWN0",
             "QgPgQQMSWgoGc3RhdHVzGAQgASgOMkouZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
             "djEuQWRSZXZpZXdDZW50ZXJBZFN0YXR1c0VudW0uQWRSZXZpZXdDZW50ZXJB",
-            "ZFN0YXR1cxIdCgtwcmV2aWV3X3VybBgFIAEoCUID4EEDSACIAQE6twHqQbMB",
-            "CilhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQWRSZXZpZXdDZW50ZXJBZBJh",
-            "bmV0d29ya3Mve25ldHdvcmtfY29kZX0vd2ViUHJvcGVydGllcy97d2ViX3By",
-            "b3BlcnR5X2NvZGV9L2FkUmV2aWV3Q2VudGVyQWRzL3thZF9yZXZpZXdfY2Vu",
-            "dGVyX2FkfSoRYWRSZXZpZXdDZW50ZXJBZHMyEGFkUmV2aWV3Q2VudGVyQWRC",
-            "DgoMX3ByZXZpZXdfdXJsQtEBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
-            "djFCHUFkUmV2aWV3Q2VudGVyQWRNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92",
-            "MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2ds",
-            "ZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6",
-            "VjFiBnByb3RvMw=="));
+            "ZFN0YXR1cxJ7ChZtYW51YWxfcmV2aWV3X3N0YXR1c2VzGAYgAygOMlYuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuTWFudWFsQWRSZXZpZXdDZW50ZXJBZFN0",
+            "YXR1c0VudW0uTWFudWFsQWRSZXZpZXdDZW50ZXJBZFN0YXR1c0ID4EEDEh0K",
+            "C3ByZXZpZXdfdXJsGAUgASgJQgPgQQNIAIgBATq3AepBswEKKWFkbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9BZFJldmlld0NlbnRlckFkEmFuZXR3b3Jrcy97",
+            "bmV0d29ya19jb2RlfS93ZWJQcm9wZXJ0aWVzL3t3ZWJfcHJvcGVydHlfY29k",
+            "ZX0vYWRSZXZpZXdDZW50ZXJBZHMve2FkX3Jldmlld19jZW50ZXJfYWR9KhFh",
+            "ZFJldmlld0NlbnRlckFkczIQYWRSZXZpZXdDZW50ZXJBZEIOCgxfcHJldmll",
+            "d191cmxC0QEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIdQWRSZXZp",
+            "ZXdDZW50ZXJBZE1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcv",
+            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdl",
+            "cqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1h",
+            "bmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AdReviewCenterAdEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.ExchangeSyndicationProductEnumReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAd), global::Google.Ads.AdManager.V1.AdReviewCenterAd.Parser, new[]{ "Name", "AdReviewCenterAdId", "ProductType", "Status", "PreviewUrl" }, new[]{ "PreviewUrl" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.AdReviewCenterAd), global::Google.Ads.AdManager.V1.AdReviewCenterAd.Parser, new[]{ "Name", "AdReviewCenterAdId", "ProductType", "Status", "ManualReviewStatuses", "PreviewUrl" }, new[]{ "PreviewUrl" }, null, null, null)
           }));
     }
     #endregion
@@ -100,6 +102,7 @@ namespace Google.Ads.AdManager.V1 {
       adReviewCenterAdId_ = other.adReviewCenterAdId_;
       productType_ = other.productType_;
       status_ = other.status_;
+      manualReviewStatuses_ = other.manualReviewStatuses_.Clone();
       previewUrl_ = other.previewUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -173,6 +176,24 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "manual_review_statuses" field.</summary>
+    public const int ManualReviewStatusesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus> _repeated_manualReviewStatuses_codec
+        = pb::FieldCodec.ForEnum(50, x => (int) x, x => (global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus) x);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus> manualReviewStatuses_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus>();
+    /// <summary>
+    /// Output only. The manual review status of the AdReviewCenterAd (for web
+    /// properties in MCR mode). For MCR mode, a single ad could have multiple
+    /// statuses (for example, pending and serving at the same time, if the ad is
+    /// affected by a protection in certain inventory only). This field is not set
+    /// for the standard mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus> ManualReviewStatuses {
+      get { return manualReviewStatuses_; }
+    }
+
     /// <summary>Field number for the "preview_url" field.</summary>
     public const int PreviewUrlFieldNumber = 5;
     private readonly static string PreviewUrlDefaultValue = "";
@@ -223,6 +244,7 @@ namespace Google.Ads.AdManager.V1 {
       if (AdReviewCenterAdId != other.AdReviewCenterAdId) return false;
       if (ProductType != other.ProductType) return false;
       if (Status != other.Status) return false;
+      if(!manualReviewStatuses_.Equals(other.manualReviewStatuses_)) return false;
       if (PreviewUrl != other.PreviewUrl) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -235,6 +257,7 @@ namespace Google.Ads.AdManager.V1 {
       if (AdReviewCenterAdId.Length != 0) hash ^= AdReviewCenterAdId.GetHashCode();
       if (ProductType != global::Google.Ads.AdManager.V1.ExchangeSyndicationProductEnum.Types.ExchangeSyndicationProduct.Unspecified) hash ^= ProductType.GetHashCode();
       if (Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) hash ^= Status.GetHashCode();
+      hash ^= manualReviewStatuses_.GetHashCode();
       if (HasPreviewUrl) hash ^= PreviewUrl.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -274,6 +297,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(42);
         output.WriteString(PreviewUrl);
       }
+      manualReviewStatuses_.WriteTo(output, _repeated_manualReviewStatuses_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -304,6 +328,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(42);
         output.WriteString(PreviewUrl);
       }
+      manualReviewStatuses_.WriteTo(ref output, _repeated_manualReviewStatuses_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -326,6 +351,7 @@ namespace Google.Ads.AdManager.V1 {
       if (Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
+      size += manualReviewStatuses_.CalculateSize(_repeated_manualReviewStatuses_codec);
       if (HasPreviewUrl) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PreviewUrl);
       }
@@ -353,6 +379,7 @@ namespace Google.Ads.AdManager.V1 {
       if (other.Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) {
         Status = other.Status;
       }
+      manualReviewStatuses_.Add(other.manualReviewStatuses_);
       if (other.HasPreviewUrl) {
         PreviewUrl = other.PreviewUrl;
       }
@@ -395,6 +422,11 @@ namespace Google.Ads.AdManager.V1 {
             PreviewUrl = input.ReadString();
             break;
           }
+          case 50:
+          case 48: {
+            manualReviewStatuses_.AddEntriesFrom(input, _repeated_manualReviewStatuses_codec);
+            break;
+          }
         }
       }
     #endif
@@ -432,6 +464,11 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 42: {
             PreviewUrl = input.ReadString();
+            break;
+          }
+          case 50:
+          case 48: {
+            manualReviewStatuses_.AddEntriesFrom(ref input, _repeated_manualReviewStatuses_codec);
             break;
           }
         }

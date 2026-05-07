@@ -25,17 +25,17 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cjdnb29nbGUvYWRzL2FkbWFuYWdlci92MS9wcml2YXRlX21hcmtldHBsYWNl",
-            "X2VudW1zLnByb3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MSLAAQogUHJp",
-            "dmF0ZU1hcmtldHBsYWNlRGVhbFN0YXR1c0VudW0imwEKHFByaXZhdGVNYXJr",
+            "X2VudW1zLnByb3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MSLPAQogUHJp",
+            "dmF0ZU1hcmtldHBsYWNlRGVhbFN0YXR1c0VudW0iqgEKHFByaXZhdGVNYXJr",
             "ZXRwbGFjZURlYWxTdGF0dXMSLworUFJJVkFURV9NQVJLRVRQTEFDRV9ERUFM",
             "X1NUQVRVU19VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIKCgZBQ1RJVkUQ",
             "AhIMCghDQU5DRUxFRBADEhEKDVNFTExFUl9QQVVTRUQQBBIQCgxCVVlFUl9Q",
-            "QVVTRUQQBULQAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhxQcml2",
-            "YXRlTWFya2V0cGxhY2VFbnVtc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3Jn",
-            "L2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFn",
-            "ZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRN",
-            "YW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3Rv",
-            "Mw=="));
+            "QVVTRUQQBRINCglDT01QTEVURUQQBkLQAQobY29tLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxQhxQcml2YXRlTWFya2V0cGxhY2VFbnVtc1Byb3RvUAFaQGdv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFu",
+            "YWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoC",
+            "F0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFu",
+            "YWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -242,6 +242,10 @@ namespace Google.Ads.AdManager.V1 {
         /// The deal is paused by the buyer.
         /// </summary>
         [pbr::OriginalName("BUYER_PAUSED")] BuyerPaused = 5,
+        /// <summary>
+        /// The deal is past its end date.
+        /// </summary>
+        [pbr::OriginalName("COMPLETED")] Completed = 6,
       }
 
     }

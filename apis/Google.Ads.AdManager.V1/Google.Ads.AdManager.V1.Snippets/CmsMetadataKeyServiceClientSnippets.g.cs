@@ -19,6 +19,7 @@ namespace GoogleCSharpSnippets
     using Google.Ads.AdManager.V1;
     using Google.Api.Gax;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -390,6 +391,228 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCmsMetadataKeys</summary>
+        public void BatchActivateCmsMetadataKeysRequestObject()
+        {
+            // Snippet: BatchActivateCmsMetadataKeys(BatchActivateCmsMetadataKeysRequest, CallSettings)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = CmsMetadataKeyServiceClient.Create();
+            // Initialize request argument(s)
+            BatchActivateCmsMetadataKeysRequest request = new BatchActivateCmsMetadataKeysRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CmsMetadataKeyNames =
+                {
+                    CmsMetadataKeyName.FromNetworkCodeCmsMetadataKey("[NETWORK_CODE]", "[CMS_METADATA_KEY]"),
+                },
+            };
+            // Make the request
+            BatchActivateCmsMetadataKeysResponse response = cmsMetadataKeyServiceClient.BatchActivateCmsMetadataKeys(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCmsMetadataKeysAsync</summary>
+        public async Task BatchActivateCmsMetadataKeysRequestObjectAsync()
+        {
+            // Snippet: BatchActivateCmsMetadataKeysAsync(BatchActivateCmsMetadataKeysRequest, CallSettings)
+            // Additional: BatchActivateCmsMetadataKeysAsync(BatchActivateCmsMetadataKeysRequest, CancellationToken)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = await CmsMetadataKeyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchActivateCmsMetadataKeysRequest request = new BatchActivateCmsMetadataKeysRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CmsMetadataKeyNames =
+                {
+                    CmsMetadataKeyName.FromNetworkCodeCmsMetadataKey("[NETWORK_CODE]", "[CMS_METADATA_KEY]"),
+                },
+            };
+            // Make the request
+            BatchActivateCmsMetadataKeysResponse response = await cmsMetadataKeyServiceClient.BatchActivateCmsMetadataKeysAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCmsMetadataKeys</summary>
+        public void BatchActivateCmsMetadataKeys()
+        {
+            // Snippet: BatchActivateCmsMetadataKeys(string, IEnumerable<string>, CallSettings)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = CmsMetadataKeyServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/cmsMetadataKeys/[CMS_METADATA_KEY]",
+            };
+            // Make the request
+            BatchActivateCmsMetadataKeysResponse response = cmsMetadataKeyServiceClient.BatchActivateCmsMetadataKeys(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCmsMetadataKeysAsync</summary>
+        public async Task BatchActivateCmsMetadataKeysAsync()
+        {
+            // Snippet: BatchActivateCmsMetadataKeysAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchActivateCmsMetadataKeysAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = await CmsMetadataKeyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/cmsMetadataKeys/[CMS_METADATA_KEY]",
+            };
+            // Make the request
+            BatchActivateCmsMetadataKeysResponse response = await cmsMetadataKeyServiceClient.BatchActivateCmsMetadataKeysAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCmsMetadataKeys</summary>
+        public void BatchActivateCmsMetadataKeysResourceNames()
+        {
+            // Snippet: BatchActivateCmsMetadataKeys(NetworkName, IEnumerable<CmsMetadataKeyName>, CallSettings)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = CmsMetadataKeyServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CmsMetadataKeyName> names = new CmsMetadataKeyName[]
+            {
+                CmsMetadataKeyName.FromNetworkCodeCmsMetadataKey("[NETWORK_CODE]", "[CMS_METADATA_KEY]"),
+            };
+            // Make the request
+            BatchActivateCmsMetadataKeysResponse response = cmsMetadataKeyServiceClient.BatchActivateCmsMetadataKeys(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchActivateCmsMetadataKeysAsync</summary>
+        public async Task BatchActivateCmsMetadataKeysResourceNamesAsync()
+        {
+            // Snippet: BatchActivateCmsMetadataKeysAsync(NetworkName, IEnumerable<CmsMetadataKeyName>, CallSettings)
+            // Additional: BatchActivateCmsMetadataKeysAsync(NetworkName, IEnumerable<CmsMetadataKeyName>, CancellationToken)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = await CmsMetadataKeyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CmsMetadataKeyName> names = new CmsMetadataKeyName[]
+            {
+                CmsMetadataKeyName.FromNetworkCodeCmsMetadataKey("[NETWORK_CODE]", "[CMS_METADATA_KEY]"),
+            };
+            // Make the request
+            BatchActivateCmsMetadataKeysResponse response = await cmsMetadataKeyServiceClient.BatchActivateCmsMetadataKeysAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCmsMetadataKeys</summary>
+        public void BatchDeactivateCmsMetadataKeysRequestObject()
+        {
+            // Snippet: BatchDeactivateCmsMetadataKeys(BatchDeactivateCmsMetadataKeysRequest, CallSettings)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = CmsMetadataKeyServiceClient.Create();
+            // Initialize request argument(s)
+            BatchDeactivateCmsMetadataKeysRequest request = new BatchDeactivateCmsMetadataKeysRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CmsMetadataKeyNames =
+                {
+                    CmsMetadataKeyName.FromNetworkCodeCmsMetadataKey("[NETWORK_CODE]", "[CMS_METADATA_KEY]"),
+                },
+            };
+            // Make the request
+            BatchDeactivateCmsMetadataKeysResponse response = cmsMetadataKeyServiceClient.BatchDeactivateCmsMetadataKeys(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCmsMetadataKeysAsync</summary>
+        public async Task BatchDeactivateCmsMetadataKeysRequestObjectAsync()
+        {
+            // Snippet: BatchDeactivateCmsMetadataKeysAsync(BatchDeactivateCmsMetadataKeysRequest, CallSettings)
+            // Additional: BatchDeactivateCmsMetadataKeysAsync(BatchDeactivateCmsMetadataKeysRequest, CancellationToken)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = await CmsMetadataKeyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            BatchDeactivateCmsMetadataKeysRequest request = new BatchDeactivateCmsMetadataKeysRequest
+            {
+                ParentAsNetworkName = NetworkName.FromNetworkCode("[NETWORK_CODE]"),
+                CmsMetadataKeyNames =
+                {
+                    CmsMetadataKeyName.FromNetworkCodeCmsMetadataKey("[NETWORK_CODE]", "[CMS_METADATA_KEY]"),
+                },
+            };
+            // Make the request
+            BatchDeactivateCmsMetadataKeysResponse response = await cmsMetadataKeyServiceClient.BatchDeactivateCmsMetadataKeysAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCmsMetadataKeys</summary>
+        public void BatchDeactivateCmsMetadataKeys()
+        {
+            // Snippet: BatchDeactivateCmsMetadataKeys(string, IEnumerable<string>, CallSettings)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = CmsMetadataKeyServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/cmsMetadataKeys/[CMS_METADATA_KEY]",
+            };
+            // Make the request
+            BatchDeactivateCmsMetadataKeysResponse response = cmsMetadataKeyServiceClient.BatchDeactivateCmsMetadataKeys(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCmsMetadataKeysAsync</summary>
+        public async Task BatchDeactivateCmsMetadataKeysAsync()
+        {
+            // Snippet: BatchDeactivateCmsMetadataKeysAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: BatchDeactivateCmsMetadataKeysAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = await CmsMetadataKeyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "networks/[NETWORK_CODE]";
+            IEnumerable<string> names = new string[]
+            {
+                "networks/[NETWORK_CODE]/cmsMetadataKeys/[CMS_METADATA_KEY]",
+            };
+            // Make the request
+            BatchDeactivateCmsMetadataKeysResponse response = await cmsMetadataKeyServiceClient.BatchDeactivateCmsMetadataKeysAsync(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCmsMetadataKeys</summary>
+        public void BatchDeactivateCmsMetadataKeysResourceNames()
+        {
+            // Snippet: BatchDeactivateCmsMetadataKeys(NetworkName, IEnumerable<CmsMetadataKeyName>, CallSettings)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = CmsMetadataKeyServiceClient.Create();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CmsMetadataKeyName> names = new CmsMetadataKeyName[]
+            {
+                CmsMetadataKeyName.FromNetworkCodeCmsMetadataKey("[NETWORK_CODE]", "[CMS_METADATA_KEY]"),
+            };
+            // Make the request
+            BatchDeactivateCmsMetadataKeysResponse response = cmsMetadataKeyServiceClient.BatchDeactivateCmsMetadataKeys(parent, names);
+            // End snippet
+        }
+
+        /// <summary>Snippet for BatchDeactivateCmsMetadataKeysAsync</summary>
+        public async Task BatchDeactivateCmsMetadataKeysResourceNamesAsync()
+        {
+            // Snippet: BatchDeactivateCmsMetadataKeysAsync(NetworkName, IEnumerable<CmsMetadataKeyName>, CallSettings)
+            // Additional: BatchDeactivateCmsMetadataKeysAsync(NetworkName, IEnumerable<CmsMetadataKeyName>, CancellationToken)
+            // Create client
+            CmsMetadataKeyServiceClient cmsMetadataKeyServiceClient = await CmsMetadataKeyServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            NetworkName parent = NetworkName.FromNetworkCode("[NETWORK_CODE]");
+            IEnumerable<CmsMetadataKeyName> names = new CmsMetadataKeyName[]
+            {
+                CmsMetadataKeyName.FromNetworkCodeCmsMetadataKey("[NETWORK_CODE]", "[CMS_METADATA_KEY]"),
+            };
+            // Make the request
+            BatchDeactivateCmsMetadataKeysResponse response = await cmsMetadataKeyServiceClient.BatchDeactivateCmsMetadataKeysAsync(parent, names);
             // End snippet
         }
     }

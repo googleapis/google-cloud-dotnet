@@ -27,21 +27,21 @@ namespace Google.Ads.AdManager.V1 {
             "Cj1nb29nbGUvYWRzL2FkbWFuYWdlci92MS9lbnRpdHlfc2lnbmFsc19tYXBw",
             "aW5nX21lc3NhZ2VzLnByb3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90byKuAwoURW50aXR5U2lnbmFsc01hcHBpbmcSHQoTYXVk",
+            "ZXNvdXJjZS5wcm90byKwAwoURW50aXR5U2lnbmFsc01hcHBpbmcSHQoTYXVk",
             "aWVuY2Vfc2VnbWVudF9pZBgDIAEoA0gAEhsKEWNvbnRlbnRfYnVuZGxlX2lk",
             "GAQgASgDSAASIwoZY3VzdG9tX3RhcmdldGluZ192YWx1ZV9pZBgFIAEoA0gA",
-            "EhEKBG5hbWUYASABKAlCA+BBCBIrChllbnRpdHlfc2lnbmFsc19tYXBwaW5n",
-            "X2lkGAIgASgDQgPgQQNIAYgBARIiChV0YXhvbm9teV9jYXRlZ29yeV9pZHMY",
-            "BiADKANCA+BBATqoAepBpAEKLWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9F",
-            "bnRpdHlTaWduYWxzTWFwcGluZxJGbmV0d29ya3Mve25ldHdvcmtfY29kZX0v",
-            "ZW50aXR5U2lnbmFsc01hcHBpbmdzL3tlbnRpdHlfc2lnbmFsc19tYXBwaW5n",
-            "fSoVZW50aXR5U2lnbmFsc01hcHBpbmdzMhRlbnRpdHlTaWduYWxzTWFwcGlu",
-            "Z0IICgZlbnRpdHlCHAoaX2VudGl0eV9zaWduYWxzX21hcHBpbmdfaWRC1QEK",
-            "G2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIhRW50aXR5U2lnbmFsc01h",
-            "cHBpbmdNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
-            "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
-            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "EhEKBG5hbWUYASABKAlCA+BBCBItChllbnRpdHlfc2lnbmFsc19tYXBwaW5n",
+            "X2lkGAIgASgDQgUYAeBBA0gBiAEBEiIKFXRheG9ub215X2NhdGVnb3J5X2lk",
+            "cxgGIAMoA0ID4EEBOqgB6kGkAQotYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L0VudGl0eVNpZ25hbHNNYXBwaW5nEkZuZXR3b3Jrcy97bmV0d29ya19jb2Rl",
+            "fS9lbnRpdHlTaWduYWxzTWFwcGluZ3Mve2VudGl0eV9zaWduYWxzX21hcHBp",
+            "bmd9KhVlbnRpdHlTaWduYWxzTWFwcGluZ3MyFGVudGl0eVNpZ25hbHNNYXBw",
+            "aW5nQggKBmVudGl0eUIcChpfZW50aXR5X3NpZ25hbHNfbWFwcGluZ19pZELV",
+            "AQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQiFFbnRpdHlTaWduYWxz",
+            "TWFwcGluZ01lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
+            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
+            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -226,8 +226,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long entitySignalsMappingId_;
     /// <summary>
-    /// Output only. `EntitySignalsMapping` ID.
+    /// Output only. Deprecated: `EntitySignalsMapping` ID.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long EntitySignalsMappingId {
@@ -238,12 +239,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "entity_signals_mapping_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasEntitySignalsMappingId {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "entity_signals_mapping_id" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEntitySignalsMappingId() {

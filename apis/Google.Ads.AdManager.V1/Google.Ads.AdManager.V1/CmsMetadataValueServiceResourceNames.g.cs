@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gaav = Google.Ads.AdManager.V1;
+using gax = Google.Api.Gax;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -40,6 +41,46 @@ namespace Google.Ads.AdManager.V1
         {
             get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
             set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchActivateCmsMetadataValuesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CmsMetadataValueName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CmsMetadataValueName> CmsMetadataValueNames
+        {
+            get => new gax::ResourceNameList<CmsMetadataValueName>(Names, s => string.IsNullOrEmpty(s) ? null : CmsMetadataValueName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class BatchDeactivateCmsMetadataValuesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="CmsMetadataValueName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<CmsMetadataValueName> CmsMetadataValueNames
+        {
+            get => new gax::ResourceNameList<CmsMetadataValueName>(Names, s => string.IsNullOrEmpty(s) ? null : CmsMetadataValueName.Parse(s, allowUnparsed: true));
         }
     }
 }

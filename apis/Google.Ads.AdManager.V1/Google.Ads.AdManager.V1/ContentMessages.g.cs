@@ -47,7 +47,7 @@ namespace Google.Ads.AdManager.V1 {
   }
   #region Messages
   /// <summary>
-  /// A piece of content from a Publisher's CMS.
+  /// A piece of `Content` from a Publisher's CMS.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Content : pb::IMessage<Content>

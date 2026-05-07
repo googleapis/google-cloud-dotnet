@@ -50,12 +50,12 @@ namespace Google.Ads.AdManager.V1 {
             "Q29udGFjdCKEAQoUVXBkYXRlQ29udGFjdFJlcXVlc3QSNgoHY29udGFjdBgB",
             "IAEoCzIgLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNvbnRhY3RCA+BBAhI0",
             "Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
-            "c2tCA+BBAiKcAQoaQmF0Y2hVcGRhdGVDb250YWN0c1JlcXVlc3QSOAoGcGFy",
+            "c2tCA+BBASKcAQoaQmF0Y2hVcGRhdGVDb250YWN0c1JlcXVlc3QSOAoGcGFy",
             "ZW50GAEgASgJQijgQQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9O",
             "ZXR3b3JrEkQKCHJlcXVlc3RzGAIgAygLMi0uZ29vZ2xlLmFkcy5hZG1hbmFn",
             "ZXIudjEuVXBkYXRlQ29udGFjdFJlcXVlc3RCA+BBAiJRChtCYXRjaFVwZGF0",
             "ZUNvbnRhY3RzUmVzcG9uc2USMgoIY29udGFjdHMYASADKAsyIC5nb29nbGUu",
-            "YWRzLmFkbWFuYWdlci52MS5Db250YWN0Mv8ICg5Db250YWN0U2VydmljZRKL",
+            "YWRzLmFkbWFuYWdlci52MS5Db250YWN0MrIJCg5Db250YWN0U2VydmljZRKL",
             "AQoKR2V0Q29udGFjdBIqLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkdldENv",
             "bnRhY3RSZXF1ZXN0GiAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ29udGFj",
             "dCIv2kEEbmFtZYLT5JMCIhIgL3YxL3tuYW1lPW5ldHdvcmtzLyovY29udGFj",
@@ -79,13 +79,14 @@ namespace Google.Ads.AdManager.V1 {
             "ci52MS5CYXRjaFVwZGF0ZUNvbnRhY3RzUmVxdWVzdBo0Lmdvb2dsZS5hZHMu",
             "YWRtYW5hZ2VyLnYxLkJhdGNoVXBkYXRlQ29udGFjdHNSZXNwb25zZSJJ2kEP",
             "cGFyZW50LHJlcXVlc3RzgtPkkwIxIiwvdjEve3BhcmVudD1uZXR3b3Jrcy8q",
-            "fS9jb250YWN0czpiYXRjaFVwZGF0ZToBKhpHykEYYWRtYW5hZ2VyLmdvb2ds",
-            "ZWFwaXMuY29t0kEpaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9h",
-            "ZG1hbmFnZXJCxwEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUITQ29u",
-            "dGFjdFNlcnZpY2VQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
-            "by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29v",
-            "Z2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxW",
-            "MeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "fS9jb250YWN0czpiYXRjaFVwZGF0ZToBKhp6ykEYYWRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29t0kFcaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9h",
+            "ZG1hbmFnZXIsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9hZG1h",
+            "bmFnZXIucmVhZG9ubHlCxwEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MUITQ29udGFjdFNlcnZpY2VQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2Vy",
+            "qgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFu",
+            "YWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ContactMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -420,8 +421,23 @@ namespace Google.Ads.AdManager.V1 {
     private string filter_ = "";
     /// <summary>
     /// Optional. Expression to filter the response.
-    /// See syntax details at
-    /// https://developers.google.com/ad-manager/api/beta/filters
+    ///  See syntax details at
+    ///  https://developers.google.com/ad-manager/api/beta/filters
+    ///
+    /// &lt;b>Filterable fields:&lt;/b>
+    /// &lt;ul style="list-style-type:none">
+    ///   &lt;li>&lt;code>address&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>cellPhone&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>comment&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>company&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>email&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>fax&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>title&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>workPhone&lt;/code>&lt;/li>
+    /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1764,7 +1780,7 @@ namespace Google.Ads.AdManager.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// Required. The list of fields to update.
+    /// Optional. The list of fields to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

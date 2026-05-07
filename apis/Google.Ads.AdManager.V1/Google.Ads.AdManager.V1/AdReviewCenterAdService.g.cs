@@ -33,62 +33,66 @@ namespace Google.Ads.AdManager.V1 {
             "aWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
             "bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aF2dvb2ds",
             "ZS9ycGMvc3RhdHVzLnByb3RvGhpnb29nbGUvdHlwZS9pbnRlcnZhbC5wcm90",
-            "byKDAwoeU2VhcmNoQWRSZXZpZXdDZW50ZXJBZHNSZXF1ZXN0EjwKBnBhcmVu",
+            "byKWBAoeU2VhcmNoQWRSZXZpZXdDZW50ZXJBZHNSZXF1ZXN0EmEKBnN0YXR1",
+            "cxgEIAEoDjJKLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFkUmV2aWV3Q2Vu",
+            "dGVyQWRTdGF0dXNFbnVtLkFkUmV2aWV3Q2VudGVyQWRTdGF0dXNCA+BBAUgA",
+            "EnsKFG1hbnVhbF9yZXZpZXdfc3RhdHVzGAkgASgOMlYuZ29vZ2xlLmFkcy5h",
+            "ZG1hbmFnZXIudjEuTWFudWFsQWRSZXZpZXdDZW50ZXJBZFN0YXR1c0VudW0u",
+            "TWFudWFsQWRSZXZpZXdDZW50ZXJBZFN0YXR1c0ID4EEBSAASPAoGcGFyZW50",
+            "GAEgASgJQizgQQL6QSYKJGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9XZWJQ",
+            "cm9wZXJ0eRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2Vu",
+            "GAMgASgJQgPgQQESIwoWYWRfcmV2aWV3X2NlbnRlcl9hZF9pZBgFIAMoCUID",
+            "4EEBEjMKD2RhdGVfdGltZV9yYW5nZRgGIAEoCzIVLmdvb2dsZS50eXBlLklu",
+            "dGVydmFsQgPgQQESGAoLc2VhcmNoX3RleHQYByADKAlCA+BBARIdChBidXll",
+            "cl9hY2NvdW50X2lkGAggAygDQgPgQQFCEgoQYWRfcmV2aWV3X3N0YXR1cyKD",
+            "AQofU2VhcmNoQWRSZXZpZXdDZW50ZXJBZHNSZXNwb25zZRJHChRhZF9yZXZp",
+            "ZXdfY2VudGVyX2FkcxgBIAMoCzIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYx",
+            "LkFkUmV2aWV3Q2VudGVyQWQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqQB",
+            "CiJCYXRjaEFsbG93QWRSZXZpZXdDZW50ZXJBZHNSZXF1ZXN0EjwKBnBhcmVu",
             "dBgBIAEoCUIs4EEC+kEmCiRhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vV2Vi",
-            "UHJvcGVydHkSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
-            "bhgDIAEoCUID4EEBEl8KBnN0YXR1cxgEIAEoDjJKLmdvb2dsZS5hZHMuYWRt",
-            "YW5hZ2VyLnYxLkFkUmV2aWV3Q2VudGVyQWRTdGF0dXNFbnVtLkFkUmV2aWV3",
-            "Q2VudGVyQWRTdGF0dXNCA+BBARIjChZhZF9yZXZpZXdfY2VudGVyX2FkX2lk",
-            "GAUgAygJQgPgQQESMwoPZGF0ZV90aW1lX3JhbmdlGAYgASgLMhUuZ29vZ2xl",
-            "LnR5cGUuSW50ZXJ2YWxCA+BBARIYCgtzZWFyY2hfdGV4dBgHIAMoCUID4EEB",
-            "Eh0KEGJ1eWVyX2FjY291bnRfaWQYCCADKANCA+BBASKDAQofU2VhcmNoQWRS",
-            "ZXZpZXdDZW50ZXJBZHNSZXNwb25zZRJHChRhZF9yZXZpZXdfY2VudGVyX2Fk",
-            "cxgBIAMoCzIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFkUmV2aWV3Q2Vu",
-            "dGVyQWQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIqQBCiJCYXRjaEFsbG93",
-            "QWRSZXZpZXdDZW50ZXJBZHNSZXF1ZXN0EjwKBnBhcmVudBgBIAEoCUIs4EEC",
-            "+kEmCiRhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vV2ViUHJvcGVydHkSQAoF",
-            "bmFtZXMYAiADKAlCMeBBAvpBKwopYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L0FkUmV2aWV3Q2VudGVyQWQiJQojQmF0Y2hBbGxvd0FkUmV2aWV3Q2VudGVy",
-            "QWRzUmVzcG9uc2UipAEKIkJhdGNoQmxvY2tBZFJldmlld0NlbnRlckFkc1Jl",
-            "cXVlc3QSPAoGcGFyZW50GAEgASgJQizgQQL6QSYKJGFkbWFuYWdlci5nb29n",
-            "bGVhcGlzLmNvbS9XZWJQcm9wZXJ0eRJACgVuYW1lcxgCIAMoCUIx4EEC+kEr",
-            "CilhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQWRSZXZpZXdDZW50ZXJBZCIl",
-            "CiNCYXRjaEJsb2NrQWRSZXZpZXdDZW50ZXJBZHNSZXNwb25zZSLjAQonQmF0",
-            "Y2hBZFJldmlld0NlbnRlckFkc09wZXJhdGlvbk1ldGFkYXRhEm0KD2ZhaWxl",
-            "ZF9yZXF1ZXN0cxgBIAMoCzJULmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJh",
-            "dGNoQWRSZXZpZXdDZW50ZXJBZHNPcGVyYXRpb25NZXRhZGF0YS5GYWlsZWRS",
-            "ZXF1ZXN0c0VudHJ5GkkKE0ZhaWxlZFJlcXVlc3RzRW50cnkSCwoDa2V5GAEg",
-            "ASgFEiEKBXZhbHVlGAIgASgLMhIuZ29vZ2xlLnJwYy5TdGF0dXM6AjgBMpQH",
-            "ChdBZFJldmlld0NlbnRlckFkU2VydmljZRLfAQoXU2VhcmNoQWRSZXZpZXdD",
-            "ZW50ZXJBZHMSNy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5TZWFyY2hBZFJl",
-            "dmlld0NlbnRlckFkc1JlcXVlc3QaOC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
-            "MS5TZWFyY2hBZFJldmlld0NlbnRlckFkc1Jlc3BvbnNlIlHaQQZwYXJlbnSC",
-            "0+STAkISQC92MS97cGFyZW50PW5ldHdvcmtzLyovd2ViUHJvcGVydGllcy8q",
-            "fS9hZFJldmlld0NlbnRlckFkczpzZWFyY2gSpQIKG0JhdGNoQWxsb3dBZFJl",
-            "dmlld0NlbnRlckFkcxI7Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJhdGNo",
-            "QWxsb3dBZFJldmlld0NlbnRlckFkc1JlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uIqkBykFOCiNCYXRjaEFsbG93QWRSZXZpZXdDZW50",
-            "ZXJBZHNSZXNwb25zZRInQmF0Y2hBZFJldmlld0NlbnRlckFkc09wZXJhdGlv",
-            "bk1ldGFkYXRh2kEGcGFyZW50gtPkkwJJIkQvdjEve3BhcmVudD1uZXR3b3Jr",
-            "cy8qL3dlYlByb3BlcnRpZXMvKn0vYWRSZXZpZXdDZW50ZXJBZHM6YmF0Y2hB",
-            "bGxvdzoBKhKlAgobQmF0Y2hCbG9ja0FkUmV2aWV3Q2VudGVyQWRzEjsuZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hCbG9ja0FkUmV2aWV3Q2VudGVy",
-            "QWRzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iqQHK",
-            "QU4KI0JhdGNoQmxvY2tBZFJldmlld0NlbnRlckFkc1Jlc3BvbnNlEidCYXRj",
-            "aEFkUmV2aWV3Q2VudGVyQWRzT3BlcmF0aW9uTWV0YWRhdGHaQQZwYXJlbnSC",
-            "0+STAkkiRC92MS97cGFyZW50PW5ldHdvcmtzLyovd2ViUHJvcGVydGllcy8q",
-            "fS9hZFJldmlld0NlbnRlckFkczpiYXRjaEJsb2NrOgEqGkfKQRhhZG1hbmFn",
-            "ZXIuZ29vZ2xlYXBpcy5jb23SQSlodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
-            "bS9hdXRoL2FkbWFuYWdlckLQAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
-            "LnYxQhxBZFJldmlld0NlbnRlckFkU2VydmljZVByb3RvUAFaQGdvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92",
-            "MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2ds",
-            "ZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6",
-            "VjFiBnByb3RvMw=="));
+            "UHJvcGVydHkSQAoFbmFtZXMYAiADKAlCMeBBAvpBKwopYWRtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL0FkUmV2aWV3Q2VudGVyQWQiJQojQmF0Y2hBbGxvd0Fk",
+            "UmV2aWV3Q2VudGVyQWRzUmVzcG9uc2UipAEKIkJhdGNoQmxvY2tBZFJldmll",
+            "d0NlbnRlckFkc1JlcXVlc3QSPAoGcGFyZW50GAEgASgJQizgQQL6QSYKJGFk",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9XZWJQcm9wZXJ0eRJACgVuYW1lcxgC",
+            "IAMoCUIx4EEC+kErCilhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQWRSZXZp",
+            "ZXdDZW50ZXJBZCIlCiNCYXRjaEJsb2NrQWRSZXZpZXdDZW50ZXJBZHNSZXNw",
+            "b25zZSLjAQonQmF0Y2hBZFJldmlld0NlbnRlckFkc09wZXJhdGlvbk1ldGFk",
+            "YXRhEm0KD2ZhaWxlZF9yZXF1ZXN0cxgBIAMoCzJULmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkJhdGNoQWRSZXZpZXdDZW50ZXJBZHNPcGVyYXRpb25NZXRh",
+            "ZGF0YS5GYWlsZWRSZXF1ZXN0c0VudHJ5GkkKE0ZhaWxlZFJlcXVlc3RzRW50",
+            "cnkSCwoDa2V5GAEgASgFEiEKBXZhbHVlGAIgASgLMhIuZ29vZ2xlLnJwYy5T",
+            "dGF0dXM6AjgBMscHChdBZFJldmlld0NlbnRlckFkU2VydmljZRLfAQoXU2Vh",
+            "cmNoQWRSZXZpZXdDZW50ZXJBZHMSNy5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5TZWFyY2hBZFJldmlld0NlbnRlckFkc1JlcXVlc3QaOC5nb29nbGUuYWRz",
+            "LmFkbWFuYWdlci52MS5TZWFyY2hBZFJldmlld0NlbnRlckFkc1Jlc3BvbnNl",
+            "IlHaQQZwYXJlbnSC0+STAkISQC92MS97cGFyZW50PW5ldHdvcmtzLyovd2Vi",
+            "UHJvcGVydGllcy8qfS9hZFJldmlld0NlbnRlckFkczpzZWFyY2gSpQIKG0Jh",
+            "dGNoQWxsb3dBZFJldmlld0NlbnRlckFkcxI7Lmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLkJhdGNoQWxsb3dBZFJldmlld0NlbnRlckFkc1JlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqkBykFOCiNCYXRjaEFsbG93",
+            "QWRSZXZpZXdDZW50ZXJBZHNSZXNwb25zZRInQmF0Y2hBZFJldmlld0NlbnRl",
+            "ckFkc09wZXJhdGlvbk1ldGFkYXRh2kEGcGFyZW50gtPkkwJJIkQvdjEve3Bh",
+            "cmVudD1uZXR3b3Jrcy8qL3dlYlByb3BlcnRpZXMvKn0vYWRSZXZpZXdDZW50",
+            "ZXJBZHM6YmF0Y2hBbGxvdzoBKhKlAgobQmF0Y2hCbG9ja0FkUmV2aWV3Q2Vu",
+            "dGVyQWRzEjsuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hCbG9ja0Fk",
+            "UmV2aWV3Q2VudGVyQWRzUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
+            "cGVyYXRpb24iqQHKQU4KI0JhdGNoQmxvY2tBZFJldmlld0NlbnRlckFkc1Jl",
+            "c3BvbnNlEidCYXRjaEFkUmV2aWV3Q2VudGVyQWRzT3BlcmF0aW9uTWV0YWRh",
+            "dGHaQQZwYXJlbnSC0+STAkkiRC92MS97cGFyZW50PW5ldHdvcmtzLyovd2Vi",
+            "UHJvcGVydGllcy8qfS9hZFJldmlld0NlbnRlckFkczpiYXRjaEJsb2NrOgEq",
+            "GnrKQRhhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb23SQVxodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2FkbWFuYWdlcixodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2FkbWFuYWdlci5yZWFkb25seULQAQobY29tLmdv",
+            "b2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhxBZFJldmlld0NlbnRlckFkU2Vydmlj",
+            "ZVByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFk",
+            "TWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xl",
+            "OjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.AdReviewCenterAdEnumsReflection.Descriptor, global::Google.Ads.AdManager.V1.AdReviewCenterAdMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsRequest), global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Status", "AdReviewCenterAdId", "DateTimeRange", "SearchText", "BuyerAccountId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsRequest), global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsRequest.Parser, new[]{ "Status", "ManualReviewStatus", "Parent", "PageSize", "PageToken", "AdReviewCenterAdId", "DateTimeRange", "SearchText", "BuyerAccountId" }, new[]{ "AdReviewStatus" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsResponse), global::Google.Ads.AdManager.V1.SearchAdReviewCenterAdsResponse.Parser, new[]{ "AdReviewCenterAds", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchAllowAdReviewCenterAdsRequest), global::Google.Ads.AdManager.V1.BatchAllowAdReviewCenterAdsRequest.Parser, new[]{ "Parent", "Names" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchAllowAdReviewCenterAdsResponse), global::Google.Ads.AdManager.V1.BatchAllowAdReviewCenterAdsResponse.Parser, null, null, null, null, null),
@@ -142,11 +146,19 @@ namespace Google.Ads.AdManager.V1 {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
       pageToken_ = other.pageToken_;
-      status_ = other.status_;
       adReviewCenterAdId_ = other.adReviewCenterAdId_.Clone();
       dateTimeRange_ = other.dateTimeRange_ != null ? other.dateTimeRange_.Clone() : null;
       searchText_ = other.searchText_.Clone();
       buyerAccountId_ = other.buyerAccountId_.Clone();
+      switch (other.AdReviewStatusCase) {
+        case AdReviewStatusOneofCase.Status:
+          Status = other.Status;
+          break;
+        case AdReviewStatusOneofCase.ManualReviewStatus:
+          ManualReviewStatus = other.ManualReviewStatus;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -154,6 +166,67 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchAdReviewCenterAdsRequest Clone() {
       return new SearchAdReviewCenterAdsRequest(this);
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 4;
+    /// <summary>
+    /// Optional. Only return ads with the given status.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus Status {
+      get { return HasStatus ? (global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus) adReviewStatus_ : global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified; }
+      set {
+        adReviewStatus_ = value;
+        adReviewStatusCase_ = AdReviewStatusOneofCase.Status;
+      }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return adReviewStatusCase_ == AdReviewStatusOneofCase.Status; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "status" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      if (HasStatus) {
+        ClearAdReviewStatus();
+      }
+    }
+
+    /// <summary>Field number for the "manual_review_status" field.</summary>
+    public const int ManualReviewStatusFieldNumber = 9;
+    /// <summary>
+    /// Optional. Only return ads with the given manual review status. Only
+    /// available for networks with Manual Creative Review enabled. For more
+    /// information, see
+    /// https://support.google.com/admanager/answer/2586531#manual-creative-review.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus ManualReviewStatus {
+      get { return HasManualReviewStatus ? (global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus) adReviewStatus_ : global::Google.Ads.AdManager.V1.ManualAdReviewCenterAdStatusEnum.Types.ManualAdReviewCenterAdStatus.Unspecified; }
+      set {
+        adReviewStatus_ = value;
+        adReviewStatusCase_ = AdReviewStatusOneofCase.ManualReviewStatus;
+      }
+    }
+    /// <summary>Gets whether the "manual_review_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasManualReviewStatus {
+      get { return adReviewStatusCase_ == AdReviewStatusOneofCase.ManualReviewStatus; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "manual_review_status" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearManualReviewStatus() {
+      if (HasManualReviewStatus) {
+        ClearAdReviewStatus();
+      }
     }
 
     /// <summary>Field number for the "parent" field.</summary>
@@ -218,21 +291,6 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
-    /// <summary>Field number for the "status" field.</summary>
-    public const int StatusFieldNumber = 4;
-    private global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus status_ = global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified;
-    /// <summary>
-    /// Optional. Only return ads with the given status.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus Status {
-      get { return status_; }
-      set {
-        status_ = value;
-      }
-    }
-
     /// <summary>Field number for the "ad_review_center_ad_id" field.</summary>
     public const int AdReviewCenterAdIdFieldNumber = 5;
     private static readonly pb::FieldCodec<string> _repeated_adReviewCenterAdId_codec
@@ -254,7 +312,8 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. If provided, only return ads that served within the given date
     /// range (inclusive). The  date range must be within the last 30 days. If not
-    /// provided, the date range will be the last 30 days.
+    /// provided, the date range will be the last 30 days. This filter does not
+    /// apply to the PENDING manual review status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -291,12 +350,33 @@ namespace Google.Ads.AdManager.V1 {
     /// <summary>
     /// Optional. If provided, restrict the search to creatives belonging to one of
     /// the given Adx buyer account IDs. Only applicable to RTB creatives. Adx
-    /// buyer account IDs can be found via the ProgrammaticBuyerService.
+    /// buyer account IDs can be found using the `ProgrammaticBuyerService`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<long> BuyerAccountId {
       get { return buyerAccountId_; }
+    }
+
+    private object adReviewStatus_;
+    /// <summary>Enum of possible cases for the "ad_review_status" oneof.</summary>
+    public enum AdReviewStatusOneofCase {
+      None = 0,
+      Status = 4,
+      ManualReviewStatus = 9,
+    }
+    private AdReviewStatusOneofCase adReviewStatusCase_ = AdReviewStatusOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AdReviewStatusOneofCase AdReviewStatusCase {
+      get { return adReviewStatusCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAdReviewStatus() {
+      adReviewStatusCase_ = AdReviewStatusOneofCase.None;
+      adReviewStatus_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -314,14 +394,16 @@ namespace Google.Ads.AdManager.V1 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (Status != other.Status) return false;
+      if (ManualReviewStatus != other.ManualReviewStatus) return false;
       if (Parent != other.Parent) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
-      if (Status != other.Status) return false;
       if(!adReviewCenterAdId_.Equals(other.adReviewCenterAdId_)) return false;
       if (!object.Equals(DateTimeRange, other.DateTimeRange)) return false;
       if(!searchText_.Equals(other.searchText_)) return false;
       if(!buyerAccountId_.Equals(other.buyerAccountId_)) return false;
+      if (AdReviewStatusCase != other.AdReviewStatusCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -329,14 +411,16 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasManualReviewStatus) hash ^= ManualReviewStatus.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
-      if (Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) hash ^= Status.GetHashCode();
       hash ^= adReviewCenterAdId_.GetHashCode();
       if (dateTimeRange_ != null) hash ^= DateTimeRange.GetHashCode();
       hash ^= searchText_.GetHashCode();
       hash ^= buyerAccountId_.GetHashCode();
+      hash ^= (int) adReviewStatusCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -367,7 +451,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
-      if (Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Status);
       }
@@ -378,6 +462,10 @@ namespace Google.Ads.AdManager.V1 {
       }
       searchText_.WriteTo(output, _repeated_searchText_codec);
       buyerAccountId_.WriteTo(output, _repeated_buyerAccountId_codec);
+      if (HasManualReviewStatus) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) ManualReviewStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -400,7 +488,7 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteString(PageToken);
       }
-      if (Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) {
+      if (HasStatus) {
         output.WriteRawTag(32);
         output.WriteEnum((int) Status);
       }
@@ -411,6 +499,10 @@ namespace Google.Ads.AdManager.V1 {
       }
       searchText_.WriteTo(ref output, _repeated_searchText_codec);
       buyerAccountId_.WriteTo(ref output, _repeated_buyerAccountId_codec);
+      if (HasManualReviewStatus) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) ManualReviewStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -421,6 +513,12 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (HasStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (HasManualReviewStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ManualReviewStatus);
+      }
       if (Parent.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
       }
@@ -429,9 +527,6 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (PageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
-      }
-      if (Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) {
-        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       size += adReviewCenterAdId_.CalculateSize(_repeated_adReviewCenterAdId_codec);
       if (dateTimeRange_ != null) {
@@ -460,9 +555,6 @@ namespace Google.Ads.AdManager.V1 {
       if (other.PageToken.Length != 0) {
         PageToken = other.PageToken;
       }
-      if (other.Status != global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus.Unspecified) {
-        Status = other.Status;
-      }
       adReviewCenterAdId_.Add(other.adReviewCenterAdId_);
       if (other.dateTimeRange_ != null) {
         if (dateTimeRange_ == null) {
@@ -472,6 +564,15 @@ namespace Google.Ads.AdManager.V1 {
       }
       searchText_.Add(other.searchText_);
       buyerAccountId_.Add(other.buyerAccountId_);
+      switch (other.AdReviewStatusCase) {
+        case AdReviewStatusOneofCase.Status:
+          Status = other.Status;
+          break;
+        case AdReviewStatusOneofCase.ManualReviewStatus:
+          ManualReviewStatus = other.ManualReviewStatus;
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -504,7 +605,8 @@ namespace Google.Ads.AdManager.V1 {
             break;
           }
           case 32: {
-            Status = (global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus) input.ReadEnum();
+            adReviewStatus_ = input.ReadEnum();
+            adReviewStatusCase_ = AdReviewStatusOneofCase.Status;
             break;
           }
           case 42: {
@@ -525,6 +627,11 @@ namespace Google.Ads.AdManager.V1 {
           case 66:
           case 64: {
             buyerAccountId_.AddEntriesFrom(input, _repeated_buyerAccountId_codec);
+            break;
+          }
+          case 72: {
+            adReviewStatus_ = input.ReadEnum();
+            adReviewStatusCase_ = AdReviewStatusOneofCase.ManualReviewStatus;
             break;
           }
         }
@@ -559,7 +666,8 @@ namespace Google.Ads.AdManager.V1 {
             break;
           }
           case 32: {
-            Status = (global::Google.Ads.AdManager.V1.AdReviewCenterAdStatusEnum.Types.AdReviewCenterAdStatus) input.ReadEnum();
+            adReviewStatus_ = input.ReadEnum();
+            adReviewStatusCase_ = AdReviewStatusOneofCase.Status;
             break;
           }
           case 42: {
@@ -580,6 +688,11 @@ namespace Google.Ads.AdManager.V1 {
           case 66:
           case 64: {
             buyerAccountId_.AddEntriesFrom(ref input, _repeated_buyerAccountId_codec);
+            break;
+          }
+          case 72: {
+            adReviewStatus_ = input.ReadEnum();
+            adReviewStatusCase_ = AdReviewStatusOneofCase.ManualReviewStatus;
             break;
           }
         }

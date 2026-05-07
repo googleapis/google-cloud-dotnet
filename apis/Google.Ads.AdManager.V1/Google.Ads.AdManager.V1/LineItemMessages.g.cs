@@ -31,28 +31,28 @@ namespace Google.Ads.AdManager.V1 {
             "Z2VyL3YxL2xpbmVfaXRlbV9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
             "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxof",
             "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3R5cGUv",
-            "bW9uZXkucHJvdG8i9gUKCExpbmVJdGVtEhEKBG5hbWUYASABKAlCA+BBCBI6",
-            "CgVvcmRlchgCIAEoCUIm4EED+kEgCh5hZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b20vT3JkZXJIAIgBARIeCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAkgBiAEB",
-            "EjgKCnN0YXJ0X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQJIAogBARI2CghlbmRfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBA0gDiAEBElgKDmxpbmVfaXRlbV90eXBlGBEg",
-            "ASgOMjYuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGluZUl0ZW1UeXBlRW51",
-            "bS5MaW5lSXRlbVR5cGVCA+BBAkgEiAEBEioKBHJhdGUYFCABKAsyEi5nb29n",
-            "bGUudHlwZS5Nb25leUID4EECSAWIAQESLAoGYnVkZ2V0GCMgASgLMhIuZ29v",
-            "Z2xlLnR5cGUuTW9uZXlCA+BBA0gGiAEBEksKE2N1c3RvbV9maWVsZF92YWx1",
-            "ZXMYOyADKAsyKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21GaWVs",
-            "ZFZhbHVlQgPgQQESNQoEZ29hbBhMIAEoCzIdLmdvb2dsZS5hZHMuYWRtYW5h",
-            "Z2VyLnYxLkdvYWxCA+BBAUgHiAEBOmrqQWcKIWFkbWFuYWdlci5nb29nbGVh",
-            "cGlzLmNvbS9MaW5lSXRlbRItbmV0d29ya3Mve25ldHdvcmtfY29kZX0vbGlu",
-            "ZUl0ZW1zL3tsaW5lX2l0ZW19KglsaW5lSXRlbXMyCGxpbmVJdGVtQggKBl9v",
-            "cmRlckIPCg1fZGlzcGxheV9uYW1lQg0KC19zdGFydF90aW1lQgsKCV9lbmRf",
-            "dGltZUIRCg9fbGluZV9pdGVtX3R5cGVCBwoFX3JhdGVCCQoHX2J1ZGdldEIH",
-            "CgVfZ29hbELJAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhVMaW5l",
-            "SXRlbU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dv",
-            "b2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJc",
-            "VjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "bW9uZXkucHJvdG8i+QUKCExpbmVJdGVtEhEKBG5hbWUYASABKAlCA+BBCBI9",
+            "CgVvcmRlchgCIAEoCUIp4EEC4EEF+kEgCh5hZG1hbmFnZXIuZ29vZ2xlYXBp",
+            "cy5jb20vT3JkZXJIAIgBARIeCgxkaXNwbGF5X25hbWUYAyABKAlCA+BBAkgB",
+            "iAEBEjgKCnN0YXJ0X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQJIAogBARI2CghlbmRfdGltZRgHIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gDiAEBElgKDmxpbmVfaXRlbV90eXBl",
+            "GBEgASgOMjYuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGluZUl0ZW1UeXBl",
+            "RW51bS5MaW5lSXRlbVR5cGVCA+BBAkgEiAEBEioKBHJhdGUYFCABKAsyEi5n",
+            "b29nbGUudHlwZS5Nb25leUID4EECSAWIAQESLAoGYnVkZ2V0GCMgASgLMhIu",
+            "Z29vZ2xlLnR5cGUuTW9uZXlCA+BBA0gGiAEBEksKE2N1c3RvbV9maWVsZF92",
+            "YWx1ZXMYOyADKAsyKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21G",
+            "aWVsZFZhbHVlQgPgQQESNQoEZ29hbBhMIAEoCzIdLmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkdvYWxCA+BBAUgHiAEBOmrqQWcKIWFkbWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbS9MaW5lSXRlbRItbmV0d29ya3Mve25ldHdvcmtfY29kZX0v",
+            "bGluZUl0ZW1zL3tsaW5lX2l0ZW19KglsaW5lSXRlbXMyCGxpbmVJdGVtQggK",
+            "Bl9vcmRlckIPCg1fZGlzcGxheV9uYW1lQg0KC19zdGFydF90aW1lQgsKCV9l",
+            "bmRfdGltZUIRCg9fbGluZV9pdGVtX3R5cGVCBwoFX3JhdGVCCQoHX2J1ZGdl",
+            "dEIHCgVfZ29hbELJAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhVM",
+            "aW5lSXRlbU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
+            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
+            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomFieldValueReflection.Descriptor, global::Google.Ads.AdManager.V1.GoalReflection.Descriptor, global::Google.Ads.AdManager.V1.LineItemEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -146,8 +146,8 @@ namespace Google.Ads.AdManager.V1 {
 
     private string order_;
     /// <summary>
-    /// Output only. The ID of the Order to which the LineItem belongs. This
-    /// attribute is required. Format: `networks/{network_code}/orders/{order}`
+    /// Required. Immutable. The ID of the Order to which the LineItem belongs.
+    /// Format: `networks/{network_code}/orders/{order}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

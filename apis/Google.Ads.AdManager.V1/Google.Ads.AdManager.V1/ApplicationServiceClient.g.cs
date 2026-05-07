@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -47,6 +48,12 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetApplicationSettings = existing.GetApplicationSettings;
             ListApplicationsSettings = existing.ListApplicationsSettings;
+            CreateApplicationSettings = existing.CreateApplicationSettings;
+            BatchCreateApplicationsSettings = existing.BatchCreateApplicationsSettings;
+            UpdateApplicationSettings = existing.UpdateApplicationSettings;
+            BatchUpdateApplicationsSettings = existing.BatchUpdateApplicationsSettings;
+            BatchArchiveApplicationsSettings = existing.BatchArchiveApplicationsSettings;
+            BatchUnarchiveApplicationsSettings = existing.BatchUnarchiveApplicationsSettings;
             OnCopy(existing);
         }
 
@@ -75,6 +82,84 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListApplicationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApplicationServiceClient.CreateApplication</c> and <c>ApplicationServiceClient.CreateApplicationAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateApplicationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApplicationServiceClient.BatchCreateApplications</c> and
+        /// <c>ApplicationServiceClient.BatchCreateApplicationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateApplicationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApplicationServiceClient.UpdateApplication</c> and <c>ApplicationServiceClient.UpdateApplicationAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateApplicationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApplicationServiceClient.BatchUpdateApplications</c> and
+        /// <c>ApplicationServiceClient.BatchUpdateApplicationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateApplicationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApplicationServiceClient.BatchArchiveApplications</c> and
+        /// <c>ApplicationServiceClient.BatchArchiveApplicationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchArchiveApplicationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ApplicationServiceClient.BatchUnarchiveApplications</c> and
+        /// <c>ApplicationServiceClient.BatchUnarchiveApplicationsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUnarchiveApplicationsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ApplicationServiceSettings"/> object.</returns>
@@ -150,11 +235,13 @@ namespace Google.Ads.AdManager.V1
         /// The default ApplicationService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/admanager</description></item>
+        /// <item><description>https://www.googleapis.com/auth/admanager.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/admanager",
+            "https://www.googleapis.com/auth/admanager.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -484,6 +571,826 @@ namespace Google.Ads.AdManager.V1
             }
             return ListApplicationsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Application CreateApplication(CreateApplicationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> CreateApplicationAsync(CreateApplicationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> CreateApplicationAsync(CreateApplicationRequest request, st::CancellationToken cancellationToken) =>
+            CreateApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Application` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="application">
+        /// Required. The `Application` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Application CreateApplication(string parent, Application application, gaxgrpc::CallSettings callSettings = null) =>
+            CreateApplication(new CreateApplicationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Application` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="application">
+        /// Required. The `Application` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> CreateApplicationAsync(string parent, Application application, gaxgrpc::CallSettings callSettings = null) =>
+            CreateApplicationAsync(new CreateApplicationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Application` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="application">
+        /// Required. The `Application` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> CreateApplicationAsync(string parent, Application application, st::CancellationToken cancellationToken) =>
+            CreateApplicationAsync(parent, application, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Application` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="application">
+        /// Required. The `Application` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Application CreateApplication(NetworkName parent, Application application, gaxgrpc::CallSettings callSettings = null) =>
+            CreateApplication(new CreateApplicationRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Application` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="application">
+        /// Required. The `Application` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> CreateApplicationAsync(NetworkName parent, Application application, gaxgrpc::CallSettings callSettings = null) =>
+            CreateApplicationAsync(new CreateApplicationRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
+            }, callSettings);
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this `Application` will be created.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="application">
+        /// Required. The `Application` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> CreateApplicationAsync(NetworkName parent, Application application, st::CancellationToken cancellationToken) =>
+            CreateApplicationAsync(parent, application, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateApplicationsResponse BatchCreateApplications(BatchCreateApplicationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateApplicationsResponse> BatchCreateApplicationsAsync(BatchCreateApplicationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateApplicationsResponse> BatchCreateApplicationsAsync(BatchCreateApplicationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateApplicationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateApplicationsResponse BatchCreateApplications(string parent, scg::IEnumerable<CreateApplicationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateApplications(new BatchCreateApplicationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateApplicationsResponse> BatchCreateApplicationsAsync(string parent, scg::IEnumerable<CreateApplicationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateApplicationsAsync(new BatchCreateApplicationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateApplicationsResponse> BatchCreateApplicationsAsync(string parent, scg::IEnumerable<CreateApplicationRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateApplicationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateApplicationsResponse BatchCreateApplications(NetworkName parent, scg::IEnumerable<CreateApplicationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateApplications(new BatchCreateApplicationsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateApplicationsResponse> BatchCreateApplicationsAsync(NetworkName parent, scg::IEnumerable<CreateApplicationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateApplicationsAsync(new BatchCreateApplicationsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be created.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the CreateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateApplicationsResponse> BatchCreateApplicationsAsync(NetworkName parent, scg::IEnumerable<CreateApplicationRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateApplicationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to update a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Application UpdateApplication(UpdateApplicationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to update a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> UpdateApplicationAsync(UpdateApplicationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to update a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> UpdateApplicationAsync(UpdateApplicationRequest request, st::CancellationToken cancellationToken) =>
+            UpdateApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to update a `Application` object.
+        /// </summary>
+        /// <param name="application">
+        /// Required. The `Application` to update.
+        /// 
+        /// The `Application`'s `name` is used to identify the `Application` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Application UpdateApplication(Application application, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateApplication(new UpdateApplicationRequest
+            {
+                Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// API to update a `Application` object.
+        /// </summary>
+        /// <param name="application">
+        /// Required. The `Application` to update.
+        /// 
+        /// The `Application`'s `name` is used to identify the `Application` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> UpdateApplicationAsync(Application application, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateApplicationAsync(new UpdateApplicationRequest
+            {
+                Application = gax::GaxPreconditions.CheckNotNull(application, nameof(application)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// API to update a `Application` object.
+        /// </summary>
+        /// <param name="application">
+        /// Required. The `Application` to update.
+        /// 
+        /// The `Application`'s `name` is used to identify the `Application` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Application> UpdateApplicationAsync(Application application, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateApplicationAsync(application, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateApplicationsResponse BatchUpdateApplications(BatchUpdateApplicationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateApplicationsResponse> BatchUpdateApplicationsAsync(BatchUpdateApplicationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateApplicationsResponse> BatchUpdateApplicationsAsync(BatchUpdateApplicationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateApplicationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateApplicationsResponse BatchUpdateApplications(string parent, scg::IEnumerable<UpdateApplicationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateApplications(new BatchUpdateApplicationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateApplicationsResponse> BatchUpdateApplicationsAsync(string parent, scg::IEnumerable<UpdateApplicationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateApplicationsAsync(new BatchUpdateApplicationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateApplicationsResponse> BatchUpdateApplicationsAsync(string parent, scg::IEnumerable<UpdateApplicationRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateApplicationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateApplicationsResponse BatchUpdateApplications(NetworkName parent, scg::IEnumerable<UpdateApplicationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateApplications(new BatchUpdateApplicationsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateApplicationsResponse> BatchUpdateApplicationsAsync(NetworkName parent, scg::IEnumerable<UpdateApplicationRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateApplicationsAsync(new BatchUpdateApplicationsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where `Applications` will be updated.
+        /// Format: `networks/{network_code}`
+        /// The parent field in the UpdateApplicationRequest must match this
+        /// field.
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `Application` objects to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateApplicationsResponse> BatchUpdateApplicationsAsync(NetworkName parent, scg::IEnumerable<UpdateApplicationRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateApplicationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchArchiveApplicationsResponse BatchArchiveApplications(BatchArchiveApplicationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchiveApplicationsResponse> BatchArchiveApplicationsAsync(BatchArchiveApplicationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchiveApplicationsResponse> BatchArchiveApplicationsAsync(BatchArchiveApplicationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchArchiveApplicationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to archive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to archive.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchArchiveApplicationsResponse BatchArchiveApplications(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchArchiveApplications(new BatchArchiveApplicationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to archive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to archive.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchiveApplicationsResponse> BatchArchiveApplicationsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchArchiveApplicationsAsync(new BatchArchiveApplicationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to archive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to archive.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchiveApplicationsResponse> BatchArchiveApplicationsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchArchiveApplicationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to archive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to archive.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchArchiveApplicationsResponse BatchArchiveApplications(NetworkName parent, scg::IEnumerable<ApplicationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchArchiveApplications(new BatchArchiveApplicationsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ApplicationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to archive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to archive.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchiveApplicationsResponse> BatchArchiveApplicationsAsync(NetworkName parent, scg::IEnumerable<ApplicationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchArchiveApplicationsAsync(new BatchArchiveApplicationsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ApplicationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to archive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to archive.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchArchiveApplicationsResponse> BatchArchiveApplicationsAsync(NetworkName parent, scg::IEnumerable<ApplicationName> names, st::CancellationToken cancellationToken) =>
+            BatchArchiveApplicationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUnarchiveApplicationsResponse BatchUnarchiveApplications(BatchUnarchiveApplicationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUnarchiveApplicationsResponse> BatchUnarchiveApplicationsAsync(BatchUnarchiveApplicationsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUnarchiveApplicationsResponse> BatchUnarchiveApplicationsAsync(BatchUnarchiveApplicationsRequest request, st::CancellationToken cancellationToken) =>
+            BatchUnarchiveApplicationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to Unarchive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to unarchive.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUnarchiveApplicationsResponse BatchUnarchiveApplications(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUnarchiveApplications(new BatchUnarchiveApplicationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to Unarchive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to unarchive.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUnarchiveApplicationsResponse> BatchUnarchiveApplicationsAsync(string parent, scg::IEnumerable<string> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUnarchiveApplicationsAsync(new BatchUnarchiveApplicationsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Names =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to Unarchive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to unarchive.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUnarchiveApplicationsResponse> BatchUnarchiveApplicationsAsync(string parent, scg::IEnumerable<string> names, st::CancellationToken cancellationToken) =>
+            BatchUnarchiveApplicationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to Unarchive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to unarchive.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUnarchiveApplicationsResponse BatchUnarchiveApplications(NetworkName parent, scg::IEnumerable<ApplicationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUnarchiveApplications(new BatchUnarchiveApplicationsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ApplicationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to Unarchive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to unarchive.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUnarchiveApplicationsResponse> BatchUnarchiveApplicationsAsync(NetworkName parent, scg::IEnumerable<ApplicationName> names, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUnarchiveApplicationsAsync(new BatchUnarchiveApplicationsRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ApplicationNames =
+                {
+                    gax::GaxPreconditions.CheckNotNull(names, nameof(names)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource shared by all `Applications` to Unarchive.
+        /// Format: `networks/{network_code}`
+        /// </param>
+        /// <param name="names">
+        /// Required. The `Application` objects to unarchive.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUnarchiveApplicationsResponse> BatchUnarchiveApplicationsAsync(NetworkName parent, scg::IEnumerable<ApplicationName> names, st::CancellationToken cancellationToken) =>
+            BatchUnarchiveApplicationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ApplicationService client wrapper implementation, for convenient use.</summary>
@@ -495,6 +1402,18 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<GetApplicationRequest, Application> _callGetApplication;
 
         private readonly gaxgrpc::ApiCall<ListApplicationsRequest, ListApplicationsResponse> _callListApplications;
+
+        private readonly gaxgrpc::ApiCall<CreateApplicationRequest, Application> _callCreateApplication;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateApplicationsRequest, BatchCreateApplicationsResponse> _callBatchCreateApplications;
+
+        private readonly gaxgrpc::ApiCall<UpdateApplicationRequest, Application> _callUpdateApplication;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateApplicationsRequest, BatchUpdateApplicationsResponse> _callBatchUpdateApplications;
+
+        private readonly gaxgrpc::ApiCall<BatchArchiveApplicationsRequest, BatchArchiveApplicationsResponse> _callBatchArchiveApplications;
+
+        private readonly gaxgrpc::ApiCall<BatchUnarchiveApplicationsRequest, BatchUnarchiveApplicationsResponse> _callBatchUnarchiveApplications;
 
         /// <summary>
         /// Constructs a client wrapper for the ApplicationService service, with the specified gRPC client and settings.
@@ -517,6 +1436,24 @@ namespace Google.Ads.AdManager.V1
             _callListApplications = clientHelper.BuildApiCall<ListApplicationsRequest, ListApplicationsResponse>("ListApplications", grpcClient.ListApplicationsAsync, grpcClient.ListApplications, effectiveSettings.ListApplicationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListApplications);
             Modify_ListApplicationsApiCall(ref _callListApplications);
+            _callCreateApplication = clientHelper.BuildApiCall<CreateApplicationRequest, Application>("CreateApplication", grpcClient.CreateApplicationAsync, grpcClient.CreateApplication, effectiveSettings.CreateApplicationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateApplication);
+            Modify_CreateApplicationApiCall(ref _callCreateApplication);
+            _callBatchCreateApplications = clientHelper.BuildApiCall<BatchCreateApplicationsRequest, BatchCreateApplicationsResponse>("BatchCreateApplications", grpcClient.BatchCreateApplicationsAsync, grpcClient.BatchCreateApplications, effectiveSettings.BatchCreateApplicationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateApplications);
+            Modify_BatchCreateApplicationsApiCall(ref _callBatchCreateApplications);
+            _callUpdateApplication = clientHelper.BuildApiCall<UpdateApplicationRequest, Application>("UpdateApplication", grpcClient.UpdateApplicationAsync, grpcClient.UpdateApplication, effectiveSettings.UpdateApplicationSettings).WithGoogleRequestParam("application.name", request => request.Application?.Name);
+            Modify_ApiCall(ref _callUpdateApplication);
+            Modify_UpdateApplicationApiCall(ref _callUpdateApplication);
+            _callBatchUpdateApplications = clientHelper.BuildApiCall<BatchUpdateApplicationsRequest, BatchUpdateApplicationsResponse>("BatchUpdateApplications", grpcClient.BatchUpdateApplicationsAsync, grpcClient.BatchUpdateApplications, effectiveSettings.BatchUpdateApplicationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateApplications);
+            Modify_BatchUpdateApplicationsApiCall(ref _callBatchUpdateApplications);
+            _callBatchArchiveApplications = clientHelper.BuildApiCall<BatchArchiveApplicationsRequest, BatchArchiveApplicationsResponse>("BatchArchiveApplications", grpcClient.BatchArchiveApplicationsAsync, grpcClient.BatchArchiveApplications, effectiveSettings.BatchArchiveApplicationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchArchiveApplications);
+            Modify_BatchArchiveApplicationsApiCall(ref _callBatchArchiveApplications);
+            _callBatchUnarchiveApplications = clientHelper.BuildApiCall<BatchUnarchiveApplicationsRequest, BatchUnarchiveApplicationsResponse>("BatchUnarchiveApplications", grpcClient.BatchUnarchiveApplicationsAsync, grpcClient.BatchUnarchiveApplications, effectiveSettings.BatchUnarchiveApplicationsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUnarchiveApplications);
+            Modify_BatchUnarchiveApplicationsApiCall(ref _callBatchUnarchiveApplications);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -526,6 +1463,18 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListApplicationsApiCall(ref gaxgrpc::ApiCall<ListApplicationsRequest, ListApplicationsResponse> call);
 
+        partial void Modify_CreateApplicationApiCall(ref gaxgrpc::ApiCall<CreateApplicationRequest, Application> call);
+
+        partial void Modify_BatchCreateApplicationsApiCall(ref gaxgrpc::ApiCall<BatchCreateApplicationsRequest, BatchCreateApplicationsResponse> call);
+
+        partial void Modify_UpdateApplicationApiCall(ref gaxgrpc::ApiCall<UpdateApplicationRequest, Application> call);
+
+        partial void Modify_BatchUpdateApplicationsApiCall(ref gaxgrpc::ApiCall<BatchUpdateApplicationsRequest, BatchUpdateApplicationsResponse> call);
+
+        partial void Modify_BatchArchiveApplicationsApiCall(ref gaxgrpc::ApiCall<BatchArchiveApplicationsRequest, BatchArchiveApplicationsResponse> call);
+
+        partial void Modify_BatchUnarchiveApplicationsApiCall(ref gaxgrpc::ApiCall<BatchUnarchiveApplicationsRequest, BatchUnarchiveApplicationsResponse> call);
+
         partial void OnConstruction(ApplicationService.ApplicationServiceClient grpcClient, ApplicationServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ApplicationService client</summary>
@@ -534,6 +1483,18 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetApplicationRequest(ref GetApplicationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListApplicationsRequest(ref ListApplicationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateApplicationRequest(ref CreateApplicationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateApplicationsRequest(ref BatchCreateApplicationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateApplicationRequest(ref UpdateApplicationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateApplicationsRequest(ref BatchUpdateApplicationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchArchiveApplicationsRequest(ref BatchArchiveApplicationsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUnarchiveApplicationsRequest(ref BatchUnarchiveApplicationsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// API to retrieve a `Application` object.
@@ -581,6 +1542,150 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListApplicationsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListApplicationsRequest, ListApplicationsResponse, Application>(_callListApplications, request, callSettings);
+        }
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Application CreateApplication(CreateApplicationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateApplicationRequest(ref request, ref callSettings);
+            return _callCreateApplication.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to create a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Application> CreateApplicationAsync(CreateApplicationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateApplicationRequest(ref request, ref callSettings);
+            return _callCreateApplication.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateApplicationsResponse BatchCreateApplications(BatchCreateApplicationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateApplicationsRequest(ref request, ref callSettings);
+            return _callBatchCreateApplications.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch create `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateApplicationsResponse> BatchCreateApplicationsAsync(BatchCreateApplicationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateApplicationsRequest(ref request, ref callSettings);
+            return _callBatchCreateApplications.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to update a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Application UpdateApplication(UpdateApplicationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateApplicationRequest(ref request, ref callSettings);
+            return _callUpdateApplication.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to update a `Application` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Application> UpdateApplicationAsync(UpdateApplicationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateApplicationRequest(ref request, ref callSettings);
+            return _callUpdateApplication.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateApplicationsResponse BatchUpdateApplications(BatchUpdateApplicationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateApplicationsRequest(ref request, ref callSettings);
+            return _callBatchUpdateApplications.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// API to batch update `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateApplicationsResponse> BatchUpdateApplicationsAsync(BatchUpdateApplicationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateApplicationsRequest(ref request, ref callSettings);
+            return _callBatchUpdateApplications.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchArchiveApplicationsResponse BatchArchiveApplications(BatchArchiveApplicationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchArchiveApplicationsRequest(ref request, ref callSettings);
+            return _callBatchArchiveApplications.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// / API to batch archive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchArchiveApplicationsResponse> BatchArchiveApplicationsAsync(BatchArchiveApplicationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchArchiveApplicationsRequest(ref request, ref callSettings);
+            return _callBatchArchiveApplications.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUnarchiveApplicationsResponse BatchUnarchiveApplications(BatchUnarchiveApplicationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUnarchiveApplicationsRequest(ref request, ref callSettings);
+            return _callBatchUnarchiveApplications.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// / API to batch unarchive `Application` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUnarchiveApplicationsResponse> BatchUnarchiveApplicationsAsync(BatchUnarchiveApplicationsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUnarchiveApplicationsRequest(ref request, ref callSettings);
+            return _callBatchUnarchiveApplications.Async(request, callSettings);
         }
     }
 

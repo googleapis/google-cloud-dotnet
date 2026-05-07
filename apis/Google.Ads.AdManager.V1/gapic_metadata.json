@@ -145,6 +145,36 @@
         "grpc": {
           "libraryClient": "ApplicationServiceClient",
           "rpcs": {
+            "BatchArchiveApplications": {
+              "methods": [
+                "BatchArchiveApplications",
+                "BatchArchiveApplicationsAsync"
+              ]
+            },
+            "BatchCreateApplications": {
+              "methods": [
+                "BatchCreateApplications",
+                "BatchCreateApplicationsAsync"
+              ]
+            },
+            "BatchUnarchiveApplications": {
+              "methods": [
+                "BatchUnarchiveApplications",
+                "BatchUnarchiveApplicationsAsync"
+              ]
+            },
+            "BatchUpdateApplications": {
+              "methods": [
+                "BatchUpdateApplications",
+                "BatchUpdateApplicationsAsync"
+              ]
+            },
+            "CreateApplication": {
+              "methods": [
+                "CreateApplication",
+                "CreateApplicationAsync"
+              ]
+            },
             "GetApplication": {
               "methods": [
                 "GetApplication",
@@ -155,6 +185,12 @@
               "methods": [
                 "ListApplications",
                 "ListApplicationsAsync"
+              ]
+            },
+            "UpdateApplication": {
+              "methods": [
+                "UpdateApplication",
+                "UpdateApplicationAsync"
               ]
             }
           }
@@ -250,6 +286,18 @@
         "grpc": {
           "libraryClient": "CmsMetadataKeyServiceClient",
           "rpcs": {
+            "BatchActivateCmsMetadataKeys": {
+              "methods": [
+                "BatchActivateCmsMetadataKeys",
+                "BatchActivateCmsMetadataKeysAsync"
+              ]
+            },
+            "BatchDeactivateCmsMetadataKeys": {
+              "methods": [
+                "BatchDeactivateCmsMetadataKeys",
+                "BatchDeactivateCmsMetadataKeysAsync"
+              ]
+            },
             "GetCmsMetadataKey": {
               "methods": [
                 "GetCmsMetadataKey",
@@ -271,6 +319,18 @@
         "grpc": {
           "libraryClient": "CmsMetadataValueServiceClient",
           "rpcs": {
+            "BatchActivateCmsMetadataValues": {
+              "methods": [
+                "BatchActivateCmsMetadataValues",
+                "BatchActivateCmsMetadataValuesAsync"
+              ]
+            },
+            "BatchDeactivateCmsMetadataValues": {
+              "methods": [
+                "BatchDeactivateCmsMetadataValues",
+                "BatchDeactivateCmsMetadataValuesAsync"
+              ]
+            },
             "GetCmsMetadataValue": {
               "methods": [
                 "GetCmsMetadataValue",
@@ -701,6 +761,63 @@
         }
       }
     },
+    "LabelService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LabelServiceClient",
+          "rpcs": {
+            "BatchActivateLabels": {
+              "methods": [
+                "BatchActivateLabels",
+                "BatchActivateLabelsAsync"
+              ]
+            },
+            "BatchCreateLabels": {
+              "methods": [
+                "BatchCreateLabels",
+                "BatchCreateLabelsAsync"
+              ]
+            },
+            "BatchDeactivateLabels": {
+              "methods": [
+                "BatchDeactivateLabels",
+                "BatchDeactivateLabelsAsync"
+              ]
+            },
+            "BatchUpdateLabels": {
+              "methods": [
+                "BatchUpdateLabels",
+                "BatchUpdateLabelsAsync"
+              ]
+            },
+            "CreateLabel": {
+              "methods": [
+                "CreateLabel",
+                "CreateLabelAsync"
+              ]
+            },
+            "GetLabel": {
+              "methods": [
+                "GetLabel",
+                "GetLabelAsync"
+              ]
+            },
+            "ListLabels": {
+              "methods": [
+                "ListLabels",
+                "ListLabelsAsync"
+              ]
+            },
+            "UpdateLabel": {
+              "methods": [
+                "UpdateLabel",
+                "UpdateLabelAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "LineItemService": {
       "clients": {
         "grpc": {
@@ -716,6 +833,42 @@
               "methods": [
                 "ListLineItems",
                 "ListLineItemsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "LinkedDeviceService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LinkedDeviceServiceClient",
+          "rpcs": {
+            "GetLinkedDevice": {
+              "methods": [
+                "GetLinkedDevice",
+                "GetLinkedDeviceAsync"
+              ]
+            },
+            "ListLinkedDevices": {
+              "methods": [
+                "ListLinkedDevices",
+                "ListLinkedDevicesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "McmEarningsService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "McmEarningsServiceClient",
+          "rpcs": {
+            "FetchMcmEarnings": {
+              "methods": [
+                "FetchMcmEarnings",
+                "FetchMcmEarningsAsync"
               ]
             }
           }
@@ -1058,6 +1211,27 @@
               "methods": [
                 "UpdateReport",
                 "UpdateReportAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "RichMediaAdsCompanyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "RichMediaAdsCompanyServiceClient",
+          "rpcs": {
+            "GetRichMediaAdsCompany": {
+              "methods": [
+                "GetRichMediaAdsCompany",
+                "GetRichMediaAdsCompanyAsync"
+              ]
+            },
+            "ListRichMediaAdsCompanies": {
+              "methods": [
+                "ListRichMediaAdsCompanies",
+                "ListRichMediaAdsCompaniesAsync"
               ]
             }
           }

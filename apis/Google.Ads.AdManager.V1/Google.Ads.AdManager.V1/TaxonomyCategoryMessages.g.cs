@@ -28,25 +28,25 @@ namespace Google.Ads.AdManager.V1 {
             "ZXNzYWdlcy5wcm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaMGdvb2ds",
             "ZS9hZHMvYWRtYW5hZ2VyL3YxL3RheG9ub215X3R5cGVfZW51bS5wcm90bxof",
             "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90byLmBAoQVGF4b25vbXlDYXRlZ29yeRIRCgRuYW1lGAEg",
-            "ASgJQgPgQQgSJgoUdGF4b25vbXlfY2F0ZWdvcnlfaWQYAiABKANCA+BBA0gA",
-            "iAEBEh4KDGRpc3BsYXlfbmFtZRgDIAEoCUID4EEDSAGIAQESHwoNZ3JvdXBp",
-            "bmdfb25seRgFIAEoCEID4EEDSAKIAQESLQobcGFyZW50X3RheG9ub215X2Nh",
-            "dGVnb3J5X2lkGAYgASgDQgPgQQNIA4gBARJXCg10YXhvbm9teV90eXBlGAkg",
-            "ASgOMjYuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVGF4b25vbXlUeXBlRW51",
-            "bS5UYXhvbm9teVR5cGVCA+BBA0gEiAEBEhsKDmFuY2VzdG9yX25hbWVzGAcg",
-            "AygJQgPgQQMSKwoeYW5jZXN0b3JfdGF4b25vbXlfY2F0ZWdvcnlfaWRzGAgg",
-            "AygDQgPgQQM6lQHqQZEBCilhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vVGF4",
-            "b25vbXlDYXRlZ29yeRI+bmV0d29ya3Mve25ldHdvcmtfY29kZX0vdGF4b25v",
-            "bXlDYXRlZ29yaWVzL3t0YXhvbm9teV9jYXRlZ29yeX0qEnRheG9ub215Q2F0",
-            "ZWdvcmllczIQdGF4b25vbXlDYXRlZ29yeUIXChVfdGF4b25vbXlfY2F0ZWdv",
-            "cnlfaWRCDwoNX2Rpc3BsYXlfbmFtZUIQCg5fZ3JvdXBpbmdfb25seUIeChxf",
-            "cGFyZW50X3RheG9ub215X2NhdGVnb3J5X2lkQhAKDl90YXhvbm9teV90eXBl",
-            "QtEBChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCHVRheG9ub215Q2F0",
-            "ZWdvcnlNZXNzYWdlc1Byb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdlci92MTthZG1hbmFnZXKqAhdH",
-            "b29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dvb2dsZVxBZHNcQWRNYW5hZ2Vy",
-            "XFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "ZXNvdXJjZS5wcm90byLoBAoQVGF4b25vbXlDYXRlZ29yeRIRCgRuYW1lGAEg",
+            "ASgJQgPgQQgSKAoUdGF4b25vbXlfY2F0ZWdvcnlfaWQYAiABKANCBRgB4EED",
+            "SACIAQESHgoMZGlzcGxheV9uYW1lGAMgASgJQgPgQQNIAYgBARIfCg1ncm91",
+            "cGluZ19vbmx5GAUgASgIQgPgQQNIAogBARItChtwYXJlbnRfdGF4b25vbXlf",
+            "Y2F0ZWdvcnlfaWQYBiABKANCA+BBA0gDiAEBElcKDXRheG9ub215X3R5cGUY",
+            "CSABKA4yNi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UYXhvbm9teVR5cGVF",
+            "bnVtLlRheG9ub215VHlwZUID4EEDSASIAQESGwoOYW5jZXN0b3JfbmFtZXMY",
+            "ByADKAlCA+BBAxIrCh5hbmNlc3Rvcl90YXhvbm9teV9jYXRlZ29yeV9pZHMY",
+            "CCADKANCA+BBAzqVAepBkQEKKWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9U",
+            "YXhvbm9teUNhdGVnb3J5Ej5uZXR3b3Jrcy97bmV0d29ya19jb2RlfS90YXhv",
+            "bm9teUNhdGVnb3JpZXMve3RheG9ub215X2NhdGVnb3J5fSoSdGF4b25vbXlD",
+            "YXRlZ29yaWVzMhB0YXhvbm9teUNhdGVnb3J5QhcKFV90YXhvbm9teV9jYXRl",
+            "Z29yeV9pZEIPCg1fZGlzcGxheV9uYW1lQhAKDl9ncm91cGluZ19vbmx5Qh4K",
+            "HF9wYXJlbnRfdGF4b25vbXlfY2F0ZWdvcnlfaWRCEAoOX3RheG9ub215X3R5",
+            "cGVC0QEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIdVGF4b25vbXlD",
+            "YXRlZ29yeU1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
+            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
+            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
+            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.TaxonomyTypeEnumReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -136,8 +136,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long taxonomyCategoryId_;
     /// <summary>
-    /// Output only. `TaxonomyCategory` ID.
+    /// Output only. Deprecated: `TaxonomyCategory` ID.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TaxonomyCategoryId {
@@ -148,12 +149,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "taxonomy_category_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasTaxonomyCategoryId {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "taxonomy_category_id" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTaxonomyCategoryId() {

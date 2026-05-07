@@ -27,25 +27,25 @@ namespace Google.Ads.AdManager.V1 {
             "CjZnb29nbGUvYWRzL2FkbWFuYWdlci92MS9wcml2YXRlX2F1Y3Rpb25fbWVz",
             "c2FnZXMucHJvdG8SF2dvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxGh9nb29nbGUv",
             "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItAECg5Q",
-            "cml2YXRlQXVjdGlvbhIRCgRuYW1lGAEgASgJQgPgQQgSJAoScHJpdmF0ZV9h",
-            "dWN0aW9uX2lkGAIgASgDQgPgQQNIAIgBARIeCgxkaXNwbGF5X25hbWUYAyAB",
-            "KAlCA+BBAkgBiAEBEh0KC2Rlc2NyaXB0aW9uGAQgASgJQgPgQQFIAogBARJD",
-            "ChRzZWxsZXJfY29udGFjdF91c2VycxgJIAMoCUIl4EEB+kEfCh1hZG1hbmFn",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vVXNlchIaCghhcmNoaXZlZBgGIAEoCEID4EED",
-            "SAOIAQESOQoLY3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQNIBIgBARI5Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gFiAEBOokB6kGFAQonYWRt",
-            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL1ByaXZhdGVBdWN0aW9uEjluZXR3b3Jr",
-            "cy97bmV0d29ya19jb2RlfS9wcml2YXRlQXVjdGlvbnMve3ByaXZhdGVfYXVj",
-            "dGlvbn0qD3ByaXZhdGVBdWN0aW9uczIOcHJpdmF0ZUF1Y3Rpb25CFQoTX3By",
-            "aXZhdGVfYXVjdGlvbl9pZEIPCg1fZGlzcGxheV9uYW1lQg4KDF9kZXNjcmlw",
-            "dGlvbkILCglfYXJjaGl2ZWRCDgoMX2NyZWF0ZV90aW1lQg4KDF91cGRhdGVf",
-            "dGltZULPAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhtQcml2YXRl",
-            "QXVjdGlvbk1lc3NhZ2VzUHJvdG9QAVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2Vu",
-            "cHJvdG8vZ29vZ2xlYXBpcy9hZHMvYWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoC",
-            "F0dvb2dsZS5BZHMuQWRNYW5hZ2VyLlYxygIXR29vZ2xlXEFkc1xBZE1hbmFn",
-            "ZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItIECg5Q",
+            "cml2YXRlQXVjdGlvbhIRCgRuYW1lGAEgASgJQgPgQQgSJgoScHJpdmF0ZV9h",
+            "dWN0aW9uX2lkGAIgASgDQgUYAeBBA0gAiAEBEh4KDGRpc3BsYXlfbmFtZRgD",
+            "IAEoCUID4EECSAGIAQESHQoLZGVzY3JpcHRpb24YBCABKAlCA+BBAUgCiAEB",
+            "EkMKFHNlbGxlcl9jb250YWN0X3VzZXJzGAkgAygJQiXgQQH6QR8KHWFkbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9Vc2VyEhoKCGFyY2hpdmVkGAYgASgIQgPg",
+            "QQNIA4gBARI5CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBA0gEiAEBEjkKC3VwZGF0ZV90aW1lGAggASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDSAWIAQE6iQHqQYUBCidh",
+            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vUHJpdmF0ZUF1Y3Rpb24SOW5ldHdv",
+            "cmtzL3tuZXR3b3JrX2NvZGV9L3ByaXZhdGVBdWN0aW9ucy97cHJpdmF0ZV9h",
+            "dWN0aW9ufSoPcHJpdmF0ZUF1Y3Rpb25zMg5wcml2YXRlQXVjdGlvbkIVChNf",
+            "cHJpdmF0ZV9hdWN0aW9uX2lkQg8KDV9kaXNwbGF5X25hbWVCDgoMX2Rlc2Ny",
+            "aXB0aW9uQgsKCV9hcmNoaXZlZEIOCgxfY3JlYXRlX3RpbWVCDgoMX3VwZGF0",
+            "ZV90aW1lQs8BChtjb20uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjFCG1ByaXZh",
+            "dGVBdWN0aW9uTWVzc2FnZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2Vy",
+            "qgIXR29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFu",
+            "YWdlclxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -136,8 +136,9 @@ namespace Google.Ads.AdManager.V1 {
 
     private long privateAuctionId_;
     /// <summary>
-    /// Output only. `PrivateAuction` ID.
+    /// Output only. Deprecated: `PrivateAuction` ID.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long PrivateAuctionId {
@@ -148,12 +149,14 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
     /// <summary>Gets whether the "private_auction_id" field is set</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasPrivateAuctionId {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "private_auction_id" field</summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPrivateAuctionId() {
