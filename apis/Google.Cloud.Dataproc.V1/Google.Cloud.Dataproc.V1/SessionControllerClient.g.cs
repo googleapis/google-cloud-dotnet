@@ -255,11 +255,15 @@ namespace Google.Cloud.Dataproc.V1
         /// The default SessionController scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataproc</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataproc.read-only</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/dataproc",
+            "https://www.googleapis.com/auth/dataproc.read-only",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>

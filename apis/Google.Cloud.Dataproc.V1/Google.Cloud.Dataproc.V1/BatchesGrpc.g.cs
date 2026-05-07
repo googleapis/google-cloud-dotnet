@@ -159,8 +159,10 @@ namespace Google.Cloud.Dataproc.V1 {
       }
 
       /// <summary>
-      /// Deletes the batch workload resource. If the batch is not in terminal state,
-      /// the delete fails and the response returns `FAILED_PRECONDITION`.
+      /// Deletes the batch workload resource. If the batch is not in a
+      /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+      /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+      /// and the response returns `FAILED_PRECONDITION`.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -345,8 +347,10 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListBatches, null, options, request);
       }
       /// <summary>
-      /// Deletes the batch workload resource. If the batch is not in terminal state,
-      /// the delete fails and the response returns `FAILED_PRECONDITION`.
+      /// Deletes the batch workload resource. If the batch is not in a
+      /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+      /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+      /// and the response returns `FAILED_PRECONDITION`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -359,8 +363,10 @@ namespace Google.Cloud.Dataproc.V1 {
         return DeleteBatch(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the batch workload resource. If the batch is not in terminal state,
-      /// the delete fails and the response returns `FAILED_PRECONDITION`.
+      /// Deletes the batch workload resource. If the batch is not in a
+      /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+      /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+      /// and the response returns `FAILED_PRECONDITION`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -371,8 +377,10 @@ namespace Google.Cloud.Dataproc.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteBatch, null, options, request);
       }
       /// <summary>
-      /// Deletes the batch workload resource. If the batch is not in terminal state,
-      /// the delete fails and the response returns `FAILED_PRECONDITION`.
+      /// Deletes the batch workload resource. If the batch is not in a
+      /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+      /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+      /// and the response returns `FAILED_PRECONDITION`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -385,8 +393,10 @@ namespace Google.Cloud.Dataproc.V1 {
         return DeleteBatchAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes the batch workload resource. If the batch is not in terminal state,
-      /// the delete fails and the response returns `FAILED_PRECONDITION`.
+      /// Deletes the batch workload resource. If the batch is not in a
+      /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+      /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+      /// and the response returns `FAILED_PRECONDITION`.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

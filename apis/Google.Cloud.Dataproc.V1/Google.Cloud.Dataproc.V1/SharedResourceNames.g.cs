@@ -771,6 +771,18 @@ namespace Google.Cloud.Dataproc.V1
         public static bool operator !=(CryptoKeyName a, CryptoKeyName b) => !(a == b);
     }
 
+    public partial class ExecutionConfig
+    {
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKey"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKey) ? null : CryptoKeyName.Parse(KmsKey, allowUnparsed: true);
+            set => KmsKey = value?.ToString() ?? "";
+        }
+    }
+
     public partial class PeripheralsConfig
     {
         /// <summary>
@@ -792,6 +804,24 @@ namespace Google.Cloud.Dataproc.V1
         {
             get => string.IsNullOrEmpty(GkeClusterTarget) ? null : ClusterName.Parse(GkeClusterTarget, allowUnparsed: true);
             set => GkeClusterTarget = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GkeNodePoolConfig
+    {
+        public partial class Types
+        {
+            public partial class GkeNodeConfig
+            {
+                /// <summary>
+                /// <see cref="CryptoKeyName"/>-typed view over the <see cref="BootDiskKmsKey"/> resource name property.
+                /// </summary>
+                public CryptoKeyName BootDiskKmsKeyAsCryptoKeyName
+                {
+                    get => string.IsNullOrEmpty(BootDiskKmsKey) ? null : CryptoKeyName.Parse(BootDiskKmsKey, allowUnparsed: true);
+                    set => BootDiskKmsKey = value?.ToString() ?? "";
+                }
+            }
         }
     }
 }

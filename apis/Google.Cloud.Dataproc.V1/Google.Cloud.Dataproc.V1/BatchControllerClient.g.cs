@@ -205,11 +205,15 @@ namespace Google.Cloud.Dataproc.V1
         /// The default BatchController scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataproc</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataproc.read-only</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/dataproc",
+            "https://www.googleapis.com/auth/dataproc.read-only",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -736,8 +740,10 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -746,8 +752,10 @@ namespace Google.Cloud.Dataproc.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -756,8 +764,10 @@ namespace Google.Cloud.Dataproc.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -766,8 +776,10 @@ namespace Google.Cloud.Dataproc.V1
             DeleteBatchAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
         /// Required. The fully qualified name of the batch to retrieve
@@ -783,8 +795,10 @@ namespace Google.Cloud.Dataproc.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
         /// Required. The fully qualified name of the batch to retrieve
@@ -800,8 +814,10 @@ namespace Google.Cloud.Dataproc.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
         /// Required. The fully qualified name of the batch to retrieve
@@ -814,8 +830,10 @@ namespace Google.Cloud.Dataproc.V1
             DeleteBatchAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
         /// Required. The fully qualified name of the batch to retrieve
@@ -831,8 +849,10 @@ namespace Google.Cloud.Dataproc.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
         /// Required. The fully qualified name of the batch to retrieve
@@ -848,8 +868,10 @@ namespace Google.Cloud.Dataproc.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="name">
         /// Required. The fully qualified name of the batch to retrieve
@@ -1010,8 +1032,10 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1023,8 +1047,10 @@ namespace Google.Cloud.Dataproc.V1
         }
 
         /// <summary>
-        /// Deletes the batch workload resource. If the batch is not in terminal state,
-        /// the delete fails and the response returns `FAILED_PRECONDITION`.
+        /// Deletes the batch workload resource. If the batch is not in a
+        /// `CANCELLED`, `SUCCEEDED` or `FAILED`
+        /// [`State`][google.cloud.dataproc.v1.Batch.State], the delete operation fails
+        /// and the response returns `FAILED_PRECONDITION`.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
