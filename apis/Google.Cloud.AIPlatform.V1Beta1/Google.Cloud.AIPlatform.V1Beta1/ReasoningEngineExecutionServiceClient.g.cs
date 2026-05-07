@@ -54,6 +54,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             StreamQueryReasoningEngineSettings = existing.StreamQueryReasoningEngineSettings;
             AsyncQueryReasoningEngineSettings = existing.AsyncQueryReasoningEngineSettings;
             AsyncQueryReasoningEngineOperationsSettings = existing.AsyncQueryReasoningEngineOperationsSettings.Clone();
+            CancelAsyncQueryReasoningEngineSettings = existing.CancelAsyncQueryReasoningEngineSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -118,6 +119,19 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReasoningEngineExecutionServiceClient.CancelAsyncQueryReasoningEngine</c> and
+        /// <c>ReasoningEngineExecutionServiceClient.CancelAsyncQueryReasoningEngineAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelAsyncQueryReasoningEngineSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -377,6 +391,33 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata>> PollOnceAsyncQueryReasoningEngineAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AsyncQueryReasoningEngineOperationsClient, callSettings);
+
+        /// <summary>
+        /// Cancels an AsyncQueryReasoningEngine operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelAsyncQueryReasoningEngineResponse CancelAsyncQueryReasoningEngine(CancelAsyncQueryReasoningEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an AsyncQueryReasoningEngine operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAsyncQueryReasoningEngineResponse> CancelAsyncQueryReasoningEngineAsync(CancelAsyncQueryReasoningEngineRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels an AsyncQueryReasoningEngine operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelAsyncQueryReasoningEngineResponse> CancelAsyncQueryReasoningEngineAsync(CancelAsyncQueryReasoningEngineRequest request, st::CancellationToken cancellationToken) =>
+            CancelAsyncQueryReasoningEngineAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ReasoningEngineExecutionService client wrapper implementation, for convenient use.</summary>
@@ -390,6 +431,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         private readonly gaxgrpc::ApiServerStreamingCall<StreamQueryReasoningEngineRequest, ga::HttpBody> _callStreamQueryReasoningEngine;
 
         private readonly gaxgrpc::ApiCall<AsyncQueryReasoningEngineRequest, lro::Operation> _callAsyncQueryReasoningEngine;
+
+        private readonly gaxgrpc::ApiCall<CancelAsyncQueryReasoningEngineRequest, CancelAsyncQueryReasoningEngineResponse> _callCancelAsyncQueryReasoningEngine;
 
         /// <summary>
         /// Constructs a client wrapper for the ReasoningEngineExecutionService service, with the specified gRPC client
@@ -421,6 +464,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1
             _callAsyncQueryReasoningEngine = clientHelper.BuildApiCall<AsyncQueryReasoningEngineRequest, lro::Operation>("AsyncQueryReasoningEngine", grpcClient.AsyncQueryReasoningEngineAsync, grpcClient.AsyncQueryReasoningEngine, effectiveSettings.AsyncQueryReasoningEngineSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callAsyncQueryReasoningEngine);
             Modify_AsyncQueryReasoningEngineApiCall(ref _callAsyncQueryReasoningEngine);
+            _callCancelAsyncQueryReasoningEngine = clientHelper.BuildApiCall<CancelAsyncQueryReasoningEngineRequest, CancelAsyncQueryReasoningEngineResponse>("CancelAsyncQueryReasoningEngine", grpcClient.CancelAsyncQueryReasoningEngineAsync, grpcClient.CancelAsyncQueryReasoningEngine, effectiveSettings.CancelAsyncQueryReasoningEngineSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelAsyncQueryReasoningEngine);
+            Modify_CancelAsyncQueryReasoningEngineApiCall(ref _callCancelAsyncQueryReasoningEngine);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -433,6 +479,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_StreamQueryReasoningEngineApiCall(ref gaxgrpc::ApiServerStreamingCall<StreamQueryReasoningEngineRequest, ga::HttpBody> call);
 
         partial void Modify_AsyncQueryReasoningEngineApiCall(ref gaxgrpc::ApiCall<AsyncQueryReasoningEngineRequest, lro::Operation> call);
+
+        partial void Modify_CancelAsyncQueryReasoningEngineApiCall(ref gaxgrpc::ApiCall<CancelAsyncQueryReasoningEngineRequest, CancelAsyncQueryReasoningEngineResponse> call);
 
         partial void OnConstruction(ReasoningEngineExecutionService.ReasoningEngineExecutionServiceClient grpcClient, ReasoningEngineExecutionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -450,6 +498,8 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         partial void Modify_StreamQueryReasoningEngineRequest(ref StreamQueryReasoningEngineRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AsyncQueryReasoningEngineRequest(ref AsyncQueryReasoningEngineRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelAsyncQueryReasoningEngineRequest(ref CancelAsyncQueryReasoningEngineRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Queries using a reasoning engine.
@@ -521,6 +571,30 @@ namespace Google.Cloud.AIPlatform.V1Beta1
         {
             Modify_AsyncQueryReasoningEngineRequest(ref request, ref callSettings);
             return new lro::Operation<AsyncQueryReasoningEngineResponse, AsyncQueryReasoningEngineOperationMetadata>(await _callAsyncQueryReasoningEngine.Async(request, callSettings).ConfigureAwait(false), AsyncQueryReasoningEngineOperationsClient);
+        }
+
+        /// <summary>
+        /// Cancels an AsyncQueryReasoningEngine operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CancelAsyncQueryReasoningEngineResponse CancelAsyncQueryReasoningEngine(CancelAsyncQueryReasoningEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelAsyncQueryReasoningEngineRequest(ref request, ref callSettings);
+            return _callCancelAsyncQueryReasoningEngine.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels an AsyncQueryReasoningEngine operation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CancelAsyncQueryReasoningEngineResponse> CancelAsyncQueryReasoningEngineAsync(CancelAsyncQueryReasoningEngineRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelAsyncQueryReasoningEngineRequest(ref request, ref callSettings);
+            return _callCancelAsyncQueryReasoningEngine.Async(request, callSettings);
         }
     }
 
