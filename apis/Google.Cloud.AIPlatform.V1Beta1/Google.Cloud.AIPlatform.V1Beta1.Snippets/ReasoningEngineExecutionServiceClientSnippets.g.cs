@@ -159,5 +159,40 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CancelAsyncQueryReasoningEngine</summary>
+        public void CancelAsyncQueryReasoningEngineRequestObject()
+        {
+            // Snippet: CancelAsyncQueryReasoningEngine(CancelAsyncQueryReasoningEngineRequest, CallSettings)
+            // Create client
+            ReasoningEngineExecutionServiceClient reasoningEngineExecutionServiceClient = ReasoningEngineExecutionServiceClient.Create();
+            // Initialize request argument(s)
+            CancelAsyncQueryReasoningEngineRequest request = new CancelAsyncQueryReasoningEngineRequest
+            {
+                ReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
+                OperationName = "",
+            };
+            // Make the request
+            CancelAsyncQueryReasoningEngineResponse response = reasoningEngineExecutionServiceClient.CancelAsyncQueryReasoningEngine(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelAsyncQueryReasoningEngineAsync</summary>
+        public async Task CancelAsyncQueryReasoningEngineRequestObjectAsync()
+        {
+            // Snippet: CancelAsyncQueryReasoningEngineAsync(CancelAsyncQueryReasoningEngineRequest, CallSettings)
+            // Additional: CancelAsyncQueryReasoningEngineAsync(CancelAsyncQueryReasoningEngineRequest, CancellationToken)
+            // Create client
+            ReasoningEngineExecutionServiceClient reasoningEngineExecutionServiceClient = await ReasoningEngineExecutionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CancelAsyncQueryReasoningEngineRequest request = new CancelAsyncQueryReasoningEngineRequest
+            {
+                ReasoningEngineName = ReasoningEngineName.FromProjectLocationReasoningEngine("[PROJECT]", "[LOCATION]", "[REASONING_ENGINE]"),
+                OperationName = "",
+            };
+            // Make the request
+            CancelAsyncQueryReasoningEngineResponse response = await reasoningEngineExecutionServiceClient.CancelAsyncQueryReasoningEngineAsync(request);
+            // End snippet
+        }
     }
 }
