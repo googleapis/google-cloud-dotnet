@@ -47,7 +47,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "cmVxdWVzdF9pZBgCIAEoCUID4EEBImYKFERlbGV0ZVNlc3Npb25SZXF1ZXN0",
             "EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofZGF0YXByb2MuZ29vZ2xlYXBpcy5j",
             "b20vU2Vzc2lvbhIXCgpyZXF1ZXN0X2lkGAIgASgJQgPgQQEipwoKB1Nlc3Np",
-            "b24SEQoEbmFtZRgBIAEoCUID4EECEhEKBHV1aWQYAiABKAlCA+BBAxI0Cgtj",
+            "b24SEQoEbmFtZRgBIAEoCUID4EEIEhEKBHV1aWQYAiABKAlCA+BBAxI0Cgtj",
             "cmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
             "A+BBAxJHCg9qdXB5dGVyX3Nlc3Npb24YBCABKAsyJy5nb29nbGUuY2xvdWQu",
             "ZGF0YXByb2MudjEuSnVweXRlckNvbmZpZ0ID4EEBSAASUgoVc3BhcmtfY29u",
@@ -80,7 +80,7 @@ namespace Google.Cloud.Dataproc.V1 {
             "b29nbGUuY2xvdWQuZGF0YXByb2MudjEuSnVweXRlckNvbmZpZy5LZXJuZWxC",
             "A+BBARIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBASI3CgZLZXJuZWwSFgoS",
             "S0VSTkVMX1VOU1BFQ0lGSUVEEAASCgoGUFlUSE9OEAESCQoFU0NBTEEQAiIU",
-            "ChJTcGFya0Nvbm5lY3RDb25maWcy9QgKEVNlc3Npb25Db250cm9sbGVyEvkB",
+            "ChJTcGFya0Nvbm5lY3RDb25maWcy0wkKEVNlc3Npb25Db250cm9sbGVyEvkB",
             "Cg1DcmVhdGVTZXNzaW9uEi4uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxLkNy",
             "ZWF0ZVNlc3Npb25SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJh",
             "dGlvbiKYAcpBPAoHU2Vzc2lvbhIxZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYx",
@@ -104,11 +104,13 @@ namespace Google.Cloud.Dataproc.V1 {
             "Z3J1bm5pbmcuT3BlcmF0aW9uInrKQTwKB1Nlc3Npb24SMWdvb2dsZS5jbG91",
             "ZC5kYXRhcHJvYy52MS5TZXNzaW9uT3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1l",
             "gtPkkwIuKiwvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9zZXNz",
-            "aW9ucy8qfRpLykEXZGF0YXByb2MuZ29vZ2xlYXBpcy5jb23SQS5odHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQmwKHGNv",
-            "bS5nb29nbGUuY2xvdWQuZGF0YXByb2MudjFCDVNlc3Npb25zUHJvdG9QAVo7",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcHJvYy92Mi9hcGl2MS9kYXRhcHJv",
-            "Y3BiO2RhdGFwcm9jcGJiBnByb3RvMw=="));
+            "aW9ucy8qfRqoAcpBF2RhdGFwcm9jLmdvb2dsZWFwaXMuY29t0kGKAWh0dHBz",
+            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0",
+            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kYXRhcHJvYyxodHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RhdGFwcm9jLnJlYWQtb25seUJs",
+            "Chxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwcm9jLnYxQg1TZXNzaW9uc1Byb3Rv",
+            "UAFaO2Nsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXByb2MvdjIvYXBpdjEvZGF0",
+            "YXByb2NwYjtkYXRhcHJvY3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataproc.V1.SharedReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1834,7 +1836,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the session.
+    /// Identifier. The resource name of the session.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1894,7 +1896,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// <summary>Field number for the "spark_connect_session" field.</summary>
     public const int SparkConnectSessionFieldNumber = 17;
     /// <summary>
-    /// Optional. Spark Connect session config.
+    /// Optional. Spark connect session config.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3267,7 +3269,7 @@ namespace Google.Cloud.Dataproc.V1 {
   }
 
   /// <summary>
-  /// Spark Connect configuration for an interactive session.
+  /// Spark connect configuration for an interactive session.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class SparkConnectConfig : pb::IMessage<SparkConnectConfig>
