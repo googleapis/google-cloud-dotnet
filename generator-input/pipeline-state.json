@@ -4165,7 +4165,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-04T19:27:07.274566324Z",
-            "lastGeneratedCommit": "ef576481d03c4c969c0c930cf6998c0176f47015",
+            "lastGeneratedCommit": "392c8aa259daf4570073220faa9e842cf1e2e173",
             "lastReleasedCommit": "ef576481d03c4c969c0c930cf6998c0176f47015",
             "apiPaths": [
                 "google/iam/v3beta"
