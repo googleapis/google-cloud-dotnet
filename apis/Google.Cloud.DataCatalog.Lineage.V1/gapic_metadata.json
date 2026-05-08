@@ -94,6 +94,12 @@
                 "ProcessOpenLineageRunEventAsync"
               ]
             },
+            "SearchLineageStreaming": {
+              "methods": [
+                "SearchLineageStreaming",
+                "SearchLineageStreamingAsync"
+              ]
+            },
             "SearchLinks": {
               "methods": [
                 "SearchLinks",

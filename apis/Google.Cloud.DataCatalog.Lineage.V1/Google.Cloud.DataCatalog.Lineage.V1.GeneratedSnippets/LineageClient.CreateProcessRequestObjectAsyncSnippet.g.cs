@@ -40,7 +40,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Process = new Process(),
-                RequestId = "",
             };
             // Make the request
             Process response = await lineageClient.CreateProcessAsync(request);

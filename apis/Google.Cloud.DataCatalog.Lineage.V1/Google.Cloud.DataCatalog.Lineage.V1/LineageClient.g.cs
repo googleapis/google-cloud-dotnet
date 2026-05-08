@@ -67,6 +67,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
             DeleteLineageEventSettings = existing.DeleteLineageEventSettings;
             SearchLinksSettings = existing.SearchLinksSettings;
             BatchSearchLinkProcessesSettings = existing.BatchSearchLinkProcessesSettings;
+            SearchLineageStreamingSettings = existing.SearchLineageStreamingSettings;
             OnCopy(existing);
         }
 
@@ -413,6 +414,13 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BatchSearchLinkProcessesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>LineageClient.SearchLineageStreaming</c> and <c>LineageClient.SearchLineageStreamingAsync</c>.
+        /// </summary>
+        /// <remarks>Timeout: 60 seconds.</remarks>
+        public gaxgrpc::CallSettings SearchLineageStreamingSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="LineageSettings"/> object.</returns>
@@ -827,8 +835,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// The process's `name` field is used to identify the process to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update. Currently not used. The whole message is
-        /// updated.
+        /// Optional. The list of fields to update. Currently not used. The whole
+        /// message is updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -848,8 +856,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// The process's `name` field is used to identify the process to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update. Currently not used. The whole message is
-        /// updated.
+        /// Optional. The list of fields to update. Currently not used. The whole
+        /// message is updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -869,8 +877,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// The process's `name` field is used to identify the process to update.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update. Currently not used. The whole message is
-        /// updated.
+        /// Optional. The list of fields to update. Currently not used. The whole
+        /// message is updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1439,8 +1447,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// `projects/{project}/locations/{location}/processes/{process}/runs/{run}`.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update. Currently not used. The whole message is
-        /// updated.
+        /// Optional. The list of fields to update. Currently not used. The whole
+        /// message is updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1463,8 +1471,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// `projects/{project}/locations/{location}/processes/{process}/runs/{run}`.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update. Currently not used. The whole message is
-        /// updated.
+        /// Optional. The list of fields to update. Currently not used. The whole
+        /// message is updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1487,8 +1495,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// `projects/{project}/locations/{location}/processes/{process}/runs/{run}`.
         /// </param>
         /// <param name="updateMask">
-        /// The list of fields to update. Currently not used. The whole message is
-        /// updated.
+        /// Optional. The list of fields to update. Currently not used. The whole
+        /// message is updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2461,6 +2469,47 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>A pageable asynchronous sequence of <see cref="ProcessLinks"/> resources.</returns>
         public virtual gax::PagedAsyncEnumerable<BatchSearchLinkProcessesResponse, ProcessLinks> BatchSearchLinkProcessesAsync(BatchSearchLinkProcessesRequest request, gaxgrpc::CallSettings callSettings = null) =>
             throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Server streaming methods for
+        /// <see cref="SearchLineageStreaming(SearchLineageStreamingRequest,gaxgrpc::CallSettings)"/>.
+        /// </summary>
+        public abstract partial class SearchLineageStreamingStream : gaxgrpc::ServerStreamingBase<SearchLineageStreamingResponse>
+        {
+        }
+
+        /// <summary>
+        /// Retrieves a streaming response of lineage links connected to the requested
+        /// assets by performing a breadth-first search in the given direction. Links
+        /// represent the data flow between **source** (upstream) and **target**
+        /// (downstream) assets in transformation pipelines. Links are stored in the
+        /// same project as the Lineage Events that create them. This method retrieves
+        /// links from all valid locations provided in the request. This method
+        /// supports Column-Level Lineage (CLL) along with wildcard support to retrieve
+        /// all CLL for an Entity FQN.
+        /// 
+        /// Following permissions are required to retrieve links:
+        /// * `datalineage.events.get` permission for the project where the link is
+        /// stored for entity-level lineage.
+        /// * `datalineage.events.getFields` permission for the project where the link
+        /// is stored for column-level lineage.
+        /// 
+        /// This method also returns processes that created the links if explicitly
+        /// requested by setting
+        /// [max_process_per_link](google.cloud.datacatalog.lineage.v1.SearchLineageStreamingRequest.limits.max_process_per_link)
+        /// is non-zero and full process details are requested via
+        /// `links.processes.process` in the
+        /// [FieldMask](https://developers.google.com/workspace/docs/api/how-tos/field-masks#read_with_a_field_mask).
+        /// 
+        /// Permission required to retrieve processes:
+        /// * `datalineage.processes.get` permission for the project where the process
+        /// is stored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public virtual SearchLineageStreamingStream SearchLineageStreaming(SearchLineageStreamingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
     }
 
     /// <summary>Lineage client wrapper implementation, for convenient use.</summary>
@@ -2505,6 +2554,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         private readonly gaxgrpc::ApiCall<SearchLinksRequest, SearchLinksResponse> _callSearchLinks;
 
         private readonly gaxgrpc::ApiCall<BatchSearchLinkProcessesRequest, BatchSearchLinkProcessesResponse> _callBatchSearchLinkProcesses;
+
+        private readonly gaxgrpc::ApiServerStreamingCall<SearchLineageStreamingRequest, SearchLineageStreamingResponse> _callSearchLineageStreaming;
 
         /// <summary>
         /// Constructs a client wrapper for the Lineage service, with the specified gRPC client and settings.
@@ -2574,10 +2625,15 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
             _callBatchSearchLinkProcesses = clientHelper.BuildApiCall<BatchSearchLinkProcessesRequest, BatchSearchLinkProcessesResponse>("BatchSearchLinkProcesses", grpcClient.BatchSearchLinkProcessesAsync, grpcClient.BatchSearchLinkProcesses, effectiveSettings.BatchSearchLinkProcessesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callBatchSearchLinkProcesses);
             Modify_BatchSearchLinkProcessesApiCall(ref _callBatchSearchLinkProcesses);
+            _callSearchLineageStreaming = clientHelper.BuildApiCall<SearchLineageStreamingRequest, SearchLineageStreamingResponse>("SearchLineageStreaming", grpcClient.SearchLineageStreaming, effectiveSettings.SearchLineageStreamingSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearchLineageStreaming);
+            Modify_SearchLineageStreamingApiCall(ref _callSearchLineageStreaming);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiServerStreamingCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
         partial void Modify_ProcessOpenLineageRunEventApiCall(ref gaxgrpc::ApiCall<ProcessOpenLineageRunEventRequest, ProcessOpenLineageRunEventResponse> call);
 
@@ -2612,6 +2668,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         partial void Modify_SearchLinksApiCall(ref gaxgrpc::ApiCall<SearchLinksRequest, SearchLinksResponse> call);
 
         partial void Modify_BatchSearchLinkProcessesApiCall(ref gaxgrpc::ApiCall<BatchSearchLinkProcessesRequest, BatchSearchLinkProcessesResponse> call);
+
+        partial void Modify_SearchLineageStreamingApiCall(ref gaxgrpc::ApiServerStreamingCall<SearchLineageStreamingRequest, SearchLineageStreamingResponse> call);
 
         partial void OnConstruction(Lineage.LineageClient grpcClient, LineageSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2652,6 +2710,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
 
         partial void Modify_BatchSearchLinkProcessesRequest(ref BatchSearchLinkProcessesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_SearchLineageStreamingRequest(ref SearchLineageStreamingRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
         /// Creates new lineage events together with their parents: process and run.
         /// Updates the process and run if they already exist.
@@ -2663,6 +2723,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>The RPC response.</returns>
         public override ProcessOpenLineageRunEventResponse ProcessOpenLineageRunEvent(ProcessOpenLineageRunEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_ProcessOpenLineageRunEventRequest(ref request, ref callSettings);
             return _callProcessOpenLineageRunEvent.Sync(request, callSettings);
         }
@@ -2678,6 +2743,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<ProcessOpenLineageRunEventResponse> ProcessOpenLineageRunEventAsync(ProcessOpenLineageRunEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_ProcessOpenLineageRunEventRequest(ref request, ref callSettings);
             return _callProcessOpenLineageRunEvent.Async(request, callSettings);
         }
@@ -2690,6 +2760,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>The RPC response.</returns>
         public override Process CreateProcess(CreateProcessRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_CreateProcessRequest(ref request, ref callSettings);
             return _callCreateProcess.Sync(request, callSettings);
         }
@@ -2702,6 +2777,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<Process> CreateProcessAsync(CreateProcessRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_CreateProcessRequest(ref request, ref callSettings);
             return _callCreateProcess.Async(request, callSettings);
         }
@@ -2714,6 +2794,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>The RPC response.</returns>
         public override Process UpdateProcess(UpdateProcessRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateProcessRequest(ref request, ref callSettings);
             return _callUpdateProcess.Sync(request, callSettings);
         }
@@ -2726,6 +2811,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<Process> UpdateProcessAsync(UpdateProcessRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_UpdateProcessRequest(ref request, ref callSettings);
             return _callUpdateProcess.Async(request, callSettings);
         }
@@ -2815,6 +2905,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>The RPC response.</returns>
         public override Run CreateRun(CreateRunRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_CreateRunRequest(ref request, ref callSettings);
             return _callCreateRun.Sync(request, callSettings);
         }
@@ -2827,6 +2922,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<Run> CreateRunAsync(CreateRunRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_CreateRunRequest(ref request, ref callSettings);
             return _callCreateRun.Async(request, callSettings);
         }
@@ -2940,6 +3040,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>The RPC response.</returns>
         public override LineageEvent CreateLineageEvent(CreateLineageEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_CreateLineageEventRequest(ref request, ref callSettings);
             return _callCreateLineageEvent.Sync(request, callSettings);
         }
@@ -2952,6 +3057,11 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         /// <returns>A Task containing the RPC response.</returns>
         public override stt::Task<LineageEvent> CreateLineageEventAsync(CreateLineageEventRequest request, gaxgrpc::CallSettings callSettings = null)
         {
+            if (request.RequestId == "")
+            {
+                request = request.Clone();
+                request.RequestId = gax::FieldFormats.GenerateUuid4();
+            }
             Modify_CreateLineageEventRequest(ref request, ref callSettings);
             return _callCreateLineageEvent.Async(request, callSettings);
         }
@@ -3118,6 +3228,51 @@ namespace Google.Cloud.DataCatalog.Lineage.V1
         {
             Modify_BatchSearchLinkProcessesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<BatchSearchLinkProcessesRequest, BatchSearchLinkProcessesResponse, ProcessLinks>(_callBatchSearchLinkProcesses, request, callSettings);
+        }
+
+        internal sealed partial class SearchLineageStreamingStreamImpl : SearchLineageStreamingStream
+        {
+            /// <summary>Construct the server streaming method for <c>SearchLineageStreaming</c>.</summary>
+            /// <param name="call">The underlying gRPC server streaming call.</param>
+            public SearchLineageStreamingStreamImpl(grpccore::AsyncServerStreamingCall<SearchLineageStreamingResponse> call) => GrpcCall = call;
+
+            public override grpccore::AsyncServerStreamingCall<SearchLineageStreamingResponse> GrpcCall { get; }
+        }
+
+        /// <summary>
+        /// Retrieves a streaming response of lineage links connected to the requested
+        /// assets by performing a breadth-first search in the given direction. Links
+        /// represent the data flow between **source** (upstream) and **target**
+        /// (downstream) assets in transformation pipelines. Links are stored in the
+        /// same project as the Lineage Events that create them. This method retrieves
+        /// links from all valid locations provided in the request. This method
+        /// supports Column-Level Lineage (CLL) along with wildcard support to retrieve
+        /// all CLL for an Entity FQN.
+        /// 
+        /// Following permissions are required to retrieve links:
+        /// * `datalineage.events.get` permission for the project where the link is
+        /// stored for entity-level lineage.
+        /// * `datalineage.events.getFields` permission for the project where the link
+        /// is stored for column-level lineage.
+        /// 
+        /// This method also returns processes that created the links if explicitly
+        /// requested by setting
+        /// [max_process_per_link](google.cloud.datacatalog.lineage.v1.SearchLineageStreamingRequest.limits.max_process_per_link)
+        /// is non-zero and full process details are requested via
+        /// `links.processes.process` in the
+        /// [FieldMask](https://developers.google.com/workspace/docs/api/how-tos/field-masks#read_with_a_field_mask).
+        /// 
+        /// Permission required to retrieve processes:
+        /// * `datalineage.processes.get` permission for the project where the process
+        /// is stored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The server stream.</returns>
+        public override LineageClient.SearchLineageStreamingStream SearchLineageStreaming(SearchLineageStreamingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchLineageStreamingRequest(ref request, ref callSettings);
+            return new SearchLineageStreamingStreamImpl(_callSearchLineageStreaming.Call(request, callSettings));
         }
     }
 

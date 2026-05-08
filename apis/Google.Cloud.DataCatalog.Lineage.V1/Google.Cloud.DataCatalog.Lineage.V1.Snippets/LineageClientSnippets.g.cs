@@ -17,6 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.Grpc;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.DataCatalog.Lineage.V1;
     using Google.LongRunning;
@@ -38,7 +39,6 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 OpenLineage = new Struct(),
-                RequestId = "",
             };
             // Make the request
             ProcessOpenLineageRunEventResponse response = lineageClient.ProcessOpenLineageRunEvent(request);
@@ -57,7 +57,6 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 OpenLineage = new Struct(),
-                RequestId = "",
             };
             // Make the request
             ProcessOpenLineageRunEventResponse response = await lineageClient.ProcessOpenLineageRunEventAsync(request);
@@ -104,7 +103,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Process = new Process(),
-                RequestId = "",
             };
             // Make the request
             Process response = lineageClient.CreateProcess(request);
@@ -123,7 +121,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Process = new Process(),
-                RequestId = "",
             };
             // Make the request
             Process response = await lineageClient.CreateProcessAsync(request);
@@ -813,7 +810,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProcessName = ProcessName.FromProjectLocationProcess("[PROJECT]", "[LOCATION]", "[PROCESS]"),
                 Run = new Run(),
-                RequestId = "",
             };
             // Make the request
             Run response = lineageClient.CreateRun(request);
@@ -832,7 +828,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProcessName = ProcessName.FromProjectLocationProcess("[PROJECT]", "[LOCATION]", "[PROCESS]"),
                 Run = new Run(),
-                RequestId = "",
             };
             // Make the request
             Run response = await lineageClient.CreateRunAsync(request);
@@ -1522,7 +1517,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsRunName = RunName.FromProjectLocationProcessRun("[PROJECT]", "[LOCATION]", "[PROCESS]", "[RUN]"),
                 LineageEvent = new LineageEvent(),
-                RequestId = "",
             };
             // Make the request
             LineageEvent response = lineageClient.CreateLineageEvent(request);
@@ -1541,7 +1535,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsRunName = RunName.FromProjectLocationProcessRun("[PROJECT]", "[LOCATION]", "[PROCESS]", "[RUN]"),
                 LineageEvent = new LineageEvent(),
-                RequestId = "",
             };
             // Make the request
             LineageEvent response = await lineageClient.CreateLineageEventAsync(request);
@@ -2251,6 +2244,37 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SearchLineageStreaming</summary>
+        public async Task SearchLineageStreamingRequestObject()
+        {
+            // Snippet: SearchLineageStreaming(SearchLineageStreamingRequest, CallSettings)
+            // Create client
+            LineageClient lineageClient = LineageClient.Create();
+            // Initialize request argument(s)
+            SearchLineageStreamingRequest request = new SearchLineageStreamingRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Locations = { "", },
+                RootCriteria = new SearchLineageStreamingRequest.Types.RootCriteria(),
+                Direction = SearchLineageStreamingRequest.Types.SearchDirection.Unspecified,
+                Filters = new SearchLineageStreamingRequest.Types.SearchFilters(),
+                Limits = new SearchLineageStreamingRequest.Types.SearchLimits(),
+            };
+            // Make the request, returning a streaming response
+            using LineageClient.SearchLineageStreamingStream response = lineageClient.SearchLineageStreaming(request);
+
+            // Read streaming responses from server until complete
+            // Note that C# 8 code can use await foreach
+            AsyncResponseStream<SearchLineageStreamingResponse> responseStream = response.GetResponseStream();
+            while (await responseStream.MoveNextAsync())
+            {
+                SearchLineageStreamingResponse responseItem = responseStream.Current;
+                // Do something with streamed response
+            }
+            // The response stream has completed
             // End snippet
         }
     }

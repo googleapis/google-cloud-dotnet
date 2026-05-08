@@ -3,7 +3,7 @@
 //     source: google/cloud/datacatalog/lineage/v1/lineage.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -122,6 +122,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest> __Marshaller_google_cloud_datacatalog_lineage_v1_BatchSearchLinkProcessesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse> __Marshaller_google_cloud_datacatalog_lineage_v1_BatchSearchLinkProcessesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest> __Marshaller_google_cloud_datacatalog_lineage_v1_SearchLineageStreamingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse> __Marshaller_google_cloud_datacatalog_lineage_v1_SearchLineageStreamingResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest, global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse> __Method_ProcessOpenLineageRunEvent = new grpc::Method<global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest, global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse>(
@@ -258,6 +262,14 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         "BatchSearchLinkProcesses",
         __Marshaller_google_cloud_datacatalog_lineage_v1_BatchSearchLinkProcessesRequest,
         __Marshaller_google_cloud_datacatalog_lineage_v1_BatchSearchLinkProcessesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest, global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse> __Method_SearchLineageStreaming = new grpc::Method<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest, global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "SearchLineageStreaming",
+        __Marshaller_google_cloud_datacatalog_lineage_v1_SearchLineageStreamingRequest,
+        __Marshaller_google_cloud_datacatalog_lineage_v1_SearchLineageStreamingResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -496,6 +508,43 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse> BatchSearchLinkProcesses(global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieves a streaming response of lineage links connected to the requested
+      /// assets by performing a breadth-first search in the given direction. Links
+      /// represent the data flow between **source** (upstream) and **target**
+      /// (downstream) assets in transformation pipelines. Links are stored in the
+      /// same project as the Lineage Events that create them. This method retrieves
+      /// links from all valid locations provided in the request. This method
+      /// supports Column-Level Lineage (CLL) along with wildcard support to retrieve
+      /// all CLL for an Entity FQN.
+      ///
+      /// Following permissions are required to retrieve links:
+      /// * `datalineage.events.get` permission for the project where the link is
+      /// stored for entity-level lineage.
+      /// * `datalineage.events.getFields` permission for the project where the link
+      /// is stored for column-level lineage.
+      ///
+      /// This method also returns processes that created the links if explicitly
+      /// requested by setting
+      /// [max_process_per_link](google.cloud.datacatalog.lineage.v1.SearchLineageStreamingRequest.limits.max_process_per_link)
+      /// is non-zero and full process details are requested via
+      /// `links.processes.process` in the
+      /// [FieldMask](https://developers.google.com/workspace/docs/api/how-tos/field-masks#read_with_a_field_mask).
+      ///
+      /// Permission required to retrieve processes:
+      /// * `datalineage.processes.get` permission for the project where the process
+      /// is stored.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task SearchLineageStreaming(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest request, grpc::IServerStreamWriter<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1453,6 +1502,78 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchSearchLinkProcesses, null, options, request);
       }
+      /// <summary>
+      /// Retrieves a streaming response of lineage links connected to the requested
+      /// assets by performing a breadth-first search in the given direction. Links
+      /// represent the data flow between **source** (upstream) and **target**
+      /// (downstream) assets in transformation pipelines. Links are stored in the
+      /// same project as the Lineage Events that create them. This method retrieves
+      /// links from all valid locations provided in the request. This method
+      /// supports Column-Level Lineage (CLL) along with wildcard support to retrieve
+      /// all CLL for an Entity FQN.
+      ///
+      /// Following permissions are required to retrieve links:
+      /// * `datalineage.events.get` permission for the project where the link is
+      /// stored for entity-level lineage.
+      /// * `datalineage.events.getFields` permission for the project where the link
+      /// is stored for column-level lineage.
+      ///
+      /// This method also returns processes that created the links if explicitly
+      /// requested by setting
+      /// [max_process_per_link](google.cloud.datacatalog.lineage.v1.SearchLineageStreamingRequest.limits.max_process_per_link)
+      /// is non-zero and full process details are requested via
+      /// `links.processes.process` in the
+      /// [FieldMask](https://developers.google.com/workspace/docs/api/how-tos/field-masks#read_with_a_field_mask).
+      ///
+      /// Permission required to retrieve processes:
+      /// * `datalineage.processes.get` permission for the project where the process
+      /// is stored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse> SearchLineageStreaming(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchLineageStreaming(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves a streaming response of lineage links connected to the requested
+      /// assets by performing a breadth-first search in the given direction. Links
+      /// represent the data flow between **source** (upstream) and **target**
+      /// (downstream) assets in transformation pipelines. Links are stored in the
+      /// same project as the Lineage Events that create them. This method retrieves
+      /// links from all valid locations provided in the request. This method
+      /// supports Column-Level Lineage (CLL) along with wildcard support to retrieve
+      /// all CLL for an Entity FQN.
+      ///
+      /// Following permissions are required to retrieve links:
+      /// * `datalineage.events.get` permission for the project where the link is
+      /// stored for entity-level lineage.
+      /// * `datalineage.events.getFields` permission for the project where the link
+      /// is stored for column-level lineage.
+      ///
+      /// This method also returns processes that created the links if explicitly
+      /// requested by setting
+      /// [max_process_per_link](google.cloud.datacatalog.lineage.v1.SearchLineageStreamingRequest.limits.max_process_per_link)
+      /// is non-zero and full process details are requested via
+      /// `links.processes.process` in the
+      /// [FieldMask](https://developers.google.com/workspace/docs/api/how-tos/field-masks#read_with_a_field_mask).
+      ///
+      /// Permission required to retrieve processes:
+      /// * `datalineage.processes.get` permission for the project where the process
+      /// is stored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse> SearchLineageStreaming(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_SearchLineageStreaming, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override LineageClient NewInstance(ClientBaseConfiguration configuration)
@@ -1483,7 +1604,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
           .AddMethod(__Method_ListLineageEvents, serviceImpl.ListLineageEvents)
           .AddMethod(__Method_DeleteLineageEvent, serviceImpl.DeleteLineageEvent)
           .AddMethod(__Method_SearchLinks, serviceImpl.SearchLinks)
-          .AddMethod(__Method_BatchSearchLinkProcesses, serviceImpl.BatchSearchLinkProcesses).Build();
+          .AddMethod(__Method_BatchSearchLinkProcesses, serviceImpl.BatchSearchLinkProcesses)
+          .AddMethod(__Method_SearchLineageStreaming, serviceImpl.SearchLineageStreaming).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1510,6 +1632,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       serviceBinder.AddMethod(__Method_DeleteLineageEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.Lineage.V1.DeleteLineageEventRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteLineageEvent));
       serviceBinder.AddMethod(__Method_SearchLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLinksRequest, global::Google.Cloud.DataCatalog.Lineage.V1.SearchLinksResponse>(serviceImpl.SearchLinks));
       serviceBinder.AddMethod(__Method_BatchSearchLinkProcesses, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest, global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse>(serviceImpl.BatchSearchLinkProcesses));
+      serviceBinder.AddMethod(__Method_SearchLineageStreaming, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest, global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse>(serviceImpl.SearchLineageStreaming));
     }
 
   }

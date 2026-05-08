@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsProcessName = ProcessName.FromProjectLocationProcess("[PROJECT]", "[LOCATION]", "[PROCESS]"),
                 Run = new Run(),
-                RequestId = "",
             };
             // Make the request
             Run response = await lineageClient.CreateRunAsync(request);
