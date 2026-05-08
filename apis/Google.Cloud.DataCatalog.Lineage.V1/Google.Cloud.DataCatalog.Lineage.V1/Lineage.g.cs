@@ -27,144 +27,208 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             "CjFnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvbGluZWFnZS92MS9saW5lYWdl",
             "LnByb3RvEiNnb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFnZS52MRoc",
             "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGll",
-            "bnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
-            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aI2dvb2dsZS9sb25ncnVubmluZy9v",
-            "cGVyYXRpb25zLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJvdG8a",
-            "IGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGhxnb29nbGUvcHJv",
-            "dG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIoEDCgdQcm9jZXNzEhEKBG5hbWUYASABKAlCA+BBBRIZCgxkaXNw",
-            "bGF5X25hbWUYAiABKAlCA+BBARJVCgphdHRyaWJ1dGVzGAMgAygLMjwuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuUHJvY2Vzcy5BdHRy",
-            "aWJ1dGVzRW50cnlCA+BBARJACgZvcmlnaW4YBCABKAsyKy5nb29nbGUuY2xv",
-            "dWQuZGF0YWNhdGFsb2cubGluZWFnZS52MS5PcmlnaW5CA+BBARpJCg9BdHRy",
-            "aWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuZ29v",
-            "Z2xlLnByb3RvYnVmLlZhbHVlOgI4ATpk6kFhCiJkYXRhbGluZWFnZS5nb29n",
-            "bGVhcGlzLmNvbS9Qcm9jZXNzEjtwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vcHJvY2Vzc2VzL3twcm9jZXNzfSK1BAoDUnVuEhEK",
-            "BG5hbWUYASABKAlCA+BBBRIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBARJR",
-            "CgphdHRyaWJ1dGVzGAMgAygLMjguZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9n",
-            "LmxpbmVhZ2UudjEuUnVuLkF0dHJpYnV0ZXNFbnRyeUID4EEBEjMKCnN0YXJ0",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQIS",
-            "MQoIZW5kX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQESQgoFc3RhdGUYBiABKA4yLi5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
-            "b2cubGluZWFnZS52MS5SdW4uU3RhdGVCA+BBAhpJCg9BdHRyaWJ1dGVzRW50",
-            "cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnByb3Rv",
-            "YnVmLlZhbHVlOgI4ASJJCgVTdGF0ZRILCgdVTktOT1dOEAASCwoHU1RBUlRF",
-            "RBABEg0KCUNPTVBMRVRFRBACEgoKBkZBSUxFRBADEgsKB0FCT1JURUQQBDpr",
-            "6kFoCh5kYXRhbGluZWFnZS5nb29nbGVhcGlzLmNvbS9SdW4SRnByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9wcm9jZXNzZXMve3By",
-            "b2Nlc3N9L3J1bnMve3J1bn0i4wIKDExpbmVhZ2VFdmVudBIRCgRuYW1lGAEg",
-            "ASgJQgPgQQUSQgoFbGlua3MYCCADKAsyLi5nb29nbGUuY2xvdWQuZGF0YWNh",
-            "dGFsb2cubGluZWFnZS52MS5FdmVudExpbmtCA+BBARIzCgpzdGFydF90aW1l",
-            "GAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjEKCGVu",
-            "ZF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEB",
-            "OpMB6kGPAQonZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5jb20vTGluZWFnZUV2",
-            "ZW50EmRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
-            "cHJvY2Vzc2VzL3twcm9jZXNzfS9ydW5zL3tydW59L2xpbmVhZ2VFdmVudHMv",
-            "e2xpbmVhZ2VfZXZlbnR9IqEBCglFdmVudExpbmsSSQoGc291cmNlGAEgASgL",
-            "MjQuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuRW50aXR5",
-            "UmVmZXJlbmNlQgPgQQISSQoGdGFyZ2V0GAIgASgLMjQuZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuRW50aXR5UmVmZXJlbmNlQgPgQQIi",
-            "NAoPRW50aXR5UmVmZXJlbmNlEiEKFGZ1bGx5X3F1YWxpZmllZF9uYW1lGAEg",
-            "ASgJQgPgQQIi5gMKEU9wZXJhdGlvbk1ldGFkYXRhElAKBXN0YXRlGAEgASgO",
-            "MjwuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuT3BlcmF0",
-            "aW9uTWV0YWRhdGEuU3RhdGVCA+BBAxJYCg5vcGVyYXRpb25fdHlwZRgCIAEo",
-            "DjI7Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLk9wZXJh",
-            "dGlvbk1ldGFkYXRhLlR5cGVCA+BBAxIVCghyZXNvdXJjZRgDIAEoCUID4EED",
-            "EhoKDXJlc291cmNlX3V1aWQYBCABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgF",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRf",
-            "dGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyJT",
-            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARIL",
-            "CgdSVU5OSU5HEAISDQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQiNAoEVHlw",
-            "ZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGREVMRVRFEAESCgoGQ1JFQVRF",
-            "EAIigAEKIVByb2Nlc3NPcGVuTGluZWFnZVJ1bkV2ZW50UmVxdWVzdBITCgZw",
-            "YXJlbnQYASABKAlCA+BBAhIyCgxvcGVuX2xpbmVhZ2UYAiABKAsyFy5nb29n",
-            "bGUucHJvdG9idWYuU3RydWN0QgPgQQISEgoKcmVxdWVzdF9pZBgDIAEoCSLW",
-            "AQoiUHJvY2Vzc09wZW5MaW5lYWdlUnVuRXZlbnRSZXNwb25zZRI4Cgdwcm9j",
-            "ZXNzGAEgASgJQif6QSQKImRhdGFsaW5lYWdlLmdvb2dsZWFwaXMuY29tL1By",
-            "b2Nlc3MSMAoDcnVuGAIgASgJQiP6QSAKHmRhdGFsaW5lYWdlLmdvb2dsZWFw",
-            "aXMuY29tL1J1bhJECg5saW5lYWdlX2V2ZW50cxgDIAMoCUIs+kEpCidkYXRh",
-            "bGluZWFnZS5nb29nbGVhcGlzLmNvbS9MaW5lYWdlRXZlbnQiqgEKFENyZWF0",
-            "ZVByb2Nlc3NSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJkYXRh",
-            "bGluZWFnZS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzEkIKB3Byb2Nlc3MYAiAB",
-            "KAsyLC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFnZS52MS5Qcm9j",
-            "ZXNzQgPgQQISEgoKcmVxdWVzdF9pZBgDIAEoCSKiAQoUVXBkYXRlUHJvY2Vz",
-            "c1JlcXVlc3QSQgoHcHJvY2VzcxgBIAEoCzIsLmdvb2dsZS5jbG91ZC5kYXRh",
-            "Y2F0YWxvZy5saW5lYWdlLnYxLlByb2Nlc3NCA+BBAhIvCgt1cGRhdGVfbWFz",
-            "axgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2sSFQoNYWxsb3df",
-            "bWlzc2luZxgDIAEoCCJNChFHZXRQcm9jZXNzUmVxdWVzdBI4CgRuYW1lGAEg",
-            "ASgJQirgQQL6QSQKImRhdGFsaW5lYWdlLmdvb2dsZWFwaXMuY29tL1Byb2Nl",
-            "c3MieQoUTGlzdFByb2Nlc3Nlc1JlcXVlc3QSOgoGcGFyZW50GAEgASgJQirg",
-            "QQL6QSQSImRhdGFsaW5lYWdlLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3MSEQoJ",
-            "cGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkicQoVTGlzdFBy",
-            "b2Nlc3Nlc1Jlc3BvbnNlEj8KCXByb2Nlc3NlcxgBIAMoCzIsLmdvb2dsZS5j",
-            "bG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLlByb2Nlc3MSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJImcKFERlbGV0ZVByb2Nlc3NSZXF1ZXN0EjgKBG5h",
-            "bWUYASABKAlCKuBBAvpBJAoiZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5jb20v",
-            "UHJvY2VzcxIVCg1hbGxvd19taXNzaW5nGAIgASgIIpoBChBDcmVhdGVSdW5S",
-            "ZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC+kEgEh5kYXRhbGluZWFnZS5n",
-            "b29nbGVhcGlzLmNvbS9SdW4SOgoDcnVuGAIgASgLMiguZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuUnVuQgPgQQISEgoKcmVxdWVzdF9p",
-            "ZBgDIAEoCSKWAQoQVXBkYXRlUnVuUmVxdWVzdBI6CgNydW4YASABKAsyKC5n",
-            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFnZS52MS5SdW5CA+BBAhIv",
-            "Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1h",
-            "c2sSFQoNYWxsb3dfbWlzc2luZxgDIAEoCCJFCg1HZXRSdW5SZXF1ZXN0EjQK",
-            "BG5hbWUYASABKAlCJuBBAvpBIAoeZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5j",
-            "b20vUnVuInAKD0xpc3RSdW5zUmVxdWVzdBI2CgZwYXJlbnQYASABKAlCJuBB",
-            "AvpBIBIeZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5jb20vUnVuEhEKCXBhZ2Vf",
-            "c2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJImMKEExpc3RSdW5zUmVz",
-            "cG9uc2USNgoEcnVucxgBIAMoCzIoLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxv",
-            "Zy5saW5lYWdlLnYxLlJ1bhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiXwoQ",
-            "RGVsZXRlUnVuUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAKHmRhdGFs",
-            "aW5lYWdlLmdvb2dsZWFwaXMuY29tL1J1bhIVCg1hbGxvd19taXNzaW5nGAIg",
-            "ASgIIr8BChlDcmVhdGVMaW5lYWdlRXZlbnRSZXF1ZXN0Ej8KBnBhcmVudBgB",
-            "IAEoCUIv4EEC+kEpEidkYXRhbGluZWFnZS5nb29nbGVhcGlzLmNvbS9MaW5l",
-            "YWdlRXZlbnQSTQoNbGluZWFnZV9ldmVudBgCIAEoCzIxLmdvb2dsZS5jbG91",
-            "ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLkxpbmVhZ2VFdmVudEID4EECEhIK",
-            "CnJlcXVlc3RfaWQYAyABKAkiVwoWR2V0TGluZWFnZUV2ZW50UmVxdWVzdBI9",
-            "CgRuYW1lGAEgASgJQi/gQQL6QSkKJ2RhdGFsaW5lYWdlLmdvb2dsZWFwaXMu",
-            "Y29tL0xpbmVhZ2VFdmVudCKCAQoYTGlzdExpbmVhZ2VFdmVudHNSZXF1ZXN0",
-            "Ej8KBnBhcmVudBgBIAEoCUIv4EEC+kEpEidkYXRhbGluZWFnZS5nb29nbGVh",
-            "cGlzLmNvbS9MaW5lYWdlRXZlbnQSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBh",
-            "Z2VfdG9rZW4YAyABKAkifwoZTGlzdExpbmVhZ2VFdmVudHNSZXNwb25zZRJJ",
-            "Cg5saW5lYWdlX2V2ZW50cxgBIAMoCzIxLmdvb2dsZS5jbG91ZC5kYXRhY2F0",
-            "YWxvZy5saW5lYWdlLnYxLkxpbmVhZ2VFdmVudBIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAiABKAkicQoZRGVsZXRlTGluZWFnZUV2ZW50UmVxdWVzdBI9CgRuYW1l",
-            "GAEgASgJQi/gQQL6QSkKJ2RhdGFsaW5lYWdlLmdvb2dsZWFwaXMuY29tL0xp",
-            "bmVhZ2VFdmVudBIVCg1hbGxvd19taXNzaW5nGAIgASgIIqcCChJTZWFyY2hM",
-            "aW5rc1JlcXVlc3QSOgoGcGFyZW50GAEgASgJQirgQQL6QSQSImRhdGFsaW5l",
-            "YWdlLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3MSSwoGc291cmNlGAQgASgLMjQu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuRW50aXR5UmVm",
-            "ZXJlbmNlQgPgQQFIABJLCgZ0YXJnZXQYBSABKAsyNC5nb29nbGUuY2xvdWQu",
-            "ZGF0YWNhdGFsb2cubGluZWFnZS52MS5FbnRpdHlSZWZlcmVuY2VCA+BBAUgA",
-            "EhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlC",
-            "A+BBAUIKCghjcml0ZXJpYSJoChNTZWFyY2hMaW5rc1Jlc3BvbnNlEjgKBWxp",
-            "bmtzGAEgAygLMikuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2Uu",
-            "djEuTGluaxIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkihgIKBExpbmsSFAoE",
-            "bmFtZRgBIAEoCUIG4EED4EEFEkQKBnNvdXJjZRgCIAEoCzI0Lmdvb2dsZS5j",
-            "bG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLkVudGl0eVJlZmVyZW5jZRJE",
-            "CgZ0YXJnZXQYAyABKAsyNC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGlu",
-            "ZWFnZS52MS5FbnRpdHlSZWZlcmVuY2USLgoKc3RhcnRfdGltZRgEIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLAoIZW5kX3RpbWUYBSABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wIpgBCh9CYXRjaFNlYXJjaExp",
-            "bmtQcm9jZXNzZXNSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJk",
-            "YXRhbGluZWFnZS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzEhIKBWxpbmtzGAIg",
-            "AygJQgPgQQISEQoJcGFnZV9zaXplGAMgASgFEhIKCnBhZ2VfdG9rZW4YBCAB",
-            "KAkihQEKIEJhdGNoU2VhcmNoTGlua1Byb2Nlc3Nlc1Jlc3BvbnNlEkgKDXBy",
-            "b2Nlc3NfbGlua3MYASADKAsyMS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cu",
-            "bGluZWFnZS52MS5Qcm9jZXNzTGlua3MSFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
-            "ASgJIo0BCgxQcm9jZXNzTGlua3MSOAoHcHJvY2VzcxgBIAEoCUIn+kEkCiJk",
-            "YXRhbGluZWFnZS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzEkMKBWxpbmtzGAIg",
-            "AygLMjQuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuUHJv",
-            "Y2Vzc0xpbmtJbmZvIn0KD1Byb2Nlc3NMaW5rSW5mbxIMCgRsaW5rGAEgASgJ",
-            "Ei4KCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEiwKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcCLpAQoGT3JpZ2luEksKC3NvdXJjZV90eXBlGAEgASgOMjYuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuT3JpZ2luLlNvdXJjZVR5",
-            "cGUSDAoEbmFtZRgCIAEoCSKDAQoKU291cmNlVHlwZRIbChdTT1VSQ0VfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgoKBkNVU1RPTRABEgwKCEJJR1FVRVJZEAISDwoL",
-            "REFUQV9GVVNJT04QAxIMCghDT01QT1NFUhAEEhEKDUxPT0tFUl9TVFVESU8Q",
-            "BRIMCghEQVRBUFJPQxAGMrwdCgdMaW5lYWdlEpkCChpQcm9jZXNzT3Blbkxp",
+            "bnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aG2dv",
+            "b2dsZS9hcGkvZmllbGRfaW5mby5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
+            "ZS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8a",
+            "G2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
+            "L2ZpZWxkX21hc2sucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJv",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aGmdvb2dsZS90",
+            "eXBlL2ludGVydmFsLnByb3RvIpUDCgdQcm9jZXNzEhEKBG5hbWUYASABKAlC",
+            "A+BBBRIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBARJVCgphdHRyaWJ1dGVz",
+            "GAMgAygLMjwuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEu",
+            "UHJvY2Vzcy5BdHRyaWJ1dGVzRW50cnlCA+BBARJACgZvcmlnaW4YBCABKAsy",
+            "Ky5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFnZS52MS5PcmlnaW5C",
+            "A+BBARpJCg9BdHRyaWJ1dGVzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVl",
+            "GAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlOgI4ATp46kF1CiJkYXRh",
+            "bGluZWFnZS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzEjtwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcHJvY2Vzc2VzL3twcm9jZXNz",
+            "fSoJcHJvY2Vzc2VzMgdwcm9jZXNzIsAECgNSdW4SEQoEbmFtZRgBIAEoCUID",
+            "4EEFEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EEBElEKCmF0dHJpYnV0ZXMY",
+            "AyADKAsyOC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFnZS52MS5S",
+            "dW4uQXR0cmlidXRlc0VudHJ5QgPgQQESMwoKc3RhcnRfdGltZRgEIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhIxCghlbmRfdGltZRgF",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARJCCgVzdGF0",
+            "ZRgGIAEoDjIuLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYx",
+            "LlJ1bi5TdGF0ZUID4EECGkkKD0F0dHJpYnV0ZXNFbnRyeRILCgNrZXkYASAB",
+            "KAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWU6AjgB",
+            "IkkKBVN0YXRlEgsKB1VOS05PV04QABILCgdTVEFSVEVEEAESDQoJQ09NUExF",
+            "VEVEEAISCgoGRkFJTEVEEAMSCwoHQUJPUlRFRBAEOnbqQXMKHmRhdGFsaW5l",
+            "YWdlLmdvb2dsZWFwaXMuY29tL1J1bhJGcHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3Byb2Nlc3Nlcy97cHJvY2Vzc30vcnVucy97",
+            "cnVufSoEcnVuczIDcnVuIoADCgxMaW5lYWdlRXZlbnQSEQoEbmFtZRgBIAEo",
+            "CUID4EEFEkIKBWxpbmtzGAggAygLMi4uZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
+            "bG9nLmxpbmVhZ2UudjEuRXZlbnRMaW5rQgPgQQESMwoKc3RhcnRfdGltZRgG",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhIxCghlbmRf",
+            "dGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBATqw",
+            "AepBrAEKJ2RhdGFsaW5lYWdlLmdvb2dsZWFwaXMuY29tL0xpbmVhZ2VFdmVu",
+            "dBJkcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3By",
+            "b2Nlc3Nlcy97cHJvY2Vzc30vcnVucy97cnVufS9saW5lYWdlRXZlbnRzL3ts",
+            "aW5lYWdlX2V2ZW50fSoNbGluZWFnZUV2ZW50czIMbGluZWFnZUV2ZW50IvQB",
+            "CglFdmVudExpbmsSSQoGc291cmNlGAEgASgLMjQuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFjYXRhbG9nLmxpbmVhZ2UudjEuRW50aXR5UmVmZXJlbmNlQgPgQQISSQoG",
+            "dGFyZ2V0GAIgASgLMjQuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVh",
+            "Z2UudjEuRW50aXR5UmVmZXJlbmNlQgPgQQISUQoPZGVwZW5kZW5jeV9pbmZv",
+            "GAMgASgLMjMuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEu",
+            "RGVwZW5kZW5jeUluZm9CA+BBASJjCg5EZXBlbmRlbmN5SW5mbxJRCg9kZXBl",
+            "bmRlbmN5X3R5cGUYASABKA4yMy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cu",
+            "bGluZWFnZS52MS5EZXBlbmRlbmN5VHlwZUID4EECIkgKD0VudGl0eVJlZmVy",
+            "ZW5jZRIhChRmdWxseV9xdWFsaWZpZWRfbmFtZRgBIAEoCUID4EECEhIKBWZp",
+            "ZWxkGAMgAygJQgPgQQEi5gMKEU9wZXJhdGlvbk1ldGFkYXRhElAKBXN0YXRl",
+            "GAEgASgOMjwuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEu",
+            "T3BlcmF0aW9uTWV0YWRhdGEuU3RhdGVCA+BBAxJYCg5vcGVyYXRpb25fdHlw",
+            "ZRgCIAEoDjI7Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYx",
+            "Lk9wZXJhdGlvbk1ldGFkYXRhLlR5cGVCA+BBAxIVCghyZXNvdXJjZRgDIAEo",
+            "CUID4EEDEhoKDXJlc291cmNlX3V1aWQYBCABKAlCA+BBAxI0CgtjcmVhdGVf",
+            "dGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIx",
+            "CghlbmRfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAyJTCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJ",
+            "TkcQARILCgdSVU5OSU5HEAISDQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQi",
+            "NAoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCgoGREVMRVRFEAESCgoG",
+            "Q1JFQVRFEAIijQEKIVByb2Nlc3NPcGVuTGluZWFnZVJ1bkV2ZW50UmVxdWVz",
+            "dBITCgZwYXJlbnQYASABKAlCA+BBAhIyCgxvcGVuX2xpbmVhZ2UYAiABKAsy",
+            "Fy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQISHwoKcmVxdWVzdF9pZBgD",
+            "IAEoCUIL4EEB4ozP1wgCCAEi1gEKIlByb2Nlc3NPcGVuTGluZWFnZVJ1bkV2",
+            "ZW50UmVzcG9uc2USOAoHcHJvY2VzcxgBIAEoCUIn+kEkCiJkYXRhbGluZWFn",
+            "ZS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzEjAKA3J1bhgCIAEoCUIj+kEgCh5k",
+            "YXRhbGluZWFnZS5nb29nbGVhcGlzLmNvbS9SdW4SRAoObGluZWFnZV9ldmVu",
+            "dHMYAyADKAlCLPpBKQonZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5jb20vTGlu",
+            "ZWFnZUV2ZW50IrcBChRDcmVhdGVQcm9jZXNzUmVxdWVzdBI6CgZwYXJlbnQY",
+            "ASABKAlCKuBBAvpBJBIiZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5jb20vUHJv",
+            "Y2VzcxJCCgdwcm9jZXNzGAIgASgLMiwuZ29vZ2xlLmNsb3VkLmRhdGFjYXRh",
+            "bG9nLmxpbmVhZ2UudjEuUHJvY2Vzc0ID4EECEh8KCnJlcXVlc3RfaWQYAyAB",
+            "KAlCC+BBAeKMz9cIAggBIs0BChRVcGRhdGVQcm9jZXNzUmVxdWVzdBJCCgdw",
+            "cm9jZXNzGAEgASgLMiwuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVh",
+            "Z2UudjEuUHJvY2Vzc0ID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBEhoKDWFsbG93X21pc3NpbmcY",
+            "AyABKAhCA+BBARIfCgpyZXF1ZXN0X2lkGAQgASgJQgvgQQHijM/XCAIIASJN",
+            "ChFHZXRQcm9jZXNzUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6QSQKImRh",
+            "dGFsaW5lYWdlLmdvb2dsZWFwaXMuY29tL1Byb2Nlc3MigwEKFExpc3RQcm9j",
+            "ZXNzZXNSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJkYXRhbGlu",
+            "ZWFnZS5nb29nbGVhcGlzLmNvbS9Qcm9jZXNzEhYKCXBhZ2Vfc2l6ZRgCIAEo",
+            "BUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBASJxChVMaXN0UHJvY2Vz",
+            "c2VzUmVzcG9uc2USPwoJcHJvY2Vzc2VzGAEgAygLMiwuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuUHJvY2VzcxIXCg9uZXh0X3BhZ2Vf",
+            "dG9rZW4YAiABKAkibAoURGVsZXRlUHJvY2Vzc1JlcXVlc3QSOAoEbmFtZRgB",
+            "IAEoCUIq4EEC+kEkCiJkYXRhbGluZWFnZS5nb29nbGVhcGlzLmNvbS9Qcm9j",
+            "ZXNzEhoKDWFsbG93X21pc3NpbmcYAiABKAhCA+BBASKnAQoQQ3JlYXRlUnVu",
+            "UmVxdWVzdBI2CgZwYXJlbnQYASABKAlCJuBBAvpBIBIeZGF0YWxpbmVhZ2Uu",
+            "Z29vZ2xlYXBpcy5jb20vUnVuEjoKA3J1bhgCIAEoCzIoLmdvb2dsZS5jbG91",
+            "ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLlJ1bkID4EECEh8KCnJlcXVlc3Rf",
+            "aWQYAyABKAlCC+BBAeKMz9cIAggBIqABChBVcGRhdGVSdW5SZXF1ZXN0EjoK",
+            "A3J1bhgBIAEoCzIoLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdl",
+            "LnYxLlJ1bkID4EECEjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFza0ID4EEBEhoKDWFsbG93X21pc3NpbmcYAyABKAhC",
+            "A+BBASJFCg1HZXRSdW5SZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoe",
+            "ZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5jb20vUnVuIn4KD0xpc3RSdW5zUmVx",
+            "dWVzdBI6CgZwYXJlbnQYASABKAlCKuBBAvpBJAoiZGF0YWxpbmVhZ2UuZ29v",
+            "Z2xlYXBpcy5jb20vUHJvY2VzcxIWCglwYWdlX3NpemUYAiABKAVCA+BBARIX",
+            "CgpwYWdlX3Rva2VuGAMgASgJQgPgQQEiYwoQTGlzdFJ1bnNSZXNwb25zZRI2",
+            "CgRydW5zGAEgAygLMiguZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVh",
+            "Z2UudjEuUnVuEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJkChBEZWxldGVS",
+            "dW5SZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpBIAoeZGF0YWxpbmVhZ2Uu",
+            "Z29vZ2xlYXBpcy5jb20vUnVuEhoKDWFsbG93X21pc3NpbmcYAiABKAhCA+BB",
+            "ASLMAQoZQ3JlYXRlTGluZWFnZUV2ZW50UmVxdWVzdBI/CgZwYXJlbnQYASAB",
+            "KAlCL+BBAvpBKRInZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5jb20vTGluZWFn",
+            "ZUV2ZW50Ek0KDWxpbmVhZ2VfZXZlbnQYAiABKAsyMS5nb29nbGUuY2xvdWQu",
+            "ZGF0YWNhdGFsb2cubGluZWFnZS52MS5MaW5lYWdlRXZlbnRCA+BBAhIfCgpy",
+            "ZXF1ZXN0X2lkGAMgASgJQgvgQQHijM/XCAIIASJXChZHZXRMaW5lYWdlRXZl",
+            "bnRSZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpBKQonZGF0YWxpbmVhZ2Uu",
+            "Z29vZ2xlYXBpcy5jb20vTGluZWFnZUV2ZW50IoMBChhMaXN0TGluZWFnZUV2",
+            "ZW50c1JlcXVlc3QSNgoGcGFyZW50GAEgASgJQibgQQL6QSAKHmRhdGFsaW5l",
+            "YWdlLmdvb2dsZWFwaXMuY29tL1J1bhIWCglwYWdlX3NpemUYAiABKAVCA+BB",
+            "ARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEifwoZTGlzdExpbmVhZ2VFdmVu",
+            "dHNSZXNwb25zZRJJCg5saW5lYWdlX2V2ZW50cxgBIAMoCzIxLmdvb2dsZS5j",
+            "bG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLkxpbmVhZ2VFdmVudBIXCg9u",
+            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkidgoZRGVsZXRlTGluZWFnZUV2ZW50UmVx",
+            "dWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ2RhdGFsaW5lYWdlLmdvb2ds",
+            "ZWFwaXMuY29tL0xpbmVhZ2VFdmVudBIaCg1hbGxvd19taXNzaW5nGAIgASgI",
+            "QgPgQQEi0wMKElNlYXJjaExpbmtzUmVxdWVzdBI6CgZwYXJlbnQYASABKAlC",
+            "KuBBAvpBJBIiZGF0YWxpbmVhZ2UuZ29vZ2xlYXBpcy5jb20vUHJvY2VzcxJL",
+            "CgZzb3VyY2UYBCABKAsyNC5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGlu",
+            "ZWFnZS52MS5FbnRpdHlSZWZlcmVuY2VCA+BBAUgAEksKBnRhcmdldBgFIAEo",
+            "CzI0Lmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLkVudGl0",
+            "eVJlZmVyZW5jZUID4EEBSAASVAoHc291cmNlcxgGIAEoCzI8Lmdvb2dsZS5j",
+            "bG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLk11bHRpcGxlRW50aXR5UmVm",
+            "ZXJlbmNlQgPgQQFIABJUCgd0YXJnZXRzGAcgASgLMjwuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuTXVsdGlwbGVFbnRpdHlSZWZlcmVu",
+            "Y2VCA+BBAUgAEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9r",
+            "ZW4YAyABKAlCA+BBAUIKCghjcml0ZXJpYSJmChdNdWx0aXBsZUVudGl0eVJl",
+            "ZmVyZW5jZRJLCghlbnRpdGllcxgBIAMoCzI0Lmdvb2dsZS5jbG91ZC5kYXRh",
+            "Y2F0YWxvZy5saW5lYWdlLnYxLkVudGl0eVJlZmVyZW5jZUID4EEBImgKE1Nl",
+            "YXJjaExpbmtzUmVzcG9uc2USOAoFbGlua3MYASADKAsyKS5nb29nbGUuY2xv",
+            "dWQuZGF0YWNhdGFsb2cubGluZWFnZS52MS5MaW5rEhcKD25leHRfcGFnZV90",
+            "b2tlbhgCIAEoCSK+AwoETGluaxIUCgRuYW1lGAEgASgJQgbgQQPgQQUSRAoG",
+            "c291cmNlGAIgASgLMjQuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVh",
+            "Z2UudjEuRW50aXR5UmVmZXJlbmNlEkQKBnRhcmdldBgDIAEoCzI0Lmdvb2ds",
+            "ZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLkVudGl0eVJlZmVyZW5j",
+            "ZRIuCgpzdGFydF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIsCghlbmRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASVgoPZGVwZW5kZW5jeV9pbmZvGAYgAygLMjguZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuTGluay5EZXBlbmRlbmN5SW5mb0ID",
+            "4EEBGl4KDkRlcGVuZGVuY3lJbmZvEkwKD2RlcGVuZGVuY3lfdHlwZRgBIAEo",
+            "DjIzLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLkRlcGVu",
+            "ZGVuY3lUeXBlIqIBCh9CYXRjaFNlYXJjaExpbmtQcm9jZXNzZXNSZXF1ZXN0",
+            "EjoKBnBhcmVudBgBIAEoCUIq4EEC+kEkEiJkYXRhbGluZWFnZS5nb29nbGVh",
+            "cGlzLmNvbS9Qcm9jZXNzEhIKBWxpbmtzGAIgAygJQgPgQQISFgoJcGFnZV9z",
+            "aXplGAMgASgFQgPgQQESFwoKcGFnZV90b2tlbhgEIAEoCUID4EEBIoUBCiBC",
+            "YXRjaFNlYXJjaExpbmtQcm9jZXNzZXNSZXNwb25zZRJICg1wcm9jZXNzX2xp",
+            "bmtzGAEgAygLMjEuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2Uu",
+            "djEuUHJvY2Vzc0xpbmtzEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKNAQoM",
+            "UHJvY2Vzc0xpbmtzEjgKB3Byb2Nlc3MYASABKAlCJ/pBJAoiZGF0YWxpbmVh",
+            "Z2UuZ29vZ2xlYXBpcy5jb20vUHJvY2VzcxJDCgVsaW5rcxgCIAMoCzI0Lmdv",
+            "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLlByb2Nlc3NMaW5r",
+            "SW5mbyJ9Cg9Qcm9jZXNzTGlua0luZm8SDAoEbGluaxgBIAEoCRIuCgpzdGFy",
+            "dF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIsCghl",
+            "bmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAilwIK",
+            "Bk9yaWdpbhJLCgtzb3VyY2VfdHlwZRgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5k",
+            "YXRhY2F0YWxvZy5saW5lYWdlLnYxLk9yaWdpbi5Tb3VyY2VUeXBlEgwKBG5h",
+            "bWUYAiABKAkisQEKClNvdXJjZVR5cGUSGwoXU09VUkNFX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIKCgZDVVNUT00QARIMCghCSUdRVUVSWRACEg8KC0RBVEFfRlVT",
+            "SU9OEAMSDAoIQ09NUE9TRVIQBBIRCg1MT09LRVJfU1RVRElPEAUSDAoIREFU",
+            "QVBST0MQBhINCglWRVJURVhfQUkQBxIMCghEQVRBRkxPVxAIEg8KC0xPT0tF",
+            "Ul9DT1JFEAkimQQKC0xpbmVhZ2VMaW5rEkQKBnNvdXJjZRgBIAEoCzI0Lmdv",
+            "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLkVudGl0eVJlZmVy",
+            "ZW5jZRJECgZ0YXJnZXQYAiABKAsyNC5nb29nbGUuY2xvdWQuZGF0YWNhdGFs",
+            "b2cubGluZWFnZS52MS5FbnRpdHlSZWZlcmVuY2USUgoJcHJvY2Vzc2VzGAMg",
+            "AygLMj8uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuTGlu",
+            "ZWFnZUxpbmsuTGluZWFnZVByb2Nlc3MSWAoPZGVwZW5kZW5jeV9pbmZvGAQg",
+            "AygLMj8uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuTGlu",
+            "ZWFnZUxpbmsuRGVwZW5kZW5jeUluZm8SDQoFZGVwdGgYBSABKAUSEAoIbG9j",
+            "YXRpb24YByABKAkaTwoOTGluZWFnZVByb2Nlc3MSPQoHcHJvY2VzcxgDIAEo",
+            "CzIsLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLlByb2Nl",
+            "c3MaXgoORGVwZW5kZW5jeUluZm8STAoPZGVwZW5kZW5jeV90eXBlGAEgASgO",
+            "MjMuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuRGVwZW5k",
+            "ZW5jeVR5cGUi+QgKHVNlYXJjaExpbmVhZ2VTdHJlYW1pbmdSZXF1ZXN0EjoK",
+            "BnBhcmVudBgBIAEoCUIq4EEC+kEkEiJkYXRhbGluZWFnZS5nb29nbGVhcGlz",
+            "LmNvbS9Qcm9jZXNzEhYKCWxvY2F0aW9ucxgCIAMoCUID4EECEmsKDXJvb3Rf",
+            "Y3JpdGVyaWEYAyABKAsyTy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGlu",
+            "ZWFnZS52MS5TZWFyY2hMaW5lYWdlU3RyZWFtaW5nUmVxdWVzdC5Sb290Q3Jp",
+            "dGVyaWFCA+BBAhJqCglkaXJlY3Rpb24YBCABKA4yUi5nb29nbGUuY2xvdWQu",
+            "ZGF0YWNhdGFsb2cubGluZWFnZS52MS5TZWFyY2hMaW5lYWdlU3RyZWFtaW5n",
+            "UmVxdWVzdC5TZWFyY2hEaXJlY3Rpb25CA+BBAhJmCgdmaWx0ZXJzGAUgASgL",
+            "MlAuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuU2VhcmNo",
+            "TGluZWFnZVN0cmVhbWluZ1JlcXVlc3QuU2VhcmNoRmlsdGVyc0ID4EEBEmQK",
+            "BmxpbWl0cxgGIAEoCzJPLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5l",
+            "YWdlLnYxLlNlYXJjaExpbmVhZ2VTdHJlYW1pbmdSZXF1ZXN0LlNlYXJjaExp",
+            "bWl0c0ID4EEBGvoBCg1TZWFyY2hGaWx0ZXJzElIKEGRlcGVuZGVuY3lfdHlw",
+            "ZXMYASADKA4yMy5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFnZS52",
+            "MS5EZXBlbmRlbmN5VHlwZUID4EEBEmUKCmVudGl0eV9zZXQYAiABKA4yTC5n",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFnZS52MS5TZWFyY2hMaW5l",
+            "YWdlU3RyZWFtaW5nUmVxdWVzdC5FbnRpdHlTZXRCA+BBARIuCgp0aW1lX3Jh",
+            "bmdlGAMgASgLMhUuZ29vZ2xlLnR5cGUuSW50ZXJ2YWxCA+BBARpjCgxTZWFy",
+            "Y2hMaW1pdHMSFgoJbWF4X2RlcHRoGAEgASgFQgPgQQESGAoLbWF4X3Jlc3Vs",
+            "dHMYAiABKAVCA+BBARIhChRtYXhfcHJvY2Vzc19wZXJfbGluaxgDIAEoBUID",
+            "4EEBGnEKDFJvb3RDcml0ZXJpYRJVCghlbnRpdGllcxgBIAEoCzI8Lmdvb2ds",
+            "ZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLk11bHRpcGxlRW50aXR5",
+            "UmVmZXJlbmNlQgPgQQFIAEIKCghjcml0ZXJpYSJRCg9TZWFyY2hEaXJlY3Rp",
+            "b24SIAocU0VBUkNIX0RJUkVDVElPTl9VTlNQRUNJRklFRBAAEg4KCkRPV05T",
+            "VFJFQU0QARIMCghVUFNUUkVBTRACIjUKCUVudGl0eVNldBIaChZFTlRJVFlf",
+            "U0VUX1VOU1BFQ0lGSUVEEAASDAoIRU5USVRJRVMQASKAAQoeU2VhcmNoTGlu",
+            "ZWFnZVN0cmVhbWluZ1Jlc3BvbnNlEkQKBWxpbmtzGAEgAygLMjAuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFjYXRhbG9nLmxpbmVhZ2UudjEuTGluZWFnZUxpbmtCA+BB",
+            "AxIYCgt1bnJlYWNoYWJsZRgCIAMoCUID4EEGKkwKDkRlcGVuZGVuY3lUeXBl",
+            "Eh8KG0RFUEVOREVOQ1lfVFlQRV9VTlNQRUNJRklFRBAAEg4KCkVYQUNUX0NP",
+            "UFkQARIJCgVPVEhFUhADMqkfCgdMaW5lYWdlEpkCChpQcm9jZXNzT3Blbkxp",
             "bmVhZ2VSdW5FdmVudBJGLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5l",
             "YWdlLnYxLlByb2Nlc3NPcGVuTGluZWFnZVJ1bkV2ZW50UmVxdWVzdBpHLmdv",
             "b2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5saW5lYWdlLnYxLlByb2Nlc3NPcGVu",
@@ -246,27 +310,34 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             "c3Nlc1JlcXVlc3QaRS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFn",
             "ZS52MS5CYXRjaFNlYXJjaExpbmtQcm9jZXNzZXNSZXNwb25zZSJHgtPkkwJB",
             "IjwvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfTpiYXRjaFNl",
-            "YXJjaExpbmtQcm9jZXNzZXM6ASoaTspBGmRhdGFsaW5lYWdlLmdvb2dsZWFw",
-            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
-            "ZC1wbGF0Zm9ybULyAQonY29tLmdvb2dsZS5jbG91ZC5kYXRhY2F0YWxvZy5s",
-            "aW5lYWdlLnYxQgxMaW5lYWdlUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9kYXRhY2F0YWxvZy9saW5lYWdlL2FwaXYxL2xpbmVhZ2VwYjtsaW5lYWdl",
-            "cGKqAiNHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuTGluZWFnZS5WMcoCI0dv",
-            "b2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xMaW5lYWdlXFYx6gInR29vZ2xlOjpD",
-            "bG91ZDo6RGF0YUNhdGFsb2c6OkxpbmVhZ2U6OlYxYgZwcm90bzM="));
+            "YXJjaExpbmtQcm9jZXNzZXM6ASoS6gEKFlNlYXJjaExpbmVhZ2VTdHJlYW1p",
+            "bmcSQi5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cubGluZWFnZS52MS5TZWFy",
+            "Y2hMaW5lYWdlU3RyZWFtaW5nUmVxdWVzdBpDLmdvb2dsZS5jbG91ZC5kYXRh",
+            "Y2F0YWxvZy5saW5lYWdlLnYxLlNlYXJjaExpbmVhZ2VTdHJlYW1pbmdSZXNw",
+            "b25zZSJFgtPkkwI/IjovdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfTpzZWFyY2hMaW5lYWdlU3RyZWFtaW5nOgEqMAEaTspBGmRhdGFsaW5l",
+            "YWdlLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybULyAQonY29tLmdvb2dsZS5jbG91ZC5k",
+            "YXRhY2F0YWxvZy5saW5lYWdlLnYxQgxMaW5lYWdlUHJvdG9QAVpBY2xvdWQu",
+            "Z29vZ2xlLmNvbS9nby9kYXRhY2F0YWxvZy9saW5lYWdlL2FwaXYxL2xpbmVh",
+            "Z2VwYjtsaW5lYWdlcGKqAiNHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuTGlu",
+            "ZWFnZS5WMcoCI0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xMaW5lYWdlXFYx",
+            "6gInR29vZ2xlOjpDbG91ZDo6RGF0YUNhdGFsb2c6OkxpbmVhZ2U6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Process), global::Google.Cloud.DataCatalog.Lineage.V1.Process.Parser, new[]{ "Name", "DisplayName", "Attributes", "Origin" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Run), global::Google.Cloud.DataCatalog.Lineage.V1.Run.Parser, new[]{ "Name", "DisplayName", "Attributes", "StartTime", "EndTime", "State" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Run.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.LineageEvent), global::Google.Cloud.DataCatalog.Lineage.V1.LineageEvent.Parser, new[]{ "Name", "Links", "StartTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.EventLink), global::Google.Cloud.DataCatalog.Lineage.V1.EventLink.Parser, new[]{ "Source", "Target" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference), global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference.Parser, new[]{ "FullyQualifiedName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.EventLink), global::Google.Cloud.DataCatalog.Lineage.V1.EventLink.Parser, new[]{ "Source", "Target", "DependencyInfo" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.DependencyInfo), global::Google.Cloud.DataCatalog.Lineage.V1.DependencyInfo.Parser, new[]{ "DependencyType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference), global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference.Parser, new[]{ "FullyQualifiedName", "Field" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata), global::Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata.Parser, new[]{ "State", "OperationType", "Resource", "ResourceUuid", "CreateTime", "EndTime" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata.Types.State), typeof(global::Google.Cloud.DataCatalog.Lineage.V1.OperationMetadata.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest), global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventRequest.Parser, new[]{ "Parent", "OpenLineage", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse), global::Google.Cloud.DataCatalog.Lineage.V1.ProcessOpenLineageRunEventResponse.Parser, new[]{ "Process", "Run", "LineageEvents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest), global::Google.Cloud.DataCatalog.Lineage.V1.CreateProcessRequest.Parser, new[]{ "Parent", "Process", "RequestId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.UpdateProcessRequest), global::Google.Cloud.DataCatalog.Lineage.V1.UpdateProcessRequest.Parser, new[]{ "Process", "UpdateMask", "AllowMissing" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.UpdateProcessRequest), global::Google.Cloud.DataCatalog.Lineage.V1.UpdateProcessRequest.Parser, new[]{ "Process", "UpdateMask", "AllowMissing", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.GetProcessRequest), global::Google.Cloud.DataCatalog.Lineage.V1.GetProcessRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.ListProcessesRequest), global::Google.Cloud.DataCatalog.Lineage.V1.ListProcessesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.ListProcessesResponse), global::Google.Cloud.DataCatalog.Lineage.V1.ListProcessesResponse.Parser, new[]{ "Processes", "NextPageToken" }, null, null, null, null),
@@ -282,19 +353,47 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsRequest), global::Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsResponse), global::Google.Cloud.DataCatalog.Lineage.V1.ListLineageEventsResponse.Parser, new[]{ "LineageEvents", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.DeleteLineageEventRequest), global::Google.Cloud.DataCatalog.Lineage.V1.DeleteLineageEventRequest.Parser, new[]{ "Name", "AllowMissing" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLinksRequest), global::Google.Cloud.DataCatalog.Lineage.V1.SearchLinksRequest.Parser, new[]{ "Parent", "Source", "Target", "PageSize", "PageToken" }, new[]{ "Criteria" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLinksRequest), global::Google.Cloud.DataCatalog.Lineage.V1.SearchLinksRequest.Parser, new[]{ "Parent", "Source", "Target", "Sources", "Targets", "PageSize", "PageToken" }, new[]{ "Criteria" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference), global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference.Parser, new[]{ "Entities" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLinksResponse), global::Google.Cloud.DataCatalog.Lineage.V1.SearchLinksResponse.Parser, new[]{ "Links", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Link), global::Google.Cloud.DataCatalog.Lineage.V1.Link.Parser, new[]{ "Name", "Source", "Target", "StartTime", "EndTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Link), global::Google.Cloud.DataCatalog.Lineage.V1.Link.Parser, new[]{ "Name", "Source", "Target", "StartTime", "EndTime", "DependencyInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Link.Types.DependencyInfo), global::Google.Cloud.DataCatalog.Lineage.V1.Link.Types.DependencyInfo.Parser, new[]{ "DependencyType" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest), global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesRequest.Parser, new[]{ "Parent", "Links", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse), global::Google.Cloud.DataCatalog.Lineage.V1.BatchSearchLinkProcessesResponse.Parser, new[]{ "ProcessLinks", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessLinks), global::Google.Cloud.DataCatalog.Lineage.V1.ProcessLinks.Parser, new[]{ "Process", "Links" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.ProcessLinkInfo), global::Google.Cloud.DataCatalog.Lineage.V1.ProcessLinkInfo.Parser, new[]{ "Link", "StartTime", "EndTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Origin), global::Google.Cloud.DataCatalog.Lineage.V1.Origin.Parser, new[]{ "SourceType", "Name" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Origin.Types.SourceType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Origin), global::Google.Cloud.DataCatalog.Lineage.V1.Origin.Parser, new[]{ "SourceType", "Name" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.Lineage.V1.Origin.Types.SourceType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink), global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Parser, new[]{ "Source", "Target", "Processes", "DependencyInfo", "Depth", "Location" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.LineageProcess), global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.LineageProcess.Parser, new[]{ "Process" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.DependencyInfo), global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.DependencyInfo.Parser, new[]{ "DependencyType" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest), global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Parser, new[]{ "Parent", "Locations", "RootCriteria", "Direction", "Filters", "Limits" }, null, new[]{ typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection), typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchFilters), global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchFilters.Parser, new[]{ "DependencyTypes", "EntitySet", "TimeRange" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchLimits), global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchLimits.Parser, new[]{ "MaxDepth", "MaxResults", "MaxProcessPerLink" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.RootCriteria), global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.RootCriteria.Parser, new[]{ "Entities" }, new[]{ "Criteria" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse), global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingResponse.Parser, new[]{ "Links", "Unreachable" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Type of dependency between entities.
+  /// </summary>
+  public enum DependencyType {
+    /// <summary>
+    /// Dependency type unspecified.
+    /// </summary>
+    [pbr::OriginalName("DEPENDENCY_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Exact data copy without any change.
+    /// </summary>
+    [pbr::OriginalName("EXACT_COPY")] ExactCopy = 1,
+    /// <summary>
+    /// Other types of dependencies like filtering or grouping.
+    /// </summary>
+    [pbr::OriginalName("OTHER")] Other = 3,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// A process is the definition of a data transformation operation.
@@ -706,7 +805,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     private string displayName_ = "";
     /// <summary>
     /// Optional. A human-readable name you can set to display in a user interface.
-    /// Must be not longer than 1024 characters and only contain UTF-8 letters
+    /// Must be not longer than 200 characters and only contain UTF-8 letters
     /// or numbers, spaces or characters like `_-:&amp;.`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1465,6 +1564,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public EventLink(EventLink other) : this() {
       source_ = other.source_ != null ? other.source_.Clone() : null;
       target_ = other.target_ != null ? other.target_.Clone() : null;
+      dependencyInfo_ = other.dependencyInfo_ != null ? other.dependencyInfo_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1504,6 +1604,21 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       }
     }
 
+    /// <summary>Field number for the "dependency_info" field.</summary>
+    public const int DependencyInfoFieldNumber = 3;
+    private global::Google.Cloud.DataCatalog.Lineage.V1.DependencyInfo dependencyInfo_;
+    /// <summary>
+    /// Optional. Describes how the target depends on the source.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.DependencyInfo DependencyInfo {
+      get { return dependencyInfo_; }
+      set {
+        dependencyInfo_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1521,6 +1636,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       }
       if (!object.Equals(Source, other.Source)) return false;
       if (!object.Equals(Target, other.Target)) return false;
+      if (!object.Equals(DependencyInfo, other.DependencyInfo)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1530,6 +1646,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       int hash = 1;
       if (source_ != null) hash ^= Source.GetHashCode();
       if (target_ != null) hash ^= Target.GetHashCode();
+      if (dependencyInfo_ != null) hash ^= DependencyInfo.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1556,6 +1673,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Target);
       }
+      if (dependencyInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DependencyInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1574,6 +1695,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(Target);
       }
+      if (dependencyInfo_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(DependencyInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1589,6 +1714,9 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       }
       if (target_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Target);
+      }
+      if (dependencyInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DependencyInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1613,6 +1741,12 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
           Target = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
         }
         Target.MergeFrom(other.Target);
+      }
+      if (other.dependencyInfo_ != null) {
+        if (dependencyInfo_ == null) {
+          DependencyInfo = new global::Google.Cloud.DataCatalog.Lineage.V1.DependencyInfo();
+        }
+        DependencyInfo.MergeFrom(other.DependencyInfo);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1647,6 +1781,13 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             input.ReadMessage(Target);
             break;
           }
+          case 26: {
+            if (dependencyInfo_ == null) {
+              DependencyInfo = new global::Google.Cloud.DataCatalog.Lineage.V1.DependencyInfo();
+            }
+            input.ReadMessage(DependencyInfo);
+            break;
+          }
         }
       }
     #endif
@@ -1678,6 +1819,217 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
               Target = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
             }
             input.ReadMessage(Target);
+            break;
+          }
+          case 26: {
+            if (dependencyInfo_ == null) {
+              DependencyInfo = new global::Google.Cloud.DataCatalog.Lineage.V1.DependencyInfo();
+            }
+            input.ReadMessage(DependencyInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Dependency info describes how one entity depends on another.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DependencyInfo : pb::IMessage<DependencyInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DependencyInfo> _parser = new pb::MessageParser<DependencyInfo>(() => new DependencyInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DependencyInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInfo(DependencyInfo other) : this() {
+      dependencyType_ = other.dependencyType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DependencyInfo Clone() {
+      return new DependencyInfo(this);
+    }
+
+    /// <summary>Field number for the "dependency_type" field.</summary>
+    public const int DependencyTypeFieldNumber = 1;
+    private global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType dependencyType_ = global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified;
+    /// <summary>
+    /// Required. Type of dependency.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType DependencyType {
+      get { return dependencyType_; }
+      set {
+        dependencyType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DependencyInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DependencyInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DependencyType != other.DependencyType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) hash ^= DependencyType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DependencyType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) DependencyType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DependencyType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DependencyInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+        DependencyType = other.DependencyType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            DependencyType = (global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            DependencyType = (global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType) input.ReadEnum();
             break;
           }
         }
@@ -1705,7 +2057,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1726,6 +2078,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EntityReference(EntityReference other) : this() {
       fullyQualifiedName_ = other.fullyQualifiedName_;
+      field_ = other.field_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1740,7 +2093,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     private string fullyQualifiedName_ = "";
     /// <summary>
     /// Required. [Fully Qualified Name
-    /// (FQN)](https://cloud.google.com/data-catalog/docs/fully-qualified-names)
+    /// (FQN)](https://cloud.google.com/dataplex/docs/fully-qualified-names)
     /// of the entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1750,6 +2103,29 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       set {
         fullyQualifiedName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "field" field.</summary>
+    public const int FieldFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_field_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> field_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Field path within the entity. Each nesting level should be a
+    /// separate value in the repeated field. The order matters. Must be empty for
+    /// asset level lineage
+    ///
+    /// For example to address "salary.net" subfield where "salary" is a column and
+    /// "net" is a proto field two values in the `field` should be reported,
+    /// the first is "salary" and the second is "net".
+    ///
+    /// Each field length is limited to 500 characters.
+    /// Maximum supported nesting level is 20.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Field {
+      get { return field_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1768,6 +2144,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         return true;
       }
       if (FullyQualifiedName != other.FullyQualifiedName) return false;
+      if(!field_.Equals(other.field_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1776,6 +2153,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (FullyQualifiedName.Length != 0) hash ^= FullyQualifiedName.GetHashCode();
+      hash ^= field_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1798,6 +2176,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(10);
         output.WriteString(FullyQualifiedName);
       }
+      field_.WriteTo(output, _repeated_field_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1812,6 +2191,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(10);
         output.WriteString(FullyQualifiedName);
       }
+      field_.WriteTo(ref output, _repeated_field_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1825,6 +2205,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (FullyQualifiedName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FullyQualifiedName);
       }
+      size += field_.CalculateSize(_repeated_field_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1840,6 +2221,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (other.FullyQualifiedName.Length != 0) {
         FullyQualifiedName = other.FullyQualifiedName;
       }
+      field_.Add(other.field_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1863,6 +2245,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             FullyQualifiedName = input.ReadString();
             break;
           }
+          case 26: {
+            field_.AddEntriesFrom(input, _repeated_field_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1884,6 +2270,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             break;
           case 10: {
             FullyQualifiedName = input.ReadString();
+            break;
+          }
+          case 26: {
+            field_.AddEntriesFrom(ref input, _repeated_field_codec);
             break;
           }
         }
@@ -1911,7 +2301,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2372,7 +2762,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [ProcessOpenLineageRunEvent][google.cloud.datacatalog.lineage.v1.ProcessOpenLineageRunEvent].
+  /// [ProcessOpenLineageRunEvent][google.cloud.datacatalog.lineage.v1.Lineage.ProcessOpenLineageRunEvent].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessOpenLineageRunEventRequest : pb::IMessage<ProcessOpenLineageRunEventRequest>
@@ -2389,7 +2779,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2457,9 +2847,9 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// A unique identifier for this request. Restricted to 36 ASCII characters.
-    /// A random UUID is recommended. This request is idempotent only if a
-    /// `request_id` is provided.
+    /// Optional. A unique identifier for this request. Restricted to 36 ASCII
+    /// characters. A random UUID is recommended. This request is idempotent only
+    /// if a `request_id` is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2670,7 +3060,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Response message for
-  /// [ProcessOpenLineageRunEvent][google.cloud.datacatalog.lineage.v1.ProcessOpenLineageRunEvent].
+  /// [ProcessOpenLineageRunEvent][google.cloud.datacatalog.lineage.v1.Lineage.ProcessOpenLineageRunEvent].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ProcessOpenLineageRunEventResponse : pb::IMessage<ProcessOpenLineageRunEventResponse>
@@ -2687,7 +3077,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2949,7 +3339,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [CreateProcess][google.cloud.datacatalog.lineage.v1.CreateProcess].
+  /// [CreateProcess][google.cloud.datacatalog.lineage.v1.Lineage.CreateProcess].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateProcessRequest : pb::IMessage<CreateProcessRequest>
@@ -2966,7 +3356,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3033,9 +3423,9 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// A unique identifier for this request. Restricted to 36 ASCII characters.
-    /// A random UUID is recommended. This request is idempotent only if a
-    /// `request_id` is provided.
+    /// Optional. A unique identifier for this request. Restricted to 36 ASCII
+    /// characters. A random UUID is recommended. This request is idempotent only
+    /// if a `request_id` is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3246,7 +3636,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [UpdateProcess][google.cloud.datacatalog.lineage.v1.UpdateProcess].
+  /// [UpdateProcess][google.cloud.datacatalog.lineage.v1.Lineage.UpdateProcess].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateProcessRequest : pb::IMessage<UpdateProcessRequest>
@@ -3263,7 +3653,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3286,6 +3676,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       process_ = other.process_ != null ? other.process_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       allowMissing_ = other.allowMissing_;
+      requestId_ = other.requestId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3316,8 +3707,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// The list of fields to update. Currently not used. The whole message is
-    /// updated.
+    /// Optional. The list of fields to update. Currently not used. The whole
+    /// message is updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3332,7 +3723,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true and the process is not found, the request inserts it.
+    /// Optional. If set to true and the process is not found, the request inserts
+    /// it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3340,6 +3732,23 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       get { return allowMissing_; }
       set {
         allowMissing_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "request_id" field.</summary>
+    public const int RequestIdFieldNumber = 4;
+    private string requestId_ = "";
+    /// <summary>
+    /// Optional. A unique identifier for this request. Restricted to 36 ASCII
+    /// characters. A random UUID is recommended. This request is idempotent only
+    /// if a `request_id` is provided.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string RequestId {
+      get { return requestId_; }
+      set {
+        requestId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -3361,6 +3770,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (!object.Equals(Process, other.Process)) return false;
       if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
       if (AllowMissing != other.AllowMissing) return false;
+      if (RequestId != other.RequestId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3371,6 +3781,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (process_ != null) hash ^= Process.GetHashCode();
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
       if (AllowMissing != false) hash ^= AllowMissing.GetHashCode();
+      if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3401,6 +3812,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(24);
         output.WriteBool(AllowMissing);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3423,6 +3838,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(24);
         output.WriteBool(AllowMissing);
       }
+      if (RequestId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(RequestId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3441,6 +3860,9 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       }
       if (AllowMissing != false) {
         size += 1 + 1;
+      }
+      if (RequestId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(RequestId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3468,6 +3890,9 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       }
       if (other.AllowMissing != false) {
         AllowMissing = other.AllowMissing;
+      }
+      if (other.RequestId.Length != 0) {
+        RequestId = other.RequestId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3504,6 +3929,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
           }
           case 24: {
             AllowMissing = input.ReadBool();
+            break;
+          }
+          case 34: {
+            RequestId = input.ReadString();
             break;
           }
         }
@@ -3543,6 +3972,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             AllowMissing = input.ReadBool();
             break;
           }
+          case 34: {
+            RequestId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -3552,7 +3985,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [GetProcess][google.cloud.datacatalog.lineage.v1.GetProcess].
+  /// [GetProcess][google.cloud.datacatalog.lineage.v1.Lineage.GetProcess].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetProcessRequest : pb::IMessage<GetProcessRequest>
@@ -3569,7 +4002,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3757,7 +4190,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [ListProcesses][google.cloud.datacatalog.lineage.v1.ListProcesses].
+  /// [ListProcesses][google.cloud.datacatalog.lineage.v1.Lineage.ListProcesses].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProcessesRequest : pb::IMessage<ListProcessesRequest>
@@ -3774,7 +4207,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3826,7 +4259,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of processes to return. The service may return
+    /// Optional. The maximum number of processes to return. The service may return
     /// fewer than this value. If unspecified, at most 50 processes are
     /// returned. The maximum value is 100; values greater than 100 are cut to
     /// 100.
@@ -3844,8 +4277,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The page token received from a previous `ListProcesses` call. Specify
-    /// it to get the next page.
+    /// Optional. The page token received from a previous `ListProcesses` call.
+    /// Specify it to get the next page.
     ///
     /// When paginating, all other parameters specified in this call must
     /// match the parameters of the call that provided the page token.
@@ -4050,7 +4483,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Response message for
-  /// [ListProcesses][google.cloud.datacatalog.lineage.v1.ListProcesses].
+  /// [ListProcesses][google.cloud.datacatalog.lineage.v1.Lineage.ListProcesses].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListProcessesResponse : pb::IMessage<ListProcessesResponse>
@@ -4067,7 +4500,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4285,7 +4718,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [DeleteProcess][google.cloud.datacatalog.lineage.v1.DeleteProcess].
+  /// [DeleteProcess][google.cloud.datacatalog.lineage.v1.Lineage.DeleteProcess].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteProcessRequest : pb::IMessage<DeleteProcessRequest>
@@ -4302,7 +4735,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4352,7 +4785,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int AllowMissingFieldNumber = 2;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true and the process is not found, the request
+    /// Optional. If set to true and the process is not found, the request
     /// succeeds but the server doesn't perform any actions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4531,7 +4964,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [CreateRun][google.cloud.datacatalog.lineage.v1.CreateRun].
+  /// [CreateRun][google.cloud.datacatalog.lineage.v1.Lineage.CreateRun].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateRunRequest : pb::IMessage<CreateRunRequest>
@@ -4548,7 +4981,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4614,9 +5047,9 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// A unique identifier for this request. Restricted to 36 ASCII characters.
-    /// A random UUID is recommended. This request is idempotent only if a
-    /// `request_id` is provided.
+    /// Optional. A unique identifier for this request. Restricted to 36 ASCII
+    /// characters. A random UUID is recommended. This request is idempotent only
+    /// if a `request_id` is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4827,7 +5260,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [UpdateRun][google.cloud.datacatalog.lineage.v1.UpdateRun].
+  /// [UpdateRun][google.cloud.datacatalog.lineage.v1.Lineage.UpdateRun].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateRunRequest : pb::IMessage<UpdateRunRequest>
@@ -4844,7 +5277,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4900,8 +5333,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int UpdateMaskFieldNumber = 2;
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
-    /// The list of fields to update. Currently not used. The whole message is
-    /// updated.
+    /// Optional. The list of fields to update. Currently not used. The whole
+    /// message is updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4916,7 +5349,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int AllowMissingFieldNumber = 3;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true and the run is not found, the request creates it.
+    /// Optional. If set to true and the run is not found, the request creates it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5136,7 +5569,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [GetRun][google.cloud.datacatalog.lineage.v1.GetRun].
+  /// [GetRun][google.cloud.datacatalog.lineage.v1.Lineage.GetRun].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetRunRequest : pb::IMessage<GetRunRequest>
@@ -5153,7 +5586,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5341,7 +5774,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [ListRuns][google.cloud.datacatalog.lineage.v1.ListRuns].
+  /// [ListRuns][google.cloud.datacatalog.lineage.v1.Lineage.ListRuns].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRunsRequest : pb::IMessage<ListRunsRequest>
@@ -5358,7 +5791,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5409,7 +5842,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of runs to return. The service may return
+    /// Optional. The maximum number of runs to return. The service may return
     /// fewer than this value. If unspecified, at most 50 runs are
     /// returned. The maximum value is 100; values greater than 100 are cut to
     /// 100.
@@ -5427,7 +5860,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The page token received from a previous `ListRuns` call. Specify
+    /// Optional. The page token received from a previous `ListRuns` call. Specify
     /// it to get the next page.
     ///
     /// When paginating, all other parameters specified in this call must
@@ -5633,7 +6066,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Response message for
-  /// [ListRuns][google.cloud.datacatalog.lineage.v1.ListRuns].
+  /// [ListRuns][google.cloud.datacatalog.lineage.v1.Lineage.ListRuns].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListRunsResponse : pb::IMessage<ListRunsResponse>
@@ -5650,7 +6083,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5868,7 +6301,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [DeleteRun][google.cloud.datacatalog.lineage.v1.DeleteRun].
+  /// [DeleteRun][google.cloud.datacatalog.lineage.v1.Lineage.DeleteRun].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteRunRequest : pb::IMessage<DeleteRunRequest>
@@ -5885,7 +6318,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5935,7 +6368,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int AllowMissingFieldNumber = 2;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true and the run is not found, the request
+    /// Optional. If set to true and the run is not found, the request
     /// succeeds but the server doesn't perform any actions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6114,7 +6547,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [CreateLineageEvent][google.cloud.datacatalog.lineage.v1.CreateLineageEvent].
+  /// [CreateLineageEvent][google.cloud.datacatalog.lineage.v1.Lineage.CreateLineageEvent].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateLineageEventRequest : pb::IMessage<CreateLineageEventRequest>
@@ -6131,7 +6564,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6197,9 +6630,9 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int RequestIdFieldNumber = 3;
     private string requestId_ = "";
     /// <summary>
-    /// A unique identifier for this request. Restricted to 36 ASCII characters.
-    /// A random UUID is recommended. This request is idempotent only if a
-    /// `request_id` is provided.
+    /// Optional. A unique identifier for this request. Restricted to 36 ASCII
+    /// characters. A random UUID is recommended. This request is idempotent only
+    /// if a `request_id` is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6410,7 +6843,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [GetLineageEvent][google.cloud.datacatalog.lineage.v1.GetLineageEvent].
+  /// [GetLineageEvent][google.cloud.datacatalog.lineage.v1.Lineage.GetLineageEvent].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetLineageEventRequest : pb::IMessage<GetLineageEventRequest>
@@ -6427,7 +6860,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6615,7 +7048,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [ListLineageEvents][google.cloud.datacatalog.lineage.v1.ListLineageEvents].
+  /// [ListLineageEvents][google.cloud.datacatalog.lineage.v1.Lineage.ListLineageEvents].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLineageEventsRequest : pb::IMessage<ListLineageEventsRequest>
@@ -6632,7 +7065,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6684,7 +7117,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of lineage events to return.
+    /// Optional. The maximum number of lineage events to return.
     ///
     /// The service may return fewer events than this value.
     /// If unspecified, at most 50 events are returned. The maximum value is 100;
@@ -6703,8 +7136,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// The page token received from a previous `ListLineageEvents` call. Specify
-    /// it to get the next page.
+    /// Optional. The page token received from a previous `ListLineageEvents` call.
+    /// Specify it to get the next page.
     ///
     /// When paginating, all other parameters specified in this call must
     /// match the parameters of the call that provided the page token.
@@ -6909,7 +7342,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Response message for
-  /// [ListLineageEvents][google.cloud.datacatalog.lineage.v1.ListLineageEvents].
+  /// [ListLineageEvents][google.cloud.datacatalog.lineage.v1.Lineage.ListLineageEvents].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListLineageEventsResponse : pb::IMessage<ListLineageEventsResponse>
@@ -6926,7 +7359,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7144,7 +7577,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
 
   /// <summary>
   /// Request message for
-  /// [DeleteLineageEvent][google.cloud.datacatalog.lineage.v1.DeleteLineageEvent].
+  /// [DeleteLineageEvent][google.cloud.datacatalog.lineage.v1.Lineage.DeleteLineageEvent].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteLineageEventRequest : pb::IMessage<DeleteLineageEventRequest>
@@ -7161,7 +7594,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7211,7 +7644,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int AllowMissingFieldNumber = 2;
     private bool allowMissing_;
     /// <summary>
-    /// If set to true and the lineage event is not found, the request
+    /// Optional. If set to true and the lineage event is not found, the request
     /// succeeds but the server doesn't perform any actions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7407,7 +7840,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7436,6 +7869,12 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
           break;
         case CriteriaOneofCase.Target:
           Target = other.Target.Clone();
+          break;
+        case CriteriaOneofCase.Sources:
+          Sources = other.Sources.Clone();
+          break;
+        case CriteriaOneofCase.Targets:
+          Targets = other.Targets.Clone();
           break;
       }
 
@@ -7495,6 +7934,48 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       }
     }
 
+    /// <summary>Field number for the "sources" field.</summary>
+    public const int SourcesFieldNumber = 6;
+    /// <summary>
+    /// Optional. Send a list of asset information in the **sources** field to
+    /// retrieve all links that lead from the specified assets to downstream
+    /// assets. This field is similar to the `source`
+    /// [source][google.cloud.datacatalog.lineage.v1.SearchLinksRequest.source]
+    /// field but allows providing multiple entities.
+    /// All entities within the `MultipleEntityReference` must have the same
+    /// `fully_qualified_name`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference Sources {
+      get { return criteriaCase_ == CriteriaOneofCase.Sources ? (global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference) criteria_ : null; }
+      set {
+        criteria_ = value;
+        criteriaCase_ = value == null ? CriteriaOneofCase.None : CriteriaOneofCase.Sources;
+      }
+    }
+
+    /// <summary>Field number for the "targets" field.</summary>
+    public const int TargetsFieldNumber = 7;
+    /// <summary>
+    /// Optional. Send a list of asset information in the **targets** field to
+    /// retrieve all links that lead from upstream assets to the specified
+    /// assets. This field is similar to the `target`
+    /// [target][google.cloud.datacatalog.lineage.v1.SearchLinksRequest.target]
+    /// field but allows providing multiple entities.
+    /// All entities within the `MultipleEntityReference` must have the same
+    /// `fully_qualified_name`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference Targets {
+      get { return criteriaCase_ == CriteriaOneofCase.Targets ? (global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference) criteria_ : null; }
+      set {
+        criteria_ = value;
+        criteriaCase_ = value == null ? CriteriaOneofCase.None : CriteriaOneofCase.Targets;
+      }
+    }
+
     /// <summary>Field number for the "page_size" field.</summary>
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
@@ -7540,6 +8021,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       None = 0,
       Source = 4,
       Target = 5,
+      Sources = 6,
+      Targets = 7,
     }
     private CriteriaOneofCase criteriaCase_ = CriteriaOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7573,6 +8056,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (Parent != other.Parent) return false;
       if (!object.Equals(Source, other.Source)) return false;
       if (!object.Equals(Target, other.Target)) return false;
+      if (!object.Equals(Sources, other.Sources)) return false;
+      if (!object.Equals(Targets, other.Targets)) return false;
       if (PageSize != other.PageSize) return false;
       if (PageToken != other.PageToken) return false;
       if (CriteriaCase != other.CriteriaCase) return false;
@@ -7586,6 +8071,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (criteriaCase_ == CriteriaOneofCase.Source) hash ^= Source.GetHashCode();
       if (criteriaCase_ == CriteriaOneofCase.Target) hash ^= Target.GetHashCode();
+      if (criteriaCase_ == CriteriaOneofCase.Sources) hash ^= Sources.GetHashCode();
+      if (criteriaCase_ == CriteriaOneofCase.Targets) hash ^= Targets.GetHashCode();
       if (PageSize != 0) hash ^= PageSize.GetHashCode();
       if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
       hash ^= (int) criteriaCase_;
@@ -7627,6 +8114,14 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Target);
       }
+      if (criteriaCase_ == CriteriaOneofCase.Sources) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Sources);
+      }
+      if (criteriaCase_ == CriteriaOneofCase.Targets) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Targets);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7657,6 +8152,14 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(Target);
       }
+      if (criteriaCase_ == CriteriaOneofCase.Sources) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Sources);
+      }
+      if (criteriaCase_ == CriteriaOneofCase.Targets) {
+        output.WriteRawTag(58);
+        output.WriteMessage(Targets);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7675,6 +8178,12 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       }
       if (criteriaCase_ == CriteriaOneofCase.Target) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Target);
+      }
+      if (criteriaCase_ == CriteriaOneofCase.Sources) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Sources);
+      }
+      if (criteriaCase_ == CriteriaOneofCase.Targets) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Targets);
       }
       if (PageSize != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
@@ -7715,6 +8224,18 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             Target = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
           }
           Target.MergeFrom(other.Target);
+          break;
+        case CriteriaOneofCase.Sources:
+          if (Sources == null) {
+            Sources = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+          }
+          Sources.MergeFrom(other.Sources);
+          break;
+        case CriteriaOneofCase.Targets:
+          if (Targets == null) {
+            Targets = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+          }
+          Targets.MergeFrom(other.Targets);
           break;
       }
 
@@ -7767,6 +8288,24 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             Target = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference subBuilder = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+            if (criteriaCase_ == CriteriaOneofCase.Sources) {
+              subBuilder.MergeFrom(Sources);
+            }
+            input.ReadMessage(subBuilder);
+            Sources = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference subBuilder = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+            if (criteriaCase_ == CriteriaOneofCase.Targets) {
+              subBuilder.MergeFrom(Targets);
+            }
+            input.ReadMessage(subBuilder);
+            Targets = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -7816,6 +8355,218 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             Target = subBuilder;
             break;
           }
+          case 50: {
+            global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference subBuilder = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+            if (criteriaCase_ == CriteriaOneofCase.Sources) {
+              subBuilder.MergeFrom(Sources);
+            }
+            input.ReadMessage(subBuilder);
+            Sources = subBuilder;
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference subBuilder = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+            if (criteriaCase_ == CriteriaOneofCase.Targets) {
+              subBuilder.MergeFrom(Targets);
+            }
+            input.ReadMessage(subBuilder);
+            Targets = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Multiple entity reference for SearchLinksRequest.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class MultipleEntityReference : pb::IMessage<MultipleEntityReference>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<MultipleEntityReference> _parser = new pb::MessageParser<MultipleEntityReference>(() => new MultipleEntityReference());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<MultipleEntityReference> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[27]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultipleEntityReference() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultipleEntityReference(MultipleEntityReference other) : this() {
+      entities_ = other.entities_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public MultipleEntityReference Clone() {
+      return new MultipleEntityReference(this);
+    }
+
+    /// <summary>Field number for the "entities" field.</summary>
+    public const int EntitiesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference> _repeated_entities_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference> entities_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference>();
+    /// <summary>
+    /// Optional. The list of entities to search for links. The maximum number of
+    /// entities is 20.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference> Entities {
+      get { return entities_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as MultipleEntityReference);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(MultipleEntityReference other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!entities_.Equals(other.entities_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= entities_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      entities_.WriteTo(output, _repeated_entities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      entities_.WriteTo(ref output, _repeated_entities_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += entities_.CalculateSize(_repeated_entities_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(MultipleEntityReference other) {
+      if (other == null) {
+        return;
+      }
+      entities_.Add(other.entities_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            entities_.AddEntriesFrom(input, _repeated_entities_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            entities_.AddEntriesFrom(ref input, _repeated_entities_codec);
+            break;
+          }
         }
       }
     }
@@ -7842,7 +8593,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8081,7 +8832,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8106,6 +8857,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       target_ = other.target_ != null ? other.target_.Clone() : null;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+      dependencyInfo_ = other.dependencyInfo_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8191,6 +8943,21 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       }
     }
 
+    /// <summary>Field number for the "dependency_info" field.</summary>
+    public const int DependencyInfoFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DataCatalog.Lineage.V1.Link.Types.DependencyInfo> _repeated_dependencyInfo_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.DataCatalog.Lineage.V1.Link.Types.DependencyInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.Link.Types.DependencyInfo> dependencyInfo_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.Link.Types.DependencyInfo>();
+    /// <summary>
+    /// Optional. The dependency info of the link (applies only to column level
+    /// links).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.Link.Types.DependencyInfo> DependencyInfo {
+      get { return dependencyInfo_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8211,6 +8978,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (!object.Equals(Target, other.Target)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
+      if(!dependencyInfo_.Equals(other.dependencyInfo_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8223,6 +8991,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (target_ != null) hash ^= Target.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
+      hash ^= dependencyInfo_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8261,6 +9030,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(EndTime);
       }
+      dependencyInfo_.WriteTo(output, _repeated_dependencyInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8291,6 +9061,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(EndTime);
       }
+      dependencyInfo_.WriteTo(ref output, _repeated_dependencyInfo_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8316,6 +9087,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
       if (endTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
       }
+      size += dependencyInfo_.CalculateSize(_repeated_dependencyInfo_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -8355,6 +9127,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         }
         EndTime.MergeFrom(other.EndTime);
       }
+      dependencyInfo_.Add(other.dependencyInfo_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -8404,6 +9177,10 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
               EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(EndTime);
+            break;
+          }
+          case 50: {
+            dependencyInfo_.AddEntriesFrom(input, _repeated_dependencyInfo_codec);
             break;
           }
         }
@@ -8457,10 +9234,226 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
             input.ReadMessage(EndTime);
             break;
           }
+          case 50: {
+            dependencyInfo_.AddEntriesFrom(ref input, _repeated_dependencyInfo_codec);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Link message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Dependency info describes how one entity depends on another.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DependencyInfo : pb::IMessage<DependencyInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DependencyInfo> _parser = new pb::MessageParser<DependencyInfo>(() => new DependencyInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DependencyInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DataCatalog.Lineage.V1.Link.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DependencyInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DependencyInfo(DependencyInfo other) : this() {
+          dependencyType_ = other.dependencyType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DependencyInfo Clone() {
+          return new DependencyInfo(this);
+        }
+
+        /// <summary>Field number for the "dependency_type" field.</summary>
+        public const int DependencyTypeFieldNumber = 1;
+        private global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType dependencyType_ = global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified;
+        /// <summary>
+        /// The type of dependency.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType DependencyType {
+          get { return dependencyType_; }
+          set {
+            dependencyType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DependencyInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DependencyInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DependencyType != other.DependencyType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) hash ^= DependencyType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DependencyType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DependencyType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DependencyType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DependencyInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+            DependencyType = other.DependencyType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                DependencyType = (global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                DependencyType = (global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -8483,7 +9476,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8555,8 +9548,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int PageSizeFieldNumber = 3;
     private int pageSize_;
     /// <summary>
-    /// The maximum number of processes to return in a single page of the response.
-    /// A page may contain fewer results than this value.
+    /// Optional. The maximum number of processes to return in a single page of the
+    /// response. A page may contain fewer results than this value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8571,8 +9564,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int PageTokenFieldNumber = 4;
     private string pageToken_ = "";
     /// <summary>
-    /// The page token received from a previous `BatchSearchLinkProcesses` call.
-    /// Use it to get the next page.
+    /// Optional. The page token received from a previous
+    /// `BatchSearchLinkProcesses` call. Use it to get the next page.
     ///
     /// When requesting subsequent pages of a response, remember that
     /// all parameters must match the values you provided
@@ -8809,7 +9802,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9043,7 +10036,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9282,7 +10275,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9585,7 +10578,7 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9623,8 +10616,9 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     /// Type of the source.
     ///
     /// Use of a source_type other than `CUSTOM` for process creation
-    /// or updating is highly discouraged, and may be restricted in the future
-    /// without notice.
+    /// or updating is highly discouraged. It might be restricted in the future
+    /// without notice. There will be increase in cost if you use any of the source
+    /// types other than `CUSTOM`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9639,8 +10633,8 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
     public const int NameFieldNumber = 2;
     private string name_ = "";
     /// <summary>
-    /// If the source_type isn't CUSTOM, the value of this field should be a GCP
-    /// resource name of the system, which reports lineage. The project and
+    /// If the source_type isn't CUSTOM, the value of this field should be a Google
+    /// Cloud resource name of the system, which reports lineage. The project and
     /// location parts of the resource name must match the project and location of
     /// the lineage resource being created. Examples:
     ///
@@ -9858,10 +10852,2366 @@ namespace Google.Cloud.DataCatalog.Lineage.V1 {
         /// Dataproc
         /// </summary>
         [pbr::OriginalName("DATAPROC")] Dataproc = 6,
+        /// <summary>
+        /// Vertex AI
+        /// </summary>
+        [pbr::OriginalName("VERTEX_AI")] VertexAi = 7,
+        /// <summary>
+        /// Dataflow
+        /// </summary>
+        [pbr::OriginalName("DATAFLOW")] Dataflow = 8,
+        /// <summary>
+        /// Looker Core
+        /// </summary>
+        [pbr::OriginalName("LOOKER_CORE")] LookerCore = 9,
       }
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Lineage link between two entities.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class LineageLink : pb::IMessage<LineageLink>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LineageLink> _parser = new pb::MessageParser<LineageLink>(() => new LineageLink());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LineageLink> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[35]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineageLink() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineageLink(LineageLink other) : this() {
+      source_ = other.source_ != null ? other.source_.Clone() : null;
+      target_ = other.target_ != null ? other.target_.Clone() : null;
+      processes_ = other.processes_.Clone();
+      dependencyInfo_ = other.dependencyInfo_.Clone();
+      depth_ = other.depth_;
+      location_ = other.location_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LineageLink Clone() {
+      return new LineageLink(this);
+    }
+
+    /// <summary>Field number for the "source" field.</summary>
+    public const int SourceFieldNumber = 1;
+    private global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference source_;
+    /// <summary>
+    /// The entity that is the **source** of this link.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference Source {
+      get { return source_; }
+      set {
+        source_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "target" field.</summary>
+    public const int TargetFieldNumber = 2;
+    private global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference target_;
+    /// <summary>
+    /// The entity that is the **target** of this link.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference Target {
+      get { return target_; }
+      set {
+        target_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "processes" field.</summary>
+    public const int ProcessesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.LineageProcess> _repeated_processes_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.LineageProcess.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.LineageProcess> processes_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.LineageProcess>();
+    /// <summary>
+    /// Processes metadata associated with the link.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.LineageProcess> Processes {
+      get { return processes_; }
+    }
+
+    /// <summary>Field number for the "dependency_info" field.</summary>
+    public const int DependencyInfoFieldNumber = 4;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.DependencyInfo> _repeated_dependencyInfo_codec
+        = pb::FieldCodec.ForMessage(34, global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.DependencyInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.DependencyInfo> dependencyInfo_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.DependencyInfo>();
+    /// <summary>
+    /// Describes how the target entity is dependent on the source entity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Types.DependencyInfo> DependencyInfo {
+      get { return dependencyInfo_; }
+    }
+
+    /// <summary>Field number for the "depth" field.</summary>
+    public const int DepthFieldNumber = 5;
+    private int depth_;
+    /// <summary>
+    /// Depth of the current link in the graph starting from 1.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int Depth {
+      get { return depth_; }
+      set {
+        depth_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 7;
+    private string location_ = "";
+    /// <summary>
+    /// The location where the LineageEvent that created the link is stored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Location {
+      get { return location_; }
+      set {
+        location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LineageLink);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LineageLink other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Source, other.Source)) return false;
+      if (!object.Equals(Target, other.Target)) return false;
+      if(!processes_.Equals(other.processes_)) return false;
+      if(!dependencyInfo_.Equals(other.dependencyInfo_)) return false;
+      if (Depth != other.Depth) return false;
+      if (Location != other.Location) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (source_ != null) hash ^= Source.GetHashCode();
+      if (target_ != null) hash ^= Target.GetHashCode();
+      hash ^= processes_.GetHashCode();
+      hash ^= dependencyInfo_.GetHashCode();
+      if (Depth != 0) hash ^= Depth.GetHashCode();
+      if (Location.Length != 0) hash ^= Location.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (source_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Source);
+      }
+      if (target_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Target);
+      }
+      processes_.WriteTo(output, _repeated_processes_codec);
+      dependencyInfo_.WriteTo(output, _repeated_dependencyInfo_codec);
+      if (Depth != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Depth);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (source_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Source);
+      }
+      if (target_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Target);
+      }
+      processes_.WriteTo(ref output, _repeated_processes_codec);
+      dependencyInfo_.WriteTo(ref output, _repeated_dependencyInfo_codec);
+      if (Depth != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(Depth);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Location);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (source_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Source);
+      }
+      if (target_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Target);
+      }
+      size += processes_.CalculateSize(_repeated_processes_codec);
+      size += dependencyInfo_.CalculateSize(_repeated_dependencyInfo_codec);
+      if (Depth != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Depth);
+      }
+      if (Location.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LineageLink other) {
+      if (other == null) {
+        return;
+      }
+      if (other.source_ != null) {
+        if (source_ == null) {
+          Source = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
+        }
+        Source.MergeFrom(other.Source);
+      }
+      if (other.target_ != null) {
+        if (target_ == null) {
+          Target = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
+        }
+        Target.MergeFrom(other.Target);
+      }
+      processes_.Add(other.processes_);
+      dependencyInfo_.Add(other.dependencyInfo_);
+      if (other.Depth != 0) {
+        Depth = other.Depth;
+      }
+      if (other.Location.Length != 0) {
+        Location = other.Location;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (source_ == null) {
+              Source = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
+            }
+            input.ReadMessage(Source);
+            break;
+          }
+          case 18: {
+            if (target_ == null) {
+              Target = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
+            }
+            input.ReadMessage(Target);
+            break;
+          }
+          case 26: {
+            processes_.AddEntriesFrom(input, _repeated_processes_codec);
+            break;
+          }
+          case 34: {
+            dependencyInfo_.AddEntriesFrom(input, _repeated_dependencyInfo_codec);
+            break;
+          }
+          case 40: {
+            Depth = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            Location = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (source_ == null) {
+              Source = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
+            }
+            input.ReadMessage(Source);
+            break;
+          }
+          case 18: {
+            if (target_ == null) {
+              Target = new global::Google.Cloud.DataCatalog.Lineage.V1.EntityReference();
+            }
+            input.ReadMessage(Target);
+            break;
+          }
+          case 26: {
+            processes_.AddEntriesFrom(ref input, _repeated_processes_codec);
+            break;
+          }
+          case 34: {
+            dependencyInfo_.AddEntriesFrom(ref input, _repeated_dependencyInfo_codec);
+            break;
+          }
+          case 40: {
+            Depth = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            Location = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the LineageLink message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Process metadata for the link.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class LineageProcess : pb::IMessage<LineageProcess>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<LineageProcess> _parser = new pb::MessageParser<LineageProcess>(() => new LineageProcess());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<LineageProcess> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LineageProcess() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LineageProcess(LineageProcess other) : this() {
+          process_ = other.process_ != null ? other.process_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public LineageProcess Clone() {
+          return new LineageProcess(this);
+        }
+
+        /// <summary>Field number for the "process" field.</summary>
+        public const int ProcessFieldNumber = 3;
+        private global::Google.Cloud.DataCatalog.Lineage.V1.Process process_;
+        /// <summary>
+        /// Process that created the link.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DataCatalog.Lineage.V1.Process Process {
+          get { return process_; }
+          set {
+            process_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as LineageProcess);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(LineageProcess other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Process, other.Process)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (process_ != null) hash ^= Process.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (process_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Process);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (process_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Process);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (process_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Process);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(LineageProcess other) {
+          if (other == null) {
+            return;
+          }
+          if (other.process_ != null) {
+            if (process_ == null) {
+              Process = new global::Google.Cloud.DataCatalog.Lineage.V1.Process();
+            }
+            Process.MergeFrom(other.Process);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 26: {
+                if (process_ == null) {
+                  Process = new global::Google.Cloud.DataCatalog.Lineage.V1.Process();
+                }
+                input.ReadMessage(Process);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 26: {
+                if (process_ == null) {
+                  Process = new global::Google.Cloud.DataCatalog.Lineage.V1.Process();
+                }
+                input.ReadMessage(Process);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Dependency info describes how one entity is dependent on another.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DependencyInfo : pb::IMessage<DependencyInfo>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DependencyInfo> _parser = new pb::MessageParser<DependencyInfo>(() => new DependencyInfo());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DependencyInfo> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DependencyInfo() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DependencyInfo(DependencyInfo other) : this() {
+          dependencyType_ = other.dependencyType_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DependencyInfo Clone() {
+          return new DependencyInfo(this);
+        }
+
+        /// <summary>Field number for the "dependency_type" field.</summary>
+        public const int DependencyTypeFieldNumber = 1;
+        private global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType dependencyType_ = global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified;
+        /// <summary>
+        /// The type of dependency.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType DependencyType {
+          get { return dependencyType_; }
+          set {
+            dependencyType_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DependencyInfo);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DependencyInfo other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (DependencyType != other.DependencyType) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) hash ^= DependencyType.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DependencyType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) DependencyType);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DependencyType);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DependencyInfo other) {
+          if (other == null) {
+            return;
+          }
+          if (other.DependencyType != global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType.Unspecified) {
+            DependencyType = other.DependencyType;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                DependencyType = (global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                DependencyType = (global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Request message for
+  /// [SearchLineageStreaming][google.cloud.datacatalog.lineage.v1.Lineage.SearchLineageStreaming].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SearchLineageStreamingRequest : pb::IMessage<SearchLineageStreamingRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SearchLineageStreamingRequest> _parser = new pb::MessageParser<SearchLineageStreamingRequest>(() => new SearchLineageStreamingRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SearchLineageStreamingRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[36]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchLineageStreamingRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchLineageStreamingRequest(SearchLineageStreamingRequest other) : this() {
+      parent_ = other.parent_;
+      locations_ = other.locations_.Clone();
+      rootCriteria_ = other.rootCriteria_ != null ? other.rootCriteria_.Clone() : null;
+      direction_ = other.direction_;
+      filters_ = other.filters_ != null ? other.filters_.Clone() : null;
+      limits_ = other.limits_ != null ? other.limits_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchLineageStreamingRequest Clone() {
+      return new SearchLineageStreamingRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The project and location to initiate the search from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "locations" field.</summary>
+    public const int LocationsFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_locations_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> locations_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Required. The locations to search in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Locations {
+      get { return locations_; }
+    }
+
+    /// <summary>Field number for the "root_criteria" field.</summary>
+    public const int RootCriteriaFieldNumber = 3;
+    private global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.RootCriteria rootCriteria_;
+    /// <summary>
+    /// Required. Criteria for the root of the search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.RootCriteria RootCriteria {
+      get { return rootCriteria_; }
+      set {
+        rootCriteria_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "direction" field.</summary>
+    public const int DirectionFieldNumber = 4;
+    private global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection direction_ = global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection.Unspecified;
+    /// <summary>
+    /// Required. Direction of the search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection Direction {
+      get { return direction_; }
+      set {
+        direction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "filters" field.</summary>
+    public const int FiltersFieldNumber = 5;
+    private global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchFilters filters_;
+    /// <summary>
+    /// Optional. Filters for the search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchFilters Filters {
+      get { return filters_; }
+      set {
+        filters_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "limits" field.</summary>
+    public const int LimitsFieldNumber = 6;
+    private global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchLimits limits_;
+    /// <summary>
+    /// Optional. Limits for the search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchLimits Limits {
+      get { return limits_; }
+      set {
+        limits_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SearchLineageStreamingRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SearchLineageStreamingRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!locations_.Equals(other.locations_)) return false;
+      if (!object.Equals(RootCriteria, other.RootCriteria)) return false;
+      if (Direction != other.Direction) return false;
+      if (!object.Equals(Filters, other.Filters)) return false;
+      if (!object.Equals(Limits, other.Limits)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= locations_.GetHashCode();
+      if (rootCriteria_ != null) hash ^= RootCriteria.GetHashCode();
+      if (Direction != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection.Unspecified) hash ^= Direction.GetHashCode();
+      if (filters_ != null) hash ^= Filters.GetHashCode();
+      if (limits_ != null) hash ^= Limits.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      locations_.WriteTo(output, _repeated_locations_codec);
+      if (rootCriteria_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RootCriteria);
+      }
+      if (Direction != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Direction);
+      }
+      if (filters_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Filters);
+      }
+      if (limits_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Limits);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      locations_.WriteTo(ref output, _repeated_locations_codec);
+      if (rootCriteria_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(RootCriteria);
+      }
+      if (Direction != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Direction);
+      }
+      if (filters_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Filters);
+      }
+      if (limits_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(Limits);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += locations_.CalculateSize(_repeated_locations_codec);
+      if (rootCriteria_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RootCriteria);
+      }
+      if (Direction != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Direction);
+      }
+      if (filters_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Filters);
+      }
+      if (limits_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Limits);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SearchLineageStreamingRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      locations_.Add(other.locations_);
+      if (other.rootCriteria_ != null) {
+        if (rootCriteria_ == null) {
+          RootCriteria = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.RootCriteria();
+        }
+        RootCriteria.MergeFrom(other.RootCriteria);
+      }
+      if (other.Direction != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection.Unspecified) {
+        Direction = other.Direction;
+      }
+      if (other.filters_ != null) {
+        if (filters_ == null) {
+          Filters = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchFilters();
+        }
+        Filters.MergeFrom(other.Filters);
+      }
+      if (other.limits_ != null) {
+        if (limits_ == null) {
+          Limits = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchLimits();
+        }
+        Limits.MergeFrom(other.Limits);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            locations_.AddEntriesFrom(input, _repeated_locations_codec);
+            break;
+          }
+          case 26: {
+            if (rootCriteria_ == null) {
+              RootCriteria = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.RootCriteria();
+            }
+            input.ReadMessage(RootCriteria);
+            break;
+          }
+          case 32: {
+            Direction = (global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (filters_ == null) {
+              Filters = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchFilters();
+            }
+            input.ReadMessage(Filters);
+            break;
+          }
+          case 50: {
+            if (limits_ == null) {
+              Limits = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchLimits();
+            }
+            input.ReadMessage(Limits);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            locations_.AddEntriesFrom(ref input, _repeated_locations_codec);
+            break;
+          }
+          case 26: {
+            if (rootCriteria_ == null) {
+              RootCriteria = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.RootCriteria();
+            }
+            input.ReadMessage(RootCriteria);
+            break;
+          }
+          case 32: {
+            Direction = (global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchDirection) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            if (filters_ == null) {
+              Filters = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchFilters();
+            }
+            input.ReadMessage(Filters);
+            break;
+          }
+          case 50: {
+            if (limits_ == null) {
+              Limits = new global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.SearchLimits();
+            }
+            input.ReadMessage(Limits);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SearchLineageStreamingRequest message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Direction of the search.
+      /// </summary>
+      public enum SearchDirection {
+        /// <summary>
+        /// Direction is unspecified.
+        /// </summary>
+        [pbr::OriginalName("SEARCH_DIRECTION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Retrieve links that lead from the specified asset to downstream assets.
+        /// </summary>
+        [pbr::OriginalName("DOWNSTREAM")] Downstream = 1,
+        /// <summary>
+        /// Retrieve links that lead from upstream assets to the specified asset.
+        /// </summary>
+        [pbr::OriginalName("UPSTREAM")] Upstream = 2,
+      }
+
+      /// <summary>
+      /// Entity set restriction.
+      /// </summary>
+      public enum EntitySet {
+        /// <summary>
+        /// The entity set is unspecified. Returns all the data.
+        /// </summary>
+        [pbr::OriginalName("ENTITY_SET_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Returns entities with only FQN specified. For example, entities with the
+        /// `field` field set are not returned.
+        /// </summary>
+        [pbr::OriginalName("ENTITIES")] Entities = 1,
+      }
+
+      /// <summary>
+      /// Filters for the search.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SearchFilters : pb::IMessage<SearchFilters>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SearchFilters> _parser = new pb::MessageParser<SearchFilters>(() => new SearchFilters());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SearchFilters> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchFilters() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchFilters(SearchFilters other) : this() {
+          dependencyTypes_ = other.dependencyTypes_.Clone();
+          entitySet_ = other.entitySet_;
+          timeRange_ = other.timeRange_ != null ? other.timeRange_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchFilters Clone() {
+          return new SearchFilters(this);
+        }
+
+        /// <summary>Field number for the "dependency_types" field.</summary>
+        public const int DependencyTypesFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType> _repeated_dependencyTypes_codec
+            = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType) x);
+        private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType> dependencyTypes_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType>();
+        /// <summary>
+        /// Optional. Types of dependencies between entities to retrieve.
+        /// If unspecified, all dependency types are returned.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.DependencyType> DependencyTypes {
+          get { return dependencyTypes_; }
+        }
+
+        /// <summary>Field number for the "entity_set" field.</summary>
+        public const int EntitySetFieldNumber = 2;
+        private global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet entitySet_ = global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet.Unspecified;
+        /// <summary>
+        /// Optional. Entity set restriction. If unspecified, the method returns all
+        /// entities.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet EntitySet {
+          get { return entitySet_; }
+          set {
+            entitySet_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "time_range" field.</summary>
+        public const int TimeRangeFieldNumber = 3;
+        private global::Google.Type.Interval timeRange_;
+        /// <summary>
+        /// Optional. Time interval to search for lineage. If unspecified, all
+        /// lineage is returned. Currently, at most one of `start_time` and
+        /// `end_time` can be set.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Type.Interval TimeRange {
+          get { return timeRange_; }
+          set {
+            timeRange_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SearchFilters);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SearchFilters other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!dependencyTypes_.Equals(other.dependencyTypes_)) return false;
+          if (EntitySet != other.EntitySet) return false;
+          if (!object.Equals(TimeRange, other.TimeRange)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= dependencyTypes_.GetHashCode();
+          if (EntitySet != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet.Unspecified) hash ^= EntitySet.GetHashCode();
+          if (timeRange_ != null) hash ^= TimeRange.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          dependencyTypes_.WriteTo(output, _repeated_dependencyTypes_codec);
+          if (EntitySet != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) EntitySet);
+          }
+          if (timeRange_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(TimeRange);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          dependencyTypes_.WriteTo(ref output, _repeated_dependencyTypes_codec);
+          if (EntitySet != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) EntitySet);
+          }
+          if (timeRange_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(TimeRange);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += dependencyTypes_.CalculateSize(_repeated_dependencyTypes_codec);
+          if (EntitySet != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EntitySet);
+          }
+          if (timeRange_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimeRange);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SearchFilters other) {
+          if (other == null) {
+            return;
+          }
+          dependencyTypes_.Add(other.dependencyTypes_);
+          if (other.EntitySet != global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet.Unspecified) {
+            EntitySet = other.EntitySet;
+          }
+          if (other.timeRange_ != null) {
+            if (timeRange_ == null) {
+              TimeRange = new global::Google.Type.Interval();
+            }
+            TimeRange.MergeFrom(other.TimeRange);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10:
+              case 8: {
+                dependencyTypes_.AddEntriesFrom(input, _repeated_dependencyTypes_codec);
+                break;
+              }
+              case 16: {
+                EntitySet = (global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                if (timeRange_ == null) {
+                  TimeRange = new global::Google.Type.Interval();
+                }
+                input.ReadMessage(TimeRange);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10:
+              case 8: {
+                dependencyTypes_.AddEntriesFrom(ref input, _repeated_dependencyTypes_codec);
+                break;
+              }
+              case 16: {
+                EntitySet = (global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Types.EntitySet) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                if (timeRange_ == null) {
+                  TimeRange = new global::Google.Type.Interval();
+                }
+                input.ReadMessage(TimeRange);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Limits for the search results.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class SearchLimits : pb::IMessage<SearchLimits>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SearchLimits> _parser = new pb::MessageParser<SearchLimits>(() => new SearchLimits());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SearchLimits> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchLimits() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchLimits(SearchLimits other) : this() {
+          maxDepth_ = other.maxDepth_;
+          maxResults_ = other.maxResults_;
+          maxProcessPerLink_ = other.maxProcessPerLink_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SearchLimits Clone() {
+          return new SearchLimits(this);
+        }
+
+        /// <summary>Field number for the "max_depth" field.</summary>
+        public const int MaxDepthFieldNumber = 1;
+        private int maxDepth_;
+        /// <summary>
+        /// Optional. The maximum depth of the search. The default value is 5 and
+        /// maximum value is 100.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxDepth {
+          get { return maxDepth_; }
+          set {
+            maxDepth_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "max_results" field.</summary>
+        public const int MaxResultsFieldNumber = 2;
+        private int maxResults_;
+        /// <summary>
+        /// Optional. The maximum number of links to return in the response. The
+        /// default value is 1_000 and the maximum value is 10_000.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxResults {
+          get { return maxResults_; }
+          set {
+            maxResults_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "max_process_per_link" field.</summary>
+        public const int MaxProcessPerLinkFieldNumber = 3;
+        private int maxProcessPerLink_;
+        /// <summary>
+        /// Optional. The maximum number of processes to return per link. The default
+        /// value is 0 and the maximum value is 100. If this value is non-zero, the
+        /// response will contain process names for the links. To retrieve full
+        /// process details in the response, include `links.processes.process` in the
+        /// [FieldMask](https://developers.google.com/workspace/docs/api/how-tos/field-masks#read_with_a_field_mask).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int MaxProcessPerLink {
+          get { return maxProcessPerLink_; }
+          set {
+            maxProcessPerLink_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SearchLimits);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SearchLimits other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (MaxDepth != other.MaxDepth) return false;
+          if (MaxResults != other.MaxResults) return false;
+          if (MaxProcessPerLink != other.MaxProcessPerLink) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (MaxDepth != 0) hash ^= MaxDepth.GetHashCode();
+          if (MaxResults != 0) hash ^= MaxResults.GetHashCode();
+          if (MaxProcessPerLink != 0) hash ^= MaxProcessPerLink.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (MaxDepth != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(MaxDepth);
+          }
+          if (MaxResults != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MaxResults);
+          }
+          if (MaxProcessPerLink != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(MaxProcessPerLink);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (MaxDepth != 0) {
+            output.WriteRawTag(8);
+            output.WriteInt32(MaxDepth);
+          }
+          if (MaxResults != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(MaxResults);
+          }
+          if (MaxProcessPerLink != 0) {
+            output.WriteRawTag(24);
+            output.WriteInt32(MaxProcessPerLink);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (MaxDepth != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxDepth);
+          }
+          if (MaxResults != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxResults);
+          }
+          if (MaxProcessPerLink != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxProcessPerLink);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SearchLimits other) {
+          if (other == null) {
+            return;
+          }
+          if (other.MaxDepth != 0) {
+            MaxDepth = other.MaxDepth;
+          }
+          if (other.MaxResults != 0) {
+            MaxResults = other.MaxResults;
+          }
+          if (other.MaxProcessPerLink != 0) {
+            MaxProcessPerLink = other.MaxProcessPerLink;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                MaxDepth = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                MaxResults = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                MaxProcessPerLink = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                MaxDepth = input.ReadInt32();
+                break;
+              }
+              case 16: {
+                MaxResults = input.ReadInt32();
+                break;
+              }
+              case 24: {
+                MaxProcessPerLink = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Criteria for the root of the search.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RootCriteria : pb::IMessage<RootCriteria>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RootCriteria> _parser = new pb::MessageParser<RootCriteria>(() => new RootCriteria());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RootCriteria> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DataCatalog.Lineage.V1.SearchLineageStreamingRequest.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RootCriteria() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RootCriteria(RootCriteria other) : this() {
+          switch (other.CriteriaCase) {
+            case CriteriaOneofCase.Entities:
+              Entities = other.Entities.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RootCriteria Clone() {
+          return new RootCriteria(this);
+        }
+
+        /// <summary>Field number for the "entities" field.</summary>
+        public const int EntitiesFieldNumber = 1;
+        /// <summary>
+        /// Optional. The entities to initiate the search from. Entities can be
+        /// specified by FQN only, or by FQN and field. To search by FQN and all
+        /// available fields for that FQN, use the wildcard `*` as the field value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference Entities {
+          get { return criteriaCase_ == CriteriaOneofCase.Entities ? (global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference) criteria_ : null; }
+          set {
+            criteria_ = value;
+            criteriaCase_ = value == null ? CriteriaOneofCase.None : CriteriaOneofCase.Entities;
+          }
+        }
+
+        private object criteria_;
+        /// <summary>Enum of possible cases for the "criteria" oneof.</summary>
+        public enum CriteriaOneofCase {
+          None = 0,
+          Entities = 1,
+        }
+        private CriteriaOneofCase criteriaCase_ = CriteriaOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public CriteriaOneofCase CriteriaCase {
+          get { return criteriaCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearCriteria() {
+          criteriaCase_ = CriteriaOneofCase.None;
+          criteria_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RootCriteria);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RootCriteria other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Entities, other.Entities)) return false;
+          if (CriteriaCase != other.CriteriaCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (criteriaCase_ == CriteriaOneofCase.Entities) hash ^= Entities.GetHashCode();
+          hash ^= (int) criteriaCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (criteriaCase_ == CriteriaOneofCase.Entities) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Entities);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (criteriaCase_ == CriteriaOneofCase.Entities) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Entities);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (criteriaCase_ == CriteriaOneofCase.Entities) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Entities);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RootCriteria other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.CriteriaCase) {
+            case CriteriaOneofCase.Entities:
+              if (Entities == null) {
+                Entities = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+              }
+              Entities.MergeFrom(other.Entities);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference subBuilder = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+                if (criteriaCase_ == CriteriaOneofCase.Entities) {
+                  subBuilder.MergeFrom(Entities);
+                }
+                input.ReadMessage(subBuilder);
+                Entities = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference subBuilder = new global::Google.Cloud.DataCatalog.Lineage.V1.MultipleEntityReference();
+                if (criteriaCase_ == CriteriaOneofCase.Entities) {
+                  subBuilder.MergeFrom(Entities);
+                }
+                input.ReadMessage(subBuilder);
+                Entities = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Response message for
+  /// [SearchLineageStreaming][google.cloud.datacatalog.lineage.v1.Lineage.SearchLineageStreaming].
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SearchLineageStreamingResponse : pb::IMessage<SearchLineageStreamingResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SearchLineageStreamingResponse> _parser = new pb::MessageParser<SearchLineageStreamingResponse>(() => new SearchLineageStreamingResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SearchLineageStreamingResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DataCatalog.Lineage.V1.LineageReflection.Descriptor.MessageTypes[37]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchLineageStreamingResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchLineageStreamingResponse(SearchLineageStreamingResponse other) : this() {
+      links_ = other.links_.Clone();
+      unreachable_ = other.unreachable_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SearchLineageStreamingResponse Clone() {
+      return new SearchLineageStreamingResponse(this);
+    }
+
+    /// <summary>Field number for the "links" field.</summary>
+    public const int LinksFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink> _repeated_links_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink> links_ = new pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink>();
+    /// <summary>
+    /// Output only. The lineage links that match the search criteria. Can be empty
+    /// if no links match.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.DataCatalog.Lineage.V1.LineageLink> Links {
+      get { return links_; }
+    }
+
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unordered list. Unreachable resources. If non-empty, the result set might
+    /// be incomplete.
+    ///
+    /// Currently, only locations are supported.
+    ///
+    /// Format: `projects/[PROJECT_NUMBER]/locations/[LOCATION]`
+    /// Example: projects/123456789/locations/us-east1
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SearchLineageStreamingResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SearchLineageStreamingResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!links_.Equals(other.links_)) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= links_.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      links_.WriteTo(output, _repeated_links_codec);
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      links_.WriteTo(ref output, _repeated_links_codec);
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += links_.CalculateSize(_repeated_links_codec);
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SearchLineageStreamingResponse other) {
+      if (other == null) {
+        return;
+      }
+      links_.Add(other.links_);
+      unreachable_.Add(other.unreachable_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            links_.AddEntriesFrom(input, _repeated_links_codec);
+            break;
+          }
+          case 18: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            links_.AddEntriesFrom(ref input, _repeated_links_codec);
+            break;
+          }
+          case 18: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 

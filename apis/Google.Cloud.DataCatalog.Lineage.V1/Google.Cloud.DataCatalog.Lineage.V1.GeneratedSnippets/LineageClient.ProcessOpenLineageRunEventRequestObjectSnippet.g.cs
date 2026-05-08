@@ -39,7 +39,6 @@ namespace GoogleCSharpSnippets
             {
                 Parent = "",
                 OpenLineage = new Struct(),
-                RequestId = "",
             };
             // Make the request
             ProcessOpenLineageRunEventResponse response = lineageClient.ProcessOpenLineageRunEvent(request);

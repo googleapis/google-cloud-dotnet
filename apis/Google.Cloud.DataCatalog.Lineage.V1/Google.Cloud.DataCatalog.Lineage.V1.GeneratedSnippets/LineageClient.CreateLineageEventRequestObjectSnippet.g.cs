@@ -38,7 +38,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsRunName = RunName.FromProjectLocationProcessRun("[PROJECT]", "[LOCATION]", "[PROCESS]", "[RUN]"),
                 LineageEvent = new LineageEvent(),
-                RequestId = "",
             };
             // Make the request
             LineageEvent response = lineageClient.CreateLineageEvent(request);
