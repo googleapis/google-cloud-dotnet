@@ -36,7 +36,7 @@ namespace Google.Apps.Chat.V1 {
             "aF9jb21tYW5kLnByb3RvGhpnb29nbGUvY2hhdC92MS9zcGFjZS5wcm90bxoZ",
             "Z29vZ2xlL2NoYXQvdjEvdXNlci5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2Zp",
             "ZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
-            "dG8i1AoKB01lc3NhZ2USEQoEbmFtZRgBIAEoCUID4EEIEikKBnNlbmRlchgC",
+            "dG8i6QoKB01lc3NhZ2USEQoEbmFtZRgBIAEoCUID4EEIEikKBnNlbmRlchgC",
             "IAEoCzIULmdvb2dsZS5jaGF0LnYxLlVzZXJCA+BBAxI3CgtjcmVhdGVfdGlt",
             "ZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBuBBBeBBARI5",
             "ChBsYXN0X3VwZGF0ZV90aW1lGBcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
@@ -55,92 +55,100 @@ namespace Google.Apps.Chat.V1 {
             "AxIzCgphdHRhY2htZW50GBIgAygLMhouZ29vZ2xlLmNoYXQudjEuQXR0YWNo",
             "bWVudEID4EEBEjQKC21hdGNoZWRfdXJsGBQgASgLMhouZ29vZ2xlLmNoYXQu",
             "djEuTWF0Y2hlZFVybEID4EEDEhkKDHRocmVhZF9yZXBseRgZIAEoCEID4EED",
-            "EicKGmNsaWVudF9hc3NpZ25lZF9tZXNzYWdlX2lkGCAgASgJQgPgQQESSwoY",
-            "ZW1vamlfcmVhY3Rpb25fc3VtbWFyaWVzGCEgAygLMiQuZ29vZ2xlLmNoYXQu",
-            "djEuRW1vamlSZWFjdGlvblN1bW1hcnlCA+BBAxI8ChZwcml2YXRlX21lc3Nh",
-            "Z2Vfdmlld2VyGCQgASgLMhQuZ29vZ2xlLmNoYXQudjEuVXNlckIG4EEF4EEB",
-            "EkAKEWRlbGV0aW9uX21ldGFkYXRhGCYgASgLMiAuZ29vZ2xlLmNoYXQudjEu",
-            "RGVsZXRpb25NZXRhZGF0YUID4EEDEksKF3F1b3RlZF9tZXNzYWdlX21ldGFk",
-            "YXRhGCcgASgLMiUuZ29vZ2xlLmNoYXQudjEuUXVvdGVkTWVzc2FnZU1ldGFk",
-            "YXRhQgPgQQESNwoNYXR0YWNoZWRfZ2lmcxgqIAMoCzIbLmdvb2dsZS5jaGF0",
-            "LnYxLkF0dGFjaGVkR2lmQgPgQQMSPwoRYWNjZXNzb3J5X3dpZGdldHMYLCAD",
-            "KAsyHy5nb29nbGUuY2hhdC52MS5BY2Nlc3NvcnlXaWRnZXRCA+BBATpD6kFA",
-            "ChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USIXNwYWNlcy97c3BhY2V9",
-            "L21lc3NhZ2VzL3ttZXNzYWdlfSIfCgtBdHRhY2hlZEdpZhIQCgN1cmkYASAB",
-            "KAlCA+BBAyKYBAoVUXVvdGVkTWVzc2FnZU1ldGFkYXRhEjEKBG5hbWUYASAB",
-            "KAlCI+BBAvpBHQobY2hhdC5nb29nbGVhcGlzLmNvbS9NZXNzYWdlEjkKEGxh",
-            "c3RfdXBkYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQISSAoKcXVvdGVfdHlwZRgEIAEoDjIvLmdvb2dsZS5jaGF0LnYx",
-            "LlF1b3RlZE1lc3NhZ2VNZXRhZGF0YS5RdW90ZVR5cGVCA+BBARJLChdxdW90",
-            "ZWRfbWVzc2FnZV9zbmFwc2hvdBgFIAEoCzIlLmdvb2dsZS5jaGF0LnYxLlF1",
-            "b3RlZE1lc3NhZ2VTbmFwc2hvdEID4EEDEkIKEmZvcndhcmRlZF9tZXRhZGF0",
-            "YRgGIAEoCzIhLmdvb2dsZS5jaGF0LnYxLkZvcndhcmRlZE1ldGFkYXRhQgPg",
-            "QQMiMgoJUXVvdGVUeXBlEhoKFlFVT1RFX1RZUEVfVU5TUEVDSUZJRUQQABIJ",
-            "CgVSRVBMWRABOoEB6kF+CiljaGF0Lmdvb2dsZWFwaXMuY29tL1F1b3RlZE1l",
-            "c3NhZ2VNZXRhZGF0YRJRc3BhY2VzL3tzcGFjZX0vbWVzc2FnZXMve21lc3Nh",
-            "Z2V9L3F1b3RlZE1lc3NhZ2VNZXRhZGF0YS97cXVvdGVkX21lc3NhZ2VfbWV0",
-            "YWRhdGF9IsgBChVRdW90ZWRNZXNzYWdlU25hcHNob3QSEwoGc2VuZGVyGAEg",
-            "ASgJQgPgQQMSEQoEdGV4dBgCIAEoCUID4EEDEhsKDmZvcm1hdHRlZF90ZXh0",
-            "GAMgASgJQgPgQQMSNAoLYW5ub3RhdGlvbnMYBCADKAsyGi5nb29nbGUuY2hh",
-            "dC52MS5Bbm5vdGF0aW9uQgPgQQMSNAoLYXR0YWNobWVudHMYBSADKAsyGi5n",
-            "b29nbGUuY2hhdC52MS5BdHRhY2htZW50QgPgQQMiZgoRRm9yd2FyZGVkTWV0",
-            "YWRhdGESMAoFc3BhY2UYASABKAlCIeBBA/pBGwoZY2hhdC5nb29nbGVhcGlz",
-            "LmNvbS9TcGFjZRIfChJzcGFjZV9kaXNwbGF5X25hbWUYAiABKAlCA+BBAyJ2",
-            "CgZUaHJlYWQSEQoEbmFtZRgBIAEoCUID4EEIEhcKCnRocmVhZF9rZXkYAyAB",
-            "KAlCA+BBATpA6kE9ChpjaGF0Lmdvb2dsZWFwaXMuY29tL1RocmVhZBIfc3Bh",
-            "Y2VzL3tzcGFjZX0vdGhyZWFkcy97dGhyZWFkfSLSBAoOQWN0aW9uUmVzcG9u",
-            "c2USPgoEdHlwZRgBIAEoDjIrLmdvb2dsZS5jaGF0LnYxLkFjdGlvblJlc3Bv",
-            "bnNlLlJlc3BvbnNlVHlwZUID4EEEEhAKA3VybBgCIAEoCUID4EEEEjgKDWRp",
-            "YWxvZ19hY3Rpb24YAyABKAsyHC5nb29nbGUuY2hhdC52MS5EaWFsb2dBY3Rp",
-            "b25CA+BBBBJJCg51cGRhdGVkX3dpZGdldBgEIAEoCzIsLmdvb2dsZS5jaGF0",
-            "LnYxLkFjdGlvblJlc3BvbnNlLlVwZGF0ZWRXaWRnZXRCA+BBBBpSCg5TZWxl",
-            "Y3Rpb25JdGVtcxJACgVpdGVtcxgBIAMoCzIxLmdvb2dsZS5hcHBzLmNhcmQu",
-            "djEuU2VsZWN0aW9uSW5wdXQuU2VsZWN0aW9uSXRlbRp3Cg1VcGRhdGVkV2lk",
-            "Z2V0EkQKC3N1Z2dlc3Rpb25zGAEgASgLMi0uZ29vZ2xlLmNoYXQudjEuQWN0",
-            "aW9uUmVzcG9uc2UuU2VsZWN0aW9uSXRlbXNIABIOCgZ3aWRnZXQYAiABKAlC",
-            "EAoOdXBkYXRlZF93aWRnZXQimwEKDFJlc3BvbnNlVHlwZRIUChBUWVBFX1VO",
-            "U1BFQ0lGSUVEEAASDwoLTkVXX01FU1NBR0UQARISCg5VUERBVEVfTUVTU0FH",
-            "RRACEh0KGVVQREFURV9VU0VSX01FU1NBR0VfQ0FSRFMQBhISCg5SRVFVRVNU",
-            "X0NPTkZJRxADEgoKBkRJQUxPRxAEEhEKDVVQREFURV9XSURHRVQQByJTCg9B",
-            "Y2Nlc3NvcnlXaWRnZXQSNgoLYnV0dG9uX2xpc3QYASABKAsyHy5nb29nbGUu",
-            "YXBwcy5jYXJkLnYxLkJ1dHRvbkxpc3RIAEIICgZhY3Rpb24iRgoRR2V0TWVz",
-            "c2FnZVJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4EEC+kEdChtjaGF0Lmdvb2ds",
-            "ZWFwaXMuY29tL01lc3NhZ2UiXQoURGVsZXRlTWVzc2FnZVJlcXVlc3QSMQoE",
-            "bmFtZRgBIAEoCUIj4EEC+kEdChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3Nh",
-            "Z2USEgoFZm9yY2UYAiABKAhCA+BBASKXAQoUVXBkYXRlTWVzc2FnZVJlcXVl",
-            "c3QSLQoHbWVzc2FnZRgBIAEoCzIXLmdvb2dsZS5jaGF0LnYxLk1lc3NhZ2VC",
-            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2tCA+BBAhIaCg1hbGxvd19taXNzaW5nGAQgASgIQgPgQQEipAMK",
-            "FENyZWF0ZU1lc3NhZ2VSZXF1ZXN0EjMKBnBhcmVudBgBIAEoCUIj4EEC+kEd",
-            "EhtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USLQoHbWVzc2FnZRgEIAEo",
-            "CzIXLmdvb2dsZS5jaGF0LnYxLk1lc3NhZ2VCA+BBAhIZCgp0aHJlYWRfa2V5",
-            "GAYgASgJQgUYAeBBARIXCgpyZXF1ZXN0X2lkGAcgASgJQgPgQQESWgoUbWVz",
-            "c2FnZV9yZXBseV9vcHRpb24YCCABKA4yNy5nb29nbGUuY2hhdC52MS5DcmVh",
-            "dGVNZXNzYWdlUmVxdWVzdC5NZXNzYWdlUmVwbHlPcHRpb25CA+BBARIXCgpt",
-            "ZXNzYWdlX2lkGAkgASgJQgPgQQEifwoSTWVzc2FnZVJlcGx5T3B0aW9uEiQK",
-            "IE1FU1NBR0VfUkVQTFlfT1BUSU9OX1VOU1BFQ0lGSUVEEAASKAokUkVQTFlf",
-            "TUVTU0FHRV9GQUxMQkFDS19UT19ORVdfVEhSRUFEEAESGQoVUkVQTFlfTUVT",
-            "U0FHRV9PUl9GQUlMEAIiwgEKE0xpc3RNZXNzYWdlc1JlcXVlc3QSMwoGcGFy",
-            "ZW50GAEgASgJQiPgQQL6QR0SG2NoYXQuZ29vZ2xlYXBpcy5jb20vTWVzc2Fn",
-            "ZRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJ",
-            "QgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlC",
-            "A+BBARIZCgxzaG93X2RlbGV0ZWQYBiABKAhCA+BBASJaChRMaXN0TWVzc2Fn",
-            "ZXNSZXNwb25zZRIpCghtZXNzYWdlcxgBIAMoCzIXLmdvb2dsZS5jaGF0LnYx",
-            "Lk1lc3NhZ2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIoEBCgxEaWFsb2dB",
-            "Y3Rpb24SLQoGZGlhbG9nGAEgASgLMhYuZ29vZ2xlLmNoYXQudjEuRGlhbG9n",
-            "QgPgQQRIABI4Cg1hY3Rpb25fc3RhdHVzGAIgASgLMhwuZ29vZ2xlLmNoYXQu",
-            "djEuQWN0aW9uU3RhdHVzQgPgQQRCCAoGYWN0aW9uIjYKBkRpYWxvZxIsCgRi",
-            "b2R5GAEgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5DYXJkQgPgQQQiRgoK",
-            "Q2FyZFdpdGhJZBIPCgdjYXJkX2lkGAEgASgJEicKBGNhcmQYAiABKAsyGS5n",
-            "b29nbGUuYXBwcy5jYXJkLnYxLkNhcmRCpQEKEmNvbS5nb29nbGUuY2hhdC52",
-            "MUIMTWVzc2FnZVByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28vY2hhdC9h",
-            "cGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29nbGUuQXBw",
-            "cy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2dsZTo6QXBw",
-            "czo6Q2hhdDo6VjFiBnByb3RvMw=="));
+            "EhMKBnNpbGVudBguIAEoCEID4EEDEicKGmNsaWVudF9hc3NpZ25lZF9tZXNz",
+            "YWdlX2lkGCAgASgJQgPgQQESSwoYZW1vamlfcmVhY3Rpb25fc3VtbWFyaWVz",
+            "GCEgAygLMiQuZ29vZ2xlLmNoYXQudjEuRW1vamlSZWFjdGlvblN1bW1hcnlC",
+            "A+BBAxI8ChZwcml2YXRlX21lc3NhZ2Vfdmlld2VyGCQgASgLMhQuZ29vZ2xl",
+            "LmNoYXQudjEuVXNlckIG4EEF4EEBEkAKEWRlbGV0aW9uX21ldGFkYXRhGCYg",
+            "ASgLMiAuZ29vZ2xlLmNoYXQudjEuRGVsZXRpb25NZXRhZGF0YUID4EEDEksK",
+            "F3F1b3RlZF9tZXNzYWdlX21ldGFkYXRhGCcgASgLMiUuZ29vZ2xlLmNoYXQu",
+            "djEuUXVvdGVkTWVzc2FnZU1ldGFkYXRhQgPgQQESNwoNYXR0YWNoZWRfZ2lm",
+            "cxgqIAMoCzIbLmdvb2dsZS5jaGF0LnYxLkF0dGFjaGVkR2lmQgPgQQMSPwoR",
+            "YWNjZXNzb3J5X3dpZGdldHMYLCADKAsyHy5nb29nbGUuY2hhdC52MS5BY2Nl",
+            "c3NvcnlXaWRnZXRCA+BBATpD6kFAChtjaGF0Lmdvb2dsZWFwaXMuY29tL01l",
+            "c3NhZ2USIXNwYWNlcy97c3BhY2V9L21lc3NhZ2VzL3ttZXNzYWdlfSIfCgtB",
+            "dHRhY2hlZEdpZhIQCgN1cmkYASABKAlCA+BBAyKYBAoVUXVvdGVkTWVzc2Fn",
+            "ZU1ldGFkYXRhEjEKBG5hbWUYASABKAlCI+BBAvpBHQobY2hhdC5nb29nbGVh",
+            "cGlzLmNvbS9NZXNzYWdlEjkKEGxhc3RfdXBkYXRlX3RpbWUYAiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISSAoKcXVvdGVfdHlwZRgE",
+            "IAEoDjIvLmdvb2dsZS5jaGF0LnYxLlF1b3RlZE1lc3NhZ2VNZXRhZGF0YS5R",
+            "dW90ZVR5cGVCA+BBARJLChdxdW90ZWRfbWVzc2FnZV9zbmFwc2hvdBgFIAEo",
+            "CzIlLmdvb2dsZS5jaGF0LnYxLlF1b3RlZE1lc3NhZ2VTbmFwc2hvdEID4EED",
+            "EkIKEmZvcndhcmRlZF9tZXRhZGF0YRgGIAEoCzIhLmdvb2dsZS5jaGF0LnYx",
+            "LkZvcndhcmRlZE1ldGFkYXRhQgPgQQMiMgoJUXVvdGVUeXBlEhoKFlFVT1RF",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIJCgVSRVBMWRABOoEB6kF+CiljaGF0Lmdv",
+            "b2dsZWFwaXMuY29tL1F1b3RlZE1lc3NhZ2VNZXRhZGF0YRJRc3BhY2VzL3tz",
+            "cGFjZX0vbWVzc2FnZXMve21lc3NhZ2V9L3F1b3RlZE1lc3NhZ2VNZXRhZGF0",
+            "YS97cXVvdGVkX21lc3NhZ2VfbWV0YWRhdGF9IsgBChVRdW90ZWRNZXNzYWdl",
+            "U25hcHNob3QSEwoGc2VuZGVyGAEgASgJQgPgQQMSEQoEdGV4dBgCIAEoCUID",
+            "4EEDEhsKDmZvcm1hdHRlZF90ZXh0GAMgASgJQgPgQQMSNAoLYW5ub3RhdGlv",
+            "bnMYBCADKAsyGi5nb29nbGUuY2hhdC52MS5Bbm5vdGF0aW9uQgPgQQMSNAoL",
+            "YXR0YWNobWVudHMYBSADKAsyGi5nb29nbGUuY2hhdC52MS5BdHRhY2htZW50",
+            "QgPgQQMiZgoRRm9yd2FyZGVkTWV0YWRhdGESMAoFc3BhY2UYASABKAlCIeBB",
+            "A/pBGwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIfChJzcGFjZV9kaXNw",
+            "bGF5X25hbWUYAiABKAlCA+BBAyJ2CgZUaHJlYWQSEQoEbmFtZRgBIAEoCUID",
+            "4EEIEhcKCnRocmVhZF9rZXkYAyABKAlCA+BBATpA6kE9ChpjaGF0Lmdvb2ds",
+            "ZWFwaXMuY29tL1RocmVhZBIfc3BhY2VzL3tzcGFjZX0vdGhyZWFkcy97dGhy",
+            "ZWFkfSLSBAoOQWN0aW9uUmVzcG9uc2USPgoEdHlwZRgBIAEoDjIrLmdvb2ds",
+            "ZS5jaGF0LnYxLkFjdGlvblJlc3BvbnNlLlJlc3BvbnNlVHlwZUID4EEEEhAK",
+            "A3VybBgCIAEoCUID4EEEEjgKDWRpYWxvZ19hY3Rpb24YAyABKAsyHC5nb29n",
+            "bGUuY2hhdC52MS5EaWFsb2dBY3Rpb25CA+BBBBJJCg51cGRhdGVkX3dpZGdl",
+            "dBgEIAEoCzIsLmdvb2dsZS5jaGF0LnYxLkFjdGlvblJlc3BvbnNlLlVwZGF0",
+            "ZWRXaWRnZXRCA+BBBBpSCg5TZWxlY3Rpb25JdGVtcxJACgVpdGVtcxgBIAMo",
+            "CzIxLmdvb2dsZS5hcHBzLmNhcmQudjEuU2VsZWN0aW9uSW5wdXQuU2VsZWN0",
+            "aW9uSXRlbRp3Cg1VcGRhdGVkV2lkZ2V0EkQKC3N1Z2dlc3Rpb25zGAEgASgL",
+            "Mi0uZ29vZ2xlLmNoYXQudjEuQWN0aW9uUmVzcG9uc2UuU2VsZWN0aW9uSXRl",
+            "bXNIABIOCgZ3aWRnZXQYAiABKAlCEAoOdXBkYXRlZF93aWRnZXQimwEKDFJl",
+            "c3BvbnNlVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDwoLTkVXX01FU1NB",
+            "R0UQARISCg5VUERBVEVfTUVTU0FHRRACEh0KGVVQREFURV9VU0VSX01FU1NB",
+            "R0VfQ0FSRFMQBhISCg5SRVFVRVNUX0NPTkZJRxADEgoKBkRJQUxPRxAEEhEK",
+            "DVVQREFURV9XSURHRVQQByJTCg9BY2Nlc3NvcnlXaWRnZXQSNgoLYnV0dG9u",
+            "X2xpc3QYASABKAsyHy5nb29nbGUuYXBwcy5jYXJkLnYxLkJ1dHRvbkxpc3RI",
+            "AEIICgZhY3Rpb24iRgoRR2V0TWVzc2FnZVJlcXVlc3QSMQoEbmFtZRgBIAEo",
+            "CUIj4EEC+kEdChtjaGF0Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2UiXQoURGVs",
+            "ZXRlTWVzc2FnZVJlcXVlc3QSMQoEbmFtZRgBIAEoCUIj4EEC+kEdChtjaGF0",
+            "Lmdvb2dsZWFwaXMuY29tL01lc3NhZ2USEgoFZm9yY2UYAiABKAhCA+BBASKX",
+            "AQoUVXBkYXRlTWVzc2FnZVJlcXVlc3QSLQoHbWVzc2FnZRgBIAEoCzIXLmdv",
+            "b2dsZS5jaGF0LnYxLk1lc3NhZ2VCA+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhIaCg1hbGxvd19t",
+            "aXNzaW5nGAQgASgIQgPgQQEiiAQKFENyZWF0ZU1lc3NhZ2VSZXF1ZXN0EjMK",
+            "BnBhcmVudBgBIAEoCUIj4EEC+kEdEhtjaGF0Lmdvb2dsZWFwaXMuY29tL01l",
+            "c3NhZ2USLQoHbWVzc2FnZRgEIAEoCzIXLmdvb2dsZS5jaGF0LnYxLk1lc3Nh",
+            "Z2VCA+BBAhIZCgp0aHJlYWRfa2V5GAYgASgJQgUYAeBBARIXCgpyZXF1ZXN0",
+            "X2lkGAcgASgJQgPgQQESWgoUbWVzc2FnZV9yZXBseV9vcHRpb24YCCABKA4y",
+            "Ny5nb29nbGUuY2hhdC52MS5DcmVhdGVNZXNzYWdlUmVxdWVzdC5NZXNzYWdl",
+            "UmVwbHlPcHRpb25CA+BBARIXCgptZXNzYWdlX2lkGAkgASgJQgPgQQESYgoj",
+            "Y3JlYXRlX21lc3NhZ2Vfbm90aWZpY2F0aW9uX29wdGlvbnMYCiABKAsyMC5n",
+            "b29nbGUuY2hhdC52MS5DcmVhdGVNZXNzYWdlTm90aWZpY2F0aW9uT3B0aW9u",
+            "c0ID4EEBIn8KEk1lc3NhZ2VSZXBseU9wdGlvbhIkCiBNRVNTQUdFX1JFUExZ",
+            "X09QVElPTl9VTlNQRUNJRklFRBAAEigKJFJFUExZX01FU1NBR0VfRkFMTEJB",
+            "Q0tfVE9fTkVXX1RIUkVBRBABEhkKFVJFUExZX01FU1NBR0VfT1JfRkFJTBAC",
+            "IvIBCiBDcmVhdGVNZXNzYWdlTm90aWZpY2F0aW9uT3B0aW9ucxJcChFub3Rp",
+            "ZmljYXRpb25fdHlwZRgBIAEoDjJBLmdvb2dsZS5jaGF0LnYxLkNyZWF0ZU1l",
+            "c3NhZ2VOb3RpZmljYXRpb25PcHRpb25zLk5vdGlmaWNhdGlvblR5cGUicAoQ",
+            "Tm90aWZpY2F0aW9uVHlwZRIaChZOT1RJRklDQVRJT05fVFlQRV9OT05FEAAS",
+            "IgoeTk9USUZJQ0FUSU9OX1RZUEVfRk9SQ0VfTk9USUZZEAISHAoYTk9USUZJ",
+            "Q0FUSU9OX1RZUEVfU0lMRU5UEAMiwgEKE0xpc3RNZXNzYWdlc1JlcXVlc3QS",
+            "MwoGcGFyZW50GAEgASgJQiPgQQL6QR0SG2NoYXQuZ29vZ2xlYXBpcy5jb20v",
+            "TWVzc2FnZRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2Vu",
+            "GAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkY",
+            "BSABKAlCA+BBARIZCgxzaG93X2RlbGV0ZWQYBiABKAhCA+BBASJaChRMaXN0",
+            "TWVzc2FnZXNSZXNwb25zZRIpCghtZXNzYWdlcxgBIAMoCzIXLmdvb2dsZS5j",
+            "aGF0LnYxLk1lc3NhZ2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIoEBCgxE",
+            "aWFsb2dBY3Rpb24SLQoGZGlhbG9nGAEgASgLMhYuZ29vZ2xlLmNoYXQudjEu",
+            "RGlhbG9nQgPgQQRIABI4Cg1hY3Rpb25fc3RhdHVzGAIgASgLMhwuZ29vZ2xl",
+            "LmNoYXQudjEuQWN0aW9uU3RhdHVzQgPgQQRCCAoGYWN0aW9uIjYKBkRpYWxv",
+            "ZxIsCgRib2R5GAEgASgLMhkuZ29vZ2xlLmFwcHMuY2FyZC52MS5DYXJkQgPg",
+            "QQQiRgoKQ2FyZFdpdGhJZBIPCgdjYXJkX2lkGAEgASgJEicKBGNhcmQYAiAB",
+            "KAsyGS5nb29nbGUuYXBwcy5jYXJkLnYxLkNhcmRCpQEKEmNvbS5nb29nbGUu",
+            "Y2hhdC52MUIMTWVzc2FnZVByb3RvUAFaLGNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "Y2hhdC9hcGl2MS9jaGF0cGI7Y2hhdHBiogILRFlOQVBJUHJvdG+qAhNHb29n",
+            "bGUuQXBwcy5DaGF0LlYxygITR29vZ2xlXEFwcHNcQ2hhdFxWMeoCFkdvb2ds",
+            "ZTo6QXBwczo6Q2hhdDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Card.V1.CardReflection.Descriptor, global::Google.Apps.Chat.V1.ActionStatusReflection.Descriptor, global::Google.Apps.Chat.V1.AnnotationReflection.Descriptor, global::Google.Apps.Chat.V1.AttachmentReflection.Descriptor, global::Google.Apps.Chat.V1.ContextualAddonReflection.Descriptor, global::Google.Apps.Chat.V1.DeletionMetadataReflection.Descriptor, global::Google.Apps.Chat.V1.MatchedUrlReflection.Descriptor, global::Google.Apps.Chat.V1.ReactionReflection.Descriptor, global::Google.Apps.Chat.V1.SlashCommandReflection.Descriptor, global::Google.Apps.Chat.V1.SpaceReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Message), global::Google.Apps.Chat.V1.Message.Parser, new[]{ "Name", "Sender", "CreateTime", "LastUpdateTime", "DeleteTime", "Text", "FormattedText", "Cards", "CardsV2", "Annotations", "Thread", "Space", "FallbackText", "ActionResponse", "ArgumentText", "SlashCommand", "Attachment", "MatchedUrl", "ThreadReply", "ClientAssignedMessageId", "EmojiReactionSummaries", "PrivateMessageViewer", "DeletionMetadata", "QuotedMessageMetadata", "AttachedGifs", "AccessoryWidgets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Message), global::Google.Apps.Chat.V1.Message.Parser, new[]{ "Name", "Sender", "CreateTime", "LastUpdateTime", "DeleteTime", "Text", "FormattedText", "Cards", "CardsV2", "Annotations", "Thread", "Space", "FallbackText", "ActionResponse", "ArgumentText", "SlashCommand", "Attachment", "MatchedUrl", "ThreadReply", "Silent", "ClientAssignedMessageId", "EmojiReactionSummaries", "PrivateMessageViewer", "DeletionMetadata", "QuotedMessageMetadata", "AttachedGifs", "AccessoryWidgets" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.AttachedGif), global::Google.Apps.Chat.V1.AttachedGif.Parser, new[]{ "Uri" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.QuotedMessageMetadata), global::Google.Apps.Chat.V1.QuotedMessageMetadata.Parser, new[]{ "Name", "LastUpdateTime", "QuoteType", "QuotedMessageSnapshot", "ForwardedMetadata" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.QuotedMessageMetadata.Types.QuoteType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.QuotedMessageSnapshot), global::Google.Apps.Chat.V1.QuotedMessageSnapshot.Parser, new[]{ "Sender", "Text", "FormattedText", "Annotations", "Attachments" }, null, null, null, null),
@@ -152,7 +160,8 @@ namespace Google.Apps.Chat.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.GetMessageRequest), global::Google.Apps.Chat.V1.GetMessageRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.DeleteMessageRequest), global::Google.Apps.Chat.V1.DeleteMessageRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.UpdateMessageRequest), global::Google.Apps.Chat.V1.UpdateMessageRequest.Parser, new[]{ "Message", "UpdateMask", "AllowMissing" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateMessageRequest), global::Google.Apps.Chat.V1.CreateMessageRequest.Parser, new[]{ "Parent", "Message", "ThreadKey", "RequestId", "MessageReplyOption", "MessageId" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.CreateMessageRequest.Types.MessageReplyOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateMessageRequest), global::Google.Apps.Chat.V1.CreateMessageRequest.Parser, new[]{ "Parent", "Message", "ThreadKey", "RequestId", "MessageReplyOption", "MessageId", "CreateMessageNotificationOptions" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.CreateMessageRequest.Types.MessageReplyOption) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateMessageNotificationOptions), global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Parser, new[]{ "NotificationType" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListMessagesRequest), global::Google.Apps.Chat.V1.ListMessagesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "ShowDeleted" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListMessagesResponse), global::Google.Apps.Chat.V1.ListMessagesResponse.Parser, new[]{ "Messages", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.DialogAction), global::Google.Apps.Chat.V1.DialogAction.Parser, new[]{ "Dialog", "ActionStatus" }, new[]{ "Action" }, null, null, null),
@@ -221,6 +230,7 @@ namespace Google.Apps.Chat.V1 {
       attachment_ = other.attachment_.Clone();
       matchedUrl_ = other.matchedUrl_ != null ? other.matchedUrl_.Clone() : null;
       threadReply_ = other.threadReply_;
+      silent_ = other.silent_;
       clientAssignedMessageId_ = other.clientAssignedMessageId_;
       emojiReactionSummaries_ = other.emojiReactionSummaries_.Clone();
       privateMessageViewer_ = other.privateMessageViewer_ != null ? other.privateMessageViewer_.Clone() : null;
@@ -610,6 +620,22 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "silent" field.</summary>
+    public const int SilentFieldNumber = 46;
+    private bool silent_;
+    /// <summary>
+    /// Output only. Whether this is a silent message. Silent messages are messages
+    /// where Chat suppresses push notifications for recipients.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Silent {
+      get { return silent_; }
+      set {
+        silent_ = value;
+      }
+    }
+
     /// <summary>Field number for the "client_assigned_message_id" field.</summary>
     public const int ClientAssignedMessageIdFieldNumber = 32;
     private string clientAssignedMessageId_ = "";
@@ -780,6 +806,7 @@ namespace Google.Apps.Chat.V1 {
       if(!attachment_.Equals(other.attachment_)) return false;
       if (!object.Equals(MatchedUrl, other.MatchedUrl)) return false;
       if (ThreadReply != other.ThreadReply) return false;
+      if (Silent != other.Silent) return false;
       if (ClientAssignedMessageId != other.ClientAssignedMessageId) return false;
       if(!emojiReactionSummaries_.Equals(other.emojiReactionSummaries_)) return false;
       if (!object.Equals(PrivateMessageViewer, other.PrivateMessageViewer)) return false;
@@ -813,6 +840,7 @@ namespace Google.Apps.Chat.V1 {
       hash ^= attachment_.GetHashCode();
       if (matchedUrl_ != null) hash ^= MatchedUrl.GetHashCode();
       if (ThreadReply != false) hash ^= ThreadReply.GetHashCode();
+      if (Silent != false) hash ^= Silent.GetHashCode();
       if (ClientAssignedMessageId.Length != 0) hash ^= ClientAssignedMessageId.GetHashCode();
       hash ^= emojiReactionSummaries_.GetHashCode();
       if (privateMessageViewer_ != null) hash ^= PrivateMessageViewer.GetHashCode();
@@ -921,6 +949,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteString(FormattedText);
       }
       accessoryWidgets_.WriteTo(output, _repeated_accessoryWidgets_codec);
+      if (Silent != false) {
+        output.WriteRawTag(240, 2);
+        output.WriteBool(Silent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1014,6 +1046,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteString(FormattedText);
       }
       accessoryWidgets_.WriteTo(ref output, _repeated_accessoryWidgets_codec);
+      if (Silent != false) {
+        output.WriteRawTag(240, 2);
+        output.WriteBool(Silent);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1071,6 +1107,9 @@ namespace Google.Apps.Chat.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MatchedUrl);
       }
       if (ThreadReply != false) {
+        size += 2 + 1;
+      }
+      if (Silent != false) {
         size += 2 + 1;
       }
       if (ClientAssignedMessageId.Length != 0) {
@@ -1175,6 +1214,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (other.ThreadReply != false) {
         ThreadReply = other.ThreadReply;
+      }
+      if (other.Silent != false) {
+        Silent = other.Silent;
       }
       if (other.ClientAssignedMessageId.Length != 0) {
         ClientAssignedMessageId = other.ClientAssignedMessageId;
@@ -1359,6 +1401,10 @@ namespace Google.Apps.Chat.V1 {
             accessoryWidgets_.AddEntriesFrom(input, _repeated_accessoryWidgets_codec);
             break;
           }
+          case 368: {
+            Silent = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1516,6 +1562,10 @@ namespace Google.Apps.Chat.V1 {
           }
           case 354: {
             accessoryWidgets_.AddEntriesFrom(ref input, _repeated_accessoryWidgets_codec);
+            break;
+          }
+          case 368: {
+            Silent = input.ReadBool();
             break;
           }
         }
@@ -4985,6 +5035,7 @@ namespace Google.Apps.Chat.V1 {
       requestId_ = other.requestId_;
       messageReplyOption_ = other.messageReplyOption_;
       messageId_ = other.messageId_;
+      createMessageNotificationOptions_ = other.createMessageNotificationOptions_ != null ? other.createMessageNotificationOptions_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -5116,6 +5167,23 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "create_message_notification_options" field.</summary>
+    public const int CreateMessageNotificationOptionsFieldNumber = 10;
+    private global::Google.Apps.Chat.V1.CreateMessageNotificationOptions createMessageNotificationOptions_;
+    /// <summary>
+    /// Optional. Controls the notification behavior when the message is posted.
+    /// To learn more, see [Force notifications or send silent
+    /// messages](https://developer.google.com/workspace/chat/create-messages#force-notify-silent).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.CreateMessageNotificationOptions CreateMessageNotificationOptions {
+      get { return createMessageNotificationOptions_; }
+      set {
+        createMessageNotificationOptions_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -5137,6 +5205,7 @@ namespace Google.Apps.Chat.V1 {
       if (RequestId != other.RequestId) return false;
       if (MessageReplyOption != other.MessageReplyOption) return false;
       if (MessageId != other.MessageId) return false;
+      if (!object.Equals(CreateMessageNotificationOptions, other.CreateMessageNotificationOptions)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -5150,6 +5219,7 @@ namespace Google.Apps.Chat.V1 {
       if (RequestId.Length != 0) hash ^= RequestId.GetHashCode();
       if (MessageReplyOption != global::Google.Apps.Chat.V1.CreateMessageRequest.Types.MessageReplyOption.Unspecified) hash ^= MessageReplyOption.GetHashCode();
       if (MessageId.Length != 0) hash ^= MessageId.GetHashCode();
+      if (createMessageNotificationOptions_ != null) hash ^= CreateMessageNotificationOptions.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5192,6 +5262,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(74);
         output.WriteString(MessageId);
       }
+      if (createMessageNotificationOptions_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CreateMessageNotificationOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -5226,6 +5300,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(74);
         output.WriteString(MessageId);
       }
+      if (createMessageNotificationOptions_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(CreateMessageNotificationOptions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -5253,6 +5331,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (MessageId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MessageId);
+      }
+      if (createMessageNotificationOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateMessageNotificationOptions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -5286,6 +5367,12 @@ namespace Google.Apps.Chat.V1 {
       }
       if (other.MessageId.Length != 0) {
         MessageId = other.MessageId;
+      }
+      if (other.createMessageNotificationOptions_ != null) {
+        if (createMessageNotificationOptions_ == null) {
+          CreateMessageNotificationOptions = new global::Google.Apps.Chat.V1.CreateMessageNotificationOptions();
+        }
+        CreateMessageNotificationOptions.MergeFrom(other.CreateMessageNotificationOptions);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -5331,6 +5418,13 @@ namespace Google.Apps.Chat.V1 {
           }
           case 74: {
             MessageId = input.ReadString();
+            break;
+          }
+          case 82: {
+            if (createMessageNotificationOptions_ == null) {
+              CreateMessageNotificationOptions = new global::Google.Apps.Chat.V1.CreateMessageNotificationOptions();
+            }
+            input.ReadMessage(CreateMessageNotificationOptions);
             break;
           }
         }
@@ -5379,6 +5473,13 @@ namespace Google.Apps.Chat.V1 {
             MessageId = input.ReadString();
             break;
           }
+          case 82: {
+            if (createMessageNotificationOptions_ == null) {
+              CreateMessageNotificationOptions = new global::Google.Apps.Chat.V1.CreateMessageNotificationOptions();
+            }
+            input.ReadMessage(CreateMessageNotificationOptions);
+            break;
+          }
         }
       }
     }
@@ -5423,6 +5524,249 @@ namespace Google.Apps.Chat.V1 {
   }
 
   /// <summary>
+  /// Options for the notification behavior when the message is posted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateMessageNotificationOptions : pb::IMessage<CreateMessageNotificationOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateMessageNotificationOptions> _parser = new pb::MessageParser<CreateMessageNotificationOptions>(() => new CreateMessageNotificationOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateMessageNotificationOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMessageNotificationOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMessageNotificationOptions(CreateMessageNotificationOptions other) : this() {
+      notificationType_ = other.notificationType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateMessageNotificationOptions Clone() {
+      return new CreateMessageNotificationOptions(this);
+    }
+
+    /// <summary>Field number for the "notification_type" field.</summary>
+    public const int NotificationTypeFieldNumber = 1;
+    private global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType notificationType_ = global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType.None;
+    /// <summary>
+    /// The notification type for the message.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType NotificationType {
+      get { return notificationType_; }
+      set {
+        notificationType_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateMessageNotificationOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateMessageNotificationOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (NotificationType != other.NotificationType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (NotificationType != global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType.None) hash ^= NotificationType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (NotificationType != global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType.None) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) NotificationType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (NotificationType != global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType.None) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) NotificationType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (NotificationType != global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType.None) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NotificationType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateMessageNotificationOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.NotificationType != global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType.None) {
+        NotificationType = other.NotificationType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            NotificationType = (global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            NotificationType = (global::Google.Apps.Chat.V1.CreateMessageNotificationOptions.Types.NotificationType) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CreateMessageNotificationOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The notification types options for the message.
+      /// </summary>
+      public enum NotificationType {
+        /// <summary>
+        /// Default behavior. Notification behavior is similar to when the human user
+        /// sends the message using the Chat UI: no notification is sent to the
+        /// human sender.
+        /// </summary>
+        [pbr::OriginalName("NOTIFICATION_TYPE_NONE")] None = 0,
+        /// <summary>
+        /// Force notify recipients. This bypasses users' space notification settings
+        /// and [Chat Do Not Disturb
+        /// settings](https://support.google.com/chat/answer/9093489). This option
+        /// does not bypass device-level Do Not Disturb settings.
+        ///
+        /// Requires [app authentication]
+        /// (https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// </summary>
+        [pbr::OriginalName("NOTIFICATION_TYPE_FORCE_NOTIFY")] ForceNotify = 2,
+        /// <summary>
+        /// Silence the notification as if the recipients have [Chat Do Not
+        /// Disturb](https://support.google.com/chat/answer/9093489) enabled or
+        /// have muted the space.
+        ///
+        /// Requires [app authentication]
+        /// (https://developers.google.com/workspace/chat/authenticate-authorize-chat-app).
+        /// </summary>
+        [pbr::OriginalName("NOTIFICATION_TYPE_SILENT")] Silent = 3,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Lists messages in the specified space, that the user is a member of.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -5440,7 +5784,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5904,7 +6248,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6140,7 +6484,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6441,7 +6785,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6664,7 +7008,7 @@ namespace Google.Apps.Chat.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Apps.Chat.V1.MessageReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

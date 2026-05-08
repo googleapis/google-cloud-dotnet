@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 MessageReplyOption = CreateMessageRequest.Types.MessageReplyOption.Unspecified,
                 MessageId = "",
+                CreateMessageNotificationOptions = new CreateMessageNotificationOptions(),
             };
             // Make the request
             Message response = chatServiceClient.CreateMessage(request);
