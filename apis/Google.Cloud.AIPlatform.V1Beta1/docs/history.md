@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta78, released 2026-05-11
+
+### New features
+
+- Release ReasoningEngineExecutionService.CancelAsyncQueryReasoningEngine v1beta1 API
+- Add ReasoningEngineRuntimeRevisionService and update related fields in ReasoningEngine
+
 ## Version 1.0.0-beta77, released 2026-05-04
 
 ### New features
