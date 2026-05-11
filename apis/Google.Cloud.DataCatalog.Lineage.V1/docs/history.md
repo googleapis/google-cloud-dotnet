@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.6.0, released 2026-05-11
+
+### New features
+
+- A new method SearchLineageStreaming is added
+- SearchLinks can now accept multiple source and target entity references as search criteria
+- Added support for column level lineage information to be passed and returned from the Lineage service
+
+### Documentation improvements
+
+- Documentation for SearchLineageStreaming API was added
+
 ## Version 1.5.0, released 2025-11-05
 
 ### New features
