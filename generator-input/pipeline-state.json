@@ -5003,10 +5003,12 @@
         },
         {
             "id": "Google.Maps.MapManagement.V2Beta",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-05-11T17:08:02.035332990Z",
             "lastGeneratedCommit": "d23047f4bae1f796aff726e6e3399292d29804ef",
+            "lastReleasedCommit": "d23047f4bae1f796aff726e6e3399292d29804ef",
             "apiPaths": [
                 "google/maps/mapmanagement/v2beta"
             ],
