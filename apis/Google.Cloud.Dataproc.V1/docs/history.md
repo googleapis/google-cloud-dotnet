@@ -1,5 +1,29 @@
 # Version history
 
+## Version 5.25.0, released 2026-05-11
+
+### New features
+
+- Add support for Cloud Resource Manager tags for Dataproc Serverless workloads
+- Add PySparkNotebookBatch message
+
+### Documentation improvements
+
+- A comment for method `DeleteBatch` in service `BatchController` is changed
+- A comment for field `request_id` in message `.google.cloud.dataproc.v1.CreateBatchRequest` is changed
+- A comment for field `filter` in message `.google.cloud.dataproc.v1.ListBatchesRequest` is changed
+- A comment for field `batches` in message `.google.cloud.dataproc.v1.ListBatchesResponse` is changed
+- A comment for field `name` in message `.google.cloud.dataproc.v1.SessionTemplate` is changed
+- A comment for field `spark_connect_session` in message `.google.cloud.dataproc.v1.SessionTemplate` is changed
+- A comment for field `name` in message `.google.cloud.dataproc.v1.Session` is changed
+- A comment for field `spark_connect_session` in message `.google.cloud.dataproc.v1.Session` is changed
+- A comment for message `SparkConnectConfig` is changed
+- A comment for field `cohort` in message `.google.cloud.dataproc.v1.RuntimeConfig` is changed
+- A comment for field `milli_accelerator_seconds` in message `.google.cloud.dataproc.v1.UsageMetrics` is changed
+- A comment for field `accelerator_type` in message `.google.cloud.dataproc.v1.UsageMetrics` is changed
+- A comment for field `boot_disk_kms_key` in message `.google.cloud.dataproc.v1.GkeNodePoolConfig` is changed
+- A comment for field `pypi_repository` in message `.google.cloud.dataproc.v1.PyPiRepositoryConfig` is changed
+
 ## Version 5.24.0, released 2026-04-13
 
 ### New features
