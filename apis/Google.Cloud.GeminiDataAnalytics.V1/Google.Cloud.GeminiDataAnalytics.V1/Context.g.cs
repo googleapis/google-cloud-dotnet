@@ -64,57 +64,60 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             "ZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEgoKcm91dGluZV9p",
             "ZBgDIAEoCRJMChRib3VuZGFyeV9sb2NhdGlvbl9pZBgEIAEoCUIp4EEB+kEj",
             "CiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb25IAIgBAUIXChVf",
-            "Ym91bmRhcnlfbG9jYXRpb25faWQiWQoMRXhhbXBsZVF1ZXJ5EhgKCXNxbF9x",
-            "dWVyeRhlIAEoCUID4EEBSAASJgoZbmF0dXJhbF9sYW5ndWFnZV9xdWVzdGlv",
-            "bhgBIAEoCUID4EEBQgcKBXF1ZXJ5IrMBCgxNYXRjaGVkUXVlcnkSSAoNZXhh",
-            "bXBsZV9xdWVyeRgBIAEoCzIxLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5h",
-            "bHl0aWNzLnYxLkV4YW1wbGVRdWVyeRJZChZxdWVyeV9wYXJhbWV0ZXJfdmFs",
-            "dWVzGAIgAygLMjkuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
-            "djEuUXVlcnlQYXJhbWV0ZXJWYWx1ZXMiPQoUUXVlcnlQYXJhbWV0ZXJWYWx1",
-            "ZXMSEQoEbmFtZRgBIAEoCUID4EECEhIKBXZhbHVlGAIgASgJQgPgQQIiiQEK",
-            "EUxvb2tlckdvbGRlblF1ZXJ5EicKGm5hdHVyYWxfbGFuZ3VhZ2VfcXVlc3Rp",
-            "b25zGAQgAygJQgPgQQESSwoMbG9va2VyX3F1ZXJ5GAUgASgLMjAuZ29vZ2xl",
-            "LmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuTG9va2VyUXVlcnlCA+BB",
-            "ASKTAgoLTG9va2VyUXVlcnkSEgoFbW9kZWwYASABKAlCA+BBAhIUCgdleHBs",
-            "b3JlGAIgASgJQgPgQQISEwoGZmllbGRzGAMgAygJQgPgQQESTQoHZmlsdGVy",
-            "cxgEIAMoCzI3Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYx",
-            "Lkxvb2tlclF1ZXJ5LkZpbHRlckID4EEBEhIKBXNvcnRzGAUgAygJQgPgQQES",
-            "FwoFbGltaXQYBiABKAlCA+BBAUgAiAEBGj8KBkZpbHRlchISCgVmaWVsZBgB",
-            "IAEoCUID4EECEhcKBXZhbHVlGAIgASgJQgPgQQFIAIgBAUIICgZfdmFsdWVC",
-            "CAoGX2xpbWl0IlgKDEdsb3NzYXJ5VGVybRIZCgxkaXNwbGF5X25hbWUYASAB",
-            "KAlCA+BBAhIYCgtkZXNjcmlwdGlvbhgCIAEoCUID4EECEhMKBmxhYmVscxgD",
-            "IAMoCUID4EEBIrMBChNDb252ZXJzYXRpb25PcHRpb25zEksKCGFuYWx5c2lz",
-            "GAIgASgLMjQuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEu",
-            "QW5hbHlzaXNPcHRpb25zQgPgQQESTwoKZGF0YXNvdXJjZRgDIAEoCzI2Lmdv",
-            "b2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkRhdGFzb3VyY2VP",
-            "cHRpb25zQgPgQQEiWQoRRGF0YXNvdXJjZU9wdGlvbnMSRAoaYmlnX3F1ZXJ5",
-            "X21heF9iaWxsZWRfYnl0ZXMYASABKAsyGy5nb29nbGUucHJvdG9idWYuSW50",
-            "NjRWYWx1ZUID4EEBIoMBCg9BbmFseXNpc09wdGlvbnMSUAoGcHl0aG9uGAEg",
-            "ASgLMjsuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuQW5h",
-            "bHlzaXNPcHRpb25zLlB5dGhvbkID4EEBGh4KBlB5dGhvbhIUCgdlbmFibGVk",
-            "GAEgASgIQgPgQQEioAEKCENpdGF0aW9uEkkKB3NvdXJjZXMYASADKAsyMy5n",
-            "b29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5DaXRhdGlvblNv",
-            "dXJjZUID4EEDEkkKB2FuY2hvcnMYAiADKAsyMy5nb29nbGUuY2xvdWQuZ2Vt",
-            "aW5pZGF0YWFuYWx5dGljcy52MS5DaXRhdGlvbkFuY2hvckID4EEDIvoBCg5D",
-            "aXRhdGlvblNvdXJjZRISCgN1cmkYAyABKAlCA+BBA0gAEk8KDWV4YW1wbGVf",
-            "cXVlcnkYBCABKAsyMS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
-            "cy52MS5FeGFtcGxlUXVlcnlCA+BBA0gAEk8KDWdsb3NzYXJ5X3Rlcm0YBSAB",
-            "KAsyMS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5HbG9z",
-            "c2FyeVRlcm1CA+BBA0gAEg8KAmlkGAEgASgJQgPgQQMSEgoFdGl0bGUYAiAB",
-            "KAlCA+BBA0INCgtzb3VyY2VfdHlwZSKiAgoOQ2l0YXRpb25BbmNob3IScQoT",
-            "dGV4dF9tZXNzYWdlX2FuY2hvchgBIAEoCzJNLmdvb2dsZS5jbG91ZC5nZW1p",
-            "bmlkYXRhYW5hbHl0aWNzLnYxLkNpdGF0aW9uQW5jaG9yLlRleHRNZXNzYWdl",
-            "Q2l0YXRpb25BbmNob3JCA+BBA0gAGo0BChlUZXh0TWVzc2FnZUNpdGF0aW9u",
-            "QW5jaG9yEhcKCnBhcnRfaW5kZXgYASABKAVCA+BBAxIfChJzdGFydF9vZmZz",
-            "ZXRfYnl0ZXMYAiABKAVCA+BBAxIdChBlbmRfb2Zmc2V0X2J5dGVzGAMgASgF",
-            "QgPgQQMSFwoKc291cmNlX2lkcxgEIAMoCUID4EEDQg0KC2FuY2hvcl90eXBl",
-            "QokCCidjb20uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFC",
-            "DENvbnRleHRQcm90b1ABWlljbG91ZC5nb29nbGUuY29tL2dvL2dlbWluaWRh",
-            "dGFhbmFseXRpY3MvYXBpdjEvZ2VtaW5pZGF0YWFuYWx5dGljc3BiO2dlbWlu",
-            "aWRhdGFhbmFseXRpY3NwYqoCI0dvb2dsZS5DbG91ZC5HZW1pbmlEYXRhQW5h",
-            "bHl0aWNzLlYxygIjR29vZ2xlXENsb3VkXEdlbWluaURhdGFBbmFseXRpY3Nc",
-            "VjHqAiZHb29nbGU6OkNsb3VkOjpHZW1pbmlEYXRhQW5hbHl0aWNzOjpWMWIG",
-            "cHJvdG8z"));
+            "Ym91bmRhcnlfbG9jYXRpb25faWQipwEKDEV4YW1wbGVRdWVyeRIYCglzcWxf",
+            "cXVlcnkYZSABKAlCA+BBAUgAEiYKGW5hdHVyYWxfbGFuZ3VhZ2VfcXVlc3Rp",
+            "b24YASABKAlCA+BBARJMCgpwYXJhbWV0ZXJzGAMgAygLMjMuZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuUXVlcnlQYXJhbWV0ZXJCA+BB",
+            "AUIHCgVxdWVyeSJVCg5RdWVyeVBhcmFtZXRlchIRCgRuYW1lGAEgASgJQgPg",
+            "QQISGAoLZGVzY3JpcHRpb24YAiABKAlCA+BBARIWCglkYXRhX3R5cGUYAyAB",
+            "KAlCA+BBAiKzAQoMTWF0Y2hlZFF1ZXJ5EkgKDWV4YW1wbGVfcXVlcnkYASAB",
+            "KAsyMS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5FeGFt",
+            "cGxlUXVlcnkSWQoWcXVlcnlfcGFyYW1ldGVyX3ZhbHVlcxgCIAMoCzI5Lmdv",
+            "b2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLlF1ZXJ5UGFyYW1l",
+            "dGVyVmFsdWVzIj0KFFF1ZXJ5UGFyYW1ldGVyVmFsdWVzEhEKBG5hbWUYASAB",
+            "KAlCA+BBAhISCgV2YWx1ZRgCIAEoCUID4EECIokBChFMb29rZXJHb2xkZW5R",
+            "dWVyeRInChpuYXR1cmFsX2xhbmd1YWdlX3F1ZXN0aW9ucxgEIAMoCUID4EEB",
+            "EksKDGxvb2tlcl9xdWVyeRgFIAEoCzIwLmdvb2dsZS5jbG91ZC5nZW1pbmlk",
+            "YXRhYW5hbHl0aWNzLnYxLkxvb2tlclF1ZXJ5QgPgQQEikwIKC0xvb2tlclF1",
+            "ZXJ5EhIKBW1vZGVsGAEgASgJQgPgQQISFAoHZXhwbG9yZRgCIAEoCUID4EEC",
+            "EhMKBmZpZWxkcxgDIAMoCUID4EEBEk0KB2ZpbHRlcnMYBCADKAsyNy5nb29n",
+            "bGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5Mb29rZXJRdWVyeS5G",
+            "aWx0ZXJCA+BBARISCgVzb3J0cxgFIAMoCUID4EEBEhcKBWxpbWl0GAYgASgJ",
+            "QgPgQQFIAIgBARo/CgZGaWx0ZXISEgoFZmllbGQYASABKAlCA+BBAhIXCgV2",
+            "YWx1ZRgCIAEoCUID4EEBSACIAQFCCAoGX3ZhbHVlQggKBl9saW1pdCJYCgxH",
+            "bG9zc2FyeVRlcm0SGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQISGAoLZGVz",
+            "Y3JpcHRpb24YAiABKAlCA+BBAhITCgZsYWJlbHMYAyADKAlCA+BBASKzAQoT",
+            "Q29udmVyc2F0aW9uT3B0aW9ucxJLCghhbmFseXNpcxgCIAEoCzI0Lmdvb2ds",
+            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkFuYWx5c2lzT3B0aW9u",
+            "c0ID4EEBEk8KCmRhdGFzb3VyY2UYAyABKAsyNi5nb29nbGUuY2xvdWQuZ2Vt",
+            "aW5pZGF0YWFuYWx5dGljcy52MS5EYXRhc291cmNlT3B0aW9uc0ID4EEBIlkK",
+            "EURhdGFzb3VyY2VPcHRpb25zEkQKGmJpZ19xdWVyeV9tYXhfYmlsbGVkX2J5",
+            "dGVzGAEgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVCA+BBASKD",
+            "AQoPQW5hbHlzaXNPcHRpb25zElAKBnB5dGhvbhgBIAEoCzI7Lmdvb2dsZS5j",
+            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkFuYWx5c2lzT3B0aW9ucy5Q",
+            "eXRob25CA+BBARoeCgZQeXRob24SFAoHZW5hYmxlZBgBIAEoCEID4EEBIqAB",
+            "CghDaXRhdGlvbhJJCgdzb3VyY2VzGAEgAygLMjMuZ29vZ2xlLmNsb3VkLmdl",
+            "bWluaWRhdGFhbmFseXRpY3MudjEuQ2l0YXRpb25Tb3VyY2VCA+BBAxJJCgdh",
+            "bmNob3JzGAIgAygLMjMuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
+            "Y3MudjEuQ2l0YXRpb25BbmNob3JCA+BBAyL6AQoOQ2l0YXRpb25Tb3VyY2US",
+            "EgoDdXJpGAMgASgJQgPgQQNIABJPCg1leGFtcGxlX3F1ZXJ5GAQgASgLMjEu",
+            "Z29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuRXhhbXBsZVF1",
+            "ZXJ5QgPgQQNIABJPCg1nbG9zc2FyeV90ZXJtGAUgASgLMjEuZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuR2xvc3NhcnlUZXJtQgPgQQNI",
+            "ABIPCgJpZBgBIAEoCUID4EEDEhIKBXRpdGxlGAIgASgJQgPgQQNCDQoLc291",
+            "cmNlX3R5cGUiogIKDkNpdGF0aW9uQW5jaG9yEnEKE3RleHRfbWVzc2FnZV9h",
+            "bmNob3IYASABKAsyTS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
+            "cy52MS5DaXRhdGlvbkFuY2hvci5UZXh0TWVzc2FnZUNpdGF0aW9uQW5jaG9y",
+            "QgPgQQNIABqNAQoZVGV4dE1lc3NhZ2VDaXRhdGlvbkFuY2hvchIXCgpwYXJ0",
+            "X2luZGV4GAEgASgFQgPgQQMSHwoSc3RhcnRfb2Zmc2V0X2J5dGVzGAIgASgF",
+            "QgPgQQMSHQoQZW5kX29mZnNldF9ieXRlcxgDIAEoBUID4EEDEhcKCnNvdXJj",
+            "ZV9pZHMYBCADKAlCA+BBA0INCgthbmNob3JfdHlwZUKJAgonY29tLmdvb2ds",
+            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxQgxDb250ZXh0UHJvdG9Q",
+            "AVpZY2xvdWQuZ29vZ2xlLmNvbS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2Fw",
+            "aXYxL2dlbWluaWRhdGFhbmFseXRpY3NwYjtnZW1pbmlkYXRhYW5hbHl0aWNz",
+            "cGKqAiNHb29nbGUuQ2xvdWQuR2VtaW5pRGF0YUFuYWx5dGljcy5WMcoCI0dv",
+            "b2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNzXFYx6gImR29vZ2xlOjpD",
+            "bG91ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -122,7 +125,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.UserFunctions), global::Google.Cloud.GeminiDataAnalytics.V1.UserFunctions.Parser, new[]{ "BqRoutines" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutine), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutine.Parser, new[]{ "RoutineReference", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutineReference), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutineReference.Parser, new[]{ "ProjectId", "DatasetId", "RoutineId", "BoundaryLocationId" }, new[]{ "BoundaryLocationId" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.ExampleQuery), global::Google.Cloud.GeminiDataAnalytics.V1.ExampleQuery.Parser, new[]{ "SqlQuery", "NaturalLanguageQuestion" }, new[]{ "Query" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.ExampleQuery), global::Google.Cloud.GeminiDataAnalytics.V1.ExampleQuery.Parser, new[]{ "SqlQuery", "NaturalLanguageQuestion", "Parameters" }, new[]{ "Query" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter), global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter.Parser, new[]{ "Name", "Description", "DataType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.MatchedQuery), global::Google.Cloud.GeminiDataAnalytics.V1.MatchedQuery.Parser, new[]{ "ExampleQuery", "QueryParameterValues" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameterValues), global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameterValues.Parser, new[]{ "Name", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.LookerGoldenQuery), global::Google.Cloud.GeminiDataAnalytics.V1.LookerGoldenQuery.Parser, new[]{ "NaturalLanguageQuestions", "LookerQuery" }, null, null, null, null),
@@ -2064,6 +2068,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExampleQuery(ExampleQuery other) : this() {
       naturalLanguageQuestion_ = other.naturalLanguageQuestion_;
+      parameters_ = other.parameters_.Clone();
       switch (other.QueryCase) {
         case QueryOneofCase.SqlQuery:
           SqlQuery = other.SqlQuery;
@@ -2126,6 +2131,23 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
     }
 
+    /// <summary>Field number for the "parameters" field.</summary>
+    public const int ParametersFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter> _repeated_parameters_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter> parameters_ = new pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter>();
+    /// <summary>
+    /// Optional. The list of query parameters.
+    /// Example: The parameterized SQL query
+    /// "SELECT * FROM my_table WHERE id = @id" can be matched with any value of
+    /// id.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter> Parameters {
+      get { return parameters_; }
+    }
+
     private object query_;
     /// <summary>Enum of possible cases for the "query" oneof.</summary>
     public enum QueryOneofCase {
@@ -2163,6 +2185,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (SqlQuery != other.SqlQuery) return false;
       if (NaturalLanguageQuestion != other.NaturalLanguageQuestion) return false;
+      if(!parameters_.Equals(other.parameters_)) return false;
       if (QueryCase != other.QueryCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2173,6 +2196,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       int hash = 1;
       if (HasSqlQuery) hash ^= SqlQuery.GetHashCode();
       if (NaturalLanguageQuestion.Length != 0) hash ^= NaturalLanguageQuestion.GetHashCode();
+      hash ^= parameters_.GetHashCode();
       hash ^= (int) queryCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2196,6 +2220,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(10);
         output.WriteString(NaturalLanguageQuestion);
       }
+      parameters_.WriteTo(output, _repeated_parameters_codec);
       if (HasSqlQuery) {
         output.WriteRawTag(170, 6);
         output.WriteString(SqlQuery);
@@ -2214,6 +2239,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(10);
         output.WriteString(NaturalLanguageQuestion);
       }
+      parameters_.WriteTo(ref output, _repeated_parameters_codec);
       if (HasSqlQuery) {
         output.WriteRawTag(170, 6);
         output.WriteString(SqlQuery);
@@ -2234,6 +2260,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (NaturalLanguageQuestion.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NaturalLanguageQuestion);
       }
+      size += parameters_.CalculateSize(_repeated_parameters_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2249,6 +2276,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (other.NaturalLanguageQuestion.Length != 0) {
         NaturalLanguageQuestion = other.NaturalLanguageQuestion;
       }
+      parameters_.Add(other.parameters_);
       switch (other.QueryCase) {
         case QueryOneofCase.SqlQuery:
           SqlQuery = other.SqlQuery;
@@ -2278,6 +2306,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             NaturalLanguageQuestion = input.ReadString();
             break;
           }
+          case 26: {
+            parameters_.AddEntriesFrom(input, _repeated_parameters_codec);
+            break;
+          }
           case 810: {
             SqlQuery = input.ReadString();
             break;
@@ -2305,8 +2337,302 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             NaturalLanguageQuestion = input.ReadString();
             break;
           }
+          case 26: {
+            parameters_.AddEntriesFrom(ref input, _repeated_parameters_codec);
+            break;
+          }
           case 810: {
             SqlQuery = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// A query parameter message represents a parameter that can be used to
+  /// parameterize a SQL query.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class QueryParameter : pb::IMessage<QueryParameter>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<QueryParameter> _parser = new pb::MessageParser<QueryParameter>(() => new QueryParameter());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<QueryParameter> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryParameter() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryParameter(QueryParameter other) : this() {
+      name_ = other.name_;
+      description_ = other.description_;
+      dataType_ = other.dataType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public QueryParameter Clone() {
+      return new QueryParameter(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The name of the parameter reference in the SQL query.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 2;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. The description of the parameter that can be used by LLM to
+    /// extract the parameter value from the user question.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_type" field.</summary>
+    public const int DataTypeFieldNumber = 3;
+    private string dataType_ = "";
+    /// <summary>
+    /// Required. The data type of the parameter, e.g. "STRING", "INT64", "DATE",
+    /// etc. For valid values, see the [BigQuery
+    /// documentation](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-types).
+    /// This will be used to populate
+    /// google.cloud.bigquery.v2.QueryParameterType.type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DataType {
+      get { return dataType_; }
+      set {
+        dataType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as QueryParameter);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(QueryParameter other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (Description != other.Description) return false;
+      if (DataType != other.DataType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (DataType.Length != 0) hash ^= DataType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (DataType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DataType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Description);
+      }
+      if (DataType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DataType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (DataType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DataType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(QueryParameter other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.DataType.Length != 0) {
+        DataType = other.DataType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            DataType = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            Description = input.ReadString();
+            break;
+          }
+          case 26: {
+            DataType = input.ReadString();
             break;
           }
         }
@@ -2336,7 +2662,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2580,7 +2906,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2825,7 +3151,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3070,7 +3396,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3723,7 +4049,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4000,7 +4326,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4262,7 +4588,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4477,7 +4803,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4903,7 +5229,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5125,7 +5451,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5566,7 +5892,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.GeminiDataAnalytics.V1.ContextReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
