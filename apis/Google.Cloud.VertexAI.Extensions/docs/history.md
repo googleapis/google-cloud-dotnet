@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2026-05-11
+
+### New features
+
+- Map GroundingMetadata to WebSearchToolCallContent/WebSearchToolResultContent
+
 ## Version 1.0.0-beta07, released 2026-03-23
 
 ### New features
