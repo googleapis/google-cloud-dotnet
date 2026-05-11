@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta24, released 2026-05-11
+
+### New features
+
+- Support force notify and silent notification option for CreateMessage
+
 ## Version 1.0.0-beta23, released 2026-05-04
 
 ### New features
