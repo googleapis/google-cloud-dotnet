@@ -1,5 +1,82 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-05-11
+
+### New features
+
+- Added new API dimension: CREATIVE_SSL_COMPLIANCE_OVERRIDE
+- Added new PUBLIC dimension: CREATIVE_SSL_COMPLIANCE_OVERRIDE_NAME
+- Added new API dimension: CREATIVE_SSL_SCAN_RESULT
+- Added new PUBLIC dimension: CREATIVE_SSL_SCAN_RESULT_NAME
+- Added new PUBLIC metric: AD_SERVER_ACTIVE_VIEW_REVENUE
+- Added new PUBLIC dimension: LINE_ITEM_AVERAGE_NUMBER_OF_VIEWERS
+- Add readonly OAuth scope
+- Add ProposalLineItem service and messages to the API.
+- Added new PUBLIC dimension: TARGETS_CUSTOMER_MATCHING_LIST
+- Expose both `get` and `list` methods for RichMediaAdsCompanies to external clients.
+- A new message `ApplicationStoreEnum` is added
+- A new message `ApplicationApprovalStatusEnum` is added
+- A new message `ApplicationPlatformEnum` is added
+- A new message `WebviewClaimingStatusEnum` is added
+- A new field `app_store_id` is added to message `.google.ads.admanager.v1.Application`
+- A new field `app_stores` is added to message `.google.ads.admanager.v1.Application`
+- A new field `archived` is added to message `.google.ads.admanager.v1.Application`
+- A new field `app_store_display_name` is added to message `.google.ads.admanager.v1.Application`
+- A new field `application_code` is added to message `.google.ads.admanager.v1.Application`
+- A new field `developer` is added to message `.google.ads.admanager.v1.Application`
+- A new field `platform` is added to message `.google.ads.admanager.v1.Application`
+- A new field `free` is added to message `.google.ads.admanager.v1.Application`
+- A new field `download_url` is added to message `.google.ads.admanager.v1.Application`
+- A new field `approval_status` is added to message `.google.ads.admanager.v1.Application`
+- A new field `webview_claiming_status` is added to message `.google.ads.admanager.v1.Application`
+- A new method `CreateApplication` is added to service `ApplicationService`
+- A new method `BatchCreateApplications` is added to service `ApplicationService`
+- A new method `UpdateApplication` is added to service `ApplicationService`
+- A new method `BatchUpdateApplications` is added to service `ApplicationService`
+- A new method `BatchArchiveApplications` is added to service `ApplicationService`
+- A new method `BatchUnarchiveApplications` is added to service `ApplicationService`
+- A new message `CreateApplicationRequest` is added
+- A new message `BatchCreateApplicationsRequest` is added
+- A new message `BatchCreateApplicationsResponse` is added
+- A new message `UpdateApplicationRequest` is added
+- A new message `BatchUpdateApplicationsRequest` is added
+- A new message `BatchUpdateApplicationsResponse` is added
+- A new message `BatchArchiveApplicationsRequest` is added
+- A new message `BatchArchiveApplicationsResponse` is added
+- A new message `BatchUnarchiveApplicationsRequest` is added
+- A new message `BatchUnarchiveApplicationsResponse` is added
+- Added child publisher resource.
+- Added McmEarnings service
+- This is referenced for delegation_type in mcm_earnings
+- New REQUIRED field `display_name` in message `.google.ads.admanager.v1.Label`
+- New REQUIRED field `types` in message `.google.ads.admanager.v1.Label`
+
+### Bug fixes
+
+- An existing value `DEMAND_SUBCHANNEL_ALL` is removed from enum `Dimension`
+- Changed field behavior for an existing field `display_name` in message `.google.ads.admanager.v1.Application`
+- Removed UNIFIED_PRICING_RULE_ID dimension
+- Removed UNIFIED_PRICING_RULE_NAME dimension
+- Remove unused AdManagerError type
+
+### Documentation improvements
+
+- A comment for enum value `DEMAND_SUBCHANNEL` in enum `Dimension` is changed
+- A comment for enum value `DEMAND_SUBCHANNEL_NAME` in enum `Dimension` is changed
+- A comment for enum value `PRICING_RULE_ID` in enum `Dimension` is changed
+- A comment for enum value `PRICING_RULE_NAME` in enum `Dimension` is changed
+- A comment for enum value `UNIFIED_PRICING_RULE_ID` in enum `Dimension` is changed
+- A comment for enum value `UNIFIED_PRICING_RULE_NAME` in enum `Dimension` is changed
+- Replace all curly quotes with regular quotes
+- Replace 'via' in all docs
+- Remove usage of and/or slashes
+- Expand regex to regular expression
+- `UNIFIED_PRICING_RULE_ID` in enum `Dimension` is deprecated
+- `UNIFIED_PRICING_RULE_NAME` in enum `Dimension` is deprecated
+- Clarify the behavior of the date_time_range filter when combined with a PENDING manual_review_status.
+- A comment for field `display_name` in message `.google.ads.admanager.v1.Application` is changed
+- A comment for field `filter` in message `.google.ads.admanager.v1.ListApplicationsRequest` is changed
+
 ## Version 1.0.0-beta05, released 2025-12-12
 
 ### New features
