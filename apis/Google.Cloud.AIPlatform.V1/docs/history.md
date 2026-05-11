@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.72.0, released 2026-05-11
+
+### New features
+
+- Release ReasoningEngineExecutionService.CancelAsyncQueryReasoningEngine v1 API
+
 ## Version 3.71.0, released 2026-05-04
 
 ### New features
