@@ -4742,10 +4742,10 @@
         },
         {
             "id": "Google.Cloud.VertexAI.Extensions",
-            "currentVersion": "1.0.0-beta07",
+            "currentVersion": "1.0.0-beta08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-23T14:46:51.630146120Z",
+            "releaseTimestamp": "2026-05-11T17:05:27.377391975Z",
             "sourcePaths": [
                 "apis/Google.Cloud.VertexAI.Extensions/Google.Cloud.VertexAI.Extensions"
             ]
