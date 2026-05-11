@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.13.0-beta06, released 2026-05-11
+
+### New features
+
+- Add cache updates API
+
 ## Version 5.13.0-beta05, released 2026-05-04
 
 ### New features
