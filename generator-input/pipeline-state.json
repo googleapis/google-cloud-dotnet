@@ -1986,7 +1986,7 @@
             "currentVersion": "4.4.0",
             "nextVersion": "5.0.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2024-09-26T08:16:29Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Logging.Log4Net/Google.Cloud.Logging.Log4Net"
@@ -4089,7 +4089,7 @@
             "id": "Google.Cloud.Diagnostics",
             "currentVersion": "5.3.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-04-14T17:16:29Z",
             "sourcePaths": [
                 "apis/Google.Cloud.Diagnostics.AspNetCore3/Google.Cloud.Diagnostics.AspNetCore3",
@@ -4400,7 +4400,7 @@
             "id": "Google.Cloud.ConfigDelivery.V1Beta",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "888ae95dd6125f754650d55410b8c117b618a268",
             "apiPaths": [
                 "google/cloud/configdelivery/v1beta"
@@ -4428,7 +4428,7 @@
             "id": "Google.Cloud.ConfigDelivery.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "apiPaths": [
                 "google/cloud/configdelivery/v1"
@@ -4456,7 +4456,7 @@
             "id": "Google.Cloud.LicenseManager.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
             "apiPaths": [
                 "google/cloud/licensemanager/v1"
@@ -4964,7 +4964,7 @@
             "id": "Google.Maps.Geocode.V4",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "77c78e90aeeb1c4612e9ab772c90bc40748a7a19",
             "apiPaths": [
                 "google/maps/geocode/v4"
@@ -5035,7 +5035,7 @@
             "id": "Google.Cloud.GeminiDataAnalytics.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "4cc6aa94090b55a457fd78758af31cac133b6ad7",
             "apiPaths": [
                 "google/cloud/geminidataanalytics/v1"
