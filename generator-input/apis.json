@@ -272,6 +272,21 @@
       "includeCommonResourcesProto": true
     },
     {
+      "id": "Google.Backstory",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Malachite Common Protos",
+      "productUrl": "https://cloud.google.com/chronicle/docs/secops/secops-overview",
+      "description": "Common Universal Data Model (UDM) and Entity protos used by Chronicle.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "backstory",
+      "shortName": "backstory",
+      "serviceConfigFile": "backstory.yaml",
+      "restNumericEnums": false
+    },
+    {
       "id": "Google.Cloud.AccessApproval.V1",
       "version": "2.6.0",
       "type": "grpc",
