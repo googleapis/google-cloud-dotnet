@@ -16,6 +16,7 @@ using Google.Cloud.Tools.Common;
 using LibGit2Sharp;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Google.Cloud.Tools.ReleaseManager
@@ -32,14 +33,15 @@ namespace Google.Cloud.Tools.ReleaseManager
 
         protected override int ExecuteImpl(string[] args)
         {
-            Console.WriteLine("Lagging packages (package ID, current version, date range of current version prerelease series):");
+            Console.WriteLine("Lagging packages (package ID, current version, date range of current version prerelease series, launch stage):");
             var catalog = ApiCatalog.Load(RootLayout);
+
             using (var repo = new Repository(RootLayout.RepositoryRoot))
             {
                 var allTags = repo.Tags.OrderByDescending(GetDate).ToList();
                 foreach (var api in catalog.Apis)
                 {
-                    MaybeShowLagging(allTags, api);
+                    MaybeShowLagging(allTags, api, RootLayout.Googleapis);
                 }
             }
             Console.WriteLine();
@@ -58,7 +60,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             return 0;
         }
 
-        private static void MaybeShowLagging(List<Tag> allTags, ApiMetadata api)
+        private static void MaybeShowLagging(List<Tag> allTags, ApiMetadata api, string googleapis)
         {
             var currentVersion = api.StructuredVersion;
             // Skip anything that is naturally pre-release (in the API), or where the current release is GA already.
@@ -80,11 +82,22 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             var latest = GetDate(matchingReleaseTags.First());
             var earliest = GetDate(matchingReleaseTags.Last());
+            string launchStage = GetLaunchStage(api, googleapis);
 
             string dateRange = latest == earliest
                 ? $"{latest:yyyy-MM-dd}"
                 : $"{earliest:yyyy-MM-dd} - {latest:yyyy-MM-dd}";
-            Console.WriteLine($"{api.Id,-50}{api.Version,-20}{dateRange}");
+            Console.WriteLine($"{api.Id,-53}{api.Version,-20}{dateRange,-23}  {launchStage}");
+        }
+
+        private static string GetLaunchStage(ApiMetadata api, string googleapis)
+        {
+            if (api.ProtoPath is null || api.ServiceConfigFile is null)
+            {
+                return null;
+            }
+            var service = ApiAnalyzer.ParseServiceConfigYaml(Path.Combine(googleapis, api.ProtoPath, api.ServiceConfigFile));
+            return service?.Publishing?.LibrarySettings.FirstOrDefault()?.LaunchStage.ToString();
         }
 
         private static DateTimeOffset GetDate(Tag tag) =>
