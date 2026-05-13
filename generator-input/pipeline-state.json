@@ -5049,6 +5049,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "lastGeneratedCommit": "31cd12474afa38f9341410abc0a4514c5f83510f",
             "apiPaths": [
                 "backstory"
             ],
