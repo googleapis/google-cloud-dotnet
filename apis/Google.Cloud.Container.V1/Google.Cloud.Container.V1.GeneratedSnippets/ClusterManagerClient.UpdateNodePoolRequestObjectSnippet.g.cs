@@ -73,6 +73,7 @@ namespace GoogleCSharpSnippets
                 BootDisk = new BootDisk(),
                 NodeDrainConfig = new NodePool.Types.NodeDrainConfig(),
                 ConsolidationDelay = new Duration(),
+                TaintConfig = new TaintConfig(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);

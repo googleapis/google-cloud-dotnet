@@ -915,7 +915,7 @@ namespace Google.Cloud.Container.V1 {
       }
 
       /// <summary>
-      /// Fetch upgrade information of a specific nodepool.
+      /// Fetch upgrade information of a specific node pool.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -2772,7 +2772,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_FetchClusterUpgradeInfo, null, options, request);
       }
       /// <summary>
-      /// Fetch upgrade information of a specific nodepool.
+      /// Fetch upgrade information of a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2785,7 +2785,7 @@ namespace Google.Cloud.Container.V1 {
         return FetchNodePoolUpgradeInfo(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fetch upgrade information of a specific nodepool.
+      /// Fetch upgrade information of a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2796,7 +2796,7 @@ namespace Google.Cloud.Container.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_FetchNodePoolUpgradeInfo, null, options, request);
       }
       /// <summary>
-      /// Fetch upgrade information of a specific nodepool.
+      /// Fetch upgrade information of a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2809,7 +2809,7 @@ namespace Google.Cloud.Container.V1 {
         return FetchNodePoolUpgradeInfoAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Fetch upgrade information of a specific nodepool.
+      /// Fetch upgrade information of a specific node pool.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
