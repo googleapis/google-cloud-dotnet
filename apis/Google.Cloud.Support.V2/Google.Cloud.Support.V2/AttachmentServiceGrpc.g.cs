@@ -67,6 +67,10 @@ namespace Google.Cloud.Support.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.ListAttachmentsRequest> __Marshaller_google_cloud_support_v2_ListAttachmentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.ListAttachmentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.ListAttachmentsResponse> __Marshaller_google_cloud_support_v2_ListAttachmentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.ListAttachmentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.GetAttachmentRequest> __Marshaller_google_cloud_support_v2_GetAttachmentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.GetAttachmentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.Attachment> __Marshaller_google_cloud_support_v2_Attachment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.Attachment.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Support.V2.ListAttachmentsRequest, global::Google.Cloud.Support.V2.ListAttachmentsResponse> __Method_ListAttachments = new grpc::Method<global::Google.Cloud.Support.V2.ListAttachmentsRequest, global::Google.Cloud.Support.V2.ListAttachmentsResponse>(
@@ -75,6 +79,14 @@ namespace Google.Cloud.Support.V2 {
         "ListAttachments",
         __Marshaller_google_cloud_support_v2_ListAttachmentsRequest,
         __Marshaller_google_cloud_support_v2_ListAttachmentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Support.V2.GetAttachmentRequest, global::Google.Cloud.Support.V2.Attachment> __Method_GetAttachment = new grpc::Method<global::Google.Cloud.Support.V2.GetAttachmentRequest, global::Google.Cloud.Support.V2.Attachment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAttachment",
+        __Marshaller_google_cloud_support_v2_GetAttachmentRequest,
+        __Marshaller_google_cloud_support_v2_Attachment);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -94,6 +106,48 @@ namespace Google.Cloud.Support.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2.ListAttachmentsResponse> ListAttachments(global::Google.Cloud.Support.V2.ListAttachmentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve an attachment associated with a support case.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// attachment="projects/some-project/cases/23598314/attachments/0684M00000P3h1fQAB"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$attachment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      /// request = (
+      ///     supportApiService.cases()
+      ///     .attachments()
+      ///     .get(name="projects/some-project/cases/43595344/attachments/0684M00000P3h1fQAB")
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2.Attachment> GetAttachment(global::Google.Cloud.Support.V2.GetAttachmentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -175,6 +229,174 @@ namespace Google.Cloud.Support.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListAttachments, null, options, request);
       }
+      /// <summary>
+      /// Retrieve an attachment associated with a support case.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// attachment="projects/some-project/cases/23598314/attachments/0684M00000P3h1fQAB"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$attachment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      /// request = (
+      ///     supportApiService.cases()
+      ///     .attachments()
+      ///     .get(name="projects/some-project/cases/43595344/attachments/0684M00000P3h1fQAB")
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Support.V2.Attachment GetAttachment(global::Google.Cloud.Support.V2.GetAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAttachment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve an attachment associated with a support case.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// attachment="projects/some-project/cases/23598314/attachments/0684M00000P3h1fQAB"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$attachment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      /// request = (
+      ///     supportApiService.cases()
+      ///     .attachments()
+      ///     .get(name="projects/some-project/cases/43595344/attachments/0684M00000P3h1fQAB")
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Support.V2.Attachment GetAttachment(global::Google.Cloud.Support.V2.GetAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAttachment, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve an attachment associated with a support case.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// attachment="projects/some-project/cases/23598314/attachments/0684M00000P3h1fQAB"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$attachment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      /// request = (
+      ///     supportApiService.cases()
+      ///     .attachments()
+      ///     .get(name="projects/some-project/cases/43595344/attachments/0684M00000P3h1fQAB")
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Support.V2.Attachment> GetAttachmentAsync(global::Google.Cloud.Support.V2.GetAttachmentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAttachmentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve an attachment associated with a support case.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// attachment="projects/some-project/cases/23598314/attachments/0684M00000P3h1fQAB"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$attachment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      /// request = (
+      ///     supportApiService.cases()
+      ///     .attachments()
+      ///     .get(name="projects/some-project/cases/43595344/attachments/0684M00000P3h1fQAB")
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Support.V2.Attachment> GetAttachmentAsync(global::Google.Cloud.Support.V2.GetAttachmentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAttachment, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CaseAttachmentServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -189,7 +411,8 @@ namespace Google.Cloud.Support.V2 {
     public static grpc::ServerServiceDefinition BindService(CaseAttachmentServiceBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
-          .AddMethod(__Method_ListAttachments, serviceImpl.ListAttachments).Build();
+          .AddMethod(__Method_ListAttachments, serviceImpl.ListAttachments)
+          .AddMethod(__Method_GetAttachment, serviceImpl.GetAttachment).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -200,6 +423,7 @@ namespace Google.Cloud.Support.V2 {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, CaseAttachmentServiceBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_ListAttachments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.ListAttachmentsRequest, global::Google.Cloud.Support.V2.ListAttachmentsResponse>(serviceImpl.ListAttachments));
+      serviceBinder.AddMethod(__Method_GetAttachment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.GetAttachmentRequest, global::Google.Cloud.Support.V2.Attachment>(serviceImpl.GetAttachment));
     }
 
   }
