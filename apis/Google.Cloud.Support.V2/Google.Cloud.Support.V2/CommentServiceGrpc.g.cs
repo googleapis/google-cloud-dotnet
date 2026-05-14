@@ -71,6 +71,8 @@ namespace Google.Cloud.Support.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.CreateCommentRequest> __Marshaller_google_cloud_support_v2_CreateCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.CreateCommentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.Comment> __Marshaller_google_cloud_support_v2_Comment = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.Comment.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Support.V2.GetCommentRequest> __Marshaller_google_cloud_support_v2_GetCommentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Support.V2.GetCommentRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Support.V2.ListCommentsRequest, global::Google.Cloud.Support.V2.ListCommentsResponse> __Method_ListComments = new grpc::Method<global::Google.Cloud.Support.V2.ListCommentsRequest, global::Google.Cloud.Support.V2.ListCommentsResponse>(
@@ -86,6 +88,14 @@ namespace Google.Cloud.Support.V2 {
         __ServiceName,
         "CreateComment",
         __Marshaller_google_cloud_support_v2_CreateCommentRequest,
+        __Marshaller_google_cloud_support_v2_Comment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Support.V2.GetCommentRequest, global::Google.Cloud.Support.V2.Comment> __Method_GetComment = new grpc::Method<global::Google.Cloud.Support.V2.GetCommentRequest, global::Google.Cloud.Support.V2.Comment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetComment",
+        __Marshaller_google_cloud_support_v2_GetCommentRequest,
         __Marshaller_google_cloud_support_v2_Comment);
 
     /// <summary>Service descriptor</summary>
@@ -120,6 +130,47 @@ namespace Google.Cloud.Support.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2.Comment> CreateComment(global::Google.Cloud.Support.V2.CreateCommentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Retrieve a comment.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// comment="projects/some-project/cases/43595344/comments/234567890"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$comment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.cases().comments().get(
+      ///     name="projects/some-project/cases/43595344/comments/234567890",
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Support.V2.Comment> GetComment(global::Google.Cloud.Support.V2.GetCommentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -257,6 +308,170 @@ namespace Google.Cloud.Support.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateComment, null, options, request);
       }
+      /// <summary>
+      /// Retrieve a comment.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// comment="projects/some-project/cases/43595344/comments/234567890"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$comment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.cases().comments().get(
+      ///     name="projects/some-project/cases/43595344/comments/234567890",
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Support.V2.Comment GetComment(global::Google.Cloud.Support.V2.GetCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetComment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a comment.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// comment="projects/some-project/cases/43595344/comments/234567890"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$comment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.cases().comments().get(
+      ///     name="projects/some-project/cases/43595344/comments/234567890",
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Support.V2.Comment GetComment(global::Google.Cloud.Support.V2.GetCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetComment, null, options, request);
+      }
+      /// <summary>
+      /// Retrieve a comment.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// comment="projects/some-project/cases/43595344/comments/234567890"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$comment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.cases().comments().get(
+      ///     name="projects/some-project/cases/43595344/comments/234567890",
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Support.V2.Comment> GetCommentAsync(global::Google.Cloud.Support.V2.GetCommentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetCommentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieve a comment.
+      ///
+      /// EXAMPLES:
+      ///
+      /// cURL:
+      ///
+      /// ```shell
+      /// comment="projects/some-project/cases/43595344/comments/234567890"
+      /// curl \
+      ///   --header "Authorization: Bearer $(gcloud auth print-access-token)" \
+      ///   "https://cloudsupport.googleapis.com/v2/$comment"
+      /// ```
+      ///
+      /// Python:
+      ///
+      /// ```python
+      /// import googleapiclient.discovery
+      ///
+      /// api_version = "v2"
+      /// supportApiService = googleapiclient.discovery.build(
+      ///     serviceName="cloudsupport",
+      ///     version=api_version,
+      ///     discoveryServiceUrl=f"https://cloudsupport.googleapis.com/$discovery/rest?version={api_version}",
+      /// )
+      ///
+      /// request = supportApiService.cases().comments().get(
+      ///     name="projects/some-project/cases/43595344/comments/234567890",
+      /// )
+      /// print(request.execute())
+      /// ```
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Support.V2.Comment> GetCommentAsync(global::Google.Cloud.Support.V2.GetCommentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetComment, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CommentServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -272,7 +487,8 @@ namespace Google.Cloud.Support.V2 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListComments, serviceImpl.ListComments)
-          .AddMethod(__Method_CreateComment, serviceImpl.CreateComment).Build();
+          .AddMethod(__Method_CreateComment, serviceImpl.CreateComment)
+          .AddMethod(__Method_GetComment, serviceImpl.GetComment).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -284,6 +500,7 @@ namespace Google.Cloud.Support.V2 {
     {
       serviceBinder.AddMethod(__Method_ListComments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.ListCommentsRequest, global::Google.Cloud.Support.V2.ListCommentsResponse>(serviceImpl.ListComments));
       serviceBinder.AddMethod(__Method_CreateComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.CreateCommentRequest, global::Google.Cloud.Support.V2.Comment>(serviceImpl.CreateComment));
+      serviceBinder.AddMethod(__Method_GetComment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Support.V2.GetCommentRequest, global::Google.Cloud.Support.V2.Comment>(serviceImpl.GetComment));
     }
 
   }
