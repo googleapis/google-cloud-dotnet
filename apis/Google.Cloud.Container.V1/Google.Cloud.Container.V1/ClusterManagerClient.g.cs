@@ -682,11 +682,15 @@ namespace Google.Cloud.Container.V1
         /// The default ClusterManager scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/container</description></item>
+        /// <item><description>https://www.googleapis.com/auth/container.read-only</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/container",
+            "https://www.googleapis.com/auth/container.read-only",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -5367,7 +5371,7 @@ namespace Google.Cloud.Container.V1
             FetchClusterUpgradeInfoAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetch upgrade information of a specific nodepool.
+        /// Fetch upgrade information of a specific node pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5376,7 +5380,7 @@ namespace Google.Cloud.Container.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetch upgrade information of a specific nodepool.
+        /// Fetch upgrade information of a specific node pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5385,7 +5389,7 @@ namespace Google.Cloud.Container.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Fetch upgrade information of a specific nodepool.
+        /// Fetch upgrade information of a specific node pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5394,10 +5398,10 @@ namespace Google.Cloud.Container.V1
             FetchNodePoolUpgradeInfoAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Fetch upgrade information of a specific nodepool.
+        /// Fetch upgrade information of a specific node pool.
         /// </summary>
         /// <param name="name">
-        /// Required. The name (project, location, cluster, nodepool) of the nodepool
+        /// Required. The name (project, location, cluster, node pool) of the node pool
         /// to get. Specified in the format
         /// `projects/*/locations/*/clusters/*/nodePools/*` or
         /// `projects/*/zones/*/clusters/*/nodePools/*`.
@@ -5411,10 +5415,10 @@ namespace Google.Cloud.Container.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetch upgrade information of a specific nodepool.
+        /// Fetch upgrade information of a specific node pool.
         /// </summary>
         /// <param name="name">
-        /// Required. The name (project, location, cluster, nodepool) of the nodepool
+        /// Required. The name (project, location, cluster, node pool) of the node pool
         /// to get. Specified in the format
         /// `projects/*/locations/*/clusters/*/nodePools/*` or
         /// `projects/*/zones/*/clusters/*/nodePools/*`.
@@ -5428,10 +5432,10 @@ namespace Google.Cloud.Container.V1
             }, callSettings);
 
         /// <summary>
-        /// Fetch upgrade information of a specific nodepool.
+        /// Fetch upgrade information of a specific node pool.
         /// </summary>
         /// <param name="name">
-        /// Required. The name (project, location, cluster, nodepool) of the nodepool
+        /// Required. The name (project, location, cluster, node pool) of the node pool
         /// to get. Specified in the format
         /// `projects/*/locations/*/clusters/*/nodePools/*` or
         /// `projects/*/zones/*/clusters/*/nodePools/*`.
@@ -6708,7 +6712,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Fetch upgrade information of a specific nodepool.
+        /// Fetch upgrade information of a specific node pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6720,7 +6724,7 @@ namespace Google.Cloud.Container.V1
         }
 
         /// <summary>
-        /// Fetch upgrade information of a specific nodepool.
+        /// Fetch upgrade information of a specific node pool.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
