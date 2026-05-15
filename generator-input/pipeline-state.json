@@ -1182,7 +1182,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-11T16:32:25.386738945Z",
-            "lastGeneratedCommit": "6810d0e5d1a01de57a8a56a13204adbe90f91026",
+            "lastGeneratedCommit": "6470fae8e944935a4f4482b580552cd943d53ebf",
             "lastReleasedCommit": "6810d0e5d1a01de57a8a56a13204adbe90f91026",
             "apiPaths": [
                 "google/cloud/datacatalog/lineage/v1"
