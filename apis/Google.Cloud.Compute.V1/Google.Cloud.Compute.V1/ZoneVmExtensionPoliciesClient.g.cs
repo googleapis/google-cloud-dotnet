@@ -340,7 +340,7 @@ namespace Google.Cloud.Compute.V1
         public virtual ZoneVmExtensionPolicies.ZoneVmExtensionPoliciesClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specified zone VM extension policy.
+        /// Deletes a specified zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -349,7 +349,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specified zone VM extension policy.
+        /// Deletes a specified zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -358,7 +358,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a specified zone VM extension policy.
+        /// Deletes a specified zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -393,7 +393,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOperationsClient, callSettings);
 
         /// <summary>
-        /// Deletes a specified zone VM extension policy.
+        /// Deletes a specified zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -415,7 +415,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specified zone VM extension policy.
+        /// Deletes a specified zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -437,7 +437,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a specified zone VM extension policy.
+        /// Deletes a specified zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -454,7 +454,7 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, zone, vmExtensionPolicy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves details of a specific zone VM extension policy.
+        /// Retrieves details of a specific zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -463,7 +463,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves details of a specific zone VM extension policy.
+        /// Retrieves details of a specific zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -472,7 +472,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves details of a specific zone VM extension policy.
+        /// Retrieves details of a specific zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -481,7 +481,7 @@ namespace Google.Cloud.Compute.V1
             GetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves details of a specific zone VM extension policy.
+        /// Retrieves details of a specific zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -503,7 +503,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves details of a specific zone VM extension policy.
+        /// Retrieves details of a specific zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -525,7 +525,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves details of a specific zone VM extension policy.
+        /// Retrieves details of a specific zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -748,7 +748,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Modifies an existing zone VM extension policy.
+        /// Modifies an existing zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -757,7 +757,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Modifies an existing zone VM extension policy.
+        /// Modifies an existing zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -766,7 +766,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Modifies an existing zone VM extension policy.
+        /// Modifies an existing zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -801,7 +801,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Modifies an existing zone VM extension policy.
+        /// Modifies an existing zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -827,7 +827,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Modifies an existing zone VM extension policy.
+        /// Modifies an existing zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -853,7 +853,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Modifies an existing zone VM extension policy.
+        /// Modifies an existing zone VM extension policy within a project.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -959,7 +959,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeleteOperationsClient { get; }
 
         /// <summary>
-        /// Deletes a specified zone VM extension policy.
+        /// Deletes a specified zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -974,7 +974,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Deletes a specified zone VM extension policy.
+        /// Deletes a specified zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -989,7 +989,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves details of a specific zone VM extension policy.
+        /// Retrieves details of a specific zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1001,7 +1001,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves details of a specific zone VM extension policy.
+        /// Retrieves details of a specific zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1073,7 +1073,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Modifies an existing zone VM extension policy.
+        /// Modifies an existing zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1088,7 +1088,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Modifies an existing zone VM extension policy.
+        /// Modifies an existing zone VM extension policy within a project.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

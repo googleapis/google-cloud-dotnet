@@ -719,6 +719,42 @@ namespace Microsoft.Extensions.DependencyInjection
                 return builder.Build(provider);
             });
 
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::GlobalVmExtensionPoliciesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGlobalVmExtensionPoliciesClient(this IServiceCollection services, sys::Action<gccv::GlobalVmExtensionPoliciesClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::GlobalVmExtensionPoliciesClientBuilder builder = new gccv::GlobalVmExtensionPoliciesClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>
+        /// Adds a singleton <see cref="gccv::GlobalVmExtensionPoliciesClient"/> to <paramref name="services"/>.
+        /// </summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddGlobalVmExtensionPoliciesClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::GlobalVmExtensionPoliciesClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::GlobalVmExtensionPoliciesClientBuilder builder = new gccv::GlobalVmExtensionPoliciesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
         /// <summary>Adds a singleton <see cref="gccv::HealthChecksClient"/> to <paramref name="services"/>.</summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -3307,6 +3343,70 @@ namespace Microsoft.Extensions.DependencyInjection
             services.AddSingleton(provider =>
             {
                 gccv::ResourcePoliciesClientBuilder builder = new gccv::ResourcePoliciesClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::RolloutPlansClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRolloutPlansClient(this IServiceCollection services, sys::Action<gccv::RolloutPlansClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RolloutPlansClientBuilder builder = new gccv::RolloutPlansClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::RolloutPlansClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRolloutPlansClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::RolloutPlansClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RolloutPlansClientBuilder builder = new gccv::RolloutPlansClientBuilder();
+                action?.Invoke(provider, builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::RolloutsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRolloutsClient(this IServiceCollection services, sys::Action<gccv::RolloutsClientBuilder> action = null) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RolloutsClientBuilder builder = new gccv::RolloutsClientBuilder();
+                action?.Invoke(builder);
+                return builder.Build(provider);
+            });
+
+        /// <summary>Adds a singleton <see cref="gccv::RolloutsClient"/> to <paramref name="services"/>.</summary>
+        /// <param name="services">
+        /// The service collection to add the client to. The services are used to configure the client when requested.
+        /// </param>
+        /// <param name="action">
+        /// An optional action to invoke on the client builder. This is invoked before services from
+        /// <paramref name="services"/> are used.
+        /// </param>
+        public static IServiceCollection AddRolloutsClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gccv::RolloutsClientBuilder> action) =>
+            services.AddSingleton(provider =>
+            {
+                gccv::RolloutsClientBuilder builder = new gccv::RolloutsClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });
