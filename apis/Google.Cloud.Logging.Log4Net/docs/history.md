@@ -1,5 +1,16 @@
 # Version history
 
+## Version 5.0.0, released 2026-05-18
+
+### New features
+
+- Add credential type parameter support to Log4Net.
+- Update dependencies
+
+### Bug fixes
+
+- Implement new Append method on GoogleStackDriver
+
 ## Version 4.4.0, released 2024-09-26
 
 ### New features
