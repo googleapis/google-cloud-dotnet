@@ -3711,7 +3711,7 @@
     },
     {
       "id": "Google.Cloud.Logging.Log4Net",
-      "version": "4.4.0",
+      "version": "5.0.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "description": "Log4Net client library for the Google Cloud Logging API.",
