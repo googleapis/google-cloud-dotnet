@@ -10,6 +10,6 @@
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax.Rest" />
-    <PackageReference Include="Google.Apis.Translate.v2" VersionOverride="[1.68.0.875, 2.0.0.0)" />
+    <PackageReference Include="Google.Apis.Translate.v2" VersionOverride="[1.74.0.875, 2.0.0.0)" />
   </ItemGroup>
 </Project>

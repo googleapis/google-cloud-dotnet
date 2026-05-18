@@ -8,7 +8,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Google.Api.Gax.Testing" />
-    <PackageReference Include="Google.Apis.CloudResourceManager.v1" VersionOverride="[1.68.0.3356, 2.0.0.0)" />
+    <PackageReference Include="Google.Apis.CloudResourceManager.v1" VersionOverride="[1.74.0.3959, 2.0.0.0)" />
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
     <ProjectReference Include="..\Google.Cloud.PubSub.V1\Google.Cloud.PubSub.V1.csproj" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
