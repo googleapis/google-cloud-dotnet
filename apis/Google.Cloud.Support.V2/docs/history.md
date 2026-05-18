@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.6.0, released 2026-05-18
+
+### New features
+
+- V2 version for `GetComment` and `GetAttachment`
+
 ## Version 1.5.0, released 2025-11-06
 
 ### New features
