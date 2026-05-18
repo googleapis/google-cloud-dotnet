@@ -6959,7 +6959,7 @@
     },
     {
       "id": "Google.Maps.Geocode.V4",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Geocoding",
       "productUrl": "https://developers.google.com/maps/documentation/geocoding/overview",

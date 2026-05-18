@@ -4967,10 +4967,12 @@
         },
         {
             "id": "Google.Maps.Geocode.V4",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-05-18T14:22:53.005995018Z",
             "lastGeneratedCommit": "77c78e90aeeb1c4612e9ab772c90bc40748a7a19",
+            "lastReleasedCommit": "77c78e90aeeb1c4612e9ab772c90bc40748a7a19",
             "apiPaths": [
                 "google/maps/geocode/v4"
             ],
