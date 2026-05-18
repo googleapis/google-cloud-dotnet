@@ -1,5 +1,26 @@
 # Version history
 
+## Version 3.38.0, released 2026-05-18
+
+### New features
+
+- Add confidential instance type and hyperdisk support to GKE API
+- Add private endpoint enforcement for master authorized networks
+- Add swap memory configuration for node pools
+- Add custom node initialization and kernel module loading policy
+- Add accurate time synchronization (PTP-KVM) support
+- Add advanced Kubelet configurations including image GC and parallel pulls
+- Add Topology Manager and Memory Manager configurations
+- Add node management features (Slurm, readiness, creation, taints)
+- Add cluster disruption budgets and maintenance window configurations
+- Add security and observability enhancements (secret sync, OTel, ML diagnostics)
+- Add GPU Direct and network performance configuration options
+- Update authentication rules with canonical scopes for ClusterManager
+
+### Documentation improvements
+
+- Various documentation improvements
+
 ## Version 3.37.0, released 2026-01-26
 
 ### New features
