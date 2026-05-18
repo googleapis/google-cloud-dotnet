@@ -770,7 +770,7 @@
             "id": "Google.Cloud.BigQuery.V2",
             "currentVersion": "3.11.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-02-03T17:58:23Z",
             "sourcePaths": [
                 "apis/Google.Cloud.BigQuery.V2/Google.Cloud.BigQuery.V2"
@@ -5057,7 +5057,7 @@
             "id": "Google.Backstory",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "31cd12474afa38f9341410abc0a4514c5f83510f",
             "apiPaths": [
                 "backstory"
