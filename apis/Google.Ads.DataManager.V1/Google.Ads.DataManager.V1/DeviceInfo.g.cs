@@ -26,17 +26,23 @@ namespace Google.Ads.DataManager.V1 {
           string.Concat(
             "Citnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2RldmljZV9pbmZvLnByb3Rv",
             "Ehlnb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvIj4KCkRldmljZUluZm8SFwoKdXNlcl9hZ2VudBgB",
-            "IAEoCUID4EEBEhcKCmlwX2FkZHJlc3MYAiABKAlCA+BBAULMAQodY29tLmdv",
-            "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCD0RldmljZUluZm9Qcm90b1ABWkFj",
-            "bG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5h",
-            "Z2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIu",
-            "VjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6",
-            "OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "X2JlaGF2aW9yLnByb3RvIsoCCgpEZXZpY2VJbmZvEhcKCnVzZXJfYWdlbnQY",
+            "ASABKAlCA+BBARIXCgppcF9hZGRyZXNzGAIgASgJQgPgQQESFQoIY2F0ZWdv",
+            "cnkYAyABKAlCA+BBARIaCg1sYW5ndWFnZV9jb2RlGAQgASgJQgPgQQESGgoN",
+            "c2NyZWVuX2hlaWdodBgFIAEoBUID4EEBEhkKDHNjcmVlbl93aWR0aBgGIAEo",
+            "BUID4EEBEh0KEG9wZXJhdGluZ19zeXN0ZW0YByABKAlCA+BBARIlChhvcGVy",
+            "YXRpbmdfc3lzdGVtX3ZlcnNpb24YCCABKAlCA+BBARISCgVtb2RlbBgJIAEo",
+            "CUID4EEBEhIKBWJyYW5kGAogASgJQgPgQQESFAoHYnJvd3NlchgLIAEoCUID",
+            "4EEBEhwKD2Jyb3dzZXJfdmVyc2lvbhgMIAEoCUID4EEBQswBCh1jb20uZ29v",
+            "Z2xlLmFkcy5kYXRhbWFuYWdlci52MUIPRGV2aWNlSW5mb1Byb3RvUAFaQWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFn",
+            "ZXJwYjtkYXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5W",
+            "McoCGUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6",
+            "RGF0YU1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.DeviceInfo), global::Google.Ads.DataManager.V1.DeviceInfo.Parser, new[]{ "UserAgent", "IpAddress" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.DeviceInfo), global::Google.Ads.DataManager.V1.DeviceInfo.Parser, new[]{ "UserAgent", "IpAddress", "Category", "LanguageCode", "ScreenHeight", "ScreenWidth", "OperatingSystem", "OperatingSystemVersion", "Model", "Brand", "Browser", "BrowserVersion" }, null, null, null, null)
           }));
     }
     #endregion
@@ -83,6 +89,16 @@ namespace Google.Ads.DataManager.V1 {
     public DeviceInfo(DeviceInfo other) : this() {
       userAgent_ = other.userAgent_;
       ipAddress_ = other.ipAddress_;
+      category_ = other.category_;
+      languageCode_ = other.languageCode_;
+      screenHeight_ = other.screenHeight_;
+      screenWidth_ = other.screenWidth_;
+      operatingSystem_ = other.operatingSystem_;
+      operatingSystemVersion_ = other.operatingSystemVersion_;
+      model_ = other.model_;
+      brand_ = other.brand_;
+      browser_ = other.browser_;
+      browserVersion_ = other.browserVersion_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -132,6 +148,157 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "category" field.</summary>
+    public const int CategoryFieldNumber = 3;
+    private string category_ = "";
+    /// <summary>
+    /// Optional. The category of device. For example, “desktop”, “tablet”,
+    /// “mobile”, “smart TV”.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Category {
+      get { return category_; }
+      set {
+        category_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 4;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Optional. The language the device uses in ISO 639-1 format.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "screen_height" field.</summary>
+    public const int ScreenHeightFieldNumber = 5;
+    private int screenHeight_;
+    /// <summary>
+    /// Optional. The height of the screen in pixels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ScreenHeight {
+      get { return screenHeight_; }
+      set {
+        screenHeight_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "screen_width" field.</summary>
+    public const int ScreenWidthFieldNumber = 6;
+    private int screenWidth_;
+    /// <summary>
+    /// Optional. The width of the screen in pixels.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ScreenWidth {
+      get { return screenWidth_; }
+      set {
+        screenWidth_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "operating_system" field.</summary>
+    public const int OperatingSystemFieldNumber = 7;
+    private string operatingSystem_ = "";
+    /// <summary>
+    /// Optional. The operating system or platform of the device.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OperatingSystem {
+      get { return operatingSystem_; }
+      set {
+        operatingSystem_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "operating_system_version" field.</summary>
+    public const int OperatingSystemVersionFieldNumber = 8;
+    private string operatingSystemVersion_ = "";
+    /// <summary>
+    /// Optional. The version of the operating system or platform.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string OperatingSystemVersion {
+      get { return operatingSystemVersion_; }
+      set {
+        operatingSystemVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 9;
+    private string model_ = "";
+    /// <summary>
+    /// Optional. The model of the device.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "brand" field.</summary>
+    public const int BrandFieldNumber = 10;
+    private string brand_ = "";
+    /// <summary>
+    /// Optional. The brand of the device.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Brand {
+      get { return brand_; }
+      set {
+        brand_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "browser" field.</summary>
+    public const int BrowserFieldNumber = 11;
+    private string browser_ = "";
+    /// <summary>
+    /// Optional. The brand or type of the browser.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Browser {
+      get { return browser_; }
+      set {
+        browser_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "browser_version" field.</summary>
+    public const int BrowserVersionFieldNumber = 12;
+    private string browserVersion_ = "";
+    /// <summary>
+    /// Optional. The version of the browser.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BrowserVersion {
+      get { return browserVersion_; }
+      set {
+        browserVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -149,6 +316,16 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (UserAgent != other.UserAgent) return false;
       if (IpAddress != other.IpAddress) return false;
+      if (Category != other.Category) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (ScreenHeight != other.ScreenHeight) return false;
+      if (ScreenWidth != other.ScreenWidth) return false;
+      if (OperatingSystem != other.OperatingSystem) return false;
+      if (OperatingSystemVersion != other.OperatingSystemVersion) return false;
+      if (Model != other.Model) return false;
+      if (Brand != other.Brand) return false;
+      if (Browser != other.Browser) return false;
+      if (BrowserVersion != other.BrowserVersion) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -158,6 +335,16 @@ namespace Google.Ads.DataManager.V1 {
       int hash = 1;
       if (UserAgent.Length != 0) hash ^= UserAgent.GetHashCode();
       if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (Category.Length != 0) hash ^= Category.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (ScreenHeight != 0) hash ^= ScreenHeight.GetHashCode();
+      if (ScreenWidth != 0) hash ^= ScreenWidth.GetHashCode();
+      if (OperatingSystem.Length != 0) hash ^= OperatingSystem.GetHashCode();
+      if (OperatingSystemVersion.Length != 0) hash ^= OperatingSystemVersion.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (Brand.Length != 0) hash ^= Brand.GetHashCode();
+      if (Browser.Length != 0) hash ^= Browser.GetHashCode();
+      if (BrowserVersion.Length != 0) hash ^= BrowserVersion.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -184,6 +371,46 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(18);
         output.WriteString(IpAddress);
       }
+      if (Category.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Category);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LanguageCode);
+      }
+      if (ScreenHeight != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ScreenHeight);
+      }
+      if (ScreenWidth != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ScreenWidth);
+      }
+      if (OperatingSystem.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(OperatingSystem);
+      }
+      if (OperatingSystemVersion.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(OperatingSystemVersion);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Model);
+      }
+      if (Brand.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Brand);
+      }
+      if (Browser.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Browser);
+      }
+      if (BrowserVersion.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(BrowserVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -202,6 +429,46 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(18);
         output.WriteString(IpAddress);
       }
+      if (Category.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Category);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LanguageCode);
+      }
+      if (ScreenHeight != 0) {
+        output.WriteRawTag(40);
+        output.WriteInt32(ScreenHeight);
+      }
+      if (ScreenWidth != 0) {
+        output.WriteRawTag(48);
+        output.WriteInt32(ScreenWidth);
+      }
+      if (OperatingSystem.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(OperatingSystem);
+      }
+      if (OperatingSystemVersion.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(OperatingSystemVersion);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(Model);
+      }
+      if (Brand.Length != 0) {
+        output.WriteRawTag(82);
+        output.WriteString(Brand);
+      }
+      if (Browser.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Browser);
+      }
+      if (BrowserVersion.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(BrowserVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -217,6 +484,36 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (IpAddress.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+      }
+      if (Category.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Category);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (ScreenHeight != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScreenHeight);
+      }
+      if (ScreenWidth != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(ScreenWidth);
+      }
+      if (OperatingSystem.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OperatingSystem);
+      }
+      if (OperatingSystemVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(OperatingSystemVersion);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (Brand.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Brand);
+      }
+      if (Browser.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Browser);
+      }
+      if (BrowserVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BrowserVersion);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -235,6 +532,36 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (other.IpAddress.Length != 0) {
         IpAddress = other.IpAddress;
+      }
+      if (other.Category.Length != 0) {
+        Category = other.Category;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.ScreenHeight != 0) {
+        ScreenHeight = other.ScreenHeight;
+      }
+      if (other.ScreenWidth != 0) {
+        ScreenWidth = other.ScreenWidth;
+      }
+      if (other.OperatingSystem.Length != 0) {
+        OperatingSystem = other.OperatingSystem;
+      }
+      if (other.OperatingSystemVersion.Length != 0) {
+        OperatingSystemVersion = other.OperatingSystemVersion;
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      if (other.Brand.Length != 0) {
+        Brand = other.Brand;
+      }
+      if (other.Browser.Length != 0) {
+        Browser = other.Browser;
+      }
+      if (other.BrowserVersion.Length != 0) {
+        BrowserVersion = other.BrowserVersion;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -263,6 +590,46 @@ namespace Google.Ads.DataManager.V1 {
             IpAddress = input.ReadString();
             break;
           }
+          case 26: {
+            Category = input.ReadString();
+            break;
+          }
+          case 34: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 40: {
+            ScreenHeight = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ScreenWidth = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            OperatingSystem = input.ReadString();
+            break;
+          }
+          case 66: {
+            OperatingSystemVersion = input.ReadString();
+            break;
+          }
+          case 74: {
+            Model = input.ReadString();
+            break;
+          }
+          case 82: {
+            Brand = input.ReadString();
+            break;
+          }
+          case 90: {
+            Browser = input.ReadString();
+            break;
+          }
+          case 98: {
+            BrowserVersion = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -288,6 +655,46 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 18: {
             IpAddress = input.ReadString();
+            break;
+          }
+          case 26: {
+            Category = input.ReadString();
+            break;
+          }
+          case 34: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 40: {
+            ScreenHeight = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            ScreenWidth = input.ReadInt32();
+            break;
+          }
+          case 58: {
+            OperatingSystem = input.ReadString();
+            break;
+          }
+          case 66: {
+            OperatingSystemVersion = input.ReadString();
+            break;
+          }
+          case 74: {
+            Model = input.ReadString();
+            break;
+          }
+          case 82: {
+            Brand = input.ReadString();
+            break;
+          }
+          case 90: {
+            Browser = input.ReadString();
+            break;
+          }
+          case 98: {
+            BrowserVersion = input.ReadString();
             break;
           }
         }

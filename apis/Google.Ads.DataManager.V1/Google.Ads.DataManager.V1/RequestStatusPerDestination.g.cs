@@ -218,7 +218,16 @@ namespace Google.Ads.DataManager.V1 {
     private global::Google.Ads.DataManager.V1.ErrorInfo errorInfo_;
     /// <summary>
     /// An error info error containing the error reason and error counts related to
-    /// the upload.
+    /// the upload. Only populated if the
+    /// [`request_status`][google.ads.datamanager.v1.RequestStatusPerDestination.request_status]
+    /// is
+    /// [`FAILED`][google.ads.datamanager.v1.RequestStatusPerDestination.RequestStatus.FAILED]
+    /// or
+    /// [`PARTIAL_SUCCESS`][google.ads.datamanager.v1.RequestStatusPerDestination.RequestStatus.PARTIAL_SUCCESS].
+    /// This field isn't populated while the request has
+    /// [`request_status`][google.ads.datamanager.v1.RequestStatusPerDestination.request_status]
+    /// of
+    /// [`PROCESSING`][google.ads.datamanager.v1.RequestStatusPerDestination.RequestStatus.PROCESSING].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -234,7 +243,10 @@ namespace Google.Ads.DataManager.V1 {
     private global::Google.Ads.DataManager.V1.WarningInfo warningInfo_;
     /// <summary>
     /// A warning info containing the warning reason and warning counts related to
-    /// the upload.
+    /// the upload. This field isn't populated while the request has
+    /// [`request_status`][google.ads.datamanager.v1.RequestStatusPerDestination.request_status]
+    /// of
+    /// [`PROCESSING`][google.ads.datamanager.v1.RequestStatusPerDestination.RequestStatus.PROCESSING].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -680,7 +692,10 @@ namespace Google.Ads.DataManager.V1 {
         /// </summary>
         [pbr::OriginalName("REQUEST_STATUS_UNKNOWN")] Unknown = 0,
         /// <summary>
-        /// The request succeeded.
+        /// Processing succeeded for all records without any errors. However, there
+        /// may be warnings in the
+        /// [`warning_info`][google.ads.datamanager.v1.RequestStatusPerDestination.warning_info]
+        /// field.
         /// </summary>
         [pbr::OriginalName("SUCCESS")] Success = 1,
         /// <summary>
@@ -688,11 +703,20 @@ namespace Google.Ads.DataManager.V1 {
         /// </summary>
         [pbr::OriginalName("PROCESSING")] Processing = 2,
         /// <summary>
-        /// The request failed.
+        /// Processing failed for all records. Check the
+        /// [`error_info`][google.ads.datamanager.v1.RequestStatusPerDestination.error_info]
+        /// field for error details, and check the
+        /// [`warning_info`][google.ads.datamanager.v1.RequestStatusPerDestination.warning_info]
+        /// field for warning details.
         /// </summary>
         [pbr::OriginalName("FAILED")] Failed = 3,
         /// <summary>
-        /// The request partially succeeded.
+        /// Processing completed successfully without errors for some records, but
+        /// failed with errors for other records. Check the
+        /// [`error_info`][google.ads.datamanager.v1.RequestStatusPerDestination.error_info]
+        /// field for error details, and check the
+        /// [`warning_info`][google.ads.datamanager.v1.RequestStatusPerDestination.warning_info]
+        /// field for warning details.
         /// </summary>
         [pbr::OriginalName("PARTIAL_SUCCESS")] PartialSuccess = 4,
       }
