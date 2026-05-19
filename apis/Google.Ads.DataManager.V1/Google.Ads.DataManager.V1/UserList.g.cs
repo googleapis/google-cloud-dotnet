@@ -58,78 +58,79 @@ namespace Google.Ads.DataManager.V1 {
             "TGlzdHMve3VzZXJfbGlzdH0qCXVzZXJMaXN0czIIdXNlckxpc3RCEAoOdXNl",
             "cl9saXN0X2luZm9CDwoNX2Rpc3BsYXlfbmFtZUIOCgxfZGVzY3JpcHRpb25C",
             "FAoSX21lbWJlcnNoaXBfc3RhdHVzQhMKEV9pbnRlZ3JhdGlvbl9jb2RlQhEK",
-            "D19jbG9zaW5nX3JlYXNvbkIYChZfYWNjb3VudF9hY2Nlc3Nfc3RhdHVzImEK",
-            "CFNpemVJbmZvEioKHWRpc3BsYXlfbmV0d29ya19tZW1iZXJzX2NvdW50GAEg",
-            "ASgDQgPgQQMSKQocc2VhcmNoX25ldHdvcmtfbWVtYmVyc19jb3VudBgCIAEo",
-            "A0ID4EEDInUKEVRhcmdldE5ldHdvcmtJbmZvEiEKFGVsaWdpYmxlX2Zvcl9k",
-            "aXNwbGF5GAEgASgIQgPgQQMSJQoTZWxpZ2libGVfZm9yX3NlYXJjaBgCIAEo",
-            "CEID4EEBSACIAQFCFgoUX2VsaWdpYmxlX2Zvcl9zZWFyY2girwUKFEluZ2Vz",
-            "dGVkVXNlckxpc3RJbmZvEl8KEHVwbG9hZF9rZXlfdHlwZXMYASADKA4yPS5n",
-            "b29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkluZ2VzdGVkVXNlckxpc3RJbmZv",
-            "LlVwbG9hZEtleVR5cGVCBuBBAuBBBRJGCg9jb250YWN0X2lkX2luZm8YAiAB",
-            "KAsyKC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkNvbnRhY3RJZEluZm9C",
-            "A+BBARJECg5tb2JpbGVfaWRfaW5mbxgDIAEoCzInLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuTW9iaWxlSWRJbmZvQgPgQQESQAoMdXNlcl9pZF9pbmZv",
-            "GAQgASgLMiUuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Vc2VySWRJbmZv",
-            "QgPgQQESQAoMcGFpcl9pZF9pbmZvGAUgASgLMiUuZ29vZ2xlLmFkcy5kYXRh",
-            "bWFuYWdlci52MS5QYWlySWRJbmZvQgPgQQESUAoUcHNldWRvbnltb3VzX2lk",
-            "X2luZm8YBiABKAsyLS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlBzZXVk",
-            "b255bW91c0lkSW5mb0ID4EEBElIKFXBhcnRuZXJfYXVkaWVuY2VfaW5mbxgH",
-            "IAEoCzIuLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUGFydG5lckF1ZGll",
-            "bmNlSW5mb0ID4EEBIn4KDVVwbG9hZEtleVR5cGUSHwobVVBMT0FEX0tFWV9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASDgoKQ09OVEFDVF9JRBABEg0KCU1PQklMRV9J",
-            "RBACEgsKB1VTRVJfSUQQAxILCgdQQUlSX0lEEAQSEwoPUFNFVURPTllNT1VT",
-            "X0lEEAUimgEKDUNvbnRhY3RJZEluZm8SUAoQZGF0YV9zb3VyY2VfdHlwZRgB",
-            "IAEoDjIpLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuRGF0YVNvdXJjZVR5",
-            "cGVCBuBBAeBBBUgAiAEBEiIKFW1hdGNoX3JhdGVfcGVyY2VudGFnZRgCIAEo",
-            "BUID4EEDQhMKEV9kYXRhX3NvdXJjZV90eXBlIroCCgxNb2JpbGVJZEluZm8S",
-            "UAoQZGF0YV9zb3VyY2VfdHlwZRgBIAEoDjIpLmdvb2dsZS5hZHMuZGF0YW1h",
-            "bmFnZXIudjEuRGF0YVNvdXJjZVR5cGVCBuBBAeBBBUgAiAEBElAKCWtleV9z",
-            "cGFjZRgCIAEoDjIwLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuTW9iaWxl",
-            "SWRJbmZvLktleVNwYWNlQgbgQQLgQQVIAYgBARIbCgZhcHBfaWQYAyABKAlC",
-            "BuBBAuBBBUgCiAEBIjsKCEtleVNwYWNlEhkKFUtFWV9TUEFDRV9VTlNQRUNJ",
-            "RklFRBAAEgcKA0lPUxABEgsKB0FORFJPSUQQAkITChFfZGF0YV9zb3VyY2Vf",
-            "dHlwZUIMCgpfa2V5X3NwYWNlQgkKB19hcHBfaWQicwoKVXNlcklkSW5mbxJQ",
-            "ChBkYXRhX3NvdXJjZV90eXBlGAEgASgOMikuZ29vZ2xlLmFkcy5kYXRhbWFu",
-            "YWdlci52MS5EYXRhU291cmNlVHlwZUIG4EEB4EEFSACIAQFCEwoRX2RhdGFf",
-            "c291cmNlX3R5cGUizQIKClBhaXJJZEluZm8SIQoMcHVibGlzaGVyX2lkGAEg",
-            "ASgDQgbgQQLgQQVIAIgBARIgCg5wdWJsaXNoZXJfbmFtZRgCIAEoCUID4EEC",
-            "SAGIAQESJwoVbWF0Y2hfcmF0ZV9wZXJjZW50YWdlGAMgASgFQgPgQQJIAogB",
-            "ARItChthZHZlcnRpc2VyX2lkZW50aWZpZXJfY291bnQYBCABKANCA+BBAUgD",
-            "iAEBEioKFWNsZWFuX3Jvb21faWRlbnRpZmllchgFIAEoCUIG4EEC4EEFSASI",
-            "AQFCDwoNX3B1Ymxpc2hlcl9pZEIRCg9fcHVibGlzaGVyX25hbWVCGAoWX21h",
-            "dGNoX3JhdGVfcGVyY2VudGFnZUIeChxfYWR2ZXJ0aXNlcl9pZGVudGlmaWVy",
-            "X2NvdW50QhgKFl9jbGVhbl9yb29tX2lkZW50aWZpZXIi7gIKE1BhcnRuZXJB",
-            "dWRpZW5jZUluZm8ScgoXcGFydG5lcl9hdWRpZW5jZV9zb3VyY2UYASABKA4y",
-            "RC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlBhcnRuZXJBdWRpZW5jZUlu",
-            "Zm8uUGFydG5lckF1ZGllbmNlU291cmNlQgbgQQLgQQVIAIgBARIiChBjb21t",
-            "ZXJjZV9wYXJ0bmVyGAIgASgJQgPgQQFIAYgBASKNAQoVUGFydG5lckF1ZGll",
-            "bmNlU291cmNlEicKI1BBUlRORVJfQVVESUVOQ0VfU09VUkNFX1VOU1BFQ0lG",
-            "SUVEEAASFQoRQ09NTUVSQ0VfQVVESUVOQ0UQARIWChJMSU5FQVJfVFZfQVVE",
-            "SUVOQ0UQAhIcChhBR0VOQ1lfUFJPVklERVJfQVVESUVOQ0UQA0IaChhfcGFy",
-            "dG5lcl9hdWRpZW5jZV9zb3VyY2VCEwoRX2NvbW1lcmNlX3BhcnRuZXIimgIK",
-            "ElBzZXVkb255bW91c0lkSW5mbxJXCgtzeW5jX3N0YXR1cxgBIAEoDjI4Lmdv",
-            "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHNldWRvbnltb3VzSWRJbmZvLlN5",
-            "bmNTdGF0dXNCA+BBA0gAiAEBEioKFWJpbGxhYmxlX3JlY29yZF9jb3VudBgC",
-            "IAEoA0IG4EEB4EEFSAGIAQEiVQoKU3luY1N0YXR1cxIbChdTWU5DX1NUQVRV",
-            "U19VTlNQRUNJRklFRBAAEgsKB0NSRUFURUQQARIRCg1SRUFEWV9GT1JfVVNF",
-            "EAISCgoGRkFJTEVEEANCDgoMX3N5bmNfc3RhdHVzQhgKFl9iaWxsYWJsZV9y",
-            "ZWNvcmRfY291bnQq4AEKDkRhdGFTb3VyY2VUeXBlEiAKHERBVEFfU09VUkNF",
-            "X1RZUEVfVU5TUEVDSUZJRUQQABIgChxEQVRBX1NPVVJDRV9UWVBFX0ZJUlNU",
-            "X1BBUlRZEAESLgoqREFUQV9TT1VSQ0VfVFlQRV9USElSRF9QQVJUWV9DUkVE",
-            "SVRfQlVSRUFVEAISKwonREFUQV9TT1VSQ0VfVFlQRV9USElSRF9QQVJUWV9W",
-            "T1RFUl9GSUxFEAMSLQopREFUQV9TT1VSQ0VfVFlQRV9USElSRF9QQVJUWV9Q",
-            "QVJUTkVSX0RBVEEQBELKAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
-            "djFCDVVzZXJMaXN0UHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRh",
-            "bWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlH",
-            "b29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFu",
-            "YWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3Rv",
-            "Mw=="));
+            "D19jbG9zaW5nX3JlYXNvbkIYChZfYWNjb3VudF9hY2Nlc3Nfc3RhdHVzIqcB",
+            "CghTaXplSW5mbxIqCh1kaXNwbGF5X25ldHdvcmtfbWVtYmVyc19jb3VudBgB",
+            "IAEoA0ID4EEDEikKHHNlYXJjaF9uZXR3b3JrX21lbWJlcnNfY291bnQYAiAB",
+            "KANCA+BBAxIiChV5b3V0dWJlX21lbWJlcnNfY291bnQYAyABKANCA+BBAxIg",
+            "ChNnbWFpbF9tZW1iZXJzX2NvdW50GAQgASgDQgPgQQMidQoRVGFyZ2V0TmV0",
+            "d29ya0luZm8SIQoUZWxpZ2libGVfZm9yX2Rpc3BsYXkYASABKAhCA+BBAxIl",
+            "ChNlbGlnaWJsZV9mb3Jfc2VhcmNoGAIgASgIQgPgQQFIAIgBAUIWChRfZWxp",
+            "Z2libGVfZm9yX3NlYXJjaCKvBQoUSW5nZXN0ZWRVc2VyTGlzdEluZm8SXwoQ",
+            "dXBsb2FkX2tleV90eXBlcxgBIAMoDjI9Lmdvb2dsZS5hZHMuZGF0YW1hbmFn",
+            "ZXIudjEuSW5nZXN0ZWRVc2VyTGlzdEluZm8uVXBsb2FkS2V5VHlwZUIG4EEC",
+            "4EEFEkYKD2NvbnRhY3RfaWRfaW5mbxgCIAEoCzIoLmdvb2dsZS5hZHMuZGF0",
+            "YW1hbmFnZXIudjEuQ29udGFjdElkSW5mb0ID4EEBEkQKDm1vYmlsZV9pZF9p",
+            "bmZvGAMgASgLMicuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Nb2JpbGVJ",
+            "ZEluZm9CA+BBARJACgx1c2VyX2lkX2luZm8YBCABKAsyJS5nb29nbGUuYWRz",
+            "LmRhdGFtYW5hZ2VyLnYxLlVzZXJJZEluZm9CA+BBARJACgxwYWlyX2lkX2lu",
+            "Zm8YBSABKAsyJS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlBhaXJJZElu",
+            "Zm9CA+BBARJQChRwc2V1ZG9ueW1vdXNfaWRfaW5mbxgGIAEoCzItLmdvb2ds",
+            "ZS5hZHMuZGF0YW1hbmFnZXIudjEuUHNldWRvbnltb3VzSWRJbmZvQgPgQQES",
+            "UgoVcGFydG5lcl9hdWRpZW5jZV9pbmZvGAcgASgLMi4uZ29vZ2xlLmFkcy5k",
+            "YXRhbWFuYWdlci52MS5QYXJ0bmVyQXVkaWVuY2VJbmZvQgPgQQEifgoNVXBs",
+            "b2FkS2V5VHlwZRIfChtVUExPQURfS0VZX1RZUEVfVU5TUEVDSUZJRUQQABIO",
+            "CgpDT05UQUNUX0lEEAESDQoJTU9CSUxFX0lEEAISCwoHVVNFUl9JRBADEgsK",
+            "B1BBSVJfSUQQBBITCg9QU0VVRE9OWU1PVVNfSUQQBSKaAQoNQ29udGFjdElk",
+            "SW5mbxJQChBkYXRhX3NvdXJjZV90eXBlGAEgASgOMikuZ29vZ2xlLmFkcy5k",
+            "YXRhbWFuYWdlci52MS5EYXRhU291cmNlVHlwZUIG4EEB4EEFSACIAQESIgoV",
+            "bWF0Y2hfcmF0ZV9wZXJjZW50YWdlGAIgASgFQgPgQQNCEwoRX2RhdGFfc291",
+            "cmNlX3R5cGUiugIKDE1vYmlsZUlkSW5mbxJQChBkYXRhX3NvdXJjZV90eXBl",
+            "GAEgASgOMikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5EYXRhU291cmNl",
+            "VHlwZUIG4EEB4EEFSACIAQESUAoJa2V5X3NwYWNlGAIgASgOMjAuZ29vZ2xl",
+            "LmFkcy5kYXRhbWFuYWdlci52MS5Nb2JpbGVJZEluZm8uS2V5U3BhY2VCBuBB",
+            "AuBBBUgBiAEBEhsKBmFwcF9pZBgDIAEoCUIG4EEC4EEFSAKIAQEiOwoIS2V5",
+            "U3BhY2USGQoVS0VZX1NQQUNFX1VOU1BFQ0lGSUVEEAASBwoDSU9TEAESCwoH",
+            "QU5EUk9JRBACQhMKEV9kYXRhX3NvdXJjZV90eXBlQgwKCl9rZXlfc3BhY2VC",
+            "CQoHX2FwcF9pZCJzCgpVc2VySWRJbmZvElAKEGRhdGFfc291cmNlX3R5cGUY",
+            "ASABKA4yKS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRhdGFTb3VyY2VU",
+            "eXBlQgbgQQHgQQVIAIgBAUITChFfZGF0YV9zb3VyY2VfdHlwZSLNAgoKUGFp",
+            "cklkSW5mbxIhCgxwdWJsaXNoZXJfaWQYASABKANCBuBBAuBBBUgAiAEBEiAK",
+            "DnB1Ymxpc2hlcl9uYW1lGAIgASgJQgPgQQJIAYgBARInChVtYXRjaF9yYXRl",
+            "X3BlcmNlbnRhZ2UYAyABKAVCA+BBAkgCiAEBEi0KG2FkdmVydGlzZXJfaWRl",
+            "bnRpZmllcl9jb3VudBgEIAEoA0ID4EEBSAOIAQESKgoVY2xlYW5fcm9vbV9p",
+            "ZGVudGlmaWVyGAUgASgJQgbgQQLgQQVIBIgBAUIPCg1fcHVibGlzaGVyX2lk",
+            "QhEKD19wdWJsaXNoZXJfbmFtZUIYChZfbWF0Y2hfcmF0ZV9wZXJjZW50YWdl",
+            "Qh4KHF9hZHZlcnRpc2VyX2lkZW50aWZpZXJfY291bnRCGAoWX2NsZWFuX3Jv",
+            "b21faWRlbnRpZmllciLuAgoTUGFydG5lckF1ZGllbmNlSW5mbxJyChdwYXJ0",
+            "bmVyX2F1ZGllbmNlX3NvdXJjZRgBIAEoDjJELmdvb2dsZS5hZHMuZGF0YW1h",
+            "bmFnZXIudjEuUGFydG5lckF1ZGllbmNlSW5mby5QYXJ0bmVyQXVkaWVuY2VT",
+            "b3VyY2VCBuBBAuBBBUgAiAEBEiIKEGNvbW1lcmNlX3BhcnRuZXIYAiABKAlC",
+            "A+BBAUgBiAEBIo0BChVQYXJ0bmVyQXVkaWVuY2VTb3VyY2USJwojUEFSVE5F",
+            "Ul9BVURJRU5DRV9TT1VSQ0VfVU5TUEVDSUZJRUQQABIVChFDT01NRVJDRV9B",
+            "VURJRU5DRRABEhYKEkxJTkVBUl9UVl9BVURJRU5DRRACEhwKGEFHRU5DWV9Q",
+            "Uk9WSURFUl9BVURJRU5DRRADQhoKGF9wYXJ0bmVyX2F1ZGllbmNlX3NvdXJj",
+            "ZUITChFfY29tbWVyY2VfcGFydG5lciKaAgoSUHNldWRvbnltb3VzSWRJbmZv",
+            "ElcKC3N5bmNfc3RhdHVzGAEgASgOMjguZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
+            "ci52MS5Qc2V1ZG9ueW1vdXNJZEluZm8uU3luY1N0YXR1c0ID4EEDSACIAQES",
+            "KgoVYmlsbGFibGVfcmVjb3JkX2NvdW50GAIgASgDQgbgQQHgQQVIAYgBASJV",
+            "CgpTeW5jU3RhdHVzEhsKF1NZTkNfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoH",
+            "Q1JFQVRFRBABEhEKDVJFQURZX0ZPUl9VU0UQAhIKCgZGQUlMRUQQA0IOCgxf",
+            "c3luY19zdGF0dXNCGAoWX2JpbGxhYmxlX3JlY29yZF9jb3VudCrgAQoORGF0",
+            "YVNvdXJjZVR5cGUSIAocREFUQV9TT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EiAKHERBVEFfU09VUkNFX1RZUEVfRklSU1RfUEFSVFkQARIuCipEQVRBX1NP",
+            "VVJDRV9UWVBFX1RISVJEX1BBUlRZX0NSRURJVF9CVVJFQVUQAhIrCidEQVRB",
+            "X1NPVVJDRV9UWVBFX1RISVJEX1BBUlRZX1ZPVEVSX0ZJTEUQAxItCilEQVRB",
+            "X1NPVVJDRV9UWVBFX1RISVJEX1BBUlRZX1BBUlRORVJfREFUQRAEQsoBCh1j",
+            "b20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUINVXNlckxpc3RQcm90b1AB",
+            "WkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFt",
+            "YW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFn",
+            "ZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpB",
+            "ZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.DataSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.UserList), global::Google.Ads.DataManager.V1.UserList.Parser, new[]{ "Name", "Id", "ReadOnly", "DisplayName", "Description", "MembershipStatus", "IntegrationCode", "MembershipDuration", "ClosingReason", "AccessReason", "AccountAccessStatus", "SizeInfo", "TargetNetworkInfo", "IngestedUserListInfo" }, new[]{ "UserListInfo", "DisplayName", "Description", "MembershipStatus", "IntegrationCode", "ClosingReason", "AccountAccessStatus" }, new[]{ typeof(global::Google.Ads.DataManager.V1.UserList.Types.MembershipStatus), typeof(global::Google.Ads.DataManager.V1.UserList.Types.ClosingReason), typeof(global::Google.Ads.DataManager.V1.UserList.Types.AccessReason), typeof(global::Google.Ads.DataManager.V1.UserList.Types.AccessStatus) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.SizeInfo), global::Google.Ads.DataManager.V1.SizeInfo.Parser, new[]{ "DisplayNetworkMembersCount", "SearchNetworkMembersCount" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.SizeInfo), global::Google.Ads.DataManager.V1.SizeInfo.Parser, new[]{ "DisplayNetworkMembersCount", "SearchNetworkMembersCount", "YoutubeMembersCount", "GmailMembersCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.TargetNetworkInfo), global::Google.Ads.DataManager.V1.TargetNetworkInfo.Parser, new[]{ "EligibleForDisplay", "EligibleForSearch" }, new[]{ "EligibleForSearch" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IngestedUserListInfo), global::Google.Ads.DataManager.V1.IngestedUserListInfo.Parser, new[]{ "UploadKeyTypes", "ContactIdInfo", "MobileIdInfo", "UserIdInfo", "PairIdInfo", "PseudonymousIdInfo", "PartnerAudienceInfo" }, null, new[]{ typeof(global::Google.Ads.DataManager.V1.IngestedUserListInfo.Types.UploadKeyType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ContactIdInfo), global::Google.Ads.DataManager.V1.ContactIdInfo.Parser, new[]{ "DataSourceType", "MatchRatePercentage" }, new[]{ "DataSourceType" }, null, null, null),
@@ -1196,6 +1197,8 @@ namespace Google.Ads.DataManager.V1 {
     public SizeInfo(SizeInfo other) : this() {
       displayNetworkMembersCount_ = other.displayNetworkMembersCount_;
       searchNetworkMembersCount_ = other.searchNetworkMembersCount_;
+      youtubeMembersCount_ = other.youtubeMembersCount_;
+      gmailMembersCount_ = other.gmailMembersCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1238,6 +1241,36 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "youtube_members_count" field.</summary>
+    public const int YoutubeMembersCountFieldNumber = 3;
+    private long youtubeMembersCount_;
+    /// <summary>
+    /// Output only. Estimated number of members in this user list on YouTube.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long YoutubeMembersCount {
+      get { return youtubeMembersCount_; }
+      set {
+        youtubeMembersCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "gmail_members_count" field.</summary>
+    public const int GmailMembersCountFieldNumber = 4;
+    private long gmailMembersCount_;
+    /// <summary>
+    /// Output only. Estimated number of members in this user list on Gmail.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long GmailMembersCount {
+      get { return gmailMembersCount_; }
+      set {
+        gmailMembersCount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1255,6 +1288,8 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (DisplayNetworkMembersCount != other.DisplayNetworkMembersCount) return false;
       if (SearchNetworkMembersCount != other.SearchNetworkMembersCount) return false;
+      if (YoutubeMembersCount != other.YoutubeMembersCount) return false;
+      if (GmailMembersCount != other.GmailMembersCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1264,6 +1299,8 @@ namespace Google.Ads.DataManager.V1 {
       int hash = 1;
       if (DisplayNetworkMembersCount != 0L) hash ^= DisplayNetworkMembersCount.GetHashCode();
       if (SearchNetworkMembersCount != 0L) hash ^= SearchNetworkMembersCount.GetHashCode();
+      if (YoutubeMembersCount != 0L) hash ^= YoutubeMembersCount.GetHashCode();
+      if (GmailMembersCount != 0L) hash ^= GmailMembersCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1290,6 +1327,14 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(SearchNetworkMembersCount);
       }
+      if (YoutubeMembersCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(YoutubeMembersCount);
+      }
+      if (GmailMembersCount != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(GmailMembersCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1308,6 +1353,14 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(16);
         output.WriteInt64(SearchNetworkMembersCount);
       }
+      if (YoutubeMembersCount != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(YoutubeMembersCount);
+      }
+      if (GmailMembersCount != 0L) {
+        output.WriteRawTag(32);
+        output.WriteInt64(GmailMembersCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1323,6 +1376,12 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (SearchNetworkMembersCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(SearchNetworkMembersCount);
+      }
+      if (YoutubeMembersCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(YoutubeMembersCount);
+      }
+      if (GmailMembersCount != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(GmailMembersCount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1341,6 +1400,12 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (other.SearchNetworkMembersCount != 0L) {
         SearchNetworkMembersCount = other.SearchNetworkMembersCount;
+      }
+      if (other.YoutubeMembersCount != 0L) {
+        YoutubeMembersCount = other.YoutubeMembersCount;
+      }
+      if (other.GmailMembersCount != 0L) {
+        GmailMembersCount = other.GmailMembersCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1369,6 +1434,14 @@ namespace Google.Ads.DataManager.V1 {
             SearchNetworkMembersCount = input.ReadInt64();
             break;
           }
+          case 24: {
+            YoutubeMembersCount = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            GmailMembersCount = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -1394,6 +1467,14 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 16: {
             SearchNetworkMembersCount = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            YoutubeMembersCount = input.ReadInt64();
+            break;
+          }
+          case 32: {
+            GmailMembersCount = input.ReadInt64();
             break;
           }
         }

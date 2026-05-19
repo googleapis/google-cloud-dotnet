@@ -25,7 +25,7 @@ namespace Google.Ads.DataManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Vycm9yLnByb3RvEhlnb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKoccCgtFcnJvclJlYXNvbhIcChhFUlJP",
+            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxKvkgCgtFcnJvclJlYXNvbhIcChhFUlJP",
             "Ul9SRUFTT05fVU5TUEVDSUZJRUQQABISCg5JTlRFUk5BTF9FUlJPUhABEhUK",
             "EURFQURMSU5FX0VYQ0VFREVEEAISFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAMS",
             "DQoJTk9UX0ZPVU5EEAQSFQoRUEVSTUlTU0lPTl9ERU5JRUQQBRIUChBJTlZB",
@@ -105,11 +105,25 @@ namespace Google.Ads.DataManager.V1 {
             "VVBQT1JURURfQUNDT1VOVF9UWVBFX0ZPUl9QQVJUTkVSX0xJTksQYhIgChxN",
             "RU1CRVJTSElQX0RVUkFUSU9OX1RPT19MT05HEGMSFwoTSU5WQUxJRF9NRVJD",
             "SEFOVF9JRBBkEjEKLUVVX1BPTElUSUNBTF9BRFZFUlRJU0lOR19ERUNMQVJB",
-            "VElPTl9SRVFVSVJFRBBlQscBCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
-            "ci52MUIKRXJyb3JQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFt",
-            "YW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdv",
-            "b2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5h",
-            "Z2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "VElPTl9SRVFVSVJFRBBlEiYKIkFDQ09VTlRfSU5FTElHSUJMRV9GT1JfU1RP",
+            "UkVfU0FMRVMQZhInCiNJTlZBTElEX01FUkNIQU5UX0ZFRURfTEFOR1VBR0Vf",
+            "Q09ERRBnEhcKE0lOVkFMSURfUkVHSU9OX0NPREUQaBIcChhJTlZBTElEX1NV",
+            "QkRJVklTSU9OX0NPREUQaxIdChlJTlZBTElEX1NVQkNPTlRJTkVOVF9DT0RF",
+            "EGwSGgoWSU5WQUxJRF9DT05USU5FTlRfQ09ERRBtEhsKF0lOVkFMSURfREVW",
+            "SUNFX0NBVEVHT1JZEG4SMgouQk9USF9DTElFTlRfSURfQU5EX0FQUF9JTlNU",
+            "QU5DRV9JRF9OT1RfQUxMT1dFRBBvEj8KO0dPT0dMRV9BTkFMWVRJQ1NfU1VC",
+            "UFJPUEVSVFlfT1JfUk9MTFVQX1BST1BFUlRZX05PVF9BTExPV0VEEHASJQoh",
+            "VEhJUkRfUEFSVFlfVVNFUl9EQVRBX05PVF9BTExPV0VEEHESFwoTSU5WQUxJ",
+            "RF9DT1VQT05fQ09ERRByEikKJUVWRU5UX1NPVVJDRV9BTkRfREVTVElOQVRJ",
+            "T05fTUlTTUFUQ0gQcxIlCiFERVNUSU5BVElPTl9BQ0NPVU5UX1RZUEVfTUlT",
+            "TUFUQ0gQdBImCiJDVVNUT01fVkFSSUFCTEVfVkFMVUVfQ09OVEFJTlNfUElJ",
+            "EHUSHwobQ1VTVE9NX1ZBUklBQkxFX05PVF9FTkFCTEVEEHYSIQodSU5WQUxJ",
+            "RF9DVVNUT01fVkFSSUFCTEVfVkFMVUUQdxIdChlDVVNUT01fVkFSSUFCTEVf",
+            "Tk9UX0ZPVU5EEHhCxwEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYx",
+            "QgpFcnJvclByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YW1hbmFn",
+            "ZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtkYXRhbWFuYWdlcnBiqgIZR29vZ2xl",
+            "LkFkcy5EYXRhTWFuYWdlci5WMcoCGUdvb2dsZVxBZHNcRGF0YU1hbmFnZXJc",
+            "VjHqAhxHb29nbGU6OkFkczo6RGF0YU1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ErrorReason), }, null, null));
@@ -546,6 +560,76 @@ namespace Google.Ads.DataManager.V1 {
     /// advertising declaration.
     /// </summary>
     [pbr::OriginalName("EU_POLITICAL_ADVERTISING_DECLARATION_REQUIRED")] EuPoliticalAdvertisingDeclarationRequired = 101,
+    /// <summary>
+    /// Account is not eligible for Store Sales.
+    /// </summary>
+    [pbr::OriginalName("ACCOUNT_INELIGIBLE_FOR_STORE_SALES")] AccountIneligibleForStoreSales = 102,
+    /// <summary>
+    /// The merchant feed language code is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_MERCHANT_FEED_LANGUAGE_CODE")] InvalidMerchantFeedLanguageCode = 103,
+    /// <summary>
+    /// The region code is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_REGION_CODE")] InvalidRegionCode = 104,
+    /// <summary>
+    /// The subdivision code is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_SUBDIVISION_CODE")] InvalidSubdivisionCode = 107,
+    /// <summary>
+    /// The subcontinent code is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_SUBCONTINENT_CODE")] InvalidSubcontinentCode = 108,
+    /// <summary>
+    /// The continent code is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_CONTINENT_CODE")] InvalidContinentCode = 109,
+    /// <summary>
+    /// The device category is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_DEVICE_CATEGORY")] InvalidDeviceCategory = 110,
+    /// <summary>
+    /// Both app_instance_id and client_id are set.
+    /// </summary>
+    [pbr::OriginalName("BOTH_CLIENT_ID_AND_APP_INSTANCE_ID_NOT_ALLOWED")] BothClientIdAndAppInstanceIdNotAllowed = 111,
+    /// <summary>
+    /// The Google Analytics property is a subproperty or rollup property.
+    /// </summary>
+    [pbr::OriginalName("GOOGLE_ANALYTICS_SUBPROPERTY_OR_ROLLUP_PROPERTY_NOT_ALLOWED")] GoogleAnalyticsSubpropertyOrRollupPropertyNotAllowed = 112,
+    /// <summary>
+    /// Third party user data can only be set by data partners.
+    /// </summary>
+    [pbr::OriginalName("THIRD_PARTY_USER_DATA_NOT_ALLOWED")] ThirdPartyUserDataNotAllowed = 113,
+    /// <summary>
+    /// The coupon code is not valid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_COUPON_CODE")] InvalidCouponCode = 114,
+    /// <summary>
+    /// The event source type does not match the destination type.
+    /// </summary>
+    [pbr::OriginalName("EVENT_SOURCE_AND_DESTINATION_MISMATCH")] EventSourceAndDestinationMismatch = 115,
+    /// <summary>
+    /// The destination account type does not match the specified account id.
+    /// </summary>
+    [pbr::OriginalName("DESTINATION_ACCOUNT_TYPE_MISMATCH")] DestinationAccountTypeMismatch = 116,
+    /// <summary>
+    /// The custom variable value contains personally identifiable information
+    /// (PII).
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_VARIABLE_VALUE_CONTAINS_PII")] CustomVariableValueContainsPii = 117,
+    /// <summary>
+    /// The custom variable is not enabled.
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_VARIABLE_NOT_ENABLED")] CustomVariableNotEnabled = 118,
+    /// <summary>
+    /// The custom variable's value is invalid.
+    /// </summary>
+    [pbr::OriginalName("INVALID_CUSTOM_VARIABLE_VALUE")] InvalidCustomVariableValue = 119,
+    /// <summary>
+    /// The destination does not have a custom variable with a name that matches
+    /// the specified `variable`.
+    /// </summary>
+    [pbr::OriginalName("CUSTOM_VARIABLE_NOT_FOUND")] CustomVariableNotFound = 120,
   }
 
   #endregion

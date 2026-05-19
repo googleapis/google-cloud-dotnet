@@ -27,25 +27,35 @@ namespace Google.Ads.DataManager.V1 {
             "Cilnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2NhcnRfZGF0YS5wcm90bxIZ",
             "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MRouZ29vZ2xlL2Fkcy9kYXRhbWFu",
             "YWdlci92MS9pdGVtX3BhcmFtZXRlci5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90byLIAQoIQ2FydERhdGESGAoLbWVyY2hhbnRfaWQY",
+            "ZF9iZWhhdmlvci5wcm90byLjAQoIQ2FydERhdGESGAoLbWVyY2hhbnRfaWQY",
             "ASABKAlCA+BBARIgChNtZXJjaGFudF9mZWVkX2xhYmVsGAIgASgJQgPgQQES",
             "KAobbWVyY2hhbnRfZmVlZF9sYW5ndWFnZV9jb2RlGAMgASgJQgPgQQESIQoU",
             "dHJhbnNhY3Rpb25fZGlzY291bnQYBCABKAFCA+BBARIzCgVpdGVtcxgFIAMo",
-            "CzIfLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuSXRlbUID4EEBIsEBCgRJ",
-            "dGVtEiAKE21lcmNoYW50X3Byb2R1Y3RfaWQYASABKAlCA+BBARIVCghxdWFu",
-            "dGl0eRgCIAEoA0ID4EEBEhcKCnVuaXRfcHJpY2UYAyABKAFCA+BBARIUCgdp",
-            "dGVtX2lkGAQgASgJQgPgQQESUQoaYWRkaXRpb25hbF9pdGVtX3BhcmFtZXRl",
-            "cnMYBSADKAsyKC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkl0ZW1QYXJh",
-            "bWV0ZXJCA+BBAULKAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFC",
-            "DUNhcnREYXRhUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFu",
-            "YWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29n",
-            "bGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdl",
-            "clxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "CzIfLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuSXRlbUID4EEBEhkKDGNv",
+            "dXBvbl9jb2RlcxgGIAMoCUID4EEBIq4DCgRJdGVtEiAKE21lcmNoYW50X3By",
+            "b2R1Y3RfaWQYASABKAlCA+BBARIVCghxdWFudGl0eRgCIAEoA0ID4EEBEhcK",
+            "CnVuaXRfcHJpY2UYAyABKAFCA+BBARIUCgdpdGVtX2lkGAQgASgJQgPgQQES",
+            "UQoaYWRkaXRpb25hbF9pdGVtX3BhcmFtZXRlcnMYBSADKAsyKC5nb29nbGUu",
+            "YWRzLmRhdGFtYW5hZ2VyLnYxLkl0ZW1QYXJhbWV0ZXJCA+BBARIYCgttZXJj",
+            "aGFudF9pZBgGIAEoCUID4EEBEiAKE21lcmNoYW50X2ZlZWRfbGFiZWwYByAB",
+            "KAlCA+BBARIoChttZXJjaGFudF9mZWVkX2xhbmd1YWdlX2NvZGUYCCABKAlC",
+            "A+BBARIiChBjb252ZXJzaW9uX3ZhbHVlGAkgASgBQgPgQQFIAIgBARJMChBj",
+            "dXN0b21fdmFyaWFibGVzGAogAygLMi0uZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
+            "ci52MS5JdGVtQ3VzdG9tVmFyaWFibGVCA+BBAUITChFfY29udmVyc2lvbl92",
+            "YWx1ZSJkChJJdGVtQ3VzdG9tVmFyaWFibGUSFQoIdmFyaWFibGUYASABKAlC",
+            "A+BBARISCgV2YWx1ZRgCIAEoCUID4EEBEiMKFmRlc3RpbmF0aW9uX3JlZmVy",
+            "ZW5jZXMYAyADKAlCA+BBAULKAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
+            "ZXIudjFCDUNhcnREYXRhUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9k",
+            "YXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKq",
+            "AhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRh",
+            "TWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.ItemParameterReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CartData), global::Google.Ads.DataManager.V1.CartData.Parser, new[]{ "MerchantId", "MerchantFeedLabel", "MerchantFeedLanguageCode", "TransactionDiscount", "Items" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Item), global::Google.Ads.DataManager.V1.Item.Parser, new[]{ "MerchantProductId", "Quantity", "UnitPrice", "ItemId", "AdditionalItemParameters" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CartData), global::Google.Ads.DataManager.V1.CartData.Parser, new[]{ "MerchantId", "MerchantFeedLabel", "MerchantFeedLanguageCode", "TransactionDiscount", "Items", "CouponCodes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Item), global::Google.Ads.DataManager.V1.Item.Parser, new[]{ "MerchantProductId", "Quantity", "UnitPrice", "ItemId", "AdditionalItemParameters", "MerchantId", "MerchantFeedLabel", "MerchantFeedLanguageCode", "ConversionValue", "CustomVariables" }, new[]{ "ConversionValue" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.ItemCustomVariable), global::Google.Ads.DataManager.V1.ItemCustomVariable.Parser, new[]{ "Variable", "Value", "DestinationReferences" }, null, null, null, null)
           }));
     }
     #endregion
@@ -95,6 +105,7 @@ namespace Google.Ads.DataManager.V1 {
       merchantFeedLanguageCode_ = other.merchantFeedLanguageCode_;
       transactionDiscount_ = other.transactionDiscount_;
       items_ = other.items_.Clone();
+      couponCodes_ = other.couponCodes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -180,6 +191,24 @@ namespace Google.Ads.DataManager.V1 {
       get { return items_; }
     }
 
+    /// <summary>Field number for the "coupon_codes" field.</summary>
+    public const int CouponCodesFieldNumber = 6;
+    private static readonly pb::FieldCodec<string> _repeated_couponCodes_codec
+        = pb::FieldCodec.ForString(50);
+    private readonly pbc::RepeatedField<string> couponCodes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The list of coupon codes that were applied to the cart.
+    /// Cart-level and item-level coupon codes are independent.
+    ///
+    /// If the event is for a Google Analytics destination, only provide a single
+    /// coupon code. Google Analytics ignores additional coupon codes.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CouponCodes {
+      get { return couponCodes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -200,6 +229,7 @@ namespace Google.Ads.DataManager.V1 {
       if (MerchantFeedLanguageCode != other.MerchantFeedLanguageCode) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TransactionDiscount, other.TransactionDiscount)) return false;
       if(!items_.Equals(other.items_)) return false;
+      if(!couponCodes_.Equals(other.couponCodes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -212,6 +242,7 @@ namespace Google.Ads.DataManager.V1 {
       if (MerchantFeedLanguageCode.Length != 0) hash ^= MerchantFeedLanguageCode.GetHashCode();
       if (TransactionDiscount != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TransactionDiscount);
       hash ^= items_.GetHashCode();
+      hash ^= couponCodes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -247,6 +278,7 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteDouble(TransactionDiscount);
       }
       items_.WriteTo(output, _repeated_items_codec);
+      couponCodes_.WriteTo(output, _repeated_couponCodes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -274,6 +306,7 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteDouble(TransactionDiscount);
       }
       items_.WriteTo(ref output, _repeated_items_codec);
+      couponCodes_.WriteTo(ref output, _repeated_couponCodes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -297,6 +330,7 @@ namespace Google.Ads.DataManager.V1 {
         size += 1 + 8;
       }
       size += items_.CalculateSize(_repeated_items_codec);
+      size += couponCodes_.CalculateSize(_repeated_couponCodes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -322,6 +356,7 @@ namespace Google.Ads.DataManager.V1 {
         TransactionDiscount = other.TransactionDiscount;
       }
       items_.Add(other.items_);
+      couponCodes_.Add(other.couponCodes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -359,6 +394,10 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 42: {
             items_.AddEntriesFrom(input, _repeated_items_codec);
+            break;
+          }
+          case 50: {
+            couponCodes_.AddEntriesFrom(input, _repeated_couponCodes_codec);
             break;
           }
         }
@@ -400,6 +439,10 @@ namespace Google.Ads.DataManager.V1 {
             items_.AddEntriesFrom(ref input, _repeated_items_codec);
             break;
           }
+          case 50: {
+            couponCodes_.AddEntriesFrom(ref input, _repeated_couponCodes_codec);
+            break;
+          }
         }
       }
     }
@@ -418,6 +461,7 @@ namespace Google.Ads.DataManager.V1 {
   {
     private static readonly pb::MessageParser<Item> _parser = new pb::MessageParser<Item>(() => new Item());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Item> Parser { get { return _parser; } }
@@ -445,11 +489,17 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Item(Item other) : this() {
+      _hasBits0 = other._hasBits0;
       merchantProductId_ = other.merchantProductId_;
       quantity_ = other.quantity_;
       unitPrice_ = other.unitPrice_;
       itemId_ = other.itemId_;
       additionalItemParameters_ = other.additionalItemParameters_.Clone();
+      merchantId_ = other.merchantId_;
+      merchantFeedLabel_ = other.merchantFeedLabel_;
+      merchantFeedLanguageCode_ = other.merchantFeedLanguageCode_;
+      conversionValue_ = other.conversionValue_;
+      customVariables_ = other.customVariables_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -537,6 +587,105 @@ namespace Google.Ads.DataManager.V1 {
       get { return additionalItemParameters_; }
     }
 
+    /// <summary>Field number for the "merchant_id" field.</summary>
+    public const int MerchantIdFieldNumber = 6;
+    private string merchantId_ = "";
+    /// <summary>
+    /// Optional. The Merchant Center ID associated with the item. For Store Sales
+    /// events this will override the value set at the cart level.  This field is
+    /// ignored for other events.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MerchantId {
+      get { return merchantId_; }
+      set {
+        merchantId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "merchant_feed_label" field.</summary>
+    public const int MerchantFeedLabelFieldNumber = 7;
+    private string merchantFeedLabel_ = "";
+    /// <summary>
+    /// Optional. The feed label of the Merchant Center feed. If countries are
+    /// still being used, the 2-letter country code in ISO-3166-1 alpha-2 can be
+    /// used instead. For Store Sales events this will override the value set at
+    /// the cart level. This field is ignored for other events.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MerchantFeedLabel {
+      get { return merchantFeedLabel_; }
+      set {
+        merchantFeedLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "merchant_feed_language_code" field.</summary>
+    public const int MerchantFeedLanguageCodeFieldNumber = 8;
+    private string merchantFeedLanguageCode_ = "";
+    /// <summary>
+    /// Optional. The language code in ISO 639-1 associated with the Merchant
+    /// Center feed where your items are uploaded.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MerchantFeedLanguageCode {
+      get { return merchantFeedLanguageCode_; }
+      set {
+        merchantFeedLanguageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "conversion_value" field.</summary>
+    public const int ConversionValueFieldNumber = 9;
+    private readonly static double ConversionValueDefaultValue = 0D;
+
+    private double conversionValue_;
+    /// <summary>
+    /// Optional. The conversion value associated with this item within the event,
+    /// for cases where the conversion value is different for each item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ConversionValue {
+      get { if ((_hasBits0 & 1) != 0) { return conversionValue_; } else { return ConversionValueDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        conversionValue_ = value;
+      }
+    }
+    /// <summary>Gets whether the "conversion_value" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConversionValue {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "conversion_value" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConversionValue() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "custom_variables" field.</summary>
+    public const int CustomVariablesFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.ItemCustomVariable> _repeated_customVariables_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Ads.DataManager.V1.ItemCustomVariable.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.ItemCustomVariable> customVariables_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.ItemCustomVariable>();
+    /// <summary>
+    /// Optional. Additional key/value pair information to send to the conversion
+    /// containers (conversion action or Floodlight activity), when tracking
+    /// per-item
+    ///  conversions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.ItemCustomVariable> CustomVariables {
+      get { return customVariables_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -557,6 +706,11 @@ namespace Google.Ads.DataManager.V1 {
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(UnitPrice, other.UnitPrice)) return false;
       if (ItemId != other.ItemId) return false;
       if(!additionalItemParameters_.Equals(other.additionalItemParameters_)) return false;
+      if (MerchantId != other.MerchantId) return false;
+      if (MerchantFeedLabel != other.MerchantFeedLabel) return false;
+      if (MerchantFeedLanguageCode != other.MerchantFeedLanguageCode) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ConversionValue, other.ConversionValue)) return false;
+      if(!customVariables_.Equals(other.customVariables_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -569,6 +723,11 @@ namespace Google.Ads.DataManager.V1 {
       if (UnitPrice != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(UnitPrice);
       if (ItemId.Length != 0) hash ^= ItemId.GetHashCode();
       hash ^= additionalItemParameters_.GetHashCode();
+      if (MerchantId.Length != 0) hash ^= MerchantId.GetHashCode();
+      if (MerchantFeedLabel.Length != 0) hash ^= MerchantFeedLabel.GetHashCode();
+      if (MerchantFeedLanguageCode.Length != 0) hash ^= MerchantFeedLanguageCode.GetHashCode();
+      if (HasConversionValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ConversionValue);
+      hash ^= customVariables_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -604,6 +763,23 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteString(ItemId);
       }
       additionalItemParameters_.WriteTo(output, _repeated_additionalItemParameters_codec);
+      if (MerchantId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(MerchantId);
+      }
+      if (MerchantFeedLabel.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(MerchantFeedLabel);
+      }
+      if (MerchantFeedLanguageCode.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(MerchantFeedLanguageCode);
+      }
+      if (HasConversionValue) {
+        output.WriteRawTag(73);
+        output.WriteDouble(ConversionValue);
+      }
+      customVariables_.WriteTo(output, _repeated_customVariables_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -631,6 +807,23 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteString(ItemId);
       }
       additionalItemParameters_.WriteTo(ref output, _repeated_additionalItemParameters_codec);
+      if (MerchantId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(MerchantId);
+      }
+      if (MerchantFeedLabel.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(MerchantFeedLabel);
+      }
+      if (MerchantFeedLanguageCode.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(MerchantFeedLanguageCode);
+      }
+      if (HasConversionValue) {
+        output.WriteRawTag(73);
+        output.WriteDouble(ConversionValue);
+      }
+      customVariables_.WriteTo(ref output, _repeated_customVariables_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -654,6 +847,19 @@ namespace Google.Ads.DataManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ItemId);
       }
       size += additionalItemParameters_.CalculateSize(_repeated_additionalItemParameters_codec);
+      if (MerchantId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MerchantId);
+      }
+      if (MerchantFeedLabel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MerchantFeedLabel);
+      }
+      if (MerchantFeedLanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MerchantFeedLanguageCode);
+      }
+      if (HasConversionValue) {
+        size += 1 + 8;
+      }
+      size += customVariables_.CalculateSize(_repeated_customVariables_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -679,6 +885,19 @@ namespace Google.Ads.DataManager.V1 {
         ItemId = other.ItemId;
       }
       additionalItemParameters_.Add(other.additionalItemParameters_);
+      if (other.MerchantId.Length != 0) {
+        MerchantId = other.MerchantId;
+      }
+      if (other.MerchantFeedLabel.Length != 0) {
+        MerchantFeedLabel = other.MerchantFeedLabel;
+      }
+      if (other.MerchantFeedLanguageCode.Length != 0) {
+        MerchantFeedLanguageCode = other.MerchantFeedLanguageCode;
+      }
+      if (other.HasConversionValue) {
+        ConversionValue = other.ConversionValue;
+      }
+      customVariables_.Add(other.customVariables_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -718,6 +937,26 @@ namespace Google.Ads.DataManager.V1 {
             additionalItemParameters_.AddEntriesFrom(input, _repeated_additionalItemParameters_codec);
             break;
           }
+          case 50: {
+            MerchantId = input.ReadString();
+            break;
+          }
+          case 58: {
+            MerchantFeedLabel = input.ReadString();
+            break;
+          }
+          case 66: {
+            MerchantFeedLanguageCode = input.ReadString();
+            break;
+          }
+          case 73: {
+            ConversionValue = input.ReadDouble();
+            break;
+          }
+          case 82: {
+            customVariables_.AddEntriesFrom(input, _repeated_customVariables_codec);
+            break;
+          }
         }
       }
     #endif
@@ -755,6 +994,304 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 42: {
             additionalItemParameters_.AddEntriesFrom(ref input, _repeated_additionalItemParameters_codec);
+            break;
+          }
+          case 50: {
+            MerchantId = input.ReadString();
+            break;
+          }
+          case 58: {
+            MerchantFeedLabel = input.ReadString();
+            break;
+          }
+          case 66: {
+            MerchantFeedLanguageCode = input.ReadString();
+            break;
+          }
+          case 73: {
+            ConversionValue = input.ReadDouble();
+            break;
+          }
+          case 82: {
+            customVariables_.AddEntriesFrom(ref input, _repeated_customVariables_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Item-level custom variable for ads conversions.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ItemCustomVariable : pb::IMessage<ItemCustomVariable>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ItemCustomVariable> _parser = new pb::MessageParser<ItemCustomVariable>(() => new ItemCustomVariable());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ItemCustomVariable> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.CartDataReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ItemCustomVariable() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ItemCustomVariable(ItemCustomVariable other) : this() {
+      variable_ = other.variable_;
+      value_ = other.value_;
+      destinationReferences_ = other.destinationReferences_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ItemCustomVariable Clone() {
+      return new ItemCustomVariable(this);
+    }
+
+    /// <summary>Field number for the "variable" field.</summary>
+    public const int VariableFieldNumber = 1;
+    private string variable_ = "";
+    /// <summary>
+    /// Optional. The name of the custom variable to set. If the variable is not
+    /// found for the given destination, it will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Variable {
+      get { return variable_; }
+      set {
+        variable_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "value" field.</summary>
+    public const int ValueFieldNumber = 2;
+    private string value_ = "";
+    /// <summary>
+    /// Optional. The value to store for the custom variable.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Value {
+      get { return value_; }
+      set {
+        value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "destination_references" field.</summary>
+    public const int DestinationReferencesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_destinationReferences_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> destinationReferences_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Reference string used to determine which of the
+    /// [Event.destination_references][google.ads.datamanager.v1.Event.destination_references]
+    /// the custom variable should be sent to. If empty, the
+    /// [Event.destination_references][google.ads.datamanager.v1.Event.destination_references]
+    /// will be used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DestinationReferences {
+      get { return destinationReferences_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ItemCustomVariable);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ItemCustomVariable other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Variable != other.Variable) return false;
+      if (Value != other.Value) return false;
+      if(!destinationReferences_.Equals(other.destinationReferences_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Variable.Length != 0) hash ^= Variable.GetHashCode();
+      if (Value.Length != 0) hash ^= Value.GetHashCode();
+      hash ^= destinationReferences_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Variable.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Variable);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Value);
+      }
+      destinationReferences_.WriteTo(output, _repeated_destinationReferences_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Variable.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Variable);
+      }
+      if (Value.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Value);
+      }
+      destinationReferences_.WriteTo(ref output, _repeated_destinationReferences_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Variable.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Variable);
+      }
+      if (Value.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+      }
+      size += destinationReferences_.CalculateSize(_repeated_destinationReferences_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ItemCustomVariable other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Variable.Length != 0) {
+        Variable = other.Variable;
+      }
+      if (other.Value.Length != 0) {
+        Value = other.Value;
+      }
+      destinationReferences_.Add(other.destinationReferences_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Variable = input.ReadString();
+            break;
+          }
+          case 18: {
+            Value = input.ReadString();
+            break;
+          }
+          case 26: {
+            destinationReferences_.AddEntriesFrom(input, _repeated_destinationReferences_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Variable = input.ReadString();
+            break;
+          }
+          case 18: {
+            Value = input.ReadString();
+            break;
+          }
+          case 26: {
+            destinationReferences_.AddEntriesFrom(ref input, _repeated_destinationReferences_codec);
             break;
           }
         }

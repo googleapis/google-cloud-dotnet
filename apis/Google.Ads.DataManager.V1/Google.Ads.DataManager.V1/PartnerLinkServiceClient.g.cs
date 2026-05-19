@@ -167,11 +167,13 @@ namespace Google.Ads.DataManager.V1
         /// The default PartnerLinkService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/datamanager</description></item>
+        /// <item><description>https://www.googleapis.com/auth/datamanager.partnerlink</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/datamanager",
+            "https://www.googleapis.com/auth/datamanager.partnerlink",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>

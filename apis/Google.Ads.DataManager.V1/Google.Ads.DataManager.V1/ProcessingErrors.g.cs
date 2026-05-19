@@ -33,7 +33,7 @@ namespace Google.Ads.DataManager.V1 {
             "PwoOd2FybmluZ19jb3VudHMYASADKAsyJy5nb29nbGUuYWRzLmRhdGFtYW5h",
             "Z2VyLnYxLldhcm5pbmdDb3VudCJoCgxXYXJuaW5nQ291bnQSFAoMcmVjb3Jk",
             "X2NvdW50GAEgASgDEkIKBnJlYXNvbhgCIAEoDjIyLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24qgQsKFVByb2Nl",
+            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24q1wsKFVByb2Nl",
             "c3NpbmdFcnJvclJlYXNvbhInCiNQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9V",
             "TlNQRUNJRklFRBAAEjMKL1BST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFM",
             "SURfQ1VTVE9NX1ZBUklBQkxFEAESNwozUFJPQ0VTU0lOR19FUlJPUl9SRUFT",
@@ -65,23 +65,25 @@ namespace Google.Ads.DataManager.V1 {
             "QVVUSF9GQUlMRUQQGxI8CjhQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9VU0VS",
             "X0lERU5USUZJRVJfREVDUllQVElPTl9FUlJPUhAZEkEKPVBST0NFU1NJTkdf",
             "RVJST1JfT1BFUkFUSU5HX0FDQ09VTlRfTUlTTUFUQ0hfRk9SX0FEX0lERU5U",
-            "SUZJRVIQGir/AwoXUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24SKQolUFJPQ0VT",
-            "U0lOR19XQVJOSU5HX1JFQVNPTl9VTlNQRUNJRklFRBAAEjMKL1BST0NFU1NJ",
-            "TkdfV0FSTklOR19SRUFTT05fS0VLX1BFUk1JU1NJT05fREVOSUVEEAESMgou",
-            "UFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9ERUtfREVDUllQVElPTl9FUlJP",
-            "UhACEi4KKlBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fREVDUllQVElPTl9F",
-            "UlJPUhADEi0KKVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fV0lQX0FVVEhf",
-            "RkFJTEVEEAQSKQolUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9JTlZBTElE",
-            "X1dJUBAFEikKJVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fSU5WQUxJRF9L",
-            "RUsQBhI+CjpQUk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX1VTRVJfSURFTlRJ",
-            "RklFUl9ERUNSWVBUSU9OX0VSUk9SEAcSLAooUFJPQ0VTU0lOR19XQVJOSU5H",
-            "X1JFQVNPTl9JTlRFUk5BTF9FUlJPUhAIEi0KKVBST0NFU1NJTkdfV0FSTklO",
-            "R19SRUFTT05fQVdTX0FVVEhfRkFJTEVEEAlC0gEKHWNvbS5nb29nbGUuYWRz",
-            "LmRhdGFtYW5hZ2VyLnYxQhVQcm9jZXNzaW5nRXJyb3JzUHJvdG9QAVpBY2xv",
-            "dWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdl",
-            "cnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYx",
-            "ygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpE",
-            "YXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "SUZJRVIQGhJUClBQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9PTkVfUEVSX0NM",
+            "SUNLX0NPTlZFUlNJT05fQUNUSU9OX05PVF9QRVJNSVRURURfV0lUSF9CUkFJ",
+            "RBAcKv8DChdQcm9jZXNzaW5nV2FybmluZ1JlYXNvbhIpCiVQUk9DRVNTSU5H",
+            "X1dBUk5JTkdfUkVBU09OX1VOU1BFQ0lGSUVEEAASMwovUFJPQ0VTU0lOR19X",
+            "QVJOSU5HX1JFQVNPTl9LRUtfUEVSTUlTU0lPTl9ERU5JRUQQARIyCi5QUk9D",
+            "RVNTSU5HX1dBUk5JTkdfUkVBU09OX0RFS19ERUNSWVBUSU9OX0VSUk9SEAIS",
+            "LgoqUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9ERUNSWVBUSU9OX0VSUk9S",
+            "EAMSLQopUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9XSVBfQVVUSF9GQUlM",
+            "RUQQBBIpCiVQUk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX0lOVkFMSURfV0lQ",
+            "EAUSKQolUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9JTlZBTElEX0tFSxAG",
+            "Ej4KOlBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fVVNFUl9JREVOVElGSUVS",
+            "X0RFQ1JZUFRJT05fRVJST1IQBxIsCihQUk9DRVNTSU5HX1dBUk5JTkdfUkVB",
+            "U09OX0lOVEVSTkFMX0VSUk9SEAgSLQopUFJPQ0VTU0lOR19XQVJOSU5HX1JF",
+            "QVNPTl9BV1NfQVVUSF9GQUlMRUQQCULSAQodY29tLmdvb2dsZS5hZHMuZGF0",
+            "YW1hbmFnZXIudjFCFVByb2Nlc3NpbmdFcnJvcnNQcm90b1ABWkFjbG91ZC5n",
+            "b29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7",
+            "ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlH",
+            "b29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFN",
+            "YW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ProcessingErrorReason), typeof(global::Google.Ads.DataManager.V1.ProcessingWarningReason), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -220,6 +222,10 @@ namespace Google.Ads.DataManager.V1 {
     /// from the operating account's ads.
     /// </summary>
     [pbr::OriginalName("PROCESSING_ERROR_OPERATING_ACCOUNT_MISMATCH_FOR_AD_IDENTIFIER")] ProcessingErrorOperatingAccountMismatchForAdIdentifier = 26,
+    /// <summary>
+    /// One-per-click conversion actions cannot be used with BRAIDs.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID")] OnePerClickConversionActionNotPermittedWithBraid = 28,
   }
 
   /// <summary>
@@ -257,7 +263,7 @@ namespace Google.Ads.DataManager.V1 {
     /// </summary>
     [pbr::OriginalName("PROCESSING_WARNING_REASON_INVALID_KEK")] InvalidKek = 6,
     /// <summary>
-    /// Failed to decrypt th
+    /// Failed to decrypt the
     /// [UserIdentifier][google.ads.datamanager.v1.UserIdentifier] data using the
     /// DEK.
     /// </summary>
