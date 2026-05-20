@@ -22,6 +22,12 @@
                 "AggregateIssueStatsAsync"
               ]
             },
+            "AggregateQueryStats": {
+              "methods": [
+                "AggregateQueryStats",
+                "AggregateQueryStatsAsync"
+              ]
+            },
             "QueryDatabaseResourceGroups": {
               "methods": [
                 "QueryDatabaseResourceGroups",

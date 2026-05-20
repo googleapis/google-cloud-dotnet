@@ -399,6 +399,103 @@
       ]
     },
     {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_AggregateQueryStats_sync",
+      "title": "AggregateQueryStatsRequestObject",
+      "description": "Snippet for AggregateQueryStats",
+      "file": "DatabaseCenterClient.AggregateQueryStatsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateQueryStats",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.AggregateQueryStats",
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.AggregateQueryStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.DatabaseCenter.V1Beta.AggregateQueryStatsResponse, Google.Cloud.DatabaseCenter.V1Beta.QueryStatsInfo>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "AggregateQueryStats",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.AggregateQueryStats",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_AggregateQueryStats_async",
+      "title": "AggregateQueryStatsRequestObjectAsync",
+      "description": "Snippet for AggregateQueryStatsAsync",
+      "file": "DatabaseCenterClient.AggregateQueryStatsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AggregateQueryStatsAsync",
+        "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient.AggregateQueryStatsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.DatabaseCenter.V1Beta.AggregateQueryStatsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.DatabaseCenter.V1Beta.AggregateQueryStatsResponse, Google.Cloud.DatabaseCenter.V1Beta.QueryStatsInfo>",
+        "client": {
+          "shortName": "DatabaseCenterClient",
+          "fullName": "Google.Cloud.DatabaseCenter.V1Beta.DatabaseCenterClient"
+        },
+        "method": {
+          "shortName": "AggregateQueryStats",
+          "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter.AggregateQueryStats",
+          "service": {
+            "shortName": "DatabaseCenter",
+            "fullName": "google.cloud.databasecenter.v1beta.DatabaseCenter"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "databasecenter_v1beta_generated_DatabaseCenter_QueryIssues_sync",
       "title": "QueryIssuesRequestObject",
       "description": "Snippet for QueryIssues",

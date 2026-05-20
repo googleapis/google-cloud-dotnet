@@ -49,6 +49,7 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             AggregateFleetSettings = existing.AggregateFleetSettings;
             QueryDatabaseResourceGroupsSettings = existing.QueryDatabaseResourceGroupsSettings;
             AggregateIssueStatsSettings = existing.AggregateIssueStatsSettings;
+            AggregateQueryStatsSettings = existing.AggregateQueryStatsSettings;
             QueryIssuesSettings = existing.QueryIssuesSettings;
             OnCopy(existing);
         }
@@ -103,6 +104,18 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings AggregateIssueStatsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DatabaseCenterClient.AggregateQueryStats</c> and <c>DatabaseCenterClient.AggregateQueryStatsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AggregateQueryStatsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -343,6 +356,24 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             AggregateIssueStatsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// AggregateQueryStats provides database resource query execution statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QueryStatsInfo"/> resources.</returns>
+        public virtual gax::PagedEnumerable<AggregateQueryStatsResponse, QueryStatsInfo> AggregateQueryStats(AggregateQueryStatsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// AggregateQueryStats provides database resource query execution statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QueryStatsInfo"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<AggregateQueryStatsResponse, QueryStatsInfo> AggregateQueryStatsAsync(AggregateQueryStatsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
         /// QueryIssues provides a list of issues and recommendations
         /// that a user has access to and that are within the requested scope.
         /// </summary>
@@ -463,6 +494,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
 
         private readonly gaxgrpc::ApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse> _callAggregateIssueStats;
 
+        private readonly gaxgrpc::ApiCall<AggregateQueryStatsRequest, AggregateQueryStatsResponse> _callAggregateQueryStats;
+
         private readonly gaxgrpc::ApiCall<QueryIssuesRequest, QueryIssuesResponse> _callQueryIssues;
 
         /// <summary>
@@ -492,6 +525,9 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
             _callAggregateIssueStats = clientHelper.BuildApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse>("AggregateIssueStats", grpcClient.AggregateIssueStatsAsync, grpcClient.AggregateIssueStats, effectiveSettings.AggregateIssueStatsSettings);
             Modify_ApiCall(ref _callAggregateIssueStats);
             Modify_AggregateIssueStatsApiCall(ref _callAggregateIssueStats);
+            _callAggregateQueryStats = clientHelper.BuildApiCall<AggregateQueryStatsRequest, AggregateQueryStatsResponse>("AggregateQueryStats", grpcClient.AggregateQueryStatsAsync, grpcClient.AggregateQueryStats, effectiveSettings.AggregateQueryStatsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callAggregateQueryStats);
+            Modify_AggregateQueryStatsApiCall(ref _callAggregateQueryStats);
             _callQueryIssues = clientHelper.BuildApiCall<QueryIssuesRequest, QueryIssuesResponse>("QueryIssues", grpcClient.QueryIssuesAsync, grpcClient.QueryIssues, effectiveSettings.QueryIssuesSettings);
             Modify_ApiCall(ref _callQueryIssues);
             Modify_QueryIssuesApiCall(ref _callQueryIssues);
@@ -508,6 +544,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
 
         partial void Modify_AggregateIssueStatsApiCall(ref gaxgrpc::ApiCall<AggregateIssueStatsRequest, AggregateIssueStatsResponse> call);
 
+        partial void Modify_AggregateQueryStatsApiCall(ref gaxgrpc::ApiCall<AggregateQueryStatsRequest, AggregateQueryStatsResponse> call);
+
         partial void Modify_QueryIssuesApiCall(ref gaxgrpc::ApiCall<QueryIssuesRequest, QueryIssuesResponse> call);
 
         partial void OnConstruction(DatabaseCenter.DatabaseCenterClient grpcClient, DatabaseCenterSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -522,6 +560,8 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         partial void Modify_QueryDatabaseResourceGroupsRequest(ref QueryDatabaseResourceGroupsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_AggregateIssueStatsRequest(ref AggregateIssueStatsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AggregateQueryStatsRequest(ref AggregateQueryStatsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryIssuesRequest(ref QueryIssuesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -626,6 +666,30 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
         }
 
         /// <summary>
+        /// AggregateQueryStats provides database resource query execution statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="QueryStatsInfo"/> resources.</returns>
+        public override gax::PagedEnumerable<AggregateQueryStatsResponse, QueryStatsInfo> AggregateQueryStats(AggregateQueryStatsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregateQueryStatsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<AggregateQueryStatsRequest, AggregateQueryStatsResponse, QueryStatsInfo>(_callAggregateQueryStats, request, callSettings);
+        }
+
+        /// <summary>
+        /// AggregateQueryStats provides database resource query execution statistics.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="QueryStatsInfo"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<AggregateQueryStatsResponse, QueryStatsInfo> AggregateQueryStatsAsync(AggregateQueryStatsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AggregateQueryStatsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<AggregateQueryStatsRequest, AggregateQueryStatsResponse, QueryStatsInfo>(_callAggregateQueryStats, request, callSettings);
+        }
+
+        /// <summary>
         /// QueryIssues provides a list of issues and recommendations
         /// that a user has access to and that are within the requested scope.
         /// </summary>
@@ -664,6 +728,10 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     {
     }
 
+    public partial class AggregateQueryStatsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class QueryIssuesRequest : gaxgrpc::IPageRequest
     {
     }
@@ -688,6 +756,14 @@ namespace Google.Cloud.DatabaseCenter.V1Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DatabaseResourceGroup> GetEnumerator() => ResourceGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class AggregateQueryStatsResponse : gaxgrpc::IPageResponse<QueryStatsInfo>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<QueryStatsInfo> GetEnumerator() => QueryStats.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
