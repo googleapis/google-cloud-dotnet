@@ -4776,7 +4776,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-04-13T15:51:17.900931023Z",
-            "lastGeneratedCommit": "aa87617d6732d348ff158d20d474c0dfba3d0086",
+            "lastGeneratedCommit": "d4c5fdde3d61752ee3adf63d79b2f0ebe9bb26cc",
             "lastReleasedCommit": "7f9e9ff15720fac72c4ba3212343ba6e6102c920",
             "apiPaths": [
                 "google/cloud/databasecenter/v1beta"
