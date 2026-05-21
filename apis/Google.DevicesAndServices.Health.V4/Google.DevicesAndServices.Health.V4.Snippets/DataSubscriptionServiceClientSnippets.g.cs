@@ -1,0 +1,814 @@
+// Copyright 2026 Google LLC
+//
+// Licensed under the Apache License, Version 2.0 (the "License");
+// you may not use this file except in compliance with the License.
+// You may obtain a copy of the License at
+//
+//     https://www.apache.org/licenses/LICENSE-2.0
+//
+// Unless required by applicable law or agreed to in writing, software
+// distributed under the License is distributed on an "AS IS" BASIS,
+// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+// See the License for the specific language governing permissions and
+// limitations under the License.
+
+// Generated code. DO NOT EDIT!
+
+namespace GoogleCSharpSnippets
+{
+    using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
+    using Google.DevicesAndServices.Health.V4;
+    using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
+    using System;
+    using System.Threading.Tasks;
+
+    /// <summary>Generated snippets.</summary>
+    public sealed class AllGeneratedDataSubscriptionServiceClientSnippets
+    {
+        /// <summary>Snippet for CreateSubscriber</summary>
+        public void CreateSubscriberRequestObject()
+        {
+            // Snippet: CreateSubscriber(CreateSubscriberRequest, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            CreateSubscriberRequest request = new CreateSubscriberRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Subscriber = new CreateSubscriberPayload(),
+                SubscriberId = "",
+            };
+            // Make the request
+            Operation<Subscriber, CreateSubscriberMetadata> response = dataSubscriptionServiceClient.CreateSubscriber(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, CreateSubscriberMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, CreateSubscriberMetadata> retrievedResponse = dataSubscriptionServiceClient.PollOnceCreateSubscriber(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubscriberAsync</summary>
+        public async Task CreateSubscriberRequestObjectAsync()
+        {
+            // Snippet: CreateSubscriberAsync(CreateSubscriberRequest, CallSettings)
+            // Additional: CreateSubscriberAsync(CreateSubscriberRequest, CancellationToken)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateSubscriberRequest request = new CreateSubscriberRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Subscriber = new CreateSubscriberPayload(),
+                SubscriberId = "",
+            };
+            // Make the request
+            Operation<Subscriber, CreateSubscriberMetadata> response = await dataSubscriptionServiceClient.CreateSubscriberAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, CreateSubscriberMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, CreateSubscriberMetadata> retrievedResponse = await dataSubscriptionServiceClient.PollOnceCreateSubscriberAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubscriber</summary>
+        public void CreateSubscriber()
+        {
+            // Snippet: CreateSubscriber(string, CreateSubscriberPayload, string, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            CreateSubscriberPayload subscriber = new CreateSubscriberPayload();
+            string subscriberId = "";
+            // Make the request
+            Operation<Subscriber, CreateSubscriberMetadata> response = dataSubscriptionServiceClient.CreateSubscriber(parent, subscriber, subscriberId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, CreateSubscriberMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, CreateSubscriberMetadata> retrievedResponse = dataSubscriptionServiceClient.PollOnceCreateSubscriber(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubscriberAsync</summary>
+        public async Task CreateSubscriberAsync()
+        {
+            // Snippet: CreateSubscriberAsync(string, CreateSubscriberPayload, string, CallSettings)
+            // Additional: CreateSubscriberAsync(string, CreateSubscriberPayload, string, CancellationToken)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            CreateSubscriberPayload subscriber = new CreateSubscriberPayload();
+            string subscriberId = "";
+            // Make the request
+            Operation<Subscriber, CreateSubscriberMetadata> response = await dataSubscriptionServiceClient.CreateSubscriberAsync(parent, subscriber, subscriberId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, CreateSubscriberMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, CreateSubscriberMetadata> retrievedResponse = await dataSubscriptionServiceClient.PollOnceCreateSubscriberAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubscriber</summary>
+        public void CreateSubscriberResourceNames()
+        {
+            // Snippet: CreateSubscriber(ProjectName, CreateSubscriberPayload, string, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            CreateSubscriberPayload subscriber = new CreateSubscriberPayload();
+            string subscriberId = "";
+            // Make the request
+            Operation<Subscriber, CreateSubscriberMetadata> response = dataSubscriptionServiceClient.CreateSubscriber(parent, subscriber, subscriberId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, CreateSubscriberMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, CreateSubscriberMetadata> retrievedResponse = dataSubscriptionServiceClient.PollOnceCreateSubscriber(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateSubscriberAsync</summary>
+        public async Task CreateSubscriberResourceNamesAsync()
+        {
+            // Snippet: CreateSubscriberAsync(ProjectName, CreateSubscriberPayload, string, CallSettings)
+            // Additional: CreateSubscriberAsync(ProjectName, CreateSubscriberPayload, string, CancellationToken)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            CreateSubscriberPayload subscriber = new CreateSubscriberPayload();
+            string subscriberId = "";
+            // Make the request
+            Operation<Subscriber, CreateSubscriberMetadata> response = await dataSubscriptionServiceClient.CreateSubscriberAsync(parent, subscriber, subscriberId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, CreateSubscriberMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, CreateSubscriberMetadata> retrievedResponse = await dataSubscriptionServiceClient.PollOnceCreateSubscriberAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscribers</summary>
+        public void ListSubscribersRequestObject()
+        {
+            // Snippet: ListSubscribers(ListSubscribersRequest, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            ListSubscribersRequest request = new ListSubscribersRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedEnumerable<ListSubscribersResponse, Subscriber> response = dataSubscriptionServiceClient.ListSubscribers(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscriber item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscribersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscriber item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscriber> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscriber item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscribersAsync</summary>
+        public async Task ListSubscribersRequestObjectAsync()
+        {
+            // Snippet: ListSubscribersAsync(ListSubscribersRequest, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListSubscribersRequest request = new ListSubscribersRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListSubscribersResponse, Subscriber> response = dataSubscriptionServiceClient.ListSubscribersAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Subscriber item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSubscribersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscriber item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscriber> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscriber item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscribers</summary>
+        public void ListSubscribers()
+        {
+            // Snippet: ListSubscribers(string, string, int?, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedEnumerable<ListSubscribersResponse, Subscriber> response = dataSubscriptionServiceClient.ListSubscribers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscriber item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscribersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscriber item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscriber> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscriber item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscribersAsync</summary>
+        public async Task ListSubscribersAsync()
+        {
+            // Snippet: ListSubscribersAsync(string, string, int?, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            PagedAsyncEnumerable<ListSubscribersResponse, Subscriber> response = dataSubscriptionServiceClient.ListSubscribersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Subscriber item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSubscribersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscriber item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscriber> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscriber item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscribers</summary>
+        public void ListSubscribersResourceNames()
+        {
+            // Snippet: ListSubscribers(ProjectName, string, int?, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListSubscribersResponse, Subscriber> response = dataSubscriptionServiceClient.ListSubscribers(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Subscriber item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListSubscribersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscriber item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscriber> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscriber item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListSubscribersAsync</summary>
+        public async Task ListSubscribersResourceNamesAsync()
+        {
+            // Snippet: ListSubscribersAsync(ProjectName, string, int?, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListSubscribersResponse, Subscriber> response = dataSubscriptionServiceClient.ListSubscribersAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (Subscriber item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListSubscribersResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Subscriber item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Subscriber> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Subscriber item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubscriber</summary>
+        public void UpdateSubscriberRequestObject()
+        {
+            // Snippet: UpdateSubscriber(UpdateSubscriberRequest, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateSubscriberRequest request = new UpdateSubscriberRequest
+            {
+                Subscriber = new Subscriber(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Subscriber, UpdateSubscriberMetadata> response = dataSubscriptionServiceClient.UpdateSubscriber(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, UpdateSubscriberMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, UpdateSubscriberMetadata> retrievedResponse = dataSubscriptionServiceClient.PollOnceUpdateSubscriber(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubscriberAsync</summary>
+        public async Task UpdateSubscriberRequestObjectAsync()
+        {
+            // Snippet: UpdateSubscriberAsync(UpdateSubscriberRequest, CallSettings)
+            // Additional: UpdateSubscriberAsync(UpdateSubscriberRequest, CancellationToken)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateSubscriberRequest request = new UpdateSubscriberRequest
+            {
+                Subscriber = new Subscriber(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Subscriber, UpdateSubscriberMetadata> response = await dataSubscriptionServiceClient.UpdateSubscriberAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, UpdateSubscriberMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, UpdateSubscriberMetadata> retrievedResponse = await dataSubscriptionServiceClient.PollOnceUpdateSubscriberAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubscriber</summary>
+        public void UpdateSubscriber()
+        {
+            // Snippet: UpdateSubscriber(Subscriber, FieldMask, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            Subscriber subscriber = new Subscriber();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Subscriber, UpdateSubscriberMetadata> response = dataSubscriptionServiceClient.UpdateSubscriber(subscriber, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, UpdateSubscriberMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, UpdateSubscriberMetadata> retrievedResponse = dataSubscriptionServiceClient.PollOnceUpdateSubscriber(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateSubscriberAsync</summary>
+        public async Task UpdateSubscriberAsync()
+        {
+            // Snippet: UpdateSubscriberAsync(Subscriber, FieldMask, CallSettings)
+            // Additional: UpdateSubscriberAsync(Subscriber, FieldMask, CancellationToken)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Subscriber subscriber = new Subscriber();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Subscriber, UpdateSubscriberMetadata> response = await dataSubscriptionServiceClient.UpdateSubscriberAsync(subscriber, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Subscriber, UpdateSubscriberMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Subscriber result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Subscriber, UpdateSubscriberMetadata> retrievedResponse = await dataSubscriptionServiceClient.PollOnceUpdateSubscriberAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Subscriber retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriber</summary>
+        public void DeleteSubscriberRequestObject()
+        {
+            // Snippet: DeleteSubscriber(DeleteSubscriberRequest, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            DeleteSubscriberRequest request = new DeleteSubscriberRequest
+            {
+                SubscriberName = SubscriberName.FromProjectSubscriber("[PROJECT]", "[SUBSCRIBER]"),
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, DeleteSubscriberMetadata> response = dataSubscriptionServiceClient.DeleteSubscriber(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSubscriberMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSubscriberMetadata> retrievedResponse = dataSubscriptionServiceClient.PollOnceDeleteSubscriber(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriberAsync</summary>
+        public async Task DeleteSubscriberRequestObjectAsync()
+        {
+            // Snippet: DeleteSubscriberAsync(DeleteSubscriberRequest, CallSettings)
+            // Additional: DeleteSubscriberAsync(DeleteSubscriberRequest, CancellationToken)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteSubscriberRequest request = new DeleteSubscriberRequest
+            {
+                SubscriberName = SubscriberName.FromProjectSubscriber("[PROJECT]", "[SUBSCRIBER]"),
+                Force = false,
+            };
+            // Make the request
+            Operation<Empty, DeleteSubscriberMetadata> response = await dataSubscriptionServiceClient.DeleteSubscriberAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSubscriberMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSubscriberMetadata> retrievedResponse = await dataSubscriptionServiceClient.PollOnceDeleteSubscriberAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriber</summary>
+        public void DeleteSubscriber()
+        {
+            // Snippet: DeleteSubscriber(string, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/subscribers/[SUBSCRIBER]";
+            // Make the request
+            Operation<Empty, DeleteSubscriberMetadata> response = dataSubscriptionServiceClient.DeleteSubscriber(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSubscriberMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSubscriberMetadata> retrievedResponse = dataSubscriptionServiceClient.PollOnceDeleteSubscriber(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriberAsync</summary>
+        public async Task DeleteSubscriberAsync()
+        {
+            // Snippet: DeleteSubscriberAsync(string, CallSettings)
+            // Additional: DeleteSubscriberAsync(string, CancellationToken)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/subscribers/[SUBSCRIBER]";
+            // Make the request
+            Operation<Empty, DeleteSubscriberMetadata> response = await dataSubscriptionServiceClient.DeleteSubscriberAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSubscriberMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSubscriberMetadata> retrievedResponse = await dataSubscriptionServiceClient.PollOnceDeleteSubscriberAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriber</summary>
+        public void DeleteSubscriberResourceNames()
+        {
+            // Snippet: DeleteSubscriber(SubscriberName, CallSettings)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = DataSubscriptionServiceClient.Create();
+            // Initialize request argument(s)
+            SubscriberName name = SubscriberName.FromProjectSubscriber("[PROJECT]", "[SUBSCRIBER]");
+            // Make the request
+            Operation<Empty, DeleteSubscriberMetadata> response = dataSubscriptionServiceClient.DeleteSubscriber(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSubscriberMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSubscriberMetadata> retrievedResponse = dataSubscriptionServiceClient.PollOnceDeleteSubscriber(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteSubscriberAsync</summary>
+        public async Task DeleteSubscriberResourceNamesAsync()
+        {
+            // Snippet: DeleteSubscriberAsync(SubscriberName, CallSettings)
+            // Additional: DeleteSubscriberAsync(SubscriberName, CancellationToken)
+            // Create client
+            DataSubscriptionServiceClient dataSubscriptionServiceClient = await DataSubscriptionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SubscriberName name = SubscriberName.FromProjectSubscriber("[PROJECT]", "[SUBSCRIBER]");
+            // Make the request
+            Operation<Empty, DeleteSubscriberMetadata> response = await dataSubscriptionServiceClient.DeleteSubscriberAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteSubscriberMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteSubscriberMetadata> retrievedResponse = await dataSubscriptionServiceClient.PollOnceDeleteSubscriberAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+    }
+}

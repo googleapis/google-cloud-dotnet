@@ -35,6 +35,7 @@ namespace Google.DevicesAndServices.Health.V4
             yield return DataModelReflection.Descriptor;
             yield return DataPointsReflection.Descriptor;
             yield return DataSourceReflection.Descriptor;
+            yield return DataSubscriptionServiceReflection.Descriptor;
             yield return HealthProfileReflection.Descriptor;
             yield return WebhookNotificationCloudLogReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;

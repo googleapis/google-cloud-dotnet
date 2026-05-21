@@ -68,6 +68,39 @@
         }
       }
     },
+    "DataSubscriptionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DataSubscriptionServiceClient",
+          "rpcs": {
+            "CreateSubscriber": {
+              "methods": [
+                "CreateSubscriber",
+                "CreateSubscriberAsync"
+              ]
+            },
+            "DeleteSubscriber": {
+              "methods": [
+                "DeleteSubscriber",
+                "DeleteSubscriberAsync"
+              ]
+            },
+            "ListSubscribers": {
+              "methods": [
+                "ListSubscribers",
+                "ListSubscribersAsync"
+              ]
+            },
+            "UpdateSubscriber": {
+              "methods": [
+                "UpdateSubscriber",
+                "UpdateSubscriberAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "HealthProfileService": {
       "clients": {
         "grpc": {

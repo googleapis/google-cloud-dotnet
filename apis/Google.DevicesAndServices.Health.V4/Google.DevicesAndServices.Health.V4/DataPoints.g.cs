@@ -4321,7 +4321,10 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
-  /// Value of a rollup for a single physical time interval (aggregation window)
+  /// Value of a rollup for a single physical time interval (aggregation window) of
+  /// reconciled data points from all data sources, excluding those data points
+  /// that are identified as recorded by wearables in intervals when they were not
+  /// actually worn.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class RollupDataPoint : pb::IMessage<RollupDataPoint>
@@ -5597,6 +5600,9 @@ namespace Google.DevicesAndServices.Health.V4 {
 
   /// <summary>
   /// Value of a daily rollup for a single civil time interval (aggregation window)
+  /// of reconciled data points from all data sources, excluding those data points
+  /// that are identified as recorded by wearables in intervals when they were not
+  /// actually worn.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DailyRollupDataPoint : pb::IMessage<DailyRollupDataPoint>
@@ -7367,9 +7373,17 @@ namespace Google.DevicesAndServices.Health.V4 {
     ///     - Date literal expected in ISO 8601 `YYYY-MM-DD` format
     ///     - Supported logical operators: `AND`
     ///     - Example:
-    ///        - `daily_resting_heart_rate.date >= "2024-08-14"`
     ///        - `daily_heart_rate_variability.date &lt; "2024-08-15"`
     ///
+    /// - Session start time (**ECG specific**):
+    ///     - Pattern: `electrocardiogram.interval.start_time`
+    ///     - Supported comparison operators: `>=`
+    ///     - Timestamp literal expected in RFC-3339 format
+    ///     - Example:
+    ///         - `electrocardiogram.interval.start_time >= "2024-08-14T12:34:56Z"`
+    ///     - Note: Only filtering by start time is supported for ECG. Filtering
+    ///       by end time (e.g., `electrocardiogram.interval.end_time`) is not
+    ///       supported.
     /// - Session civil start time (**Excluding Sleep**):
     ///     - Pattern: `{session_data_type}.interval.civil_start_time`
     ///     - Supported comparison operators: `>=`, `&lt;`
@@ -11762,6 +11776,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     private string tcxData_ = "";
     /// <summary>
     /// Contains the exported TCX data.
+    ///
+    /// This field is intended for gRPC clients, as media download integration
+    /// is not supported for gRPC. HTTP clients should instead use the `alt=media`
+    /// query parameter to download the raw binary TCX file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
