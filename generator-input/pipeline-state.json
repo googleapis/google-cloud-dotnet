@@ -5000,7 +5000,7 @@
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
-            "lastGeneratedCommit": "d195a7c9ad950b21370b3c94d16d2af7a0dad381",
+            "lastGeneratedCommit": "f4a164aa9daf580d7f434c4004b7c894572f1ab4",
             "apiPaths": [
                 "google/developers/knowledge/v1"
             ],
