@@ -39,6 +39,8 @@ namespace GoogleCSharpSnippets
                 Parent = "",
                 Credentials = new Credentials(),
                 ThinkingMode = ChatRequest.Types.ThinkingMode.Unspecified,
+                Model = ChatRequest.Types.Model.Unspecified,
+                LookerSettings = new LookerSettings(),
                 InlineContext = new Context(),
             };
             // Make the request, returning a streaming response

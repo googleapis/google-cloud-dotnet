@@ -60,79 +60,82 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             "UXVlcnlSb3V0aW5lIoABCg9CaWdRdWVyeVJvdXRpbmUSWAoRcm91dGluZV9y",
             "ZWZlcmVuY2UYASABKAsyPS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5",
             "dGljcy52MS5CaWdRdWVyeVJvdXRpbmVSZWZlcmVuY2USEwoLZGVzY3JpcHRp",
-            "b24YAiABKAkivQEKGEJpZ1F1ZXJ5Um91dGluZVJlZmVyZW5jZRISCgpwcm9q",
-            "ZWN0X2lkGAEgASgJEhIKCmRhdGFzZXRfaWQYAiABKAkSEgoKcm91dGluZV9p",
-            "ZBgDIAEoCRJMChRib3VuZGFyeV9sb2NhdGlvbl9pZBgEIAEoCUIp4EEB+kEj",
-            "CiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb25IAIgBAUIXChVf",
-            "Ym91bmRhcnlfbG9jYXRpb25faWQipwEKDEV4YW1wbGVRdWVyeRIYCglzcWxf",
-            "cXVlcnkYZSABKAlCA+BBAUgAEiYKGW5hdHVyYWxfbGFuZ3VhZ2VfcXVlc3Rp",
-            "b24YASABKAlCA+BBARJMCgpwYXJhbWV0ZXJzGAMgAygLMjMuZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuUXVlcnlQYXJhbWV0ZXJCA+BB",
-            "AUIHCgVxdWVyeSJVCg5RdWVyeVBhcmFtZXRlchIRCgRuYW1lGAEgASgJQgPg",
-            "QQISGAoLZGVzY3JpcHRpb24YAiABKAlCA+BBARIWCglkYXRhX3R5cGUYAyAB",
-            "KAlCA+BBAiKzAQoMTWF0Y2hlZFF1ZXJ5EkgKDWV4YW1wbGVfcXVlcnkYASAB",
-            "KAsyMS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5FeGFt",
-            "cGxlUXVlcnkSWQoWcXVlcnlfcGFyYW1ldGVyX3ZhbHVlcxgCIAMoCzI5Lmdv",
-            "b2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLlF1ZXJ5UGFyYW1l",
-            "dGVyVmFsdWVzIj0KFFF1ZXJ5UGFyYW1ldGVyVmFsdWVzEhEKBG5hbWUYASAB",
-            "KAlCA+BBAhISCgV2YWx1ZRgCIAEoCUID4EECIokBChFMb29rZXJHb2xkZW5R",
-            "dWVyeRInChpuYXR1cmFsX2xhbmd1YWdlX3F1ZXN0aW9ucxgEIAMoCUID4EEB",
-            "EksKDGxvb2tlcl9xdWVyeRgFIAEoCzIwLmdvb2dsZS5jbG91ZC5nZW1pbmlk",
-            "YXRhYW5hbHl0aWNzLnYxLkxvb2tlclF1ZXJ5QgPgQQEikwIKC0xvb2tlclF1",
-            "ZXJ5EhIKBW1vZGVsGAEgASgJQgPgQQISFAoHZXhwbG9yZRgCIAEoCUID4EEC",
-            "EhMKBmZpZWxkcxgDIAMoCUID4EEBEk0KB2ZpbHRlcnMYBCADKAsyNy5nb29n",
-            "bGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5Mb29rZXJRdWVyeS5G",
-            "aWx0ZXJCA+BBARISCgVzb3J0cxgFIAMoCUID4EEBEhcKBWxpbWl0GAYgASgJ",
-            "QgPgQQFIAIgBARo/CgZGaWx0ZXISEgoFZmllbGQYASABKAlCA+BBAhIXCgV2",
-            "YWx1ZRgCIAEoCUID4EEBSACIAQFCCAoGX3ZhbHVlQggKBl9saW1pdCJYCgxH",
-            "bG9zc2FyeVRlcm0SGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQISGAoLZGVz",
-            "Y3JpcHRpb24YAiABKAlCA+BBAhITCgZsYWJlbHMYAyADKAlCA+BBASKzAQoT",
-            "Q29udmVyc2F0aW9uT3B0aW9ucxJLCghhbmFseXNpcxgCIAEoCzI0Lmdvb2ds",
-            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkFuYWx5c2lzT3B0aW9u",
-            "c0ID4EEBEk8KCmRhdGFzb3VyY2UYAyABKAsyNi5nb29nbGUuY2xvdWQuZ2Vt",
-            "aW5pZGF0YWFuYWx5dGljcy52MS5EYXRhc291cmNlT3B0aW9uc0ID4EEBIlkK",
-            "EURhdGFzb3VyY2VPcHRpb25zEkQKGmJpZ19xdWVyeV9tYXhfYmlsbGVkX2J5",
-            "dGVzGAEgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVCA+BBASKD",
-            "AQoPQW5hbHlzaXNPcHRpb25zElAKBnB5dGhvbhgBIAEoCzI7Lmdvb2dsZS5j",
-            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkFuYWx5c2lzT3B0aW9ucy5Q",
-            "eXRob25CA+BBARoeCgZQeXRob24SFAoHZW5hYmxlZBgBIAEoCEID4EEBIqAB",
-            "CghDaXRhdGlvbhJJCgdzb3VyY2VzGAEgAygLMjMuZ29vZ2xlLmNsb3VkLmdl",
-            "bWluaWRhdGFhbmFseXRpY3MudjEuQ2l0YXRpb25Tb3VyY2VCA+BBAxJJCgdh",
-            "bmNob3JzGAIgAygLMjMuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
-            "Y3MudjEuQ2l0YXRpb25BbmNob3JCA+BBAyL6AQoOQ2l0YXRpb25Tb3VyY2US",
-            "EgoDdXJpGAMgASgJQgPgQQNIABJPCg1leGFtcGxlX3F1ZXJ5GAQgASgLMjEu",
-            "Z29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuRXhhbXBsZVF1",
-            "ZXJ5QgPgQQNIABJPCg1nbG9zc2FyeV90ZXJtGAUgASgLMjEuZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuR2xvc3NhcnlUZXJtQgPgQQNI",
-            "ABIPCgJpZBgBIAEoCUID4EEDEhIKBXRpdGxlGAIgASgJQgPgQQNCDQoLc291",
-            "cmNlX3R5cGUiogIKDkNpdGF0aW9uQW5jaG9yEnEKE3RleHRfbWVzc2FnZV9h",
-            "bmNob3IYASABKAsyTS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
-            "cy52MS5DaXRhdGlvbkFuY2hvci5UZXh0TWVzc2FnZUNpdGF0aW9uQW5jaG9y",
-            "QgPgQQNIABqNAQoZVGV4dE1lc3NhZ2VDaXRhdGlvbkFuY2hvchIXCgpwYXJ0",
-            "X2luZGV4GAEgASgFQgPgQQMSHwoSc3RhcnRfb2Zmc2V0X2J5dGVzGAIgASgF",
-            "QgPgQQMSHQoQZW5kX29mZnNldF9ieXRlcxgDIAEoBUID4EEDEhcKCnNvdXJj",
-            "ZV9pZHMYBCADKAlCA+BBA0INCgthbmNob3JfdHlwZUKJAgonY29tLmdvb2ds",
-            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxQgxDb250ZXh0UHJvdG9Q",
-            "AVpZY2xvdWQuZ29vZ2xlLmNvbS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2Fw",
-            "aXYxL2dlbWluaWRhdGFhbmFseXRpY3NwYjtnZW1pbmlkYXRhYW5hbHl0aWNz",
-            "cGKqAiNHb29nbGUuQ2xvdWQuR2VtaW5pRGF0YUFuYWx5dGljcy5WMcoCI0dv",
-            "b2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNzXFYx6gImR29vZ2xlOjpD",
-            "bG91ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiBnByb3RvMw=="));
+            "b24YAiABKAkiVgoYQmlnUXVlcnlSb3V0aW5lUmVmZXJlbmNlEhIKCnByb2pl",
+            "Y3RfaWQYASABKAkSEgoKZGF0YXNldF9pZBgCIAEoCRISCgpyb3V0aW5lX2lk",
+            "GAMgASgJIqcBCgxFeGFtcGxlUXVlcnkSGAoJc3FsX3F1ZXJ5GGUgASgJQgPg",
+            "QQFIABImChluYXR1cmFsX2xhbmd1YWdlX3F1ZXN0aW9uGAEgASgJQgPgQQES",
+            "TAoKcGFyYW1ldGVycxgDIAMoCzIzLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRh",
+            "YW5hbHl0aWNzLnYxLlF1ZXJ5UGFyYW1ldGVyQgPgQQFCBwoFcXVlcnkiVQoO",
+            "UXVlcnlQYXJhbWV0ZXISEQoEbmFtZRgBIAEoCUID4EECEhgKC2Rlc2NyaXB0",
+            "aW9uGAIgASgJQgPgQQESFgoJZGF0YV90eXBlGAMgASgJQgPgQQIiswEKDE1h",
+            "dGNoZWRRdWVyeRJICg1leGFtcGxlX3F1ZXJ5GAEgASgLMjEuZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuRXhhbXBsZVF1ZXJ5ElkKFnF1",
+            "ZXJ5X3BhcmFtZXRlcl92YWx1ZXMYAiADKAsyOS5nb29nbGUuY2xvdWQuZ2Vt",
+            "aW5pZGF0YWFuYWx5dGljcy52MS5RdWVyeVBhcmFtZXRlclZhbHVlcyI9ChRR",
+            "dWVyeVBhcmFtZXRlclZhbHVlcxIRCgRuYW1lGAEgASgJQgPgQQISEgoFdmFs",
+            "dWUYAiABKAlCA+BBAiKJAQoRTG9va2VyR29sZGVuUXVlcnkSJwoabmF0dXJh",
+            "bF9sYW5ndWFnZV9xdWVzdGlvbnMYBCADKAlCA+BBARJLCgxsb29rZXJfcXVl",
+            "cnkYBSABKAsyMC5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
+            "MS5Mb29rZXJRdWVyeUID4EEBIucCCgtMb29rZXJRdWVyeRISCgVtb2RlbBgB",
+            "IAEoCUID4EECEhQKB2V4cGxvcmUYAiABKAlCA+BBAhITCgZmaWVsZHMYAyAD",
+            "KAlCA+BBARJNCgdmaWx0ZXJzGAQgAygLMjcuZ29vZ2xlLmNsb3VkLmdlbWlu",
+            "aWRhdGFhbmFseXRpY3MudjEuTG9va2VyUXVlcnkuRmlsdGVyQgPgQQESEgoF",
+            "c29ydHMYBSADKAlCA+BBARIXCgVsaW1pdBgGIAEoCUID4EEBSACIAQESGgoI",
+            "cXVlcnlfaWQYCiABKAlCA+BBAUgBiAEBEhsKCWNsaWVudF9pZBgLIAEoCUID",
+            "4EEBSAKIAQEaPwoGRmlsdGVyEhIKBWZpZWxkGAEgASgJQgPgQQISFwoFdmFs",
+            "dWUYAiABKAlCA+BBAUgAiAEBQggKBl92YWx1ZUIICgZfbGltaXRCCwoJX3F1",
+            "ZXJ5X2lkQgwKCl9jbGllbnRfaWQiWAoMR2xvc3NhcnlUZXJtEhkKDGRpc3Bs",
+            "YXlfbmFtZRgBIAEoCUID4EECEhgKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQIS",
+            "EwoGbGFiZWxzGAMgAygJQgPgQQEiywIKE0NvbnZlcnNhdGlvbk9wdGlvbnMS",
+            "SwoIYW5hbHlzaXMYAiABKAsyNC5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFu",
+            "YWx5dGljcy52MS5BbmFseXNpc09wdGlvbnNCA+BBARJPCgpkYXRhc291cmNl",
+            "GAMgASgLMjYuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEu",
+            "RGF0YXNvdXJjZU9wdGlvbnNCA+BBARJXCgVtb2RlbBgGIAEoDjI+Lmdvb2ds",
+            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkNvbnZlcnNhdGlvbk9w",
+            "dGlvbnMuTW9kZWxCA+BBAUgAiAEBIjMKBU1vZGVsEhUKEU1PREVMX1VOU1BF",
+            "Q0lGSUVEEAASEwoPTEFURVNUX0dBX01PREVMEAFCCAoGX21vZGVsIlkKEURh",
+            "dGFzb3VyY2VPcHRpb25zEkQKGmJpZ19xdWVyeV9tYXhfYmlsbGVkX2J5dGVz",
+            "GAEgASgLMhsuZ29vZ2xlLnByb3RvYnVmLkludDY0VmFsdWVCA+BBASKDAQoP",
+            "QW5hbHlzaXNPcHRpb25zElAKBnB5dGhvbhgBIAEoCzI7Lmdvb2dsZS5jbG91",
+            "ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkFuYWx5c2lzT3B0aW9ucy5QeXRo",
+            "b25CA+BBARoeCgZQeXRob24SFAoHZW5hYmxlZBgBIAEoCEID4EEBIqABCghD",
+            "aXRhdGlvbhJJCgdzb3VyY2VzGAEgAygLMjMuZ29vZ2xlLmNsb3VkLmdlbWlu",
+            "aWRhdGFhbmFseXRpY3MudjEuQ2l0YXRpb25Tb3VyY2VCA+BBAxJJCgdhbmNo",
+            "b3JzGAIgAygLMjMuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
+            "djEuQ2l0YXRpb25BbmNob3JCA+BBAyL6AQoOQ2l0YXRpb25Tb3VyY2USEgoD",
+            "dXJpGAMgASgJQgPgQQNIABJPCg1leGFtcGxlX3F1ZXJ5GAQgASgLMjEuZ29v",
+            "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuRXhhbXBsZVF1ZXJ5",
+            "QgPgQQNIABJPCg1nbG9zc2FyeV90ZXJtGAUgASgLMjEuZ29vZ2xlLmNsb3Vk",
+            "LmdlbWluaWRhdGFhbmFseXRpY3MudjEuR2xvc3NhcnlUZXJtQgPgQQNIABIP",
+            "CgJpZBgBIAEoCUID4EEDEhIKBXRpdGxlGAIgASgJQgPgQQNCDQoLc291cmNl",
+            "X3R5cGUiogIKDkNpdGF0aW9uQW5jaG9yEnEKE3RleHRfbWVzc2FnZV9hbmNo",
+            "b3IYASABKAsyTS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52",
+            "MS5DaXRhdGlvbkFuY2hvci5UZXh0TWVzc2FnZUNpdGF0aW9uQW5jaG9yQgPg",
+            "QQNIABqNAQoZVGV4dE1lc3NhZ2VDaXRhdGlvbkFuY2hvchIXCgpwYXJ0X2lu",
+            "ZGV4GAEgASgFQgPgQQMSHwoSc3RhcnRfb2Zmc2V0X2J5dGVzGAIgASgFQgPg",
+            "QQMSHQoQZW5kX29mZnNldF9ieXRlcxgDIAEoBUID4EEDEhcKCnNvdXJjZV9p",
+            "ZHMYBCADKAlCA+BBA0INCgthbmNob3JfdHlwZUKJAgonY29tLmdvb2dsZS5j",
+            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxQgxDb250ZXh0UHJvdG9QAVpZ",
+            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2FwaXYx",
+            "L2dlbWluaWRhdGFhbmFseXRpY3NwYjtnZW1pbmlkYXRhYW5hbHl0aWNzcGKq",
+            "AiNHb29nbGUuQ2xvdWQuR2VtaW5pRGF0YUFuYWx5dGljcy5WMcoCI0dvb2ds",
+            "ZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0aWNzXFYx6gImR29vZ2xlOjpDbG91",
+            "ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.Context), global::Google.Cloud.GeminiDataAnalytics.V1.Context.Parser, new[]{ "SystemInstruction", "DatasourceReferences", "Options", "ExampleQueries", "LookerGoldenQueries", "GlossaryTerms", "SchemaRelationships", "UserFunctions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.Context.Types.SchemaRelationship), global::Google.Cloud.GeminiDataAnalytics.V1.Context.Types.SchemaRelationship.Parser, new[]{ "LeftSchemaPaths", "RightSchemaPaths", "Sources", "ConfidenceScore" }, null, new[]{ typeof(global::Google.Cloud.GeminiDataAnalytics.V1.Context.Types.SchemaRelationship.Types.Source) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.Context.Types.SchemaRelationship.Types.SchemaPaths), global::Google.Cloud.GeminiDataAnalytics.V1.Context.Types.SchemaRelationship.Types.SchemaPaths.Parser, new[]{ "TableFqn", "Paths" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.UserFunctions), global::Google.Cloud.GeminiDataAnalytics.V1.UserFunctions.Parser, new[]{ "BqRoutines" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutine), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutine.Parser, new[]{ "RoutineReference", "Description" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutineReference), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutineReference.Parser, new[]{ "ProjectId", "DatasetId", "RoutineId", "BoundaryLocationId" }, new[]{ "BoundaryLocationId" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutineReference), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryRoutineReference.Parser, new[]{ "ProjectId", "DatasetId", "RoutineId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.ExampleQuery), global::Google.Cloud.GeminiDataAnalytics.V1.ExampleQuery.Parser, new[]{ "SqlQuery", "NaturalLanguageQuestion", "Parameters" }, new[]{ "Query" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter), global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameter.Parser, new[]{ "Name", "Description", "DataType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.MatchedQuery), global::Google.Cloud.GeminiDataAnalytics.V1.MatchedQuery.Parser, new[]{ "ExampleQuery", "QueryParameterValues" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameterValues), global::Google.Cloud.GeminiDataAnalytics.V1.QueryParameterValues.Parser, new[]{ "Name", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.LookerGoldenQuery), global::Google.Cloud.GeminiDataAnalytics.V1.LookerGoldenQuery.Parser, new[]{ "NaturalLanguageQuestions", "LookerQuery" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.LookerQuery), global::Google.Cloud.GeminiDataAnalytics.V1.LookerQuery.Parser, new[]{ "Model", "Explore", "Fields", "Filters", "Sorts", "Limit" }, new[]{ "Limit" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.LookerQuery.Types.Filter), global::Google.Cloud.GeminiDataAnalytics.V1.LookerQuery.Types.Filter.Parser, new[]{ "Field", "Value" }, new[]{ "Value" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.LookerQuery), global::Google.Cloud.GeminiDataAnalytics.V1.LookerQuery.Parser, new[]{ "Model", "Explore", "Fields", "Filters", "Sorts", "Limit", "QueryId", "ClientId" }, new[]{ "Limit", "QueryId", "ClientId" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.LookerQuery.Types.Filter), global::Google.Cloud.GeminiDataAnalytics.V1.LookerQuery.Types.Filter.Parser, new[]{ "Field", "Value" }, new[]{ "Value" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.GlossaryTerm), global::Google.Cloud.GeminiDataAnalytics.V1.GlossaryTerm.Parser, new[]{ "DisplayName", "Description", "Labels" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions), global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Parser, new[]{ "Analysis", "Datasource" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions), global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Parser, new[]{ "Analysis", "Datasource", "Model" }, new[]{ "Model" }, new[]{ typeof(global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Types.Model) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceOptions), global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceOptions.Parser, new[]{ "BigQueryMaxBilledBytes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.AnalysisOptions), global::Google.Cloud.GeminiDataAnalytics.V1.AnalysisOptions.Parser, new[]{ "Python" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.AnalysisOptions.Types.Python), global::Google.Cloud.GeminiDataAnalytics.V1.AnalysisOptions.Types.Python.Parser, new[]{ "Enabled" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.Citation), global::Google.Cloud.GeminiDataAnalytics.V1.Citation.Parser, new[]{ "Sources", "Anchors" }, null, null, null, null),
@@ -1726,7 +1729,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       projectId_ = other.projectId_;
       datasetId_ = other.datasetId_;
       routineId_ = other.routineId_;
-      boundaryLocationId_ = other.boundaryLocationId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1781,39 +1783,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
     }
 
-    /// <summary>Field number for the "boundary_location_id" field.</summary>
-    public const int BoundaryLocationIdFieldNumber = 4;
-    private readonly static string BoundaryLocationIdDefaultValue = "";
-
-    private string boundaryLocationId_;
-    /// <summary>
-    /// Optional. The location to restrict BigQuery operations to.
-    ///
-    /// If unspecified, this value defaults to the location of the endpoint.
-    ///
-    /// Examples: "us-central1", "europe-west1".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string BoundaryLocationId {
-      get { return boundaryLocationId_ ?? BoundaryLocationIdDefaultValue; }
-      set {
-        boundaryLocationId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "boundary_location_id" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasBoundaryLocationId {
-      get { return boundaryLocationId_ != null; }
-    }
-    /// <summary>Clears the value of the "boundary_location_id" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearBoundaryLocationId() {
-      boundaryLocationId_ = null;
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1832,7 +1801,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (DatasetId != other.DatasetId) return false;
       if (RoutineId != other.RoutineId) return false;
-      if (BoundaryLocationId != other.BoundaryLocationId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1843,7 +1811,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (RoutineId.Length != 0) hash ^= RoutineId.GetHashCode();
-      if (HasBoundaryLocationId) hash ^= BoundaryLocationId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1874,10 +1841,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(26);
         output.WriteString(RoutineId);
       }
-      if (HasBoundaryLocationId) {
-        output.WriteRawTag(34);
-        output.WriteString(BoundaryLocationId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1900,10 +1863,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(26);
         output.WriteString(RoutineId);
       }
-      if (HasBoundaryLocationId) {
-        output.WriteRawTag(34);
-        output.WriteString(BoundaryLocationId);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1922,9 +1881,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (RoutineId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(RoutineId);
-      }
-      if (HasBoundaryLocationId) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(BoundaryLocationId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1946,9 +1902,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (other.RoutineId.Length != 0) {
         RoutineId = other.RoutineId;
-      }
-      if (other.HasBoundaryLocationId) {
-        BoundaryLocationId = other.BoundaryLocationId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1981,10 +1934,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             RoutineId = input.ReadString();
             break;
           }
-          case 34: {
-            BoundaryLocationId = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -2014,10 +1963,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
           }
           case 26: {
             RoutineId = input.ReadString();
-            break;
-          }
-          case 34: {
-            BoundaryLocationId = input.ReadString();
             break;
           }
         }
@@ -3422,6 +3367,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       filters_ = other.filters_.Clone();
       sorts_ = other.sorts_.Clone();
       limit_ = other.limit_;
+      queryId_ = other.queryId_;
+      clientId_ = other.clientId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3532,6 +3479,68 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       limit_ = null;
     }
 
+    /// <summary>Field number for the "query_id" field.</summary>
+    public const int QueryIdFieldNumber = 10;
+    private readonly static string QueryIdDefaultValue = "";
+
+    private string queryId_;
+    /// <summary>
+    /// Optional. The primary identifier for the query resource in Looker, used for
+    /// API operations. Maps to `id` (or `slug`) in the Looker API `Query`
+    /// resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string QueryId {
+      get { return queryId_ ?? QueryIdDefaultValue; }
+      set {
+        queryId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "query_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasQueryId {
+      get { return queryId_ != null; }
+    }
+    /// <summary>Clears the value of the "query_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearQueryId() {
+      queryId_ = null;
+    }
+
+    /// <summary>Field number for the "client_id" field.</summary>
+    public const int ClientIdFieldNumber = 11;
+    private readonly static string ClientIdDefaultValue = "";
+
+    private string clientId_;
+    /// <summary>
+    /// Optional. The short alphanumeric identifier for the query, used for share
+    /// links and Explore URLs (e.g., in the `qid` parameter). Maps to `client_id`
+    /// in the Looker API `Query` resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ClientId {
+      get { return clientId_ ?? ClientIdDefaultValue; }
+      set {
+        clientId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "client_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasClientId {
+      get { return clientId_ != null; }
+    }
+    /// <summary>Clears the value of the "client_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearClientId() {
+      clientId_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3553,6 +3562,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if(!filters_.Equals(other.filters_)) return false;
       if(!sorts_.Equals(other.sorts_)) return false;
       if (Limit != other.Limit) return false;
+      if (QueryId != other.QueryId) return false;
+      if (ClientId != other.ClientId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3566,6 +3577,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       hash ^= filters_.GetHashCode();
       hash ^= sorts_.GetHashCode();
       if (HasLimit) hash ^= Limit.GetHashCode();
+      if (HasQueryId) hash ^= QueryId.GetHashCode();
+      if (HasClientId) hash ^= ClientId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3599,6 +3612,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(50);
         output.WriteString(Limit);
       }
+      if (HasQueryId) {
+        output.WriteRawTag(82);
+        output.WriteString(QueryId);
+      }
+      if (HasClientId) {
+        output.WriteRawTag(90);
+        output.WriteString(ClientId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3624,6 +3645,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(50);
         output.WriteString(Limit);
       }
+      if (HasQueryId) {
+        output.WriteRawTag(82);
+        output.WriteString(QueryId);
+      }
+      if (HasClientId) {
+        output.WriteRawTag(90);
+        output.WriteString(ClientId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3645,6 +3674,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       size += sorts_.CalculateSize(_repeated_sorts_codec);
       if (HasLimit) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Limit);
+      }
+      if (HasQueryId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(QueryId);
+      }
+      if (HasClientId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ClientId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3669,6 +3704,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       sorts_.Add(other.sorts_);
       if (other.HasLimit) {
         Limit = other.Limit;
+      }
+      if (other.HasQueryId) {
+        QueryId = other.QueryId;
+      }
+      if (other.HasClientId) {
+        ClientId = other.ClientId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3713,6 +3754,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             Limit = input.ReadString();
             break;
           }
+          case 82: {
+            QueryId = input.ReadString();
+            break;
+          }
+          case 90: {
+            ClientId = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -3754,6 +3803,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
           }
           case 50: {
             Limit = input.ReadString();
+            break;
+          }
+          case 82: {
+            QueryId = input.ReadString();
+            break;
+          }
+          case 90: {
+            ClientId = input.ReadString();
             break;
           }
         }
@@ -4319,6 +4376,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
   {
     private static readonly pb::MessageParser<ConversationOptions> _parser = new pb::MessageParser<ConversationOptions>(() => new ConversationOptions());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConversationOptions> Parser { get { return _parser; } }
@@ -4346,8 +4404,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversationOptions(ConversationOptions other) : this() {
+      _hasBits0 = other._hasBits0;
       analysis_ = other.analysis_ != null ? other.analysis_.Clone() : null;
       datasource_ = other.datasource_ != null ? other.datasource_.Clone() : null;
+      model_ = other.model_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4387,6 +4447,36 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
     }
 
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 6;
+    private readonly static global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Types.Model ModelDefaultValue = global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Types.Model.Unspecified;
+
+    private global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Types.Model model_;
+    /// <summary>
+    /// Optional. The model to use for the agent loop.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Types.Model Model {
+      get { if ((_hasBits0 & 1) != 0) { return model_; } else { return ModelDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        model_ = value;
+      }
+    }
+    /// <summary>Gets whether the "model" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasModel {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "model" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearModel() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4404,6 +4494,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (!object.Equals(Analysis, other.Analysis)) return false;
       if (!object.Equals(Datasource, other.Datasource)) return false;
+      if (Model != other.Model) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4413,6 +4504,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       int hash = 1;
       if (analysis_ != null) hash ^= Analysis.GetHashCode();
       if (datasource_ != null) hash ^= Datasource.GetHashCode();
+      if (HasModel) hash ^= Model.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4439,6 +4531,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Datasource);
       }
+      if (HasModel) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Model);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4457,6 +4553,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(Datasource);
       }
+      if (HasModel) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Model);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4472,6 +4572,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (datasource_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Datasource);
+      }
+      if (HasModel) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Model);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4496,6 +4599,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
           Datasource = new global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceOptions();
         }
         Datasource.MergeFrom(other.Datasource);
+      }
+      if (other.HasModel) {
+        Model = other.Model;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4528,6 +4634,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
               Datasource = new global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceOptions();
             }
             input.ReadMessage(Datasource);
+            break;
+          }
+          case 48: {
+            Model = (global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Types.Model) input.ReadEnum();
             break;
           }
         }
@@ -4563,10 +4673,41 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             input.ReadMessage(Datasource);
             break;
           }
+          case 48: {
+            Model = (global::Google.Cloud.GeminiDataAnalytics.V1.ConversationOptions.Types.Model) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ConversationOptions message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Allowed models for the agent/conversation.
+      /// </summary>
+      public enum Model {
+        /// <summary>
+        /// No model specified. The model may be set on the chat request, or the
+        /// default model will be used. Currently, this is
+        /// `gemini-3.0-flash-preview`.
+        /// </summary>
+        [pbr::OriginalName("MODEL_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Use the most up-to-date non-preview model. Currently, this is
+        /// `gemini-2.5-flash`. This constrains the request level settings. The
+        /// default will change to `gemini-2.5-flash`, and setting `thinking_mode`
+        /// will not be supported.
+        /// </summary>
+        [pbr::OriginalName("LATEST_GA_MODEL")] LatestGaModel = 1,
+      }
+
+    }
+    #endregion
 
   }
 
