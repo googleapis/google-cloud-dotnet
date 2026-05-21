@@ -29,6 +29,7 @@ namespace Google.Cloud.BigQuery.Migration.V2
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AssessmentTaskReflection.Descriptor;
             yield return MigrationEntitiesReflection.Descriptor;
             yield return MigrationErrorDetailsReflection.Descriptor;
             yield return MigrationMetricsReflection.Descriptor;
