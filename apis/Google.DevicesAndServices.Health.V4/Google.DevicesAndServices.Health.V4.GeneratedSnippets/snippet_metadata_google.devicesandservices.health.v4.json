@@ -1787,6 +1787,1131 @@
       ]
     },
     {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscriber_sync",
+      "title": "CreateSubscriberRequestObject",
+      "description": "Snippet for CreateSubscriber",
+      "file": "DataSubscriptionServiceClient.CreateSubscriberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriber",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriber",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.CreateSubscriberMetadata>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscriber_async",
+      "title": "CreateSubscriberRequestObjectAsync",
+      "description": "Snippet for CreateSubscriberAsync",
+      "file": "DataSubscriptionServiceClient.CreateSubscriberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriberAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.CreateSubscriberMetadata>>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscriber_sync_flattened",
+      "title": "CreateSubscriber",
+      "description": "Snippet for CreateSubscriber",
+      "file": "DataSubscriptionServiceClient.CreateSubscriberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriber",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriber",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriberPayload",
+            "name": "subscriber"
+          },
+          {
+            "type": "System.String",
+            "name": "subscriberId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.CreateSubscriberMetadata>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscriber_async_flattened",
+      "title": "CreateSubscriberAsync",
+      "description": "Snippet for CreateSubscriberAsync",
+      "file": "DataSubscriptionServiceClient.CreateSubscriberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriberAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriberPayload",
+            "name": "subscriber"
+          },
+          {
+            "type": "System.String",
+            "name": "subscriberId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.CreateSubscriberMetadata>>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscriber_sync_flattened_resourceNames",
+      "title": "CreateSubscriberResourceNames",
+      "description": "Snippet for CreateSubscriber",
+      "file": "DataSubscriptionServiceClient.CreateSubscriberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriber",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriber",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriberPayload",
+            "name": "subscriber"
+          },
+          {
+            "type": "System.String",
+            "name": "subscriberId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.CreateSubscriberMetadata>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscriber_async_flattened_resourceNames",
+      "title": "CreateSubscriberResourceNamesAsync",
+      "description": "Snippet for CreateSubscriberAsync",
+      "file": "DataSubscriptionServiceClient.CreateSubscriberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriberAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriberPayload",
+            "name": "subscriber"
+          },
+          {
+            "type": "System.String",
+            "name": "subscriberId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.CreateSubscriberMetadata>>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscribers_sync",
+      "title": "ListSubscribersRequestObject",
+      "description": "Snippet for ListSubscribers",
+      "file": "DataSubscriptionServiceClient.ListSubscribersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscribers",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscribers",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.ListSubscribersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListSubscribersResponse, Google.DevicesAndServices.Health.V4.Subscriber>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscribers",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscribers",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscribers_async",
+      "title": "ListSubscribersRequestObjectAsync",
+      "description": "Snippet for ListSubscribersAsync",
+      "file": "DataSubscriptionServiceClient.ListSubscribersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscribersAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscribersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.ListSubscribersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListSubscribersResponse, Google.DevicesAndServices.Health.V4.Subscriber>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscribers",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscribers",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscribers_sync_flattened",
+      "title": "ListSubscribers",
+      "description": "Snippet for ListSubscribers",
+      "file": "DataSubscriptionServiceClient.ListSubscribersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscribers",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscribers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListSubscribersResponse, Google.DevicesAndServices.Health.V4.Subscriber>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscribers",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscribers",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscribers_async_flattened",
+      "title": "ListSubscribersAsync",
+      "description": "Snippet for ListSubscribersAsync",
+      "file": "DataSubscriptionServiceClient.ListSubscribersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscribersAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscribersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListSubscribersResponse, Google.DevicesAndServices.Health.V4.Subscriber>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscribers",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscribers",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscribers_sync_flattened_resourceNames",
+      "title": "ListSubscribersResourceNames",
+      "description": "Snippet for ListSubscribers",
+      "file": "DataSubscriptionServiceClient.ListSubscribersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscribers",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscribers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListSubscribersResponse, Google.DevicesAndServices.Health.V4.Subscriber>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscribers",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscribers",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscribers_async_flattened_resourceNames",
+      "title": "ListSubscribersResourceNamesAsync",
+      "description": "Snippet for ListSubscribersAsync",
+      "file": "DataSubscriptionServiceClient.ListSubscribersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscribersAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscribersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.ProjectName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListSubscribersResponse, Google.DevicesAndServices.Health.V4.Subscriber>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscribers",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscribers",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_UpdateSubscriber_sync",
+      "title": "UpdateSubscriberRequestObject",
+      "description": "Snippet for UpdateSubscriber",
+      "file": "DataSubscriptionServiceClient.UpdateSubscriberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriber",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.UpdateSubscriber",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.UpdateSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.UpdateSubscriberMetadata>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.UpdateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_UpdateSubscriber_async",
+      "title": "UpdateSubscriberRequestObjectAsync",
+      "description": "Snippet for UpdateSubscriberAsync",
+      "file": "DataSubscriptionServiceClient.UpdateSubscriberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriberAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.UpdateSubscriberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.UpdateSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.UpdateSubscriberMetadata>>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.UpdateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_UpdateSubscriber_sync_flattened",
+      "title": "UpdateSubscriber",
+      "description": "Snippet for UpdateSubscriber",
+      "file": "DataSubscriptionServiceClient.UpdateSubscriberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriber",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.UpdateSubscriber",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.Subscriber",
+            "name": "subscriber"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.UpdateSubscriberMetadata>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.UpdateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_UpdateSubscriber_async_flattened",
+      "title": "UpdateSubscriberAsync",
+      "description": "Snippet for UpdateSubscriberAsync",
+      "file": "DataSubscriptionServiceClient.UpdateSubscriberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriberAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.UpdateSubscriberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.Subscriber",
+            "name": "subscriber"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.DevicesAndServices.Health.V4.Subscriber, Google.DevicesAndServices.Health.V4.UpdateSubscriberMetadata>>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.UpdateSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscriber_sync",
+      "title": "DeleteSubscriberRequestObject",
+      "description": "Snippet for DeleteSubscriber",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriberRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriber",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriber",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.DeleteSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.DevicesAndServices.Health.V4.DeleteSubscriberMetadata>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscriber_async",
+      "title": "DeleteSubscriberRequestObjectAsync",
+      "description": "Snippet for DeleteSubscriberAsync",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriberRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriberAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.DeleteSubscriberRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.DevicesAndServices.Health.V4.DeleteSubscriberMetadata>>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscriber_sync_flattened",
+      "title": "DeleteSubscriber",
+      "description": "Snippet for DeleteSubscriber",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriberSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriber",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriber",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.DevicesAndServices.Health.V4.DeleteSubscriberMetadata>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscriber_async_flattened",
+      "title": "DeleteSubscriberAsync",
+      "description": "Snippet for DeleteSubscriberAsync",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriberAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriberAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.DevicesAndServices.Health.V4.DeleteSubscriberMetadata>>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscriber_sync_flattened_resourceNames",
+      "title": "DeleteSubscriberResourceNames",
+      "description": "Snippet for DeleteSubscriber",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriberResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriber",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriber",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.SubscriberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.DevicesAndServices.Health.V4.DeleteSubscriberMetadata>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscriber_async_flattened_resourceNames",
+      "title": "DeleteSubscriberResourceNamesAsync",
+      "description": "Snippet for DeleteSubscriberAsync",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriberResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriberAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriberAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.SubscriberName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.DevicesAndServices.Health.V4.DeleteSubscriberMetadata>>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscriber",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscriber",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "health_v4_generated_HealthProfileService_GetProfile_sync",
       "title": "GetProfileRequestObject",
       "description": "Snippet for GetProfile",

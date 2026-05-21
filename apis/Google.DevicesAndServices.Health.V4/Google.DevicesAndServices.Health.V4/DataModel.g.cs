@@ -30,451 +30,483 @@ namespace Google.DevicesAndServices.Health.V4 {
             "aS9yZXNvdXJjZS5wcm90bxo6Z29vZ2xlL2RldmljZXNhbmRzZXJ2aWNlcy9o",
             "ZWFsdGgvdjQvZGF0YV9jb29yZGluYXRlcy5wcm90bxoeZ29vZ2xlL3Byb3Rv",
             "YnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3RvIsQCChFBY3RpdmVab25l",
+            "LnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3RvIuECChFBY3RpdmVab25l",
             "TWludXRlcxJTCghpbnRlcnZhbBgBIAEoCzI8Lmdvb2dsZS5kZXZpY2VzYW5k",
             "c2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVydmFsQgPg",
             "QQISYgoPaGVhcnRfcmF0ZV96b25lGAIgASgOMkQuZ29vZ2xlLmRldmljZXNh",
             "bmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZlWm9uZU1pbnV0ZXMuSGVhcnRS",
-            "YXRlWm9uZUID4EECEiAKE2FjdGl2ZV96b25lX21pbnV0ZXMYAyABKANCA+BB",
-            "AiJUCg1IZWFydFJhdGVab25lEh8KG0hFQVJUX1JBVEVfWk9ORV9VTlNQRUNJ",
-            "RklFRBAAEgwKCEZBVF9CVVJOEAESCgoGQ0FSRElPEAISCAoEUEVBSxADIoQB",
-            "ChxBY3RpdmVab25lTWludXRlc1JvbGx1cFZhbHVlEiAKGHN1bV9pbl9jYXJk",
-            "aW9faGVhcnRfem9uZRgBIAEoAxIeChZzdW1faW5fcGVha19oZWFydF96b25l",
-            "GAIgASgDEiIKGnN1bV9pbl9mYXRfYnVybl9oZWFydF96b25lGAMgASgDItkD",
-            "Cg1BY3RpdmVNaW51dGVzElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1lSW50",
-            "ZXJ2YWxCA+BBAhJ+CiBhY3RpdmVfbWludXRlc19ieV9hY3Rpdml0eV9sZXZl",
-            "bBgCIAMoCzJPLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
-            "LkFjdGl2ZU1pbnV0ZXMuQWN0aXZlTWludXRlc0J5QWN0aXZpdHlMZXZlbEID",
-            "4EECGpoBChxBY3RpdmVNaW51dGVzQnlBY3Rpdml0eUxldmVsEl0KDmFjdGl2",
-            "aXR5X2xldmVsGAEgASgOMkAuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjQuQWN0aXZlTWludXRlcy5BY3Rpdml0eUxldmVsQgPgQQISGwoO",
-            "YWN0aXZlX21pbnV0ZXMYAiABKANCA+BBAiJWCg1BY3Rpdml0eUxldmVsEh4K",
-            "GkFDVElWSVRZX0xFVkVMX1VOU1BFQ0lGSUVEEAASCQoFTElHSFQQARIMCghN",
-            "T0RFUkFURRACEgwKCFZJR09ST1VTEAMiywIKGEFjdGl2ZU1pbnV0ZXNSb2xs",
-            "dXBWYWx1ZRKRAQonYWN0aXZlX21pbnV0ZXNfcm9sbHVwX2J5X2FjdGl2aXR5",
-            "X2xldmVsGAEgAygLMmAuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuQWN0aXZlTWludXRlc1JvbGx1cFZhbHVlLkFjdGl2ZU1pbnV0ZXNS",
-            "b2xsdXBCeUFjdGl2aXR5TGV2ZWwamgEKIkFjdGl2ZU1pbnV0ZXNSb2xsdXBC",
-            "eUFjdGl2aXR5TGV2ZWwSWAoOYWN0aXZpdHlfbGV2ZWwYASABKA4yQC5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVNaW51dGVz",
-            "LkFjdGl2aXR5TGV2ZWwSGgoSYWN0aXZlX21pbnV0ZXNfc3VtGAIgASgDItIC",
-            "Cg1BY3Rpdml0eUxldmVsElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1lSW50",
-            "ZXJ2YWxCA+BBAhJmChNhY3Rpdml0eV9sZXZlbF90eXBlGAIgASgOMkQuZ29v",
-            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZpdHlMZXZl",
-            "bC5BY3Rpdml0eUxldmVsVHlwZUID4EECIoMBChFBY3Rpdml0eUxldmVsVHlw",
-            "ZRIjCh9BQ1RJVklUWV9MRVZFTF9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJU0VE",
-            "RU5UQVJZEAESEgoOTElHSFRMWV9BQ1RJVkUQAhIVChFNT0RFUkFURUxZX0FD",
-            "VElWRRADEg8KC1ZFUllfQUNUSVZFEAQi+QIKGEFjdGl2aXR5TGV2ZWxSb2xs",
-            "dXBWYWx1ZRKbAQotYWN0aXZpdHlfbGV2ZWxfcm9sbHVwc19ieV9hY3Rpdml0",
-            "eV9sZXZlbF90eXBlGAEgAygLMmQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuQWN0aXZpdHlMZXZlbFJvbGx1cFZhbHVlLkFjdGl2aXR5",
-            "TGV2ZWxSb2xsdXBCeUFjdGl2aXR5TGV2ZWxUeXBlGr4BCiZBY3Rpdml0eUxl",
-            "dmVsUm9sbHVwQnlBY3Rpdml0eUxldmVsVHlwZRJhChNhY3Rpdml0eV9sZXZl",
-            "bF90eXBlGAEgASgOMkQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuQWN0aXZpdHlMZXZlbC5BY3Rpdml0eUxldmVsVHlwZRIxCg50b3Rh",
-            "bF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiJ+",
-            "CghBbHRpdHVkZRJTCghpbnRlcnZhbBgCIAEoCzI8Lmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVydmFs",
-            "QgPgQQISHQoQZ2Fpbl9taWxsaW1ldGVycxgDIAEoA0ID4EECInsKEUJhc2Fs",
-            "RW5lcmd5QnVybmVkElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1lSW50ZXJ2",
-            "YWxCA+BBAhIRCgRrY2FsGAIgASgBQgPgQQIieAoHQm9keUZhdBJUCgtzYW1w",
-            "bGVfdGltZRgCIAEoCzI6Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0Lk9ic2VydmF0aW9uU2FtcGxlVGltZUID4EECEhcKCnBlcmNlbnRh",
-            "Z2UYAyABKAFCA+BBAiI1ChJCb2R5RmF0Um9sbHVwVmFsdWUSHwoXYm9keV9m",
-            "YXRfcGVyY2VudGFnZV9hdmcYASABKAEisAIKIkNhbG9yaWVzSW5IZWFydFJh",
-            "dGVab25lUm9sbHVwVmFsdWUSigEKHGNhbG9yaWVzX2luX2hlYXJ0X3JhdGVf",
-            "em9uZXMYASADKAsyZC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
-            "aC52NC5DYWxvcmllc0luSGVhcnRSYXRlWm9uZVJvbGx1cFZhbHVlLkNhbG9y",
-            "aWVzSW5IZWFydFJhdGVab25lVmFsdWUafQocQ2Fsb3JpZXNJbkhlYXJ0UmF0",
-            "ZVpvbmVWYWx1ZRJPCg9oZWFydF9yYXRlX3pvbmUYASABKA4yNi5nb29nbGUu",
-            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5IZWFydFJhdGVab25lVHlw",
-            "ZRIMCgRrY2FsGAIgASgBItUCChNEYWlseUhlYXJ0UmF0ZVpvbmVzEiQKBGRh",
-            "dGUYASABKAsyES5nb29nbGUudHlwZS5EYXRlQgPgQQISZQoQaGVhcnRfcmF0",
-            "ZV96b25lcxgCIAMoCzJGLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LkRhaWx5SGVhcnRSYXRlWm9uZXMuSGVhcnRSYXRlWm9uZUID4EEC",
-            "GrABCg1IZWFydFJhdGVab25lElkKFGhlYXJ0X3JhdGVfem9uZV90eXBlGAEg",
-            "ASgOMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVh",
-            "cnRSYXRlWm9uZVR5cGVCA+BBAhIhChRtaW5fYmVhdHNfcGVyX21pbnV0ZRgC",
-            "IAEoA0ID4EECEiEKFG1heF9iZWF0c19wZXJfbWludXRlGAMgASgDQgPgQQIi",
-            "0wMKGURhaWx5SGVhcnRSYXRlVmFyaWFiaWxpdHkSJAoEZGF0ZRgCIAEoCzIR",
-            "Lmdvb2dsZS50eXBlLkRhdGVCA+BBAhI9CithdmVyYWdlX2hlYXJ0X3JhdGVf",
-            "dmFyaWFiaWxpdHlfbWlsbGlzZWNvbmRzGAQgASgBQgPgQQFIAIgBARI1CiNu",
-            "b25fcmVtX2hlYXJ0X3JhdGVfYmVhdHNfcGVyX21pbnV0ZRgFIAEoA0ID4EEB",
-            "SAGIAQESGQoHZW50cm9weRgGIAEoAUID4EEBSAKIAQESVApCZGVlcF9zbGVl",
-            "cF9yb290X21lYW5fc3F1YXJlX29mX3N1Y2Nlc3NpdmVfZGlmZmVyZW5jZXNf",
-            "bWlsbGlzZWNvbmRzGAcgASgBQgPgQQFIA4gBAUIuCixfYXZlcmFnZV9oZWFy",
-            "dF9yYXRlX3ZhcmlhYmlsaXR5X21pbGxpc2Vjb25kc0ImCiRfbm9uX3JlbV9o",
-            "ZWFydF9yYXRlX2JlYXRzX3Blcl9taW51dGVCCgoIX2VudHJvcHlCRQpDX2Rl",
-            "ZXBfc2xlZXBfcm9vdF9tZWFuX3NxdWFyZV9vZl9zdWNjZXNzaXZlX2RpZmZl",
-            "cmVuY2VzX21pbGxpc2Vjb25kcyJdChREYWlseVJlc3BpcmF0b3J5UmF0ZRIk",
-            "CgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EECEh8KEmJyZWF0",
-            "aHNfcGVyX21pbnV0ZRgCIAEoAUID4EECItQBChVEYWlseU94eWdlblNhdHVy",
-            "YXRpb24SJAoEZGF0ZRgBIAEoCzIRLmdvb2dsZS50eXBlLkRhdGVCA+BBAhIf",
-            "ChJhdmVyYWdlX3BlcmNlbnRhZ2UYAiABKAFCA+BBAhIjChZsb3dlcl9ib3Vu",
-            "ZF9wZXJjZW50YWdlGAMgASgBQgPgQQISIwoWdXBwZXJfYm91bmRfcGVyY2Vu",
-            "dGFnZRgEIAEoAUID4EECEioKHXN0YW5kYXJkX2RldmlhdGlvbl9wZXJjZW50",
-            "YWdlGAUgASgBQgPgQQEi+gMKFURhaWx5UmVzdGluZ0hlYXJ0UmF0ZRIkCgRk",
-            "YXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EECEh0KEGJlYXRzX3Bl",
-            "cl9taW51dGUYBCABKANCA+BBAhKIAQohZGFpbHlfcmVzdGluZ19oZWFydF9y",
-            "YXRlX21ldGFkYXRhGAUgASgLMlguZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuRGFpbHlSZXN0aW5nSGVhcnRSYXRlLkRhaWx5UmVzdGlu",
-            "Z0hlYXJ0UmF0ZU1ldGFkYXRhQgPgQQEakAIKHURhaWx5UmVzdGluZ0hlYXJ0",
-            "UmF0ZU1ldGFkYXRhEosBChJjYWxjdWxhdGlvbl9tZXRob2QYASABKA4yai5n",
+            "YXRlWm9uZUID4EECEiUKE2FjdGl2ZV96b25lX21pbnV0ZXMYAyABKANCA+BB",
+            "AkgAiAEBIlQKDUhlYXJ0UmF0ZVpvbmUSHwobSEVBUlRfUkFURV9aT05FX1VO",
+            "U1BFQ0lGSUVEEAASDAoIRkFUX0JVUk4QARIKCgZDQVJESU8QAhIICgRQRUFL",
+            "EANCFgoUX2FjdGl2ZV96b25lX21pbnV0ZXMi6gEKHEFjdGl2ZVpvbmVNaW51",
+            "dGVzUm9sbHVwVmFsdWUSJQoYc3VtX2luX2NhcmRpb19oZWFydF96b25lGAEg",
+            "ASgDSACIAQESIwoWc3VtX2luX3BlYWtfaGVhcnRfem9uZRgCIAEoA0gBiAEB",
+            "EicKGnN1bV9pbl9mYXRfYnVybl9oZWFydF96b25lGAMgASgDSAKIAQFCGwoZ",
+            "X3N1bV9pbl9jYXJkaW9faGVhcnRfem9uZUIZChdfc3VtX2luX3BlYWtfaGVh",
+            "cnRfem9uZUIdChtfc3VtX2luX2ZhdF9idXJuX2hlYXJ0X3pvbmUi8QMKDUFj",
+            "dGl2ZU1pbnV0ZXMSUwoIaW50ZXJ2YWwYASABKAsyPC5nb29nbGUuZGV2aWNl",
+            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJbnRlcnZh",
+            "bEID4EECEn4KIGFjdGl2ZV9taW51dGVzX2J5X2FjdGl2aXR5X2xldmVsGAIg",
+            "AygLMk8uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0",
+            "aXZlTWludXRlcy5BY3RpdmVNaW51dGVzQnlBY3Rpdml0eUxldmVsQgPgQQIa",
+            "sgEKHEFjdGl2ZU1pbnV0ZXNCeUFjdGl2aXR5TGV2ZWwSXQoOYWN0aXZpdHlf",
+            "bGV2ZWwYASABKA4yQC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
+            "aC52NC5BY3RpdmVNaW51dGVzLkFjdGl2aXR5TGV2ZWxCA+BBAhIgCg5hY3Rp",
+            "dmVfbWludXRlcxgCIAEoA0ID4EECSACIAQFCEQoPX2FjdGl2ZV9taW51dGVz",
+            "IlYKDUFjdGl2aXR5TGV2ZWwSHgoaQUNUSVZJVFlfTEVWRUxfVU5TUEVDSUZJ",
+            "RUQQABIJCgVMSUdIVBABEgwKCE1PREVSQVRFEAISDAoIVklHT1JPVVMQAyLn",
+            "AgoYQWN0aXZlTWludXRlc1JvbGx1cFZhbHVlEpEBCidhY3RpdmVfbWludXRl",
+            "c19yb2xsdXBfYnlfYWN0aXZpdHlfbGV2ZWwYASADKAsyYC5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVNaW51dGVzUm9sbHVw",
+            "VmFsdWUuQWN0aXZlTWludXRlc1JvbGx1cEJ5QWN0aXZpdHlMZXZlbBq2AQoi",
+            "QWN0aXZlTWludXRlc1JvbGx1cEJ5QWN0aXZpdHlMZXZlbBJYCg5hY3Rpdml0",
+            "eV9sZXZlbBgBIAEoDjJALmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LkFjdGl2ZU1pbnV0ZXMuQWN0aXZpdHlMZXZlbBIfChJhY3RpdmVf",
+            "bWludXRlc19zdW0YAiABKANIAIgBAUIVChNfYWN0aXZlX21pbnV0ZXNfc3Vt",
+            "ItICCg1BY3Rpdml0eUxldmVsElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xl",
+            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1l",
+            "SW50ZXJ2YWxCA+BBAhJmChNhY3Rpdml0eV9sZXZlbF90eXBlGAIgASgOMkQu",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZpdHlM",
+            "ZXZlbC5BY3Rpdml0eUxldmVsVHlwZUID4EECIoMBChFBY3Rpdml0eUxldmVs",
+            "VHlwZRIjCh9BQ1RJVklUWV9MRVZFTF9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJ",
+            "U0VERU5UQVJZEAESEgoOTElHSFRMWV9BQ1RJVkUQAhIVChFNT0RFUkFURUxZ",
+            "X0FDVElWRRADEg8KC1ZFUllfQUNUSVZFEAQi+QIKGEFjdGl2aXR5TGV2ZWxS",
+            "b2xsdXBWYWx1ZRKbAQotYWN0aXZpdHlfbGV2ZWxfcm9sbHVwc19ieV9hY3Rp",
+            "dml0eV9sZXZlbF90eXBlGAEgAygLMmQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuQWN0aXZpdHlMZXZlbFJvbGx1cFZhbHVlLkFjdGl2",
+            "aXR5TGV2ZWxSb2xsdXBCeUFjdGl2aXR5TGV2ZWxUeXBlGr4BCiZBY3Rpdml0",
+            "eUxldmVsUm9sbHVwQnlBY3Rpdml0eUxldmVsVHlwZRJhChNhY3Rpdml0eV9s",
+            "ZXZlbF90eXBlGAEgASgOMkQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
+            "ZWFsdGgudjQuQWN0aXZpdHlMZXZlbC5BY3Rpdml0eUxldmVsVHlwZRIxCg50",
+            "b3RhbF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "biKYAQoIQWx0aXR1ZGUSUwoIaW50ZXJ2YWwYAiABKAsyPC5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJbnRl",
+            "cnZhbEID4EECEiIKEGdhaW5fbWlsbGltZXRlcnMYAyABKANCA+BBAkgAiAEB",
+            "QhMKEV9nYWluX21pbGxpbWV0ZXJzIokBChFCYXNhbEVuZXJneUJ1cm5lZBJT",
+            "CghpbnRlcnZhbBgBIAEoCzI8Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVydmFsQgPgQQISFgoEa2Nh",
+            "bBgCIAEoAUID4EECSACIAQFCBwoFX2tjYWwijAEKB0JvZHlGYXQSVAoLc2Ft",
+            "cGxlX3RpbWUYAiABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhIcCgpwZXJjZW50",
+            "YWdlGAMgASgBQgPgQQJIAIgBAUINCgtfcGVyY2VudGFnZSJWChJCb2R5RmF0",
+            "Um9sbHVwVmFsdWUSJAoXYm9keV9mYXRfcGVyY2VudGFnZV9hdmcYASABKAFI",
+            "AIgBAUIaChhfYm9keV9mYXRfcGVyY2VudGFnZV9hdmcivwIKIkNhbG9yaWVz",
+            "SW5IZWFydFJhdGVab25lUm9sbHVwVmFsdWUSigEKHGNhbG9yaWVzX2luX2hl",
+            "YXJ0X3JhdGVfem9uZXMYASADKAsyZC5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5DYWxvcmllc0luSGVhcnRSYXRlWm9uZVJvbGx1cFZh",
+            "bHVlLkNhbG9yaWVzSW5IZWFydFJhdGVab25lVmFsdWUaiwEKHENhbG9yaWVz",
+            "SW5IZWFydFJhdGVab25lVmFsdWUSTwoPaGVhcnRfcmF0ZV96b25lGAEgASgO",
+            "MjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRS",
+            "YXRlWm9uZVR5cGUSEQoEa2NhbBgCIAEoAUgAiAEBQgcKBV9rY2FsIpEDChNE",
+            "YWlseUhlYXJ0UmF0ZVpvbmVzEiQKBGRhdGUYASABKAsyES5nb29nbGUudHlw",
+            "ZS5EYXRlQgPgQQISZQoQaGVhcnRfcmF0ZV96b25lcxgCIAMoCzJGLmdvb2ds",
+            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5SGVhcnRSYXRl",
+            "Wm9uZXMuSGVhcnRSYXRlWm9uZUID4EECGuwBCg1IZWFydFJhdGVab25lElkK",
+            "FGhlYXJ0X3JhdGVfem9uZV90eXBlGAEgASgOMjYuZ29vZ2xlLmRldmljZXNh",
+            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlWm9uZVR5cGVCA+BBAhIm",
+            "ChRtaW5fYmVhdHNfcGVyX21pbnV0ZRgCIAEoA0ID4EECSACIAQESJgoUbWF4",
+            "X2JlYXRzX3Blcl9taW51dGUYAyABKANCA+BBAkgBiAEBQhcKFV9taW5fYmVh",
+            "dHNfcGVyX21pbnV0ZUIXChVfbWF4X2JlYXRzX3Blcl9taW51dGUi0wMKGURh",
+            "aWx5SGVhcnRSYXRlVmFyaWFiaWxpdHkSJAoEZGF0ZRgCIAEoCzIRLmdvb2ds",
+            "ZS50eXBlLkRhdGVCA+BBAhI9CithdmVyYWdlX2hlYXJ0X3JhdGVfdmFyaWFi",
+            "aWxpdHlfbWlsbGlzZWNvbmRzGAQgASgBQgPgQQFIAIgBARI1CiNub25fcmVt",
+            "X2hlYXJ0X3JhdGVfYmVhdHNfcGVyX21pbnV0ZRgFIAEoA0ID4EEBSAGIAQES",
+            "GQoHZW50cm9weRgGIAEoAUID4EEBSAKIAQESVApCZGVlcF9zbGVlcF9yb290",
+            "X21lYW5fc3F1YXJlX29mX3N1Y2Nlc3NpdmVfZGlmZmVyZW5jZXNfbWlsbGlz",
+            "ZWNvbmRzGAcgASgBQgPgQQFIA4gBAUIuCixfYXZlcmFnZV9oZWFydF9yYXRl",
+            "X3ZhcmlhYmlsaXR5X21pbGxpc2Vjb25kc0ImCiRfbm9uX3JlbV9oZWFydF9y",
+            "YXRlX2JlYXRzX3Blcl9taW51dGVCCgoIX2VudHJvcHlCRQpDX2RlZXBfc2xl",
+            "ZXBfcm9vdF9tZWFuX3NxdWFyZV9vZl9zdWNjZXNzaXZlX2RpZmZlcmVuY2Vz",
+            "X21pbGxpc2Vjb25kcyJ5ChREYWlseVJlc3BpcmF0b3J5UmF0ZRIkCgRkYXRl",
+            "GAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EECEiQKEmJyZWF0aHNfcGVy",
+            "X21pbnV0ZRgCIAEoAUID4EECSACIAQFCFQoTX2JyZWF0aHNfcGVyX21pbnV0",
+            "ZSLXAgoVRGFpbHlPeHlnZW5TYXR1cmF0aW9uEiQKBGRhdGUYASABKAsyES5n",
+            "b29nbGUudHlwZS5EYXRlQgPgQQISJAoSYXZlcmFnZV9wZXJjZW50YWdlGAIg",
+            "ASgBQgPgQQJIAIgBARIoChZsb3dlcl9ib3VuZF9wZXJjZW50YWdlGAMgASgB",
+            "QgPgQQJIAYgBARIoChZ1cHBlcl9ib3VuZF9wZXJjZW50YWdlGAQgASgBQgPg",
+            "QQJIAogBARIvCh1zdGFuZGFyZF9kZXZpYXRpb25fcGVyY2VudGFnZRgFIAEo",
+            "AUID4EEBSAOIAQFCFQoTX2F2ZXJhZ2VfcGVyY2VudGFnZUIZChdfbG93ZXJf",
+            "Ym91bmRfcGVyY2VudGFnZUIZChdfdXBwZXJfYm91bmRfcGVyY2VudGFnZUIg",
+            "Ch5fc3RhbmRhcmRfZGV2aWF0aW9uX3BlcmNlbnRhZ2UilAQKFURhaWx5UmVz",
+            "dGluZ0hlYXJ0UmF0ZRIkCgRkYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
+            "ZUID4EECEiIKEGJlYXRzX3Blcl9taW51dGUYBCABKANCA+BBAkgAiAEBEogB",
+            "CiFkYWlseV9yZXN0aW5nX2hlYXJ0X3JhdGVfbWV0YWRhdGEYBSABKAsyWC5n",
             "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseVJlc3Rp",
-            "bmdIZWFydFJhdGUuRGFpbHlSZXN0aW5nSGVhcnRSYXRlTWV0YWRhdGEuQ2Fs",
-            "Y3VsYXRpb25NZXRob2RCA+BBAiJhChFDYWxjdWxhdGlvbk1ldGhvZBIiCh5D",
-            "QUxDVUxBVElPTl9NRVRIT0RfVU5TUEVDSUZJRUQQABIOCgpXSVRIX1NMRUVQ",
-            "EAESGAoUT05MWV9XSVRIX0FXQUtFX0RBVEEQAiLPAQogRGFpbHlTbGVlcFRl",
-            "bXBlcmF0dXJlRGVyaXZhdGlvbnMSJAoEZGF0ZRgBIAEoCzIRLmdvb2dsZS50",
-            "eXBlLkRhdGVCA+BBAhIoChtuaWdodGx5X3RlbXBlcmF0dXJlX2NlbHNpdXMY",
-            "AiABKAFCA+BBAhIpChxiYXNlbGluZV90ZW1wZXJhdHVyZV9jZWxzaXVzGAMg",
-            "ASgBQgPgQQESMAojcmVsYXRpdmVfbmlnaHRseV9zdGRkZXZfMzBkX2NlbHNp",
-            "dXMYBCABKAFCA+BBASLwAgoLRGFpbHlWTzJNYXgSJAoEZGF0ZRgBIAEoCzIR",
-            "Lmdvb2dsZS50eXBlLkRhdGVCA+BBAhIUCgd2bzJfbWF4GAIgASgBQgPgQQIS",
-            "FgoJZXN0aW1hdGVkGAMgASgIQgPgQQESZgoUY2FyZGlvX2ZpdG5lc3NfbGV2",
-            "ZWwYBCABKA4yQy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
-            "NC5EYWlseVZPMk1heC5DYXJkaW9GaXRuZXNzTGV2ZWxCA+BBARIfChJ2bzJf",
-            "bWF4X2NvdmFyaWFuY2UYBSABKAFCA+BBASKDAQoSQ2FyZGlvRml0bmVzc0xl",
-            "dmVsEiQKIENBUkRJT19GSVRORVNTX0xFVkVMX1VOU1BFQ0lGSUVEEAASCAoE",
-            "UE9PUhABEggKBEZBSVIQAhILCgdBVkVSQUdFEAMSCAoER09PRBAEEg0KCVZF",
-            "UllfR09PRBAFEg0KCUVYQ0VMTEVOVBAGInkKCERpc3RhbmNlElMKCGludGVy",
-            "dmFsGAIgASgLMjwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
-            "djQuT2JzZXJ2YXRpb25UaW1lSW50ZXJ2YWxCA+BBAhIYCgttaWxsaW1ldGVy",
-            "cxgDIAEoA0ID4EECIi4KE0Rpc3RhbmNlUm9sbHVwVmFsdWUSFwoPbWlsbGlt",
-            "ZXRlcnNfc3VtGAEgASgDIpIQCghFeGVyY2lzZRJPCghpbnRlcnZhbBgCIAEo",
-            "CzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNlc3Np",
-            "b25UaW1lSW50ZXJ2YWxCA+BBAhJWCg1leGVyY2lzZV90eXBlGAYgASgOMjou",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2Uu",
-            "RXhlcmNpc2VUeXBlQgPgQQISTwoGc3BsaXRzGAggAygLMjouZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2UuU3BsaXRTdW1t",
-            "YXJ5QgPgQQESWQoPZXhlcmNpc2VfZXZlbnRzGA8gAygLMjsuZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2UuRXhlcmNpc2VF",
-            "dmVudEID4EEBElgKD3NwbGl0X3N1bW1hcmllcxgJIAMoCzI6Lmdvb2dsZS5k",
-            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkV4ZXJjaXNlLlNwbGl0U3Vt",
-            "bWFyeUID4EEBElEKD21ldHJpY3Nfc3VtbWFyeRgKIAEoCzIzLmdvb2dsZS5k",
-            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk1ldHJpY3NTdW1tYXJ5QgPg",
-            "QQISXgoRZXhlcmNpc2VfbWV0YWRhdGEYCyABKAsyPi5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5FeGVyY2lzZS5FeGVyY2lzZU1ldGFk",
-            "YXRhQgPgQQESGQoMZGlzcGxheV9uYW1lGAwgASgJQgPgQQISNwoPYWN0aXZl",
-            "X2R1cmF0aW9uGA0gASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPg",
-            "QQESEgoFbm90ZXMYDiABKAlCA+BBARI0Cgt1cGRhdGVfdGltZRgQIAEoCzIa",
-            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtjcmVhdGVfdGlt",
-            "ZRgRIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxqyBAoM",
-            "U3BsaXRTdW1tYXJ5EjMKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQISOAoQc3RhcnRfdXRjX29mZnNldBgCIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECEjEKCGVuZF90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjYKDmVu",
-            "ZF91dGNfb2Zmc2V0GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
-            "QgPgQQISNwoPYWN0aXZlX2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uQgPgQQMSUQoPbWV0cmljc19zdW1tYXJ5GAYgASgLMjMu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuTWV0cmljc1N1",
-            "bW1hcnlCA+BBAhJdCgpzcGxpdF90eXBlGAcgASgOMkQuZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2UuU3BsaXRTdW1tYXJ5",
-            "LlNwbGl0VHlwZUID4EECIl0KCVNwbGl0VHlwZRIaChZTUExJVF9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASCgoGTUFOVUFMEAESDAoIRFVSQVRJT04QAhIMCghESVNU",
-            "QU5DRRADEgwKCENBTE9SSUVTEAQa9wIKDUV4ZXJjaXNlRXZlbnQSMwoKZXZl",
-            "bnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AhI4ChBldmVudF91dGNfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uQgPgQQISbwoTZXhlcmNpc2VfZXZlbnRfdHlwZRgDIAEoDjJN",
-            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkV4ZXJjaXNl",
-            "LkV4ZXJjaXNlRXZlbnQuRXhlcmNpc2VFdmVudFR5cGVCA+BBAiKFAQoRRXhl",
-            "cmNpc2VFdmVudFR5cGUSIwofRVhFUkNJU0VfRVZFTlRfVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEgkKBVNUQVJUEAESCAoEU1RPUBACEgkKBVBBVVNFEAMSCgoGUkVT",
-            "VU1FEAQSDgoKQVVUT19QQVVTRRAFEg8KC0FVVE9fUkVTVU1FEAYaTgoQRXhl",
-            "cmNpc2VNZXRhZGF0YRIkChdwb29sX2xlbmd0aF9taWxsaW1ldGVycxgBIAEo",
-            "A0ID4EEBEhQKB2hhc19ncHMYAiABKAhCA+BBASLQAQoMRXhlcmNpc2VUeXBl",
-            "Eh0KGUVYRVJDSVNFX1RZUEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAES",
-            "CwoHV0FMS0lORxACEgoKBkJJS0lORxADEgwKCFNXSU1NSU5HEAQSCgoGSElL",
-            "SU5HEAUSCAoEWU9HQRAGEgsKB1BJTEFURVMQBxILCgdXT1JLT1VUEAgSCAoE",
-            "SElJVBAJEhEKDVdFSUdIVExJRlRJTkcQChIVChFTVFJFTkdUSF9UUkFJTklO",
-            "RxALEgkKBU9USEVSEAwicQoGRmxvb3JzElMKCGludGVydmFsGAIgASgLMjwu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRp",
-            "b25UaW1lSW50ZXJ2YWxCA+BBAhISCgVjb3VudBgEIAEoA0ID4EECIiYKEUZs",
-            "b29yc1JvbGx1cFZhbHVlEhEKCWNvdW50X3N1bRgBIAEoAyIzChNBbHRpdHVk",
-            "ZVJvbGx1cFZhbHVlEhwKFGdhaW5fbWlsbGltZXRlcnNfc3VtGAEgASgDIo4F",
-            "CglIZWFydFJhdGUSVAoLc2FtcGxlX3RpbWUYAiABKAsyOi5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRp",
-            "bWVCA+BBAhIdChBiZWF0c19wZXJfbWludXRlGAQgASgDQgPgQQISVwoIbWV0",
-            "YWRhdGEYBiABKAsyQC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
-            "aC52NC5IZWFydFJhdGUuSGVhcnRSYXRlTWV0YWRhdGFCA+BBARqyAwoRSGVh",
-            "cnRSYXRlTWV0YWRhdGESawoObW90aW9uX2NvbnRleHQYASABKA4yTi5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5IZWFydFJhdGUuSGVh",
-            "cnRSYXRlTWV0YWRhdGEuTW90aW9uQ29udGV4dEID4EEBEm0KD3NlbnNvcl9s",
-            "b2NhdGlvbhgCIAEoDjJPLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LkhlYXJ0UmF0ZS5IZWFydFJhdGVNZXRhZGF0YS5TZW5zb3JMb2Nh",
-            "dGlvbkID4EEBIkoKDU1vdGlvbkNvbnRleHQSHgoaTU9USU9OX0NPTlRFWFRf",
-            "VU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARINCglTRURFTlRBUlkQAiJ1Cg5T",
-            "ZW5zb3JMb2NhdGlvbhIfChtTRU5TT1JfTE9DQVRJT05fVU5TUEVDSUZJRUQQ",
-            "ABIJCgVDSEVTVBABEgkKBVdSSVNUEAISCgoGRklOR0VSEAMSCAoESEFORBAE",
-            "EgwKCEVBUl9MT0JFEAUSCAoERk9PVBAGIsoBChRIZWFydFJhdGVSb2xsdXBW",
-            "YWx1ZRIhChRiZWF0c19wZXJfbWludXRlX2F2ZxgBIAEoAUgAiAEBEiEKFGJl",
-            "YXRzX3Blcl9taW51dGVfbWF4GAIgASgBSAGIAQESIQoUYmVhdHNfcGVyX21p",
-            "bnV0ZV9taW4YAyABKAFIAogBAUIXChVfYmVhdHNfcGVyX21pbnV0ZV9hdmdC",
-            "FwoVX2JlYXRzX3Blcl9taW51dGVfbWF4QhcKFV9iZWF0c19wZXJfbWludXRl",
-            "X21pbiJMChRSdW5WTzJNYXhSb2xsdXBWYWx1ZRIQCghyYXRlX21pbhgBIAEo",
-            "ARIQCghyYXRlX21heBgCIAEoARIQCghyYXRlX2F2ZxgDIAEoASJ7CglSdW5W",
-            "TzJNYXgSVAoLc2FtcGxlX3RpbWUYASABKAsyOi5nb29nbGUuZGV2aWNlc2Fu",
+            "bmdIZWFydFJhdGUuRGFpbHlSZXN0aW5nSGVhcnRSYXRlTWV0YWRhdGFCA+BB",
+            "ARqQAgodRGFpbHlSZXN0aW5nSGVhcnRSYXRlTWV0YWRhdGESiwEKEmNhbGN1",
+            "bGF0aW9uX21ldGhvZBgBIAEoDjJqLmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
+            "ZXMuaGVhbHRoLnY0LkRhaWx5UmVzdGluZ0hlYXJ0UmF0ZS5EYWlseVJlc3Rp",
+            "bmdIZWFydFJhdGVNZXRhZGF0YS5DYWxjdWxhdGlvbk1ldGhvZEID4EECImEK",
+            "EUNhbGN1bGF0aW9uTWV0aG9kEiIKHkNBTENVTEFUSU9OX01FVEhPRF9VTlNQ",
+            "RUNJRklFRBAAEg4KCldJVEhfU0xFRVAQARIYChRPTkxZX1dJVEhfQVdBS0Vf",
+            "REFUQRACQhMKEV9iZWF0c19wZXJfbWludXRlIscCCiBEYWlseVNsZWVwVGVt",
+            "cGVyYXR1cmVEZXJpdmF0aW9ucxIkCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5",
+            "cGUuRGF0ZUID4EECEi0KG25pZ2h0bHlfdGVtcGVyYXR1cmVfY2Vsc2l1cxgC",
+            "IAEoAUID4EECSACIAQESLgocYmFzZWxpbmVfdGVtcGVyYXR1cmVfY2Vsc2l1",
+            "cxgDIAEoAUID4EEBSAGIAQESNQojcmVsYXRpdmVfbmlnaHRseV9zdGRkZXZf",
+            "MzBkX2NlbHNpdXMYBCABKAFCA+BBAUgCiAEBQh4KHF9uaWdodGx5X3RlbXBl",
+            "cmF0dXJlX2NlbHNpdXNCHwodX2Jhc2VsaW5lX3RlbXBlcmF0dXJlX2NlbHNp",
+            "dXNCJgokX3JlbGF0aXZlX25pZ2h0bHlfc3RkZGV2XzMwZF9jZWxzaXVzIp0D",
+            "CgtEYWlseVZPMk1heBIkCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
+            "ZUID4EECEhkKB3ZvMl9tYXgYAiABKAFCA+BBAkgAiAEBEhYKCWVzdGltYXRl",
+            "ZBgDIAEoCEID4EEBEmYKFGNhcmRpb19maXRuZXNzX2xldmVsGAQgASgOMkMu",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlWTzJN",
+            "YXguQ2FyZGlvRml0bmVzc0xldmVsQgPgQQESJAoSdm8yX21heF9jb3Zhcmlh",
+            "bmNlGAUgASgBQgPgQQFIAYgBASKDAQoSQ2FyZGlvRml0bmVzc0xldmVsEiQK",
+            "IENBUkRJT19GSVRORVNTX0xFVkVMX1VOU1BFQ0lGSUVEEAASCAoEUE9PUhAB",
+            "EggKBEZBSVIQAhILCgdBVkVSQUdFEAMSCAoER09PRBAEEg0KCVZFUllfR09P",
+            "RBAFEg0KCUVYQ0VMTEVOVBAGQgoKCF92bzJfbWF4QhUKE192bzJfbWF4X2Nv",
+            "dmFyaWFuY2UijgEKCERpc3RhbmNlElMKCGludGVydmFsGAIgASgLMjwuZ29v",
+            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25U",
+            "aW1lSW50ZXJ2YWxCA+BBAhIdCgttaWxsaW1ldGVycxgDIAEoA0ID4EECSACI",
+            "AQFCDgoMX21pbGxpbWV0ZXJzIkcKE0Rpc3RhbmNlUm9sbHVwVmFsdWUSHAoP",
+            "bWlsbGltZXRlcnNfc3VtGAEgASgDSACIAQFCEgoQX21pbGxpbWV0ZXJzX3N1",
+            "bSKzEAoIRXhlcmNpc2USTwoIaW50ZXJ2YWwYAiABKAsyOC5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TZXNzaW9uVGltZUludGVydmFs",
+            "QgPgQQISVgoNZXhlcmNpc2VfdHlwZRgGIAEoDjI6Lmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkV4ZXJjaXNlLkV4ZXJjaXNlVHlwZUID",
+            "4EECEk8KBnNwbGl0cxgIIAMoCzI6Lmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
+            "ZXMuaGVhbHRoLnY0LkV4ZXJjaXNlLlNwbGl0U3VtbWFyeUID4EEBElkKD2V4",
+            "ZXJjaXNlX2V2ZW50cxgPIAMoCzI7Lmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
+            "ZXMuaGVhbHRoLnY0LkV4ZXJjaXNlLkV4ZXJjaXNlRXZlbnRCA+BBARJYCg9z",
+            "cGxpdF9zdW1tYXJpZXMYCSADKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5FeGVyY2lzZS5TcGxpdFN1bW1hcnlCA+BBARJRCg9t",
+            "ZXRyaWNzX3N1bW1hcnkYCiABKAsyMy5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5NZXRyaWNzU3VtbWFyeUID4EECEl4KEWV4ZXJjaXNl",
+            "X21ldGFkYXRhGAsgASgLMj4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
+            "ZWFsdGgudjQuRXhlcmNpc2UuRXhlcmNpc2VNZXRhZGF0YUID4EEBEhkKDGRp",
+            "c3BsYXlfbmFtZRgMIAEoCUID4EECEjcKD2FjdGl2ZV9kdXJhdGlvbhgNIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEhIKBW5vdGVzGA4g",
+            "ASgJQgPgQQESNAoLdXBkYXRlX3RpbWUYECABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQMSNAoLY3JlYXRlX3RpbWUYESABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMasgQKDFNwbGl0U3VtbWFyeRIz",
+            "CgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EECEjgKEHN0YXJ0X3V0Y19vZmZzZXQYAiABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25CA+BBAhIxCghlbmRfdGltZRgDIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI2Cg5lbmRfdXRjX29mZnNldBgE",
+            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECEjcKD2FjdGl2",
+            "ZV9kdXJhdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID",
+            "4EEDElEKD21ldHJpY3Nfc3VtbWFyeRgGIAEoCzIzLmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0Lk1ldHJpY3NTdW1tYXJ5QgPgQQISXQoK",
+            "c3BsaXRfdHlwZRgHIAEoDjJELmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0LkV4ZXJjaXNlLlNwbGl0U3VtbWFyeS5TcGxpdFR5cGVCA+BB",
+            "AiJdCglTcGxpdFR5cGUSGgoWU1BMSVRfVFlQRV9VTlNQRUNJRklFRBAAEgoK",
+            "Bk1BTlVBTBABEgwKCERVUkFUSU9OEAISDAoIRElTVEFOQ0UQAxIMCghDQUxP",
+            "UklFUxAEGvcCCg1FeGVyY2lzZUV2ZW50EjMKCmV2ZW50X3RpbWUYASABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISOAoQZXZlbnRfdXRj",
+            "X29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEC",
+            "Em8KE2V4ZXJjaXNlX2V2ZW50X3R5cGUYAyABKA4yTS5nb29nbGUuZGV2aWNl",
+            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5FeGVyY2lzZS5FeGVyY2lzZUV2ZW50",
+            "LkV4ZXJjaXNlRXZlbnRUeXBlQgPgQQIihQEKEUV4ZXJjaXNlRXZlbnRUeXBl",
+            "EiMKH0VYRVJDSVNFX0VWRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVTVEFS",
+            "VBABEggKBFNUT1AQAhIJCgVQQVVTRRADEgoKBlJFU1VNRRAEEg4KCkFVVE9f",
+            "UEFVU0UQBRIPCgtBVVRPX1JFU1VNRRAGGm8KEEV4ZXJjaXNlTWV0YWRhdGES",
+            "KQoXcG9vbF9sZW5ndGhfbWlsbGltZXRlcnMYASABKANCA+BBAUgAiAEBEhQK",
+            "B2hhc19ncHMYAiABKAhCA+BBAUIaChhfcG9vbF9sZW5ndGhfbWlsbGltZXRl",
+            "cnMi0AEKDEV4ZXJjaXNlVHlwZRIdChlFWEVSQ0lTRV9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASCwoHUlVOTklORxABEgsKB1dBTEtJTkcQAhIKCgZCSUtJTkcQAxIM",
+            "CghTV0lNTUlORxAEEgoKBkhJS0lORxAFEggKBFlPR0EQBhILCgdQSUxBVEVT",
+            "EAcSCwoHV09SS09VVBAIEggKBEhJSVQQCRIRCg1XRUlHSFRMSUZUSU5HEAoS",
+            "FQoRU1RSRU5HVEhfVFJBSU5JTkcQCxIJCgVPVEhFUhAMIoABCgZGbG9vcnMS",
+            "UwoIaW50ZXJ2YWwYAiABKAsyPC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
+            "LmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJbnRlcnZhbEID4EECEhcKBWNv",
+            "dW50GAQgASgDQgPgQQJIAIgBAUIICgZfY291bnQiOQoRRmxvb3JzUm9sbHVw",
+            "VmFsdWUSFgoJY291bnRfc3VtGAEgASgDSACIAQFCDAoKX2NvdW50X3N1bSJR",
+            "ChNBbHRpdHVkZVJvbGx1cFZhbHVlEiEKFGdhaW5fbWlsbGltZXRlcnNfc3Vt",
+            "GAEgASgDSACIAQFCFwoVX2dhaW5fbWlsbGltZXRlcnNfc3VtIqgFCglIZWFy",
+            "dFJhdGUSVAoLc2FtcGxlX3RpbWUYAiABKAsyOi5nb29nbGUuZGV2aWNlc2Fu",
             "ZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BB",
-            "AhIYCgtydW5fdm8yX21heBgCIAEoAUID4EECIpICCixIZWFydFJhdGVWYXJp",
-            "YWJpbGl0eVBlcnNvbmFsUmFuZ2VSb2xsdXBWYWx1ZRI8Ci9hdmVyYWdlX2hl",
-            "YXJ0X3JhdGVfdmFyaWFiaWxpdHlfbWlsbGlzZWNvbmRzX21pbhgBIAEoAUgA",
-            "iAEBEjwKL2F2ZXJhZ2VfaGVhcnRfcmF0ZV92YXJpYWJpbGl0eV9taWxsaXNl",
-            "Y29uZHNfbWF4GAIgASgBSAGIAQFCMgowX2F2ZXJhZ2VfaGVhcnRfcmF0ZV92",
-            "YXJpYWJpbGl0eV9taWxsaXNlY29uZHNfbWluQjIKMF9hdmVyYWdlX2hlYXJ0",
-            "X3JhdGVfdmFyaWFiaWxpdHlfbWlsbGlzZWNvbmRzX21heCJ/CgZIZWlnaHQS",
+            "AhIiChBiZWF0c19wZXJfbWludXRlGAQgASgDQgPgQQJIAIgBARJXCghtZXRh",
+            "ZGF0YRgGIAEoCzJALmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0LkhlYXJ0UmF0ZS5IZWFydFJhdGVNZXRhZGF0YUID4EEBGrIDChFIZWFy",
+            "dFJhdGVNZXRhZGF0YRJrCg5tb3Rpb25fY29udGV4dBgBIAEoDjJOLmdvb2ds",
+            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkhlYXJ0UmF0ZS5IZWFy",
+            "dFJhdGVNZXRhZGF0YS5Nb3Rpb25Db250ZXh0QgPgQQESbQoPc2Vuc29yX2xv",
+            "Y2F0aW9uGAIgASgOMk8uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
+            "dGgudjQuSGVhcnRSYXRlLkhlYXJ0UmF0ZU1ldGFkYXRhLlNlbnNvckxvY2F0",
+            "aW9uQgPgQQEiSgoNTW90aW9uQ29udGV4dBIeChpNT1RJT05fQ09OVEVYVF9V",
+            "TlNQRUNJRklFRBAAEgoKBkFDVElWRRABEg0KCVNFREVOVEFSWRACInUKDlNl",
+            "bnNvckxvY2F0aW9uEh8KG1NFTlNPUl9MT0NBVElPTl9VTlNQRUNJRklFRBAA",
+            "EgkKBUNIRVNUEAESCQoFV1JJU1QQAhIKCgZGSU5HRVIQAxIICgRIQU5EEAQS",
+            "DAoIRUFSX0xPQkUQBRIICgRGT09UEAZCEwoRX2JlYXRzX3Blcl9taW51dGUi",
+            "ygEKFEhlYXJ0UmF0ZVJvbGx1cFZhbHVlEiEKFGJlYXRzX3Blcl9taW51dGVf",
+            "YXZnGAEgASgBSACIAQESIQoUYmVhdHNfcGVyX21pbnV0ZV9tYXgYAiABKAFI",
+            "AYgBARIhChRiZWF0c19wZXJfbWludXRlX21pbhgDIAEoAUgCiAEBQhcKFV9i",
+            "ZWF0c19wZXJfbWludXRlX2F2Z0IXChVfYmVhdHNfcGVyX21pbnV0ZV9tYXhC",
+            "FwoVX2JlYXRzX3Blcl9taW51dGVfbWluIoIBChRSdW5WTzJNYXhSb2xsdXBW",
+            "YWx1ZRIVCghyYXRlX21pbhgBIAEoAUgAiAEBEhUKCHJhdGVfbWF4GAIgASgB",
+            "SAGIAQESFQoIcmF0ZV9hdmcYAyABKAFIAogBAUILCglfcmF0ZV9taW5CCwoJ",
+            "X3JhdGVfbWF4QgsKCV9yYXRlX2F2ZyKQAQoJUnVuVk8yTWF4ElQKC3NhbXBs",
+            "ZV90aW1lGAEgASgLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
+            "dGgudjQuT2JzZXJ2YXRpb25TYW1wbGVUaW1lQgPgQQISHQoLcnVuX3ZvMl9t",
+            "YXgYAiABKAFCA+BBAkgAiAEBQg4KDF9ydW5fdm8yX21heCKSAgosSGVhcnRS",
+            "YXRlVmFyaWFiaWxpdHlQZXJzb25hbFJhbmdlUm9sbHVwVmFsdWUSPAovYXZl",
+            "cmFnZV9oZWFydF9yYXRlX3ZhcmlhYmlsaXR5X21pbGxpc2Vjb25kc19taW4Y",
+            "ASABKAFIAIgBARI8Ci9hdmVyYWdlX2hlYXJ0X3JhdGVfdmFyaWFiaWxpdHlf",
+            "bWlsbGlzZWNvbmRzX21heBgCIAEoAUgBiAEBQjIKMF9hdmVyYWdlX2hlYXJ0",
+            "X3JhdGVfdmFyaWFiaWxpdHlfbWlsbGlzZWNvbmRzX21pbkIyCjBfYXZlcmFn",
+            "ZV9oZWFydF9yYXRlX3ZhcmlhYmlsaXR5X21pbGxpc2Vjb25kc19tYXgimwEK",
+            "BkhlaWdodBJUCgtzYW1wbGVfdGltZRgBIAEoCzI6Lmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uU2FtcGxlVGltZUID",
+            "4EECEiQKEmhlaWdodF9taWxsaW1ldGVycxgCIAEoA0ID4EECSACIAQFCFQoT",
+            "X2hlaWdodF9taWxsaW1ldGVycyLKAgoUSGVhcnRSYXRlVmFyaWFiaWxpdHkS",
             "VAoLc2FtcGxlX3RpbWUYASABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhIfChJo",
-            "ZWlnaHRfbWlsbGltZXRlcnMYAiABKANCA+BBAiLgAQoUSGVhcnRSYXRlVmFy",
-            "aWFiaWxpdHkSVAoLc2FtcGxlX3RpbWUYASABKAsyOi5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVC",
-            "A+BBAhJECjdyb290X21lYW5fc3F1YXJlX29mX3N1Y2Nlc3NpdmVfZGlmZmVy",
-            "ZW5jZXNfbWlsbGlzZWNvbmRzGAIgASgBQgPgQQESLAofc3RhbmRhcmRfZGV2",
-            "aWF0aW9uX21pbGxpc2Vjb25kcxgDIAEoAUID4EEBInwKDlZvbHVtZVF1YW50",
-            "aXR5EhgKC21pbGxpbGl0ZXJzGAEgASgBQgPgQQISUAoSdXNlcl9wcm92aWRl",
-            "ZF91bml0GAIgASgOMi8uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuVm9sdW1lVW5pdEID4EEBIrIBCgxIeWRyYXRpb25Mb2cSTwoIaW50",
-            "ZXJ2YWwYASABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
-            "aC52NC5TZXNzaW9uVGltZUludGVydmFsQgPgQQISUQoPYW1vdW50X2NvbnN1",
-            "bWVkGAIgASgLMjMuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
-            "djQuVm9sdW1lUXVhbnRpdHlCA+BBAiKTAgoXSHlkcmF0aW9uTG9nUm9sbHVw",
-            "VmFsdWUSagoPYW1vdW50X2NvbnN1bWVkGAEgASgLMlEuZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSHlkcmF0aW9uTG9nUm9sbHVwVmFs",
-            "dWUuVm9sdW1lUXVhbnRpdHlSb2xsdXAaiwEKFFZvbHVtZVF1YW50aXR5Um9s",
-            "bHVwEhwKD21pbGxpbGl0ZXJzX3N1bRgBIAEoAUID4EECElUKF3VzZXJfcHJv",
-            "dmlkZWRfdW5pdF9sYXN0GAIgASgOMi8uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuVm9sdW1lVW5pdEID4EEBIpgMCg5NZXRyaWNzU3Vt",
-            "bWFyeRIfCg1jYWxvcmllc19rY2FsGAEgASgBQgPgQQFIAIgBARImChRkaXN0",
-            "YW5jZV9taWxsaW1ldGVycxgCIAEoAUID4EEBSAGIAQESFwoFc3RlcHMYAyAB",
-            "KANCA+BBAUgCiAEBEjYKJGF2ZXJhZ2Vfc3BlZWRfbWlsbGltZXRlcnNfcGVy",
-            "X3NlY29uZBgEIAEoAUID4EEBSAOIAQESMAoeYXZlcmFnZV9wYWNlX3NlY29u",
-            "ZHNfcGVyX21ldGVyGAUgASgBQgPgQQFIBIgBARI1CiNhdmVyYWdlX2hlYXJ0",
-            "X3JhdGVfYmVhdHNfcGVyX21pbnV0ZRgGIAEoA0ID4EEBSAWIAQESLAoaZWxl",
-            "dmF0aW9uX2dhaW5fbWlsbGltZXRlcnMYByABKAFCA+BBAUgGiAEBEiUKE2Fj",
-            "dGl2ZV96b25lX21pbnV0ZXMYCSABKANCA+BBAUgHiAEBEh0KC3J1bl92bzJf",
-            "bWF4GAogASgBQgPgQQFICIgBARIkChJ0b3RhbF9zd2ltX2xlbmd0aHMYCyAB",
-            "KAFCA+BBAUgJiAEBEnAKGWhlYXJ0X3JhdGVfem9uZV9kdXJhdGlvbnMYDCAB",
-            "KAsySC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5NZXRy",
-            "aWNzU3VtbWFyeS5UaW1lSW5IZWFydFJhdGVab25lc0ID4EEBEmIKEG1vYmls",
-            "aXR5X21ldHJpY3MYDSABKAsyQy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NC5NZXRyaWNzU3VtbWFyeS5Nb2JpbGl0eU1ldHJpY3NCA+BB",
-            "ARrrAQoUVGltZUluSGVhcnRSYXRlWm9uZXMSMgoKbGlnaHRfdGltZRgBIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjUKDW1vZGVyYXRl",
-            "X3RpbWUYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARI1",
-            "Cg12aWdvcm91c190aW1lGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
-            "aW9uQgPgQQESMQoJcGVha190aW1lGAQgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
-            "LkR1cmF0aW9uQgPgQQEanQMKD01vYmlsaXR5TWV0cmljcxIuChxhdmdfY2Fk",
-            "ZW5jZV9zdGVwc19wZXJfbWludXRlGAEgASgBQgPgQQFIAIgBARIvCh1hdmdf",
-            "c3RyaWRlX2xlbmd0aF9taWxsaW1ldGVycxgCIAEoA0ID4EEBSAGIAQESNgok",
-            "YXZnX3ZlcnRpY2FsX29zY2lsbGF0aW9uX21pbGxpbWV0ZXJzGAMgASgDQgPg",
-            "QQFIAogBARIkChJhdmdfdmVydGljYWxfcmF0aW8YBCABKAFCA+BBAUgDiAEB",
-            "EkgKIGF2Z19ncm91bmRfY29udGFjdF90aW1lX2R1cmF0aW9uGAUgASgLMhku",
-            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQFCHwodX2F2Z19jYWRlbmNl",
-            "X3N0ZXBzX3Blcl9taW51dGVCIAoeX2F2Z19zdHJpZGVfbGVuZ3RoX21pbGxp",
-            "bWV0ZXJzQicKJV9hdmdfdmVydGljYWxfb3NjaWxsYXRpb25fbWlsbGltZXRl",
-            "cnNCFQoTX2F2Z192ZXJ0aWNhbF9yYXRpb0IQCg5fY2Fsb3JpZXNfa2NhbEIX",
-            "ChVfZGlzdGFuY2VfbWlsbGltZXRlcnNCCAoGX3N0ZXBzQicKJV9hdmVyYWdl",
-            "X3NwZWVkX21pbGxpbWV0ZXJzX3Blcl9zZWNvbmRCIQofX2F2ZXJhZ2VfcGFj",
-            "ZV9zZWNvbmRzX3Blcl9tZXRlckImCiRfYXZlcmFnZV9oZWFydF9yYXRlX2Jl",
-            "YXRzX3Blcl9taW51dGVCHQobX2VsZXZhdGlvbl9nYWluX21pbGxpbWV0ZXJz",
-            "QhYKFF9hY3RpdmVfem9uZV9taW51dGVzQg4KDF9ydW5fdm8yX21heEIVChNf",
-            "dG90YWxfc3dpbV9sZW5ndGhzIoEBChBPeHlnZW5TYXR1cmF0aW9uElQKC3Nh",
-            "bXBsZV90aW1lGAEgASgLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjQuT2JzZXJ2YXRpb25TYW1wbGVUaW1lQgPgQQISFwoKcGVyY2Vu",
-            "dGFnZRgCIAEoAUID4EECIqIBCihSZXN0aW5nSGVhcnRSYXRlUGVyc29uYWxS",
-            "YW5nZVJvbGx1cFZhbHVlEiEKFGJlYXRzX3Blcl9taW51dGVfbWluGAEgASgB",
-            "SACIAQESIQoUYmVhdHNfcGVyX21pbnV0ZV9tYXgYAiABKAFIAYgBAUIXChVf",
-            "YmVhdHNfcGVyX21pbnV0ZV9taW5CFwoVX2JlYXRzX3Blcl9taW51dGVfbWF4",
-            "Ip0GChtSZXNwaXJhdG9yeVJhdGVTbGVlcFN1bW1hcnkSVAoLc2FtcGxlX3Rp",
-            "bWUYASABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
-            "NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhKFAQoQZGVlcF9zbGVlcF9z",
-            "dGF0cxgCIAEoCzJmLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
-            "LnY0LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFyeS5SZXNwaXJhdG9yeVJh",
-            "dGVTbGVlcFN1bW1hcnlTdGF0aXN0aWNzQgPgQQEShgEKEWxpZ2h0X3NsZWVw",
-            "X3N0YXRzGAMgASgLMmYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5LlJlc3BpcmF0b3J5",
-            "UmF0ZVNsZWVwU3VtbWFyeVN0YXRpc3RpY3NCA+BBARKEAQoPcmVtX3NsZWVw",
-            "X3N0YXRzGAQgASgLMmYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5LlJlc3BpcmF0b3J5",
-            "UmF0ZVNsZWVwU3VtbWFyeVN0YXRpc3RpY3NCA+BBARKFAQoQZnVsbF9zbGVl",
-            "cF9zdGF0cxgFIAEoCzJmLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFyeS5SZXNwaXJhdG9y",
-            "eVJhdGVTbGVlcFN1bW1hcnlTdGF0aXN0aWNzQgPgQQIahwEKJVJlc3BpcmF0",
-            "b3J5UmF0ZVNsZWVwU3VtbWFyeVN0YXRpc3RpY3MSHwoSYnJlYXRoc19wZXJf",
-            "bWludXRlGAEgASgBQgPgQQISHwoSc3RhbmRhcmRfZGV2aWF0aW9uGAIgASgB",
-            "QgPgQQESHAoPc2lnbmFsX3RvX25vaXNlGAMgASgBQgPgQQEilhMKBVNsZWVw",
-            "Ek8KCGludGVydmFsGAMgASgLMjguZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuU2Vzc2lvblRpbWVJbnRlcnZhbEID4EECEkcKBHR5cGUY",
-            "BCABKA4yNC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5T",
-            "bGVlcC5TbGVlcFR5cGVCA+BBARJKCgZzdGFnZXMYBSADKAsyNS5nb29nbGUu",
-            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TbGVlcC5TbGVlcFN0YWdl",
-            "QgPgQQESXAoTb3V0X29mX2JlZF9zZWdtZW50cxgGIAMoCzI6Lmdvb2dsZS5k",
-            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNsZWVwLk91dE9mQmVkU2Vn",
-            "bWVudEID4EEBEk8KCG1ldGFkYXRhGAggASgLMjguZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuU2xlZXAuU2xlZXBNZXRhZGF0YUID4EEB",
-            "Ek0KB3N1bW1hcnkYCSABKAsyNy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NC5TbGVlcC5TbGVlcFN1bW1hcnlCA+BBAxI0CgtjcmVhdGVf",
-            "dGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
-            "Cgt1cGRhdGVfdGltZRgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXBCA+BBAxqgAwoKU2xlZXBTdGFnZRIzCgpzdGFydF90aW1lGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjgKEHN0YXJ0X3V0Y19v",
-            "ZmZzZXQYBCABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhIx",
-            "CghlbmRfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAhI2Cg5lbmRfdXRjX29mZnNldBgGIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbkID4EECEkwKBHR5cGUYByABKA4yOS5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TbGVlcC5TbGVlcFN0YWdlVHlwZUID",
-            "4EECEjQKC2NyZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xlLnBy",
-            "b3RvYnVmLlRpbWVzdGFtcEID4EEDGusBCg9PdXRPZkJlZFNlZ21lbnQSMwoK",
-            "c3RhcnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAhI4ChBzdGFydF91dGNfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uQgPgQQISMQoIZW5kX3RpbWUYAyABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQISNgoOZW5kX3V0Y19vZmZzZXQYBCAB",
-            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhq+AwoNU2xlZXBN",
-            "ZXRhZGF0YRJgCg1zdGFnZXNfc3RhdHVzGAEgASgOMkQuZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU2xlZXAuU2xlZXBNZXRhZGF0YS5T",
-            "dGFnZXNTdGF0ZUID4EEDEhYKCXByb2Nlc3NlZBgCIAEoCEID4EEDEhAKA25h",
-            "cBgFIAEoCEID4EEDEhwKD21hbnVhbGx5X2VkaXRlZBgGIAEoCEID4EEDEhgK",
-            "C2V4dGVybmFsX2lkGAcgASgJQgPgQQEi6AEKC1N0YWdlc1N0YXRlEhwKGFNU",
-            "QUdFU19TVEFURV9VTlNQRUNJRklFRBAAEhUKEVJFSkVDVEVEX0NPVkVSQUdF",
-            "EAESFAoQUkVKRUNURURfTUFYX0dBUBACEhYKElJFSkVDVEVEX1NUQVJUX0dB",
-            "UBADEhQKEFJFSkVDVEVEX0VORF9HQVAQBBIQCgxSRUpFQ1RFRF9OQVAQBRIT",
-            "Cg9SRUpFQ1RFRF9TRVJWRVIQBhILCgdUSU1FT1VUEAcSDQoJU1VDQ0VFREVE",
-            "EAgSHQoZUFJPQ0VTU0lOR19JTlRFUk5BTF9FUlJPUhAJGrEECgxTbGVlcFN1",
-            "bW1hcnkSKQoXbWludXRlc19pbl9zbGVlcF9wZXJpb2QYASABKANCA+BBA0gA",
-            "iAEBEicKFW1pbnV0ZXNfYWZ0ZXJfd2FrZV91cBgCIAEoA0ID4EEDSAGIAQES",
-            "KAoWbWludXRlc190b19mYWxsX2FzbGVlcBgDIAEoA0ID4EEDSAKIAQESIAoO",
-            "bWludXRlc19hc2xlZXAYBCABKANCA+BBA0gDiAEBEh8KDW1pbnV0ZXNfYXdh",
-            "a2UYBSABKANCA+BBA0gEiAEBEmEKDnN0YWdlc19zdW1tYXJ5GAYgAygLMkQu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU2xlZXAuU2xl",
-            "ZXBTdW1tYXJ5LlN0YWdlU3VtbWFyeUID4EEDGoYBCgxTdGFnZVN1bW1hcnkS",
-            "TAoEdHlwZRgBIAEoDjI5Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LlNsZWVwLlNsZWVwU3RhZ2VUeXBlQgPgQQMSFAoHbWludXRlcxgC",
-            "IAEoA0ID4EEDEhIKBWNvdW50GAMgASgDQgPgQQNCGgoYX21pbnV0ZXNfaW5f",
-            "c2xlZXBfcGVyaW9kQhgKFl9taW51dGVzX2FmdGVyX3dha2VfdXBCGQoXX21p",
-            "bnV0ZXNfdG9fZmFsbF9hc2xlZXBCEQoPX21pbnV0ZXNfYXNsZWVwQhAKDl9t",
-            "aW51dGVzX2F3YWtlIkAKCVNsZWVwVHlwZRIaChZTTEVFUF9UWVBFX1VOU1BF",
-            "Q0lGSUVEEAASCwoHQ0xBU1NJQxABEgoKBlNUQUdFUxACInUKDlNsZWVwU3Rh",
-            "Z2VUeXBlEiAKHFNMRUVQX1NUQUdFX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVB",
-            "V0FLRRABEgkKBUxJR0hUEAISCAoEREVFUBADEgcKA1JFTRAEEgoKBkFTTEVF",
-            "UBAFEgwKCFJFU1RMRVNTEAYicAoFU3RlcHMSUwoIaW50ZXJ2YWwYAiABKAsy",
-            "PC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZh",
-            "dGlvblRpbWVJbnRlcnZhbEID4EECEhIKBWNvdW50GAQgASgDQgPgQQIiJQoQ",
-            "U3RlcHNSb2xsdXBWYWx1ZRIRCgljb3VudF9zdW0YASABKAMi2QIKD1N3aW1M",
-            "ZW5ndGhzRGF0YRJTCghpbnRlcnZhbBgBIAEoCzI8Lmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVydmFs",
-            "QgPgQQISYgoQc3dpbV9zdHJva2VfdHlwZRgCIAEoDjJDLmdvb2dsZS5kZXZp",
-            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlN3aW1MZW5ndGhzRGF0YS5Td2lt",
-            "U3Ryb2tlVHlwZUID4EECEhkKDHN0cm9rZV9jb3VudBgDIAEoA0ID4EECInIK",
-            "DlN3aW1TdHJva2VUeXBlEiAKHFNXSU1fU1RST0tFX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABINCglGUkVFU1RZTEUQARIOCgpCQUNLU1RST0tFEAISEAoMQlJFQVNU",
-            "U1RST0tFEAMSDQoJQlVUVEVSRkxZEAQiNgoaU3dpbUxlbmd0aHNEYXRhUm9s",
-            "bHVwVmFsdWUSGAoQc3Ryb2tlX2NvdW50X3N1bRgBIAEoAyLFAQoTVGltZUlu",
-            "SGVhcnRSYXRlWm9uZRJTCghpbnRlcnZhbBgBIAEoCzI8Lmdvb2dsZS5kZXZp",
-            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVy",
-            "dmFsQgPgQQISWQoUaGVhcnRfcmF0ZV96b25lX3R5cGUYAiABKA4yNi5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5IZWFydFJhdGVab25l",
-            "VHlwZUID4EECIrsCCh5UaW1lSW5IZWFydFJhdGVab25lUm9sbHVwVmFsdWUS",
-            "fgoYdGltZV9pbl9oZWFydF9yYXRlX3pvbmVzGAEgAygLMlwuZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuVGltZUluSGVhcnRSYXRlWm9u",
-            "ZVJvbGx1cFZhbHVlLlRpbWVJbkhlYXJ0UmF0ZVpvbmVWYWx1ZRqYAQoYVGlt",
-            "ZUluSGVhcnRSYXRlWm9uZVZhbHVlEk8KD2hlYXJ0X3JhdGVfem9uZRgBIAEo",
-            "DjI2Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkhlYXJ0",
-            "UmF0ZVpvbmVUeXBlEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uIiwKGFRvdGFsQ2Fsb3JpZXNSb2xsdXBWYWx1ZRIQCghr",
-            "Y2FsX3N1bRgBIAEoASKEBAoGVk8yTWF4ElQKC3NhbXBsZV90aW1lGAEgASgL",
-            "MjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2",
-            "YXRpb25TYW1wbGVUaW1lQgPgQQISFAoHdm8yX21heBgCIAEoAUID4EECEl4K",
-            "Em1lYXN1cmVtZW50X21ldGhvZBgEIAEoDjI9Lmdvb2dsZS5kZXZpY2VzYW5k",
-            "c2VydmljZXMuaGVhbHRoLnY0LlZPMk1heC5NZWFzdXJlbWVudE1ldGhvZEID",
-            "4EEBIq0CChFNZWFzdXJlbWVudE1ldGhvZBIiCh5NRUFTVVJFTUVOVF9NRVRI",
-            "T0RfVU5TUEVDSUZJRUQQABIOCgpGSVRCSVRfUlVOEAESFgoSR09PR0xFX0RF",
-            "TU9HUkFQSElDEAISDwoLQ09PUEVSX1RFU1QQAxIUChBIRUFSVF9SQVRFX1JB",
-            "VElPEAQSEgoOTUVUQUJPTElDX0NBUlQQBRIbChdNVUxUSVNUQUdFX0ZJVE5F",
-            "U1NfVEVTVBAGEhkKFVJPQ0tQT1JUX0ZJVE5FU1NfVEVTVBAHEhAKDE1BWF9F",
-            "WEVSQ0lTRRAIEh8KG1BSRURJQ1RJT05fU1VCX01BWF9FWEVSQ0lTRRAJEhsK",
-            "F1BSRURJQ1RJT05fTk9OX0VYRVJDSVNFEAoSCQoFT1RIRVIQCyKNAQoGV2Vp",
-            "Z2h0ElQKC3NhbXBsZV90aW1lGAIgASgLMjouZ29vZ2xlLmRldmljZXNhbmRz",
+            "Y2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhJJCjdy",
+            "b290X21lYW5fc3F1YXJlX29mX3N1Y2Nlc3NpdmVfZGlmZmVyZW5jZXNfbWls",
+            "bGlzZWNvbmRzGAIgASgBQgPgQQFIAIgBARIxCh9zdGFuZGFyZF9kZXZpYXRp",
+            "b25fbWlsbGlzZWNvbmRzGAMgASgBQgPgQQFIAYgBAUI6Cjhfcm9vdF9tZWFu",
+            "X3NxdWFyZV9vZl9zdWNjZXNzaXZlX2RpZmZlcmVuY2VzX21pbGxpc2Vjb25k",
+            "c0IiCiBfc3RhbmRhcmRfZGV2aWF0aW9uX21pbGxpc2Vjb25kcyKRAQoOVm9s",
+            "dW1lUXVhbnRpdHkSHQoLbWlsbGlsaXRlcnMYASABKAFCA+BBAkgAiAEBElAK",
+            "EnVzZXJfcHJvdmlkZWRfdW5pdBgCIAEoDjIvLmdvb2dsZS5kZXZpY2VzYW5k",
+            "c2VydmljZXMuaGVhbHRoLnY0LlZvbHVtZVVuaXRCA+BBAUIOCgxfbWlsbGls",
+            "aXRlcnMisgEKDEh5ZHJhdGlvbkxvZxJPCghpbnRlcnZhbBgBIAEoCzI4Lmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNlc3Npb25UaW1l",
+            "SW50ZXJ2YWxCA+BBAhJRCg9hbW91bnRfY29uc3VtZWQYAiABKAsyMy5nb29n",
+            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Wb2x1bWVRdWFudGl0",
+            "eUID4EECIqwCChdIeWRyYXRpb25Mb2dSb2xsdXBWYWx1ZRJqCg9hbW91bnRf",
+            "Y29uc3VtZWQYASABKAsyUS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5IeWRyYXRpb25Mb2dSb2xsdXBWYWx1ZS5Wb2x1bWVRdWFudGl0",
+            "eVJvbGx1cBqkAQoUVm9sdW1lUXVhbnRpdHlSb2xsdXASIQoPbWlsbGlsaXRl",
+            "cnNfc3VtGAEgASgBQgPgQQJIAIgBARJVChd1c2VyX3Byb3ZpZGVkX3VuaXRf",
+            "bGFzdBgCIAEoDjIvLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0LlZvbHVtZVVuaXRCA+BBAUISChBfbWlsbGlsaXRlcnNfc3VtIpgMCg5N",
+            "ZXRyaWNzU3VtbWFyeRIfCg1jYWxvcmllc19rY2FsGAEgASgBQgPgQQFIAIgB",
+            "ARImChRkaXN0YW5jZV9taWxsaW1ldGVycxgCIAEoAUID4EEBSAGIAQESFwoF",
+            "c3RlcHMYAyABKANCA+BBAUgCiAEBEjYKJGF2ZXJhZ2Vfc3BlZWRfbWlsbGlt",
+            "ZXRlcnNfcGVyX3NlY29uZBgEIAEoAUID4EEBSAOIAQESMAoeYXZlcmFnZV9w",
+            "YWNlX3NlY29uZHNfcGVyX21ldGVyGAUgASgBQgPgQQFIBIgBARI1CiNhdmVy",
+            "YWdlX2hlYXJ0X3JhdGVfYmVhdHNfcGVyX21pbnV0ZRgGIAEoA0ID4EEBSAWI",
+            "AQESLAoaZWxldmF0aW9uX2dhaW5fbWlsbGltZXRlcnMYByABKAFCA+BBAUgG",
+            "iAEBEiUKE2FjdGl2ZV96b25lX21pbnV0ZXMYCSABKANCA+BBAUgHiAEBEh0K",
+            "C3J1bl92bzJfbWF4GAogASgBQgPgQQFICIgBARIkChJ0b3RhbF9zd2ltX2xl",
+            "bmd0aHMYCyABKAFCA+BBAUgJiAEBEnAKGWhlYXJ0X3JhdGVfem9uZV9kdXJh",
+            "dGlvbnMYDCABKAsySC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
+            "aC52NC5NZXRyaWNzU3VtbWFyeS5UaW1lSW5IZWFydFJhdGVab25lc0ID4EEB",
+            "EmIKEG1vYmlsaXR5X21ldHJpY3MYDSABKAsyQy5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5NZXRyaWNzU3VtbWFyeS5Nb2JpbGl0eU1l",
+            "dHJpY3NCA+BBARrrAQoUVGltZUluSGVhcnRSYXRlWm9uZXMSMgoKbGlnaHRf",
+            "dGltZRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjUK",
+            "DW1vZGVyYXRlX3RpbWUYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
+            "b25CA+BBARI1Cg12aWdvcm91c190aW1lGAMgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uQgPgQQESMQoJcGVha190aW1lGAQgASgLMhkuZ29vZ2xl",
+            "LnByb3RvYnVmLkR1cmF0aW9uQgPgQQEanQMKD01vYmlsaXR5TWV0cmljcxIu",
+            "ChxhdmdfY2FkZW5jZV9zdGVwc19wZXJfbWludXRlGAEgASgBQgPgQQFIAIgB",
+            "ARIvCh1hdmdfc3RyaWRlX2xlbmd0aF9taWxsaW1ldGVycxgCIAEoA0ID4EEB",
+            "SAGIAQESNgokYXZnX3ZlcnRpY2FsX29zY2lsbGF0aW9uX21pbGxpbWV0ZXJz",
+            "GAMgASgDQgPgQQFIAogBARIkChJhdmdfdmVydGljYWxfcmF0aW8YBCABKAFC",
+            "A+BBAUgDiAEBEkgKIGF2Z19ncm91bmRfY29udGFjdF90aW1lX2R1cmF0aW9u",
+            "GAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQFCHwodX2F2",
+            "Z19jYWRlbmNlX3N0ZXBzX3Blcl9taW51dGVCIAoeX2F2Z19zdHJpZGVfbGVu",
+            "Z3RoX21pbGxpbWV0ZXJzQicKJV9hdmdfdmVydGljYWxfb3NjaWxsYXRpb25f",
+            "bWlsbGltZXRlcnNCFQoTX2F2Z192ZXJ0aWNhbF9yYXRpb0IQCg5fY2Fsb3Jp",
+            "ZXNfa2NhbEIXChVfZGlzdGFuY2VfbWlsbGltZXRlcnNCCAoGX3N0ZXBzQicK",
+            "JV9hdmVyYWdlX3NwZWVkX21pbGxpbWV0ZXJzX3Blcl9zZWNvbmRCIQofX2F2",
+            "ZXJhZ2VfcGFjZV9zZWNvbmRzX3Blcl9tZXRlckImCiRfYXZlcmFnZV9oZWFy",
+            "dF9yYXRlX2JlYXRzX3Blcl9taW51dGVCHQobX2VsZXZhdGlvbl9nYWluX21p",
+            "bGxpbWV0ZXJzQhYKFF9hY3RpdmVfem9uZV9taW51dGVzQg4KDF9ydW5fdm8y",
+            "X21heEIVChNfdG90YWxfc3dpbV9sZW5ndGhzIpUBChBPeHlnZW5TYXR1cmF0",
+            "aW9uElQKC3NhbXBsZV90aW1lGAEgASgLMjouZ29vZ2xlLmRldmljZXNhbmRz",
             "ZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25TYW1wbGVUaW1lQgPgQQIS",
-            "GQoMd2VpZ2h0X2dyYW1zGAMgASgBQgPgQQISEgoFbm90ZXMYBCABKAlCA+BB",
-            "ASItChFXZWlnaHRSb2xsdXBWYWx1ZRIYChB3ZWlnaHRfZ3JhbXNfYXZnGAEg",
-            "ASgBImYKD1NlZGVudGFyeVBlcmlvZBJTCghpbnRlcnZhbBgBIAEoCzI8Lmdv",
-            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9u",
-            "VGltZUludGVydmFsQgPgQQIiTQoaU2VkZW50YXJ5UGVyaW9kUm9sbHVwVmFs",
-            "dWUSLwoMZHVyYXRpb25fc3VtGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uKmoKEUhlYXJ0UmF0ZVpvbmVUeXBlEiQKIEhFQVJUX1JBVEVfWk9O",
-            "RV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFTElHSFQQARIMCghNT0RFUkFURRAC",
-            "EgwKCFZJR09ST1VTEAMSCAoEUEVBSxAEKrABCgpWb2x1bWVVbml0EhsKF1ZP",
-            "TFVNRV9VTklUX1VOU1BFQ0lGSUVEEAASEAoMQ1VQX0lNUEVSSUFMEAESCgoG",
-            "Q1VQX1VTEAISGAoURkxVSURfT1VOQ0VfSU1QRVJJQUwQAxISCg5GTFVJRF9P",
-            "VU5DRV9VUxAEEgkKBUxJVEVSEAUSDgoKTUlMTElMSVRFUhAGEhEKDVBJTlRf",
-            "SU1QRVJJQUwQBxILCgdQSU5UX1VTEAhChAIKJ2NvbS5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NEIORGF0YU1vZGVsUHJvdG9QAVpSZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9kZXZpY2VzYW5k",
-            "c2VydmljZXMvaGVhbHRoL2FwaXY0bWFpbjtoZWFsdGhwYqoCI0dvb2dsZS5E",
-            "ZXZpY2VzQW5kU2VydmljZXMuSGVhbHRoLlY0ygIjR29vZ2xlXERldmljZXNB",
-            "bmRTZXJ2aWNlc1xIZWFsdGhcVjTqAiZHb29nbGU6OkRldmljZXNBbmRTZXJ2",
-            "aWNlczo6SGVhbHRoOjpWNGIGcHJvdG8z"));
+            "HAoKcGVyY2VudGFnZRgCIAEoAUID4EECSACIAQFCDQoLX3BlcmNlbnRhZ2Ui",
+            "ogEKKFJlc3RpbmdIZWFydFJhdGVQZXJzb25hbFJhbmdlUm9sbHVwVmFsdWUS",
+            "IQoUYmVhdHNfcGVyX21pbnV0ZV9taW4YASABKAFIAIgBARIhChRiZWF0c19w",
+            "ZXJfbWludXRlX21heBgCIAEoAUgBiAEBQhcKFV9iZWF0c19wZXJfbWludXRl",
+            "X21pbkIXChVfYmVhdHNfcGVyX21pbnV0ZV9tYXgi7gYKG1Jlc3BpcmF0b3J5",
+            "UmF0ZVNsZWVwU3VtbWFyeRJUCgtzYW1wbGVfdGltZRgBIAEoCzI6Lmdvb2ds",
+            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uU2Ft",
+            "cGxlVGltZUID4EECEoUBChBkZWVwX3NsZWVwX3N0YXRzGAIgASgLMmYuZ29v",
+            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUmVzcGlyYXRvcnlS",
+            "YXRlU2xlZXBTdW1tYXJ5LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFyeVN0",
+            "YXRpc3RpY3NCA+BBARKGAQoRbGlnaHRfc2xlZXBfc3RhdHMYAyABKAsyZi5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5SZXNwaXJhdG9y",
+            "eVJhdGVTbGVlcFN1bW1hcnkuUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5",
+            "U3RhdGlzdGljc0ID4EEBEoQBCg9yZW1fc2xlZXBfc3RhdHMYBCABKAsyZi5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5SZXNwaXJhdG9y",
+            "eVJhdGVTbGVlcFN1bW1hcnkuUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5",
+            "U3RhdGlzdGljc0ID4EEBEoUBChBmdWxsX3NsZWVwX3N0YXRzGAUgASgLMmYu",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUmVzcGlyYXRv",
+            "cnlSYXRlU2xlZXBTdW1tYXJ5LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFy",
+            "eVN0YXRpc3RpY3NCA+BBAhrYAQolUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1t",
+            "YXJ5U3RhdGlzdGljcxIkChJicmVhdGhzX3Blcl9taW51dGUYASABKAFCA+BB",
+            "AkgAiAEBEiQKEnN0YW5kYXJkX2RldmlhdGlvbhgCIAEoAUID4EEBSAGIAQES",
+            "IQoPc2lnbmFsX3RvX25vaXNlGAMgASgBQgPgQQFIAogBAUIVChNfYnJlYXRo",
+            "c19wZXJfbWludXRlQhUKE19zdGFuZGFyZF9kZXZpYXRpb25CEgoQX3NpZ25h",
+            "bF90b19ub2lzZSK2EwoFU2xlZXASTwoIaW50ZXJ2YWwYAyABKAsyOC5nb29n",
+            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TZXNzaW9uVGltZUlu",
+            "dGVydmFsQgPgQQISRwoEdHlwZRgEIAEoDjI0Lmdvb2dsZS5kZXZpY2VzYW5k",
+            "c2VydmljZXMuaGVhbHRoLnY0LlNsZWVwLlNsZWVwVHlwZUID4EEBEkoKBnN0",
+            "YWdlcxgFIAMoCzI1Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0LlNsZWVwLlNsZWVwU3RhZ2VCA+BBARJcChNvdXRfb2ZfYmVkX3NlZ21l",
+            "bnRzGAYgAygLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuU2xlZXAuT3V0T2ZCZWRTZWdtZW50QgPgQQESTwoIbWV0YWRhdGEYCCAB",
+            "KAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TbGVl",
+            "cC5TbGVlcE1ldGFkYXRhQgPgQQESTQoHc3VtbWFyeRgJIAEoCzI3Lmdvb2ds",
+            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNsZWVwLlNsZWVwU3Vt",
+            "bWFyeUID4EEDEjQKC2NyZWF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAsgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGqADCgpTbGVlcFN0YWdlEjMK",
+            "CnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQISOAoQc3RhcnRfdXRjX29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkID4EECEjEKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjYKDmVuZF91dGNfb2Zmc2V0GAYg",
+            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQISTAoEdHlwZRgH",
+            "IAEoDjI5Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNs",
+            "ZWVwLlNsZWVwU3RhZ2VUeXBlQgPgQQISNAoLY3JlYXRlX3RpbWUYCCABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
+            "bWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMa6wEK",
+            "D091dE9mQmVkU2VnbWVudBIzCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjgKEHN0YXJ0X3V0Y19vZmZzZXQY",
+            "AiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhIxCghlbmRf",
+            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI2",
+            "Cg5lbmRfdXRjX29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
+            "dGlvbkID4EECGr4DCg1TbGVlcE1ldGFkYXRhEmAKDXN0YWdlc19zdGF0dXMY",
+            "ASABKA4yRC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5T",
+            "bGVlcC5TbGVlcE1ldGFkYXRhLlN0YWdlc1N0YXRlQgPgQQMSFgoJcHJvY2Vz",
+            "c2VkGAIgASgIQgPgQQMSEAoDbmFwGAUgASgIQgPgQQMSHAoPbWFudWFsbHlf",
+            "ZWRpdGVkGAYgASgIQgPgQQMSGAoLZXh0ZXJuYWxfaWQYByABKAlCA+BBASLo",
+            "AQoLU3RhZ2VzU3RhdGUSHAoYU1RBR0VTX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
+            "FQoRUkVKRUNURURfQ09WRVJBR0UQARIUChBSRUpFQ1RFRF9NQVhfR0FQEAIS",
+            "FgoSUkVKRUNURURfU1RBUlRfR0FQEAMSFAoQUkVKRUNURURfRU5EX0dBUBAE",
+            "EhAKDFJFSkVDVEVEX05BUBAFEhMKD1JFSkVDVEVEX1NFUlZFUhAGEgsKB1RJ",
+            "TUVPVVQQBxINCglTVUNDRUVERUQQCBIdChlQUk9DRVNTSU5HX0lOVEVSTkFM",
+            "X0VSUk9SEAka0QQKDFNsZWVwU3VtbWFyeRIpChdtaW51dGVzX2luX3NsZWVw",
+            "X3BlcmlvZBgBIAEoA0ID4EEDSACIAQESJwoVbWludXRlc19hZnRlcl93YWtl",
+            "X3VwGAIgASgDQgPgQQNIAYgBARIoChZtaW51dGVzX3RvX2ZhbGxfYXNsZWVw",
+            "GAMgASgDQgPgQQNIAogBARIgCg5taW51dGVzX2FzbGVlcBgEIAEoA0ID4EED",
+            "SAOIAQESHwoNbWludXRlc19hd2FrZRgFIAEoA0ID4EEDSASIAQESYQoOc3Rh",
+            "Z2VzX3N1bW1hcnkYBiADKAsyRC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
+            "LmhlYWx0aC52NC5TbGVlcC5TbGVlcFN1bW1hcnkuU3RhZ2VTdW1tYXJ5QgPg",
+            "QQMapgEKDFN0YWdlU3VtbWFyeRJMCgR0eXBlGAEgASgOMjkuZ29vZ2xlLmRl",
+            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU2xlZXAuU2xlZXBTdGFnZVR5",
+            "cGVCA+BBAxIZCgdtaW51dGVzGAIgASgDQgPgQQNIAIgBARIXCgVjb3VudBgD",
+            "IAEoA0ID4EEDSAGIAQFCCgoIX21pbnV0ZXNCCAoGX2NvdW50QhoKGF9taW51",
+            "dGVzX2luX3NsZWVwX3BlcmlvZEIYChZfbWludXRlc19hZnRlcl93YWtlX3Vw",
+            "QhkKF19taW51dGVzX3RvX2ZhbGxfYXNsZWVwQhEKD19taW51dGVzX2FzbGVl",
+            "cEIQCg5fbWludXRlc19hd2FrZSJACglTbGVlcFR5cGUSGgoWU0xFRVBfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEgsKB0NMQVNTSUMQARIKCgZTVEFHRVMQAiJ1Cg5T",
+            "bGVlcFN0YWdlVHlwZRIgChxTTEVFUF9TVEFHRV9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASCQoFQVdBS0UQARIJCgVMSUdIVBACEggKBERFRVAQAxIHCgNSRU0QBBIK",
+            "CgZBU0xFRVAQBRIMCghSRVNUTEVTUxAGIn8KBVN0ZXBzElMKCGludGVydmFs",
+            "GAIgASgLMjwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "T2JzZXJ2YXRpb25UaW1lSW50ZXJ2YWxCA+BBAhIXCgVjb3VudBgEIAEoA0ID",
+            "4EECSACIAQFCCAoGX2NvdW50IjgKEFN0ZXBzUm9sbHVwVmFsdWUSFgoJY291",
+            "bnRfc3VtGAEgASgDSACIAQFCDAoKX2NvdW50X3N1bSLvAgoPU3dpbUxlbmd0",
+            "aHNEYXRhElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xlLmRldmljZXNhbmRz",
+            "ZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1lSW50ZXJ2YWxCA+BB",
+            "AhJiChBzd2ltX3N0cm9rZV90eXBlGAIgASgOMkMuZ29vZ2xlLmRldmljZXNh",
+            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuU3dpbUxlbmd0aHNEYXRhLlN3aW1TdHJv",
+            "a2VUeXBlQgPgQQISHgoMc3Ryb2tlX2NvdW50GAMgASgDQgPgQQJIAIgBASJy",
+            "Cg5Td2ltU3Ryb2tlVHlwZRIgChxTV0lNX1NUUk9LRV9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDQoJRlJFRVNUWUxFEAESDgoKQkFDS1NUUk9LRRACEhAKDEJSRUFT",
+            "VFNUUk9LRRADEg0KCUJVVFRFUkZMWRAEQg8KDV9zdHJva2VfY291bnQiUAoa",
+            "U3dpbUxlbmd0aHNEYXRhUm9sbHVwVmFsdWUSHQoQc3Ryb2tlX2NvdW50X3N1",
+            "bRgBIAEoA0gAiAEBQhMKEV9zdHJva2VfY291bnRfc3VtIsUBChNUaW1lSW5I",
+            "ZWFydFJhdGVab25lElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1lSW50ZXJ2",
+            "YWxCA+BBAhJZChRoZWFydF9yYXRlX3pvbmVfdHlwZRgCIAEoDjI2Lmdvb2ds",
+            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkhlYXJ0UmF0ZVpvbmVU",
+            "eXBlQgPgQQIiuwIKHlRpbWVJbkhlYXJ0UmF0ZVpvbmVSb2xsdXBWYWx1ZRJ+",
+            "Chh0aW1lX2luX2hlYXJ0X3JhdGVfem9uZXMYASADKAsyXC5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5UaW1lSW5IZWFydFJhdGVab25l",
+            "Um9sbHVwVmFsdWUuVGltZUluSGVhcnRSYXRlWm9uZVZhbHVlGpgBChhUaW1l",
+            "SW5IZWFydFJhdGVab25lVmFsdWUSTwoPaGVhcnRfcmF0ZV96b25lGAEgASgO",
+            "MjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRS",
+            "YXRlWm9uZVR5cGUSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9i",
+            "dWYuRHVyYXRpb24iPgoYVG90YWxDYWxvcmllc1JvbGx1cFZhbHVlEhUKCGtj",
+            "YWxfc3VtGAEgASgBSACIAQFCCwoJX2tjYWxfc3VtIpUECgZWTzJNYXgSVAoL",
+            "c2FtcGxlX3RpbWUYASABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
+            "LmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhIZCgd2bzJf",
+            "bWF4GAIgASgBQgPgQQJIAIgBARJeChJtZWFzdXJlbWVudF9tZXRob2QYBCAB",
+            "KA4yPS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5WTzJN",
+            "YXguTWVhc3VyZW1lbnRNZXRob2RCA+BBASKtAgoRTWVhc3VyZW1lbnRNZXRo",
+            "b2QSIgoeTUVBU1VSRU1FTlRfTUVUSE9EX1VOU1BFQ0lGSUVEEAASDgoKRklU",
+            "QklUX1JVThABEhYKEkdPT0dMRV9ERU1PR1JBUEhJQxACEg8KC0NPT1BFUl9U",
+            "RVNUEAMSFAoQSEVBUlRfUkFURV9SQVRJTxAEEhIKDk1FVEFCT0xJQ19DQVJU",
+            "EAUSGwoXTVVMVElTVEFHRV9GSVRORVNTX1RFU1QQBhIZChVST0NLUE9SVF9G",
+            "SVRORVNTX1RFU1QQBxIQCgxNQVhfRVhFUkNJU0UQCBIfChtQUkVESUNUSU9O",
+            "X1NVQl9NQVhfRVhFUkNJU0UQCRIbChdQUkVESUNUSU9OX05PTl9FWEVSQ0lT",
+            "RRAKEgkKBU9USEVSEAtCCgoIX3ZvMl9tYXgiowEKBldlaWdodBJUCgtzYW1w",
+            "bGVfdGltZRgCIAEoCzI6Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0Lk9ic2VydmF0aW9uU2FtcGxlVGltZUID4EECEh4KDHdlaWdodF9n",
+            "cmFtcxgDIAEoAUID4EECSACIAQESEgoFbm90ZXMYBCABKAlCA+BBAUIPCg1f",
+            "d2VpZ2h0X2dyYW1zIkcKEVdlaWdodFJvbGx1cFZhbHVlEh0KEHdlaWdodF9n",
+            "cmFtc19hdmcYASABKAFIAIgBAUITChFfd2VpZ2h0X2dyYW1zX2F2ZyJmCg9T",
+            "ZWRlbnRhcnlQZXJpb2QSUwoIaW50ZXJ2YWwYASABKAsyPC5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJbnRl",
+            "cnZhbEID4EECIk0KGlNlZGVudGFyeVBlcmlvZFJvbGx1cFZhbHVlEi8KDGR1",
+            "cmF0aW9uX3N1bRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbipq",
+            "ChFIZWFydFJhdGVab25lVHlwZRIkCiBIRUFSVF9SQVRFX1pPTkVfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEgkKBUxJR0hUEAESDAoITU9ERVJBVEUQAhIMCghWSUdP",
+            "Uk9VUxADEggKBFBFQUsQBCqwAQoKVm9sdW1lVW5pdBIbChdWT0xVTUVfVU5J",
+            "VF9VTlNQRUNJRklFRBAAEhAKDENVUF9JTVBFUklBTBABEgoKBkNVUF9VUxAC",
+            "EhgKFEZMVUlEX09VTkNFX0lNUEVSSUFMEAMSEgoORkxVSURfT1VOQ0VfVVMQ",
+            "BBIJCgVMSVRFUhAFEg4KCk1JTExJTElURVIQBhIRCg1QSU5UX0lNUEVSSUFM",
+            "EAcSCwoHUElOVF9VUxAIQoQCCidjb20uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjRCDkRhdGFNb2RlbFByb3RvUAFaUmdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2aWNlc2FuZHNlcnZpY2Vz",
+            "L2hlYWx0aC9hcGl2NG1haW47aGVhbHRocGKqAiNHb29nbGUuRGV2aWNlc0Fu",
+            "ZFNlcnZpY2VzLkhlYWx0aC5WNMoCI0dvb2dsZVxEZXZpY2VzQW5kU2Vydmlj",
+            "ZXNcSGVhbHRoXFY06gImR29vZ2xlOjpEZXZpY2VzQW5kU2VydmljZXM6Okhl",
+            "YWx0aDo6VjRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataCoordinatesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.DevicesAndServices.Health.V4.HeartRateZoneType), typeof(global::Google.DevicesAndServices.Health.V4.VolumeUnit), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes), global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Parser, new[]{ "Interval", "HeartRateZone", "ActiveZoneMinutes_" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Types.HeartRateZone) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutesRollupValue), global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutesRollupValue.Parser, new[]{ "SumInCardioHeartZone", "SumInPeakHeartZone", "SumInFatBurnHeartZone" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes), global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Parser, new[]{ "Interval", "ActiveMinutesByActivityLevel" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActiveMinutesByActivityLevel), global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActiveMinutesByActivityLevel.Parser, new[]{ "ActivityLevel", "ActiveMinutes" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutesRollupValue), global::Google.DevicesAndServices.Health.V4.ActiveMinutesRollupValue.Parser, new[]{ "ActiveMinutesRollupByActivityLevel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutesRollupValue.Types.ActiveMinutesRollupByActivityLevel), global::Google.DevicesAndServices.Health.V4.ActiveMinutesRollupValue.Types.ActiveMinutesRollupByActivityLevel.Parser, new[]{ "ActivityLevel", "ActiveMinutesSum" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes), global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Parser, new[]{ "Interval", "HeartRateZone", "ActiveZoneMinutes_" }, new[]{ "ActiveZoneMinutes" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Types.HeartRateZone) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutesRollupValue), global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutesRollupValue.Parser, new[]{ "SumInCardioHeartZone", "SumInPeakHeartZone", "SumInFatBurnHeartZone" }, new[]{ "SumInCardioHeartZone", "SumInPeakHeartZone", "SumInFatBurnHeartZone" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes), global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Parser, new[]{ "Interval", "ActiveMinutesByActivityLevel" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActiveMinutesByActivityLevel), global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActiveMinutesByActivityLevel.Parser, new[]{ "ActivityLevel", "ActiveMinutes" }, new[]{ "ActiveMinutes" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutesRollupValue), global::Google.DevicesAndServices.Health.V4.ActiveMinutesRollupValue.Parser, new[]{ "ActiveMinutesRollupByActivityLevel" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutesRollupValue.Types.ActiveMinutesRollupByActivityLevel), global::Google.DevicesAndServices.Health.V4.ActiveMinutesRollupValue.Types.ActiveMinutesRollupByActivityLevel.Parser, new[]{ "ActivityLevel", "ActiveMinutesSum" }, new[]{ "ActiveMinutesSum" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActivityLevel), global::Google.DevicesAndServices.Health.V4.ActivityLevel.Parser, new[]{ "Interval", "ActivityLevelType" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.ActivityLevel.Types.ActivityLevelType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActivityLevelRollupValue), global::Google.DevicesAndServices.Health.V4.ActivityLevelRollupValue.Parser, new[]{ "ActivityLevelRollupsByActivityLevelType" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActivityLevelRollupValue.Types.ActivityLevelRollupByActivityLevelType), global::Google.DevicesAndServices.Health.V4.ActivityLevelRollupValue.Types.ActivityLevelRollupByActivityLevelType.Parser, new[]{ "ActivityLevelType", "TotalDuration" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Altitude), global::Google.DevicesAndServices.Health.V4.Altitude.Parser, new[]{ "Interval", "GainMillimeters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BasalEnergyBurned), global::Google.DevicesAndServices.Health.V4.BasalEnergyBurned.Parser, new[]{ "Interval", "Kcal" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BodyFat), global::Google.DevicesAndServices.Health.V4.BodyFat.Parser, new[]{ "SampleTime", "Percentage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BodyFatRollupValue), global::Google.DevicesAndServices.Health.V4.BodyFatRollupValue.Parser, new[]{ "BodyFatPercentageAvg" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue), global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Parser, new[]{ "CaloriesInHeartRateZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Types.CaloriesInHeartRateZoneValue), global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Types.CaloriesInHeartRateZoneValue.Parser, new[]{ "HeartRateZone", "Kcal" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones), global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Parser, new[]{ "Date", "HeartRateZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Types.HeartRateZone), global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Types.HeartRateZone.Parser, new[]{ "HeartRateZoneType", "MinBeatsPerMinute", "MaxBeatsPerMinute" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Altitude), global::Google.DevicesAndServices.Health.V4.Altitude.Parser, new[]{ "Interval", "GainMillimeters" }, new[]{ "GainMillimeters" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BasalEnergyBurned), global::Google.DevicesAndServices.Health.V4.BasalEnergyBurned.Parser, new[]{ "Interval", "Kcal" }, new[]{ "Kcal" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BodyFat), global::Google.DevicesAndServices.Health.V4.BodyFat.Parser, new[]{ "SampleTime", "Percentage" }, new[]{ "Percentage" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BodyFatRollupValue), global::Google.DevicesAndServices.Health.V4.BodyFatRollupValue.Parser, new[]{ "BodyFatPercentageAvg" }, new[]{ "BodyFatPercentageAvg" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue), global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Parser, new[]{ "CaloriesInHeartRateZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Types.CaloriesInHeartRateZoneValue), global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Types.CaloriesInHeartRateZoneValue.Parser, new[]{ "HeartRateZone", "Kcal" }, new[]{ "Kcal" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones), global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Parser, new[]{ "Date", "HeartRateZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Types.HeartRateZone), global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Types.HeartRateZone.Parser, new[]{ "HeartRateZoneType", "MinBeatsPerMinute", "MaxBeatsPerMinute" }, new[]{ "MinBeatsPerMinute", "MaxBeatsPerMinute" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyHeartRateVariability), global::Google.DevicesAndServices.Health.V4.DailyHeartRateVariability.Parser, new[]{ "Date", "AverageHeartRateVariabilityMilliseconds", "NonRemHeartRateBeatsPerMinute", "Entropy", "DeepSleepRootMeanSquareOfSuccessiveDifferencesMilliseconds" }, new[]{ "AverageHeartRateVariabilityMilliseconds", "NonRemHeartRateBeatsPerMinute", "Entropy", "DeepSleepRootMeanSquareOfSuccessiveDifferencesMilliseconds" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRespiratoryRate), global::Google.DevicesAndServices.Health.V4.DailyRespiratoryRate.Parser, new[]{ "Date", "BreathsPerMinute" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyOxygenSaturation), global::Google.DevicesAndServices.Health.V4.DailyOxygenSaturation.Parser, new[]{ "Date", "AveragePercentage", "LowerBoundPercentage", "UpperBoundPercentage", "StandardDeviationPercentage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate), global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate.Parser, new[]{ "Date", "BeatsPerMinute", "DailyRestingHeartRateMetadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate.Types.DailyRestingHeartRateMetadata), global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate.Types.DailyRestingHeartRateMetadata.Parser, new[]{ "CalculationMethod" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate.Types.DailyRestingHeartRateMetadata.Types.CalculationMethod) }, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailySleepTemperatureDerivations), global::Google.DevicesAndServices.Health.V4.DailySleepTemperatureDerivations.Parser, new[]{ "Date", "NightlyTemperatureCelsius", "BaselineTemperatureCelsius", "RelativeNightlyStddev30DCelsius" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyVO2Max), global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Parser, new[]{ "Date", "Vo2Max", "Estimated", "CardioFitnessLevel", "Vo2MaxCovariance" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Types.CardioFitnessLevel) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Distance), global::Google.DevicesAndServices.Health.V4.Distance.Parser, new[]{ "Interval", "Millimeters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DistanceRollupValue), global::Google.DevicesAndServices.Health.V4.DistanceRollupValue.Parser, new[]{ "MillimetersSum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRespiratoryRate), global::Google.DevicesAndServices.Health.V4.DailyRespiratoryRate.Parser, new[]{ "Date", "BreathsPerMinute" }, new[]{ "BreathsPerMinute" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyOxygenSaturation), global::Google.DevicesAndServices.Health.V4.DailyOxygenSaturation.Parser, new[]{ "Date", "AveragePercentage", "LowerBoundPercentage", "UpperBoundPercentage", "StandardDeviationPercentage" }, new[]{ "AveragePercentage", "LowerBoundPercentage", "UpperBoundPercentage", "StandardDeviationPercentage" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate), global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate.Parser, new[]{ "Date", "BeatsPerMinute", "DailyRestingHeartRateMetadata" }, new[]{ "BeatsPerMinute" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate.Types.DailyRestingHeartRateMetadata), global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate.Types.DailyRestingHeartRateMetadata.Parser, new[]{ "CalculationMethod" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.DailyRestingHeartRate.Types.DailyRestingHeartRateMetadata.Types.CalculationMethod) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailySleepTemperatureDerivations), global::Google.DevicesAndServices.Health.V4.DailySleepTemperatureDerivations.Parser, new[]{ "Date", "NightlyTemperatureCelsius", "BaselineTemperatureCelsius", "RelativeNightlyStddev30DCelsius" }, new[]{ "NightlyTemperatureCelsius", "BaselineTemperatureCelsius", "RelativeNightlyStddev30DCelsius" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyVO2Max), global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Parser, new[]{ "Date", "Vo2Max", "Estimated", "CardioFitnessLevel", "Vo2MaxCovariance" }, new[]{ "Vo2Max", "Vo2MaxCovariance" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Types.CardioFitnessLevel) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Distance), global::Google.DevicesAndServices.Health.V4.Distance.Parser, new[]{ "Interval", "Millimeters" }, new[]{ "Millimeters" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DistanceRollupValue), global::Google.DevicesAndServices.Health.V4.DistanceRollupValue.Parser, new[]{ "MillimetersSum" }, new[]{ "MillimetersSum" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise), global::Google.DevicesAndServices.Health.V4.Exercise.Parser, new[]{ "Interval", "ExerciseType", "Splits", "ExerciseEvents", "SplitSummaries", "MetricsSummary", "ExerciseMetadata", "DisplayName", "ActiveDuration", "Notes", "UpdateTime", "CreateTime" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.SplitSummary), global::Google.DevicesAndServices.Health.V4.Exercise.Types.SplitSummary.Parser, new[]{ "StartTime", "StartUtcOffset", "EndTime", "EndUtcOffset", "ActiveDuration", "MetricsSummary", "SplitType" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.SplitSummary.Types.SplitType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseEvent), global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseEvent.Parser, new[]{ "EventTime", "EventUtcOffset", "ExerciseEventType" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseEvent.Types.ExerciseEventType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseMetadata), global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseMetadata.Parser, new[]{ "PoolLengthMillimeters", "HasGps" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Floors), global::Google.DevicesAndServices.Health.V4.Floors.Parser, new[]{ "Interval", "Count" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.FloorsRollupValue), global::Google.DevicesAndServices.Health.V4.FloorsRollupValue.Parser, new[]{ "CountSum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.AltitudeRollupValue), global::Google.DevicesAndServices.Health.V4.AltitudeRollupValue.Parser, new[]{ "GainMillimetersSum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HeartRate), global::Google.DevicesAndServices.Health.V4.HeartRate.Parser, new[]{ "SampleTime", "BeatsPerMinute", "Metadata" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HeartRate.Types.HeartRateMetadata), global::Google.DevicesAndServices.Health.V4.HeartRate.Types.HeartRateMetadata.Parser, new[]{ "MotionContext", "SensorLocation" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.HeartRate.Types.HeartRateMetadata.Types.MotionContext), typeof(global::Google.DevicesAndServices.Health.V4.HeartRate.Types.HeartRateMetadata.Types.SensorLocation) }, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseMetadata), global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseMetadata.Parser, new[]{ "PoolLengthMillimeters", "HasGps" }, new[]{ "PoolLengthMillimeters" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Floors), global::Google.DevicesAndServices.Health.V4.Floors.Parser, new[]{ "Interval", "Count" }, new[]{ "Count" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.FloorsRollupValue), global::Google.DevicesAndServices.Health.V4.FloorsRollupValue.Parser, new[]{ "CountSum" }, new[]{ "CountSum" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.AltitudeRollupValue), global::Google.DevicesAndServices.Health.V4.AltitudeRollupValue.Parser, new[]{ "GainMillimetersSum" }, new[]{ "GainMillimetersSum" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HeartRate), global::Google.DevicesAndServices.Health.V4.HeartRate.Parser, new[]{ "SampleTime", "BeatsPerMinute", "Metadata" }, new[]{ "BeatsPerMinute" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HeartRate.Types.HeartRateMetadata), global::Google.DevicesAndServices.Health.V4.HeartRate.Types.HeartRateMetadata.Parser, new[]{ "MotionContext", "SensorLocation" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.HeartRate.Types.HeartRateMetadata.Types.MotionContext), typeof(global::Google.DevicesAndServices.Health.V4.HeartRate.Types.HeartRateMetadata.Types.SensorLocation) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HeartRateRollupValue), global::Google.DevicesAndServices.Health.V4.HeartRateRollupValue.Parser, new[]{ "BeatsPerMinuteAvg", "BeatsPerMinuteMax", "BeatsPerMinuteMin" }, new[]{ "BeatsPerMinuteAvg", "BeatsPerMinuteMax", "BeatsPerMinuteMin" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RunVO2MaxRollupValue), global::Google.DevicesAndServices.Health.V4.RunVO2MaxRollupValue.Parser, new[]{ "RateMin", "RateMax", "RateAvg" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RunVO2Max), global::Google.DevicesAndServices.Health.V4.RunVO2Max.Parser, new[]{ "SampleTime", "RunVo2Max" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RunVO2MaxRollupValue), global::Google.DevicesAndServices.Health.V4.RunVO2MaxRollupValue.Parser, new[]{ "RateMin", "RateMax", "RateAvg" }, new[]{ "RateMin", "RateMax", "RateAvg" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RunVO2Max), global::Google.DevicesAndServices.Health.V4.RunVO2Max.Parser, new[]{ "SampleTime", "RunVo2Max" }, new[]{ "RunVo2Max" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HeartRateVariabilityPersonalRangeRollupValue), global::Google.DevicesAndServices.Health.V4.HeartRateVariabilityPersonalRangeRollupValue.Parser, new[]{ "AverageHeartRateVariabilityMillisecondsMin", "AverageHeartRateVariabilityMillisecondsMax" }, new[]{ "AverageHeartRateVariabilityMillisecondsMin", "AverageHeartRateVariabilityMillisecondsMax" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Height), global::Google.DevicesAndServices.Health.V4.Height.Parser, new[]{ "SampleTime", "HeightMillimeters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HeartRateVariability), global::Google.DevicesAndServices.Health.V4.HeartRateVariability.Parser, new[]{ "SampleTime", "RootMeanSquareOfSuccessiveDifferencesMilliseconds", "StandardDeviationMilliseconds" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.VolumeQuantity), global::Google.DevicesAndServices.Health.V4.VolumeQuantity.Parser, new[]{ "Milliliters", "UserProvidedUnit" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Height), global::Google.DevicesAndServices.Health.V4.Height.Parser, new[]{ "SampleTime", "HeightMillimeters" }, new[]{ "HeightMillimeters" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HeartRateVariability), global::Google.DevicesAndServices.Health.V4.HeartRateVariability.Parser, new[]{ "SampleTime", "RootMeanSquareOfSuccessiveDifferencesMilliseconds", "StandardDeviationMilliseconds" }, new[]{ "RootMeanSquareOfSuccessiveDifferencesMilliseconds", "StandardDeviationMilliseconds" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.VolumeQuantity), global::Google.DevicesAndServices.Health.V4.VolumeQuantity.Parser, new[]{ "Milliliters", "UserProvidedUnit" }, new[]{ "Milliliters" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HydrationLog), global::Google.DevicesAndServices.Health.V4.HydrationLog.Parser, new[]{ "Interval", "AmountConsumed" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue), global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Parser, new[]{ "AmountConsumed" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Types.VolumeQuantityRollup), global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Types.VolumeQuantityRollup.Parser, new[]{ "MillilitersSum", "UserProvidedUnitLast" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue), global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Parser, new[]{ "AmountConsumed" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Types.VolumeQuantityRollup), global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Types.VolumeQuantityRollup.Parser, new[]{ "MillilitersSum", "UserProvidedUnitLast" }, new[]{ "MillilitersSum" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.MetricsSummary), global::Google.DevicesAndServices.Health.V4.MetricsSummary.Parser, new[]{ "CaloriesKcal", "DistanceMillimeters", "Steps", "AverageSpeedMillimetersPerSecond", "AveragePaceSecondsPerMeter", "AverageHeartRateBeatsPerMinute", "ElevationGainMillimeters", "ActiveZoneMinutes", "RunVo2Max", "TotalSwimLengths", "HeartRateZoneDurations", "MobilityMetrics" }, new[]{ "CaloriesKcal", "DistanceMillimeters", "Steps", "AverageSpeedMillimetersPerSecond", "AveragePaceSecondsPerMeter", "AverageHeartRateBeatsPerMinute", "ElevationGainMillimeters", "ActiveZoneMinutes", "RunVo2Max", "TotalSwimLengths" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.MetricsSummary.Types.TimeInHeartRateZones), global::Google.DevicesAndServices.Health.V4.MetricsSummary.Types.TimeInHeartRateZones.Parser, new[]{ "LightTime", "ModerateTime", "VigorousTime", "PeakTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.MetricsSummary.Types.MobilityMetrics), global::Google.DevicesAndServices.Health.V4.MetricsSummary.Types.MobilityMetrics.Parser, new[]{ "AvgCadenceStepsPerMinute", "AvgStrideLengthMillimeters", "AvgVerticalOscillationMillimeters", "AvgVerticalRatio", "AvgGroundContactTimeDuration" }, new[]{ "AvgCadenceStepsPerMinute", "AvgStrideLengthMillimeters", "AvgVerticalOscillationMillimeters", "AvgVerticalRatio" }, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.OxygenSaturation), global::Google.DevicesAndServices.Health.V4.OxygenSaturation.Parser, new[]{ "SampleTime", "Percentage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.OxygenSaturation), global::Google.DevicesAndServices.Health.V4.OxygenSaturation.Parser, new[]{ "SampleTime", "Percentage" }, new[]{ "Percentage" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RestingHeartRatePersonalRangeRollupValue), global::Google.DevicesAndServices.Health.V4.RestingHeartRatePersonalRangeRollupValue.Parser, new[]{ "BeatsPerMinuteMin", "BeatsPerMinuteMax" }, new[]{ "BeatsPerMinuteMin", "BeatsPerMinuteMax" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary), global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Parser, new[]{ "SampleTime", "DeepSleepStats", "LightSleepStats", "RemSleepStats", "FullSleepStats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Types.RespiratoryRateSleepSummaryStatistics), global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Types.RespiratoryRateSleepSummaryStatistics.Parser, new[]{ "BreathsPerMinute", "StandardDeviation", "SignalToNoise" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary), global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Parser, new[]{ "SampleTime", "DeepSleepStats", "LightSleepStats", "RemSleepStats", "FullSleepStats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Types.RespiratoryRateSleepSummaryStatistics), global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Types.RespiratoryRateSleepSummaryStatistics.Parser, new[]{ "BreathsPerMinute", "StandardDeviation", "SignalToNoise" }, new[]{ "BreathsPerMinute", "StandardDeviation", "SignalToNoise" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep), global::Google.DevicesAndServices.Health.V4.Sleep.Parser, new[]{ "Interval", "Type", "Stages", "OutOfBedSegments", "Metadata", "Summary", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepType), typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStageType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStage), global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStage.Parser, new[]{ "StartTime", "StartUtcOffset", "EndTime", "EndUtcOffset", "Type", "CreateTime", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.OutOfBedSegment), global::Google.DevicesAndServices.Health.V4.Sleep.Types.OutOfBedSegment.Parser, new[]{ "StartTime", "StartUtcOffset", "EndTime", "EndUtcOffset" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepMetadata), global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepMetadata.Parser, new[]{ "StagesStatus", "Processed", "Nap", "ManuallyEdited", "ExternalId" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepMetadata.Types.StagesState) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepSummary), global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepSummary.Parser, new[]{ "MinutesInSleepPeriod", "MinutesAfterWakeUp", "MinutesToFallAsleep", "MinutesAsleep", "MinutesAwake", "StagesSummary" }, new[]{ "MinutesInSleepPeriod", "MinutesAfterWakeUp", "MinutesToFallAsleep", "MinutesAsleep", "MinutesAwake" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepSummary.Types.StageSummary), global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepSummary.Types.StageSummary.Parser, new[]{ "Type", "Minutes", "Count" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Steps), global::Google.DevicesAndServices.Health.V4.Steps.Parser, new[]{ "Interval", "Count" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.StepsRollupValue), global::Google.DevicesAndServices.Health.V4.StepsRollupValue.Parser, new[]{ "CountSum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SwimLengthsData), global::Google.DevicesAndServices.Health.V4.SwimLengthsData.Parser, new[]{ "Interval", "SwimStrokeType", "StrokeCount" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.SwimLengthsData.Types.SwimStrokeType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SwimLengthsDataRollupValue), global::Google.DevicesAndServices.Health.V4.SwimLengthsDataRollupValue.Parser, new[]{ "StrokeCountSum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepSummary), global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepSummary.Parser, new[]{ "MinutesInSleepPeriod", "MinutesAfterWakeUp", "MinutesToFallAsleep", "MinutesAsleep", "MinutesAwake", "StagesSummary" }, new[]{ "MinutesInSleepPeriod", "MinutesAfterWakeUp", "MinutesToFallAsleep", "MinutesAsleep", "MinutesAwake" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepSummary.Types.StageSummary), global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepSummary.Types.StageSummary.Parser, new[]{ "Type", "Minutes", "Count" }, new[]{ "Minutes", "Count" }, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Steps), global::Google.DevicesAndServices.Health.V4.Steps.Parser, new[]{ "Interval", "Count" }, new[]{ "Count" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.StepsRollupValue), global::Google.DevicesAndServices.Health.V4.StepsRollupValue.Parser, new[]{ "CountSum" }, new[]{ "CountSum" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SwimLengthsData), global::Google.DevicesAndServices.Health.V4.SwimLengthsData.Parser, new[]{ "Interval", "SwimStrokeType", "StrokeCount" }, new[]{ "StrokeCount" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.SwimLengthsData.Types.SwimStrokeType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SwimLengthsDataRollupValue), global::Google.DevicesAndServices.Health.V4.SwimLengthsDataRollupValue.Parser, new[]{ "StrokeCountSum" }, new[]{ "StrokeCountSum" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.TimeInHeartRateZone), global::Google.DevicesAndServices.Health.V4.TimeInHeartRateZone.Parser, new[]{ "Interval", "HeartRateZoneType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.TimeInHeartRateZoneRollupValue), global::Google.DevicesAndServices.Health.V4.TimeInHeartRateZoneRollupValue.Parser, new[]{ "TimeInHeartRateZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.TimeInHeartRateZoneRollupValue.Types.TimeInHeartRateZoneValue), global::Google.DevicesAndServices.Health.V4.TimeInHeartRateZoneRollupValue.Types.TimeInHeartRateZoneValue.Parser, new[]{ "HeartRateZone", "Duration" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.TotalCaloriesRollupValue), global::Google.DevicesAndServices.Health.V4.TotalCaloriesRollupValue.Parser, new[]{ "KcalSum" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.VO2Max), global::Google.DevicesAndServices.Health.V4.VO2Max.Parser, new[]{ "SampleTime", "Vo2Max", "MeasurementMethod" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.VO2Max.Types.MeasurementMethod) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Weight), global::Google.DevicesAndServices.Health.V4.Weight.Parser, new[]{ "SampleTime", "WeightGrams", "Notes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.WeightRollupValue), global::Google.DevicesAndServices.Health.V4.WeightRollupValue.Parser, new[]{ "WeightGramsAvg" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.TotalCaloriesRollupValue), global::Google.DevicesAndServices.Health.V4.TotalCaloriesRollupValue.Parser, new[]{ "KcalSum" }, new[]{ "KcalSum" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.VO2Max), global::Google.DevicesAndServices.Health.V4.VO2Max.Parser, new[]{ "SampleTime", "Vo2Max", "MeasurementMethod" }, new[]{ "Vo2Max" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.VO2Max.Types.MeasurementMethod) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Weight), global::Google.DevicesAndServices.Health.V4.Weight.Parser, new[]{ "SampleTime", "WeightGrams", "Notes" }, new[]{ "WeightGrams" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.WeightRollupValue), global::Google.DevicesAndServices.Health.V4.WeightRollupValue.Parser, new[]{ "WeightGramsAvg" }, new[]{ "WeightGramsAvg" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SedentaryPeriod), global::Google.DevicesAndServices.Health.V4.SedentaryPeriod.Parser, new[]{ "Interval" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SedentaryPeriodRollupValue), global::Google.DevicesAndServices.Health.V4.SedentaryPeriodRollupValue.Parser, new[]{ "DurationSum" }, null, null, null, null)
           }));
@@ -565,6 +597,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<ActiveZoneMinutes> _parser = new pb::MessageParser<ActiveZoneMinutes>(() => new ActiveZoneMinutes());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ActiveZoneMinutes> Parser { get { return _parser; } }
@@ -592,6 +625,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ActiveZoneMinutes(ActiveZoneMinutes other) : this() {
+      _hasBits0 = other._hasBits0;
       interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       heartRateZone_ = other.heartRateZone_;
       activeZoneMinutes_ = other.activeZoneMinutes_;
@@ -637,6 +671,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "active_zone_minutes" field.</summary>
     public const int ActiveZoneMinutes_FieldNumber = 3;
+    private readonly static long ActiveZoneMinutes_DefaultValue = 0L;
+
     private long activeZoneMinutes_;
     /// <summary>
     /// Required. Number of Active Zone Minutes earned in the given time interval.
@@ -646,10 +682,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ActiveZoneMinutes_ {
-      get { return activeZoneMinutes_; }
+      get { if ((_hasBits0 & 1) != 0) { return activeZoneMinutes_; } else { return ActiveZoneMinutes_DefaultValue; } }
       set {
+        _hasBits0 |= 1;
         activeZoneMinutes_ = value;
       }
+    }
+    /// <summary>Gets whether the "active_zone_minutes" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasActiveZoneMinutes_ {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "active_zone_minutes" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearActiveZoneMinutes_() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -679,7 +728,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       int hash = 1;
       if (interval_ != null) hash ^= Interval.GetHashCode();
       if (HeartRateZone != global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Types.HeartRateZone.Unspecified) hash ^= HeartRateZone.GetHashCode();
-      if (ActiveZoneMinutes_ != 0L) hash ^= ActiveZoneMinutes_.GetHashCode();
+      if (HasActiveZoneMinutes_) hash ^= ActiveZoneMinutes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -706,7 +755,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(16);
         output.WriteEnum((int) HeartRateZone);
       }
-      if (ActiveZoneMinutes_ != 0L) {
+      if (HasActiveZoneMinutes_) {
         output.WriteRawTag(24);
         output.WriteInt64(ActiveZoneMinutes_);
       }
@@ -728,7 +777,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(16);
         output.WriteEnum((int) HeartRateZone);
       }
-      if (ActiveZoneMinutes_ != 0L) {
+      if (HasActiveZoneMinutes_) {
         output.WriteRawTag(24);
         output.WriteInt64(ActiveZoneMinutes_);
       }
@@ -748,7 +797,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (HeartRateZone != global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Types.HeartRateZone.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HeartRateZone);
       }
-      if (ActiveZoneMinutes_ != 0L) {
+      if (HasActiveZoneMinutes_) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActiveZoneMinutes_);
       }
       if (_unknownFields != null) {
@@ -772,7 +821,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other.HeartRateZone != global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Types.HeartRateZone.Unspecified) {
         HeartRateZone = other.HeartRateZone;
       }
-      if (other.ActiveZoneMinutes_ != 0L) {
+      if (other.HasActiveZoneMinutes_) {
         ActiveZoneMinutes_ = other.ActiveZoneMinutes_;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -891,6 +940,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<ActiveZoneMinutesRollupValue> _parser = new pb::MessageParser<ActiveZoneMinutesRollupValue>(() => new ActiveZoneMinutesRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ActiveZoneMinutesRollupValue> Parser { get { return _parser; } }
@@ -918,6 +968,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ActiveZoneMinutesRollupValue(ActiveZoneMinutesRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       sumInCardioHeartZone_ = other.sumInCardioHeartZone_;
       sumInPeakHeartZone_ = other.sumInPeakHeartZone_;
       sumInFatBurnHeartZone_ = other.sumInFatBurnHeartZone_;
@@ -932,6 +983,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "sum_in_cardio_heart_zone" field.</summary>
     public const int SumInCardioHeartZoneFieldNumber = 1;
+    private readonly static long SumInCardioHeartZoneDefaultValue = 0L;
+
     private long sumInCardioHeartZone_;
     /// <summary>
     /// Active zone minutes in `HeartRateZone.CARDIO`.
@@ -939,14 +992,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SumInCardioHeartZone {
-      get { return sumInCardioHeartZone_; }
+      get { if ((_hasBits0 & 1) != 0) { return sumInCardioHeartZone_; } else { return SumInCardioHeartZoneDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         sumInCardioHeartZone_ = value;
       }
+    }
+    /// <summary>Gets whether the "sum_in_cardio_heart_zone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSumInCardioHeartZone {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "sum_in_cardio_heart_zone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSumInCardioHeartZone() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "sum_in_peak_heart_zone" field.</summary>
     public const int SumInPeakHeartZoneFieldNumber = 2;
+    private readonly static long SumInPeakHeartZoneDefaultValue = 0L;
+
     private long sumInPeakHeartZone_;
     /// <summary>
     /// Active zone minutes in `HeartRateZone.PEAK`.
@@ -954,14 +1022,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SumInPeakHeartZone {
-      get { return sumInPeakHeartZone_; }
+      get { if ((_hasBits0 & 2) != 0) { return sumInPeakHeartZone_; } else { return SumInPeakHeartZoneDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         sumInPeakHeartZone_ = value;
       }
+    }
+    /// <summary>Gets whether the "sum_in_peak_heart_zone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSumInPeakHeartZone {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "sum_in_peak_heart_zone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSumInPeakHeartZone() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "sum_in_fat_burn_heart_zone" field.</summary>
     public const int SumInFatBurnHeartZoneFieldNumber = 3;
+    private readonly static long SumInFatBurnHeartZoneDefaultValue = 0L;
+
     private long sumInFatBurnHeartZone_;
     /// <summary>
     /// Active zone minutes in `HeartRateZone.FAT_BURN`.
@@ -969,10 +1052,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SumInFatBurnHeartZone {
-      get { return sumInFatBurnHeartZone_; }
+      get { if ((_hasBits0 & 4) != 0) { return sumInFatBurnHeartZone_; } else { return SumInFatBurnHeartZoneDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         sumInFatBurnHeartZone_ = value;
       }
+    }
+    /// <summary>Gets whether the "sum_in_fat_burn_heart_zone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSumInFatBurnHeartZone {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "sum_in_fat_burn_heart_zone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSumInFatBurnHeartZone() {
+      _hasBits0 &= ~4;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1000,9 +1096,9 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (SumInCardioHeartZone != 0L) hash ^= SumInCardioHeartZone.GetHashCode();
-      if (SumInPeakHeartZone != 0L) hash ^= SumInPeakHeartZone.GetHashCode();
-      if (SumInFatBurnHeartZone != 0L) hash ^= SumInFatBurnHeartZone.GetHashCode();
+      if (HasSumInCardioHeartZone) hash ^= SumInCardioHeartZone.GetHashCode();
+      if (HasSumInPeakHeartZone) hash ^= SumInPeakHeartZone.GetHashCode();
+      if (HasSumInFatBurnHeartZone) hash ^= SumInFatBurnHeartZone.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1021,15 +1117,15 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (SumInCardioHeartZone != 0L) {
+      if (HasSumInCardioHeartZone) {
         output.WriteRawTag(8);
         output.WriteInt64(SumInCardioHeartZone);
       }
-      if (SumInPeakHeartZone != 0L) {
+      if (HasSumInPeakHeartZone) {
         output.WriteRawTag(16);
         output.WriteInt64(SumInPeakHeartZone);
       }
-      if (SumInFatBurnHeartZone != 0L) {
+      if (HasSumInFatBurnHeartZone) {
         output.WriteRawTag(24);
         output.WriteInt64(SumInFatBurnHeartZone);
       }
@@ -1043,15 +1139,15 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (SumInCardioHeartZone != 0L) {
+      if (HasSumInCardioHeartZone) {
         output.WriteRawTag(8);
         output.WriteInt64(SumInCardioHeartZone);
       }
-      if (SumInPeakHeartZone != 0L) {
+      if (HasSumInPeakHeartZone) {
         output.WriteRawTag(16);
         output.WriteInt64(SumInPeakHeartZone);
       }
-      if (SumInFatBurnHeartZone != 0L) {
+      if (HasSumInFatBurnHeartZone) {
         output.WriteRawTag(24);
         output.WriteInt64(SumInFatBurnHeartZone);
       }
@@ -1065,13 +1161,13 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (SumInCardioHeartZone != 0L) {
+      if (HasSumInCardioHeartZone) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(SumInCardioHeartZone);
       }
-      if (SumInPeakHeartZone != 0L) {
+      if (HasSumInPeakHeartZone) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(SumInPeakHeartZone);
       }
-      if (SumInFatBurnHeartZone != 0L) {
+      if (HasSumInFatBurnHeartZone) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(SumInFatBurnHeartZone);
       }
       if (_unknownFields != null) {
@@ -1086,13 +1182,13 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.SumInCardioHeartZone != 0L) {
+      if (other.HasSumInCardioHeartZone) {
         SumInCardioHeartZone = other.SumInCardioHeartZone;
       }
-      if (other.SumInPeakHeartZone != 0L) {
+      if (other.HasSumInPeakHeartZone) {
         SumInPeakHeartZone = other.SumInPeakHeartZone;
       }
-      if (other.SumInFatBurnHeartZone != 0L) {
+      if (other.HasSumInFatBurnHeartZone) {
         SumInFatBurnHeartZone = other.SumInFatBurnHeartZone;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1443,6 +1539,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         private static readonly pb::MessageParser<ActiveMinutesByActivityLevel> _parser = new pb::MessageParser<ActiveMinutesByActivityLevel>(() => new ActiveMinutesByActivityLevel());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ActiveMinutesByActivityLevel> Parser { get { return _parser; } }
@@ -1470,6 +1567,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ActiveMinutesByActivityLevel(ActiveMinutesByActivityLevel other) : this() {
+          _hasBits0 = other._hasBits0;
           activityLevel_ = other.activityLevel_;
           activeMinutes_ = other.activeMinutes_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1498,6 +1596,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
         /// <summary>Field number for the "active_minutes" field.</summary>
         public const int ActiveMinutesFieldNumber = 2;
+        private readonly static long ActiveMinutesDefaultValue = 0L;
+
         private long activeMinutes_;
         /// <summary>
         /// Required. Number of whole minutes spent in activity.
@@ -1505,10 +1605,23 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long ActiveMinutes {
-          get { return activeMinutes_; }
+          get { if ((_hasBits0 & 1) != 0) { return activeMinutes_; } else { return ActiveMinutesDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             activeMinutes_ = value;
           }
+        }
+        /// <summary>Gets whether the "active_minutes" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasActiveMinutes {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "active_minutes" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearActiveMinutes() {
+          _hasBits0 &= ~1;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1536,7 +1649,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         public override int GetHashCode() {
           int hash = 1;
           if (ActivityLevel != global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel.Unspecified) hash ^= ActivityLevel.GetHashCode();
-          if (ActiveMinutes != 0L) hash ^= ActiveMinutes.GetHashCode();
+          if (HasActiveMinutes) hash ^= ActiveMinutes.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1559,7 +1672,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             output.WriteRawTag(8);
             output.WriteEnum((int) ActivityLevel);
           }
-          if (ActiveMinutes != 0L) {
+          if (HasActiveMinutes) {
             output.WriteRawTag(16);
             output.WriteInt64(ActiveMinutes);
           }
@@ -1577,7 +1690,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             output.WriteRawTag(8);
             output.WriteEnum((int) ActivityLevel);
           }
-          if (ActiveMinutes != 0L) {
+          if (HasActiveMinutes) {
             output.WriteRawTag(16);
             output.WriteInt64(ActiveMinutes);
           }
@@ -1594,7 +1707,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (ActivityLevel != global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActivityLevel);
           }
-          if (ActiveMinutes != 0L) {
+          if (HasActiveMinutes) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActiveMinutes);
           }
           if (_unknownFields != null) {
@@ -1612,7 +1725,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (other.ActivityLevel != global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel.Unspecified) {
             ActivityLevel = other.ActivityLevel;
           }
-          if (other.ActiveMinutes != 0L) {
+          if (other.HasActiveMinutes) {
             ActiveMinutes = other.ActiveMinutes;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1889,6 +2002,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         private static readonly pb::MessageParser<ActiveMinutesRollupByActivityLevel> _parser = new pb::MessageParser<ActiveMinutesRollupByActivityLevel>(() => new ActiveMinutesRollupByActivityLevel());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ActiveMinutesRollupByActivityLevel> Parser { get { return _parser; } }
@@ -1916,6 +2030,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ActiveMinutesRollupByActivityLevel(ActiveMinutesRollupByActivityLevel other) : this() {
+          _hasBits0 = other._hasBits0;
           activityLevel_ = other.activityLevel_;
           activeMinutesSum_ = other.activeMinutesSum_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1944,6 +2059,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
         /// <summary>Field number for the "active_minutes_sum" field.</summary>
         public const int ActiveMinutesSumFieldNumber = 2;
+        private readonly static long ActiveMinutesSumDefaultValue = 0L;
+
         private long activeMinutesSum_;
         /// <summary>
         /// Number of whole minutes spent in activity.
@@ -1951,10 +2068,23 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long ActiveMinutesSum {
-          get { return activeMinutesSum_; }
+          get { if ((_hasBits0 & 1) != 0) { return activeMinutesSum_; } else { return ActiveMinutesSumDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             activeMinutesSum_ = value;
           }
+        }
+        /// <summary>Gets whether the "active_minutes_sum" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasActiveMinutesSum {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "active_minutes_sum" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearActiveMinutesSum() {
+          _hasBits0 &= ~1;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1982,7 +2112,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         public override int GetHashCode() {
           int hash = 1;
           if (ActivityLevel != global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel.Unspecified) hash ^= ActivityLevel.GetHashCode();
-          if (ActiveMinutesSum != 0L) hash ^= ActiveMinutesSum.GetHashCode();
+          if (HasActiveMinutesSum) hash ^= ActiveMinutesSum.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2005,7 +2135,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             output.WriteRawTag(8);
             output.WriteEnum((int) ActivityLevel);
           }
-          if (ActiveMinutesSum != 0L) {
+          if (HasActiveMinutesSum) {
             output.WriteRawTag(16);
             output.WriteInt64(ActiveMinutesSum);
           }
@@ -2023,7 +2153,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             output.WriteRawTag(8);
             output.WriteEnum((int) ActivityLevel);
           }
-          if (ActiveMinutesSum != 0L) {
+          if (HasActiveMinutesSum) {
             output.WriteRawTag(16);
             output.WriteInt64(ActiveMinutesSum);
           }
@@ -2040,7 +2170,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (ActivityLevel != global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ActivityLevel);
           }
-          if (ActiveMinutesSum != 0L) {
+          if (HasActiveMinutesSum) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(ActiveMinutesSum);
           }
           if (_unknownFields != null) {
@@ -2058,7 +2188,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (other.ActivityLevel != global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel.Unspecified) {
             ActivityLevel = other.ActivityLevel;
           }
-          if (other.ActiveMinutesSum != 0L) {
+          if (other.HasActiveMinutesSum) {
             ActiveMinutesSum = other.ActiveMinutesSum;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2880,6 +3010,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<Altitude> _parser = new pb::MessageParser<Altitude>(() => new Altitude());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Altitude> Parser { get { return _parser; } }
@@ -2907,6 +3038,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Altitude(Altitude other) : this() {
+      _hasBits0 = other._hasBits0;
       interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       gainMillimeters_ = other.gainMillimeters_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2935,6 +3067,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "gain_millimeters" field.</summary>
     public const int GainMillimetersFieldNumber = 3;
+    private readonly static long GainMillimetersDefaultValue = 0L;
+
     private long gainMillimeters_;
     /// <summary>
     /// Required. Altitude gain in millimeters over the observed interval.
@@ -2942,10 +3076,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long GainMillimeters {
-      get { return gainMillimeters_; }
+      get { if ((_hasBits0 & 1) != 0) { return gainMillimeters_; } else { return GainMillimetersDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         gainMillimeters_ = value;
       }
+    }
+    /// <summary>Gets whether the "gain_millimeters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGainMillimeters {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "gain_millimeters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGainMillimeters() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2973,7 +3120,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (interval_ != null) hash ^= Interval.GetHashCode();
-      if (GainMillimeters != 0L) hash ^= GainMillimeters.GetHashCode();
+      if (HasGainMillimeters) hash ^= GainMillimeters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2996,7 +3143,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Interval);
       }
-      if (GainMillimeters != 0L) {
+      if (HasGainMillimeters) {
         output.WriteRawTag(24);
         output.WriteInt64(GainMillimeters);
       }
@@ -3014,7 +3161,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Interval);
       }
-      if (GainMillimeters != 0L) {
+      if (HasGainMillimeters) {
         output.WriteRawTag(24);
         output.WriteInt64(GainMillimeters);
       }
@@ -3031,7 +3178,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (interval_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
       }
-      if (GainMillimeters != 0L) {
+      if (HasGainMillimeters) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(GainMillimeters);
       }
       if (_unknownFields != null) {
@@ -3052,7 +3199,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Interval.MergeFrom(other.Interval);
       }
-      if (other.GainMillimeters != 0L) {
+      if (other.HasGainMillimeters) {
         GainMillimeters = other.GainMillimeters;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3134,6 +3281,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<BasalEnergyBurned> _parser = new pb::MessageParser<BasalEnergyBurned>(() => new BasalEnergyBurned());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BasalEnergyBurned> Parser { get { return _parser; } }
@@ -3161,6 +3309,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BasalEnergyBurned(BasalEnergyBurned other) : this() {
+      _hasBits0 = other._hasBits0;
       interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       kcal_ = other.kcal_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3189,6 +3338,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "kcal" field.</summary>
     public const int KcalFieldNumber = 2;
+    private readonly static double KcalDefaultValue = 0D;
+
     private double kcal_;
     /// <summary>
     /// Required. Number of calories burned due to basal metabolic rate in
@@ -3197,10 +3348,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Kcal {
-      get { return kcal_; }
+      get { if ((_hasBits0 & 1) != 0) { return kcal_; } else { return KcalDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         kcal_ = value;
       }
+    }
+    /// <summary>Gets whether the "kcal" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKcal {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "kcal" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKcal() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3228,7 +3392,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (interval_ != null) hash ^= Interval.GetHashCode();
-      if (Kcal != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Kcal);
+      if (HasKcal) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Kcal);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3251,7 +3415,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Interval);
       }
-      if (Kcal != 0D) {
+      if (HasKcal) {
         output.WriteRawTag(17);
         output.WriteDouble(Kcal);
       }
@@ -3269,7 +3433,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Interval);
       }
-      if (Kcal != 0D) {
+      if (HasKcal) {
         output.WriteRawTag(17);
         output.WriteDouble(Kcal);
       }
@@ -3286,7 +3450,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (interval_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
       }
-      if (Kcal != 0D) {
+      if (HasKcal) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -3307,7 +3471,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Interval.MergeFrom(other.Interval);
       }
-      if (other.Kcal != 0D) {
+      if (other.HasKcal) {
         Kcal = other.Kcal;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3388,6 +3552,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<BodyFat> _parser = new pb::MessageParser<BodyFat>(() => new BodyFat());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BodyFat> Parser { get { return _parser; } }
@@ -3415,6 +3580,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BodyFat(BodyFat other) : this() {
+      _hasBits0 = other._hasBits0;
       sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
       percentage_ = other.percentage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -3443,6 +3609,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "percentage" field.</summary>
     public const int PercentageFieldNumber = 3;
+    private readonly static double PercentageDefaultValue = 0D;
+
     private double percentage_;
     /// <summary>
     /// Required. Body fat percentage, in range [0, 100].
@@ -3450,10 +3618,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Percentage {
-      get { return percentage_; }
+      get { if ((_hasBits0 & 1) != 0) { return percentage_; } else { return PercentageDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         percentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentage {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentage() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3481,7 +3662,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
-      if (Percentage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Percentage);
+      if (HasPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Percentage);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3504,7 +3685,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(SampleTime);
       }
-      if (Percentage != 0D) {
+      if (HasPercentage) {
         output.WriteRawTag(25);
         output.WriteDouble(Percentage);
       }
@@ -3522,7 +3703,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(SampleTime);
       }
-      if (Percentage != 0D) {
+      if (HasPercentage) {
         output.WriteRawTag(25);
         output.WriteDouble(Percentage);
       }
@@ -3539,7 +3720,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (sampleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
       }
-      if (Percentage != 0D) {
+      if (HasPercentage) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -3560,7 +3741,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         SampleTime.MergeFrom(other.SampleTime);
       }
-      if (other.Percentage != 0D) {
+      if (other.HasPercentage) {
         Percentage = other.Percentage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -3641,6 +3822,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<BodyFatRollupValue> _parser = new pb::MessageParser<BodyFatRollupValue>(() => new BodyFatRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BodyFatRollupValue> Parser { get { return _parser; } }
@@ -3668,6 +3850,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BodyFatRollupValue(BodyFatRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       bodyFatPercentageAvg_ = other.bodyFatPercentageAvg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -3680,6 +3863,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "body_fat_percentage_avg" field.</summary>
     public const int BodyFatPercentageAvgFieldNumber = 1;
+    private readonly static double BodyFatPercentageAvgDefaultValue = 0D;
+
     private double bodyFatPercentageAvg_;
     /// <summary>
     /// Average body fat percentage.
@@ -3687,10 +3872,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double BodyFatPercentageAvg {
-      get { return bodyFatPercentageAvg_; }
+      get { if ((_hasBits0 & 1) != 0) { return bodyFatPercentageAvg_; } else { return BodyFatPercentageAvgDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         bodyFatPercentageAvg_ = value;
       }
+    }
+    /// <summary>Gets whether the "body_fat_percentage_avg" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBodyFatPercentageAvg {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "body_fat_percentage_avg" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBodyFatPercentageAvg() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3716,7 +3914,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (BodyFatPercentageAvg != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BodyFatPercentageAvg);
+      if (HasBodyFatPercentageAvg) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BodyFatPercentageAvg);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3735,7 +3933,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (BodyFatPercentageAvg != 0D) {
+      if (HasBodyFatPercentageAvg) {
         output.WriteRawTag(9);
         output.WriteDouble(BodyFatPercentageAvg);
       }
@@ -3749,7 +3947,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (BodyFatPercentageAvg != 0D) {
+      if (HasBodyFatPercentageAvg) {
         output.WriteRawTag(9);
         output.WriteDouble(BodyFatPercentageAvg);
       }
@@ -3763,7 +3961,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (BodyFatPercentageAvg != 0D) {
+      if (HasBodyFatPercentageAvg) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -3778,7 +3976,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.BodyFatPercentageAvg != 0D) {
+      if (other.HasBodyFatPercentageAvg) {
         BodyFatPercentageAvg = other.BodyFatPercentageAvg;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4042,6 +4240,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         private static readonly pb::MessageParser<CaloriesInHeartRateZoneValue> _parser = new pb::MessageParser<CaloriesInHeartRateZoneValue>(() => new CaloriesInHeartRateZoneValue());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<CaloriesInHeartRateZoneValue> Parser { get { return _parser; } }
@@ -4069,6 +4268,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CaloriesInHeartRateZoneValue(CaloriesInHeartRateZoneValue other) : this() {
+          _hasBits0 = other._hasBits0;
           heartRateZone_ = other.heartRateZone_;
           kcal_ = other.kcal_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -4097,6 +4297,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
         /// <summary>Field number for the "kcal" field.</summary>
         public const int KcalFieldNumber = 2;
+        private readonly static double KcalDefaultValue = 0D;
+
         private double kcal_;
         /// <summary>
         /// The amount of kilocalories burned in the specified heart rate zone.
@@ -4104,10 +4306,23 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Kcal {
-          get { return kcal_; }
+          get { if ((_hasBits0 & 1) != 0) { return kcal_; } else { return KcalDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             kcal_ = value;
           }
+        }
+        /// <summary>Gets whether the "kcal" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasKcal {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "kcal" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearKcal() {
+          _hasBits0 &= ~1;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4135,7 +4350,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         public override int GetHashCode() {
           int hash = 1;
           if (HeartRateZone != global::Google.DevicesAndServices.Health.V4.HeartRateZoneType.Unspecified) hash ^= HeartRateZone.GetHashCode();
-          if (Kcal != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Kcal);
+          if (HasKcal) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Kcal);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4158,7 +4373,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             output.WriteRawTag(8);
             output.WriteEnum((int) HeartRateZone);
           }
-          if (Kcal != 0D) {
+          if (HasKcal) {
             output.WriteRawTag(17);
             output.WriteDouble(Kcal);
           }
@@ -4176,7 +4391,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             output.WriteRawTag(8);
             output.WriteEnum((int) HeartRateZone);
           }
-          if (Kcal != 0D) {
+          if (HasKcal) {
             output.WriteRawTag(17);
             output.WriteDouble(Kcal);
           }
@@ -4193,7 +4408,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (HeartRateZone != global::Google.DevicesAndServices.Health.V4.HeartRateZoneType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HeartRateZone);
           }
-          if (Kcal != 0D) {
+          if (HasKcal) {
             size += 1 + 8;
           }
           if (_unknownFields != null) {
@@ -4211,7 +4426,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (other.HeartRateZone != global::Google.DevicesAndServices.Health.V4.HeartRateZoneType.Unspecified) {
             HeartRateZone = other.HeartRateZone;
           }
-          if (other.Kcal != 0D) {
+          if (other.HasKcal) {
             Kcal = other.Kcal;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -4537,6 +4752,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         private static readonly pb::MessageParser<HeartRateZone> _parser = new pb::MessageParser<HeartRateZone>(() => new HeartRateZone());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<HeartRateZone> Parser { get { return _parser; } }
@@ -4564,6 +4780,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public HeartRateZone(HeartRateZone other) : this() {
+          _hasBits0 = other._hasBits0;
           heartRateZoneType_ = other.heartRateZoneType_;
           minBeatsPerMinute_ = other.minBeatsPerMinute_;
           maxBeatsPerMinute_ = other.maxBeatsPerMinute_;
@@ -4593,6 +4810,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
         /// <summary>Field number for the "min_beats_per_minute" field.</summary>
         public const int MinBeatsPerMinuteFieldNumber = 2;
+        private readonly static long MinBeatsPerMinuteDefaultValue = 0L;
+
         private long minBeatsPerMinute_;
         /// <summary>
         /// Required. Minimum heart rate for this zone in beats per minute.
@@ -4600,14 +4819,29 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long MinBeatsPerMinute {
-          get { return minBeatsPerMinute_; }
+          get { if ((_hasBits0 & 1) != 0) { return minBeatsPerMinute_; } else { return MinBeatsPerMinuteDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             minBeatsPerMinute_ = value;
           }
+        }
+        /// <summary>Gets whether the "min_beats_per_minute" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMinBeatsPerMinute {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "min_beats_per_minute" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMinBeatsPerMinute() {
+          _hasBits0 &= ~1;
         }
 
         /// <summary>Field number for the "max_beats_per_minute" field.</summary>
         public const int MaxBeatsPerMinuteFieldNumber = 3;
+        private readonly static long MaxBeatsPerMinuteDefaultValue = 0L;
+
         private long maxBeatsPerMinute_;
         /// <summary>
         /// Required. Maximum heart rate for this zone in beats per minute.
@@ -4615,10 +4849,23 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long MaxBeatsPerMinute {
-          get { return maxBeatsPerMinute_; }
+          get { if ((_hasBits0 & 2) != 0) { return maxBeatsPerMinute_; } else { return MaxBeatsPerMinuteDefaultValue; } }
           set {
+            _hasBits0 |= 2;
             maxBeatsPerMinute_ = value;
           }
+        }
+        /// <summary>Gets whether the "max_beats_per_minute" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMaxBeatsPerMinute {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "max_beats_per_minute" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMaxBeatsPerMinute() {
+          _hasBits0 &= ~2;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4647,8 +4894,8 @@ namespace Google.DevicesAndServices.Health.V4 {
         public override int GetHashCode() {
           int hash = 1;
           if (HeartRateZoneType != global::Google.DevicesAndServices.Health.V4.HeartRateZoneType.Unspecified) hash ^= HeartRateZoneType.GetHashCode();
-          if (MinBeatsPerMinute != 0L) hash ^= MinBeatsPerMinute.GetHashCode();
-          if (MaxBeatsPerMinute != 0L) hash ^= MaxBeatsPerMinute.GetHashCode();
+          if (HasMinBeatsPerMinute) hash ^= MinBeatsPerMinute.GetHashCode();
+          if (HasMaxBeatsPerMinute) hash ^= MaxBeatsPerMinute.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -4671,11 +4918,11 @@ namespace Google.DevicesAndServices.Health.V4 {
             output.WriteRawTag(8);
             output.WriteEnum((int) HeartRateZoneType);
           }
-          if (MinBeatsPerMinute != 0L) {
+          if (HasMinBeatsPerMinute) {
             output.WriteRawTag(16);
             output.WriteInt64(MinBeatsPerMinute);
           }
-          if (MaxBeatsPerMinute != 0L) {
+          if (HasMaxBeatsPerMinute) {
             output.WriteRawTag(24);
             output.WriteInt64(MaxBeatsPerMinute);
           }
@@ -4693,11 +4940,11 @@ namespace Google.DevicesAndServices.Health.V4 {
             output.WriteRawTag(8);
             output.WriteEnum((int) HeartRateZoneType);
           }
-          if (MinBeatsPerMinute != 0L) {
+          if (HasMinBeatsPerMinute) {
             output.WriteRawTag(16);
             output.WriteInt64(MinBeatsPerMinute);
           }
-          if (MaxBeatsPerMinute != 0L) {
+          if (HasMaxBeatsPerMinute) {
             output.WriteRawTag(24);
             output.WriteInt64(MaxBeatsPerMinute);
           }
@@ -4714,10 +4961,10 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (HeartRateZoneType != global::Google.DevicesAndServices.Health.V4.HeartRateZoneType.Unspecified) {
             size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HeartRateZoneType);
           }
-          if (MinBeatsPerMinute != 0L) {
+          if (HasMinBeatsPerMinute) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(MinBeatsPerMinute);
           }
-          if (MaxBeatsPerMinute != 0L) {
+          if (HasMaxBeatsPerMinute) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(MaxBeatsPerMinute);
           }
           if (_unknownFields != null) {
@@ -4735,10 +4982,10 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (other.HeartRateZoneType != global::Google.DevicesAndServices.Health.V4.HeartRateZoneType.Unspecified) {
             HeartRateZoneType = other.HeartRateZoneType;
           }
-          if (other.MinBeatsPerMinute != 0L) {
+          if (other.HasMinBeatsPerMinute) {
             MinBeatsPerMinute = other.MinBeatsPerMinute;
           }
-          if (other.MaxBeatsPerMinute != 0L) {
+          if (other.HasMaxBeatsPerMinute) {
             MaxBeatsPerMinute = other.MaxBeatsPerMinute;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -5275,6 +5522,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<DailyRespiratoryRate> _parser = new pb::MessageParser<DailyRespiratoryRate>(() => new DailyRespiratoryRate());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DailyRespiratoryRate> Parser { get { return _parser; } }
@@ -5302,6 +5550,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyRespiratoryRate(DailyRespiratoryRate other) : this() {
+      _hasBits0 = other._hasBits0;
       date_ = other.date_ != null ? other.date_.Clone() : null;
       breathsPerMinute_ = other.breathsPerMinute_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -5330,6 +5579,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "breaths_per_minute" field.</summary>
     public const int BreathsPerMinuteFieldNumber = 2;
+    private readonly static double BreathsPerMinuteDefaultValue = 0D;
+
     private double breathsPerMinute_;
     /// <summary>
     /// Required. The average number of breaths taken per minute.
@@ -5337,10 +5588,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double BreathsPerMinute {
-      get { return breathsPerMinute_; }
+      get { if ((_hasBits0 & 1) != 0) { return breathsPerMinute_; } else { return BreathsPerMinuteDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         breathsPerMinute_ = value;
       }
+    }
+    /// <summary>Gets whether the "breaths_per_minute" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBreathsPerMinute {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "breaths_per_minute" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBreathsPerMinute() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5368,7 +5632,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (date_ != null) hash ^= Date.GetHashCode();
-      if (BreathsPerMinute != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BreathsPerMinute);
+      if (HasBreathsPerMinute) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BreathsPerMinute);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5391,7 +5655,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (BreathsPerMinute != 0D) {
+      if (HasBreathsPerMinute) {
         output.WriteRawTag(17);
         output.WriteDouble(BreathsPerMinute);
       }
@@ -5409,7 +5673,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (BreathsPerMinute != 0D) {
+      if (HasBreathsPerMinute) {
         output.WriteRawTag(17);
         output.WriteDouble(BreathsPerMinute);
       }
@@ -5426,7 +5690,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (date_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Date);
       }
-      if (BreathsPerMinute != 0D) {
+      if (HasBreathsPerMinute) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -5447,7 +5711,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Date.MergeFrom(other.Date);
       }
-      if (other.BreathsPerMinute != 0D) {
+      if (other.HasBreathsPerMinute) {
         BreathsPerMinute = other.BreathsPerMinute;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -5530,6 +5794,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<DailyOxygenSaturation> _parser = new pb::MessageParser<DailyOxygenSaturation>(() => new DailyOxygenSaturation());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DailyOxygenSaturation> Parser { get { return _parser; } }
@@ -5557,6 +5822,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyOxygenSaturation(DailyOxygenSaturation other) : this() {
+      _hasBits0 = other._hasBits0;
       date_ = other.date_ != null ? other.date_.Clone() : null;
       averagePercentage_ = other.averagePercentage_;
       lowerBoundPercentage_ = other.lowerBoundPercentage_;
@@ -5588,6 +5854,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "average_percentage" field.</summary>
     public const int AveragePercentageFieldNumber = 2;
+    private readonly static double AveragePercentageDefaultValue = 0D;
+
     private double averagePercentage_;
     /// <summary>
     /// Required. The average value of the oxygen saturation samples during the
@@ -5596,14 +5864,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double AveragePercentage {
-      get { return averagePercentage_; }
+      get { if ((_hasBits0 & 1) != 0) { return averagePercentage_; } else { return AveragePercentageDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         averagePercentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "average_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAveragePercentage {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "average_percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAveragePercentage() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "lower_bound_percentage" field.</summary>
     public const int LowerBoundPercentageFieldNumber = 3;
+    private readonly static double LowerBoundPercentageDefaultValue = 0D;
+
     private double lowerBoundPercentage_;
     /// <summary>
     /// Required. The lower bound of the confidence interval of oxygen saturation
@@ -5612,14 +5895,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double LowerBoundPercentage {
-      get { return lowerBoundPercentage_; }
+      get { if ((_hasBits0 & 2) != 0) { return lowerBoundPercentage_; } else { return LowerBoundPercentageDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         lowerBoundPercentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "lower_bound_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLowerBoundPercentage {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "lower_bound_percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLowerBoundPercentage() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "upper_bound_percentage" field.</summary>
     public const int UpperBoundPercentageFieldNumber = 4;
+    private readonly static double UpperBoundPercentageDefaultValue = 0D;
+
     private double upperBoundPercentage_;
     /// <summary>
     /// Required. The upper bound of the confidence interval of oxygen saturation
@@ -5628,14 +5926,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double UpperBoundPercentage {
-      get { return upperBoundPercentage_; }
+      get { if ((_hasBits0 & 4) != 0) { return upperBoundPercentage_; } else { return UpperBoundPercentageDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         upperBoundPercentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "upper_bound_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasUpperBoundPercentage {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "upper_bound_percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearUpperBoundPercentage() {
+      _hasBits0 &= ~4;
     }
 
     /// <summary>Field number for the "standard_deviation_percentage" field.</summary>
     public const int StandardDeviationPercentageFieldNumber = 5;
+    private readonly static double StandardDeviationPercentageDefaultValue = 0D;
+
     private double standardDeviationPercentage_;
     /// <summary>
     /// Optional. Standard deviation of the daily oxygen saturation averages from
@@ -5644,10 +5957,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double StandardDeviationPercentage {
-      get { return standardDeviationPercentage_; }
+      get { if ((_hasBits0 & 8) != 0) { return standardDeviationPercentage_; } else { return StandardDeviationPercentageDefaultValue; } }
       set {
+        _hasBits0 |= 8;
         standardDeviationPercentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "standard_deviation_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStandardDeviationPercentage {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "standard_deviation_percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStandardDeviationPercentage() {
+      _hasBits0 &= ~8;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5678,10 +6004,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (date_ != null) hash ^= Date.GetHashCode();
-      if (AveragePercentage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(AveragePercentage);
-      if (LowerBoundPercentage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(LowerBoundPercentage);
-      if (UpperBoundPercentage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(UpperBoundPercentage);
-      if (StandardDeviationPercentage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(StandardDeviationPercentage);
+      if (HasAveragePercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(AveragePercentage);
+      if (HasLowerBoundPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(LowerBoundPercentage);
+      if (HasUpperBoundPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(UpperBoundPercentage);
+      if (HasStandardDeviationPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(StandardDeviationPercentage);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -5704,19 +6030,19 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (AveragePercentage != 0D) {
+      if (HasAveragePercentage) {
         output.WriteRawTag(17);
         output.WriteDouble(AveragePercentage);
       }
-      if (LowerBoundPercentage != 0D) {
+      if (HasLowerBoundPercentage) {
         output.WriteRawTag(25);
         output.WriteDouble(LowerBoundPercentage);
       }
-      if (UpperBoundPercentage != 0D) {
+      if (HasUpperBoundPercentage) {
         output.WriteRawTag(33);
         output.WriteDouble(UpperBoundPercentage);
       }
-      if (StandardDeviationPercentage != 0D) {
+      if (HasStandardDeviationPercentage) {
         output.WriteRawTag(41);
         output.WriteDouble(StandardDeviationPercentage);
       }
@@ -5734,19 +6060,19 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (AveragePercentage != 0D) {
+      if (HasAveragePercentage) {
         output.WriteRawTag(17);
         output.WriteDouble(AveragePercentage);
       }
-      if (LowerBoundPercentage != 0D) {
+      if (HasLowerBoundPercentage) {
         output.WriteRawTag(25);
         output.WriteDouble(LowerBoundPercentage);
       }
-      if (UpperBoundPercentage != 0D) {
+      if (HasUpperBoundPercentage) {
         output.WriteRawTag(33);
         output.WriteDouble(UpperBoundPercentage);
       }
-      if (StandardDeviationPercentage != 0D) {
+      if (HasStandardDeviationPercentage) {
         output.WriteRawTag(41);
         output.WriteDouble(StandardDeviationPercentage);
       }
@@ -5763,16 +6089,16 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (date_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Date);
       }
-      if (AveragePercentage != 0D) {
+      if (HasAveragePercentage) {
         size += 1 + 8;
       }
-      if (LowerBoundPercentage != 0D) {
+      if (HasLowerBoundPercentage) {
         size += 1 + 8;
       }
-      if (UpperBoundPercentage != 0D) {
+      if (HasUpperBoundPercentage) {
         size += 1 + 8;
       }
-      if (StandardDeviationPercentage != 0D) {
+      if (HasStandardDeviationPercentage) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -5793,16 +6119,16 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Date.MergeFrom(other.Date);
       }
-      if (other.AveragePercentage != 0D) {
+      if (other.HasAveragePercentage) {
         AveragePercentage = other.AveragePercentage;
       }
-      if (other.LowerBoundPercentage != 0D) {
+      if (other.HasLowerBoundPercentage) {
         LowerBoundPercentage = other.LowerBoundPercentage;
       }
-      if (other.UpperBoundPercentage != 0D) {
+      if (other.HasUpperBoundPercentage) {
         UpperBoundPercentage = other.UpperBoundPercentage;
       }
-      if (other.StandardDeviationPercentage != 0D) {
+      if (other.HasStandardDeviationPercentage) {
         StandardDeviationPercentage = other.StandardDeviationPercentage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -5908,6 +6234,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<DailyRestingHeartRate> _parser = new pb::MessageParser<DailyRestingHeartRate>(() => new DailyRestingHeartRate());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DailyRestingHeartRate> Parser { get { return _parser; } }
@@ -5935,6 +6262,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyRestingHeartRate(DailyRestingHeartRate other) : this() {
+      _hasBits0 = other._hasBits0;
       date_ = other.date_ != null ? other.date_.Clone() : null;
       beatsPerMinute_ = other.beatsPerMinute_;
       dailyRestingHeartRateMetadata_ = other.dailyRestingHeartRateMetadata_ != null ? other.dailyRestingHeartRateMetadata_.Clone() : null;
@@ -5965,6 +6293,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "beats_per_minute" field.</summary>
     public const int BeatsPerMinuteFieldNumber = 4;
+    private readonly static long BeatsPerMinuteDefaultValue = 0L;
+
     private long beatsPerMinute_;
     /// <summary>
     /// Required. The resting heart rate value in beats per minute.
@@ -5972,10 +6302,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BeatsPerMinute {
-      get { return beatsPerMinute_; }
+      get { if ((_hasBits0 & 1) != 0) { return beatsPerMinute_; } else { return BeatsPerMinuteDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         beatsPerMinute_ = value;
       }
+    }
+    /// <summary>Gets whether the "beats_per_minute" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBeatsPerMinute {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "beats_per_minute" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBeatsPerMinute() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "daily_resting_heart_rate_metadata" field.</summary>
@@ -6019,7 +6362,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (date_ != null) hash ^= Date.GetHashCode();
-      if (BeatsPerMinute != 0L) hash ^= BeatsPerMinute.GetHashCode();
+      if (HasBeatsPerMinute) hash ^= BeatsPerMinute.GetHashCode();
       if (dailyRestingHeartRateMetadata_ != null) hash ^= DailyRestingHeartRateMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -6043,7 +6386,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Date);
       }
-      if (BeatsPerMinute != 0L) {
+      if (HasBeatsPerMinute) {
         output.WriteRawTag(32);
         output.WriteInt64(BeatsPerMinute);
       }
@@ -6065,7 +6408,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Date);
       }
-      if (BeatsPerMinute != 0L) {
+      if (HasBeatsPerMinute) {
         output.WriteRawTag(32);
         output.WriteInt64(BeatsPerMinute);
       }
@@ -6086,7 +6429,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (date_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Date);
       }
-      if (BeatsPerMinute != 0L) {
+      if (HasBeatsPerMinute) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeatsPerMinute);
       }
       if (dailyRestingHeartRateMetadata_ != null) {
@@ -6110,7 +6453,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Date.MergeFrom(other.Date);
       }
-      if (other.BeatsPerMinute != 0L) {
+      if (other.HasBeatsPerMinute) {
         BeatsPerMinute = other.BeatsPerMinute;
       }
       if (other.dailyRestingHeartRateMetadata_ != null) {
@@ -6450,6 +6793,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<DailySleepTemperatureDerivations> _parser = new pb::MessageParser<DailySleepTemperatureDerivations>(() => new DailySleepTemperatureDerivations());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DailySleepTemperatureDerivations> Parser { get { return _parser; } }
@@ -6477,6 +6821,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailySleepTemperatureDerivations(DailySleepTemperatureDerivations other) : this() {
+      _hasBits0 = other._hasBits0;
       date_ = other.date_ != null ? other.date_.Clone() : null;
       nightlyTemperatureCelsius_ = other.nightlyTemperatureCelsius_;
       baselineTemperatureCelsius_ = other.baselineTemperatureCelsius_;
@@ -6507,6 +6852,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "nightly_temperature_celsius" field.</summary>
     public const int NightlyTemperatureCelsiusFieldNumber = 2;
+    private readonly static double NightlyTemperatureCelsiusDefaultValue = 0D;
+
     private double nightlyTemperatureCelsius_;
     /// <summary>
     /// Required. The user's nightly skin temperature. It is the mean of skin
@@ -6515,14 +6862,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double NightlyTemperatureCelsius {
-      get { return nightlyTemperatureCelsius_; }
+      get { if ((_hasBits0 & 1) != 0) { return nightlyTemperatureCelsius_; } else { return NightlyTemperatureCelsiusDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         nightlyTemperatureCelsius_ = value;
       }
+    }
+    /// <summary>Gets whether the "nightly_temperature_celsius" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNightlyTemperatureCelsius {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "nightly_temperature_celsius" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNightlyTemperatureCelsius() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "baseline_temperature_celsius" field.</summary>
     public const int BaselineTemperatureCelsiusFieldNumber = 3;
+    private readonly static double BaselineTemperatureCelsiusDefaultValue = 0D;
+
     private double baselineTemperatureCelsius_;
     /// <summary>
     /// Optional. The user's baseline skin temperature. It is the median of the
@@ -6531,14 +6893,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double BaselineTemperatureCelsius {
-      get { return baselineTemperatureCelsius_; }
+      get { if ((_hasBits0 & 2) != 0) { return baselineTemperatureCelsius_; } else { return BaselineTemperatureCelsiusDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         baselineTemperatureCelsius_ = value;
       }
+    }
+    /// <summary>Gets whether the "baseline_temperature_celsius" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBaselineTemperatureCelsius {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "baseline_temperature_celsius" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBaselineTemperatureCelsius() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "relative_nightly_stddev_30d_celsius" field.</summary>
     public const int RelativeNightlyStddev30DCelsiusFieldNumber = 4;
+    private readonly static double RelativeNightlyStddev30DCelsiusDefaultValue = 0D;
+
     private double relativeNightlyStddev30DCelsius_;
     /// <summary>
     /// Optional. The standard deviation of the user’s relative nightly skin
@@ -6547,10 +6924,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double RelativeNightlyStddev30DCelsius {
-      get { return relativeNightlyStddev30DCelsius_; }
+      get { if ((_hasBits0 & 4) != 0) { return relativeNightlyStddev30DCelsius_; } else { return RelativeNightlyStddev30DCelsiusDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         relativeNightlyStddev30DCelsius_ = value;
       }
+    }
+    /// <summary>Gets whether the "relative_nightly_stddev_30d_celsius" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRelativeNightlyStddev30DCelsius {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "relative_nightly_stddev_30d_celsius" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRelativeNightlyStddev30DCelsius() {
+      _hasBits0 &= ~4;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6580,9 +6970,9 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (date_ != null) hash ^= Date.GetHashCode();
-      if (NightlyTemperatureCelsius != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(NightlyTemperatureCelsius);
-      if (BaselineTemperatureCelsius != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BaselineTemperatureCelsius);
-      if (RelativeNightlyStddev30DCelsius != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RelativeNightlyStddev30DCelsius);
+      if (HasNightlyTemperatureCelsius) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(NightlyTemperatureCelsius);
+      if (HasBaselineTemperatureCelsius) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BaselineTemperatureCelsius);
+      if (HasRelativeNightlyStddev30DCelsius) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RelativeNightlyStddev30DCelsius);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6605,15 +6995,15 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (NightlyTemperatureCelsius != 0D) {
+      if (HasNightlyTemperatureCelsius) {
         output.WriteRawTag(17);
         output.WriteDouble(NightlyTemperatureCelsius);
       }
-      if (BaselineTemperatureCelsius != 0D) {
+      if (HasBaselineTemperatureCelsius) {
         output.WriteRawTag(25);
         output.WriteDouble(BaselineTemperatureCelsius);
       }
-      if (RelativeNightlyStddev30DCelsius != 0D) {
+      if (HasRelativeNightlyStddev30DCelsius) {
         output.WriteRawTag(33);
         output.WriteDouble(RelativeNightlyStddev30DCelsius);
       }
@@ -6631,15 +7021,15 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (NightlyTemperatureCelsius != 0D) {
+      if (HasNightlyTemperatureCelsius) {
         output.WriteRawTag(17);
         output.WriteDouble(NightlyTemperatureCelsius);
       }
-      if (BaselineTemperatureCelsius != 0D) {
+      if (HasBaselineTemperatureCelsius) {
         output.WriteRawTag(25);
         output.WriteDouble(BaselineTemperatureCelsius);
       }
-      if (RelativeNightlyStddev30DCelsius != 0D) {
+      if (HasRelativeNightlyStddev30DCelsius) {
         output.WriteRawTag(33);
         output.WriteDouble(RelativeNightlyStddev30DCelsius);
       }
@@ -6656,13 +7046,13 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (date_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Date);
       }
-      if (NightlyTemperatureCelsius != 0D) {
+      if (HasNightlyTemperatureCelsius) {
         size += 1 + 8;
       }
-      if (BaselineTemperatureCelsius != 0D) {
+      if (HasBaselineTemperatureCelsius) {
         size += 1 + 8;
       }
-      if (RelativeNightlyStddev30DCelsius != 0D) {
+      if (HasRelativeNightlyStddev30DCelsius) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -6683,13 +7073,13 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Date.MergeFrom(other.Date);
       }
-      if (other.NightlyTemperatureCelsius != 0D) {
+      if (other.HasNightlyTemperatureCelsius) {
         NightlyTemperatureCelsius = other.NightlyTemperatureCelsius;
       }
-      if (other.BaselineTemperatureCelsius != 0D) {
+      if (other.HasBaselineTemperatureCelsius) {
         BaselineTemperatureCelsius = other.BaselineTemperatureCelsius;
       }
-      if (other.RelativeNightlyStddev30DCelsius != 0D) {
+      if (other.HasRelativeNightlyStddev30DCelsius) {
         RelativeNightlyStddev30DCelsius = other.RelativeNightlyStddev30DCelsius;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -6787,6 +7177,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<DailyVO2Max> _parser = new pb::MessageParser<DailyVO2Max>(() => new DailyVO2Max());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DailyVO2Max> Parser { get { return _parser; } }
@@ -6814,6 +7205,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DailyVO2Max(DailyVO2Max other) : this() {
+      _hasBits0 = other._hasBits0;
       date_ = other.date_ != null ? other.date_.Clone() : null;
       vo2Max_ = other.vo2Max_;
       estimated_ = other.estimated_;
@@ -6845,6 +7237,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "vo2_max" field.</summary>
     public const int Vo2MaxFieldNumber = 2;
+    private readonly static double Vo2MaxDefaultValue = 0D;
+
     private double vo2Max_;
     /// <summary>
     /// Required. Daily VO2 max value measured as in ml consumed oxygen / kg of
@@ -6853,10 +7247,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Vo2Max {
-      get { return vo2Max_; }
+      get { if ((_hasBits0 & 1) != 0) { return vo2Max_; } else { return Vo2MaxDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         vo2Max_ = value;
       }
+    }
+    /// <summary>Gets whether the "vo2_max" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVo2Max {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "vo2_max" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVo2Max() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "estimated" field.</summary>
@@ -6893,6 +7300,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "vo2_max_covariance" field.</summary>
     public const int Vo2MaxCovarianceFieldNumber = 5;
+    private readonly static double Vo2MaxCovarianceDefaultValue = 0D;
+
     private double vo2MaxCovariance_;
     /// <summary>
     /// Optional. The covariance of the VO2 max value.
@@ -6900,10 +7309,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Vo2MaxCovariance {
-      get { return vo2MaxCovariance_; }
+      get { if ((_hasBits0 & 2) != 0) { return vo2MaxCovariance_; } else { return Vo2MaxCovarianceDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         vo2MaxCovariance_ = value;
       }
+    }
+    /// <summary>Gets whether the "vo2_max_covariance" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVo2MaxCovariance {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "vo2_max_covariance" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVo2MaxCovariance() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6934,10 +7356,10 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (date_ != null) hash ^= Date.GetHashCode();
-      if (Vo2Max != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Vo2Max);
+      if (HasVo2Max) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Vo2Max);
       if (Estimated != false) hash ^= Estimated.GetHashCode();
       if (CardioFitnessLevel != global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Types.CardioFitnessLevel.Unspecified) hash ^= CardioFitnessLevel.GetHashCode();
-      if (Vo2MaxCovariance != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Vo2MaxCovariance);
+      if (HasVo2MaxCovariance) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Vo2MaxCovariance);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -6960,7 +7382,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (Vo2Max != 0D) {
+      if (HasVo2Max) {
         output.WriteRawTag(17);
         output.WriteDouble(Vo2Max);
       }
@@ -6972,7 +7394,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(32);
         output.WriteEnum((int) CardioFitnessLevel);
       }
-      if (Vo2MaxCovariance != 0D) {
+      if (HasVo2MaxCovariance) {
         output.WriteRawTag(41);
         output.WriteDouble(Vo2MaxCovariance);
       }
@@ -6990,7 +7412,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(Date);
       }
-      if (Vo2Max != 0D) {
+      if (HasVo2Max) {
         output.WriteRawTag(17);
         output.WriteDouble(Vo2Max);
       }
@@ -7002,7 +7424,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(32);
         output.WriteEnum((int) CardioFitnessLevel);
       }
-      if (Vo2MaxCovariance != 0D) {
+      if (HasVo2MaxCovariance) {
         output.WriteRawTag(41);
         output.WriteDouble(Vo2MaxCovariance);
       }
@@ -7019,7 +7441,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (date_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Date);
       }
-      if (Vo2Max != 0D) {
+      if (HasVo2Max) {
         size += 1 + 8;
       }
       if (Estimated != false) {
@@ -7028,7 +7450,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (CardioFitnessLevel != global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Types.CardioFitnessLevel.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CardioFitnessLevel);
       }
-      if (Vo2MaxCovariance != 0D) {
+      if (HasVo2MaxCovariance) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -7049,7 +7471,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Date.MergeFrom(other.Date);
       }
-      if (other.Vo2Max != 0D) {
+      if (other.HasVo2Max) {
         Vo2Max = other.Vo2Max;
       }
       if (other.Estimated != false) {
@@ -7058,7 +7480,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other.CardioFitnessLevel != global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Types.CardioFitnessLevel.Unspecified) {
         CardioFitnessLevel = other.CardioFitnessLevel;
       }
-      if (other.Vo2MaxCovariance != 0D) {
+      if (other.HasVo2MaxCovariance) {
         Vo2MaxCovariance = other.Vo2MaxCovariance;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -7205,6 +7627,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<Distance> _parser = new pb::MessageParser<Distance>(() => new Distance());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Distance> Parser { get { return _parser; } }
@@ -7232,6 +7655,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Distance(Distance other) : this() {
+      _hasBits0 = other._hasBits0;
       interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       millimeters_ = other.millimeters_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -7260,6 +7684,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "millimeters" field.</summary>
     public const int MillimetersFieldNumber = 3;
+    private readonly static long MillimetersDefaultValue = 0L;
+
     private long millimeters_;
     /// <summary>
     /// Required. Distance in millimeters over the observed interval.
@@ -7267,10 +7693,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Millimeters {
-      get { return millimeters_; }
+      get { if ((_hasBits0 & 1) != 0) { return millimeters_; } else { return MillimetersDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         millimeters_ = value;
       }
+    }
+    /// <summary>Gets whether the "millimeters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMillimeters {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "millimeters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMillimeters() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7298,7 +7737,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (interval_ != null) hash ^= Interval.GetHashCode();
-      if (Millimeters != 0L) hash ^= Millimeters.GetHashCode();
+      if (HasMillimeters) hash ^= Millimeters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7321,7 +7760,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Interval);
       }
-      if (Millimeters != 0L) {
+      if (HasMillimeters) {
         output.WriteRawTag(24);
         output.WriteInt64(Millimeters);
       }
@@ -7339,7 +7778,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Interval);
       }
-      if (Millimeters != 0L) {
+      if (HasMillimeters) {
         output.WriteRawTag(24);
         output.WriteInt64(Millimeters);
       }
@@ -7356,7 +7795,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (interval_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
       }
-      if (Millimeters != 0L) {
+      if (HasMillimeters) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Millimeters);
       }
       if (_unknownFields != null) {
@@ -7377,7 +7816,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Interval.MergeFrom(other.Interval);
       }
-      if (other.Millimeters != 0L) {
+      if (other.HasMillimeters) {
         Millimeters = other.Millimeters;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -7458,6 +7897,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<DistanceRollupValue> _parser = new pb::MessageParser<DistanceRollupValue>(() => new DistanceRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DistanceRollupValue> Parser { get { return _parser; } }
@@ -7485,6 +7925,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DistanceRollupValue(DistanceRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       millimetersSum_ = other.millimetersSum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -7497,6 +7938,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "millimeters_sum" field.</summary>
     public const int MillimetersSumFieldNumber = 1;
+    private readonly static long MillimetersSumDefaultValue = 0L;
+
     private long millimetersSum_;
     /// <summary>
     /// Sum of the distance in millimeters.
@@ -7504,10 +7947,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MillimetersSum {
-      get { return millimetersSum_; }
+      get { if ((_hasBits0 & 1) != 0) { return millimetersSum_; } else { return MillimetersSumDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         millimetersSum_ = value;
       }
+    }
+    /// <summary>Gets whether the "millimeters_sum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMillimetersSum {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "millimeters_sum" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMillimetersSum() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7533,7 +7989,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (MillimetersSum != 0L) hash ^= MillimetersSum.GetHashCode();
+      if (HasMillimetersSum) hash ^= MillimetersSum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7552,7 +8008,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (MillimetersSum != 0L) {
+      if (HasMillimetersSum) {
         output.WriteRawTag(8);
         output.WriteInt64(MillimetersSum);
       }
@@ -7566,7 +8022,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (MillimetersSum != 0L) {
+      if (HasMillimetersSum) {
         output.WriteRawTag(8);
         output.WriteInt64(MillimetersSum);
       }
@@ -7580,7 +8036,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (MillimetersSum != 0L) {
+      if (HasMillimetersSum) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(MillimetersSum);
       }
       if (_unknownFields != null) {
@@ -7595,7 +8051,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.MillimetersSum != 0L) {
+      if (other.HasMillimetersSum) {
         MillimetersSum = other.MillimetersSum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -9278,6 +9734,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         private static readonly pb::MessageParser<ExerciseMetadata> _parser = new pb::MessageParser<ExerciseMetadata>(() => new ExerciseMetadata());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ExerciseMetadata> Parser { get { return _parser; } }
@@ -9305,6 +9762,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExerciseMetadata(ExerciseMetadata other) : this() {
+          _hasBits0 = other._hasBits0;
           poolLengthMillimeters_ = other.poolLengthMillimeters_;
           hasGps_ = other.hasGps_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -9318,6 +9776,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
         /// <summary>Field number for the "pool_length_millimeters" field.</summary>
         public const int PoolLengthMillimetersFieldNumber = 1;
+        private readonly static long PoolLengthMillimetersDefaultValue = 0L;
+
         private long poolLengthMillimeters_;
         /// <summary>
         /// Optional. Pool length in millimeters. Only present in the swimming
@@ -9326,10 +9786,23 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long PoolLengthMillimeters {
-          get { return poolLengthMillimeters_; }
+          get { if ((_hasBits0 & 1) != 0) { return poolLengthMillimeters_; } else { return PoolLengthMillimetersDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             poolLengthMillimeters_ = value;
           }
+        }
+        /// <summary>Gets whether the "pool_length_millimeters" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasPoolLengthMillimeters {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "pool_length_millimeters" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPoolLengthMillimeters() {
+          _hasBits0 &= ~1;
         }
 
         /// <summary>Field number for the "has_gps" field.</summary>
@@ -9371,7 +9844,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (PoolLengthMillimeters != 0L) hash ^= PoolLengthMillimeters.GetHashCode();
+          if (HasPoolLengthMillimeters) hash ^= PoolLengthMillimeters.GetHashCode();
           if (HasGps != false) hash ^= HasGps.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -9391,7 +9864,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (PoolLengthMillimeters != 0L) {
+          if (HasPoolLengthMillimeters) {
             output.WriteRawTag(8);
             output.WriteInt64(PoolLengthMillimeters);
           }
@@ -9409,7 +9882,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (PoolLengthMillimeters != 0L) {
+          if (HasPoolLengthMillimeters) {
             output.WriteRawTag(8);
             output.WriteInt64(PoolLengthMillimeters);
           }
@@ -9427,7 +9900,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (PoolLengthMillimeters != 0L) {
+          if (HasPoolLengthMillimeters) {
             size += 1 + pb::CodedOutputStream.ComputeInt64Size(PoolLengthMillimeters);
           }
           if (HasGps != false) {
@@ -9445,7 +9918,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (other == null) {
             return;
           }
-          if (other.PoolLengthMillimeters != 0L) {
+          if (other.HasPoolLengthMillimeters) {
             PoolLengthMillimeters = other.PoolLengthMillimeters;
           }
           if (other.HasGps != false) {
@@ -9528,6 +10001,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<Floors> _parser = new pb::MessageParser<Floors>(() => new Floors());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Floors> Parser { get { return _parser; } }
@@ -9555,6 +10029,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Floors(Floors other) : this() {
+      _hasBits0 = other._hasBits0;
       interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -9583,6 +10058,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "count" field.</summary>
     public const int CountFieldNumber = 4;
+    private readonly static long CountDefaultValue = 0L;
+
     private long count_;
     /// <summary>
     /// Required. Number of floors in the recorded interval
@@ -9590,10 +10067,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Count {
-      get { return count_; }
+      get { if ((_hasBits0 & 1) != 0) { return count_; } else { return CountDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         count_ = value;
       }
+    }
+    /// <summary>Gets whether the "count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCount() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9621,7 +10111,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (interval_ != null) hash ^= Interval.GetHashCode();
-      if (Count != 0L) hash ^= Count.GetHashCode();
+      if (HasCount) hash ^= Count.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9644,7 +10134,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Interval);
       }
-      if (Count != 0L) {
+      if (HasCount) {
         output.WriteRawTag(32);
         output.WriteInt64(Count);
       }
@@ -9662,7 +10152,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Interval);
       }
-      if (Count != 0L) {
+      if (HasCount) {
         output.WriteRawTag(32);
         output.WriteInt64(Count);
       }
@@ -9679,7 +10169,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (interval_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
       }
-      if (Count != 0L) {
+      if (HasCount) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
       }
       if (_unknownFields != null) {
@@ -9700,7 +10190,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Interval.MergeFrom(other.Interval);
       }
-      if (other.Count != 0L) {
+      if (other.HasCount) {
         Count = other.Count;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -9781,6 +10271,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<FloorsRollupValue> _parser = new pb::MessageParser<FloorsRollupValue>(() => new FloorsRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FloorsRollupValue> Parser { get { return _parser; } }
@@ -9808,6 +10299,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FloorsRollupValue(FloorsRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       countSum_ = other.countSum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -9820,6 +10312,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "count_sum" field.</summary>
     public const int CountSumFieldNumber = 1;
+    private readonly static long CountSumDefaultValue = 0L;
+
     private long countSum_;
     /// <summary>
     /// Sum of the floors count.
@@ -9827,10 +10321,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long CountSum {
-      get { return countSum_; }
+      get { if ((_hasBits0 & 1) != 0) { return countSum_; } else { return CountSumDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         countSum_ = value;
       }
+    }
+    /// <summary>Gets whether the "count_sum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCountSum {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "count_sum" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCountSum() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -9856,7 +10363,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CountSum != 0L) hash ^= CountSum.GetHashCode();
+      if (HasCountSum) hash ^= CountSum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -9875,7 +10382,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CountSum != 0L) {
+      if (HasCountSum) {
         output.WriteRawTag(8);
         output.WriteInt64(CountSum);
       }
@@ -9889,7 +10396,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CountSum != 0L) {
+      if (HasCountSum) {
         output.WriteRawTag(8);
         output.WriteInt64(CountSum);
       }
@@ -9903,7 +10410,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CountSum != 0L) {
+      if (HasCountSum) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CountSum);
       }
       if (_unknownFields != null) {
@@ -9918,7 +10425,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.CountSum != 0L) {
+      if (other.HasCountSum) {
         CountSum = other.CountSum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -9985,6 +10492,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<AltitudeRollupValue> _parser = new pb::MessageParser<AltitudeRollupValue>(() => new AltitudeRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AltitudeRollupValue> Parser { get { return _parser; } }
@@ -10012,6 +10520,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AltitudeRollupValue(AltitudeRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       gainMillimetersSum_ = other.gainMillimetersSum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -10024,6 +10533,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "gain_millimeters_sum" field.</summary>
     public const int GainMillimetersSumFieldNumber = 1;
+    private readonly static long GainMillimetersSumDefaultValue = 0L;
+
     private long gainMillimetersSum_;
     /// <summary>
     /// Sum of the altitude gain in millimeters.
@@ -10031,10 +10542,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long GainMillimetersSum {
-      get { return gainMillimetersSum_; }
+      get { if ((_hasBits0 & 1) != 0) { return gainMillimetersSum_; } else { return GainMillimetersSumDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         gainMillimetersSum_ = value;
       }
+    }
+    /// <summary>Gets whether the "gain_millimeters_sum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGainMillimetersSum {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "gain_millimeters_sum" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGainMillimetersSum() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10060,7 +10584,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (GainMillimetersSum != 0L) hash ^= GainMillimetersSum.GetHashCode();
+      if (HasGainMillimetersSum) hash ^= GainMillimetersSum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10079,7 +10603,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (GainMillimetersSum != 0L) {
+      if (HasGainMillimetersSum) {
         output.WriteRawTag(8);
         output.WriteInt64(GainMillimetersSum);
       }
@@ -10093,7 +10617,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (GainMillimetersSum != 0L) {
+      if (HasGainMillimetersSum) {
         output.WriteRawTag(8);
         output.WriteInt64(GainMillimetersSum);
       }
@@ -10107,7 +10631,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (GainMillimetersSum != 0L) {
+      if (HasGainMillimetersSum) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(GainMillimetersSum);
       }
       if (_unknownFields != null) {
@@ -10122,7 +10646,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.GainMillimetersSum != 0L) {
+      if (other.HasGainMillimetersSum) {
         GainMillimetersSum = other.GainMillimetersSum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -10189,6 +10713,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<HeartRate> _parser = new pb::MessageParser<HeartRate>(() => new HeartRate());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HeartRate> Parser { get { return _parser; } }
@@ -10216,6 +10741,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeartRate(HeartRate other) : this() {
+      _hasBits0 = other._hasBits0;
       sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
       beatsPerMinute_ = other.beatsPerMinute_;
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
@@ -10245,6 +10771,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "beats_per_minute" field.</summary>
     public const int BeatsPerMinuteFieldNumber = 4;
+    private readonly static long BeatsPerMinuteDefaultValue = 0L;
+
     private long beatsPerMinute_;
     /// <summary>
     /// Required. The heart rate value in beats per minute.
@@ -10252,10 +10780,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BeatsPerMinute {
-      get { return beatsPerMinute_; }
+      get { if ((_hasBits0 & 1) != 0) { return beatsPerMinute_; } else { return BeatsPerMinuteDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         beatsPerMinute_ = value;
       }
+    }
+    /// <summary>Gets whether the "beats_per_minute" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBeatsPerMinute {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "beats_per_minute" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBeatsPerMinute() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "metadata" field.</summary>
@@ -10299,7 +10840,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
-      if (BeatsPerMinute != 0L) hash ^= BeatsPerMinute.GetHashCode();
+      if (HasBeatsPerMinute) hash ^= BeatsPerMinute.GetHashCode();
       if (metadata_ != null) hash ^= Metadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10323,7 +10864,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(SampleTime);
       }
-      if (BeatsPerMinute != 0L) {
+      if (HasBeatsPerMinute) {
         output.WriteRawTag(32);
         output.WriteInt64(BeatsPerMinute);
       }
@@ -10345,7 +10886,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(SampleTime);
       }
-      if (BeatsPerMinute != 0L) {
+      if (HasBeatsPerMinute) {
         output.WriteRawTag(32);
         output.WriteInt64(BeatsPerMinute);
       }
@@ -10366,7 +10907,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (sampleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
       }
-      if (BeatsPerMinute != 0L) {
+      if (HasBeatsPerMinute) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeatsPerMinute);
       }
       if (metadata_ != null) {
@@ -10390,7 +10931,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         SampleTime.MergeFrom(other.SampleTime);
       }
-      if (other.BeatsPerMinute != 0L) {
+      if (other.HasBeatsPerMinute) {
         BeatsPerMinute = other.BeatsPerMinute;
       }
       if (other.metadata_ != null) {
@@ -11137,6 +11678,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<RunVO2MaxRollupValue> _parser = new pb::MessageParser<RunVO2MaxRollupValue>(() => new RunVO2MaxRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RunVO2MaxRollupValue> Parser { get { return _parser; } }
@@ -11164,6 +11706,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunVO2MaxRollupValue(RunVO2MaxRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       rateMin_ = other.rateMin_;
       rateMax_ = other.rateMax_;
       rateAvg_ = other.rateAvg_;
@@ -11178,6 +11721,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "rate_min" field.</summary>
     public const int RateMinFieldNumber = 1;
+    private readonly static double RateMinDefaultValue = 0D;
+
     private double rateMin_;
     /// <summary>
     /// Minimum value of run VO2 max in the interval..
@@ -11185,14 +11730,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double RateMin {
-      get { return rateMin_; }
+      get { if ((_hasBits0 & 1) != 0) { return rateMin_; } else { return RateMinDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         rateMin_ = value;
       }
+    }
+    /// <summary>Gets whether the "rate_min" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRateMin {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "rate_min" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRateMin() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "rate_max" field.</summary>
     public const int RateMaxFieldNumber = 2;
+    private readonly static double RateMaxDefaultValue = 0D;
+
     private double rateMax_;
     /// <summary>
     /// Maximum value of run VO2 max in the interval.
@@ -11200,14 +11760,29 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double RateMax {
-      get { return rateMax_; }
+      get { if ((_hasBits0 & 2) != 0) { return rateMax_; } else { return RateMaxDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         rateMax_ = value;
       }
+    }
+    /// <summary>Gets whether the "rate_max" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRateMax {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "rate_max" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRateMax() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "rate_avg" field.</summary>
     public const int RateAvgFieldNumber = 3;
+    private readonly static double RateAvgDefaultValue = 0D;
+
     private double rateAvg_;
     /// <summary>
     /// Average value of run VO2 max in the interval.
@@ -11215,10 +11790,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double RateAvg {
-      get { return rateAvg_; }
+      get { if ((_hasBits0 & 4) != 0) { return rateAvg_; } else { return RateAvgDefaultValue; } }
       set {
+        _hasBits0 |= 4;
         rateAvg_ = value;
       }
+    }
+    /// <summary>Gets whether the "rate_avg" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRateAvg {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "rate_avg" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRateAvg() {
+      _hasBits0 &= ~4;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11246,9 +11834,9 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (RateMin != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RateMin);
-      if (RateMax != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RateMax);
-      if (RateAvg != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RateAvg);
+      if (HasRateMin) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RateMin);
+      if (HasRateMax) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RateMax);
+      if (HasRateAvg) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RateAvg);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -11267,15 +11855,15 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (RateMin != 0D) {
+      if (HasRateMin) {
         output.WriteRawTag(9);
         output.WriteDouble(RateMin);
       }
-      if (RateMax != 0D) {
+      if (HasRateMax) {
         output.WriteRawTag(17);
         output.WriteDouble(RateMax);
       }
-      if (RateAvg != 0D) {
+      if (HasRateAvg) {
         output.WriteRawTag(25);
         output.WriteDouble(RateAvg);
       }
@@ -11289,15 +11877,15 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (RateMin != 0D) {
+      if (HasRateMin) {
         output.WriteRawTag(9);
         output.WriteDouble(RateMin);
       }
-      if (RateMax != 0D) {
+      if (HasRateMax) {
         output.WriteRawTag(17);
         output.WriteDouble(RateMax);
       }
-      if (RateAvg != 0D) {
+      if (HasRateAvg) {
         output.WriteRawTag(25);
         output.WriteDouble(RateAvg);
       }
@@ -11311,13 +11899,13 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (RateMin != 0D) {
+      if (HasRateMin) {
         size += 1 + 8;
       }
-      if (RateMax != 0D) {
+      if (HasRateMax) {
         size += 1 + 8;
       }
-      if (RateAvg != 0D) {
+      if (HasRateAvg) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -11332,13 +11920,13 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.RateMin != 0D) {
+      if (other.HasRateMin) {
         RateMin = other.RateMin;
       }
-      if (other.RateMax != 0D) {
+      if (other.HasRateMax) {
         RateMax = other.RateMax;
       }
-      if (other.RateAvg != 0D) {
+      if (other.HasRateAvg) {
         RateAvg = other.RateAvg;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -11422,6 +12010,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<RunVO2Max> _parser = new pb::MessageParser<RunVO2Max>(() => new RunVO2Max());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RunVO2Max> Parser { get { return _parser; } }
@@ -11449,6 +12038,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunVO2Max(RunVO2Max other) : this() {
+      _hasBits0 = other._hasBits0;
       sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
       runVo2Max_ = other.runVo2Max_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -11477,6 +12067,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "run_vo2_max" field.</summary>
     public const int RunVo2MaxFieldNumber = 2;
+    private readonly static double RunVo2MaxDefaultValue = 0D;
+
     private double runVo2Max_;
     /// <summary>
     /// Required. Run VO2 max value in ml/kg/min.
@@ -11484,10 +12076,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double RunVo2Max {
-      get { return runVo2Max_; }
+      get { if ((_hasBits0 & 1) != 0) { return runVo2Max_; } else { return RunVo2MaxDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         runVo2Max_ = value;
       }
+    }
+    /// <summary>Gets whether the "run_vo2_max" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRunVo2Max {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "run_vo2_max" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRunVo2Max() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11515,7 +12120,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
-      if (RunVo2Max != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RunVo2Max);
+      if (HasRunVo2Max) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RunVo2Max);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -11538,7 +12143,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (RunVo2Max != 0D) {
+      if (HasRunVo2Max) {
         output.WriteRawTag(17);
         output.WriteDouble(RunVo2Max);
       }
@@ -11556,7 +12161,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (RunVo2Max != 0D) {
+      if (HasRunVo2Max) {
         output.WriteRawTag(17);
         output.WriteDouble(RunVo2Max);
       }
@@ -11573,7 +12178,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (sampleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
       }
-      if (RunVo2Max != 0D) {
+      if (HasRunVo2Max) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -11594,7 +12199,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         SampleTime.MergeFrom(other.SampleTime);
       }
-      if (other.RunVo2Max != 0D) {
+      if (other.HasRunVo2Max) {
         RunVo2Max = other.RunVo2Max;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -11954,6 +12559,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<Height> _parser = new pb::MessageParser<Height>(() => new Height());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Height> Parser { get { return _parser; } }
@@ -11981,6 +12587,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Height(Height other) : this() {
+      _hasBits0 = other._hasBits0;
       sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
       heightMillimeters_ = other.heightMillimeters_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -12009,6 +12616,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "height_millimeters" field.</summary>
     public const int HeightMillimetersFieldNumber = 2;
+    private readonly static long HeightMillimetersDefaultValue = 0L;
+
     private long heightMillimeters_;
     /// <summary>
     /// Required. Height of the user in millimeters.
@@ -12016,10 +12625,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long HeightMillimeters {
-      get { return heightMillimeters_; }
+      get { if ((_hasBits0 & 1) != 0) { return heightMillimeters_; } else { return HeightMillimetersDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         heightMillimeters_ = value;
       }
+    }
+    /// <summary>Gets whether the "height_millimeters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHeightMillimeters {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "height_millimeters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHeightMillimeters() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12047,7 +12669,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
-      if (HeightMillimeters != 0L) hash ^= HeightMillimeters.GetHashCode();
+      if (HasHeightMillimeters) hash ^= HeightMillimeters.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12070,7 +12692,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (HeightMillimeters != 0L) {
+      if (HasHeightMillimeters) {
         output.WriteRawTag(16);
         output.WriteInt64(HeightMillimeters);
       }
@@ -12088,7 +12710,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (HeightMillimeters != 0L) {
+      if (HasHeightMillimeters) {
         output.WriteRawTag(16);
         output.WriteInt64(HeightMillimeters);
       }
@@ -12105,7 +12727,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (sampleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
       }
-      if (HeightMillimeters != 0L) {
+      if (HasHeightMillimeters) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(HeightMillimeters);
       }
       if (_unknownFields != null) {
@@ -12126,7 +12748,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         SampleTime.MergeFrom(other.SampleTime);
       }
-      if (other.HeightMillimeters != 0L) {
+      if (other.HasHeightMillimeters) {
         HeightMillimeters = other.HeightMillimeters;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -12209,6 +12831,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<HeartRateVariability> _parser = new pb::MessageParser<HeartRateVariability>(() => new HeartRateVariability());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HeartRateVariability> Parser { get { return _parser; } }
@@ -12236,6 +12859,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HeartRateVariability(HeartRateVariability other) : this() {
+      _hasBits0 = other._hasBits0;
       sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
       rootMeanSquareOfSuccessiveDifferencesMilliseconds_ = other.rootMeanSquareOfSuccessiveDifferencesMilliseconds_;
       standardDeviationMilliseconds_ = other.standardDeviationMilliseconds_;
@@ -12265,22 +12889,40 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "root_mean_square_of_successive_differences_milliseconds" field.</summary>
     public const int RootMeanSquareOfSuccessiveDifferencesMillisecondsFieldNumber = 2;
+    private readonly static double RootMeanSquareOfSuccessiveDifferencesMillisecondsDefaultValue = 0D;
+
     private double rootMeanSquareOfSuccessiveDifferencesMilliseconds_;
     /// <summary>
     /// Optional. The root mean square of successive differences between normal
-    /// heartbeats. This is a measure of heart rate variability used by Fitbit.
+    /// heartbeats. This is a measure of heart rate variability used by Google
+    /// Health.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double RootMeanSquareOfSuccessiveDifferencesMilliseconds {
-      get { return rootMeanSquareOfSuccessiveDifferencesMilliseconds_; }
+      get { if ((_hasBits0 & 1) != 0) { return rootMeanSquareOfSuccessiveDifferencesMilliseconds_; } else { return RootMeanSquareOfSuccessiveDifferencesMillisecondsDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         rootMeanSquareOfSuccessiveDifferencesMilliseconds_ = value;
       }
+    }
+    /// <summary>Gets whether the "root_mean_square_of_successive_differences_milliseconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRootMeanSquareOfSuccessiveDifferencesMilliseconds {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "root_mean_square_of_successive_differences_milliseconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRootMeanSquareOfSuccessiveDifferencesMilliseconds() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "standard_deviation_milliseconds" field.</summary>
     public const int StandardDeviationMillisecondsFieldNumber = 3;
+    private readonly static double StandardDeviationMillisecondsDefaultValue = 0D;
+
     private double standardDeviationMilliseconds_;
     /// <summary>
     /// Optional. The standard deviation of the heart rate variability measurement.
@@ -12288,10 +12930,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double StandardDeviationMilliseconds {
-      get { return standardDeviationMilliseconds_; }
+      get { if ((_hasBits0 & 2) != 0) { return standardDeviationMilliseconds_; } else { return StandardDeviationMillisecondsDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         standardDeviationMilliseconds_ = value;
       }
+    }
+    /// <summary>Gets whether the "standard_deviation_milliseconds" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStandardDeviationMilliseconds {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "standard_deviation_milliseconds" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStandardDeviationMilliseconds() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12320,8 +12975,8 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
-      if (RootMeanSquareOfSuccessiveDifferencesMilliseconds != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RootMeanSquareOfSuccessiveDifferencesMilliseconds);
-      if (StandardDeviationMilliseconds != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(StandardDeviationMilliseconds);
+      if (HasRootMeanSquareOfSuccessiveDifferencesMilliseconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(RootMeanSquareOfSuccessiveDifferencesMilliseconds);
+      if (HasStandardDeviationMilliseconds) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(StandardDeviationMilliseconds);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -12344,11 +12999,11 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (RootMeanSquareOfSuccessiveDifferencesMilliseconds != 0D) {
+      if (HasRootMeanSquareOfSuccessiveDifferencesMilliseconds) {
         output.WriteRawTag(17);
         output.WriteDouble(RootMeanSquareOfSuccessiveDifferencesMilliseconds);
       }
-      if (StandardDeviationMilliseconds != 0D) {
+      if (HasStandardDeviationMilliseconds) {
         output.WriteRawTag(25);
         output.WriteDouble(StandardDeviationMilliseconds);
       }
@@ -12366,11 +13021,11 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (RootMeanSquareOfSuccessiveDifferencesMilliseconds != 0D) {
+      if (HasRootMeanSquareOfSuccessiveDifferencesMilliseconds) {
         output.WriteRawTag(17);
         output.WriteDouble(RootMeanSquareOfSuccessiveDifferencesMilliseconds);
       }
-      if (StandardDeviationMilliseconds != 0D) {
+      if (HasStandardDeviationMilliseconds) {
         output.WriteRawTag(25);
         output.WriteDouble(StandardDeviationMilliseconds);
       }
@@ -12387,10 +13042,10 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (sampleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
       }
-      if (RootMeanSquareOfSuccessiveDifferencesMilliseconds != 0D) {
+      if (HasRootMeanSquareOfSuccessiveDifferencesMilliseconds) {
         size += 1 + 8;
       }
-      if (StandardDeviationMilliseconds != 0D) {
+      if (HasStandardDeviationMilliseconds) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -12411,10 +13066,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         SampleTime.MergeFrom(other.SampleTime);
       }
-      if (other.RootMeanSquareOfSuccessiveDifferencesMilliseconds != 0D) {
+      if (other.HasRootMeanSquareOfSuccessiveDifferencesMilliseconds) {
         RootMeanSquareOfSuccessiveDifferencesMilliseconds = other.RootMeanSquareOfSuccessiveDifferencesMilliseconds;
       }
-      if (other.StandardDeviationMilliseconds != 0D) {
+      if (other.HasStandardDeviationMilliseconds) {
         StandardDeviationMilliseconds = other.StandardDeviationMilliseconds;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -12503,6 +13158,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<VolumeQuantity> _parser = new pb::MessageParser<VolumeQuantity>(() => new VolumeQuantity());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VolumeQuantity> Parser { get { return _parser; } }
@@ -12530,6 +13186,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VolumeQuantity(VolumeQuantity other) : this() {
+      _hasBits0 = other._hasBits0;
       milliliters_ = other.milliliters_;
       userProvidedUnit_ = other.userProvidedUnit_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -12543,6 +13200,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "milliliters" field.</summary>
     public const int MillilitersFieldNumber = 1;
+    private readonly static double MillilitersDefaultValue = 0D;
+
     private double milliliters_;
     /// <summary>
     /// Required. Value representing the volume in milliliters.
@@ -12550,17 +13209,32 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Milliliters {
-      get { return milliliters_; }
+      get { if ((_hasBits0 & 1) != 0) { return milliliters_; } else { return MillilitersDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         milliliters_ = value;
       }
+    }
+    /// <summary>Gets whether the "milliliters" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMilliliters {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "milliliters" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMilliliters() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "user_provided_unit" field.</summary>
     public const int UserProvidedUnitFieldNumber = 2;
     private global::Google.DevicesAndServices.Health.V4.VolumeUnit userProvidedUnit_ = global::Google.DevicesAndServices.Health.V4.VolumeUnit.Unspecified;
     /// <summary>
-    /// Optional. Value representing the user provided unit.
+    /// Optional. Value representing the user provided unit, used only for
+    /// user-facing input and display purposes. In the API format, all volume
+    /// quantities are converted to milliliters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12595,7 +13269,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Milliliters != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Milliliters);
+      if (HasMilliliters) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Milliliters);
       if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.VolumeUnit.Unspecified) hash ^= UserProvidedUnit.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -12615,7 +13289,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Milliliters != 0D) {
+      if (HasMilliliters) {
         output.WriteRawTag(9);
         output.WriteDouble(Milliliters);
       }
@@ -12633,7 +13307,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Milliliters != 0D) {
+      if (HasMilliliters) {
         output.WriteRawTag(9);
         output.WriteDouble(Milliliters);
       }
@@ -12651,7 +13325,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Milliliters != 0D) {
+      if (HasMilliliters) {
         size += 1 + 8;
       }
       if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.VolumeUnit.Unspecified) {
@@ -12669,7 +13343,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.Milliliters != 0D) {
+      if (other.HasMilliliters) {
         Milliliters = other.Milliliters;
       }
       if (other.UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.VolumeUnit.Unspecified) {
@@ -13225,6 +13899,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         private static readonly pb::MessageParser<VolumeQuantityRollup> _parser = new pb::MessageParser<VolumeQuantityRollup>(() => new VolumeQuantityRollup());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<VolumeQuantityRollup> Parser { get { return _parser; } }
@@ -13252,6 +13927,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public VolumeQuantityRollup(VolumeQuantityRollup other) : this() {
+          _hasBits0 = other._hasBits0;
           millilitersSum_ = other.millilitersSum_;
           userProvidedUnitLast_ = other.userProvidedUnitLast_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -13265,6 +13941,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
         /// <summary>Field number for the "milliliters_sum" field.</summary>
         public const int MillilitersSumFieldNumber = 1;
+        private readonly static double MillilitersSumDefaultValue = 0D;
+
         private double millilitersSum_;
         /// <summary>
         /// Required. The sum of volume in milliliters.
@@ -13272,10 +13950,23 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double MillilitersSum {
-          get { return millilitersSum_; }
+          get { if ((_hasBits0 & 1) != 0) { return millilitersSum_; } else { return MillilitersSumDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             millilitersSum_ = value;
           }
+        }
+        /// <summary>Gets whether the "milliliters_sum" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasMillilitersSum {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "milliliters_sum" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearMillilitersSum() {
+          _hasBits0 &= ~1;
         }
 
         /// <summary>Field number for the "user_provided_unit_last" field.</summary>
@@ -13317,7 +14008,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (MillilitersSum != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MillilitersSum);
+          if (HasMillilitersSum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MillilitersSum);
           if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.VolumeUnit.Unspecified) hash ^= UserProvidedUnitLast.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
@@ -13337,7 +14028,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (MillilitersSum != 0D) {
+          if (HasMillilitersSum) {
             output.WriteRawTag(9);
             output.WriteDouble(MillilitersSum);
           }
@@ -13355,7 +14046,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (MillilitersSum != 0D) {
+          if (HasMillilitersSum) {
             output.WriteRawTag(9);
             output.WriteDouble(MillilitersSum);
           }
@@ -13373,7 +14064,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (MillilitersSum != 0D) {
+          if (HasMillilitersSum) {
             size += 1 + 8;
           }
           if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.VolumeUnit.Unspecified) {
@@ -13391,7 +14082,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (other == null) {
             return;
           }
-          if (other.MillilitersSum != 0D) {
+          if (other.HasMillilitersSum) {
             MillilitersSum = other.MillilitersSum;
           }
           if (other.UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.VolumeUnit.Unspecified) {
@@ -15099,6 +15790,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<OxygenSaturation> _parser = new pb::MessageParser<OxygenSaturation>(() => new OxygenSaturation());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OxygenSaturation> Parser { get { return _parser; } }
@@ -15126,6 +15818,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OxygenSaturation(OxygenSaturation other) : this() {
+      _hasBits0 = other._hasBits0;
       sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
       percentage_ = other.percentage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -15154,6 +15847,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "percentage" field.</summary>
     public const int PercentageFieldNumber = 2;
+    private readonly static double PercentageDefaultValue = 0D;
+
     private double percentage_;
     /// <summary>
     /// Required. The oxygen saturation percentage. Valid values are from 0 to 100.
@@ -15161,10 +15856,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Percentage {
-      get { return percentage_; }
+      get { if ((_hasBits0 & 1) != 0) { return percentage_; } else { return PercentageDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         percentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasPercentage {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearPercentage() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15192,7 +15900,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
-      if (Percentage != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Percentage);
+      if (HasPercentage) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Percentage);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -15215,7 +15923,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (Percentage != 0D) {
+      if (HasPercentage) {
         output.WriteRawTag(17);
         output.WriteDouble(Percentage);
       }
@@ -15233,7 +15941,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (Percentage != 0D) {
+      if (HasPercentage) {
         output.WriteRawTag(17);
         output.WriteDouble(Percentage);
       }
@@ -15250,7 +15958,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (sampleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
       }
-      if (Percentage != 0D) {
+      if (HasPercentage) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -15271,7 +15979,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         SampleTime.MergeFrom(other.SampleTime);
       }
-      if (other.Percentage != 0D) {
+      if (other.HasPercentage) {
         Percentage = other.Percentage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -16041,6 +16749,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         private static readonly pb::MessageParser<RespiratoryRateSleepSummaryStatistics> _parser = new pb::MessageParser<RespiratoryRateSleepSummaryStatistics>(() => new RespiratoryRateSleepSummaryStatistics());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<RespiratoryRateSleepSummaryStatistics> Parser { get { return _parser; } }
@@ -16068,6 +16777,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RespiratoryRateSleepSummaryStatistics(RespiratoryRateSleepSummaryStatistics other) : this() {
+          _hasBits0 = other._hasBits0;
           breathsPerMinute_ = other.breathsPerMinute_;
           standardDeviation_ = other.standardDeviation_;
           signalToNoise_ = other.signalToNoise_;
@@ -16082,6 +16792,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
         /// <summary>Field number for the "breaths_per_minute" field.</summary>
         public const int BreathsPerMinuteFieldNumber = 1;
+        private readonly static double BreathsPerMinuteDefaultValue = 0D;
+
         private double breathsPerMinute_;
         /// <summary>
         /// Required. Average breaths per minute.
@@ -16089,14 +16801,29 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double BreathsPerMinute {
-          get { return breathsPerMinute_; }
+          get { if ((_hasBits0 & 1) != 0) { return breathsPerMinute_; } else { return BreathsPerMinuteDefaultValue; } }
           set {
+            _hasBits0 |= 1;
             breathsPerMinute_ = value;
           }
+        }
+        /// <summary>Gets whether the "breaths_per_minute" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBreathsPerMinute {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "breaths_per_minute" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBreathsPerMinute() {
+          _hasBits0 &= ~1;
         }
 
         /// <summary>Field number for the "standard_deviation" field.</summary>
         public const int StandardDeviationFieldNumber = 2;
+        private readonly static double StandardDeviationDefaultValue = 0D;
+
         private double standardDeviation_;
         /// <summary>
         /// Optional. Standard deviation of the respiratory rate during sleep.
@@ -16104,14 +16831,29 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double StandardDeviation {
-          get { return standardDeviation_; }
+          get { if ((_hasBits0 & 2) != 0) { return standardDeviation_; } else { return StandardDeviationDefaultValue; } }
           set {
+            _hasBits0 |= 2;
             standardDeviation_ = value;
           }
+        }
+        /// <summary>Gets whether the "standard_deviation" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasStandardDeviation {
+          get { return (_hasBits0 & 2) != 0; }
+        }
+        /// <summary>Clears the value of the "standard_deviation" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearStandardDeviation() {
+          _hasBits0 &= ~2;
         }
 
         /// <summary>Field number for the "signal_to_noise" field.</summary>
         public const int SignalToNoiseFieldNumber = 3;
+        private readonly static double SignalToNoiseDefaultValue = 0D;
+
         private double signalToNoise_;
         /// <summary>
         /// Optional. How trustworthy the data is for the computation.
@@ -16119,10 +16861,23 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double SignalToNoise {
-          get { return signalToNoise_; }
+          get { if ((_hasBits0 & 4) != 0) { return signalToNoise_; } else { return SignalToNoiseDefaultValue; } }
           set {
+            _hasBits0 |= 4;
             signalToNoise_ = value;
           }
+        }
+        /// <summary>Gets whether the "signal_to_noise" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSignalToNoise {
+          get { return (_hasBits0 & 4) != 0; }
+        }
+        /// <summary>Clears the value of the "signal_to_noise" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSignalToNoise() {
+          _hasBits0 &= ~4;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16150,9 +16905,9 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
-          if (BreathsPerMinute != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BreathsPerMinute);
-          if (StandardDeviation != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(StandardDeviation);
-          if (SignalToNoise != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SignalToNoise);
+          if (HasBreathsPerMinute) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BreathsPerMinute);
+          if (HasStandardDeviation) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(StandardDeviation);
+          if (HasSignalToNoise) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SignalToNoise);
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -16171,15 +16926,15 @@ namespace Google.DevicesAndServices.Health.V4 {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
         #else
-          if (BreathsPerMinute != 0D) {
+          if (HasBreathsPerMinute) {
             output.WriteRawTag(9);
             output.WriteDouble(BreathsPerMinute);
           }
-          if (StandardDeviation != 0D) {
+          if (HasStandardDeviation) {
             output.WriteRawTag(17);
             output.WriteDouble(StandardDeviation);
           }
-          if (SignalToNoise != 0D) {
+          if (HasSignalToNoise) {
             output.WriteRawTag(25);
             output.WriteDouble(SignalToNoise);
           }
@@ -16193,15 +16948,15 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-          if (BreathsPerMinute != 0D) {
+          if (HasBreathsPerMinute) {
             output.WriteRawTag(9);
             output.WriteDouble(BreathsPerMinute);
           }
-          if (StandardDeviation != 0D) {
+          if (HasStandardDeviation) {
             output.WriteRawTag(17);
             output.WriteDouble(StandardDeviation);
           }
-          if (SignalToNoise != 0D) {
+          if (HasSignalToNoise) {
             output.WriteRawTag(25);
             output.WriteDouble(SignalToNoise);
           }
@@ -16215,13 +16970,13 @@ namespace Google.DevicesAndServices.Health.V4 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
-          if (BreathsPerMinute != 0D) {
+          if (HasBreathsPerMinute) {
             size += 1 + 8;
           }
-          if (StandardDeviation != 0D) {
+          if (HasStandardDeviation) {
             size += 1 + 8;
           }
-          if (SignalToNoise != 0D) {
+          if (HasSignalToNoise) {
             size += 1 + 8;
           }
           if (_unknownFields != null) {
@@ -16236,13 +16991,13 @@ namespace Google.DevicesAndServices.Health.V4 {
           if (other == null) {
             return;
           }
-          if (other.BreathsPerMinute != 0D) {
+          if (other.HasBreathsPerMinute) {
             BreathsPerMinute = other.BreathsPerMinute;
           }
-          if (other.StandardDeviation != 0D) {
+          if (other.HasStandardDeviation) {
             StandardDeviation = other.StandardDeviation;
           }
-          if (other.SignalToNoise != 0D) {
+          if (other.HasSignalToNoise) {
             SignalToNoise = other.SignalToNoise;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -18664,6 +19419,7 @@ namespace Google.DevicesAndServices.Health.V4 {
           {
             private static readonly pb::MessageParser<StageSummary> _parser = new pb::MessageParser<StageSummary>(() => new StageSummary());
             private pb::UnknownFieldSet _unknownFields;
+            private int _hasBits0;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<StageSummary> Parser { get { return _parser; } }
@@ -18691,6 +19447,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public StageSummary(StageSummary other) : this() {
+              _hasBits0 = other._hasBits0;
               type_ = other.type_;
               minutes_ = other.minutes_;
               count_ = other.count_;
@@ -18720,6 +19477,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
             /// <summary>Field number for the "minutes" field.</summary>
             public const int MinutesFieldNumber = 2;
+            private readonly static long MinutesDefaultValue = 0L;
+
             private long minutes_;
             /// <summary>
             /// Output only. Total duration in minutes of a sleep stage.
@@ -18727,14 +19486,29 @@ namespace Google.DevicesAndServices.Health.V4 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public long Minutes {
-              get { return minutes_; }
+              get { if ((_hasBits0 & 1) != 0) { return minutes_; } else { return MinutesDefaultValue; } }
               set {
+                _hasBits0 |= 1;
                 minutes_ = value;
               }
+            }
+            /// <summary>Gets whether the "minutes" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasMinutes {
+              get { return (_hasBits0 & 1) != 0; }
+            }
+            /// <summary>Clears the value of the "minutes" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearMinutes() {
+              _hasBits0 &= ~1;
             }
 
             /// <summary>Field number for the "count" field.</summary>
             public const int CountFieldNumber = 3;
+            private readonly static long CountDefaultValue = 0L;
+
             private long count_;
             /// <summary>
             /// Output only. Number of sleep stages segments.
@@ -18742,10 +19516,23 @@ namespace Google.DevicesAndServices.Health.V4 {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public long Count {
-              get { return count_; }
+              get { if ((_hasBits0 & 2) != 0) { return count_; } else { return CountDefaultValue; } }
               set {
+                _hasBits0 |= 2;
                 count_ = value;
               }
+            }
+            /// <summary>Gets whether the "count" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasCount {
+              get { return (_hasBits0 & 2) != 0; }
+            }
+            /// <summary>Clears the value of the "count" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearCount() {
+              _hasBits0 &= ~2;
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -18774,8 +19561,8 @@ namespace Google.DevicesAndServices.Health.V4 {
             public override int GetHashCode() {
               int hash = 1;
               if (Type != global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStageType.Unspecified) hash ^= Type.GetHashCode();
-              if (Minutes != 0L) hash ^= Minutes.GetHashCode();
-              if (Count != 0L) hash ^= Count.GetHashCode();
+              if (HasMinutes) hash ^= Minutes.GetHashCode();
+              if (HasCount) hash ^= Count.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -18798,11 +19585,11 @@ namespace Google.DevicesAndServices.Health.V4 {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) Type);
               }
-              if (Minutes != 0L) {
+              if (HasMinutes) {
                 output.WriteRawTag(16);
                 output.WriteInt64(Minutes);
               }
-              if (Count != 0L) {
+              if (HasCount) {
                 output.WriteRawTag(24);
                 output.WriteInt64(Count);
               }
@@ -18820,11 +19607,11 @@ namespace Google.DevicesAndServices.Health.V4 {
                 output.WriteRawTag(8);
                 output.WriteEnum((int) Type);
               }
-              if (Minutes != 0L) {
+              if (HasMinutes) {
                 output.WriteRawTag(16);
                 output.WriteInt64(Minutes);
               }
-              if (Count != 0L) {
+              if (HasCount) {
                 output.WriteRawTag(24);
                 output.WriteInt64(Count);
               }
@@ -18841,10 +19628,10 @@ namespace Google.DevicesAndServices.Health.V4 {
               if (Type != global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStageType.Unspecified) {
                 size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
               }
-              if (Minutes != 0L) {
+              if (HasMinutes) {
                 size += 1 + pb::CodedOutputStream.ComputeInt64Size(Minutes);
               }
-              if (Count != 0L) {
+              if (HasCount) {
                 size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
               }
               if (_unknownFields != null) {
@@ -18862,10 +19649,10 @@ namespace Google.DevicesAndServices.Health.V4 {
               if (other.Type != global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStageType.Unspecified) {
                 Type = other.Type;
               }
-              if (other.Minutes != 0L) {
+              if (other.HasMinutes) {
                 Minutes = other.Minutes;
               }
-              if (other.Count != 0L) {
+              if (other.HasCount) {
                 Count = other.Count;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -18958,6 +19745,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<Steps> _parser = new pb::MessageParser<Steps>(() => new Steps());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Steps> Parser { get { return _parser; } }
@@ -18985,6 +19773,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Steps(Steps other) : this() {
+      _hasBits0 = other._hasBits0;
       interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       count_ = other.count_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -19013,6 +19802,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "count" field.</summary>
     public const int CountFieldNumber = 4;
+    private readonly static long CountDefaultValue = 0L;
+
     private long count_;
     /// <summary>
     /// Required. Number of steps in the recorded interval.
@@ -19020,10 +19811,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Count {
-      get { return count_; }
+      get { if ((_hasBits0 & 1) != 0) { return count_; } else { return CountDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         count_ = value;
       }
+    }
+    /// <summary>Gets whether the "count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCount() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19051,7 +19855,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (interval_ != null) hash ^= Interval.GetHashCode();
-      if (Count != 0L) hash ^= Count.GetHashCode();
+      if (HasCount) hash ^= Count.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -19074,7 +19878,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Interval);
       }
-      if (Count != 0L) {
+      if (HasCount) {
         output.WriteRawTag(32);
         output.WriteInt64(Count);
       }
@@ -19092,7 +19896,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(Interval);
       }
-      if (Count != 0L) {
+      if (HasCount) {
         output.WriteRawTag(32);
         output.WriteInt64(Count);
       }
@@ -19109,7 +19913,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (interval_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
       }
-      if (Count != 0L) {
+      if (HasCount) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(Count);
       }
       if (_unknownFields != null) {
@@ -19130,7 +19934,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         Interval.MergeFrom(other.Interval);
       }
-      if (other.Count != 0L) {
+      if (other.HasCount) {
         Count = other.Count;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -19211,6 +20015,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<StepsRollupValue> _parser = new pb::MessageParser<StepsRollupValue>(() => new StepsRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StepsRollupValue> Parser { get { return _parser; } }
@@ -19238,6 +20043,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StepsRollupValue(StepsRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       countSum_ = other.countSum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -19250,6 +20056,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "count_sum" field.</summary>
     public const int CountSumFieldNumber = 1;
+    private readonly static long CountSumDefaultValue = 0L;
+
     private long countSum_;
     /// <summary>
     /// Total number of steps in the interval.
@@ -19257,10 +20065,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long CountSum {
-      get { return countSum_; }
+      get { if ((_hasBits0 & 1) != 0) { return countSum_; } else { return CountSumDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         countSum_ = value;
       }
+    }
+    /// <summary>Gets whether the "count_sum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCountSum {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "count_sum" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCountSum() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19286,7 +20107,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (CountSum != 0L) hash ^= CountSum.GetHashCode();
+      if (HasCountSum) hash ^= CountSum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -19305,7 +20126,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (CountSum != 0L) {
+      if (HasCountSum) {
         output.WriteRawTag(8);
         output.WriteInt64(CountSum);
       }
@@ -19319,7 +20140,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (CountSum != 0L) {
+      if (HasCountSum) {
         output.WriteRawTag(8);
         output.WriteInt64(CountSum);
       }
@@ -19333,7 +20154,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (CountSum != 0L) {
+      if (HasCountSum) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(CountSum);
       }
       if (_unknownFields != null) {
@@ -19348,7 +20169,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.CountSum != 0L) {
+      if (other.HasCountSum) {
         CountSum = other.CountSum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -19415,6 +20236,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<SwimLengthsData> _parser = new pb::MessageParser<SwimLengthsData>(() => new SwimLengthsData());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SwimLengthsData> Parser { get { return _parser; } }
@@ -19442,6 +20264,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwimLengthsData(SwimLengthsData other) : this() {
+      _hasBits0 = other._hasBits0;
       interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       swimStrokeType_ = other.swimStrokeType_;
       strokeCount_ = other.strokeCount_;
@@ -19486,6 +20309,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "stroke_count" field.</summary>
     public const int StrokeCountFieldNumber = 3;
+    private readonly static long StrokeCountDefaultValue = 0L;
+
     private long strokeCount_;
     /// <summary>
     /// Required. Number of strokes in the lap.
@@ -19493,10 +20318,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long StrokeCount {
-      get { return strokeCount_; }
+      get { if ((_hasBits0 & 1) != 0) { return strokeCount_; } else { return StrokeCountDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         strokeCount_ = value;
       }
+    }
+    /// <summary>Gets whether the "stroke_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStrokeCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "stroke_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStrokeCount() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19526,7 +20364,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       int hash = 1;
       if (interval_ != null) hash ^= Interval.GetHashCode();
       if (SwimStrokeType != global::Google.DevicesAndServices.Health.V4.SwimLengthsData.Types.SwimStrokeType.Unspecified) hash ^= SwimStrokeType.GetHashCode();
-      if (StrokeCount != 0L) hash ^= StrokeCount.GetHashCode();
+      if (HasStrokeCount) hash ^= StrokeCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -19553,7 +20391,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(16);
         output.WriteEnum((int) SwimStrokeType);
       }
-      if (StrokeCount != 0L) {
+      if (HasStrokeCount) {
         output.WriteRawTag(24);
         output.WriteInt64(StrokeCount);
       }
@@ -19575,7 +20413,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(16);
         output.WriteEnum((int) SwimStrokeType);
       }
-      if (StrokeCount != 0L) {
+      if (HasStrokeCount) {
         output.WriteRawTag(24);
         output.WriteInt64(StrokeCount);
       }
@@ -19595,7 +20433,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (SwimStrokeType != global::Google.DevicesAndServices.Health.V4.SwimLengthsData.Types.SwimStrokeType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SwimStrokeType);
       }
-      if (StrokeCount != 0L) {
+      if (HasStrokeCount) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(StrokeCount);
       }
       if (_unknownFields != null) {
@@ -19619,7 +20457,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other.SwimStrokeType != global::Google.DevicesAndServices.Health.V4.SwimLengthsData.Types.SwimStrokeType.Unspecified) {
         SwimStrokeType = other.SwimStrokeType;
       }
-      if (other.StrokeCount != 0L) {
+      if (other.HasStrokeCount) {
         StrokeCount = other.StrokeCount;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -19742,6 +20580,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<SwimLengthsDataRollupValue> _parser = new pb::MessageParser<SwimLengthsDataRollupValue>(() => new SwimLengthsDataRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SwimLengthsDataRollupValue> Parser { get { return _parser; } }
@@ -19769,6 +20608,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SwimLengthsDataRollupValue(SwimLengthsDataRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       strokeCountSum_ = other.strokeCountSum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -19781,6 +20621,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "stroke_count_sum" field.</summary>
     public const int StrokeCountSumFieldNumber = 1;
+    private readonly static long StrokeCountSumDefaultValue = 0L;
+
     private long strokeCountSum_;
     /// <summary>
     /// Total number of swim strokes in the interval.
@@ -19788,10 +20630,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long StrokeCountSum {
-      get { return strokeCountSum_; }
+      get { if ((_hasBits0 & 1) != 0) { return strokeCountSum_; } else { return StrokeCountSumDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         strokeCountSum_ = value;
       }
+    }
+    /// <summary>Gets whether the "stroke_count_sum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStrokeCountSum {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "stroke_count_sum" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStrokeCountSum() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19817,7 +20672,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (StrokeCountSum != 0L) hash ^= StrokeCountSum.GetHashCode();
+      if (HasStrokeCountSum) hash ^= StrokeCountSum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -19836,7 +20691,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (StrokeCountSum != 0L) {
+      if (HasStrokeCountSum) {
         output.WriteRawTag(8);
         output.WriteInt64(StrokeCountSum);
       }
@@ -19850,7 +20705,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (StrokeCountSum != 0L) {
+      if (HasStrokeCountSum) {
         output.WriteRawTag(8);
         output.WriteInt64(StrokeCountSum);
       }
@@ -19864,7 +20719,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (StrokeCountSum != 0L) {
+      if (HasStrokeCountSum) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(StrokeCountSum);
       }
       if (_unknownFields != null) {
@@ -19879,7 +20734,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.StrokeCountSum != 0L) {
+      if (other.HasStrokeCountSum) {
         StrokeCountSum = other.StrokeCountSum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -20655,6 +21510,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<TotalCaloriesRollupValue> _parser = new pb::MessageParser<TotalCaloriesRollupValue>(() => new TotalCaloriesRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TotalCaloriesRollupValue> Parser { get { return _parser; } }
@@ -20682,6 +21538,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TotalCaloriesRollupValue(TotalCaloriesRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       kcalSum_ = other.kcalSum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -20694,6 +21551,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "kcal_sum" field.</summary>
     public const int KcalSumFieldNumber = 1;
+    private readonly static double KcalSumDefaultValue = 0D;
+
     private double kcalSum_;
     /// <summary>
     /// Sum of the total calories in kilocalories.
@@ -20701,10 +21560,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double KcalSum {
-      get { return kcalSum_; }
+      get { if ((_hasBits0 & 1) != 0) { return kcalSum_; } else { return KcalSumDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         kcalSum_ = value;
       }
+    }
+    /// <summary>Gets whether the "kcal_sum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKcalSum {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "kcal_sum" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKcalSum() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20730,7 +21602,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (KcalSum != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(KcalSum);
+      if (HasKcalSum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(KcalSum);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -20749,7 +21621,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (KcalSum != 0D) {
+      if (HasKcalSum) {
         output.WriteRawTag(9);
         output.WriteDouble(KcalSum);
       }
@@ -20763,7 +21635,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (KcalSum != 0D) {
+      if (HasKcalSum) {
         output.WriteRawTag(9);
         output.WriteDouble(KcalSum);
       }
@@ -20777,7 +21649,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (KcalSum != 0D) {
+      if (HasKcalSum) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -20792,7 +21664,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.KcalSum != 0D) {
+      if (other.HasKcalSum) {
         KcalSum = other.KcalSum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -20859,6 +21731,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<VO2Max> _parser = new pb::MessageParser<VO2Max>(() => new VO2Max());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VO2Max> Parser { get { return _parser; } }
@@ -20886,6 +21759,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VO2Max(VO2Max other) : this() {
+      _hasBits0 = other._hasBits0;
       sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
       vo2Max_ = other.vo2Max_;
       measurementMethod_ = other.measurementMethod_;
@@ -20915,6 +21789,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "vo2_max" field.</summary>
     public const int Vo2MaxFieldNumber = 2;
+    private readonly static double Vo2MaxDefaultValue = 0D;
+
     private double vo2Max_;
     /// <summary>
     /// Required. VO2 max value measured as in ml consumed oxygen / kg of body
@@ -20923,10 +21799,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Vo2Max {
-      get { return vo2Max_; }
+      get { if ((_hasBits0 & 1) != 0) { return vo2Max_; } else { return Vo2MaxDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         vo2Max_ = value;
       }
+    }
+    /// <summary>Gets whether the "vo2_max" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasVo2Max {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "vo2_max" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearVo2Max() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "measurement_method" field.</summary>
@@ -20970,7 +21859,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
-      if (Vo2Max != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Vo2Max);
+      if (HasVo2Max) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Vo2Max);
       if (MeasurementMethod != global::Google.DevicesAndServices.Health.V4.VO2Max.Types.MeasurementMethod.Unspecified) hash ^= MeasurementMethod.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -20994,7 +21883,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (Vo2Max != 0D) {
+      if (HasVo2Max) {
         output.WriteRawTag(17);
         output.WriteDouble(Vo2Max);
       }
@@ -21016,7 +21905,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(10);
         output.WriteMessage(SampleTime);
       }
-      if (Vo2Max != 0D) {
+      if (HasVo2Max) {
         output.WriteRawTag(17);
         output.WriteDouble(Vo2Max);
       }
@@ -21037,7 +21926,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (sampleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
       }
-      if (Vo2Max != 0D) {
+      if (HasVo2Max) {
         size += 1 + 8;
       }
       if (MeasurementMethod != global::Google.DevicesAndServices.Health.V4.VO2Max.Types.MeasurementMethod.Unspecified) {
@@ -21061,7 +21950,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         SampleTime.MergeFrom(other.SampleTime);
       }
-      if (other.Vo2Max != 0D) {
+      if (other.HasVo2Max) {
         Vo2Max = other.Vo2Max;
       }
       if (other.MeasurementMethod != global::Google.DevicesAndServices.Health.V4.VO2Max.Types.MeasurementMethod.Unspecified) {
@@ -21223,6 +22112,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<Weight> _parser = new pb::MessageParser<Weight>(() => new Weight());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Weight> Parser { get { return _parser; } }
@@ -21250,6 +22140,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Weight(Weight other) : this() {
+      _hasBits0 = other._hasBits0;
       sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
       weightGrams_ = other.weightGrams_;
       notes_ = other.notes_;
@@ -21279,6 +22170,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "weight_grams" field.</summary>
     public const int WeightGramsFieldNumber = 3;
+    private readonly static double WeightGramsDefaultValue = 0D;
+
     private double weightGrams_;
     /// <summary>
     /// Required. Weight of a user in grams.
@@ -21286,10 +22179,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double WeightGrams {
-      get { return weightGrams_; }
+      get { if ((_hasBits0 & 1) != 0) { return weightGrams_; } else { return WeightGramsDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         weightGrams_ = value;
       }
+    }
+    /// <summary>Gets whether the "weight_grams" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWeightGrams {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "weight_grams" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWeightGrams() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "notes" field.</summary>
@@ -21333,7 +22239,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     public override int GetHashCode() {
       int hash = 1;
       if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
-      if (WeightGrams != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(WeightGrams);
+      if (HasWeightGrams) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(WeightGrams);
       if (Notes.Length != 0) hash ^= Notes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -21357,7 +22263,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(SampleTime);
       }
-      if (WeightGrams != 0D) {
+      if (HasWeightGrams) {
         output.WriteRawTag(25);
         output.WriteDouble(WeightGrams);
       }
@@ -21379,7 +22285,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(18);
         output.WriteMessage(SampleTime);
       }
-      if (WeightGrams != 0D) {
+      if (HasWeightGrams) {
         output.WriteRawTag(25);
         output.WriteDouble(WeightGrams);
       }
@@ -21400,7 +22306,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (sampleTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
       }
-      if (WeightGrams != 0D) {
+      if (HasWeightGrams) {
         size += 1 + 8;
       }
       if (Notes.Length != 0) {
@@ -21424,7 +22330,7 @@ namespace Google.DevicesAndServices.Health.V4 {
         }
         SampleTime.MergeFrom(other.SampleTime);
       }
-      if (other.WeightGrams != 0D) {
+      if (other.HasWeightGrams) {
         WeightGrams = other.WeightGrams;
       }
       if (other.Notes.Length != 0) {
@@ -21516,6 +22422,7 @@ namespace Google.DevicesAndServices.Health.V4 {
   {
     private static readonly pb::MessageParser<WeightRollupValue> _parser = new pb::MessageParser<WeightRollupValue>(() => new WeightRollupValue());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WeightRollupValue> Parser { get { return _parser; } }
@@ -21543,6 +22450,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WeightRollupValue(WeightRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
       weightGramsAvg_ = other.weightGramsAvg_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -21555,6 +22463,8 @@ namespace Google.DevicesAndServices.Health.V4 {
 
     /// <summary>Field number for the "weight_grams_avg" field.</summary>
     public const int WeightGramsAvgFieldNumber = 1;
+    private readonly static double WeightGramsAvgDefaultValue = 0D;
+
     private double weightGramsAvg_;
     /// <summary>
     /// Average weight in grams.
@@ -21562,10 +22472,23 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double WeightGramsAvg {
-      get { return weightGramsAvg_; }
+      get { if ((_hasBits0 & 1) != 0) { return weightGramsAvg_; } else { return WeightGramsAvgDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         weightGramsAvg_ = value;
       }
+    }
+    /// <summary>Gets whether the "weight_grams_avg" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasWeightGramsAvg {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "weight_grams_avg" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearWeightGramsAvg() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21591,7 +22514,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (WeightGramsAvg != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(WeightGramsAvg);
+      if (HasWeightGramsAvg) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(WeightGramsAvg);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -21610,7 +22533,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (WeightGramsAvg != 0D) {
+      if (HasWeightGramsAvg) {
         output.WriteRawTag(9);
         output.WriteDouble(WeightGramsAvg);
       }
@@ -21624,7 +22547,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (WeightGramsAvg != 0D) {
+      if (HasWeightGramsAvg) {
         output.WriteRawTag(9);
         output.WriteDouble(WeightGramsAvg);
       }
@@ -21638,7 +22561,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (WeightGramsAvg != 0D) {
+      if (HasWeightGramsAvg) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -21653,7 +22576,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (other == null) {
         return;
       }
-      if (other.WeightGramsAvg != 0D) {
+      if (other.HasWeightGramsAvg) {
         WeightGramsAvg = other.WeightGramsAvg;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
