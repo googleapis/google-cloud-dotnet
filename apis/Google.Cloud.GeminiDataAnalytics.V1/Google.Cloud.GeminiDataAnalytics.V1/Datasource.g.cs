@@ -36,75 +36,72 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             "ZVJlZmVyZW5jZXNIAEIMCgpyZWZlcmVuY2VzInUKF0JpZ1F1ZXJ5VGFibGVS",
             "ZWZlcmVuY2VzEloKEHRhYmxlX3JlZmVyZW5jZXMYASADKAsyOy5nb29nbGUu",
             "Y2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5CaWdRdWVyeVRhYmxlUmVm",
-            "ZXJlbmNlQgPgQQEi3gEKFkJpZ1F1ZXJ5VGFibGVSZWZlcmVuY2USFwoKcHJv",
+            "ZXJlbmNlQgPgQQEiowEKFkJpZ1F1ZXJ5VGFibGVSZWZlcmVuY2USFwoKcHJv",
             "amVjdF9pZBgBIAEoCUID4EECEhcKCmRhdGFzZXRfaWQYAyABKAlCA+BBAhIV",
             "Cgh0YWJsZV9pZBgEIAEoCUID4EECEkAKBnNjaGVtYRgGIAEoCzIrLmdvb2ds",
-            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLlNjaGVtYUID4EEBEiMK",
-            "EWxvY2F0aW9uX2JvdW5kYXJ5GAcgASgJQgPgQQFIAIgBAUIUChJfbG9jYXRp",
-            "b25fYm91bmRhcnkifAoaU3R1ZGlvRGF0YXNvdXJjZVJlZmVyZW5jZXMSXgoR",
-            "c3R1ZGlvX3JlZmVyZW5jZXMYAiADKAsyPi5nb29nbGUuY2xvdWQuZ2VtaW5p",
-            "ZGF0YWFuYWx5dGljcy52MS5TdHVkaW9EYXRhc291cmNlUmVmZXJlbmNlQgPg",
-            "QQEiNwoZU3R1ZGlvRGF0YXNvdXJjZVJlZmVyZW5jZRIaCg1kYXRhc291cmNl",
-            "X2lkGAEgASgJQgPgQQIidwoXTG9va2VyRXhwbG9yZVJlZmVyZW5jZXMSXAoS",
-            "ZXhwbG9yZV9yZWZlcmVuY2VzGAEgAygLMjsuZ29vZ2xlLmNsb3VkLmdlbWlu",
-            "aWRhdGFhbmFseXRpY3MudjEuTG9va2VyRXhwbG9yZVJlZmVyZW5jZUID4EEC",
-            "Ip4CChZMb29rZXJFeHBsb3JlUmVmZXJlbmNlEh0KE2xvb2tlcl9pbnN0YW5j",
-            "ZV91cmkYCSABKAlIABJmChxwcml2YXRlX2xvb2tlcl9pbnN0YW5jZV9pbmZv",
-            "GAogASgLMj4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEu",
-            "UHJpdmF0ZUxvb2tlckluc3RhbmNlSW5mb0gAEhkKDGxvb2ttbF9tb2RlbBgE",
-            "IAEoCUID4EECEhQKB2V4cGxvcmUYBSABKAlCA+BBAhJACgZzY2hlbWEYCCAB",
-            "KAsyKy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5TY2hl",
-            "bWFCA+BBAUIKCghpbnN0YW5jZSKtAQoeQmlnUXVlcnlQcm9wZXJ0eUdyYXBo",
-            "UmVmZXJlbmNlEhcKCnByb2plY3RfaWQYASABKAlCA+BBAhIXCgpkYXRhc2V0",
-            "X2lkGAIgASgJQgPgQQISHgoRcHJvcGVydHlfZ3JhcGhfaWQYAyABKAlCA+BB",
-            "AhIjChFsb2NhdGlvbl9ib3VuZGFyeRgEIAEoCUID4EEBSACIAQFCFAoSX2xv",
-            "Y2F0aW9uX2JvdW5kYXJ5IlcKGVByaXZhdGVMb29rZXJJbnN0YW5jZUluZm8S",
-            "GgoSbG9va2VyX2luc3RhbmNlX2lkGAEgASgJEh4KFnNlcnZpY2VfZGlyZWN0",
-            "b3J5X25hbWUYAiABKAki5AMKCkRhdGFzb3VyY2USXwoYYmlncXVlcnlfdGFi",
-            "bGVfcmVmZXJlbmNlGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFh",
-            "bmFseXRpY3MudjEuQmlnUXVlcnlUYWJsZVJlZmVyZW5jZUgAEh4KFHN0dWRp",
-            "b19kYXRhc291cmNlX2lkGAIgASgJSAASXwoYbG9va2VyX2V4cGxvcmVfcmVm",
-            "ZXJlbmNlGAQgASgLMjsuZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRp",
-            "Y3MudjEuTG9va2VyRXhwbG9yZVJlZmVyZW5jZUgAEnAKIWJpZ3F1ZXJ5X3By",
-            "b3BlcnR5X2dyYXBoX3JlZmVyZW5jZRgQIAEoCzJDLmdvb2dsZS5jbG91ZC5n",
-            "ZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkJpZ1F1ZXJ5UHJvcGVydHlHcmFwaFJl",
-            "ZmVyZW5jZUgAEkAKBnNjaGVtYRgHIAEoCzIrLmdvb2dsZS5jbG91ZC5nZW1p",
-            "bmlkYXRhYW5hbHl0aWNzLnYxLlNjaGVtYUID4EEBEjMKDXN0cnVjdF9zY2hl",
-            "bWEYCiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQFCCwoJcmVm",
-            "ZXJlbmNlIu8BCgZTY2hlbWESPwoGZmllbGRzGAEgAygLMiouZ29vZ2xlLmNs",
-            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuRmllbGRCA+BBARIYCgtkZXNj",
-            "cmlwdGlvbhgCIAEoCUID4EEBEhUKCHN5bm9ueW1zGAMgAygJQgPgQQESEQoE",
-            "dGFncxgEIAMoCUID4EEBEhkKDGRpc3BsYXlfbmFtZRgFIAEoCUID4EEBEkUK",
-            "B2ZpbHRlcnMYBiADKAsyLy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5",
-            "dGljcy52MS5EYXRhRmlsdGVyQgPgQQEilQIKBUZpZWxkEhEKBG5hbWUYASAB",
-            "KAlCA+BBARIRCgR0eXBlGAIgASgJQgPgQQESGAoLZGVzY3JpcHRpb24YAyAB",
-            "KAlCA+BBARIRCgRtb2RlGAQgASgJQgPgQQESFQoIc3lub255bXMYBiADKAlC",
-            "A+BBARIRCgR0YWdzGAcgAygJQgPgQQESGQoMZGlzcGxheV9uYW1lGAggASgJ",
-            "QgPgQQESQgoJc3ViZmllbGRzGAkgAygLMiouZ29vZ2xlLmNsb3VkLmdlbWlu",
-            "aWRhdGFhbmFseXRpY3MudjEuRmllbGRCA+BBARIVCghjYXRlZ29yeRgKIAEo",
-            "CUID4EEBEhkKDHZhbHVlX2Zvcm1hdBgLIAEoCUID4EEBInwKCkRhdGFGaWx0",
-            "ZXISEgoFZmllbGQYASABKAlCA+BBARISCgV2YWx1ZRgCIAEoCUID4EEBEkYK",
-            "BHR5cGUYAyABKA4yMy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
-            "cy52MS5EYXRhRmlsdGVyVHlwZUID4EEBKkUKDkRhdGFGaWx0ZXJUeXBlEiAK",
-            "HERBVEFfRklMVEVSX1RZUEVfVU5TUEVDSUZJRUQQABIRCg1BTFdBWVNfRklM",
-            "VEVSEAFCjAIKJ2NvbS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGlj",
-            "cy52MUIPRGF0YXNvdXJjZVByb3RvUAFaWWNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "Z2VtaW5pZGF0YWFuYWx5dGljcy9hcGl2MS9nZW1pbmlkYXRhYW5hbHl0aWNz",
-            "cGI7Z2VtaW5pZGF0YWFuYWx5dGljc3BiqgIjR29vZ2xlLkNsb3VkLkdlbWlu",
-            "aURhdGFBbmFseXRpY3MuVjHKAiNHb29nbGVcQ2xvdWRcR2VtaW5pRGF0YUFu",
-            "YWx5dGljc1xWMeoCJkdvb2dsZTo6Q2xvdWQ6OkdlbWluaURhdGFBbmFseXRp",
-            "Y3M6OlYxYgZwcm90bzM="));
+            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLlNjaGVtYUID4EEBInwK",
+            "GlN0dWRpb0RhdGFzb3VyY2VSZWZlcmVuY2VzEl4KEXN0dWRpb19yZWZlcmVu",
+            "Y2VzGAIgAygLMj4uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3Mu",
+            "djEuU3R1ZGlvRGF0YXNvdXJjZVJlZmVyZW5jZUID4EEBIjcKGVN0dWRpb0Rh",
+            "dGFzb3VyY2VSZWZlcmVuY2USGgoNZGF0YXNvdXJjZV9pZBgBIAEoCUID4EEC",
+            "IncKF0xvb2tlckV4cGxvcmVSZWZlcmVuY2VzElwKEmV4cGxvcmVfcmVmZXJl",
+            "bmNlcxgBIAMoCzI7Lmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNz",
+            "LnYxLkxvb2tlckV4cGxvcmVSZWZlcmVuY2VCA+BBAiKeAgoWTG9va2VyRXhw",
+            "bG9yZVJlZmVyZW5jZRIdChNsb29rZXJfaW5zdGFuY2VfdXJpGAkgASgJSAAS",
+            "ZgoccHJpdmF0ZV9sb29rZXJfaW5zdGFuY2VfaW5mbxgKIAEoCzI+Lmdvb2ds",
+            "ZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLlByaXZhdGVMb29rZXJJ",
+            "bnN0YW5jZUluZm9IABIZCgxsb29rbWxfbW9kZWwYBCABKAlCA+BBAhIUCgdl",
+            "eHBsb3JlGAUgASgJQgPgQQISQAoGc2NoZW1hGAggASgLMisuZ29vZ2xlLmNs",
+            "b3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjEuU2NoZW1hQgPgQQFCCgoIaW5z",
+            "dGFuY2UicgoeQmlnUXVlcnlQcm9wZXJ0eUdyYXBoUmVmZXJlbmNlEhcKCnBy",
+            "b2plY3RfaWQYASABKAlCA+BBAhIXCgpkYXRhc2V0X2lkGAIgASgJQgPgQQIS",
+            "HgoRcHJvcGVydHlfZ3JhcGhfaWQYAyABKAlCA+BBAiJXChlQcml2YXRlTG9v",
+            "a2VySW5zdGFuY2VJbmZvEhoKEmxvb2tlcl9pbnN0YW5jZV9pZBgBIAEoCRIe",
+            "ChZzZXJ2aWNlX2RpcmVjdG9yeV9uYW1lGAIgASgJIuQDCgpEYXRhc291cmNl",
+            "El8KGGJpZ3F1ZXJ5X3RhYmxlX3JlZmVyZW5jZRgBIAEoCzI7Lmdvb2dsZS5j",
+            "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkJpZ1F1ZXJ5VGFibGVSZWZl",
+            "cmVuY2VIABIeChRzdHVkaW9fZGF0YXNvdXJjZV9pZBgCIAEoCUgAEl8KGGxv",
+            "b2tlcl9leHBsb3JlX3JlZmVyZW5jZRgEIAEoCzI7Lmdvb2dsZS5jbG91ZC5n",
+            "ZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkxvb2tlckV4cGxvcmVSZWZlcmVuY2VI",
+            "ABJwCiFiaWdxdWVyeV9wcm9wZXJ0eV9ncmFwaF9yZWZlcmVuY2UYECABKAsy",
+            "Qy5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5CaWdRdWVy",
+            "eVByb3BlcnR5R3JhcGhSZWZlcmVuY2VIABJACgZzY2hlbWEYByABKAsyKy5n",
+            "b29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MS5TY2hlbWFCA+BB",
+            "ARIzCg1zdHJ1Y3Rfc2NoZW1hGAogASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
+            "cnVjdEID4EEBQgsKCXJlZmVyZW5jZSLvAQoGU2NoZW1hEj8KBmZpZWxkcxgB",
+            "IAMoCzIqLmdvb2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkZp",
+            "ZWxkQgPgQQESGAoLZGVzY3JpcHRpb24YAiABKAlCA+BBARIVCghzeW5vbnlt",
+            "cxgDIAMoCUID4EEBEhEKBHRhZ3MYBCADKAlCA+BBARIZCgxkaXNwbGF5X25h",
+            "bWUYBSABKAlCA+BBARJFCgdmaWx0ZXJzGAYgAygLMi8uZ29vZ2xlLmNsb3Vk",
+            "LmdlbWluaWRhdGFhbmFseXRpY3MudjEuRGF0YUZpbHRlckID4EEBIpUCCgVG",
+            "aWVsZBIRCgRuYW1lGAEgASgJQgPgQQESEQoEdHlwZRgCIAEoCUID4EEBEhgK",
+            "C2Rlc2NyaXB0aW9uGAMgASgJQgPgQQESEQoEbW9kZRgEIAEoCUID4EEBEhUK",
+            "CHN5bm9ueW1zGAYgAygJQgPgQQESEQoEdGFncxgHIAMoCUID4EEBEhkKDGRp",
+            "c3BsYXlfbmFtZRgIIAEoCUID4EEBEkIKCXN1YmZpZWxkcxgJIAMoCzIqLmdv",
+            "b2dsZS5jbG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxLkZpZWxkQgPgQQES",
+            "FQoIY2F0ZWdvcnkYCiABKAlCA+BBARIZCgx2YWx1ZV9mb3JtYXQYCyABKAlC",
+            "A+BBASJ8CgpEYXRhRmlsdGVyEhIKBWZpZWxkGAEgASgJQgPgQQESEgoFdmFs",
+            "dWUYAiABKAlCA+BBARJGCgR0eXBlGAMgASgOMjMuZ29vZ2xlLmNsb3VkLmdl",
+            "bWluaWRhdGFhbmFseXRpY3MudjEuRGF0YUZpbHRlclR5cGVCA+BBASpFCg5E",
+            "YXRhRmlsdGVyVHlwZRIgChxEQVRBX0ZJTFRFUl9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASEQoNQUxXQVlTX0ZJTFRFUhABQowCCidjb20uZ29vZ2xlLmNsb3VkLmdl",
+            "bWluaWRhdGFhbmFseXRpY3MudjFCD0RhdGFzb3VyY2VQcm90b1ABWlljbG91",
+            "ZC5nb29nbGUuY29tL2dvL2dlbWluaWRhdGFhbmFseXRpY3MvYXBpdjEvZ2Vt",
+            "aW5pZGF0YWFuYWx5dGljc3BiO2dlbWluaWRhdGFhbmFseXRpY3NwYqoCI0dv",
+            "b2dsZS5DbG91ZC5HZW1pbmlEYXRhQW5hbHl0aWNzLlYxygIjR29vZ2xlXENs",
+            "b3VkXEdlbWluaURhdGFBbmFseXRpY3NcVjHqAiZHb29nbGU6OkNsb3VkOjpH",
+            "ZW1pbmlEYXRhQW5hbHl0aWNzOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.GeminiDataAnalytics.V1.DataFilterType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReferences), global::Google.Cloud.GeminiDataAnalytics.V1.DatasourceReferences.Parser, new[]{ "Bq", "Studio", "Looker" }, new[]{ "References" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReferences), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReferences.Parser, new[]{ "TableReferences" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference.Parser, new[]{ "ProjectId", "DatasetId", "TableId", "Schema", "LocationBoundary" }, new[]{ "LocationBoundary" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryTableReference.Parser, new[]{ "ProjectId", "DatasetId", "TableId", "Schema" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.StudioDatasourceReferences), global::Google.Cloud.GeminiDataAnalytics.V1.StudioDatasourceReferences.Parser, new[]{ "StudioReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.StudioDatasourceReference), global::Google.Cloud.GeminiDataAnalytics.V1.StudioDatasourceReference.Parser, new[]{ "DatasourceId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.LookerExploreReferences), global::Google.Cloud.GeminiDataAnalytics.V1.LookerExploreReferences.Parser, new[]{ "ExploreReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.LookerExploreReference), global::Google.Cloud.GeminiDataAnalytics.V1.LookerExploreReference.Parser, new[]{ "LookerInstanceUri", "PrivateLookerInstanceInfo", "LookmlModel", "Explore", "Schema" }, new[]{ "Instance" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference.Parser, new[]{ "ProjectId", "DatasetId", "PropertyGraphId", "LocationBoundary" }, new[]{ "LocationBoundary" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference), global::Google.Cloud.GeminiDataAnalytics.V1.BigQueryPropertyGraphReference.Parser, new[]{ "ProjectId", "DatasetId", "PropertyGraphId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.PrivateLookerInstanceInfo), global::Google.Cloud.GeminiDataAnalytics.V1.PrivateLookerInstanceInfo.Parser, new[]{ "LookerInstanceId", "ServiceDirectoryName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.Datasource), global::Google.Cloud.GeminiDataAnalytics.V1.Datasource.Parser, new[]{ "BigqueryTableReference", "StudioDatasourceId", "LookerExploreReference", "BigqueryPropertyGraphReference", "Schema", "StructSchema" }, new[]{ "Reference" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1.Schema), global::Google.Cloud.GeminiDataAnalytics.V1.Schema.Parser, new[]{ "Fields", "Description", "Synonyms", "Tags", "DisplayName", "Filters" }, null, null, null, null),
@@ -731,7 +728,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       datasetId_ = other.datasetId_;
       tableId_ = other.tableId_;
       schema_ = other.schema_ != null ? other.schema_.Clone() : null;
-      locationBoundary_ = other.locationBoundary_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -801,39 +797,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
     }
 
-    /// <summary>Field number for the "location_boundary" field.</summary>
-    public const int LocationBoundaryFieldNumber = 7;
-    private readonly static string LocationBoundaryDefaultValue = "";
-
-    private string locationBoundary_;
-    /// <summary>
-    /// Optional. The location to restrict BigQuery operations to.
-    ///
-    /// If unspecified, this value defaults to the location of the endpoint.
-    ///
-    /// Examples: "us-central1", "europe-west1".
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LocationBoundary {
-      get { return locationBoundary_ ?? LocationBoundaryDefaultValue; }
-      set {
-        locationBoundary_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "location_boundary" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasLocationBoundary {
-      get { return locationBoundary_ != null; }
-    }
-    /// <summary>Clears the value of the "location_boundary" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearLocationBoundary() {
-      locationBoundary_ = null;
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -853,7 +816,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (DatasetId != other.DatasetId) return false;
       if (TableId != other.TableId) return false;
       if (!object.Equals(Schema, other.Schema)) return false;
-      if (LocationBoundary != other.LocationBoundary) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -865,7 +827,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (TableId.Length != 0) hash ^= TableId.GetHashCode();
       if (schema_ != null) hash ^= Schema.GetHashCode();
-      if (HasLocationBoundary) hash ^= LocationBoundary.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -900,10 +861,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Schema);
       }
-      if (HasLocationBoundary) {
-        output.WriteRawTag(58);
-        output.WriteString(LocationBoundary);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -930,10 +887,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Schema);
       }
-      if (HasLocationBoundary) {
-        output.WriteRawTag(58);
-        output.WriteString(LocationBoundary);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -955,9 +908,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (schema_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Schema);
-      }
-      if (HasLocationBoundary) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LocationBoundary);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -985,9 +935,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
           Schema = new global::Google.Cloud.GeminiDataAnalytics.V1.Schema();
         }
         Schema.MergeFrom(other.Schema);
-      }
-      if (other.HasLocationBoundary) {
-        LocationBoundary = other.LocationBoundary;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1027,10 +974,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             input.ReadMessage(Schema);
             break;
           }
-          case 58: {
-            LocationBoundary = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -1067,10 +1010,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
               Schema = new global::Google.Cloud.GeminiDataAnalytics.V1.Schema();
             }
             input.ReadMessage(Schema);
-            break;
-          }
-          case 58: {
-            LocationBoundary = input.ReadString();
             break;
           }
         }
@@ -2150,7 +2089,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       projectId_ = other.projectId_;
       datasetId_ = other.datasetId_;
       propertyGraphId_ = other.propertyGraphId_;
-      locationBoundary_ = other.locationBoundary_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2205,35 +2143,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
     }
 
-    /// <summary>Field number for the "location_boundary" field.</summary>
-    public const int LocationBoundaryFieldNumber = 4;
-    private readonly static string LocationBoundaryDefaultValue = "";
-
-    private string locationBoundary_;
-    /// <summary>
-    /// Optional. The location boundary of the graph.
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string LocationBoundary {
-      get { return locationBoundary_ ?? LocationBoundaryDefaultValue; }
-      set {
-        locationBoundary_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-    /// <summary>Gets whether the "location_boundary" field is set</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool HasLocationBoundary {
-      get { return locationBoundary_ != null; }
-    }
-    /// <summary>Clears the value of the "location_boundary" field</summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void ClearLocationBoundary() {
-      locationBoundary_ = null;
-    }
-
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2252,7 +2161,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (ProjectId != other.ProjectId) return false;
       if (DatasetId != other.DatasetId) return false;
       if (PropertyGraphId != other.PropertyGraphId) return false;
-      if (LocationBoundary != other.LocationBoundary) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2263,7 +2171,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
       if (PropertyGraphId.Length != 0) hash ^= PropertyGraphId.GetHashCode();
-      if (HasLocationBoundary) hash ^= LocationBoundary.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2294,10 +2201,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(26);
         output.WriteString(PropertyGraphId);
       }
-      if (HasLocationBoundary) {
-        output.WriteRawTag(34);
-        output.WriteString(LocationBoundary);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2320,10 +2223,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
         output.WriteRawTag(26);
         output.WriteString(PropertyGraphId);
       }
-      if (HasLocationBoundary) {
-        output.WriteRawTag(34);
-        output.WriteString(LocationBoundary);
-      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2342,9 +2241,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (PropertyGraphId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(PropertyGraphId);
-      }
-      if (HasLocationBoundary) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(LocationBoundary);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2366,9 +2262,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
       }
       if (other.PropertyGraphId.Length != 0) {
         PropertyGraphId = other.PropertyGraphId;
-      }
-      if (other.HasLocationBoundary) {
-        LocationBoundary = other.LocationBoundary;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2401,10 +2294,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
             PropertyGraphId = input.ReadString();
             break;
           }
-          case 34: {
-            LocationBoundary = input.ReadString();
-            break;
-          }
         }
       }
     #endif
@@ -2434,10 +2323,6 @@ namespace Google.Cloud.GeminiDataAnalytics.V1 {
           }
           case 26: {
             PropertyGraphId = input.ReadString();
-            break;
-          }
-          case 34: {
-            LocationBoundary = input.ReadString();
             break;
           }
         }
