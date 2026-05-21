@@ -27,87 +27,93 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             "Cjtnb29nbGUvY2xvdWQvYmlncXVlcnkvbWlncmF0aW9uL3YyL21pZ3JhdGlv",
             "bl9lbnRpdGllcy5wcm90bxIiZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3Jh",
             "dGlvbi52MhofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29v",
-            "Z2xlL2FwaS9yZXNvdXJjZS5wcm90bxpAZ29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5",
-            "L21pZ3JhdGlvbi92Mi9taWdyYXRpb25fZXJyb3JfZGV0YWlscy5wcm90bxo6",
-            "Z29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L21pZ3JhdGlvbi92Mi9taWdyYXRpb25f",
-            "bWV0cmljcy5wcm90bxo7Z29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L21pZ3JhdGlv",
-            "bi92Mi90cmFuc2xhdGlvbl9jb25maWcucHJvdG8aPGdvb2dsZS9jbG91ZC9i",
-            "aWdxdWVyeS9taWdyYXRpb24vdjIvdHJhbnNsYXRpb25fZGV0YWlscy5wcm90",
-            "bxo+Z29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5L21pZ3JhdGlvbi92Mi90cmFuc2xh",
-            "dGlvbl91c2FiaWxpdHkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8aHmdvb2dsZS9ycGMvZXJyb3JfZGV0YWlscy5wcm90byL2BAoR",
-            "TWlncmF0aW9uV29ya2Zsb3cSFwoEbmFtZRgBIAEoCUIJ4EED4EEF4EEIEhQK",
-            "DGRpc3BsYXlfbmFtZRgGIAEoCRJPCgV0YXNrcxgCIAMoCzJALmdvb2dsZS5j",
-            "bG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uV29ya2Zsb3cu",
-            "VGFza3NFbnRyeRJPCgVzdGF0ZRgDIAEoDjI7Lmdvb2dsZS5jbG91ZC5iaWdx",
-            "dWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uV29ya2Zsb3cuU3RhdGVCA+BB",
-            "AxIvCgtjcmVhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASNAoQbGFzdF91cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXAaXwoKVGFza3NFbnRyeRILCgNrZXkYASABKAkSQAoF",
-            "dmFsdWUYAiABKAsyMS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9u",
-            "LnYyLk1pZ3JhdGlvblRhc2s6AjgBIlEKBVN0YXRlEhUKEVNUQVRFX1VOU1BF",
-            "Q0lGSUVEEAASCQoFRFJBRlQQARILCgdSVU5OSU5HEAISCgoGUEFVU0VEEAMS",
-            "DQoJQ09NUExFVEVEEAQ6depBcgoyYmlncXVlcnltaWdyYXRpb24uZ29vZ2xl",
-            "YXBpcy5jb20vTWlncmF0aW9uV29ya2Zsb3cSPHByb2plY3RzL3twcm9qZWN0",
-            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS93b3JrZmxvd3Mve3dvcmtmbG93fSK0",
-            "BwoNTWlncmF0aW9uVGFzaxJiChp0cmFuc2xhdGlvbl9jb25maWdfZGV0YWls",
-            "cxgOIAEoCzI8Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIu",
-            "VHJhbnNsYXRpb25Db25maWdEZXRhaWxzSAASVQoTdHJhbnNsYXRpb25fZGV0",
-            "YWlscxgQIAEoCzI2Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24u",
-            "djIuVHJhbnNsYXRpb25EZXRhaWxzSAASEgoCaWQYASABKAlCBuBBA+BBBRIM",
-            "CgR0eXBlGAIgASgJEksKBXN0YXRlGAQgASgOMjcuZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5NaWdyYXRpb25UYXNrLlN0YXRlQgPgQQMS",
-            "NAoQcHJvY2Vzc2luZ19lcnJvchgFIAEoCzIVLmdvb2dsZS5ycGMuRXJyb3JJ",
-            "bmZvQgPgQQMSLwoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wEjQKEGxhc3RfdXBkYXRlX3RpbWUYByABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wElwKFnJlc291cmNlX2Vycm9yX2RldGFp",
-            "bHMYESADKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYy",
-            "LlJlc291cmNlRXJyb3JEZXRhaWxCA+BBAxIcChRyZXNvdXJjZV9lcnJvcl9j",
-            "b3VudBgSIAEoBRI/CgdtZXRyaWNzGBMgAygLMi4uZ29vZ2xlLmNsb3VkLmJp",
-            "Z3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5UaW1lU2VyaWVzElEKC3Rhc2tfcmVzdWx0",
-            "GBQgASgLMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5N",
-            "aWdyYXRpb25UYXNrUmVzdWx0QgPgQQMSJAocdG90YWxfcHJvY2Vzc2luZ19l",
-            "cnJvcl9jb3VudBgVIAEoBRIiChp0b3RhbF9yZXNvdXJjZV9lcnJvcl9jb3Vu",
-            "dBgWIAEoBSJyCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BF",
-            "TkRJTkcQARIRCg1PUkNIRVNUUkFUSU5HEAISCwoHUlVOTklORxADEgoKBlBB",
-            "VVNFRBAEEg0KCVNVQ0NFRURFRBAFEgoKBkZBSUxFRBAGQg4KDHRhc2tfZGV0",
-            "YWlscyL0BQoQTWlncmF0aW9uU3VidGFzaxIUCgRuYW1lGAEgASgJQgbgQQPg",
-            "QQUSDwoHdGFza19pZBgCIAEoCRIMCgR0eXBlGAMgASgJEk4KBXN0YXRlGAUg",
-            "ASgOMjouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5NaWdy",
-            "YXRpb25TdWJ0YXNrLlN0YXRlQgPgQQMSNAoQcHJvY2Vzc2luZ19lcnJvchgG",
-            "IAEoCzIVLmdvb2dsZS5ycGMuRXJyb3JJbmZvQgPgQQMSXAoWcmVzb3VyY2Vf",
-            "ZXJyb3JfZGV0YWlscxgMIAMoCzI3Lmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5t",
-            "aWdyYXRpb24udjIuUmVzb3VyY2VFcnJvckRldGFpbEID4EEDEhwKFHJlc291",
-            "cmNlX2Vycm9yX2NvdW50GA0gASgFEi8KC2NyZWF0ZV90aW1lGAcgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0ZV90aW1l",
-            "GAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI/CgdtZXRyaWNz",
-            "GAsgAygLMi4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5U",
-            "aW1lU2VyaWVzInYKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoG",
-            "QUNUSVZFEAESCwoHUlVOTklORxACEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxF",
-            "RBAEEgoKBlBBVVNFRBAFEhYKElBFTkRJTkdfREVQRU5ERU5DWRAGOogB6kGE",
-            "AQoxYmlncXVlcnltaWdyYXRpb24uZ29vZ2xlYXBpcy5jb20vTWlncmF0aW9u",
-            "U3VidGFzaxJPcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3dvcmtmbG93cy97d29ya2Zsb3d9L3N1YnRhc2tzL3tzdWJ0YXNrfSJ+",
-            "ChNNaWdyYXRpb25UYXNrUmVzdWx0ElwKF3RyYW5zbGF0aW9uX3Rhc2tfcmVz",
-            "dWx0GAIgASgLMjkuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52",
-            "Mi5UcmFuc2xhdGlvblRhc2tSZXN1bHRIAEIJCgdkZXRhaWxzIrcBChVUcmFu",
-            "c2xhdGlvblRhc2tSZXN1bHQSSAoTdHJhbnNsYXRlZF9saXRlcmFscxgBIAMo",
-            "CzIrLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTGl0ZXJh",
-            "bBJUChNyZXBvcnRfbG9nX21lc3NhZ2VzGAIgAygLMjcuZ29vZ2xlLmNsb3Vk",
-            "LmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5HY3NSZXBvcnRMb2dNZXNzYWdlQtIB",
-            "CiZjb20uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52MkIWTWln",
-            "cmF0aW9uRW50aXRpZXNQcm90b1ABWkRjbG91ZC5nb29nbGUuY29tL2dvL2Jp",
-            "Z3F1ZXJ5L21pZ3JhdGlvbi9hcGl2Mi9taWdyYXRpb25wYjttaWdyYXRpb25w",
-            "YqoCIkdvb2dsZS5DbG91ZC5CaWdRdWVyeS5NaWdyYXRpb24uVjLKAiJHb29n",
-            "bGVcQ2xvdWRcQmlnUXVlcnlcTWlncmF0aW9uXFYyYgZwcm90bzM="));
+            "Z2xlL2FwaS9yZXNvdXJjZS5wcm90bxo4Z29vZ2xlL2Nsb3VkL2JpZ3F1ZXJ5",
+            "L21pZ3JhdGlvbi92Mi9hc3Nlc3NtZW50X3Rhc2sucHJvdG8aQGdvb2dsZS9j",
+            "bG91ZC9iaWdxdWVyeS9taWdyYXRpb24vdjIvbWlncmF0aW9uX2Vycm9yX2Rl",
+            "dGFpbHMucHJvdG8aOmdvb2dsZS9jbG91ZC9iaWdxdWVyeS9taWdyYXRpb24v",
+            "djIvbWlncmF0aW9uX21ldHJpY3MucHJvdG8aO2dvb2dsZS9jbG91ZC9iaWdx",
+            "dWVyeS9taWdyYXRpb24vdjIvdHJhbnNsYXRpb25fY29uZmlnLnByb3RvGjxn",
+            "b29nbGUvY2xvdWQvYmlncXVlcnkvbWlncmF0aW9uL3YyL3RyYW5zbGF0aW9u",
+            "X2RldGFpbHMucHJvdG8aPmdvb2dsZS9jbG91ZC9iaWdxdWVyeS9taWdyYXRp",
+            "b24vdjIvdHJhbnNsYXRpb25fdXNhYmlsaXR5LnByb3RvGh9nb29nbGUvcHJv",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvGh5nb29nbGUvcnBjL2Vycm9yX2RldGFp",
+            "bHMucHJvdG8igAUKEU1pZ3JhdGlvbldvcmtmbG93EhcKBG5hbWUYASABKAlC",
+            "CeBBA+BBBeBBCBIUCgxkaXNwbGF5X25hbWUYBiABKAkSTwoFdGFza3MYAiAD",
+            "KAsyQC5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLk1pZ3Jh",
+            "dGlvbldvcmtmbG93LlRhc2tzRW50cnkSTwoFc3RhdGUYAyABKA4yOy5nb29n",
+            "bGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLk1pZ3JhdGlvbldvcmtm",
+            "bG93LlN0YXRlQgPgQQMSNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSOQoQbGFzdF91cGRhdGVfdGltZRgF",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxpfCgpUYXNr",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRJACgV2YWx1ZRgCIAEoCzIxLmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuTWlncmF0aW9uVGFzazoCOAEi",
+            "UQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIJCgVEUkFGVBABEgsK",
+            "B1JVTk5JTkcQAhIKCgZQQVVTRUQQAxINCglDT01QTEVURUQQBDp16kFyCjJi",
+            "aWdxdWVyeW1pZ3JhdGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRpb25Xb3Jr",
+            "ZmxvdxI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L3dvcmtmbG93cy97d29ya2Zsb3d9IrAICg1NaWdyYXRpb25UYXNrElwKF2Fz",
+            "c2Vzc21lbnRfdGFza19kZXRhaWxzGAwgASgLMjkuZ29vZ2xlLmNsb3VkLmJp",
+            "Z3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5Bc3Nlc3NtZW50VGFza0RldGFpbHNIABJi",
+            "Chp0cmFuc2xhdGlvbl9jb25maWdfZGV0YWlscxgOIAEoCzI8Lmdvb2dsZS5j",
+            "bG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuVHJhbnNsYXRpb25Db25maWdE",
+            "ZXRhaWxzSAASVQoTdHJhbnNsYXRpb25fZGV0YWlscxgQIAEoCzI2Lmdvb2ds",
+            "ZS5jbG91ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuVHJhbnNsYXRpb25EZXRh",
+            "aWxzSAASEgoCaWQYASABKAlCBuBBA+BBBRIMCgR0eXBlGAIgASgJEksKBXN0",
+            "YXRlGAQgASgOMjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52",
+            "Mi5NaWdyYXRpb25UYXNrLlN0YXRlQgPgQQMSNAoQcHJvY2Vzc2luZ19lcnJv",
+            "chgFIAEoCzIVLmdvb2dsZS5ycGMuRXJyb3JJbmZvQgPgQQMSNAoLY3JlYXRl",
+            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "OQoQbGFzdF91cGRhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxJcChZyZXNvdXJjZV9lcnJvcl9kZXRhaWxzGBEgAygL",
+            "MjcuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5SZXNvdXJj",
+            "ZUVycm9yRGV0YWlsQgPgQQMSIQoUcmVzb3VyY2VfZXJyb3JfY291bnQYEiAB",
+            "KAVCA+BBAxJECgdtZXRyaWNzGBMgAygLMi4uZ29vZ2xlLmNsb3VkLmJpZ3F1",
+            "ZXJ5Lm1pZ3JhdGlvbi52Mi5UaW1lU2VyaWVzQgPgQQMSUQoLdGFza19yZXN1",
+            "bHQYFCABKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYy",
+            "Lk1pZ3JhdGlvblRhc2tSZXN1bHRCA+BBAxIpChx0b3RhbF9wcm9jZXNzaW5n",
+            "X2Vycm9yX2NvdW50GBUgASgFQgPgQQMSJwoadG90YWxfcmVzb3VyY2VfZXJy",
+            "b3JfY291bnQYFiABKAVCA+BBAyJyCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJ",
+            "RklFRBAAEgsKB1BFTkRJTkcQARIRCg1PUkNIRVNUUkFUSU5HEAISCwoHUlVO",
+            "TklORxADEgoKBlBBVVNFRBAEEg0KCVNVQ0NFRURFRBAFEgoKBkZBSUxFRBAG",
+            "Qg4KDHRhc2tfZGV0YWlscyKIBgoQTWlncmF0aW9uU3VidGFzaxIUCgRuYW1l",
+            "GAEgASgJQgbgQQPgQQUSDwoHdGFza19pZBgCIAEoCRIMCgR0eXBlGAMgASgJ",
+            "Ek4KBXN0YXRlGAUgASgOMjouZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3Jh",
+            "dGlvbi52Mi5NaWdyYXRpb25TdWJ0YXNrLlN0YXRlQgPgQQMSNAoQcHJvY2Vz",
+            "c2luZ19lcnJvchgGIAEoCzIVLmdvb2dsZS5ycGMuRXJyb3JJbmZvQgPgQQMS",
+            "XAoWcmVzb3VyY2VfZXJyb3JfZGV0YWlscxgMIAMoCzI3Lmdvb2dsZS5jbG91",
+            "ZC5iaWdxdWVyeS5taWdyYXRpb24udjIuUmVzb3VyY2VFcnJvckRldGFpbEID",
+            "4EEDEiEKFHJlc291cmNlX2Vycm9yX2NvdW50GA0gASgFQgPgQQMSNAoLY3Jl",
+            "YXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSOQoQbGFzdF91cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxJECgdtZXRyaWNzGAsgAygLMi4uZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5UaW1lU2VyaWVzQgPgQQMidgoF",
+            "U3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARILCgdS",
+            "VU5OSU5HEAISDQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQSCgoGUEFVU0VE",
+            "EAUSFgoSUEVORElOR19ERVBFTkRFTkNZEAY6iAHqQYQBCjFiaWdxdWVyeW1p",
+            "Z3JhdGlvbi5nb29nbGVhcGlzLmNvbS9NaWdyYXRpb25TdWJ0YXNrEk9wcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29ya2Zsb3dz",
+            "L3t3b3JrZmxvd30vc3VidGFza3Mve3N1YnRhc2t9In4KE01pZ3JhdGlvblRh",
+            "c2tSZXN1bHQSXAoXdHJhbnNsYXRpb25fdGFza19yZXN1bHQYAiABKAsyOS5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLlRyYW5zbGF0aW9u",
+            "VGFza1Jlc3VsdEgAQgkKB2RldGFpbHMizAEKFVRyYW5zbGF0aW9uVGFza1Jl",
+            "c3VsdBJIChN0cmFuc2xhdGVkX2xpdGVyYWxzGAEgAygLMisuZ29vZ2xlLmNs",
+            "b3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5MaXRlcmFsElQKE3JlcG9ydF9s",
+            "b2dfbWVzc2FnZXMYAiADKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWln",
+            "cmF0aW9uLnYyLkdjc1JlcG9ydExvZ01lc3NhZ2USEwoLY29uc29sZV91cmkY",
+            "AyABKAlC0gEKJmNvbS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9u",
+            "LnYyQhZNaWdyYXRpb25FbnRpdGllc1Byb3RvUAFaRGNsb3VkLmdvb2dsZS5j",
+            "b20vZ28vYmlncXVlcnkvbWlncmF0aW9uL2FwaXYyL21pZ3JhdGlvbnBiO21p",
+            "Z3JhdGlvbnBiqgIiR29vZ2xlLkNsb3VkLkJpZ1F1ZXJ5Lk1pZ3JhdGlvbi5W",
+            "MsoCIkdvb2dsZVxDbG91ZFxCaWdRdWVyeVxNaWdyYXRpb25cVjJiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationErrorDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationMetricsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationUsabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationErrorDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.MigrationMetricsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor, global::Google.Cloud.BigQuery.Migration.V2.TranslationUsabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.ErrorDetailsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow), global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow.Parser, new[]{ "Name", "DisplayName", "Tasks", "State", "CreateTime", "LastUpdateTime" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationWorkflow.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask), global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Parser, new[]{ "TranslationConfigDetails", "TranslationDetails", "Id", "Type", "State", "ProcessingError", "CreateTime", "LastUpdateTime", "ResourceErrorDetails", "ResourceErrorCount", "Metrics", "TaskResult", "TotalProcessingErrorCount", "TotalResourceErrorCount" }, new[]{ "TaskDetails" }, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask), global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Parser, new[]{ "AssessmentTaskDetails", "TranslationConfigDetails", "TranslationDetails", "Id", "Type", "State", "ProcessingError", "CreateTime", "LastUpdateTime", "ResourceErrorDetails", "ResourceErrorCount", "Metrics", "TaskResult", "TotalProcessingErrorCount", "TotalResourceErrorCount" }, new[]{ "TaskDetails" }, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTask.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask), global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask.Parser, new[]{ "Name", "TaskId", "Type", "State", "ProcessingError", "ResourceErrorDetails", "ResourceErrorCount", "CreateTime", "LastUpdateTime", "Metrics" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationSubtask.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.MigrationTaskResult.Parser, new[]{ "TranslationTaskResult" }, new[]{ "Details" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult.Parser, new[]{ "TranslatedLiterals", "ReportLogMessages" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult), global::Google.Cloud.BigQuery.Migration.V2.TranslationTaskResult.Parser, new[]{ "TranslatedLiterals", "ReportLogMessages", "ConsoleUri" }, null, null, null, null)
           }));
     }
     #endregion
@@ -237,7 +243,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int CreateTimeFieldNumber = 4;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Time when the workflow was created.
+    /// Output only. Time when the workflow was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -252,7 +258,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int LastUpdateTimeFieldNumber = 5;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
     /// <summary>
-    /// Time when the workflow was last updated.
+    /// Output only. Time when the workflow was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -622,6 +628,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       totalProcessingErrorCount_ = other.totalProcessingErrorCount_;
       totalResourceErrorCount_ = other.totalResourceErrorCount_;
       switch (other.TaskDetailsCase) {
+        case TaskDetailsOneofCase.AssessmentTaskDetails:
+          AssessmentTaskDetails = other.AssessmentTaskDetails.Clone();
+          break;
         case TaskDetailsOneofCase.TranslationConfigDetails:
           TranslationConfigDetails = other.TranslationConfigDetails.Clone();
           break;
@@ -637,6 +646,21 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationTask Clone() {
       return new MigrationTask(this);
+    }
+
+    /// <summary>Field number for the "assessment_task_details" field.</summary>
+    public const int AssessmentTaskDetailsFieldNumber = 12;
+    /// <summary>
+    /// Task configuration for Assessment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskDetails AssessmentTaskDetails {
+      get { return taskDetailsCase_ == TaskDetailsOneofCase.AssessmentTaskDetails ? (global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskDetails) taskDetails_ : null; }
+      set {
+        taskDetails_ = value;
+        taskDetailsCase_ = value == null ? TaskDetailsOneofCase.None : TaskDetailsOneofCase.AssessmentTaskDetails;
+      }
     }
 
     /// <summary>Field number for the "translation_config_details" field.</summary>
@@ -689,13 +713,22 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int TypeFieldNumber = 2;
     private string type_ = "";
     /// <summary>
-    /// The type of the task. This must be one of the supported task types:
-    /// Translation_Teradata2BQ, Translation_Redshift2BQ, Translation_Bteq2BQ,
-    /// Translation_Oracle2BQ, Translation_HiveQL2BQ, Translation_SparkSQL2BQ,
-    /// Translation_Snowflake2BQ, Translation_Netezza2BQ,
-    /// Translation_AzureSynapse2BQ, Translation_Vertica2BQ,
-    /// Translation_SQLServer2BQ, Translation_Presto2BQ, Translation_MySQL2BQ,
-    /// Translation_Postgresql2BQ, Translation_SQLite2BQ, Translation_Greenplum2BQ.
+    /// The type of the task. This must be one of the supported task types.
+    ///
+    /// Assessment:
+    ///
+    /// - `Assessment_Hive` - Assessment for Hive.
+    /// - `Assessment_Redshift` - Assessment for Redshift.
+    /// - `Assessment_Snowflake` - Assessment for Snowflake.
+    /// - `Assessment_Teradata_v2` - Assessment for Teradata.
+    /// - `Assessment_Oracle` - Assessment for Oracle.
+    /// - `Assessment_Hadoop` - Assessment for Hadoop.
+    /// - `Assessment_Informatica` - Assessment for Informatica.
+    ///
+    /// Translation:
+    /// See [Supported Task
+    /// Types](https://docs.cloud.google.com/bigquery/docs/api-sql-translator#supported_task_types)
+    /// for a list of supported task types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -741,7 +774,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int CreateTimeFieldNumber = 6;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Time when the task was created.
+    /// Output only. Time when the task was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -756,7 +789,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int LastUpdateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
     /// <summary>
-    /// Time when the task was last updated.
+    /// Output only. Time when the task was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -787,10 +820,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int ResourceErrorCountFieldNumber = 18;
     private int resourceErrorCount_;
     /// <summary>
-    /// The number or resources with errors. Note: This is not the total
-    /// number of errors as each resource can have more than one error.
-    /// This is used to indicate truncation by having a `resource_error_count`
-    /// that is higher than the size of `resource_error_details`.
+    /// Output only. The number or resources with errors. Note: This is not the
+    /// total number of errors as each resource can have more than one error. This
+    /// is used to indicate truncation by having a `resource_error_count` that is
+    /// higher than the size of `resource_error_details`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -807,7 +840,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         = pb::FieldCodec.ForMessage(154, global::Google.Cloud.BigQuery.Migration.V2.TimeSeries.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.TimeSeries> metrics_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.TimeSeries>();
     /// <summary>
-    /// The metrics for the task.
+    /// Output only. The metrics for the task.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -834,7 +867,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int TotalProcessingErrorCountFieldNumber = 21;
     private int totalProcessingErrorCount_;
     /// <summary>
-    /// Count of all the processing errors in this task and its subtasks.
+    /// Output only. Count of all the processing errors in this task and its
+    /// subtasks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -849,7 +883,8 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int TotalResourceErrorCountFieldNumber = 22;
     private int totalResourceErrorCount_;
     /// <summary>
-    /// Count of all the resource errors in this task and its subtasks.
+    /// Output only. Count of all the resource errors in this task and its
+    /// subtasks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -864,6 +899,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     /// <summary>Enum of possible cases for the "task_details" oneof.</summary>
     public enum TaskDetailsOneofCase {
       None = 0,
+      AssessmentTaskDetails = 12,
       TranslationConfigDetails = 14,
       TranslationDetails = 16,
     }
@@ -896,6 +932,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (ReferenceEquals(other, this)) {
         return true;
       }
+      if (!object.Equals(AssessmentTaskDetails, other.AssessmentTaskDetails)) return false;
       if (!object.Equals(TranslationConfigDetails, other.TranslationConfigDetails)) return false;
       if (!object.Equals(TranslationDetails, other.TranslationDetails)) return false;
       if (Id != other.Id) return false;
@@ -918,6 +955,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
+      if (taskDetailsCase_ == TaskDetailsOneofCase.AssessmentTaskDetails) hash ^= AssessmentTaskDetails.GetHashCode();
       if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationConfigDetails) hash ^= TranslationConfigDetails.GetHashCode();
       if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationDetails) hash ^= TranslationDetails.GetHashCode();
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -974,6 +1012,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (lastUpdateTime_ != null) {
         output.WriteRawTag(58);
         output.WriteMessage(LastUpdateTime);
+      }
+      if (taskDetailsCase_ == TaskDetailsOneofCase.AssessmentTaskDetails) {
+        output.WriteRawTag(98);
+        output.WriteMessage(AssessmentTaskDetails);
       }
       if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationConfigDetails) {
         output.WriteRawTag(114);
@@ -1035,6 +1077,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(58);
         output.WriteMessage(LastUpdateTime);
       }
+      if (taskDetailsCase_ == TaskDetailsOneofCase.AssessmentTaskDetails) {
+        output.WriteRawTag(98);
+        output.WriteMessage(AssessmentTaskDetails);
+      }
       if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationConfigDetails) {
         output.WriteRawTag(114);
         output.WriteMessage(TranslationConfigDetails);
@@ -1071,6 +1117,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
+      if (taskDetailsCase_ == TaskDetailsOneofCase.AssessmentTaskDetails) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AssessmentTaskDetails);
+      }
       if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationConfigDetails) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TranslationConfigDetails);
       }
@@ -1166,6 +1215,12 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         TotalResourceErrorCount = other.TotalResourceErrorCount;
       }
       switch (other.TaskDetailsCase) {
+        case TaskDetailsOneofCase.AssessmentTaskDetails:
+          if (AssessmentTaskDetails == null) {
+            AssessmentTaskDetails = new global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskDetails();
+          }
+          AssessmentTaskDetails.MergeFrom(other.AssessmentTaskDetails);
+          break;
         case TaskDetailsOneofCase.TranslationConfigDetails:
           if (TranslationConfigDetails == null) {
             TranslationConfigDetails = new global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigDetails();
@@ -1230,6 +1285,15 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
               LastUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(LastUpdateTime);
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskDetails subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskDetails();
+            if (taskDetailsCase_ == TaskDetailsOneofCase.AssessmentTaskDetails) {
+              subBuilder.MergeFrom(AssessmentTaskDetails);
+            }
+            input.ReadMessage(subBuilder);
+            AssessmentTaskDetails = subBuilder;
             break;
           }
           case 114: {
@@ -1329,6 +1393,15 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             input.ReadMessage(LastUpdateTime);
             break;
           }
+          case 98: {
+            global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskDetails subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.AssessmentTaskDetails();
+            if (taskDetailsCase_ == TaskDetailsOneofCase.AssessmentTaskDetails) {
+              subBuilder.MergeFrom(AssessmentTaskDetails);
+            }
+            input.ReadMessage(subBuilder);
+            AssessmentTaskDetails = subBuilder;
+            break;
+          }
           case 114: {
             global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigDetails subBuilder = new global::Google.Cloud.BigQuery.Migration.V2.TranslationConfigDetails();
             if (taskDetailsCase_ == TaskDetailsOneofCase.TranslationConfigDetails) {
@@ -1405,7 +1478,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         /// </summary>
         [pbr::OriginalName("RUNNING")] Running = 3,
         /// <summary>
-        /// Tha task is paused. Assigned subtasks can continue, but no new subtasks
+        /// The task is paused. Assigned subtasks can continue, but no new subtasks
         /// will be scheduled.
         /// </summary>
         [pbr::OriginalName("PAUSED")] Paused = 4,
@@ -1585,10 +1658,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int ResourceErrorCountFieldNumber = 13;
     private int resourceErrorCount_;
     /// <summary>
-    /// The number or resources with errors. Note: This is not the total
-    /// number of errors as each resource can have more than one error.
-    /// This is used to indicate truncation by having a `resource_error_count`
-    /// that is higher than the size of `resource_error_details`.
+    /// Output only. The number or resources with errors. Note: This is not the
+    /// total number of errors as each resource can have more than one error. This
+    /// is used to indicate truncation by having a `resource_error_count` that is
+    /// higher than the size of `resource_error_details`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1603,7 +1676,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int CreateTimeFieldNumber = 7;
     private global::Google.Protobuf.WellKnownTypes.Timestamp createTime_;
     /// <summary>
-    /// Time when the subtask was created.
+    /// Output only. Time when the subtask was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1618,7 +1691,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public const int LastUpdateTimeFieldNumber = 8;
     private global::Google.Protobuf.WellKnownTypes.Timestamp lastUpdateTime_;
     /// <summary>
-    /// Time when the subtask was last updated.
+    /// Output only. Time when the subtask was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1635,7 +1708,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         = pb::FieldCodec.ForMessage(90, global::Google.Cloud.BigQuery.Migration.V2.TimeSeries.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.TimeSeries> metrics_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.TimeSeries>();
     /// <summary>
-    /// The metrics for the subtask.
+    /// Output only. The metrics for the subtask.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2338,6 +2411,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     public TranslationTaskResult(TranslationTaskResult other) : this() {
       translatedLiterals_ = other.translatedLiterals_.Clone();
       reportLogMessages_ = other.reportLogMessages_.Clone();
+      consoleUri_ = other.consoleUri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2375,6 +2449,21 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       get { return reportLogMessages_; }
     }
 
+    /// <summary>Field number for the "console_uri" field.</summary>
+    public const int ConsoleUriFieldNumber = 3;
+    private string consoleUri_ = "";
+    /// <summary>
+    /// The Cloud Console URI for the migration workflow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConsoleUri {
+      get { return consoleUri_; }
+      set {
+        consoleUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2392,6 +2481,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       if(!translatedLiterals_.Equals(other.translatedLiterals_)) return false;
       if(!reportLogMessages_.Equals(other.reportLogMessages_)) return false;
+      if (ConsoleUri != other.ConsoleUri) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2401,6 +2491,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       int hash = 1;
       hash ^= translatedLiterals_.GetHashCode();
       hash ^= reportLogMessages_.GetHashCode();
+      if (ConsoleUri.Length != 0) hash ^= ConsoleUri.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2421,6 +2512,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     #else
       translatedLiterals_.WriteTo(output, _repeated_translatedLiterals_codec);
       reportLogMessages_.WriteTo(output, _repeated_reportLogMessages_codec);
+      if (ConsoleUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ConsoleUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2433,6 +2528,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       translatedLiterals_.WriteTo(ref output, _repeated_translatedLiterals_codec);
       reportLogMessages_.WriteTo(ref output, _repeated_reportLogMessages_codec);
+      if (ConsoleUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(ConsoleUri);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2445,6 +2544,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       int size = 0;
       size += translatedLiterals_.CalculateSize(_repeated_translatedLiterals_codec);
       size += reportLogMessages_.CalculateSize(_repeated_reportLogMessages_codec);
+      if (ConsoleUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ConsoleUri);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2459,6 +2561,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       translatedLiterals_.Add(other.translatedLiterals_);
       reportLogMessages_.Add(other.reportLogMessages_);
+      if (other.ConsoleUri.Length != 0) {
+        ConsoleUri = other.ConsoleUri;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2486,6 +2591,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             reportLogMessages_.AddEntriesFrom(input, _repeated_reportLogMessages_codec);
             break;
           }
+          case 26: {
+            ConsoleUri = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -2511,6 +2620,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
           }
           case 18: {
             reportLogMessages_.AddEntriesFrom(ref input, _repeated_reportLogMessages_codec);
+            break;
+          }
+          case 26: {
+            ConsoleUri = input.ReadString();
             break;
           }
         }

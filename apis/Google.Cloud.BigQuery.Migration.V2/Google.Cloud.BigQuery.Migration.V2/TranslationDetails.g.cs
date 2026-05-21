@@ -26,37 +26,52 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
           string.Concat(
             "Cjxnb29nbGUvY2xvdWQvYmlncXVlcnkvbWlncmF0aW9uL3YyL3RyYW5zbGF0",
             "aW9uX2RldGFpbHMucHJvdG8SImdvb2dsZS5jbG91ZC5iaWdxdWVyeS5taWdy",
-            "YXRpb24udjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8ijgIK",
+            "YXRpb24udjIaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8i3wIK",
             "ElRyYW5zbGF0aW9uRGV0YWlscxJWChVzb3VyY2VfdGFyZ2V0X21hcHBpbmcY",
             "ASADKAsyNy5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLlNv",
             "dXJjZVRhcmdldE1hcHBpbmcSFwoPdGFyZ2V0X2Jhc2VfdXJpGAIgASgJElEK",
             "EnNvdXJjZV9lbnZpcm9ubWVudBgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5iaWdx",
             "dWVyeS5taWdyYXRpb24udjIuU291cmNlRW52aXJvbm1lbnQSHgoWdGFyZ2V0",
-            "X3JldHVybl9saXRlcmFscxgEIAMoCRIUCgx0YXJnZXRfdHlwZXMYBSADKAki",
-            "nwEKE1NvdXJjZVRhcmdldE1hcHBpbmcSQwoLc291cmNlX3NwZWMYASABKAsy",
-            "Li5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLlNvdXJjZVNw",
-            "ZWMSQwoLdGFyZ2V0X3NwZWMYAiABKAsyLi5nb29nbGUuY2xvdWQuYmlncXVl",
-            "cnkubWlncmF0aW9uLnYyLlRhcmdldFNwZWMigQEKClNvdXJjZVNwZWMSEgoI",
-            "YmFzZV91cmkYASABKAlIABI+CgdsaXRlcmFsGAIgASgLMisuZ29vZ2xlLmNs",
-            "b3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5MaXRlcmFsSAASFQoIZW5jb2Rp",
-            "bmcYAyABKAlCA+BBAUIICgZzb3VyY2UiIwoKVGFyZ2V0U3BlYxIVCg1yZWxh",
-            "dGl2ZV9wYXRoGAEgASgJImgKB0xpdGVyYWwSGAoObGl0ZXJhbF9zdHJpbmcY",
-            "AiABKAlIABIXCg1saXRlcmFsX2J5dGVzGAMgASgMSAASGgoNcmVsYXRpdmVf",
-            "cGF0aBgBIAEoCUID4EECQg4KDGxpdGVyYWxfZGF0YSJuChFTb3VyY2VFbnZp",
-            "cm9ubWVudBIYChBkZWZhdWx0X2RhdGFiYXNlGAEgASgJEhoKEnNjaGVtYV9z",
-            "ZWFyY2hfcGF0aBgCIAMoCRIjChZtZXRhZGF0YV9zdG9yZV9kYXRhc2V0GAMg",
-            "ASgJQgPgQQFC0wEKJmNvbS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0",
-            "aW9uLnYyQhdUcmFuc2xhdGlvbkRldGFpbHNQcm90b1ABWkRjbG91ZC5nb29n",
-            "bGUuY29tL2dvL2JpZ3F1ZXJ5L21pZ3JhdGlvbi9hcGl2Mi9taWdyYXRpb25w",
-            "YjttaWdyYXRpb25wYqoCIkdvb2dsZS5DbG91ZC5CaWdRdWVyeS5NaWdyYXRp",
-            "b24uVjLKAiJHb29nbGVcQ2xvdWRcQmlnUXVlcnlcTWlncmF0aW9uXFYyYgZw",
-            "cm90bzM="));
+            "X3JldHVybl9saXRlcmFscxgEIAMoCRIUCgx0YXJnZXRfdHlwZXMYBSADKAkS",
+            "TwoRc3VnZ2VzdGlvbl9jb25maWcYBiABKAsyNC5nb29nbGUuY2xvdWQuYmln",
+            "cXVlcnkubWlncmF0aW9uLnYyLlN1Z2dlc3Rpb25Db25maWciZQoQU3VnZ2Vz",
+            "dGlvbkNvbmZpZxJRChVza2lwX3N1Z2dlc3Rpb25fc3RlcHMYASADKAsyMi5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLlN1Z2dlc3Rpb25T",
+            "dGVwIoADCg5TdWdnZXN0aW9uU3RlcBJaCg9zdWdnZXN0aW9uX3R5cGUYASAB",
+            "KA4yQS5nb29nbGUuY2xvdWQuYmlncXVlcnkubWlncmF0aW9uLnYyLlN1Z2dl",
+            "c3Rpb25TdGVwLlN1Z2dlc3Rpb25UeXBlElgKDnJld3JpdGVfdGFyZ2V0GAIg",
+            "ASgOMkAuZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5TdWdn",
+            "ZXN0aW9uU3RlcC5SZXdyaXRlVGFyZ2V0ImcKDlN1Z2dlc3Rpb25UeXBlEh8K",
+            "G1NVR0dFU1RJT05fVFlQRV9VTlNQRUNJRklFRBAAEhcKE1FVRVJZX0NVU1RP",
+            "TUlaQVRJT04QARIbChdUUkFOU0xBVElPTl9FWFBMQU5BVElPThACIk8KDVJl",
+            "d3JpdGVUYXJnZXQSHgoaUkVXUklURV9UQVJHRVRfVU5TUEVDSUZJRUQQABIO",
+            "CgpTT1VSQ0VfU1FMEAESDgoKVEFSR0VUX1NRTBACIp8BChNTb3VyY2VUYXJn",
+            "ZXRNYXBwaW5nEkMKC3NvdXJjZV9zcGVjGAEgASgLMi4uZ29vZ2xlLmNsb3Vk",
+            "LmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52Mi5Tb3VyY2VTcGVjEkMKC3RhcmdldF9z",
+            "cGVjGAIgASgLMi4uZ29vZ2xlLmNsb3VkLmJpZ3F1ZXJ5Lm1pZ3JhdGlvbi52",
+            "Mi5UYXJnZXRTcGVjIpoBCgpTb3VyY2VTcGVjEhIKCGJhc2VfdXJpGAEgASgJ",
+            "SAASPgoHbGl0ZXJhbBgCIAEoCzIrLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5t",
+            "aWdyYXRpb24udjIuTGl0ZXJhbEgAEhcKDWdjc19maWxlX3BhdGgYBCABKAlI",
+            "ABIVCghlbmNvZGluZxgDIAEoCUID4EEBQggKBnNvdXJjZSIjCgpUYXJnZXRT",
+            "cGVjEhUKDXJlbGF0aXZlX3BhdGgYASABKAkiaAoHTGl0ZXJhbBIYCg5saXRl",
+            "cmFsX3N0cmluZxgCIAEoCUgAEhcKDWxpdGVyYWxfYnl0ZXMYAyABKAxIABIa",
+            "Cg1yZWxhdGl2ZV9wYXRoGAEgASgJQgPgQQJCDgoMbGl0ZXJhbF9kYXRhIm4K",
+            "EVNvdXJjZUVudmlyb25tZW50EhgKEGRlZmF1bHRfZGF0YWJhc2UYASABKAkS",
+            "GgoSc2NoZW1hX3NlYXJjaF9wYXRoGAIgAygJEiMKFm1ldGFkYXRhX3N0b3Jl",
+            "X2RhdGFzZXQYAyABKAlCA+BBAULTAQomY29tLmdvb2dsZS5jbG91ZC5iaWdx",
+            "dWVyeS5taWdyYXRpb24udjJCF1RyYW5zbGF0aW9uRGV0YWlsc1Byb3RvUAFa",
+            "RGNsb3VkLmdvb2dsZS5jb20vZ28vYmlncXVlcnkvbWlncmF0aW9uL2FwaXYy",
+            "L21pZ3JhdGlvbnBiO21pZ3JhdGlvbnBiqgIiR29vZ2xlLkNsb3VkLkJpZ1F1",
+            "ZXJ5Lk1pZ3JhdGlvbi5WMsoCIkdvb2dsZVxDbG91ZFxCaWdRdWVyeVxNaWdy",
+            "YXRpb25cVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails), global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails.Parser, new[]{ "SourceTargetMapping", "TargetBaseUri", "SourceEnvironment", "TargetReturnLiterals", "TargetTypes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails), global::Google.Cloud.BigQuery.Migration.V2.TranslationDetails.Parser, new[]{ "SourceTargetMapping", "TargetBaseUri", "SourceEnvironment", "TargetReturnLiterals", "TargetTypes", "SuggestionConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.SuggestionConfig), global::Google.Cloud.BigQuery.Migration.V2.SuggestionConfig.Parser, new[]{ "SkipSuggestionSteps" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep), global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Parser, new[]{ "SuggestionType", "RewriteTarget" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType), typeof(global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.SourceTargetMapping), global::Google.Cloud.BigQuery.Migration.V2.SourceTargetMapping.Parser, new[]{ "SourceSpec", "TargetSpec" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.SourceSpec), global::Google.Cloud.BigQuery.Migration.V2.SourceSpec.Parser, new[]{ "BaseUri", "Literal", "Encoding" }, new[]{ "Source" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.SourceSpec), global::Google.Cloud.BigQuery.Migration.V2.SourceSpec.Parser, new[]{ "BaseUri", "Literal", "GcsFilePath", "Encoding" }, new[]{ "Source" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.TargetSpec), global::Google.Cloud.BigQuery.Migration.V2.TargetSpec.Parser, new[]{ "RelativePath" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.Literal), global::Google.Cloud.BigQuery.Migration.V2.Literal.Parser, new[]{ "LiteralString", "LiteralBytes", "RelativePath" }, new[]{ "LiteralData" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Migration.V2.SourceEnvironment), global::Google.Cloud.BigQuery.Migration.V2.SourceEnvironment.Parser, new[]{ "DefaultDatabase", "SchemaSearchPath", "MetadataStoreDataset" }, null, null, null, null)
@@ -110,6 +125,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       sourceEnvironment_ = other.sourceEnvironment_ != null ? other.sourceEnvironment_.Clone() : null;
       targetReturnLiterals_ = other.targetReturnLiterals_.Clone();
       targetTypes_ = other.targetTypes_.Clone();
+      suggestionConfig_ = other.suggestionConfig_ != null ? other.suggestionConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -196,6 +212,21 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       get { return targetTypes_; }
     }
 
+    /// <summary>Field number for the "suggestion_config" field.</summary>
+    public const int SuggestionConfigFieldNumber = 6;
+    private global::Google.Cloud.BigQuery.Migration.V2.SuggestionConfig suggestionConfig_;
+    /// <summary>
+    /// The configuration for the suggestion if requested as a target type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.SuggestionConfig SuggestionConfig {
+      get { return suggestionConfig_; }
+      set {
+        suggestionConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -216,6 +247,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (!object.Equals(SourceEnvironment, other.SourceEnvironment)) return false;
       if(!targetReturnLiterals_.Equals(other.targetReturnLiterals_)) return false;
       if(!targetTypes_.Equals(other.targetTypes_)) return false;
+      if (!object.Equals(SuggestionConfig, other.SuggestionConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -228,6 +260,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       if (sourceEnvironment_ != null) hash ^= SourceEnvironment.GetHashCode();
       hash ^= targetReturnLiterals_.GetHashCode();
       hash ^= targetTypes_.GetHashCode();
+      if (suggestionConfig_ != null) hash ^= SuggestionConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -257,6 +290,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       targetReturnLiterals_.WriteTo(output, _repeated_targetReturnLiterals_codec);
       targetTypes_.WriteTo(output, _repeated_targetTypes_codec);
+      if (suggestionConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SuggestionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -278,6 +315,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       targetReturnLiterals_.WriteTo(ref output, _repeated_targetReturnLiterals_codec);
       targetTypes_.WriteTo(ref output, _repeated_targetTypes_codec);
+      if (suggestionConfig_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(SuggestionConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -297,6 +338,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       size += targetReturnLiterals_.CalculateSize(_repeated_targetReturnLiterals_codec);
       size += targetTypes_.CalculateSize(_repeated_targetTypes_codec);
+      if (suggestionConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SuggestionConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -321,6 +365,12 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       targetReturnLiterals_.Add(other.targetReturnLiterals_);
       targetTypes_.Add(other.targetTypes_);
+      if (other.suggestionConfig_ != null) {
+        if (suggestionConfig_ == null) {
+          SuggestionConfig = new global::Google.Cloud.BigQuery.Migration.V2.SuggestionConfig();
+        }
+        SuggestionConfig.MergeFrom(other.SuggestionConfig);
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -361,6 +411,13 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
           }
           case 42: {
             targetTypes_.AddEntriesFrom(input, _repeated_targetTypes_codec);
+            break;
+          }
+          case 50: {
+            if (suggestionConfig_ == null) {
+              SuggestionConfig = new global::Google.Cloud.BigQuery.Migration.V2.SuggestionConfig();
+            }
+            input.ReadMessage(SuggestionConfig);
             break;
           }
         }
@@ -405,10 +462,498 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             targetTypes_.AddEntriesFrom(ref input, _repeated_targetTypes_codec);
             break;
           }
+          case 50: {
+            if (suggestionConfig_ == null) {
+              SuggestionConfig = new global::Google.Cloud.BigQuery.Migration.V2.SuggestionConfig();
+            }
+            input.ReadMessage(SuggestionConfig);
+            break;
+          }
         }
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// The configuration for the suggestion if requested as a target type.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SuggestionConfig : pb::IMessage<SuggestionConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SuggestionConfig> _parser = new pb::MessageParser<SuggestionConfig>(() => new SuggestionConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SuggestionConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SuggestionConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SuggestionConfig(SuggestionConfig other) : this() {
+      skipSuggestionSteps_ = other.skipSuggestionSteps_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SuggestionConfig Clone() {
+      return new SuggestionConfig(this);
+    }
+
+    /// <summary>Field number for the "skip_suggestion_steps" field.</summary>
+    public const int SkipSuggestionStepsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep> _repeated_skipSuggestionSteps_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep> skipSuggestionSteps_ = new pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep>();
+    /// <summary>
+    /// The list of suggestion steps to skip.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep> SkipSuggestionSteps {
+      get { return skipSuggestionSteps_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SuggestionConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SuggestionConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!skipSuggestionSteps_.Equals(other.skipSuggestionSteps_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= skipSuggestionSteps_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      skipSuggestionSteps_.WriteTo(output, _repeated_skipSuggestionSteps_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      skipSuggestionSteps_.WriteTo(ref output, _repeated_skipSuggestionSteps_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += skipSuggestionSteps_.CalculateSize(_repeated_skipSuggestionSteps_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SuggestionConfig other) {
+      if (other == null) {
+        return;
+      }
+      skipSuggestionSteps_.Add(other.skipSuggestionSteps_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            skipSuggestionSteps_.AddEntriesFrom(input, _repeated_skipSuggestionSteps_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            skipSuggestionSteps_.AddEntriesFrom(ref input, _repeated_skipSuggestionSteps_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Suggestion step to skip.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SuggestionStep : pb::IMessage<SuggestionStep>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SuggestionStep> _parser = new pb::MessageParser<SuggestionStep>(() => new SuggestionStep());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SuggestionStep> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SuggestionStep() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SuggestionStep(SuggestionStep other) : this() {
+      suggestionType_ = other.suggestionType_;
+      rewriteTarget_ = other.rewriteTarget_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SuggestionStep Clone() {
+      return new SuggestionStep(this);
+    }
+
+    /// <summary>Field number for the "suggestion_type" field.</summary>
+    public const int SuggestionTypeFieldNumber = 1;
+    private global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType suggestionType_ = global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType.Unspecified;
+    /// <summary>
+    /// The type of suggestion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType SuggestionType {
+      get { return suggestionType_; }
+      set {
+        suggestionType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "rewrite_target" field.</summary>
+    public const int RewriteTargetFieldNumber = 2;
+    private global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget rewriteTarget_ = global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget.Unspecified;
+    /// <summary>
+    /// The rewrite target.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget RewriteTarget {
+      get { return rewriteTarget_; }
+      set {
+        rewriteTarget_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SuggestionStep);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SuggestionStep other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (SuggestionType != other.SuggestionType) return false;
+      if (RewriteTarget != other.RewriteTarget) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (SuggestionType != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType.Unspecified) hash ^= SuggestionType.GetHashCode();
+      if (RewriteTarget != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget.Unspecified) hash ^= RewriteTarget.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (SuggestionType != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) SuggestionType);
+      }
+      if (RewriteTarget != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RewriteTarget);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SuggestionType != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) SuggestionType);
+      }
+      if (RewriteTarget != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) RewriteTarget);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (SuggestionType != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SuggestionType);
+      }
+      if (RewriteTarget != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RewriteTarget);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SuggestionStep other) {
+      if (other == null) {
+        return;
+      }
+      if (other.SuggestionType != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType.Unspecified) {
+        SuggestionType = other.SuggestionType;
+      }
+      if (other.RewriteTarget != global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget.Unspecified) {
+        RewriteTarget = other.RewriteTarget;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            SuggestionType = (global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            RewriteTarget = (global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            SuggestionType = (global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.SuggestionType) input.ReadEnum();
+            break;
+          }
+          case 16: {
+            RewriteTarget = (global::Google.Cloud.BigQuery.Migration.V2.SuggestionStep.Types.RewriteTarget) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SuggestionStep message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Suggestion type.
+      /// </summary>
+      public enum SuggestionType {
+        /// <summary>
+        /// Suggestion type unspecified.
+        /// </summary>
+        [pbr::OriginalName("SUGGESTION_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Query customization.
+        /// </summary>
+        [pbr::OriginalName("QUERY_CUSTOMIZATION")] QueryCustomization = 1,
+        /// <summary>
+        /// Translation explanation.
+        /// </summary>
+        [pbr::OriginalName("TRANSLATION_EXPLANATION")] TranslationExplanation = 2,
+      }
+
+      /// <summary>
+      /// The target to apply the suggestion to.
+      /// </summary>
+      public enum RewriteTarget {
+        /// <summary>
+        /// Rewrite target unspecified.
+        /// </summary>
+        [pbr::OriginalName("REWRITE_TARGET_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Source SQL.
+        /// </summary>
+        [pbr::OriginalName("SOURCE_SQL")] SourceSql = 1,
+        /// <summary>
+        /// Target SQL.
+        /// </summary>
+        [pbr::OriginalName("TARGET_SQL")] TargetSql = 2,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -430,7 +975,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -692,7 +1237,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -719,6 +1264,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
           break;
         case SourceOneofCase.Literal:
           Literal = other.Literal.Clone();
+          break;
+        case SourceOneofCase.GcsFilePath:
+          GcsFilePath = other.GcsFilePath;
           break;
       }
 
@@ -775,6 +1323,35 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
     }
 
+    /// <summary>Field number for the "gcs_file_path" field.</summary>
+    public const int GcsFilePathFieldNumber = 4;
+    /// <summary>
+    /// The path to a single source file in Cloud Storage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string GcsFilePath {
+      get { return HasGcsFilePath ? (string) source_ : ""; }
+      set {
+        source_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        sourceCase_ = SourceOneofCase.GcsFilePath;
+      }
+    }
+    /// <summary>Gets whether the "gcs_file_path" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGcsFilePath {
+      get { return sourceCase_ == SourceOneofCase.GcsFilePath; }
+    }
+    /// <summary> Clears the value of the oneof if it's currently set to "gcs_file_path" </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGcsFilePath() {
+      if (HasGcsFilePath) {
+        ClearSource();
+      }
+    }
+
     /// <summary>Field number for the "encoding" field.</summary>
     public const int EncodingFieldNumber = 3;
     private string encoding_ = "";
@@ -796,6 +1373,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       None = 0,
       BaseUri = 1,
       Literal = 2,
+      GcsFilePath = 4,
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -828,6 +1406,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       if (BaseUri != other.BaseUri) return false;
       if (!object.Equals(Literal, other.Literal)) return false;
+      if (GcsFilePath != other.GcsFilePath) return false;
       if (Encoding != other.Encoding) return false;
       if (SourceCase != other.SourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -839,6 +1418,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       int hash = 1;
       if (HasBaseUri) hash ^= BaseUri.GetHashCode();
       if (sourceCase_ == SourceOneofCase.Literal) hash ^= Literal.GetHashCode();
+      if (HasGcsFilePath) hash ^= GcsFilePath.GetHashCode();
       if (Encoding.Length != 0) hash ^= Encoding.GetHashCode();
       hash ^= (int) sourceCase_;
       if (_unknownFields != null) {
@@ -871,6 +1451,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(26);
         output.WriteString(Encoding);
       }
+      if (HasGcsFilePath) {
+        output.WriteRawTag(34);
+        output.WriteString(GcsFilePath);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -893,6 +1477,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
         output.WriteRawTag(26);
         output.WriteString(Encoding);
       }
+      if (HasGcsFilePath) {
+        output.WriteRawTag(34);
+        output.WriteString(GcsFilePath);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -908,6 +1496,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
       }
       if (sourceCase_ == SourceOneofCase.Literal) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Literal);
+      }
+      if (HasGcsFilePath) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(GcsFilePath);
       }
       if (Encoding.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Encoding);
@@ -936,6 +1527,9 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             Literal = new global::Google.Cloud.BigQuery.Migration.V2.Literal();
           }
           Literal.MergeFrom(other.Literal);
+          break;
+        case SourceOneofCase.GcsFilePath:
+          GcsFilePath = other.GcsFilePath;
           break;
       }
 
@@ -975,6 +1569,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             Encoding = input.ReadString();
             break;
           }
+          case 34: {
+            GcsFilePath = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1011,6 +1609,10 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
             Encoding = input.ReadString();
             break;
           }
+          case 34: {
+            GcsFilePath = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1036,7 +1638,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1242,7 +1844,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1587,7 +2189,7 @@ namespace Google.Cloud.BigQuery.Migration.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.BigQuery.Migration.V2.TranslationDetailsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
