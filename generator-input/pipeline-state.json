@@ -5080,17 +5080,17 @@
         }
     ],
     "ignoredApiPaths": [
-        "google/storage/v2",
-        "google/cloud/securityposture/v1",
-        "google/cloud/telcoautomation/v1alpha1",
-        "google/shopping/merchant/productstudio/v1alpha",
-        "google/cloud/redis/cluster/v1beta1",
+        "google/cloud/appoptimize/v1alpha",
         "google/cloud/configdelivery/v1alpha",
         "google/cloud/geminidataanalytics/v1alpha",
-        "google/shopping/merchant/reports/v1alpha",
         "google/cloud/networksecurity/v1alpha1",
+        "google/cloud/redis/cluster/v1beta1",
         "google/cloud/securesourcemanager/v1",
+        "google/cloud/securityposture/v1",
+        "google/cloud/telcoautomation/v1alpha1",
         "google/maps/weather/v1",
-        "google/cloud/appoptimize/v1alpha"
+        "google/shopping/merchant/productstudio/v1alpha",
+        "google/shopping/merchant/reports/v1alpha",
+        "google/storage/v2"
     ]
 }
