@@ -5065,6 +5065,18 @@
             "sourcePaths": [
                 "apis/Google.Backstory/Google.Backstory"
             ]
+        },
+        {
+            "id": "Google.Cloud.NetworkSecurity.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/networksecurity/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.NetworkSecurity.V1/Google.Cloud.NetworkSecurity.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
