@@ -30,8 +30,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxobZ29vZ2xlL2FwaS9maWVsZF9p",
             "bmZvLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGj5nb29nbGUv",
             "Y2xvdWQvc2Fhc3BsYXRmb3JtL3NhYXNzZXJ2aWNlbWdtdC92MWJldGExL2Nv",
-            "bW1vbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLR",
-            "DQoHUm9sbG91dBIRCgRuYW1lGAEgASgJQgPgQQgSQgoHcmVsZWFzZRgDIAEo",
+            "bW1vbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKv",
+            "DgoHUm9sbG91dBIRCgRuYW1lGAEgASgJQgPgQQgSQgoHcmVsZWFzZRgDIAEo",
             "CUIx4EEB4EEF+kEoCiZzYWFzc2VydmljZW1nbXQuZ29vZ2xlYXBpcy5jb20v",
             "UmVsZWFzZRI2CgpzdGFydF90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcEIG4EEB4EEDEjQKCGVuZF90aW1lGAggASgLMhouZ29vZ2xl",
@@ -45,86 +45,91 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             "QQPgQQH6QSgKJnNhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9Sb2xs",
             "b3V0EisKHnJvbGxvdXRfb3JjaGVzdHJhdGlvbl9zdHJhdGVneRgTIAEoCUID",
             "4EEBEhgKC3VuaXRfZmlsdGVyGBUgASgJQgPgQQESSwoMcm9sbG91dF9raW5k",
-            "GBYgASgJQjXgQQHgQQX6QSwKKnNhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlz",
+            "GBYgASgJQjXgQQLgQQX6QSwKKnNhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlz",
             "LmNvbS9Sb2xsb3V0S2luZBJWCgVzdGF0cxgYIAEoCzI/Lmdvb2dsZS5jbG91",
             "ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuUm9sbG91",
             "dFN0YXRzQgbgQQPgQQESVwoHY29udHJvbBgZIAEoCzJBLmdvb2dsZS5jbG91",
             "ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuUm9sbG91",
-            "dENvbnRyb2xCA+BBARJcCgZsYWJlbHMYoVEgAygLMkYuZ29vZ2xlLmNsb3Vk",
-            "LnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Sb2xsb3V0",
-            "LkxhYmVsc0VudHJ5QgPgQQESZgoLYW5ub3RhdGlvbnMYolEgAygLMksuZ29v",
+            "dENvbnRyb2xCA+BBARIlChVlZmZlY3RpdmVfdW5pdF9maWx0ZXIYGiABKAlC",
+            "BuBBAeBBAxJcCgZsYWJlbHMYoVEgAygLMkYuZ29vZ2xlLmNsb3VkLnNhYXNw",
+            "bGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Sb2xsb3V0LkxhYmVs",
+            "c0VudHJ5QgPgQQESZgoLYW5ub3RhdGlvbnMYolEgAygLMksuZ29vZ2xlLmNs",
+            "b3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Sb2xs",
+            "b3V0LkFubm90YXRpb25zRW50cnlCA+BBARIZCgN1aWQY2U8gASgJQgvgQQPi",
+            "jM/XCAIIARISCgRldGFnGNpPIAEoCUID4EEDEjUKC2NyZWF0ZV90aW1lGL9Q",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI1Cgt1cGRh",
+            "dGVfdGltZRjAUCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNQoLZGVsZXRlX3RpbWUYwVAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkYASAB",
+            "KAkSDQoFdmFsdWUYAiABKAk6AjgBIqYCCgxSb2xsb3V0U3RhdGUSHQoZUk9M",
+            "TE9VVF9TVEFURV9VTlNQRUNJRklFRBAAEhkKFVJPTExPVVRfU1RBVEVfUlVO",
+            "TklORxABEhgKFFJPTExPVVRfU1RBVEVfUEFVU0VEEAISGwoXUk9MTE9VVF9T",
+            "VEFURV9TVUNDRUVERUQQAxIYChRST0xMT1VUX1NUQVRFX0ZBSUxFRBAEEhsK",
+            "F1JPTExPVVRfU1RBVEVfQ0FOQ0VMTEVEEAUSGQoVUk9MTE9VVF9TVEFURV9X",
+            "QUlUSU5HEAYSHAoYUk9MTE9VVF9TVEFURV9DQU5DRUxMSU5HEAcSGgoWUk9M",
+            "TE9VVF9TVEFURV9SRVNVTUlORxAIEhkKFVJPTExPVVRfU1RBVEVfUEFVU0lO",
+            "RxAJOn3qQXoKJnNhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9Sb2xs",
+            "b3V0Ej1wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "cm9sbG91dHMve3JvbGxvdXRfaWR9Kghyb2xsb3V0czIHcm9sbG91dCKVCQoL",
+            "Um9sbG91dEtpbmQSEQoEbmFtZRgBIAEoCUID4EEIEkUKCXVuaXRfa2luZBgC",
+            "IAEoCUIy4EEC4EEF+kEpCidzYWFzc2VydmljZW1nbXQuZ29vZ2xlYXBpcy5j",
+            "b20vVW5pdEtpbmQSKwoecm9sbG91dF9vcmNoZXN0cmF0aW9uX3N0cmF0ZWd5",
+            "GAMgASgJQgPgQQESGAoLdW5pdF9maWx0ZXIYBSABKAlCA+BBARJ9Chl1cGRh",
+            "dGVfdW5pdF9raW5kX3N0cmF0ZWd5GAYgASgOMlUuZ29vZ2xlLmNsb3VkLnNh",
+            "YXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Sb2xsb3V0S2lu",
+            "ZC5VcGRhdGVVbml0S2luZFN0cmF0ZWd5QgPgQQESXgoMZXJyb3JfYnVkZ2V0",
+            "GAcgASgLMj4uZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2Vydmlj",
+            "ZW1nbXQudjFiZXRhMS5FcnJvckJ1ZGdldEID4EEBSACIAQESYAoGbGFiZWxz",
+            "GKFRIAMoCzJKLmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZp",
+            "Y2VtZ210LnYxYmV0YTEuUm9sbG91dEtpbmQuTGFiZWxzRW50cnlCA+BBARJq",
+            "Cgthbm5vdGF0aW9ucxiiUSADKAsyTy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRm",
+            "b3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlJvbGxvdXRLaW5kLkFubm90",
+            "YXRpb25zRW50cnlCA+BBARIZCgN1aWQY2U8gASgJQgvgQQPijM/XCAIIARIS",
+            "CgRldGFnGNpPIAEoCUID4EEDEjUKC2NyZWF0ZV90aW1lGL9QIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI1Cgt1cGRhdGVfdGltZRjA",
+            "UCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaLQoLTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBB",
+            "bm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEikAEKFlVwZGF0ZVVuaXRLaW5kU3RyYXRlZ3kSKQolVVBEQVRFX1VOSVRf",
+            "S0lORF9TVFJBVEVHWV9VTlNQRUNJRklFRBAAEiYKIlVQREFURV9VTklUX0tJ",
+            "TkRfU1RSQVRFR1lfT05fU1RBUlQQARIjCh9VUERBVEVfVU5JVF9LSU5EX1NU",
+            "UkFURUdZX05FVkVSEAI6kwHqQY8BCipzYWFzc2VydmljZW1nbXQuZ29vZ2xl",
+            "YXBpcy5jb20vUm9sbG91dEtpbmQSRnByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9yb2xsb3V0S2luZHMve3JvbGxvdXRfa2luZF9p",
+            "ZH0qDHJvbGxvdXRLaW5kczILcm9sbG91dEtpbmRCDwoNX2Vycm9yX2J1ZGdl",
+            "dCJ9CgtFcnJvckJ1ZGdldBIfCg1hbGxvd2VkX2NvdW50GAEgASgFQgPgQQFI",
+            "AIgBARIkChJhbGxvd2VkX3BlcmNlbnRhZ2UYAiABKAVCA+BBAUgBiAEBQhAK",
+            "Dl9hbGxvd2VkX2NvdW50QhUKE19hbGxvd2VkX3BlcmNlbnRhZ2UixAEKDFJv",
+            "bGxvdXRTdGF0cxJkChNvcGVyYXRpb25zX2J5X3N0YXRlGAIgAygLMjwuZ29v",
             "Z2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRh",
-            "MS5Sb2xsb3V0LkFubm90YXRpb25zRW50cnlCA+BBARIZCgN1aWQY2U8gASgJ",
-            "QgvgQQPijM/XCAIIARISCgRldGFnGNpPIAEoCUID4EEDEjUKC2NyZWF0ZV90",
-            "aW1lGL9QIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI1",
-            "Cgt1cGRhdGVfdGltZRjAUCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEipgIKDFJvbGxvdXRTdGF0ZRIdChlST0xMT1VU",
-            "X1NUQVRFX1VOU1BFQ0lGSUVEEAASGQoVUk9MTE9VVF9TVEFURV9SVU5OSU5H",
-            "EAESGAoUUk9MTE9VVF9TVEFURV9QQVVTRUQQAhIbChdST0xMT1VUX1NUQVRF",
-            "X1NVQ0NFRURFRBADEhgKFFJPTExPVVRfU1RBVEVfRkFJTEVEEAQSGwoXUk9M",
-            "TE9VVF9TVEFURV9DQU5DRUxMRUQQBRIZChVST0xMT1VUX1NUQVRFX1dBSVRJ",
-            "TkcQBhIcChhST0xMT1VUX1NUQVRFX0NBTkNFTExJTkcQBxIaChZST0xMT1VU",
-            "X1NUQVRFX1JFU1VNSU5HEAgSGQoVUk9MTE9VVF9TVEFURV9QQVVTSU5HEAk6",
-            "fepBegomc2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1JvbGxvdXQS",
-            "PXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yb2xs",
-            "b3V0cy97cm9sbG91dF9pZH0qCHJvbGxvdXRzMgdyb2xsb3V0IpUJCgtSb2xs",
-            "b3V0S2luZBIRCgRuYW1lGAEgASgJQgPgQQgSRQoJdW5pdF9raW5kGAIgASgJ",
-            "QjLgQQLgQQX6QSkKJ3NhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9V",
-            "bml0S2luZBIrCh5yb2xsb3V0X29yY2hlc3RyYXRpb25fc3RyYXRlZ3kYAyAB",
-            "KAlCA+BBARIYCgt1bml0X2ZpbHRlchgFIAEoCUID4EEBEn0KGXVwZGF0ZV91",
-            "bml0X2tpbmRfc3RyYXRlZ3kYBiABKA4yVS5nb29nbGUuY2xvdWQuc2Fhc3Bs",
-            "YXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlJvbGxvdXRLaW5kLlVw",
-            "ZGF0ZVVuaXRLaW5kU3RyYXRlZ3lCA+BBARJeCgxlcnJvcl9idWRnZXQYByAB",
-            "KAsyPi5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdt",
-            "dC52MWJldGExLkVycm9yQnVkZ2V0QgPgQQFIAIgBARJgCgZsYWJlbHMYoVEg",
-            "AygLMkouZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1n",
-            "bXQudjFiZXRhMS5Sb2xsb3V0S2luZC5MYWJlbHNFbnRyeUID4EEBEmoKC2Fu",
-            "bm90YXRpb25zGKJRIAMoCzJPLmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0u",
-            "c2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuUm9sbG91dEtpbmQuQW5ub3RhdGlv",
-            "bnNFbnRyeUID4EEBEhkKA3VpZBjZTyABKAlCC+BBA+KMz9cIAggBEhIKBGV0",
-            "YWcY2k8gASgJQgPgQQMSNQoLY3JlYXRlX3RpbWUYv1AgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjUKC3VwZGF0ZV90aW1lGMBQIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxotCgtMYWJlbHNF",
-            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90",
-            "YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASKQ",
-            "AQoWVXBkYXRlVW5pdEtpbmRTdHJhdGVneRIpCiVVUERBVEVfVU5JVF9LSU5E",
-            "X1NUUkFURUdZX1VOU1BFQ0lGSUVEEAASJgoiVVBEQVRFX1VOSVRfS0lORF9T",
-            "VFJBVEVHWV9PTl9TVEFSVBABEiMKH1VQREFURV9VTklUX0tJTkRfU1RSQVRF",
-            "R1lfTkVWRVIQAjqTAepBjwEKKnNhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlz",
-            "LmNvbS9Sb2xsb3V0S2luZBJGcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3JvbGxvdXRLaW5kcy97cm9sbG91dF9raW5kX2lkfSoM",
-            "cm9sbG91dEtpbmRzMgtyb2xsb3V0S2luZEIPCg1fZXJyb3JfYnVkZ2V0IkoK",
-            "C0Vycm9yQnVkZ2V0EhoKDWFsbG93ZWRfY291bnQYASABKAVCA+BBARIfChJh",
-            "bGxvd2VkX3BlcmNlbnRhZ2UYAiABKAVCA+BBASJuCgxSb2xsb3V0U3RhdHMS",
-            "XgoTb3BlcmF0aW9uc19ieV9zdGF0ZRgCIAMoCzI8Lmdvb2dsZS5jbG91ZC5z",
-            "YWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuQWdncmVnYXRl",
-            "QgPgQQMirQIKDlJvbGxvdXRDb250cm9sEnMKCnJ1bl9wYXJhbXMYAiABKAsy",
-            "WC5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52",
-            "MWJldGExLlJvbGxvdXRDb250cm9sLlJ1blJvbGxvdXRBY3Rpb25QYXJhbXNC",
-            "A+BBAUgAElUKBmFjdGlvbhgBIAEoDjJALmdvb2dsZS5jbG91ZC5zYWFzcGxh",
-            "dGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuUm9sbG91dEFjdGlvbkID",
-            "4EECGj4KFlJ1blJvbGxvdXRBY3Rpb25QYXJhbXMSJAoXcmV0cnlfZmFpbGVk",
-            "X29wZXJhdGlvbnMYASABKAhCA+BBAkIPCg1hY3Rpb25fcGFyYW1zKnwKDVJv",
-            "bGxvdXRBY3Rpb24SHgoaUk9MTE9VVF9BQ1RJT05fVU5TUEVDSUZJRUQQABIW",
-            "ChJST0xMT1VUX0FDVElPTl9SVU4QARIYChRST0xMT1VUX0FDVElPTl9QQVVT",
-            "RRACEhkKFVJPTExPVVRfQUNUSU9OX0NBTkNFTBADQtYCCjVjb20uZ29vZ2xl",
-            "LmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMUIa",
-            "U2Fhc1JvbGxvdXRzUmVzb3VyY2VzUHJvdG9QAVpfY2xvdWQuZ29vZ2xlLmNv",
-            "bS9nby9zYWFzcGxhdGZvcm0vc2Fhc3NlcnZpY2VtZ210L2FwaXYxYmV0YTEv",
-            "c2Fhc3NlcnZpY2VtZ210cGI7c2Fhc3NlcnZpY2VtZ210cGKqAjFHb29nbGUu",
-            "Q2xvdWQuU2Fhc1BsYXRmb3JtLlNhYXNTZXJ2aWNlTWdtdC5WMUJldGExygIx",
-            "R29vZ2xlXENsb3VkXFNhYXNQbGF0Zm9ybVxTYWFzU2VydmljZU1nbXRcVjFi",
-            "ZXRhMeoCNUdvb2dsZTo6Q2xvdWQ6OlNhYXNQbGF0Zm9ybTo6U2Fhc1NlcnZp",
-            "Y2VNZ210OjpWMWJldGExYgZwcm90bzM="));
+            "MS5BZ2dyZWdhdGVCCeBBA+BBAeBBBhIvChplc3RpbWF0ZWRfdG90YWxfdW5p",
+            "dF9jb3VudBgDIAEoA0IG4EED4EEBSACIAQFCHQobX2VzdGltYXRlZF90b3Rh",
+            "bF91bml0X2NvdW50Iq0CCg5Sb2xsb3V0Q29udHJvbBJzCgpydW5fcGFyYW1z",
+            "GAIgASgLMlguZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2Vydmlj",
+            "ZW1nbXQudjFiZXRhMS5Sb2xsb3V0Q29udHJvbC5SdW5Sb2xsb3V0QWN0aW9u",
+            "UGFyYW1zQgPgQQFIABJVCgZhY3Rpb24YASABKA4yQC5nb29nbGUuY2xvdWQu",
+            "c2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlJvbGxvdXRB",
+            "Y3Rpb25CA+BBAho+ChZSdW5Sb2xsb3V0QWN0aW9uUGFyYW1zEiQKF3JldHJ5",
+            "X2ZhaWxlZF9vcGVyYXRpb25zGAEgASgIQgPgQQJCDwoNYWN0aW9uX3BhcmFt",
+            "cyp8Cg1Sb2xsb3V0QWN0aW9uEh4KGlJPTExPVVRfQUNUSU9OX1VOU1BFQ0lG",
+            "SUVEEAASFgoSUk9MTE9VVF9BQ1RJT05fUlVOEAESGAoUUk9MTE9VVF9BQ1RJ",
+            "T05fUEFVU0UQAhIZChVST0xMT1VUX0FDVElPTl9DQU5DRUwQA0LWAgo1Y29t",
+            "Lmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYx",
+            "YmV0YTFCGlNhYXNSb2xsb3V0c1Jlc291cmNlc1Byb3RvUAFaX2Nsb3VkLmdv",
+            "b2dsZS5jb20vZ28vc2Fhc3BsYXRmb3JtL3NhYXNzZXJ2aWNlbWdtdC9hcGl2",
+            "MWJldGExL3NhYXNzZXJ2aWNlbWdtdHBiO3NhYXNzZXJ2aWNlbWdtdHBiqgIx",
+            "R29vZ2xlLkNsb3VkLlNhYXNQbGF0Zm9ybS5TYWFzU2VydmljZU1nbXQuVjFC",
+            "ZXRhMcoCMUdvb2dsZVxDbG91ZFxTYWFzUGxhdGZvcm1cU2Fhc1NlcnZpY2VN",
+            "Z210XFYxYmV0YTHqAjVHb29nbGU6OkNsb3VkOjpTYWFzUGxhdGZvcm06OlNh",
+            "YXNTZXJ2aWNlTWdtdDo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutAction), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Rollout), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Rollout.Parser, new[]{ "Name", "Release", "StartTime", "EndTime", "State", "StateMessage", "StateTransitionTime", "RootRollout", "ParentRollout", "RolloutOrchestrationStrategy", "UnitFilter", "RolloutKind", "Stats", "Control", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Rollout.Types.RolloutState) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Rollout), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Rollout.Parser, new[]{ "Name", "Release", "StartTime", "EndTime", "State", "StateMessage", "StateTransitionTime", "RootRollout", "ParentRollout", "RolloutOrchestrationStrategy", "UnitFilter", "RolloutKind", "Stats", "Control", "EffectiveUnitFilter", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime", "DeleteTime" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Rollout.Types.RolloutState) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutKind), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutKind.Parser, new[]{ "Name", "UnitKind", "RolloutOrchestrationStrategy", "UnitFilter", "UpdateUnitKindStrategy", "ErrorBudget", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, new[]{ "ErrorBudget" }, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutKind.Types.UpdateUnitKindStrategy) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ErrorBudget), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ErrorBudget.Parser, new[]{ "AllowedCount", "AllowedPercentage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutStats), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutStats.Parser, new[]{ "OperationsByState" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ErrorBudget), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ErrorBudget.Parser, new[]{ "AllowedCount", "AllowedPercentage" }, new[]{ "AllowedCount", "AllowedPercentage" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutStats), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutStats.Parser, new[]{ "OperationsByState", "EstimatedTotalUnitCount" }, new[]{ "EstimatedTotalUnitCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutControl), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutControl.Parser, new[]{ "RunParams", "Action" }, new[]{ "ActionParams" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutControl.Types.RunRolloutActionParams), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.RolloutControl.Types.RunRolloutActionParams.Parser, new[]{ "RetryFailedOperations" }, null, null, null, null)})
           }));
     }
@@ -214,12 +219,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       rolloutKind_ = other.rolloutKind_;
       stats_ = other.stats_ != null ? other.stats_.Clone() : null;
       control_ = other.control_ != null ? other.control_.Clone() : null;
+      effectiveUnitFilter_ = other.effectiveUnitFilter_;
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
       uid_ = other.uid_;
       etag_ = other.etag_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -388,8 +395,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     /// <summary>
     /// Optional. The strategy used for executing this Rollout.
     /// This strategy will override whatever strategy is specified in the
-    /// RolloutType. If not specified on creation, the
-    /// strategy from RolloutType will be used.
+    /// RolloutKind. If not specified on creation, the
+    /// strategy from RolloutKind will be used.
     ///
     /// There are two supported values strategies which are used to control
     /// - "Google.Cloud.Simple.AllAtOnce"
@@ -414,7 +421,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     /// Optional. CEL(https://github.com/google/cel-spec) formatted filter string
     /// against Unit. The filter will be applied to determine the eligible unit
     /// population. This filter can only reduce, but not expand the scope of the
-    /// rollout. If not provided, the unit_filter from the RolloutType will be
+    /// rollout. If not provided, the unit_filter from the RolloutKind will be
     /// used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -430,7 +437,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     public const int RolloutKindFieldNumber = 22;
     private string rolloutKind_ = "";
     /// <summary>
-    /// Optional. Immutable. Name of the RolloutKind this rollout is stemming from
+    /// Required. Immutable. Name of the RolloutKind this rollout is stemming from
     /// and adhering to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -474,6 +481,27 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       get { return control_; }
       set {
         control_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "effective_unit_filter" field.</summary>
+    public const int EffectiveUnitFilterFieldNumber = 26;
+    private string effectiveUnitFilter_ = "";
+    /// <summary>
+    /// Optional. Output only. Output only snapshot of the effective unit filter at
+    /// Rollout start time. Contains a CEL(https://github.com/google/cel-spec)
+    /// expression consisting of a conjunction of Rollout.unit_filter and
+    /// RolloutKind.unit_filter. This field captures the filter applied by the
+    /// Rollout to determine the Unit population. If the associated RolloutKind's
+    /// unit_filter is modified after the rollout is started, it will not be
+    /// updated here.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EffectiveUnitFilter {
+      get { return effectiveUnitFilter_; }
+      set {
+        effectiveUnitFilter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -579,6 +607,22 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "delete_time" field.</summary>
+    public const int DeleteTimeFieldNumber = 10305;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
+    /// <summary>
+    /// Output only. The timestamp when the resource was marked for deletion
+    /// (deletion is an asynchronous operation).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
+      get { return deleteTime_; }
+      set {
+        deleteTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -608,12 +652,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (RolloutKind != other.RolloutKind) return false;
       if (!object.Equals(Stats, other.Stats)) return false;
       if (!object.Equals(Control, other.Control)) return false;
+      if (EffectiveUnitFilter != other.EffectiveUnitFilter) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (Uid != other.Uid) return false;
       if (Etag != other.Etag) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -635,12 +681,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (RolloutKind.Length != 0) hash ^= RolloutKind.GetHashCode();
       if (stats_ != null) hash ^= Stats.GetHashCode();
       if (control_ != null) hash ^= Control.GetHashCode();
+      if (EffectiveUnitFilter.Length != 0) hash ^= EffectiveUnitFilter.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -715,6 +763,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteRawTag(202, 1);
         output.WriteMessage(Control);
       }
+      if (EffectiveUnitFilter.Length != 0) {
+        output.WriteRawTag(210, 1);
+        output.WriteString(EffectiveUnitFilter);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -730,6 +782,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (updateTime_ != null) {
         output.WriteRawTag(130, 132, 5);
         output.WriteMessage(UpdateTime);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(138, 132, 5);
+        output.WriteMessage(DeleteTime);
       }
       labels_.WriteTo(output, _map_labels_codec);
       annotations_.WriteTo(output, _map_annotations_codec);
@@ -799,6 +855,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteRawTag(202, 1);
         output.WriteMessage(Control);
       }
+      if (EffectiveUnitFilter.Length != 0) {
+        output.WriteRawTag(210, 1);
+        output.WriteString(EffectiveUnitFilter);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -814,6 +874,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (updateTime_ != null) {
         output.WriteRawTag(130, 132, 5);
         output.WriteMessage(UpdateTime);
+      }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(138, 132, 5);
+        output.WriteMessage(DeleteTime);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
       annotations_.WriteTo(ref output, _map_annotations_codec);
@@ -869,6 +933,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (control_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Control);
       }
+      if (EffectiveUnitFilter.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(EffectiveUnitFilter);
+      }
       size += labels_.CalculateSize(_map_labels_codec);
       size += annotations_.CalculateSize(_map_annotations_codec);
       if (Uid.Length != 0) {
@@ -882,6 +949,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
       if (updateTime_ != null) {
         size += 3 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (deleteTime_ != null) {
+        size += 3 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -952,6 +1022,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         }
         Control.MergeFrom(other.Control);
       }
+      if (other.EffectiveUnitFilter.Length != 0) {
+        EffectiveUnitFilter = other.EffectiveUnitFilter;
+      }
       labels_.MergeFrom(other.labels_);
       annotations_.MergeFrom(other.annotations_);
       if (other.Uid.Length != 0) {
@@ -971,6 +1044,12 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.deleteTime_ != null) {
+        if (deleteTime_ == null) {
+          DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeleteTime.MergeFrom(other.DeleteTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1062,6 +1141,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             input.ReadMessage(Control);
             break;
           }
+          case 210: {
+            EffectiveUnitFilter = input.ReadString();
+            break;
+          }
           case 81610: {
             Uid = input.ReadString();
             break;
@@ -1082,6 +1165,13 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82442: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
             break;
           }
           case 83210: {
@@ -1182,6 +1272,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             input.ReadMessage(Control);
             break;
           }
+          case 210: {
+            EffectiveUnitFilter = input.ReadString();
+            break;
+          }
           case 81610: {
             Uid = input.ReadString();
             break;
@@ -1202,6 +1296,13 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82442: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
             break;
           }
           case 83210: {
@@ -1993,6 +2094,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
   {
     private static readonly pb::MessageParser<ErrorBudget> _parser = new pb::MessageParser<ErrorBudget>(() => new ErrorBudget());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ErrorBudget> Parser { get { return _parser; } }
@@ -2020,6 +2122,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorBudget(ErrorBudget other) : this() {
+      _hasBits0 = other._hasBits0;
       allowedCount_ = other.allowedCount_;
       allowedPercentage_ = other.allowedPercentage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -2033,6 +2136,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
 
     /// <summary>Field number for the "allowed_count" field.</summary>
     public const int AllowedCountFieldNumber = 1;
+    private readonly static int AllowedCountDefaultValue = 0;
+
     private int allowedCount_;
     /// <summary>
     /// Optional. The maximum number of failed units allowed in a location without
@@ -2041,14 +2146,29 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int AllowedCount {
-      get { return allowedCount_; }
+      get { if ((_hasBits0 & 1) != 0) { return allowedCount_; } else { return AllowedCountDefaultValue; } }
       set {
+        _hasBits0 |= 1;
         allowedCount_ = value;
       }
+    }
+    /// <summary>Gets whether the "allowed_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllowedCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "allowed_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllowedCount() {
+      _hasBits0 &= ~1;
     }
 
     /// <summary>Field number for the "allowed_percentage" field.</summary>
     public const int AllowedPercentageFieldNumber = 2;
+    private readonly static int AllowedPercentageDefaultValue = 0;
+
     private int allowedPercentage_;
     /// <summary>
     /// Optional. The maximum percentage of units allowed to fail (0, 100] within a
@@ -2057,10 +2177,23 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int AllowedPercentage {
-      get { return allowedPercentage_; }
+      get { if ((_hasBits0 & 2) != 0) { return allowedPercentage_; } else { return AllowedPercentageDefaultValue; } }
       set {
+        _hasBits0 |= 2;
         allowedPercentage_ = value;
       }
+    }
+    /// <summary>Gets whether the "allowed_percentage" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAllowedPercentage {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "allowed_percentage" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAllowedPercentage() {
+      _hasBits0 &= ~2;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2087,8 +2220,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (AllowedCount != 0) hash ^= AllowedCount.GetHashCode();
-      if (AllowedPercentage != 0) hash ^= AllowedPercentage.GetHashCode();
+      if (HasAllowedCount) hash ^= AllowedCount.GetHashCode();
+      if (HasAllowedPercentage) hash ^= AllowedPercentage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2107,11 +2240,11 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (AllowedCount != 0) {
+      if (HasAllowedCount) {
         output.WriteRawTag(8);
         output.WriteInt32(AllowedCount);
       }
-      if (AllowedPercentage != 0) {
+      if (HasAllowedPercentage) {
         output.WriteRawTag(16);
         output.WriteInt32(AllowedPercentage);
       }
@@ -2125,11 +2258,11 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (AllowedCount != 0) {
+      if (HasAllowedCount) {
         output.WriteRawTag(8);
         output.WriteInt32(AllowedCount);
       }
-      if (AllowedPercentage != 0) {
+      if (HasAllowedPercentage) {
         output.WriteRawTag(16);
         output.WriteInt32(AllowedPercentage);
       }
@@ -2143,10 +2276,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (AllowedCount != 0) {
+      if (HasAllowedCount) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AllowedCount);
       }
-      if (AllowedPercentage != 0) {
+      if (HasAllowedPercentage) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(AllowedPercentage);
       }
       if (_unknownFields != null) {
@@ -2161,10 +2294,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (other == null) {
         return;
       }
-      if (other.AllowedCount != 0) {
+      if (other.HasAllowedCount) {
         AllowedCount = other.AllowedCount;
       }
-      if (other.AllowedPercentage != 0) {
+      if (other.HasAllowedPercentage) {
         AllowedPercentage = other.AllowedPercentage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2239,6 +2372,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
   {
     private static readonly pb::MessageParser<RolloutStats> _parser = new pb::MessageParser<RolloutStats>(() => new RolloutStats());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RolloutStats> Parser { get { return _parser; } }
@@ -2266,7 +2400,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RolloutStats(RolloutStats other) : this() {
+      _hasBits0 = other._hasBits0;
       operationsByState_ = other.operationsByState_.Clone();
+      estimatedTotalUnitCount_ = other.estimatedTotalUnitCount_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2282,10 +2418,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         = pb::FieldCodec.ForMessage(18, global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Aggregate.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Aggregate> operationsByState_ = new pbc::RepeatedField<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Aggregate>();
     /// <summary>
-    /// Output only. A breakdown of the progress of operations triggered by the
-    /// rollout. Provides a count of Operations by their state. This can be used to
-    /// determine the number of units which have been updated, or are scheduled to
-    /// be updated.
+    /// Optional. Output only. Unordered list. A breakdown of the progress of
+    /// operations triggered by the rollout. Provides a count of Operations by
+    /// their state. This can be used to determine the number of units which have
+    /// been updated, or are scheduled to be updated.
     ///
     /// There will be at most one entry per group.
     /// Possible values for operation groups are:
@@ -2300,6 +2436,37 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Aggregate> OperationsByState {
       get { return operationsByState_; }
+    }
+
+    /// <summary>Field number for the "estimated_total_unit_count" field.</summary>
+    public const int EstimatedTotalUnitCountFieldNumber = 3;
+    private readonly static long EstimatedTotalUnitCountDefaultValue = 0L;
+
+    private long estimatedTotalUnitCount_;
+    /// <summary>
+    /// Optional. Output only. Estimated number of units based. The estimation is
+    /// computed upon creation of the rollout.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long EstimatedTotalUnitCount {
+      get { if ((_hasBits0 & 1) != 0) { return estimatedTotalUnitCount_; } else { return EstimatedTotalUnitCountDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        estimatedTotalUnitCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "estimated_total_unit_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEstimatedTotalUnitCount {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "estimated_total_unit_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEstimatedTotalUnitCount() {
+      _hasBits0 &= ~1;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2318,6 +2485,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         return true;
       }
       if(!operationsByState_.Equals(other.operationsByState_)) return false;
+      if (EstimatedTotalUnitCount != other.EstimatedTotalUnitCount) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2326,6 +2494,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= operationsByState_.GetHashCode();
+      if (HasEstimatedTotalUnitCount) hash ^= EstimatedTotalUnitCount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2345,6 +2514,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       output.WriteRawMessage(this);
     #else
       operationsByState_.WriteTo(output, _repeated_operationsByState_codec);
+      if (HasEstimatedTotalUnitCount) {
+        output.WriteRawTag(24);
+        output.WriteInt64(EstimatedTotalUnitCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2356,6 +2529,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       operationsByState_.WriteTo(ref output, _repeated_operationsByState_codec);
+      if (HasEstimatedTotalUnitCount) {
+        output.WriteRawTag(24);
+        output.WriteInt64(EstimatedTotalUnitCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2367,6 +2544,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     public int CalculateSize() {
       int size = 0;
       size += operationsByState_.CalculateSize(_repeated_operationsByState_codec);
+      if (HasEstimatedTotalUnitCount) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(EstimatedTotalUnitCount);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2380,6 +2560,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         return;
       }
       operationsByState_.Add(other.operationsByState_);
+      if (other.HasEstimatedTotalUnitCount) {
+        EstimatedTotalUnitCount = other.EstimatedTotalUnitCount;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -2403,6 +2586,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             operationsByState_.AddEntriesFrom(input, _repeated_operationsByState_codec);
             break;
           }
+          case 24: {
+            EstimatedTotalUnitCount = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -2424,6 +2611,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             break;
           case 18: {
             operationsByState_.AddEntriesFrom(ref input, _repeated_operationsByState_codec);
+            break;
+          }
+          case 24: {
+            EstimatedTotalUnitCount = input.ReadInt64();
             break;
           }
         }

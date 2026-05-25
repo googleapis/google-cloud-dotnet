@@ -4676,7 +4676,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-02-16T14:50:26.010190819Z",
-            "lastGeneratedCommit": "96b171f04a80ea7747b808c823debea61087e4ae",
+            "lastGeneratedCommit": "9275871fcf1427f9b5de4e46233392e28e2d79ed",
             "lastReleasedCommit": "772f19612f4244bec0419e3fffed62ccbb82ae3f",
             "apiPaths": [
                 "google/cloud/saasplatform/saasservicemgmt/v1beta1"

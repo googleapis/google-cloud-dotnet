@@ -31,93 +31,110 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             "ZF9pbmZvLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGj5nb29n",
             "bGUvY2xvdWQvc2Fhc3BsYXRmb3JtL3NhYXNzZXJ2aWNlbWdtdC92MWJldGEx",
             "L2NvbW1vbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byIdCghMb2NhdGlvbhIRCgRuYW1lGAEgASgJQgPgQQEimQUKBFNhYXMSEQoE",
-            "bmFtZRgBIAEoCUID4EEIElMKCWxvY2F0aW9ucxgEIAMoCzI7Lmdvb2dsZS5j",
-            "bG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuTG9j",
-            "YXRpb25CA+BBARJZCgZsYWJlbHMYoVEgAygLMkMuZ29vZ2xlLmNsb3VkLnNh",
-            "YXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5TYWFzLkxhYmVs",
-            "c0VudHJ5QgPgQQESYwoLYW5ub3RhdGlvbnMYolEgAygLMkguZ29vZ2xlLmNs",
-            "b3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5TYWFz",
-            "LkFubm90YXRpb25zRW50cnlCA+BBARIZCgN1aWQY2U8gASgJQgvgQQPijM/X",
-            "CAIIARISCgRldGFnGNpPIAEoCUID4EEDEjUKC2NyZWF0ZV90aW1lGL9QIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI1Cgt1cGRhdGVf",
-            "dGltZRjAUCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMa",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgC",
-            "IAEoCToCOAE6aepBZgojc2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29t",
-            "L1NhYXMSM3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9zYWFzL3tzYWFzfSoEc2FhczIEc2FhcyK3BQoGVGVuYW50EhEKBG5hbWUY",
-            "ASABKAlCA+BBCBIhChFjb25zdW1lcl9yZXNvdXJjZRgCIAEoCUIG4EEB4EEF",
-            "EjwKBHNhYXMYAyABKAlCLuBBAuBBBfpBJQojc2Fhc3NlcnZpY2VtZ210Lmdv",
-            "b2dsZWFwaXMuY29tL1NhYXMSWwoGbGFiZWxzGKFRIAMoCzJFLmdvb2dsZS5j",
-            "bG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVGVu",
-            "YW50LkxhYmVsc0VudHJ5QgPgQQESZQoLYW5ub3RhdGlvbnMYolEgAygLMkou",
-            "Z29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFi",
-            "ZXRhMS5UZW5hbnQuQW5ub3RhdGlvbnNFbnRyeUID4EEBEhkKA3VpZBjZTyAB",
-            "KAlCC+BBA+KMz9cIAggBEhIKBGV0YWcY2k8gASgJQgPgQQMSNQoLY3JlYXRl",
-            "X3RpbWUYv1AgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EjUKC3VwZGF0ZV90aW1lGMBQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ATp16kFyCiVzYWFzc2VydmljZW1nbXQuZ29v",
-            "Z2xlYXBpcy5jb20vVGVuYW50Ejhwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vdGVuYW50cy97dGVuYW50fSoHdGVuYW50czIGdGVu",
-            "YW50Ip8ICghVbml0S2luZBIRCgRuYW1lGAEgASgJQgPgQQgSRwoPZGVmYXVs",
-            "dF9yZWxlYXNlGAIgASgJQi7gQQH6QSgKJnNhYXNzZXJ2aWNlbWdtdC5nb29n",
-            "bGVhcGlzLmNvbS9SZWxlYXNlElsKDGRlcGVuZGVuY2llcxgEIAMoCzI9Lmdv",
+            "bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iHQoITG9jYXRpb24SEQoEbmFt",
+            "ZRgBIAEoCUID4EEBIv0ICgRTYWFzEhEKBG5hbWUYASABKAlCA+BBCBJTCgls",
+            "b2NhdGlvbnMYBCADKAsyOy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNh",
+            "YXNzZXJ2aWNlbWdtdC52MWJldGExLkxvY2F0aW9uQgPgQQESXQoUYXBwbGlj",
+            "YXRpb25fdGVtcGxhdGUYBSABKAsyPy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRm",
+            "b3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLkNvbXBvc2l0ZVJlZhIbCg5i",
+            "bHVlcHJpbnRfcmVwbxgGIAEoCUID4EEDElEKBXN0YXRlGAcgASgOMj0uZ29v",
+            "Z2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRh",
+            "MS5TYWFzLlN0YXRlQgPgQQMSWQoKY29uZGl0aW9ucxgIIAMoCzJALmdvb2ds",
+            "ZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEu",
+            "U2Fhc0NvbmRpdGlvbkID4EEDEiYKBWVycm9yGAkgASgLMhIuZ29vZ2xlLnJw",
+            "Yy5TdGF0dXNCA+BBAxJZCgZsYWJlbHMYoVEgAygLMkMuZ29vZ2xlLmNsb3Vk",
+            "LnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5TYWFzLkxh",
+            "YmVsc0VudHJ5QgPgQQESYwoLYW5ub3RhdGlvbnMYolEgAygLMkguZ29vZ2xl",
+            "LmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5T",
+            "YWFzLkFubm90YXRpb25zRW50cnlCA+BBARIZCgN1aWQY2U8gASgJQgvgQQPi",
+            "jM/XCAIIARISCgRldGFnGNpPIAEoCUID4EEDEjUKC2NyZWF0ZV90aW1lGL9Q",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI1Cgt1cGRh",
+            "dGVfdGltZRjAUCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
+            "ZRgCIAEoCToCOAEijwEKBVN0YXRlEhoKFlNUQVRFX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIQCgxTVEFURV9BQ1RJVkUQARIRCg1TVEFURV9SVU5OSU5HEAISEAoM",
+            "U1RBVEVfRkFJTEVEEAMSDgoGQUNUSVZFEAEaAggBEg8KB1JVTk5JTkcQAhoC",
+            "CAESDgoGRkFJTEVEEAMaAggBGgIQATpp6kFmCiNzYWFzc2VydmljZW1nbXQu",
+            "Z29vZ2xlYXBpcy5jb20vU2FhcxIzcHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L3NhYXMve3NhYXN9KgRzYWFzMgRzYWFzIrcFCgZU",
+            "ZW5hbnQSEQoEbmFtZRgBIAEoCUID4EEIEiEKEWNvbnN1bWVyX3Jlc291cmNl",
+            "GAIgASgJQgbgQQHgQQUSPAoEc2FhcxgDIAEoCUIu4EEC4EEF+kElCiNzYWFz",
+            "c2VydmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vU2FhcxJbCgZsYWJlbHMYoVEg",
+            "AygLMkUuZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1n",
+            "bXQudjFiZXRhMS5UZW5hbnQuTGFiZWxzRW50cnlCA+BBARJlCgthbm5vdGF0",
+            "aW9ucxiiUSADKAsySi5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNz",
+            "ZXJ2aWNlbWdtdC52MWJldGExLlRlbmFudC5Bbm5vdGF0aW9uc0VudHJ5QgPg",
+            "QQESGQoDdWlkGNlPIAEoCUIL4EED4ozP1wgCCAESEgoEZXRhZxjaTyABKAlC",
+            "A+BBAxI1CgtjcmVhdGVfdGltZRi/UCABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSNQoLdXBkYXRlX3RpbWUYwFAgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
+            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOnXqQXIKJXNhYXNz",
+            "ZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9UZW5hbnQSOHByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90ZW5hbnRzL3t0ZW5hbnR9",
+            "Kgd0ZW5hbnRzMgZ0ZW5hbnQi3wkKCFVuaXRLaW5kEhEKBG5hbWUYASABKAlC",
+            "A+BBCBJHCg9kZWZhdWx0X3JlbGVhc2UYAiABKAlCLuBBAfpBKAomc2Fhc3Nl",
+            "cnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1JlbGVhc2USWwoMZGVwZW5kZW5j",
+            "aWVzGAQgAygLMj0uZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2Vy",
+            "dmljZW1nbXQudjFiZXRhMS5EZXBlbmRlbmN5QgbgQQHgQQUSaAoXaW5wdXRf",
+            "dmFyaWFibGVfbWFwcGluZ3MYBSADKAsyQi5nb29nbGUuY2xvdWQuc2Fhc3Bs",
+            "YXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlZhcmlhYmxlTWFwcGlu",
+            "Z0ID4EEBEmkKGG91dHB1dF92YXJpYWJsZV9tYXBwaW5ncxgGIAMoCzJCLmdv",
             "b2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0",
-            "YTEuRGVwZW5kZW5jeUIG4EEB4EEFEmgKF2lucHV0X3ZhcmlhYmxlX21hcHBp",
-            "bmdzGAUgAygLMkIuZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2Vy",
-            "dmljZW1nbXQudjFiZXRhMS5WYXJpYWJsZU1hcHBpbmdCA+BBARJpChhvdXRw",
-            "dXRfdmFyaWFibGVfbWFwcGluZ3MYBiADKAsyQi5nb29nbGUuY2xvdWQuc2Fh",
-            "c3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlZhcmlhYmxlTWFw",
-            "cGluZ0ID4EEBEjwKBHNhYXMYCCABKAlCLuBBAuBBBfpBJQojc2Fhc3NlcnZp",
-            "Y2VtZ210Lmdvb2dsZWFwaXMuY29tL1NhYXMSXQoGbGFiZWxzGKFRIAMoCzJH",
-            "Lmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYx",
-            "YmV0YTEuVW5pdEtpbmQuTGFiZWxzRW50cnlCA+BBARJnCgthbm5vdGF0aW9u",
-            "cxiiUSADKAsyTC5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2",
-            "aWNlbWdtdC52MWJldGExLlVuaXRLaW5kLkFubm90YXRpb25zRW50cnlCA+BB",
-            "ARIZCgN1aWQY2U8gASgJQgvgQQPijM/XCAIIARISCgRldGFnGNpPIAEoCUID",
-            "4EEDEjUKC2NyZWF0ZV90aW1lGL9QIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
-            "aW1lc3RhbXBCA+BBAxI1Cgt1cGRhdGVfdGltZRjAUCABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
-            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5",
-            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6f+pBfAonc2Fhc3Nl",
-            "cnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1VuaXRLaW5kEjxwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdW5pdEtpbmRzL3t1bml0",
-            "S2luZH0qCXVuaXRLaW5kczIIdW5pdEtpbmQi/RMKBFVuaXQSEQoEbmFtZRgB",
-            "IAEoCUID4EEIEkIKCXVuaXRfa2luZBgCIAEoCUIv4EEB+kEpCidzYWFzc2Vy",
-            "dmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vVW5pdEtpbmQSQgoHcmVsZWFzZRgN",
-            "IAEoCUIx4EEB4EED+kEoCiZzYWFzc2VydmljZW1nbXQuZ29vZ2xlYXBpcy5j",
-            "b20vUmVsZWFzZRI9CgZ0ZW5hbnQYBCABKAlCLeBBAfpBJwolc2Fhc3NlcnZp",
-            "Y2VtZ210Lmdvb2dsZWFwaXMuY29tL1RlbmFudBJTChJvbmdvaW5nX29wZXJh",
-            "dGlvbnMYBSADKAlCN+BBAeBBA/pBLgosc2Fhc3NlcnZpY2VtZ210Lmdvb2ds",
-            "ZWFwaXMuY29tL1VuaXRPcGVyYXRpb24SUwoScGVuZGluZ19vcGVyYXRpb25z",
-            "GAYgAygJQjfgQQHgQQP6QS4KLHNhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlz",
-            "LmNvbS9Vbml0T3BlcmF0aW9uElUKFHNjaGVkdWxlZF9vcGVyYXRpb25zGBgg",
-            "AygJQjfgQQHgQQP6QS4KLHNhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNv",
-            "bS9Vbml0T3BlcmF0aW9uEl0KCmRlcGVuZGVudHMYByADKAsyQS5nb29nbGUu",
-            "Y2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVu",
-            "aXREZXBlbmRlbmN5QgbgQQHgQQMSXwoMZGVwZW5kZW5jaWVzGAggAygLMkEu",
+            "YTEuVmFyaWFibGVNYXBwaW5nQgPgQQESPAoEc2FhcxgIIAEoCUIu4EEC4EEF",
+            "+kElCiNzYWFzc2VydmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vU2FhcxJsCh5h",
+            "cHBsaWNhdGlvbl90ZW1wbGF0ZV9jb21wb25lbnQYCiABKAsyPy5nb29nbGUu",
+            "Y2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLkNv",
+            "bXBvbmVudFJlZkID4EEDElAKCmFwcF9wYXJhbXMYCyABKAsyPC5nb29nbGUu",
+            "Y2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLkFw",
+            "cFBhcmFtcxJdCgZsYWJlbHMYoVEgAygLMkcuZ29vZ2xlLmNsb3VkLnNhYXNw",
+            "bGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0S2luZC5MYWJl",
+            "bHNFbnRyeUID4EEBEmcKC2Fubm90YXRpb25zGKJRIAMoCzJMLmdvb2dsZS5j",
+            "bG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5p",
+            "dEtpbmQuQW5ub3RhdGlvbnNFbnRyeUID4EEBEhkKA3VpZBjZTyABKAlCC+BB",
+            "A+KMz9cIAggBEhIKBGV0YWcY2k8gASgJQgPgQQMSNQoLY3JlYXRlX3RpbWUY",
+            "v1AgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjUKC3Vw",
+            "ZGF0ZV90aW1lGMBQIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
+            "KAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJEg0KBXZh",
+            "bHVlGAIgASgJOgI4ATp/6kF8CidzYWFzc2VydmljZW1nbXQuZ29vZ2xlYXBp",
+            "cy5jb20vVW5pdEtpbmQSPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS91bml0S2luZHMve3VuaXRLaW5kfSoJdW5pdEtpbmRzMgh1",
+            "bml0S2luZCL3FAoEVW5pdBIRCgRuYW1lGAEgASgJQgPgQQgSQgoJdW5pdF9r",
+            "aW5kGAIgASgJQi/gQQH6QSkKJ3NhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlz",
+            "LmNvbS9Vbml0S2luZBJCCgdyZWxlYXNlGA0gASgJQjHgQQHgQQP6QSgKJnNh",
+            "YXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9SZWxlYXNlEj0KBnRlbmFu",
+            "dBgEIAEoCUIt4EEB+kEnCiVzYWFzc2VydmljZW1nbXQuZ29vZ2xlYXBpcy5j",
+            "b20vVGVuYW50ElMKEm9uZ29pbmdfb3BlcmF0aW9ucxgFIAMoCUI34EEB4EED",
+            "+kEuCixzYWFzc2VydmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vVW5pdE9wZXJh",
+            "dGlvbhJTChJwZW5kaW5nX29wZXJhdGlvbnMYBiADKAlCN+BBAeBBA/pBLgos",
+            "c2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1VuaXRPcGVyYXRpb24S",
+            "VQoUc2NoZWR1bGVkX29wZXJhdGlvbnMYGCADKAlCN+BBAeBBA/pBLgosc2Fh",
+            "c3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1VuaXRPcGVyYXRpb24SXQoK",
+            "ZGVwZW5kZW50cxgHIAMoCzJBLmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0u",
+            "c2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdERlcGVuZGVuY3lCBuBBAeBB",
+            "AxJfCgxkZXBlbmRlbmNpZXMYCCADKAsyQS5nb29nbGUuY2xvdWQuc2Fhc3Bs",
+            "YXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVuaXREZXBlbmRlbmN5",
+            "QgbgQQHgQQMSYAoPaW5wdXRfdmFyaWFibGVzGAkgAygLMj8uZ29vZ2xlLmNs",
+            "b3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0",
+            "VmFyaWFibGVCBuBBAeBBAxJhChBvdXRwdXRfdmFyaWFibGVzGAogAygLMj8u",
             "Z29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFi",
-            "ZXRhMS5Vbml0RGVwZW5kZW5jeUIG4EEB4EEDEmAKD2lucHV0X3ZhcmlhYmxl",
-            "cxgJIAMoCzI/Lmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZp",
-            "Y2VtZ210LnYxYmV0YTEuVW5pdFZhcmlhYmxlQgbgQQHgQQMSYQoQb3V0cHV0",
-            "X3ZhcmlhYmxlcxgKIAMoCzI/Lmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0u",
-            "c2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdFZhcmlhYmxlQgbgQQHgQQMS",
-            "ZQoLbWFpbnRlbmFuY2UYDiABKAsySy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRm",
-            "b3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVuaXQuTWFpbnRlbmFuY2VT",
-            "ZXR0aW5nc0ID4EEBElgKBXN0YXRlGBAgASgOMkEuZ29vZ2xlLmNsb3VkLnNh",
-            "YXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0LlVuaXRT",
-            "dGF0ZUIG4EEB4EEDElwKCmNvbmRpdGlvbnMYFCADKAsyQC5nb29nbGUuY2xv",
-            "dWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVuaXRD",
-            "b25kaXRpb25CBuBBAeBBAxJnCg9tYW5hZ2VtZW50X21vZGUYFiABKA4yRi5n",
-            "b29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJl",
-            "dGExLlVuaXQuTWFuYWdlbWVudE1vZGVCBuBBAeBBBRJwChRzeXN0ZW1fbWFu",
-            "YWdlZF9zdGF0ZRgZIAEoDjJKLmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0u",
-            "c2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdC5TeXN0ZW1NYW5hZ2VkU3Rh",
-            "dGVCBuBBAeBBAxI9ChFzeXN0ZW1fY2xlYW51cF9hdBgaIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCBuBBAeBBAxJZCgZsYWJlbHMYoVEgAygL",
+            "ZXRhMS5Vbml0VmFyaWFibGVCBuBBAeBBAxJlCgttYWludGVuYW5jZRgOIAEo",
+            "CzJLLmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210",
+            "LnYxYmV0YTEuVW5pdC5NYWludGVuYW5jZVNldHRpbmdzQgPgQQESWAoFc3Rh",
+            "dGUYECABKA4yQS5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2",
+            "aWNlbWdtdC52MWJldGExLlVuaXQuVW5pdFN0YXRlQgbgQQHgQQMSXAoKY29u",
+            "ZGl0aW9ucxgUIAMoCzJALmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fh",
+            "c3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdENvbmRpdGlvbkIG4EEB4EEDEmcK",
+            "D21hbmFnZW1lbnRfbW9kZRgWIAEoDjJGLmdvb2dsZS5jbG91ZC5zYWFzcGxh",
+            "dGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdC5NYW5hZ2VtZW50",
+            "TW9kZUIG4EEB4EEFEnAKFHN5c3RlbV9tYW5hZ2VkX3N0YXRlGBkgASgOMkou",
+            "Z29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFi",
+            "ZXRhMS5Vbml0LlN5c3RlbU1hbmFnZWRTdGF0ZUIG4EEB4EEDEj0KEXN5c3Rl",
+            "bV9jbGVhbnVwX2F0GBogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEIG4EEB4EEDEj4KC2FwcGxpY2F0aW9uGB0gASgJQingQQH6QSMKIWFwcGh1",
+            "Yi5nb29nbGVhcGlzLmNvbS9BcHBsaWNhdGlvbhJZCgZsYWJlbHMYoVEgAygL",
             "MkMuZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQu",
             "djFiZXRhMS5Vbml0LkxhYmVsc0VudHJ5QgPgQQESYwoLYW5ub3RhdGlvbnMY",
             "olEgAygLMkguZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2Vydmlj",
@@ -125,146 +142,181 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             "aWQY2U8gASgJQgvgQQPijM/XCAIIARISCgRldGFnGNpPIAEoCUID4EEDEjUK",
             "C2NyZWF0ZV90aW1lGL9QIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
             "bXBCA+BBAxI1Cgt1cGRhdGVfdGltZRjAUCABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMaUQoTTWFpbnRlbmFuY2VTZXR0aW5ncxI6ChFw",
-            "aW5uZWRfdW50aWxfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
-            "dWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkSCwoDa2V5GAEgASgJ",
-            "Eg0KBXZhbHVlGAIgASgJOgI4ASLIAQoJVW5pdFN0YXRlEhoKFlVOSVRfU1RB",
-            "VEVfVU5TUEVDSUZJRUQQABIeChpVTklUX1NUQVRFX05PVF9QUk9WSVNJT05F",
-            "RBABEhsKF1VOSVRfU1RBVEVfUFJPVklTSU9OSU5HEAISFwoTVU5JVF9TVEFU",
-            "RV9VUERBVElORxADEh0KGVVOSVRfU1RBVEVfREVQUk9WSVNJT05JTkcQBBIU",
-            "ChBVTklUX1NUQVRFX1JFQURZEAUSFAoQVU5JVF9TVEFURV9FUlJPUhAGImcK",
-            "Dk1hbmFnZW1lbnRNb2RlEh8KG01BTkFHRU1FTlRfTU9ERV9VTlNQRUNJRklF",
-            "RBAAEhgKFE1BTkFHRU1FTlRfTU9ERV9VU0VSEAESGgoWTUFOQUdFTUVOVF9N",
-            "T0RFX1NZU1RFTRACIqcBChJTeXN0ZW1NYW5hZ2VkU3RhdGUSJAogU1lTVEVN",
-            "X01BTkFHRURfU1RBVEVfVU5TUEVDSUZJRUQQABIfChtTWVNURU1fTUFOQUdF",
-            "RF9TVEFURV9BQ1RJVkUQARIhCh1TWVNURU1fTUFOQUdFRF9TVEFURV9JTkFD",
-            "VElWRRACEicKI1NZU1RFTV9NQU5BR0VEX1NUQVRFX0RFQ09NTUlTU0lPTkVE",
-            "EAM6a+pBaAojc2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1VuaXQS",
-            "NHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS91bml0",
-            "cy97dW5pdH0qBXVuaXRzMgR1bml0Il8KDlVuaXREZXBlbmRlbmN5EhIKBWFs",
-            "aWFzGAEgASgJQgPgQQMSOQoEdW5pdBgCIAEoCUIr4EED+kElCiNzYWFzc2Vy",
-            "dmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vVW5pdCLWDgoNVW5pdE9wZXJhdGlv",
-            "bhJWCglwcm92aXNpb24YCCABKAsyPC5nb29nbGUuY2xvdWQuc2Fhc3BsYXRm",
-            "b3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlByb3Zpc2lvbkID4EEBSAAS",
-            "UgoHdXBncmFkZRgJIAEoCzI6Lmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0u",
-            "c2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVXBncmFkZUID4EEBSAASWgoLZGVw",
-            "cm92aXNpb24YCiABKAsyPi5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNh",
-            "YXNzZXJ2aWNlbWdtdC52MWJldGExLkRlcHJvdmlzaW9uQgPgQQFIABIRCgRu",
-            "YW1lGAEgASgJQgPgQQgSPAoEdW5pdBgCIAEoCUIu4EEC4EEF+kElCiNzYWFz",
-            "c2VydmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vVW5pdBJTChVwYXJlbnRfdW5p",
-            "dF9vcGVyYXRpb24YAyABKAlCNOBBAfpBLgosc2Fhc3NlcnZpY2VtZ210Lmdv",
-            "b2dsZWFwaXMuY29tL1VuaXRPcGVyYXRpb24SPwoHcm9sbG91dBgEIAEoCUIu",
-            "4EEB+kEoCiZzYWFzc2VydmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vUm9sbG91",
-            "dBITCgZjYW5jZWwYBSABKAhCA+BBARJqCgVzdGF0ZRgGIAEoDjJTLmdvb2ds",
-            "ZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEu",
-            "VW5pdE9wZXJhdGlvbi5Vbml0T3BlcmF0aW9uU3RhdGVCBuBBAeBBAxJlCgpj",
-            "b25kaXRpb25zGAcgAygLMkkuZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5z",
-            "YWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0T3BlcmF0aW9uQ29uZGl0aW9u",
-            "QgbgQQHgQQMSUgoIc2NoZWR1bGUYDCABKAsyOy5nb29nbGUuY2xvdWQuc2Fh",
-            "c3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlNjaGVkdWxlQgPg",
-            "QQESHAoMZW5naW5lX3N0YXRlGA4gASgJQgbgQQHgQQMSbQoOZXJyb3JfY2F0",
-            "ZWdvcnkYDyABKA4yTS5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNz",
-            "ZXJ2aWNlbWdtdC52MWJldGExLlVuaXRPcGVyYXRpb25FcnJvckNhdGVnb3J5",
-            "QgbgQQHgQQMSYgoGbGFiZWxzGKFRIAMoCzJMLmdvb2dsZS5jbG91ZC5zYWFz",
-            "cGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdE9wZXJhdGlv",
-            "bi5MYWJlbHNFbnRyeUID4EEBEmwKC2Fubm90YXRpb25zGKJRIAMoCzJRLmdv",
-            "b2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0",
-            "YTEuVW5pdE9wZXJhdGlvbi5Bbm5vdGF0aW9uc0VudHJ5QgPgQQESGQoDdWlk",
-            "GNlPIAEoCUIL4EED4ozP1wgCCAESEgoEZXRhZxjaTyABKAlCA+BBAxI1Cgtj",
-            "cmVhdGVfdGltZRi/UCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQMSNQoLdXBkYXRlX3RpbWUYwFAgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBIocCChJVbml0T3BlcmF0aW9uU3Rh",
-            "dGUSIAocVU5JVF9PUEVSQVRJT05fU1RBVEVfVU5LTk9XThAAEiAKHFVOSVRf",
-            "T1BFUkFUSU9OX1NUQVRFX1BFTkRJTkcQARIiCh5VTklUX09QRVJBVElPTl9T",
-            "VEFURV9TQ0hFRFVMRUQQAhIgChxVTklUX09QRVJBVElPTl9TVEFURV9SVU5O",
-            "SU5HEAQSIgoeVU5JVF9PUEVSQVRJT05fU1RBVEVfU1VDQ0VFREVEEAUSHwob",
-            "VU5JVF9PUEVSQVRJT05fU1RBVEVfRkFJTEVEEAYSIgoeVU5JVF9PUEVSQVRJ",
-            "T05fU1RBVEVfQ0FOQ0VMTEVEEAc6mQHqQZUBCixzYWFzc2VydmljZW1nbXQu",
-            "Z29vZ2xlYXBpcy5jb20vVW5pdE9wZXJhdGlvbhJGcHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3VuaXRPcGVyYXRpb25zL3t1bml0",
-            "T3BlcmF0aW9ufSoOdW5pdE9wZXJhdGlvbnMyDXVuaXRPcGVyYXRpb25CFQoT",
-            "dW5pdF9vcGVyYXRpb25fdHlwZSKrAQoJUHJvdmlzaW9uEj8KB3JlbGVhc2UY",
-            "ASABKAlCLuBBAfpBKAomc2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29t",
-            "L1JlbGVhc2USXQoPaW5wdXRfdmFyaWFibGVzGAMgAygLMj8uZ29vZ2xlLmNs",
-            "b3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0",
-            "VmFyaWFibGVCA+BBASINCgtEZXByb3Zpc2lvbiKpAQoHVXBncmFkZRI/Cgdy",
-            "ZWxlYXNlGAEgASgJQi7gQQH6QSgKJnNhYXNzZXJ2aWNlbWdtdC5nb29nbGVh",
-            "cGlzLmNvbS9SZWxlYXNlEl0KD2lucHV0X3ZhcmlhYmxlcxgCIAMoCzI/Lmdv",
-            "b2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0",
-            "YTEuVW5pdFZhcmlhYmxlQgPgQQEiPwoIU2NoZWR1bGUSMwoKc3RhcnRfdGlt",
-            "ZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBASKECgoH",
-            "UmVsZWFzZRIRCgRuYW1lGAEgASgJQgPgQQgSRQoJdW5pdF9raW5kGAIgASgJ",
-            "QjLgQQLgQQX6QSkKJ3NhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9V",
-            "bml0S2luZBJUCglibHVlcHJpbnQYAyABKAsyPC5nb29nbGUuY2xvdWQuc2Fh",
-            "c3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLkJsdWVwcmludEID",
-            "4EEBEnEKFHJlbGVhc2VfcmVxdWlyZW1lbnRzGAQgASgLMk4uZ29vZ2xlLmNs",
-            "b3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5SZWxl",
-            "YXNlLlJlbGVhc2VSZXF1aXJlbWVudHNCA+BBARJgCg9pbnB1dF92YXJpYWJs",
-            "ZXMYBSADKAsyPy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2",
-            "aWNlbWdtdC52MWJldGExLlVuaXRWYXJpYWJsZUIG4EEB4EEDEmEKEG91dHB1",
-            "dF92YXJpYWJsZXMYBiADKAsyPy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3Jt",
-            "LnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVuaXRWYXJpYWJsZUIG4EEB4EED",
-            "EmUKF2lucHV0X3ZhcmlhYmxlX2RlZmF1bHRzGAcgAygLMj8uZ29vZ2xlLmNs",
-            "b3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0",
-            "VmFyaWFibGVCA+BBARJcCgZsYWJlbHMYoVEgAygLMkYuZ29vZ2xlLmNsb3Vk",
-            "LnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5SZWxlYXNl",
-            "LkxhYmVsc0VudHJ5QgPgQQESZgoLYW5ub3RhdGlvbnMYolEgAygLMksuZ29v",
+            "dWYuVGltZXN0YW1wQgPgQQMSGwoNc2F0aXNmaWVzX3B6cxjBUCABKAhCA+BB",
+            "AxIbCg1zYXRpc2ZpZXNfcHppGMJQIAEoCEID4EEDGlEKE01haW50ZW5hbmNl",
+            "U2V0dGluZ3MSOgoRcGlubmVkX3VudGlsX3RpbWUYASABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoDa2V5",
+            "GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5",
+            "EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiyAEKCVVuaXRTdGF0",
+            "ZRIaChZVTklUX1NUQVRFX1VOU1BFQ0lGSUVEEAASHgoaVU5JVF9TVEFURV9O",
+            "T1RfUFJPVklTSU9ORUQQARIbChdVTklUX1NUQVRFX1BST1ZJU0lPTklORxAC",
+            "EhcKE1VOSVRfU1RBVEVfVVBEQVRJTkcQAxIdChlVTklUX1NUQVRFX0RFUFJP",
+            "VklTSU9OSU5HEAQSFAoQVU5JVF9TVEFURV9SRUFEWRAFEhQKEFVOSVRfU1RB",
+            "VEVfRVJST1IQBiJnCg5NYW5hZ2VtZW50TW9kZRIfChtNQU5BR0VNRU5UX01P",
+            "REVfVU5TUEVDSUZJRUQQABIYChRNQU5BR0VNRU5UX01PREVfVVNFUhABEhoK",
+            "Fk1BTkFHRU1FTlRfTU9ERV9TWVNURU0QAiKnAQoSU3lzdGVtTWFuYWdlZFN0",
+            "YXRlEiQKIFNZU1RFTV9NQU5BR0VEX1NUQVRFX1VOU1BFQ0lGSUVEEAASHwob",
+            "U1lTVEVNX01BTkFHRURfU1RBVEVfQUNUSVZFEAESIQodU1lTVEVNX01BTkFH",
+            "RURfU1RBVEVfSU5BQ1RJVkUQAhInCiNTWVNURU1fTUFOQUdFRF9TVEFURV9E",
+            "RUNPTU1JU1NJT05FRBADOmvqQWgKI3NhYXNzZXJ2aWNlbWdtdC5nb29nbGVh",
+            "cGlzLmNvbS9Vbml0EjRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
+            "b2NhdGlvbn0vdW5pdHMve3VuaXR9KgV1bml0czIEdW5pdCJfCg5Vbml0RGVw",
+            "ZW5kZW5jeRISCgVhbGlhcxgBIAEoCUID4EEDEjkKBHVuaXQYAiABKAlCK+BB",
+            "A/pBJQojc2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1VuaXQijQ8K",
+            "DVVuaXRPcGVyYXRpb24SVgoJcHJvdmlzaW9uGAggASgLMjwuZ29vZ2xlLmNs",
+            "b3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Qcm92",
+            "aXNpb25CA+BBAUgAElIKB3VwZ3JhZGUYCSABKAsyOi5nb29nbGUuY2xvdWQu",
+            "c2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVwZ3JhZGVC",
+            "A+BBAUgAEloKC2RlcHJvdmlzaW9uGAogASgLMj4uZ29vZ2xlLmNsb3VkLnNh",
+            "YXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5EZXByb3Zpc2lv",
+            "bkID4EEBSAASEQoEbmFtZRgBIAEoCUID4EEIEjwKBHVuaXQYAiABKAlCLuBB",
+            "AuBBBfpBJQojc2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1VuaXQS",
+            "UwoVcGFyZW50X3VuaXRfb3BlcmF0aW9uGAMgASgJQjTgQQH6QS4KLHNhYXNz",
+            "ZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9Vbml0T3BlcmF0aW9uEj8KB3Jv",
+            "bGxvdXQYBCABKAlCLuBBAfpBKAomc2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFw",
+            "aXMuY29tL1JvbGxvdXQSEwoGY2FuY2VsGAUgASgIQgPgQQESagoFc3RhdGUY",
+            "BiABKA4yUy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNl",
+            "bWdtdC52MWJldGExLlVuaXRPcGVyYXRpb24uVW5pdE9wZXJhdGlvblN0YXRl",
+            "QgbgQQHgQQMSZQoKY29uZGl0aW9ucxgHIAMoCzJJLmdvb2dsZS5jbG91ZC5z",
+            "YWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdE9wZXJh",
+            "dGlvbkNvbmRpdGlvbkIG4EEB4EEDElIKCHNjaGVkdWxlGAwgASgLMjsuZ29v",
             "Z2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRh",
-            "MS5SZWxlYXNlLkFubm90YXRpb25zRW50cnlCA+BBARIZCgN1aWQY2U8gASgJ",
-            "QgvgQQPijM/XCAIIARISCgRldGFnGNpPIAEoCUID4EEDEjUKC2NyZWF0ZV90",
-            "aW1lGL9QIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI1",
-            "Cgt1cGRhdGVfdGltZRjAUCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMaaAoTUmVsZWFzZVJlcXVpcmVtZW50cxJRChl1cGdyYWRlYWJs",
-            "ZV9mcm9tX3JlbGVhc2VzGAEgAygJQi7gQQH6QSgKJnNhYXNzZXJ2aWNlbWdt",
-            "dC5nb29nbGVhcGlzLmNvbS9SZWxlYXNlGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMgoQQW5ub3RhdGlvbnNFbnRy",
-            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOnrqQXcKJnNhYXNz",
-            "ZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9SZWxlYXNlEjpwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVsZWFzZXMve3JlbGVh",
-            "c2V9KghyZWxlYXNlczIHcmVsZWFzZSLeAQoPVmFyaWFibGVNYXBwaW5nElMK",
-            "BGZyb20YAiABKAsyPi5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNz",
-            "ZXJ2aWNlbWdtdC52MWJldGExLkZyb21NYXBwaW5nQgPgQQFIABJPCgJ0bxgD",
+            "MS5TY2hlZHVsZUID4EEBEhwKDGVuZ2luZV9zdGF0ZRgOIAEoCUIG4EEB4EED",
+            "Em0KDmVycm9yX2NhdGVnb3J5GA8gASgOMk0uZ29vZ2xlLmNsb3VkLnNhYXNw",
+            "bGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0T3BlcmF0aW9u",
+            "RXJyb3JDYXRlZ29yeUIG4EEB4EEDEmIKBmxhYmVscxihUSADKAsyTC5nb29n",
+            "bGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGEx",
+            "LlVuaXRPcGVyYXRpb24uTGFiZWxzRW50cnlCA+BBARJsCgthbm5vdGF0aW9u",
+            "cxiiUSADKAsyUS5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2",
+            "aWNlbWdtdC52MWJldGExLlVuaXRPcGVyYXRpb24uQW5ub3RhdGlvbnNFbnRy",
+            "eUID4EEBEhkKA3VpZBjZTyABKAlCC+BBA+KMz9cIAggBEhIKBGV0YWcY2k8g",
+            "ASgJQgPgQQMSNQoLY3JlYXRlX3RpbWUYv1AgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjUKC3VwZGF0ZV90aW1lGMBQIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI1CgtkZWxldGVfdGltZRjB",
+            "UCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaLQoLTGFi",
+            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ARoyChBB",
+            "bm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
+            "OAEihwIKElVuaXRPcGVyYXRpb25TdGF0ZRIgChxVTklUX09QRVJBVElPTl9T",
+            "VEFURV9VTktOT1dOEAASIAocVU5JVF9PUEVSQVRJT05fU1RBVEVfUEVORElO",
+            "RxABEiIKHlVOSVRfT1BFUkFUSU9OX1NUQVRFX1NDSEVEVUxFRBACEiAKHFVO",
+            "SVRfT1BFUkFUSU9OX1NUQVRFX1JVTk5JTkcQBBIiCh5VTklUX09QRVJBVElP",
+            "Tl9TVEFURV9TVUNDRUVERUQQBRIfChtVTklUX09QRVJBVElPTl9TVEFURV9G",
+            "QUlMRUQQBhIiCh5VTklUX09QRVJBVElPTl9TVEFURV9DQU5DRUxMRUQQBzqZ",
+            "AepBlQEKLHNhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9Vbml0T3Bl",
+            "cmF0aW9uEkZwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vdW5pdE9wZXJhdGlvbnMve3VuaXRPcGVyYXRpb259Kg51bml0T3BlcmF0",
+            "aW9uczINdW5pdE9wZXJhdGlvbkIVChN1bml0X29wZXJhdGlvbl90eXBlIqsB",
+            "CglQcm92aXNpb24SPwoHcmVsZWFzZRgBIAEoCUIu4EEB+kEoCiZzYWFzc2Vy",
+            "dmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vUmVsZWFzZRJdCg9pbnB1dF92YXJp",
+            "YWJsZXMYAyADKAsyPy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNz",
+            "ZXJ2aWNlbWdtdC52MWJldGExLlVuaXRWYXJpYWJsZUID4EEBIg0KC0RlcHJv",
+            "dmlzaW9uIqkBCgdVcGdyYWRlEj8KB3JlbGVhc2UYASABKAlCLuBBAfpBKAom",
+            "c2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1JlbGVhc2USXQoPaW5w",
+            "dXRfdmFyaWFibGVzGAIgAygLMj8uZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9y",
+            "bS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0VmFyaWFibGVCA+BBASI/",
+            "CghTY2hlZHVsZRIzCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEBIvIKCgdSZWxlYXNlEhEKBG5hbWUYASABKAlC",
+            "A+BBCBJFCgl1bml0X2tpbmQYAiABKAlCMuBBAuBBBfpBKQonc2Fhc3NlcnZp",
+            "Y2VtZ210Lmdvb2dsZWFwaXMuY29tL1VuaXRLaW5kElQKCWJsdWVwcmludBgD",
             "IAEoCzI8Lmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2Vt",
-            "Z210LnYxYmV0YTEuVG9NYXBwaW5nQgPgQQFIABIVCgh2YXJpYWJsZRgBIAEo",
-            "CUID4EECQg4KDG1hcHBpbmdfdHlwZSJECgtGcm9tTWFwcGluZxIXCgpkZXBl",
-            "bmRlbmN5GAEgASgJQgPgQQISHAoPb3V0cHV0X3ZhcmlhYmxlGAIgASgJQgPg",
-            "QQIiYQoJVG9NYXBwaW5nEhcKCmRlcGVuZGVuY3kYASABKAlCA+BBAhIbCg5p",
-            "bnB1dF92YXJpYWJsZRgCIAEoCUID4EECEh4KEWlnbm9yZV9mb3JfbG9va3Vw",
-            "GAMgASgIQgPgQQEiZwoKRGVwZW5kZW5jeRJFCgl1bml0X2tpbmQYASABKAlC",
-            "MuBBAuBBBfpBKQonc2Fhc3NlcnZpY2VtZ210Lmdvb2dsZWFwaXMuY29tL1Vu",
-            "aXRLaW5kEhIKBWFsaWFzGAIgASgJQgPgQQJC2QIKNWNvbS5nb29nbGUuY2xv",
-            "dWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExQh1TYWFz",
-            "RGVwbG95bWVudHNSZXNvdXJjZXNQcm90b1ABWl9jbG91ZC5nb29nbGUuY29t",
-            "L2dvL3NhYXNwbGF0Zm9ybS9zYWFzc2VydmljZW1nbXQvYXBpdjFiZXRhMS9z",
-            "YWFzc2VydmljZW1nbXRwYjtzYWFzc2VydmljZW1nbXRwYqoCMUdvb2dsZS5D",
-            "bG91ZC5TYWFzUGxhdGZvcm0uU2Fhc1NlcnZpY2VNZ210LlYxQmV0YTHKAjFH",
-            "b29nbGVcQ2xvdWRcU2Fhc1BsYXRmb3JtXFNhYXNTZXJ2aWNlTWdtdFxWMWJl",
-            "dGEx6gI1R29vZ2xlOjpDbG91ZDo6U2Fhc1BsYXRmb3JtOjpTYWFzU2Vydmlj",
-            "ZU1nbXQ6OlYxYmV0YTFiBnByb3RvMw=="));
+            "Z210LnYxYmV0YTEuQmx1ZXByaW50QgPgQQEScQoUcmVsZWFzZV9yZXF1aXJl",
+            "bWVudHMYBCABKAsyTi5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNz",
+            "ZXJ2aWNlbWdtdC52MWJldGExLlJlbGVhc2UuUmVsZWFzZVJlcXVpcmVtZW50",
+            "c0ID4EEBEmAKD2lucHV0X3ZhcmlhYmxlcxgFIAMoCzI/Lmdvb2dsZS5jbG91",
+            "ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdFZh",
+            "cmlhYmxlQgbgQQHgQQMSYQoQb3V0cHV0X3ZhcmlhYmxlcxgGIAMoCzI/Lmdv",
+            "b2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0",
+            "YTEuVW5pdFZhcmlhYmxlQgbgQQHgQQMSZQoXaW5wdXRfdmFyaWFibGVfZGVm",
+            "YXVsdHMYByADKAsyPy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNz",
+            "ZXJ2aWNlbWdtdC52MWJldGExLlVuaXRWYXJpYWJsZUID4EEBEmwKHmFwcGxp",
+            "Y2F0aW9uX3RlbXBsYXRlX2NvbXBvbmVudBgJIAEoCzI/Lmdvb2dsZS5jbG91",
+            "ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuQ29tcG9u",
+            "ZW50UmVmQgPgQQMSXAoGbGFiZWxzGKFRIAMoCzJGLmdvb2dsZS5jbG91ZC5z",
+            "YWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuUmVsZWFzZS5M",
+            "YWJlbHNFbnRyeUID4EEBEmYKC2Fubm90YXRpb25zGKJRIAMoCzJLLmdvb2ds",
+            "ZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEu",
+            "UmVsZWFzZS5Bbm5vdGF0aW9uc0VudHJ5QgPgQQESGQoDdWlkGNlPIAEoCUIL",
+            "4EED4ozP1wgCCAESEgoEZXRhZxjaTyABKAlCA+BBAxI1CgtjcmVhdGVfdGlt",
+            "ZRi/UCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNQoL",
+            "dXBkYXRlX3RpbWUYwFAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDGmgKE1JlbGVhc2VSZXF1aXJlbWVudHMSUQoZdXBncmFkZWFibGVf",
+            "ZnJvbV9yZWxlYXNlcxgBIAMoCUIu4EEB+kEoCiZzYWFzc2VydmljZW1nbXQu",
+            "Z29vZ2xlYXBpcy5jb20vUmVsZWFzZRotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjIKEEFubm90YXRpb25zRW50cnkS",
+            "CwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATp66kF3CiZzYWFzc2Vy",
+            "dmljZW1nbXQuZ29vZ2xlYXBpcy5jb20vUmVsZWFzZRI6cHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlbGVhc2VzL3tyZWxlYXNl",
+            "fSoIcmVsZWFzZXMyB3JlbGVhc2Ui3gEKD1ZhcmlhYmxlTWFwcGluZxJTCgRm",
+            "cm9tGAIgASgLMj4uZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2Vy",
+            "dmljZW1nbXQudjFiZXRhMS5Gcm9tTWFwcGluZ0ID4EEBSAASTwoCdG8YAyAB",
+            "KAsyPC5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdt",
+            "dC52MWJldGExLlRvTWFwcGluZ0ID4EEBSAASFQoIdmFyaWFibGUYASABKAlC",
+            "A+BBAkIOCgxtYXBwaW5nX3R5cGUiRAoLRnJvbU1hcHBpbmcSFwoKZGVwZW5k",
+            "ZW5jeRgBIAEoCUID4EECEhwKD291dHB1dF92YXJpYWJsZRgCIAEoCUID4EEC",
+            "ImEKCVRvTWFwcGluZxIXCgpkZXBlbmRlbmN5GAEgASgJQgPgQQISGwoOaW5w",
+            "dXRfdmFyaWFibGUYAiABKAlCA+BBAhIeChFpZ25vcmVfZm9yX2xvb2t1cBgD",
+            "IAEoCEID4EEBImcKCkRlcGVuZGVuY3kSRQoJdW5pdF9raW5kGAEgASgJQjLg",
+            "QQLgQQX6QSkKJ3NhYXNzZXJ2aWNlbWdtdC5nb29nbGVhcGlzLmNvbS9Vbml0",
+            "S2luZBISCgVhbGlhcxgCIAEoCUID4EECItIBCgxDb21wb3NpdGVSZWYSVQoU",
+            "YXBwbGljYXRpb25fdGVtcGxhdGUYASABKAlCN+BBAvpBMQovZGVzaWduY2Vu",
+            "dGVyLmdvb2dsZWFwaXMuY29tL0FwcGxpY2F0aW9uVGVtcGxhdGUSTgoIcmV2",
+            "aXNpb24YAiABKAlCPPpBOQo3ZGVzaWduY2VudGVyLmdvb2dsZWFwaXMuY29t",
+            "L0FwcGxpY2F0aW9uVGVtcGxhdGVSZXZpc2lvbhIbCg5zeW5jX29wZXJhdGlv",
+            "bhgDIAEoCUID4EEDIosBCgxDb21wb25lbnRSZWYSVgoNY29tcG9zaXRlX3Jl",
+            "ZhgBIAEoCzI/Lmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZp",
+            "Y2VtZ210LnYxYmV0YTEuQ29tcG9zaXRlUmVmEhEKCWNvbXBvbmVudBgCIAEo",
+            "CRIQCghyZXZpc2lvbhgDIAEoCSK7AgoJQXBwUGFyYW1zEg0KBWdyb3VwGAEg",
+            "ASgJElEKBXNjb3BlGAIgASgLMkIuZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9y",
+            "bS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5BcHBQYXJhbXMuU2NvcGUaywEK",
+            "BVNjb3BlEloKBHR5cGUYASABKA4yRy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRm",
+            "b3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLkFwcFBhcmFtcy5TY29wZS5U",
+            "eXBlQgPgQQIiZgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASEQoNVFlQ",
+            "RV9SRUdJT05BTBABEg8KC1RZUEVfR0xPQkFMEAISEAoIUkVHSU9OQUwQARoC",
+            "CAESDgoGR0xPQkFMEAIaAggBGgIQAUL8Bgo1Y29tLmdvb2dsZS5jbG91ZC5z",
+            "YWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTFCHVNhYXNEZXBs",
+            "b3ltZW50c1Jlc291cmNlc1Byb3RvUAFaX2Nsb3VkLmdvb2dsZS5jb20vZ28v",
+            "c2Fhc3BsYXRmb3JtL3NhYXNzZXJ2aWNlbWdtdC9hcGl2MWJldGExL3NhYXNz",
+            "ZXJ2aWNlbWdtdHBiO3NhYXNzZXJ2aWNlbWdtdHBiqgIxR29vZ2xlLkNsb3Vk",
+            "LlNhYXNQbGF0Zm9ybS5TYWFzU2VydmljZU1nbXQuVjFCZXRhMcoCMUdvb2ds",
+            "ZVxDbG91ZFxTYWFzUGxhdGZvcm1cU2Fhc1NlcnZpY2VNZ210XFYxYmV0YTHq",
+            "AjVHb29nbGU6OkNsb3VkOjpTYWFzUGxhdGZvcm06OlNhYXNTZXJ2aWNlTWdt",
+            "dDo6VjFiZXRhMepBZwohYXBwaHViLmdvb2dsZWFwaXMuY29tL0FwcGxpY2F0",
+            "aW9uEkJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "YXBwbGljYXRpb25zL3thcHBsaWNhdGlvbn3qQf8BCi9kZXNpZ25jZW50ZXIu",
+            "Z29vZ2xlYXBpcy5jb20vQXBwbGljYXRpb25UZW1wbGF0ZRJhcHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NwYWNlcy97c3BhY2V9",
+            "L2FwcGxpY2F0aW9uVGVtcGxhdGVzL3thcHBsaWNhdGlvblRlbXBsYXRlfRJp",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dvcmtz",
+            "cGFjZXMve3dvcmtzcGFjZX0vYXBwbGljYXRpb25UZW1wbGF0ZXMve2FwcGxp",
+            "Y2F0aW9uVGVtcGxhdGV96kGyAQo3ZGVzaWduY2VudGVyLmdvb2dsZWFwaXMu",
+            "Y29tL0FwcGxpY2F0aW9uVGVtcGxhdGVSZXZpc2lvbhJ3cHJvamVjdHMve3By",
+            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3NwYWNlcy97c3BhY2V9L2Fw",
+            "cGxpY2F0aW9uVGVtcGxhdGVzL3thcHBsaWNhdGlvbl90ZW1wbGF0ZX0vcmV2",
+            "aXNpb25zL3tyZXZpc2lvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Location), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Location.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Parser, new[]{ "Name", "Locations", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Parser, new[]{ "Name", "Locations", "ApplicationTemplate", "BlueprintRepo", "State", "Conditions", "Error", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Tenant), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Tenant.Parser, new[]{ "Name", "ConsumerResource", "Saas", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitKind), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitKind.Parser, new[]{ "Name", "DefaultRelease", "Dependencies", "InputVariableMappings", "OutputVariableMappings", "Saas", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Parser, new[]{ "Name", "UnitKind", "Release", "Tenant", "OngoingOperations", "PendingOperations", "ScheduledOperations", "Dependents", "Dependencies", "InputVariables", "OutputVariables", "Maintenance", "State", "Conditions", "ManagementMode", "SystemManagedState", "SystemCleanupAt", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.UnitState), typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.ManagementMode), typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.SystemManagedState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.MaintenanceSettings), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.MaintenanceSettings.Parser, new[]{ "PinnedUntilTime" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitKind), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitKind.Parser, new[]{ "Name", "DefaultRelease", "Dependencies", "InputVariableMappings", "OutputVariableMappings", "Saas", "ApplicationTemplateComponent", "AppParams", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Parser, new[]{ "Name", "UnitKind", "Release", "Tenant", "OngoingOperations", "PendingOperations", "ScheduledOperations", "Dependents", "Dependencies", "InputVariables", "OutputVariables", "Maintenance", "State", "Conditions", "ManagementMode", "SystemManagedState", "SystemCleanupAt", "Application", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime", "SatisfiesPzs", "SatisfiesPzi" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.UnitState), typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.ManagementMode), typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.SystemManagedState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.MaintenanceSettings), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.MaintenanceSettings.Parser, new[]{ "PinnedUntilTime" }, null, null, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitDependency), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitDependency.Parser, new[]{ "Alias", "Unit" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperation), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperation.Parser, new[]{ "Provision", "Upgrade", "Deprovision", "Name", "Unit", "ParentUnitOperation", "Rollout", "Cancel", "State", "Conditions", "Schedule", "EngineState", "ErrorCategory", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, new[]{ "UnitOperationType" }, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperation.Types.UnitOperationState) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperation), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperation.Parser, new[]{ "Provision", "Upgrade", "Deprovision", "Name", "Unit", "ParentUnitOperation", "Rollout", "Cancel", "State", "Conditions", "Schedule", "EngineState", "ErrorCategory", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime", "DeleteTime" }, new[]{ "UnitOperationType" }, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperation.Types.UnitOperationState) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Provision), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Provision.Parser, new[]{ "Release", "InputVariables" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Deprovision), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Deprovision.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Upgrade), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Upgrade.Parser, new[]{ "Release", "InputVariables" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Schedule), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Schedule.Parser, new[]{ "StartTime" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Release), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Release.Parser, new[]{ "Name", "UnitKind", "Blueprint", "ReleaseRequirements", "InputVariables", "OutputVariables", "InputVariableDefaults", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Release.Types.ReleaseRequirements), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Release.Types.ReleaseRequirements.Parser, new[]{ "UpgradeableFromReleases" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Release), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Release.Parser, new[]{ "Name", "UnitKind", "Blueprint", "ReleaseRequirements", "InputVariables", "OutputVariables", "InputVariableDefaults", "ApplicationTemplateComponent", "Labels", "Annotations", "Uid", "Etag", "CreateTime", "UpdateTime" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Release.Types.ReleaseRequirements), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Release.Types.ReleaseRequirements.Parser, new[]{ "UpgradeableFromReleases" }, null, null, null, null),
             null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.VariableMapping), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.VariableMapping.Parser, new[]{ "From", "To", "Variable" }, new[]{ "MappingType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.FromMapping), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.FromMapping.Parser, new[]{ "Dependency", "OutputVariable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ToMapping), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ToMapping.Parser, new[]{ "Dependency", "InputVariable", "IgnoreForLookup" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Dependency), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Dependency.Parser, new[]{ "UnitKind", "Alias" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Dependency), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Dependency.Parser, new[]{ "UnitKind", "Alias" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef.Parser, new[]{ "ApplicationTemplate", "Revision", "SyncOperation" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef.Parser, new[]{ "CompositeRef", "Component", "Revision" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Parser, new[]{ "Group", "Scope" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Parser, new[]{ "Type" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type) }, null, null)})
           }));
     }
     #endregion
@@ -515,6 +567,11 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     public Saas(Saas other) : this() {
       name_ = other.name_;
       locations_ = other.locations_.Clone();
+      applicationTemplate_ = other.applicationTemplate_ != null ? other.applicationTemplate_.Clone() : null;
+      blueprintRepo_ = other.blueprintRepo_;
+      state_ = other.state_;
+      conditions_ = other.conditions_.Clone();
+      error_ = other.error_ != null ? other.error_.Clone() : null;
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
       uid_ = other.uid_;
@@ -561,6 +618,89 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Location> Locations {
       get { return locations_; }
+    }
+
+    /// <summary>Field number for the "application_template" field.</summary>
+    public const int ApplicationTemplateFieldNumber = 5;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef applicationTemplate_;
+    /// <summary>
+    /// Reference to composite ApplicationTemplate.
+    /// When specified, the template components will be imported into their
+    /// equivalent UnitKind, Release and Blueprint resources.
+    /// Deleted references will not delete imported resources.
+    /// Should only be specified on source regions, and be unspecified on replica
+    /// regions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef ApplicationTemplate {
+      get { return applicationTemplate_; }
+      set {
+        applicationTemplate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "blueprint_repo" field.</summary>
+    public const int BlueprintRepoFieldNumber = 6;
+    private string blueprintRepo_ = "";
+    /// <summary>
+    /// Output only. Name of repository in Artifact Registry for system-generated
+    /// Blueprints, eg. Blueprints of imported ApplicationTemplates.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BlueprintRepo {
+      get { return blueprintRepo_; }
+      set {
+        blueprintRepo_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 7;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State state_ = global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State.TypeUnspecified;
+    /// <summary>
+    /// Output only. State of the Saas.
+    /// It is always in ACTIVE state if the application_template is empty.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "conditions" field.</summary>
+    public const int ConditionsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition> _repeated_conditions_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition> conditions_ = new pbc::RepeatedField<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition>();
+    /// <summary>
+    /// Output only. A set of conditions which indicate the various conditions this
+    /// resource can have.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition> Conditions {
+      get { return conditions_; }
+    }
+
+    /// <summary>Field number for the "error" field.</summary>
+    public const int ErrorFieldNumber = 9;
+    private global::Google.Rpc.Status error_;
+    /// <summary>
+    /// Output only. If the state is FAILED, the corresponding error code and
+    /// message. Defaults to code=OK for all other states.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Rpc.Status Error {
+      get { return error_; }
+      set {
+        error_ = value;
+      }
     }
 
     /// <summary>Field number for the "labels" field.</summary>
@@ -682,6 +822,11 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
       if (Name != other.Name) return false;
       if(!locations_.Equals(other.locations_)) return false;
+      if (!object.Equals(ApplicationTemplate, other.ApplicationTemplate)) return false;
+      if (BlueprintRepo != other.BlueprintRepo) return false;
+      if (State != other.State) return false;
+      if(!conditions_.Equals(other.conditions_)) return false;
+      if (!object.Equals(Error, other.Error)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (Uid != other.Uid) return false;
@@ -697,6 +842,11 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       hash ^= locations_.GetHashCode();
+      if (applicationTemplate_ != null) hash ^= ApplicationTemplate.GetHashCode();
+      if (BlueprintRepo.Length != 0) hash ^= BlueprintRepo.GetHashCode();
+      if (State != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State.TypeUnspecified) hash ^= State.GetHashCode();
+      hash ^= conditions_.GetHashCode();
+      if (error_ != null) hash ^= Error.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
@@ -726,6 +876,23 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteString(Name);
       }
       locations_.WriteTo(output, _repeated_locations_codec);
+      if (applicationTemplate_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ApplicationTemplate);
+      }
+      if (BlueprintRepo.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(BlueprintRepo);
+      }
+      if (State != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State.TypeUnspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      conditions_.WriteTo(output, _repeated_conditions_codec);
+      if (error_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Error);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -759,6 +926,23 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteString(Name);
       }
       locations_.WriteTo(ref output, _repeated_locations_codec);
+      if (applicationTemplate_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ApplicationTemplate);
+      }
+      if (BlueprintRepo.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(BlueprintRepo);
+      }
+      if (State != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State.TypeUnspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) State);
+      }
+      conditions_.WriteTo(ref output, _repeated_conditions_codec);
+      if (error_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(Error);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -791,6 +975,19 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
       size += locations_.CalculateSize(_repeated_locations_codec);
+      if (applicationTemplate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplicationTemplate);
+      }
+      if (BlueprintRepo.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BlueprintRepo);
+      }
+      if (State != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State.TypeUnspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
+      size += conditions_.CalculateSize(_repeated_conditions_codec);
+      if (error_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+      }
       size += labels_.CalculateSize(_map_labels_codec);
       size += annotations_.CalculateSize(_map_annotations_codec);
       if (Uid.Length != 0) {
@@ -821,6 +1018,25 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         Name = other.Name;
       }
       locations_.Add(other.locations_);
+      if (other.applicationTemplate_ != null) {
+        if (applicationTemplate_ == null) {
+          ApplicationTemplate = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef();
+        }
+        ApplicationTemplate.MergeFrom(other.ApplicationTemplate);
+      }
+      if (other.BlueprintRepo.Length != 0) {
+        BlueprintRepo = other.BlueprintRepo;
+      }
+      if (other.State != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State.TypeUnspecified) {
+        State = other.State;
+      }
+      conditions_.Add(other.conditions_);
+      if (other.error_ != null) {
+        if (error_ == null) {
+          Error = new global::Google.Rpc.Status();
+        }
+        Error.MergeFrom(other.Error);
+      }
       labels_.MergeFrom(other.labels_);
       annotations_.MergeFrom(other.annotations_);
       if (other.Uid.Length != 0) {
@@ -866,6 +1082,32 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
           }
           case 34: {
             locations_.AddEntriesFrom(input, _repeated_locations_codec);
+            break;
+          }
+          case 42: {
+            if (applicationTemplate_ == null) {
+              ApplicationTemplate = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef();
+            }
+            input.ReadMessage(ApplicationTemplate);
+            break;
+          }
+          case 50: {
+            BlueprintRepo = input.ReadString();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            conditions_.AddEntriesFrom(input, _repeated_conditions_codec);
+            break;
+          }
+          case 74: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
             break;
           }
           case 81610: {
@@ -925,6 +1167,32 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             locations_.AddEntriesFrom(ref input, _repeated_locations_codec);
             break;
           }
+          case 42: {
+            if (applicationTemplate_ == null) {
+              ApplicationTemplate = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef();
+            }
+            input.ReadMessage(ApplicationTemplate);
+            break;
+          }
+          case 50: {
+            BlueprintRepo = input.ReadString();
+            break;
+          }
+          case 56: {
+            State = (global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Saas.Types.State) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            conditions_.AddEntriesFrom(ref input, _repeated_conditions_codec);
+            break;
+          }
+          case 74: {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            input.ReadMessage(Error);
+            break;
+          }
           case 81610: {
             Uid = input.ReadString();
             break;
@@ -959,6 +1227,53 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Saas message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// State of the Saas.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// State type is unspecified.
+        /// </summary>
+        [pbr::OriginalName("STATE_TYPE_UNSPECIFIED")] TypeUnspecified = 0,
+        /// <summary>
+        /// The Saas is ready
+        /// </summary>
+        [pbr::OriginalName("STATE_ACTIVE")] Active = 1,
+        /// <summary>
+        /// In the process of importing, synchronizing or replicating
+        /// ApplicationTemplates
+        /// </summary>
+        [pbr::OriginalName("STATE_RUNNING")] Running = 2,
+        /// <summary>
+        /// Failure during process of importing, synchronizing or replicating
+        /// ApplicationTemplate processing
+        /// </summary>
+        [pbr::OriginalName("STATE_FAILED")] Failed = 3,
+        /// <summary>
+        /// Deprecated: Use STATE_ACTIVE.
+        /// </summary>
+        [global::System.ObsoleteAttribute]
+        [pbr::OriginalName("ACTIVE", PreferredAlias = false)] Active_ = 1,
+        /// <summary>
+        /// Deprecated: Use STATE_RUNNING.
+        /// </summary>
+        [global::System.ObsoleteAttribute]
+        [pbr::OriginalName("RUNNING", PreferredAlias = false)] Running_ = 2,
+        /// <summary>
+        /// Deprecated: Use STATE_FAILED.
+        /// </summary>
+        [global::System.ObsoleteAttribute]
+        [pbr::OriginalName("FAILED", PreferredAlias = false)] Failed_ = 3,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -1561,6 +1876,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       inputVariableMappings_ = other.inputVariableMappings_.Clone();
       outputVariableMappings_ = other.outputVariableMappings_.Clone();
       saas_ = other.saas_;
+      applicationTemplateComponent_ = other.applicationTemplateComponent_ != null ? other.applicationTemplateComponent_.Clone() : null;
+      appParams_ = other.appParams_ != null ? other.appParams_.Clone() : null;
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
       uid_ = other.uid_;
@@ -1675,6 +1992,37 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       get { return saas_; }
       set {
         saas_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "application_template_component" field.</summary>
+    public const int ApplicationTemplateComponentFieldNumber = 10;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef applicationTemplateComponent_;
+    /// <summary>
+    /// Output only. Reference to component and revision in a composite
+    /// ApplicationTemplate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef ApplicationTemplateComponent {
+      get { return applicationTemplateComponent_; }
+      set {
+        applicationTemplateComponent_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "app_params" field.</summary>
+    public const int AppParamsFieldNumber = 11;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams appParams_;
+    /// <summary>
+    /// AppParams contains the parameters for creating an AppHub Application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams AppParams {
+      get { return appParams_; }
+      set {
+        appParams_ = value;
       }
     }
 
@@ -1801,6 +2149,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if(!inputVariableMappings_.Equals(other.inputVariableMappings_)) return false;
       if(!outputVariableMappings_.Equals(other.outputVariableMappings_)) return false;
       if (Saas != other.Saas) return false;
+      if (!object.Equals(ApplicationTemplateComponent, other.ApplicationTemplateComponent)) return false;
+      if (!object.Equals(AppParams, other.AppParams)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (Uid != other.Uid) return false;
@@ -1820,6 +2170,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       hash ^= inputVariableMappings_.GetHashCode();
       hash ^= outputVariableMappings_.GetHashCode();
       if (Saas.Length != 0) hash ^= Saas.GetHashCode();
+      if (applicationTemplateComponent_ != null) hash ^= ApplicationTemplateComponent.GetHashCode();
+      if (appParams_ != null) hash ^= AppParams.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
@@ -1858,6 +2210,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (Saas.Length != 0) {
         output.WriteRawTag(66);
         output.WriteString(Saas);
+      }
+      if (applicationTemplateComponent_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(ApplicationTemplateComponent);
+      }
+      if (appParams_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AppParams);
       }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
@@ -1902,6 +2262,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteRawTag(66);
         output.WriteString(Saas);
       }
+      if (applicationTemplateComponent_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(ApplicationTemplateComponent);
+      }
+      if (appParams_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(AppParams);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -1942,6 +2310,12 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (Saas.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Saas);
       }
+      if (applicationTemplateComponent_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplicationTemplateComponent);
+      }
+      if (appParams_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(AppParams);
+      }
       size += labels_.CalculateSize(_map_labels_codec);
       size += annotations_.CalculateSize(_map_annotations_codec);
       if (Uid.Length != 0) {
@@ -1979,6 +2353,18 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       outputVariableMappings_.Add(other.outputVariableMappings_);
       if (other.Saas.Length != 0) {
         Saas = other.Saas;
+      }
+      if (other.applicationTemplateComponent_ != null) {
+        if (applicationTemplateComponent_ == null) {
+          ApplicationTemplateComponent = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef();
+        }
+        ApplicationTemplateComponent.MergeFrom(other.ApplicationTemplateComponent);
+      }
+      if (other.appParams_ != null) {
+        if (appParams_ == null) {
+          AppParams = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams();
+        }
+        AppParams.MergeFrom(other.AppParams);
       }
       labels_.MergeFrom(other.labels_);
       annotations_.MergeFrom(other.annotations_);
@@ -2041,6 +2427,20 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
           }
           case 66: {
             Saas = input.ReadString();
+            break;
+          }
+          case 82: {
+            if (applicationTemplateComponent_ == null) {
+              ApplicationTemplateComponent = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef();
+            }
+            input.ReadMessage(ApplicationTemplateComponent);
+            break;
+          }
+          case 90: {
+            if (appParams_ == null) {
+              AppParams = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams();
+            }
+            input.ReadMessage(AppParams);
             break;
           }
           case 81610: {
@@ -2114,6 +2514,20 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
           }
           case 66: {
             Saas = input.ReadString();
+            break;
+          }
+          case 82: {
+            if (applicationTemplateComponent_ == null) {
+              ApplicationTemplateComponent = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef();
+            }
+            input.ReadMessage(ApplicationTemplateComponent);
+            break;
+          }
+          case 90: {
+            if (appParams_ == null) {
+              AppParams = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams();
+            }
+            input.ReadMessage(AppParams);
             break;
           }
           case 81610: {
@@ -2211,12 +2625,15 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       managementMode_ = other.managementMode_;
       systemManagedState_ = other.systemManagedState_;
       systemCleanupAt_ = other.systemCleanupAt_ != null ? other.systemCleanupAt_.Clone() : null;
+      application_ = other.application_;
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
       uid_ = other.uid_;
       etag_ = other.etag_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      satisfiesPzs_ = other.satisfiesPzs_;
+      satisfiesPzi_ = other.satisfiesPzi_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2494,6 +2911,23 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "application" field.</summary>
+    public const int ApplicationFieldNumber = 29;
+    private string application_ = "";
+    /// <summary>
+    /// Optional. Reference to the AppHub Application this unit belongs to.
+    /// All resources deployed in this Unit will be associated with the specified
+    /// Application.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Application {
+      get { return application_; }
+      set {
+        application_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "labels" field.</summary>
     public const int LabelsFieldNumber = 10401;
     private static readonly pbc::MapField<string, string>.Codec _map_labels_codec
@@ -2596,6 +3030,37 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "satisfies_pzs" field.</summary>
+    public const int SatisfiesPzsFieldNumber = 10305;
+    private bool satisfiesPzs_;
+    /// <summary>
+    /// Output only. Indicates whether the resource location satisfies Zone
+    /// Separation constraints. This is false by default.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzs {
+      get { return satisfiesPzs_; }
+      set {
+        satisfiesPzs_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "satisfies_pzi" field.</summary>
+    public const int SatisfiesPziFieldNumber = 10306;
+    private bool satisfiesPzi_;
+    /// <summary>
+    /// Output only. Reserved for future use.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SatisfiesPzi {
+      get { return satisfiesPzi_; }
+      set {
+        satisfiesPzi_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2628,12 +3093,15 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (ManagementMode != other.ManagementMode) return false;
       if (SystemManagedState != other.SystemManagedState) return false;
       if (!object.Equals(SystemCleanupAt, other.SystemCleanupAt)) return false;
+      if (Application != other.Application) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (Uid != other.Uid) return false;
       if (Etag != other.Etag) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (SatisfiesPzs != other.SatisfiesPzs) return false;
+      if (SatisfiesPzi != other.SatisfiesPzi) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2658,12 +3126,15 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (ManagementMode != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.ManagementMode.Unspecified) hash ^= ManagementMode.GetHashCode();
       if (SystemManagedState != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Unit.Types.SystemManagedState.Unspecified) hash ^= SystemManagedState.GetHashCode();
       if (systemCleanupAt_ != null) hash ^= SystemCleanupAt.GetHashCode();
+      if (Application.Length != 0) hash ^= Application.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (SatisfiesPzs != false) hash ^= SatisfiesPzs.GetHashCode();
+      if (SatisfiesPzi != false) hash ^= SatisfiesPzi.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2726,6 +3197,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(SystemCleanupAt);
       }
+      if (Application.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(Application);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -2741,6 +3216,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (updateTime_ != null) {
         output.WriteRawTag(130, 132, 5);
         output.WriteMessage(UpdateTime);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(136, 132, 5);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(144, 132, 5);
+        output.WriteBool(SatisfiesPzi);
       }
       labels_.WriteTo(output, _map_labels_codec);
       annotations_.WriteTo(output, _map_annotations_codec);
@@ -2798,6 +3281,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteRawTag(210, 1);
         output.WriteMessage(SystemCleanupAt);
       }
+      if (Application.Length != 0) {
+        output.WriteRawTag(234, 1);
+        output.WriteString(Application);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -2813,6 +3300,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (updateTime_ != null) {
         output.WriteRawTag(130, 132, 5);
         output.WriteMessage(UpdateTime);
+      }
+      if (SatisfiesPzs != false) {
+        output.WriteRawTag(136, 132, 5);
+        output.WriteBool(SatisfiesPzs);
+      }
+      if (SatisfiesPzi != false) {
+        output.WriteRawTag(144, 132, 5);
+        output.WriteBool(SatisfiesPzi);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
       annotations_.WriteTo(ref output, _map_annotations_codec);
@@ -2861,6 +3356,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (systemCleanupAt_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SystemCleanupAt);
       }
+      if (Application.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Application);
+      }
       size += labels_.CalculateSize(_map_labels_codec);
       size += annotations_.CalculateSize(_map_annotations_codec);
       if (Uid.Length != 0) {
@@ -2874,6 +3372,12 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
       if (updateTime_ != null) {
         size += 3 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (SatisfiesPzs != false) {
+        size += 3 + 1;
+      }
+      if (SatisfiesPzi != false) {
+        size += 3 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2928,6 +3432,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         }
         SystemCleanupAt.MergeFrom(other.SystemCleanupAt);
       }
+      if (other.Application.Length != 0) {
+        Application = other.Application;
+      }
       labels_.MergeFrom(other.labels_);
       annotations_.MergeFrom(other.annotations_);
       if (other.Uid.Length != 0) {
@@ -2947,6 +3454,12 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.SatisfiesPzs != false) {
+        SatisfiesPzs = other.SatisfiesPzs;
+      }
+      if (other.SatisfiesPzi != false) {
+        SatisfiesPzi = other.SatisfiesPzi;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3041,6 +3554,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             input.ReadMessage(SystemCleanupAt);
             break;
           }
+          case 234: {
+            Application = input.ReadString();
+            break;
+          }
           case 81610: {
             Uid = input.ReadString();
             break;
@@ -3061,6 +3578,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82440: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 82448: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
           case 83210: {
@@ -3164,6 +3689,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             input.ReadMessage(SystemCleanupAt);
             break;
           }
+          case 234: {
+            Application = input.ReadString();
+            break;
+          }
           case 81610: {
             Uid = input.ReadString();
             break;
@@ -3184,6 +3713,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82440: {
+            SatisfiesPzs = input.ReadBool();
+            break;
+          }
+          case 82448: {
+            SatisfiesPzi = input.ReadBool();
             break;
           }
           case 83210: {
@@ -3752,7 +4289,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
   /// unit to focus only on the change they have requested.
   ///
   /// This is a base object that contains the common fields in all unit operations.
-  /// Next: 19
+  /// Next: 22
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UnitOperation : pb::IMessage<UnitOperation>
@@ -3805,6 +4342,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       etag_ = other.etag_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
       switch (other.UnitOperationTypeCase) {
         case UnitOperationTypeOneofCase.Provision:
           Provision = other.Provision.Clone();
@@ -4128,6 +4666,22 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "delete_time" field.</summary>
+    public const int DeleteTimeFieldNumber = 10305;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp deleteTime_;
+    /// <summary>
+    /// Output only. The timestamp when the resource was marked for deletion
+    /// (deletion is an asynchronous operation).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
+      get { return deleteTime_; }
+      set {
+        deleteTime_ = value;
+      }
+    }
+
     private object unitOperationType_;
     /// <summary>Enum of possible cases for the "unit_operation_type" oneof.</summary>
     public enum UnitOperationTypeOneofCase {
@@ -4184,6 +4738,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (Etag != other.Etag) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
       if (UnitOperationTypeCase != other.UnitOperationTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -4211,6 +4766,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
       hash ^= (int) unitOperationTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -4295,6 +4851,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteRawTag(130, 132, 5);
         output.WriteMessage(UpdateTime);
       }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(138, 132, 5);
+        output.WriteMessage(DeleteTime);
+      }
       labels_.WriteTo(output, _map_labels_codec);
       annotations_.WriteTo(output, _map_annotations_codec);
       if (_unknownFields != null) {
@@ -4372,6 +4932,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         output.WriteRawTag(130, 132, 5);
         output.WriteMessage(UpdateTime);
       }
+      if (deleteTime_ != null) {
+        output.WriteRawTag(138, 132, 5);
+        output.WriteMessage(DeleteTime);
+      }
       labels_.WriteTo(ref output, _map_labels_codec);
       annotations_.WriteTo(ref output, _map_annotations_codec);
       if (_unknownFields != null) {
@@ -4435,6 +4999,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if (updateTime_ != null) {
         size += 3 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
+      if (deleteTime_ != null) {
+        size += 3 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4497,6 +5064,12 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.deleteTime_ != null) {
+        if (deleteTime_ == null) {
+          DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        DeleteTime.MergeFrom(other.DeleteTime);
       }
       switch (other.UnitOperationTypeCase) {
         case UnitOperationTypeOneofCase.Provision:
@@ -4630,6 +5203,13 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             input.ReadMessage(UpdateTime);
             break;
           }
+          case 82442: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
+            break;
+          }
           case 83210: {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
@@ -4747,6 +5327,13 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
               UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 82442: {
+            if (deleteTime_ == null) {
+              DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(DeleteTime);
             break;
           }
           case 83210: {
@@ -5700,6 +6287,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       inputVariables_ = other.inputVariables_.Clone();
       outputVariables_ = other.outputVariables_.Clone();
       inputVariableDefaults_ = other.inputVariableDefaults_.Clone();
+      applicationTemplateComponent_ = other.applicationTemplateComponent_ != null ? other.applicationTemplateComponent_.Clone() : null;
       labels_ = other.labels_.Clone();
       annotations_ = other.annotations_.Clone();
       uid_ = other.uid_;
@@ -5823,6 +6411,22 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitVariable> InputVariableDefaults {
       get { return inputVariableDefaults_; }
+    }
+
+    /// <summary>Field number for the "application_template_component" field.</summary>
+    public const int ApplicationTemplateComponentFieldNumber = 9;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef applicationTemplateComponent_;
+    /// <summary>
+    /// Output only. Reference to component and revision in a composite
+    /// ApplicationTemplate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef ApplicationTemplateComponent {
+      get { return applicationTemplateComponent_; }
+      set {
+        applicationTemplateComponent_ = value;
+      }
     }
 
     /// <summary>Field number for the "labels" field.</summary>
@@ -5949,6 +6553,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       if(!inputVariables_.Equals(other.inputVariables_)) return false;
       if(!outputVariables_.Equals(other.outputVariables_)) return false;
       if(!inputVariableDefaults_.Equals(other.inputVariableDefaults_)) return false;
+      if (!object.Equals(ApplicationTemplateComponent, other.ApplicationTemplateComponent)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (!Annotations.Equals(other.Annotations)) return false;
       if (Uid != other.Uid) return false;
@@ -5969,6 +6574,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       hash ^= inputVariables_.GetHashCode();
       hash ^= outputVariables_.GetHashCode();
       hash ^= inputVariableDefaults_.GetHashCode();
+      if (applicationTemplateComponent_ != null) hash ^= ApplicationTemplateComponent.GetHashCode();
       hash ^= Labels.GetHashCode();
       hash ^= Annotations.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
@@ -6012,6 +6618,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       inputVariables_.WriteTo(output, _repeated_inputVariables_codec);
       outputVariables_.WriteTo(output, _repeated_outputVariables_codec);
       inputVariableDefaults_.WriteTo(output, _repeated_inputVariableDefaults_codec);
+      if (applicationTemplateComponent_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ApplicationTemplateComponent);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -6059,6 +6669,10 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       inputVariables_.WriteTo(ref output, _repeated_inputVariables_codec);
       outputVariables_.WriteTo(ref output, _repeated_outputVariables_codec);
       inputVariableDefaults_.WriteTo(ref output, _repeated_inputVariableDefaults_codec);
+      if (applicationTemplateComponent_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(ApplicationTemplateComponent);
+      }
       if (Uid.Length != 0) {
         output.WriteRawTag(202, 253, 4);
         output.WriteString(Uid);
@@ -6102,6 +6716,9 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       size += inputVariables_.CalculateSize(_repeated_inputVariables_codec);
       size += outputVariables_.CalculateSize(_repeated_outputVariables_codec);
       size += inputVariableDefaults_.CalculateSize(_repeated_inputVariableDefaults_codec);
+      if (applicationTemplateComponent_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ApplicationTemplateComponent);
+      }
       size += labels_.CalculateSize(_map_labels_codec);
       size += annotations_.CalculateSize(_map_annotations_codec);
       if (Uid.Length != 0) {
@@ -6149,6 +6766,12 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       inputVariables_.Add(other.inputVariables_);
       outputVariables_.Add(other.outputVariables_);
       inputVariableDefaults_.Add(other.inputVariableDefaults_);
+      if (other.applicationTemplateComponent_ != null) {
+        if (applicationTemplateComponent_ == null) {
+          ApplicationTemplateComponent = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef();
+        }
+        ApplicationTemplateComponent.MergeFrom(other.ApplicationTemplateComponent);
+      }
       labels_.MergeFrom(other.labels_);
       annotations_.MergeFrom(other.annotations_);
       if (other.Uid.Length != 0) {
@@ -6220,6 +6843,13 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
           }
           case 58: {
             inputVariableDefaults_.AddEntriesFrom(input, _repeated_inputVariableDefaults_codec);
+            break;
+          }
+          case 74: {
+            if (applicationTemplateComponent_ == null) {
+              ApplicationTemplateComponent = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef();
+            }
+            input.ReadMessage(ApplicationTemplateComponent);
             break;
           }
           case 81610: {
@@ -6303,6 +6933,13 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
           }
           case 58: {
             inputVariableDefaults_.AddEntriesFrom(ref input, _repeated_inputVariableDefaults_codec);
+            break;
+          }
+          case 74: {
+            if (applicationTemplateComponent_ == null) {
+              ApplicationTemplateComponent = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.ComponentRef();
+            }
+            input.ReadMessage(ApplicationTemplateComponent);
             break;
           }
           case 81610: {
@@ -7662,6 +8299,1097 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// CompositeRef represents a reference to a composite resource.
+  /// Next ID: 4
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CompositeRef : pb::IMessage<CompositeRef>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CompositeRef> _parser = new pb::MessageParser<CompositeRef>(() => new CompositeRef());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CompositeRef> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.DeploymentsResourcesReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompositeRef() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompositeRef(CompositeRef other) : this() {
+      applicationTemplate_ = other.applicationTemplate_;
+      revision_ = other.revision_;
+      syncOperation_ = other.syncOperation_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompositeRef Clone() {
+      return new CompositeRef(this);
+    }
+
+    /// <summary>Field number for the "application_template" field.</summary>
+    public const int ApplicationTemplateFieldNumber = 1;
+    private string applicationTemplate_ = "";
+    /// <summary>
+    /// Required. Reference to the ApplicationTemplate resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ApplicationTemplate {
+      get { return applicationTemplate_; }
+      set {
+        applicationTemplate_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "revision" field.</summary>
+    public const int RevisionFieldNumber = 2;
+    private string revision_ = "";
+    /// <summary>
+    /// Revision of the ApplicationTemplate to use.
+    /// Changes to revision will trigger manual resynchronization.
+    /// If empty, ApplicationTemplate will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Revision {
+      get { return revision_; }
+      set {
+        revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "sync_operation" field.</summary>
+    public const int SyncOperationFieldNumber = 3;
+    private string syncOperation_ = "";
+    /// <summary>
+    /// Output only. Reference to on-going AppTemplate import and replication
+    /// operation (i.e. the operation_id for the long-running operation). This
+    /// field is opaque for external usage.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SyncOperation {
+      get { return syncOperation_; }
+      set {
+        syncOperation_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CompositeRef);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CompositeRef other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ApplicationTemplate != other.ApplicationTemplate) return false;
+      if (Revision != other.Revision) return false;
+      if (SyncOperation != other.SyncOperation) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ApplicationTemplate.Length != 0) hash ^= ApplicationTemplate.GetHashCode();
+      if (Revision.Length != 0) hash ^= Revision.GetHashCode();
+      if (SyncOperation.Length != 0) hash ^= SyncOperation.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ApplicationTemplate.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApplicationTemplate);
+      }
+      if (Revision.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Revision);
+      }
+      if (SyncOperation.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SyncOperation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ApplicationTemplate.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ApplicationTemplate);
+      }
+      if (Revision.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Revision);
+      }
+      if (SyncOperation.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(SyncOperation);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ApplicationTemplate.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ApplicationTemplate);
+      }
+      if (Revision.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Revision);
+      }
+      if (SyncOperation.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SyncOperation);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CompositeRef other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ApplicationTemplate.Length != 0) {
+        ApplicationTemplate = other.ApplicationTemplate;
+      }
+      if (other.Revision.Length != 0) {
+        Revision = other.Revision;
+      }
+      if (other.SyncOperation.Length != 0) {
+        SyncOperation = other.SyncOperation;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ApplicationTemplate = input.ReadString();
+            break;
+          }
+          case 18: {
+            Revision = input.ReadString();
+            break;
+          }
+          case 26: {
+            SyncOperation = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ApplicationTemplate = input.ReadString();
+            break;
+          }
+          case 18: {
+            Revision = input.ReadString();
+            break;
+          }
+          case 26: {
+            SyncOperation = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ComponentRef represents a reference to a component resource.
+  /// Next ID: 4
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ComponentRef : pb::IMessage<ComponentRef>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ComponentRef> _parser = new pb::MessageParser<ComponentRef>(() => new ComponentRef());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ComponentRef> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.DeploymentsResourcesReflection.Descriptor.MessageTypes[17]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ComponentRef() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ComponentRef(ComponentRef other) : this() {
+      compositeRef_ = other.compositeRef_ != null ? other.compositeRef_.Clone() : null;
+      component_ = other.component_;
+      revision_ = other.revision_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ComponentRef Clone() {
+      return new ComponentRef(this);
+    }
+
+    /// <summary>Field number for the "composite_ref" field.</summary>
+    public const int CompositeRefFieldNumber = 1;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef compositeRef_;
+    /// <summary>
+    /// Reference to the Composite ApplicationTemplate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef CompositeRef {
+      get { return compositeRef_; }
+      set {
+        compositeRef_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "component" field.</summary>
+    public const int ComponentFieldNumber = 2;
+    private string component_ = "";
+    /// <summary>
+    /// Name of the component in composite.Components
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Component {
+      get { return component_; }
+      set {
+        component_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "revision" field.</summary>
+    public const int RevisionFieldNumber = 3;
+    private string revision_ = "";
+    /// <summary>
+    /// Revision of the component.
+    /// If the component does not have a revision, this field will be explicitly
+    /// set to the revision of the composite ApplicationTemplate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Revision {
+      get { return revision_; }
+      set {
+        revision_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ComponentRef);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ComponentRef other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CompositeRef, other.CompositeRef)) return false;
+      if (Component != other.Component) return false;
+      if (Revision != other.Revision) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (compositeRef_ != null) hash ^= CompositeRef.GetHashCode();
+      if (Component.Length != 0) hash ^= Component.GetHashCode();
+      if (Revision.Length != 0) hash ^= Revision.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (compositeRef_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CompositeRef);
+      }
+      if (Component.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Component);
+      }
+      if (Revision.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Revision);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (compositeRef_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CompositeRef);
+      }
+      if (Component.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Component);
+      }
+      if (Revision.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Revision);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (compositeRef_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CompositeRef);
+      }
+      if (Component.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Component);
+      }
+      if (Revision.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Revision);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ComponentRef other) {
+      if (other == null) {
+        return;
+      }
+      if (other.compositeRef_ != null) {
+        if (compositeRef_ == null) {
+          CompositeRef = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef();
+        }
+        CompositeRef.MergeFrom(other.CompositeRef);
+      }
+      if (other.Component.Length != 0) {
+        Component = other.Component;
+      }
+      if (other.Revision.Length != 0) {
+        Revision = other.Revision;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (compositeRef_ == null) {
+              CompositeRef = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef();
+            }
+            input.ReadMessage(CompositeRef);
+            break;
+          }
+          case 18: {
+            Component = input.ReadString();
+            break;
+          }
+          case 26: {
+            Revision = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (compositeRef_ == null) {
+              CompositeRef = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CompositeRef();
+            }
+            input.ReadMessage(CompositeRef);
+            break;
+          }
+          case 18: {
+            Component = input.ReadString();
+            break;
+          }
+          case 26: {
+            Revision = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// AppParams contains the parameters for creating an AppHub Application.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AppParams : pb::IMessage<AppParams>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AppParams> _parser = new pb::MessageParser<AppParams>(() => new AppParams());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AppParams> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.DeploymentsResourcesReflection.Descriptor.MessageTypes[18]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AppParams() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AppParams(AppParams other) : this() {
+      group_ = other.group_;
+      scope_ = other.scope_ != null ? other.scope_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AppParams Clone() {
+      return new AppParams(this);
+    }
+
+    /// <summary>Field number for the "group" field.</summary>
+    public const int GroupFieldNumber = 1;
+    private string group_ = "";
+    /// <summary>
+    /// Grouping used to construct the name of the AppHub Application.
+    /// Multiple UnitKinds can specify the same group to use the same Application
+    /// across their respective units.
+    /// Corresponds to the app_boundary_id in the ADC composite
+    /// ApplicationTemplate. Defaults to UnitKind.name
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Group {
+      get { return group_; }
+      set {
+        group_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "scope" field.</summary>
+    public const int ScopeFieldNumber = 2;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope scope_;
+    /// <summary>
+    /// Corresponds to the scope in the ADC composite ApplicationTemplate.
+    /// Defaults to TYPE_REGIONAL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope Scope {
+      get { return scope_; }
+      set {
+        scope_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AppParams);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AppParams other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Group != other.Group) return false;
+      if (!object.Equals(Scope, other.Scope)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Group.Length != 0) hash ^= Group.GetHashCode();
+      if (scope_ != null) hash ^= Scope.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Group.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Group);
+      }
+      if (scope_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Scope);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Group.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Group);
+      }
+      if (scope_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Scope);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Group.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Group);
+      }
+      if (scope_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Scope);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AppParams other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Group.Length != 0) {
+        Group = other.Group;
+      }
+      if (other.scope_ != null) {
+        if (scope_ == null) {
+          Scope = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope();
+        }
+        Scope.MergeFrom(other.Scope);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Group = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (scope_ == null) {
+              Scope = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope();
+            }
+            input.ReadMessage(Scope);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Group = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (scope_ == null) {
+              Scope = new global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope();
+            }
+            input.ReadMessage(Scope);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AppParams message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Scope of an application.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Scope : pb::IMessage<Scope>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Scope> _parser = new pb::MessageParser<Scope>(() => new Scope());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Scope> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Scope() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Scope(Scope other) : this() {
+          type_ = other.type_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Scope Clone() {
+          return new Scope(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type type_ = global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type.Unspecified;
+        /// <summary>
+        /// Required. Scope Type.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Scope);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Scope other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Scope other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.AppParams.Types.Scope.Types.Type) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Scope message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Scope Type.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// Unspecified type.
+            /// </summary>
+            [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Regional type.
+            /// </summary>
+            [pbr::OriginalName("TYPE_REGIONAL")] Regional = 1,
+            /// <summary>
+            /// Global type.
+            /// </summary>
+            [pbr::OriginalName("TYPE_GLOBAL")] Global = 2,
+            /// <summary>
+            /// Deprecated: Use TYPE_REGIONAL.
+            /// </summary>
+            [global::System.ObsoleteAttribute]
+            [pbr::OriginalName("REGIONAL", PreferredAlias = false)] Regional_ = 1,
+            /// <summary>
+            /// Deprecated: Use TYPE_GLOBAL.
+            /// </summary>
+            [global::System.ObsoleteAttribute]
+            [pbr::OriginalName("GLOBAL", PreferredAlias = false)] Global_ = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 
