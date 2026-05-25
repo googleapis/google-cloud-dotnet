@@ -27,58 +27,71 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             "Cj5nb29nbGUvY2xvdWQvc2Fhc3BsYXRmb3JtL3NhYXNzZXJ2aWNlbWdtdC92",
             "MWJldGExL2NvbW1vbi5wcm90bxIxZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9y",
             "bS5zYWFzc2VydmljZW1nbXQudjFiZXRhMRofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90",
-            "byJPCglCbHVlcHJpbnQSFwoHcGFja2FnZRgBIAEoCUIG4EEB4EEFEhMKBmVu",
-            "Z2luZRgCIAEoCUID4EEDEhQKB3ZlcnNpb24YAyABKAlCA+BBAyLVAQoMVW5p",
-            "dFZhcmlhYmxlEhgKCHZhcmlhYmxlGAEgASgJQgbgQQLgQQUSWgoEdHlwZRgC",
-            "IAEoDjJELmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2Vt",
-            "Z210LnYxYmV0YTEuVW5pdFZhcmlhYmxlLlR5cGVCBuBBAeBBBRISCgV2YWx1",
-            "ZRgDIAEoCUID4EEBIjsKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgoK",
-            "BlNUUklORxABEgcKA0lOVBACEggKBEJPT0wQAyL7AwoNVW5pdENvbmRpdGlv",
-            "bhJcCgZzdGF0dXMYASABKA4yRy5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3Jt",
-            "LnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVuaXRDb25kaXRpb24uU3RhdHVz",
-            "QgPgQQISWAoEdHlwZRgCIAEoDjJFLmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZv",
-            "cm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdENvbmRpdGlvbi5UeXBl",
-            "QgPgQQISPQoUbGFzdF90cmFuc2l0aW9uX3RpbWUYAyABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQISFAoHbWVzc2FnZRgEIAEoCUID4EEC",
-            "EhMKBnJlYXNvbhgFIAEoCUID4EECIlcKBlN0YXR1cxIWChJTVEFUVVNfVU5T",
-            "UEVDSUZJRUQQABISCg5TVEFUVVNfVU5LTk9XThABEg8KC1NUQVRVU19UUlVF",
-            "EAISEAoMU1RBVFVTX0ZBTFNFEAMibwoEVHlwZRIUChBUWVBFX1VOU1BFQ0lG",
-            "SUVEEAASDgoKVFlQRV9SRUFEWRABEhEKDVRZUEVfVVBEQVRJTkcQAhIUChBU",
-            "WVBFX1BST1ZJU0lPTkVEEAMSGAoUVFlQRV9PUEVSQVRJT05fRVJST1IQBCLM",
-            "BAoWVW5pdE9wZXJhdGlvbkNvbmRpdGlvbhJlCgZzdGF0dXMYASABKA4yUC5n",
-            "b29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJl",
-            "dGExLlVuaXRPcGVyYXRpb25Db25kaXRpb24uU3RhdHVzQgPgQQISYQoEdHlw",
-            "ZRgCIAEoDjJOLmdvb2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZp",
-            "Y2VtZ210LnYxYmV0YTEuVW5pdE9wZXJhdGlvbkNvbmRpdGlvbi5UeXBlQgPg",
-            "QQISPQoUbGFzdF90cmFuc2l0aW9uX3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQISFAoHbWVzc2FnZRgEIAEoCUID4EECEhMK",
-            "BnJlYXNvbhgFIAEoCUID4EECIlcKBlN0YXR1cxIWChJTVEFUVVNfVU5TUEVD",
-            "SUZJRUQQABISCg5TVEFUVVNfVU5LTk9XThABEg8KC1NUQVRVU19UUlVFEAIS",
-            "EAoMU1RBVFVTX0ZBTFNFEAMipAEKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklF",
-            "RBAAEhIKDlRZUEVfU0NIRURVTEVEEAISEAoMVFlQRV9SVU5OSU5HEAMSEgoO",
-            "VFlQRV9TVUNDRUVERUQQBBISCg5UWVBFX0NBTkNFTExFRBAFEhQKEFRZUEVf",
-            "QVBQX0NSRUFURUQQBhIiCh5UWVBFX0FQUF9DT01QT05FTlRTX1JFR0lTVEVS",
-            "RUQQByIzCglBZ2dyZWdhdGUSEgoFZ3JvdXAYASABKAlCA+BBAhISCgVjb3Vu",
-            "dBgCIAEoBUID4EECKpYBChpVbml0T3BlcmF0aW9uRXJyb3JDYXRlZ29yeRIt",
-            "CilVTklUX09QRVJBVElPTl9FUlJPUl9DQVRFR09SWV9VTlNQRUNJRklFRBAA",
-            "EhIKDk5PVF9BUFBMSUNBQkxFEAESCQoFRkFUQUwQAhINCglSRVRSSUFCTEUQ",
-            "AxINCglJR05PUkFCTEUQBBIMCghTVEFOREFSRBAFQscCCjVjb20uZ29vZ2xl",
-            "LmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMUIL",
-            "Q29tbW9uUHJvdG9QAVpfY2xvdWQuZ29vZ2xlLmNvbS9nby9zYWFzcGxhdGZv",
-            "cm0vc2Fhc3NlcnZpY2VtZ210L2FwaXYxYmV0YTEvc2Fhc3NlcnZpY2VtZ210",
-            "cGI7c2Fhc3NlcnZpY2VtZ210cGKqAjFHb29nbGUuQ2xvdWQuU2Fhc1BsYXRm",
-            "b3JtLlNhYXNTZXJ2aWNlTWdtdC5WMUJldGExygIxR29vZ2xlXENsb3VkXFNh",
-            "YXNQbGF0Zm9ybVxTYWFzU2VydmljZU1nbXRcVjFiZXRhMeoCNUdvb2dsZTo6",
-            "Q2xvdWQ6OlNhYXNQbGF0Zm9ybTo6U2Fhc1NlcnZpY2VNZ210OjpWMWJldGEx",
-            "YgZwcm90bzM="));
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byJPCglCbHVlcHJpbnQSFwoH",
+            "cGFja2FnZRgBIAEoCUIG4EEB4EEFEhMKBmVuZ2luZRgCIAEoCUID4EEDEhQK",
+            "B3ZlcnNpb24YAyABKAlCA+BBAyLrAQoMVW5pdFZhcmlhYmxlEhgKCHZhcmlh",
+            "YmxlGAEgASgJQgbgQQLgQQUSWgoEdHlwZRgCIAEoDjJELmdvb2dsZS5jbG91",
+            "ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuVW5pdFZh",
+            "cmlhYmxlLlR5cGVCBuBBAeBBBRISCgV2YWx1ZRgDIAEoCUID4EEBIlEKBFR5",
+            "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEgoKBlNUUklORxABEgcKA0lOVBAC",
+            "EggKBEJPT0wQAxIKCgZTVFJVQ1QQBBIICgRMSVNUEAUi+wMKDVVuaXRDb25k",
+            "aXRpb24SXAoGc3RhdHVzGAEgASgOMkcuZ29vZ2xlLmNsb3VkLnNhYXNwbGF0",
+            "Zm9ybS5zYWFzc2VydmljZW1nbXQudjFiZXRhMS5Vbml0Q29uZGl0aW9uLlN0",
+            "YXR1c0ID4EECElgKBHR5cGUYAiABKA4yRS5nb29nbGUuY2xvdWQuc2Fhc3Bs",
+            "YXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVuaXRDb25kaXRpb24u",
+            "VHlwZUID4EECEj0KFGxhc3RfdHJhbnNpdGlvbl90aW1lGAMgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECEhQKB21lc3NhZ2UYBCABKAlC",
+            "A+BBAhITCgZyZWFzb24YBSABKAlCA+BBAiJXCgZTdGF0dXMSFgoSU1RBVFVT",
+            "X1VOU1BFQ0lGSUVEEAASEgoOU1RBVFVTX1VOS05PV04QARIPCgtTVEFUVVNf",
+            "VFJVRRACEhAKDFNUQVRVU19GQUxTRRADIm8KBFR5cGUSFAoQVFlQRV9VTlNQ",
+            "RUNJRklFRBAAEg4KClRZUEVfUkVBRFkQARIRCg1UWVBFX1VQREFUSU5HEAIS",
+            "FAoQVFlQRV9QUk9WSVNJT05FRBADEhgKFFRZUEVfT1BFUkFUSU9OX0VSUk9S",
+            "EAQi6QQKFlVuaXRPcGVyYXRpb25Db25kaXRpb24SZQoGc3RhdHVzGAEgASgO",
+            "MlAuZ29vZ2xlLmNsb3VkLnNhYXNwbGF0Zm9ybS5zYWFzc2VydmljZW1nbXQu",
+            "djFiZXRhMS5Vbml0T3BlcmF0aW9uQ29uZGl0aW9uLlN0YXR1c0ID4EECEmEK",
+            "BHR5cGUYAiABKA4yTi5nb29nbGUuY2xvdWQuc2Fhc3BsYXRmb3JtLnNhYXNz",
+            "ZXJ2aWNlbWdtdC52MWJldGExLlVuaXRPcGVyYXRpb25Db25kaXRpb24uVHlw",
+            "ZUID4EECEj0KFGxhc3RfdHJhbnNpdGlvbl90aW1lGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EECEhQKB21lc3NhZ2UYBCABKAlCA+BB",
+            "AhITCgZyZWFzb24YBSABKAlCA+BBAiJXCgZTdGF0dXMSFgoSU1RBVFVTX1VO",
+            "U1BFQ0lGSUVEEAASEgoOU1RBVFVTX1VOS05PV04QARIPCgtTVEFUVVNfVFJV",
+            "RRACEhAKDFNUQVRVU19GQUxTRRADIsEBCgRUeXBlEhQKEFRZUEVfVU5TUEVD",
+            "SUZJRUQQABISCg5UWVBFX1NDSEVEVUxFRBACEhAKDFRZUEVfUlVOTklORxAD",
+            "EhIKDlRZUEVfU1VDQ0VFREVEEAQSEgoOVFlQRV9DQU5DRUxMRUQQBRIUChBU",
+            "WVBFX0FQUF9DUkVBVEVEEAYSIgoeVFlQRV9BUFBfQ09NUE9ORU5UU19SRUdJ",
+            "U1RFUkVEEAcSGwoXVFlQRV9XT1JLTE9BRF9TVUNDRUVERUQQCCLPAwoNU2Fh",
+            "c0NvbmRpdGlvbhJcCgZzdGF0dXMYASABKA4yRy5nb29nbGUuY2xvdWQuc2Fh",
+            "c3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlNhYXNDb25kaXRp",
+            "b24uU3RhdHVzQgPgQQISWAoEdHlwZRgGIAEoDjJFLmdvb2dsZS5jbG91ZC5z",
+            "YWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0YTEuU2Fhc0NvbmRp",
+            "dGlvbi5UeXBlQgPgQQISPQoUbGFzdF90cmFuc2l0aW9uX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISFAoHbWVzc2FnZRgE",
+            "IAEoCUID4EECEhMKBnJlYXNvbhgFIAEoCUID4EECIlcKBlN0YXR1cxIWChJT",
+            "VEFUVVNfVU5TUEVDSUZJRUQQABISCg5TVEFUVVNfVU5LTk9XThABEg8KC1NU",
+            "QVRVU19UUlVFEAISEAoMU1RBVFVTX0ZBTFNFEAMiQwoEVHlwZRIUChBUWVBF",
+            "X1VOU1BFQ0lGSUVEEAASDgoKVFlQRV9SRUFEWRABEhUKEVRZUEVfU1lOQ0hS",
+            "T05JWkVEEAIiMwoJQWdncmVnYXRlEhIKBWdyb3VwGAEgASgJQgPgQQISEgoF",
+            "Y291bnQYAiABKAVCA+BBAiqWAQoaVW5pdE9wZXJhdGlvbkVycm9yQ2F0ZWdv",
+            "cnkSLQopVU5JVF9PUEVSQVRJT05fRVJST1JfQ0FURUdPUllfVU5TUEVDSUZJ",
+            "RUQQABISCg5OT1RfQVBQTElDQUJMRRABEgkKBUZBVEFMEAISDQoJUkVUUklB",
+            "QkxFEAMSDQoJSUdOT1JBQkxFEAQSDAoIU1RBTkRBUkQQBULHAgo1Y29tLmdv",
+            "b2dsZS5jbG91ZC5zYWFzcGxhdGZvcm0uc2Fhc3NlcnZpY2VtZ210LnYxYmV0",
+            "YTFCC0NvbW1vblByb3RvUAFaX2Nsb3VkLmdvb2dsZS5jb20vZ28vc2Fhc3Bs",
+            "YXRmb3JtL3NhYXNzZXJ2aWNlbWdtdC9hcGl2MWJldGExL3NhYXNzZXJ2aWNl",
+            "bWdtdHBiO3NhYXNzZXJ2aWNlbWdtdHBiqgIxR29vZ2xlLkNsb3VkLlNhYXNQ",
+            "bGF0Zm9ybS5TYWFzU2VydmljZU1nbXQuVjFCZXRhMcoCMUdvb2dsZVxDbG91",
+            "ZFxTYWFzUGxhdGZvcm1cU2Fhc1NlcnZpY2VNZ210XFYxYmV0YTHqAjVHb29n",
+            "bGU6OkNsb3VkOjpTYWFzUGxhdGZvcm06OlNhYXNTZXJ2aWNlTWdtdDo6VjFi",
+            "ZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperationErrorCategory), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Blueprint), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Blueprint.Parser, new[]{ "Package", "Engine", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitVariable), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitVariable.Parser, new[]{ "Variable", "Type", "Value" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitVariable.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitCondition), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitCondition.Parser, new[]{ "Status", "Type", "LastTransitionTime", "Message", "Reason" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitCondition.Types.Status), typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitCondition.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperationCondition), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperationCondition.Parser, new[]{ "Status", "Type", "LastTransitionTime", "Message", "Reason" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperationCondition.Types.Status), typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.UnitOperationCondition.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Parser, new[]{ "Status", "Type", "LastTransitionTime", "Message", "Reason" }, null, new[]{ typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status), typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Aggregate), global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.Aggregate.Parser, new[]{ "Group", "Count" }, null, null, null, null)
           }));
     }
@@ -701,6 +714,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     public static partial class Types {
       /// <summary>
       /// Enumeration of variable types.
+      /// `STRUCT` and `LIST` values should be JSON-encoded strings.
       /// </summary>
       public enum Type {
         /// <summary>
@@ -719,6 +733,14 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         /// Variable type is bool.
         /// </summary>
         [pbr::OriginalName("BOOL")] Bool = 3,
+        /// <summary>
+        /// Variable type is struct.
+        /// </summary>
+        [pbr::OriginalName("STRUCT")] Struct = 4,
+        /// <summary>
+        /// Variable type is list.
+        /// </summary>
+        [pbr::OriginalName("LIST")] List = 5,
       }
 
     }
@@ -1591,6 +1613,436 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         /// Indicates if services and workloads have been registered with AppHub.
         /// </summary>
         [pbr::OriginalName("TYPE_APP_COMPONENTS_REGISTERED")] AppComponentsRegistered = 7,
+        /// <summary>
+        /// Indicates if the UnitOperation's core workload execution completed
+        /// successfully.
+        /// The workload is the core execution operation performed for a
+        /// UnitOperation (e.g., provisioning, updating, or deprovisioning
+        /// resources) excluding post-operation checks.
+        /// </summary>
+        [pbr::OriginalName("TYPE_WORKLOAD_SUCCEEDED")] WorkloadSucceeded = 8,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// SaasCondition describes the status of a Saas.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SaasCondition : pb::IMessage<SaasCondition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SaasCondition> _parser = new pb::MessageParser<SaasCondition>(() => new SaasCondition());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SaasCondition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CommonReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SaasCondition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SaasCondition(SaasCondition other) : this() {
+      status_ = other.status_;
+      type_ = other.type_;
+      lastTransitionTime_ = other.lastTransitionTime_ != null ? other.lastTransitionTime_.Clone() : null;
+      message_ = other.message_;
+      reason_ = other.reason_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SaasCondition Clone() {
+      return new SaasCondition(this);
+    }
+
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 1;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status status_ = global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status.Unspecified;
+    /// <summary>
+    /// Required. Status of the condition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "type" field.</summary>
+    public const int TypeFieldNumber = 6;
+    private global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type type_ = global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type.Unspecified;
+    /// <summary>
+    /// Required. Type of the condition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type Type {
+      get { return type_; }
+      set {
+        type_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "last_transition_time" field.</summary>
+    public const int LastTransitionTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp lastTransitionTime_;
+    /// <summary>
+    /// Required. Last time the condition transited from one status to another.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LastTransitionTime {
+      get { return lastTransitionTime_; }
+      set {
+        lastTransitionTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "message" field.</summary>
+    public const int MessageFieldNumber = 4;
+    private string message_ = "";
+    /// <summary>
+    /// Required. Human readable message indicating details about the last
+    /// transition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Message {
+      get { return message_; }
+      set {
+        message_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 5;
+    private string reason_ = "";
+    /// <summary>
+    /// Required. Brief reason for the condition's last transition.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Reason {
+      get { return reason_; }
+      set {
+        reason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SaasCondition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SaasCondition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Status != other.Status) return false;
+      if (Type != other.Type) return false;
+      if (!object.Equals(LastTransitionTime, other.LastTransitionTime)) return false;
+      if (Message != other.Message) return false;
+      if (Reason != other.Reason) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Status != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status.Unspecified) hash ^= Status.GetHashCode();
+      if (Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+      if (lastTransitionTime_ != null) hash ^= LastTransitionTime.GetHashCode();
+      if (Message.Length != 0) hash ^= Message.GetHashCode();
+      if (Reason.Length != 0) hash ^= Reason.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Status != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Status);
+      }
+      if (lastTransitionTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LastTransitionTime);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Message);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Reason);
+      }
+      if (Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Type);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Status != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Status);
+      }
+      if (lastTransitionTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(LastTransitionTime);
+      }
+      if (Message.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Message);
+      }
+      if (Reason.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Reason);
+      }
+      if (Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Type);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Status != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+      }
+      if (lastTransitionTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastTransitionTime);
+      }
+      if (Message.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Message);
+      }
+      if (Reason.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Reason);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SaasCondition other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Status != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status.Unspecified) {
+        Status = other.Status;
+      }
+      if (other.Type != global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type.Unspecified) {
+        Type = other.Type;
+      }
+      if (other.lastTransitionTime_ != null) {
+        if (lastTransitionTime_ == null) {
+          LastTransitionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LastTransitionTime.MergeFrom(other.LastTransitionTime);
+      }
+      if (other.Message.Length != 0) {
+        Message = other.Message;
+      }
+      if (other.Reason.Length != 0) {
+        Reason = other.Reason;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Status = (global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (lastTransitionTime_ == null) {
+              LastTransitionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastTransitionTime);
+            break;
+          }
+          case 34: {
+            Message = input.ReadString();
+            break;
+          }
+          case 42: {
+            Reason = input.ReadString();
+            break;
+          }
+          case 48: {
+            Type = (global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Status = (global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Status) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (lastTransitionTime_ == null) {
+              LastTransitionTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastTransitionTime);
+            break;
+          }
+          case 34: {
+            Message = input.ReadString();
+            break;
+          }
+          case 42: {
+            Reason = input.ReadString();
+            break;
+          }
+          case 48: {
+            Type = (global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.SaasCondition.Types.Type) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SaasCondition message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Enumeration of condition statuses.
+      /// </summary>
+      public enum Status {
+        /// <summary>
+        /// Condition status is unspecified.
+        /// </summary>
+        [pbr::OriginalName("STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Condition is unknown.
+        /// </summary>
+        [pbr::OriginalName("STATUS_UNKNOWN")] Unknown = 1,
+        /// <summary>
+        /// Condition is true.
+        /// </summary>
+        [pbr::OriginalName("STATUS_TRUE")] True = 2,
+        /// <summary>
+        /// Condition is false.
+        /// </summary>
+        [pbr::OriginalName("STATUS_FALSE")] False = 3,
+      }
+
+      /// <summary>
+      /// Enumeration of condition types.
+      /// </summary>
+      public enum Type {
+        /// <summary>
+        /// Condition type is unspecified.
+        /// </summary>
+        [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Condition type is ready.
+        /// </summary>
+        [pbr::OriginalName("TYPE_READY")] Ready = 1,
+        /// <summary>
+        /// Condition type is synchronized.
+        /// </summary>
+        [pbr::OriginalName("TYPE_SYNCHRONIZED")] Synchronized = 2,
       }
 
     }
@@ -1618,7 +2070,7 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CommonReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1.CommonReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
