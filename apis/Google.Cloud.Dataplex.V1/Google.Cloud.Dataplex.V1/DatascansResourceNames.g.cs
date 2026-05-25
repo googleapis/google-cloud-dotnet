@@ -610,6 +610,18 @@ namespace Google.Cloud.Dataplex.V1
         }
     }
 
+    public partial class CancelDataScanJobRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::DataScanJobName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::DataScanJobName DataScanJobName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::DataScanJobName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DataScan
     {
         /// <summary>

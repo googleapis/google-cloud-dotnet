@@ -1119,8 +1119,13 @@ namespace Google.Cloud.Dataplex.V1 {
     /// //storage.googleapis.com/projects/PROJECT_ID/buckets/BUCKET_ID
     /// or
     /// BigQuery table of type "TABLE" for
-    /// DataProfileScan/DataQualityScan/DataDocumentationScan Format:
+    /// DataProfileScan/DataQualityScan/DataDocumentationScan
+    /// Format:
     /// //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID/tables/TABLE_ID
+    /// or
+    /// BigQuery dataset for DataDocumentationScan only
+    /// Format:
+    /// //bigquery.googleapis.com/projects/PROJECT_ID/datasets/DATASET_ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

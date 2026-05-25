@@ -18,13 +18,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dataplex_v1_generated_CatalogService_LookupContext_async]
+    // [START dataplex_v1_generated_DataProductService_RequestDataProductAccess_async_flattened]
     using System.Threading.Tasks;
     using gcdv = Google.Cloud.Dataplex.V1;
 
-    public sealed partial class GeneratedCatalogServiceClientSnippets
+    public sealed partial class GeneratedDataProductServiceClientSnippets
     {
-        /// <summary>Snippet for LookupContextAsync</summary>
+        /// <summary>Snippet for RequestDataProductAccessAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +32,16 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task LookupContextRequestObjectAsync()
+        public async Task RequestDataProductAccessAsync()
         {
             // Create client
-            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            gcdv::DataProductServiceClient dataProductServiceClient = await gcdv::DataProductServiceClient.CreateAsync();
             // Initialize request argument(s)
-            gcdv::LookupContextRequest request = new gcdv::LookupContextRequest
-            {
-                Name = "",
-                ResourcesAsEntryNames =
-                {
-                    gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                },
-                Context = "",
-                Options = { { "", "" }, },
-            };
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataProducts/[DATA_PRODUCT]";
+            gcdv::ChangeRequest changeRequest = new gcdv::ChangeRequest();
             // Make the request
-            gcdv::LookupContextResponse response = await catalogServiceClient.LookupContextAsync(request);
+            gcdv::RequestDataProductAccessResponse response = await dataProductServiceClient.RequestDataProductAccessAsync(parent, changeRequest);
         }
     }
-    // [END dataplex_v1_generated_CatalogService_LookupContext_async]
+    // [END dataplex_v1_generated_DataProductService_RequestDataProductAccess_async_flattened]
 }

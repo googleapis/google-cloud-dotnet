@@ -144,7 +144,7 @@ namespace Google.Cloud.Dataplex.V1 {
             "dG9yYWdlQWNjZXNzLkFjY2Vzc01vZGVCA+BBAyJCCgpBY2Nlc3NNb2RlEhsK",
             "F0FDQ0VTU19NT0RFX1VOU1BFQ0lGSUVEEAASCgoGRElSRUNUEAESCwoHTUFO",
             "QUdFRBACKlAKDVN0b3JhZ2VTeXN0ZW0SHgoaU1RPUkFHRV9TWVNURU1fVU5T",
-            "UEVDSUZJRUQQABIRCg1DTE9VRF9TVE9SQUdFEAESDAoIQklHUVVFUlkQAjKJ",
+            "UEVDSUZJRUQQABIRCg1DTE9VRF9TVE9SQUdFEAESDAoIQklHUVVFUlkQAjK9",
             "DgoPTWV0YWRhdGFTZXJ2aWNlEr0BCgxDcmVhdGVFbnRpdHkSLS5nb29nbGUu",
             "Y2xvdWQuZGF0YXBsZXgudjEuQ3JlYXRlRW50aXR5UmVxdWVzdBogLmdvb2ds",
             "ZS5jbG91ZC5kYXRhcGxleC52MS5FbnRpdHkiXNpBDXBhcmVudCxlbnRpdHmC",
@@ -183,11 +183,12 @@ namespace Google.Cloud.Dataplex.V1 {
             "c1JlcXVlc3QaMC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuTGlzdFBhcnRp",
             "dGlvbnNSZXNwb25zZSJa2kEGcGFyZW50gtPkkwJLEkkvdjEve3BhcmVudD1w",
             "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2xha2VzLyovem9uZXMvKi9lbnRpdGll",
-            "cy8qfS9wYXJ0aXRpb25zGkvKQRdkYXRhcGxleC5nb29nbGVhcGlzLmNvbdJB",
-            "Lmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
-            "cm1CaQocY29tLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MUINTWV0YWRhdGFQ",
-            "cm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2FwaXYxL2Rh",
-            "dGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
+            "cy8qfS9wYXJ0aXRpb25zGn/KQRdkYXRhcGxleC5nb29nbGVhcGlzLmNvbdJB",
+            "Ymh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZv",
+            "cm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kYXRhcGxleC5y",
+            "ZWFkLXdyaXRlQmkKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCDU1l",
+            "dGFkYXRhUHJvdG9QAVo4Y2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhcGxleC9h",
+            "cGl2MS9kYXRhcGxleHBiO2RhdGFwbGV4cGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataplex.V1.StorageSystem), }, null, new pbr::GeneratedClrTypeInfo[] {

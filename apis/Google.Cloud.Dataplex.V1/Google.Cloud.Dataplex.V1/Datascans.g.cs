@@ -42,7 +42,7 @@ namespace Google.Cloud.Dataplex.V1 {
             "YW5SZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMu",
             "Z29vZ2xlYXBpcy5jb20vTG9jYXRpb24SOgoJZGF0YV9zY2FuGAIgASgLMiIu",
             "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuQgPgQQISGQoMZGF0",
-            "YV9zY2FuX2lkGAMgASgJQgPgQQISGgoNdmFsaWRhdGVfb25seRgEIAEoCEID",
+            "YV9zY2FuX2lkGAMgASgJQgPgQQESGgoNdmFsaWRhdGVfb25seRgEIAEoCEID",
             "4EEBIqUBChVVcGRhdGVEYXRhU2NhblJlcXVlc3QSOgoJZGF0YV9zY2FuGAEg",
             "ASgLMiIuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuQgPgQQIS",
             "NAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
@@ -75,127 +75,150 @@ namespace Google.Cloud.Dataplex.V1 {
             "QgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEo",
             "CUID4EEBInIKGExpc3REYXRhU2NhbkpvYnNSZXNwb25zZRI9Cg5kYXRhX3Nj",
             "YW5fam9icxgBIAMoCzIlLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRh",
-            "U2NhbkpvYhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiNAofR2VuZXJhdGVE",
-            "YXRhUXVhbGl0eVJ1bGVzUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIiWwog",
-            "R2VuZXJhdGVEYXRhUXVhbGl0eVJ1bGVzUmVzcG9uc2USNwoEcnVsZRgBIAMo",
-            "CzIpLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJ1bGUi",
-            "2w0KCERhdGFTY2FuEhQKBG5hbWUYASABKAlCBuBBA+BBCBIYCgN1aWQYAiAB",
-            "KAlCC+BBA+KMz9cIAggBEhgKC2Rlc2NyaXB0aW9uGAMgASgJQgPgQQESGQoM",
-            "ZGlzcGxheV9uYW1lGAQgASgJQgPgQQESQwoGbGFiZWxzGAUgAygLMi4uZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuLkxhYmVsc0VudHJ5QgPg",
-            "QQESMwoFc3RhdGUYBiABKA4yHy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
-            "U3RhdGVCA+BBAxI0CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI3CgRkYXRhGAkgASgLMiQu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTb3VyY2VCA+BBAhJNCg5l",
-            "eGVjdXRpb25fc3BlYxgKIAEoCzIwLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
-            "MS5EYXRhU2Nhbi5FeGVjdXRpb25TcGVjQgPgQQESUQoQZXhlY3V0aW9uX3N0",
-            "YXR1cxgLIAEoCzIyLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2Nh",
-            "bi5FeGVjdXRpb25TdGF0dXNCA+BBAxI5CgR0eXBlGAwgASgOMiYuZ29vZ2xl",
-            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuVHlwZUID4EEDEkYKEWRhdGFf",
-            "cXVhbGl0eV9zcGVjGGQgASgLMikuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "LkRhdGFRdWFsaXR5U3BlY0gAEkYKEWRhdGFfcHJvZmlsZV9zcGVjGGUgASgL",
-            "MikuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlU3BlY0gA",
-            "EkoKE2RhdGFfZGlzY292ZXJ5X3NwZWMYZiABKAsyKy5nb29nbGUuY2xvdWQu",
-            "ZGF0YXBsZXgudjEuRGF0YURpc2NvdmVyeVNwZWNIABJSChdkYXRhX2RvY3Vt",
-            "ZW50YXRpb25fc3BlYxhnIAEoCzIvLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
-            "MS5EYXRhRG9jdW1lbnRhdGlvblNwZWNIABJQChNkYXRhX3F1YWxpdHlfcmVz",
-            "dWx0GMgBIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVh",
-            "bGl0eVJlc3VsdEID4EEDSAESUAoTZGF0YV9wcm9maWxlX3Jlc3VsdBjJASAB",
-            "KAsyKy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1",
-            "bHRCA+BBA0gBElQKFWRhdGFfZGlzY292ZXJ5X3Jlc3VsdBjKASABKAsyLS5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURpc2NvdmVyeVJlc3VsdEID",
-            "4EEDSAESXAoZZGF0YV9kb2N1bWVudGF0aW9uX3Jlc3VsdBjLASABKAsyMS5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRpb25SZXN1",
-            "bHRCA+BBA0gBGm0KDUV4ZWN1dGlvblNwZWMSNwoHdHJpZ2dlchgBIAEoCzIh",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5UcmlnZ2VyQgPgQQESFAoFZmll",
-            "bGQYZCABKAlCA+BBBUgAQg0KC2luY3JlbWVudGFsGtABCg9FeGVjdXRpb25T",
-            "dGF0dXMSPgoVbGF0ZXN0X2pvYl9zdGFydF90aW1lGAQgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEjwKE2xhdGVzdF9qb2JfZW5kX3Rp",
-            "bWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESPwoW",
-            "bGF0ZXN0X2pvYl9jcmVhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
-            "DQoFdmFsdWUYAiABKAk6AjgBOmPqQWAKIGRhdGFwbGV4Lmdvb2dsZWFwaXMu",
-            "Y29tL0RhdGFTY2FuEjxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vZGF0YVNjYW5zL3tkYXRhU2Nhbn1CBgoEc3BlY0IICgZyZXN1",
-            "bHQigQoKC0RhdGFTY2FuSm9iEhQKBG5hbWUYASABKAlCBuBBA+BBCBIYCgN1",
-            "aWQYAiABKAlCC+BBA+KMz9cIAggBEjQKC2NyZWF0ZV90aW1lGAggASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjMKCnN0YXJ0X3RpbWUY",
-            "AyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSMQoIZW5k",
-            "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
-            "PwoFc3RhdGUYBSABKA4yKy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0",
-            "YVNjYW5Kb2IuU3RhdGVCA+BBAxIUCgdtZXNzYWdlGAYgASgJQgPgQQMSOQoE",
-            "dHlwZRgHIAEoDjImLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2Nh",
-            "blR5cGVCA+BBAxJLChFkYXRhX3F1YWxpdHlfc3BlYxhkIAEoCzIpLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVNwZWNCA+BBA0gAEksK",
-            "EWRhdGFfcHJvZmlsZV9zcGVjGGUgASgLMikuZ29vZ2xlLmNsb3VkLmRhdGFw",
-            "bGV4LnYxLkRhdGFQcm9maWxlU3BlY0ID4EEDSAASTwoTZGF0YV9kaXNjb3Zl",
-            "cnlfc3BlYxhmIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRh",
-            "RGlzY292ZXJ5U3BlY0ID4EEDSAASVwoXZGF0YV9kb2N1bWVudGF0aW9uX3Nw",
-            "ZWMYZyABKAsyLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3Vt",
-            "ZW50YXRpb25TcGVjQgPgQQNIABJQChNkYXRhX3F1YWxpdHlfcmVzdWx0GMgB",
-            "IAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVJl",
-            "c3VsdEID4EEDSAESUAoTZGF0YV9wcm9maWxlX3Jlc3VsdBjJASABKAsyKy5n",
-            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHRCA+BB",
-            "A0gBElQKFWRhdGFfZGlzY292ZXJ5X3Jlc3VsdBjKASABKAsyLS5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuRGF0YURpc2NvdmVyeVJlc3VsdEID4EEDSAES",
-            "XAoZZGF0YV9kb2N1bWVudGF0aW9uX3Jlc3VsdBjLASABKAsyMS5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRpb25SZXN1bHRCA+BB",
-            "A0gBInEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUlVOTklO",
-            "RxABEg0KCUNBTkNFTElORxACEg0KCUNBTkNFTExFRBADEg0KCVNVQ0NFRURF",
-            "RBAEEgoKBkZBSUxFRBAFEgsKB1BFTkRJTkcQBzpx6kFuCiNkYXRhcGxleC5n",
-            "b29nbGVhcGlzLmNvbS9EYXRhU2NhbkpvYhJHcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFTY2Fucy97ZGF0YVNjYW59L2pv",
-            "YnMve2pvYn1CBgoEc3BlY0IICgZyZXN1bHQqfgoMRGF0YVNjYW5UeXBlEh4K",
-            "GkRBVEFfU0NBTl9UWVBFX1VOU1BFQ0lGSUVEEAASEAoMREFUQV9RVUFMSVRZ",
-            "EAESEAoMREFUQV9QUk9GSUxFEAISEgoOREFUQV9ESVNDT1ZFUlkQAxIWChJE",
-            "QVRBX0RPQ1VNRU5UQVRJT04QBDK2DwoPRGF0YVNjYW5TZXJ2aWNlEuMBCg5D",
-            "cmVhdGVEYXRhU2NhbhIvLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5DcmVh",
-            "dGVEYXRhU2NhblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIoABykEdCghEYXRhU2NhbhIRT3BlcmF0aW9uTWV0YWRhdGHaQR1wYXJl",
-            "bnQsZGF0YV9zY2FuLGRhdGFfc2Nhbl9pZILT5JMCOiItL3YxL3twYXJlbnQ9",
-            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZGF0YVNjYW5zOglkYXRhX3NjYW4S",
-            "5QEKDlVwZGF0ZURhdGFTY2FuEi8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "LlVwZGF0ZURhdGFTY2FuUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5P",
-            "cGVyYXRpb24iggHKQR0KCERhdGFTY2FuEhFPcGVyYXRpb25NZXRhZGF0YdpB",
-            "FWRhdGFfc2Nhbix1cGRhdGVfbWFza4LT5JMCRDI3L3YxL3tkYXRhX3NjYW4u",
-            "bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTY2Fucy8qfToJZGF0",
-            "YV9zY2FuEssBCg5EZWxldGVEYXRhU2NhbhIvLmdvb2dsZS5jbG91ZC5kYXRh",
-            "cGxleC52MS5EZWxldGVEYXRhU2NhblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1",
-            "bm5pbmcuT3BlcmF0aW9uImnKQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIR",
-            "T3BlcmF0aW9uTWV0YWRhdGHaQQRuYW1lgtPkkwIvKi0vdjEve25hbWU9cHJv",
-            "amVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU2NhbnMvKn0SnQEKC0dldERhdGFT",
-            "Y2FuEiwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkdldERhdGFTY2FuUmVx",
-            "dWVzdBoiLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2NhbiI82kEE",
-            "bmFtZYLT5JMCLxItL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
-            "ZGF0YVNjYW5zLyp9ErABCg1MaXN0RGF0YVNjYW5zEi4uZ29vZ2xlLmNsb3Vk",
-            "LmRhdGFwbGV4LnYxLkxpc3REYXRhU2NhbnNSZXF1ZXN0Gi8uZ29vZ2xlLmNs",
-            "b3VkLmRhdGFwbGV4LnYxLkxpc3REYXRhU2NhbnNSZXNwb25zZSI+2kEGcGFy",
-            "ZW50gtPkkwIvEi0vdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "fS9kYXRhU2NhbnMSrwEKC1J1bkRhdGFTY2FuEiwuZ29vZ2xlLmNsb3VkLmRh",
-            "dGFwbGV4LnYxLlJ1bkRhdGFTY2FuUmVxdWVzdBotLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5SdW5EYXRhU2NhblJlc3BvbnNlIkPaQQRuYW1lgtPkkwI2",
-            "IjEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU2NhbnMv",
-            "Kn06cnVuOgEqEq0BCg5HZXREYXRhU2NhbkpvYhIvLmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5HZXREYXRhU2NhbkpvYlJlcXVlc3QaJS5nb29nbGUuY2xv",
-            "dWQuZGF0YXBsZXgudjEuRGF0YVNjYW5Kb2IiQ9pBBG5hbWWC0+STAjYSNC92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTY2Fucy8qL2pv",
-            "YnMvKn0SwAEKEExpc3REYXRhU2NhbkpvYnMSMS5nb29nbGUuY2xvdWQuZGF0",
-            "YXBsZXgudjEuTGlzdERhdGFTY2FuSm9ic1JlcXVlc3QaMi5nb29nbGUuY2xv",
-            "dWQuZGF0YXBsZXgudjEuTGlzdERhdGFTY2FuSm9ic1Jlc3BvbnNlIkXaQQZw",
-            "YXJlbnSC0+STAjYSNC92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovZGF0YVNjYW5zLyp9L2pvYnMSwQIKGEdlbmVyYXRlRGF0YVF1YWxpdHlS",
-            "dWxlcxI5Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5HZW5lcmF0ZURhdGFR",
-            "dWFsaXR5UnVsZXNSZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "LkdlbmVyYXRlRGF0YVF1YWxpdHlSdWxlc1Jlc3BvbnNlIq0B2kEEbmFtZYLT",
-            "5JMCnwEiRi92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFT",
-            "Y2Fucy8qfTpnZW5lcmF0ZURhdGFRdWFsaXR5UnVsZXM6ASpaUiJNL3YxL3tu",
-            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVNjYW5zLyovam9icy8q",
-            "fTpnZW5lcmF0ZURhdGFRdWFsaXR5UnVsZXM6ASoaS8pBF2RhdGFwbGV4Lmdv",
-            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybUJqChxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxQg5EYXRhU2NhbnNQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2Rh",
-            "dGFwbGV4L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
+            "U2NhbkpvYhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiVQoYQ2FuY2VsRGF0",
+            "YVNjYW5Kb2JSZXF1ZXN0EjkKBG5hbWUYASABKAlCK+BBAvpBJQojZGF0YXBs",
+            "ZXguZ29vZ2xlYXBpcy5jb20vRGF0YVNjYW5Kb2IiGwoZQ2FuY2VsRGF0YVNj",
+            "YW5Kb2JSZXNwb25zZSI0Ch9HZW5lcmF0ZURhdGFRdWFsaXR5UnVsZXNSZXF1",
+            "ZXN0EhEKBG5hbWUYASABKAlCA+BBAiJbCiBHZW5lcmF0ZURhdGFRdWFsaXR5",
+            "UnVsZXNSZXNwb25zZRI3CgRydWxlGAEgAygLMikuZ29vZ2xlLmNsb3VkLmRh",
+            "dGFwbGV4LnYxLkRhdGFRdWFsaXR5UnVsZSKtDgoIRGF0YVNjYW4SFAoEbmFt",
+            "ZRgBIAEoCUIG4EED4EEIEhgKA3VpZBgCIAEoCUIL4EED4ozP1wgCCAESGAoL",
+            "ZGVzY3JpcHRpb24YAyABKAlCA+BBARIZCgxkaXNwbGF5X25hbWUYBCABKAlC",
+            "A+BBARJDCgZsYWJlbHMYBSADKAsyLi5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuRGF0YVNjYW4uTGFiZWxzRW50cnlCA+BBARIzCgVzdGF0ZRgGIAEoDjIf",
+            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5TdGF0ZUID4EEDEjQKC2NyZWF0",
+            "ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
+            "EjQKC3VwZGF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEDEjcKBGRhdGEYCSABKAsyJC5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuRGF0YVNvdXJjZUID4EECEk0KDmV4ZWN1dGlvbl9zcGVjGAogASgL",
+            "MjAuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuLkV4ZWN1dGlv",
+            "blNwZWNCA+BBARJRChBleGVjdXRpb25fc3RhdHVzGAsgASgLMjIuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuLkV4ZWN1dGlvblN0YXR1c0ID",
+            "4EEDEjkKBHR5cGUYDCABKA4yJi5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "RGF0YVNjYW5UeXBlQgPgQQMSRgoRZGF0YV9xdWFsaXR5X3NwZWMYZCABKAsy",
+            "KS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVF1YWxpdHlTcGVjSAAS",
+            "RgoRZGF0YV9wcm9maWxlX3NwZWMYZSABKAsyKS5nb29nbGUuY2xvdWQuZGF0",
+            "YXBsZXgudjEuRGF0YVByb2ZpbGVTcGVjSAASSgoTZGF0YV9kaXNjb3Zlcnlf",
+            "c3BlYxhmIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhRGlz",
+            "Y292ZXJ5U3BlY0gAElIKF2RhdGFfZG9jdW1lbnRhdGlvbl9zcGVjGGcgASgL",
+            "Mi8uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEb2N1bWVudGF0aW9u",
+            "U3BlY0gAElAKE2RhdGFfcXVhbGl0eV9yZXN1bHQYyAEgASgLMisuZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFRdWFsaXR5UmVzdWx0QgPgQQNIARJQ",
+            "ChNkYXRhX3Byb2ZpbGVfcmVzdWx0GMkBIAEoCzIrLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdEID4EEDSAESVAoVZGF0YV9k",
+            "aXNjb3ZlcnlfcmVzdWx0GMoBIAEoCzItLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5EYXRhRGlzY292ZXJ5UmVzdWx0QgPgQQNIARJcChlkYXRhX2RvY3Vt",
+            "ZW50YXRpb25fcmVzdWx0GMsBIAEoCzIxLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5EYXRhRG9jdW1lbnRhdGlvblJlc3VsdEID4EEDSAESUAoSZXhlY3V0",
+            "aW9uX2lkZW50aXR5GKwCIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
+            "MS5FeGVjdXRpb25JZGVudGl0eUIG4EEB4EEFGm0KDUV4ZWN1dGlvblNwZWMS",
+            "NwoHdHJpZ2dlchgBIAEoCzIhLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5U",
+            "cmlnZ2VyQgPgQQESFAoFZmllbGQYZCABKAlCA+BBBUgAQg0KC2luY3JlbWVu",
+            "dGFsGtABCg9FeGVjdXRpb25TdGF0dXMSPgoVbGF0ZXN0X2pvYl9zdGFydF90",
+            "aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEjwK",
+            "E2xhdGVzdF9qb2JfZW5kX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQESPwoWbGF0ZXN0X2pvYl9jcmVhdGVfdGltZRgGIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARotCgtMYWJlbHNF",
+            "bnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmPqQWAKIGRh",
+            "dGFwbGV4Lmdvb2dsZWFwaXMuY29tL0RhdGFTY2FuEjxwcm9qZWN0cy97cHJv",
+            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVNjYW5zL3tkYXRhU2Nh",
+            "bn1CBgoEc3BlY0IICgZyZXN1bHQikAMKEUV4ZWN1dGlvbklkZW50aXR5EmcK",
+            "FmRhdGFwbGV4X3NlcnZpY2VfYWdlbnQYASABKAsyQC5nb29nbGUuY2xvdWQu",
+            "ZGF0YXBsZXgudjEuRXhlY3V0aW9uSWRlbnRpdHkuRGF0YXBsZXhTZXJ2aWNl",
+            "QWdlbnRCA+BBAUgAEloKD3VzZXJfY3JlZGVudGlhbBgCIAEoCzI6Lmdvb2ds",
+            "ZS5jbG91ZC5kYXRhcGxleC52MS5FeGVjdXRpb25JZGVudGl0eS5Vc2VyQ3Jl",
+            "ZGVudGlhbEID4EEBSAASWgoPc2VydmljZV9hY2NvdW50GAMgASgLMjouZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkV4ZWN1dGlvbklkZW50aXR5LlNlcnZp",
+            "Y2VBY2NvdW50QgPgQQFIABoWChREYXRhcGxleFNlcnZpY2VBZ2VudBoQCg5V",
+            "c2VyQ3JlZGVudGlhbBokCg5TZXJ2aWNlQWNjb3VudBISCgVlbWFpbBgBIAEo",
+            "CUID4EECQgoKCGlkZW50aXR5IsMKCgtEYXRhU2NhbkpvYhIUCgRuYW1lGAEg",
+            "ASgJQgbgQQPgQQgSGAoDdWlkGAIgASgJQgvgQQPijM/XCAIIARI0CgtjcmVh",
+            "dGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AxIkChdwYXJ0aWFsX2ZhaWx1cmVfbWVzc2FnZRgJIAEoCUID4EEDEjMKCnN0",
+            "YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSMQoIZW5kX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wQgPgQQMSPwoFc3RhdGUYBSABKA4yKy5nb29nbGUuY2xvdWQuZGF0YXBs",
+            "ZXgudjEuRGF0YVNjYW5Kb2IuU3RhdGVCA+BBAxIUCgdtZXNzYWdlGAYgASgJ",
+            "QgPgQQMSOQoEdHlwZRgHIAEoDjImLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
+            "MS5EYXRhU2NhblR5cGVCA+BBAxJLChFkYXRhX3F1YWxpdHlfc3BlYxhkIAEo",
+            "CzIpLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUXVhbGl0eVNwZWNC",
+            "A+BBA0gAEksKEWRhdGFfcHJvZmlsZV9zcGVjGGUgASgLMikuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlU3BlY0ID4EEDSAASTwoTZGF0",
+            "YV9kaXNjb3Zlcnlfc3BlYxhmIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5EYXRhRGlzY292ZXJ5U3BlY0ID4EEDSAASVwoXZGF0YV9kb2N1bWVu",
+            "dGF0aW9uX3NwZWMYZyABKAsyLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "RGF0YURvY3VtZW50YXRpb25TcGVjQgPgQQNIABJQChNkYXRhX3F1YWxpdHlf",
+            "cmVzdWx0GMgBIAEoCzIrLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRh",
+            "UXVhbGl0eVJlc3VsdEID4EEDSAESUAoTZGF0YV9wcm9maWxlX3Jlc3VsdBjJ",
+            "ASABKAsyKy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVS",
+            "ZXN1bHRCA+BBA0gBElQKFWRhdGFfZGlzY292ZXJ5X3Jlc3VsdBjKASABKAsy",
+            "LS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURpc2NvdmVyeVJlc3Vs",
+            "dEID4EEDSAESXAoZZGF0YV9kb2N1bWVudGF0aW9uX3Jlc3VsdBjLASABKAsy",
+            "MS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURvY3VtZW50YXRpb25S",
+            "ZXN1bHRCA+BBA0gBIowBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAA",
+            "EgsKB1JVTk5JTkcQARINCglDQU5DRUxJTkcQAhINCglDQU5DRUxMRUQQAxIN",
+            "CglTVUNDRUVERUQQBBIKCgZGQUlMRUQQBRILCgdQRU5ESU5HEAcSGQoVU1VD",
+            "Q0VFREVEX1dJVEhfRVJST1JTEAg6cepBbgojZGF0YXBsZXguZ29vZ2xlYXBp",
+            "cy5jb20vRGF0YVNjYW5Kb2ISR3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9kYXRhU2NhbnMve2RhdGFTY2FufS9qb2JzL3tqb2J9",
+            "QgYKBHNwZWNCCAoGcmVzdWx0Kn4KDERhdGFTY2FuVHlwZRIeChpEQVRBX1ND",
+            "QU5fVFlQRV9VTlNQRUNJRklFRBAAEhAKDERBVEFfUVVBTElUWRABEhAKDERB",
+            "VEFfUFJPRklMRRACEhIKDkRBVEFfRElTQ09WRVJZEAMSFgoSREFUQV9ET0NV",
+            "TUVOVEFUSU9OEAQypRIKD0RhdGFTY2FuU2VydmljZRLjAQoOQ3JlYXRlRGF0",
+            "YVNjYW4SLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQ3JlYXRlRGF0YVNj",
+            "YW5SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKAAcpB",
+            "HQoIRGF0YVNjYW4SEU9wZXJhdGlvbk1ldGFkYXRh2kEdcGFyZW50LGRhdGFf",
+            "c2NhbixkYXRhX3NjYW5faWSC0+STAjoiLS92MS97cGFyZW50PXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyp9L2RhdGFTY2FuczoJZGF0YV9zY2FuEuUBCg5VcGRh",
+            "dGVEYXRhU2NhbhIvLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5VcGRhdGVE",
+            "YXRhU2NhblJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
+            "IoIBykEdCghEYXRhU2NhbhIRT3BlcmF0aW9uTWV0YWRhdGHaQRVkYXRhX3Nj",
+            "YW4sdXBkYXRlX21hc2uC0+STAkQyNy92MS97ZGF0YV9zY2FuLm5hbWU9cHJv",
+            "amVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU2NhbnMvKn06CWRhdGFfc2NhbhLL",
+            "AQoORGVsZXRlRGF0YVNjYW4SLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEu",
+            "RGVsZXRlRGF0YVNjYW5SZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9w",
+            "ZXJhdGlvbiJpykEqChVnb29nbGUucHJvdG9idWYuRW1wdHkSEU9wZXJhdGlv",
+            "bk1ldGFkYXRh2kEEbmFtZYLT5JMCLyotL3YxL3tuYW1lPXByb2plY3RzLyov",
+            "bG9jYXRpb25zLyovZGF0YVNjYW5zLyp9Ep0BCgtHZXREYXRhU2NhbhIsLmdv",
+            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5HZXREYXRhU2NhblJlcXVlc3QaIi5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVNjYW4iPNpBBG5hbWWC0+ST",
+            "Ai8SLS92MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFTY2Fu",
+            "cy8qfRKwAQoNTGlzdERhdGFTY2FucxIuLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5MaXN0RGF0YVNjYW5zUmVxdWVzdBovLmdvb2dsZS5jbG91ZC5kYXRh",
+            "cGxleC52MS5MaXN0RGF0YVNjYW5zUmVzcG9uc2UiPtpBBnBhcmVudILT5JMC",
+            "LxItL3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vZGF0YVNj",
+            "YW5zEq8BCgtSdW5EYXRhU2NhbhIsLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52",
+            "MS5SdW5EYXRhU2NhblJlcXVlc3QaLS5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuUnVuRGF0YVNjYW5SZXNwb25zZSJD2kEEbmFtZYLT5JMCNiIxL3YxL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovZGF0YVNjYW5zLyp9OnJ1bjoB",
+            "KhKtAQoOR2V0RGF0YVNjYW5Kb2ISLy5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djEuR2V0RGF0YVNjYW5Kb2JSZXF1ZXN0GiUuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkRhdGFTY2FuSm9iIkPaQQRuYW1lgtPkkwI2EjQvdjEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU2NhbnMvKi9qb2JzLyp9EsAB",
+            "ChBMaXN0RGF0YVNjYW5Kb2JzEjEuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
+            "Lkxpc3REYXRhU2NhbkpvYnNSZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLmRhdGFw",
+            "bGV4LnYxLkxpc3REYXRhU2NhbkpvYnNSZXNwb25zZSJF2kEGcGFyZW50gtPk",
+            "kwI2EjQvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2RhdGFT",
+            "Y2Fucy8qfS9qb2JzEssBChFDYW5jZWxEYXRhU2NhbkpvYhIyLmdvb2dsZS5j",
+            "bG91ZC5kYXRhcGxleC52MS5DYW5jZWxEYXRhU2NhbkpvYlJlcXVlc3QaMy5n",
+            "b29nbGUuY2xvdWQuZGF0YXBsZXgudjEuQ2FuY2VsRGF0YVNjYW5Kb2JSZXNw",
+            "b25zZSJN2kEEbmFtZYLT5JMCQCI7L3YxL3tuYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovZGF0YVNjYW5zLyovam9icy8qfTpjYW5jZWw6ASoSwQIKGEdl",
+            "bmVyYXRlRGF0YVF1YWxpdHlSdWxlcxI5Lmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MS5HZW5lcmF0ZURhdGFRdWFsaXR5UnVsZXNSZXF1ZXN0GjouZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLkdlbmVyYXRlRGF0YVF1YWxpdHlSdWxlc1Jl",
+            "c3BvbnNlIq0B2kEEbmFtZYLT5JMCnwEiRi92MS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2RhdGFTY2Fucy8qfTpnZW5lcmF0ZURhdGFRdWFsaXR5",
+            "UnVsZXM6ASpaUiJNL3YxL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "ZGF0YVNjYW5zLyovam9icy8qfTpnZW5lcmF0ZURhdGFRdWFsaXR5UnVsZXM6",
+            "ASoa6wHKQRdkYXRhcGxleC5nb29nbGVhcGlzLmNvbdJBzQFodHRwczovL3d3",
+            "dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm0ucmVhZC1v",
+            "bmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGF0YXBsZXgu",
+            "cmVhZC13cml0ZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Rh",
+            "dGFwbGV4LnJlYWRvbmx5QmoKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
+            "djFCDkRhdGFTY2Fuc1Byb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0",
+            "YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dataplex.V1.DataDiscoveryReflection.Descriptor, global::Google.Cloud.Dataplex.V1.DataDocumentationReflection.Descriptor, global::Google.Cloud.Dataplex.V1.DataProfileReflection.Descriptor, global::Google.Cloud.Dataplex.V1.DataQualityReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ResourcesReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ServiceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataplex.V1.DataScanType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -210,12 +233,17 @@ namespace Google.Cloud.Dataplex.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GetDataScanJobRequest), global::Google.Cloud.Dataplex.V1.GetDataScanJobRequest.Parser, new[]{ "Name", "View" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.GetDataScanJobRequest.Types.DataScanJobView) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListDataScanJobsRequest), global::Google.Cloud.Dataplex.V1.ListDataScanJobsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ListDataScanJobsResponse), global::Google.Cloud.Dataplex.V1.ListDataScanJobsResponse.Parser, new[]{ "DataScanJobs", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CancelDataScanJobRequest), global::Google.Cloud.Dataplex.V1.CancelDataScanJobRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.CancelDataScanJobResponse), global::Google.Cloud.Dataplex.V1.CancelDataScanJobResponse.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest), global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse), global::Google.Cloud.Dataplex.V1.GenerateDataQualityRulesResponse.Parser, new[]{ "Rule" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan), global::Google.Cloud.Dataplex.V1.DataScan.Parser, new[]{ "Name", "Uid", "Description", "DisplayName", "Labels", "State", "CreateTime", "UpdateTime", "Data", "ExecutionSpec", "ExecutionStatus", "Type", "DataQualitySpec", "DataProfileSpec", "DataDiscoverySpec", "DataDocumentationSpec", "DataQualityResult", "DataProfileResult", "DataDiscoveryResult", "DataDocumentationResult" }, new[]{ "Spec", "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionSpec), global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionSpec.Parser, new[]{ "Trigger", "Field" }, new[]{ "Incremental" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan), global::Google.Cloud.Dataplex.V1.DataScan.Parser, new[]{ "Name", "Uid", "Description", "DisplayName", "Labels", "State", "CreateTime", "UpdateTime", "Data", "ExecutionSpec", "ExecutionStatus", "Type", "DataQualitySpec", "DataProfileSpec", "DataDiscoverySpec", "DataDocumentationSpec", "DataQualityResult", "DataProfileResult", "DataDiscoveryResult", "DataDocumentationResult", "ExecutionIdentity" }, new[]{ "Spec", "Result" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionSpec), global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionSpec.Parser, new[]{ "Trigger", "Field" }, new[]{ "Incremental" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionStatus), global::Google.Cloud.Dataplex.V1.DataScan.Types.ExecutionStatus.Parser, new[]{ "LatestJobStartTime", "LatestJobEndTime", "LatestJobCreateTime" }, null, null, null, null),
             null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanJob), global::Google.Cloud.Dataplex.V1.DataScanJob.Parser, new[]{ "Name", "Uid", "CreateTime", "StartTime", "EndTime", "State", "Message", "Type", "DataQualitySpec", "DataProfileSpec", "DataDiscoverySpec", "DataDocumentationSpec", "DataQualityResult", "DataProfileResult", "DataDiscoveryResult", "DataDocumentationResult" }, new[]{ "Spec", "Result" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataScanJob.Types.State) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ExecutionIdentity), global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Parser, new[]{ "DataplexServiceAgent", "UserCredential", "ServiceAccount" }, new[]{ "Identity" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent), global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential), global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount), global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount.Parser, new[]{ "Email" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataScanJob), global::Google.Cloud.Dataplex.V1.DataScanJob.Parser, new[]{ "Name", "Uid", "CreateTime", "PartialFailureMessage", "StartTime", "EndTime", "State", "Message", "Type", "DataQualitySpec", "DataProfileSpec", "DataDiscoverySpec", "DataDocumentationSpec", "DataQualityResult", "DataProfileResult", "DataDiscoveryResult", "DataDocumentationResult" }, new[]{ "Spec", "Result" }, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataScanJob.Types.State) }, null, null)
           }));
     }
     #endregion
@@ -339,7 +367,8 @@ namespace Google.Cloud.Dataplex.V1 {
     public const int DataScanIdFieldNumber = 3;
     private string dataScanId_ = "";
     /// <summary>
-    /// Required. DataScan identifier.
+    /// Optional. DataScan identifier. If not provided, a unique ID will be
+    /// generated with the prefix "data-scan-".
     ///
     /// * Must contain only lowercase letters, numbers and hyphens.
     /// * Must start with a letter.
@@ -3336,6 +3365,377 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
+  /// Request message for the `CancelDataScanJob` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CancelDataScanJobRequest : pb::IMessage<CancelDataScanJobRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CancelDataScanJobRequest> _parser = new pb::MessageParser<CancelDataScanJobRequest>(() => new CancelDataScanJobRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CancelDataScanJobRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelDataScanJobRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelDataScanJobRequest(CancelDataScanJobRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelDataScanJobRequest Clone() {
+      return new CancelDataScanJobRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the DataScanJob:
+    /// `projects/{project_id_or_number}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
+    /// where `project_id_or_number` refers to a *project_id* or *project_number*
+    /// and `location_id` refers to a Google Cloud region.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CancelDataScanJobRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CancelDataScanJobRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CancelDataScanJobRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for the `CancelDataScanJob` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CancelDataScanJobResponse : pb::IMessage<CancelDataScanJobResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CancelDataScanJobResponse> _parser = new pb::MessageParser<CancelDataScanJobResponse>(() => new CancelDataScanJobResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CancelDataScanJobResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelDataScanJobResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelDataScanJobResponse(CancelDataScanJobResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CancelDataScanJobResponse Clone() {
+      return new CancelDataScanJobResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CancelDataScanJobResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CancelDataScanJobResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CancelDataScanJobResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Request details for generating data quality rule recommendations.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -3353,7 +3753,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3562,7 +3962,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3755,10 +4155,11 @@ namespace Google.Cloud.Dataplex.V1 {
   /// * Data discovery: scans data in Cloud Storage buckets to extract and then
   ///   catalog metadata. For more information, see [Discover and catalog Cloud
   ///   Storage data](https://cloud.google.com/bigquery/docs/automatic-discovery).
-  /// * Data documentation: analyzes the table details and generates insights
-  /// including descriptions and sample SQL queries for the table. For more
-  /// information, see [Generate data insights in
-  /// BigQuery](https://cloud.google.com/bigquery/docs/data-insights).
+  /// * Data documentation: analyzes the table or dataset metadata and generates
+  ///   insights. For tables, insights include descriptions and sample SQL
+  ///   queries. For datasets, insights include descriptions, schema relationships
+  ///   and sample SQL queries. For more information, see [Generate data insights
+  ///   in BigQuery](https://cloud.google.com/bigquery/docs/data-insights).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DataScan : pb::IMessage<DataScan>
@@ -3775,7 +4176,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3807,6 +4208,7 @@ namespace Google.Cloud.Dataplex.V1 {
       executionSpec_ = other.executionSpec_ != null ? other.executionSpec_.Clone() : null;
       executionStatus_ = other.executionStatus_ != null ? other.executionStatus_.Clone() : null;
       type_ = other.type_;
+      executionIdentity_ = other.executionIdentity_ != null ? other.executionIdentity_.Clone() : null;
       switch (other.SpecCase) {
         case SpecOneofCase.DataQualitySpec:
           DataQualitySpec = other.DataQualitySpec.Clone();
@@ -4155,6 +4557,22 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "execution_identity" field.</summary>
+    public const int ExecutionIdentityFieldNumber = 300;
+    private global::Google.Cloud.Dataplex.V1.ExecutionIdentity executionIdentity_;
+    /// <summary>
+    /// Optional. Immutable. The identity to run the datascan.
+    /// If not specified, defaults to the Dataplex Service Agent.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.ExecutionIdentity ExecutionIdentity {
+      get { return executionIdentity_; }
+      set {
+        executionIdentity_ = value;
+      }
+    }
+
     private object spec_;
     /// <summary>Enum of possible cases for the "spec" oneof.</summary>
     public enum SpecOneofCase {
@@ -4236,6 +4654,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (!object.Equals(DataProfileResult, other.DataProfileResult)) return false;
       if (!object.Equals(DataDiscoveryResult, other.DataDiscoveryResult)) return false;
       if (!object.Equals(DataDocumentationResult, other.DataDocumentationResult)) return false;
+      if (!object.Equals(ExecutionIdentity, other.ExecutionIdentity)) return false;
       if (SpecCase != other.SpecCase) return false;
       if (ResultCase != other.ResultCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -4265,6 +4684,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (resultCase_ == ResultOneofCase.DataProfileResult) hash ^= DataProfileResult.GetHashCode();
       if (resultCase_ == ResultOneofCase.DataDiscoveryResult) hash ^= DataDiscoveryResult.GetHashCode();
       if (resultCase_ == ResultOneofCase.DataDocumentationResult) hash ^= DataDocumentationResult.GetHashCode();
+      if (executionIdentity_ != null) hash ^= ExecutionIdentity.GetHashCode();
       hash ^= (int) specCase_;
       hash ^= (int) resultCase_;
       if (_unknownFields != null) {
@@ -4362,6 +4782,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(218, 12);
         output.WriteMessage(DataDocumentationResult);
       }
+      if (executionIdentity_ != null) {
+        output.WriteRawTag(226, 18);
+        output.WriteMessage(ExecutionIdentity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4449,6 +4873,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(218, 12);
         output.WriteMessage(DataDocumentationResult);
       }
+      if (executionIdentity_ != null) {
+        output.WriteRawTag(226, 18);
+        output.WriteMessage(ExecutionIdentity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4517,6 +4945,9 @@ namespace Google.Cloud.Dataplex.V1 {
       if (resultCase_ == ResultOneofCase.DataDocumentationResult) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DataDocumentationResult);
       }
+      if (executionIdentity_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ExecutionIdentity);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4577,6 +5008,12 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (other.Type != global::Google.Cloud.Dataplex.V1.DataScanType.Unspecified) {
         Type = other.Type;
+      }
+      if (other.executionIdentity_ != null) {
+        if (executionIdentity_ == null) {
+          ExecutionIdentity = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity();
+        }
+        ExecutionIdentity.MergeFrom(other.ExecutionIdentity);
       }
       switch (other.SpecCase) {
         case SpecOneofCase.DataQualitySpec:
@@ -4786,6 +5223,13 @@ namespace Google.Cloud.Dataplex.V1 {
             DataDocumentationResult = subBuilder;
             break;
           }
+          case 2402: {
+            if (executionIdentity_ == null) {
+              ExecutionIdentity = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity();
+            }
+            input.ReadMessage(ExecutionIdentity);
+            break;
+          }
         }
       }
     #endif
@@ -4938,6 +5382,13 @@ namespace Google.Cloud.Dataplex.V1 {
             }
             input.ReadMessage(subBuilder);
             DataDocumentationResult = subBuilder;
+            break;
+          }
+          case 2402: {
+            if (executionIdentity_ == null) {
+              ExecutionIdentity = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity();
+            }
+            input.ReadMessage(ExecutionIdentity);
             break;
           }
         }
@@ -5570,6 +6021,910 @@ namespace Google.Cloud.Dataplex.V1 {
   }
 
   /// <summary>
+  /// The identity to run the datascan.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ExecutionIdentity : pb::IMessage<ExecutionIdentity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ExecutionIdentity> _parser = new pb::MessageParser<ExecutionIdentity>(() => new ExecutionIdentity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ExecutionIdentity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[16]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutionIdentity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutionIdentity(ExecutionIdentity other) : this() {
+      switch (other.IdentityCase) {
+        case IdentityOneofCase.DataplexServiceAgent:
+          DataplexServiceAgent = other.DataplexServiceAgent.Clone();
+          break;
+        case IdentityOneofCase.UserCredential:
+          UserCredential = other.UserCredential.Clone();
+          break;
+        case IdentityOneofCase.ServiceAccount:
+          ServiceAccount = other.ServiceAccount.Clone();
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ExecutionIdentity Clone() {
+      return new ExecutionIdentity(this);
+    }
+
+    /// <summary>Field number for the "dataplex_service_agent" field.</summary>
+    public const int DataplexServiceAgentFieldNumber = 1;
+    /// <summary>
+    /// Optional. The Dataplex service agent associated with the user's project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent DataplexServiceAgent {
+      get { return identityCase_ == IdentityOneofCase.DataplexServiceAgent ? (global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent) identity_ : null; }
+      set {
+        identity_ = value;
+        identityCase_ = value == null ? IdentityOneofCase.None : IdentityOneofCase.DataplexServiceAgent;
+      }
+    }
+
+    /// <summary>Field number for the "user_credential" field.</summary>
+    public const int UserCredentialFieldNumber = 2;
+    /// <summary>
+    /// Optional. The credential of the calling user. Supports only ONE_TIME
+    /// trigger type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential UserCredential {
+      get { return identityCase_ == IdentityOneofCase.UserCredential ? (global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential) identity_ : null; }
+      set {
+        identity_ = value;
+        identityCase_ = value == null ? IdentityOneofCase.None : IdentityOneofCase.UserCredential;
+      }
+    }
+
+    /// <summary>Field number for the "service_account" field.</summary>
+    public const int ServiceAccountFieldNumber = 3;
+    /// <summary>
+    /// Optional. The provided service account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount ServiceAccount {
+      get { return identityCase_ == IdentityOneofCase.ServiceAccount ? (global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount) identity_ : null; }
+      set {
+        identity_ = value;
+        identityCase_ = value == null ? IdentityOneofCase.None : IdentityOneofCase.ServiceAccount;
+      }
+    }
+
+    private object identity_;
+    /// <summary>Enum of possible cases for the "identity" oneof.</summary>
+    public enum IdentityOneofCase {
+      None = 0,
+      DataplexServiceAgent = 1,
+      UserCredential = 2,
+      ServiceAccount = 3,
+    }
+    private IdentityOneofCase identityCase_ = IdentityOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IdentityOneofCase IdentityCase {
+      get { return identityCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearIdentity() {
+      identityCase_ = IdentityOneofCase.None;
+      identity_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ExecutionIdentity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ExecutionIdentity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(DataplexServiceAgent, other.DataplexServiceAgent)) return false;
+      if (!object.Equals(UserCredential, other.UserCredential)) return false;
+      if (!object.Equals(ServiceAccount, other.ServiceAccount)) return false;
+      if (IdentityCase != other.IdentityCase) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (identityCase_ == IdentityOneofCase.DataplexServiceAgent) hash ^= DataplexServiceAgent.GetHashCode();
+      if (identityCase_ == IdentityOneofCase.UserCredential) hash ^= UserCredential.GetHashCode();
+      if (identityCase_ == IdentityOneofCase.ServiceAccount) hash ^= ServiceAccount.GetHashCode();
+      hash ^= (int) identityCase_;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (identityCase_ == IdentityOneofCase.DataplexServiceAgent) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DataplexServiceAgent);
+      }
+      if (identityCase_ == IdentityOneofCase.UserCredential) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UserCredential);
+      }
+      if (identityCase_ == IdentityOneofCase.ServiceAccount) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (identityCase_ == IdentityOneofCase.DataplexServiceAgent) {
+        output.WriteRawTag(10);
+        output.WriteMessage(DataplexServiceAgent);
+      }
+      if (identityCase_ == IdentityOneofCase.UserCredential) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UserCredential);
+      }
+      if (identityCase_ == IdentityOneofCase.ServiceAccount) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (identityCase_ == IdentityOneofCase.DataplexServiceAgent) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataplexServiceAgent);
+      }
+      if (identityCase_ == IdentityOneofCase.UserCredential) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserCredential);
+      }
+      if (identityCase_ == IdentityOneofCase.ServiceAccount) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceAccount);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ExecutionIdentity other) {
+      if (other == null) {
+        return;
+      }
+      switch (other.IdentityCase) {
+        case IdentityOneofCase.DataplexServiceAgent:
+          if (DataplexServiceAgent == null) {
+            DataplexServiceAgent = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent();
+          }
+          DataplexServiceAgent.MergeFrom(other.DataplexServiceAgent);
+          break;
+        case IdentityOneofCase.UserCredential:
+          if (UserCredential == null) {
+            UserCredential = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential();
+          }
+          UserCredential.MergeFrom(other.UserCredential);
+          break;
+        case IdentityOneofCase.ServiceAccount:
+          if (ServiceAccount == null) {
+            ServiceAccount = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount();
+          }
+          ServiceAccount.MergeFrom(other.ServiceAccount);
+          break;
+      }
+
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent subBuilder = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent();
+            if (identityCase_ == IdentityOneofCase.DataplexServiceAgent) {
+              subBuilder.MergeFrom(DataplexServiceAgent);
+            }
+            input.ReadMessage(subBuilder);
+            DataplexServiceAgent = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential subBuilder = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential();
+            if (identityCase_ == IdentityOneofCase.UserCredential) {
+              subBuilder.MergeFrom(UserCredential);
+            }
+            input.ReadMessage(subBuilder);
+            UserCredential = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount subBuilder = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount();
+            if (identityCase_ == IdentityOneofCase.ServiceAccount) {
+              subBuilder.MergeFrom(ServiceAccount);
+            }
+            input.ReadMessage(subBuilder);
+            ServiceAccount = subBuilder;
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent subBuilder = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.DataplexServiceAgent();
+            if (identityCase_ == IdentityOneofCase.DataplexServiceAgent) {
+              subBuilder.MergeFrom(DataplexServiceAgent);
+            }
+            input.ReadMessage(subBuilder);
+            DataplexServiceAgent = subBuilder;
+            break;
+          }
+          case 18: {
+            global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential subBuilder = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.UserCredential();
+            if (identityCase_ == IdentityOneofCase.UserCredential) {
+              subBuilder.MergeFrom(UserCredential);
+            }
+            input.ReadMessage(subBuilder);
+            UserCredential = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount subBuilder = new global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Types.ServiceAccount();
+            if (identityCase_ == IdentityOneofCase.ServiceAccount) {
+              subBuilder.MergeFrom(ServiceAccount);
+            }
+            input.ReadMessage(subBuilder);
+            ServiceAccount = subBuilder;
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ExecutionIdentity message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The Dataplex service agent associated with the user's project.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DataplexServiceAgent : pb::IMessage<DataplexServiceAgent>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DataplexServiceAgent> _parser = new pb::MessageParser<DataplexServiceAgent>(() => new DataplexServiceAgent());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DataplexServiceAgent> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataplexServiceAgent() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataplexServiceAgent(DataplexServiceAgent other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DataplexServiceAgent Clone() {
+          return new DataplexServiceAgent(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DataplexServiceAgent);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DataplexServiceAgent other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DataplexServiceAgent other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The credential of the calling user.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class UserCredential : pb::IMessage<UserCredential>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<UserCredential> _parser = new pb::MessageParser<UserCredential>(() => new UserCredential());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<UserCredential> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserCredential() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserCredential(UserCredential other) : this() {
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserCredential Clone() {
+          return new UserCredential(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as UserCredential);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(UserCredential other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(UserCredential other) {
+          if (other == null) {
+            return;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The service account
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ServiceAccount : pb::IMessage<ServiceAccount>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ServiceAccount> _parser = new pb::MessageParser<ServiceAccount>(() => new ServiceAccount());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ServiceAccount> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dataplex.V1.ExecutionIdentity.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ServiceAccount() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ServiceAccount(ServiceAccount other) : this() {
+          email_ = other.email_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ServiceAccount Clone() {
+          return new ServiceAccount(this);
+        }
+
+        /// <summary>Field number for the "email" field.</summary>
+        public const int EmailFieldNumber = 1;
+        private string email_ = "";
+        /// <summary>
+        /// Required. Service account email. The datascan will execute with this
+        /// service account's credentials. The user calling this API must have
+        /// permissions to act as this service account. Dataplex service agent must
+        /// be granted iam.serviceAccounts.getAccessToken permission on this service
+        /// account, for example, through the iam.serviceAccountTokenCreator role .
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Email {
+          get { return email_; }
+          set {
+            email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ServiceAccount);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ServiceAccount other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Email != other.Email) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Email.Length != 0) hash ^= Email.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Email.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Email);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Email.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Email);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Email.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ServiceAccount other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Email.Length != 0) {
+            Email = other.Email;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Email = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Email = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// A DataScanJob represents an instance of DataScan execution.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -5587,7 +6942,7 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Dataplex.V1.DatascansReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5610,6 +6965,7 @@ namespace Google.Cloud.Dataplex.V1 {
       name_ = other.name_;
       uid_ = other.uid_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
+      partialFailureMessage_ = other.partialFailureMessage_;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
       state_ = other.state_;
@@ -5700,6 +7056,21 @@ namespace Google.Cloud.Dataplex.V1 {
       get { return createTime_; }
       set {
         createTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "partial_failure_message" field.</summary>
+    public const int PartialFailureMessageFieldNumber = 9;
+    private string partialFailureMessage_ = "";
+    /// <summary>
+    /// Output only. A message indicating partial failure details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PartialFailureMessage {
+      get { return partialFailureMessage_; }
+      set {
+        partialFailureMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -5962,6 +7333,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (Name != other.Name) return false;
       if (Uid != other.Uid) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
+      if (PartialFailureMessage != other.PartialFailureMessage) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
       if (State != other.State) return false;
@@ -5987,6 +7359,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Uid.Length != 0) hash ^= Uid.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
+      if (PartialFailureMessage.Length != 0) hash ^= PartialFailureMessage.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       if (State != global::Google.Cloud.Dataplex.V1.DataScanJob.Types.State.Unspecified) hash ^= State.GetHashCode();
@@ -6051,6 +7424,10 @@ namespace Google.Cloud.Dataplex.V1 {
       if (createTime_ != null) {
         output.WriteRawTag(66);
         output.WriteMessage(CreateTime);
+      }
+      if (PartialFailureMessage.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(PartialFailureMessage);
       }
       if (specCase_ == SpecOneofCase.DataQualitySpec) {
         output.WriteRawTag(162, 6);
@@ -6126,6 +7503,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(CreateTime);
       }
+      if (PartialFailureMessage.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(PartialFailureMessage);
+      }
       if (specCase_ == SpecOneofCase.DataQualitySpec) {
         output.WriteRawTag(162, 6);
         output.WriteMessage(DataQualitySpec);
@@ -6176,6 +7557,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
+      }
+      if (PartialFailureMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PartialFailureMessage);
       }
       if (startTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
@@ -6239,6 +7623,9 @@ namespace Google.Cloud.Dataplex.V1 {
           CreateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         CreateTime.MergeFrom(other.CreateTime);
+      }
+      if (other.PartialFailureMessage.Length != 0) {
+        PartialFailureMessage = other.PartialFailureMessage;
       }
       if (other.startTime_ != null) {
         if (startTime_ == null) {
@@ -6375,6 +7762,10 @@ namespace Google.Cloud.Dataplex.V1 {
             input.ReadMessage(CreateTime);
             break;
           }
+          case 74: {
+            PartialFailureMessage = input.ReadString();
+            break;
+          }
           case 802: {
             global::Google.Cloud.Dataplex.V1.DataQualitySpec subBuilder = new global::Google.Cloud.Dataplex.V1.DataQualitySpec();
             if (specCase_ == SpecOneofCase.DataQualitySpec) {
@@ -6507,6 +7898,10 @@ namespace Google.Cloud.Dataplex.V1 {
             input.ReadMessage(CreateTime);
             break;
           }
+          case 74: {
+            PartialFailureMessage = input.ReadString();
+            break;
+          }
           case 802: {
             global::Google.Cloud.Dataplex.V1.DataQualitySpec subBuilder = new global::Google.Cloud.Dataplex.V1.DataQualitySpec();
             if (specCase_ == SpecOneofCase.DataQualitySpec) {
@@ -6621,6 +8016,10 @@ namespace Google.Cloud.Dataplex.V1 {
         /// The DataScanJob has been created but not started to run yet.
         /// </summary>
         [pbr::OriginalName("PENDING")] Pending = 7,
+        /// <summary>
+        /// The DataScanJob succeeded with errors.
+        /// </summary>
+        [pbr::OriginalName("SUCCEEDED_WITH_ERRORS")] SucceededWithErrors = 8,
       }
 
     }

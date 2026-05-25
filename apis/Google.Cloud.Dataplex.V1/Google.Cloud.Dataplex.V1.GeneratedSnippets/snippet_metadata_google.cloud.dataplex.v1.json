@@ -9986,6 +9986,103 @@
       ]
     },
     {
+      "regionTag": "dataplex_v1_generated_CatalogService_ModifyEntry_sync",
+      "title": "ModifyEntryRequestObject",
+      "description": "Snippet for ModifyEntry",
+      "file": "CatalogServiceClient.ModifyEntryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyEntry",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.ModifyEntry",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ModifyEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.Entry",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ModifyEntry",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.ModifyEntry",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_CatalogService_ModifyEntry_async",
+      "title": "ModifyEntryRequestObjectAsync",
+      "description": "Snippet for ModifyEntryAsync",
+      "file": "CatalogServiceClient.ModifyEntryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ModifyEntryAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient.ModifyEntryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.ModifyEntryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.Entry>",
+        "client": {
+          "shortName": "CatalogServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.CatalogServiceClient"
+        },
+        "method": {
+          "shortName": "ModifyEntry",
+          "fullName": "google.cloud.dataplex.v1.CatalogService.ModifyEntry",
+          "service": {
+            "shortName": "CatalogService",
+            "fullName": "google.cloud.dataplex.v1.CatalogService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataplex_v1_generated_CatalogService_SearchEntries_sync",
       "title": "SearchEntriesRequestObject",
       "description": "Snippet for SearchEntries",
@@ -12462,12 +12559,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 49,
+          "end": 50,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 47,
+          "end": 48,
           "type": "SHORT"
         }
       ]
@@ -12511,12 +12608,12 @@
       "segments": [
         {
           "start": 22,
-          "end": 52,
+          "end": 53,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 50,
+          "end": 51,
           "type": "SHORT"
         }
       ]
@@ -17045,6 +17142,309 @@
       ]
     },
     {
+      "regionTag": "dataplex_v1_generated_DataProductService_RequestDataProductAccess_sync",
+      "title": "RequestDataProductAccessRequestObject",
+      "description": "Snippet for RequestDataProductAccess",
+      "file": "DataProductServiceClient.RequestDataProductAccessRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestDataProductAccess",
+        "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient.RequestDataProductAccess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse",
+        "client": {
+          "shortName": "DataProductServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient"
+        },
+        "method": {
+          "shortName": "RequestDataProductAccess",
+          "fullName": "google.cloud.dataplex.v1.DataProductService.RequestDataProductAccess",
+          "service": {
+            "shortName": "DataProductService",
+            "fullName": "google.cloud.dataplex.v1.DataProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataProductService_RequestDataProductAccess_async",
+      "title": "RequestDataProductAccessRequestObjectAsync",
+      "description": "Snippet for RequestDataProductAccessAsync",
+      "file": "DataProductServiceClient.RequestDataProductAccessRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestDataProductAccessAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient.RequestDataProductAccessAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse>",
+        "client": {
+          "shortName": "DataProductServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient"
+        },
+        "method": {
+          "shortName": "RequestDataProductAccess",
+          "fullName": "google.cloud.dataplex.v1.DataProductService.RequestDataProductAccess",
+          "service": {
+            "shortName": "DataProductService",
+            "fullName": "google.cloud.dataplex.v1.DataProductService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 49,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataProductService_RequestDataProductAccess_sync_flattened",
+      "title": "RequestDataProductAccess",
+      "description": "Snippet for RequestDataProductAccess",
+      "file": "DataProductServiceClient.RequestDataProductAccessSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestDataProductAccess",
+        "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient.RequestDataProductAccess",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.ChangeRequest",
+            "name": "changeRequest"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse",
+        "client": {
+          "shortName": "DataProductServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient"
+        },
+        "method": {
+          "shortName": "RequestDataProductAccess",
+          "fullName": "google.cloud.dataplex.v1.DataProductService.RequestDataProductAccess",
+          "service": {
+            "shortName": "DataProductService",
+            "fullName": "google.cloud.dataplex.v1.DataProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataProductService_RequestDataProductAccess_async_flattened",
+      "title": "RequestDataProductAccessAsync",
+      "description": "Snippet for RequestDataProductAccessAsync",
+      "file": "DataProductServiceClient.RequestDataProductAccessAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestDataProductAccessAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient.RequestDataProductAccessAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.ChangeRequest",
+            "name": "changeRequest"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse>",
+        "client": {
+          "shortName": "DataProductServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient"
+        },
+        "method": {
+          "shortName": "RequestDataProductAccess",
+          "fullName": "google.cloud.dataplex.v1.DataProductService.RequestDataProductAccess",
+          "service": {
+            "shortName": "DataProductService",
+            "fullName": "google.cloud.dataplex.v1.DataProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataProductService_RequestDataProductAccess_sync_flattened_resourceNames",
+      "title": "RequestDataProductAccessResourceNames",
+      "description": "Snippet for RequestDataProductAccess",
+      "file": "DataProductServiceClient.RequestDataProductAccessResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestDataProductAccess",
+        "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient.RequestDataProductAccess",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataProductName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.ChangeRequest",
+            "name": "changeRequest"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse",
+        "client": {
+          "shortName": "DataProductServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient"
+        },
+        "method": {
+          "shortName": "RequestDataProductAccess",
+          "fullName": "google.cloud.dataplex.v1.DataProductService.RequestDataProductAccess",
+          "service": {
+            "shortName": "DataProductService",
+            "fullName": "google.cloud.dataplex.v1.DataProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataProductService_RequestDataProductAccess_async_flattened_resourceNames",
+      "title": "RequestDataProductAccessResourceNamesAsync",
+      "description": "Snippet for RequestDataProductAccessAsync",
+      "file": "DataProductServiceClient.RequestDataProductAccessResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RequestDataProductAccessAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient.RequestDataProductAccessAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataProductName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Dataplex.V1.ChangeRequest",
+            "name": "changeRequest"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse>",
+        "client": {
+          "shortName": "DataProductServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataProductServiceClient"
+        },
+        "method": {
+          "shortName": "RequestDataProductAccess",
+          "fullName": "google.cloud.dataplex.v1.DataProductService.RequestDataProductAccess",
+          "service": {
+            "shortName": "DataProductService",
+            "fullName": "google.cloud.dataplex.v1.DataProductService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "dataplex_v1_generated_DataProductService_CreateDataAsset_sync",
       "title": "CreateDataAssetRequestObject",
       "description": "Snippet for CreateDataAsset",
@@ -20757,6 +21157,293 @@
         {
           "start": 39,
           "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CancelDataScanJob_sync",
+      "title": "CancelDataScanJobRequestObject",
+      "description": "Snippet for CancelDataScanJob",
+      "file": "DataScanServiceClient.CancelDataScanJobRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDataScanJob",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CancelDataScanJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CancelDataScanJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.CancelDataScanJobResponse",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CancelDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CancelDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CancelDataScanJob_async",
+      "title": "CancelDataScanJobRequestObjectAsync",
+      "description": "Snippet for CancelDataScanJobAsync",
+      "file": "DataScanServiceClient.CancelDataScanJobRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDataScanJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CancelDataScanJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.CancelDataScanJobRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.CancelDataScanJobResponse>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CancelDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CancelDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CancelDataScanJob_sync_flattened",
+      "title": "CancelDataScanJob",
+      "description": "Snippet for CancelDataScanJob",
+      "file": "DataScanServiceClient.CancelDataScanJobSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDataScanJob",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CancelDataScanJob",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.CancelDataScanJobResponse",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CancelDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CancelDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CancelDataScanJob_async_flattened",
+      "title": "CancelDataScanJobAsync",
+      "description": "Snippet for CancelDataScanJobAsync",
+      "file": "DataScanServiceClient.CancelDataScanJobAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDataScanJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CancelDataScanJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.CancelDataScanJobResponse>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CancelDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CancelDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CancelDataScanJob_sync_flattened_resourceNames",
+      "title": "CancelDataScanJobResourceNames",
+      "description": "Snippet for CancelDataScanJob",
+      "file": "DataScanServiceClient.CancelDataScanJobResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDataScanJob",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CancelDataScanJob",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataScanJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Dataplex.V1.CancelDataScanJobResponse",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CancelDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CancelDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataplex_v1_generated_DataScanService_CancelDataScanJob_async_flattened_resourceNames",
+      "title": "CancelDataScanJobResourceNamesAsync",
+      "description": "Snippet for CancelDataScanJobAsync",
+      "file": "DataScanServiceClient.CancelDataScanJobResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CancelDataScanJobAsync",
+        "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient.CancelDataScanJobAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataplex.V1.DataScanJobName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Dataplex.V1.CancelDataScanJobResponse>",
+        "client": {
+          "shortName": "DataScanServiceClient",
+          "fullName": "Google.Cloud.Dataplex.V1.DataScanServiceClient"
+        },
+        "method": {
+          "shortName": "CancelDataScanJob",
+          "fullName": "google.cloud.dataplex.v1.DataScanService.CancelDataScanJob",
+          "service": {
+            "shortName": "DataScanService",
+            "fullName": "google.cloud.dataplex.v1.DataScanService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 22,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 42,
           "type": "SHORT"
         }
       ]

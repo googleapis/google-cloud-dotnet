@@ -289,6 +289,12 @@
                 "LookupEntryLinksAsync"
               ]
             },
+            "ModifyEntry": {
+              "methods": [
+                "ModifyEntry",
+                "ModifyEntryAsync"
+              ]
+            },
             "SearchEntries": {
               "methods": [
                 "SearchEntries",
@@ -434,6 +440,12 @@
                 "ListDataProductsAsync"
               ]
             },
+            "RequestDataProductAccess": {
+              "methods": [
+                "RequestDataProductAccess",
+                "RequestDataProductAccessAsync"
+              ]
+            },
             "UpdateDataAsset": {
               "methods": [
                 "UpdateDataAsset",
@@ -455,6 +467,12 @@
         "grpc": {
           "libraryClient": "DataScanServiceClient",
           "rpcs": {
+            "CancelDataScanJob": {
+              "methods": [
+                "CancelDataScanJob",
+                "CancelDataScanJobAsync"
+              ]
+            },
             "CreateDataScan": {
               "methods": [
                 "CreateDataScan",

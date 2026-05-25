@@ -28,7 +28,7 @@ namespace Google.Cloud.Dataplex.V1 {
             "Ehhnb29nbGUuY2xvdWQuZGF0YXBsZXgudjEaH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8aL2dvb2dsZS9jbG91ZC9kYXRhcGxleC92MS9kYXRh",
             "c2NhbnNfY29tbW9uLnByb3RvGilnb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEv",
-            "cHJvY2Vzc2luZy5wcm90byLRBAoPRGF0YVByb2ZpbGVTcGVjEh0KEHNhbXBs",
+            "cHJvY2Vzc2luZy5wcm90byLRBQoPRGF0YVByb2ZpbGVTcGVjEh0KEHNhbXBs",
             "aW5nX3BlcmNlbnQYAiABKAJCA+BBARIXCgpyb3dfZmlsdGVyGAMgASgJQgPg",
             "QQESWQoRcG9zdF9zY2FuX2FjdGlvbnMYBCABKAsyOS5nb29nbGUuY2xvdWQu",
             "ZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVTcGVjLlBvc3RTY2FuQWN0aW9uc0ID",
@@ -36,63 +36,66 @@ namespace Google.Cloud.Dataplex.V1 {
             "dGFwbGV4LnYxLkRhdGFQcm9maWxlU3BlYy5TZWxlY3RlZEZpZWxkc0ID4EEB",
             "ElUKDmV4Y2x1ZGVfZmllbGRzGAYgASgLMjguZ29vZ2xlLmNsb3VkLmRhdGFw",
             "bGV4LnYxLkRhdGFQcm9maWxlU3BlYy5TZWxlY3RlZEZpZWxkc0ID4EEBEicK",
-            "GmNhdGFsb2dfcHVibGlzaGluZ19lbmFibGVkGAggASgIQgPgQQEapwEKD1Bv",
-            "c3RTY2FuQWN0aW9ucxJmCg9iaWdxdWVyeV9leHBvcnQYASABKAsySC5nb29n",
-            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVTcGVjLlBvc3RTY2Fu",
-            "QWN0aW9ucy5CaWdRdWVyeUV4cG9ydEID4EEBGiwKDkJpZ1F1ZXJ5RXhwb3J0",
-            "EhoKDXJlc3VsdHNfdGFibGUYASABKAlCA+BBARoqCg5TZWxlY3RlZEZpZWxk",
-            "cxIYCgtmaWVsZF9uYW1lcxgBIAMoCUID4EEBItAPChFEYXRhUHJvZmlsZVJl",
-            "c3VsdBIWCglyb3dfY291bnQYAyABKANCA+BBAxJJCgdwcm9maWxlGAQgASgL",
-            "MjMuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0",
-            "LlByb2ZpbGVCA+BBAxJACgxzY2FubmVkX2RhdGEYBSABKAsyJS5nb29nbGUu",
-            "Y2xvdWQuZGF0YXBsZXgudjEuU2Nhbm5lZERhdGFCA+BBAxJoChhwb3N0X3Nj",
-            "YW5fYWN0aW9uc19yZXN1bHQYBiABKAsyQS5nb29nbGUuY2xvdWQuZGF0YXBs",
-            "ZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUG9zdFNjYW5BY3Rpb25zUmVzdWx0",
-            "QgPgQQMSYQoZY2F0YWxvZ19wdWJsaXNoaW5nX3N0YXR1cxgHIAEoCzI5Lmdv",
-            "b2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhU2NhbkNhdGFsb2dQdWJsaXNo",
-            "aW5nU3RhdHVzQgPgQQMayAkKB1Byb2ZpbGUSTgoGZmllbGRzGAIgAygLMjku",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBy",
-            "b2ZpbGUuRmllbGRCA+BBAxrsCAoFRmllbGQSEQoEbmFtZRgBIAEoCUID4EED",
-            "EhEKBHR5cGUYAiABKAlCA+BBAxIRCgRtb2RlGAMgASgJQgPgQQMSWwoHcHJv",
-            "ZmlsZRgEIAEoCzJFLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJv",
-            "ZmlsZVJlc3VsdC5Qcm9maWxlLkZpZWxkLlByb2ZpbGVJbmZvQgPgQQMazAcK",
-            "C1Byb2ZpbGVJbmZvEhcKCm51bGxfcmF0aW8YAiABKAFCA+BBAxIbCg5kaXN0",
-            "aW5jdF9yYXRpbxgDIAEoAUID4EEDEmoKDHRvcF9uX3ZhbHVlcxgEIAMoCzJP",
-            "Lmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdC5Q",
-            "cm9maWxlLkZpZWxkLlByb2ZpbGVJbmZvLlRvcE5WYWx1ZUID4EEDEm8KDnN0",
-            "cmluZ19wcm9maWxlGGUgASgLMlUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
-            "LkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUluZm8u",
-            "U3RyaW5nRmllbGRJbmZvSAAScQoPaW50ZWdlcl9wcm9maWxlGGYgASgLMlYu",
-            "Z29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBy",
-            "b2ZpbGUuRmllbGQuUHJvZmlsZUluZm8uSW50ZWdlckZpZWxkSW5mb0gAEm8K",
-            "DmRvdWJsZV9wcm9maWxlGGcgASgLMlUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4",
-            "LnYxLkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUlu",
-            "Zm8uRG91YmxlRmllbGRJbmZvSAAaYAoPU3RyaW5nRmllbGRJbmZvEhcKCm1p",
-            "bl9sZW5ndGgYASABKANCA+BBAxIXCgptYXhfbGVuZ3RoGAIgASgDQgPgQQMS",
-            "GwoOYXZlcmFnZV9sZW5ndGgYAyABKAFCA+BBAxqFAQoQSW50ZWdlckZpZWxk",
-            "SW5mbxIUCgdhdmVyYWdlGAEgASgBQgPgQQMSHwoSc3RhbmRhcmRfZGV2aWF0",
-            "aW9uGAMgASgBQgPgQQMSEAoDbWluGAQgASgDQgPgQQMSFgoJcXVhcnRpbGVz",
-            "GAYgAygDQgPgQQMSEAoDbWF4GAUgASgDQgPgQQMahAEKD0RvdWJsZUZpZWxk",
-            "SW5mbxIUCgdhdmVyYWdlGAEgASgBQgPgQQMSHwoSc3RhbmRhcmRfZGV2aWF0",
-            "aW9uGAMgASgBQgPgQQMSEAoDbWluGAQgASgBQgPgQQMSFgoJcXVhcnRpbGVz",
-            "GAYgAygBQgPgQQMSEAoDbWF4GAUgASgBQgPgQQMaRwoJVG9wTlZhbHVlEhIK",
-            "BXZhbHVlGAEgASgJQgPgQQMSEgoFY291bnQYAiABKANCA+BBAxISCgVyYXRp",
-            "bxgDIAEoAUID4EEDQgwKCmZpZWxkX2luZm8a/QIKFVBvc3RTY2FuQWN0aW9u",
-            "c1Jlc3VsdBJ7ChZiaWdxdWVyeV9leHBvcnRfcmVzdWx0GAEgASgLMlYuZ29v",
-            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBvc3RT",
-            "Y2FuQWN0aW9uc1Jlc3VsdC5CaWdRdWVyeUV4cG9ydFJlc3VsdEID4EEDGuYB",
-            "ChRCaWdRdWVyeUV4cG9ydFJlc3VsdBJwCgVzdGF0ZRgBIAEoDjJcLmdvb2ds",
-            "ZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmlsZVJlc3VsdC5Qb3N0U2Nh",
-            "bkFjdGlvbnNSZXN1bHQuQmlnUXVlcnlFeHBvcnRSZXN1bHQuU3RhdGVCA+BB",
-            "AxIUCgdtZXNzYWdlGAIgASgJQgPgQQMiRgoFU3RhdGUSFQoRU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABINCglTVUNDRUVERUQQARIKCgZGQUlMRUQQAhILCgdTS0lQ",
-            "UEVEEANCbAocY29tLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MUIQRGF0YVBy",
-            "b2ZpbGVQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4L2Fw",
-            "aXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYmIGcHJvdG8z"));
+            "GmNhdGFsb2dfcHVibGlzaGluZ19lbmFibGVkGAggASgIQgPgQQESQQoEbW9k",
+            "ZRgJIAEoDjIuLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5EYXRhUHJvZmls",
+            "ZVNwZWMuTW9kZUID4EEBGqcBCg9Qb3N0U2NhbkFjdGlvbnMSZgoPYmlncXVl",
+            "cnlfZXhwb3J0GAEgASgLMkguZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRh",
+            "dGFQcm9maWxlU3BlYy5Qb3N0U2NhbkFjdGlvbnMuQmlnUXVlcnlFeHBvcnRC",
+            "A+BBARosCg5CaWdRdWVyeUV4cG9ydBIaCg1yZXN1bHRzX3RhYmxlGAEgASgJ",
+            "QgPgQQEaKgoOU2VsZWN0ZWRGaWVsZHMSGAoLZmllbGRfbmFtZXMYASADKAlC",
+            "A+BBASI7CgRNb2RlEhQKEE1PREVfVU5TUEVDSUZJRUQQABIMCghTVEFOREFS",
+            "RBABEg8KC0xJR0hUV0VJR0hUEAIi0A8KEURhdGFQcm9maWxlUmVzdWx0EhYK",
+            "CXJvd19jb3VudBgDIAEoA0ID4EEDEkkKB3Byb2ZpbGUYBCABKAsyMy5nb29n",
+            "bGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmls",
+            "ZUID4EEDEkAKDHNjYW5uZWRfZGF0YRgFIAEoCzIlLmdvb2dsZS5jbG91ZC5k",
+            "YXRhcGxleC52MS5TY2FubmVkRGF0YUID4EEDEmgKGHBvc3Rfc2Nhbl9hY3Rp",
+            "b25zX3Jlc3VsdBgGIAEoCzJBLmdvb2dsZS5jbG91ZC5kYXRhcGxleC52MS5E",
+            "YXRhUHJvZmlsZVJlc3VsdC5Qb3N0U2NhbkFjdGlvbnNSZXN1bHRCA+BBAxJh",
+            "ChljYXRhbG9nX3B1Ymxpc2hpbmdfc3RhdHVzGAcgASgLMjkuZ29vZ2xlLmNs",
+            "b3VkLmRhdGFwbGV4LnYxLkRhdGFTY2FuQ2F0YWxvZ1B1Ymxpc2hpbmdTdGF0",
+            "dXNCA+BBAxrICQoHUHJvZmlsZRJOCgZmaWVsZHMYAiADKAsyOS5nb29nbGUu",
+            "Y2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5G",
+            "aWVsZEID4EEDGuwICgVGaWVsZBIRCgRuYW1lGAEgASgJQgPgQQMSEQoEdHlw",
+            "ZRgCIAEoCUID4EEDEhEKBG1vZGUYAyABKAlCA+BBAxJbCgdwcm9maWxlGAQg",
+            "ASgLMkUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVz",
+            "dWx0LlByb2ZpbGUuRmllbGQuUHJvZmlsZUluZm9CA+BBAxrMBwoLUHJvZmls",
+            "ZUluZm8SFwoKbnVsbF9yYXRpbxgCIAEoAUID4EEDEhsKDmRpc3RpbmN0X3Jh",
+            "dGlvGAMgASgBQgPgQQMSagoMdG9wX25fdmFsdWVzGAQgAygLMk8uZ29vZ2xl",
+            "LmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlByb2ZpbGUu",
+            "RmllbGQuUHJvZmlsZUluZm8uVG9wTlZhbHVlQgPgQQMSbwoOc3RyaW5nX3By",
+            "b2ZpbGUYZSABKAsyVS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YVBy",
+            "b2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mby5TdHJpbmdG",
+            "aWVsZEluZm9IABJxCg9pbnRlZ2VyX3Byb2ZpbGUYZiABKAsyVi5nb29nbGUu",
+            "Y2xvdWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5G",
+            "aWVsZC5Qcm9maWxlSW5mby5JbnRlZ2VyRmllbGRJbmZvSAASbwoOZG91Ymxl",
+            "X3Byb2ZpbGUYZyABKAsyVS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0",
+            "YVByb2ZpbGVSZXN1bHQuUHJvZmlsZS5GaWVsZC5Qcm9maWxlSW5mby5Eb3Vi",
+            "bGVGaWVsZEluZm9IABpgCg9TdHJpbmdGaWVsZEluZm8SFwoKbWluX2xlbmd0",
+            "aBgBIAEoA0ID4EEDEhcKCm1heF9sZW5ndGgYAiABKANCA+BBAxIbCg5hdmVy",
+            "YWdlX2xlbmd0aBgDIAEoAUID4EEDGoUBChBJbnRlZ2VyRmllbGRJbmZvEhQK",
+            "B2F2ZXJhZ2UYASABKAFCA+BBAxIfChJzdGFuZGFyZF9kZXZpYXRpb24YAyAB",
+            "KAFCA+BBAxIQCgNtaW4YBCABKANCA+BBAxIWCglxdWFydGlsZXMYBiADKANC",
+            "A+BBAxIQCgNtYXgYBSABKANCA+BBAxqEAQoPRG91YmxlRmllbGRJbmZvEhQK",
+            "B2F2ZXJhZ2UYASABKAFCA+BBAxIfChJzdGFuZGFyZF9kZXZpYXRpb24YAyAB",
+            "KAFCA+BBAxIQCgNtaW4YBCABKAFCA+BBAxIWCglxdWFydGlsZXMYBiADKAFC",
+            "A+BBAxIQCgNtYXgYBSABKAFCA+BBAxpHCglUb3BOVmFsdWUSEgoFdmFsdWUY",
+            "ASABKAlCA+BBAxISCgVjb3VudBgCIAEoA0ID4EEDEhIKBXJhdGlvGAMgASgB",
+            "QgPgQQNCDAoKZmllbGRfaW5mbxr9AgoVUG9zdFNjYW5BY3Rpb25zUmVzdWx0",
+            "EnsKFmJpZ3F1ZXJ5X2V4cG9ydF9yZXN1bHQYASABKAsyVi5nb29nbGUuY2xv",
+            "dWQuZGF0YXBsZXgudjEuRGF0YVByb2ZpbGVSZXN1bHQuUG9zdFNjYW5BY3Rp",
+            "b25zUmVzdWx0LkJpZ1F1ZXJ5RXhwb3J0UmVzdWx0QgPgQQMa5gEKFEJpZ1F1",
+            "ZXJ5RXhwb3J0UmVzdWx0EnAKBXN0YXRlGAEgASgOMlwuZ29vZ2xlLmNsb3Vk",
+            "LmRhdGFwbGV4LnYxLkRhdGFQcm9maWxlUmVzdWx0LlBvc3RTY2FuQWN0aW9u",
+            "c1Jlc3VsdC5CaWdRdWVyeUV4cG9ydFJlc3VsdC5TdGF0ZUID4EEDEhQKB21l",
+            "c3NhZ2UYAiABKAlCA+BBAyJGCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
+            "RBAAEg0KCVNVQ0NFRURFRBABEgoKBkZBSUxFRBACEgsKB1NLSVBQRUQQA0Js",
+            "Chxjb20uZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxQhBEYXRhUHJvZmlsZVBy",
+            "b3RvUAFaOGNsb3VkLmdvb2dsZS5jb20vZ28vZGF0YXBsZXgvYXBpdjEvZGF0",
+            "YXBsZXhwYjtkYXRhcGxleHBiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Dataplex.V1.DatascansCommonReflection.Descriptor, global::Google.Cloud.Dataplex.V1.ProcessingReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Parser, new[]{ "SamplingPercent", "RowFilter", "PostScanActions", "IncludeFields", "ExcludeFields", "CatalogPublishingEnabled" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Parser, new[]{ "BigqueryExport" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport.Parser, new[]{ "ResultsTable" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Parser, new[]{ "SamplingPercent", "RowFilter", "PostScanActions", "IncludeFields", "ExcludeFields", "CatalogPublishingEnabled", "Mode" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Parser, new[]{ "BigqueryExport" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.PostScanActions.Types.BigQueryExport.Parser, new[]{ "ResultsTable" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields), global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.SelectedFields.Parser, new[]{ "FieldNames" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult), global::Google.Cloud.Dataplex.V1.DataProfileResult.Parser, new[]{ "RowCount", "Profile", "ScannedData", "PostScanActionsResult", "CatalogPublishingStatus" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Parser, new[]{ "Name", "Type", "Mode", "Profile" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Parser, new[]{ "NullRatio", "DistinctRatio", "TopNValues", "StringProfile", "IntegerProfile", "DoubleProfile" }, new[]{ "FieldInfo" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.StringFieldInfo.Parser, new[]{ "MinLength", "MaxLength", "AverageLength" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.IntegerFieldInfo), global::Google.Cloud.Dataplex.V1.DataProfileResult.Types.Profile.Types.Field.Types.ProfileInfo.Types.IntegerFieldInfo.Parser, new[]{ "Average", "StandardDeviation", "Min", "Quartiles", "Max" }, null, null, null, null),
@@ -149,6 +152,7 @@ namespace Google.Cloud.Dataplex.V1 {
       includeFields_ = other.includeFields_ != null ? other.includeFields_.Clone() : null;
       excludeFields_ = other.excludeFields_ != null ? other.excludeFields_.Clone() : null;
       catalogPublishingEnabled_ = other.catalogPublishingEnabled_;
+      mode_ = other.mode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -264,6 +268,21 @@ namespace Google.Cloud.Dataplex.V1 {
       }
     }
 
+    /// <summary>Field number for the "mode" field.</summary>
+    public const int ModeFieldNumber = 9;
+    private global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode mode_ = global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode.Unspecified;
+    /// <summary>
+    /// Optional. The execution mode for the profile scan.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode Mode {
+      get { return mode_; }
+      set {
+        mode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -285,6 +304,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (!object.Equals(IncludeFields, other.IncludeFields)) return false;
       if (!object.Equals(ExcludeFields, other.ExcludeFields)) return false;
       if (CatalogPublishingEnabled != other.CatalogPublishingEnabled) return false;
+      if (Mode != other.Mode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -298,6 +318,7 @@ namespace Google.Cloud.Dataplex.V1 {
       if (includeFields_ != null) hash ^= IncludeFields.GetHashCode();
       if (excludeFields_ != null) hash ^= ExcludeFields.GetHashCode();
       if (CatalogPublishingEnabled != false) hash ^= CatalogPublishingEnabled.GetHashCode();
+      if (Mode != global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode.Unspecified) hash ^= Mode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -340,6 +361,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(64);
         output.WriteBool(CatalogPublishingEnabled);
       }
+      if (Mode != global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Mode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -374,6 +399,10 @@ namespace Google.Cloud.Dataplex.V1 {
         output.WriteRawTag(64);
         output.WriteBool(CatalogPublishingEnabled);
       }
+      if (Mode != global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Mode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -401,6 +430,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (CatalogPublishingEnabled != false) {
         size += 1 + 1;
+      }
+      if (Mode != global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -440,6 +472,9 @@ namespace Google.Cloud.Dataplex.V1 {
       }
       if (other.CatalogPublishingEnabled != false) {
         CatalogPublishingEnabled = other.CatalogPublishingEnabled;
+      }
+      if (other.Mode != global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode.Unspecified) {
+        Mode = other.Mode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -491,6 +526,10 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           case 64: {
             CatalogPublishingEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            Mode = (global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode) input.ReadEnum();
             break;
           }
         }
@@ -545,6 +584,10 @@ namespace Google.Cloud.Dataplex.V1 {
             CatalogPublishingEnabled = input.ReadBool();
             break;
           }
+          case 72: {
+            Mode = (global::Google.Cloud.Dataplex.V1.DataProfileSpec.Types.Mode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -555,6 +598,30 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// Defines the execution mode for the profile scan.
+      /// </summary>
+      public enum Mode {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Performs standard profiling. The behavior is controlled by other fields
+        /// such as `sampling_percent`, `row_filter`, and column filters.
+        /// This mode allows for full scans or custom sampling.
+        /// </summary>
+        [pbr::OriginalName("STANDARD")] Standard = 1,
+        /// <summary>
+        /// Specifies lightweight profiling mode. This mode is optimized for
+        /// low-latency, low-fidelity profiling.
+        ///
+        /// When this mode is selected, the following fields must not be set:
+        /// `sampling_percent`, `row_filter`, `include_fields`, and `exclude_fields`.
+        /// </summary>
+        [pbr::OriginalName("LIGHTWEIGHT")] Lightweight = 2,
+      }
+
       /// <summary>
       /// The configuration of post scan actions of DataProfileScan job.
       /// </summary>

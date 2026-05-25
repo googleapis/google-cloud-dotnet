@@ -80,6 +80,7 @@ namespace Google.Cloud.Dataplex.V1
             ListEntriesSettings = existing.ListEntriesSettings;
             GetEntrySettings = existing.GetEntrySettings;
             LookupEntrySettings = existing.LookupEntrySettings;
+            ModifyEntrySettings = existing.ModifyEntrySettings;
             SearchEntriesSettings = existing.SearchEntriesSettings;
             CreateMetadataJobSettings = existing.CreateMetadataJobSettings;
             CreateMetadataJobOperationsSettings = existing.CreateMetadataJobOperationsSettings.Clone();
@@ -613,6 +614,18 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CatalogServiceClient.ModifyEntry</c> and <c>CatalogServiceClient.ModifyEntryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ModifyEntrySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>CatalogServiceClient.SearchEntries</c> and <c>CatalogServiceClient.SearchEntriesAsync</c>.
         /// </summary>
         /// <remarks>
@@ -705,10 +718,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings CreateEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings CreateEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -716,11 +729,20 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 3</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings UpdateEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings UpdateEntryLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 3, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -729,10 +751,10 @@ namespace Google.Cloud.Dataplex.V1
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings DeleteEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings DeleteEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -740,11 +762,20 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 3</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 20 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings LookupEntryLinksSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings LookupEntryLinksSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 3, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -764,11 +795,20 @@ namespace Google.Cloud.Dataplex.V1
         /// </summary>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This call will not be retried.</description></item>
-        /// <item><description>No timeout is applied.</description></item>
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 3</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.ResourceExhausted"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 20 seconds.</description></item>
         /// </list>
         /// </remarks>
-        public gaxgrpc::CallSettings GetEntryLinkSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+        public gaxgrpc::CallSettings GetEntryLinkSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 3, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.ResourceExhausted)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3901,6 +3941,33 @@ namespace Google.Cloud.Dataplex.V1
             LookupEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Modifies an entry using the permission on the source system.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Entry ModifyEntry(ModifyEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies an entry using the permission on the source system.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entry> ModifyEntryAsync(ModifyEntryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Modifies an entry using the permission on the source system.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Entry> ModifyEntryAsync(ModifyEntryRequest request, st::CancellationToken cancellationToken) =>
+            ModifyEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Searches for Entries matching the given query and scope.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -5965,6 +6032,8 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<LookupEntryRequest, Entry> _callLookupEntry;
 
+        private readonly gaxgrpc::ApiCall<ModifyEntryRequest, Entry> _callModifyEntry;
+
         private readonly gaxgrpc::ApiCall<SearchEntriesRequest, SearchEntriesResponse> _callSearchEntries;
 
         private readonly gaxgrpc::ApiCall<CreateMetadataJobRequest, lro::Operation> _callCreateMetadataJob;
@@ -6090,6 +6159,9 @@ namespace Google.Cloud.Dataplex.V1
             _callLookupEntry = clientHelper.BuildApiCall<LookupEntryRequest, Entry>("LookupEntry", grpcClient.LookupEntryAsync, grpcClient.LookupEntry, effectiveSettings.LookupEntrySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callLookupEntry);
             Modify_LookupEntryApiCall(ref _callLookupEntry);
+            _callModifyEntry = clientHelper.BuildApiCall<ModifyEntryRequest, Entry>("ModifyEntry", grpcClient.ModifyEntryAsync, grpcClient.ModifyEntry, effectiveSettings.ModifyEntrySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callModifyEntry);
+            Modify_ModifyEntryApiCall(ref _callModifyEntry);
             _callSearchEntries = clientHelper.BuildApiCall<SearchEntriesRequest, SearchEntriesResponse>("SearchEntries", grpcClient.SearchEntriesAsync, grpcClient.SearchEntries, effectiveSettings.SearchEntriesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callSearchEntries);
             Modify_SearchEntriesApiCall(ref _callSearchEntries);
@@ -6185,6 +6257,8 @@ namespace Google.Cloud.Dataplex.V1
 
         partial void Modify_LookupEntryApiCall(ref gaxgrpc::ApiCall<LookupEntryRequest, Entry> call);
 
+        partial void Modify_ModifyEntryApiCall(ref gaxgrpc::ApiCall<ModifyEntryRequest, Entry> call);
+
         partial void Modify_SearchEntriesApiCall(ref gaxgrpc::ApiCall<SearchEntriesRequest, SearchEntriesResponse> call);
 
         partial void Modify_CreateMetadataJobApiCall(ref gaxgrpc::ApiCall<CreateMetadataJobRequest, lro::Operation> call);
@@ -6269,6 +6343,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetEntryRequest(ref GetEntryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_LookupEntryRequest(ref LookupEntryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ModifyEntryRequest(ref ModifyEntryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SearchEntriesRequest(ref SearchEntriesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6831,6 +6907,30 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_LookupEntryRequest(ref request, ref callSettings);
             return _callLookupEntry.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Modifies an entry using the permission on the source system.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Entry ModifyEntry(ModifyEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyEntryRequest(ref request, ref callSettings);
+            return _callModifyEntry.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Modifies an entry using the permission on the source system.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Entry> ModifyEntryAsync(ModifyEntryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ModifyEntryRequest(ref request, ref callSettings);
+            return _callModifyEntry.Async(request, callSettings);
         }
 
         /// <summary>

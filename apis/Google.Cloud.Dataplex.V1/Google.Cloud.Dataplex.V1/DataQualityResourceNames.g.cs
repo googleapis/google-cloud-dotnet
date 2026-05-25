@@ -16,6 +16,7 @@
 
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
+using gcdv = Google.Cloud.Dataplex.V1;
 using sys = System;
 
 namespace Google.Cloud.Dataplex.V1
@@ -259,5 +260,23 @@ namespace Google.Cloud.Dataplex.V1
         /// false.
         /// </returns>
         public static bool operator !=(TableName a, TableName b) => !(a == b);
+    }
+
+    public partial class DataQualityRule
+    {
+        public partial class Types
+        {
+            public partial class TemplateReference
+            {
+                /// <summary>
+                /// <see cref="gcdv::EntryName"/>-typed view over the <see cref="Name"/> resource name property.
+                /// </summary>
+                public gcdv::EntryName EntryName
+                {
+                    get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryName.Parse(Name, allowUnparsed: true);
+                    set => Name = value?.ToString() ?? "";
+                }
+            }
+        }
     }
 }

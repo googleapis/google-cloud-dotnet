@@ -910,6 +910,101 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for RequestDataProductAccess</summary>
+        public void RequestDataProductAccessRequestObject()
+        {
+            // Snippet: RequestDataProductAccess(RequestDataProductAccessRequest, CallSettings)
+            // Create client
+            gcdv::DataProductServiceClient dataProductServiceClient = gcdv::DataProductServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::RequestDataProductAccessRequest request = new gcdv::RequestDataProductAccessRequest
+            {
+                ParentAsDataProductName = gcdv::DataProductName.FromProjectLocationDataProduct("[PROJECT]", "[LOCATION]", "[DATA_PRODUCT]"),
+                ChangeRequest = new gcdv::ChangeRequest(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            gcdv::RequestDataProductAccessResponse response = dataProductServiceClient.RequestDataProductAccess(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestDataProductAccessAsync</summary>
+        public async Task RequestDataProductAccessRequestObjectAsync()
+        {
+            // Snippet: RequestDataProductAccessAsync(RequestDataProductAccessRequest, CallSettings)
+            // Additional: RequestDataProductAccessAsync(RequestDataProductAccessRequest, CancellationToken)
+            // Create client
+            gcdv::DataProductServiceClient dataProductServiceClient = await gcdv::DataProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::RequestDataProductAccessRequest request = new gcdv::RequestDataProductAccessRequest
+            {
+                ParentAsDataProductName = gcdv::DataProductName.FromProjectLocationDataProduct("[PROJECT]", "[LOCATION]", "[DATA_PRODUCT]"),
+                ChangeRequest = new gcdv::ChangeRequest(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            gcdv::RequestDataProductAccessResponse response = await dataProductServiceClient.RequestDataProductAccessAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestDataProductAccess</summary>
+        public void RequestDataProductAccess()
+        {
+            // Snippet: RequestDataProductAccess(string, ChangeRequest, CallSettings)
+            // Create client
+            gcdv::DataProductServiceClient dataProductServiceClient = gcdv::DataProductServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataProducts/[DATA_PRODUCT]";
+            gcdv::ChangeRequest changeRequest = new gcdv::ChangeRequest();
+            // Make the request
+            gcdv::RequestDataProductAccessResponse response = dataProductServiceClient.RequestDataProductAccess(parent, changeRequest);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestDataProductAccessAsync</summary>
+        public async Task RequestDataProductAccessAsync()
+        {
+            // Snippet: RequestDataProductAccessAsync(string, ChangeRequest, CallSettings)
+            // Additional: RequestDataProductAccessAsync(string, ChangeRequest, CancellationToken)
+            // Create client
+            gcdv::DataProductServiceClient dataProductServiceClient = await gcdv::DataProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/dataProducts/[DATA_PRODUCT]";
+            gcdv::ChangeRequest changeRequest = new gcdv::ChangeRequest();
+            // Make the request
+            gcdv::RequestDataProductAccessResponse response = await dataProductServiceClient.RequestDataProductAccessAsync(parent, changeRequest);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestDataProductAccess</summary>
+        public void RequestDataProductAccessResourceNames()
+        {
+            // Snippet: RequestDataProductAccess(DataProductName, ChangeRequest, CallSettings)
+            // Create client
+            gcdv::DataProductServiceClient dataProductServiceClient = gcdv::DataProductServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::DataProductName parent = gcdv::DataProductName.FromProjectLocationDataProduct("[PROJECT]", "[LOCATION]", "[DATA_PRODUCT]");
+            gcdv::ChangeRequest changeRequest = new gcdv::ChangeRequest();
+            // Make the request
+            gcdv::RequestDataProductAccessResponse response = dataProductServiceClient.RequestDataProductAccess(parent, changeRequest);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RequestDataProductAccessAsync</summary>
+        public async Task RequestDataProductAccessResourceNamesAsync()
+        {
+            // Snippet: RequestDataProductAccessAsync(DataProductName, ChangeRequest, CallSettings)
+            // Additional: RequestDataProductAccessAsync(DataProductName, ChangeRequest, CancellationToken)
+            // Create client
+            gcdv::DataProductServiceClient dataProductServiceClient = await gcdv::DataProductServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::DataProductName parent = gcdv::DataProductName.FromProjectLocationDataProduct("[PROJECT]", "[LOCATION]", "[DATA_PRODUCT]");
+            gcdv::ChangeRequest changeRequest = new gcdv::ChangeRequest();
+            // Make the request
+            gcdv::RequestDataProductAccessResponse response = await dataProductServiceClient.RequestDataProductAccessAsync(parent, changeRequest);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateDataAsset</summary>
         public void CreateDataAssetRequestObject()
         {

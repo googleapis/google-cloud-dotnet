@@ -81,6 +81,10 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.UpdateDataProductRequest> __Marshaller_google_cloud_dataplex_v1_UpdateDataProductRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.UpdateDataProductRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest> __Marshaller_google_cloud_dataplex_v1_RequestDataProductAccessRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse> __Marshaller_google_cloud_dataplex_v1_RequestDataProductAccessResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.CreateDataAssetRequest> __Marshaller_google_cloud_dataplex_v1_CreateDataAssetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.CreateDataAssetRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.UpdateDataAssetRequest> __Marshaller_google_cloud_dataplex_v1_UpdateDataAssetRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.UpdateDataAssetRequest.Parser));
@@ -134,6 +138,14 @@ namespace Google.Cloud.Dataplex.V1 {
         "UpdateDataProduct",
         __Marshaller_google_cloud_dataplex_v1_UpdateDataProductRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest, global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse> __Method_RequestDataProductAccess = new grpc::Method<global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest, global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RequestDataProductAccess",
+        __Marshaller_google_cloud_dataplex_v1_RequestDataProductAccessRequest,
+        __Marshaller_google_cloud_dataplex_v1_RequestDataProductAccessResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.CreateDataAssetRequest, global::Google.LongRunning.Operation> __Method_CreateDataAsset = new grpc::Method<global::Google.Cloud.Dataplex.V1.CreateDataAssetRequest, global::Google.LongRunning.Operation>(
@@ -242,6 +254,20 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDataProduct(global::Google.Cloud.Dataplex.V1.UpdateDataProductRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Requests access to a data product. This will trigger an access approval
+      /// workflow, and the requester will need to wait for the approval to be
+      /// granted before they will be able to access the data product assets.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse> RequestDataProductAccess(global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -580,6 +606,62 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDataProduct, null, options, request);
       }
       /// <summary>
+      /// Requests access to a data product. This will trigger an access approval
+      /// workflow, and the requester will need to wait for the approval to be
+      /// granted before they will be able to access the data product assets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse RequestDataProductAccess(global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestDataProductAccess(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Requests access to a data product. This will trigger an access approval
+      /// workflow, and the requester will need to wait for the approval to be
+      /// granted before they will be able to access the data product assets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse RequestDataProductAccess(global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RequestDataProductAccess, null, options, request);
+      }
+      /// <summary>
+      /// Requests access to a data product. This will trigger an access approval
+      /// workflow, and the requester will need to wait for the approval to be
+      /// granted before they will be able to access the data product assets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse> RequestDataProductAccessAsync(global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RequestDataProductAccessAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Requests access to a data product. This will trigger an access approval
+      /// workflow, and the requester will need to wait for the approval to be
+      /// granted before they will be able to access the data product assets.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse> RequestDataProductAccessAsync(global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RequestDataProductAccess, null, options, request);
+      }
+      /// <summary>
       /// Creates a data asset.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -838,6 +920,7 @@ namespace Google.Cloud.Dataplex.V1 {
           .AddMethod(__Method_GetDataProduct, serviceImpl.GetDataProduct)
           .AddMethod(__Method_ListDataProducts, serviceImpl.ListDataProducts)
           .AddMethod(__Method_UpdateDataProduct, serviceImpl.UpdateDataProduct)
+          .AddMethod(__Method_RequestDataProductAccess, serviceImpl.RequestDataProductAccess)
           .AddMethod(__Method_CreateDataAsset, serviceImpl.CreateDataAsset)
           .AddMethod(__Method_UpdateDataAsset, serviceImpl.UpdateDataAsset)
           .AddMethod(__Method_DeleteDataAsset, serviceImpl.DeleteDataAsset)
@@ -857,6 +940,7 @@ namespace Google.Cloud.Dataplex.V1 {
       serviceBinder.AddMethod(__Method_GetDataProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GetDataProductRequest, global::Google.Cloud.Dataplex.V1.DataProduct>(serviceImpl.GetDataProduct));
       serviceBinder.AddMethod(__Method_ListDataProducts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.ListDataProductsRequest, global::Google.Cloud.Dataplex.V1.ListDataProductsResponse>(serviceImpl.ListDataProducts));
       serviceBinder.AddMethod(__Method_UpdateDataProduct, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.UpdateDataProductRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDataProduct));
+      serviceBinder.AddMethod(__Method_RequestDataProductAccess, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.RequestDataProductAccessRequest, global::Google.Cloud.Dataplex.V1.RequestDataProductAccessResponse>(serviceImpl.RequestDataProductAccess));
       serviceBinder.AddMethod(__Method_CreateDataAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.CreateDataAssetRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDataAsset));
       serviceBinder.AddMethod(__Method_UpdateDataAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.UpdateDataAssetRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDataAsset));
       serviceBinder.AddMethod(__Method_DeleteDataAsset, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.DeleteDataAssetRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDataAsset));
