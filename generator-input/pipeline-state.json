@@ -768,10 +768,10 @@
         },
         {
             "id": "Google.Cloud.BigQuery.V2",
-            "currentVersion": "3.11.0",
+            "currentVersion": "3.12.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-02-03T17:58:23Z",
+            "releaseTimestamp": "2026-05-25T14:08:26.001727715Z",
             "sourcePaths": [
                 "apis/Google.Cloud.BigQuery.V2/Google.Cloud.BigQuery.V2"
             ]
@@ -1253,12 +1253,12 @@
         },
         {
             "id": "Google.Cloud.Dataplex.V1",
-            "currentVersion": "3.14.0",
+            "currentVersion": "3.15.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-04-13T15:44:29.855093321Z",
+            "releaseTimestamp": "2026-05-25T14:33:52.819325728Z",
             "lastGeneratedCommit": "1742af79e7621f80e7843109769b23e30ebfb501",
-            "lastReleasedCommit": "19913519dae24b82f58b8f1b43822c2c020a123c",
+            "lastReleasedCommit": "1742af79e7621f80e7843109769b23e30ebfb501",
             "apiPaths": [
                 "google/cloud/dataplex/v1"
             ],
