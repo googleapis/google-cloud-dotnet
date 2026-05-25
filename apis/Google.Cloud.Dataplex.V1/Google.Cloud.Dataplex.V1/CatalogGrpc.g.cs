@@ -128,6 +128,8 @@ namespace Google.Cloud.Dataplex.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.LookupEntryRequest> __Marshaller_google_cloud_dataplex_v1_LookupEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.LookupEntryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.ModifyEntryRequest> __Marshaller_google_cloud_dataplex_v1_ModifyEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.ModifyEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.SearchEntriesRequest> __Marshaller_google_cloud_dataplex_v1_SearchEntriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.SearchEntriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataplex.V1.SearchEntriesResponse> __Marshaller_google_cloud_dataplex_v1_SearchEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataplex.V1.SearchEntriesResponse.Parser));
@@ -344,6 +346,14 @@ namespace Google.Cloud.Dataplex.V1 {
         __ServiceName,
         "LookupEntry",
         __Marshaller_google_cloud_dataplex_v1_LookupEntryRequest,
+        __Marshaller_google_cloud_dataplex_v1_Entry);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataplex.V1.ModifyEntryRequest, global::Google.Cloud.Dataplex.V1.Entry> __Method_ModifyEntry = new grpc::Method<global::Google.Cloud.Dataplex.V1.ModifyEntryRequest, global::Google.Cloud.Dataplex.V1.Entry>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ModifyEntry",
+        __Marshaller_google_cloud_dataplex_v1_ModifyEntryRequest,
         __Marshaller_google_cloud_dataplex_v1_Entry);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -732,6 +742,18 @@ namespace Google.Cloud.Dataplex.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.Entry> LookupEntry(global::Google.Cloud.Dataplex.V1.LookupEntryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Modifies an entry using the permission on the source system.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dataplex.V1.Entry> ModifyEntry(global::Google.Cloud.Dataplex.V1.ModifyEntryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1972,6 +1994,54 @@ namespace Google.Cloud.Dataplex.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_LookupEntry, null, options, request);
       }
       /// <summary>
+      /// Modifies an entry using the permission on the source system.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.Entry ModifyEntry(global::Google.Cloud.Dataplex.V1.ModifyEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies an entry using the permission on the source system.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dataplex.V1.Entry ModifyEntry(global::Google.Cloud.Dataplex.V1.ModifyEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ModifyEntry, null, options, request);
+      }
+      /// <summary>
+      /// Modifies an entry using the permission on the source system.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.Entry> ModifyEntryAsync(global::Google.Cloud.Dataplex.V1.ModifyEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies an entry using the permission on the source system.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dataplex.V1.Entry> ModifyEntryAsync(global::Google.Cloud.Dataplex.V1.ModifyEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ModifyEntry, null, options, request);
+      }
+      /// <summary>
       /// Searches for Entries matching the given query and scope.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2798,6 +2868,7 @@ namespace Google.Cloud.Dataplex.V1 {
           .AddMethod(__Method_ListEntries, serviceImpl.ListEntries)
           .AddMethod(__Method_GetEntry, serviceImpl.GetEntry)
           .AddMethod(__Method_LookupEntry, serviceImpl.LookupEntry)
+          .AddMethod(__Method_ModifyEntry, serviceImpl.ModifyEntry)
           .AddMethod(__Method_SearchEntries, serviceImpl.SearchEntries)
           .AddMethod(__Method_CreateMetadataJob, serviceImpl.CreateMetadataJob)
           .AddMethod(__Method_GetMetadataJob, serviceImpl.GetMetadataJob)
@@ -2844,6 +2915,7 @@ namespace Google.Cloud.Dataplex.V1 {
       serviceBinder.AddMethod(__Method_ListEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.ListEntriesRequest, global::Google.Cloud.Dataplex.V1.ListEntriesResponse>(serviceImpl.ListEntries));
       serviceBinder.AddMethod(__Method_GetEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GetEntryRequest, global::Google.Cloud.Dataplex.V1.Entry>(serviceImpl.GetEntry));
       serviceBinder.AddMethod(__Method_LookupEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.LookupEntryRequest, global::Google.Cloud.Dataplex.V1.Entry>(serviceImpl.LookupEntry));
+      serviceBinder.AddMethod(__Method_ModifyEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.ModifyEntryRequest, global::Google.Cloud.Dataplex.V1.Entry>(serviceImpl.ModifyEntry));
       serviceBinder.AddMethod(__Method_SearchEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.SearchEntriesRequest, global::Google.Cloud.Dataplex.V1.SearchEntriesResponse>(serviceImpl.SearchEntries));
       serviceBinder.AddMethod(__Method_CreateMetadataJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.CreateMetadataJobRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateMetadataJob));
       serviceBinder.AddMethod(__Method_GetMetadataJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataplex.V1.GetMetadataJobRequest, global::Google.Cloud.Dataplex.V1.MetadataJob>(serviceImpl.GetMetadataJob));

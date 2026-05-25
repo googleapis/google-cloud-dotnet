@@ -26,8 +26,8 @@ namespace Google.Cloud.Dataplex.V1 {
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvZGF0YXBsZXgvdjEvZGF0YV9kaXNjb3ZlcnkucHJv",
             "dG8SGGdvb2dsZS5jbG91ZC5kYXRhcGxleC52MRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLL",
-            "CAoRRGF0YURpc2NvdmVyeVNwZWMSbQoaYmlncXVlcnlfcHVibGlzaGluZ19j",
+            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKK",
+            "CgoRRGF0YURpc2NvdmVyeVNwZWMSbQoaYmlncXVlcnlfcHVibGlzaGluZ19j",
             "b25maWcYASABKAsyRC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURp",
             "c2NvdmVyeVNwZWMuQmlnUXVlcnlQdWJsaXNoaW5nQ29uZmlnQgPgQQESUwoO",
             "c3RvcmFnZV9jb25maWcYZCABKAsyOS5nb29nbGUuY2xvdWQuZGF0YXBsZXgu",
@@ -40,44 +40,49 @@ namespace Google.Cloud.Dataplex.V1 {
             "B3Byb2plY3QYBSABKAlCM+BBAfpBLQorY2xvdWRyZXNvdXJjZW1hbmFnZXIu",
             "Z29vZ2xlYXBpcy5jb20vUHJvamVjdCJCCglUYWJsZVR5cGUSGgoWVEFCTEVf",
             "VFlQRV9VTlNQRUNJRklFRBAAEgwKCEVYVEVSTkFMEAESCwoHQklHTEFLRRAC",
-            "Gu0DCg1TdG9yYWdlQ29uZmlnEh0KEGluY2x1ZGVfcGF0dGVybnMYASADKAlC",
+            "GqwFCg1TdG9yYWdlQ29uZmlnEh0KEGluY2x1ZGVfcGF0dGVybnMYASADKAlC",
             "A+BBARIdChBleGNsdWRlX3BhdHRlcm5zGAIgAygJQgPgQQESXgoLY3N2X29w",
             "dGlvbnMYAyABKAsyRC5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjEuRGF0YURp",
             "c2NvdmVyeVNwZWMuU3RvcmFnZUNvbmZpZy5Dc3ZPcHRpb25zQgPgQQESYAoM",
             "anNvbl9vcHRpb25zGAQgASgLMkUuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYx",
             "LkRhdGFEaXNjb3ZlcnlTcGVjLlN0b3JhZ2VDb25maWcuSnNvbk9wdGlvbnNC",
-            "A+BBARqPAQoKQ3N2T3B0aW9ucxIYCgtoZWFkZXJfcm93cxgBIAEoBUID4EEB",
-            "EhYKCWRlbGltaXRlchgCIAEoCUID4EEBEhUKCGVuY29kaW5nGAMgASgJQgPg",
-            "QQESJAoXdHlwZV9pbmZlcmVuY2VfZGlzYWJsZWQYBCABKAhCA+BBARISCgVx",
-            "dW90ZRgFIAEoCUID4EEBGkoKC0pzb25PcHRpb25zEhUKCGVuY29kaW5nGAEg",
-            "ASgJQgPgQQESJAoXdHlwZV9pbmZlcmVuY2VfZGlzYWJsZWQYAiABKAhCA+BB",
-            "AUIRCg9yZXNvdXJjZV9jb25maWcitwQKE0RhdGFEaXNjb3ZlcnlSZXN1bHQS",
-            "YgoTYmlncXVlcnlfcHVibGlzaGluZxgBIAEoCzJALmdvb2dsZS5jbG91ZC5k",
-            "YXRhcGxleC52MS5EYXRhRGlzY292ZXJ5UmVzdWx0LkJpZ1F1ZXJ5UHVibGlz",
-            "aGluZ0ID4EEDEloKD3NjYW5fc3RhdGlzdGljcxgCIAEoCzI8Lmdvb2dsZS5j",
-            "bG91ZC5kYXRhcGxleC52MS5EYXRhRGlzY292ZXJ5UmVzdWx0LlNjYW5TdGF0",
-            "aXN0aWNzQgPgQQMaZQoSQmlnUXVlcnlQdWJsaXNoaW5nEjgKB2RhdGFzZXQY",
-            "ASABKAlCJ+BBA/pBIQofYmlncXVlcnkuZ29vZ2xlYXBpcy5jb20vRGF0YXNl",
-            "dBIVCghsb2NhdGlvbhgCIAEoCUID4EEDGvgBCg5TY2FuU3RhdGlzdGljcxIa",
-            "ChJzY2FubmVkX2ZpbGVfY291bnQYASABKAUSHAoUZGF0YV9wcm9jZXNzZWRf",
-            "Ynl0ZXMYAiABKAMSFgoOZmlsZXNfZXhjbHVkZWQYAyABKAUSFgoOdGFibGVz",
-            "X2NyZWF0ZWQYBCABKAUSFgoOdGFibGVzX2RlbGV0ZWQYBSABKAUSFgoOdGFi",
-            "bGVzX3VwZGF0ZWQYBiABKAUSGAoQZmlsZXNldHNfY3JlYXRlZBgHIAEoBRIY",
-            "ChBmaWxlc2V0c19kZWxldGVkGAggASgFEhgKEGZpbGVzZXRzX3VwZGF0ZWQY",
-            "CSABKAVCrAIKHGNvbS5nb29nbGUuY2xvdWQuZGF0YXBsZXgudjFCEkRhdGFE",
-            "aXNjb3ZlcnlQcm90b1ABWjhjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFwbGV4",
-            "L2FwaXYxL2RhdGFwbGV4cGI7ZGF0YXBsZXhwYupBSAofYmlncXVlcnkuZ29v",
-            "Z2xlYXBpcy5jb20vRGF0YXNldBIlcHJvamVjdHMve3Byb2plY3R9L2RhdGFz",
-            "ZXRzL3tkYXRhc2V0fepBcAosYmlncXVlcnljb25uZWN0aW9uLmdvb2dsZWFw",
-            "aXMuY29tL0Nvbm5lY3Rpb24SQHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9jb25uZWN0aW9ucy97Y29ubmVjdGlvbn1iBnByb3Rv",
-            "Mw=="));
+            "A+BBARJ5Chl1bnN0cnVjdHVyZWRfZGF0YV9vcHRpb25zGAUgASgLMlEuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEaXNjb3ZlcnlTcGVjLlN0b3Jh",
+            "Z2VDb25maWcuVW5zdHJ1Y3R1cmVkRGF0YU9wdGlvbnNCA+BBARqPAQoKQ3N2",
+            "T3B0aW9ucxIYCgtoZWFkZXJfcm93cxgBIAEoBUID4EEBEhYKCWRlbGltaXRl",
+            "chgCIAEoCUID4EEBEhUKCGVuY29kaW5nGAMgASgJQgPgQQESJAoXdHlwZV9p",
+            "bmZlcmVuY2VfZGlzYWJsZWQYBCABKAhCA+BBARISCgVxdW90ZRgFIAEoCUID",
+            "4EEBGkoKC0pzb25PcHRpb25zEhUKCGVuY29kaW5nGAEgASgJQgPgQQESJAoX",
+            "dHlwZV9pbmZlcmVuY2VfZGlzYWJsZWQYAiABKAhCA+BBARpCChdVbnN0cnVj",
+            "dHVyZWREYXRhT3B0aW9ucxInChpzZW1hbnRpY19pbmZlcmVuY2VfZW5hYmxl",
+            "ZBgCIAEoCEID4EEBQhEKD3Jlc291cmNlX2NvbmZpZyK3BAoTRGF0YURpc2Nv",
+            "dmVyeVJlc3VsdBJiChNiaWdxdWVyeV9wdWJsaXNoaW5nGAEgASgLMkAuZ29v",
+            "Z2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEaXNjb3ZlcnlSZXN1bHQuQmln",
+            "UXVlcnlQdWJsaXNoaW5nQgPgQQMSWgoPc2Nhbl9zdGF0aXN0aWNzGAIgASgL",
+            "MjwuZ29vZ2xlLmNsb3VkLmRhdGFwbGV4LnYxLkRhdGFEaXNjb3ZlcnlSZXN1",
+            "bHQuU2NhblN0YXRpc3RpY3NCA+BBAxplChJCaWdRdWVyeVB1Ymxpc2hpbmcS",
+            "OAoHZGF0YXNldBgBIAEoCUIn4EED+kEhCh9iaWdxdWVyeS5nb29nbGVhcGlz",
+            "LmNvbS9EYXRhc2V0EhUKCGxvY2F0aW9uGAIgASgJQgPgQQMa+AEKDlNjYW5T",
+            "dGF0aXN0aWNzEhoKEnNjYW5uZWRfZmlsZV9jb3VudBgBIAEoBRIcChRkYXRh",
+            "X3Byb2Nlc3NlZF9ieXRlcxgCIAEoAxIWCg5maWxlc19leGNsdWRlZBgDIAEo",
+            "BRIWCg50YWJsZXNfY3JlYXRlZBgEIAEoBRIWCg50YWJsZXNfZGVsZXRlZBgF",
+            "IAEoBRIWCg50YWJsZXNfdXBkYXRlZBgGIAEoBRIYChBmaWxlc2V0c19jcmVh",
+            "dGVkGAcgASgFEhgKEGZpbGVzZXRzX2RlbGV0ZWQYCCABKAUSGAoQZmlsZXNl",
+            "dHNfdXBkYXRlZBgJIAEoBUKsAgocY29tLmdvb2dsZS5jbG91ZC5kYXRhcGxl",
+            "eC52MUISRGF0YURpc2NvdmVyeVByb3RvUAFaOGNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vZGF0YXBsZXgvYXBpdjEvZGF0YXBsZXhwYjtkYXRhcGxleHBi6kFICh9i",
+            "aWdxdWVyeS5nb29nbGVhcGlzLmNvbS9EYXRhc2V0EiVwcm9qZWN0cy97cHJv",
+            "amVjdH0vZGF0YXNldHMve2RhdGFzZXR96kFwCixiaWdxdWVyeWNvbm5lY3Rp",
+            "b24uZ29vZ2xlYXBpcy5jb20vQ29ubmVjdGlvbhJAcHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nvbm5lY3Rpb25zL3tjb25uZWN0",
+            "aW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Parser, new[]{ "BigqueryPublishingConfig", "StorageConfig" }, new[]{ "ResourceConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.BigQueryPublishingConfig), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.BigQueryPublishingConfig.Parser, new[]{ "TableType", "Connection", "Location", "Project" }, null, new[]{ typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.BigQueryPublishingConfig.Types.TableType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Parser, new[]{ "IncludePatterns", "ExcludePatterns", "CsvOptions", "JsonOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.CsvOptions), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.CsvOptions.Parser, new[]{ "HeaderRows", "Delimiter", "Encoding", "TypeInferenceDisabled", "Quote" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.JsonOptions), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.JsonOptions.Parser, new[]{ "Encoding", "TypeInferenceDisabled" }, null, null, null, null)})}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Parser, new[]{ "IncludePatterns", "ExcludePatterns", "CsvOptions", "JsonOptions", "UnstructuredDataOptions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.CsvOptions), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.CsvOptions.Parser, new[]{ "HeaderRows", "Delimiter", "Encoding", "TypeInferenceDisabled", "Quote" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.JsonOptions), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.JsonOptions.Parser, new[]{ "Encoding", "TypeInferenceDisabled" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.UnstructuredDataOptions), global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.UnstructuredDataOptions.Parser, new[]{ "SemanticInferenceEnabled" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoveryResult), global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Parser, new[]{ "BigqueryPublishing", "ScanStatistics" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.BigQueryPublishing), global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.BigQueryPublishing.Parser, new[]{ "Dataset", "Location" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics), global::Google.Cloud.Dataplex.V1.DataDiscoveryResult.Types.ScanStatistics.Parser, new[]{ "ScannedFileCount", "DataProcessedBytes", "FilesExcluded", "TablesCreated", "TablesDeleted", "TablesUpdated", "FilesetsCreated", "FilesetsDeleted", "FilesetsUpdated" }, null, null, null, null)})
           }));
@@ -807,6 +812,7 @@ namespace Google.Cloud.Dataplex.V1 {
           excludePatterns_ = other.excludePatterns_.Clone();
           csvOptions_ = other.csvOptions_ != null ? other.csvOptions_.Clone() : null;
           jsonOptions_ = other.jsonOptions_ != null ? other.jsonOptions_.Clone() : null;
+          unstructuredDataOptions_ = other.unstructuredDataOptions_ != null ? other.unstructuredDataOptions_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -883,6 +889,21 @@ namespace Google.Cloud.Dataplex.V1 {
           }
         }
 
+        /// <summary>Field number for the "unstructured_data_options" field.</summary>
+        public const int UnstructuredDataOptionsFieldNumber = 5;
+        private global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.UnstructuredDataOptions unstructuredDataOptions_;
+        /// <summary>
+        /// Optional. Specifies configuration for unstructured data discovery.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.UnstructuredDataOptions UnstructuredDataOptions {
+          get { return unstructuredDataOptions_; }
+          set {
+            unstructuredDataOptions_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -902,6 +923,7 @@ namespace Google.Cloud.Dataplex.V1 {
           if(!excludePatterns_.Equals(other.excludePatterns_)) return false;
           if (!object.Equals(CsvOptions, other.CsvOptions)) return false;
           if (!object.Equals(JsonOptions, other.JsonOptions)) return false;
+          if (!object.Equals(UnstructuredDataOptions, other.UnstructuredDataOptions)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -913,6 +935,7 @@ namespace Google.Cloud.Dataplex.V1 {
           hash ^= excludePatterns_.GetHashCode();
           if (csvOptions_ != null) hash ^= CsvOptions.GetHashCode();
           if (jsonOptions_ != null) hash ^= JsonOptions.GetHashCode();
+          if (unstructuredDataOptions_ != null) hash ^= UnstructuredDataOptions.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -941,6 +964,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(34);
             output.WriteMessage(JsonOptions);
           }
+          if (unstructuredDataOptions_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(UnstructuredDataOptions);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -961,6 +988,10 @@ namespace Google.Cloud.Dataplex.V1 {
             output.WriteRawTag(34);
             output.WriteMessage(JsonOptions);
           }
+          if (unstructuredDataOptions_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(UnstructuredDataOptions);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -978,6 +1009,9 @@ namespace Google.Cloud.Dataplex.V1 {
           }
           if (jsonOptions_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(JsonOptions);
+          }
+          if (unstructuredDataOptions_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(UnstructuredDataOptions);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1004,6 +1038,12 @@ namespace Google.Cloud.Dataplex.V1 {
               JsonOptions = new global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.JsonOptions();
             }
             JsonOptions.MergeFrom(other.JsonOptions);
+          }
+          if (other.unstructuredDataOptions_ != null) {
+            if (unstructuredDataOptions_ == null) {
+              UnstructuredDataOptions = new global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.UnstructuredDataOptions();
+            }
+            UnstructuredDataOptions.MergeFrom(other.UnstructuredDataOptions);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1046,6 +1086,13 @@ namespace Google.Cloud.Dataplex.V1 {
                 input.ReadMessage(JsonOptions);
                 break;
               }
+              case 42: {
+                if (unstructuredDataOptions_ == null) {
+                  UnstructuredDataOptions = new global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.UnstructuredDataOptions();
+                }
+                input.ReadMessage(UnstructuredDataOptions);
+                break;
+              }
             }
           }
         #endif
@@ -1085,6 +1132,13 @@ namespace Google.Cloud.Dataplex.V1 {
                   JsonOptions = new global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.JsonOptions();
                 }
                 input.ReadMessage(JsonOptions);
+                break;
+              }
+              case 42: {
+                if (unstructuredDataOptions_ == null) {
+                  UnstructuredDataOptions = new global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Types.UnstructuredDataOptions();
+                }
+                input.ReadMessage(UnstructuredDataOptions);
                 break;
               }
             }
@@ -1703,6 +1757,211 @@ namespace Google.Cloud.Dataplex.V1 {
                   }
                   case 16: {
                     TypeInferenceDisabled = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+          /// <summary>
+          /// Describes options for unstructured data discovery.
+          /// </summary>
+          [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+          public sealed partial class UnstructuredDataOptions : pb::IMessage<UnstructuredDataOptions>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<UnstructuredDataOptions> _parser = new pb::MessageParser<UnstructuredDataOptions>(() => new UnstructuredDataOptions());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<UnstructuredDataOptions> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Dataplex.V1.DataDiscoverySpec.Types.StorageConfig.Descriptor.NestedTypes[2]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public UnstructuredDataOptions() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public UnstructuredDataOptions(UnstructuredDataOptions other) : this() {
+              semanticInferenceEnabled_ = other.semanticInferenceEnabled_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public UnstructuredDataOptions Clone() {
+              return new UnstructuredDataOptions(this);
+            }
+
+            /// <summary>Field number for the "semantic_inference_enabled" field.</summary>
+            public const int SemanticInferenceEnabledFieldNumber = 2;
+            private bool semanticInferenceEnabled_;
+            /// <summary>
+            /// Optional. Specifies whether deeper semantic inference over the objects'
+            /// contents using GenAI is enabled.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool SemanticInferenceEnabled {
+              get { return semanticInferenceEnabled_; }
+              set {
+                semanticInferenceEnabled_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as UnstructuredDataOptions);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(UnstructuredDataOptions other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (SemanticInferenceEnabled != other.SemanticInferenceEnabled) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (SemanticInferenceEnabled != false) hash ^= SemanticInferenceEnabled.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (SemanticInferenceEnabled != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(SemanticInferenceEnabled);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (SemanticInferenceEnabled != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(SemanticInferenceEnabled);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (SemanticInferenceEnabled != false) {
+                size += 1 + 1;
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(UnstructuredDataOptions other) {
+              if (other == null) {
+                return;
+              }
+              if (other.SemanticInferenceEnabled != false) {
+                SemanticInferenceEnabled = other.SemanticInferenceEnabled;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 16: {
+                    SemanticInferenceEnabled = input.ReadBool();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+              if ((tag & 7) == 4) {
+                // Abort on any end group tag.
+                return;
+              }
+              switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 16: {
+                    SemanticInferenceEnabled = input.ReadBool();
                     break;
                   }
                 }

@@ -614,6 +614,31 @@ namespace Google.Cloud.Dataplex.V1
         }
     }
 
+    public partial class RequestDataProductAccessRequest
+    {
+        /// <summary>
+        /// <see cref="DataProductName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public DataProductName ParentAsDataProductName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : DataProductName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RequestDataProductAccessResponse
+    {
+        /// <summary>
+        /// <see cref="gcdv::ChangeRequestName"/>-typed view over the <see cref="ChangeRequestName"/> resource name
+        /// property.
+        /// </summary>
+        public gcdv::ChangeRequestName ChangeRequestNameAsChangeRequestName
+        {
+            get => string.IsNullOrEmpty(ChangeRequestName) ? null : gcdv::ChangeRequestName.Parse(ChangeRequestName, allowUnparsed: true);
+            set => ChangeRequestName = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateDataAssetRequest
     {
         /// <summary>

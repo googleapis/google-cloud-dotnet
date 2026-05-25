@@ -14,17 +14,15 @@
 
 // Generated code. DO NOT EDIT!
 
-#pragma warning disable CS8981
-
 namespace GoogleCSharpSnippets
 {
-    // [START dataplex_v1_generated_CatalogService_LookupContext_async]
-    using System.Threading.Tasks;
-    using gcdv = Google.Cloud.Dataplex.V1;
+    // [START dataplex_v1_generated_CatalogService_ModifyEntry_sync]
+    using Google.Cloud.Dataplex.V1;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedCatalogServiceClientSnippets
     {
-        /// <summary>Snippet for LookupContextAsync</summary>
+        /// <summary>Snippet for ModifyEntry</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +30,22 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task LookupContextRequestObjectAsync()
+        public void ModifyEntryRequestObject()
         {
             // Create client
-            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            CatalogServiceClient catalogServiceClient = CatalogServiceClient.Create();
             // Initialize request argument(s)
-            gcdv::LookupContextRequest request = new gcdv::LookupContextRequest
+            ModifyEntryRequest request = new ModifyEntryRequest
             {
                 Name = "",
-                ResourcesAsEntryNames =
-                {
-                    gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                },
-                Context = "",
-                Options = { { "", "" }, },
+                Entry = new Entry(),
+                UpdateMask = new FieldMask(),
+                DeleteMissingAspects = false,
+                AspectKeys = { "", },
             };
             // Make the request
-            gcdv::LookupContextResponse response = await catalogServiceClient.LookupContextAsync(request);
+            Entry response = catalogServiceClient.ModifyEntry(request);
         }
     }
-    // [END dataplex_v1_generated_CatalogService_LookupContext_async]
+    // [END dataplex_v1_generated_CatalogService_ModifyEntry_sync]
 }

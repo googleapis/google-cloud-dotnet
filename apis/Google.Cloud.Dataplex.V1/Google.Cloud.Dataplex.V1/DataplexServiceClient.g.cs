@@ -802,11 +802,17 @@ namespace Google.Cloud.Dataplex.V1
         /// The default DataplexService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform.read-only</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataplex.read-write</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataplex.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/dataplex.read-write",
+            "https://www.googleapis.com/auth/dataplex.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>

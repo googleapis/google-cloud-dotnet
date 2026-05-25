@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 {
                     EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 },
+                Context = "",
                 Options = { { "", "" }, },
             };
             // Make the request

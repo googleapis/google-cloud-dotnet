@@ -1364,6 +1364,93 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for CancelDataScanJob</summary>
+        public void CancelDataScanJobRequestObject()
+        {
+            // Snippet: CancelDataScanJob(CancelDataScanJobRequest, CallSettings)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::CancelDataScanJobRequest request = new gcdv::CancelDataScanJobRequest
+            {
+                DataScanJobName = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]"),
+            };
+            // Make the request
+            gcdv::CancelDataScanJobResponse response = dataScanServiceClient.CancelDataScanJob(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDataScanJobAsync</summary>
+        public async Task CancelDataScanJobRequestObjectAsync()
+        {
+            // Snippet: CancelDataScanJobAsync(CancelDataScanJobRequest, CallSettings)
+            // Additional: CancelDataScanJobAsync(CancelDataScanJobRequest, CancellationToken)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::CancelDataScanJobRequest request = new gcdv::CancelDataScanJobRequest
+            {
+                DataScanJobName = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]"),
+            };
+            // Make the request
+            gcdv::CancelDataScanJobResponse response = await dataScanServiceClient.CancelDataScanJobAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDataScanJob</summary>
+        public void CancelDataScanJob()
+        {
+            // Snippet: CancelDataScanJob(string, CallSettings)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]/jobs/[JOB]";
+            // Make the request
+            gcdv::CancelDataScanJobResponse response = dataScanServiceClient.CancelDataScanJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDataScanJobAsync</summary>
+        public async Task CancelDataScanJobAsync()
+        {
+            // Snippet: CancelDataScanJobAsync(string, CallSettings)
+            // Additional: CancelDataScanJobAsync(string, CancellationToken)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]/jobs/[JOB]";
+            // Make the request
+            gcdv::CancelDataScanJobResponse response = await dataScanServiceClient.CancelDataScanJobAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDataScanJob</summary>
+        public void CancelDataScanJobResourceNames()
+        {
+            // Snippet: CancelDataScanJob(DataScanJobName, CallSettings)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = gcdv::DataScanServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::DataScanJobName name = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]");
+            // Make the request
+            gcdv::CancelDataScanJobResponse response = dataScanServiceClient.CancelDataScanJob(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CancelDataScanJobAsync</summary>
+        public async Task CancelDataScanJobResourceNamesAsync()
+        {
+            // Snippet: CancelDataScanJobAsync(DataScanJobName, CallSettings)
+            // Additional: CancelDataScanJobAsync(DataScanJobName, CancellationToken)
+            // Create client
+            gcdv::DataScanServiceClient dataScanServiceClient = await gcdv::DataScanServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::DataScanJobName name = gcdv::DataScanJobName.FromProjectLocationDataScanJob("[PROJECT]", "[LOCATION]", "[DATASCAN]", "[JOB]");
+            // Make the request
+            gcdv::CancelDataScanJobResponse response = await dataScanServiceClient.CancelDataScanJobAsync(name);
+            // End snippet
+        }
+
         /// <summary>Snippet for GenerateDataQualityRules</summary>
         public void GenerateDataQualityRulesRequestObject()
         {

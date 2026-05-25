@@ -18,13 +18,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dataplex_v1_generated_CatalogService_LookupContext_async]
+    // [START dataplex_v1_generated_CatalogService_ModifyEntry_async]
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
     using gcdv = Google.Cloud.Dataplex.V1;
 
     public sealed partial class GeneratedCatalogServiceClientSnippets
     {
-        /// <summary>Snippet for LookupContextAsync</summary>
+        /// <summary>Snippet for ModifyEntryAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +33,22 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task LookupContextRequestObjectAsync()
+        public async Task ModifyEntryRequestObjectAsync()
         {
             // Create client
             gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
             // Initialize request argument(s)
-            gcdv::LookupContextRequest request = new gcdv::LookupContextRequest
+            gcdv::ModifyEntryRequest request = new gcdv::ModifyEntryRequest
             {
                 Name = "",
-                ResourcesAsEntryNames =
-                {
-                    gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                },
-                Context = "",
-                Options = { { "", "" }, },
+                Entry = new gcdv::Entry(),
+                UpdateMask = new FieldMask(),
+                DeleteMissingAspects = false,
+                AspectKeys = { "", },
             };
             // Make the request
-            gcdv::LookupContextResponse response = await catalogServiceClient.LookupContextAsync(request);
+            gcdv::Entry response = await catalogServiceClient.ModifyEntryAsync(request);
         }
     }
-    // [END dataplex_v1_generated_CatalogService_LookupContext_async]
+    // [END dataplex_v1_generated_CatalogService_ModifyEntry_async]
 }

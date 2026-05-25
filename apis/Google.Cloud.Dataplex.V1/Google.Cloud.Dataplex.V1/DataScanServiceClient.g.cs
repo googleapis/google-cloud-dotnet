@@ -61,6 +61,7 @@ namespace Google.Cloud.Dataplex.V1
             RunDataScanSettings = existing.RunDataScanSettings;
             GetDataScanJobSettings = existing.GetDataScanJobSettings;
             ListDataScanJobsSettings = existing.ListDataScanJobsSettings;
+            CancelDataScanJobSettings = existing.CancelDataScanJobSettings;
             GenerateDataQualityRulesSettings = existing.GenerateDataQualityRulesSettings;
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
@@ -221,6 +222,18 @@ namespace Google.Cloud.Dataplex.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataScanServiceClient.CancelDataScanJob</c> and <c>DataScanServiceClient.CancelDataScanJobAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CancelDataScanJobSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataScanServiceClient.GenerateDataQualityRules</c> and
         /// <c>DataScanServiceClient.GenerateDataQualityRulesAsync</c>.
         /// </summary>
@@ -318,11 +331,17 @@ namespace Google.Cloud.Dataplex.V1
         /// The default DataScanService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform.read-only</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataplex.read-write</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataplex.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/dataplex.read-write",
+            "https://www.googleapis.com/auth/dataplex.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -457,7 +476,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. DataScan resource.
         /// </param>
         /// <param name="dataScanId">
-        /// Required. DataScan identifier.
+        /// Optional. DataScan identifier. If not provided, a unique ID will be
+        /// generated with the prefix "data-scan-".
         /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
@@ -472,7 +492,7 @@ namespace Google.Cloud.Dataplex.V1
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 DataScan = gax::GaxPreconditions.CheckNotNull(dataScan, nameof(dataScan)),
-                DataScanId = gax::GaxPreconditions.CheckNotNullOrEmpty(dataScanId, nameof(dataScanId)),
+                DataScanId = dataScanId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -488,7 +508,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. DataScan resource.
         /// </param>
         /// <param name="dataScanId">
-        /// Required. DataScan identifier.
+        /// Optional. DataScan identifier. If not provided, a unique ID will be
+        /// generated with the prefix "data-scan-".
         /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
@@ -503,7 +524,7 @@ namespace Google.Cloud.Dataplex.V1
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 DataScan = gax::GaxPreconditions.CheckNotNull(dataScan, nameof(dataScan)),
-                DataScanId = gax::GaxPreconditions.CheckNotNullOrEmpty(dataScanId, nameof(dataScanId)),
+                DataScanId = dataScanId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -519,7 +540,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. DataScan resource.
         /// </param>
         /// <param name="dataScanId">
-        /// Required. DataScan identifier.
+        /// Optional. DataScan identifier. If not provided, a unique ID will be
+        /// generated with the prefix "data-scan-".
         /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
@@ -545,7 +567,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. DataScan resource.
         /// </param>
         /// <param name="dataScanId">
-        /// Required. DataScan identifier.
+        /// Optional. DataScan identifier. If not provided, a unique ID will be
+        /// generated with the prefix "data-scan-".
         /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
@@ -560,7 +583,7 @@ namespace Google.Cloud.Dataplex.V1
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 DataScan = gax::GaxPreconditions.CheckNotNull(dataScan, nameof(dataScan)),
-                DataScanId = gax::GaxPreconditions.CheckNotNullOrEmpty(dataScanId, nameof(dataScanId)),
+                DataScanId = dataScanId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -576,7 +599,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. DataScan resource.
         /// </param>
         /// <param name="dataScanId">
-        /// Required. DataScan identifier.
+        /// Optional. DataScan identifier. If not provided, a unique ID will be
+        /// generated with the prefix "data-scan-".
         /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
@@ -591,7 +615,7 @@ namespace Google.Cloud.Dataplex.V1
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 DataScan = gax::GaxPreconditions.CheckNotNull(dataScan, nameof(dataScan)),
-                DataScanId = gax::GaxPreconditions.CheckNotNullOrEmpty(dataScanId, nameof(dataScanId)),
+                DataScanId = dataScanId ?? "",
             }, callSettings);
 
         /// <summary>
@@ -607,7 +631,8 @@ namespace Google.Cloud.Dataplex.V1
         /// Required. DataScan resource.
         /// </param>
         /// <param name="dataScanId">
-        /// Required. DataScan identifier.
+        /// Optional. DataScan identifier. If not provided, a unique ID will be
+        /// generated with the prefix "data-scan-".
         /// 
         /// * Must contain only lowercase letters, numbers and hyphens.
         /// * Must start with a letter.
@@ -1584,6 +1609,129 @@ namespace Google.Cloud.Dataplex.V1
         }
 
         /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelDataScanJobResponse CancelDataScanJob(CancelDataScanJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelDataScanJobResponse> CancelDataScanJobAsync(CancelDataScanJobRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelDataScanJobResponse> CancelDataScanJobAsync(CancelDataScanJobRequest request, st::CancellationToken cancellationToken) =>
+            CancelDataScanJobAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the DataScanJob:
+        /// `projects/{project_id_or_number}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
+        /// where `project_id_or_number` refers to a *project_id* or *project_number*
+        /// and `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelDataScanJobResponse CancelDataScanJob(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelDataScanJob(new CancelDataScanJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the DataScanJob:
+        /// `projects/{project_id_or_number}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
+        /// where `project_id_or_number` refers to a *project_id* or *project_number*
+        /// and `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelDataScanJobResponse> CancelDataScanJobAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelDataScanJobAsync(new CancelDataScanJobRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the DataScanJob:
+        /// `projects/{project_id_or_number}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
+        /// where `project_id_or_number` refers to a *project_id* or *project_number*
+        /// and `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelDataScanJobResponse> CancelDataScanJobAsync(string name, st::CancellationToken cancellationToken) =>
+            CancelDataScanJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the DataScanJob:
+        /// `projects/{project_id_or_number}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
+        /// where `project_id_or_number` refers to a *project_id* or *project_number*
+        /// and `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CancelDataScanJobResponse CancelDataScanJob(DataScanJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelDataScanJob(new CancelDataScanJobRequest
+            {
+                DataScanJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the DataScanJob:
+        /// `projects/{project_id_or_number}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
+        /// where `project_id_or_number` refers to a *project_id* or *project_number*
+        /// and `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelDataScanJobResponse> CancelDataScanJobAsync(DataScanJobName name, gaxgrpc::CallSettings callSettings = null) =>
+            CancelDataScanJobAsync(new CancelDataScanJobRequest
+            {
+                DataScanJobName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the DataScanJob:
+        /// `projects/{project_id_or_number}/locations/{location_id}/dataScans/{data_scan_id}/jobs/{data_scan_job_id}`
+        /// where `project_id_or_number` refers to a *project_id* or *project_number*
+        /// and `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CancelDataScanJobResponse> CancelDataScanJobAsync(DataScanJobName name, st::CancellationToken cancellationToken) =>
+            CancelDataScanJobAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Generates recommended data quality rules based on the results of a data
         /// profiling scan.
         /// 
@@ -1707,6 +1855,8 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse> _callListDataScanJobs;
 
+        private readonly gaxgrpc::ApiCall<CancelDataScanJobRequest, CancelDataScanJobResponse> _callCancelDataScanJob;
+
         private readonly gaxgrpc::ApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse> _callGenerateDataQualityRules;
 
         /// <summary>
@@ -1753,6 +1903,9 @@ namespace Google.Cloud.Dataplex.V1
             _callListDataScanJobs = clientHelper.BuildApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse>("ListDataScanJobs", grpcClient.ListDataScanJobsAsync, grpcClient.ListDataScanJobs, effectiveSettings.ListDataScanJobsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDataScanJobs);
             Modify_ListDataScanJobsApiCall(ref _callListDataScanJobs);
+            _callCancelDataScanJob = clientHelper.BuildApiCall<CancelDataScanJobRequest, CancelDataScanJobResponse>("CancelDataScanJob", grpcClient.CancelDataScanJobAsync, grpcClient.CancelDataScanJob, effectiveSettings.CancelDataScanJobSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callCancelDataScanJob);
+            Modify_CancelDataScanJobApiCall(ref _callCancelDataScanJob);
             _callGenerateDataQualityRules = clientHelper.BuildApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse>("GenerateDataQualityRules", grpcClient.GenerateDataQualityRulesAsync, grpcClient.GenerateDataQualityRules, effectiveSettings.GenerateDataQualityRulesSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGenerateDataQualityRules);
             Modify_GenerateDataQualityRulesApiCall(ref _callGenerateDataQualityRules);
@@ -1776,6 +1929,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetDataScanJobApiCall(ref gaxgrpc::ApiCall<GetDataScanJobRequest, DataScanJob> call);
 
         partial void Modify_ListDataScanJobsApiCall(ref gaxgrpc::ApiCall<ListDataScanJobsRequest, ListDataScanJobsResponse> call);
+
+        partial void Modify_CancelDataScanJobApiCall(ref gaxgrpc::ApiCall<CancelDataScanJobRequest, CancelDataScanJobResponse> call);
 
         partial void Modify_GenerateDataQualityRulesApiCall(ref gaxgrpc::ApiCall<GenerateDataQualityRulesRequest, GenerateDataQualityRulesResponse> call);
 
@@ -1805,6 +1960,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_GetDataScanJobRequest(ref GetDataScanJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDataScanJobsRequest(ref ListDataScanJobsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CancelDataScanJobRequest(ref CancelDataScanJobRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GenerateDataQualityRulesRequest(ref GenerateDataQualityRulesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2007,6 +2164,30 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_ListDataScanJobsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDataScanJobsRequest, ListDataScanJobsResponse, DataScanJob>(_callListDataScanJobs, request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CancelDataScanJobResponse CancelDataScanJob(CancelDataScanJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelDataScanJobRequest(ref request, ref callSettings);
+            return _callCancelDataScanJob.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Cancels a running/pending DataScan job.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CancelDataScanJobResponse> CancelDataScanJobAsync(CancelDataScanJobRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CancelDataScanJobRequest(ref request, ref callSettings);
+            return _callCancelDataScanJob.Async(request, callSettings);
         }
 
         /// <summary>

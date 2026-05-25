@@ -14,17 +14,14 @@
 
 // Generated code. DO NOT EDIT!
 
-#pragma warning disable CS8981
-
 namespace GoogleCSharpSnippets
 {
-    // [START dataplex_v1_generated_CatalogService_LookupContext_async]
-    using System.Threading.Tasks;
-    using gcdv = Google.Cloud.Dataplex.V1;
+    // [START dataplex_v1_generated_DataScanService_CancelDataScanJob_sync_flattened]
+    using Google.Cloud.Dataplex.V1;
 
-    public sealed partial class GeneratedCatalogServiceClientSnippets
+    public sealed partial class GeneratedDataScanServiceClientSnippets
     {
-        /// <summary>Snippet for LookupContextAsync</summary>
+        /// <summary>Snippet for CancelDataScanJob</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,24 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task LookupContextRequestObjectAsync()
+        public void CancelDataScanJob()
         {
             // Create client
-            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            DataScanServiceClient dataScanServiceClient = DataScanServiceClient.Create();
             // Initialize request argument(s)
-            gcdv::LookupContextRequest request = new gcdv::LookupContextRequest
-            {
-                Name = "",
-                ResourcesAsEntryNames =
-                {
-                    gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
-                },
-                Context = "",
-                Options = { { "", "" }, },
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/dataScans/[DATASCAN]/jobs/[JOB]";
             // Make the request
-            gcdv::LookupContextResponse response = await catalogServiceClient.LookupContextAsync(request);
+            CancelDataScanJobResponse response = dataScanServiceClient.CancelDataScanJob(name);
         }
     }
-    // [END dataplex_v1_generated_CatalogService_LookupContext_async]
+    // [END dataplex_v1_generated_DataScanService_CancelDataScanJob_sync_flattened]
 }

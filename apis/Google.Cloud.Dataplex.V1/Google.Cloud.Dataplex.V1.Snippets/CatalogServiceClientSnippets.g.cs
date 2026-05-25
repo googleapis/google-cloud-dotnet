@@ -3334,6 +3334,47 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyEntry</summary>
+        public void ModifyEntryRequestObject()
+        {
+            // Snippet: ModifyEntry(ModifyEntryRequest, CallSettings)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = gcdv::CatalogServiceClient.Create();
+            // Initialize request argument(s)
+            gcdv::ModifyEntryRequest request = new gcdv::ModifyEntryRequest
+            {
+                Name = "",
+                Entry = new gcdv::Entry(),
+                UpdateMask = new FieldMask(),
+                DeleteMissingAspects = false,
+                AspectKeys = { "", },
+            };
+            // Make the request
+            gcdv::Entry response = catalogServiceClient.ModifyEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModifyEntryAsync</summary>
+        public async Task ModifyEntryRequestObjectAsync()
+        {
+            // Snippet: ModifyEntryAsync(ModifyEntryRequest, CallSettings)
+            // Additional: ModifyEntryAsync(ModifyEntryRequest, CancellationToken)
+            // Create client
+            gcdv::CatalogServiceClient catalogServiceClient = await gcdv::CatalogServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            gcdv::ModifyEntryRequest request = new gcdv::ModifyEntryRequest
+            {
+                Name = "",
+                Entry = new gcdv::Entry(),
+                UpdateMask = new FieldMask(),
+                DeleteMissingAspects = false,
+                AspectKeys = { "", },
+            };
+            // Make the request
+            gcdv::Entry response = await catalogServiceClient.ModifyEntryAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for SearchEntries</summary>
         public void SearchEntriesRequestObject()
         {
@@ -4639,6 +4680,7 @@ namespace GoogleCSharpSnippets
                 {
                     gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 },
+                Context = "",
                 Options = { { "", "" }, },
             };
             // Make the request
@@ -4661,6 +4703,7 @@ namespace GoogleCSharpSnippets
                 {
                     gcdv::EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
                 },
+                Context = "",
                 Options = { { "", "" }, },
             };
             // Make the request

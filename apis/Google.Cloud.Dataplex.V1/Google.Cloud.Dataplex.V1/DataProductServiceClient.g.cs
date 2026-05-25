@@ -58,6 +58,7 @@ namespace Google.Cloud.Dataplex.V1
             ListDataProductsSettings = existing.ListDataProductsSettings;
             UpdateDataProductSettings = existing.UpdateDataProductSettings;
             UpdateDataProductOperationsSettings = existing.UpdateDataProductOperationsSettings.Clone();
+            RequestDataProductAccessSettings = existing.RequestDataProductAccessSettings;
             CreateDataAssetSettings = existing.CreateDataAssetSettings;
             CreateDataAssetOperationsSettings = existing.CreateDataAssetOperationsSettings.Clone();
             UpdateDataAssetSettings = existing.UpdateDataAssetSettings;
@@ -189,6 +190,19 @@ namespace Google.Cloud.Dataplex.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataProductServiceClient.RequestDataProductAccess</c> and
+        /// <c>DataProductServiceClient.RequestDataProductAccessAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RequestDataProductAccessSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -389,11 +403,17 @@ namespace Google.Cloud.Dataplex.V1
         /// The default DataProductService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud-platform.read-only</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataplex.read-write</description></item>
+        /// <item><description>https://www.googleapis.com/auth/dataplex.readonly</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud-platform.read-only",
+            "https://www.googleapis.com/auth/dataplex.read-write",
+            "https://www.googleapis.com/auth/dataplex.readonly",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -1243,6 +1263,163 @@ namespace Google.Cloud.Dataplex.V1
             UpdateDataProductAsync(dataProduct, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RequestDataProductAccessResponse RequestDataProductAccess(RequestDataProductAccessRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RequestDataProductAccessResponse> RequestDataProductAccessAsync(RequestDataProductAccessRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RequestDataProductAccessResponse> RequestDataProductAccessAsync(RequestDataProductAccessRequest request, st::CancellationToken cancellationToken) =>
+            RequestDataProductAccessAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the data product.
+        /// Format:
+        /// projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+        /// </param>
+        /// <param name="changeRequest">
+        /// Required. The change request for the data product access request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RequestDataProductAccessResponse RequestDataProductAccess(string parent, ChangeRequest changeRequest, gaxgrpc::CallSettings callSettings = null) =>
+            RequestDataProductAccess(new RequestDataProductAccessRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ChangeRequest = gax::GaxPreconditions.CheckNotNull(changeRequest, nameof(changeRequest)),
+            }, callSettings);
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the data product.
+        /// Format:
+        /// projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+        /// </param>
+        /// <param name="changeRequest">
+        /// Required. The change request for the data product access request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RequestDataProductAccessResponse> RequestDataProductAccessAsync(string parent, ChangeRequest changeRequest, gaxgrpc::CallSettings callSettings = null) =>
+            RequestDataProductAccessAsync(new RequestDataProductAccessRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ChangeRequest = gax::GaxPreconditions.CheckNotNull(changeRequest, nameof(changeRequest)),
+            }, callSettings);
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the data product.
+        /// Format:
+        /// projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+        /// </param>
+        /// <param name="changeRequest">
+        /// Required. The change request for the data product access request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RequestDataProductAccessResponse> RequestDataProductAccessAsync(string parent, ChangeRequest changeRequest, st::CancellationToken cancellationToken) =>
+            RequestDataProductAccessAsync(parent, changeRequest, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the data product.
+        /// Format:
+        /// projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+        /// </param>
+        /// <param name="changeRequest">
+        /// Required. The change request for the data product access request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RequestDataProductAccessResponse RequestDataProductAccess(DataProductName parent, ChangeRequest changeRequest, gaxgrpc::CallSettings callSettings = null) =>
+            RequestDataProductAccess(new RequestDataProductAccessRequest
+            {
+                ParentAsDataProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChangeRequest = gax::GaxPreconditions.CheckNotNull(changeRequest, nameof(changeRequest)),
+            }, callSettings);
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the data product.
+        /// Format:
+        /// projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+        /// </param>
+        /// <param name="changeRequest">
+        /// Required. The change request for the data product access request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RequestDataProductAccessResponse> RequestDataProductAccessAsync(DataProductName parent, ChangeRequest changeRequest, gaxgrpc::CallSettings callSettings = null) =>
+            RequestDataProductAccessAsync(new RequestDataProductAccessRequest
+            {
+                ParentAsDataProductName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChangeRequest = gax::GaxPreconditions.CheckNotNull(changeRequest, nameof(changeRequest)),
+            }, callSettings);
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the data product.
+        /// Format:
+        /// projects/{project_number}/locations/{location_id}/dataProducts/{data_product_id}
+        /// </param>
+        /// <param name="changeRequest">
+        /// Required. The change request for the data product access request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RequestDataProductAccessResponse> RequestDataProductAccessAsync(DataProductName parent, ChangeRequest changeRequest, st::CancellationToken cancellationToken) =>
+            RequestDataProductAccessAsync(parent, changeRequest, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates a data asset.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2016,6 +2193,8 @@ namespace Google.Cloud.Dataplex.V1
 
         private readonly gaxgrpc::ApiCall<UpdateDataProductRequest, lro::Operation> _callUpdateDataProduct;
 
+        private readonly gaxgrpc::ApiCall<RequestDataProductAccessRequest, RequestDataProductAccessResponse> _callRequestDataProductAccess;
+
         private readonly gaxgrpc::ApiCall<CreateDataAssetRequest, lro::Operation> _callCreateDataAsset;
 
         private readonly gaxgrpc::ApiCall<UpdateDataAssetRequest, lro::Operation> _callUpdateDataAsset;
@@ -2064,6 +2243,9 @@ namespace Google.Cloud.Dataplex.V1
             _callUpdateDataProduct = clientHelper.BuildApiCall<UpdateDataProductRequest, lro::Operation>("UpdateDataProduct", grpcClient.UpdateDataProductAsync, grpcClient.UpdateDataProduct, effectiveSettings.UpdateDataProductSettings).WithGoogleRequestParam("data_product.name", request => request.DataProduct?.Name);
             Modify_ApiCall(ref _callUpdateDataProduct);
             Modify_UpdateDataProductApiCall(ref _callUpdateDataProduct);
+            _callRequestDataProductAccess = clientHelper.BuildApiCall<RequestDataProductAccessRequest, RequestDataProductAccessResponse>("RequestDataProductAccess", grpcClient.RequestDataProductAccessAsync, grpcClient.RequestDataProductAccess, effectiveSettings.RequestDataProductAccessSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callRequestDataProductAccess);
+            Modify_RequestDataProductAccessApiCall(ref _callRequestDataProductAccess);
             _callCreateDataAsset = clientHelper.BuildApiCall<CreateDataAssetRequest, lro::Operation>("CreateDataAsset", grpcClient.CreateDataAssetAsync, grpcClient.CreateDataAsset, effectiveSettings.CreateDataAssetSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDataAsset);
             Modify_CreateDataAssetApiCall(ref _callCreateDataAsset);
@@ -2093,6 +2275,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_ListDataProductsApiCall(ref gaxgrpc::ApiCall<ListDataProductsRequest, ListDataProductsResponse> call);
 
         partial void Modify_UpdateDataProductApiCall(ref gaxgrpc::ApiCall<UpdateDataProductRequest, lro::Operation> call);
+
+        partial void Modify_RequestDataProductAccessApiCall(ref gaxgrpc::ApiCall<RequestDataProductAccessRequest, RequestDataProductAccessResponse> call);
 
         partial void Modify_CreateDataAssetApiCall(ref gaxgrpc::ApiCall<CreateDataAssetRequest, lro::Operation> call);
 
@@ -2124,6 +2308,8 @@ namespace Google.Cloud.Dataplex.V1
         partial void Modify_ListDataProductsRequest(ref ListDataProductsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateDataProductRequest(ref UpdateDataProductRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RequestDataProductAccessRequest(ref RequestDataProductAccessRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateDataAssetRequest(ref CreateDataAssetRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2264,6 +2450,34 @@ namespace Google.Cloud.Dataplex.V1
         {
             Modify_UpdateDataProductRequest(ref request, ref callSettings);
             return new lro::Operation<DataProduct, OperationMetadata>(await _callUpdateDataProduct.Async(request, callSettings).ConfigureAwait(false), UpdateDataProductOperationsClient);
+        }
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RequestDataProductAccessResponse RequestDataProductAccess(RequestDataProductAccessRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RequestDataProductAccessRequest(ref request, ref callSettings);
+            return _callRequestDataProductAccess.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Requests access to a data product. This will trigger an access approval
+        /// workflow, and the requester will need to wait for the approval to be
+        /// granted before they will be able to access the data product assets.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RequestDataProductAccessResponse> RequestDataProductAccessAsync(RequestDataProductAccessRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RequestDataProductAccessRequest(ref request, ref callSettings);
+            return _callRequestDataProductAccess.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>CreateDataAsset</c>.</summary>
