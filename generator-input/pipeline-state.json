@@ -5040,12 +5040,12 @@
         },
         {
             "id": "Google.Cloud.GeminiDataAnalytics.V1",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-05-18T14:23:29.659432780Z",
+            "releaseTimestamp": "2026-05-25T14:39:45.405057264Z",
             "lastGeneratedCommit": "64c2cac3c44c1714c76b9335cbfa9e46022d71e0",
-            "lastReleasedCommit": "4cc6aa94090b55a457fd78758af31cac133b6ad7",
+            "lastReleasedCommit": "64c2cac3c44c1714c76b9335cbfa9e46022d71e0",
             "apiPaths": [
                 "google/cloud/geminidataanalytics/v1"
             ],
