@@ -738,12 +738,12 @@
         },
         {
             "id": "Google.Cloud.BigQuery.Migration.V2",
-            "currentVersion": "1.6.0",
+            "currentVersion": "1.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T08:47:48.878790533Z",
+            "releaseTimestamp": "2026-05-25T14:05:43.357950856Z",
             "lastGeneratedCommit": "43731d5d22f8e3526ba7aa708da9d5de26043d0f",
-            "lastReleasedCommit": "4823efd0b9944891ec5c387104dcc2ec401307a8",
+            "lastReleasedCommit": "43731d5d22f8e3526ba7aa708da9d5de26043d0f",
             "apiPaths": [
                 "google/cloud/bigquery/migration/v2"
             ],

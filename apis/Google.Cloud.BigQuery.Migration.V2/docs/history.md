@@ -1,5 +1,30 @@
 # Version history
 
+## Version 1.7.0, released 2026-05-25
+
+### New features
+
+- Add support for assessment tasks in BigQuery Migration API
+- Add suggestion config to translation tasks
+
+### Documentation improvements
+
+- Update comments for various fields in MigrationWorkflow, MigrationTask, and MigrationSubtask
+- Add comment that field `create_time` in message `.google.cloud.bigquery.migration.v2.MigrationWorkflow` is output only
+- Add comment that field `last_update_time` in message `.google.cloud.bigquery.migration.v2.MigrationWorkflow` is output only
+- Fixed typo in comment for enum value `PAUSED` in enum `State` is changed
+- Link to relevant documentation in comment for field `type` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is changed
+- Add comment that field `create_time` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is output only
+- Add comment that field `last_update_time` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is output only
+- Add comment that field `resource_error_count` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is output only
+- Add comment that field `metrics` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is output only
+- Add comment that field `total_processing_error_count` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is output only
+- Add comment that field `total_resource_error_count` in message `.google.cloud.bigquery.migration.v2.MigrationTask` is output only
+- Add comment that field `resource_error_count` in message `.google.cloud.bigquery.migration.v2.MigrationSubtask` is output only
+- Add comment that field `create_time` in message `.google.cloud.bigquery.migration.v2.MigrationSubtask` is output only
+- Add comment that field `last_update_time` in message `.google.cloud.bigquery.migration.v2.MigrationSubtask` is output only
+- Add comment for field `metrics` in message `.google.cloud.bigquery.migration.v2.MigrationSubtask` is output only
+
 ## Version 1.6.0, released 2025-11-05
 
 ### New features
