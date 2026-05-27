@@ -47,6 +47,7 @@ namespace Google.Maps.Places.V1
             yield return RouteModifiersReflection.Descriptor;
             yield return RoutingPreferenceReflection.Descriptor;
             yield return RoutingSummaryReflection.Descriptor;
+            yield return TransitReflection.Descriptor;
             yield return TravelModeReflection.Descriptor;
         }
     }
