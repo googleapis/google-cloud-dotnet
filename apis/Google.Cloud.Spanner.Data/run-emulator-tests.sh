@@ -27,7 +27,7 @@ gcloud emulators spanner start &
 
 EMULATOR_PID=$!
 # When this shell exits, stop the emulator.
-trap "kill -15 $EMULATOR_PID; echo \"Cleaned up the emulator\";" EXIT
+trap "kill -- "-$EMULATOR_PID" || true; echo \"Cleaned up the emulator\";" EXIT
 
 # Run the tests.
 dotnet test -c Release Google.Cloud.Spanner.Data.IntegrationTests --filter SupportedOnEmulator\!=No
