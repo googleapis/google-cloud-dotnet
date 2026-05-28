@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gcscv = Google.Cloud.Storage.Control.V2;
 using sys = System;
@@ -1331,6 +1332,588 @@ namespace Google.Cloud.Storage.Control.V2
         public static bool operator !=(IntelligenceConfigName a, IntelligenceConfigName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>IntelligenceFinding</c> resource.</summary>
+    public sealed partial class IntelligenceFindingName : gax::IResourceName, sys::IEquatable<IntelligenceFindingName>
+    {
+        /// <summary>The possible contents of <see cref="IntelligenceFindingName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>.
+            /// </summary>
+            ProjectLocationIntelligenceFinding = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationIntelligenceFinding = new gax::PathTemplate("projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}");
+
+        /// <summary>Creates a <see cref="IntelligenceFindingName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="IntelligenceFindingName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static IntelligenceFindingName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new IntelligenceFindingName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="IntelligenceFindingName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intelligenceFindingId">
+        /// The <c>IntelligenceFinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="IntelligenceFindingName"/> constructed from the provided ids.
+        /// </returns>
+        public static IntelligenceFindingName FromProjectLocationIntelligenceFinding(string projectId, string locationId, string intelligenceFindingId) =>
+            new IntelligenceFindingName(ResourceNameType.ProjectLocationIntelligenceFinding, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), intelligenceFindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(intelligenceFindingId, nameof(intelligenceFindingId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="IntelligenceFindingName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intelligenceFindingId">
+        /// The <c>IntelligenceFinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="IntelligenceFindingName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string intelligenceFindingId) =>
+            FormatProjectLocationIntelligenceFinding(projectId, locationId, intelligenceFindingId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="IntelligenceFindingName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intelligenceFindingId">
+        /// The <c>IntelligenceFinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="IntelligenceFindingName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>.
+        /// </returns>
+        public static string FormatProjectLocationIntelligenceFinding(string projectId, string locationId, string intelligenceFindingId) =>
+            s_projectLocationIntelligenceFinding.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(intelligenceFindingId, nameof(intelligenceFindingId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="IntelligenceFindingName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="intelligenceFindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="IntelligenceFindingName"/> if successful.</returns>
+        public static IntelligenceFindingName Parse(string intelligenceFindingName) => Parse(intelligenceFindingName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="IntelligenceFindingName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="intelligenceFindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="IntelligenceFindingName"/> if successful.</returns>
+        public static IntelligenceFindingName Parse(string intelligenceFindingName, bool allowUnparsed) =>
+            TryParse(intelligenceFindingName, allowUnparsed, out IntelligenceFindingName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="IntelligenceFindingName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="intelligenceFindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="IntelligenceFindingName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string intelligenceFindingName, out IntelligenceFindingName result) =>
+            TryParse(intelligenceFindingName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="IntelligenceFindingName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="intelligenceFindingName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="IntelligenceFindingName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string intelligenceFindingName, bool allowUnparsed, out IntelligenceFindingName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(intelligenceFindingName, nameof(intelligenceFindingName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationIntelligenceFinding.TryParseName(intelligenceFindingName, out resourceName))
+            {
+                result = FromProjectLocationIntelligenceFinding(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(intelligenceFindingName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private IntelligenceFindingName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string intelligenceFindingId = null, string locationId = null, string projectId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            IntelligenceFindingId = intelligenceFindingId;
+            LocationId = locationId;
+            ProjectId = projectId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="IntelligenceFindingName"/> class from the component parts of
+        /// pattern <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intelligenceFindingId">
+        /// The <c>IntelligenceFinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public IntelligenceFindingName(string projectId, string locationId, string intelligenceFindingId) : this(ResourceNameType.ProjectLocationIntelligenceFinding, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), intelligenceFindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(intelligenceFindingId, nameof(intelligenceFindingId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>IntelligenceFinding</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string IntelligenceFindingId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationIntelligenceFinding: return s_projectLocationIntelligenceFinding.Expand(ProjectId, LocationId, IntelligenceFindingId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as IntelligenceFindingName);
+
+        /// <inheritdoc/>
+        public bool Equals(IntelligenceFindingName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(IntelligenceFindingName a, IntelligenceFindingName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(IntelligenceFindingName a, IntelligenceFindingName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>IntelligenceFindingRevision</c> resource.</summary>
+    public sealed partial class IntelligenceFindingRevisionName : gax::IResourceName, sys::IEquatable<IntelligenceFindingRevisionName>
+    {
+        /// <summary>The possible contents of <see cref="IntelligenceFindingRevisionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+            /// .
+            /// </summary>
+            ProjectLocationIntelligenceFindingRevision = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationIntelligenceFindingRevision = new gax::PathTemplate("projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}");
+
+        /// <summary>
+        /// Creates a <see cref="IntelligenceFindingRevisionName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="IntelligenceFindingRevisionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static IntelligenceFindingRevisionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new IntelligenceFindingRevisionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="IntelligenceFindingRevisionName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intelligenceFindingId">
+        /// The <c>IntelligenceFinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="IntelligenceFindingRevisionName"/> constructed from the provided ids.
+        /// </returns>
+        public static IntelligenceFindingRevisionName FromProjectLocationIntelligenceFindingRevision(string projectId, string locationId, string intelligenceFindingId, string revisionId) =>
+            new IntelligenceFindingRevisionName(ResourceNameType.ProjectLocationIntelligenceFindingRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), intelligenceFindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(intelligenceFindingId, nameof(intelligenceFindingId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="IntelligenceFindingRevisionName"/> with
+        /// pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intelligenceFindingId">
+        /// The <c>IntelligenceFinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="IntelligenceFindingRevisionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string intelligenceFindingId, string revisionId) =>
+            FormatProjectLocationIntelligenceFindingRevision(projectId, locationId, intelligenceFindingId, revisionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="IntelligenceFindingRevisionName"/> with
+        /// pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intelligenceFindingId">
+        /// The <c>IntelligenceFinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="IntelligenceFindingRevisionName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationIntelligenceFindingRevision(string projectId, string locationId, string intelligenceFindingId, string revisionId) =>
+            s_projectLocationIntelligenceFindingRevision.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(intelligenceFindingId, nameof(intelligenceFindingId)), gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="IntelligenceFindingRevisionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="intelligenceFindingRevisionName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="IntelligenceFindingRevisionName"/> if successful.</returns>
+        public static IntelligenceFindingRevisionName Parse(string intelligenceFindingRevisionName) =>
+            Parse(intelligenceFindingRevisionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="IntelligenceFindingRevisionName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="intelligenceFindingRevisionName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="IntelligenceFindingRevisionName"/> if successful.</returns>
+        public static IntelligenceFindingRevisionName Parse(string intelligenceFindingRevisionName, bool allowUnparsed) =>
+            TryParse(intelligenceFindingRevisionName, allowUnparsed, out IntelligenceFindingRevisionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="IntelligenceFindingRevisionName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="intelligenceFindingRevisionName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="IntelligenceFindingRevisionName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string intelligenceFindingRevisionName, out IntelligenceFindingRevisionName result) =>
+            TryParse(intelligenceFindingRevisionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="IntelligenceFindingRevisionName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="intelligenceFindingRevisionName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="IntelligenceFindingRevisionName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string intelligenceFindingRevisionName, bool allowUnparsed, out IntelligenceFindingRevisionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(intelligenceFindingRevisionName, nameof(intelligenceFindingRevisionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationIntelligenceFindingRevision.TryParseName(intelligenceFindingRevisionName, out resourceName))
+            {
+                result = FromProjectLocationIntelligenceFindingRevision(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(intelligenceFindingRevisionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private IntelligenceFindingRevisionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string intelligenceFindingId = null, string locationId = null, string projectId = null, string revisionId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            IntelligenceFindingId = intelligenceFindingId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            RevisionId = revisionId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="IntelligenceFindingRevisionName"/> class from the component parts
+        /// of pattern
+        /// <c>projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="intelligenceFindingId">
+        /// The <c>IntelligenceFinding</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="revisionId">The <c>Revision</c> ID. Must not be <c>null</c> or empty.</param>
+        public IntelligenceFindingRevisionName(string projectId, string locationId, string intelligenceFindingId, string revisionId) : this(ResourceNameType.ProjectLocationIntelligenceFindingRevision, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), intelligenceFindingId: gax::GaxPreconditions.CheckNotNullOrEmpty(intelligenceFindingId, nameof(intelligenceFindingId)), revisionId: gax::GaxPreconditions.CheckNotNullOrEmpty(revisionId, nameof(revisionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>IntelligenceFinding</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string IntelligenceFindingId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Revision</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string RevisionId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationIntelligenceFindingRevision: return s_projectLocationIntelligenceFindingRevision.Expand(ProjectId, LocationId, IntelligenceFindingId, RevisionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as IntelligenceFindingRevisionName);
+
+        /// <inheritdoc/>
+        public bool Equals(IntelligenceFindingRevisionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(IntelligenceFindingRevisionName a, IntelligenceFindingRevisionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(IntelligenceFindingRevisionName a, IntelligenceFindingRevisionName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>Bucket</c> resource.</summary>
     public sealed partial class BucketName : gax::IResourceName, sys::IEquatable<BucketName>
     {
@@ -1843,6 +2426,155 @@ namespace Google.Cloud.Storage.Control.V2
         {
             get => string.IsNullOrEmpty(Name) ? null : gcscv::IntelligenceConfigName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class IntelligenceFinding
+    {
+        /// <summary>
+        /// <see cref="gcscv::IntelligenceFindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::IntelligenceFindingName IntelligenceFindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::IntelligenceFindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        public partial class Types
+        {
+            public partial class ColdlineAndArchivalStorageOperationsSpike
+            {
+                public partial class Types
+                {
+                    public partial class BucketContribution
+                    {
+                        /// <summary>
+                        /// <see cref="BucketName"/>-typed view over the <see cref="Bucket"/> resource name property.
+                        /// </summary>
+                        public BucketName BucketAsBucketName
+                        {
+                            get => string.IsNullOrEmpty(Bucket) ? null : BucketName.Parse(Bucket, allowUnparsed: true);
+                            set => Bucket = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+
+            public partial class CrossRegionEgressSpike
+            {
+                public partial class Types
+                {
+                    public partial class BucketContribution
+                    {
+                        /// <summary>
+                        /// <see cref="BucketName"/>-typed view over the <see cref="Bucket"/> resource name property.
+                        /// </summary>
+                        public BucketName BucketAsBucketName
+                        {
+                            get => string.IsNullOrEmpty(Bucket) ? null : BucketName.Parse(Bucket, allowUnparsed: true);
+                            set => Bucket = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+
+            public partial class ThrottledRequestSpike
+            {
+                public partial class Types
+                {
+                    public partial class BucketContribution
+                    {
+                        /// <summary>
+                        /// <see cref="BucketName"/>-typed view over the <see cref="Bucket"/> resource name property.
+                        /// </summary>
+                        public BucketName BucketAsBucketName
+                        {
+                            get => string.IsNullOrEmpty(Bucket) ? null : BucketName.Parse(Bucket, allowUnparsed: true);
+                            set => Bucket = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+
+            public partial class StorageGrowthAboveTrend
+            {
+                public partial class Types
+                {
+                    public partial class BucketContribution
+                    {
+                        /// <summary>
+                        /// <see cref="BucketName"/>-typed view over the <see cref="Bucket"/> resource name property.
+                        /// </summary>
+                        public BucketName BucketAsBucketName
+                        {
+                            get => string.IsNullOrEmpty(Bucket) ? null : BucketName.Parse(Bucket, allowUnparsed: true);
+                            set => Bucket = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    public partial class IntelligenceFindingRevision
+    {
+        /// <summary>
+        /// <see cref="gcscv::IntelligenceFindingRevisionName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcscv::IntelligenceFindingRevisionName IntelligenceFindingRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::IntelligenceFindingRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetIntelligenceFindingRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::IntelligenceFindingName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcscv::IntelligenceFindingName IntelligenceFindingName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::IntelligenceFindingName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListIntelligenceFindingsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetIntelligenceFindingRevisionRequest
+    {
+        /// <summary>
+        /// <see cref="gcscv::IntelligenceFindingRevisionName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcscv::IntelligenceFindingRevisionName IntelligenceFindingRevisionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcscv::IntelligenceFindingRevisionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListIntelligenceFindingRevisionsRequest
+    {
+        /// <summary>
+        /// <see cref="IntelligenceFindingName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public IntelligenceFindingName ParentAsIntelligenceFindingName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : IntelligenceFindingName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
         }
     }
 }

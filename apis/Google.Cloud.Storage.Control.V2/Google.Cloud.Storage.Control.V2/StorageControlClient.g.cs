@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
+using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gciv = Google.Cloud.Iam.V1;
@@ -79,6 +80,11 @@ namespace Google.Cloud.Storage.Control.V2
             GetIamPolicySettings = existing.GetIamPolicySettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            GetIntelligenceFindingSettings = existing.GetIntelligenceFindingSettings;
+            ListIntelligenceFindingsSettings = existing.ListIntelligenceFindingsSettings;
+            SummarizeIntelligenceFindingsSettings = existing.SummarizeIntelligenceFindingsSettings;
+            GetIntelligenceFindingRevisionSettings = existing.GetIntelligenceFindingRevisionSettings;
+            ListIntelligenceFindingRevisionsSettings = existing.ListIntelligenceFindingRevisionsSettings;
             OnCopy(existing);
         }
 
@@ -696,6 +702,121 @@ namespace Google.Cloud.Storage.Control.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetIntelligenceFinding</c> and <c>StorageControlClient.GetIntelligenceFindingAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIntelligenceFindingSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.ListIntelligenceFindings</c> and
+        /// <c>StorageControlClient.ListIntelligenceFindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListIntelligenceFindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.SummarizeIntelligenceFindings</c> and
+        /// <c>StorageControlClient.SummarizeIntelligenceFindingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SummarizeIntelligenceFindingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.GetIntelligenceFindingRevision</c> and
+        /// <c>StorageControlClient.GetIntelligenceFindingRevisionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIntelligenceFindingRevisionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>StorageControlClient.ListIntelligenceFindingRevisions</c> and
+        /// <c>StorageControlClient.ListIntelligenceFindingRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.ResourceExhausted"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>, <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Internal"/>, <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListIntelligenceFindingRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.ResourceExhausted, grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Internal, grpccore::StatusCode.Unknown)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="StorageControlSettings"/> object.</returns>
@@ -4560,6 +4681,668 @@ namespace Google.Cloud.Storage.Control.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gax::IResourceName resource, scg::IEnumerable<string> permissions, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceFinding GetIntelligenceFinding(GetIntelligenceFindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFinding> GetIntelligenceFindingAsync(GetIntelligenceFindingRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFinding> GetIntelligenceFindingAsync(GetIntelligenceFindingRequest request, st::CancellationToken cancellationToken) =>
+            GetIntelligenceFindingAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFinding` resource.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceFinding GetIntelligenceFinding(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIntelligenceFinding(new GetIntelligenceFindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFinding` resource.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFinding> GetIntelligenceFindingAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIntelligenceFindingAsync(new GetIntelligenceFindingRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFinding` resource.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFinding> GetIntelligenceFindingAsync(string name, st::CancellationToken cancellationToken) =>
+            GetIntelligenceFindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFinding` resource.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceFinding GetIntelligenceFinding(IntelligenceFindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIntelligenceFinding(new GetIntelligenceFindingRequest
+            {
+                IntelligenceFindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFinding` resource.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFinding> GetIntelligenceFindingAsync(IntelligenceFindingName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIntelligenceFindingAsync(new GetIntelligenceFindingRequest
+            {
+                IntelligenceFindingName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFinding` resource.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFinding> GetIntelligenceFindingAsync(IntelligenceFindingName name, st::CancellationToken cancellationToken) =>
+            GetIntelligenceFindingAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IntelligenceFinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindings(ListIntelligenceFindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IntelligenceFinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindingsAsync(ListIntelligenceFindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the `IntelligenceFinding` resource.
+        /// 
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IntelligenceFinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntelligenceFindingsRequest request = new ListIntelligenceFindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntelligenceFindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the `IntelligenceFinding` resource.
+        /// 
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IntelligenceFinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntelligenceFindingsRequest request = new ListIntelligenceFindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntelligenceFindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the `IntelligenceFinding` resource.
+        /// 
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IntelligenceFinding"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindings(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntelligenceFindingsRequest request = new ListIntelligenceFindingsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntelligenceFindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the `IntelligenceFinding` resource.
+        /// 
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IntelligenceFinding"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindingsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntelligenceFindingsRequest request = new ListIntelligenceFindingsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntelligenceFindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Summarize the intelligence findings for the specified scope(org, folder or
+        /// project).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FindingSummary"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SummarizeIntelligenceFindingsResponse, FindingSummary> SummarizeIntelligenceFindings(SummarizeIntelligenceFindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Summarize the intelligence findings for the specified scope(org, folder or
+        /// project).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FindingSummary"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SummarizeIntelligenceFindingsResponse, FindingSummary> SummarizeIntelligenceFindingsAsync(SummarizeIntelligenceFindingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Summarize the intelligence findings for the specified scope(org, folder or
+        /// project).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The scope to summarize the findings for.
+        /// Format:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `folders/{folder}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FindingSummary"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SummarizeIntelligenceFindingsResponse, FindingSummary> SummarizeIntelligenceFindings(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SummarizeIntelligenceFindingsRequest request = new SummarizeIntelligenceFindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SummarizeIntelligenceFindings(request, callSettings);
+        }
+
+        /// <summary>
+        /// Summarize the intelligence findings for the specified scope(org, folder or
+        /// project).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The scope to summarize the findings for.
+        /// Format:
+        /// - `organizations/{organization}/locations/{location}`
+        /// - `folders/{folder}/locations/{location}`
+        /// - `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FindingSummary"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<SummarizeIntelligenceFindingsResponse, FindingSummary> SummarizeIntelligenceFindingsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            SummarizeIntelligenceFindingsRequest request = new SummarizeIntelligenceFindingsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return SummarizeIntelligenceFindingsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceFindingRevision GetIntelligenceFindingRevision(GetIntelligenceFindingRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest request, st::CancellationToken cancellationToken) =>
+            GetIntelligenceFindingRevisionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceFindingRevision GetIntelligenceFindingRevision(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIntelligenceFindingRevision(new GetIntelligenceFindingRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIntelligenceFindingRevisionAsync(new GetIntelligenceFindingRevisionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetIntelligenceFindingRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IntelligenceFindingRevision GetIntelligenceFindingRevision(IntelligenceFindingRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIntelligenceFindingRevision(new GetIntelligenceFindingRevisionRequest
+            {
+                IntelligenceFindingRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(IntelligenceFindingRevisionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIntelligenceFindingRevisionAsync(new GetIntelligenceFindingRevisionRequest
+            {
+                IntelligenceFindingRevisionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}/revisions/{revision}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(IntelligenceFindingRevisionName name, st::CancellationToken cancellationToken) =>
+            GetIntelligenceFindingRevisionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the revisions of an `IntelligenceFinding` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IntelligenceFindingRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisions(ListIntelligenceFindingRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the revisions of an `IntelligenceFinding` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IntelligenceFindingRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisionsAsync(ListIntelligenceFindingRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the revisions of an `IntelligenceFinding` resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IntelligenceFindingRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntelligenceFindingRevisionsRequest request = new ListIntelligenceFindingRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntelligenceFindingRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the revisions of an `IntelligenceFinding` resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IntelligenceFindingRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntelligenceFindingRevisionsRequest request = new ListIntelligenceFindingRevisionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntelligenceFindingRevisionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the revisions of an `IntelligenceFinding` resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IntelligenceFindingRevision"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisions(IntelligenceFindingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntelligenceFindingRevisionsRequest request = new ListIntelligenceFindingRevisionsRequest
+            {
+                ParentAsIntelligenceFindingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntelligenceFindingRevisions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the revisions of an `IntelligenceFinding` resource.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent of the `IntelligenceFindingRevision` resource.
+        /// ## Format:
+        /// 
+        /// `projects/{project}/locations/{location}/intelligenceFindings/{intelligence_finding}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IntelligenceFindingRevision"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisionsAsync(IntelligenceFindingName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListIntelligenceFindingRevisionsRequest request = new ListIntelligenceFindingRevisionsRequest
+            {
+                ParentAsIntelligenceFindingName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListIntelligenceFindingRevisionsAsync(request, callSettings);
+        }
     }
 
     /// <summary>StorageControl client wrapper implementation, for convenient use.</summary>
@@ -4621,6 +5404,16 @@ namespace Google.Cloud.Storage.Control.V2
         private readonly gaxgrpc::ApiCall<gciv::SetIamPolicyRequest, gciv::Policy> _callSetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
+        private readonly gaxgrpc::ApiCall<GetIntelligenceFindingRequest, IntelligenceFinding> _callGetIntelligenceFinding;
+
+        private readonly gaxgrpc::ApiCall<ListIntelligenceFindingsRequest, ListIntelligenceFindingsResponse> _callListIntelligenceFindings;
+
+        private readonly gaxgrpc::ApiCall<SummarizeIntelligenceFindingsRequest, SummarizeIntelligenceFindingsResponse> _callSummarizeIntelligenceFindings;
+
+        private readonly gaxgrpc::ApiCall<GetIntelligenceFindingRevisionRequest, IntelligenceFindingRevision> _callGetIntelligenceFindingRevision;
+
+        private readonly gaxgrpc::ApiCall<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse> _callListIntelligenceFindingRevisions;
 
         /// <summary>
         /// Constructs a client wrapper for the StorageControl service, with the specified gRPC client and settings.
@@ -4722,6 +5515,21 @@ namespace Google.Cloud.Storage.Control.V2
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithExtractedGoogleRequestParam(new gaxgrpc::RoutingHeaderExtractor<gciv::TestIamPermissionsRequest>().WithExtractedParameter("bucket", "^(.+)$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/objects(?:/.*)?$", request => request.Resource).WithExtractedParameter("bucket", "^(projects/[^/]+/buckets/[^/]+)/managedFolders(?:/.*)?$", request => request.Resource));
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callGetIntelligenceFinding = clientHelper.BuildApiCall<GetIntelligenceFindingRequest, IntelligenceFinding>("GetIntelligenceFinding", grpcClient.GetIntelligenceFindingAsync, grpcClient.GetIntelligenceFinding, effectiveSettings.GetIntelligenceFindingSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetIntelligenceFinding);
+            Modify_GetIntelligenceFindingApiCall(ref _callGetIntelligenceFinding);
+            _callListIntelligenceFindings = clientHelper.BuildApiCall<ListIntelligenceFindingsRequest, ListIntelligenceFindingsResponse>("ListIntelligenceFindings", grpcClient.ListIntelligenceFindingsAsync, grpcClient.ListIntelligenceFindings, effectiveSettings.ListIntelligenceFindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListIntelligenceFindings);
+            Modify_ListIntelligenceFindingsApiCall(ref _callListIntelligenceFindings);
+            _callSummarizeIntelligenceFindings = clientHelper.BuildApiCall<SummarizeIntelligenceFindingsRequest, SummarizeIntelligenceFindingsResponse>("SummarizeIntelligenceFindings", grpcClient.SummarizeIntelligenceFindingsAsync, grpcClient.SummarizeIntelligenceFindings, effectiveSettings.SummarizeIntelligenceFindingsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSummarizeIntelligenceFindings);
+            Modify_SummarizeIntelligenceFindingsApiCall(ref _callSummarizeIntelligenceFindings);
+            _callGetIntelligenceFindingRevision = clientHelper.BuildApiCall<GetIntelligenceFindingRevisionRequest, IntelligenceFindingRevision>("GetIntelligenceFindingRevision", grpcClient.GetIntelligenceFindingRevisionAsync, grpcClient.GetIntelligenceFindingRevision, effectiveSettings.GetIntelligenceFindingRevisionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetIntelligenceFindingRevision);
+            Modify_GetIntelligenceFindingRevisionApiCall(ref _callGetIntelligenceFindingRevision);
+            _callListIntelligenceFindingRevisions = clientHelper.BuildApiCall<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse>("ListIntelligenceFindingRevisions", grpcClient.ListIntelligenceFindingRevisionsAsync, grpcClient.ListIntelligenceFindingRevisions, effectiveSettings.ListIntelligenceFindingRevisionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListIntelligenceFindingRevisions);
+            Modify_ListIntelligenceFindingRevisionsApiCall(ref _callListIntelligenceFindingRevisions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -4781,6 +5589,16 @@ namespace Google.Cloud.Storage.Control.V2
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_GetIntelligenceFindingApiCall(ref gaxgrpc::ApiCall<GetIntelligenceFindingRequest, IntelligenceFinding> call);
+
+        partial void Modify_ListIntelligenceFindingsApiCall(ref gaxgrpc::ApiCall<ListIntelligenceFindingsRequest, ListIntelligenceFindingsResponse> call);
+
+        partial void Modify_SummarizeIntelligenceFindingsApiCall(ref gaxgrpc::ApiCall<SummarizeIntelligenceFindingsRequest, SummarizeIntelligenceFindingsResponse> call);
+
+        partial void Modify_GetIntelligenceFindingRevisionApiCall(ref gaxgrpc::ApiCall<GetIntelligenceFindingRevisionRequest, IntelligenceFindingRevision> call);
+
+        partial void Modify_ListIntelligenceFindingRevisionsApiCall(ref gaxgrpc::ApiCall<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse> call);
+
         partial void OnConstruction(StorageControl.StorageControlClient grpcClient, StorageControlSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC StorageControl client</summary>
@@ -4839,6 +5657,16 @@ namespace Google.Cloud.Storage.Control.V2
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetIntelligenceFindingRequest(ref GetIntelligenceFindingRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListIntelligenceFindingsRequest(ref ListIntelligenceFindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SummarizeIntelligenceFindingsRequest(ref SummarizeIntelligenceFindingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetIntelligenceFindingRevisionRequest(ref GetIntelligenceFindingRevisionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListIntelligenceFindingRevisionsRequest(ref ListIntelligenceFindingRevisionsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new folder. This operation is only applicable to a hierarchical
@@ -5721,6 +6549,128 @@ namespace Google.Cloud.Storage.Control.V2
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IntelligenceFinding GetIntelligenceFinding(GetIntelligenceFindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIntelligenceFindingRequest(ref request, ref callSettings);
+            return _callGetIntelligenceFinding.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the `IntelligenceFinding` for a project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IntelligenceFinding> GetIntelligenceFindingAsync(GetIntelligenceFindingRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIntelligenceFindingRequest(ref request, ref callSettings);
+            return _callGetIntelligenceFinding.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IntelligenceFinding"/> resources.</returns>
+        public override gax::PagedEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindings(ListIntelligenceFindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListIntelligenceFindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListIntelligenceFindingsRequest, ListIntelligenceFindingsResponse, IntelligenceFinding>(_callListIntelligenceFindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists the `IntelligenceFinding` resources for the specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IntelligenceFinding"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListIntelligenceFindingsResponse, IntelligenceFinding> ListIntelligenceFindingsAsync(ListIntelligenceFindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListIntelligenceFindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListIntelligenceFindingsRequest, ListIntelligenceFindingsResponse, IntelligenceFinding>(_callListIntelligenceFindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Summarize the intelligence findings for the specified scope(org, folder or
+        /// project).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="FindingSummary"/> resources.</returns>
+        public override gax::PagedEnumerable<SummarizeIntelligenceFindingsResponse, FindingSummary> SummarizeIntelligenceFindings(SummarizeIntelligenceFindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SummarizeIntelligenceFindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SummarizeIntelligenceFindingsRequest, SummarizeIntelligenceFindingsResponse, FindingSummary>(_callSummarizeIntelligenceFindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Summarize the intelligence findings for the specified scope(org, folder or
+        /// project).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="FindingSummary"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<SummarizeIntelligenceFindingsResponse, FindingSummary> SummarizeIntelligenceFindingsAsync(SummarizeIntelligenceFindingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SummarizeIntelligenceFindingsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SummarizeIntelligenceFindingsRequest, SummarizeIntelligenceFindingsResponse, FindingSummary>(_callSummarizeIntelligenceFindings, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IntelligenceFindingRevision GetIntelligenceFindingRevision(GetIntelligenceFindingRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIntelligenceFindingRevisionRequest(ref request, ref callSettings);
+            return _callGetIntelligenceFindingRevision.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the `IntelligenceFindingRevision` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIntelligenceFindingRevisionRequest(ref request, ref callSettings);
+            return _callGetIntelligenceFindingRevision.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the revisions of an `IntelligenceFinding` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="IntelligenceFindingRevision"/> resources.</returns>
+        public override gax::PagedEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisions(ListIntelligenceFindingRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListIntelligenceFindingRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision>(_callListIntelligenceFindingRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the revisions of an `IntelligenceFinding` resource.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="IntelligenceFindingRevision"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision> ListIntelligenceFindingRevisionsAsync(ListIntelligenceFindingRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListIntelligenceFindingRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListIntelligenceFindingRevisionsRequest, ListIntelligenceFindingRevisionsResponse, IntelligenceFindingRevision>(_callListIntelligenceFindingRevisions, request, callSettings);
+        }
     }
 
     public partial class ListFoldersRequest : gaxgrpc::IPageRequest
@@ -5732,6 +6682,18 @@ namespace Google.Cloud.Storage.Control.V2
     }
 
     public partial class ListAnywhereCachesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListIntelligenceFindingsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SummarizeIntelligenceFindingsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListIntelligenceFindingRevisionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -5755,6 +6717,31 @@ namespace Google.Cloud.Storage.Control.V2
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<AnywhereCache> GetEnumerator() => AnywhereCaches.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListIntelligenceFindingsResponse : gaxgrpc::IPageResponse<IntelligenceFinding>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<IntelligenceFinding> GetEnumerator() => IntelligenceFindings.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SummarizeIntelligenceFindingsResponse : gaxgrpc::IPageResponse<FindingSummary>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<FindingSummary> GetEnumerator() => FindingSummaries.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListIntelligenceFindingRevisionsResponse : gaxgrpc::IPageResponse<IntelligenceFindingRevision>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<IntelligenceFindingRevision> GetEnumerator() =>
+            IntelligenceFindingRevisions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
