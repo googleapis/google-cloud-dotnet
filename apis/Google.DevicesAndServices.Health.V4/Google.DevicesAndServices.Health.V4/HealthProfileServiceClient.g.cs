@@ -21,6 +21,7 @@ using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
 using proto = Google.Protobuf;
+using sc = System.Collections;
 using scg = System.Collections.Generic;
 using sco = System.Collections.ObjectModel;
 using st = System.Threading;
@@ -50,6 +51,9 @@ namespace Google.DevicesAndServices.Health.V4
             GetSettingsSettings = existing.GetSettingsSettings;
             UpdateSettingsSettings = existing.UpdateSettingsSettings;
             GetIdentitySettings = existing.GetIdentitySettings;
+            GetIrnProfileSettings = existing.GetIrnProfileSettings;
+            GetPairedDeviceSettings = existing.GetPairedDeviceSettings;
+            ListPairedDevicesSettings = existing.ListPairedDevicesSettings;
             OnCopy(existing);
         }
 
@@ -133,6 +137,62 @@ namespace Google.DevicesAndServices.Health.V4
         /// </remarks>
         public gaxgrpc::CallSettings GetIdentitySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HealthProfileServiceClient.GetIrnProfile</c> and <c>HealthProfileServiceClient.GetIrnProfileAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetIrnProfileSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HealthProfileServiceClient.GetPairedDevice</c> and <c>HealthProfileServiceClient.GetPairedDeviceAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetPairedDeviceSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>HealthProfileServiceClient.ListPairedDevices</c> and <c>HealthProfileServiceClient.ListPairedDevicesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListPairedDevicesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="HealthProfileServiceSettings"/> object.</returns>
         public HealthProfileServiceSettings Clone() => new HealthProfileServiceSettings(this);
@@ -209,11 +269,13 @@ namespace Google.DevicesAndServices.Health.V4
         /// <item>
         /// <description>https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly</description>
         /// </item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.ecg.readonly</description></item>
         /// <item>
         /// <description>
         /// https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly
         /// </description>
         /// </item>
+        /// <item><description>https://www.googleapis.com/auth/googlehealth.irn.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.profile.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.settings.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/googlehealth.sleep.readonly</description></item>
@@ -222,7 +284,9 @@ namespace Google.DevicesAndServices.Health.V4
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/googlehealth.activity_and_fitness.readonly",
+            "https://www.googleapis.com/auth/googlehealth.ecg.readonly",
             "https://www.googleapis.com/auth/googlehealth.health_metrics_and_measurements.readonly",
+            "https://www.googleapis.com/auth/googlehealth.irn.readonly",
             "https://www.googleapis.com/auth/googlehealth.profile.readonly",
             "https://www.googleapis.com/auth/googlehealth.settings.readonly",
             "https://www.googleapis.com/auth/googlehealth.sleep.readonly",
@@ -804,6 +868,412 @@ namespace Google.DevicesAndServices.Health.V4
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Identity> GetIdentityAsync(IdentityName name, st::CancellationToken cancellationToken) =>
             GetIdentityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IrnProfile GetIrnProfile(GetIrnProfileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IrnProfile> GetIrnProfileAsync(GetIrnProfileRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IrnProfile> GetIrnProfileAsync(GetIrnProfileRequest request, st::CancellationToken cancellationToken) =>
+            GetIrnProfileAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the IRN Profile.
+        /// Format: `users/{user}/irnProfile`
+        /// Example: `users/1234567890/irnProfile` or `users/me/irnProfile`
+        /// The {user} ID is a system-generated Google Health API user ID, a string of
+        /// 1-63 characters consisting of lowercase and uppercase letters, numbers, and
+        /// hyphens. The literal `me` can also be used to refer to the authenticated
+        /// user.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IrnProfile GetIrnProfile(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIrnProfile(new GetIrnProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the IRN Profile.
+        /// Format: `users/{user}/irnProfile`
+        /// Example: `users/1234567890/irnProfile` or `users/me/irnProfile`
+        /// The {user} ID is a system-generated Google Health API user ID, a string of
+        /// 1-63 characters consisting of lowercase and uppercase letters, numbers, and
+        /// hyphens. The literal `me` can also be used to refer to the authenticated
+        /// user.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IrnProfile> GetIrnProfileAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIrnProfileAsync(new GetIrnProfileRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the IRN Profile.
+        /// Format: `users/{user}/irnProfile`
+        /// Example: `users/1234567890/irnProfile` or `users/me/irnProfile`
+        /// The {user} ID is a system-generated Google Health API user ID, a string of
+        /// 1-63 characters consisting of lowercase and uppercase letters, numbers, and
+        /// hyphens. The literal `me` can also be used to refer to the authenticated
+        /// user.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IrnProfile> GetIrnProfileAsync(string name, st::CancellationToken cancellationToken) =>
+            GetIrnProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the IRN Profile.
+        /// Format: `users/{user}/irnProfile`
+        /// Example: `users/1234567890/irnProfile` or `users/me/irnProfile`
+        /// The {user} ID is a system-generated Google Health API user ID, a string of
+        /// 1-63 characters consisting of lowercase and uppercase letters, numbers, and
+        /// hyphens. The literal `me` can also be used to refer to the authenticated
+        /// user.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual IrnProfile GetIrnProfile(IrnProfileName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIrnProfile(new GetIrnProfileRequest
+            {
+                IrnProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the IRN Profile.
+        /// Format: `users/{user}/irnProfile`
+        /// Example: `users/1234567890/irnProfile` or `users/me/irnProfile`
+        /// The {user} ID is a system-generated Google Health API user ID, a string of
+        /// 1-63 characters consisting of lowercase and uppercase letters, numbers, and
+        /// hyphens. The literal `me` can also be used to refer to the authenticated
+        /// user.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IrnProfile> GetIrnProfileAsync(IrnProfileName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetIrnProfileAsync(new GetIrnProfileRequest
+            {
+                IrnProfileName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the IRN Profile.
+        /// Format: `users/{user}/irnProfile`
+        /// Example: `users/1234567890/irnProfile` or `users/me/irnProfile`
+        /// The {user} ID is a system-generated Google Health API user ID, a string of
+        /// 1-63 characters consisting of lowercase and uppercase letters, numbers, and
+        /// hyphens. The literal `me` can also be used to refer to the authenticated
+        /// user.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<IrnProfile> GetIrnProfileAsync(IrnProfileName name, st::CancellationToken cancellationToken) =>
+            GetIrnProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PairedDevice GetPairedDevice(GetPairedDeviceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PairedDevice> GetPairedDeviceAsync(GetPairedDeviceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PairedDevice> GetPairedDeviceAsync(GetPairedDeviceRequest request, st::CancellationToken cancellationToken) =>
+            GetPairedDeviceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the device to retrieve.
+        /// Format: users/{user}/devices/{device}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PairedDevice GetPairedDevice(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPairedDevice(new GetPairedDeviceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the device to retrieve.
+        /// Format: users/{user}/devices/{device}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PairedDevice> GetPairedDeviceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPairedDeviceAsync(new GetPairedDeviceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the device to retrieve.
+        /// Format: users/{user}/devices/{device}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PairedDevice> GetPairedDeviceAsync(string name, st::CancellationToken cancellationToken) =>
+            GetPairedDeviceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the device to retrieve.
+        /// Format: users/{user}/devices/{device}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PairedDevice GetPairedDevice(PairedDeviceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPairedDevice(new GetPairedDeviceRequest
+            {
+                PairedDeviceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the device to retrieve.
+        /// Format: users/{user}/devices/{device}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PairedDevice> GetPairedDeviceAsync(PairedDeviceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetPairedDeviceAsync(new GetPairedDeviceRequest
+            {
+                PairedDeviceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the device to retrieve.
+        /// Format: users/{user}/devices/{device}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PairedDevice> GetPairedDeviceAsync(PairedDeviceName name, st::CancellationToken cancellationToken) =>
+            GetPairedDeviceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns the user's list of paired 1P trackers and smartwatches.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PairedDevice"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPairedDevicesResponse, PairedDevice> ListPairedDevices(ListPairedDevicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the user's list of paired 1P trackers and smartwatches.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PairedDevice"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPairedDevicesResponse, PairedDevice> ListPairedDevicesAsync(ListPairedDevicesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns the user's list of paired 1P trackers and smartwatches.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of devices.
+        /// Format: users/{user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PairedDevice"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPairedDevicesResponse, PairedDevice> ListPairedDevices(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPairedDevicesRequest request = new ListPairedDevicesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPairedDevices(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the user's list of paired 1P trackers and smartwatches.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of devices.
+        /// Format: users/{user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PairedDevice"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPairedDevicesResponse, PairedDevice> ListPairedDevicesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPairedDevicesRequest request = new ListPairedDevicesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPairedDevicesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the user's list of paired 1P trackers and smartwatches.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of devices.
+        /// Format: users/{user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PairedDevice"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListPairedDevicesResponse, PairedDevice> ListPairedDevices(UserName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPairedDevicesRequest request = new ListPairedDevicesRequest
+            {
+                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPairedDevices(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the user's list of paired 1P trackers and smartwatches.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of devices.
+        /// Format: users/{user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PairedDevice"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListPairedDevicesResponse, PairedDevice> ListPairedDevicesAsync(UserName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListPairedDevicesRequest request = new ListPairedDevicesRequest
+            {
+                ParentAsUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListPairedDevicesAsync(request, callSettings);
+        }
     }
 
     /// <summary>HealthProfileService client wrapper implementation, for convenient use.</summary>
@@ -821,6 +1291,12 @@ namespace Google.DevicesAndServices.Health.V4
         private readonly gaxgrpc::ApiCall<UpdateSettingsRequest, Settings> _callUpdateSettings;
 
         private readonly gaxgrpc::ApiCall<GetIdentityRequest, Identity> _callGetIdentity;
+
+        private readonly gaxgrpc::ApiCall<GetIrnProfileRequest, IrnProfile> _callGetIrnProfile;
+
+        private readonly gaxgrpc::ApiCall<GetPairedDeviceRequest, PairedDevice> _callGetPairedDevice;
+
+        private readonly gaxgrpc::ApiCall<ListPairedDevicesRequest, ListPairedDevicesResponse> _callListPairedDevices;
 
         /// <summary>
         /// Constructs a client wrapper for the HealthProfileService service, with the specified gRPC client and
@@ -853,6 +1329,15 @@ namespace Google.DevicesAndServices.Health.V4
             _callGetIdentity = clientHelper.BuildApiCall<GetIdentityRequest, Identity>("GetIdentity", grpcClient.GetIdentityAsync, grpcClient.GetIdentity, effectiveSettings.GetIdentitySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetIdentity);
             Modify_GetIdentityApiCall(ref _callGetIdentity);
+            _callGetIrnProfile = clientHelper.BuildApiCall<GetIrnProfileRequest, IrnProfile>("GetIrnProfile", grpcClient.GetIrnProfileAsync, grpcClient.GetIrnProfile, effectiveSettings.GetIrnProfileSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetIrnProfile);
+            Modify_GetIrnProfileApiCall(ref _callGetIrnProfile);
+            _callGetPairedDevice = clientHelper.BuildApiCall<GetPairedDeviceRequest, PairedDevice>("GetPairedDevice", grpcClient.GetPairedDeviceAsync, grpcClient.GetPairedDevice, effectiveSettings.GetPairedDeviceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetPairedDevice);
+            Modify_GetPairedDeviceApiCall(ref _callGetPairedDevice);
+            _callListPairedDevices = clientHelper.BuildApiCall<ListPairedDevicesRequest, ListPairedDevicesResponse>("ListPairedDevices", grpcClient.ListPairedDevicesAsync, grpcClient.ListPairedDevices, effectiveSettings.ListPairedDevicesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListPairedDevices);
+            Modify_ListPairedDevicesApiCall(ref _callListPairedDevices);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -868,6 +1353,12 @@ namespace Google.DevicesAndServices.Health.V4
 
         partial void Modify_GetIdentityApiCall(ref gaxgrpc::ApiCall<GetIdentityRequest, Identity> call);
 
+        partial void Modify_GetIrnProfileApiCall(ref gaxgrpc::ApiCall<GetIrnProfileRequest, IrnProfile> call);
+
+        partial void Modify_GetPairedDeviceApiCall(ref gaxgrpc::ApiCall<GetPairedDeviceRequest, PairedDevice> call);
+
+        partial void Modify_ListPairedDevicesApiCall(ref gaxgrpc::ApiCall<ListPairedDevicesRequest, ListPairedDevicesResponse> call);
+
         partial void OnConstruction(HealthProfileService.HealthProfileServiceClient grpcClient, HealthProfileServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC HealthProfileService client</summary>
@@ -882,6 +1373,12 @@ namespace Google.DevicesAndServices.Health.V4
         partial void Modify_UpdateSettingsRequest(ref UpdateSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetIdentityRequest(ref GetIdentityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetIrnProfileRequest(ref GetIrnProfileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetPairedDeviceRequest(ref GetPairedDeviceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListPairedDevicesRequest(ref ListPairedDevicesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Returns user Profile details.
@@ -1008,5 +1505,89 @@ namespace Google.DevicesAndServices.Health.V4
             Modify_GetIdentityRequest(ref request, ref callSettings);
             return _callGetIdentity.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override IrnProfile GetIrnProfile(GetIrnProfileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIrnProfileRequest(ref request, ref callSettings);
+            return _callGetIrnProfile.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns user's IRN Profile details.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<IrnProfile> GetIrnProfileAsync(GetIrnProfileRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetIrnProfileRequest(ref request, ref callSettings);
+            return _callGetIrnProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PairedDevice GetPairedDevice(GetPairedDeviceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPairedDeviceRequest(ref request, ref callSettings);
+            return _callGetPairedDevice.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns user's Device.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PairedDevice> GetPairedDeviceAsync(GetPairedDeviceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetPairedDeviceRequest(ref request, ref callSettings);
+            return _callGetPairedDevice.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the user's list of paired 1P trackers and smartwatches.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="PairedDevice"/> resources.</returns>
+        public override gax::PagedEnumerable<ListPairedDevicesResponse, PairedDevice> ListPairedDevices(ListPairedDevicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPairedDevicesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListPairedDevicesRequest, ListPairedDevicesResponse, PairedDevice>(_callListPairedDevices, request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns the user's list of paired 1P trackers and smartwatches.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="PairedDevice"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListPairedDevicesResponse, PairedDevice> ListPairedDevicesAsync(ListPairedDevicesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListPairedDevicesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListPairedDevicesRequest, ListPairedDevicesResponse, PairedDevice>(_callListPairedDevices, request, callSettings);
+        }
+    }
+
+    public partial class ListPairedDevicesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListPairedDevicesResponse : gaxgrpc::IPageResponse<PairedDevice>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<PairedDevice> GetEnumerator() => PairedDevices.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 }

@@ -35,7 +35,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             "YXRhX3NvdXJjZS5wcm90bxojZ29vZ2xlL2xvbmdydW5uaW5nL29wZXJhdGlv",
             "bnMucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29v",
             "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0",
-            "dXMucHJvdG8aGmdvb2dsZS90eXBlL2ludGVydmFsLnByb3RvIuUVCglEYXRh",
+            "dXMucHJvdG8aGmdvb2dsZS90eXBlL2ludGVydmFsLnByb3RvIq8bCglEYXRh",
             "UG9pbnQSQAoFc3RlcHMYBCABKAsyKi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
             "Y2VzLmhlYWx0aC52NC5TdGVwc0ID4EEBSAASQgoGZmxvb3JzGAUgASgLMisu",
             "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRmxvb3JzQgPg",
@@ -74,285 +74,325 @@ namespace Google.DevicesAndServices.Health.V4 {
             "dGl2aXR5TGV2ZWxCA+BBAUgAEkMKB3ZvMl9tYXgYGyABKAsyKy5nb29nbGUu",
             "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5WTzJNYXhCA+BBAUgAEk4K",
             "DWRhaWx5X3ZvMl9tYXgYHCABKAsyMC5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5EYWlseVZPMk1heEID4EEBSAASXwoWZGFpbHlfaGVh",
-            "cnRfcmF0ZV96b25lcxggIAEoCzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
-            "ZXMuaGVhbHRoLnY0LkRhaWx5SGVhcnRSYXRlWm9uZXNCA+BBAUgAEk8KDWh5",
-            "ZHJhdGlvbl9sb2cYISABKAsyMS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NC5IeWRyYXRpb25Mb2dCA+BBAUgAEmAKF3RpbWVfaW5faGVh",
-            "cnRfcmF0ZV96b25lGCMgASgLMjguZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuVGltZUluSGVhcnRSYXRlWm9uZUID4EEBSAASUQoOYWN0",
-            "aXZlX21pbnV0ZXMYJCABKAsyMi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NC5BY3RpdmVNaW51dGVzQgPgQQFIABJvCh5yZXNwaXJhdG9y",
-            "eV9yYXRlX3NsZWVwX3N1bW1hcnkYJSABKAsyQC5nb29nbGUuZGV2aWNlc2Fu",
-            "ZHNlcnZpY2VzLmhlYWx0aC52NC5SZXNwaXJhdG9yeVJhdGVTbGVlcFN1bW1h",
-            "cnlCA+BBAUgAEmAKFmRhaWx5X3Jlc3BpcmF0b3J5X3JhdGUYJiABKAsyOS5n",
-            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseVJlc3Bp",
-            "cmF0b3J5UmF0ZUID4EEBSAASVgoRc3dpbV9sZW5ndGhzX2RhdGEYJyABKAsy",
-            "NC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Td2ltTGVu",
-            "Z3Roc0RhdGFCA+BBAUgAEkIKBmhlaWdodBgoIAEoCzIrLmdvb2dsZS5kZXZp",
-            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkhlaWdodEID4EEBSAASWgoTYmFz",
-            "YWxfZW5lcmd5X2J1cm5lZBgpIAEoCzI2Lmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
-            "dmljZXMuaGVhbHRoLnY0LkJhc2FsRW5lcmd5QnVybmVkQgPgQQFIABIRCgRu",
-            "YW1lGAEgASgJQgPgQQgSSQoLZGF0YV9zb3VyY2UYAyABKAsyLy5nb29nbGUu",
-            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYXRhU291cmNlQgPgQQE6",
-            "d+pBdAofaGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFQb2ludBI6dXNlcnMv",
-            "e3VzZXJ9L2RhdGFUeXBlcy97ZGF0YV90eXBlfS9kYXRhUG9pbnRzL3tkYXRh",
-            "X3BvaW50fSoKZGF0YVBvaW50czIJZGF0YVBvaW50QgYKBGRhdGEioBMKE1Jl",
-            "Y29uY2lsZWREYXRhUG9pbnQSOwoFc3RlcHMYBCABKAsyKi5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TdGVwc0gAEj0KBmZsb29ycxgF",
-            "IAEoCzIrLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkZs",
-            "b29yc0gAEkQKCmhlYXJ0X3JhdGUYBiABKAsyLi5nb29nbGUuZGV2aWNlc2Fu",
-            "ZHNlcnZpY2VzLmhlYWx0aC52NC5IZWFydFJhdGVIABI7CgVzbGVlcBgIIAEo",
-            "CzIqLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNsZWVw",
-            "SAASXgoYZGFpbHlfcmVzdGluZ19oZWFydF9yYXRlGAkgASgLMjouZ29vZ2xl",
-            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlSZXN0aW5nSGVh",
-            "cnRSYXRlSAASZgocZGFpbHlfaGVhcnRfcmF0ZV92YXJpYWJpbGl0eRgKIAEo",
-            "CzI+Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5",
-            "SGVhcnRSYXRlVmFyaWFiaWxpdHlIABJBCghleGVyY2lzZRgLIAEoCzItLmdv",
-            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkV4ZXJjaXNlSAAS",
-            "PQoGd2VpZ2h0GAwgASgLMisuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjQuV2VpZ2h0SAASQQoIYWx0aXR1ZGUYDSABKAsyLS5nb29nbGUu",
-            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BbHRpdHVkZUgAEkEKCGRp",
-            "c3RhbmNlGA4gASgLMi0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuRGlzdGFuY2VIABJACghib2R5X2ZhdBgPIAEoCzIsLmdvb2dsZS5k",
-            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkJvZHlGYXRIABJVChNhY3Rp",
-            "dmVfem9uZV9taW51dGVzGBEgASgLMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuQWN0aXZlWm9uZU1pbnV0ZXNIABJbChZoZWFydF9y",
-            "YXRlX3ZhcmlhYmlsaXR5GBMgASgLMjkuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlVmFyaWFiaWxpdHlIABJ0CiNkYWls",
-            "eV9zbGVlcF90ZW1wZXJhdHVyZV9kZXJpdmF0aW9ucxgUIAEoCzJFLmdvb2ds",
-            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5U2xlZXBUZW1w",
-            "ZXJhdHVyZURlcml2YXRpb25zSAASUAoQc2VkZW50YXJ5X3BlcmlvZBgVIAEo",
-            "CzI0Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNlZGVu",
-            "dGFyeVBlcmlvZEgAEkUKC3J1bl92bzJfbWF4GBYgASgLMi4uZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUnVuVk8yTWF4SAASUgoRb3h5",
-            "Z2VuX3NhdHVyYXRpb24YGCABKAsyNS5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5PeHlnZW5TYXR1cmF0aW9uSAASXQoXZGFpbHlfb3h5",
-            "Z2VuX3NhdHVyYXRpb24YGSABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5EYWlseU94eWdlblNhdHVyYXRpb25IABJMCg5hY3Rp",
-            "dml0eV9sZXZlbBgaIAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
-            "aGVhbHRoLnY0LkFjdGl2aXR5TGV2ZWxIABI+Cgd2bzJfbWF4GBsgASgLMisu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuVk8yTWF4SAAS",
-            "SQoNZGFpbHlfdm8yX21heBgcIAEoCzIwLmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
-            "dmljZXMuaGVhbHRoLnY0LkRhaWx5Vk8yTWF4SAASWgoWZGFpbHlfaGVhcnRf",
-            "cmF0ZV96b25lcxggIAEoCzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
-            "aGVhbHRoLnY0LkRhaWx5SGVhcnRSYXRlWm9uZXNIABJKCg1oeWRyYXRpb25f",
-            "bG9nGCEgASgLMjEuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
-            "djQuSHlkcmF0aW9uTG9nSAASWwoXdGltZV9pbl9oZWFydF9yYXRlX3pvbmUY",
+            "Y2VzLmhlYWx0aC52NC5EYWlseVZPMk1heEID4EEBSAASTwoNbnV0cml0aW9u",
+            "X2xvZxgdIAEoCzIxLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0Lk51dHJpdGlvbkxvZ0ID4EEBSAASbgodaXJyZWd1bGFyX3JoeXRobV9u",
+            "b3RpZmljYXRpb24YHiABKAsyQC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
+            "LmhlYWx0aC52NC5JcnJlZ3VsYXJSaHl0aG1Ob3RpZmljYXRpb25CA+BBAUgA",
+            "ElgKEWVsZWN0cm9jYXJkaW9ncmFtGB8gASgLMjYuZ29vZ2xlLmRldmljZXNh",
+            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuRWxlY3Ryb2NhcmRpb2dyYW1CA+BBAUgA",
+            "El8KFmRhaWx5X2hlYXJ0X3JhdGVfem9uZXMYICABKAsyOC5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseUhlYXJ0UmF0ZVpvbmVz",
+            "QgPgQQFIABJPCg1oeWRyYXRpb25fbG9nGCEgASgLMjEuZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSHlkcmF0aW9uTG9nQgPgQQFIABI+",
+            "CgRmb29kGCIgASgLMikuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
+            "dGgudjQuRm9vZEID4EEBSAASYAoXdGltZV9pbl9oZWFydF9yYXRlX3pvbmUY",
             "IyABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5U",
-            "aW1lSW5IZWFydFJhdGVab25lSAASTAoOYWN0aXZlX21pbnV0ZXMYJCABKAsy",
-            "Mi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVN",
-            "aW51dGVzSAASagoecmVzcGlyYXRvcnlfcmF0ZV9zbGVlcF9zdW1tYXJ5GCUg",
-            "ASgLMkAuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUmVz",
-            "cGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5SAASWwoWZGFpbHlfcmVzcGlyYXRv",
-            "cnlfcmF0ZRgmIAEoCzI5Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LkRhaWx5UmVzcGlyYXRvcnlSYXRlSAASUQoRc3dpbV9sZW5ndGhz",
-            "X2RhdGEYJyABKAsyNC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
-            "aC52NC5Td2ltTGVuZ3Roc0RhdGFIABI9CgZoZWlnaHQYKCABKAsyKy5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5IZWlnaHRIABJVChNi",
-            "YXNhbF9lbmVyZ3lfYnVybmVkGCkgASgLMjYuZ29vZ2xlLmRldmljZXNhbmRz",
-            "ZXJ2aWNlcy5oZWFsdGgudjQuQmFzYWxFbmVyZ3lCdXJuZWRIABIcCg9kYXRh",
-            "X3BvaW50X25hbWUYASABKAlCA+BBCEIGCgRkYXRhIrcMCg9Sb2xsdXBEYXRh",
-            "UG9pbnQSRgoFc3RlcHMYBSABKAsyNS5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5TdGVwc1JvbGx1cFZhbHVlSAASSAoGZmxvb3JzGAYg",
-            "ASgLMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRmxv",
-            "b3JzUm9sbHVwVmFsdWVIABJPCgpoZWFydF9yYXRlGAcgASgLMjkuZ29vZ2xl",
-            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlUm9sbHVw",
-            "VmFsdWVIABJICgZ3ZWlnaHQYCCABKAsyNi5nb29nbGUuZGV2aWNlc2FuZHNl",
-            "cnZpY2VzLmhlYWx0aC52NC5XZWlnaHRSb2xsdXBWYWx1ZUgAEkwKCGFsdGl0",
-            "dWRlGAkgASgLMjguZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
-            "djQuQWx0aXR1ZGVSb2xsdXBWYWx1ZUgAEkwKCGRpc3RhbmNlGAogASgLMjgu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGlzdGFuY2VS",
-            "b2xsdXBWYWx1ZUgAEksKCGJvZHlfZmF0GAsgASgLMjcuZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQm9keUZhdFJvbGx1cFZhbHVlSAAS",
-            "VwoOdG90YWxfY2Fsb3JpZXMYDCABKAsyPS5nb29nbGUuZGV2aWNlc2FuZHNl",
-            "cnZpY2VzLmhlYWx0aC52NC5Ub3RhbENhbG9yaWVzUm9sbHVwVmFsdWVIABJg",
-            "ChNhY3RpdmVfem9uZV9taW51dGVzGA0gASgLMkEuZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZlWm9uZU1pbnV0ZXNSb2xsdXBW",
-            "YWx1ZUgAElsKEHNlZGVudGFyeV9wZXJpb2QYDyABKAsyPy5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TZWRlbnRhcnlQZXJpb2RSb2xs",
-            "dXBWYWx1ZUgAElAKC3J1bl92bzJfbWF4GBAgASgLMjkuZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUnVuVk8yTWF4Um9sbHVwVmFsdWVI",
-            "ABJuChtjYWxvcmllc19pbl9oZWFydF9yYXRlX3pvbmUYESABKAsyRy5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5DYWxvcmllc0luSGVh",
-            "cnRSYXRlWm9uZVJvbGx1cFZhbHVlSAASVwoOYWN0aXZpdHlfbGV2ZWwYEiAB",
-            "KAsyPS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3Rp",
-            "dml0eUxldmVsUm9sbHVwVmFsdWVIABJVCg1oeWRyYXRpb25fbG9nGBQgASgL",
-            "MjwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSHlkcmF0",
-            "aW9uTG9nUm9sbHVwVmFsdWVIABJmChd0aW1lX2luX2hlYXJ0X3JhdGVfem9u",
-            "ZRgVIAEoCzJDLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
-            "LlRpbWVJbkhlYXJ0UmF0ZVpvbmVSb2xsdXBWYWx1ZUgAElcKDmFjdGl2ZV9t",
-            "aW51dGVzGBYgASgLMj0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuQWN0aXZlTWludXRlc1JvbGx1cFZhbHVlSAASXAoRc3dpbV9sZW5n",
-            "dGhzX2RhdGEYFyABKAsyPy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
-            "YWx0aC52NC5Td2ltTGVuZ3Roc0RhdGFSb2xsdXBWYWx1ZUgAEi4KCnN0YXJ0",
-            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVu",
-            "ZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEIHCgV2",
-            "YWx1ZSL5DgoURGFpbHlSb2xsdXBEYXRhUG9pbnQSRgoFc3RlcHMYBSABKAsy",
-            "NS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TdGVwc1Jv",
-            "bGx1cFZhbHVlSAASSAoGZmxvb3JzGAYgASgLMjYuZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuRmxvb3JzUm9sbHVwVmFsdWVIABJPCgpo",
-            "ZWFydF9yYXRlGAcgASgLMjkuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjQuSGVhcnRSYXRlUm9sbHVwVmFsdWVIABJ6CiFyZXN0aW5nX2hl",
-            "YXJ0X3JhdGVfcGVyc29uYWxfcmFuZ2UYCCABKAsyTS5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5SZXN0aW5nSGVhcnRSYXRlUGVyc29u",
-            "YWxSYW5nZVJvbGx1cFZhbHVlSAASggEKJWhlYXJ0X3JhdGVfdmFyaWFiaWxp",
-            "dHlfcGVyc29uYWxfcmFuZ2UYCSABKAsyUS5nb29nbGUuZGV2aWNlc2FuZHNl",
-            "cnZpY2VzLmhlYWx0aC52NC5IZWFydFJhdGVWYXJpYWJpbGl0eVBlcnNvbmFs",
-            "UmFuZ2VSb2xsdXBWYWx1ZUgAEkgKBndlaWdodBgKIAEoCzI2Lmdvb2dsZS5k",
+            "aW1lSW5IZWFydFJhdGVab25lQgPgQQFIABJRCg5hY3RpdmVfbWludXRlcxgk",
+            "IAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkFj",
+            "dGl2ZU1pbnV0ZXNCA+BBAUgAEm8KHnJlc3BpcmF0b3J5X3JhdGVfc2xlZXBf",
+            "c3VtbWFyeRglIAEoCzJALmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFyeUID4EEBSAASYAoW",
+            "ZGFpbHlfcmVzcGlyYXRvcnlfcmF0ZRgmIAEoCzI5Lmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5UmVzcGlyYXRvcnlSYXRlQgPg",
+            "QQFIABJWChFzd2ltX2xlbmd0aHNfZGF0YRgnIAEoCzI0Lmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlN3aW1MZW5ndGhzRGF0YUID4EEB",
+            "SAASQgoGaGVpZ2h0GCggASgLMisuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuSGVpZ2h0QgPgQQFIABJaChNiYXNhbF9lbmVyZ3lfYnVy",
+            "bmVkGCkgASgLMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuQmFzYWxFbmVyZ3lCdXJuZWRCA+BBAUgAEl4KFWNvcmVfYm9keV90ZW1w",
+            "ZXJhdHVyZRgqIAEoCzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LkNvcmVCb2R5VGVtcGVyYXR1cmVCA+BBAUgAElwKFGFjdGl2ZV9l",
+            "bmVyZ3lfYnVybmVkGCwgASgLMjcuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuQWN0aXZlRW5lcmd5QnVybmVkQgPgQQFIABJeChVmb29k",
+            "X21lYXN1cmVtZW50X3VuaXQYLSABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5Gb29kTWVhc3VyZW1lbnRVbml0QgPgQQFIABJP",
+            "Cg1ibG9vZF9nbHVjb3NlGC4gASgLMjEuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuQmxvb2RHbHVjb3NlQgPgQQFIABIRCgRuYW1lGAEg",
+            "ASgJQgPgQQgSSQoLZGF0YV9zb3VyY2UYAyABKAsyLy5nb29nbGUuZGV2aWNl",
+            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYXRhU291cmNlQgPgQQE6d+pBdAof",
+            "aGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFQb2ludBI6dXNlcnMve3VzZXJ9",
+            "L2RhdGFUeXBlcy97ZGF0YV90eXBlfS9kYXRhUG9pbnRzL3tkYXRhX3BvaW50",
+            "fSoKZGF0YVBvaW50czIJZGF0YVBvaW50QgYKBGRhdGEi7BUKE1JlY29uY2ls",
+            "ZWREYXRhUG9pbnQSOwoFc3RlcHMYBCABKAsyKi5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5TdGVwc0gAEj0KBmZsb29ycxgFIAEoCzIr",
+            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkZsb29yc0gA",
+            "EkQKCmhlYXJ0X3JhdGUYBiABKAsyLi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5IZWFydFJhdGVIABI7CgVzbGVlcBgIIAEoCzIqLmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNsZWVwSAASXgoY",
+            "ZGFpbHlfcmVzdGluZ19oZWFydF9yYXRlGAkgASgLMjouZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlSZXN0aW5nSGVhcnRSYXRl",
+            "SAASZgocZGFpbHlfaGVhcnRfcmF0ZV92YXJpYWJpbGl0eRgKIAEoCzI+Lmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5SGVhcnRS",
+            "YXRlVmFyaWFiaWxpdHlIABJBCghleGVyY2lzZRgLIAEoCzItLmdvb2dsZS5k",
+            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkV4ZXJjaXNlSAASPQoGd2Vp",
+            "Z2h0GAwgASgLMisuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuV2VpZ2h0SAASQQoIYWx0aXR1ZGUYDSABKAsyLS5nb29nbGUuZGV2aWNl",
+            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BbHRpdHVkZUgAEkEKCGRpc3RhbmNl",
+            "GA4gASgLMi0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "RGlzdGFuY2VIABJACghib2R5X2ZhdBgPIAEoCzIsLmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkJvZHlGYXRIABJVChNhY3RpdmVfem9u",
+            "ZV9taW51dGVzGBEgASgLMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
+            "ZWFsdGgudjQuQWN0aXZlWm9uZU1pbnV0ZXNIABJbChZoZWFydF9yYXRlX3Zh",
+            "cmlhYmlsaXR5GBMgASgLMjkuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
+            "ZWFsdGgudjQuSGVhcnRSYXRlVmFyaWFiaWxpdHlIABJ0CiNkYWlseV9zbGVl",
+            "cF90ZW1wZXJhdHVyZV9kZXJpdmF0aW9ucxgUIAEoCzJFLmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5U2xlZXBUZW1wZXJhdHVy",
+            "ZURlcml2YXRpb25zSAASUAoQc2VkZW50YXJ5X3BlcmlvZBgVIAEoCzI0Lmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNlZGVudGFyeVBl",
+            "cmlvZEgAEkUKC3J1bl92bzJfbWF4GBYgASgLMi4uZ29vZ2xlLmRldmljZXNh",
+            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuUnVuVk8yTWF4SAASUgoRb3h5Z2VuX3Nh",
+            "dHVyYXRpb24YGCABKAsyNS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5PeHlnZW5TYXR1cmF0aW9uSAASXQoXZGFpbHlfb3h5Z2VuX3Nh",
+            "dHVyYXRpb24YGSABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5EYWlseU94eWdlblNhdHVyYXRpb25IABJMCg5hY3Rpdml0eV9s",
+            "ZXZlbBgaIAEoCzIyLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0LkFjdGl2aXR5TGV2ZWxIABI+Cgd2bzJfbWF4GBsgASgLMisuZ29vZ2xl",
+            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuVk8yTWF4SAASSQoNZGFp",
+            "bHlfdm8yX21heBgcIAEoCzIwLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0LkRhaWx5Vk8yTWF4SAASSgoNbnV0cml0aW9uX2xvZxgdIAEo",
+            "CzIxLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk51dHJp",
+            "dGlvbkxvZ0gAEloKFmRhaWx5X2hlYXJ0X3JhdGVfem9uZXMYICABKAsyOC5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseUhlYXJ0",
+            "UmF0ZVpvbmVzSAASSgoNaHlkcmF0aW9uX2xvZxghIAEoCzIxLmdvb2dsZS5k",
+            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lkh5ZHJhdGlvbkxvZ0gAElsK",
+            "F3RpbWVfaW5faGVhcnRfcmF0ZV96b25lGCMgASgLMjguZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuVGltZUluSGVhcnRSYXRlWm9uZUgA",
+            "EkwKDmFjdGl2ZV9taW51dGVzGCQgASgLMjIuZ29vZ2xlLmRldmljZXNhbmRz",
+            "ZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZlTWludXRlc0gAEmoKHnJlc3BpcmF0",
+            "b3J5X3JhdGVfc2xlZXBfc3VtbWFyeRglIAEoCzJALmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3Vt",
+            "bWFyeUgAElsKFmRhaWx5X3Jlc3BpcmF0b3J5X3JhdGUYJiABKAsyOS5nb29n",
+            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseVJlc3BpcmF0",
+            "b3J5UmF0ZUgAElEKEXN3aW1fbGVuZ3Roc19kYXRhGCcgASgLMjQuZ29vZ2xl",
+            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU3dpbUxlbmd0aHNEYXRh",
+            "SAASPQoGaGVpZ2h0GCggASgLMisuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuSGVpZ2h0SAASVQoTYmFzYWxfZW5lcmd5X2J1cm5lZBgp",
+            "IAEoCzI2Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkJh",
+            "c2FsRW5lcmd5QnVybmVkSAASWQoVY29yZV9ib2R5X3RlbXBlcmF0dXJlGCog",
+            "ASgLMjguZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQ29y",
+            "ZUJvZHlUZW1wZXJhdHVyZUgAElcKFGFjdGl2ZV9lbmVyZ3lfYnVybmVkGCwg",
+            "ASgLMjcuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0",
+            "aXZlRW5lcmd5QnVybmVkSAASSgoNYmxvb2RfZ2x1Y29zZRguIAEoCzIxLmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkJsb29kR2x1Y29z",
+            "ZUgAEhwKD2RhdGFfcG9pbnRfbmFtZRgBIAEoCUID4EEIQgYKBGRhdGEirw8K",
+            "D1JvbGx1cERhdGFQb2ludBJGCgVzdGVwcxgFIAEoCzI1Lmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlN0ZXBzUm9sbHVwVmFsdWVIABJI",
+            "CgZmbG9vcnMYBiABKAsyNi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5GbG9vcnNSb2xsdXBWYWx1ZUgAEk8KCmhlYXJ0X3JhdGUYByAB",
+            "KAsyOS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5IZWFy",
+            "dFJhdGVSb2xsdXBWYWx1ZUgAEkgKBndlaWdodBgIIAEoCzI2Lmdvb2dsZS5k",
             "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LldlaWdodFJvbGx1cFZhbHVl",
-            "SAASTAoIYWx0aXR1ZGUYCyABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "SAASTAoIYWx0aXR1ZGUYCSABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
             "Y2VzLmhlYWx0aC52NC5BbHRpdHVkZVJvbGx1cFZhbHVlSAASTAoIZGlzdGFu",
-            "Y2UYDCABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
-            "NC5EaXN0YW5jZVJvbGx1cFZhbHVlSAASSwoIYm9keV9mYXQYDSABKAsyNy5n",
+            "Y2UYCiABKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
+            "NC5EaXN0YW5jZVJvbGx1cFZhbHVlSAASSwoIYm9keV9mYXQYCyABKAsyNy5n",
             "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Cb2R5RmF0Um9s",
-            "bHVwVmFsdWVIABJXCg50b3RhbF9jYWxvcmllcxgOIAEoCzI9Lmdvb2dsZS5k",
+            "bHVwVmFsdWVIABJXCg50b3RhbF9jYWxvcmllcxgMIAEoCzI9Lmdvb2dsZS5k",
             "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlRvdGFsQ2Fsb3JpZXNSb2xs",
-            "dXBWYWx1ZUgAEmAKE2FjdGl2ZV96b25lX21pbnV0ZXMYDyABKAsyQS5nb29n",
+            "dXBWYWx1ZUgAEmAKE2FjdGl2ZV96b25lX21pbnV0ZXMYDSABKAsyQS5nb29n",
             "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVab25lTWlu",
-            "dXRlc1JvbGx1cFZhbHVlSAASWwoQc2VkZW50YXJ5X3BlcmlvZBgRIAEoCzI/",
+            "dXRlc1JvbGx1cFZhbHVlSAASWwoQc2VkZW50YXJ5X3BlcmlvZBgPIAEoCzI/",
             "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNlZGVudGFy",
-            "eVBlcmlvZFJvbGx1cFZhbHVlSAASUAoLcnVuX3ZvMl9tYXgYEiABKAsyOS5n",
+            "eVBlcmlvZFJvbGx1cFZhbHVlSAASUAoLcnVuX3ZvMl9tYXgYECABKAsyOS5n",
             "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5SdW5WTzJNYXhS",
-            "b2xsdXBWYWx1ZUgAEm4KG2NhbG9yaWVzX2luX2hlYXJ0X3JhdGVfem9uZRgT",
+            "b2xsdXBWYWx1ZUgAEm4KG2NhbG9yaWVzX2luX2hlYXJ0X3JhdGVfem9uZRgR",
             "IAEoCzJHLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkNh",
             "bG9yaWVzSW5IZWFydFJhdGVab25lUm9sbHVwVmFsdWVIABJXCg5hY3Rpdml0",
-            "eV9sZXZlbBgUIAEoCzI9Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LkFjdGl2aXR5TGV2ZWxSb2xsdXBWYWx1ZUgAElUKDWh5ZHJhdGlv",
-            "bl9sb2cYFiABKAsyPC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
-            "aC52NC5IeWRyYXRpb25Mb2dSb2xsdXBWYWx1ZUgAEmYKF3RpbWVfaW5faGVh",
-            "cnRfcmF0ZV96b25lGBcgASgLMkMuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuVGltZUluSGVhcnRSYXRlWm9uZVJvbGx1cFZhbHVlSAAS",
-            "VwoOYWN0aXZlX21pbnV0ZXMYGCABKAsyPS5nb29nbGUuZGV2aWNlc2FuZHNl",
-            "cnZpY2VzLmhlYWx0aC52NC5BY3RpdmVNaW51dGVzUm9sbHVwVmFsdWVIABJc",
-            "ChFzd2ltX2xlbmd0aHNfZGF0YRgZIAEoCzI/Lmdvb2dsZS5kZXZpY2VzYW5k",
-            "c2VydmljZXMuaGVhbHRoLnY0LlN3aW1MZW5ndGhzRGF0YVJvbGx1cFZhbHVl",
-            "SAASTAoQY2l2aWxfc3RhcnRfdGltZRgBIAEoCzIyLmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkNpdmlsRGF0ZVRpbWUSSgoOY2l2aWxf",
-            "ZW5kX3RpbWUYAiABKAsyMi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
-            "YWx0aC52NC5DaXZpbERhdGVUaW1lQgcKBXZhbHVlIkwKE0dldERhdGFQb2lu",
-            "dFJlcXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9oZWFsdGguZ29vZ2xl",
-            "YXBpcy5jb20vRGF0YVBvaW50IpUBChVMaXN0RGF0YVBvaW50c1JlcXVlc3QS",
-            "NgoGcGFyZW50GAEgASgJQibgQQL6QSAKHmhlYWx0aC5nb29nbGVhcGlzLmNv",
-            "bS9EYXRhVHlwZRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rv",
-            "a2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQEidgoWTGlzdERh",
-            "dGFQb2ludHNSZXNwb25zZRJDCgtkYXRhX3BvaW50cxgBIAMoCzIuLmdvb2ds",
-            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhdGFQb2ludBIXCg9u",
-            "ZXh0X3BhZ2VfdG9rZW4YAiABKAkimgEKFkNyZWF0ZURhdGFQb2ludFJlcXVl",
-            "c3QSNwoGcGFyZW50GAEgASgJQifgQQL6QSESH2hlYWx0aC5nb29nbGVhcGlz",
-            "LmNvbS9EYXRhUG9pbnQSRwoKZGF0YV9wb2ludBgCIAEoCzIuLmdvb2dsZS5k",
-            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhdGFQb2ludEID4EECIiIK",
-            "IENyZWF0ZURhdGFQb2ludE9wZXJhdGlvbk1ldGFkYXRhImEKFlVwZGF0ZURh",
-            "dGFQb2ludFJlcXVlc3QSRwoKZGF0YV9wb2ludBgBIAEoCzIuLmdvb2dsZS5k",
-            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhdGFQb2ludEID4EECIiIK",
-            "IFVwZGF0ZURhdGFQb2ludE9wZXJhdGlvbk1ldGFkYXRhIo4BChxCYXRjaERl",
-            "bGV0ZURhdGFQb2ludHNSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEB+kEg",
-            "Ch5oZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0YVR5cGUSNgoFbmFtZXMYAiAD",
-            "KAlCJ+BBAvpBIQofaGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFQb2ludCJk",
-            "Ch1CYXRjaERlbGV0ZURhdGFQb2ludHNSZXNwb25zZRJDCgtkYXRhX3BvaW50",
-            "cxgBIAMoCzIuLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
-            "LkRhdGFQb2ludCLtAQomQmF0Y2hEZWxldGVEYXRhUG9pbnRzT3BlcmF0aW9u",
-            "TWV0YWRhdGESeAoPZmFpbGVkX3JlcXVlc3RzGAEgAygLMl8uZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQmF0Y2hEZWxldGVEYXRhUG9p",
-            "bnRzT3BlcmF0aW9uTWV0YWRhdGEuRmFpbGVkUmVxdWVzdHNFbnRyeRpJChNG",
-            "YWlsZWRSZXF1ZXN0c0VudHJ5EgsKA2tleRgBIAEoBRIhCgV2YWx1ZRgCIAEo",
-            "CzISLmdvb2dsZS5ycGMuU3RhdHVzOgI4ASKYAQoaUmVjb25jaWxlRGF0YVBv",
-            "aW50c1JlcXVlc3QSEwoGcGFyZW50GAEgASgJQgPgQQISFgoJcGFnZV9zaXpl",
-            "GAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRl",
-            "chgEIAEoCUID4EEBEh8KEmRhdGFfc291cmNlX2ZhbWlseRgFIAEoCUID4EEB",
-            "IoUBChtSZWNvbmNpbGVEYXRhUG9pbnRzUmVzcG9uc2USTQoLZGF0YV9wb2lu",
-            "dHMYASADKAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
-            "NC5SZWNvbmNpbGVkRGF0YVBvaW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEo",
-            "CSKDAgoXUm9sbFVwRGF0YVBvaW50c1JlcXVlc3QSNgoGcGFyZW50GAEgASgJ",
-            "QibgQQL6QSAKHmhlYWx0aC5nb29nbGVhcGlzLmNvbS9EYXRhVHlwZRIpCgVy",
-            "YW5nZRgCIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFsQgPgQQISMwoLd2lu",
-            "ZG93X3NpemUYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
-            "AhIWCglwYWdlX3NpemUYBCABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAUgASgJ",
-            "QgPgQQESHwoSZGF0YV9zb3VyY2VfZmFtaWx5GAcgASgJQgPgQQEihQEKGFJv",
-            "bGxVcERhdGFQb2ludHNSZXNwb25zZRJQChJyb2xsdXBfZGF0YV9wb2ludHMY",
-            "ASADKAsyNC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5S",
-            "b2xsdXBEYXRhUG9pbnQSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpMCChxE",
-            "YWlseVJvbGxVcERhdGFQb2ludHNSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm",
-            "4EEC+kEgCh5oZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0YVR5cGUSSgoFcmFu",
-            "Z2UYAiABKAsyNi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
-            "NC5DaXZpbFRpbWVJbnRlcnZhbEID4EECEh0KEHdpbmRvd19zaXplX2RheXMY",
-            "AyABKAVCA+BBARIWCglwYWdlX3NpemUYBCABKAVCA+BBARIXCgpwYWdlX3Rv",
-            "a2VuGAUgASgJQgPgQQESHwoSZGF0YV9zb3VyY2VfZmFtaWx5GAcgASgJQgPg",
-            "QQEidgodRGFpbHlSb2xsVXBEYXRhUG9pbnRzUmVzcG9uc2USVQoScm9sbHVw",
-            "X2RhdGFfcG9pbnRzGAEgAygLMjkuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
-            "cy5oZWFsdGgudjQuRGFpbHlSb2xsdXBEYXRhUG9pbnQiewoIRGF0YVR5cGUS",
-            "EQoEbmFtZRgBIAEoCUID4EEIOlzqQVkKHmhlYWx0aC5nb29nbGVhcGlzLmNv",
-            "bS9EYXRhVHlwZRIidXNlcnMve3VzZXJ9L2RhdGFUeXBlcy97ZGF0YV90eXBl",
-            "fSoJZGF0YVR5cGVzMghkYXRhVHlwZSJsChhFeHBvcnRFeGVyY2lzZVRjeFJl",
-            "cXVlc3QSNQoEbmFtZRgBIAEoCUIn4EEC+kEhCh9oZWFsdGguZ29vZ2xlYXBp",
-            "cy5jb20vRGF0YVBvaW50EhkKDHBhcnRpYWxfZGF0YRgCIAEoCEID4EEBIi0K",
-            "GUV4cG9ydEV4ZXJjaXNlVGN4UmVzcG9uc2USEAoIdGN4X2RhdGEYAiABKAky",
-            "vBIKEURhdGFQb2ludHNTZXJ2aWNlErQBCgxHZXREYXRhUG9pbnQSOC5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5HZXREYXRhUG9pbnRS",
-            "ZXF1ZXN0Gi4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
-            "RGF0YVBvaW50IjraQQRuYW1lgtPkkwItEisvdjQve25hbWU9dXNlcnMvKi9k",
-            "YXRhVHlwZXMvKi9kYXRhUG9pbnRzLyp9EscBCg5MaXN0RGF0YVBvaW50cxI6",
-            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lkxpc3REYXRh",
-            "UG9pbnRzUmVxdWVzdBo7Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0Lkxpc3REYXRhUG9pbnRzUmVzcG9uc2UiPNpBBnBhcmVudILT5JMC",
-            "LRIrL3Y0L3twYXJlbnQ9dXNlcnMvKi9kYXRhVHlwZXMvKn0vZGF0YVBvaW50",
-            "cxLzAQoPQ3JlYXRlRGF0YVBvaW50EjsuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuQ3JlYXRlRGF0YVBvaW50UmVxdWVzdBodLmdvb2ds",
-            "ZS5sb25ncnVubmluZy5PcGVyYXRpb24igwHKQS0KCURhdGFQb2ludBIgQ3Jl",
-            "YXRlRGF0YVBvaW50T3BlcmF0aW9uTWV0YWRhdGHaQRFwYXJlbnQsZGF0YV9w",
-            "b2ludILT5JMCOSIrL3Y0L3twYXJlbnQ9dXNlcnMvKi9kYXRhVHlwZXMvKn0v",
-            "ZGF0YVBvaW50czoKZGF0YV9wb2ludBL3AQoPVXBkYXRlRGF0YVBvaW50Ejsu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuVXBkYXRlRGF0",
-            "YVBvaW50UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "hwHKQS0KCURhdGFQb2ludBIgVXBkYXRlRGF0YVBvaW50T3BlcmF0aW9uTWV0",
-            "YWRhdGHaQQpkYXRhX3BvaW50gtPkkwJEMjYvdjQve2RhdGFfcG9pbnQubmFt",
-            "ZT11c2Vycy8qL2RhdGFUeXBlcy8qL2RhdGFQb2ludHMvKn06CmRhdGFfcG9p",
-            "bnQSiAIKFUJhdGNoRGVsZXRlRGF0YVBvaW50cxJBLmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkJhdGNoRGVsZXRlRGF0YVBvaW50c1Jl",
-            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIowBykFHCh1C",
-            "YXRjaERlbGV0ZURhdGFQb2ludHNSZXNwb25zZRImQmF0Y2hEZWxldGVEYXRh",
-            "UG9pbnRzT3BlcmF0aW9uTWV0YWRhdGGC0+STAjwiNy92NC97cGFyZW50PXVz",
-            "ZXJzLyovZGF0YVR5cGVzLyp9L2RhdGFQb2ludHM6YmF0Y2hEZWxldGU6ASoS",
-            "1wEKE1JlY29uY2lsZURhdGFQb2ludHMSPy5nb29nbGUuZGV2aWNlc2FuZHNl",
-            "cnZpY2VzLmhlYWx0aC52NC5SZWNvbmNpbGVEYXRhUG9pbnRzUmVxdWVzdBpA",
-            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlJlY29uY2ls",
-            "ZURhdGFQb2ludHNSZXNwb25zZSI9gtPkkwI3EjUvdjQve3BhcmVudD11c2Vy",
-            "cy8qL2RhdGFUeXBlcy8qfS9kYXRhUG9pbnRzOnJlY29uY2lsZRLOAQoQUm9s",
-            "bFVwRGF0YVBvaW50cxI8Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LlJvbGxVcERhdGFQb2ludHNSZXF1ZXN0Gj0uZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUm9sbFVwRGF0YVBvaW50c1Jlc3Bv",
-            "bnNlIj2C0+STAjciMi92NC97cGFyZW50PXVzZXJzLyovZGF0YVR5cGVzLyp9",
-            "L2RhdGFQb2ludHM6cm9sbFVwOgEqEuIBChVEYWlseVJvbGxVcERhdGFQb2lu",
-            "dHMSQS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWls",
-            "eVJvbGxVcERhdGFQb2ludHNSZXF1ZXN0GkIuZ29vZ2xlLmRldmljZXNhbmRz",
-            "ZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlSb2xsVXBEYXRhUG9pbnRzUmVzcG9u",
-            "c2UiQoLT5JMCPCI3L3Y0L3twYXJlbnQ9dXNlcnMvKi9kYXRhVHlwZXMvKn0v",
-            "ZGF0YVBvaW50czpkYWlseVJvbGxVcDoBKhLgAQoRRXhwb3J0RXhlcmNpc2VU",
-            "Y3gSPS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5FeHBv",
-            "cnRFeGVyY2lzZVRjeFJlcXVlc3QaPi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5FeHBvcnRFeGVyY2lzZVRjeFJlc3BvbnNlIkzaQQRu",
-            "YW1lgtPkkwI/Ej0vdjQve25hbWU9dXNlcnMvKi9kYXRhVHlwZXMvKi9kYXRh",
-            "UG9pbnRzLyp9OmV4cG9ydEV4ZXJjaXNlVGN4GrcCykEVaGVhbHRoLmdvb2ds",
-            "ZWFwaXMuY29t0kGbAmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
-            "Z29vZ2xlaGVhbHRoLmFjdGl2aXR5X2FuZF9maXRuZXNzLnJlYWRvbmx5LGh0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVhbHRoLmhl",
-            "YWx0aF9tZXRyaWNzX2FuZF9tZWFzdXJlbWVudHMucmVhZG9ubHksaHR0cHM6",
-            "Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9nb29nbGVoZWFsdGgubG9jYXRp",
-            "b24ucmVhZG9ubHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9n",
-            "b29nbGVoZWFsdGguc2xlZXAucmVhZG9ubHlChQIKJ2NvbS5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NEIPRGF0YVBvaW50c1Byb3RvUAFa",
-            "Umdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2aWNl",
-            "c2FuZHNlcnZpY2VzL2hlYWx0aC9hcGl2NG1haW47aGVhbHRocGKqAiNHb29n",
-            "bGUuRGV2aWNlc0FuZFNlcnZpY2VzLkhlYWx0aC5WNMoCI0dvb2dsZVxEZXZp",
-            "Y2VzQW5kU2VydmljZXNcSGVhbHRoXFY06gImR29vZ2xlOjpEZXZpY2VzQW5k",
-            "U2VydmljZXM6OkhlYWx0aDo6VjRiBnByb3RvMw=="));
+            "eV9sZXZlbBgSIAEoCzI9Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LkFjdGl2aXR5TGV2ZWxSb2xsdXBWYWx1ZUgAElUKDW51dHJpdGlv",
+            "bl9sb2cYEyABKAsyPC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
+            "aC52NC5OdXRyaXRpb25Mb2dSb2xsdXBWYWx1ZUgAElUKDWh5ZHJhdGlvbl9s",
+            "b2cYFCABKAsyPC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
+            "NC5IeWRyYXRpb25Mb2dSb2xsdXBWYWx1ZUgAEmYKF3RpbWVfaW5faGVhcnRf",
+            "cmF0ZV96b25lGBUgASgLMkMuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
+            "ZWFsdGgudjQuVGltZUluSGVhcnRSYXRlWm9uZVJvbGx1cFZhbHVlSAASVwoO",
+            "YWN0aXZlX21pbnV0ZXMYFiABKAsyPS5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5BY3RpdmVNaW51dGVzUm9sbHVwVmFsdWVIABJcChFz",
+            "d2ltX2xlbmd0aHNfZGF0YRgXIAEoCzI/Lmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
+            "dmljZXMuaGVhbHRoLnY0LlN3aW1MZW5ndGhzRGF0YVJvbGx1cFZhbHVlSAAS",
+            "ZAoVY29yZV9ib2R5X3RlbXBlcmF0dXJlGBggASgLMkMuZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQ29yZUJvZHlUZW1wZXJhdHVyZVJv",
+            "bGx1cFZhbHVlSAASYgoUYWN0aXZlX2VuZXJneV9idXJuZWQYGSABKAsyQi5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVFbmVy",
+            "Z3lCdXJuZWRSb2xsdXBWYWx1ZUgAElUKDWJsb29kX2dsdWNvc2UYGiABKAsy",
+            "PC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5CbG9vZEds",
+            "dWNvc2VSb2xsdXBWYWx1ZUgAEi4KCnN0YXJ0X3RpbWUYASABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEiwKCGVuZF90aW1lGAIgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEIHCgV2YWx1ZSLxEQoURGFpbHlSb2xs",
+            "dXBEYXRhUG9pbnQSRgoFc3RlcHMYBSABKAsyNS5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5TdGVwc1JvbGx1cFZhbHVlSAASSAoGZmxv",
+            "b3JzGAYgASgLMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuRmxvb3JzUm9sbHVwVmFsdWVIABJPCgpoZWFydF9yYXRlGAcgASgLMjku",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRl",
+            "Um9sbHVwVmFsdWVIABJ6CiFyZXN0aW5nX2hlYXJ0X3JhdGVfcGVyc29uYWxf",
+            "cmFuZ2UYCCABKAsyTS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
+            "aC52NC5SZXN0aW5nSGVhcnRSYXRlUGVyc29uYWxSYW5nZVJvbGx1cFZhbHVl",
+            "SAASggEKJWhlYXJ0X3JhdGVfdmFyaWFiaWxpdHlfcGVyc29uYWxfcmFuZ2UY",
+            "CSABKAsyUS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5I",
+            "ZWFydFJhdGVWYXJpYWJpbGl0eVBlcnNvbmFsUmFuZ2VSb2xsdXBWYWx1ZUgA",
+            "EkgKBndlaWdodBgKIAEoCzI2Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0LldlaWdodFJvbGx1cFZhbHVlSAASTAoIYWx0aXR1ZGUYCyAB",
+            "KAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BbHRp",
+            "dHVkZVJvbGx1cFZhbHVlSAASTAoIZGlzdGFuY2UYDCABKAsyOC5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EaXN0YW5jZVJvbGx1cFZh",
+            "bHVlSAASSwoIYm9keV9mYXQYDSABKAsyNy5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5Cb2R5RmF0Um9sbHVwVmFsdWVIABJXCg50b3Rh",
+            "bF9jYWxvcmllcxgOIAEoCzI9Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0LlRvdGFsQ2Fsb3JpZXNSb2xsdXBWYWx1ZUgAEmAKE2FjdGl2",
+            "ZV96b25lX21pbnV0ZXMYDyABKAsyQS5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5BY3RpdmVab25lTWludXRlc1JvbGx1cFZhbHVlSAAS",
+            "WwoQc2VkZW50YXJ5X3BlcmlvZBgRIAEoCzI/Lmdvb2dsZS5kZXZpY2VzYW5k",
+            "c2VydmljZXMuaGVhbHRoLnY0LlNlZGVudGFyeVBlcmlvZFJvbGx1cFZhbHVl",
+            "SAASUAoLcnVuX3ZvMl9tYXgYEiABKAsyOS5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5SdW5WTzJNYXhSb2xsdXBWYWx1ZUgAEm4KG2Nh",
+            "bG9yaWVzX2luX2hlYXJ0X3JhdGVfem9uZRgTIAEoCzJHLmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkNhbG9yaWVzSW5IZWFydFJhdGVa",
+            "b25lUm9sbHVwVmFsdWVIABJXCg5hY3Rpdml0eV9sZXZlbBgUIAEoCzI9Lmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkFjdGl2aXR5TGV2",
+            "ZWxSb2xsdXBWYWx1ZUgAElUKDW51dHJpdGlvbl9sb2cYFSABKAsyPC5nb29n",
+            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5OdXRyaXRpb25Mb2dS",
+            "b2xsdXBWYWx1ZUgAElUKDWh5ZHJhdGlvbl9sb2cYFiABKAsyPC5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5IeWRyYXRpb25Mb2dSb2xs",
+            "dXBWYWx1ZUgAEmYKF3RpbWVfaW5faGVhcnRfcmF0ZV96b25lGBcgASgLMkMu",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuVGltZUluSGVh",
+            "cnRSYXRlWm9uZVJvbGx1cFZhbHVlSAASVwoOYWN0aXZlX21pbnV0ZXMYGCAB",
+            "KAsyPS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3Rp",
+            "dmVNaW51dGVzUm9sbHVwVmFsdWVIABJcChFzd2ltX2xlbmd0aHNfZGF0YRgZ",
+            "IAEoCzI/Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlN3",
+            "aW1MZW5ndGhzRGF0YVJvbGx1cFZhbHVlSAASZAoVY29yZV9ib2R5X3RlbXBl",
+            "cmF0dXJlGBogASgLMkMuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
+            "dGgudjQuQ29yZUJvZHlUZW1wZXJhdHVyZVJvbGx1cFZhbHVlSAASYgoUYWN0",
+            "aXZlX2VuZXJneV9idXJuZWQYGyABKAsyQi5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5BY3RpdmVFbmVyZ3lCdXJuZWRSb2xsdXBWYWx1",
+            "ZUgAElUKDWJsb29kX2dsdWNvc2UYHCABKAsyPC5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5CbG9vZEdsdWNvc2VSb2xsdXBWYWx1ZUgA",
+            "EkwKEGNpdmlsX3N0YXJ0X3RpbWUYASABKAsyMi5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5DaXZpbERhdGVUaW1lEkoKDmNpdmlsX2Vu",
+            "ZF90aW1lGAIgASgLMjIuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
+            "dGgudjQuQ2l2aWxEYXRlVGltZUIHCgV2YWx1ZSJMChNHZXREYXRhUG9pbnRS",
+            "ZXF1ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofaGVhbHRoLmdvb2dsZWFw",
+            "aXMuY29tL0RhdGFQb2ludCKVAQoVTGlzdERhdGFQb2ludHNSZXF1ZXN0EjYK",
+            "BnBhcmVudBgBIAEoCUIm4EEC+kEgCh5oZWFsdGguZ29vZ2xlYXBpcy5jb20v",
+            "RGF0YVR5cGUSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
+            "bhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBInYKFkxpc3REYXRh",
+            "UG9pbnRzUmVzcG9uc2USQwoLZGF0YV9wb2ludHMYASADKAsyLi5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYXRhUG9pbnQSFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAIgASgJIpoBChZDcmVhdGVEYXRhUG9pbnRSZXF1ZXN0",
+            "EjcKBnBhcmVudBgBIAEoCUIn4EEC+kEhEh9oZWFsdGguZ29vZ2xlYXBpcy5j",
+            "b20vRGF0YVBvaW50EkcKCmRhdGFfcG9pbnQYAiABKAsyLi5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYXRhUG9pbnRCA+BBAiIiCiBD",
+            "cmVhdGVEYXRhUG9pbnRPcGVyYXRpb25NZXRhZGF0YSJhChZVcGRhdGVEYXRh",
+            "UG9pbnRSZXF1ZXN0EkcKCmRhdGFfcG9pbnQYASABKAsyLi5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYXRhUG9pbnRCA+BBAiIiCiBV",
+            "cGRhdGVEYXRhUG9pbnRPcGVyYXRpb25NZXRhZGF0YSKOAQocQmF0Y2hEZWxl",
+            "dGVEYXRhUG9pbnRzUmVxdWVzdBI2CgZwYXJlbnQYASABKAlCJuBBAfpBIAoe",
+            "aGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFUeXBlEjYKBW5hbWVzGAIgAygJ",
+            "QifgQQL6QSEKH2hlYWx0aC5nb29nbGVhcGlzLmNvbS9EYXRhUG9pbnQiZAod",
+            "QmF0Y2hEZWxldGVEYXRhUG9pbnRzUmVzcG9uc2USQwoLZGF0YV9wb2ludHMY",
+            "ASADKAsyLi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5E",
+            "YXRhUG9pbnQi7QEKJkJhdGNoRGVsZXRlRGF0YVBvaW50c09wZXJhdGlvbk1l",
+            "dGFkYXRhEngKD2ZhaWxlZF9yZXF1ZXN0cxgBIAMoCzJfLmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkJhdGNoRGVsZXRlRGF0YVBvaW50",
+            "c09wZXJhdGlvbk1ldGFkYXRhLkZhaWxlZFJlcXVlc3RzRW50cnkaSQoTRmFp",
+            "bGVkUmVxdWVzdHNFbnRyeRILCgNrZXkYASABKAUSIQoFdmFsdWUYAiABKAsy",
+            "Ei5nb29nbGUucnBjLlN0YXR1czoCOAEimAEKGlJlY29uY2lsZURhdGFQb2lu",
+            "dHNSZXF1ZXN0EhMKBnBhcmVudBgBIAEoCUID4EECEhYKCXBhZ2Vfc2l6ZRgC",
+            "IAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIY",
+            "BCABKAlCA+BBARIfChJkYXRhX3NvdXJjZV9mYW1pbHkYBSABKAlCA+BBASKF",
+            "AQobUmVjb25jaWxlRGF0YVBvaW50c1Jlc3BvbnNlEk0KC2RhdGFfcG9pbnRz",
+            "GAEgAygLMjguZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "UmVjb25jaWxlZERhdGFQb2ludBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAki",
+            "gwIKF1JvbGxVcERhdGFQb2ludHNSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm",
+            "4EEC+kEgCh5oZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0YVR5cGUSKQoFcmFu",
+            "Z2UYAiABKAsyFS5nb29nbGUudHlwZS5JbnRlcnZhbEID4EECEjMKC3dpbmRv",
+            "d19zaXplGAMgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQIS",
+            "FgoJcGFnZV9zaXplGAQgASgFQgPgQQESFwoKcGFnZV90b2tlbhgFIAEoCUID",
+            "4EEBEh8KEmRhdGFfc291cmNlX2ZhbWlseRgHIAEoCUID4EEBIoUBChhSb2xs",
+            "VXBEYXRhUG9pbnRzUmVzcG9uc2USUAoScm9sbHVwX2RhdGFfcG9pbnRzGAEg",
+            "AygLMjQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUm9s",
+            "bHVwRGF0YVBvaW50EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKTAgocRGFp",
+            "bHlSb2xsVXBEYXRhUG9pbnRzUmVxdWVzdBI2CgZwYXJlbnQYASABKAlCJuBB",
+            "AvpBIAoeaGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFUeXBlEkoKBXJhbmdl",
+            "GAIgASgLMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "Q2l2aWxUaW1lSW50ZXJ2YWxCA+BBAhIdChB3aW5kb3dfc2l6ZV9kYXlzGAMg",
+            "ASgFQgPgQQESFgoJcGFnZV9zaXplGAQgASgFQgPgQQESFwoKcGFnZV90b2tl",
+            "bhgFIAEoCUID4EEBEh8KEmRhdGFfc291cmNlX2ZhbWlseRgHIAEoCUID4EEB",
+            "InYKHURhaWx5Um9sbFVwRGF0YVBvaW50c1Jlc3BvbnNlElUKEnJvbGx1cF9k",
+            "YXRhX3BvaW50cxgBIAMoCzI5Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0LkRhaWx5Um9sbHVwRGF0YVBvaW50InsKCERhdGFUeXBlEhEK",
+            "BG5hbWUYASABKAlCA+BBCDpc6kFZCh5oZWFsdGguZ29vZ2xlYXBpcy5jb20v",
+            "RGF0YVR5cGUSInVzZXJzL3t1c2VyfS9kYXRhVHlwZXMve2RhdGFfdHlwZX0q",
+            "CWRhdGFUeXBlczIIZGF0YVR5cGUibAoYRXhwb3J0RXhlcmNpc2VUY3hSZXF1",
+            "ZXN0EjUKBG5hbWUYASABKAlCJ+BBAvpBIQofaGVhbHRoLmdvb2dsZWFwaXMu",
+            "Y29tL0RhdGFQb2ludBIZCgxwYXJ0aWFsX2RhdGEYAiABKAhCA+BBASItChlF",
+            "eHBvcnRFeGVyY2lzZVRjeFJlc3BvbnNlEhAKCHRjeF9kYXRhGAIgASgJMrwS",
+            "ChFEYXRhUG9pbnRzU2VydmljZRK0AQoMR2V0RGF0YVBvaW50EjguZ29vZ2xl",
+            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuR2V0RGF0YVBvaW50UmVx",
+            "dWVzdBouLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRh",
+            "dGFQb2ludCI62kEEbmFtZYLT5JMCLRIrL3Y0L3tuYW1lPXVzZXJzLyovZGF0",
+            "YVR5cGVzLyovZGF0YVBvaW50cy8qfRLHAQoOTGlzdERhdGFQb2ludHMSOi5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5MaXN0RGF0YVBv",
+            "aW50c1JlcXVlc3QaOy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
+            "aC52NC5MaXN0RGF0YVBvaW50c1Jlc3BvbnNlIjzaQQZwYXJlbnSC0+STAi0S",
+            "Ky92NC97cGFyZW50PXVzZXJzLyovZGF0YVR5cGVzLyp9L2RhdGFQb2ludHMS",
+            "8wEKD0NyZWF0ZURhdGFQb2ludBI7Lmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
+            "ZXMuaGVhbHRoLnY0LkNyZWF0ZURhdGFQb2ludFJlcXVlc3QaHS5nb29nbGUu",
+            "bG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoMBykEtCglEYXRhUG9pbnQSIENyZWF0",
+            "ZURhdGFQb2ludE9wZXJhdGlvbk1ldGFkYXRh2kERcGFyZW50LGRhdGFfcG9p",
+            "bnSC0+STAjkiKy92NC97cGFyZW50PXVzZXJzLyovZGF0YVR5cGVzLyp9L2Rh",
+            "dGFQb2ludHM6CmRhdGFfcG9pbnQS9wEKD1VwZGF0ZURhdGFQb2ludBI7Lmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlVwZGF0ZURhdGFQ",
+            "b2ludFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIocB",
+            "ykEtCglEYXRhUG9pbnQSIFVwZGF0ZURhdGFQb2ludE9wZXJhdGlvbk1ldGFk",
+            "YXRh2kEKZGF0YV9wb2ludILT5JMCRDI2L3Y0L3tkYXRhX3BvaW50Lm5hbWU9",
+            "dXNlcnMvKi9kYXRhVHlwZXMvKi9kYXRhUG9pbnRzLyp9OgpkYXRhX3BvaW50",
+            "EogCChVCYXRjaERlbGV0ZURhdGFQb2ludHMSQS5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5CYXRjaERlbGV0ZURhdGFQb2ludHNSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKMAcpBRwodQmF0",
+            "Y2hEZWxldGVEYXRhUG9pbnRzUmVzcG9uc2USJkJhdGNoRGVsZXRlRGF0YVBv",
+            "aW50c09wZXJhdGlvbk1ldGFkYXRhgtPkkwI8IjcvdjQve3BhcmVudD11c2Vy",
+            "cy8qL2RhdGFUeXBlcy8qfS9kYXRhUG9pbnRzOmJhdGNoRGVsZXRlOgEqEtcB",
+            "ChNSZWNvbmNpbGVEYXRhUG9pbnRzEj8uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuUmVjb25jaWxlRGF0YVBvaW50c1JlcXVlc3QaQC5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5SZWNvbmNpbGVE",
+            "YXRhUG9pbnRzUmVzcG9uc2UiPYLT5JMCNxI1L3Y0L3twYXJlbnQ9dXNlcnMv",
+            "Ki9kYXRhVHlwZXMvKn0vZGF0YVBvaW50czpyZWNvbmNpbGUSzgEKEFJvbGxV",
+            "cERhdGFQb2ludHMSPC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
+            "aC52NC5Sb2xsVXBEYXRhUG9pbnRzUmVxdWVzdBo9Lmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LlJvbGxVcERhdGFQb2ludHNSZXNwb25z",
+            "ZSI9gtPkkwI3IjIvdjQve3BhcmVudD11c2Vycy8qL2RhdGFUeXBlcy8qfS9k",
+            "YXRhUG9pbnRzOnJvbGxVcDoBKhLiAQoVRGFpbHlSb2xsVXBEYXRhUG9pbnRz",
+            "EkEuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlS",
+            "b2xsVXBEYXRhUG9pbnRzUmVxdWVzdBpCLmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
+            "dmljZXMuaGVhbHRoLnY0LkRhaWx5Um9sbFVwRGF0YVBvaW50c1Jlc3BvbnNl",
+            "IkKC0+STAjwiNy92NC97cGFyZW50PXVzZXJzLyovZGF0YVR5cGVzLyp9L2Rh",
+            "dGFQb2ludHM6ZGFpbHlSb2xsVXA6ASoS4AEKEUV4cG9ydEV4ZXJjaXNlVGN4",
+            "Ej0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhwb3J0",
+            "RXhlcmNpc2VUY3hSZXF1ZXN0Gj4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuRXhwb3J0RXhlcmNpc2VUY3hSZXNwb25zZSJM2kEEbmFt",
+            "ZYLT5JMCPxI9L3Y0L3tuYW1lPXVzZXJzLyovZGF0YVR5cGVzLyovZGF0YVBv",
+            "aW50cy8qfTpleHBvcnRFeGVyY2lzZVRjeBq3AspBFWhlYWx0aC5nb29nbGVh",
+            "cGlzLmNvbdJBmwJodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dv",
+            "b2dsZWhlYWx0aC5hY3Rpdml0eV9hbmRfZml0bmVzcy5yZWFkb25seSxodHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2dvb2dsZWhlYWx0aC5oZWFs",
+            "dGhfbWV0cmljc19hbmRfbWVhc3VyZW1lbnRzLnJlYWRvbmx5LGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29vZ2xlaGVhbHRoLmxvY2F0aW9u",
+            "LnJlYWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZ29v",
+            "Z2xlaGVhbHRoLnNsZWVwLnJlYWRvbmx5QoUCCidjb20uZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjRCD0RhdGFQb2ludHNQcm90b1ABWlJn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2RldmljZXNh",
+            "bmRzZXJ2aWNlcy9oZWFsdGgvYXBpdjRtYWluO2hlYWx0aHBiqgIjR29vZ2xl",
+            "LkRldmljZXNBbmRTZXJ2aWNlcy5IZWFsdGguVjTKAiNHb29nbGVcRGV2aWNl",
+            "c0FuZFNlcnZpY2VzXEhlYWx0aFxWNOoCJkdvb2dsZTo6RGV2aWNlc0FuZFNl",
+            "cnZpY2VzOjpIZWFsdGg6OlY0YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataCoordinatesReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataSourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DataPoint), global::Google.DevicesAndServices.Health.V4.DataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "Sleep", "DailyRestingHeartRate", "DailyHeartRateVariability", "Exercise", "Weight", "Altitude", "Distance", "BodyFat", "ActiveZoneMinutes", "HeartRateVariability", "DailySleepTemperatureDerivations", "SedentaryPeriod", "RunVo2Max", "OxygenSaturation", "DailyOxygenSaturation", "ActivityLevel", "Vo2Max", "DailyVo2Max", "DailyHeartRateZones", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "RespiratoryRateSleepSummary", "DailyRespiratoryRate", "SwimLengthsData", "Height", "BasalEnergyBurned", "Name", "DataSource" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ReconciledDataPoint), global::Google.DevicesAndServices.Health.V4.ReconciledDataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "Sleep", "DailyRestingHeartRate", "DailyHeartRateVariability", "Exercise", "Weight", "Altitude", "Distance", "BodyFat", "ActiveZoneMinutes", "HeartRateVariability", "DailySleepTemperatureDerivations", "SedentaryPeriod", "RunVo2Max", "OxygenSaturation", "DailyOxygenSaturation", "ActivityLevel", "Vo2Max", "DailyVo2Max", "DailyHeartRateZones", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "RespiratoryRateSleepSummary", "DailyRespiratoryRate", "SwimLengthsData", "Height", "BasalEnergyBurned", "DataPointName" }, new[]{ "Data" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RollupDataPoint), global::Google.DevicesAndServices.Health.V4.RollupDataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "Weight", "Altitude", "Distance", "BodyFat", "TotalCalories", "ActiveZoneMinutes", "SedentaryPeriod", "RunVo2Max", "CaloriesInHeartRateZone", "ActivityLevel", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "SwimLengthsData", "StartTime", "EndTime" }, new[]{ "Value" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRollupDataPoint), global::Google.DevicesAndServices.Health.V4.DailyRollupDataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "RestingHeartRatePersonalRange", "HeartRateVariabilityPersonalRange", "Weight", "Altitude", "Distance", "BodyFat", "TotalCalories", "ActiveZoneMinutes", "SedentaryPeriod", "RunVo2Max", "CaloriesInHeartRateZone", "ActivityLevel", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "SwimLengthsData", "CivilStartTime", "CivilEndTime" }, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DataPoint), global::Google.DevicesAndServices.Health.V4.DataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "Sleep", "DailyRestingHeartRate", "DailyHeartRateVariability", "Exercise", "Weight", "Altitude", "Distance", "BodyFat", "ActiveZoneMinutes", "HeartRateVariability", "DailySleepTemperatureDerivations", "SedentaryPeriod", "RunVo2Max", "OxygenSaturation", "DailyOxygenSaturation", "ActivityLevel", "Vo2Max", "DailyVo2Max", "NutritionLog", "IrregularRhythmNotification", "Electrocardiogram", "DailyHeartRateZones", "HydrationLog", "Food", "TimeInHeartRateZone", "ActiveMinutes", "RespiratoryRateSleepSummary", "DailyRespiratoryRate", "SwimLengthsData", "Height", "BasalEnergyBurned", "CoreBodyTemperature", "ActiveEnergyBurned", "FoodMeasurementUnit", "BloodGlucose", "Name", "DataSource" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ReconciledDataPoint), global::Google.DevicesAndServices.Health.V4.ReconciledDataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "Sleep", "DailyRestingHeartRate", "DailyHeartRateVariability", "Exercise", "Weight", "Altitude", "Distance", "BodyFat", "ActiveZoneMinutes", "HeartRateVariability", "DailySleepTemperatureDerivations", "SedentaryPeriod", "RunVo2Max", "OxygenSaturation", "DailyOxygenSaturation", "ActivityLevel", "Vo2Max", "DailyVo2Max", "NutritionLog", "DailyHeartRateZones", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "RespiratoryRateSleepSummary", "DailyRespiratoryRate", "SwimLengthsData", "Height", "BasalEnergyBurned", "CoreBodyTemperature", "ActiveEnergyBurned", "BloodGlucose", "DataPointName" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RollupDataPoint), global::Google.DevicesAndServices.Health.V4.RollupDataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "Weight", "Altitude", "Distance", "BodyFat", "TotalCalories", "ActiveZoneMinutes", "SedentaryPeriod", "RunVo2Max", "CaloriesInHeartRateZone", "ActivityLevel", "NutritionLog", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "SwimLengthsData", "CoreBodyTemperature", "ActiveEnergyBurned", "BloodGlucose", "StartTime", "EndTime" }, new[]{ "Value" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyRollupDataPoint), global::Google.DevicesAndServices.Health.V4.DailyRollupDataPoint.Parser, new[]{ "Steps", "Floors", "HeartRate", "RestingHeartRatePersonalRange", "HeartRateVariabilityPersonalRange", "Weight", "Altitude", "Distance", "BodyFat", "TotalCalories", "ActiveZoneMinutes", "SedentaryPeriod", "RunVo2Max", "CaloriesInHeartRateZone", "ActivityLevel", "NutritionLog", "HydrationLog", "TimeInHeartRateZone", "ActiveMinutes", "SwimLengthsData", "CoreBodyTemperature", "ActiveEnergyBurned", "BloodGlucose", "CivilStartTime", "CivilEndTime" }, new[]{ "Value" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.GetDataPointRequest), global::Google.DevicesAndServices.Health.V4.GetDataPointRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest), global::Google.DevicesAndServices.Health.V4.ListDataPointsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse), global::Google.DevicesAndServices.Health.V4.ListDataPointsResponse.Parser, new[]{ "DataPoints", "NextPageToken" }, null, null, null, null),
@@ -482,11 +522,23 @@ namespace Google.DevicesAndServices.Health.V4 {
         case DataOneofCase.DailyVo2Max:
           DailyVo2Max = other.DailyVo2Max.Clone();
           break;
+        case DataOneofCase.NutritionLog:
+          NutritionLog = other.NutritionLog.Clone();
+          break;
+        case DataOneofCase.IrregularRhythmNotification:
+          IrregularRhythmNotification = other.IrregularRhythmNotification.Clone();
+          break;
+        case DataOneofCase.Electrocardiogram:
+          Electrocardiogram = other.Electrocardiogram.Clone();
+          break;
         case DataOneofCase.DailyHeartRateZones:
           DailyHeartRateZones = other.DailyHeartRateZones.Clone();
           break;
         case DataOneofCase.HydrationLog:
           HydrationLog = other.HydrationLog.Clone();
+          break;
+        case DataOneofCase.Food:
+          Food = other.Food.Clone();
           break;
         case DataOneofCase.TimeInHeartRateZone:
           TimeInHeartRateZone = other.TimeInHeartRateZone.Clone();
@@ -508,6 +560,18 @@ namespace Google.DevicesAndServices.Health.V4 {
           break;
         case DataOneofCase.BasalEnergyBurned:
           BasalEnergyBurned = other.BasalEnergyBurned.Clone();
+          break;
+        case DataOneofCase.CoreBodyTemperature:
+          CoreBodyTemperature = other.CoreBodyTemperature.Clone();
+          break;
+        case DataOneofCase.ActiveEnergyBurned:
+          ActiveEnergyBurned = other.ActiveEnergyBurned.Clone();
+          break;
+        case DataOneofCase.FoodMeasurementUnit:
+          FoodMeasurementUnit = other.FoodMeasurementUnit.Clone();
+          break;
+        case DataOneofCase.BloodGlucose:
+          BloodGlucose = other.BloodGlucose.Clone();
           break;
       }
 
@@ -849,6 +913,54 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "nutrition_log" field.</summary>
+    public const int NutritionLogFieldNumber = 29;
+    /// <summary>
+    /// Optional. Data for points in the `nutrition-log` session data type
+    /// collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLog NutritionLog {
+      get { return dataCase_ == DataOneofCase.NutritionLog ? (global::Google.DevicesAndServices.Health.V4.NutritionLog) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.NutritionLog;
+      }
+    }
+
+    /// <summary>Field number for the "irregular_rhythm_notification" field.</summary>
+    public const int IrregularRhythmNotificationFieldNumber = 30;
+    /// <summary>
+    /// Optional. Data for points in the `irregular-rhythm-notification` session
+    /// data type collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification IrregularRhythmNotification {
+      get { return dataCase_ == DataOneofCase.IrregularRhythmNotification ? (global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.IrregularRhythmNotification;
+      }
+    }
+
+    /// <summary>Field number for the "electrocardiogram" field.</summary>
+    public const int ElectrocardiogramFieldNumber = 31;
+    /// <summary>
+    /// Optional. Data for points in the `electrocardiogram` session data type
+    /// collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.Electrocardiogram Electrocardiogram {
+      get { return dataCase_ == DataOneofCase.Electrocardiogram ? (global::Google.DevicesAndServices.Health.V4.Electrocardiogram) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Electrocardiogram;
+      }
+    }
+
     /// <summary>Field number for the "daily_heart_rate_zones" field.</summary>
     public const int DailyHeartRateZonesFieldNumber = 32;
     /// <summary>
@@ -878,6 +990,21 @@ namespace Google.DevicesAndServices.Health.V4 {
       set {
         data_ = value;
         dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.HydrationLog;
+      }
+    }
+
+    /// <summary>Field number for the "food" field.</summary>
+    public const int FoodFieldNumber = 34;
+    /// <summary>
+    /// Optional. The food details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.Food Food {
+      get { return dataCase_ == DataOneofCase.Food ? (global::Google.DevicesAndServices.Health.V4.Food) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.Food;
       }
     }
 
@@ -992,6 +1119,69 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "core_body_temperature" field.</summary>
+    public const int CoreBodyTemperatureFieldNumber = 42;
+    /// <summary>
+    /// Optional. Data for points in the `core-body-temperature` sample data type
+    /// collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature CoreBodyTemperature {
+      get { return dataCase_ == DataOneofCase.CoreBodyTemperature ? (global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.CoreBodyTemperature;
+      }
+    }
+
+    /// <summary>Field number for the "active_energy_burned" field.</summary>
+    public const int ActiveEnergyBurnedFieldNumber = 44;
+    /// <summary>
+    /// Optional. Data for points in the `active-energy-burned` interval data
+    /// type collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned ActiveEnergyBurned {
+      get { return dataCase_ == DataOneofCase.ActiveEnergyBurned ? (global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ActiveEnergyBurned;
+      }
+    }
+
+    /// <summary>Field number for the "food_measurement_unit" field.</summary>
+    public const int FoodMeasurementUnitFieldNumber = 45;
+    /// <summary>
+    /// Optional. The food measurement unit details.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit FoodMeasurementUnit {
+      get { return dataCase_ == DataOneofCase.FoodMeasurementUnit ? (global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.FoodMeasurementUnit;
+      }
+    }
+
+    /// <summary>Field number for the "blood_glucose" field.</summary>
+    public const int BloodGlucoseFieldNumber = 46;
+    /// <summary>
+    /// Optional. Data for points in the `blood-glucose` sample data type
+    /// collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.BloodGlucose BloodGlucose {
+      get { return dataCase_ == DataOneofCase.BloodGlucose ? (global::Google.DevicesAndServices.Health.V4.BloodGlucose) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.BloodGlucose;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
@@ -1066,8 +1256,12 @@ namespace Google.DevicesAndServices.Health.V4 {
       ActivityLevel = 26,
       Vo2Max = 27,
       DailyVo2Max = 28,
+      NutritionLog = 29,
+      IrregularRhythmNotification = 30,
+      Electrocardiogram = 31,
       DailyHeartRateZones = 32,
       HydrationLog = 33,
+      Food = 34,
       TimeInHeartRateZone = 35,
       ActiveMinutes = 36,
       RespiratoryRateSleepSummary = 37,
@@ -1075,6 +1269,10 @@ namespace Google.DevicesAndServices.Health.V4 {
       SwimLengthsData = 39,
       Height = 40,
       BasalEnergyBurned = 41,
+      CoreBodyTemperature = 42,
+      ActiveEnergyBurned = 44,
+      FoodMeasurementUnit = 45,
+      BloodGlucose = 46,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1126,8 +1324,12 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (!object.Equals(ActivityLevel, other.ActivityLevel)) return false;
       if (!object.Equals(Vo2Max, other.Vo2Max)) return false;
       if (!object.Equals(DailyVo2Max, other.DailyVo2Max)) return false;
+      if (!object.Equals(NutritionLog, other.NutritionLog)) return false;
+      if (!object.Equals(IrregularRhythmNotification, other.IrregularRhythmNotification)) return false;
+      if (!object.Equals(Electrocardiogram, other.Electrocardiogram)) return false;
       if (!object.Equals(DailyHeartRateZones, other.DailyHeartRateZones)) return false;
       if (!object.Equals(HydrationLog, other.HydrationLog)) return false;
+      if (!object.Equals(Food, other.Food)) return false;
       if (!object.Equals(TimeInHeartRateZone, other.TimeInHeartRateZone)) return false;
       if (!object.Equals(ActiveMinutes, other.ActiveMinutes)) return false;
       if (!object.Equals(RespiratoryRateSleepSummary, other.RespiratoryRateSleepSummary)) return false;
@@ -1135,6 +1337,10 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (!object.Equals(SwimLengthsData, other.SwimLengthsData)) return false;
       if (!object.Equals(Height, other.Height)) return false;
       if (!object.Equals(BasalEnergyBurned, other.BasalEnergyBurned)) return false;
+      if (!object.Equals(CoreBodyTemperature, other.CoreBodyTemperature)) return false;
+      if (!object.Equals(ActiveEnergyBurned, other.ActiveEnergyBurned)) return false;
+      if (!object.Equals(FoodMeasurementUnit, other.FoodMeasurementUnit)) return false;
+      if (!object.Equals(BloodGlucose, other.BloodGlucose)) return false;
       if (Name != other.Name) return false;
       if (!object.Equals(DataSource, other.DataSource)) return false;
       if (DataCase != other.DataCase) return false;
@@ -1166,8 +1372,12 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.ActivityLevel) hash ^= ActivityLevel.GetHashCode();
       if (dataCase_ == DataOneofCase.Vo2Max) hash ^= Vo2Max.GetHashCode();
       if (dataCase_ == DataOneofCase.DailyVo2Max) hash ^= DailyVo2Max.GetHashCode();
+      if (dataCase_ == DataOneofCase.NutritionLog) hash ^= NutritionLog.GetHashCode();
+      if (dataCase_ == DataOneofCase.IrregularRhythmNotification) hash ^= IrregularRhythmNotification.GetHashCode();
+      if (dataCase_ == DataOneofCase.Electrocardiogram) hash ^= Electrocardiogram.GetHashCode();
       if (dataCase_ == DataOneofCase.DailyHeartRateZones) hash ^= DailyHeartRateZones.GetHashCode();
       if (dataCase_ == DataOneofCase.HydrationLog) hash ^= HydrationLog.GetHashCode();
+      if (dataCase_ == DataOneofCase.Food) hash ^= Food.GetHashCode();
       if (dataCase_ == DataOneofCase.TimeInHeartRateZone) hash ^= TimeInHeartRateZone.GetHashCode();
       if (dataCase_ == DataOneofCase.ActiveMinutes) hash ^= ActiveMinutes.GetHashCode();
       if (dataCase_ == DataOneofCase.RespiratoryRateSleepSummary) hash ^= RespiratoryRateSleepSummary.GetHashCode();
@@ -1175,6 +1385,10 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.SwimLengthsData) hash ^= SwimLengthsData.GetHashCode();
       if (dataCase_ == DataOneofCase.Height) hash ^= Height.GetHashCode();
       if (dataCase_ == DataOneofCase.BasalEnergyBurned) hash ^= BasalEnergyBurned.GetHashCode();
+      if (dataCase_ == DataOneofCase.CoreBodyTemperature) hash ^= CoreBodyTemperature.GetHashCode();
+      if (dataCase_ == DataOneofCase.ActiveEnergyBurned) hash ^= ActiveEnergyBurned.GetHashCode();
+      if (dataCase_ == DataOneofCase.FoodMeasurementUnit) hash ^= FoodMeasurementUnit.GetHashCode();
+      if (dataCase_ == DataOneofCase.BloodGlucose) hash ^= BloodGlucose.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (dataSource_ != null) hash ^= DataSource.GetHashCode();
       hash ^= (int) dataCase_;
@@ -1288,6 +1502,18 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(DailyVo2Max);
       }
+      if (dataCase_ == DataOneofCase.NutritionLog) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(NutritionLog);
+      }
+      if (dataCase_ == DataOneofCase.IrregularRhythmNotification) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(IrregularRhythmNotification);
+      }
+      if (dataCase_ == DataOneofCase.Electrocardiogram) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(Electrocardiogram);
+      }
       if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(DailyHeartRateZones);
@@ -1295,6 +1521,10 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.HydrationLog) {
         output.WriteRawTag(138, 2);
         output.WriteMessage(HydrationLog);
+      }
+      if (dataCase_ == DataOneofCase.Food) {
+        output.WriteRawTag(146, 2);
+        output.WriteMessage(Food);
       }
       if (dataCase_ == DataOneofCase.TimeInHeartRateZone) {
         output.WriteRawTag(154, 2);
@@ -1323,6 +1553,22 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.BasalEnergyBurned) {
         output.WriteRawTag(202, 2);
         output.WriteMessage(BasalEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+        output.WriteRawTag(210, 2);
+        output.WriteMessage(CoreBodyTemperature);
+      }
+      if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+        output.WriteRawTag(226, 2);
+        output.WriteMessage(ActiveEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.FoodMeasurementUnit) {
+        output.WriteRawTag(234, 2);
+        output.WriteMessage(FoodMeasurementUnit);
+      }
+      if (dataCase_ == DataOneofCase.BloodGlucose) {
+        output.WriteRawTag(242, 2);
+        output.WriteMessage(BloodGlucose);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -1426,6 +1672,18 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(DailyVo2Max);
       }
+      if (dataCase_ == DataOneofCase.NutritionLog) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(NutritionLog);
+      }
+      if (dataCase_ == DataOneofCase.IrregularRhythmNotification) {
+        output.WriteRawTag(242, 1);
+        output.WriteMessage(IrregularRhythmNotification);
+      }
+      if (dataCase_ == DataOneofCase.Electrocardiogram) {
+        output.WriteRawTag(250, 1);
+        output.WriteMessage(Electrocardiogram);
+      }
       if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(DailyHeartRateZones);
@@ -1433,6 +1691,10 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.HydrationLog) {
         output.WriteRawTag(138, 2);
         output.WriteMessage(HydrationLog);
+      }
+      if (dataCase_ == DataOneofCase.Food) {
+        output.WriteRawTag(146, 2);
+        output.WriteMessage(Food);
       }
       if (dataCase_ == DataOneofCase.TimeInHeartRateZone) {
         output.WriteRawTag(154, 2);
@@ -1461,6 +1723,22 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.BasalEnergyBurned) {
         output.WriteRawTag(202, 2);
         output.WriteMessage(BasalEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+        output.WriteRawTag(210, 2);
+        output.WriteMessage(CoreBodyTemperature);
+      }
+      if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+        output.WriteRawTag(226, 2);
+        output.WriteMessage(ActiveEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.FoodMeasurementUnit) {
+        output.WriteRawTag(234, 2);
+        output.WriteMessage(FoodMeasurementUnit);
+      }
+      if (dataCase_ == DataOneofCase.BloodGlucose) {
+        output.WriteRawTag(242, 2);
+        output.WriteMessage(BloodGlucose);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1535,11 +1813,23 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.DailyVo2Max) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DailyVo2Max);
       }
+      if (dataCase_ == DataOneofCase.NutritionLog) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NutritionLog);
+      }
+      if (dataCase_ == DataOneofCase.IrregularRhythmNotification) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(IrregularRhythmNotification);
+      }
+      if (dataCase_ == DataOneofCase.Electrocardiogram) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Electrocardiogram);
+      }
       if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DailyHeartRateZones);
       }
       if (dataCase_ == DataOneofCase.HydrationLog) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(HydrationLog);
+      }
+      if (dataCase_ == DataOneofCase.Food) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Food);
       }
       if (dataCase_ == DataOneofCase.TimeInHeartRateZone) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(TimeInHeartRateZone);
@@ -1561,6 +1851,18 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
       if (dataCase_ == DataOneofCase.BasalEnergyBurned) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BasalEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CoreBodyTemperature);
+      }
+      if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ActiveEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.FoodMeasurementUnit) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FoodMeasurementUnit);
+      }
+      if (dataCase_ == DataOneofCase.BloodGlucose) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BloodGlucose);
       }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
@@ -1716,6 +2018,24 @@ namespace Google.DevicesAndServices.Health.V4 {
           }
           DailyVo2Max.MergeFrom(other.DailyVo2Max);
           break;
+        case DataOneofCase.NutritionLog:
+          if (NutritionLog == null) {
+            NutritionLog = new global::Google.DevicesAndServices.Health.V4.NutritionLog();
+          }
+          NutritionLog.MergeFrom(other.NutritionLog);
+          break;
+        case DataOneofCase.IrregularRhythmNotification:
+          if (IrregularRhythmNotification == null) {
+            IrregularRhythmNotification = new global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification();
+          }
+          IrregularRhythmNotification.MergeFrom(other.IrregularRhythmNotification);
+          break;
+        case DataOneofCase.Electrocardiogram:
+          if (Electrocardiogram == null) {
+            Electrocardiogram = new global::Google.DevicesAndServices.Health.V4.Electrocardiogram();
+          }
+          Electrocardiogram.MergeFrom(other.Electrocardiogram);
+          break;
         case DataOneofCase.DailyHeartRateZones:
           if (DailyHeartRateZones == null) {
             DailyHeartRateZones = new global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones();
@@ -1727,6 +2047,12 @@ namespace Google.DevicesAndServices.Health.V4 {
             HydrationLog = new global::Google.DevicesAndServices.Health.V4.HydrationLog();
           }
           HydrationLog.MergeFrom(other.HydrationLog);
+          break;
+        case DataOneofCase.Food:
+          if (Food == null) {
+            Food = new global::Google.DevicesAndServices.Health.V4.Food();
+          }
+          Food.MergeFrom(other.Food);
           break;
         case DataOneofCase.TimeInHeartRateZone:
           if (TimeInHeartRateZone == null) {
@@ -1769,6 +2095,30 @@ namespace Google.DevicesAndServices.Health.V4 {
             BasalEnergyBurned = new global::Google.DevicesAndServices.Health.V4.BasalEnergyBurned();
           }
           BasalEnergyBurned.MergeFrom(other.BasalEnergyBurned);
+          break;
+        case DataOneofCase.CoreBodyTemperature:
+          if (CoreBodyTemperature == null) {
+            CoreBodyTemperature = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature();
+          }
+          CoreBodyTemperature.MergeFrom(other.CoreBodyTemperature);
+          break;
+        case DataOneofCase.ActiveEnergyBurned:
+          if (ActiveEnergyBurned == null) {
+            ActiveEnergyBurned = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned();
+          }
+          ActiveEnergyBurned.MergeFrom(other.ActiveEnergyBurned);
+          break;
+        case DataOneofCase.FoodMeasurementUnit:
+          if (FoodMeasurementUnit == null) {
+            FoodMeasurementUnit = new global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit();
+          }
+          FoodMeasurementUnit.MergeFrom(other.FoodMeasurementUnit);
+          break;
+        case DataOneofCase.BloodGlucose:
+          if (BloodGlucose == null) {
+            BloodGlucose = new global::Google.DevicesAndServices.Health.V4.BloodGlucose();
+          }
+          BloodGlucose.MergeFrom(other.BloodGlucose);
           break;
       }
 
@@ -1991,6 +2341,33 @@ namespace Google.DevicesAndServices.Health.V4 {
             DailyVo2Max = subBuilder;
             break;
           }
+          case 234: {
+            global::Google.DevicesAndServices.Health.V4.NutritionLog subBuilder = new global::Google.DevicesAndServices.Health.V4.NutritionLog();
+            if (dataCase_ == DataOneofCase.NutritionLog) {
+              subBuilder.MergeFrom(NutritionLog);
+            }
+            input.ReadMessage(subBuilder);
+            NutritionLog = subBuilder;
+            break;
+          }
+          case 242: {
+            global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification subBuilder = new global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification();
+            if (dataCase_ == DataOneofCase.IrregularRhythmNotification) {
+              subBuilder.MergeFrom(IrregularRhythmNotification);
+            }
+            input.ReadMessage(subBuilder);
+            IrregularRhythmNotification = subBuilder;
+            break;
+          }
+          case 250: {
+            global::Google.DevicesAndServices.Health.V4.Electrocardiogram subBuilder = new global::Google.DevicesAndServices.Health.V4.Electrocardiogram();
+            if (dataCase_ == DataOneofCase.Electrocardiogram) {
+              subBuilder.MergeFrom(Electrocardiogram);
+            }
+            input.ReadMessage(subBuilder);
+            Electrocardiogram = subBuilder;
+            break;
+          }
           case 258: {
             global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones subBuilder = new global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones();
             if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
@@ -2007,6 +2384,15 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             HydrationLog = subBuilder;
+            break;
+          }
+          case 274: {
+            global::Google.DevicesAndServices.Health.V4.Food subBuilder = new global::Google.DevicesAndServices.Health.V4.Food();
+            if (dataCase_ == DataOneofCase.Food) {
+              subBuilder.MergeFrom(Food);
+            }
+            input.ReadMessage(subBuilder);
+            Food = subBuilder;
             break;
           }
           case 282: {
@@ -2070,6 +2456,42 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             BasalEnergyBurned = subBuilder;
+            break;
+          }
+          case 338: {
+            global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature subBuilder = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature();
+            if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+              subBuilder.MergeFrom(CoreBodyTemperature);
+            }
+            input.ReadMessage(subBuilder);
+            CoreBodyTemperature = subBuilder;
+            break;
+          }
+          case 354: {
+            global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned subBuilder = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned();
+            if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+              subBuilder.MergeFrom(ActiveEnergyBurned);
+            }
+            input.ReadMessage(subBuilder);
+            ActiveEnergyBurned = subBuilder;
+            break;
+          }
+          case 362: {
+            global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit subBuilder = new global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit();
+            if (dataCase_ == DataOneofCase.FoodMeasurementUnit) {
+              subBuilder.MergeFrom(FoodMeasurementUnit);
+            }
+            input.ReadMessage(subBuilder);
+            FoodMeasurementUnit = subBuilder;
+            break;
+          }
+          case 370: {
+            global::Google.DevicesAndServices.Health.V4.BloodGlucose subBuilder = new global::Google.DevicesAndServices.Health.V4.BloodGlucose();
+            if (dataCase_ == DataOneofCase.BloodGlucose) {
+              subBuilder.MergeFrom(BloodGlucose);
+            }
+            input.ReadMessage(subBuilder);
+            BloodGlucose = subBuilder;
             break;
           }
         }
@@ -2291,6 +2713,33 @@ namespace Google.DevicesAndServices.Health.V4 {
             DailyVo2Max = subBuilder;
             break;
           }
+          case 234: {
+            global::Google.DevicesAndServices.Health.V4.NutritionLog subBuilder = new global::Google.DevicesAndServices.Health.V4.NutritionLog();
+            if (dataCase_ == DataOneofCase.NutritionLog) {
+              subBuilder.MergeFrom(NutritionLog);
+            }
+            input.ReadMessage(subBuilder);
+            NutritionLog = subBuilder;
+            break;
+          }
+          case 242: {
+            global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification subBuilder = new global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification();
+            if (dataCase_ == DataOneofCase.IrregularRhythmNotification) {
+              subBuilder.MergeFrom(IrregularRhythmNotification);
+            }
+            input.ReadMessage(subBuilder);
+            IrregularRhythmNotification = subBuilder;
+            break;
+          }
+          case 250: {
+            global::Google.DevicesAndServices.Health.V4.Electrocardiogram subBuilder = new global::Google.DevicesAndServices.Health.V4.Electrocardiogram();
+            if (dataCase_ == DataOneofCase.Electrocardiogram) {
+              subBuilder.MergeFrom(Electrocardiogram);
+            }
+            input.ReadMessage(subBuilder);
+            Electrocardiogram = subBuilder;
+            break;
+          }
           case 258: {
             global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones subBuilder = new global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones();
             if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
@@ -2307,6 +2756,15 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             HydrationLog = subBuilder;
+            break;
+          }
+          case 274: {
+            global::Google.DevicesAndServices.Health.V4.Food subBuilder = new global::Google.DevicesAndServices.Health.V4.Food();
+            if (dataCase_ == DataOneofCase.Food) {
+              subBuilder.MergeFrom(Food);
+            }
+            input.ReadMessage(subBuilder);
+            Food = subBuilder;
             break;
           }
           case 282: {
@@ -2370,6 +2828,42 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             BasalEnergyBurned = subBuilder;
+            break;
+          }
+          case 338: {
+            global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature subBuilder = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature();
+            if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+              subBuilder.MergeFrom(CoreBodyTemperature);
+            }
+            input.ReadMessage(subBuilder);
+            CoreBodyTemperature = subBuilder;
+            break;
+          }
+          case 354: {
+            global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned subBuilder = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned();
+            if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+              subBuilder.MergeFrom(ActiveEnergyBurned);
+            }
+            input.ReadMessage(subBuilder);
+            ActiveEnergyBurned = subBuilder;
+            break;
+          }
+          case 362: {
+            global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit subBuilder = new global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit();
+            if (dataCase_ == DataOneofCase.FoodMeasurementUnit) {
+              subBuilder.MergeFrom(FoodMeasurementUnit);
+            }
+            input.ReadMessage(subBuilder);
+            FoodMeasurementUnit = subBuilder;
+            break;
+          }
+          case 370: {
+            global::Google.DevicesAndServices.Health.V4.BloodGlucose subBuilder = new global::Google.DevicesAndServices.Health.V4.BloodGlucose();
+            if (dataCase_ == DataOneofCase.BloodGlucose) {
+              subBuilder.MergeFrom(BloodGlucose);
+            }
+            input.ReadMessage(subBuilder);
+            BloodGlucose = subBuilder;
             break;
           }
         }
@@ -2482,6 +2976,9 @@ namespace Google.DevicesAndServices.Health.V4 {
         case DataOneofCase.DailyVo2Max:
           DailyVo2Max = other.DailyVo2Max.Clone();
           break;
+        case DataOneofCase.NutritionLog:
+          NutritionLog = other.NutritionLog.Clone();
+          break;
         case DataOneofCase.DailyHeartRateZones:
           DailyHeartRateZones = other.DailyHeartRateZones.Clone();
           break;
@@ -2508,6 +3005,15 @@ namespace Google.DevicesAndServices.Health.V4 {
           break;
         case DataOneofCase.BasalEnergyBurned:
           BasalEnergyBurned = other.BasalEnergyBurned.Clone();
+          break;
+        case DataOneofCase.CoreBodyTemperature:
+          CoreBodyTemperature = other.CoreBodyTemperature.Clone();
+          break;
+        case DataOneofCase.ActiveEnergyBurned:
+          ActiveEnergyBurned = other.ActiveEnergyBurned.Clone();
+          break;
+        case DataOneofCase.BloodGlucose:
+          BloodGlucose = other.BloodGlucose.Clone();
           break;
       }
 
@@ -2841,6 +3347,21 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "nutrition_log" field.</summary>
+    public const int NutritionLogFieldNumber = 29;
+    /// <summary>
+    /// Data for points in the `nutrition-log` session data type collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLog NutritionLog {
+      get { return dataCase_ == DataOneofCase.NutritionLog ? (global::Google.DevicesAndServices.Health.V4.NutritionLog) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.NutritionLog;
+      }
+    }
+
     /// <summary>Field number for the "daily_heart_rate_zones" field.</summary>
     public const int DailyHeartRateZonesFieldNumber = 32;
     /// <summary>
@@ -2981,6 +3502,53 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "core_body_temperature" field.</summary>
+    public const int CoreBodyTemperatureFieldNumber = 42;
+    /// <summary>
+    /// Data for points in the `core-body-temperature` sample data type
+    /// collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature CoreBodyTemperature {
+      get { return dataCase_ == DataOneofCase.CoreBodyTemperature ? (global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.CoreBodyTemperature;
+      }
+    }
+
+    /// <summary>Field number for the "active_energy_burned" field.</summary>
+    public const int ActiveEnergyBurnedFieldNumber = 44;
+    /// <summary>
+    /// Data for points in the `active-energy-burned` interval data type
+    /// collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned ActiveEnergyBurned {
+      get { return dataCase_ == DataOneofCase.ActiveEnergyBurned ? (global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.ActiveEnergyBurned;
+      }
+    }
+
+    /// <summary>Field number for the "blood_glucose" field.</summary>
+    public const int BloodGlucoseFieldNumber = 46;
+    /// <summary>
+    /// Data for points in the `blood-glucose` sample data type collection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.BloodGlucose BloodGlucose {
+      get { return dataCase_ == DataOneofCase.BloodGlucose ? (global::Google.DevicesAndServices.Health.V4.BloodGlucose) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.BloodGlucose;
+      }
+    }
+
     /// <summary>Field number for the "data_point_name" field.</summary>
     public const int DataPointNameFieldNumber = 1;
     private string dataPointName_ = "";
@@ -3040,6 +3608,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       ActivityLevel = 26,
       Vo2Max = 27,
       DailyVo2Max = 28,
+      NutritionLog = 29,
       DailyHeartRateZones = 32,
       HydrationLog = 33,
       TimeInHeartRateZone = 35,
@@ -3049,6 +3618,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       SwimLengthsData = 39,
       Height = 40,
       BasalEnergyBurned = 41,
+      CoreBodyTemperature = 42,
+      ActiveEnergyBurned = 44,
+      BloodGlucose = 46,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3100,6 +3672,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (!object.Equals(ActivityLevel, other.ActivityLevel)) return false;
       if (!object.Equals(Vo2Max, other.Vo2Max)) return false;
       if (!object.Equals(DailyVo2Max, other.DailyVo2Max)) return false;
+      if (!object.Equals(NutritionLog, other.NutritionLog)) return false;
       if (!object.Equals(DailyHeartRateZones, other.DailyHeartRateZones)) return false;
       if (!object.Equals(HydrationLog, other.HydrationLog)) return false;
       if (!object.Equals(TimeInHeartRateZone, other.TimeInHeartRateZone)) return false;
@@ -3109,6 +3682,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (!object.Equals(SwimLengthsData, other.SwimLengthsData)) return false;
       if (!object.Equals(Height, other.Height)) return false;
       if (!object.Equals(BasalEnergyBurned, other.BasalEnergyBurned)) return false;
+      if (!object.Equals(CoreBodyTemperature, other.CoreBodyTemperature)) return false;
+      if (!object.Equals(ActiveEnergyBurned, other.ActiveEnergyBurned)) return false;
+      if (!object.Equals(BloodGlucose, other.BloodGlucose)) return false;
       if (DataPointName != other.DataPointName) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -3139,6 +3715,7 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.ActivityLevel) hash ^= ActivityLevel.GetHashCode();
       if (dataCase_ == DataOneofCase.Vo2Max) hash ^= Vo2Max.GetHashCode();
       if (dataCase_ == DataOneofCase.DailyVo2Max) hash ^= DailyVo2Max.GetHashCode();
+      if (dataCase_ == DataOneofCase.NutritionLog) hash ^= NutritionLog.GetHashCode();
       if (dataCase_ == DataOneofCase.DailyHeartRateZones) hash ^= DailyHeartRateZones.GetHashCode();
       if (dataCase_ == DataOneofCase.HydrationLog) hash ^= HydrationLog.GetHashCode();
       if (dataCase_ == DataOneofCase.TimeInHeartRateZone) hash ^= TimeInHeartRateZone.GetHashCode();
@@ -3148,6 +3725,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.SwimLengthsData) hash ^= SwimLengthsData.GetHashCode();
       if (dataCase_ == DataOneofCase.Height) hash ^= Height.GetHashCode();
       if (dataCase_ == DataOneofCase.BasalEnergyBurned) hash ^= BasalEnergyBurned.GetHashCode();
+      if (dataCase_ == DataOneofCase.CoreBodyTemperature) hash ^= CoreBodyTemperature.GetHashCode();
+      if (dataCase_ == DataOneofCase.ActiveEnergyBurned) hash ^= ActiveEnergyBurned.GetHashCode();
+      if (dataCase_ == DataOneofCase.BloodGlucose) hash ^= BloodGlucose.GetHashCode();
       if (DataPointName.Length != 0) hash ^= DataPointName.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
@@ -3256,6 +3836,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(DailyVo2Max);
       }
+      if (dataCase_ == DataOneofCase.NutritionLog) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(NutritionLog);
+      }
       if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(DailyHeartRateZones);
@@ -3291,6 +3875,18 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.BasalEnergyBurned) {
         output.WriteRawTag(202, 2);
         output.WriteMessage(BasalEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+        output.WriteRawTag(210, 2);
+        output.WriteMessage(CoreBodyTemperature);
+      }
+      if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+        output.WriteRawTag(226, 2);
+        output.WriteMessage(ActiveEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.BloodGlucose) {
+        output.WriteRawTag(242, 2);
+        output.WriteMessage(BloodGlucose);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -3390,6 +3986,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(226, 1);
         output.WriteMessage(DailyVo2Max);
       }
+      if (dataCase_ == DataOneofCase.NutritionLog) {
+        output.WriteRawTag(234, 1);
+        output.WriteMessage(NutritionLog);
+      }
       if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
         output.WriteRawTag(130, 2);
         output.WriteMessage(DailyHeartRateZones);
@@ -3425,6 +4025,18 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.BasalEnergyBurned) {
         output.WriteRawTag(202, 2);
         output.WriteMessage(BasalEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+        output.WriteRawTag(210, 2);
+        output.WriteMessage(CoreBodyTemperature);
+      }
+      if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+        output.WriteRawTag(226, 2);
+        output.WriteMessage(ActiveEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.BloodGlucose) {
+        output.WriteRawTag(242, 2);
+        output.WriteMessage(BloodGlucose);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3499,6 +4111,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (dataCase_ == DataOneofCase.DailyVo2Max) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DailyVo2Max);
       }
+      if (dataCase_ == DataOneofCase.NutritionLog) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NutritionLog);
+      }
       if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(DailyHeartRateZones);
       }
@@ -3525,6 +4140,15 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
       if (dataCase_ == DataOneofCase.BasalEnergyBurned) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(BasalEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CoreBodyTemperature);
+      }
+      if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ActiveEnergyBurned);
+      }
+      if (dataCase_ == DataOneofCase.BloodGlucose) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BloodGlucose);
       }
       if (DataPointName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DataPointName);
@@ -3671,6 +4295,12 @@ namespace Google.DevicesAndServices.Health.V4 {
           }
           DailyVo2Max.MergeFrom(other.DailyVo2Max);
           break;
+        case DataOneofCase.NutritionLog:
+          if (NutritionLog == null) {
+            NutritionLog = new global::Google.DevicesAndServices.Health.V4.NutritionLog();
+          }
+          NutritionLog.MergeFrom(other.NutritionLog);
+          break;
         case DataOneofCase.DailyHeartRateZones:
           if (DailyHeartRateZones == null) {
             DailyHeartRateZones = new global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones();
@@ -3724,6 +4354,24 @@ namespace Google.DevicesAndServices.Health.V4 {
             BasalEnergyBurned = new global::Google.DevicesAndServices.Health.V4.BasalEnergyBurned();
           }
           BasalEnergyBurned.MergeFrom(other.BasalEnergyBurned);
+          break;
+        case DataOneofCase.CoreBodyTemperature:
+          if (CoreBodyTemperature == null) {
+            CoreBodyTemperature = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature();
+          }
+          CoreBodyTemperature.MergeFrom(other.CoreBodyTemperature);
+          break;
+        case DataOneofCase.ActiveEnergyBurned:
+          if (ActiveEnergyBurned == null) {
+            ActiveEnergyBurned = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned();
+          }
+          ActiveEnergyBurned.MergeFrom(other.ActiveEnergyBurned);
+          break;
+        case DataOneofCase.BloodGlucose:
+          if (BloodGlucose == null) {
+            BloodGlucose = new global::Google.DevicesAndServices.Health.V4.BloodGlucose();
+          }
+          BloodGlucose.MergeFrom(other.BloodGlucose);
           break;
       }
 
@@ -3939,6 +4587,15 @@ namespace Google.DevicesAndServices.Health.V4 {
             DailyVo2Max = subBuilder;
             break;
           }
+          case 234: {
+            global::Google.DevicesAndServices.Health.V4.NutritionLog subBuilder = new global::Google.DevicesAndServices.Health.V4.NutritionLog();
+            if (dataCase_ == DataOneofCase.NutritionLog) {
+              subBuilder.MergeFrom(NutritionLog);
+            }
+            input.ReadMessage(subBuilder);
+            NutritionLog = subBuilder;
+            break;
+          }
           case 258: {
             global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones subBuilder = new global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones();
             if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
@@ -4018,6 +4675,33 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             BasalEnergyBurned = subBuilder;
+            break;
+          }
+          case 338: {
+            global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature subBuilder = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature();
+            if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+              subBuilder.MergeFrom(CoreBodyTemperature);
+            }
+            input.ReadMessage(subBuilder);
+            CoreBodyTemperature = subBuilder;
+            break;
+          }
+          case 354: {
+            global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned subBuilder = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned();
+            if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+              subBuilder.MergeFrom(ActiveEnergyBurned);
+            }
+            input.ReadMessage(subBuilder);
+            ActiveEnergyBurned = subBuilder;
+            break;
+          }
+          case 370: {
+            global::Google.DevicesAndServices.Health.V4.BloodGlucose subBuilder = new global::Google.DevicesAndServices.Health.V4.BloodGlucose();
+            if (dataCase_ == DataOneofCase.BloodGlucose) {
+              subBuilder.MergeFrom(BloodGlucose);
+            }
+            input.ReadMessage(subBuilder);
+            BloodGlucose = subBuilder;
             break;
           }
         }
@@ -4232,6 +4916,15 @@ namespace Google.DevicesAndServices.Health.V4 {
             DailyVo2Max = subBuilder;
             break;
           }
+          case 234: {
+            global::Google.DevicesAndServices.Health.V4.NutritionLog subBuilder = new global::Google.DevicesAndServices.Health.V4.NutritionLog();
+            if (dataCase_ == DataOneofCase.NutritionLog) {
+              subBuilder.MergeFrom(NutritionLog);
+            }
+            input.ReadMessage(subBuilder);
+            NutritionLog = subBuilder;
+            break;
+          }
           case 258: {
             global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones subBuilder = new global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones();
             if (dataCase_ == DataOneofCase.DailyHeartRateZones) {
@@ -4311,6 +5004,33 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             BasalEnergyBurned = subBuilder;
+            break;
+          }
+          case 338: {
+            global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature subBuilder = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature();
+            if (dataCase_ == DataOneofCase.CoreBodyTemperature) {
+              subBuilder.MergeFrom(CoreBodyTemperature);
+            }
+            input.ReadMessage(subBuilder);
+            CoreBodyTemperature = subBuilder;
+            break;
+          }
+          case 354: {
+            global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned subBuilder = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned();
+            if (dataCase_ == DataOneofCase.ActiveEnergyBurned) {
+              subBuilder.MergeFrom(ActiveEnergyBurned);
+            }
+            input.ReadMessage(subBuilder);
+            ActiveEnergyBurned = subBuilder;
+            break;
+          }
+          case 370: {
+            global::Google.DevicesAndServices.Health.V4.BloodGlucose subBuilder = new global::Google.DevicesAndServices.Health.V4.BloodGlucose();
+            if (dataCase_ == DataOneofCase.BloodGlucose) {
+              subBuilder.MergeFrom(BloodGlucose);
+            }
+            input.ReadMessage(subBuilder);
+            BloodGlucose = subBuilder;
             break;
           }
         }
@@ -4403,6 +5123,9 @@ namespace Google.DevicesAndServices.Health.V4 {
         case ValueOneofCase.ActivityLevel:
           ActivityLevel = other.ActivityLevel.Clone();
           break;
+        case ValueOneofCase.NutritionLog:
+          NutritionLog = other.NutritionLog.Clone();
+          break;
         case ValueOneofCase.HydrationLog:
           HydrationLog = other.HydrationLog.Clone();
           break;
@@ -4414,6 +5137,15 @@ namespace Google.DevicesAndServices.Health.V4 {
           break;
         case ValueOneofCase.SwimLengthsData:
           SwimLengthsData = other.SwimLengthsData.Clone();
+          break;
+        case ValueOneofCase.CoreBodyTemperature:
+          CoreBodyTemperature = other.CoreBodyTemperature.Clone();
+          break;
+        case ValueOneofCase.ActiveEnergyBurned:
+          ActiveEnergyBurned = other.ActiveEnergyBurned.Clone();
+          break;
+        case ValueOneofCase.BloodGlucose:
+          BloodGlucose = other.BloodGlucose.Clone();
           break;
       }
 
@@ -4647,6 +5379,23 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "nutrition_log" field.</summary>
+    public const int NutritionLogFieldNumber = 19;
+    /// <summary>
+    /// Returned by default when rolling up data points from the
+    /// `nutrition-log` data type, or when requested explicitly using the
+    /// `nutrition-log` rollup type identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue NutritionLog {
+      get { return valueCase_ == ValueOneofCase.NutritionLog ? (global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.NutritionLog;
+      }
+    }
+
     /// <summary>Field number for the "hydration_log" field.</summary>
     public const int HydrationLogFieldNumber = 20;
     /// <summary>
@@ -4715,6 +5464,55 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "core_body_temperature" field.</summary>
+    public const int CoreBodyTemperatureFieldNumber = 24;
+    /// <summary>
+    /// Returned by default when rolling up data points from the
+    /// `core-body-temperature` data type, or when requested explicitly using
+    /// the `core-body-temperature` rollup type identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue CoreBodyTemperature {
+      get { return valueCase_ == ValueOneofCase.CoreBodyTemperature ? (global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.CoreBodyTemperature;
+      }
+    }
+
+    /// <summary>Field number for the "active_energy_burned" field.</summary>
+    public const int ActiveEnergyBurnedFieldNumber = 25;
+    /// <summary>
+    /// Returned by default when rolling up data points from the
+    /// `active-energy-burned` data type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue ActiveEnergyBurned {
+      get { return valueCase_ == ValueOneofCase.ActiveEnergyBurned ? (global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.ActiveEnergyBurned;
+      }
+    }
+
+    /// <summary>Field number for the "blood_glucose" field.</summary>
+    public const int BloodGlucoseFieldNumber = 26;
+    /// <summary>
+    /// Returned by default when rolling up data points from the
+    /// `blood-glucose` data type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue BloodGlucose {
+      get { return valueCase_ == ValueOneofCase.BloodGlucose ? (global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.BloodGlucose;
+      }
+    }
+
     /// <summary>Field number for the "start_time" field.</summary>
     public const int StartTimeFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
@@ -4762,10 +5560,14 @@ namespace Google.DevicesAndServices.Health.V4 {
       RunVo2Max = 16,
       CaloriesInHeartRateZone = 17,
       ActivityLevel = 18,
+      NutritionLog = 19,
       HydrationLog = 20,
       TimeInHeartRateZone = 21,
       ActiveMinutes = 22,
       SwimLengthsData = 23,
+      CoreBodyTemperature = 24,
+      ActiveEnergyBurned = 25,
+      BloodGlucose = 26,
     }
     private ValueOneofCase valueCase_ = ValueOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4809,10 +5611,14 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (!object.Equals(RunVo2Max, other.RunVo2Max)) return false;
       if (!object.Equals(CaloriesInHeartRateZone, other.CaloriesInHeartRateZone)) return false;
       if (!object.Equals(ActivityLevel, other.ActivityLevel)) return false;
+      if (!object.Equals(NutritionLog, other.NutritionLog)) return false;
       if (!object.Equals(HydrationLog, other.HydrationLog)) return false;
       if (!object.Equals(TimeInHeartRateZone, other.TimeInHeartRateZone)) return false;
       if (!object.Equals(ActiveMinutes, other.ActiveMinutes)) return false;
       if (!object.Equals(SwimLengthsData, other.SwimLengthsData)) return false;
+      if (!object.Equals(CoreBodyTemperature, other.CoreBodyTemperature)) return false;
+      if (!object.Equals(ActiveEnergyBurned, other.ActiveEnergyBurned)) return false;
+      if (!object.Equals(BloodGlucose, other.BloodGlucose)) return false;
       if (!object.Equals(StartTime, other.StartTime)) return false;
       if (!object.Equals(EndTime, other.EndTime)) return false;
       if (ValueCase != other.ValueCase) return false;
@@ -4836,10 +5642,14 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (valueCase_ == ValueOneofCase.RunVo2Max) hash ^= RunVo2Max.GetHashCode();
       if (valueCase_ == ValueOneofCase.CaloriesInHeartRateZone) hash ^= CaloriesInHeartRateZone.GetHashCode();
       if (valueCase_ == ValueOneofCase.ActivityLevel) hash ^= ActivityLevel.GetHashCode();
+      if (valueCase_ == ValueOneofCase.NutritionLog) hash ^= NutritionLog.GetHashCode();
       if (valueCase_ == ValueOneofCase.HydrationLog) hash ^= HydrationLog.GetHashCode();
       if (valueCase_ == ValueOneofCase.TimeInHeartRateZone) hash ^= TimeInHeartRateZone.GetHashCode();
       if (valueCase_ == ValueOneofCase.ActiveMinutes) hash ^= ActiveMinutes.GetHashCode();
       if (valueCase_ == ValueOneofCase.SwimLengthsData) hash ^= SwimLengthsData.GetHashCode();
+      if (valueCase_ == ValueOneofCase.CoreBodyTemperature) hash ^= CoreBodyTemperature.GetHashCode();
+      if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) hash ^= ActiveEnergyBurned.GetHashCode();
+      if (valueCase_ == ValueOneofCase.BloodGlucose) hash ^= BloodGlucose.GetHashCode();
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
       if (endTime_ != null) hash ^= EndTime.GetHashCode();
       hash ^= (int) valueCase_;
@@ -4921,6 +5731,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(ActivityLevel);
       }
+      if (valueCase_ == ValueOneofCase.NutritionLog) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(NutritionLog);
+      }
       if (valueCase_ == ValueOneofCase.HydrationLog) {
         output.WriteRawTag(162, 1);
         output.WriteMessage(HydrationLog);
@@ -4936,6 +5750,18 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (valueCase_ == ValueOneofCase.SwimLengthsData) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(SwimLengthsData);
+      }
+      if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(CoreBodyTemperature);
+      }
+      if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(ActiveEnergyBurned);
+      }
+      if (valueCase_ == ValueOneofCase.BloodGlucose) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(BloodGlucose);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -5007,6 +5833,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(146, 1);
         output.WriteMessage(ActivityLevel);
       }
+      if (valueCase_ == ValueOneofCase.NutritionLog) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(NutritionLog);
+      }
       if (valueCase_ == ValueOneofCase.HydrationLog) {
         output.WriteRawTag(162, 1);
         output.WriteMessage(HydrationLog);
@@ -5022,6 +5852,18 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (valueCase_ == ValueOneofCase.SwimLengthsData) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(SwimLengthsData);
+      }
+      if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+        output.WriteRawTag(194, 1);
+        output.WriteMessage(CoreBodyTemperature);
+      }
+      if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(ActiveEnergyBurned);
+      }
+      if (valueCase_ == ValueOneofCase.BloodGlucose) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(BloodGlucose);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -5072,6 +5914,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (valueCase_ == ValueOneofCase.ActivityLevel) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ActivityLevel);
       }
+      if (valueCase_ == ValueOneofCase.NutritionLog) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NutritionLog);
+      }
       if (valueCase_ == ValueOneofCase.HydrationLog) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(HydrationLog);
       }
@@ -5083,6 +5928,15 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
       if (valueCase_ == ValueOneofCase.SwimLengthsData) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SwimLengthsData);
+      }
+      if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CoreBodyTemperature);
+      }
+      if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ActiveEnergyBurned);
+      }
+      if (valueCase_ == ValueOneofCase.BloodGlucose) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BloodGlucose);
       }
       if (startTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
@@ -5193,6 +6047,12 @@ namespace Google.DevicesAndServices.Health.V4 {
           }
           ActivityLevel.MergeFrom(other.ActivityLevel);
           break;
+        case ValueOneofCase.NutritionLog:
+          if (NutritionLog == null) {
+            NutritionLog = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue();
+          }
+          NutritionLog.MergeFrom(other.NutritionLog);
+          break;
         case ValueOneofCase.HydrationLog:
           if (HydrationLog == null) {
             HydrationLog = new global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue();
@@ -5216,6 +6076,24 @@ namespace Google.DevicesAndServices.Health.V4 {
             SwimLengthsData = new global::Google.DevicesAndServices.Health.V4.SwimLengthsDataRollupValue();
           }
           SwimLengthsData.MergeFrom(other.SwimLengthsData);
+          break;
+        case ValueOneofCase.CoreBodyTemperature:
+          if (CoreBodyTemperature == null) {
+            CoreBodyTemperature = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue();
+          }
+          CoreBodyTemperature.MergeFrom(other.CoreBodyTemperature);
+          break;
+        case ValueOneofCase.ActiveEnergyBurned:
+          if (ActiveEnergyBurned == null) {
+            ActiveEnergyBurned = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue();
+          }
+          ActiveEnergyBurned.MergeFrom(other.ActiveEnergyBurned);
+          break;
+        case ValueOneofCase.BloodGlucose:
+          if (BloodGlucose == null) {
+            BloodGlucose = new global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue();
+          }
+          BloodGlucose.MergeFrom(other.BloodGlucose);
           break;
       }
 
@@ -5369,6 +6247,15 @@ namespace Google.DevicesAndServices.Health.V4 {
             ActivityLevel = subBuilder;
             break;
           }
+          case 154: {
+            global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue();
+            if (valueCase_ == ValueOneofCase.NutritionLog) {
+              subBuilder.MergeFrom(NutritionLog);
+            }
+            input.ReadMessage(subBuilder);
+            NutritionLog = subBuilder;
+            break;
+          }
           case 162: {
             global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue();
             if (valueCase_ == ValueOneofCase.HydrationLog) {
@@ -5403,6 +6290,33 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             SwimLengthsData = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue();
+            if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+              subBuilder.MergeFrom(CoreBodyTemperature);
+            }
+            input.ReadMessage(subBuilder);
+            CoreBodyTemperature = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue();
+            if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+              subBuilder.MergeFrom(ActiveEnergyBurned);
+            }
+            input.ReadMessage(subBuilder);
+            ActiveEnergyBurned = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue();
+            if (valueCase_ == ValueOneofCase.BloodGlucose) {
+              subBuilder.MergeFrom(BloodGlucose);
+            }
+            input.ReadMessage(subBuilder);
+            BloodGlucose = subBuilder;
             break;
           }
         }
@@ -5555,6 +6469,15 @@ namespace Google.DevicesAndServices.Health.V4 {
             ActivityLevel = subBuilder;
             break;
           }
+          case 154: {
+            global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue();
+            if (valueCase_ == ValueOneofCase.NutritionLog) {
+              subBuilder.MergeFrom(NutritionLog);
+            }
+            input.ReadMessage(subBuilder);
+            NutritionLog = subBuilder;
+            break;
+          }
           case 162: {
             global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue();
             if (valueCase_ == ValueOneofCase.HydrationLog) {
@@ -5589,6 +6512,33 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             SwimLengthsData = subBuilder;
+            break;
+          }
+          case 194: {
+            global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue();
+            if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+              subBuilder.MergeFrom(CoreBodyTemperature);
+            }
+            input.ReadMessage(subBuilder);
+            CoreBodyTemperature = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue();
+            if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+              subBuilder.MergeFrom(ActiveEnergyBurned);
+            }
+            input.ReadMessage(subBuilder);
+            ActiveEnergyBurned = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue();
+            if (valueCase_ == ValueOneofCase.BloodGlucose) {
+              subBuilder.MergeFrom(BloodGlucose);
+            }
+            input.ReadMessage(subBuilder);
+            BloodGlucose = subBuilder;
             break;
           }
         }
@@ -5687,6 +6637,9 @@ namespace Google.DevicesAndServices.Health.V4 {
         case ValueOneofCase.ActivityLevel:
           ActivityLevel = other.ActivityLevel.Clone();
           break;
+        case ValueOneofCase.NutritionLog:
+          NutritionLog = other.NutritionLog.Clone();
+          break;
         case ValueOneofCase.HydrationLog:
           HydrationLog = other.HydrationLog.Clone();
           break;
@@ -5698,6 +6651,15 @@ namespace Google.DevicesAndServices.Health.V4 {
           break;
         case ValueOneofCase.SwimLengthsData:
           SwimLengthsData = other.SwimLengthsData.Clone();
+          break;
+        case ValueOneofCase.CoreBodyTemperature:
+          CoreBodyTemperature = other.CoreBodyTemperature.Clone();
+          break;
+        case ValueOneofCase.ActiveEnergyBurned:
+          ActiveEnergyBurned = other.ActiveEnergyBurned.Clone();
+          break;
+        case ValueOneofCase.BloodGlucose:
+          BloodGlucose = other.BloodGlucose.Clone();
           break;
       }
 
@@ -5967,6 +6929,23 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "nutrition_log" field.</summary>
+    public const int NutritionLogFieldNumber = 21;
+    /// <summary>
+    /// Returned by default when rolling up data points from the
+    /// `nutrition-log` data type, or when requested explicitly using the
+    /// `nutrition-log` rollup type identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue NutritionLog {
+      get { return valueCase_ == ValueOneofCase.NutritionLog ? (global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.NutritionLog;
+      }
+    }
+
     /// <summary>Field number for the "hydration_log" field.</summary>
     public const int HydrationLogFieldNumber = 22;
     /// <summary>
@@ -6035,6 +7014,55 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
     }
 
+    /// <summary>Field number for the "core_body_temperature" field.</summary>
+    public const int CoreBodyTemperatureFieldNumber = 26;
+    /// <summary>
+    /// Returned by default when rolling up data points from the
+    /// `core-body-temperature` data type, or when requested explicitly using
+    /// the `core-body-temperature` rollup type identifier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue CoreBodyTemperature {
+      get { return valueCase_ == ValueOneofCase.CoreBodyTemperature ? (global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.CoreBodyTemperature;
+      }
+    }
+
+    /// <summary>Field number for the "active_energy_burned" field.</summary>
+    public const int ActiveEnergyBurnedFieldNumber = 27;
+    /// <summary>
+    /// Returned by default when rolling up data points from the
+    /// `active-energy-burned` data type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue ActiveEnergyBurned {
+      get { return valueCase_ == ValueOneofCase.ActiveEnergyBurned ? (global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.ActiveEnergyBurned;
+      }
+    }
+
+    /// <summary>Field number for the "blood_glucose" field.</summary>
+    public const int BloodGlucoseFieldNumber = 28;
+    /// <summary>
+    /// Returned by default when rolling up data points from the
+    /// `blood-glucose` data type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue BloodGlucose {
+      get { return valueCase_ == ValueOneofCase.BloodGlucose ? (global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue) value_ : null; }
+      set {
+        value_ = value;
+        valueCase_ = value == null ? ValueOneofCase.None : ValueOneofCase.BloodGlucose;
+      }
+    }
+
     /// <summary>Field number for the "civil_start_time" field.</summary>
     public const int CivilStartTimeFieldNumber = 1;
     private global::Google.DevicesAndServices.Health.V4.CivilDateTime civilStartTime_;
@@ -6084,10 +7112,14 @@ namespace Google.DevicesAndServices.Health.V4 {
       RunVo2Max = 18,
       CaloriesInHeartRateZone = 19,
       ActivityLevel = 20,
+      NutritionLog = 21,
       HydrationLog = 22,
       TimeInHeartRateZone = 23,
       ActiveMinutes = 24,
       SwimLengthsData = 25,
+      CoreBodyTemperature = 26,
+      ActiveEnergyBurned = 27,
+      BloodGlucose = 28,
     }
     private ValueOneofCase valueCase_ = ValueOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6133,10 +7165,14 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (!object.Equals(RunVo2Max, other.RunVo2Max)) return false;
       if (!object.Equals(CaloriesInHeartRateZone, other.CaloriesInHeartRateZone)) return false;
       if (!object.Equals(ActivityLevel, other.ActivityLevel)) return false;
+      if (!object.Equals(NutritionLog, other.NutritionLog)) return false;
       if (!object.Equals(HydrationLog, other.HydrationLog)) return false;
       if (!object.Equals(TimeInHeartRateZone, other.TimeInHeartRateZone)) return false;
       if (!object.Equals(ActiveMinutes, other.ActiveMinutes)) return false;
       if (!object.Equals(SwimLengthsData, other.SwimLengthsData)) return false;
+      if (!object.Equals(CoreBodyTemperature, other.CoreBodyTemperature)) return false;
+      if (!object.Equals(ActiveEnergyBurned, other.ActiveEnergyBurned)) return false;
+      if (!object.Equals(BloodGlucose, other.BloodGlucose)) return false;
       if (!object.Equals(CivilStartTime, other.CivilStartTime)) return false;
       if (!object.Equals(CivilEndTime, other.CivilEndTime)) return false;
       if (ValueCase != other.ValueCase) return false;
@@ -6162,10 +7198,14 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (valueCase_ == ValueOneofCase.RunVo2Max) hash ^= RunVo2Max.GetHashCode();
       if (valueCase_ == ValueOneofCase.CaloriesInHeartRateZone) hash ^= CaloriesInHeartRateZone.GetHashCode();
       if (valueCase_ == ValueOneofCase.ActivityLevel) hash ^= ActivityLevel.GetHashCode();
+      if (valueCase_ == ValueOneofCase.NutritionLog) hash ^= NutritionLog.GetHashCode();
       if (valueCase_ == ValueOneofCase.HydrationLog) hash ^= HydrationLog.GetHashCode();
       if (valueCase_ == ValueOneofCase.TimeInHeartRateZone) hash ^= TimeInHeartRateZone.GetHashCode();
       if (valueCase_ == ValueOneofCase.ActiveMinutes) hash ^= ActiveMinutes.GetHashCode();
       if (valueCase_ == ValueOneofCase.SwimLengthsData) hash ^= SwimLengthsData.GetHashCode();
+      if (valueCase_ == ValueOneofCase.CoreBodyTemperature) hash ^= CoreBodyTemperature.GetHashCode();
+      if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) hash ^= ActiveEnergyBurned.GetHashCode();
+      if (valueCase_ == ValueOneofCase.BloodGlucose) hash ^= BloodGlucose.GetHashCode();
       if (civilStartTime_ != null) hash ^= CivilStartTime.GetHashCode();
       if (civilEndTime_ != null) hash ^= CivilEndTime.GetHashCode();
       hash ^= (int) valueCase_;
@@ -6255,6 +7295,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(ActivityLevel);
       }
+      if (valueCase_ == ValueOneofCase.NutritionLog) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(NutritionLog);
+      }
       if (valueCase_ == ValueOneofCase.HydrationLog) {
         output.WriteRawTag(178, 1);
         output.WriteMessage(HydrationLog);
@@ -6270,6 +7314,18 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (valueCase_ == ValueOneofCase.SwimLengthsData) {
         output.WriteRawTag(202, 1);
         output.WriteMessage(SwimLengthsData);
+      }
+      if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(CoreBodyTemperature);
+      }
+      if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(ActiveEnergyBurned);
+      }
+      if (valueCase_ == ValueOneofCase.BloodGlucose) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(BloodGlucose);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -6349,6 +7405,10 @@ namespace Google.DevicesAndServices.Health.V4 {
         output.WriteRawTag(162, 1);
         output.WriteMessage(ActivityLevel);
       }
+      if (valueCase_ == ValueOneofCase.NutritionLog) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(NutritionLog);
+      }
       if (valueCase_ == ValueOneofCase.HydrationLog) {
         output.WriteRawTag(178, 1);
         output.WriteMessage(HydrationLog);
@@ -6364,6 +7424,18 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (valueCase_ == ValueOneofCase.SwimLengthsData) {
         output.WriteRawTag(202, 1);
         output.WriteMessage(SwimLengthsData);
+      }
+      if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(CoreBodyTemperature);
+      }
+      if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(ActiveEnergyBurned);
+      }
+      if (valueCase_ == ValueOneofCase.BloodGlucose) {
+        output.WriteRawTag(226, 1);
+        output.WriteMessage(BloodGlucose);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -6420,6 +7492,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       if (valueCase_ == ValueOneofCase.ActivityLevel) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ActivityLevel);
       }
+      if (valueCase_ == ValueOneofCase.NutritionLog) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(NutritionLog);
+      }
       if (valueCase_ == ValueOneofCase.HydrationLog) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(HydrationLog);
       }
@@ -6431,6 +7506,15 @@ namespace Google.DevicesAndServices.Health.V4 {
       }
       if (valueCase_ == ValueOneofCase.SwimLengthsData) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(SwimLengthsData);
+      }
+      if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(CoreBodyTemperature);
+      }
+      if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ActiveEnergyBurned);
+      }
+      if (valueCase_ == ValueOneofCase.BloodGlucose) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(BloodGlucose);
       }
       if (civilStartTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CivilStartTime);
@@ -6553,6 +7637,12 @@ namespace Google.DevicesAndServices.Health.V4 {
           }
           ActivityLevel.MergeFrom(other.ActivityLevel);
           break;
+        case ValueOneofCase.NutritionLog:
+          if (NutritionLog == null) {
+            NutritionLog = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue();
+          }
+          NutritionLog.MergeFrom(other.NutritionLog);
+          break;
         case ValueOneofCase.HydrationLog:
           if (HydrationLog == null) {
             HydrationLog = new global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue();
@@ -6576,6 +7666,24 @@ namespace Google.DevicesAndServices.Health.V4 {
             SwimLengthsData = new global::Google.DevicesAndServices.Health.V4.SwimLengthsDataRollupValue();
           }
           SwimLengthsData.MergeFrom(other.SwimLengthsData);
+          break;
+        case ValueOneofCase.CoreBodyTemperature:
+          if (CoreBodyTemperature == null) {
+            CoreBodyTemperature = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue();
+          }
+          CoreBodyTemperature.MergeFrom(other.CoreBodyTemperature);
+          break;
+        case ValueOneofCase.ActiveEnergyBurned:
+          if (ActiveEnergyBurned == null) {
+            ActiveEnergyBurned = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue();
+          }
+          ActiveEnergyBurned.MergeFrom(other.ActiveEnergyBurned);
+          break;
+        case ValueOneofCase.BloodGlucose:
+          if (BloodGlucose == null) {
+            BloodGlucose = new global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue();
+          }
+          BloodGlucose.MergeFrom(other.BloodGlucose);
           break;
       }
 
@@ -6747,6 +7855,15 @@ namespace Google.DevicesAndServices.Health.V4 {
             ActivityLevel = subBuilder;
             break;
           }
+          case 170: {
+            global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue();
+            if (valueCase_ == ValueOneofCase.NutritionLog) {
+              subBuilder.MergeFrom(NutritionLog);
+            }
+            input.ReadMessage(subBuilder);
+            NutritionLog = subBuilder;
+            break;
+          }
           case 178: {
             global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue();
             if (valueCase_ == ValueOneofCase.HydrationLog) {
@@ -6781,6 +7898,33 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             SwimLengthsData = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue();
+            if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+              subBuilder.MergeFrom(CoreBodyTemperature);
+            }
+            input.ReadMessage(subBuilder);
+            CoreBodyTemperature = subBuilder;
+            break;
+          }
+          case 218: {
+            global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue();
+            if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+              subBuilder.MergeFrom(ActiveEnergyBurned);
+            }
+            input.ReadMessage(subBuilder);
+            ActiveEnergyBurned = subBuilder;
+            break;
+          }
+          case 226: {
+            global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue();
+            if (valueCase_ == ValueOneofCase.BloodGlucose) {
+              subBuilder.MergeFrom(BloodGlucose);
+            }
+            input.ReadMessage(subBuilder);
+            BloodGlucose = subBuilder;
             break;
           }
         }
@@ -6951,6 +8095,15 @@ namespace Google.DevicesAndServices.Health.V4 {
             ActivityLevel = subBuilder;
             break;
           }
+          case 170: {
+            global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue();
+            if (valueCase_ == ValueOneofCase.NutritionLog) {
+              subBuilder.MergeFrom(NutritionLog);
+            }
+            input.ReadMessage(subBuilder);
+            NutritionLog = subBuilder;
+            break;
+          }
           case 178: {
             global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue();
             if (valueCase_ == ValueOneofCase.HydrationLog) {
@@ -6985,6 +8138,33 @@ namespace Google.DevicesAndServices.Health.V4 {
             }
             input.ReadMessage(subBuilder);
             SwimLengthsData = subBuilder;
+            break;
+          }
+          case 210: {
+            global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue();
+            if (valueCase_ == ValueOneofCase.CoreBodyTemperature) {
+              subBuilder.MergeFrom(CoreBodyTemperature);
+            }
+            input.ReadMessage(subBuilder);
+            CoreBodyTemperature = subBuilder;
+            break;
+          }
+          case 218: {
+            global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue();
+            if (valueCase_ == ValueOneofCase.ActiveEnergyBurned) {
+              subBuilder.MergeFrom(ActiveEnergyBurned);
+            }
+            input.ReadMessage(subBuilder);
+            ActiveEnergyBurned = subBuilder;
+            break;
+          }
+          case 226: {
+            global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue subBuilder = new global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue();
+            if (valueCase_ == ValueOneofCase.BloodGlucose) {
+              subBuilder.MergeFrom(BloodGlucose);
+            }
+            input.ReadMessage(subBuilder);
+            BloodGlucose = subBuilder;
             break;
           }
         }
@@ -7375,16 +8555,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     ///     - Example:
     ///        - `daily_heart_rate_variability.date &lt; "2024-08-15"`
     ///
-    /// - Session start time (**ECG specific**):
-    ///     - Pattern: `electrocardiogram.interval.start_time`
-    ///     - Supported comparison operators: `>=`
-    ///     - Timestamp literal expected in RFC-3339 format
-    ///     - Example:
-    ///         - `electrocardiogram.interval.start_time >= "2024-08-14T12:34:56Z"`
-    ///     - Note: Only filtering by start time is supported for ECG. Filtering
-    ///       by end time (e.g., `electrocardiogram.interval.end_time`) is not
-    ///       supported.
-    /// - Session civil start time (**Excluding Sleep**):
+    /// - Session civil start time (**Excluding Sleep and ECG**):
     ///     - Pattern: `{session_data_type}.interval.civil_start_time`
     ///     - Supported comparison operators: `>=`, `&lt;`
     ///     - Date with optional time literal expected in ISO 8601
@@ -7394,6 +8565,16 @@ namespace Google.DevicesAndServices.Health.V4 {
     ///        - `exercise.interval.civil_start_time >= "2023-11-24" AND
     ///        exercise.interval.civil_start_time &lt; "2023-11-25"`
     ///        - `exercise.interval.civil_start_time >= "2024-08-14T12:34:56"`
+    ///
+    /// - Session start time (**ECG specific**):
+    ///     - Pattern: `electrocardiogram.interval.start_time`
+    ///     - Supported comparison operators: `>=`
+    ///     - Timestamp literal expected in RFC-3339 format
+    ///     - Example:
+    ///         - `electrocardiogram.interval.start_time >= "2024-08-14T12:34:56Z"`
+    ///     - Note: Only filtering by start time is supported for ECG. Filtering
+    ///       by end time (e.g., `electrocardiogram.interval.end_time`) is not
+    ///       supported.
     ///
     /// - Session end time (**Sleep specific**):
     ///     - Pattern: `sleep.interval.end_time`

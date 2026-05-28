@@ -57,6 +57,10 @@ namespace Google.DevicesAndServices.Health.V4
             UpdateSubscriberOperationsSettings = existing.UpdateSubscriberOperationsSettings.Clone();
             DeleteSubscriberSettings = existing.DeleteSubscriberSettings;
             DeleteSubscriberOperationsSettings = existing.DeleteSubscriberOperationsSettings.Clone();
+            CreateSubscriptionSettings = existing.CreateSubscriptionSettings;
+            ListSubscriptionsSettings = existing.ListSubscriptionsSettings;
+            UpdateSubscriptionSettings = existing.UpdateSubscriptionSettings;
+            DeleteSubscriptionSettings = existing.DeleteSubscriptionSettings;
             OnCopy(existing);
         }
 
@@ -179,6 +183,70 @@ namespace Google.DevicesAndServices.Health.V4
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataSubscriptionServiceClient.CreateSubscription</c> and
+        /// <c>DataSubscriptionServiceClient.CreateSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateSubscriptionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataSubscriptionServiceClient.ListSubscriptions</c> and
+        /// <c>DataSubscriptionServiceClient.ListSubscriptionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListSubscriptionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataSubscriptionServiceClient.UpdateSubscription</c> and
+        /// <c>DataSubscriptionServiceClient.UpdateSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateSubscriptionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataSubscriptionServiceClient.DeleteSubscription</c> and
+        /// <c>DataSubscriptionServiceClient.DeleteSubscriptionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteSubscriptionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataSubscriptionServiceSettings"/> object.</returns>
@@ -1318,6 +1386,647 @@ namespace Google.DevicesAndServices.Health.V4
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, DeleteSubscriberMetadata>> DeleteSubscriberAsync(SubscriberName name, st::CancellationToken cancellationToken) =>
             DeleteSubscriberAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription CreateSubscription(CreateSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> CreateSubscriptionAsync(CreateSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> CreateSubscriptionAsync(CreateSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            CreateSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="subscription">
+        /// Required. The subscription to create.
+        /// </param>
+        /// <param name="subscriptionId">
+        /// Optional. The {subscription_id} is user-settable
+        /// (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+        /// otherwise.
+        /// If provided, the ID must be unique within the parent subscriber.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription CreateSubscription(string parent, CreateSubscriptionPayload subscription, string subscriptionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSubscription(new CreateSubscriptionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SubscriptionId = subscriptionId ?? "",
+                Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="subscription">
+        /// Required. The subscription to create.
+        /// </param>
+        /// <param name="subscriptionId">
+        /// Optional. The {subscription_id} is user-settable
+        /// (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+        /// otherwise.
+        /// If provided, the ID must be unique within the parent subscriber.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> CreateSubscriptionAsync(string parent, CreateSubscriptionPayload subscription, string subscriptionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSubscriptionAsync(new CreateSubscriptionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                SubscriptionId = subscriptionId ?? "",
+                Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="subscription">
+        /// Required. The subscription to create.
+        /// </param>
+        /// <param name="subscriptionId">
+        /// Optional. The {subscription_id} is user-settable
+        /// (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+        /// otherwise.
+        /// If provided, the ID must be unique within the parent subscriber.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> CreateSubscriptionAsync(string parent, CreateSubscriptionPayload subscription, string subscriptionId, st::CancellationToken cancellationToken) =>
+            CreateSubscriptionAsync(parent, subscription, subscriptionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="subscription">
+        /// Required. The subscription to create.
+        /// </param>
+        /// <param name="subscriptionId">
+        /// Optional. The {subscription_id} is user-settable
+        /// (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+        /// otherwise.
+        /// If provided, the ID must be unique within the parent subscriber.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription CreateSubscription(SubscriberName parent, CreateSubscriptionPayload subscription, string subscriptionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSubscription(new CreateSubscriptionRequest
+            {
+                ParentAsSubscriberName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SubscriptionId = subscriptionId ?? "",
+                Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="subscription">
+        /// Required. The subscription to create.
+        /// </param>
+        /// <param name="subscriptionId">
+        /// Optional. The {subscription_id} is user-settable
+        /// (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+        /// otherwise.
+        /// If provided, the ID must be unique within the parent subscriber.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> CreateSubscriptionAsync(SubscriberName parent, CreateSubscriptionPayload subscription, string subscriptionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateSubscriptionAsync(new CreateSubscriptionRequest
+            {
+                ParentAsSubscriberName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                SubscriptionId = subscriptionId ?? "",
+                Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="subscription">
+        /// Required. The subscription to create.
+        /// </param>
+        /// <param name="subscriptionId">
+        /// Optional. The {subscription_id} is user-settable
+        /// (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+        /// otherwise.
+        /// If provided, the ID must be unique within the parent subscriber.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> CreateSubscriptionAsync(SubscriberName parent, CreateSubscriptionPayload subscription, string subscriptionId, st::CancellationToken cancellationToken) =>
+            CreateSubscriptionAsync(parent, subscription, subscriptionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all active subscriptions for a given subscriber. This can be
+        /// filtered, for example, by user or data type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(ListSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all active subscriptions for a given subscriber. This can be
+        /// filtered, for example, by user or data type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(ListSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all active subscriptions for a given subscriber. This can be
+        /// filtered, for example, by user or data type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubscriptions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all active subscriptions for a given subscriber. This can be
+        /// filtered, for example, by user or data type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubscriptionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all active subscriptions for a given subscriber. This can be
+        /// filtered, for example, by user or data type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(SubscriberName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                ParentAsSubscriberName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubscriptions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all active subscriptions for a given subscriber. This can be
+        /// filtered, for example, by user or data type.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent subscriber.
+        /// Format: projects/{project}/subscribers/{subscriber}
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(SubscriberName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListSubscriptionsRequest request = new ListSubscriptionsRequest
+            {
+                ParentAsSubscriberName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListSubscriptionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the data types for an existing user subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription UpdateSubscription(UpdateSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the data types for an existing user subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(UpdateSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the data types for an existing user subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(UpdateSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            UpdateSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the data types for an existing user subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription to update.
+        /// The subscription's `name` field is used to identify the subscription to
+        /// update. Format:
+        /// projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Subscription UpdateSubscription(Subscription subscription, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubscription(new UpdateSubscriptionRequest
+            {
+                Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the data types for an existing user subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription to update.
+        /// The subscription's `name` field is used to identify the subscription to
+        /// update. Format:
+        /// projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(Subscription subscription, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateSubscriptionAsync(new UpdateSubscriptionRequest
+            {
+                Subscription = gax::GaxPreconditions.CheckNotNull(subscription, nameof(subscription)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the data types for an existing user subscription.
+        /// </summary>
+        /// <param name="subscription">
+        /// Required. The subscription to update.
+        /// The subscription's `name` field is used to identify the subscription to
+        /// update. Format:
+        /// projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Subscription> UpdateSubscriptionAsync(Subscription subscription, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateSubscriptionAsync(subscription, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSubscription(DeleteSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubscriptionAsync(DeleteSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubscriptionAsync(DeleteSubscriptionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteSubscriptionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subscription to delete.
+        /// Format:
+        /// `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}`
+        /// Example:
+        /// `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise. The {subscription} ID is user-settable (4-36
+        /// characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided
+        /// during creation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSubscription(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubscription(new DeleteSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subscription to delete.
+        /// Format:
+        /// `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}`
+        /// Example:
+        /// `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise. The {subscription} ID is user-settable (4-36
+        /// characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided
+        /// during creation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubscriptionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubscriptionAsync(new DeleteSubscriptionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subscription to delete.
+        /// Format:
+        /// `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}`
+        /// Example:
+        /// `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise. The {subscription} ID is user-settable (4-36
+        /// characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided
+        /// during creation.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubscriptionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subscription to delete.
+        /// Format:
+        /// `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}`
+        /// Example:
+        /// `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise. The {subscription} ID is user-settable (4-36
+        /// characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided
+        /// during creation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void DeleteSubscription(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubscription(new DeleteSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subscription to delete.
+        /// Format:
+        /// `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}`
+        /// Example:
+        /// `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise. The {subscription} ID is user-settable (4-36
+        /// characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided
+        /// during creation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubscriptionAsync(SubscriptionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteSubscriptionAsync(new DeleteSubscriptionRequest
+            {
+                SubscriptionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the subscription to delete.
+        /// Format:
+        /// `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}`
+        /// Example:
+        /// `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+        /// The {subscriber} ID is user-settable (4-36 characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+        /// system-generated otherwise. The {subscription} ID is user-settable (4-36
+        /// characters, matching
+        /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided
+        /// during creation.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task DeleteSubscriptionAsync(SubscriptionName name, st::CancellationToken cancellationToken) =>
+            DeleteSubscriptionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataSubscriptionService client wrapper implementation, for convenient use.</summary>
@@ -1336,6 +2045,14 @@ namespace Google.DevicesAndServices.Health.V4
         private readonly gaxgrpc::ApiCall<UpdateSubscriberRequest, lro::Operation> _callUpdateSubscriber;
 
         private readonly gaxgrpc::ApiCall<DeleteSubscriberRequest, lro::Operation> _callDeleteSubscriber;
+
+        private readonly gaxgrpc::ApiCall<CreateSubscriptionRequest, Subscription> _callCreateSubscription;
+
+        private readonly gaxgrpc::ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> _callListSubscriptions;
+
+        private readonly gaxgrpc::ApiCall<UpdateSubscriptionRequest, Subscription> _callUpdateSubscription;
+
+        private readonly gaxgrpc::ApiCall<DeleteSubscriptionRequest, wkt::Empty> _callDeleteSubscription;
 
         /// <summary>
         /// Constructs a client wrapper for the DataSubscriptionService service, with the specified gRPC client and
@@ -1370,6 +2087,18 @@ namespace Google.DevicesAndServices.Health.V4
             _callDeleteSubscriber = clientHelper.BuildApiCall<DeleteSubscriberRequest, lro::Operation>("DeleteSubscriber", grpcClient.DeleteSubscriberAsync, grpcClient.DeleteSubscriber, effectiveSettings.DeleteSubscriberSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteSubscriber);
             Modify_DeleteSubscriberApiCall(ref _callDeleteSubscriber);
+            _callCreateSubscription = clientHelper.BuildApiCall<CreateSubscriptionRequest, Subscription>("CreateSubscription", grpcClient.CreateSubscriptionAsync, grpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateSubscription);
+            Modify_CreateSubscriptionApiCall(ref _callCreateSubscription);
+            _callListSubscriptions = clientHelper.BuildApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse>("ListSubscriptions", grpcClient.ListSubscriptionsAsync, grpcClient.ListSubscriptions, effectiveSettings.ListSubscriptionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListSubscriptions);
+            Modify_ListSubscriptionsApiCall(ref _callListSubscriptions);
+            _callUpdateSubscription = clientHelper.BuildApiCall<UpdateSubscriptionRequest, Subscription>("UpdateSubscription", grpcClient.UpdateSubscriptionAsync, grpcClient.UpdateSubscription, effectiveSettings.UpdateSubscriptionSettings).WithGoogleRequestParam("subscription.name", request => request.Subscription?.Name);
+            Modify_ApiCall(ref _callUpdateSubscription);
+            Modify_UpdateSubscriptionApiCall(ref _callUpdateSubscription);
+            _callDeleteSubscription = clientHelper.BuildApiCall<DeleteSubscriptionRequest, wkt::Empty>("DeleteSubscription", grpcClient.DeleteSubscriptionAsync, grpcClient.DeleteSubscription, effectiveSettings.DeleteSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteSubscription);
+            Modify_DeleteSubscriptionApiCall(ref _callDeleteSubscription);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1383,6 +2112,14 @@ namespace Google.DevicesAndServices.Health.V4
 
         partial void Modify_DeleteSubscriberApiCall(ref gaxgrpc::ApiCall<DeleteSubscriberRequest, lro::Operation> call);
 
+        partial void Modify_CreateSubscriptionApiCall(ref gaxgrpc::ApiCall<CreateSubscriptionRequest, Subscription> call);
+
+        partial void Modify_ListSubscriptionsApiCall(ref gaxgrpc::ApiCall<ListSubscriptionsRequest, ListSubscriptionsResponse> call);
+
+        partial void Modify_UpdateSubscriptionApiCall(ref gaxgrpc::ApiCall<UpdateSubscriptionRequest, Subscription> call);
+
+        partial void Modify_DeleteSubscriptionApiCall(ref gaxgrpc::ApiCall<DeleteSubscriptionRequest, wkt::Empty> call);
+
         partial void OnConstruction(DataSubscriptionService.DataSubscriptionServiceClient grpcClient, DataSubscriptionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DataSubscriptionService client</summary>
@@ -1395,6 +2132,14 @@ namespace Google.DevicesAndServices.Health.V4
         partial void Modify_UpdateSubscriberRequest(ref UpdateSubscriberRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteSubscriberRequest(ref DeleteSubscriberRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateSubscriptionRequest(ref CreateSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListSubscriptionsRequest(ref ListSubscriptionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateSubscriptionRequest(ref UpdateSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteSubscriptionRequest(ref DeleteSubscriptionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateSubscriber</c>.</summary>
         public override lro::OperationsClient CreateSubscriberOperationsClient { get; }
@@ -1586,9 +2331,117 @@ namespace Google.DevicesAndServices.Health.V4
             Modify_DeleteSubscriberRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, DeleteSubscriberMetadata>(await _callDeleteSubscriber.Async(request, callSettings).ConfigureAwait(false), DeleteSubscriberOperationsClient);
         }
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Subscription CreateSubscription(CreateSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSubscriptionRequest(ref request, ref callSettings);
+            return _callCreateSubscription.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a subscription for a specific user to a specific subscriber.
+        /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+        /// set to `MANUAL` for the given data types.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Subscription> CreateSubscriptionAsync(CreateSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateSubscriptionRequest(ref request, ref callSettings);
+            return _callCreateSubscription.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all active subscriptions for a given subscriber. This can be
+        /// filtered, for example, by user or data type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Subscription"/> resources.</returns>
+        public override gax::PagedEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptions(ListSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubscriptionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all active subscriptions for a given subscriber. This can be
+        /// filtered, for example, by user or data type.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Subscription"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListSubscriptionsResponse, Subscription> ListSubscriptionsAsync(ListSubscriptionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListSubscriptionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListSubscriptionsRequest, ListSubscriptionsResponse, Subscription>(_callListSubscriptions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the data types for an existing user subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Subscription UpdateSubscription(UpdateSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubscriptionRequest(ref request, ref callSettings);
+            return _callUpdateSubscription.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the data types for an existing user subscription.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Subscription> UpdateSubscriptionAsync(UpdateSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateSubscriptionRequest(ref request, ref callSettings);
+            return _callUpdateSubscription.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void DeleteSubscription(DeleteSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
+            _callDeleteSubscription.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deletes a specific user subscription, stopping notifications for this
+        /// user to this subscriber.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task DeleteSubscriptionAsync(DeleteSubscriptionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteSubscriptionRequest(ref request, ref callSettings);
+            return _callDeleteSubscription.Async(request, callSettings);
+        }
     }
 
     public partial class ListSubscribersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListSubscriptionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1596,6 +2449,14 @@ namespace Google.DevicesAndServices.Health.V4
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Subscriber> GetEnumerator() => Subscribers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListSubscriptionsResponse : gaxgrpc::IPageResponse<Subscription>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Subscription> GetEnumerator() => Subscriptions.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

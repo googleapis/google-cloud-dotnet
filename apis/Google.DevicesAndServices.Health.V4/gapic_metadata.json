@@ -79,10 +79,22 @@
                 "CreateSubscriberAsync"
               ]
             },
+            "CreateSubscription": {
+              "methods": [
+                "CreateSubscription",
+                "CreateSubscriptionAsync"
+              ]
+            },
             "DeleteSubscriber": {
               "methods": [
                 "DeleteSubscriber",
                 "DeleteSubscriberAsync"
+              ]
+            },
+            "DeleteSubscription": {
+              "methods": [
+                "DeleteSubscription",
+                "DeleteSubscriptionAsync"
               ]
             },
             "ListSubscribers": {
@@ -91,10 +103,22 @@
                 "ListSubscribersAsync"
               ]
             },
+            "ListSubscriptions": {
+              "methods": [
+                "ListSubscriptions",
+                "ListSubscriptionsAsync"
+              ]
+            },
             "UpdateSubscriber": {
               "methods": [
                 "UpdateSubscriber",
                 "UpdateSubscriberAsync"
+              ]
+            },
+            "UpdateSubscription": {
+              "methods": [
+                "UpdateSubscription",
+                "UpdateSubscriptionAsync"
               ]
             }
           }
@@ -112,6 +136,18 @@
                 "GetIdentityAsync"
               ]
             },
+            "GetIrnProfile": {
+              "methods": [
+                "GetIrnProfile",
+                "GetIrnProfileAsync"
+              ]
+            },
+            "GetPairedDevice": {
+              "methods": [
+                "GetPairedDevice",
+                "GetPairedDeviceAsync"
+              ]
+            },
             "GetProfile": {
               "methods": [
                 "GetProfile",
@@ -122,6 +158,12 @@
               "methods": [
                 "GetSettings",
                 "GetSettingsAsync"
+              ]
+            },
+            "ListPairedDevices": {
+              "methods": [
+                "ListPairedDevices",
+                "ListPairedDevicesAsync"
               ]
             },
             "UpdateProfile": {
