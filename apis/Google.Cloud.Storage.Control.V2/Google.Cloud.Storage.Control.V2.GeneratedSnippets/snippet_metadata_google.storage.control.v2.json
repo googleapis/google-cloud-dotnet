@@ -7628,6 +7628,1426 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFinding_sync",
+      "title": "GetIntelligenceFindingRequestObject",
+      "description": "Snippet for GetIntelligenceFinding",
+      "file": "StorageControlClient.GetIntelligenceFindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFinding",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceFinding",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFinding",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFinding",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFinding_async",
+      "title": "GetIntelligenceFindingRequestObjectAsync",
+      "description": "Snippet for GetIntelligenceFindingAsync",
+      "file": "StorageControlClient.GetIntelligenceFindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFinding",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFinding",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFinding_sync_flattened",
+      "title": "GetIntelligenceFinding",
+      "description": "Snippet for GetIntelligenceFinding",
+      "file": "StorageControlClient.GetIntelligenceFindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFinding",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceFinding",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFinding",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFinding",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFinding_async_flattened",
+      "title": "GetIntelligenceFindingAsync",
+      "description": "Snippet for GetIntelligenceFindingAsync",
+      "file": "StorageControlClient.GetIntelligenceFindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFinding",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFinding",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFinding_sync_flattened_resourceNames",
+      "title": "GetIntelligenceFindingResourceNames",
+      "description": "Snippet for GetIntelligenceFinding",
+      "file": "StorageControlClient.GetIntelligenceFindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFinding",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceFindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceFinding",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFinding",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFinding",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFinding_async_flattened_resourceNames",
+      "title": "GetIntelligenceFindingResourceNamesAsync",
+      "description": "Snippet for GetIntelligenceFindingAsync",
+      "file": "StorageControlClient.GetIntelligenceFindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceFindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFinding",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFinding",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindings_sync",
+      "title": "ListIntelligenceFindingsRequestObject",
+      "description": "Snippet for ListIntelligenceFindings",
+      "file": "StorageControlClient.ListIntelligenceFindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindings",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindings_async",
+      "title": "ListIntelligenceFindingsRequestObjectAsync",
+      "description": "Snippet for ListIntelligenceFindingsAsync",
+      "file": "StorageControlClient.ListIntelligenceFindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingsAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindings_sync_flattened",
+      "title": "ListIntelligenceFindings",
+      "description": "Snippet for ListIntelligenceFindings",
+      "file": "StorageControlClient.ListIntelligenceFindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindings",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindings_async_flattened",
+      "title": "ListIntelligenceFindingsAsync",
+      "description": "Snippet for ListIntelligenceFindingsAsync",
+      "file": "StorageControlClient.ListIntelligenceFindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingsAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindings_sync_flattened_resourceNames",
+      "title": "ListIntelligenceFindingsResourceNames",
+      "description": "Snippet for ListIntelligenceFindings",
+      "file": "StorageControlClient.ListIntelligenceFindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindings",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindings",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindings_async_flattened_resourceNames",
+      "title": "ListIntelligenceFindingsResourceNamesAsync",
+      "description": "Snippet for ListIntelligenceFindingsAsync",
+      "file": "StorageControlClient.ListIntelligenceFindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingsAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFinding>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_SummarizeIntelligenceFindings_sync",
+      "title": "SummarizeIntelligenceFindingsRequestObject",
+      "description": "Snippet for SummarizeIntelligenceFindings",
+      "file": "StorageControlClient.SummarizeIntelligenceFindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeIntelligenceFindings",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.SummarizeIntelligenceFindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.FindingSummary>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "SummarizeIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.SummarizeIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_SummarizeIntelligenceFindings_async",
+      "title": "SummarizeIntelligenceFindingsRequestObjectAsync",
+      "description": "Snippet for SummarizeIntelligenceFindingsAsync",
+      "file": "StorageControlClient.SummarizeIntelligenceFindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeIntelligenceFindingsAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.SummarizeIntelligenceFindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.FindingSummary>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "SummarizeIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.SummarizeIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_SummarizeIntelligenceFindings_sync_flattened",
+      "title": "SummarizeIntelligenceFindings",
+      "description": "Snippet for SummarizeIntelligenceFindings",
+      "file": "StorageControlClient.SummarizeIntelligenceFindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeIntelligenceFindings",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.SummarizeIntelligenceFindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.FindingSummary>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "SummarizeIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.SummarizeIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_SummarizeIntelligenceFindings_async_flattened",
+      "title": "SummarizeIntelligenceFindingsAsync",
+      "description": "Snippet for SummarizeIntelligenceFindingsAsync",
+      "file": "StorageControlClient.SummarizeIntelligenceFindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SummarizeIntelligenceFindingsAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.SummarizeIntelligenceFindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse, Google.Cloud.Storage.Control.V2.FindingSummary>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "SummarizeIntelligenceFindings",
+          "fullName": "google.storage.control.v2.StorageControl.SummarizeIntelligenceFindings",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFindingRevision_sync",
+      "title": "GetIntelligenceFindingRevisionRequestObject",
+      "description": "Snippet for GetIntelligenceFindingRevision",
+      "file": "StorageControlClient.GetIntelligenceFindingRevisionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingRevision",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFindingRevision",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFindingRevision",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFindingRevision_async",
+      "title": "GetIntelligenceFindingRevisionRequestObjectAsync",
+      "description": "Snippet for GetIntelligenceFindingRevisionAsync",
+      "file": "StorageControlClient.GetIntelligenceFindingRevisionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingRevisionAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFindingRevision",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFindingRevision",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFindingRevision_sync_flattened",
+      "title": "GetIntelligenceFindingRevision",
+      "description": "Snippet for GetIntelligenceFindingRevision",
+      "file": "StorageControlClient.GetIntelligenceFindingRevisionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingRevision",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingRevision",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFindingRevision",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFindingRevision",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFindingRevision_async_flattened",
+      "title": "GetIntelligenceFindingRevisionAsync",
+      "description": "Snippet for GetIntelligenceFindingRevisionAsync",
+      "file": "StorageControlClient.GetIntelligenceFindingRevisionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingRevisionAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFindingRevision",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFindingRevision",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFindingRevision_sync_flattened_resourceNames",
+      "title": "GetIntelligenceFindingRevisionResourceNames",
+      "description": "Snippet for GetIntelligenceFindingRevision",
+      "file": "StorageControlClient.GetIntelligenceFindingRevisionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingRevision",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingRevision",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceFindingRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFindingRevision",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFindingRevision",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_GetIntelligenceFindingRevision_async_flattened_resourceNames",
+      "title": "GetIntelligenceFindingRevisionResourceNamesAsync",
+      "description": "Snippet for GetIntelligenceFindingRevisionAsync",
+      "file": "StorageControlClient.GetIntelligenceFindingRevisionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIntelligenceFindingRevisionAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.GetIntelligenceFindingRevisionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceFindingRevisionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "GetIntelligenceFindingRevision",
+          "fullName": "google.storage.control.v2.StorageControl.GetIntelligenceFindingRevision",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindingRevisions_sync",
+      "title": "ListIntelligenceFindingRevisionsRequestObject",
+      "description": "Snippet for ListIntelligenceFindingRevisions",
+      "file": "StorageControlClient.ListIntelligenceFindingRevisionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingRevisions",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindingRevisions",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindingRevisions",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindingRevisions_async",
+      "title": "ListIntelligenceFindingRevisionsRequestObjectAsync",
+      "description": "Snippet for ListIntelligenceFindingRevisionsAsync",
+      "file": "StorageControlClient.ListIntelligenceFindingRevisionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingRevisionsAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindingRevisions",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindingRevisions",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindingRevisions_sync_flattened",
+      "title": "ListIntelligenceFindingRevisions",
+      "description": "Snippet for ListIntelligenceFindingRevisions",
+      "file": "StorageControlClient.ListIntelligenceFindingRevisionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingRevisions",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingRevisions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindingRevisions",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindingRevisions",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindingRevisions_async_flattened",
+      "title": "ListIntelligenceFindingRevisionsAsync",
+      "description": "Snippet for ListIntelligenceFindingRevisionsAsync",
+      "file": "StorageControlClient.ListIntelligenceFindingRevisionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingRevisionsAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindingRevisions",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindingRevisions",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindingRevisions_sync_flattened_resourceNames",
+      "title": "ListIntelligenceFindingRevisionsResourceNames",
+      "description": "Snippet for ListIntelligenceFindingRevisions",
+      "file": "StorageControlClient.ListIntelligenceFindingRevisionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingRevisions",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingRevisions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceFindingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindingRevisions",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindingRevisions",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "storage_v2_generated_StorageControl_ListIntelligenceFindingRevisions_async_flattened_resourceNames",
+      "title": "ListIntelligenceFindingRevisionsResourceNamesAsync",
+      "description": "Snippet for ListIntelligenceFindingRevisionsAsync",
+      "file": "StorageControlClient.ListIntelligenceFindingRevisionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListIntelligenceFindingRevisionsAsync",
+        "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient.ListIntelligenceFindingRevisionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Storage.Control.V2.IntelligenceFindingName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse, Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>",
+        "client": {
+          "shortName": "StorageControlClient",
+          "fullName": "Google.Cloud.Storage.Control.V2.StorageControlClient"
+        },
+        "method": {
+          "shortName": "ListIntelligenceFindingRevisions",
+          "fullName": "google.storage.control.v2.StorageControl.ListIntelligenceFindingRevisions",
+          "service": {
+            "shortName": "StorageControl",
+            "fullName": "google.storage.control.v2.StorageControl"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

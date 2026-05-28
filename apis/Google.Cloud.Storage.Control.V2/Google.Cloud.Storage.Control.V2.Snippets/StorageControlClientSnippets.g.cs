@@ -14,16 +14,19 @@
 
 // Generated code. DO NOT EDIT!
 
+#pragma warning disable CS8981
+
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
-    using Google.Cloud.Storage.Control.V2;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
     using System.Collections.Generic;
     using System.Threading.Tasks;
+    using gcscv = Google.Cloud.Storage.Control.V2;
 
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedStorageControlClientSnippets
@@ -33,17 +36,17 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateFolder(CreateFolderRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            CreateFolderRequest request = new CreateFolderRequest
+            gcscv::CreateFolderRequest request = new gcscv::CreateFolderRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                Folder = new Folder(),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                Folder = new gcscv::Folder(),
                 FolderId = "",
                 Recursive = false,
             };
             // Make the request
-            Folder response = storageControlClient.CreateFolder(request);
+            gcscv::Folder response = storageControlClient.CreateFolder(request);
             // End snippet
         }
 
@@ -53,17 +56,17 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateFolderAsync(CreateFolderRequest, CallSettings)
             // Additional: CreateFolderAsync(CreateFolderRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            CreateFolderRequest request = new CreateFolderRequest
+            gcscv::CreateFolderRequest request = new gcscv::CreateFolderRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                Folder = new Folder(),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                Folder = new gcscv::Folder(),
                 FolderId = "",
                 Recursive = false,
             };
             // Make the request
-            Folder response = await storageControlClient.CreateFolderAsync(request);
+            gcscv::Folder response = await storageControlClient.CreateFolderAsync(request);
             // End snippet
         }
 
@@ -72,13 +75,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateFolder(string, Folder, string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
-            Folder folder = new Folder();
+            gcscv::Folder folder = new gcscv::Folder();
             string folderId = "";
             // Make the request
-            Folder response = storageControlClient.CreateFolder(parent, folder, folderId);
+            gcscv::Folder response = storageControlClient.CreateFolder(parent, folder, folderId);
             // End snippet
         }
 
@@ -88,13 +91,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateFolderAsync(string, Folder, string, CallSettings)
             // Additional: CreateFolderAsync(string, Folder, string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
-            Folder folder = new Folder();
+            gcscv::Folder folder = new gcscv::Folder();
             string folderId = "";
             // Make the request
-            Folder response = await storageControlClient.CreateFolderAsync(parent, folder, folderId);
+            gcscv::Folder response = await storageControlClient.CreateFolderAsync(parent, folder, folderId);
             // End snippet
         }
 
@@ -103,13 +106,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateFolder(BucketName, Folder, string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
-            Folder folder = new Folder();
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::Folder folder = new gcscv::Folder();
             string folderId = "";
             // Make the request
-            Folder response = storageControlClient.CreateFolder(parent, folder, folderId);
+            gcscv::Folder response = storageControlClient.CreateFolder(parent, folder, folderId);
             // End snippet
         }
 
@@ -119,13 +122,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateFolderAsync(BucketName, Folder, string, CallSettings)
             // Additional: CreateFolderAsync(BucketName, Folder, string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
-            Folder folder = new Folder();
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::Folder folder = new gcscv::Folder();
             string folderId = "";
             // Make the request
-            Folder response = await storageControlClient.CreateFolderAsync(parent, folder, folderId);
+            gcscv::Folder response = await storageControlClient.CreateFolderAsync(parent, folder, folderId);
             // End snippet
         }
 
@@ -134,13 +137,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFolder(DeleteFolderRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            DeleteFolderRequest request = new DeleteFolderRequest
+            gcscv::DeleteFolderRequest request = new gcscv::DeleteFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                FolderName = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
             };
             // Make the request
             storageControlClient.DeleteFolder(request);
@@ -153,13 +156,13 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFolderAsync(DeleteFolderRequest, CallSettings)
             // Additional: DeleteFolderAsync(DeleteFolderRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteFolderRequest request = new DeleteFolderRequest
+            gcscv::DeleteFolderRequest request = new gcscv::DeleteFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                FolderName = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
             };
             // Make the request
             await storageControlClient.DeleteFolderAsync(request);
@@ -171,7 +174,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFolder(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
             // Make the request
@@ -185,7 +188,7 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFolderAsync(string, CallSettings)
             // Additional: DeleteFolderAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
             // Make the request
@@ -198,9 +201,9 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFolder(FolderName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            gcscv::FolderName name = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
             // Make the request
             storageControlClient.DeleteFolder(name);
             // End snippet
@@ -212,9 +215,9 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFolderAsync(FolderName, CallSettings)
             // Additional: DeleteFolderAsync(FolderName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            gcscv::FolderName name = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
             // Make the request
             await storageControlClient.DeleteFolderAsync(name);
             // End snippet
@@ -225,16 +228,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFolder(GetFolderRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            GetFolderRequest request = new GetFolderRequest
+            gcscv::GetFolderRequest request = new gcscv::GetFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                FolderName = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
             };
             // Make the request
-            Folder response = storageControlClient.GetFolder(request);
+            gcscv::Folder response = storageControlClient.GetFolder(request);
             // End snippet
         }
 
@@ -244,16 +247,16 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFolderAsync(GetFolderRequest, CallSettings)
             // Additional: GetFolderAsync(GetFolderRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            GetFolderRequest request = new GetFolderRequest
+            gcscv::GetFolderRequest request = new gcscv::GetFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                FolderName = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
             };
             // Make the request
-            Folder response = await storageControlClient.GetFolderAsync(request);
+            gcscv::Folder response = await storageControlClient.GetFolderAsync(request);
             // End snippet
         }
 
@@ -262,11 +265,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFolder(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
             // Make the request
-            Folder response = storageControlClient.GetFolder(name);
+            gcscv::Folder response = storageControlClient.GetFolder(name);
             // End snippet
         }
 
@@ -276,11 +279,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFolderAsync(string, CallSettings)
             // Additional: GetFolderAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
             // Make the request
-            Folder response = await storageControlClient.GetFolderAsync(name);
+            gcscv::Folder response = await storageControlClient.GetFolderAsync(name);
             // End snippet
         }
 
@@ -289,11 +292,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFolder(FolderName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            gcscv::FolderName name = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
             // Make the request
-            Folder response = storageControlClient.GetFolder(name);
+            gcscv::Folder response = storageControlClient.GetFolder(name);
             // End snippet
         }
 
@@ -303,11 +306,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFolderAsync(FolderName, CallSettings)
             // Additional: GetFolderAsync(FolderName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            gcscv::FolderName name = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
             // Make the request
-            Folder response = await storageControlClient.GetFolderAsync(name);
+            gcscv::Folder response = await storageControlClient.GetFolderAsync(name);
             // End snippet
         }
 
@@ -316,11 +319,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFolders(ListFoldersRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            ListFoldersRequest request = new ListFoldersRequest
+            gcscv::ListFoldersRequest request = new gcscv::ListFoldersRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 Prefix = "",
                 LexicographicStart = "",
                 LexicographicEnd = "",
@@ -328,21 +331,21 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
             };
             // Make the request
-            PagedEnumerable<ListFoldersResponse, Folder> response = storageControlClient.ListFolders(request);
+            PagedEnumerable<gcscv::ListFoldersResponse, gcscv::Folder> response = storageControlClient.ListFolders(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Folder item in response)
+            foreach (gcscv::Folder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFoldersResponse page in response.AsRawResponses())
+            foreach (gcscv::ListFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Folder item in page)
+                foreach (gcscv::Folder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -351,10 +354,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Folder> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::Folder> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Folder item in singlePage)
+            foreach (gcscv::Folder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -369,11 +372,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFoldersAsync(ListFoldersRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ListFoldersRequest request = new ListFoldersRequest
+            gcscv::ListFoldersRequest request = new gcscv::ListFoldersRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 Prefix = "",
                 LexicographicStart = "",
                 LexicographicEnd = "",
@@ -381,21 +384,21 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListFoldersResponse, Folder> response = storageControlClient.ListFoldersAsync(request);
+            PagedAsyncEnumerable<gcscv::ListFoldersResponse, gcscv::Folder> response = storageControlClient.ListFoldersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Folder item in response)
+            await foreach (gcscv::Folder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListFoldersResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Folder item in page)
+                foreach (gcscv::Folder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -404,10 +407,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Folder> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::Folder> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Folder item in singlePage)
+            foreach (gcscv::Folder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -422,25 +425,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFolders(string, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
             // Make the request
-            PagedEnumerable<ListFoldersResponse, Folder> response = storageControlClient.ListFolders(parent);
+            PagedEnumerable<gcscv::ListFoldersResponse, gcscv::Folder> response = storageControlClient.ListFolders(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Folder item in response)
+            foreach (gcscv::Folder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFoldersResponse page in response.AsRawResponses())
+            foreach (gcscv::ListFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Folder item in page)
+                foreach (gcscv::Folder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -449,10 +452,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Folder> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::Folder> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Folder item in singlePage)
+            foreach (gcscv::Folder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -467,25 +470,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFoldersAsync(string, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
             // Make the request
-            PagedAsyncEnumerable<ListFoldersResponse, Folder> response = storageControlClient.ListFoldersAsync(parent);
+            PagedAsyncEnumerable<gcscv::ListFoldersResponse, gcscv::Folder> response = storageControlClient.ListFoldersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Folder item in response)
+            await foreach (gcscv::Folder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListFoldersResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Folder item in page)
+                foreach (gcscv::Folder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -494,10 +497,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Folder> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::Folder> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Folder item in singlePage)
+            foreach (gcscv::Folder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -512,25 +515,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFolders(BucketName, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
             // Make the request
-            PagedEnumerable<ListFoldersResponse, Folder> response = storageControlClient.ListFolders(parent);
+            PagedEnumerable<gcscv::ListFoldersResponse, gcscv::Folder> response = storageControlClient.ListFolders(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (Folder item in response)
+            foreach (gcscv::Folder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListFoldersResponse page in response.AsRawResponses())
+            foreach (gcscv::ListFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Folder item in page)
+                foreach (gcscv::Folder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -539,10 +542,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Folder> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::Folder> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Folder item in singlePage)
+            foreach (gcscv::Folder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -557,25 +560,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListFoldersAsync(BucketName, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
             // Make the request
-            PagedAsyncEnumerable<ListFoldersResponse, Folder> response = storageControlClient.ListFoldersAsync(parent);
+            PagedAsyncEnumerable<gcscv::ListFoldersResponse, gcscv::Folder> response = storageControlClient.ListFoldersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (Folder item in response)
+            await foreach (gcscv::Folder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListFoldersResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (Folder item in page)
+                foreach (gcscv::Folder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -584,10 +587,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<Folder> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::Folder> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (Folder item in singlePage)
+            foreach (gcscv::Folder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -602,32 +605,32 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: RenameFolder(RenameFolderRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            RenameFolderRequest request = new RenameFolderRequest
+            gcscv::RenameFolderRequest request = new gcscv::RenameFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                FolderName = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
                 DestinationFolderId = "",
             };
             // Make the request
-            Operation<Folder, RenameFolderMetadata> response = storageControlClient.RenameFolder(request);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> response = storageControlClient.RenameFolder(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Folder, RenameFolderMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Folder result = completedResponse.Result;
+            gcscv::Folder result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Folder, RenameFolderMetadata> retrievedResponse = storageControlClient.PollOnceRenameFolder(operationName);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> retrievedResponse = storageControlClient.PollOnceRenameFolder(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Folder retrievedResult = retrievedResponse.Result;
+                gcscv::Folder retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -638,32 +641,32 @@ namespace GoogleCSharpSnippets
             // Snippet: RenameFolderAsync(RenameFolderRequest, CallSettings)
             // Additional: RenameFolderAsync(RenameFolderRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            RenameFolderRequest request = new RenameFolderRequest
+            gcscv::RenameFolderRequest request = new gcscv::RenameFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                FolderName = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
                 DestinationFolderId = "",
             };
             // Make the request
-            Operation<Folder, RenameFolderMetadata> response = await storageControlClient.RenameFolderAsync(request);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> response = await storageControlClient.RenameFolderAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Folder, RenameFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Folder result = completedResponse.Result;
+            gcscv::Folder result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Folder, RenameFolderMetadata> retrievedResponse = await storageControlClient.PollOnceRenameFolderAsync(operationName);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> retrievedResponse = await storageControlClient.PollOnceRenameFolderAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Folder retrievedResult = retrievedResponse.Result;
+                gcscv::Folder retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -673,27 +676,27 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: RenameFolder(string, string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
             string destinationFolderId = "";
             // Make the request
-            Operation<Folder, RenameFolderMetadata> response = storageControlClient.RenameFolder(name, destinationFolderId);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> response = storageControlClient.RenameFolder(name, destinationFolderId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Folder, RenameFolderMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Folder result = completedResponse.Result;
+            gcscv::Folder result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Folder, RenameFolderMetadata> retrievedResponse = storageControlClient.PollOnceRenameFolder(operationName);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> retrievedResponse = storageControlClient.PollOnceRenameFolder(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Folder retrievedResult = retrievedResponse.Result;
+                gcscv::Folder retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -704,27 +707,27 @@ namespace GoogleCSharpSnippets
             // Snippet: RenameFolderAsync(string, string, CallSettings)
             // Additional: RenameFolderAsync(string, string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
             string destinationFolderId = "";
             // Make the request
-            Operation<Folder, RenameFolderMetadata> response = await storageControlClient.RenameFolderAsync(name, destinationFolderId);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> response = await storageControlClient.RenameFolderAsync(name, destinationFolderId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Folder, RenameFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Folder result = completedResponse.Result;
+            gcscv::Folder result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Folder, RenameFolderMetadata> retrievedResponse = await storageControlClient.PollOnceRenameFolderAsync(operationName);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> retrievedResponse = await storageControlClient.PollOnceRenameFolderAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Folder retrievedResult = retrievedResponse.Result;
+                gcscv::Folder retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -734,27 +737,27 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: RenameFolder(FolderName, string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            gcscv::FolderName name = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
             string destinationFolderId = "";
             // Make the request
-            Operation<Folder, RenameFolderMetadata> response = storageControlClient.RenameFolder(name, destinationFolderId);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> response = storageControlClient.RenameFolder(name, destinationFolderId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Folder, RenameFolderMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            Folder result = completedResponse.Result;
+            gcscv::Folder result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Folder, RenameFolderMetadata> retrievedResponse = storageControlClient.PollOnceRenameFolder(operationName);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> retrievedResponse = storageControlClient.PollOnceRenameFolder(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Folder retrievedResult = retrievedResponse.Result;
+                gcscv::Folder retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -765,27 +768,27 @@ namespace GoogleCSharpSnippets
             // Snippet: RenameFolderAsync(FolderName, string, CallSettings)
             // Additional: RenameFolderAsync(FolderName, string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            gcscv::FolderName name = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
             string destinationFolderId = "";
             // Make the request
-            Operation<Folder, RenameFolderMetadata> response = await storageControlClient.RenameFolderAsync(name, destinationFolderId);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> response = await storageControlClient.RenameFolderAsync(name, destinationFolderId);
 
             // Poll until the returned long-running operation is complete
-            Operation<Folder, RenameFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            Folder result = completedResponse.Result;
+            gcscv::Folder result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Folder, RenameFolderMetadata> retrievedResponse = await storageControlClient.PollOnceRenameFolderAsync(operationName);
+            Operation<gcscv::Folder, gcscv::RenameFolderMetadata> retrievedResponse = await storageControlClient.PollOnceRenameFolderAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                Folder retrievedResult = retrievedResponse.Result;
+                gcscv::Folder retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -795,26 +798,26 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFolderRecursive(DeleteFolderRecursiveRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            DeleteFolderRecursiveRequest request = new DeleteFolderRecursiveRequest
+            gcscv::DeleteFolderRecursiveRequest request = new gcscv::DeleteFolderRecursiveRequest
             {
-                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                FolderName = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
             };
             // Make the request
-            Operation<Empty, DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(request);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -830,26 +833,26 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest, CallSettings)
             // Additional: DeleteFolderRecursiveAsync(DeleteFolderRecursiveRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteFolderRecursiveRequest request = new DeleteFolderRecursiveRequest
+            gcscv::DeleteFolderRecursiveRequest request = new gcscv::DeleteFolderRecursiveRequest
             {
-                FolderName = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
+                FolderName = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]"),
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
             };
             // Make the request
-            Operation<Empty, DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(request);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -864,21 +867,21 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFolderRecursive(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
             // Make the request
-            Operation<Empty, DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(name);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -894,21 +897,21 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFolderRecursiveAsync(string, CallSettings)
             // Additional: DeleteFolderRecursiveAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/folders/[FOLDER]";
             // Make the request
-            Operation<Empty, DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(name);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -923,21 +926,21 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteFolderRecursive(FolderName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            gcscv::FolderName name = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
             // Make the request
-            Operation<Empty, DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(name);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> response = storageControlClient.DeleteFolderRecursive(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> retrievedResponse = storageControlClient.PollOnceDeleteFolderRecursive(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -953,21 +956,21 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteFolderRecursiveAsync(FolderName, CallSettings)
             // Additional: DeleteFolderRecursiveAsync(FolderName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            FolderName name = FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
+            gcscv::FolderName name = gcscv::FolderName.FromProjectBucketFolder("[PROJECT]", "[BUCKET]", "[FOLDER]");
             // Make the request
-            Operation<Empty, DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(name);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> response = await storageControlClient.DeleteFolderRecursiveAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<Empty, DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
             Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<Empty, DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
+            Operation<Empty, gcscv::DeleteFolderRecursiveMetadata> retrievedResponse = await storageControlClient.PollOnceDeleteFolderRecursiveAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -982,15 +985,15 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetStorageLayout(GetStorageLayoutRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            GetStorageLayoutRequest request = new GetStorageLayoutRequest
+            gcscv::GetStorageLayoutRequest request = new gcscv::GetStorageLayoutRequest
             {
-                StorageLayoutName = StorageLayoutName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                StorageLayoutName = gcscv::StorageLayoutName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 Prefix = "",
             };
             // Make the request
-            StorageLayout response = storageControlClient.GetStorageLayout(request);
+            gcscv::StorageLayout response = storageControlClient.GetStorageLayout(request);
             // End snippet
         }
 
@@ -1000,15 +1003,15 @@ namespace GoogleCSharpSnippets
             // Snippet: GetStorageLayoutAsync(GetStorageLayoutRequest, CallSettings)
             // Additional: GetStorageLayoutAsync(GetStorageLayoutRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            GetStorageLayoutRequest request = new GetStorageLayoutRequest
+            gcscv::GetStorageLayoutRequest request = new gcscv::GetStorageLayoutRequest
             {
-                StorageLayoutName = StorageLayoutName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                StorageLayoutName = gcscv::StorageLayoutName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 Prefix = "",
             };
             // Make the request
-            StorageLayout response = await storageControlClient.GetStorageLayoutAsync(request);
+            gcscv::StorageLayout response = await storageControlClient.GetStorageLayoutAsync(request);
             // End snippet
         }
 
@@ -1017,11 +1020,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetStorageLayout(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/storageLayout";
             // Make the request
-            StorageLayout response = storageControlClient.GetStorageLayout(name);
+            gcscv::StorageLayout response = storageControlClient.GetStorageLayout(name);
             // End snippet
         }
 
@@ -1031,11 +1034,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetStorageLayoutAsync(string, CallSettings)
             // Additional: GetStorageLayoutAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/storageLayout";
             // Make the request
-            StorageLayout response = await storageControlClient.GetStorageLayoutAsync(name);
+            gcscv::StorageLayout response = await storageControlClient.GetStorageLayoutAsync(name);
             // End snippet
         }
 
@@ -1044,11 +1047,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetStorageLayout(StorageLayoutName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            StorageLayoutName name = StorageLayoutName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::StorageLayoutName name = gcscv::StorageLayoutName.FromProjectBucket("[PROJECT]", "[BUCKET]");
             // Make the request
-            StorageLayout response = storageControlClient.GetStorageLayout(name);
+            gcscv::StorageLayout response = storageControlClient.GetStorageLayout(name);
             // End snippet
         }
 
@@ -1058,11 +1061,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetStorageLayoutAsync(StorageLayoutName, CallSettings)
             // Additional: GetStorageLayoutAsync(StorageLayoutName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            StorageLayoutName name = StorageLayoutName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::StorageLayoutName name = gcscv::StorageLayoutName.FromProjectBucket("[PROJECT]", "[BUCKET]");
             // Make the request
-            StorageLayout response = await storageControlClient.GetStorageLayoutAsync(name);
+            gcscv::StorageLayout response = await storageControlClient.GetStorageLayoutAsync(name);
             // End snippet
         }
 
@@ -1071,16 +1074,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateManagedFolder(CreateManagedFolderRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            CreateManagedFolderRequest request = new CreateManagedFolderRequest
+            gcscv::CreateManagedFolderRequest request = new gcscv::CreateManagedFolderRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                ManagedFolder = new ManagedFolder(),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ManagedFolder = new gcscv::ManagedFolder(),
                 ManagedFolderId = "",
             };
             // Make the request
-            ManagedFolder response = storageControlClient.CreateManagedFolder(request);
+            gcscv::ManagedFolder response = storageControlClient.CreateManagedFolder(request);
             // End snippet
         }
 
@@ -1090,16 +1093,16 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateManagedFolderAsync(CreateManagedFolderRequest, CallSettings)
             // Additional: CreateManagedFolderAsync(CreateManagedFolderRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            CreateManagedFolderRequest request = new CreateManagedFolderRequest
+            gcscv::CreateManagedFolderRequest request = new gcscv::CreateManagedFolderRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                ManagedFolder = new ManagedFolder(),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ManagedFolder = new gcscv::ManagedFolder(),
                 ManagedFolderId = "",
             };
             // Make the request
-            ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(request);
+            gcscv::ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(request);
             // End snippet
         }
 
@@ -1108,13 +1111,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateManagedFolder(string, ManagedFolder, string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
-            ManagedFolder managedFolder = new ManagedFolder();
+            gcscv::ManagedFolder managedFolder = new gcscv::ManagedFolder();
             string managedFolderId = "";
             // Make the request
-            ManagedFolder response = storageControlClient.CreateManagedFolder(parent, managedFolder, managedFolderId);
+            gcscv::ManagedFolder response = storageControlClient.CreateManagedFolder(parent, managedFolder, managedFolderId);
             // End snippet
         }
 
@@ -1124,13 +1127,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateManagedFolderAsync(string, ManagedFolder, string, CallSettings)
             // Additional: CreateManagedFolderAsync(string, ManagedFolder, string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
-            ManagedFolder managedFolder = new ManagedFolder();
+            gcscv::ManagedFolder managedFolder = new gcscv::ManagedFolder();
             string managedFolderId = "";
             // Make the request
-            ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(parent, managedFolder, managedFolderId);
+            gcscv::ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(parent, managedFolder, managedFolderId);
             // End snippet
         }
 
@@ -1139,13 +1142,13 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateManagedFolder(BucketName, ManagedFolder, string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
-            ManagedFolder managedFolder = new ManagedFolder();
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::ManagedFolder managedFolder = new gcscv::ManagedFolder();
             string managedFolderId = "";
             // Make the request
-            ManagedFolder response = storageControlClient.CreateManagedFolder(parent, managedFolder, managedFolderId);
+            gcscv::ManagedFolder response = storageControlClient.CreateManagedFolder(parent, managedFolder, managedFolderId);
             // End snippet
         }
 
@@ -1155,13 +1158,13 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateManagedFolderAsync(BucketName, ManagedFolder, string, CallSettings)
             // Additional: CreateManagedFolderAsync(BucketName, ManagedFolder, string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
-            ManagedFolder managedFolder = new ManagedFolder();
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::ManagedFolder managedFolder = new gcscv::ManagedFolder();
             string managedFolderId = "";
             // Make the request
-            ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(parent, managedFolder, managedFolderId);
+            gcscv::ManagedFolder response = await storageControlClient.CreateManagedFolderAsync(parent, managedFolder, managedFolderId);
             // End snippet
         }
 
@@ -1170,14 +1173,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteManagedFolder(DeleteManagedFolderRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            DeleteManagedFolderRequest request = new DeleteManagedFolderRequest
+            gcscv::DeleteManagedFolderRequest request = new gcscv::DeleteManagedFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
                 AllowNonEmpty = false,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
+                ManagedFolderName = gcscv::ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
             storageControlClient.DeleteManagedFolder(request);
@@ -1190,14 +1193,14 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteManagedFolderAsync(DeleteManagedFolderRequest, CallSettings)
             // Additional: DeleteManagedFolderAsync(DeleteManagedFolderRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteManagedFolderRequest request = new DeleteManagedFolderRequest
+            gcscv::DeleteManagedFolderRequest request = new gcscv::DeleteManagedFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
                 AllowNonEmpty = false,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
+                ManagedFolderName = gcscv::ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
             await storageControlClient.DeleteManagedFolderAsync(request);
@@ -1209,7 +1212,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteManagedFolder(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
@@ -1223,7 +1226,7 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteManagedFolderAsync(string, CallSettings)
             // Additional: DeleteManagedFolderAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
@@ -1236,9 +1239,9 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DeleteManagedFolder(ManagedFolderName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
+            gcscv::ManagedFolderName name = gcscv::ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
             storageControlClient.DeleteManagedFolder(name);
             // End snippet
@@ -1250,9 +1253,9 @@ namespace GoogleCSharpSnippets
             // Snippet: DeleteManagedFolderAsync(ManagedFolderName, CallSettings)
             // Additional: DeleteManagedFolderAsync(ManagedFolderName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
+            gcscv::ManagedFolderName name = gcscv::ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
             await storageControlClient.DeleteManagedFolderAsync(name);
             // End snippet
@@ -1263,16 +1266,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetManagedFolder(GetManagedFolderRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            GetManagedFolderRequest request = new GetManagedFolderRequest
+            gcscv::GetManagedFolderRequest request = new gcscv::GetManagedFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
+                ManagedFolderName = gcscv::ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
-            ManagedFolder response = storageControlClient.GetManagedFolder(request);
+            gcscv::ManagedFolder response = storageControlClient.GetManagedFolder(request);
             // End snippet
         }
 
@@ -1282,16 +1285,16 @@ namespace GoogleCSharpSnippets
             // Snippet: GetManagedFolderAsync(GetManagedFolderRequest, CallSettings)
             // Additional: GetManagedFolderAsync(GetManagedFolderRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            GetManagedFolderRequest request = new GetManagedFolderRequest
+            gcscv::GetManagedFolderRequest request = new gcscv::GetManagedFolderRequest
             {
                 IfMetagenerationMatch = 0L,
                 IfMetagenerationNotMatch = 0L,
-                ManagedFolderName = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
+                ManagedFolderName = gcscv::ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]"),
             };
             // Make the request
-            ManagedFolder response = await storageControlClient.GetManagedFolderAsync(request);
+            gcscv::ManagedFolder response = await storageControlClient.GetManagedFolderAsync(request);
             // End snippet
         }
 
@@ -1300,11 +1303,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetManagedFolder(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
-            ManagedFolder response = storageControlClient.GetManagedFolder(name);
+            gcscv::ManagedFolder response = storageControlClient.GetManagedFolder(name);
             // End snippet
         }
 
@@ -1314,11 +1317,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetManagedFolderAsync(string, CallSettings)
             // Additional: GetManagedFolderAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/managedFolders/[MANAGED_FOLDER]";
             // Make the request
-            ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
+            gcscv::ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
             // End snippet
         }
 
@@ -1327,11 +1330,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetManagedFolder(ManagedFolderName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
+            gcscv::ManagedFolderName name = gcscv::ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
-            ManagedFolder response = storageControlClient.GetManagedFolder(name);
+            gcscv::ManagedFolder response = storageControlClient.GetManagedFolder(name);
             // End snippet
         }
 
@@ -1341,11 +1344,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetManagedFolderAsync(ManagedFolderName, CallSettings)
             // Additional: GetManagedFolderAsync(ManagedFolderName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ManagedFolderName name = ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
+            gcscv::ManagedFolderName name = gcscv::ManagedFolderName.FromProjectBucketManagedFolder("[PROJECT]", "[BUCKET]", "[MANAGED_FOLDER]");
             // Make the request
-            ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
+            gcscv::ManagedFolder response = await storageControlClient.GetManagedFolderAsync(name);
             // End snippet
         }
 
@@ -1354,29 +1357,29 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListManagedFolders(ListManagedFoldersRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            ListManagedFoldersRequest request = new ListManagedFoldersRequest
+            gcscv::ListManagedFoldersRequest request = new gcscv::ListManagedFoldersRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 Prefix = "",
             };
             // Make the request
-            PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFolders(request);
+            PagedEnumerable<gcscv::ListManagedFoldersResponse, gcscv::ManagedFolder> response = storageControlClient.ListManagedFolders(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ManagedFolder item in response)
+            foreach (gcscv::ManagedFolder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            foreach (gcscv::ListManagedFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ManagedFolder item in page)
+                foreach (gcscv::ManagedFolder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1385,10 +1388,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ManagedFolder> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::ManagedFolder> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ManagedFolder item in singlePage)
+            foreach (gcscv::ManagedFolder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1403,29 +1406,29 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListManagedFoldersAsync(ListManagedFoldersRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ListManagedFoldersRequest request = new ListManagedFoldersRequest
+            gcscv::ListManagedFoldersRequest request = new gcscv::ListManagedFoldersRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
                 Prefix = "",
             };
             // Make the request
-            PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(request);
+            PagedAsyncEnumerable<gcscv::ListManagedFoldersResponse, gcscv::ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (ManagedFolder item in response)
+            await foreach (gcscv::ManagedFolder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListManagedFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ManagedFolder item in page)
+                foreach (gcscv::ManagedFolder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1434,10 +1437,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ManagedFolder item in singlePage)
+            foreach (gcscv::ManagedFolder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1452,25 +1455,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListManagedFolders(string, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
             // Make the request
-            PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFolders(parent);
+            PagedEnumerable<gcscv::ListManagedFoldersResponse, gcscv::ManagedFolder> response = storageControlClient.ListManagedFolders(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ManagedFolder item in response)
+            foreach (gcscv::ManagedFolder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            foreach (gcscv::ListManagedFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ManagedFolder item in page)
+                foreach (gcscv::ManagedFolder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1479,10 +1482,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ManagedFolder> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::ManagedFolder> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ManagedFolder item in singlePage)
+            foreach (gcscv::ManagedFolder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1497,25 +1500,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListManagedFoldersAsync(string, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
             // Make the request
-            PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(parent);
+            PagedAsyncEnumerable<gcscv::ListManagedFoldersResponse, gcscv::ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (ManagedFolder item in response)
+            await foreach (gcscv::ManagedFolder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListManagedFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ManagedFolder item in page)
+                foreach (gcscv::ManagedFolder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1524,10 +1527,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ManagedFolder item in singlePage)
+            foreach (gcscv::ManagedFolder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1542,25 +1545,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListManagedFolders(BucketName, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
             // Make the request
-            PagedEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFolders(parent);
+            PagedEnumerable<gcscv::ListManagedFoldersResponse, gcscv::ManagedFolder> response = storageControlClient.ListManagedFolders(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (ManagedFolder item in response)
+            foreach (gcscv::ManagedFolder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            foreach (gcscv::ListManagedFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ManagedFolder item in page)
+                foreach (gcscv::ManagedFolder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1569,10 +1572,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ManagedFolder> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::ManagedFolder> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ManagedFolder item in singlePage)
+            foreach (gcscv::ManagedFolder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1587,25 +1590,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListManagedFoldersAsync(BucketName, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
             // Make the request
-            PagedAsyncEnumerable<ListManagedFoldersResponse, ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(parent);
+            PagedAsyncEnumerable<gcscv::ListManagedFoldersResponse, gcscv::ManagedFolder> response = storageControlClient.ListManagedFoldersAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (ManagedFolder item in response)
+            await foreach (gcscv::ManagedFolder item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListManagedFoldersResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListManagedFoldersResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (ManagedFolder item in page)
+                foreach (gcscv::ManagedFolder item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -1614,10 +1617,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::ManagedFolder> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (ManagedFolder item in singlePage)
+            foreach (gcscv::ManagedFolder item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -1632,30 +1635,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateAnywhereCache(CreateAnywhereCacheRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            CreateAnywhereCacheRequest request = new CreateAnywhereCacheRequest
+            gcscv::CreateAnywhereCacheRequest request = new gcscv::CreateAnywhereCacheRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                AnywhereCache = new AnywhereCache(),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                AnywhereCache = new gcscv::AnywhereCache(),
             };
             // Make the request
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(request);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1666,30 +1669,30 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateAnywhereCacheAsync(CreateAnywhereCacheRequest, CallSettings)
             // Additional: CreateAnywhereCacheAsync(CreateAnywhereCacheRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            CreateAnywhereCacheRequest request = new CreateAnywhereCacheRequest
+            gcscv::CreateAnywhereCacheRequest request = new gcscv::CreateAnywhereCacheRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
-                AnywhereCache = new AnywhereCache(),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                AnywhereCache = new gcscv::AnywhereCache(),
             };
             // Make the request
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(request);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1699,27 +1702,27 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateAnywhereCache(string, AnywhereCache, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
-            AnywhereCache anywhereCache = new AnywhereCache();
+            gcscv::AnywhereCache anywhereCache = new gcscv::AnywhereCache();
             // Make the request
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(parent, anywhereCache);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(parent, anywhereCache);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1730,27 +1733,27 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateAnywhereCacheAsync(string, AnywhereCache, CallSettings)
             // Additional: CreateAnywhereCacheAsync(string, AnywhereCache, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
-            AnywhereCache anywhereCache = new AnywhereCache();
+            gcscv::AnywhereCache anywhereCache = new gcscv::AnywhereCache();
             // Make the request
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(parent, anywhereCache);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(parent, anywhereCache);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1760,27 +1763,27 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: CreateAnywhereCache(BucketName, AnywhereCache, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
-            AnywhereCache anywhereCache = new AnywhereCache();
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::AnywhereCache anywhereCache = new gcscv::AnywhereCache();
             // Make the request
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(parent, anywhereCache);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> response = storageControlClient.CreateAnywhereCache(parent, anywhereCache);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceCreateAnywhereCache(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1791,27 +1794,27 @@ namespace GoogleCSharpSnippets
             // Snippet: CreateAnywhereCacheAsync(BucketName, AnywhereCache, CallSettings)
             // Additional: CreateAnywhereCacheAsync(BucketName, AnywhereCache, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
-            AnywhereCache anywhereCache = new AnywhereCache();
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::AnywhereCache anywhereCache = new gcscv::AnywhereCache();
             // Make the request
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(parent, anywhereCache);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> response = await storageControlClient.CreateAnywhereCacheAsync(parent, anywhereCache);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::CreateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceCreateAnywhereCacheAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1821,30 +1824,30 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateAnywhereCache(UpdateAnywhereCacheRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            UpdateAnywhereCacheRequest request = new UpdateAnywhereCacheRequest
+            gcscv::UpdateAnywhereCacheRequest request = new gcscv::UpdateAnywhereCacheRequest
             {
-                AnywhereCache = new AnywhereCache(),
+                AnywhereCache = new gcscv::AnywhereCache(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> response = storageControlClient.UpdateAnywhereCache(request);
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> response = storageControlClient.UpdateAnywhereCache(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceUpdateAnywhereCache(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceUpdateAnywhereCache(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1855,30 +1858,30 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest, CallSettings)
             // Additional: UpdateAnywhereCacheAsync(UpdateAnywhereCacheRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateAnywhereCacheRequest request = new UpdateAnywhereCacheRequest
+            gcscv::UpdateAnywhereCacheRequest request = new gcscv::UpdateAnywhereCacheRequest
             {
-                AnywhereCache = new AnywhereCache(),
+                AnywhereCache = new gcscv::AnywhereCache(),
                 UpdateMask = new FieldMask(),
             };
             // Make the request
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> response = await storageControlClient.UpdateAnywhereCacheAsync(request);
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> response = await storageControlClient.UpdateAnywhereCacheAsync(request);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceUpdateAnywhereCacheAsync(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceUpdateAnywhereCacheAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1888,27 +1891,27 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateAnywhereCache(AnywhereCache, FieldMask, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            AnywhereCache anywhereCache = new AnywhereCache();
+            gcscv::AnywhereCache anywhereCache = new gcscv::AnywhereCache();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> response = storageControlClient.UpdateAnywhereCache(anywhereCache, updateMask);
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> response = storageControlClient.UpdateAnywhereCache(anywhereCache, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> completedResponse = response.PollUntilCompleted();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceUpdateAnywhereCache(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> retrievedResponse = storageControlClient.PollOnceUpdateAnywhereCache(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1919,27 +1922,27 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateAnywhereCacheAsync(AnywhereCache, FieldMask, CallSettings)
             // Additional: UpdateAnywhereCacheAsync(AnywhereCache, FieldMask, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            AnywhereCache anywhereCache = new AnywhereCache();
+            gcscv::AnywhereCache anywhereCache = new gcscv::AnywhereCache();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> response = await storageControlClient.UpdateAnywhereCacheAsync(anywhereCache, updateMask);
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> response = await storageControlClient.UpdateAnywhereCacheAsync(anywhereCache, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            AnywhereCache result = completedResponse.Result;
+            gcscv::AnywhereCache result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<AnywhereCache, UpdateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceUpdateAnywhereCacheAsync(operationName);
+            Operation<gcscv::AnywhereCache, gcscv::UpdateAnywhereCacheMetadata> retrievedResponse = await storageControlClient.PollOnceUpdateAnywhereCacheAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                AnywhereCache retrievedResult = retrievedResponse.Result;
+                gcscv::AnywhereCache retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
@@ -1949,14 +1952,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DisableAnywhereCache(DisableAnywhereCacheRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            DisableAnywhereCacheRequest request = new DisableAnywhereCacheRequest
+            gcscv::DisableAnywhereCacheRequest request = new gcscv::DisableAnywhereCacheRequest
             {
-                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+                AnywhereCacheName = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
             };
             // Make the request
-            AnywhereCache response = storageControlClient.DisableAnywhereCache(request);
+            gcscv::AnywhereCache response = storageControlClient.DisableAnywhereCache(request);
             // End snippet
         }
 
@@ -1966,14 +1969,14 @@ namespace GoogleCSharpSnippets
             // Snippet: DisableAnywhereCacheAsync(DisableAnywhereCacheRequest, CallSettings)
             // Additional: DisableAnywhereCacheAsync(DisableAnywhereCacheRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            DisableAnywhereCacheRequest request = new DisableAnywhereCacheRequest
+            gcscv::DisableAnywhereCacheRequest request = new gcscv::DisableAnywhereCacheRequest
             {
-                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+                AnywhereCacheName = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
             };
             // Make the request
-            AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(request);
+            gcscv::AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(request);
             // End snippet
         }
 
@@ -1982,11 +1985,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DisableAnywhereCache(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
             // Make the request
-            AnywhereCache response = storageControlClient.DisableAnywhereCache(name);
+            gcscv::AnywhereCache response = storageControlClient.DisableAnywhereCache(name);
             // End snippet
         }
 
@@ -1996,11 +1999,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DisableAnywhereCacheAsync(string, CallSettings)
             // Additional: DisableAnywhereCacheAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
             // Make the request
-            AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(name);
+            gcscv::AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(name);
             // End snippet
         }
 
@@ -2009,11 +2012,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: DisableAnywhereCache(AnywhereCacheName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            gcscv::AnywhereCacheName name = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
             // Make the request
-            AnywhereCache response = storageControlClient.DisableAnywhereCache(name);
+            gcscv::AnywhereCache response = storageControlClient.DisableAnywhereCache(name);
             // End snippet
         }
 
@@ -2023,11 +2026,11 @@ namespace GoogleCSharpSnippets
             // Snippet: DisableAnywhereCacheAsync(AnywhereCacheName, CallSettings)
             // Additional: DisableAnywhereCacheAsync(AnywhereCacheName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            gcscv::AnywhereCacheName name = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
             // Make the request
-            AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(name);
+            gcscv::AnywhereCache response = await storageControlClient.DisableAnywhereCacheAsync(name);
             // End snippet
         }
 
@@ -2036,14 +2039,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PauseAnywhereCache(PauseAnywhereCacheRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            PauseAnywhereCacheRequest request = new PauseAnywhereCacheRequest
+            gcscv::PauseAnywhereCacheRequest request = new gcscv::PauseAnywhereCacheRequest
             {
-                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+                AnywhereCacheName = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
             };
             // Make the request
-            AnywhereCache response = storageControlClient.PauseAnywhereCache(request);
+            gcscv::AnywhereCache response = storageControlClient.PauseAnywhereCache(request);
             // End snippet
         }
 
@@ -2053,14 +2056,14 @@ namespace GoogleCSharpSnippets
             // Snippet: PauseAnywhereCacheAsync(PauseAnywhereCacheRequest, CallSettings)
             // Additional: PauseAnywhereCacheAsync(PauseAnywhereCacheRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            PauseAnywhereCacheRequest request = new PauseAnywhereCacheRequest
+            gcscv::PauseAnywhereCacheRequest request = new gcscv::PauseAnywhereCacheRequest
             {
-                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+                AnywhereCacheName = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
             };
             // Make the request
-            AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(request);
+            gcscv::AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(request);
             // End snippet
         }
 
@@ -2069,11 +2072,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PauseAnywhereCache(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
             // Make the request
-            AnywhereCache response = storageControlClient.PauseAnywhereCache(name);
+            gcscv::AnywhereCache response = storageControlClient.PauseAnywhereCache(name);
             // End snippet
         }
 
@@ -2083,11 +2086,11 @@ namespace GoogleCSharpSnippets
             // Snippet: PauseAnywhereCacheAsync(string, CallSettings)
             // Additional: PauseAnywhereCacheAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
             // Make the request
-            AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(name);
+            gcscv::AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(name);
             // End snippet
         }
 
@@ -2096,11 +2099,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: PauseAnywhereCache(AnywhereCacheName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            gcscv::AnywhereCacheName name = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
             // Make the request
-            AnywhereCache response = storageControlClient.PauseAnywhereCache(name);
+            gcscv::AnywhereCache response = storageControlClient.PauseAnywhereCache(name);
             // End snippet
         }
 
@@ -2110,11 +2113,11 @@ namespace GoogleCSharpSnippets
             // Snippet: PauseAnywhereCacheAsync(AnywhereCacheName, CallSettings)
             // Additional: PauseAnywhereCacheAsync(AnywhereCacheName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            gcscv::AnywhereCacheName name = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
             // Make the request
-            AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(name);
+            gcscv::AnywhereCache response = await storageControlClient.PauseAnywhereCacheAsync(name);
             // End snippet
         }
 
@@ -2123,14 +2126,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ResumeAnywhereCache(ResumeAnywhereCacheRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            ResumeAnywhereCacheRequest request = new ResumeAnywhereCacheRequest
+            gcscv::ResumeAnywhereCacheRequest request = new gcscv::ResumeAnywhereCacheRequest
             {
-                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+                AnywhereCacheName = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
             };
             // Make the request
-            AnywhereCache response = storageControlClient.ResumeAnywhereCache(request);
+            gcscv::AnywhereCache response = storageControlClient.ResumeAnywhereCache(request);
             // End snippet
         }
 
@@ -2140,14 +2143,14 @@ namespace GoogleCSharpSnippets
             // Snippet: ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest, CallSettings)
             // Additional: ResumeAnywhereCacheAsync(ResumeAnywhereCacheRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ResumeAnywhereCacheRequest request = new ResumeAnywhereCacheRequest
+            gcscv::ResumeAnywhereCacheRequest request = new gcscv::ResumeAnywhereCacheRequest
             {
-                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+                AnywhereCacheName = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
             };
             // Make the request
-            AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(request);
+            gcscv::AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(request);
             // End snippet
         }
 
@@ -2156,11 +2159,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ResumeAnywhereCache(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
             // Make the request
-            AnywhereCache response = storageControlClient.ResumeAnywhereCache(name);
+            gcscv::AnywhereCache response = storageControlClient.ResumeAnywhereCache(name);
             // End snippet
         }
 
@@ -2170,11 +2173,11 @@ namespace GoogleCSharpSnippets
             // Snippet: ResumeAnywhereCacheAsync(string, CallSettings)
             // Additional: ResumeAnywhereCacheAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
             // Make the request
-            AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(name);
+            gcscv::AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(name);
             // End snippet
         }
 
@@ -2183,11 +2186,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ResumeAnywhereCache(AnywhereCacheName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            gcscv::AnywhereCacheName name = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
             // Make the request
-            AnywhereCache response = storageControlClient.ResumeAnywhereCache(name);
+            gcscv::AnywhereCache response = storageControlClient.ResumeAnywhereCache(name);
             // End snippet
         }
 
@@ -2197,11 +2200,11 @@ namespace GoogleCSharpSnippets
             // Snippet: ResumeAnywhereCacheAsync(AnywhereCacheName, CallSettings)
             // Additional: ResumeAnywhereCacheAsync(AnywhereCacheName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            gcscv::AnywhereCacheName name = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
             // Make the request
-            AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(name);
+            gcscv::AnywhereCache response = await storageControlClient.ResumeAnywhereCacheAsync(name);
             // End snippet
         }
 
@@ -2210,14 +2213,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetAnywhereCache(GetAnywhereCacheRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            GetAnywhereCacheRequest request = new GetAnywhereCacheRequest
+            gcscv::GetAnywhereCacheRequest request = new gcscv::GetAnywhereCacheRequest
             {
-                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+                AnywhereCacheName = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
             };
             // Make the request
-            AnywhereCache response = storageControlClient.GetAnywhereCache(request);
+            gcscv::AnywhereCache response = storageControlClient.GetAnywhereCache(request);
             // End snippet
         }
 
@@ -2227,14 +2230,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetAnywhereCacheAsync(GetAnywhereCacheRequest, CallSettings)
             // Additional: GetAnywhereCacheAsync(GetAnywhereCacheRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            GetAnywhereCacheRequest request = new GetAnywhereCacheRequest
+            gcscv::GetAnywhereCacheRequest request = new gcscv::GetAnywhereCacheRequest
             {
-                AnywhereCacheName = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
+                AnywhereCacheName = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]"),
             };
             // Make the request
-            AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(request);
+            gcscv::AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(request);
             // End snippet
         }
 
@@ -2243,11 +2246,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetAnywhereCache(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
             // Make the request
-            AnywhereCache response = storageControlClient.GetAnywhereCache(name);
+            gcscv::AnywhereCache response = storageControlClient.GetAnywhereCache(name);
             // End snippet
         }
 
@@ -2257,11 +2260,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetAnywhereCacheAsync(string, CallSettings)
             // Additional: GetAnywhereCacheAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "projects/[PROJECT]/buckets/[BUCKET]/anywhereCaches/[ANYWHERE_CACHE]";
             // Make the request
-            AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(name);
+            gcscv::AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(name);
             // End snippet
         }
 
@@ -2270,11 +2273,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetAnywhereCache(AnywhereCacheName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            gcscv::AnywhereCacheName name = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
             // Make the request
-            AnywhereCache response = storageControlClient.GetAnywhereCache(name);
+            gcscv::AnywhereCache response = storageControlClient.GetAnywhereCache(name);
             // End snippet
         }
 
@@ -2284,11 +2287,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetAnywhereCacheAsync(AnywhereCacheName, CallSettings)
             // Additional: GetAnywhereCacheAsync(AnywhereCacheName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            AnywhereCacheName name = AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
+            gcscv::AnywhereCacheName name = gcscv::AnywhereCacheName.FromProjectBucketAnywhereCache("[PROJECT]", "[BUCKET]", "[ANYWHERE_CACHE]");
             // Make the request
-            AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(name);
+            gcscv::AnywhereCache response = await storageControlClient.GetAnywhereCacheAsync(name);
             // End snippet
         }
 
@@ -2297,28 +2300,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListAnywhereCaches(ListAnywhereCachesRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            ListAnywhereCachesRequest request = new ListAnywhereCachesRequest
+            gcscv::ListAnywhereCachesRequest request = new gcscv::ListAnywhereCachesRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
             };
             // Make the request
-            PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCaches(request);
+            PagedEnumerable<gcscv::ListAnywhereCachesResponse, gcscv::AnywhereCache> response = storageControlClient.ListAnywhereCaches(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (AnywhereCache item in response)
+            foreach (gcscv::AnywhereCache item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            foreach (gcscv::ListAnywhereCachesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (AnywhereCache item in page)
+                foreach (gcscv::AnywhereCache item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2327,10 +2330,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<AnywhereCache> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::AnywhereCache> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AnywhereCache item in singlePage)
+            foreach (gcscv::AnywhereCache item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2345,28 +2348,28 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListAnywhereCachesAsync(ListAnywhereCachesRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            ListAnywhereCachesRequest request = new ListAnywhereCachesRequest
+            gcscv::ListAnywhereCachesRequest request = new gcscv::ListAnywhereCachesRequest
             {
-                ParentAsBucketName = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
+                ParentAsBucketName = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]"),
             };
             // Make the request
-            PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(request);
+            PagedAsyncEnumerable<gcscv::ListAnywhereCachesResponse, gcscv::AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (AnywhereCache item in response)
+            await foreach (gcscv::AnywhereCache item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListAnywhereCachesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (AnywhereCache item in page)
+                foreach (gcscv::AnywhereCache item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2375,10 +2378,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AnywhereCache item in singlePage)
+            foreach (gcscv::AnywhereCache item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2393,25 +2396,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListAnywhereCaches(string, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
             // Make the request
-            PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCaches(parent);
+            PagedEnumerable<gcscv::ListAnywhereCachesResponse, gcscv::AnywhereCache> response = storageControlClient.ListAnywhereCaches(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (AnywhereCache item in response)
+            foreach (gcscv::AnywhereCache item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            foreach (gcscv::ListAnywhereCachesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (AnywhereCache item in page)
+                foreach (gcscv::AnywhereCache item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2420,10 +2423,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<AnywhereCache> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::AnywhereCache> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AnywhereCache item in singlePage)
+            foreach (gcscv::AnywhereCache item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2438,25 +2441,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListAnywhereCachesAsync(string, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string parent = "projects/[PROJECT]/buckets/[BUCKET]";
             // Make the request
-            PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(parent);
+            PagedAsyncEnumerable<gcscv::ListAnywhereCachesResponse, gcscv::AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (AnywhereCache item in response)
+            await foreach (gcscv::AnywhereCache item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListAnywhereCachesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (AnywhereCache item in page)
+                foreach (gcscv::AnywhereCache item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2465,10 +2468,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AnywhereCache item in singlePage)
+            foreach (gcscv::AnywhereCache item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2483,25 +2486,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListAnywhereCaches(BucketName, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
             // Make the request
-            PagedEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCaches(parent);
+            PagedEnumerable<gcscv::ListAnywhereCachesResponse, gcscv::AnywhereCache> response = storageControlClient.ListAnywhereCaches(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (AnywhereCache item in response)
+            foreach (gcscv::AnywhereCache item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            foreach (gcscv::ListAnywhereCachesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (AnywhereCache item in page)
+                foreach (gcscv::AnywhereCache item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2510,10 +2513,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<AnywhereCache> singlePage = response.ReadPage(pageSize);
+            Page<gcscv::AnywhereCache> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AnywhereCache item in singlePage)
+            foreach (gcscv::AnywhereCache item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2528,25 +2531,25 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: ListAnywhereCachesAsync(BucketName, string, int?, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            BucketName parent = BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
+            gcscv::BucketName parent = gcscv::BucketName.FromProjectBucket("[PROJECT]", "[BUCKET]");
             // Make the request
-            PagedAsyncEnumerable<ListAnywhereCachesResponse, AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(parent);
+            PagedAsyncEnumerable<gcscv::ListAnywhereCachesResponse, gcscv::AnywhereCache> response = storageControlClient.ListAnywhereCachesAsync(parent);
 
             // Iterate over all response items, lazily performing RPCs as required
-            await foreach (AnywhereCache item in response)
+            await foreach (gcscv::AnywhereCache item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            await foreach (ListAnywhereCachesResponse page in response.AsRawResponses())
+            await foreach (gcscv::ListAnywhereCachesResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (AnywhereCache item in page)
+                foreach (gcscv::AnywhereCache item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -2555,10 +2558,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
+            Page<gcscv::AnywhereCache> singlePage = await response.ReadPageAsync(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (AnywhereCache item in singlePage)
+            foreach (gcscv::AnywhereCache item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2573,14 +2576,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetProjectIntelligenceConfig(GetProjectIntelligenceConfigRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            GetProjectIntelligenceConfigRequest request = new GetProjectIntelligenceConfigRequest
+            gcscv::GetProjectIntelligenceConfigRequest request = new gcscv::GetProjectIntelligenceConfigRequest
             {
-                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+                IntelligenceConfigName = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
             };
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(request);
+            gcscv::IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(request);
             // End snippet
         }
 
@@ -2590,14 +2593,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CallSettings)
             // Additional: GetProjectIntelligenceConfigAsync(GetProjectIntelligenceConfigRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            GetProjectIntelligenceConfigRequest request = new GetProjectIntelligenceConfigRequest
+            gcscv::GetProjectIntelligenceConfigRequest request = new gcscv::GetProjectIntelligenceConfigRequest
             {
-                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+                IntelligenceConfigName = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
             };
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(request);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(request);
             // End snippet
         }
 
@@ -2606,11 +2609,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetProjectIntelligenceConfig(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(name);
+            gcscv::IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(name);
             // End snippet
         }
 
@@ -2620,11 +2623,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetProjectIntelligenceConfigAsync(string, CallSettings)
             // Additional: GetProjectIntelligenceConfigAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(name);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(name);
             // End snippet
         }
 
@@ -2633,11 +2636,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetProjectIntelligenceConfig(IntelligenceConfigName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            gcscv::IntelligenceConfigName name = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(name);
+            gcscv::IntelligenceConfig response = storageControlClient.GetProjectIntelligenceConfig(name);
             // End snippet
         }
 
@@ -2647,11 +2650,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetProjectIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
             // Additional: GetProjectIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            gcscv::IntelligenceConfigName name = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(name);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetProjectIntelligenceConfigAsync(name);
             // End snippet
         }
 
@@ -2660,16 +2663,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateProjectIntelligenceConfig(UpdateProjectIntelligenceConfigRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            UpdateProjectIntelligenceConfigRequest request = new UpdateProjectIntelligenceConfigRequest
+            gcscv::UpdateProjectIntelligenceConfigRequest request = new gcscv::UpdateProjectIntelligenceConfigRequest
             {
-                IntelligenceConfig = new IntelligenceConfig(),
+                IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
                 RequestId = "",
             };
             // Make the request
-            IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(request);
+            gcscv::IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(request);
             // End snippet
         }
 
@@ -2679,16 +2682,16 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CallSettings)
             // Additional: UpdateProjectIntelligenceConfigAsync(UpdateProjectIntelligenceConfigRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateProjectIntelligenceConfigRequest request = new UpdateProjectIntelligenceConfigRequest
+            gcscv::UpdateProjectIntelligenceConfigRequest request = new gcscv::UpdateProjectIntelligenceConfigRequest
             {
-                IntelligenceConfig = new IntelligenceConfig(),
+                IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
                 RequestId = "",
             };
             // Make the request
-            IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(request);
+            gcscv::IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(request);
             // End snippet
         }
 
@@ -2697,12 +2700,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateProjectIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            gcscv::IntelligenceConfig intelligenceConfig = new gcscv::IntelligenceConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(intelligenceConfig, updateMask);
+            gcscv::IntelligenceConfig response = storageControlClient.UpdateProjectIntelligenceConfig(intelligenceConfig, updateMask);
             // End snippet
         }
 
@@ -2712,12 +2715,12 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateProjectIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
             // Additional: UpdateProjectIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            gcscv::IntelligenceConfig intelligenceConfig = new gcscv::IntelligenceConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            gcscv::IntelligenceConfig response = await storageControlClient.UpdateProjectIntelligenceConfigAsync(intelligenceConfig, updateMask);
             // End snippet
         }
 
@@ -2726,14 +2729,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFolderIntelligenceConfig(GetFolderIntelligenceConfigRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            GetFolderIntelligenceConfigRequest request = new GetFolderIntelligenceConfigRequest
+            gcscv::GetFolderIntelligenceConfigRequest request = new gcscv::GetFolderIntelligenceConfigRequest
             {
-                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+                IntelligenceConfigName = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
             };
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(request);
+            gcscv::IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(request);
             // End snippet
         }
 
@@ -2743,14 +2746,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CallSettings)
             // Additional: GetFolderIntelligenceConfigAsync(GetFolderIntelligenceConfigRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            GetFolderIntelligenceConfigRequest request = new GetFolderIntelligenceConfigRequest
+            gcscv::GetFolderIntelligenceConfigRequest request = new gcscv::GetFolderIntelligenceConfigRequest
             {
-                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+                IntelligenceConfigName = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
             };
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(request);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(request);
             // End snippet
         }
 
@@ -2759,11 +2762,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFolderIntelligenceConfig(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(name);
+            gcscv::IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(name);
             // End snippet
         }
 
@@ -2773,11 +2776,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFolderIntelligenceConfigAsync(string, CallSettings)
             // Additional: GetFolderIntelligenceConfigAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(name);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(name);
             // End snippet
         }
 
@@ -2786,11 +2789,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetFolderIntelligenceConfig(IntelligenceConfigName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            gcscv::IntelligenceConfigName name = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(name);
+            gcscv::IntelligenceConfig response = storageControlClient.GetFolderIntelligenceConfig(name);
             // End snippet
         }
 
@@ -2800,11 +2803,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetFolderIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
             // Additional: GetFolderIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            gcscv::IntelligenceConfigName name = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(name);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetFolderIntelligenceConfigAsync(name);
             // End snippet
         }
 
@@ -2813,16 +2816,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateFolderIntelligenceConfig(UpdateFolderIntelligenceConfigRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            UpdateFolderIntelligenceConfigRequest request = new UpdateFolderIntelligenceConfigRequest
+            gcscv::UpdateFolderIntelligenceConfigRequest request = new gcscv::UpdateFolderIntelligenceConfigRequest
             {
-                IntelligenceConfig = new IntelligenceConfig(),
+                IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
                 RequestId = "",
             };
             // Make the request
-            IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(request);
+            gcscv::IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(request);
             // End snippet
         }
 
@@ -2832,16 +2835,16 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CallSettings)
             // Additional: UpdateFolderIntelligenceConfigAsync(UpdateFolderIntelligenceConfigRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateFolderIntelligenceConfigRequest request = new UpdateFolderIntelligenceConfigRequest
+            gcscv::UpdateFolderIntelligenceConfigRequest request = new gcscv::UpdateFolderIntelligenceConfigRequest
             {
-                IntelligenceConfig = new IntelligenceConfig(),
+                IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
                 RequestId = "",
             };
             // Make the request
-            IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(request);
+            gcscv::IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(request);
             // End snippet
         }
 
@@ -2850,12 +2853,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateFolderIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            gcscv::IntelligenceConfig intelligenceConfig = new gcscv::IntelligenceConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(intelligenceConfig, updateMask);
+            gcscv::IntelligenceConfig response = storageControlClient.UpdateFolderIntelligenceConfig(intelligenceConfig, updateMask);
             // End snippet
         }
 
@@ -2865,12 +2868,12 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateFolderIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
             // Additional: UpdateFolderIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            gcscv::IntelligenceConfig intelligenceConfig = new gcscv::IntelligenceConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            gcscv::IntelligenceConfig response = await storageControlClient.UpdateFolderIntelligenceConfigAsync(intelligenceConfig, updateMask);
             // End snippet
         }
 
@@ -2879,14 +2882,14 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetOrganizationIntelligenceConfig(GetOrganizationIntelligenceConfigRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            GetOrganizationIntelligenceConfigRequest request = new GetOrganizationIntelligenceConfigRequest
+            gcscv::GetOrganizationIntelligenceConfigRequest request = new gcscv::GetOrganizationIntelligenceConfigRequest
             {
-                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+                IntelligenceConfigName = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
             };
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(request);
+            gcscv::IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(request);
             // End snippet
         }
 
@@ -2896,14 +2899,14 @@ namespace GoogleCSharpSnippets
             // Snippet: GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CallSettings)
             // Additional: GetOrganizationIntelligenceConfigAsync(GetOrganizationIntelligenceConfigRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            GetOrganizationIntelligenceConfigRequest request = new GetOrganizationIntelligenceConfigRequest
+            gcscv::GetOrganizationIntelligenceConfigRequest request = new gcscv::GetOrganizationIntelligenceConfigRequest
             {
-                IntelligenceConfigName = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
+                IntelligenceConfigName = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]"),
             };
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(request);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(request);
             // End snippet
         }
 
@@ -2912,11 +2915,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetOrganizationIntelligenceConfig(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(name);
+            gcscv::IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(name);
             // End snippet
         }
 
@@ -2926,11 +2929,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetOrganizationIntelligenceConfigAsync(string, CallSettings)
             // Additional: GetOrganizationIntelligenceConfigAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string name = "folders/[FOLDER]/locations/[LOCATION]/intelligenceConfig";
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(name);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(name);
             // End snippet
         }
 
@@ -2939,11 +2942,11 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetOrganizationIntelligenceConfig(IntelligenceConfigName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            gcscv::IntelligenceConfigName name = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
             // Make the request
-            IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(name);
+            gcscv::IntelligenceConfig response = storageControlClient.GetOrganizationIntelligenceConfig(name);
             // End snippet
         }
 
@@ -2953,11 +2956,11 @@ namespace GoogleCSharpSnippets
             // Snippet: GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName, CallSettings)
             // Additional: GetOrganizationIntelligenceConfigAsync(IntelligenceConfigName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            IntelligenceConfigName name = IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
+            gcscv::IntelligenceConfigName name = gcscv::IntelligenceConfigName.FromFolderLocation("[FOLDER]", "[LOCATION]");
             // Make the request
-            IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(name);
+            gcscv::IntelligenceConfig response = await storageControlClient.GetOrganizationIntelligenceConfigAsync(name);
             // End snippet
         }
 
@@ -2966,16 +2969,16 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateOrganizationIntelligenceConfig(UpdateOrganizationIntelligenceConfigRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            UpdateOrganizationIntelligenceConfigRequest request = new UpdateOrganizationIntelligenceConfigRequest
+            gcscv::UpdateOrganizationIntelligenceConfigRequest request = new gcscv::UpdateOrganizationIntelligenceConfigRequest
             {
-                IntelligenceConfig = new IntelligenceConfig(),
+                IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
                 RequestId = "",
             };
             // Make the request
-            IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(request);
+            gcscv::IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(request);
             // End snippet
         }
 
@@ -2985,16 +2988,16 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CallSettings)
             // Additional: UpdateOrganizationIntelligenceConfigAsync(UpdateOrganizationIntelligenceConfigRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            UpdateOrganizationIntelligenceConfigRequest request = new UpdateOrganizationIntelligenceConfigRequest
+            gcscv::UpdateOrganizationIntelligenceConfigRequest request = new gcscv::UpdateOrganizationIntelligenceConfigRequest
             {
-                IntelligenceConfig = new IntelligenceConfig(),
+                IntelligenceConfig = new gcscv::IntelligenceConfig(),
                 UpdateMask = new FieldMask(),
                 RequestId = "",
             };
             // Make the request
-            IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(request);
+            gcscv::IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(request);
             // End snippet
         }
 
@@ -3003,12 +3006,12 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: UpdateOrganizationIntelligenceConfig(IntelligenceConfig, FieldMask, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
-            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            gcscv::IntelligenceConfig intelligenceConfig = new gcscv::IntelligenceConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(intelligenceConfig, updateMask);
+            gcscv::IntelligenceConfig response = storageControlClient.UpdateOrganizationIntelligenceConfig(intelligenceConfig, updateMask);
             // End snippet
         }
 
@@ -3018,12 +3021,12 @@ namespace GoogleCSharpSnippets
             // Snippet: UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CallSettings)
             // Additional: UpdateOrganizationIntelligenceConfigAsync(IntelligenceConfig, FieldMask, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
-            IntelligenceConfig intelligenceConfig = new IntelligenceConfig();
+            gcscv::IntelligenceConfig intelligenceConfig = new gcscv::IntelligenceConfig();
             FieldMask updateMask = new FieldMask();
             // Make the request
-            IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(intelligenceConfig, updateMask);
+            gcscv::IntelligenceConfig response = await storageControlClient.UpdateOrganizationIntelligenceConfigAsync(intelligenceConfig, updateMask);
             // End snippet
         }
 
@@ -3032,7 +3035,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -3050,7 +3053,7 @@ namespace GoogleCSharpSnippets
             // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
             // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             GetIamPolicyRequest request = new GetIamPolicyRequest
             {
@@ -3067,7 +3070,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetIamPolicy(string, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             // Make the request
@@ -3081,7 +3084,7 @@ namespace GoogleCSharpSnippets
             // Snippet: GetIamPolicyAsync(string, CallSettings)
             // Additional: GetIamPolicyAsync(string, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             // Make the request
@@ -3094,7 +3097,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: GetIamPolicy(IResourceName, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
@@ -3108,7 +3111,7 @@ namespace GoogleCSharpSnippets
             // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
             // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
@@ -3121,7 +3124,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -3140,7 +3143,7 @@ namespace GoogleCSharpSnippets
             // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
             // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             SetIamPolicyRequest request = new SetIamPolicyRequest
             {
@@ -3158,7 +3161,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SetIamPolicy(string, Policy, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             Policy policy = new Policy();
@@ -3173,7 +3176,7 @@ namespace GoogleCSharpSnippets
             // Snippet: SetIamPolicyAsync(string, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(string, Policy, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             Policy policy = new Policy();
@@ -3187,7 +3190,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
@@ -3202,7 +3205,7 @@ namespace GoogleCSharpSnippets
             // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
             // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             Policy policy = new Policy();
@@ -3216,7 +3219,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: TestIamPermissions(TestIamPermissionsRequest, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
@@ -3234,7 +3237,7 @@ namespace GoogleCSharpSnippets
             // Snippet: TestIamPermissionsAsync(TestIamPermissionsRequest, CallSettings)
             // Additional: TestIamPermissionsAsync(TestIamPermissionsRequest, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             TestIamPermissionsRequest request = new TestIamPermissionsRequest
             {
@@ -3251,7 +3254,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: TestIamPermissions(string, IEnumerable<string>, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             IEnumerable<string> permissions = new string[] { "", };
@@ -3266,7 +3269,7 @@ namespace GoogleCSharpSnippets
             // Snippet: TestIamPermissionsAsync(string, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(string, IEnumerable<string>, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             string resource = "a/wildcard/resource";
             IEnumerable<string> permissions = new string[] { "", };
@@ -3280,7 +3283,7 @@ namespace GoogleCSharpSnippets
         {
             // Snippet: TestIamPermissions(IResourceName, IEnumerable<string>, CallSettings)
             // Create client
-            StorageControlClient storageControlClient = StorageControlClient.Create();
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
@@ -3295,12 +3298,930 @@ namespace GoogleCSharpSnippets
             // Snippet: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CallSettings)
             // Additional: TestIamPermissionsAsync(IResourceName, IEnumerable<string>, CancellationToken)
             // Create client
-            StorageControlClient storageControlClient = await StorageControlClient.CreateAsync();
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
             // Initialize request argument(s)
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             IEnumerable<string> permissions = new string[] { "", };
             // Make the request
             TestIamPermissionsResponse response = await storageControlClient.TestIamPermissionsAsync(resource, permissions);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFinding</summary>
+        public void GetIntelligenceFindingRequestObject()
+        {
+            // Snippet: GetIntelligenceFinding(GetIntelligenceFindingRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::GetIntelligenceFindingRequest request = new gcscv::GetIntelligenceFindingRequest
+            {
+                IntelligenceFindingName = gcscv::IntelligenceFindingName.FromProjectLocationIntelligenceFinding("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]"),
+            };
+            // Make the request
+            gcscv::IntelligenceFinding response = storageControlClient.GetIntelligenceFinding(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingAsync</summary>
+        public async Task GetIntelligenceFindingRequestObjectAsync()
+        {
+            // Snippet: GetIntelligenceFindingAsync(GetIntelligenceFindingRequest, CallSettings)
+            // Additional: GetIntelligenceFindingAsync(GetIntelligenceFindingRequest, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::GetIntelligenceFindingRequest request = new gcscv::GetIntelligenceFindingRequest
+            {
+                IntelligenceFindingName = gcscv::IntelligenceFindingName.FromProjectLocationIntelligenceFinding("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]"),
+            };
+            // Make the request
+            gcscv::IntelligenceFinding response = await storageControlClient.GetIntelligenceFindingAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFinding</summary>
+        public void GetIntelligenceFinding()
+        {
+            // Snippet: GetIntelligenceFinding(string, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/intelligenceFindings/[INTELLIGENCE_FINDING]";
+            // Make the request
+            gcscv::IntelligenceFinding response = storageControlClient.GetIntelligenceFinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingAsync</summary>
+        public async Task GetIntelligenceFindingAsync()
+        {
+            // Snippet: GetIntelligenceFindingAsync(string, CallSettings)
+            // Additional: GetIntelligenceFindingAsync(string, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/intelligenceFindings/[INTELLIGENCE_FINDING]";
+            // Make the request
+            gcscv::IntelligenceFinding response = await storageControlClient.GetIntelligenceFindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFinding</summary>
+        public void GetIntelligenceFindingResourceNames()
+        {
+            // Snippet: GetIntelligenceFinding(IntelligenceFindingName, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::IntelligenceFindingName name = gcscv::IntelligenceFindingName.FromProjectLocationIntelligenceFinding("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]");
+            // Make the request
+            gcscv::IntelligenceFinding response = storageControlClient.GetIntelligenceFinding(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingAsync</summary>
+        public async Task GetIntelligenceFindingResourceNamesAsync()
+        {
+            // Snippet: GetIntelligenceFindingAsync(IntelligenceFindingName, CallSettings)
+            // Additional: GetIntelligenceFindingAsync(IntelligenceFindingName, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::IntelligenceFindingName name = gcscv::IntelligenceFindingName.FromProjectLocationIntelligenceFinding("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]");
+            // Make the request
+            gcscv::IntelligenceFinding response = await storageControlClient.GetIntelligenceFindingAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindings</summary>
+        public void ListIntelligenceFindingsRequestObject()
+        {
+            // Snippet: ListIntelligenceFindings(ListIntelligenceFindingsRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::ListIntelligenceFindingsRequest request = new gcscv::ListIntelligenceFindingsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<gcscv::ListIntelligenceFindingsResponse, gcscv::IntelligenceFinding> response = storageControlClient.ListIntelligenceFindings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::IntelligenceFinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingsAsync</summary>
+        public async Task ListIntelligenceFindingsRequestObjectAsync()
+        {
+            // Snippet: ListIntelligenceFindingsAsync(ListIntelligenceFindingsRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::ListIntelligenceFindingsRequest request = new gcscv::ListIntelligenceFindingsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListIntelligenceFindingsResponse, gcscv::IntelligenceFinding> response = storageControlClient.ListIntelligenceFindingsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::IntelligenceFinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindings</summary>
+        public void ListIntelligenceFindings()
+        {
+            // Snippet: ListIntelligenceFindings(string, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<gcscv::ListIntelligenceFindingsResponse, gcscv::IntelligenceFinding> response = storageControlClient.ListIntelligenceFindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::IntelligenceFinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingsAsync</summary>
+        public async Task ListIntelligenceFindingsAsync()
+        {
+            // Snippet: ListIntelligenceFindingsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListIntelligenceFindingsResponse, gcscv::IntelligenceFinding> response = storageControlClient.ListIntelligenceFindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::IntelligenceFinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindings</summary>
+        public void ListIntelligenceFindingsResourceNames()
+        {
+            // Snippet: ListIntelligenceFindings(LocationName, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<gcscv::ListIntelligenceFindingsResponse, gcscv::IntelligenceFinding> response = storageControlClient.ListIntelligenceFindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::IntelligenceFinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFinding> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingsAsync</summary>
+        public async Task ListIntelligenceFindingsResourceNamesAsync()
+        {
+            // Snippet: ListIntelligenceFindingsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListIntelligenceFindingsResponse, gcscv::IntelligenceFinding> response = storageControlClient.ListIntelligenceFindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::IntelligenceFinding item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFinding item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFinding> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFinding item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SummarizeIntelligenceFindings</summary>
+        public void SummarizeIntelligenceFindingsRequestObject()
+        {
+            // Snippet: SummarizeIntelligenceFindings(SummarizeIntelligenceFindingsRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::SummarizeIntelligenceFindingsRequest request = new gcscv::SummarizeIntelligenceFindingsRequest
+            {
+                Parent = "",
+                ResourceScope = gcscv::SummarizeIntelligenceFindingsRequest.Types.ResourceScope.Unspecified,
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<gcscv::SummarizeIntelligenceFindingsResponse, gcscv::FindingSummary> response = storageControlClient.SummarizeIntelligenceFindings(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::FindingSummary item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::SummarizeIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::FindingSummary item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::FindingSummary> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::FindingSummary item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SummarizeIntelligenceFindingsAsync</summary>
+        public async Task SummarizeIntelligenceFindingsRequestObjectAsync()
+        {
+            // Snippet: SummarizeIntelligenceFindingsAsync(SummarizeIntelligenceFindingsRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::SummarizeIntelligenceFindingsRequest request = new gcscv::SummarizeIntelligenceFindingsRequest
+            {
+                Parent = "",
+                ResourceScope = gcscv::SummarizeIntelligenceFindingsRequest.Types.ResourceScope.Unspecified,
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcscv::SummarizeIntelligenceFindingsResponse, gcscv::FindingSummary> response = storageControlClient.SummarizeIntelligenceFindingsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::FindingSummary item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::SummarizeIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::FindingSummary item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::FindingSummary> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::FindingSummary item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SummarizeIntelligenceFindings</summary>
+        public void SummarizeIntelligenceFindings()
+        {
+            // Snippet: SummarizeIntelligenceFindings(string, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedEnumerable<gcscv::SummarizeIntelligenceFindingsResponse, gcscv::FindingSummary> response = storageControlClient.SummarizeIntelligenceFindings(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::FindingSummary item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::SummarizeIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::FindingSummary item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::FindingSummary> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::FindingSummary item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for SummarizeIntelligenceFindingsAsync</summary>
+        public async Task SummarizeIntelligenceFindingsAsync()
+        {
+            // Snippet: SummarizeIntelligenceFindingsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "";
+            // Make the request
+            PagedAsyncEnumerable<gcscv::SummarizeIntelligenceFindingsResponse, gcscv::FindingSummary> response = storageControlClient.SummarizeIntelligenceFindingsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::FindingSummary item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::SummarizeIntelligenceFindingsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::FindingSummary item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::FindingSummary> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::FindingSummary item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingRevision</summary>
+        public void GetIntelligenceFindingRevisionRequestObject()
+        {
+            // Snippet: GetIntelligenceFindingRevision(GetIntelligenceFindingRevisionRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::GetIntelligenceFindingRevisionRequest request = new gcscv::GetIntelligenceFindingRevisionRequest
+            {
+                IntelligenceFindingRevisionName = gcscv::IntelligenceFindingRevisionName.FromProjectLocationIntelligenceFindingRevision("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]", "[REVISION]"),
+            };
+            // Make the request
+            gcscv::IntelligenceFindingRevision response = storageControlClient.GetIntelligenceFindingRevision(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingRevisionAsync</summary>
+        public async Task GetIntelligenceFindingRevisionRequestObjectAsync()
+        {
+            // Snippet: GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest, CallSettings)
+            // Additional: GetIntelligenceFindingRevisionAsync(GetIntelligenceFindingRevisionRequest, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::GetIntelligenceFindingRevisionRequest request = new gcscv::GetIntelligenceFindingRevisionRequest
+            {
+                IntelligenceFindingRevisionName = gcscv::IntelligenceFindingRevisionName.FromProjectLocationIntelligenceFindingRevision("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]", "[REVISION]"),
+            };
+            // Make the request
+            gcscv::IntelligenceFindingRevision response = await storageControlClient.GetIntelligenceFindingRevisionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingRevision</summary>
+        public void GetIntelligenceFindingRevision()
+        {
+            // Snippet: GetIntelligenceFindingRevision(string, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/intelligenceFindings/[INTELLIGENCE_FINDING]/revisions/[REVISION]";
+            // Make the request
+            gcscv::IntelligenceFindingRevision response = storageControlClient.GetIntelligenceFindingRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingRevisionAsync</summary>
+        public async Task GetIntelligenceFindingRevisionAsync()
+        {
+            // Snippet: GetIntelligenceFindingRevisionAsync(string, CallSettings)
+            // Additional: GetIntelligenceFindingRevisionAsync(string, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/intelligenceFindings/[INTELLIGENCE_FINDING]/revisions/[REVISION]";
+            // Make the request
+            gcscv::IntelligenceFindingRevision response = await storageControlClient.GetIntelligenceFindingRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingRevision</summary>
+        public void GetIntelligenceFindingRevisionResourceNames()
+        {
+            // Snippet: GetIntelligenceFindingRevision(IntelligenceFindingRevisionName, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::IntelligenceFindingRevisionName name = gcscv::IntelligenceFindingRevisionName.FromProjectLocationIntelligenceFindingRevision("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]", "[REVISION]");
+            // Make the request
+            gcscv::IntelligenceFindingRevision response = storageControlClient.GetIntelligenceFindingRevision(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIntelligenceFindingRevisionAsync</summary>
+        public async Task GetIntelligenceFindingRevisionResourceNamesAsync()
+        {
+            // Snippet: GetIntelligenceFindingRevisionAsync(IntelligenceFindingRevisionName, CallSettings)
+            // Additional: GetIntelligenceFindingRevisionAsync(IntelligenceFindingRevisionName, CancellationToken)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::IntelligenceFindingRevisionName name = gcscv::IntelligenceFindingRevisionName.FromProjectLocationIntelligenceFindingRevision("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]", "[REVISION]");
+            // Make the request
+            gcscv::IntelligenceFindingRevision response = await storageControlClient.GetIntelligenceFindingRevisionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingRevisions</summary>
+        public void ListIntelligenceFindingRevisionsRequestObject()
+        {
+            // Snippet: ListIntelligenceFindingRevisions(ListIntelligenceFindingRevisionsRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::ListIntelligenceFindingRevisionsRequest request = new gcscv::ListIntelligenceFindingRevisionsRequest
+            {
+                ParentAsIntelligenceFindingName = gcscv::IntelligenceFindingName.FromProjectLocationIntelligenceFinding("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]"),
+            };
+            // Make the request
+            PagedEnumerable<gcscv::ListIntelligenceFindingRevisionsResponse, gcscv::IntelligenceFindingRevision> response = storageControlClient.ListIntelligenceFindingRevisions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::IntelligenceFindingRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListIntelligenceFindingRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFindingRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFindingRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFindingRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingRevisionsAsync</summary>
+        public async Task ListIntelligenceFindingRevisionsRequestObjectAsync()
+        {
+            // Snippet: ListIntelligenceFindingRevisionsAsync(ListIntelligenceFindingRevisionsRequest, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::ListIntelligenceFindingRevisionsRequest request = new gcscv::ListIntelligenceFindingRevisionsRequest
+            {
+                ParentAsIntelligenceFindingName = gcscv::IntelligenceFindingName.FromProjectLocationIntelligenceFinding("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListIntelligenceFindingRevisionsResponse, gcscv::IntelligenceFindingRevision> response = storageControlClient.ListIntelligenceFindingRevisionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::IntelligenceFindingRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListIntelligenceFindingRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFindingRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFindingRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFindingRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingRevisions</summary>
+        public void ListIntelligenceFindingRevisions()
+        {
+            // Snippet: ListIntelligenceFindingRevisions(string, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/intelligenceFindings/[INTELLIGENCE_FINDING]";
+            // Make the request
+            PagedEnumerable<gcscv::ListIntelligenceFindingRevisionsResponse, gcscv::IntelligenceFindingRevision> response = storageControlClient.ListIntelligenceFindingRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::IntelligenceFindingRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListIntelligenceFindingRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFindingRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFindingRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFindingRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingRevisionsAsync</summary>
+        public async Task ListIntelligenceFindingRevisionsAsync()
+        {
+            // Snippet: ListIntelligenceFindingRevisionsAsync(string, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/intelligenceFindings/[INTELLIGENCE_FINDING]";
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListIntelligenceFindingRevisionsResponse, gcscv::IntelligenceFindingRevision> response = storageControlClient.ListIntelligenceFindingRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::IntelligenceFindingRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListIntelligenceFindingRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFindingRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFindingRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFindingRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingRevisions</summary>
+        public void ListIntelligenceFindingRevisionsResourceNames()
+        {
+            // Snippet: ListIntelligenceFindingRevisions(IntelligenceFindingName, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = gcscv::StorageControlClient.Create();
+            // Initialize request argument(s)
+            gcscv::IntelligenceFindingName parent = gcscv::IntelligenceFindingName.FromProjectLocationIntelligenceFinding("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]");
+            // Make the request
+            PagedEnumerable<gcscv::ListIntelligenceFindingRevisionsResponse, gcscv::IntelligenceFindingRevision> response = storageControlClient.ListIntelligenceFindingRevisions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (gcscv::IntelligenceFindingRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (gcscv::ListIntelligenceFindingRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFindingRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFindingRevision> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFindingRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListIntelligenceFindingRevisionsAsync</summary>
+        public async Task ListIntelligenceFindingRevisionsResourceNamesAsync()
+        {
+            // Snippet: ListIntelligenceFindingRevisionsAsync(IntelligenceFindingName, string, int?, CallSettings)
+            // Create client
+            gcscv::StorageControlClient storageControlClient = await gcscv::StorageControlClient.CreateAsync();
+            // Initialize request argument(s)
+            gcscv::IntelligenceFindingName parent = gcscv::IntelligenceFindingName.FromProjectLocationIntelligenceFinding("[PROJECT]", "[LOCATION]", "[INTELLIGENCE_FINDING]");
+            // Make the request
+            PagedAsyncEnumerable<gcscv::ListIntelligenceFindingRevisionsResponse, gcscv::IntelligenceFindingRevision> response = storageControlClient.ListIntelligenceFindingRevisionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (gcscv::IntelligenceFindingRevision item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (gcscv::ListIntelligenceFindingRevisionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (gcscv::IntelligenceFindingRevision item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<gcscv::IntelligenceFindingRevision> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (gcscv::IntelligenceFindingRevision item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

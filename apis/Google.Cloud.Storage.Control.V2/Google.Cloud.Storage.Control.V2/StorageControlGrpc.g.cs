@@ -141,6 +141,26 @@ namespace Google.Cloud.Storage.Control.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest> __Marshaller_google_storage_control_v2_GetIntelligenceFindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.IntelligenceFinding> __Marshaller_google_storage_control_v2_IntelligenceFinding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.IntelligenceFinding.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest> __Marshaller_google_storage_control_v2_ListIntelligenceFindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse> __Marshaller_google_storage_control_v2_ListIntelligenceFindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest> __Marshaller_google_storage_control_v2_SummarizeIntelligenceFindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse> __Marshaller_google_storage_control_v2_SummarizeIntelligenceFindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest> __Marshaller_google_storage_control_v2_GetIntelligenceFindingRevisionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision> __Marshaller_google_storage_control_v2_IntelligenceFindingRevision = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest> __Marshaller_google_storage_control_v2_ListIntelligenceFindingRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse> __Marshaller_google_storage_control_v2_ListIntelligenceFindingRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder> __Method_CreateFolder = new grpc::Method<global::Google.Cloud.Storage.Control.V2.CreateFolderRequest, global::Google.Cloud.Storage.Control.V2.Folder>(
@@ -357,6 +377,46 @@ namespace Google.Cloud.Storage.Control.V2 {
         "TestIamPermissions",
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceFinding> __Method_GetIntelligenceFinding = new grpc::Method<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceFinding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIntelligenceFinding",
+        __Marshaller_google_storage_control_v2_GetIntelligenceFindingRequest,
+        __Marshaller_google_storage_control_v2_IntelligenceFinding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse> __Method_ListIntelligenceFindings = new grpc::Method<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListIntelligenceFindings",
+        __Marshaller_google_storage_control_v2_ListIntelligenceFindingsRequest,
+        __Marshaller_google_storage_control_v2_ListIntelligenceFindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest, global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse> __Method_SummarizeIntelligenceFindings = new grpc::Method<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest, global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SummarizeIntelligenceFindings",
+        __Marshaller_google_storage_control_v2_SummarizeIntelligenceFindingsRequest,
+        __Marshaller_google_storage_control_v2_SummarizeIntelligenceFindingsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision> __Method_GetIntelligenceFindingRevision = new grpc::Method<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIntelligenceFindingRevision",
+        __Marshaller_google_storage_control_v2_GetIntelligenceFindingRevisionRequest,
+        __Marshaller_google_storage_control_v2_IntelligenceFindingRevision);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse> __Method_ListIntelligenceFindingRevisions = new grpc::Method<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListIntelligenceFindingRevisions",
+        __Marshaller_google_storage_control_v2_ListIntelligenceFindingRevisionsRequest,
+        __Marshaller_google_storage_control_v2_ListIntelligenceFindingRevisionsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -714,6 +774,67 @@ namespace Google.Cloud.Storage.Control.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the `IntelligenceFinding` for a project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.IntelligenceFinding> GetIntelligenceFinding(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists the `IntelligenceFinding` resources for the specified project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse> ListIntelligenceFindings(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Summarize the intelligence findings for the specified scope(org, folder or
+      /// project).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse> SummarizeIntelligenceFindings(global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the `IntelligenceFindingRevision` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision> GetIntelligenceFindingRevision(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the revisions of an `IntelligenceFinding` resource.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse> ListIntelligenceFindingRevisions(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2147,6 +2268,250 @@ namespace Google.Cloud.Storage.Control.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
+      /// <summary>
+      /// Gets the `IntelligenceFinding` for a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceFinding GetIntelligenceFinding(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIntelligenceFinding(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the `IntelligenceFinding` for a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceFinding GetIntelligenceFinding(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIntelligenceFinding, null, options, request);
+      }
+      /// <summary>
+      /// Gets the `IntelligenceFinding` for a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceFinding> GetIntelligenceFindingAsync(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIntelligenceFindingAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the `IntelligenceFinding` for a project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceFinding> GetIntelligenceFindingAsync(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIntelligenceFinding, null, options, request);
+      }
+      /// <summary>
+      /// Lists the `IntelligenceFinding` resources for the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse ListIntelligenceFindings(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIntelligenceFindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the `IntelligenceFinding` resources for the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse ListIntelligenceFindings(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListIntelligenceFindings, null, options, request);
+      }
+      /// <summary>
+      /// Lists the `IntelligenceFinding` resources for the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse> ListIntelligenceFindingsAsync(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIntelligenceFindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists the `IntelligenceFinding` resources for the specified project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse> ListIntelligenceFindingsAsync(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListIntelligenceFindings, null, options, request);
+      }
+      /// <summary>
+      /// Summarize the intelligence findings for the specified scope(org, folder or
+      /// project).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse SummarizeIntelligenceFindings(global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SummarizeIntelligenceFindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Summarize the intelligence findings for the specified scope(org, folder or
+      /// project).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse SummarizeIntelligenceFindings(global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SummarizeIntelligenceFindings, null, options, request);
+      }
+      /// <summary>
+      /// Summarize the intelligence findings for the specified scope(org, folder or
+      /// project).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse> SummarizeIntelligenceFindingsAsync(global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SummarizeIntelligenceFindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Summarize the intelligence findings for the specified scope(org, folder or
+      /// project).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse> SummarizeIntelligenceFindingsAsync(global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SummarizeIntelligenceFindings, null, options, request);
+      }
+      /// <summary>
+      /// Gets the `IntelligenceFindingRevision` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision GetIntelligenceFindingRevision(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIntelligenceFindingRevision(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the `IntelligenceFindingRevision` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision GetIntelligenceFindingRevision(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIntelligenceFindingRevision, null, options, request);
+      }
+      /// <summary>
+      /// Gets the `IntelligenceFindingRevision` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIntelligenceFindingRevisionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the `IntelligenceFindingRevision` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision> GetIntelligenceFindingRevisionAsync(global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIntelligenceFindingRevision, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the revisions of an `IntelligenceFinding` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse ListIntelligenceFindingRevisions(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIntelligenceFindingRevisions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the revisions of an `IntelligenceFinding` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse ListIntelligenceFindingRevisions(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListIntelligenceFindingRevisions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the revisions of an `IntelligenceFinding` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse> ListIntelligenceFindingRevisionsAsync(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListIntelligenceFindingRevisionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the revisions of an `IntelligenceFinding` resource.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse> ListIntelligenceFindingRevisionsAsync(global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListIntelligenceFindingRevisions, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override StorageControlClient NewInstance(ClientBaseConfiguration configuration)
@@ -2187,7 +2552,12 @@ namespace Google.Cloud.Storage.Control.V2 {
           .AddMethod(__Method_UpdateOrganizationIntelligenceConfig, serviceImpl.UpdateOrganizationIntelligenceConfig)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
-          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_GetIntelligenceFinding, serviceImpl.GetIntelligenceFinding)
+          .AddMethod(__Method_ListIntelligenceFindings, serviceImpl.ListIntelligenceFindings)
+          .AddMethod(__Method_SummarizeIntelligenceFindings, serviceImpl.SummarizeIntelligenceFindings)
+          .AddMethod(__Method_GetIntelligenceFindingRevision, serviceImpl.GetIntelligenceFindingRevision)
+          .AddMethod(__Method_ListIntelligenceFindingRevisions, serviceImpl.ListIntelligenceFindingRevisions).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2224,6 +2594,11 @@ namespace Google.Cloud.Storage.Control.V2 {
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_GetIntelligenceFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceFinding>(serviceImpl.GetIntelligenceFinding));
+      serviceBinder.AddMethod(__Method_ListIntelligenceFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsRequest, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingsResponse>(serviceImpl.ListIntelligenceFindings));
+      serviceBinder.AddMethod(__Method_SummarizeIntelligenceFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsRequest, global::Google.Cloud.Storage.Control.V2.SummarizeIntelligenceFindingsResponse>(serviceImpl.SummarizeIntelligenceFindings));
+      serviceBinder.AddMethod(__Method_GetIntelligenceFindingRevision, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.GetIntelligenceFindingRevisionRequest, global::Google.Cloud.Storage.Control.V2.IntelligenceFindingRevision>(serviceImpl.GetIntelligenceFindingRevision));
+      serviceBinder.AddMethod(__Method_ListIntelligenceFindingRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsRequest, global::Google.Cloud.Storage.Control.V2.ListIntelligenceFindingRevisionsResponse>(serviceImpl.ListIntelligenceFindingRevisions));
     }
 
   }
