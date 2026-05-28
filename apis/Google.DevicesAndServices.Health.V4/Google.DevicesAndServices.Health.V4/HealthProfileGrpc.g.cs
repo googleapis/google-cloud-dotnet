@@ -79,6 +79,18 @@ namespace Google.DevicesAndServices.Health.V4 {
     static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.GetIdentityRequest> __Marshaller_google_devicesandservices_health_v4_GetIdentityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.GetIdentityRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.Identity> __Marshaller_google_devicesandservices_health_v4_Identity = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.Identity.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest> __Marshaller_google_devicesandservices_health_v4_GetIrnProfileRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.IrnProfile> __Marshaller_google_devicesandservices_health_v4_IrnProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.IrnProfile.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest> __Marshaller_google_devicesandservices_health_v4_GetPairedDeviceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.PairedDevice> __Marshaller_google_devicesandservices_health_v4_PairedDevice = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.PairedDevice.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest> __Marshaller_google_devicesandservices_health_v4_ListPairedDevicesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse> __Marshaller_google_devicesandservices_health_v4_ListPairedDevicesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.GetProfileRequest, global::Google.DevicesAndServices.Health.V4.Profile> __Method_GetProfile = new grpc::Method<global::Google.DevicesAndServices.Health.V4.GetProfileRequest, global::Google.DevicesAndServices.Health.V4.Profile>(
@@ -119,6 +131,30 @@ namespace Google.DevicesAndServices.Health.V4 {
         "GetIdentity",
         __Marshaller_google_devicesandservices_health_v4_GetIdentityRequest,
         __Marshaller_google_devicesandservices_health_v4_Identity);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest, global::Google.DevicesAndServices.Health.V4.IrnProfile> __Method_GetIrnProfile = new grpc::Method<global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest, global::Google.DevicesAndServices.Health.V4.IrnProfile>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIrnProfile",
+        __Marshaller_google_devicesandservices_health_v4_GetIrnProfileRequest,
+        __Marshaller_google_devicesandservices_health_v4_IrnProfile);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest, global::Google.DevicesAndServices.Health.V4.PairedDevice> __Method_GetPairedDevice = new grpc::Method<global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest, global::Google.DevicesAndServices.Health.V4.PairedDevice>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetPairedDevice",
+        __Marshaller_google_devicesandservices_health_v4_GetPairedDeviceRequest,
+        __Marshaller_google_devicesandservices_health_v4_PairedDevice);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest, global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse> __Method_ListPairedDevices = new grpc::Method<global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest, global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListPairedDevices",
+        __Marshaller_google_devicesandservices_health_v4_ListPairedDevicesRequest,
+        __Marshaller_google_devicesandservices_health_v4_ListPairedDevicesResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -189,6 +225,42 @@ namespace Google.DevicesAndServices.Health.V4 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.DevicesAndServices.Health.V4.Identity> GetIdentity(global::Google.DevicesAndServices.Health.V4.GetIdentityRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns user's IRN Profile details.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.DevicesAndServices.Health.V4.IrnProfile> GetIrnProfile(global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns user's Device.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.DevicesAndServices.Health.V4.PairedDevice> GetPairedDevice(global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns the user's list of paired 1P trackers and smartwatches.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse> ListPairedDevices(global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -474,6 +546,150 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIdentity, null, options, request);
       }
+      /// <summary>
+      /// Returns user's IRN Profile details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.IrnProfile GetIrnProfile(global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIrnProfile(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns user's IRN Profile details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.IrnProfile GetIrnProfile(global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIrnProfile, null, options, request);
+      }
+      /// <summary>
+      /// Returns user's IRN Profile details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.IrnProfile> GetIrnProfileAsync(global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIrnProfileAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns user's IRN Profile details.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.IrnProfile> GetIrnProfileAsync(global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIrnProfile, null, options, request);
+      }
+      /// <summary>
+      /// Returns user's Device.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.PairedDevice GetPairedDevice(global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPairedDevice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns user's Device.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.PairedDevice GetPairedDevice(global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetPairedDevice, null, options, request);
+      }
+      /// <summary>
+      /// Returns user's Device.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.PairedDevice> GetPairedDeviceAsync(global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetPairedDeviceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns user's Device.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.PairedDevice> GetPairedDeviceAsync(global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetPairedDevice, null, options, request);
+      }
+      /// <summary>
+      /// Returns the user's list of paired 1P trackers and smartwatches.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse ListPairedDevices(global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPairedDevices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the user's list of paired 1P trackers and smartwatches.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse ListPairedDevices(global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListPairedDevices, null, options, request);
+      }
+      /// <summary>
+      /// Returns the user's list of paired 1P trackers and smartwatches.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse> ListPairedDevicesAsync(global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListPairedDevicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns the user's list of paired 1P trackers and smartwatches.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse> ListPairedDevicesAsync(global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListPairedDevices, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override HealthProfileServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -492,7 +708,10 @@ namespace Google.DevicesAndServices.Health.V4 {
           .AddMethod(__Method_UpdateProfile, serviceImpl.UpdateProfile)
           .AddMethod(__Method_GetSettings, serviceImpl.GetSettings)
           .AddMethod(__Method_UpdateSettings, serviceImpl.UpdateSettings)
-          .AddMethod(__Method_GetIdentity, serviceImpl.GetIdentity).Build();
+          .AddMethod(__Method_GetIdentity, serviceImpl.GetIdentity)
+          .AddMethod(__Method_GetIrnProfile, serviceImpl.GetIrnProfile)
+          .AddMethod(__Method_GetPairedDevice, serviceImpl.GetPairedDevice)
+          .AddMethod(__Method_ListPairedDevices, serviceImpl.ListPairedDevices).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -507,6 +726,9 @@ namespace Google.DevicesAndServices.Health.V4 {
       serviceBinder.AddMethod(__Method_GetSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.GetSettingsRequest, global::Google.DevicesAndServices.Health.V4.Settings>(serviceImpl.GetSettings));
       serviceBinder.AddMethod(__Method_UpdateSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.UpdateSettingsRequest, global::Google.DevicesAndServices.Health.V4.Settings>(serviceImpl.UpdateSettings));
       serviceBinder.AddMethod(__Method_GetIdentity, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.GetIdentityRequest, global::Google.DevicesAndServices.Health.V4.Identity>(serviceImpl.GetIdentity));
+      serviceBinder.AddMethod(__Method_GetIrnProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.GetIrnProfileRequest, global::Google.DevicesAndServices.Health.V4.IrnProfile>(serviceImpl.GetIrnProfile));
+      serviceBinder.AddMethod(__Method_GetPairedDevice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest, global::Google.DevicesAndServices.Health.V4.PairedDevice>(serviceImpl.GetPairedDevice));
+      serviceBinder.AddMethod(__Method_ListPairedDevices, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest, global::Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse>(serviceImpl.ListPairedDevices));
     }
 
   }

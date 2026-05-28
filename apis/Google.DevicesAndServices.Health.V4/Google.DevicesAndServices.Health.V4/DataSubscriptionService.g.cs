@@ -48,65 +48,111 @@ namespace Google.DevicesAndServices.Health.V4 {
             "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBASJl",
             "ChdEZWxldGVTdWJzY3JpYmVyUmVxdWVzdBI2CgRuYW1lGAEgASgJQijgQQL6",
             "QSIKIGhlYWx0aC5nb29nbGVhcGlzLmNvbS9TdWJzY3JpYmVyEhIKBWZvcmNl",
-            "GAIgASgIQgPgQQEi4QQKClN1YnNjcmliZXISEQoEbmFtZRgBIAEoCUID4EEI",
-            "EhkKDGVuZHBvaW50X3VyaRgCIAEoCUID4EECEjQKC2NyZWF0ZV90aW1lGAMg",
-            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
-            "ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "ElYKEnN1YnNjcmliZXJfY29uZmlncxgFIAMoCzI1Lmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0LlN1YnNjcmliZXJDb25maWdCA+BBARJf",
-            "ChZlbmRwb2ludF9hdXRob3JpemF0aW9uGAcgASgLMjouZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRW5kcG9pbnRBdXRob3JpemF0aW9u",
-            "QgPgQQISSQoFc3RhdGUYBiABKA4yNS5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5TdWJzY3JpYmVyLlN0YXRlQgPgQQMiSAoFU3RhdGUS",
-            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIOCgpVTlZFUklGSUVEEAESCgoGQUNU",
-            "SVZFEAISDAoISU5BQ1RJVkUQAzpr6kFoCiBoZWFsdGguZ29vZ2xlYXBpcy5j",
-            "b20vU3Vic2NyaWJlchIrcHJvamVjdHMve3Byb2plY3R9L3N1YnNjcmliZXJz",
-            "L3tzdWJzY3JpYmVyfSoLc3Vic2NyaWJlcnMyCnN1YnNjcmliZXIiqgIKEFN1",
-            "YnNjcmliZXJDb25maWcSOgoKZGF0YV90eXBlcxgBIAMoCUIm4EEC+kEgCh5o",
-            "ZWFsdGguZ29vZ2xlYXBpcy5jb20vRGF0YVR5cGUSdwoac3Vic2NyaXB0aW9u",
-            "X2NyZWF0ZV9wb2xpY3kYAiABKA4yTi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5TdWJzY3JpYmVyQ29uZmlnLlN1YnNjcmlwdGlvbkNy",
-            "ZWF0ZVBvbGljeUID4EECImEKGFN1YnNjcmlwdGlvbkNyZWF0ZVBvbGljeRIq",
-            "CiZTVUJTQ1JJUFRJT05fQ1JFQVRFX1BPTElDWV9VTlNQRUNJRklFRBAAEg0K",
-            "CUFVVE9NQVRJQxABEgoKBk1BTlVBTBACIkgKFUVuZHBvaW50QXV0aG9yaXph",
-            "dGlvbhIWCgZzZWNyZXQYASABKAlCBuBBAuBBBBIXCgpzZWNyZXRfc2V0GAIg",
-            "ASgIQgPgQQMi7QEKF0NyZWF0ZVN1YnNjcmliZXJQYXlsb2FkEhkKDGVuZHBv",
-            "aW50X3VyaRgBIAEoCUID4EECElYKEnN1YnNjcmliZXJfY29uZmlncxgCIAMo",
-            "CzI1Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlN1YnNj",
-            "cmliZXJDb25maWdCA+BBARJfChZlbmRwb2ludF9hdXRob3JpemF0aW9uGAMg",
-            "ASgLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRW5k",
-            "cG9pbnRBdXRob3JpemF0aW9uQgPgQQIiGgoYQ3JlYXRlU3Vic2NyaWJlck1l",
-            "dGFkYXRhIhoKGFVwZGF0ZVN1YnNjcmliZXJNZXRhZGF0YSIaChhEZWxldGVT",
-            "dWJzY3JpYmVyTWV0YWRhdGEy8wcKF0RhdGFTdWJzY3JpcHRpb25TZXJ2aWNl",
-            "EvQBChBDcmVhdGVTdWJzY3JpYmVyEjwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuQ3JlYXRlU3Vic2NyaWJlclJlcXVlc3QaHS5nb29n",
-            "bGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoIBykEmCgpTdWJzY3JpYmVyEhhD",
-            "cmVhdGVTdWJzY3JpYmVyTWV0YWRhdGHaQR9wYXJlbnQsc3Vic2NyaWJlcixz",
-            "dWJzY3JpYmVyX2lkgtPkkwIxIiMvdjQve3BhcmVudD1wcm9qZWN0cy8qfS9z",
-            "dWJzY3JpYmVyczoKc3Vic2NyaWJlchLCAQoPTGlzdFN1YnNjcmliZXJzEjsu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuTGlzdFN1YnNj",
-            "cmliZXJzUmVxdWVzdBo8Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0Lkxpc3RTdWJzY3JpYmVyc1Jlc3BvbnNlIjTaQQZwYXJlbnSC0+ST",
-            "AiUSIy92NC97cGFyZW50PXByb2plY3RzLyp9L3N1YnNjcmliZXJzEvYBChBV",
-            "cGRhdGVTdWJzY3JpYmVyEjwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjQuVXBkYXRlU3Vic2NyaWJlclJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIoQBykEmCgpTdWJzY3JpYmVyEhhVcGRhdGVT",
-            "dWJzY3JpYmVyTWV0YWRhdGHaQRZzdWJzY3JpYmVyLHVwZGF0ZV9tYXNrgtPk",
-            "kwI8Mi4vdjQve3N1YnNjcmliZXIubmFtZT1wcm9qZWN0cy8qL3N1YnNjcmli",
-            "ZXJzLyp9OgpzdWJzY3JpYmVyEtcBChBEZWxldGVTdWJzY3JpYmVyEjwuZ29v",
-            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGVsZXRlU3Vic2Ny",
-            "aWJlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uImbK",
-            "QTEKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIYRGVsZXRlU3Vic2NyaWJlck1l",
-            "dGFkYXRh2kEEbmFtZYLT5JMCJSojL3Y0L3tuYW1lPXByb2plY3RzLyovc3Vi",
-            "c2NyaWJlcnMvKn0aScpBFWhlYWx0aC5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CkgIK",
-            "J2NvbS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NEIcRGF0",
-            "YVN1YnNjcmlwdGlvblNlcnZpY2VQcm90b1ABWlJnb29nbGUuZ29sYW5nLm9y",
-            "Zy9nZW5wcm90by9nb29nbGVhcGlzL2RldmljZXNhbmRzZXJ2aWNlcy9oZWFs",
-            "dGgvYXBpdjRtYWluO2hlYWx0aHBiqgIjR29vZ2xlLkRldmljZXNBbmRTZXJ2",
-            "aWNlcy5IZWFsdGguVjTKAiNHb29nbGVcRGV2aWNlc0FuZFNlcnZpY2VzXEhl",
-            "YWx0aFxWNOoCJkdvb2dsZTo6RGV2aWNlc0FuZFNlcnZpY2VzOjpIZWFsdGg6",
-            "OlY0YgZwcm90bzM="));
+            "GAIgASgIQgPgQQEi0AEKGUNyZWF0ZVN1YnNjcmlwdGlvblJlcXVlc3QSOgoG",
+            "cGFyZW50GAEgASgJQirgQQL6QSQSImhlYWx0aC5nb29nbGVhcGlzLmNvbS9T",
+            "dWJzY3JpcHRpb24SHAoPc3Vic2NyaXB0aW9uX2lkGAIgASgJQgPgQQESWQoM",
+            "c3Vic2NyaXB0aW9uGAMgASgLMj4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuQ3JlYXRlU3Vic2NyaXB0aW9uUGF5bG9hZEID4EECIpwB",
+            "ChhMaXN0U3Vic2NyaXB0aW9uc1JlcXVlc3QSOgoGcGFyZW50GAEgASgJQirg",
+            "QQL6QSQSImhlYWx0aC5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24SEwoG",
+            "ZmlsdGVyGAIgASgJQgPgQQESFgoJcGFnZV9zaXplGAMgASgFQgPgQQESFwoK",
+            "cGFnZV90b2tlbhgEIAEoCUID4EEBIn4KGUxpc3RTdWJzY3JpcHRpb25zUmVz",
+            "cG9uc2USSAoNc3Vic2NyaXB0aW9ucxgBIAMoCzIxLmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LlN1YnNjcmlwdGlvbhIXCg9uZXh0X3Bh",
+            "Z2VfdG9rZW4YAiABKAkinwEKGVVwZGF0ZVN1YnNjcmlwdGlvblJlcXVlc3QS",
+            "TAoMc3Vic2NyaXB0aW9uGAEgASgLMjEuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuU3Vic2NyaXB0aW9uQgPgQQISNAoLdXBkYXRlX21h",
+            "c2sYAiABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQEiVQoZ",
+            "RGVsZXRlU3Vic2NyaXB0aW9uUmVxdWVzdBI4CgRuYW1lGAEgASgJQirgQQL6",
+            "QSQKImhlYWx0aC5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24i4QQKClN1",
+            "YnNjcmliZXISEQoEbmFtZRgBIAEoCUID4EEIEhkKDGVuZHBvaW50X3VyaRgC",
+            "IAEoCUID4EECEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAQgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElYKEnN1YnNjcmliZXJfY29u",
+            "ZmlncxgFIAMoCzI1Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
+            "LnY0LlN1YnNjcmliZXJDb25maWdCA+BBARJfChZlbmRwb2ludF9hdXRob3Jp",
+            "emF0aW9uGAcgASgLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
+            "dGgudjQuRW5kcG9pbnRBdXRob3JpemF0aW9uQgPgQQISSQoFc3RhdGUYBiAB",
+            "KA4yNS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TdWJz",
+            "Y3JpYmVyLlN0YXRlQgPgQQMiSAoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJ",
+            "RUQQABIOCgpVTlZFUklGSUVEEAESCgoGQUNUSVZFEAISDAoISU5BQ1RJVkUQ",
+            "Azpr6kFoCiBoZWFsdGguZ29vZ2xlYXBpcy5jb20vU3Vic2NyaWJlchIrcHJv",
+            "amVjdHMve3Byb2plY3R9L3N1YnNjcmliZXJzL3tzdWJzY3JpYmVyfSoLc3Vi",
+            "c2NyaWJlcnMyCnN1YnNjcmliZXIioQIKDFN1YnNjcmlwdGlvbhIRCgRuYW1l",
+            "GAEgASgJQgPgQQgSOgoKZGF0YV90eXBlcxgCIAMoCUIm4EEB+kEgCh5oZWFs",
+            "dGguZ29vZ2xlYXBpcy5jb20vRGF0YVR5cGUSMAoEdXNlchgDIAEoCUIi4EEF",
+            "+kEcChpoZWFsdGguZ29vZ2xlYXBpcy5jb20vVXNlcjqPAepBiwEKImhlYWx0",
+            "aC5nb29nbGVhcGlzLmNvbS9TdWJzY3JpcHRpb24SSHByb2plY3RzL3twcm9q",
+            "ZWN0fS9zdWJzY3JpYmVycy97c3Vic2NyaWJlcn0vc3Vic2NyaXB0aW9ucy97",
+            "c3Vic2NyaXB0aW9ufSoNc3Vic2NyaXB0aW9uczIMc3Vic2NyaXB0aW9uIqoC",
+            "ChBTdWJzY3JpYmVyQ29uZmlnEjoKCmRhdGFfdHlwZXMYASADKAlCJuBBAvpB",
+            "IAoeaGVhbHRoLmdvb2dsZWFwaXMuY29tL0RhdGFUeXBlEncKGnN1YnNjcmlw",
+            "dGlvbl9jcmVhdGVfcG9saWN5GAIgASgOMk4uZ29vZ2xlLmRldmljZXNhbmRz",
+            "ZXJ2aWNlcy5oZWFsdGgudjQuU3Vic2NyaWJlckNvbmZpZy5TdWJzY3JpcHRp",
+            "b25DcmVhdGVQb2xpY3lCA+BBAiJhChhTdWJzY3JpcHRpb25DcmVhdGVQb2xp",
+            "Y3kSKgomU1VCU0NSSVBUSU9OX0NSRUFURV9QT0xJQ1lfVU5TUEVDSUZJRUQQ",
+            "ABINCglBVVRPTUFUSUMQARIKCgZNQU5VQUwQAiJIChVFbmRwb2ludEF1dGhv",
+            "cml6YXRpb24SFgoGc2VjcmV0GAEgASgJQgbgQQLgQQQSFwoKc2VjcmV0X3Nl",
+            "dBgCIAEoCEID4EEDIu0BChdDcmVhdGVTdWJzY3JpYmVyUGF5bG9hZBIZCgxl",
+            "bmRwb2ludF91cmkYASABKAlCA+BBAhJWChJzdWJzY3JpYmVyX2NvbmZpZ3MY",
+            "AiADKAsyNS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5T",
+            "dWJzY3JpYmVyQ29uZmlnQgPgQQESXwoWZW5kcG9pbnRfYXV0aG9yaXphdGlv",
+            "bhgDIAEoCzI6Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
+            "LkVuZHBvaW50QXV0aG9yaXphdGlvbkID4EECIowBChlDcmVhdGVTdWJzY3Jp",
+            "cHRpb25QYXlsb2FkEjoKCmRhdGFfdHlwZXMYASADKAlCJuBBAfpBIAoeaGVh",
+            "bHRoLmdvb2dsZWFwaXMuY29tL0RhdGFUeXBlEjMKBHVzZXIYAiABKAlCJeBB",
+            "AuBBBfpBHAoaaGVhbHRoLmdvb2dsZWFwaXMuY29tL1VzZXIiGgoYQ3JlYXRl",
+            "U3Vic2NyaWJlck1ldGFkYXRhIhoKGFVwZGF0ZVN1YnNjcmliZXJNZXRhZGF0",
+            "YSIaChhEZWxldGVTdWJzY3JpYmVyTWV0YWRhdGEy+Q4KF0RhdGFTdWJzY3Jp",
+            "cHRpb25TZXJ2aWNlEvQBChBDcmVhdGVTdWJzY3JpYmVyEjwuZ29vZ2xlLmRl",
+            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQ3JlYXRlU3Vic2NyaWJlclJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoIBykEmCgpT",
+            "dWJzY3JpYmVyEhhDcmVhdGVTdWJzY3JpYmVyTWV0YWRhdGHaQR9wYXJlbnQs",
+            "c3Vic2NyaWJlcixzdWJzY3JpYmVyX2lkgtPkkwIxIiMvdjQve3BhcmVudD1w",
+            "cm9qZWN0cy8qfS9zdWJzY3JpYmVyczoKc3Vic2NyaWJlchLCAQoPTGlzdFN1",
+            "YnNjcmliZXJzEjsuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuTGlzdFN1YnNjcmliZXJzUmVxdWVzdBo8Lmdvb2dsZS5kZXZpY2VzYW5k",
+            "c2VydmljZXMuaGVhbHRoLnY0Lkxpc3RTdWJzY3JpYmVyc1Jlc3BvbnNlIjTa",
+            "QQZwYXJlbnSC0+STAiUSIy92NC97cGFyZW50PXByb2plY3RzLyp9L3N1YnNj",
+            "cmliZXJzEvYBChBVcGRhdGVTdWJzY3JpYmVyEjwuZ29vZ2xlLmRldmljZXNh",
+            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuVXBkYXRlU3Vic2NyaWJlclJlcXVlc3Qa",
+            "HS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIoQBykEmCgpTdWJzY3Jp",
+            "YmVyEhhVcGRhdGVTdWJzY3JpYmVyTWV0YWRhdGHaQRZzdWJzY3JpYmVyLHVw",
+            "ZGF0ZV9tYXNrgtPkkwI8Mi4vdjQve3N1YnNjcmliZXIubmFtZT1wcm9qZWN0",
+            "cy8qL3N1YnNjcmliZXJzLyp9OgpzdWJzY3JpYmVyEtcBChBEZWxldGVTdWJz",
+            "Y3JpYmVyEjwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "RGVsZXRlU3Vic2NyaWJlclJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
+            "T3BlcmF0aW9uImbKQTEKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIYRGVsZXRl",
+            "U3Vic2NyaWJlck1ldGFkYXRh2kEEbmFtZYLT5JMCJSojL3Y0L3tuYW1lPXBy",
+            "b2plY3RzLyovc3Vic2NyaWJlcnMvKn0S+AEKEkNyZWF0ZVN1YnNjcmlwdGlv",
+            "bhI+Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkNyZWF0",
+            "ZVN1YnNjcmlwdGlvblJlcXVlc3QaMS5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5TdWJzY3JpcHRpb24ib9pBI3BhcmVudCxzdWJzY3Jp",
+            "cHRpb24sc3Vic2NyaXB0aW9uX2lkgtPkkwJDIjMvdjQve3BhcmVudD1wcm9q",
+            "ZWN0cy8qL3N1YnNjcmliZXJzLyp9L3N1YnNjcmlwdGlvbnM6DHN1YnNjcmlw",
+            "dGlvbhLYAQoRTGlzdFN1YnNjcmlwdGlvbnMSPS5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5MaXN0U3Vic2NyaXB0aW9uc1JlcXVlc3Qa",
+            "Pi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5MaXN0U3Vi",
+            "c2NyaXB0aW9uc1Jlc3BvbnNlIkTaQQZwYXJlbnSC0+STAjUSMy92NC97cGFy",
+            "ZW50PXByb2plY3RzLyovc3Vic2NyaWJlcnMvKn0vc3Vic2NyaXB0aW9ucxL6",
+            "AQoSVXBkYXRlU3Vic2NyaXB0aW9uEj4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuVXBkYXRlU3Vic2NyaXB0aW9uUmVxdWVzdBoxLmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlN1YnNjcmlwdGlv",
+            "biJx2kEYc3Vic2NyaXB0aW9uLHVwZGF0ZV9tYXNrgtPkkwJQMkAvdjQve3N1",
+            "YnNjcmlwdGlvbi5uYW1lPXByb2plY3RzLyovc3Vic2NyaWJlcnMvKi9zdWJz",
+            "Y3JpcHRpb25zLyp9OgxzdWJzY3JpcHRpb24SsAEKEkRlbGV0ZVN1YnNjcmlw",
+            "dGlvbhI+Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRl",
+            "bGV0ZVN1YnNjcmlwdGlvblJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1w",
+            "dHkiQtpBBG5hbWWC0+STAjUqMy92NC97bmFtZT1wcm9qZWN0cy8qL3N1YnNj",
+            "cmliZXJzLyovc3Vic2NyaXB0aW9ucy8qfRpJykEVaGVhbHRoLmdvb2dsZWFw",
+            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
+            "ZC1wbGF0Zm9ybUKSAgonY29tLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0QhxEYXRhU3Vic2NyaXB0aW9uU2VydmljZVByb3RvUAFaUmdv",
+            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzL2hlYWx0aC9hcGl2NG1haW47aGVhbHRocGKqAiNHb29nbGUu",
+            "RGV2aWNlc0FuZFNlcnZpY2VzLkhlYWx0aC5WNMoCI0dvb2dsZVxEZXZpY2Vz",
+            "QW5kU2VydmljZXNcSGVhbHRoXFY06gImR29vZ2xlOjpEZXZpY2VzQW5kU2Vy",
+            "dmljZXM6OkhlYWx0aDo6VjRiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -115,10 +161,17 @@ namespace Google.DevicesAndServices.Health.V4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ListSubscribersResponse), global::Google.DevicesAndServices.Health.V4.ListSubscribersResponse.Parser, new[]{ "Subscribers", "NextPageToken", "TotalSize" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.UpdateSubscriberRequest), global::Google.DevicesAndServices.Health.V4.UpdateSubscriberRequest.Parser, new[]{ "Subscriber", "UpdateMask" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DeleteSubscriberRequest), global::Google.DevicesAndServices.Health.V4.DeleteSubscriberRequest.Parser, new[]{ "Name", "Force" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest), global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest.Parser, new[]{ "Parent", "SubscriptionId", "Subscription" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest), global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse), global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse.Parser, new[]{ "Subscriptions", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest), global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest.Parser, new[]{ "Subscription", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest), global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Subscriber), global::Google.DevicesAndServices.Health.V4.Subscriber.Parser, new[]{ "Name", "EndpointUri", "CreateTime", "UpdateTime", "SubscriberConfigs", "EndpointAuthorization", "State" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Subscriber.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Subscription), global::Google.DevicesAndServices.Health.V4.Subscription.Parser, new[]{ "Name", "DataTypes", "User" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SubscriberConfig), global::Google.DevicesAndServices.Health.V4.SubscriberConfig.Parser, new[]{ "DataTypes", "SubscriptionCreatePolicy" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.SubscriberConfig.Types.SubscriptionCreatePolicy) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.EndpointAuthorization), global::Google.DevicesAndServices.Health.V4.EndpointAuthorization.Parser, new[]{ "Secret", "SecretSet" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CreateSubscriberPayload), global::Google.DevicesAndServices.Health.V4.CreateSubscriberPayload.Parser, new[]{ "EndpointUri", "SubscriberConfigs", "EndpointAuthorization" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload), global::Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload.Parser, new[]{ "DataTypes", "User" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CreateSubscriberMetadata), global::Google.DevicesAndServices.Health.V4.CreateSubscriberMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.UpdateSubscriberMetadata), global::Google.DevicesAndServices.Health.V4.UpdateSubscriberMetadata.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DeleteSubscriberMetadata), global::Google.DevicesAndServices.Health.V4.DeleteSubscriberMetadata.Parser, null, null, null, null, null)
@@ -1516,6 +1569,1365 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// Request message for CreateSubscription.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateSubscriptionRequest : pb::IMessage<CreateSubscriptionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateSubscriptionRequest> _parser = new pb::MessageParser<CreateSubscriptionRequest>(() => new CreateSubscriptionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateSubscriptionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSubscriptionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSubscriptionRequest(CreateSubscriptionRequest other) : this() {
+      parent_ = other.parent_;
+      subscriptionId_ = other.subscriptionId_;
+      subscription_ = other.subscription_ != null ? other.subscription_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSubscriptionRequest Clone() {
+      return new CreateSubscriptionRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent subscriber.
+    /// Format: projects/{project}/subscribers/{subscriber}
+    /// The {subscriber} ID is user-settable (4-36 characters, matching
+    /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+    /// system-generated otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "subscription_id" field.</summary>
+    public const int SubscriptionIdFieldNumber = 2;
+    private string subscriptionId_ = "";
+    /// <summary>
+    /// Optional. The {subscription_id} is user-settable
+    /// (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated
+    /// otherwise.
+    /// If provided, the ID must be unique within the parent subscriber.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SubscriptionId {
+      get { return subscriptionId_; }
+      set {
+        subscriptionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "subscription" field.</summary>
+    public const int SubscriptionFieldNumber = 3;
+    private global::Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload subscription_;
+    /// <summary>
+    /// Required. The subscription to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload Subscription {
+      get { return subscription_; }
+      set {
+        subscription_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateSubscriptionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateSubscriptionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (SubscriptionId != other.SubscriptionId) return false;
+      if (!object.Equals(Subscription, other.Subscription)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (SubscriptionId.Length != 0) hash ^= SubscriptionId.GetHashCode();
+      if (subscription_ != null) hash ^= Subscription.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (SubscriptionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SubscriptionId);
+      }
+      if (subscription_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Subscription);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (SubscriptionId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(SubscriptionId);
+      }
+      if (subscription_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Subscription);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (SubscriptionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SubscriptionId);
+      }
+      if (subscription_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Subscription);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateSubscriptionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.SubscriptionId.Length != 0) {
+        SubscriptionId = other.SubscriptionId;
+      }
+      if (other.subscription_ != null) {
+        if (subscription_ == null) {
+          Subscription = new global::Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload();
+        }
+        Subscription.MergeFrom(other.Subscription);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            SubscriptionId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (subscription_ == null) {
+              Subscription = new global::Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload();
+            }
+            input.ReadMessage(Subscription);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            SubscriptionId = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (subscription_ == null) {
+              Subscription = new global::Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload();
+            }
+            input.ReadMessage(Subscription);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for ListSubscriptions.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListSubscriptionsRequest : pb::IMessage<ListSubscriptionsRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListSubscriptionsRequest> _parser = new pb::MessageParser<ListSubscriptionsRequest>(() => new ListSubscriptionsRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListSubscriptionsRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListSubscriptionsRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListSubscriptionsRequest(ListSubscriptionsRequest other) : this() {
+      parent_ = other.parent_;
+      filter_ = other.filter_;
+      pageSize_ = other.pageSize_;
+      pageToken_ = other.pageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListSubscriptionsRequest Clone() {
+      return new ListSubscriptionsRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent subscriber.
+    /// Format: projects/{project}/subscribers/{subscriber}
+    /// The {subscriber} ID is user-settable (4-36 characters, matching
+    /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+    /// system-generated otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "filter" field.</summary>
+    public const int FilterFieldNumber = 2;
+    private string filter_ = "";
+    /// <summary>
+    /// Optional. A filter to apply to the list of subscriptions.
+    /// The filter syntax is described in https://google.aip.dev/160.
+    /// The filter can be applied to the following fields:
+    /// - `user`
+    /// - `data_type`
+    ///
+    /// The `user` identifier (e.g., `user1` in `users/user1`) refers to the public
+    /// `healthUserId`
+    ///
+    /// Example: user = "users/user1"
+    /// Example: user = "users/user1" OR user = "users/user2"
+    /// Example: user = "users/user1" AND (data_type = "sleep" OR data_type =
+    /// "weight")
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Filter {
+      get { return filter_; }
+      set {
+        filter_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "page_size" field.</summary>
+    public const int PageSizeFieldNumber = 3;
+    private int pageSize_;
+    /// <summary>
+    /// Optional. The maximum number of subscriptions to return. The service may
+    /// return fewer than this value. If unspecified, at most 50 subscriptions will
+    /// be returned. The maximum value is 1000; values above 1000 will be coerced
+    /// to 1000.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int PageSize {
+      get { return pageSize_; }
+      set {
+        pageSize_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "page_token" field.</summary>
+    public const int PageTokenFieldNumber = 4;
+    private string pageToken_ = "";
+    /// <summary>
+    /// Optional. A page token, received from a previous `ListSubscriptions` call.
+    /// Provide this to retrieve the subsequent page.
+    /// When paginating, all other parameters provided to `ListSubscriptions` must
+    /// match the call that provided the page token.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PageToken {
+      get { return pageToken_; }
+      set {
+        pageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListSubscriptionsRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListSubscriptionsRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (Filter != other.Filter) return false;
+      if (PageSize != other.PageSize) return false;
+      if (PageToken != other.PageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (Filter.Length != 0) hash ^= Filter.GetHashCode();
+      if (PageSize != 0) hash ^= PageSize.GetHashCode();
+      if (PageToken.Length != 0) hash ^= PageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (Filter.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Filter);
+      }
+      if (PageSize != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (Filter.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Filter);
+      }
+      if (PageSize != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(PageSize);
+      }
+      if (PageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListSubscriptionsRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.Filter.Length != 0) {
+        Filter = other.Filter;
+      }
+      if (other.PageSize != 0) {
+        PageSize = other.PageSize;
+      }
+      if (other.PageToken.Length != 0) {
+        PageToken = other.PageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            Filter = input.ReadString();
+            break;
+          }
+          case 24: {
+            PageSize = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            PageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response message for ListSubscriptions.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ListSubscriptionsResponse : pb::IMessage<ListSubscriptionsResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ListSubscriptionsResponse> _parser = new pb::MessageParser<ListSubscriptionsResponse>(() => new ListSubscriptionsResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ListSubscriptionsResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListSubscriptionsResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListSubscriptionsResponse(ListSubscriptionsResponse other) : this() {
+      subscriptions_ = other.subscriptions_.Clone();
+      nextPageToken_ = other.nextPageToken_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ListSubscriptionsResponse Clone() {
+      return new ListSubscriptionsResponse(this);
+    }
+
+    /// <summary>Field number for the "subscriptions" field.</summary>
+    public const int SubscriptionsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.DevicesAndServices.Health.V4.Subscription> _repeated_subscriptions_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.DevicesAndServices.Health.V4.Subscription.Parser);
+    private readonly pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.Subscription> subscriptions_ = new pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.Subscription>();
+    /// <summary>
+    /// The subscriptions from the specified subscriber.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.Subscription> Subscriptions {
+      get { return subscriptions_; }
+    }
+
+    /// <summary>Field number for the "next_page_token" field.</summary>
+    public const int NextPageTokenFieldNumber = 2;
+    private string nextPageToken_ = "";
+    /// <summary>
+    /// A token, which can be sent as `page_token` to retrieve the next page.
+    /// If this field is omitted, there are no subsequent pages.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NextPageToken {
+      get { return nextPageToken_; }
+      set {
+        nextPageToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ListSubscriptionsResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ListSubscriptionsResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!subscriptions_.Equals(other.subscriptions_)) return false;
+      if (NextPageToken != other.NextPageToken) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= subscriptions_.GetHashCode();
+      if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      subscriptions_.WriteTo(output, _repeated_subscriptions_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      subscriptions_.WriteTo(ref output, _repeated_subscriptions_codec);
+      if (NextPageToken.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += subscriptions_.CalculateSize(_repeated_subscriptions_codec);
+      if (NextPageToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ListSubscriptionsResponse other) {
+      if (other == null) {
+        return;
+      }
+      subscriptions_.Add(other.subscriptions_);
+      if (other.NextPageToken.Length != 0) {
+        NextPageToken = other.NextPageToken;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            subscriptions_.AddEntriesFrom(input, _repeated_subscriptions_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            subscriptions_.AddEntriesFrom(ref input, _repeated_subscriptions_codec);
+            break;
+          }
+          case 18: {
+            NextPageToken = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for UpdateSubscription.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateSubscriptionRequest : pb::IMessage<UpdateSubscriptionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateSubscriptionRequest> _parser = new pb::MessageParser<UpdateSubscriptionRequest>(() => new UpdateSubscriptionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateSubscriptionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateSubscriptionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateSubscriptionRequest(UpdateSubscriptionRequest other) : this() {
+      subscription_ = other.subscription_ != null ? other.subscription_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateSubscriptionRequest Clone() {
+      return new UpdateSubscriptionRequest(this);
+    }
+
+    /// <summary>Field number for the "subscription" field.</summary>
+    public const int SubscriptionFieldNumber = 1;
+    private global::Google.DevicesAndServices.Health.V4.Subscription subscription_;
+    /// <summary>
+    /// Required. The subscription to update.
+    /// The subscription's `name` field is used to identify the subscription to
+    /// update. Format:
+    /// projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.Subscription Subscription {
+      get { return subscription_; }
+      set {
+        subscription_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. The list of fields to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateSubscriptionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateSubscriptionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Subscription, other.Subscription)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (subscription_ != null) hash ^= Subscription.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (subscription_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Subscription);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (subscription_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Subscription);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (subscription_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Subscription);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateSubscriptionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.subscription_ != null) {
+        if (subscription_ == null) {
+          Subscription = new global::Google.DevicesAndServices.Health.V4.Subscription();
+        }
+        Subscription.MergeFrom(other.Subscription);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (subscription_ == null) {
+              Subscription = new global::Google.DevicesAndServices.Health.V4.Subscription();
+            }
+            input.ReadMessage(Subscription);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (subscription_ == null) {
+              Subscription = new global::Google.DevicesAndServices.Health.V4.Subscription();
+            }
+            input.ReadMessage(Subscription);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for DeleteSubscription.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteSubscriptionRequest : pb::IMessage<DeleteSubscriptionRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteSubscriptionRequest> _parser = new pb::MessageParser<DeleteSubscriptionRequest>(() => new DeleteSubscriptionRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteSubscriptionRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteSubscriptionRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteSubscriptionRequest(DeleteSubscriptionRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteSubscriptionRequest Clone() {
+      return new DeleteSubscriptionRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the subscription to delete.
+    /// Format:
+    /// `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}`
+    /// Example:
+    /// `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+    /// The {subscriber} ID is user-settable (4-36 characters, matching
+    /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided during creation, or
+    /// system-generated otherwise. The {subscription} ID is user-settable (4-36
+    /// characters, matching
+    /// /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or system-generated if not provided
+    /// during creation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteSubscriptionRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteSubscriptionRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteSubscriptionRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// -- Resource Messages --
   /// A subscriber receives notifications from Google Health API.
   /// </summary>
@@ -1534,7 +2946,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2022,6 +3434,299 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// A subscription to a data collection for a specific user, to be delivered to
+  /// a subscriber.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Subscription : pb::IMessage<Subscription>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Subscription> _parser = new pb::MessageParser<Subscription>(() => new Subscription());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Subscription> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Subscription() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Subscription(Subscription other) : this() {
+      name_ = other.name_;
+      dataTypes_ = other.dataTypes_.Clone();
+      user_ = other.user_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Subscription Clone() {
+      return new Subscription(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Identifier. The resource name of the Subscription.
+    /// Format:
+    /// `projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}`
+    /// Example:
+    /// `projects/my-project/subscribers/my-subscriber-123/subscriptions/my-subscription-456`
+    /// The {project} ID is mandatory
+    /// (6-30 characters, matching /[a-z][a-z0-9-]{6,30}/)
+    /// The {subscriber} ID is user-settable
+    /// (4-36 characters, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) if provided
+    /// during creation, or system-generated otherwise. The {subscription} ID is
+    /// user-settable (4-36 chars, matching /[a-z]([a-z0-9-]{2,34}[a-z0-9])/) or
+    /// system-generated otherwise.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "data_types" field.</summary>
+    public const int DataTypesFieldNumber = 2;
+    private static readonly pb::FieldCodec<string> _repeated_dataTypes_codec
+        = pb::FieldCodec.ForString(18);
+    private readonly pbc::RepeatedField<string> dataTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Data types subscribed to.
+    /// A subscriber will only receive notifications for data types that are
+    /// declared here.
+    /// A subscription can only subscribe to the data types of the subscriber.
+    /// Supported data types are: "altitude", "distance", "floors", "sleep",
+    /// "steps", "weight".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DataTypes {
+      get { return dataTypes_; }
+    }
+
+    /// <summary>Field number for the "user" field.</summary>
+    public const int UserFieldNumber = 3;
+    private string user_ = "";
+    /// <summary>
+    /// Immutable. The resource name of the user for whom this subscription is
+    /// active. Format: `users/{user}` where `{user}` is the public `healthUserId`
+    /// as returned by the `GetIdentity` action in the profile PAPI (see
+    /// `google.devicesandservices.health.v4main.HealthProfileService.GetIdentity`).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string User {
+      get { return user_; }
+      set {
+        user_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Subscription);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Subscription other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if(!dataTypes_.Equals(other.dataTypes_)) return false;
+      if (User != other.User) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      hash ^= dataTypes_.GetHashCode();
+      if (User.Length != 0) hash ^= User.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      dataTypes_.WriteTo(output, _repeated_dataTypes_codec);
+      if (User.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(User);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      dataTypes_.WriteTo(ref output, _repeated_dataTypes_codec);
+      if (User.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(User);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      size += dataTypes_.CalculateSize(_repeated_dataTypes_codec);
+      if (User.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(User);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Subscription other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      dataTypes_.Add(other.dataTypes_);
+      if (other.User.Length != 0) {
+        User = other.User;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            dataTypes_.AddEntriesFrom(input, _repeated_dataTypes_codec);
+            break;
+          }
+          case 26: {
+            User = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 18: {
+            dataTypes_.AddEntriesFrom(ref input, _repeated_dataTypes_codec);
+            break;
+          }
+          case 26: {
+            User = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Configuration for a subscriber.
   /// A notification is sent to a subscription ONLY if the subscriber has a config
   /// for the data type.
@@ -2041,7 +3746,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2319,7 +4024,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2570,7 +4275,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2840,6 +4545,243 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// Payload for creating a subscription.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateSubscriptionPayload : pb::IMessage<CreateSubscriptionPayload>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateSubscriptionPayload> _parser = new pb::MessageParser<CreateSubscriptionPayload>(() => new CreateSubscriptionPayload());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateSubscriptionPayload> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[15]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSubscriptionPayload() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSubscriptionPayload(CreateSubscriptionPayload other) : this() {
+      dataTypes_ = other.dataTypes_.Clone();
+      user_ = other.user_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateSubscriptionPayload Clone() {
+      return new CreateSubscriptionPayload(this);
+    }
+
+    /// <summary>Field number for the "data_types" field.</summary>
+    public const int DataTypesFieldNumber = 1;
+    private static readonly pb::FieldCodec<string> _repeated_dataTypes_codec
+        = pb::FieldCodec.ForString(10);
+    private readonly pbc::RepeatedField<string> dataTypes_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Data types subscribed to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DataTypes {
+      get { return dataTypes_; }
+    }
+
+    /// <summary>Field number for the "user" field.</summary>
+    public const int UserFieldNumber = 2;
+    private string user_ = "";
+    /// <summary>
+    /// Required. Immutable. The resource name of the user for whom this
+    /// subscription is active. Format: `users/{user}` where `{user}` is the public
+    /// `healthUserId` as returned by the `GetIdentity` action in the profile PAPI
+    /// (see
+    /// `google.devicesandservices.health.v4main.HealthProfileService.GetIdentity`).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string User {
+      get { return user_; }
+      set {
+        user_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateSubscriptionPayload);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateSubscriptionPayload other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!dataTypes_.Equals(other.dataTypes_)) return false;
+      if (User != other.User) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= dataTypes_.GetHashCode();
+      if (User.Length != 0) hash ^= User.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      dataTypes_.WriteTo(output, _repeated_dataTypes_codec);
+      if (User.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(User);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      dataTypes_.WriteTo(ref output, _repeated_dataTypes_codec);
+      if (User.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(User);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += dataTypes_.CalculateSize(_repeated_dataTypes_codec);
+      if (User.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(User);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateSubscriptionPayload other) {
+      if (other == null) {
+        return;
+      }
+      dataTypes_.Add(other.dataTypes_);
+      if (other.User.Length != 0) {
+        User = other.User;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            dataTypes_.AddEntriesFrom(input, _repeated_dataTypes_codec);
+            break;
+          }
+          case 18: {
+            User = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            dataTypes_.AddEntriesFrom(ref input, _repeated_dataTypes_codec);
+            break;
+          }
+          case 18: {
+            User = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents metadata for creating a subscriber.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -2857,7 +4799,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3021,7 +4963,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3185,7 +5127,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataSubscriptionServiceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

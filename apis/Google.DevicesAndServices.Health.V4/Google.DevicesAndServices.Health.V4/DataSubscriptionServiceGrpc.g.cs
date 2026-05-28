@@ -78,6 +78,20 @@ namespace Google.DevicesAndServices.Health.V4 {
     static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.UpdateSubscriberRequest> __Marshaller_google_devicesandservices_health_v4_UpdateSubscriberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.UpdateSubscriberRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.DeleteSubscriberRequest> __Marshaller_google_devicesandservices_health_v4_DeleteSubscriberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.DeleteSubscriberRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest> __Marshaller_google_devicesandservices_health_v4_CreateSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.Subscription> __Marshaller_google_devicesandservices_health_v4_Subscription = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.Subscription.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest> __Marshaller_google_devicesandservices_health_v4_ListSubscriptionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse> __Marshaller_google_devicesandservices_health_v4_ListSubscriptionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest> __Marshaller_google_devicesandservices_health_v4_UpdateSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest> __Marshaller_google_devicesandservices_health_v4_DeleteSubscriptionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.CreateSubscriberRequest, global::Google.LongRunning.Operation> __Method_CreateSubscriber = new grpc::Method<global::Google.DevicesAndServices.Health.V4.CreateSubscriberRequest, global::Google.LongRunning.Operation>(
@@ -110,6 +124,38 @@ namespace Google.DevicesAndServices.Health.V4 {
         "DeleteSubscriber",
         __Marshaller_google_devicesandservices_health_v4_DeleteSubscriberRequest,
         __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest, global::Google.DevicesAndServices.Health.V4.Subscription> __Method_CreateSubscription = new grpc::Method<global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest, global::Google.DevicesAndServices.Health.V4.Subscription>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateSubscription",
+        __Marshaller_google_devicesandservices_health_v4_CreateSubscriptionRequest,
+        __Marshaller_google_devicesandservices_health_v4_Subscription);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest, global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse> __Method_ListSubscriptions = new grpc::Method<global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest, global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListSubscriptions",
+        __Marshaller_google_devicesandservices_health_v4_ListSubscriptionsRequest,
+        __Marshaller_google_devicesandservices_health_v4_ListSubscriptionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest, global::Google.DevicesAndServices.Health.V4.Subscription> __Method_UpdateSubscription = new grpc::Method<global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest, global::Google.DevicesAndServices.Health.V4.Subscription>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateSubscription",
+        __Marshaller_google_devicesandservices_health_v4_UpdateSubscriptionRequest,
+        __Marshaller_google_devicesandservices_health_v4_Subscription);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteSubscription = new grpc::Method<global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteSubscription",
+        __Marshaller_google_devicesandservices_health_v4_DeleteSubscriptionRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -208,6 +254,58 @@ namespace Google.DevicesAndServices.Health.V4 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteSubscriber(global::Google.DevicesAndServices.Health.V4.DeleteSubscriberRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a subscription for a specific user to a specific subscriber.
+      /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+      /// set to `MANUAL` for the given data types.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.DevicesAndServices.Health.V4.Subscription> CreateSubscription(global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all active subscriptions for a given subscriber. This can be
+      /// filtered, for example, by user or data type.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse> ListSubscriptions(global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the data types for an existing user subscription.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.DevicesAndServices.Health.V4.Subscription> UpdateSubscription(global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a specific user subscription, stopping notifications for this
+      /// user to this subscriber.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscription(global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -605,6 +703,214 @@ namespace Google.DevicesAndServices.Health.V4 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteSubscriber, null, options, request);
       }
+      /// <summary>
+      /// Creates a subscription for a specific user to a specific subscriber.
+      /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+      /// set to `MANUAL` for the given data types.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.Subscription CreateSubscription(global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a subscription for a specific user to a specific subscriber.
+      /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+      /// set to `MANUAL` for the given data types.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.Subscription CreateSubscription(global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Creates a subscription for a specific user to a specific subscriber.
+      /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+      /// set to `MANUAL` for the given data types.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.Subscription> CreateSubscriptionAsync(global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a subscription for a specific user to a specific subscriber.
+      /// This method requires the subscriber to have a `SubscriptionCreatePolicy`
+      /// set to `MANUAL` for the given data types.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.Subscription> CreateSubscriptionAsync(global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Lists all active subscriptions for a given subscriber. This can be
+      /// filtered, for example, by user or data type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse ListSubscriptions(global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubscriptions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all active subscriptions for a given subscriber. This can be
+      /// filtered, for example, by user or data type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse ListSubscriptions(global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListSubscriptions, null, options, request);
+      }
+      /// <summary>
+      /// Lists all active subscriptions for a given subscriber. This can be
+      /// filtered, for example, by user or data type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse> ListSubscriptionsAsync(global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListSubscriptionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all active subscriptions for a given subscriber. This can be
+      /// filtered, for example, by user or data type.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse> ListSubscriptionsAsync(global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListSubscriptions, null, options, request);
+      }
+      /// <summary>
+      /// Updates the data types for an existing user subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.Subscription UpdateSubscription(global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the data types for an existing user subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.DevicesAndServices.Health.V4.Subscription UpdateSubscription(global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Updates the data types for an existing user subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.Subscription> UpdateSubscriptionAsync(global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the data types for an existing user subscription.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.DevicesAndServices.Health.V4.Subscription> UpdateSubscriptionAsync(global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific user subscription, stopping notifications for this
+      /// user to this subscriber.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSubscription(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific user subscription, stopping notifications for this
+      /// user to this subscriber.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteSubscription(global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteSubscription, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a specific user subscription, stopping notifications for this
+      /// user to this subscriber.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteSubscriptionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a specific user subscription, stopping notifications for this
+      /// user to this subscriber.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteSubscriptionAsync(global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteSubscription, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DataSubscriptionServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -622,7 +928,11 @@ namespace Google.DevicesAndServices.Health.V4 {
           .AddMethod(__Method_CreateSubscriber, serviceImpl.CreateSubscriber)
           .AddMethod(__Method_ListSubscribers, serviceImpl.ListSubscribers)
           .AddMethod(__Method_UpdateSubscriber, serviceImpl.UpdateSubscriber)
-          .AddMethod(__Method_DeleteSubscriber, serviceImpl.DeleteSubscriber).Build();
+          .AddMethod(__Method_DeleteSubscriber, serviceImpl.DeleteSubscriber)
+          .AddMethod(__Method_CreateSubscription, serviceImpl.CreateSubscription)
+          .AddMethod(__Method_ListSubscriptions, serviceImpl.ListSubscriptions)
+          .AddMethod(__Method_UpdateSubscription, serviceImpl.UpdateSubscription)
+          .AddMethod(__Method_DeleteSubscription, serviceImpl.DeleteSubscription).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -636,6 +946,10 @@ namespace Google.DevicesAndServices.Health.V4 {
       serviceBinder.AddMethod(__Method_ListSubscribers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.ListSubscribersRequest, global::Google.DevicesAndServices.Health.V4.ListSubscribersResponse>(serviceImpl.ListSubscribers));
       serviceBinder.AddMethod(__Method_UpdateSubscriber, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.UpdateSubscriberRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateSubscriber));
       serviceBinder.AddMethod(__Method_DeleteSubscriber, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.DeleteSubscriberRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteSubscriber));
+      serviceBinder.AddMethod(__Method_CreateSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest, global::Google.DevicesAndServices.Health.V4.Subscription>(serviceImpl.CreateSubscription));
+      serviceBinder.AddMethod(__Method_ListSubscriptions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest, global::Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse>(serviceImpl.ListSubscriptions));
+      serviceBinder.AddMethod(__Method_UpdateSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest, global::Google.DevicesAndServices.Health.V4.Subscription>(serviceImpl.UpdateSubscription));
+      serviceBinder.AddMethod(__Method_DeleteSubscription, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSubscription));
     }
 
   }

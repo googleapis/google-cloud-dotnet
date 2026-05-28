@@ -16,8 +16,10 @@
 
 namespace GoogleCSharpSnippets
 {
+    using Google.Api.Gax;
     using Google.DevicesAndServices.Health.V4;
     using Google.Protobuf.WellKnownTypes;
+    using System;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -409,6 +411,456 @@ namespace GoogleCSharpSnippets
             IdentityName name = IdentityName.FromUser("[USER]");
             // Make the request
             Identity response = await healthProfileServiceClient.GetIdentityAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIrnProfile</summary>
+        public void GetIrnProfileRequestObject()
+        {
+            // Snippet: GetIrnProfile(GetIrnProfileRequest, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            GetIrnProfileRequest request = new GetIrnProfileRequest
+            {
+                IrnProfileName = IrnProfileName.FromUser("[USER]"),
+            };
+            // Make the request
+            IrnProfile response = healthProfileServiceClient.GetIrnProfile(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIrnProfileAsync</summary>
+        public async Task GetIrnProfileRequestObjectAsync()
+        {
+            // Snippet: GetIrnProfileAsync(GetIrnProfileRequest, CallSettings)
+            // Additional: GetIrnProfileAsync(GetIrnProfileRequest, CancellationToken)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIrnProfileRequest request = new GetIrnProfileRequest
+            {
+                IrnProfileName = IrnProfileName.FromUser("[USER]"),
+            };
+            // Make the request
+            IrnProfile response = await healthProfileServiceClient.GetIrnProfileAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIrnProfile</summary>
+        public void GetIrnProfile()
+        {
+            // Snippet: GetIrnProfile(string, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/irnProfile";
+            // Make the request
+            IrnProfile response = healthProfileServiceClient.GetIrnProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIrnProfileAsync</summary>
+        public async Task GetIrnProfileAsync()
+        {
+            // Snippet: GetIrnProfileAsync(string, CallSettings)
+            // Additional: GetIrnProfileAsync(string, CancellationToken)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/irnProfile";
+            // Make the request
+            IrnProfile response = await healthProfileServiceClient.GetIrnProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIrnProfile</summary>
+        public void GetIrnProfileResourceNames()
+        {
+            // Snippet: GetIrnProfile(IrnProfileName, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            IrnProfileName name = IrnProfileName.FromUser("[USER]");
+            // Make the request
+            IrnProfile response = healthProfileServiceClient.GetIrnProfile(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIrnProfileAsync</summary>
+        public async Task GetIrnProfileResourceNamesAsync()
+        {
+            // Snippet: GetIrnProfileAsync(IrnProfileName, CallSettings)
+            // Additional: GetIrnProfileAsync(IrnProfileName, CancellationToken)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IrnProfileName name = IrnProfileName.FromUser("[USER]");
+            // Make the request
+            IrnProfile response = await healthProfileServiceClient.GetIrnProfileAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPairedDevice</summary>
+        public void GetPairedDeviceRequestObject()
+        {
+            // Snippet: GetPairedDevice(GetPairedDeviceRequest, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            GetPairedDeviceRequest request = new GetPairedDeviceRequest
+            {
+                PairedDeviceName = PairedDeviceName.FromUserPairedDevice("[USER]", "[PAIRED_DEVICE]"),
+            };
+            // Make the request
+            PairedDevice response = healthProfileServiceClient.GetPairedDevice(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPairedDeviceAsync</summary>
+        public async Task GetPairedDeviceRequestObjectAsync()
+        {
+            // Snippet: GetPairedDeviceAsync(GetPairedDeviceRequest, CallSettings)
+            // Additional: GetPairedDeviceAsync(GetPairedDeviceRequest, CancellationToken)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetPairedDeviceRequest request = new GetPairedDeviceRequest
+            {
+                PairedDeviceName = PairedDeviceName.FromUserPairedDevice("[USER]", "[PAIRED_DEVICE]"),
+            };
+            // Make the request
+            PairedDevice response = await healthProfileServiceClient.GetPairedDeviceAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPairedDevice</summary>
+        public void GetPairedDevice()
+        {
+            // Snippet: GetPairedDevice(string, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/pairedDevices/[PAIRED_DEVICE]";
+            // Make the request
+            PairedDevice response = healthProfileServiceClient.GetPairedDevice(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPairedDeviceAsync</summary>
+        public async Task GetPairedDeviceAsync()
+        {
+            // Snippet: GetPairedDeviceAsync(string, CallSettings)
+            // Additional: GetPairedDeviceAsync(string, CancellationToken)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/pairedDevices/[PAIRED_DEVICE]";
+            // Make the request
+            PairedDevice response = await healthProfileServiceClient.GetPairedDeviceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPairedDevice</summary>
+        public void GetPairedDeviceResourceNames()
+        {
+            // Snippet: GetPairedDevice(PairedDeviceName, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            PairedDeviceName name = PairedDeviceName.FromUserPairedDevice("[USER]", "[PAIRED_DEVICE]");
+            // Make the request
+            PairedDevice response = healthProfileServiceClient.GetPairedDevice(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetPairedDeviceAsync</summary>
+        public async Task GetPairedDeviceResourceNamesAsync()
+        {
+            // Snippet: GetPairedDeviceAsync(PairedDeviceName, CallSettings)
+            // Additional: GetPairedDeviceAsync(PairedDeviceName, CancellationToken)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PairedDeviceName name = PairedDeviceName.FromUserPairedDevice("[USER]", "[PAIRED_DEVICE]");
+            // Make the request
+            PairedDevice response = await healthProfileServiceClient.GetPairedDeviceAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPairedDevices</summary>
+        public void ListPairedDevicesRequestObject()
+        {
+            // Snippet: ListPairedDevices(ListPairedDevicesRequest, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            ListPairedDevicesRequest request = new ListPairedDevicesRequest
+            {
+                ParentAsUserName = UserName.FromUser("[USER]"),
+            };
+            // Make the request
+            PagedEnumerable<ListPairedDevicesResponse, PairedDevice> response = healthProfileServiceClient.ListPairedDevices(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PairedDevice item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPairedDevicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PairedDevice item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PairedDevice> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PairedDevice item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPairedDevicesAsync</summary>
+        public async Task ListPairedDevicesRequestObjectAsync()
+        {
+            // Snippet: ListPairedDevicesAsync(ListPairedDevicesRequest, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ListPairedDevicesRequest request = new ListPairedDevicesRequest
+            {
+                ParentAsUserName = UserName.FromUser("[USER]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListPairedDevicesResponse, PairedDevice> response = healthProfileServiceClient.ListPairedDevicesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (PairedDevice item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListPairedDevicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PairedDevice item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PairedDevice> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PairedDevice item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPairedDevices</summary>
+        public void ListPairedDevices()
+        {
+            // Snippet: ListPairedDevices(string, string, int?, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "users/[USER]";
+            // Make the request
+            PagedEnumerable<ListPairedDevicesResponse, PairedDevice> response = healthProfileServiceClient.ListPairedDevices(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PairedDevice item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPairedDevicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PairedDevice item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PairedDevice> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PairedDevice item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPairedDevicesAsync</summary>
+        public async Task ListPairedDevicesAsync()
+        {
+            // Snippet: ListPairedDevicesAsync(string, string, int?, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "users/[USER]";
+            // Make the request
+            PagedAsyncEnumerable<ListPairedDevicesResponse, PairedDevice> response = healthProfileServiceClient.ListPairedDevicesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (PairedDevice item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListPairedDevicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PairedDevice item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PairedDevice> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PairedDevice item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPairedDevices</summary>
+        public void ListPairedDevicesResourceNames()
+        {
+            // Snippet: ListPairedDevices(UserName, string, int?, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = HealthProfileServiceClient.Create();
+            // Initialize request argument(s)
+            UserName parent = UserName.FromUser("[USER]");
+            // Make the request
+            PagedEnumerable<ListPairedDevicesResponse, PairedDevice> response = healthProfileServiceClient.ListPairedDevices(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (PairedDevice item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListPairedDevicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PairedDevice item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PairedDevice> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PairedDevice item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListPairedDevicesAsync</summary>
+        public async Task ListPairedDevicesResourceNamesAsync()
+        {
+            // Snippet: ListPairedDevicesAsync(UserName, string, int?, CallSettings)
+            // Create client
+            HealthProfileServiceClient healthProfileServiceClient = await HealthProfileServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UserName parent = UserName.FromUser("[USER]");
+            // Make the request
+            PagedAsyncEnumerable<ListPairedDevicesResponse, PairedDevice> response = healthProfileServiceClient.ListPairedDevicesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (PairedDevice item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListPairedDevicesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (PairedDevice item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<PairedDevice> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (PairedDevice item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
             // End snippet
         }
     }

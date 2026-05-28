@@ -251,6 +251,259 @@ namespace Google.DevicesAndServices.Health.V4
         public static bool operator !=(SubscriberName a, SubscriberName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>Subscription</c> resource.</summary>
+    public sealed partial class SubscriptionName : gax::IResourceName, sys::IEquatable<SubscriptionName>
+    {
+        /// <summary>The possible contents of <see cref="SubscriptionName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c>
+            /// .
+            /// </summary>
+            ProjectSubscriberSubscription = 1,
+        }
+
+        private static gax::PathTemplate s_projectSubscriberSubscription = new gax::PathTemplate("projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}");
+
+        /// <summary>Creates a <see cref="SubscriptionName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="SubscriptionName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static SubscriptionName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new SubscriptionName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="SubscriptionName"/> with the pattern
+        /// <c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="subscriberId">The <c>Subscriber</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="subscriptionId">The <c>Subscription</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SubscriptionName"/> constructed from the provided ids.</returns>
+        public static SubscriptionName FromProjectSubscriberSubscription(string projectId, string subscriberId, string subscriptionId) =>
+            new SubscriptionName(ResourceNameType.ProjectSubscriberSubscription, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), subscriberId: gax::GaxPreconditions.CheckNotNullOrEmpty(subscriberId, nameof(subscriberId)), subscriptionId: gax::GaxPreconditions.CheckNotNullOrEmpty(subscriptionId, nameof(subscriptionId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SubscriptionName"/> with pattern
+        /// <c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="subscriberId">The <c>Subscriber</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="subscriptionId">The <c>Subscription</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SubscriptionName"/> with pattern
+        /// <c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c>.
+        /// </returns>
+        public static string Format(string projectId, string subscriberId, string subscriptionId) =>
+            FormatProjectSubscriberSubscription(projectId, subscriberId, subscriptionId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SubscriptionName"/> with pattern
+        /// <c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="subscriberId">The <c>Subscriber</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="subscriptionId">The <c>Subscription</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SubscriptionName"/> with pattern
+        /// <c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c>.
+        /// </returns>
+        public static string FormatProjectSubscriberSubscription(string projectId, string subscriberId, string subscriptionId) =>
+            s_projectSubscriberSubscription.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(subscriberId, nameof(subscriberId)), gax::GaxPreconditions.CheckNotNullOrEmpty(subscriptionId, nameof(subscriptionId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="SubscriptionName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="subscriptionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="SubscriptionName"/> if successful.</returns>
+        public static SubscriptionName Parse(string subscriptionName) => Parse(subscriptionName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="SubscriptionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="subscriptionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="SubscriptionName"/> if successful.</returns>
+        public static SubscriptionName Parse(string subscriptionName, bool allowUnparsed) =>
+            TryParse(subscriptionName, allowUnparsed, out SubscriptionName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SubscriptionName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="subscriptionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SubscriptionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string subscriptionName, out SubscriptionName result) =>
+            TryParse(subscriptionName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="SubscriptionName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="subscriptionName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="SubscriptionName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string subscriptionName, bool allowUnparsed, out SubscriptionName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectSubscriberSubscription.TryParseName(subscriptionName, out resourceName))
+            {
+                result = FromProjectSubscriberSubscription(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(subscriptionName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private SubscriptionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string subscriberId = null, string subscriptionId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ProjectId = projectId;
+            SubscriberId = subscriberId;
+            SubscriptionId = subscriptionId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="SubscriptionName"/> class from the component parts of pattern
+        /// <c>projects/{project}/subscribers/{subscriber}/subscriptions/{subscription}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="subscriberId">The <c>Subscriber</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="subscriptionId">The <c>Subscription</c> ID. Must not be <c>null</c> or empty.</param>
+        public SubscriptionName(string projectId, string subscriberId, string subscriptionId) : this(ResourceNameType.ProjectSubscriberSubscription, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), subscriberId: gax::GaxPreconditions.CheckNotNullOrEmpty(subscriberId, nameof(subscriberId)), subscriptionId: gax::GaxPreconditions.CheckNotNullOrEmpty(subscriptionId, nameof(subscriptionId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Subscriber</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string SubscriberId { get; }
+
+        /// <summary>
+        /// The <c>Subscription</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string SubscriptionId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectSubscriberSubscription: return s_projectSubscriberSubscription.Expand(ProjectId, SubscriberId, SubscriptionId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as SubscriptionName);
+
+        /// <inheritdoc/>
+        public bool Equals(SubscriptionName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(SubscriptionName a, SubscriptionName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(SubscriptionName a, SubscriptionName b) => !(a == b);
+    }
+
     public partial class CreateSubscriberRequest
     {
         /// <summary>
@@ -287,6 +540,42 @@ namespace Google.DevicesAndServices.Health.V4
         }
     }
 
+    public partial class CreateSubscriptionRequest
+    {
+        /// <summary>
+        /// <see cref="SubscriberName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public SubscriberName ParentAsSubscriberName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SubscriberName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListSubscriptionsRequest
+    {
+        /// <summary>
+        /// <see cref="SubscriberName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public SubscriberName ParentAsSubscriberName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SubscriberName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteSubscriptionRequest
+    {
+        /// <summary>
+        /// <see cref="gdhv::SubscriptionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gdhv::SubscriptionName SubscriptionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gdhv::SubscriptionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Subscriber
     {
         /// <summary>
@@ -299,6 +588,33 @@ namespace Google.DevicesAndServices.Health.V4
         }
     }
 
+    public partial class Subscription
+    {
+        /// <summary>
+        /// <see cref="gdhv::SubscriptionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gdhv::SubscriptionName SubscriptionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gdhv::SubscriptionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="DataTypeName"/>-typed view over the <see cref="DataTypes"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<DataTypeName> DataTypesAsDataTypeNames
+        {
+            get => new gax::ResourceNameList<DataTypeName>(DataTypes, s => string.IsNullOrEmpty(s) ? null : DataTypeName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary><see cref="UserName"/>-typed view over the <see cref="User"/> resource name property.</summary>
+        public UserName UserAsUserName
+        {
+            get => string.IsNullOrEmpty(User) ? null : UserName.Parse(User, allowUnparsed: true);
+            set => User = value?.ToString() ?? "";
+        }
+    }
+
     public partial class SubscriberConfig
     {
         /// <summary>
@@ -307,6 +623,24 @@ namespace Google.DevicesAndServices.Health.V4
         public gax::ResourceNameList<DataTypeName> DataTypesAsDataTypeNames
         {
             get => new gax::ResourceNameList<DataTypeName>(DataTypes, s => string.IsNullOrEmpty(s) ? null : DataTypeName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class CreateSubscriptionPayload
+    {
+        /// <summary>
+        /// <see cref="DataTypeName"/>-typed view over the <see cref="DataTypes"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<DataTypeName> DataTypesAsDataTypeNames
+        {
+            get => new gax::ResourceNameList<DataTypeName>(DataTypes, s => string.IsNullOrEmpty(s) ? null : DataTypeName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary><see cref="UserName"/>-typed view over the <see cref="User"/> resource name property.</summary>
+        public UserName UserAsUserName
+        {
+            get => string.IsNullOrEmpty(User) ? null : UserName.Parse(User, allowUnparsed: true);
+            set => User = value?.ToString() ?? "";
         }
     }
 }

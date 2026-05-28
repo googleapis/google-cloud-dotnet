@@ -28,430 +28,634 @@ namespace Google.DevicesAndServices.Health.V4 {
             "ZGVsLnByb3RvEiNnb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
             "NBofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2Fw",
             "aS9yZXNvdXJjZS5wcm90bxo6Z29vZ2xlL2RldmljZXNhbmRzZXJ2aWNlcy9o",
-            "ZWFsdGgvdjQvZGF0YV9jb29yZGluYXRlcy5wcm90bxoeZ29vZ2xlL3Byb3Rv",
-            "YnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnByb3RvIuECChFBY3RpdmVab25l",
-            "TWludXRlcxJTCghpbnRlcnZhbBgBIAEoCzI8Lmdvb2dsZS5kZXZpY2VzYW5k",
-            "c2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVydmFsQgPg",
-            "QQISYgoPaGVhcnRfcmF0ZV96b25lGAIgASgOMkQuZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZlWm9uZU1pbnV0ZXMuSGVhcnRS",
-            "YXRlWm9uZUID4EECEiUKE2FjdGl2ZV96b25lX21pbnV0ZXMYAyABKANCA+BB",
-            "AkgAiAEBIlQKDUhlYXJ0UmF0ZVpvbmUSHwobSEVBUlRfUkFURV9aT05FX1VO",
-            "U1BFQ0lGSUVEEAASDAoIRkFUX0JVUk4QARIKCgZDQVJESU8QAhIICgRQRUFL",
-            "EANCFgoUX2FjdGl2ZV96b25lX21pbnV0ZXMi6gEKHEFjdGl2ZVpvbmVNaW51",
-            "dGVzUm9sbHVwVmFsdWUSJQoYc3VtX2luX2NhcmRpb19oZWFydF96b25lGAEg",
-            "ASgDSACIAQESIwoWc3VtX2luX3BlYWtfaGVhcnRfem9uZRgCIAEoA0gBiAEB",
-            "EicKGnN1bV9pbl9mYXRfYnVybl9oZWFydF96b25lGAMgASgDSAKIAQFCGwoZ",
-            "X3N1bV9pbl9jYXJkaW9faGVhcnRfem9uZUIZChdfc3VtX2luX3BlYWtfaGVh",
-            "cnRfem9uZUIdChtfc3VtX2luX2ZhdF9idXJuX2hlYXJ0X3pvbmUi8QMKDUFj",
-            "dGl2ZU1pbnV0ZXMSUwoIaW50ZXJ2YWwYASABKAsyPC5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJbnRlcnZh",
-            "bEID4EECEn4KIGFjdGl2ZV9taW51dGVzX2J5X2FjdGl2aXR5X2xldmVsGAIg",
-            "AygLMk8uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0",
-            "aXZlTWludXRlcy5BY3RpdmVNaW51dGVzQnlBY3Rpdml0eUxldmVsQgPgQQIa",
-            "sgEKHEFjdGl2ZU1pbnV0ZXNCeUFjdGl2aXR5TGV2ZWwSXQoOYWN0aXZpdHlf",
-            "bGV2ZWwYASABKA4yQC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
-            "aC52NC5BY3RpdmVNaW51dGVzLkFjdGl2aXR5TGV2ZWxCA+BBAhIgCg5hY3Rp",
-            "dmVfbWludXRlcxgCIAEoA0ID4EECSACIAQFCEQoPX2FjdGl2ZV9taW51dGVz",
-            "IlYKDUFjdGl2aXR5TGV2ZWwSHgoaQUNUSVZJVFlfTEVWRUxfVU5TUEVDSUZJ",
-            "RUQQABIJCgVMSUdIVBABEgwKCE1PREVSQVRFEAISDAoIVklHT1JPVVMQAyLn",
-            "AgoYQWN0aXZlTWludXRlc1JvbGx1cFZhbHVlEpEBCidhY3RpdmVfbWludXRl",
-            "c19yb2xsdXBfYnlfYWN0aXZpdHlfbGV2ZWwYASADKAsyYC5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVNaW51dGVzUm9sbHVw",
-            "VmFsdWUuQWN0aXZlTWludXRlc1JvbGx1cEJ5QWN0aXZpdHlMZXZlbBq2AQoi",
-            "QWN0aXZlTWludXRlc1JvbGx1cEJ5QWN0aXZpdHlMZXZlbBJYCg5hY3Rpdml0",
-            "eV9sZXZlbBgBIAEoDjJALmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0LkFjdGl2ZU1pbnV0ZXMuQWN0aXZpdHlMZXZlbBIfChJhY3RpdmVf",
-            "bWludXRlc19zdW0YAiABKANIAIgBAUIVChNfYWN0aXZlX21pbnV0ZXNfc3Vt",
-            "ItICCg1BY3Rpdml0eUxldmVsElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xl",
-            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1l",
-            "SW50ZXJ2YWxCA+BBAhJmChNhY3Rpdml0eV9sZXZlbF90eXBlGAIgASgOMkQu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZpdHlM",
-            "ZXZlbC5BY3Rpdml0eUxldmVsVHlwZUID4EECIoMBChFBY3Rpdml0eUxldmVs",
-            "VHlwZRIjCh9BQ1RJVklUWV9MRVZFTF9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJ",
-            "U0VERU5UQVJZEAESEgoOTElHSFRMWV9BQ1RJVkUQAhIVChFNT0RFUkFURUxZ",
-            "X0FDVElWRRADEg8KC1ZFUllfQUNUSVZFEAQi+QIKGEFjdGl2aXR5TGV2ZWxS",
-            "b2xsdXBWYWx1ZRKbAQotYWN0aXZpdHlfbGV2ZWxfcm9sbHVwc19ieV9hY3Rp",
-            "dml0eV9sZXZlbF90eXBlGAEgAygLMmQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjQuQWN0aXZpdHlMZXZlbFJvbGx1cFZhbHVlLkFjdGl2",
-            "aXR5TGV2ZWxSb2xsdXBCeUFjdGl2aXR5TGV2ZWxUeXBlGr4BCiZBY3Rpdml0",
-            "eUxldmVsUm9sbHVwQnlBY3Rpdml0eUxldmVsVHlwZRJhChNhY3Rpdml0eV9s",
-            "ZXZlbF90eXBlGAEgASgOMkQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjQuQWN0aXZpdHlMZXZlbC5BY3Rpdml0eUxldmVsVHlwZRIxCg50",
-            "b3RhbF9kdXJhdGlvbhgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "biKYAQoIQWx0aXR1ZGUSUwoIaW50ZXJ2YWwYAiABKAsyPC5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJbnRl",
-            "cnZhbEID4EECEiIKEGdhaW5fbWlsbGltZXRlcnMYAyABKANCA+BBAkgAiAEB",
-            "QhMKEV9nYWluX21pbGxpbWV0ZXJzIokBChFCYXNhbEVuZXJneUJ1cm5lZBJT",
-            "CghpbnRlcnZhbBgBIAEoCzI8Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
-            "aGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVydmFsQgPgQQISFgoEa2Nh",
-            "bBgCIAEoAUID4EECSACIAQFCBwoFX2tjYWwijAEKB0JvZHlGYXQSVAoLc2Ft",
-            "cGxlX3RpbWUYAiABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
-            "YWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhIcCgpwZXJjZW50",
-            "YWdlGAMgASgBQgPgQQJIAIgBAUINCgtfcGVyY2VudGFnZSJWChJCb2R5RmF0",
-            "Um9sbHVwVmFsdWUSJAoXYm9keV9mYXRfcGVyY2VudGFnZV9hdmcYASABKAFI",
-            "AIgBAUIaChhfYm9keV9mYXRfcGVyY2VudGFnZV9hdmcivwIKIkNhbG9yaWVz",
-            "SW5IZWFydFJhdGVab25lUm9sbHVwVmFsdWUSigEKHGNhbG9yaWVzX2luX2hl",
-            "YXJ0X3JhdGVfem9uZXMYASADKAsyZC5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5DYWxvcmllc0luSGVhcnRSYXRlWm9uZVJvbGx1cFZh",
-            "bHVlLkNhbG9yaWVzSW5IZWFydFJhdGVab25lVmFsdWUaiwEKHENhbG9yaWVz",
-            "SW5IZWFydFJhdGVab25lVmFsdWUSTwoPaGVhcnRfcmF0ZV96b25lGAEgASgO",
-            "MjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRS",
-            "YXRlWm9uZVR5cGUSEQoEa2NhbBgCIAEoAUgAiAEBQgcKBV9rY2FsIpEDChNE",
-            "YWlseUhlYXJ0UmF0ZVpvbmVzEiQKBGRhdGUYASABKAsyES5nb29nbGUudHlw",
-            "ZS5EYXRlQgPgQQISZQoQaGVhcnRfcmF0ZV96b25lcxgCIAMoCzJGLmdvb2ds",
-            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5SGVhcnRSYXRl",
-            "Wm9uZXMuSGVhcnRSYXRlWm9uZUID4EECGuwBCg1IZWFydFJhdGVab25lElkK",
-            "FGhlYXJ0X3JhdGVfem9uZV90eXBlGAEgASgOMjYuZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlWm9uZVR5cGVCA+BBAhIm",
-            "ChRtaW5fYmVhdHNfcGVyX21pbnV0ZRgCIAEoA0ID4EECSACIAQESJgoUbWF4",
-            "X2JlYXRzX3Blcl9taW51dGUYAyABKANCA+BBAkgBiAEBQhcKFV9taW5fYmVh",
-            "dHNfcGVyX21pbnV0ZUIXChVfbWF4X2JlYXRzX3Blcl9taW51dGUi0wMKGURh",
-            "aWx5SGVhcnRSYXRlVmFyaWFiaWxpdHkSJAoEZGF0ZRgCIAEoCzIRLmdvb2ds",
-            "ZS50eXBlLkRhdGVCA+BBAhI9CithdmVyYWdlX2hlYXJ0X3JhdGVfdmFyaWFi",
-            "aWxpdHlfbWlsbGlzZWNvbmRzGAQgASgBQgPgQQFIAIgBARI1CiNub25fcmVt",
-            "X2hlYXJ0X3JhdGVfYmVhdHNfcGVyX21pbnV0ZRgFIAEoA0ID4EEBSAGIAQES",
-            "GQoHZW50cm9weRgGIAEoAUID4EEBSAKIAQESVApCZGVlcF9zbGVlcF9yb290",
-            "X21lYW5fc3F1YXJlX29mX3N1Y2Nlc3NpdmVfZGlmZmVyZW5jZXNfbWlsbGlz",
-            "ZWNvbmRzGAcgASgBQgPgQQFIA4gBAUIuCixfYXZlcmFnZV9oZWFydF9yYXRl",
-            "X3ZhcmlhYmlsaXR5X21pbGxpc2Vjb25kc0ImCiRfbm9uX3JlbV9oZWFydF9y",
-            "YXRlX2JlYXRzX3Blcl9taW51dGVCCgoIX2VudHJvcHlCRQpDX2RlZXBfc2xl",
-            "ZXBfcm9vdF9tZWFuX3NxdWFyZV9vZl9zdWNjZXNzaXZlX2RpZmZlcmVuY2Vz",
-            "X21pbGxpc2Vjb25kcyJ5ChREYWlseVJlc3BpcmF0b3J5UmF0ZRIkCgRkYXRl",
-            "GAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EECEiQKEmJyZWF0aHNfcGVy",
-            "X21pbnV0ZRgCIAEoAUID4EECSACIAQFCFQoTX2JyZWF0aHNfcGVyX21pbnV0",
-            "ZSLXAgoVRGFpbHlPeHlnZW5TYXR1cmF0aW9uEiQKBGRhdGUYASABKAsyES5n",
-            "b29nbGUudHlwZS5EYXRlQgPgQQISJAoSYXZlcmFnZV9wZXJjZW50YWdlGAIg",
-            "ASgBQgPgQQJIAIgBARIoChZsb3dlcl9ib3VuZF9wZXJjZW50YWdlGAMgASgB",
-            "QgPgQQJIAYgBARIoChZ1cHBlcl9ib3VuZF9wZXJjZW50YWdlGAQgASgBQgPg",
-            "QQJIAogBARIvCh1zdGFuZGFyZF9kZXZpYXRpb25fcGVyY2VudGFnZRgFIAEo",
-            "AUID4EEBSAOIAQFCFQoTX2F2ZXJhZ2VfcGVyY2VudGFnZUIZChdfbG93ZXJf",
-            "Ym91bmRfcGVyY2VudGFnZUIZChdfdXBwZXJfYm91bmRfcGVyY2VudGFnZUIg",
-            "Ch5fc3RhbmRhcmRfZGV2aWF0aW9uX3BlcmNlbnRhZ2UilAQKFURhaWx5UmVz",
-            "dGluZ0hlYXJ0UmF0ZRIkCgRkYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
-            "ZUID4EECEiIKEGJlYXRzX3Blcl9taW51dGUYBCABKANCA+BBAkgAiAEBEogB",
-            "CiFkYWlseV9yZXN0aW5nX2hlYXJ0X3JhdGVfbWV0YWRhdGEYBSABKAsyWC5n",
-            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseVJlc3Rp",
-            "bmdIZWFydFJhdGUuRGFpbHlSZXN0aW5nSGVhcnRSYXRlTWV0YWRhdGFCA+BB",
-            "ARqQAgodRGFpbHlSZXN0aW5nSGVhcnRSYXRlTWV0YWRhdGESiwEKEmNhbGN1",
-            "bGF0aW9uX21ldGhvZBgBIAEoDjJqLmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
-            "ZXMuaGVhbHRoLnY0LkRhaWx5UmVzdGluZ0hlYXJ0UmF0ZS5EYWlseVJlc3Rp",
-            "bmdIZWFydFJhdGVNZXRhZGF0YS5DYWxjdWxhdGlvbk1ldGhvZEID4EECImEK",
-            "EUNhbGN1bGF0aW9uTWV0aG9kEiIKHkNBTENVTEFUSU9OX01FVEhPRF9VTlNQ",
-            "RUNJRklFRBAAEg4KCldJVEhfU0xFRVAQARIYChRPTkxZX1dJVEhfQVdBS0Vf",
-            "REFUQRACQhMKEV9iZWF0c19wZXJfbWludXRlIscCCiBEYWlseVNsZWVwVGVt",
-            "cGVyYXR1cmVEZXJpdmF0aW9ucxIkCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5",
-            "cGUuRGF0ZUID4EECEi0KG25pZ2h0bHlfdGVtcGVyYXR1cmVfY2Vsc2l1cxgC",
-            "IAEoAUID4EECSACIAQESLgocYmFzZWxpbmVfdGVtcGVyYXR1cmVfY2Vsc2l1",
-            "cxgDIAEoAUID4EEBSAGIAQESNQojcmVsYXRpdmVfbmlnaHRseV9zdGRkZXZf",
-            "MzBkX2NlbHNpdXMYBCABKAFCA+BBAUgCiAEBQh4KHF9uaWdodGx5X3RlbXBl",
-            "cmF0dXJlX2NlbHNpdXNCHwodX2Jhc2VsaW5lX3RlbXBlcmF0dXJlX2NlbHNp",
-            "dXNCJgokX3JlbGF0aXZlX25pZ2h0bHlfc3RkZGV2XzMwZF9jZWxzaXVzIp0D",
-            "CgtEYWlseVZPMk1heBIkCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
-            "ZUID4EECEhkKB3ZvMl9tYXgYAiABKAFCA+BBAkgAiAEBEhYKCWVzdGltYXRl",
-            "ZBgDIAEoCEID4EEBEmYKFGNhcmRpb19maXRuZXNzX2xldmVsGAQgASgOMkMu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlWTzJN",
-            "YXguQ2FyZGlvRml0bmVzc0xldmVsQgPgQQESJAoSdm8yX21heF9jb3Zhcmlh",
-            "bmNlGAUgASgBQgPgQQFIAYgBASKDAQoSQ2FyZGlvRml0bmVzc0xldmVsEiQK",
-            "IENBUkRJT19GSVRORVNTX0xFVkVMX1VOU1BFQ0lGSUVEEAASCAoEUE9PUhAB",
-            "EggKBEZBSVIQAhILCgdBVkVSQUdFEAMSCAoER09PRBAEEg0KCVZFUllfR09P",
-            "RBAFEg0KCUVYQ0VMTEVOVBAGQgoKCF92bzJfbWF4QhUKE192bzJfbWF4X2Nv",
-            "dmFyaWFuY2UijgEKCERpc3RhbmNlElMKCGludGVydmFsGAIgASgLMjwuZ29v",
-            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25U",
-            "aW1lSW50ZXJ2YWxCA+BBAhIdCgttaWxsaW1ldGVycxgDIAEoA0ID4EECSACI",
-            "AQFCDgoMX21pbGxpbWV0ZXJzIkcKE0Rpc3RhbmNlUm9sbHVwVmFsdWUSHAoP",
-            "bWlsbGltZXRlcnNfc3VtGAEgASgDSACIAQFCEgoQX21pbGxpbWV0ZXJzX3N1",
-            "bSKzEAoIRXhlcmNpc2USTwoIaW50ZXJ2YWwYAiABKAsyOC5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TZXNzaW9uVGltZUludGVydmFs",
-            "QgPgQQISVgoNZXhlcmNpc2VfdHlwZRgGIAEoDjI6Lmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkV4ZXJjaXNlLkV4ZXJjaXNlVHlwZUID",
-            "4EECEk8KBnNwbGl0cxgIIAMoCzI6Lmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
-            "ZXMuaGVhbHRoLnY0LkV4ZXJjaXNlLlNwbGl0U3VtbWFyeUID4EEBElkKD2V4",
-            "ZXJjaXNlX2V2ZW50cxgPIAMoCzI7Lmdvb2dsZS5kZXZpY2VzYW5kc2Vydmlj",
-            "ZXMuaGVhbHRoLnY0LkV4ZXJjaXNlLkV4ZXJjaXNlRXZlbnRCA+BBARJYCg9z",
-            "cGxpdF9zdW1tYXJpZXMYCSADKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5FeGVyY2lzZS5TcGxpdFN1bW1hcnlCA+BBARJRCg9t",
-            "ZXRyaWNzX3N1bW1hcnkYCiABKAsyMy5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5NZXRyaWNzU3VtbWFyeUID4EECEl4KEWV4ZXJjaXNl",
-            "X21ldGFkYXRhGAsgASgLMj4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
-            "ZWFsdGgudjQuRXhlcmNpc2UuRXhlcmNpc2VNZXRhZGF0YUID4EEBEhkKDGRp",
-            "c3BsYXlfbmFtZRgMIAEoCUID4EECEjcKD2FjdGl2ZV9kdXJhdGlvbhgNIAEo",
-            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEhIKBW5vdGVzGA4g",
-            "ASgJQgPgQQESNAoLdXBkYXRlX3RpbWUYECABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQMSNAoLY3JlYXRlX3RpbWUYESABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMasgQKDFNwbGl0U3VtbWFyeRIz",
-            "CgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EECEjgKEHN0YXJ0X3V0Y19vZmZzZXQYAiABKAsyGS5nb29nbGUucHJv",
-            "dG9idWYuRHVyYXRpb25CA+BBAhIxCghlbmRfdGltZRgDIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI2Cg5lbmRfdXRjX29mZnNldBgE",
-            "IAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECEjcKD2FjdGl2",
-            "ZV9kdXJhdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID",
-            "4EEDElEKD21ldHJpY3Nfc3VtbWFyeRgGIAEoCzIzLmdvb2dsZS5kZXZpY2Vz",
-            "YW5kc2VydmljZXMuaGVhbHRoLnY0Lk1ldHJpY3NTdW1tYXJ5QgPgQQISXQoK",
-            "c3BsaXRfdHlwZRgHIAEoDjJELmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
-            "aGVhbHRoLnY0LkV4ZXJjaXNlLlNwbGl0U3VtbWFyeS5TcGxpdFR5cGVCA+BB",
-            "AiJdCglTcGxpdFR5cGUSGgoWU1BMSVRfVFlQRV9VTlNQRUNJRklFRBAAEgoK",
-            "Bk1BTlVBTBABEgwKCERVUkFUSU9OEAISDAoIRElTVEFOQ0UQAxIMCghDQUxP",
-            "UklFUxAEGvcCCg1FeGVyY2lzZUV2ZW50EjMKCmV2ZW50X3RpbWUYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISOAoQZXZlbnRfdXRj",
-            "X29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEC",
-            "Em8KE2V4ZXJjaXNlX2V2ZW50X3R5cGUYAyABKA4yTS5nb29nbGUuZGV2aWNl",
-            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5FeGVyY2lzZS5FeGVyY2lzZUV2ZW50",
-            "LkV4ZXJjaXNlRXZlbnRUeXBlQgPgQQIihQEKEUV4ZXJjaXNlRXZlbnRUeXBl",
-            "EiMKH0VYRVJDSVNFX0VWRU5UX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVTVEFS",
-            "VBABEggKBFNUT1AQAhIJCgVQQVVTRRADEgoKBlJFU1VNRRAEEg4KCkFVVE9f",
-            "UEFVU0UQBRIPCgtBVVRPX1JFU1VNRRAGGm8KEEV4ZXJjaXNlTWV0YWRhdGES",
-            "KQoXcG9vbF9sZW5ndGhfbWlsbGltZXRlcnMYASABKANCA+BBAUgAiAEBEhQK",
-            "B2hhc19ncHMYAiABKAhCA+BBAUIaChhfcG9vbF9sZW5ndGhfbWlsbGltZXRl",
-            "cnMi0AEKDEV4ZXJjaXNlVHlwZRIdChlFWEVSQ0lTRV9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASCwoHUlVOTklORxABEgsKB1dBTEtJTkcQAhIKCgZCSUtJTkcQAxIM",
-            "CghTV0lNTUlORxAEEgoKBkhJS0lORxAFEggKBFlPR0EQBhILCgdQSUxBVEVT",
-            "EAcSCwoHV09SS09VVBAIEggKBEhJSVQQCRIRCg1XRUlHSFRMSUZUSU5HEAoS",
-            "FQoRU1RSRU5HVEhfVFJBSU5JTkcQCxIJCgVPVEhFUhAMIoABCgZGbG9vcnMS",
+            "ZWFsdGgvdjQvZGF0YV9jb29yZGluYXRlcy5wcm90bxo9Z29vZ2xlL2Rldmlj",
+            "ZXNhbmRzZXJ2aWNlcy9oZWFsdGgvdjQvbWVkaWNhbF9kZXZpY2VfaW5mby5w",
+            "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhZnb29nbGUvdHlwZS9kYXRlLnBy",
+            "b3RvIuECChFBY3RpdmVab25lTWludXRlcxJTCghpbnRlcnZhbBgBIAEoCzI8",
+            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0",
+            "aW9uVGltZUludGVydmFsQgPgQQISYgoPaGVhcnRfcmF0ZV96b25lGAIgASgO",
+            "MkQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZl",
+            "Wm9uZU1pbnV0ZXMuSGVhcnRSYXRlWm9uZUID4EECEiUKE2FjdGl2ZV96b25l",
+            "X21pbnV0ZXMYAyABKANCA+BBAkgAiAEBIlQKDUhlYXJ0UmF0ZVpvbmUSHwob",
+            "SEVBUlRfUkFURV9aT05FX1VOU1BFQ0lGSUVEEAASDAoIRkFUX0JVUk4QARIK",
+            "CgZDQVJESU8QAhIICgRQRUFLEANCFgoUX2FjdGl2ZV96b25lX21pbnV0ZXMi",
+            "6gEKHEFjdGl2ZVpvbmVNaW51dGVzUm9sbHVwVmFsdWUSJQoYc3VtX2luX2Nh",
+            "cmRpb19oZWFydF96b25lGAEgASgDSACIAQESIwoWc3VtX2luX3BlYWtfaGVh",
+            "cnRfem9uZRgCIAEoA0gBiAEBEicKGnN1bV9pbl9mYXRfYnVybl9oZWFydF96",
+            "b25lGAMgASgDSAKIAQFCGwoZX3N1bV9pbl9jYXJkaW9faGVhcnRfem9uZUIZ",
+            "Chdfc3VtX2luX3BlYWtfaGVhcnRfem9uZUIdChtfc3VtX2luX2ZhdF9idXJu",
+            "X2hlYXJ0X3pvbmUi8QMKDUFjdGl2ZU1pbnV0ZXMSUwoIaW50ZXJ2YWwYASAB",
+            "KAsyPC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNl",
+            "cnZhdGlvblRpbWVJbnRlcnZhbEID4EECEn4KIGFjdGl2ZV9taW51dGVzX2J5",
+            "X2FjdGl2aXR5X2xldmVsGAIgAygLMk8uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuQWN0aXZlTWludXRlcy5BY3RpdmVNaW51dGVzQnlB",
+            "Y3Rpdml0eUxldmVsQgPgQQIasgEKHEFjdGl2ZU1pbnV0ZXNCeUFjdGl2aXR5",
+            "TGV2ZWwSXQoOYWN0aXZpdHlfbGV2ZWwYASABKA4yQC5nb29nbGUuZGV2aWNl",
+            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5BY3RpdmVNaW51dGVzLkFjdGl2aXR5",
+            "TGV2ZWxCA+BBAhIgCg5hY3RpdmVfbWludXRlcxgCIAEoA0ID4EECSACIAQFC",
+            "EQoPX2FjdGl2ZV9taW51dGVzIlYKDUFjdGl2aXR5TGV2ZWwSHgoaQUNUSVZJ",
+            "VFlfTEVWRUxfVU5TUEVDSUZJRUQQABIJCgVMSUdIVBABEgwKCE1PREVSQVRF",
+            "EAISDAoIVklHT1JPVVMQAyLnAgoYQWN0aXZlTWludXRlc1JvbGx1cFZhbHVl",
+            "EpEBCidhY3RpdmVfbWludXRlc19yb2xsdXBfYnlfYWN0aXZpdHlfbGV2ZWwY",
+            "ASADKAsyYC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5B",
+            "Y3RpdmVNaW51dGVzUm9sbHVwVmFsdWUuQWN0aXZlTWludXRlc1JvbGx1cEJ5",
+            "QWN0aXZpdHlMZXZlbBq2AQoiQWN0aXZlTWludXRlc1JvbGx1cEJ5QWN0aXZp",
+            "dHlMZXZlbBJYCg5hY3Rpdml0eV9sZXZlbBgBIAEoDjJALmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkFjdGl2ZU1pbnV0ZXMuQWN0aXZp",
+            "dHlMZXZlbBIfChJhY3RpdmVfbWludXRlc19zdW0YAiABKANIAIgBAUIVChNf",
+            "YWN0aXZlX21pbnV0ZXNfc3VtItICCg1BY3Rpdml0eUxldmVsElMKCGludGVy",
+            "dmFsGAEgASgLMjwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuT2JzZXJ2YXRpb25UaW1lSW50ZXJ2YWxCA+BBAhJmChNhY3Rpdml0eV9s",
+            "ZXZlbF90eXBlGAIgASgOMkQuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
+            "ZWFsdGgudjQuQWN0aXZpdHlMZXZlbC5BY3Rpdml0eUxldmVsVHlwZUID4EEC",
+            "IoMBChFBY3Rpdml0eUxldmVsVHlwZRIjCh9BQ1RJVklUWV9MRVZFTF9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASDQoJU0VERU5UQVJZEAESEgoOTElHSFRMWV9BQ1RJ",
+            "VkUQAhIVChFNT0RFUkFURUxZX0FDVElWRRADEg8KC1ZFUllfQUNUSVZFEAQi",
+            "+QIKGEFjdGl2aXR5TGV2ZWxSb2xsdXBWYWx1ZRKbAQotYWN0aXZpdHlfbGV2",
+            "ZWxfcm9sbHVwc19ieV9hY3Rpdml0eV9sZXZlbF90eXBlGAEgAygLMmQuZ29v",
+            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZpdHlMZXZl",
+            "bFJvbGx1cFZhbHVlLkFjdGl2aXR5TGV2ZWxSb2xsdXBCeUFjdGl2aXR5TGV2",
+            "ZWxUeXBlGr4BCiZBY3Rpdml0eUxldmVsUm9sbHVwQnlBY3Rpdml0eUxldmVs",
+            "VHlwZRJhChNhY3Rpdml0eV9sZXZlbF90eXBlGAEgASgOMkQuZ29vZ2xlLmRl",
+            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuQWN0aXZpdHlMZXZlbC5BY3Rp",
+            "dml0eUxldmVsVHlwZRIxCg50b3RhbF9kdXJhdGlvbhgCIAEoCzIZLmdvb2ds",
+            "ZS5wcm90b2J1Zi5EdXJhdGlvbiKYAQoIQWx0aXR1ZGUSUwoIaW50ZXJ2YWwY",
+            "AiABKAsyPC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5P",
+            "YnNlcnZhdGlvblRpbWVJbnRlcnZhbEID4EECEiIKEGdhaW5fbWlsbGltZXRl",
+            "cnMYAyABKANCA+BBAkgAiAEBQhMKEV9nYWluX21pbGxpbWV0ZXJzIokBChFC",
+            "YXNhbEVuZXJneUJ1cm5lZBJTCghpbnRlcnZhbBgBIAEoCzI8Lmdvb2dsZS5k",
+            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUlu",
+            "dGVydmFsQgPgQQISFgoEa2NhbBgCIAEoAUID4EECSACIAQFCBwoFX2tjYWwi",
+            "jAEKB0JvZHlGYXQSVAoLc2FtcGxlX3RpbWUYAiABKAsyOi5nb29nbGUuZGV2",
+            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRp",
+            "bWVCA+BBAhIcCgpwZXJjZW50YWdlGAMgASgBQgPgQQJIAIgBAUINCgtfcGVy",
+            "Y2VudGFnZSJWChJCb2R5RmF0Um9sbHVwVmFsdWUSJAoXYm9keV9mYXRfcGVy",
+            "Y2VudGFnZV9hdmcYASABKAFIAIgBAUIaChhfYm9keV9mYXRfcGVyY2VudGFn",
+            "ZV9hdmci0wQKE0NvcmVCb2R5VGVtcGVyYXR1cmUSVAoLc2FtcGxlX3RpbWUY",
+            "AiABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5P",
+            "YnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhIlChN0ZW1wZXJhdHVyZV9jZWxz",
+            "aXVzGAMgASgBQgPgQQJIAIgBARJvChRtZWFzdXJlbWVudF9sb2NhdGlvbhgE",
+            "IAEoDjJMLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkNv",
+            "cmVCb2R5VGVtcGVyYXR1cmUuTWVhc3VyZW1lbnRMb2NhdGlvbkID4EEBEg8K",
+            "AmlkGAUgASgJQgPgQQEipAIKE01lYXN1cmVtZW50TG9jYXRpb24SJAogTUVB",
+            "U1VSRU1FTlRfTE9DQVRJT05fVU5TUEVDSUZJRUQQABIJCgVPVEhFUhABEgoK",
+            "BkFSTVBJVBACEggKBEJPRFkQAxIHCgNFQVIQBBIKCgZGSU5HRVIQBRIVChFH",
+            "QVNUUk9fSU5URVNUSU5BTBAGEgkKBU1PVVRIEAcSCgoGUkVDVFVNEAgSBwoD",
+            "VE9FEAkSDAoIRUFSX0RSVU0QChITCg9URU1QT1JBTF9BUlRFUlkQCxIMCghG",
+            "T1JFSEVBRBAMEhMKD1VSSU5BUllfQkxBRERFUhANEgkKBU5BU0FMEA4SEgoO",
+            "TkFTT1BIQVJZTkdFQUwQDxIJCgVXUklTVBAQEgoKBlZBR0lOQRARQhYKFF90",
+            "ZW1wZXJhdHVyZV9jZWxzaXVzIuYBCh5Db3JlQm9keVRlbXBlcmF0dXJlUm9s",
+            "bHVwVmFsdWUSJAoXdGVtcGVyYXR1cmVfY2Vsc2l1c19hdmcYASABKAFIAIgB",
+            "ARIkChd0ZW1wZXJhdHVyZV9jZWxzaXVzX21heBgCIAEoAUgBiAEBEiQKF3Rl",
+            "bXBlcmF0dXJlX2NlbHNpdXNfbWluGAMgASgBSAKIAQFCGgoYX3RlbXBlcmF0",
+            "dXJlX2NlbHNpdXNfYXZnQhoKGF90ZW1wZXJhdHVyZV9jZWxzaXVzX21heEIa",
+            "ChhfdGVtcGVyYXR1cmVfY2Vsc2l1c19taW4ivwIKIkNhbG9yaWVzSW5IZWFy",
+            "dFJhdGVab25lUm9sbHVwVmFsdWUSigEKHGNhbG9yaWVzX2luX2hlYXJ0X3Jh",
+            "dGVfem9uZXMYASADKAsyZC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5DYWxvcmllc0luSGVhcnRSYXRlWm9uZVJvbGx1cFZhbHVlLkNh",
+            "bG9yaWVzSW5IZWFydFJhdGVab25lVmFsdWUaiwEKHENhbG9yaWVzSW5IZWFy",
+            "dFJhdGVab25lVmFsdWUSTwoPaGVhcnRfcmF0ZV96b25lGAEgASgOMjYuZ29v",
+            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlWm9u",
+            "ZVR5cGUSEQoEa2NhbBgCIAEoAUgAiAEBQgcKBV9rY2FsIpEDChNEYWlseUhl",
+            "YXJ0UmF0ZVpvbmVzEiQKBGRhdGUYASABKAsyES5nb29nbGUudHlwZS5EYXRl",
+            "QgPgQQISZQoQaGVhcnRfcmF0ZV96b25lcxgCIAMoCzJGLmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkRhaWx5SGVhcnRSYXRlWm9uZXMu",
+            "SGVhcnRSYXRlWm9uZUID4EECGuwBCg1IZWFydFJhdGVab25lElkKFGhlYXJ0",
+            "X3JhdGVfem9uZV90eXBlGAEgASgOMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlWm9uZVR5cGVCA+BBAhImChRtaW5f",
+            "YmVhdHNfcGVyX21pbnV0ZRgCIAEoA0ID4EECSACIAQESJgoUbWF4X2JlYXRz",
+            "X3Blcl9taW51dGUYAyABKANCA+BBAkgBiAEBQhcKFV9taW5fYmVhdHNfcGVy",
+            "X21pbnV0ZUIXChVfbWF4X2JlYXRzX3Blcl9taW51dGUi0wMKGURhaWx5SGVh",
+            "cnRSYXRlVmFyaWFiaWxpdHkSJAoEZGF0ZRgCIAEoCzIRLmdvb2dsZS50eXBl",
+            "LkRhdGVCA+BBAhI9CithdmVyYWdlX2hlYXJ0X3JhdGVfdmFyaWFiaWxpdHlf",
+            "bWlsbGlzZWNvbmRzGAQgASgBQgPgQQFIAIgBARI1CiNub25fcmVtX2hlYXJ0",
+            "X3JhdGVfYmVhdHNfcGVyX21pbnV0ZRgFIAEoA0ID4EEBSAGIAQESGQoHZW50",
+            "cm9weRgGIAEoAUID4EEBSAKIAQESVApCZGVlcF9zbGVlcF9yb290X21lYW5f",
+            "c3F1YXJlX29mX3N1Y2Nlc3NpdmVfZGlmZmVyZW5jZXNfbWlsbGlzZWNvbmRz",
+            "GAcgASgBQgPgQQFIA4gBAUIuCixfYXZlcmFnZV9oZWFydF9yYXRlX3Zhcmlh",
+            "YmlsaXR5X21pbGxpc2Vjb25kc0ImCiRfbm9uX3JlbV9oZWFydF9yYXRlX2Jl",
+            "YXRzX3Blcl9taW51dGVCCgoIX2VudHJvcHlCRQpDX2RlZXBfc2xlZXBfcm9v",
+            "dF9tZWFuX3NxdWFyZV9vZl9zdWNjZXNzaXZlX2RpZmZlcmVuY2VzX21pbGxp",
+            "c2Vjb25kcyJ5ChREYWlseVJlc3BpcmF0b3J5UmF0ZRIkCgRkYXRlGAEgASgL",
+            "MhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EECEiQKEmJyZWF0aHNfcGVyX21pbnV0",
+            "ZRgCIAEoAUID4EECSACIAQFCFQoTX2JyZWF0aHNfcGVyX21pbnV0ZSLXAgoV",
+            "RGFpbHlPeHlnZW5TYXR1cmF0aW9uEiQKBGRhdGUYASABKAsyES5nb29nbGUu",
+            "dHlwZS5EYXRlQgPgQQISJAoSYXZlcmFnZV9wZXJjZW50YWdlGAIgASgBQgPg",
+            "QQJIAIgBARIoChZsb3dlcl9ib3VuZF9wZXJjZW50YWdlGAMgASgBQgPgQQJI",
+            "AYgBARIoChZ1cHBlcl9ib3VuZF9wZXJjZW50YWdlGAQgASgBQgPgQQJIAogB",
+            "ARIvCh1zdGFuZGFyZF9kZXZpYXRpb25fcGVyY2VudGFnZRgFIAEoAUID4EEB",
+            "SAOIAQFCFQoTX2F2ZXJhZ2VfcGVyY2VudGFnZUIZChdfbG93ZXJfYm91bmRf",
+            "cGVyY2VudGFnZUIZChdfdXBwZXJfYm91bmRfcGVyY2VudGFnZUIgCh5fc3Rh",
+            "bmRhcmRfZGV2aWF0aW9uX3BlcmNlbnRhZ2UilAQKFURhaWx5UmVzdGluZ0hl",
+            "YXJ0UmF0ZRIkCgRkYXRlGAIgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EEC",
+            "EiIKEGJlYXRzX3Blcl9taW51dGUYBCABKANCA+BBAkgAiAEBEogBCiFkYWls",
+            "eV9yZXN0aW5nX2hlYXJ0X3JhdGVfbWV0YWRhdGEYBSABKAsyWC5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5EYWlseVJlc3RpbmdIZWFy",
+            "dFJhdGUuRGFpbHlSZXN0aW5nSGVhcnRSYXRlTWV0YWRhdGFCA+BBARqQAgod",
+            "RGFpbHlSZXN0aW5nSGVhcnRSYXRlTWV0YWRhdGESiwEKEmNhbGN1bGF0aW9u",
+            "X21ldGhvZBgBIAEoDjJqLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LkRhaWx5UmVzdGluZ0hlYXJ0UmF0ZS5EYWlseVJlc3RpbmdIZWFy",
+            "dFJhdGVNZXRhZGF0YS5DYWxjdWxhdGlvbk1ldGhvZEID4EECImEKEUNhbGN1",
+            "bGF0aW9uTWV0aG9kEiIKHkNBTENVTEFUSU9OX01FVEhPRF9VTlNQRUNJRklF",
+            "RBAAEg4KCldJVEhfU0xFRVAQARIYChRPTkxZX1dJVEhfQVdBS0VfREFUQRAC",
+            "QhMKEV9iZWF0c19wZXJfbWludXRlIscCCiBEYWlseVNsZWVwVGVtcGVyYXR1",
+            "cmVEZXJpdmF0aW9ucxIkCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0",
+            "ZUID4EECEi0KG25pZ2h0bHlfdGVtcGVyYXR1cmVfY2Vsc2l1cxgCIAEoAUID",
+            "4EECSACIAQESLgocYmFzZWxpbmVfdGVtcGVyYXR1cmVfY2Vsc2l1cxgDIAEo",
+            "AUID4EEBSAGIAQESNQojcmVsYXRpdmVfbmlnaHRseV9zdGRkZXZfMzBkX2Nl",
+            "bHNpdXMYBCABKAFCA+BBAUgCiAEBQh4KHF9uaWdodGx5X3RlbXBlcmF0dXJl",
+            "X2NlbHNpdXNCHwodX2Jhc2VsaW5lX3RlbXBlcmF0dXJlX2NlbHNpdXNCJgok",
+            "X3JlbGF0aXZlX25pZ2h0bHlfc3RkZGV2XzMwZF9jZWxzaXVzIp0DCgtEYWls",
+            "eVZPMk1heBIkCgRkYXRlGAEgASgLMhEuZ29vZ2xlLnR5cGUuRGF0ZUID4EEC",
+            "EhkKB3ZvMl9tYXgYAiABKAFCA+BBAkgAiAEBEhYKCWVzdGltYXRlZBgDIAEo",
+            "CEID4EEBEmYKFGNhcmRpb19maXRuZXNzX2xldmVsGAQgASgOMkMuZ29vZ2xl",
+            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRGFpbHlWTzJNYXguQ2Fy",
+            "ZGlvRml0bmVzc0xldmVsQgPgQQESJAoSdm8yX21heF9jb3ZhcmlhbmNlGAUg",
+            "ASgBQgPgQQFIAYgBASKDAQoSQ2FyZGlvRml0bmVzc0xldmVsEiQKIENBUkRJ",
+            "T19GSVRORVNTX0xFVkVMX1VOU1BFQ0lGSUVEEAASCAoEUE9PUhABEggKBEZB",
+            "SVIQAhILCgdBVkVSQUdFEAMSCAoER09PRBAEEg0KCVZFUllfR09PRBAFEg0K",
+            "CUVYQ0VMTEVOVBAGQgoKCF92bzJfbWF4QhUKE192bzJfbWF4X2NvdmFyaWFu",
+            "Y2UijgEKCERpc3RhbmNlElMKCGludGVydmFsGAIgASgLMjwuZ29vZ2xlLmRl",
+            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1lSW50",
+            "ZXJ2YWxCA+BBAhIdCgttaWxsaW1ldGVycxgDIAEoA0ID4EECSACIAQFCDgoM",
+            "X21pbGxpbWV0ZXJzIkcKE0Rpc3RhbmNlUm9sbHVwVmFsdWUSHAoPbWlsbGlt",
+            "ZXRlcnNfc3VtGAEgASgDSACIAQFCEgoQX21pbGxpbWV0ZXJzX3N1bSK7BgoR",
+            "RWxlY3Ryb2NhcmRpb2dyYW0STwoIaW50ZXJ2YWwYASABKAsyOC5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TZXNzaW9uVGltZUludGVy",
+            "dmFsQgPgQQISJgoUYmVhdHNfcGVyX21pbnV0ZV9hdmcYAiABKANCA+BBAUgA",
+            "iAEBEm8KFXJlc3VsdF9jbGFzc2lmaWNhdGlvbhgDIAEoDjJLLmdvb2dsZS5k",
+            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkVsZWN0cm9jYXJkaW9ncmFt",
+            "LlJlc3VsdENsYXNzaWZpY2F0aW9uQgPgQQESHQoQd2F2ZWZvcm1fc2FtcGxl",
+            "cxgEIAMoEUID4EEBEioKGHNhbXBsaW5nX2ZyZXF1ZW5jeV9oZXJ0ehgFIAEo",
+            "BUID4EEBSAGIAQESKwoZbWlsbGl2b2x0c19zY2FsaW5nX2ZhY3RvchgGIAEo",
+            "BUID4EEBSAKIAQESHQoLbGVhZF9udW1iZXIYByABKAVCA+BBAUgDiAEBElgK",
+            "E21lZGljYWxfZGV2aWNlX2luZm8YCCABKAsyNi5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5NZWRpY2FsRGV2aWNlSW5mb0ID4EEDIuYB",
+            "ChRSZXN1bHRDbGFzc2lmaWNhdGlvbhIlCiFSRVNVTFRfQ0xBU1NJRklDQVRJ",
+            "T05fVU5TUEVDSUZJRUQQABIXChNOT1JNQUxfU0lOVVNfUkhZVEhNEAESFwoT",
+            "QVRSSUFMX0ZJQlJJTExBVElPThACEhAKDElOQ09OQ0xVU0lWRRADEiAKHElO",
+            "Q09OQ0xVU0lWRV9ISUdIX0hFQVJUX1JBVEUQBBIfChtJTkNPTkNMVVNJVkVf",
+            "TE9XX0hFQVJUX1JBVEUQBRIOCgpVTlJFQURBQkxFEAYSEAoMTk9UX0FOQUxZ",
+            "WkVEEAdCFwoVX2JlYXRzX3Blcl9taW51dGVfYXZnQhsKGV9zYW1wbGluZ19m",
+            "cmVxdWVuY3lfaGVydHpCHAoaX21pbGxpdm9sdHNfc2NhbGluZ19mYWN0b3JC",
+            "DgoMX2xlYWRfbnVtYmVyIrMQCghFeGVyY2lzZRJPCghpbnRlcnZhbBgCIAEo",
+            "CzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNlc3Np",
+            "b25UaW1lSW50ZXJ2YWxCA+BBAhJWCg1leGVyY2lzZV90eXBlGAYgASgOMjou",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2Uu",
+            "RXhlcmNpc2VUeXBlQgPgQQISTwoGc3BsaXRzGAggAygLMjouZ29vZ2xlLmRl",
+            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2UuU3BsaXRTdW1t",
+            "YXJ5QgPgQQESWQoPZXhlcmNpc2VfZXZlbnRzGA8gAygLMjsuZ29vZ2xlLmRl",
+            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2UuRXhlcmNpc2VF",
+            "dmVudEID4EEBElgKD3NwbGl0X3N1bW1hcmllcxgJIAMoCzI6Lmdvb2dsZS5k",
+            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkV4ZXJjaXNlLlNwbGl0U3Vt",
+            "bWFyeUID4EEBElEKD21ldHJpY3Nfc3VtbWFyeRgKIAEoCzIzLmdvb2dsZS5k",
+            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk1ldHJpY3NTdW1tYXJ5QgPg",
+            "QQISXgoRZXhlcmNpc2VfbWV0YWRhdGEYCyABKAsyPi5nb29nbGUuZGV2aWNl",
+            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5FeGVyY2lzZS5FeGVyY2lzZU1ldGFk",
+            "YXRhQgPgQQESGQoMZGlzcGxheV9uYW1lGAwgASgJQgPgQQISNwoPYWN0aXZl",
+            "X2R1cmF0aW9uGA0gASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPg",
+            "QQESEgoFbm90ZXMYDiABKAlCA+BBARI0Cgt1cGRhdGVfdGltZRgQIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0CgtjcmVhdGVfdGlt",
+            "ZRgRIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxqyBAoM",
+            "U3BsaXRTdW1tYXJ5EjMKCnN0YXJ0X3RpbWUYASABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQISOAoQc3RhcnRfdXRjX29mZnNldBgCIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECEjEKCGVuZF90aW1l",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjYKDmVu",
+            "ZF91dGNfb2Zmc2V0GAQgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "QgPgQQISNwoPYWN0aXZlX2R1cmF0aW9uGAUgASgLMhkuZ29vZ2xlLnByb3Rv",
+            "YnVmLkR1cmF0aW9uQgPgQQMSUQoPbWV0cmljc19zdW1tYXJ5GAYgASgLMjMu",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuTWV0cmljc1N1",
+            "bW1hcnlCA+BBAhJdCgpzcGxpdF90eXBlGAcgASgOMkQuZ29vZ2xlLmRldmlj",
+            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRXhlcmNpc2UuU3BsaXRTdW1tYXJ5",
+            "LlNwbGl0VHlwZUID4EECIl0KCVNwbGl0VHlwZRIaChZTUExJVF9UWVBFX1VO",
+            "U1BFQ0lGSUVEEAASCgoGTUFOVUFMEAESDAoIRFVSQVRJT04QAhIMCghESVNU",
+            "QU5DRRADEgwKCENBTE9SSUVTEAQa9wIKDUV4ZXJjaXNlRXZlbnQSMwoKZXZl",
+            "bnRfdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
+            "AhI4ChBldmVudF91dGNfb2Zmc2V0GAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uQgPgQQISbwoTZXhlcmNpc2VfZXZlbnRfdHlwZRgDIAEoDjJN",
+            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkV4ZXJjaXNl",
+            "LkV4ZXJjaXNlRXZlbnQuRXhlcmNpc2VFdmVudFR5cGVCA+BBAiKFAQoRRXhl",
+            "cmNpc2VFdmVudFR5cGUSIwofRVhFUkNJU0VfRVZFTlRfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEgkKBVNUQVJUEAESCAoEU1RPUBACEgkKBVBBVVNFEAMSCgoGUkVT",
+            "VU1FEAQSDgoKQVVUT19QQVVTRRAFEg8KC0FVVE9fUkVTVU1FEAYabwoQRXhl",
+            "cmNpc2VNZXRhZGF0YRIpChdwb29sX2xlbmd0aF9taWxsaW1ldGVycxgBIAEo",
+            "A0ID4EEBSACIAQESFAoHaGFzX2dwcxgCIAEoCEID4EEBQhoKGF9wb29sX2xl",
+            "bmd0aF9taWxsaW1ldGVycyLQAQoMRXhlcmNpc2VUeXBlEh0KGUVYRVJDSVNF",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESCwoHV0FMS0lORxAC",
+            "EgoKBkJJS0lORxADEgwKCFNXSU1NSU5HEAQSCgoGSElLSU5HEAUSCAoEWU9H",
+            "QRAGEgsKB1BJTEFURVMQBxILCgdXT1JLT1VUEAgSCAoESElJVBAJEhEKDVdF",
+            "SUdIVExJRlRJTkcQChIVChFTVFJFTkdUSF9UUkFJTklORxALEgkKBU9USEVS",
+            "EAwigAEKBkZsb29ycxJTCghpbnRlcnZhbBgCIAEoCzI8Lmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVy",
+            "dmFsQgPgQQISFwoFY291bnQYBCABKANCA+BBAkgAiAEBQggKBl9jb3VudCI5",
+            "ChFGbG9vcnNSb2xsdXBWYWx1ZRIWCgljb3VudF9zdW0YASABKANIAIgBAUIM",
+            "CgpfY291bnRfc3VtIlEKE0FsdGl0dWRlUm9sbHVwVmFsdWUSIQoUZ2Fpbl9t",
+            "aWxsaW1ldGVyc19zdW0YASABKANIAIgBAUIXChVfZ2Fpbl9taWxsaW1ldGVy",
+            "c19zdW0iqAUKCUhlYXJ0UmF0ZRJUCgtzYW1wbGVfdGltZRgCIAEoCzI6Lmdv",
+            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9u",
+            "U2FtcGxlVGltZUID4EECEiIKEGJlYXRzX3Blcl9taW51dGUYBCABKANCA+BB",
+            "AkgAiAEBElcKCG1ldGFkYXRhGAYgASgLMkAuZ29vZ2xlLmRldmljZXNhbmRz",
+            "ZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRSYXRlLkhlYXJ0UmF0ZU1ldGFkYXRh",
+            "QgPgQQEasgMKEUhlYXJ0UmF0ZU1ldGFkYXRhEmsKDm1vdGlvbl9jb250ZXh0",
+            "GAEgASgOMk4uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
+            "SGVhcnRSYXRlLkhlYXJ0UmF0ZU1ldGFkYXRhLk1vdGlvbkNvbnRleHRCA+BB",
+            "ARJtCg9zZW5zb3JfbG9jYXRpb24YAiABKA4yTy5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5IZWFydFJhdGUuSGVhcnRSYXRlTWV0YWRh",
+            "dGEuU2Vuc29yTG9jYXRpb25CA+BBASJKCg1Nb3Rpb25Db250ZXh0Eh4KGk1P",
+            "VElPTl9DT05URVhUX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDQoJU0VE",
+            "RU5UQVJZEAIidQoOU2Vuc29yTG9jYXRpb24SHwobU0VOU09SX0xPQ0FUSU9O",
+            "X1VOU1BFQ0lGSUVEEAASCQoFQ0hFU1QQARIJCgVXUklTVBACEgoKBkZJTkdF",
+            "UhADEggKBEhBTkQQBBIMCghFQVJfTE9CRRAFEggKBEZPT1QQBkITChFfYmVh",
+            "dHNfcGVyX21pbnV0ZSLKAQoUSGVhcnRSYXRlUm9sbHVwVmFsdWUSIQoUYmVh",
+            "dHNfcGVyX21pbnV0ZV9hdmcYASABKAFIAIgBARIhChRiZWF0c19wZXJfbWlu",
+            "dXRlX21heBgCIAEoAUgBiAEBEiEKFGJlYXRzX3Blcl9taW51dGVfbWluGAMg",
+            "ASgBSAKIAQFCFwoVX2JlYXRzX3Blcl9taW51dGVfYXZnQhcKFV9iZWF0c19w",
+            "ZXJfbWludXRlX21heEIXChVfYmVhdHNfcGVyX21pbnV0ZV9taW4iggEKFFJ1",
+            "blZPMk1heFJvbGx1cFZhbHVlEhUKCHJhdGVfbWluGAEgASgBSACIAQESFQoI",
+            "cmF0ZV9tYXgYAiABKAFIAYgBARIVCghyYXRlX2F2ZxgDIAEoAUgCiAEBQgsK",
+            "CV9yYXRlX21pbkILCglfcmF0ZV9tYXhCCwoJX3JhdGVfYXZnIpABCglSdW5W",
+            "TzJNYXgSVAoLc2FtcGxlX3RpbWUYASABKAsyOi5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BB",
+            "AhIdCgtydW5fdm8yX21heBgCIAEoAUID4EECSACIAQFCDgoMX3J1bl92bzJf",
+            "bWF4IpICCixIZWFydFJhdGVWYXJpYWJpbGl0eVBlcnNvbmFsUmFuZ2VSb2xs",
+            "dXBWYWx1ZRI8Ci9hdmVyYWdlX2hlYXJ0X3JhdGVfdmFyaWFiaWxpdHlfbWls",
+            "bGlzZWNvbmRzX21pbhgBIAEoAUgAiAEBEjwKL2F2ZXJhZ2VfaGVhcnRfcmF0",
+            "ZV92YXJpYWJpbGl0eV9taWxsaXNlY29uZHNfbWF4GAIgASgBSAGIAQFCMgow",
+            "X2F2ZXJhZ2VfaGVhcnRfcmF0ZV92YXJpYWJpbGl0eV9taWxsaXNlY29uZHNf",
+            "bWluQjIKMF9hdmVyYWdlX2hlYXJ0X3JhdGVfdmFyaWFiaWxpdHlfbWlsbGlz",
+            "ZWNvbmRzX21heCKbAQoGSGVpZ2h0ElQKC3NhbXBsZV90aW1lGAEgASgLMjou",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRp",
+            "b25TYW1wbGVUaW1lQgPgQQISJAoSaGVpZ2h0X21pbGxpbWV0ZXJzGAIgASgD",
+            "QgPgQQJIAIgBAUIVChNfaGVpZ2h0X21pbGxpbWV0ZXJzIsoCChRIZWFydFJh",
+            "dGVWYXJpYWJpbGl0eRJUCgtzYW1wbGVfdGltZRgBIAEoCzI6Lmdvb2dsZS5k",
+            "ZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uU2FtcGxl",
+            "VGltZUID4EECEkkKN3Jvb3RfbWVhbl9zcXVhcmVfb2Zfc3VjY2Vzc2l2ZV9k",
+            "aWZmZXJlbmNlc19taWxsaXNlY29uZHMYAiABKAFCA+BBAUgAiAEBEjEKH3N0",
+            "YW5kYXJkX2RldmlhdGlvbl9taWxsaXNlY29uZHMYAyABKAFCA+BBAUgBiAEB",
+            "QjoKOF9yb290X21lYW5fc3F1YXJlX29mX3N1Y2Nlc3NpdmVfZGlmZmVyZW5j",
+            "ZXNfbWlsbGlzZWNvbmRzQiIKIF9zdGFuZGFyZF9kZXZpYXRpb25fbWlsbGlz",
+            "ZWNvbmRzIpEBCg5Wb2x1bWVRdWFudGl0eRIdCgttaWxsaWxpdGVycxgBIAEo",
+            "AUID4EECSACIAQESUAoSdXNlcl9wcm92aWRlZF91bml0GAIgASgOMi8uZ29v",
+            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuVm9sdW1lVW5pdEID",
+            "4EEBQg4KDF9taWxsaWxpdGVycyKyAQoMSHlkcmF0aW9uTG9nEk8KCGludGVy",
+            "dmFsGAEgASgLMjguZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuU2Vzc2lvblRpbWVJbnRlcnZhbEID4EECElEKD2Ftb3VudF9jb25zdW1l",
+            "ZBgCIAEoCzIzLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
+            "LlZvbHVtZVF1YW50aXR5QgPgQQIirAIKF0h5ZHJhdGlvbkxvZ1JvbGx1cFZh",
+            "bHVlEmoKD2Ftb3VudF9jb25zdW1lZBgBIAEoCzJRLmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0Lkh5ZHJhdGlvbkxvZ1JvbGx1cFZhbHVl",
+            "LlZvbHVtZVF1YW50aXR5Um9sbHVwGqQBChRWb2x1bWVRdWFudGl0eVJvbGx1",
+            "cBIhCg9taWxsaWxpdGVyc19zdW0YASABKAFCA+BBAkgAiAEBElUKF3VzZXJf",
+            "cHJvdmlkZWRfdW5pdF9sYXN0GAIgASgOMi8uZ29vZ2xlLmRldmljZXNhbmRz",
+            "ZXJ2aWNlcy5oZWFsdGgudjQuVm9sdW1lVW5pdEID4EEBQhIKEF9taWxsaWxp",
+            "dGVyc19zdW0ivQgKG0lycmVndWxhclJoeXRobU5vdGlmaWNhdGlvbhJPCghp",
+            "bnRlcnZhbBgBIAEoCzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LlNlc3Npb25UaW1lSW50ZXJ2YWxCA+BBAhJoCg1hbGVydF93aW5k",
+            "b3dzGAUgAygLMkwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuSXJyZWd1bGFyUmh5dGhtTm90aWZpY2F0aW9uLkFsZXJ0V2luZG93QgPg",
+            "QQESWAoTbWVkaWNhbF9kZXZpY2VfaW5mbxgGIAEoCzI2Lmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk1lZGljYWxEZXZpY2VJbmZvQgPg",
+            "QQMa/QEKCUhlYXJ0QmVhdBI2Cg1waHlzaWNhbF90aW1lGAEgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjIKCnV0Y19vZmZzZXQYAiAB",
+            "KAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhJLCgpjaXZpbF90",
+            "aW1lGAMgASgLMjIuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
+            "djQuQ2l2aWxEYXRlVGltZUID4EEDEiIKEGJlYXRzX3Blcl9taW51dGUYBCAB",
+            "KAVCA+BBAkgAiAEBQhMKEV9iZWF0c19wZXJfbWludXRlGogECgtBbGVydFdp",
+            "bmRvdxIzCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EECEjgKEHN0YXJ0X3V0Y19vZmZzZXQYAiABKAsyGS5nb29n",
+            "bGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhIxCghlbmRfdGltZRgDIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI2Cg5lbmRfdXRjX29m",
+            "ZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECElEK",
+            "EGNpdmlsX3N0YXJ0X3RpbWUYBSABKAsyMi5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5DaXZpbERhdGVUaW1lQgPgQQMSTwoOY2l2aWxf",
+            "ZW5kX3RpbWUYBiABKAsyMi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5DaXZpbERhdGVUaW1lQgPgQQMSFQoIcG9zaXRpdmUYByABKAhC",
+            "A+BBARJkCgtoZWFydF9iZWF0cxgIIAMoCzJKLmdvb2dsZS5kZXZpY2VzYW5k",
+            "c2VydmljZXMuaGVhbHRoLnY0LklycmVndWxhclJoeXRobU5vdGlmaWNhdGlv",
+            "bi5IZWFydEJlYXRCA+BBASKYDAoOTWV0cmljc1N1bW1hcnkSHwoNY2Fsb3Jp",
+            "ZXNfa2NhbBgBIAEoAUID4EEBSACIAQESJgoUZGlzdGFuY2VfbWlsbGltZXRl",
+            "cnMYAiABKAFCA+BBAUgBiAEBEhcKBXN0ZXBzGAMgASgDQgPgQQFIAogBARI2",
+            "CiRhdmVyYWdlX3NwZWVkX21pbGxpbWV0ZXJzX3Blcl9zZWNvbmQYBCABKAFC",
+            "A+BBAUgDiAEBEjAKHmF2ZXJhZ2VfcGFjZV9zZWNvbmRzX3Blcl9tZXRlchgF",
+            "IAEoAUID4EEBSASIAQESNQojYXZlcmFnZV9oZWFydF9yYXRlX2JlYXRzX3Bl",
+            "cl9taW51dGUYBiABKANCA+BBAUgFiAEBEiwKGmVsZXZhdGlvbl9nYWluX21p",
+            "bGxpbWV0ZXJzGAcgASgBQgPgQQFIBogBARIlChNhY3RpdmVfem9uZV9taW51",
+            "dGVzGAkgASgDQgPgQQFIB4gBARIdCgtydW5fdm8yX21heBgKIAEoAUID4EEB",
+            "SAiIAQESJAoSdG90YWxfc3dpbV9sZW5ndGhzGAsgASgBQgPgQQFICYgBARJw",
+            "ChloZWFydF9yYXRlX3pvbmVfZHVyYXRpb25zGAwgASgLMkguZ29vZ2xlLmRl",
+            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuTWV0cmljc1N1bW1hcnkuVGlt",
+            "ZUluSGVhcnRSYXRlWm9uZXNCA+BBARJiChBtb2JpbGl0eV9tZXRyaWNzGA0g",
+            "ASgLMkMuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuTWV0",
+            "cmljc1N1bW1hcnkuTW9iaWxpdHlNZXRyaWNzQgPgQQEa6wEKFFRpbWVJbkhl",
+            "YXJ0UmF0ZVpvbmVzEjIKCmxpZ2h0X3RpbWUYASABKAsyGS5nb29nbGUucHJv",
+            "dG9idWYuRHVyYXRpb25CA+BBARI1Cg1tb2RlcmF0ZV90aW1lGAIgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQESNQoNdmlnb3JvdXNfdGlt",
+            "ZRgDIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjEKCXBl",
+            "YWtfdGltZRgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEB",
+            "Gp0DCg9Nb2JpbGl0eU1ldHJpY3MSLgocYXZnX2NhZGVuY2Vfc3RlcHNfcGVy",
+            "X21pbnV0ZRgBIAEoAUID4EEBSACIAQESLwodYXZnX3N0cmlkZV9sZW5ndGhf",
+            "bWlsbGltZXRlcnMYAiABKANCA+BBAUgBiAEBEjYKJGF2Z192ZXJ0aWNhbF9v",
+            "c2NpbGxhdGlvbl9taWxsaW1ldGVycxgDIAEoA0ID4EEBSAKIAQESJAoSYXZn",
+            "X3ZlcnRpY2FsX3JhdGlvGAQgASgBQgPgQQFIA4gBARJICiBhdmdfZ3JvdW5k",
+            "X2NvbnRhY3RfdGltZV9kdXJhdGlvbhgFIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbkID4EEBQh8KHV9hdmdfY2FkZW5jZV9zdGVwc19wZXJfbWlu",
+            "dXRlQiAKHl9hdmdfc3RyaWRlX2xlbmd0aF9taWxsaW1ldGVyc0InCiVfYXZn",
+            "X3ZlcnRpY2FsX29zY2lsbGF0aW9uX21pbGxpbWV0ZXJzQhUKE19hdmdfdmVy",
+            "dGljYWxfcmF0aW9CEAoOX2NhbG9yaWVzX2tjYWxCFwoVX2Rpc3RhbmNlX21p",
+            "bGxpbWV0ZXJzQggKBl9zdGVwc0InCiVfYXZlcmFnZV9zcGVlZF9taWxsaW1l",
+            "dGVyc19wZXJfc2Vjb25kQiEKH19hdmVyYWdlX3BhY2Vfc2Vjb25kc19wZXJf",
+            "bWV0ZXJCJgokX2F2ZXJhZ2VfaGVhcnRfcmF0ZV9iZWF0c19wZXJfbWludXRl",
+            "Qh0KG19lbGV2YXRpb25fZ2Fpbl9taWxsaW1ldGVyc0IWChRfYWN0aXZlX3pv",
+            "bmVfbWludXRlc0IOCgxfcnVuX3ZvMl9tYXhCFQoTX3RvdGFsX3N3aW1fbGVu",
+            "Z3RocyKFAQoOV2VpZ2h0UXVhbnRpdHkSFwoFZ3JhbXMYASABKAFCA+BBAkgA",
+            "iAEBElAKEnVzZXJfcHJvdmlkZWRfdW5pdBgCIAEoDjIvLmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LldlaWdodFVuaXRCA+BBAUIICgZf",
+            "Z3JhbXMigwEKDkVuZXJneVF1YW50aXR5EhYKBGtjYWwYASABKAFCA+BBAkgA",
+            "iAEBElAKEnVzZXJfcHJvdmlkZWRfdW5pdBgCIAEoDjIvLmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkVuZXJneVVuaXRCA+BBAUIHCgVf",
+            "a2NhbCKkAQoQTnV0cmllbnRRdWFudGl0eRJKCghxdWFudGl0eRgBIAEoCzIz",
+            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LldlaWdodFF1",
+            "YW50aXR5QgPgQQISRAoIbnV0cmllbnQYAiABKA4yLS5nb29nbGUuZGV2aWNl",
+            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5OdXRyaWVudEID4EECIoIHCgxOdXRy",
+            "aXRpb25Mb2cSTwoIaW50ZXJ2YWwYAiABKAsyOC5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5TZXNzaW9uVGltZUludGVydmFsQgPgQQIS",
+            "TQoJbnV0cmllbnRzGAMgAygLMjUuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuTnV0cmllbnRRdWFudGl0eUID4EEBEkgKBmVuZXJneRgE",
+            "IAEoCzIzLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkVu",
+            "ZXJneVF1YW50aXR5QgPgQQESUQoPZW5lcmd5X2Zyb21fZmF0GAUgASgLMjMu",
+            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuRW5lcmd5UXVh",
+            "bnRpdHlCA+BBARJUChJ0b3RhbF9jYXJib2h5ZHJhdGUYByABKAsyMy5nb29n",
+            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5XZWlnaHRRdWFudGl0",
+            "eUID4EEBEksKCXRvdGFsX2ZhdBgIIAEoCzIzLmdvb2dsZS5kZXZpY2VzYW5k",
+            "c2VydmljZXMuaGVhbHRoLnY0LldlaWdodFF1YW50aXR5QgPgQQESRQoJbWVh",
+            "bF90eXBlGA0gASgOMi0uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
+            "dGgudjQuTWVhbFR5cGVCA+BBARJPCgdzZXJ2aW5nGA4gASgLMjkuZ29vZ2xl",
+            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuTnV0cml0aW9uTG9nLlNl",
+            "cnZpbmdCA+BBARI1CgRmb29kGA8gASgJQifgQQL6QSEKH2hlYWx0aC5nb29n",
+            "bGVhcGlzLmNvbS9EYXRhUG9pbnQSGQoRZm9vZF9kaXNwbGF5X25hbWUYECAB",
+            "KAkapwEKB1NlcnZpbmcSGAoGYW1vdW50GAEgASgBQgPgQQFIAIgBARJGChVm",
+            "b29kX21lYXN1cmVtZW50X3VuaXQYAiABKAlCJ+BBAvpBIQofaGVhbHRoLmdv",
+            "b2dsZWFwaXMuY29tL0RhdGFQb2ludBIvCiJmb29kX21lYXN1cmVtZW50X3Vu",
+            "aXRfZGlzcGxheV9uYW1lGAMgASgJQgPgQQNCCQoHX2Ftb3VudCLUCQoERm9v",
+            "ZBIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhISCgVicmFuZBgDIAEoCUID",
+            "4EEBEk8KDGFjY2Vzc19sZXZlbBgEIAEoDjI0Lmdvb2dsZS5kZXZpY2VzYW5k",
+            "c2VydmljZXMuaGVhbHRoLnY0LkZvb2RBY2Nlc3NMZXZlbEID4EECEhgKC2Rl",
+            "c2NyaXB0aW9uGAUgASgJQgPgQQESGgoNbGFuZ3VhZ2VfY29kZRgGIAEoCUID",
+            "4EEBEkUKCW1lYWxfdHlwZRgKIAEoDjItLmdvb2dsZS5kZXZpY2VzYW5kc2Vy",
+            "dmljZXMuaGVhbHRoLnY0Lk1lYWxUeXBlQgPgQQESTQoJbnV0cmllbnRzGAwg",
+            "AygLMjUuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuTnV0",
+            "cmllbnRRdWFudGl0eUID4EEBElEKD2VuZXJneV9mcm9tX2ZhdBgNIAEoCzIz",
+            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkVuZXJneVF1",
+            "YW50aXR5QgPgQQESVAoSdG90YWxfY2FyYm9oeWRyYXRlGA4gASgLMjMuZ29v",
+            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuV2VpZ2h0UXVhbnRp",
+            "dHlCA+BBARJLCgl0b3RhbF9mYXQYDyABKAsyMy5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NC5XZWlnaHRRdWFudGl0eUID4EEBEkwKCmVu",
+            "ZXJneV9taW4YECABKAsyMy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
+            "YWx0aC52NC5FbmVyZ3lRdWFudGl0eUID4EEBEkwKCmVuZXJneV9hdmcYESAB",
+            "KAsyMy5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5FbmVy",
+            "Z3lRdWFudGl0eUID4EEBEkwKCmVuZXJneV9tYXgYEiABKAsyMy5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5FbmVyZ3lRdWFudGl0eUID",
+            "4EEBElMKD2RlZmF1bHRfc2VydmluZxgTIAEoCzI1Lmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LkZvb2QuRm9vZFNlcnZpbmdCA+BBAhJM",
+            "CghzZXJ2aW5ncxgUIAMoCzI1Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0LkZvb2QuRm9vZFNlcnZpbmdCA+BBARr8AQoLRm9vZFNlcnZp",
+            "bmcSGAoGYW1vdW50GAEgASgBQgPgQQFIAIgBARJGChVmb29kX21lYXN1cmVt",
+            "ZW50X3VuaXQYAiABKAlCJ+BBAvpBIQofaGVhbHRoLmdvb2dsZWFwaXMuY29t",
+            "L0RhdGFQb2ludBIvCiJmb29kX21lYXN1cmVtZW50X3VuaXRfZGlzcGxheV9u",
+            "YW1lGAMgASgJQgPgQQMSNgopZm9vZF9tZWFzdXJlbWVudF91bml0X2Rpc3Bs",
+            "YXlfbmFtZV9wbHVyYWwYBCABKAlCA+BBAxIXCgptdWx0aXBsaWVyGAUgASgB",
+            "QgPgQQFCCQoHX2Ftb3VudCKkCAoXTnV0cml0aW9uTG9nUm9sbHVwVmFsdWUS",
+            "ZgoJbnV0cmllbnRzGAEgAygLMlMuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuTnV0cml0aW9uTG9nUm9sbHVwVmFsdWUuTnV0cmllbnRR",
+            "dWFudGl0eVJvbGx1cBJhCgZlbmVyZ3kYAiABKAsyUS5nb29nbGUuZGV2aWNl",
+            "c2FuZHNlcnZpY2VzLmhlYWx0aC52NC5OdXRyaXRpb25Mb2dSb2xsdXBWYWx1",
+            "ZS5FbmVyZ3lRdWFudGl0eVJvbGx1cBJqCg9lbmVyZ3lfZnJvbV9mYXQYAyAB",
+            "KAsyUS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5OdXRy",
+            "aXRpb25Mb2dSb2xsdXBWYWx1ZS5FbmVyZ3lRdWFudGl0eVJvbGx1cBJtChJ0",
+            "b3RhbF9jYXJib2h5ZHJhdGUYBCABKAsyUS5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5OdXRyaXRpb25Mb2dSb2xsdXBWYWx1ZS5XZWln",
+            "aHRRdWFudGl0eVJvbGx1cBJkCgl0b3RhbF9mYXQYBSABKAsyUS5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5OdXRyaXRpb25Mb2dSb2xs",
+            "dXBWYWx1ZS5XZWlnaHRRdWFudGl0eVJvbGx1cBqYAQoUV2VpZ2h0UXVhbnRp",
+            "dHlSb2xsdXASGwoJZ3JhbXNfc3VtGAEgASgBQgPgQQJIAIgBARJVChd1c2Vy",
+            "X3Byb3ZpZGVkX3VuaXRfbGFzdBgCIAEoDjIvLmdvb2dsZS5kZXZpY2VzYW5k",
+            "c2VydmljZXMuaGVhbHRoLnY0LldlaWdodFVuaXRCA+BBAUIMCgpfZ3JhbXNf",
+            "c3VtGpYBChRFbmVyZ3lRdWFudGl0eVJvbGx1cBIaCghrY2FsX3N1bRgBIAEo",
+            "AUID4EECSACIAQESVQoXdXNlcl9wcm92aWRlZF91bml0X2xhc3QYAiABKA4y",
+            "Ly5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5FbmVyZ3lV",
+            "bml0QgPgQQFCCwoJX2tjYWxfc3VtGsgBChZOdXRyaWVudFF1YW50aXR5Um9s",
+            "bHVwEmgKCHF1YW50aXR5GAEgASgLMlEuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuTnV0cml0aW9uTG9nUm9sbHVwVmFsdWUuV2VpZ2h0",
+            "UXVhbnRpdHlSb2xsdXBCA+BBAhJECghudXRyaWVudBgCIAEoDjItLmdvb2ds",
+            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk51dHJpZW50QgPgQQIi",
+            "lQEKEE94eWdlblNhdHVyYXRpb24SVAoLc2FtcGxlX3RpbWUYASABKAsyOi5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlv",
+            "blNhbXBsZVRpbWVCA+BBAhIcCgpwZXJjZW50YWdlGAIgASgBQgPgQQJIAIgB",
+            "AUINCgtfcGVyY2VudGFnZSKiAQooUmVzdGluZ0hlYXJ0UmF0ZVBlcnNvbmFs",
+            "UmFuZ2VSb2xsdXBWYWx1ZRIhChRiZWF0c19wZXJfbWludXRlX21pbhgBIAEo",
+            "AUgAiAEBEiEKFGJlYXRzX3Blcl9taW51dGVfbWF4GAIgASgBSAGIAQFCFwoV",
+            "X2JlYXRzX3Blcl9taW51dGVfbWluQhcKFV9iZWF0c19wZXJfbWludXRlX21h",
+            "eCJSChNGb29kTWVhc3VyZW1lbnRVbml0EhkKDGRpc3BsYXlfbmFtZRgBIAEo",
+            "CUID4EECEiAKE3BsdXJhbF9kaXNwbGF5X25hbWUYAiABKAlCA+BBASLuBgob",
+            "UmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5ElQKC3NhbXBsZV90aW1lGAEg",
+            "ASgLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2Jz",
+            "ZXJ2YXRpb25TYW1wbGVUaW1lQgPgQQIShQEKEGRlZXBfc2xlZXBfc3RhdHMY",
+            "AiABKAsyZi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5S",
+            "ZXNwaXJhdG9yeVJhdGVTbGVlcFN1bW1hcnkuUmVzcGlyYXRvcnlSYXRlU2xl",
+            "ZXBTdW1tYXJ5U3RhdGlzdGljc0ID4EEBEoYBChFsaWdodF9zbGVlcF9zdGF0",
+            "cxgDIAEoCzJmLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
+            "LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFyeS5SZXNwaXJhdG9yeVJhdGVT",
+            "bGVlcFN1bW1hcnlTdGF0aXN0aWNzQgPgQQEShAEKD3JlbV9zbGVlcF9zdGF0",
+            "cxgEIAEoCzJmLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0",
+            "LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFyeS5SZXNwaXJhdG9yeVJhdGVT",
+            "bGVlcFN1bW1hcnlTdGF0aXN0aWNzQgPgQQEShQEKEGZ1bGxfc2xlZXBfc3Rh",
+            "dHMYBSABKAsyZi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52",
+            "NC5SZXNwaXJhdG9yeVJhdGVTbGVlcFN1bW1hcnkuUmVzcGlyYXRvcnlSYXRl",
+            "U2xlZXBTdW1tYXJ5U3RhdGlzdGljc0ID4EECGtgBCiVSZXNwaXJhdG9yeVJh",
+            "dGVTbGVlcFN1bW1hcnlTdGF0aXN0aWNzEiQKEmJyZWF0aHNfcGVyX21pbnV0",
+            "ZRgBIAEoAUID4EECSACIAQESJAoSc3RhbmRhcmRfZGV2aWF0aW9uGAIgASgB",
+            "QgPgQQFIAYgBARIhCg9zaWduYWxfdG9fbm9pc2UYAyABKAFCA+BBAUgCiAEB",
+            "QhUKE19icmVhdGhzX3Blcl9taW51dGVCFQoTX3N0YW5kYXJkX2RldmlhdGlv",
+            "bkISChBfc2lnbmFsX3RvX25vaXNlIrYTCgVTbGVlcBJPCghpbnRlcnZhbBgD",
+            "IAEoCzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNl",
+            "c3Npb25UaW1lSW50ZXJ2YWxCA+BBAhJHCgR0eXBlGAQgASgOMjQuZ29vZ2xl",
+            "LmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU2xlZXAuU2xlZXBUeXBl",
+            "QgPgQQESSgoGc3RhZ2VzGAUgAygLMjUuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuU2xlZXAuU2xlZXBTdGFnZUID4EEBElwKE291dF9v",
+            "Zl9iZWRfc2VnbWVudHMYBiADKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
+            "Y2VzLmhlYWx0aC52NC5TbGVlcC5PdXRPZkJlZFNlZ21lbnRCA+BBARJPCght",
+            "ZXRhZGF0YRgIIAEoCzI4Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LlNsZWVwLlNsZWVwTWV0YWRhdGFCA+BBARJNCgdzdW1tYXJ5GAkg",
+            "ASgLMjcuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU2xl",
+            "ZXAuU2xlZXBTdW1tYXJ5QgPgQQMSNAoLY3JlYXRlX3RpbWUYCiABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUY",
+            "CyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMaoAMKClNs",
+            "ZWVwU3RhZ2USMwoKc3RhcnRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAhI4ChBzdGFydF91dGNfb2Zmc2V0GAQgASgLMhku",
+            "Z29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQISMQoIZW5kX3RpbWUYBSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISNgoOZW5kX3V0",
+            "Y19vZmZzZXQYBiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BB",
+            "AhJMCgR0eXBlGAcgASgOMjkuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
+            "ZWFsdGgudjQuU2xlZXAuU2xlZXBTdGFnZVR5cGVCA+BBAhI0CgtjcmVhdGVf",
+            "dGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0",
+            "Cgt1cGRhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxrrAQoPT3V0T2ZCZWRTZWdtZW50EjMKCnN0YXJ0X3RpbWUYASAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQISOAoQc3RhcnRf",
+            "dXRjX29mZnNldBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID",
+            "4EECEjEKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EECEjYKDmVuZF91dGNfb2Zmc2V0GAQgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uQgPgQQIavgMKDVNsZWVwTWV0YWRhdGESYAoNc3Rh",
+            "Z2VzX3N0YXR1cxgBIAEoDjJELmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMu",
+            "aGVhbHRoLnY0LlNsZWVwLlNsZWVwTWV0YWRhdGEuU3RhZ2VzU3RhdGVCA+BB",
+            "AxIWCglwcm9jZXNzZWQYAiABKAhCA+BBAxIQCgNuYXAYBSABKAhCA+BBAxIc",
+            "Cg9tYW51YWxseV9lZGl0ZWQYBiABKAhCA+BBAxIYCgtleHRlcm5hbF9pZBgH",
+            "IAEoCUID4EEBIugBCgtTdGFnZXNTdGF0ZRIcChhTVEFHRVNfU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABIVChFSRUpFQ1RFRF9DT1ZFUkFHRRABEhQKEFJFSkVDVEVE",
+            "X01BWF9HQVAQAhIWChJSRUpFQ1RFRF9TVEFSVF9HQVAQAxIUChBSRUpFQ1RF",
+            "RF9FTkRfR0FQEAQSEAoMUkVKRUNURURfTkFQEAUSEwoPUkVKRUNURURfU0VS",
+            "VkVSEAYSCwoHVElNRU9VVBAHEg0KCVNVQ0NFRURFRBAIEh0KGVBST0NFU1NJ",
+            "TkdfSU5URVJOQUxfRVJST1IQCRrRBAoMU2xlZXBTdW1tYXJ5EikKF21pbnV0",
+            "ZXNfaW5fc2xlZXBfcGVyaW9kGAEgASgDQgPgQQNIAIgBARInChVtaW51dGVz",
+            "X2FmdGVyX3dha2VfdXAYAiABKANCA+BBA0gBiAEBEigKFm1pbnV0ZXNfdG9f",
+            "ZmFsbF9hc2xlZXAYAyABKANCA+BBA0gCiAEBEiAKDm1pbnV0ZXNfYXNsZWVw",
+            "GAQgASgDQgPgQQNIA4gBARIfCg1taW51dGVzX2F3YWtlGAUgASgDQgPgQQNI",
+            "BIgBARJhCg5zdGFnZXNfc3VtbWFyeRgGIAMoCzJELmdvb2dsZS5kZXZpY2Vz",
+            "YW5kc2VydmljZXMuaGVhbHRoLnY0LlNsZWVwLlNsZWVwU3VtbWFyeS5TdGFn",
+            "ZVN1bW1hcnlCA+BBAxqmAQoMU3RhZ2VTdW1tYXJ5EkwKBHR5cGUYASABKA4y",
+            "OS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TbGVlcC5T",
+            "bGVlcFN0YWdlVHlwZUID4EEDEhkKB21pbnV0ZXMYAiABKANCA+BBA0gAiAEB",
+            "EhcKBWNvdW50GAMgASgDQgPgQQNIAYgBAUIKCghfbWludXRlc0IICgZfY291",
+            "bnRCGgoYX21pbnV0ZXNfaW5fc2xlZXBfcGVyaW9kQhgKFl9taW51dGVzX2Fm",
+            "dGVyX3dha2VfdXBCGQoXX21pbnV0ZXNfdG9fZmFsbF9hc2xlZXBCEQoPX21p",
+            "bnV0ZXNfYXNsZWVwQhAKDl9taW51dGVzX2F3YWtlIkAKCVNsZWVwVHlwZRIa",
+            "ChZTTEVFUF9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHQ0xBU1NJQxABEgoKBlNU",
+            "QUdFUxACInUKDlNsZWVwU3RhZ2VUeXBlEiAKHFNMRUVQX1NUQUdFX1RZUEVf",
+            "VU5TUEVDSUZJRUQQABIJCgVBV0FLRRABEgkKBUxJR0hUEAISCAoEREVFUBAD",
+            "EgcKA1JFTRAEEgoKBkFTTEVFUBAFEgwKCFJFU1RMRVNTEAYifwoFU3RlcHMS",
             "UwoIaW50ZXJ2YWwYAiABKAsyPC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
             "LmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJbnRlcnZhbEID4EECEhcKBWNv",
-            "dW50GAQgASgDQgPgQQJIAIgBAUIICgZfY291bnQiOQoRRmxvb3JzUm9sbHVw",
-            "VmFsdWUSFgoJY291bnRfc3VtGAEgASgDSACIAQFCDAoKX2NvdW50X3N1bSJR",
-            "ChNBbHRpdHVkZVJvbGx1cFZhbHVlEiEKFGdhaW5fbWlsbGltZXRlcnNfc3Vt",
-            "GAEgASgDSACIAQFCFwoVX2dhaW5fbWlsbGltZXRlcnNfc3VtIqgFCglIZWFy",
-            "dFJhdGUSVAoLc2FtcGxlX3RpbWUYAiABKAsyOi5nb29nbGUuZGV2aWNlc2Fu",
-            "ZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BB",
-            "AhIiChBiZWF0c19wZXJfbWludXRlGAQgASgDQgPgQQJIAIgBARJXCghtZXRh",
-            "ZGF0YRgGIAEoCzJALmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
-            "LnY0LkhlYXJ0UmF0ZS5IZWFydFJhdGVNZXRhZGF0YUID4EEBGrIDChFIZWFy",
-            "dFJhdGVNZXRhZGF0YRJrCg5tb3Rpb25fY29udGV4dBgBIAEoDjJOLmdvb2ds",
-            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkhlYXJ0UmF0ZS5IZWFy",
-            "dFJhdGVNZXRhZGF0YS5Nb3Rpb25Db250ZXh0QgPgQQESbQoPc2Vuc29yX2xv",
-            "Y2F0aW9uGAIgASgOMk8uZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuSGVhcnRSYXRlLkhlYXJ0UmF0ZU1ldGFkYXRhLlNlbnNvckxvY2F0",
-            "aW9uQgPgQQEiSgoNTW90aW9uQ29udGV4dBIeChpNT1RJT05fQ09OVEVYVF9V",
-            "TlNQRUNJRklFRBAAEgoKBkFDVElWRRABEg0KCVNFREVOVEFSWRACInUKDlNl",
-            "bnNvckxvY2F0aW9uEh8KG1NFTlNPUl9MT0NBVElPTl9VTlNQRUNJRklFRBAA",
-            "EgkKBUNIRVNUEAESCQoFV1JJU1QQAhIKCgZGSU5HRVIQAxIICgRIQU5EEAQS",
-            "DAoIRUFSX0xPQkUQBRIICgRGT09UEAZCEwoRX2JlYXRzX3Blcl9taW51dGUi",
-            "ygEKFEhlYXJ0UmF0ZVJvbGx1cFZhbHVlEiEKFGJlYXRzX3Blcl9taW51dGVf",
-            "YXZnGAEgASgBSACIAQESIQoUYmVhdHNfcGVyX21pbnV0ZV9tYXgYAiABKAFI",
-            "AYgBARIhChRiZWF0c19wZXJfbWludXRlX21pbhgDIAEoAUgCiAEBQhcKFV9i",
-            "ZWF0c19wZXJfbWludXRlX2F2Z0IXChVfYmVhdHNfcGVyX21pbnV0ZV9tYXhC",
-            "FwoVX2JlYXRzX3Blcl9taW51dGVfbWluIoIBChRSdW5WTzJNYXhSb2xsdXBW",
-            "YWx1ZRIVCghyYXRlX21pbhgBIAEoAUgAiAEBEhUKCHJhdGVfbWF4GAIgASgB",
-            "SAGIAQESFQoIcmF0ZV9hdmcYAyABKAFIAogBAUILCglfcmF0ZV9taW5CCwoJ",
-            "X3JhdGVfbWF4QgsKCV9yYXRlX2F2ZyKQAQoJUnVuVk8yTWF4ElQKC3NhbXBs",
-            "ZV90aW1lGAEgASgLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFs",
-            "dGgudjQuT2JzZXJ2YXRpb25TYW1wbGVUaW1lQgPgQQISHQoLcnVuX3ZvMl9t",
-            "YXgYAiABKAFCA+BBAkgAiAEBQg4KDF9ydW5fdm8yX21heCKSAgosSGVhcnRS",
-            "YXRlVmFyaWFiaWxpdHlQZXJzb25hbFJhbmdlUm9sbHVwVmFsdWUSPAovYXZl",
-            "cmFnZV9oZWFydF9yYXRlX3ZhcmlhYmlsaXR5X21pbGxpc2Vjb25kc19taW4Y",
-            "ASABKAFIAIgBARI8Ci9hdmVyYWdlX2hlYXJ0X3JhdGVfdmFyaWFiaWxpdHlf",
-            "bWlsbGlzZWNvbmRzX21heBgCIAEoAUgBiAEBQjIKMF9hdmVyYWdlX2hlYXJ0",
-            "X3JhdGVfdmFyaWFiaWxpdHlfbWlsbGlzZWNvbmRzX21pbkIyCjBfYXZlcmFn",
-            "ZV9oZWFydF9yYXRlX3ZhcmlhYmlsaXR5X21pbGxpc2Vjb25kc19tYXgimwEK",
-            "BkhlaWdodBJUCgtzYW1wbGVfdGltZRgBIAEoCzI6Lmdvb2dsZS5kZXZpY2Vz",
+            "dW50GAQgASgDQgPgQQJIAIgBAUIICgZfY291bnQiOAoQU3RlcHNSb2xsdXBW",
+            "YWx1ZRIWCgljb3VudF9zdW0YASABKANIAIgBAUIMCgpfY291bnRfc3VtIu8C",
+            "Cg9Td2ltTGVuZ3Roc0RhdGESUwoIaW50ZXJ2YWwYASABKAsyPC5nb29nbGUu",
+            "ZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJ",
+            "bnRlcnZhbEID4EECEmIKEHN3aW1fc3Ryb2tlX3R5cGUYAiABKA4yQy5nb29n",
+            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Td2ltTGVuZ3Roc0Rh",
+            "dGEuU3dpbVN0cm9rZVR5cGVCA+BBAhIeCgxzdHJva2VfY291bnQYAyABKANC",
+            "A+BBAkgAiAEBInIKDlN3aW1TdHJva2VUeXBlEiAKHFNXSU1fU1RST0tFX1RZ",
+            "UEVfVU5TUEVDSUZJRUQQABINCglGUkVFU1RZTEUQARIOCgpCQUNLU1RST0tF",
+            "EAISEAoMQlJFQVNUU1RST0tFEAMSDQoJQlVUVEVSRkxZEARCDwoNX3N0cm9r",
+            "ZV9jb3VudCJQChpTd2ltTGVuZ3Roc0RhdGFSb2xsdXBWYWx1ZRIdChBzdHJv",
+            "a2VfY291bnRfc3VtGAEgASgDSACIAQFCEwoRX3N0cm9rZV9jb3VudF9zdW0i",
+            "xQEKE1RpbWVJbkhlYXJ0UmF0ZVpvbmUSUwoIaW50ZXJ2YWwYASABKAsyPC5n",
+            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlv",
+            "blRpbWVJbnRlcnZhbEID4EECElkKFGhlYXJ0X3JhdGVfem9uZV90eXBlGAIg",
+            "ASgOMjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVh",
+            "cnRSYXRlWm9uZVR5cGVCA+BBAiK7AgoeVGltZUluSGVhcnRSYXRlWm9uZVJv",
+            "bGx1cFZhbHVlEn4KGHRpbWVfaW5faGVhcnRfcmF0ZV96b25lcxgBIAMoCzJc",
+            "Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlRpbWVJbkhl",
+            "YXJ0UmF0ZVpvbmVSb2xsdXBWYWx1ZS5UaW1lSW5IZWFydFJhdGVab25lVmFs",
+            "dWUamAEKGFRpbWVJbkhlYXJ0UmF0ZVpvbmVWYWx1ZRJPCg9oZWFydF9yYXRl",
+            "X3pvbmUYASABKA4yNi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
+            "aC52NC5IZWFydFJhdGVab25lVHlwZRIrCghkdXJhdGlvbhgCIAEoCzIZLmdv",
+            "b2dsZS5wcm90b2J1Zi5EdXJhdGlvbiI+ChhUb3RhbENhbG9yaWVzUm9sbHVw",
+            "VmFsdWUSFQoIa2NhbF9zdW0YASABKAFIAIgBAUILCglfa2NhbF9zdW0ilQQK",
+            "BlZPMk1heBJUCgtzYW1wbGVfdGltZRgBIAEoCzI6Lmdvb2dsZS5kZXZpY2Vz",
             "YW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uU2FtcGxlVGltZUID",
-            "4EECEiQKEmhlaWdodF9taWxsaW1ldGVycxgCIAEoA0ID4EECSACIAQFCFQoT",
-            "X2hlaWdodF9taWxsaW1ldGVycyLKAgoUSGVhcnRSYXRlVmFyaWFiaWxpdHkS",
-            "VAoLc2FtcGxlX3RpbWUYASABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZp",
-            "Y2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhJJCjdy",
-            "b290X21lYW5fc3F1YXJlX29mX3N1Y2Nlc3NpdmVfZGlmZmVyZW5jZXNfbWls",
-            "bGlzZWNvbmRzGAIgASgBQgPgQQFIAIgBARIxCh9zdGFuZGFyZF9kZXZpYXRp",
-            "b25fbWlsbGlzZWNvbmRzGAMgASgBQgPgQQFIAYgBAUI6Cjhfcm9vdF9tZWFu",
-            "X3NxdWFyZV9vZl9zdWNjZXNzaXZlX2RpZmZlcmVuY2VzX21pbGxpc2Vjb25k",
-            "c0IiCiBfc3RhbmRhcmRfZGV2aWF0aW9uX21pbGxpc2Vjb25kcyKRAQoOVm9s",
-            "dW1lUXVhbnRpdHkSHQoLbWlsbGlsaXRlcnMYASABKAFCA+BBAkgAiAEBElAK",
-            "EnVzZXJfcHJvdmlkZWRfdW5pdBgCIAEoDjIvLmdvb2dsZS5kZXZpY2VzYW5k",
-            "c2VydmljZXMuaGVhbHRoLnY0LlZvbHVtZVVuaXRCA+BBAUIOCgxfbWlsbGls",
-            "aXRlcnMisgEKDEh5ZHJhdGlvbkxvZxJPCghpbnRlcnZhbBgBIAEoCzI4Lmdv",
-            "b2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNlc3Npb25UaW1l",
-            "SW50ZXJ2YWxCA+BBAhJRCg9hbW91bnRfY29uc3VtZWQYAiABKAsyMy5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5Wb2x1bWVRdWFudGl0",
-            "eUID4EECIqwCChdIeWRyYXRpb25Mb2dSb2xsdXBWYWx1ZRJqCg9hbW91bnRf",
-            "Y29uc3VtZWQYASABKAsyUS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhl",
-            "YWx0aC52NC5IeWRyYXRpb25Mb2dSb2xsdXBWYWx1ZS5Wb2x1bWVRdWFudGl0",
-            "eVJvbGx1cBqkAQoUVm9sdW1lUXVhbnRpdHlSb2xsdXASIQoPbWlsbGlsaXRl",
-            "cnNfc3VtGAEgASgBQgPgQQJIAIgBARJVChd1c2VyX3Byb3ZpZGVkX3VuaXRf",
-            "bGFzdBgCIAEoDjIvLmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
-            "LnY0LlZvbHVtZVVuaXRCA+BBAUISChBfbWlsbGlsaXRlcnNfc3VtIpgMCg5N",
-            "ZXRyaWNzU3VtbWFyeRIfCg1jYWxvcmllc19rY2FsGAEgASgBQgPgQQFIAIgB",
-            "ARImChRkaXN0YW5jZV9taWxsaW1ldGVycxgCIAEoAUID4EEBSAGIAQESFwoF",
-            "c3RlcHMYAyABKANCA+BBAUgCiAEBEjYKJGF2ZXJhZ2Vfc3BlZWRfbWlsbGlt",
-            "ZXRlcnNfcGVyX3NlY29uZBgEIAEoAUID4EEBSAOIAQESMAoeYXZlcmFnZV9w",
-            "YWNlX3NlY29uZHNfcGVyX21ldGVyGAUgASgBQgPgQQFIBIgBARI1CiNhdmVy",
-            "YWdlX2hlYXJ0X3JhdGVfYmVhdHNfcGVyX21pbnV0ZRgGIAEoA0ID4EEBSAWI",
-            "AQESLAoaZWxldmF0aW9uX2dhaW5fbWlsbGltZXRlcnMYByABKAFCA+BBAUgG",
-            "iAEBEiUKE2FjdGl2ZV96b25lX21pbnV0ZXMYCSABKANCA+BBAUgHiAEBEh0K",
-            "C3J1bl92bzJfbWF4GAogASgBQgPgQQFICIgBARIkChJ0b3RhbF9zd2ltX2xl",
-            "bmd0aHMYCyABKAFCA+BBAUgJiAEBEnAKGWhlYXJ0X3JhdGVfem9uZV9kdXJh",
-            "dGlvbnMYDCABKAsySC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0",
-            "aC52NC5NZXRyaWNzU3VtbWFyeS5UaW1lSW5IZWFydFJhdGVab25lc0ID4EEB",
-            "EmIKEG1vYmlsaXR5X21ldHJpY3MYDSABKAsyQy5nb29nbGUuZGV2aWNlc2Fu",
-            "ZHNlcnZpY2VzLmhlYWx0aC52NC5NZXRyaWNzU3VtbWFyeS5Nb2JpbGl0eU1l",
-            "dHJpY3NCA+BBARrrAQoUVGltZUluSGVhcnRSYXRlWm9uZXMSMgoKbGlnaHRf",
-            "dGltZRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEBEjUK",
-            "DW1vZGVyYXRlX3RpbWUYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b25CA+BBARI1Cg12aWdvcm91c190aW1lGAMgASgLMhkuZ29vZ2xlLnByb3Rv",
-            "YnVmLkR1cmF0aW9uQgPgQQESMQoJcGVha190aW1lGAQgASgLMhkuZ29vZ2xl",
-            "LnByb3RvYnVmLkR1cmF0aW9uQgPgQQEanQMKD01vYmlsaXR5TWV0cmljcxIu",
-            "ChxhdmdfY2FkZW5jZV9zdGVwc19wZXJfbWludXRlGAEgASgBQgPgQQFIAIgB",
-            "ARIvCh1hdmdfc3RyaWRlX2xlbmd0aF9taWxsaW1ldGVycxgCIAEoA0ID4EEB",
-            "SAGIAQESNgokYXZnX3ZlcnRpY2FsX29zY2lsbGF0aW9uX21pbGxpbWV0ZXJz",
-            "GAMgASgDQgPgQQFIAogBARIkChJhdmdfdmVydGljYWxfcmF0aW8YBCABKAFC",
-            "A+BBAUgDiAEBEkgKIGF2Z19ncm91bmRfY29udGFjdF90aW1lX2R1cmF0aW9u",
-            "GAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQFCHwodX2F2",
-            "Z19jYWRlbmNlX3N0ZXBzX3Blcl9taW51dGVCIAoeX2F2Z19zdHJpZGVfbGVu",
-            "Z3RoX21pbGxpbWV0ZXJzQicKJV9hdmdfdmVydGljYWxfb3NjaWxsYXRpb25f",
-            "bWlsbGltZXRlcnNCFQoTX2F2Z192ZXJ0aWNhbF9yYXRpb0IQCg5fY2Fsb3Jp",
-            "ZXNfa2NhbEIXChVfZGlzdGFuY2VfbWlsbGltZXRlcnNCCAoGX3N0ZXBzQicK",
-            "JV9hdmVyYWdlX3NwZWVkX21pbGxpbWV0ZXJzX3Blcl9zZWNvbmRCIQofX2F2",
-            "ZXJhZ2VfcGFjZV9zZWNvbmRzX3Blcl9tZXRlckImCiRfYXZlcmFnZV9oZWFy",
-            "dF9yYXRlX2JlYXRzX3Blcl9taW51dGVCHQobX2VsZXZhdGlvbl9nYWluX21p",
-            "bGxpbWV0ZXJzQhYKFF9hY3RpdmVfem9uZV9taW51dGVzQg4KDF9ydW5fdm8y",
-            "X21heEIVChNfdG90YWxfc3dpbV9sZW5ndGhzIpUBChBPeHlnZW5TYXR1cmF0",
-            "aW9uElQKC3NhbXBsZV90aW1lGAEgASgLMjouZ29vZ2xlLmRldmljZXNhbmRz",
+            "4EECEhkKB3ZvMl9tYXgYAiABKAFCA+BBAkgAiAEBEl4KEm1lYXN1cmVtZW50",
+            "X21ldGhvZBgEIAEoDjI9Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
+            "bHRoLnY0LlZPMk1heC5NZWFzdXJlbWVudE1ldGhvZEID4EEBIq0CChFNZWFz",
+            "dXJlbWVudE1ldGhvZBIiCh5NRUFTVVJFTUVOVF9NRVRIT0RfVU5TUEVDSUZJ",
+            "RUQQABIOCgpGSVRCSVRfUlVOEAESFgoSR09PR0xFX0RFTU9HUkFQSElDEAIS",
+            "DwoLQ09PUEVSX1RFU1QQAxIUChBIRUFSVF9SQVRFX1JBVElPEAQSEgoOTUVU",
+            "QUJPTElDX0NBUlQQBRIbChdNVUxUSVNUQUdFX0ZJVE5FU1NfVEVTVBAGEhkK",
+            "FVJPQ0tQT1JUX0ZJVE5FU1NfVEVTVBAHEhAKDE1BWF9FWEVSQ0lTRRAIEh8K",
+            "G1BSRURJQ1RJT05fU1VCX01BWF9FWEVSQ0lTRRAJEhsKF1BSRURJQ1RJT05f",
+            "Tk9OX0VYRVJDSVNFEAoSCQoFT1RIRVIQC0IKCghfdm8yX21heCKjAQoGV2Vp",
+            "Z2h0ElQKC3NhbXBsZV90aW1lGAIgASgLMjouZ29vZ2xlLmRldmljZXNhbmRz",
             "ZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25TYW1wbGVUaW1lQgPgQQIS",
-            "HAoKcGVyY2VudGFnZRgCIAEoAUID4EECSACIAQFCDQoLX3BlcmNlbnRhZ2Ui",
-            "ogEKKFJlc3RpbmdIZWFydFJhdGVQZXJzb25hbFJhbmdlUm9sbHVwVmFsdWUS",
-            "IQoUYmVhdHNfcGVyX21pbnV0ZV9taW4YASABKAFIAIgBARIhChRiZWF0c19w",
-            "ZXJfbWludXRlX21heBgCIAEoAUgBiAEBQhcKFV9iZWF0c19wZXJfbWludXRl",
-            "X21pbkIXChVfYmVhdHNfcGVyX21pbnV0ZV9tYXgi7gYKG1Jlc3BpcmF0b3J5",
-            "UmF0ZVNsZWVwU3VtbWFyeRJUCgtzYW1wbGVfdGltZRgBIAEoCzI6Lmdvb2ds",
-            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uU2Ft",
-            "cGxlVGltZUID4EECEoUBChBkZWVwX3NsZWVwX3N0YXRzGAIgASgLMmYuZ29v",
-            "Z2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUmVzcGlyYXRvcnlS",
-            "YXRlU2xlZXBTdW1tYXJ5LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFyeVN0",
-            "YXRpc3RpY3NCA+BBARKGAQoRbGlnaHRfc2xlZXBfc3RhdHMYAyABKAsyZi5n",
-            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5SZXNwaXJhdG9y",
-            "eVJhdGVTbGVlcFN1bW1hcnkuUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5",
-            "U3RhdGlzdGljc0ID4EEBEoQBCg9yZW1fc2xlZXBfc3RhdHMYBCABKAsyZi5n",
-            "b29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5SZXNwaXJhdG9y",
-            "eVJhdGVTbGVlcFN1bW1hcnkuUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1tYXJ5",
-            "U3RhdGlzdGljc0ID4EEBEoUBChBmdWxsX3NsZWVwX3N0YXRzGAUgASgLMmYu",
-            "Z29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuUmVzcGlyYXRv",
-            "cnlSYXRlU2xlZXBTdW1tYXJ5LlJlc3BpcmF0b3J5UmF0ZVNsZWVwU3VtbWFy",
-            "eVN0YXRpc3RpY3NCA+BBAhrYAQolUmVzcGlyYXRvcnlSYXRlU2xlZXBTdW1t",
-            "YXJ5U3RhdGlzdGljcxIkChJicmVhdGhzX3Blcl9taW51dGUYASABKAFCA+BB",
-            "AkgAiAEBEiQKEnN0YW5kYXJkX2RldmlhdGlvbhgCIAEoAUID4EEBSAGIAQES",
-            "IQoPc2lnbmFsX3RvX25vaXNlGAMgASgBQgPgQQFIAogBAUIVChNfYnJlYXRo",
-            "c19wZXJfbWludXRlQhUKE19zdGFuZGFyZF9kZXZpYXRpb25CEgoQX3NpZ25h",
-            "bF90b19ub2lzZSK2EwoFU2xlZXASTwoIaW50ZXJ2YWwYAyABKAsyOC5nb29n",
-            "bGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TZXNzaW9uVGltZUlu",
-            "dGVydmFsQgPgQQISRwoEdHlwZRgEIAEoDjI0Lmdvb2dsZS5kZXZpY2VzYW5k",
-            "c2VydmljZXMuaGVhbHRoLnY0LlNsZWVwLlNsZWVwVHlwZUID4EEBEkoKBnN0",
-            "YWdlcxgFIAMoCzI1Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRo",
-            "LnY0LlNsZWVwLlNsZWVwU3RhZ2VCA+BBARJcChNvdXRfb2ZfYmVkX3NlZ21l",
-            "bnRzGAYgAygLMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgu",
-            "djQuU2xlZXAuT3V0T2ZCZWRTZWdtZW50QgPgQQESTwoIbWV0YWRhdGEYCCAB",
-            "KAsyOC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5TbGVl",
-            "cC5TbGVlcE1ldGFkYXRhQgPgQQESTQoHc3VtbWFyeRgJIAEoCzI3Lmdvb2ds",
-            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNsZWVwLlNsZWVwU3Vt",
-            "bWFyeUID4EEDEjQKC2NyZWF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAsgASgLMhouZ29v",
-            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDGqADCgpTbGVlcFN0YWdlEjMK",
-            "CnN0YXJ0X3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
-            "QgPgQQISOAoQc3RhcnRfdXRjX29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90",
-            "b2J1Zi5EdXJhdGlvbkID4EECEjEKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjYKDmVuZF91dGNfb2Zmc2V0GAYg",
-            "ASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQISTAoEdHlwZRgH",
-            "IAEoDjI5Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LlNs",
-            "ZWVwLlNsZWVwU3RhZ2VUeXBlQgPgQQISNAoLY3JlYXRlX3RpbWUYCCABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3Rp",
-            "bWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMa6wEK",
-            "D091dE9mQmVkU2VnbWVudBIzCgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EECEjgKEHN0YXJ0X3V0Y19vZmZzZXQY",
-            "AiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBAhIxCghlbmRf",
-            "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhI2",
-            "Cg5lbmRfdXRjX29mZnNldBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbkID4EECGr4DCg1TbGVlcE1ldGFkYXRhEmAKDXN0YWdlc19zdGF0dXMY",
-            "ASABKA4yRC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5T",
-            "bGVlcC5TbGVlcE1ldGFkYXRhLlN0YWdlc1N0YXRlQgPgQQMSFgoJcHJvY2Vz",
-            "c2VkGAIgASgIQgPgQQMSEAoDbmFwGAUgASgIQgPgQQMSHAoPbWFudWFsbHlf",
-            "ZWRpdGVkGAYgASgIQgPgQQMSGAoLZXh0ZXJuYWxfaWQYByABKAlCA+BBASLo",
-            "AQoLU3RhZ2VzU3RhdGUSHAoYU1RBR0VTX1NUQVRFX1VOU1BFQ0lGSUVEEAAS",
-            "FQoRUkVKRUNURURfQ09WRVJBR0UQARIUChBSRUpFQ1RFRF9NQVhfR0FQEAIS",
-            "FgoSUkVKRUNURURfU1RBUlRfR0FQEAMSFAoQUkVKRUNURURfRU5EX0dBUBAE",
-            "EhAKDFJFSkVDVEVEX05BUBAFEhMKD1JFSkVDVEVEX1NFUlZFUhAGEgsKB1RJ",
-            "TUVPVVQQBxINCglTVUNDRUVERUQQCBIdChlQUk9DRVNTSU5HX0lOVEVSTkFM",
-            "X0VSUk9SEAka0QQKDFNsZWVwU3VtbWFyeRIpChdtaW51dGVzX2luX3NsZWVw",
-            "X3BlcmlvZBgBIAEoA0ID4EEDSACIAQESJwoVbWludXRlc19hZnRlcl93YWtl",
-            "X3VwGAIgASgDQgPgQQNIAYgBARIoChZtaW51dGVzX3RvX2ZhbGxfYXNsZWVw",
-            "GAMgASgDQgPgQQNIAogBARIgCg5taW51dGVzX2FzbGVlcBgEIAEoA0ID4EED",
-            "SAOIAQESHwoNbWludXRlc19hd2FrZRgFIAEoA0ID4EEDSASIAQESYQoOc3Rh",
-            "Z2VzX3N1bW1hcnkYBiADKAsyRC5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NC5TbGVlcC5TbGVlcFN1bW1hcnkuU3RhZ2VTdW1tYXJ5QgPg",
-            "QQMapgEKDFN0YWdlU3VtbWFyeRJMCgR0eXBlGAEgASgOMjkuZ29vZ2xlLmRl",
-            "dmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuU2xlZXAuU2xlZXBTdGFnZVR5",
-            "cGVCA+BBAxIZCgdtaW51dGVzGAIgASgDQgPgQQNIAIgBARIXCgVjb3VudBgD",
-            "IAEoA0ID4EEDSAGIAQFCCgoIX21pbnV0ZXNCCAoGX2NvdW50QhoKGF9taW51",
-            "dGVzX2luX3NsZWVwX3BlcmlvZEIYChZfbWludXRlc19hZnRlcl93YWtlX3Vw",
-            "QhkKF19taW51dGVzX3RvX2ZhbGxfYXNsZWVwQhEKD19taW51dGVzX2FzbGVl",
-            "cEIQCg5fbWludXRlc19hd2FrZSJACglTbGVlcFR5cGUSGgoWU0xFRVBfVFlQ",
-            "RV9VTlNQRUNJRklFRBAAEgsKB0NMQVNTSUMQARIKCgZTVEFHRVMQAiJ1Cg5T",
-            "bGVlcFN0YWdlVHlwZRIgChxTTEVFUF9TVEFHRV9UWVBFX1VOU1BFQ0lGSUVE",
-            "EAASCQoFQVdBS0UQARIJCgVMSUdIVBACEggKBERFRVAQAxIHCgNSRU0QBBIK",
-            "CgZBU0xFRVAQBRIMCghSRVNUTEVTUxAGIn8KBVN0ZXBzElMKCGludGVydmFs",
-            "GAIgASgLMjwuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQu",
-            "T2JzZXJ2YXRpb25UaW1lSW50ZXJ2YWxCA+BBAhIXCgVjb3VudBgEIAEoA0ID",
-            "4EECSACIAQFCCAoGX2NvdW50IjgKEFN0ZXBzUm9sbHVwVmFsdWUSFgoJY291",
-            "bnRfc3VtGAEgASgDSACIAQFCDAoKX2NvdW50X3N1bSLvAgoPU3dpbUxlbmd0",
-            "aHNEYXRhElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xlLmRldmljZXNhbmRz",
+            "HgoMd2VpZ2h0X2dyYW1zGAMgASgBQgPgQQJIAIgBARISCgVub3RlcxgEIAEo",
+            "CUID4EEBQg8KDV93ZWlnaHRfZ3JhbXMiRwoRV2VpZ2h0Um9sbHVwVmFsdWUS",
+            "HQoQd2VpZ2h0X2dyYW1zX2F2ZxgBIAEoAUgAiAEBQhMKEV93ZWlnaHRfZ3Jh",
+            "bXNfYXZnItIICgxCbG9vZEdsdWNvc2USVAoLc2FtcGxlX3RpbWUYASABKAsy",
+            "Oi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZh",
+            "dGlvblNhbXBsZVRpbWVCA+BBAhI4CiZibG9vZF9nbHVjb3NlX21pbGxpZ3Jh",
+            "bXNfcGVyX2RlY2lsaXRlchgCIAEoAUID4EECSACIAQESZAoSbWVhc3VyZW1l",
+            "bnRfc291cmNlGAMgASgOMkMuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5o",
+            "ZWFsdGgudjQuQmxvb2RHbHVjb3NlLk1lYXN1cmVtZW50U291cmNlQgPgQQES",
+            "UgoJbWVhbF90eXBlGAQgASgOMjouZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNl",
+            "cy5oZWFsdGgudjQuQmxvb2RHbHVjb3NlLk1lYWxUeXBlQgPgQQESZAoSbWVh",
+            "c3VyZW1lbnRfdGltaW5nGAUgASgOMkMuZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
+            "aWNlcy5oZWFsdGgudjQuQmxvb2RHbHVjb3NlLk1lYXN1cmVtZW50VGltaW5n",
+            "QgPgQQESUQoIc3BlY2ltZW4YBiABKA4yOi5nb29nbGUuZGV2aWNlc2FuZHNl",
+            "cnZpY2VzLmhlYWx0aC52NC5CbG9vZEdsdWNvc2UuU3BlY2ltZW5CA+BBARIS",
+            "CgVub3RlcxgIIAEoCUID4EEBIosBChFNZWFzdXJlbWVudFNvdXJjZRIiCh5N",
+            "RUFTVVJFTUVOVF9TT1VSQ0VfVU5TUEVDSUZJRUQQABIhCh1TRUxGX01PTklU",
+            "T1JJTkdfQkxPT0RfR0xVQ09TRRABEiEKHUNPTlRJTlVPVVNfR0xVQ09TRV9N",
+            "T05JVE9SSU5HEAISDAoITEFCX1RFU1QQAyJWCghNZWFsVHlwZRIZChVNRUFM",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABINCglCUkVBS0ZBU1QQARIJCgVMVU5DSBAC",
+            "EgoKBkRJTk5FUhADEgkKBVNOQUNLEAQikgEKEU1lYXN1cmVtZW50VGltaW5n",
+            "EiIKHk1FQVNVUkVNRU5UX1RJTUlOR19VTlNQRUNJRklFRBAAEg4KCkFGVEVS",
+            "X01FQUwQARIPCgtCRUZPUkVfTUVBTBACEgsKB0ZBU1RJTkcQAxILCgdHRU5F",
+            "UkFMEAQSDgoKQkVGT1JFX0JFRBAFEg4KCk9WRVJfTklHSFQQBiKEAQoIU3Bl",
+            "Y2ltZW4SGAoUU1BFQ0lNRU5fVU5TUEVDSUZJRUQQABITCg9DQVBJTExBUllf",
+            "QkxPT0QQARIWChJJTlRFUlNUSVRJQUxfRkxVSUQQAhIKCgZQTEFTTUEQAxIJ",
+            "CgVTRVJVTRAEEgkKBVRFQVJTEAUSDwoLV0hPTEVfQkxPT0QQBkIpCidfYmxv",
+            "b2RfZ2x1Y29zZV9taWxsaWdyYW1zX3Blcl9kZWNpbGl0ZXIigQEKF0Jsb29k",
+            "R2x1Y29zZVJvbGx1cFZhbHVlEjcKKmJsb29kX2dsdWNvc2VfbWlsbGlncmFt",
+            "c19wZXJfZGVjaWxpdGVyX2F2ZxgBIAEoAUgAiAEBQi0KK19ibG9vZF9nbHVj",
+            "b3NlX21pbGxpZ3JhbXNfcGVyX2RlY2lsaXRlcl9hdmciZgoPU2VkZW50YXJ5",
+            "UGVyaW9kElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xlLmRldmljZXNhbmRz",
             "ZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1lSW50ZXJ2YWxCA+BB",
-            "AhJiChBzd2ltX3N0cm9rZV90eXBlGAIgASgOMkMuZ29vZ2xlLmRldmljZXNh",
-            "bmRzZXJ2aWNlcy5oZWFsdGgudjQuU3dpbUxlbmd0aHNEYXRhLlN3aW1TdHJv",
-            "a2VUeXBlQgPgQQISHgoMc3Ryb2tlX2NvdW50GAMgASgDQgPgQQJIAIgBASJy",
-            "Cg5Td2ltU3Ryb2tlVHlwZRIgChxTV0lNX1NUUk9LRV9UWVBFX1VOU1BFQ0lG",
-            "SUVEEAASDQoJRlJFRVNUWUxFEAESDgoKQkFDS1NUUk9LRRACEhAKDEJSRUFT",
-            "VFNUUk9LRRADEg0KCUJVVFRFUkZMWRAEQg8KDV9zdHJva2VfY291bnQiUAoa",
-            "U3dpbUxlbmd0aHNEYXRhUm9sbHVwVmFsdWUSHQoQc3Ryb2tlX2NvdW50X3N1",
-            "bRgBIAEoA0gAiAEBQhMKEV9zdHJva2VfY291bnRfc3VtIsUBChNUaW1lSW5I",
-            "ZWFydFJhdGVab25lElMKCGludGVydmFsGAEgASgLMjwuZ29vZ2xlLmRldmlj",
-            "ZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuT2JzZXJ2YXRpb25UaW1lSW50ZXJ2",
-            "YWxCA+BBAhJZChRoZWFydF9yYXRlX3pvbmVfdHlwZRgCIAEoDjI2Lmdvb2ds",
-            "ZS5kZXZpY2VzYW5kc2VydmljZXMuaGVhbHRoLnY0LkhlYXJ0UmF0ZVpvbmVU",
-            "eXBlQgPgQQIiuwIKHlRpbWVJbkhlYXJ0UmF0ZVpvbmVSb2xsdXBWYWx1ZRJ+",
-            "Chh0aW1lX2luX2hlYXJ0X3JhdGVfem9uZXMYASADKAsyXC5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5UaW1lSW5IZWFydFJhdGVab25l",
-            "Um9sbHVwVmFsdWUuVGltZUluSGVhcnRSYXRlWm9uZVZhbHVlGpgBChhUaW1l",
-            "SW5IZWFydFJhdGVab25lVmFsdWUSTwoPaGVhcnRfcmF0ZV96b25lGAEgASgO",
-            "MjYuZ29vZ2xlLmRldmljZXNhbmRzZXJ2aWNlcy5oZWFsdGgudjQuSGVhcnRS",
-            "YXRlWm9uZVR5cGUSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9i",
-            "dWYuRHVyYXRpb24iPgoYVG90YWxDYWxvcmllc1JvbGx1cFZhbHVlEhUKCGtj",
-            "YWxfc3VtGAEgASgBSACIAQFCCwoJX2tjYWxfc3VtIpUECgZWTzJNYXgSVAoL",
-            "c2FtcGxlX3RpbWUYASABKAsyOi5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "LmhlYWx0aC52NC5PYnNlcnZhdGlvblNhbXBsZVRpbWVCA+BBAhIZCgd2bzJf",
-            "bWF4GAIgASgBQgPgQQJIAIgBARJeChJtZWFzdXJlbWVudF9tZXRob2QYBCAB",
-            "KA4yPS5nb29nbGUuZGV2aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5WTzJN",
-            "YXguTWVhc3VyZW1lbnRNZXRob2RCA+BBASKtAgoRTWVhc3VyZW1lbnRNZXRo",
-            "b2QSIgoeTUVBU1VSRU1FTlRfTUVUSE9EX1VOU1BFQ0lGSUVEEAASDgoKRklU",
-            "QklUX1JVThABEhYKEkdPT0dMRV9ERU1PR1JBUEhJQxACEg8KC0NPT1BFUl9U",
-            "RVNUEAMSFAoQSEVBUlRfUkFURV9SQVRJTxAEEhIKDk1FVEFCT0xJQ19DQVJU",
-            "EAUSGwoXTVVMVElTVEFHRV9GSVRORVNTX1RFU1QQBhIZChVST0NLUE9SVF9G",
-            "SVRORVNTX1RFU1QQBxIQCgxNQVhfRVhFUkNJU0UQCBIfChtQUkVESUNUSU9O",
-            "X1NVQl9NQVhfRVhFUkNJU0UQCRIbChdQUkVESUNUSU9OX05PTl9FWEVSQ0lT",
-            "RRAKEgkKBU9USEVSEAtCCgoIX3ZvMl9tYXgiowEKBldlaWdodBJUCgtzYW1w",
-            "bGVfdGltZRgCIAEoCzI6Lmdvb2dsZS5kZXZpY2VzYW5kc2VydmljZXMuaGVh",
-            "bHRoLnY0Lk9ic2VydmF0aW9uU2FtcGxlVGltZUID4EECEh4KDHdlaWdodF9n",
-            "cmFtcxgDIAEoAUID4EECSACIAQESEgoFbm90ZXMYBCABKAlCA+BBAUIPCg1f",
-            "d2VpZ2h0X2dyYW1zIkcKEVdlaWdodFJvbGx1cFZhbHVlEh0KEHdlaWdodF9n",
-            "cmFtc19hdmcYASABKAFIAIgBAUITChFfd2VpZ2h0X2dyYW1zX2F2ZyJmCg9T",
-            "ZWRlbnRhcnlQZXJpb2QSUwoIaW50ZXJ2YWwYASABKAsyPC5nb29nbGUuZGV2",
-            "aWNlc2FuZHNlcnZpY2VzLmhlYWx0aC52NC5PYnNlcnZhdGlvblRpbWVJbnRl",
-            "cnZhbEID4EECIk0KGlNlZGVudGFyeVBlcmlvZFJvbGx1cFZhbHVlEi8KDGR1",
-            "cmF0aW9uX3N1bRgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbipq",
-            "ChFIZWFydFJhdGVab25lVHlwZRIkCiBIRUFSVF9SQVRFX1pPTkVfVFlQRV9V",
-            "TlNQRUNJRklFRBAAEgkKBUxJR0hUEAESDAoITU9ERVJBVEUQAhIMCghWSUdP",
-            "Uk9VUxADEggKBFBFQUsQBCqwAQoKVm9sdW1lVW5pdBIbChdWT0xVTUVfVU5J",
-            "VF9VTlNQRUNJRklFRBAAEhAKDENVUF9JTVBFUklBTBABEgoKBkNVUF9VUxAC",
-            "EhgKFEZMVUlEX09VTkNFX0lNUEVSSUFMEAMSEgoORkxVSURfT1VOQ0VfVVMQ",
-            "BBIJCgVMSVRFUhAFEg4KCk1JTExJTElURVIQBhIRCg1QSU5UX0lNUEVSSUFM",
-            "EAcSCwoHUElOVF9VUxAIQoQCCidjb20uZ29vZ2xlLmRldmljZXNhbmRzZXJ2",
-            "aWNlcy5oZWFsdGgudjRCDkRhdGFNb2RlbFByb3RvUAFaUmdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2aWNlc2FuZHNlcnZpY2Vz",
-            "L2hlYWx0aC9hcGl2NG1haW47aGVhbHRocGKqAiNHb29nbGUuRGV2aWNlc0Fu",
-            "ZFNlcnZpY2VzLkhlYWx0aC5WNMoCI0dvb2dsZVxEZXZpY2VzQW5kU2Vydmlj",
-            "ZXNcSGVhbHRoXFY06gImR29vZ2xlOjpEZXZpY2VzQW5kU2VydmljZXM6Okhl",
-            "YWx0aDo6VjRiBnByb3RvMw=="));
+            "AiJNChpTZWRlbnRhcnlQZXJpb2RSb2xsdXBWYWx1ZRIvCgxkdXJhdGlvbl9z",
+            "dW0YASABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24iigEKEkFjdGl2",
+            "ZUVuZXJneUJ1cm5lZBJTCghpbnRlcnZhbBgBIAEoCzI8Lmdvb2dsZS5kZXZp",
+            "Y2VzYW5kc2VydmljZXMuaGVhbHRoLnY0Lk9ic2VydmF0aW9uVGltZUludGVy",
+            "dmFsQgPgQQISFgoEa2NhbBgCIAEoAUID4EECSACIAQFCBwoFX2tjYWwiSAod",
+            "QWN0aXZlRW5lcmd5QnVybmVkUm9sbHVwVmFsdWUSGgoIa2NhbF9zdW0YASAB",
+            "KAFCA+BBA0gAiAEBQgsKCV9rY2FsX3N1bSpqChFIZWFydFJhdGVab25lVHlw",
+            "ZRIkCiBIRUFSVF9SQVRFX1pPTkVfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUxJ",
+            "R0hUEAESDAoITU9ERVJBVEUQAhIMCghWSUdPUk9VUxADEggKBFBFQUsQBCpx",
+            "Cg9Gb29kQWNjZXNzTGV2ZWwSIQodRk9PRF9BQ0NFU1NfTEVWRUxfVU5TUEVD",
+            "SUZJRUQQABIcChhGT09EX0FDQ0VTU19MRVZFTF9QVUJMSUMQARIdChlGT09E",
+            "X0FDQ0VTU19MRVZFTF9QUklWQVRFEAIqsAEKCE1lYWxUeXBlEhkKFU1FQUxf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEhQKEEJFRk9SRV9CUkVBS0ZBU1QQARINCglC",
+            "UkVBS0ZBU1QQAhIQCgxCRUZPUkVfTFVOQ0gQAxIJCgVMVU5DSBAEEhEKDUJF",
+            "Rk9SRV9ESU5ORVIQBRIKCgZESU5ORVIQBhIQCgxBRlRFUl9ESU5ORVIQBxIJ",
+            "CgVTTkFDSxAIEgsKB0FOWVRJTUUQCSp0CgpFbmVyZ3lVbml0EhsKF0VORVJH",
+            "WV9VTklUX1VOU1BFQ0lGSUVEEAASCQoFSk9VTEUQARINCglLSUxPSk9VTEUQ",
+            "AhIPCgtLSUxPQ0FMT1JJRRADEhEKDVNNQUxMX0NBTE9SSUUQBBILCgdDQUxP",
+            "UklFEAUq+QQKCE51dHJpZW50EhgKFE5VVFJJRU5UX1VOU1BFQ0lGSUVEEAAS",
+            "CgoGQklPVElOEAESDAoIQ0FGRkVJTkUQAhILCgdDQUxDSVVNEAMSDAoIQ0hM",
+            "T1JJREUQBBIRCg1DQVJCT0hZRFJBVEVTEAUSDwoLQ0hPTEVTVEVST0wQBhIM",
+            "CghDSFJPTUlVTRAHEgoKBkNPUFBFUhAIEhEKDURJRVRBUllfRklCRVIQCRIO",
+            "CgpGT0xJQ19BQ0lEEAoSCgoGSU9ESU5FEAsSCAoESVJPThAMEg0KCU1BR05F",
+            "U0lVTRANEg0KCU1BTkdBTkVTRRAOEg4KCk1PTFlCREVOVU0QDxIXChNNT05P",
+            "VU5TQVRVUkFURURfRkFUEBASCgoGTklBQ0lOEBESFAoQUEFOVE9USEVOSUNf",
+            "QUNJRBASEg4KClBIT1NQSE9SVVMQExIXChNQT0xZVU5TQVRVUkFURURfRkFU",
+            "EBQSDQoJUE9UQVNTSVVNEBUSCwoHUFJPVEVJThAWEg4KClJJQk9GTEFWSU4Q",
+            "FxIRCg1TQVRVUkFURURfRkFUEBgSDAoIU0VMRU5JVU0QGRIKCgZTT0RJVU0Q",
+            "GhIJCgVTVUdBUhAbEgsKB1RISUFNSU4QHBINCglUUkFOU19GQVQQHRITCg9V",
+            "TlNBVFVSQVRFRF9GQVQQHhINCglWSVRBTUlOX0EQHxIPCgtWSVRBTUlOX0Ix",
+            "MhAgEg4KClZJVEFNSU5fQjYQIRINCglWSVRBTUlOX0MQIhINCglWSVRBTUlO",
+            "X0QQIxINCglWSVRBTUlOX0UQJBINCglWSVRBTUlOX0sQJRIICgRaSU5DECYS",
+            "CgoGRk9MQVRFECcqjgEKCldlaWdodFVuaXQSGwoXV0VJR0hUX1VOSVRfVU5T",
+            "UEVDSUZJRUQQABIICgRHUkFNEAESDAoIS0lMT0dSQU0QAhIJCgVPVU5DRRAD",
+            "EgkKBVBPVU5EEAQSCQoFU1RPTkUQBRINCglNSUxMSUdSQU0QBhINCglNSUNS",
+            "T0dSQU0QBxIMCghOQU5PR1JBTRAIKrABCgpWb2x1bWVVbml0EhsKF1ZPTFVN",
+            "RV9VTklUX1VOU1BFQ0lGSUVEEAASEAoMQ1VQX0lNUEVSSUFMEAESCgoGQ1VQ",
+            "X1VTEAISGAoURkxVSURfT1VOQ0VfSU1QRVJJQUwQAxISCg5GTFVJRF9PVU5D",
+            "RV9VUxAEEgkKBUxJVEVSEAUSDgoKTUlMTElMSVRFUhAGEhEKDVBJTlRfSU1Q",
+            "RVJJQUwQBxILCgdQSU5UX1VTEAhChAIKJ2NvbS5nb29nbGUuZGV2aWNlc2Fu",
+            "ZHNlcnZpY2VzLmhlYWx0aC52NEIORGF0YU1vZGVsUHJvdG9QAVpSZ29vZ2xl",
+            "LmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9kZXZpY2VzYW5kc2Vy",
+            "dmljZXMvaGVhbHRoL2FwaXY0bWFpbjtoZWFsdGhwYqoCI0dvb2dsZS5EZXZp",
+            "Y2VzQW5kU2VydmljZXMuSGVhbHRoLlY0ygIjR29vZ2xlXERldmljZXNBbmRT",
+            "ZXJ2aWNlc1xIZWFsdGhcVjTqAiZHb29nbGU6OkRldmljZXNBbmRTZXJ2aWNl",
+            "czo6SGVhbHRoOjpWNGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataCoordinatesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.DevicesAndServices.Health.V4.HeartRateZoneType), typeof(global::Google.DevicesAndServices.Health.V4.VolumeUnit), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.DataCoordinatesReflection.Descriptor, global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.DevicesAndServices.Health.V4.HeartRateZoneType), typeof(global::Google.DevicesAndServices.Health.V4.FoodAccessLevel), typeof(global::Google.DevicesAndServices.Health.V4.MealType), typeof(global::Google.DevicesAndServices.Health.V4.EnergyUnit), typeof(global::Google.DevicesAndServices.Health.V4.Nutrient), typeof(global::Google.DevicesAndServices.Health.V4.WeightUnit), typeof(global::Google.DevicesAndServices.Health.V4.VolumeUnit), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes), global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Parser, new[]{ "Interval", "HeartRateZone", "ActiveZoneMinutes_" }, new[]{ "ActiveZoneMinutes" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutes.Types.HeartRateZone) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutesRollupValue), global::Google.DevicesAndServices.Health.V4.ActiveZoneMinutesRollupValue.Parser, new[]{ "SumInCardioHeartZone", "SumInPeakHeartZone", "SumInFatBurnHeartZone" }, new[]{ "SumInCardioHeartZone", "SumInPeakHeartZone", "SumInFatBurnHeartZone" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes), global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Parser, new[]{ "Interval", "ActiveMinutesByActivityLevel" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActivityLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActiveMinutesByActivityLevel), global::Google.DevicesAndServices.Health.V4.ActiveMinutes.Types.ActiveMinutesByActivityLevel.Parser, new[]{ "ActivityLevel", "ActiveMinutes" }, new[]{ "ActiveMinutes" }, null, null, null)}),
@@ -462,6 +666,8 @@ namespace Google.DevicesAndServices.Health.V4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BasalEnergyBurned), global::Google.DevicesAndServices.Health.V4.BasalEnergyBurned.Parser, new[]{ "Interval", "Kcal" }, new[]{ "Kcal" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BodyFat), global::Google.DevicesAndServices.Health.V4.BodyFat.Parser, new[]{ "SampleTime", "Percentage" }, new[]{ "Percentage" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BodyFatRollupValue), global::Google.DevicesAndServices.Health.V4.BodyFatRollupValue.Parser, new[]{ "BodyFatPercentageAvg" }, new[]{ "BodyFatPercentageAvg" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature), global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Parser, new[]{ "SampleTime", "TemperatureCelsius", "MeasurementLocation", "Id" }, new[]{ "TemperatureCelsius" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue), global::Google.DevicesAndServices.Health.V4.CoreBodyTemperatureRollupValue.Parser, new[]{ "TemperatureCelsiusAvg", "TemperatureCelsiusMax", "TemperatureCelsiusMin" }, new[]{ "TemperatureCelsiusAvg", "TemperatureCelsiusMax", "TemperatureCelsiusMin" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue), global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Parser, new[]{ "CaloriesInHeartRateZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Types.CaloriesInHeartRateZoneValue), global::Google.DevicesAndServices.Health.V4.CaloriesInHeartRateZoneRollupValue.Types.CaloriesInHeartRateZoneValue.Parser, new[]{ "HeartRateZone", "Kcal" }, new[]{ "Kcal" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones), global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Parser, new[]{ "Date", "HeartRateZones" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Types.HeartRateZone), global::Google.DevicesAndServices.Health.V4.DailyHeartRateZones.Types.HeartRateZone.Parser, new[]{ "HeartRateZoneType", "MinBeatsPerMinute", "MaxBeatsPerMinute" }, new[]{ "MinBeatsPerMinute", "MaxBeatsPerMinute" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyHeartRateVariability), global::Google.DevicesAndServices.Health.V4.DailyHeartRateVariability.Parser, new[]{ "Date", "AverageHeartRateVariabilityMilliseconds", "NonRemHeartRateBeatsPerMinute", "Entropy", "DeepSleepRootMeanSquareOfSuccessiveDifferencesMilliseconds" }, new[]{ "AverageHeartRateVariabilityMilliseconds", "NonRemHeartRateBeatsPerMinute", "Entropy", "DeepSleepRootMeanSquareOfSuccessiveDifferencesMilliseconds" }, null, null, null),
@@ -472,6 +678,7 @@ namespace Google.DevicesAndServices.Health.V4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DailyVO2Max), global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Parser, new[]{ "Date", "Vo2Max", "Estimated", "CardioFitnessLevel", "Vo2MaxCovariance" }, new[]{ "Vo2Max", "Vo2MaxCovariance" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.DailyVO2Max.Types.CardioFitnessLevel) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Distance), global::Google.DevicesAndServices.Health.V4.Distance.Parser, new[]{ "Interval", "Millimeters" }, new[]{ "Millimeters" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.DistanceRollupValue), global::Google.DevicesAndServices.Health.V4.DistanceRollupValue.Parser, new[]{ "MillimetersSum" }, new[]{ "MillimetersSum" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Electrocardiogram), global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Parser, new[]{ "Interval", "BeatsPerMinuteAvg", "ResultClassification", "WaveformSamples", "SamplingFrequencyHertz", "MillivoltsScalingFactor", "LeadNumber", "MedicalDeviceInfo" }, new[]{ "BeatsPerMinuteAvg", "SamplingFrequencyHertz", "MillivoltsScalingFactor", "LeadNumber" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise), global::Google.DevicesAndServices.Health.V4.Exercise.Parser, new[]{ "Interval", "ExerciseType", "Splits", "ExerciseEvents", "SplitSummaries", "MetricsSummary", "ExerciseMetadata", "DisplayName", "ActiveDuration", "Notes", "UpdateTime", "CreateTime" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.SplitSummary), global::Google.DevicesAndServices.Health.V4.Exercise.Types.SplitSummary.Parser, new[]{ "StartTime", "StartUtcOffset", "EndTime", "EndUtcOffset", "ActiveDuration", "MetricsSummary", "SplitType" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.SplitSummary.Types.SplitType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseEvent), global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseEvent.Parser, new[]{ "EventTime", "EventUtcOffset", "ExerciseEventType" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseEvent.Types.ExerciseEventType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseMetadata), global::Google.DevicesAndServices.Health.V4.Exercise.Types.ExerciseMetadata.Parser, new[]{ "PoolLengthMillimeters", "HasGps" }, new[]{ "PoolLengthMillimeters" }, null, null, null)}),
@@ -488,10 +695,21 @@ namespace Google.DevicesAndServices.Health.V4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.VolumeQuantity), global::Google.DevicesAndServices.Health.V4.VolumeQuantity.Parser, new[]{ "Milliliters", "UserProvidedUnit" }, new[]{ "Milliliters" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HydrationLog), global::Google.DevicesAndServices.Health.V4.HydrationLog.Parser, new[]{ "Interval", "AmountConsumed" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue), global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Parser, new[]{ "AmountConsumed" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Types.VolumeQuantityRollup), global::Google.DevicesAndServices.Health.V4.HydrationLogRollupValue.Types.VolumeQuantityRollup.Parser, new[]{ "MillilitersSum", "UserProvidedUnitLast" }, new[]{ "MillilitersSum" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification), global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Parser, new[]{ "Interval", "AlertWindows", "MedicalDeviceInfo" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.HeartBeat), global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.HeartBeat.Parser, new[]{ "PhysicalTime", "UtcOffset", "CivilTime", "BeatsPerMinute" }, new[]{ "BeatsPerMinute" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.AlertWindow), global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.AlertWindow.Parser, new[]{ "StartTime", "StartUtcOffset", "EndTime", "EndUtcOffset", "CivilStartTime", "CivilEndTime", "Positive", "HeartBeats" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.MetricsSummary), global::Google.DevicesAndServices.Health.V4.MetricsSummary.Parser, new[]{ "CaloriesKcal", "DistanceMillimeters", "Steps", "AverageSpeedMillimetersPerSecond", "AveragePaceSecondsPerMeter", "AverageHeartRateBeatsPerMinute", "ElevationGainMillimeters", "ActiveZoneMinutes", "RunVo2Max", "TotalSwimLengths", "HeartRateZoneDurations", "MobilityMetrics" }, new[]{ "CaloriesKcal", "DistanceMillimeters", "Steps", "AverageSpeedMillimetersPerSecond", "AveragePaceSecondsPerMeter", "AverageHeartRateBeatsPerMinute", "ElevationGainMillimeters", "ActiveZoneMinutes", "RunVo2Max", "TotalSwimLengths" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.MetricsSummary.Types.TimeInHeartRateZones), global::Google.DevicesAndServices.Health.V4.MetricsSummary.Types.TimeInHeartRateZones.Parser, new[]{ "LightTime", "ModerateTime", "VigorousTime", "PeakTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.MetricsSummary.Types.MobilityMetrics), global::Google.DevicesAndServices.Health.V4.MetricsSummary.Types.MobilityMetrics.Parser, new[]{ "AvgCadenceStepsPerMinute", "AvgStrideLengthMillimeters", "AvgVerticalOscillationMillimeters", "AvgVerticalRatio", "AvgGroundContactTimeDuration" }, new[]{ "AvgCadenceStepsPerMinute", "AvgStrideLengthMillimeters", "AvgVerticalOscillationMillimeters", "AvgVerticalRatio" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.WeightQuantity), global::Google.DevicesAndServices.Health.V4.WeightQuantity.Parser, new[]{ "Grams", "UserProvidedUnit" }, new[]{ "Grams" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.EnergyQuantity), global::Google.DevicesAndServices.Health.V4.EnergyQuantity.Parser, new[]{ "Kcal", "UserProvidedUnit" }, new[]{ "Kcal" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.NutrientQuantity), global::Google.DevicesAndServices.Health.V4.NutrientQuantity.Parser, new[]{ "Quantity", "Nutrient" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.NutritionLog), global::Google.DevicesAndServices.Health.V4.NutritionLog.Parser, new[]{ "Interval", "Nutrients", "Energy", "EnergyFromFat", "TotalCarbohydrate", "TotalFat", "MealType", "Serving", "Food", "FoodDisplayName" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.NutritionLog.Types.Serving), global::Google.DevicesAndServices.Health.V4.NutritionLog.Types.Serving.Parser, new[]{ "Amount", "FoodMeasurementUnit", "FoodMeasurementUnitDisplayName" }, new[]{ "Amount" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Food), global::Google.DevicesAndServices.Health.V4.Food.Parser, new[]{ "DisplayName", "Brand", "AccessLevel", "Description", "LanguageCode", "MealType", "Nutrients", "EnergyFromFat", "TotalCarbohydrate", "TotalFat", "EnergyMin", "EnergyAvg", "EnergyMax", "DefaultServing", "Servings" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing), global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing.Parser, new[]{ "Amount", "FoodMeasurementUnit", "FoodMeasurementUnitDisplayName", "FoodMeasurementUnitDisplayNamePlural", "Multiplier" }, new[]{ "Amount" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue), global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Parser, new[]{ "Nutrients", "Energy", "EnergyFromFat", "TotalCarbohydrate", "TotalFat" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup), global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup.Parser, new[]{ "GramsSum", "UserProvidedUnitLast" }, new[]{ "GramsSum" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup), global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup.Parser, new[]{ "KcalSum", "UserProvidedUnitLast" }, new[]{ "KcalSum" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.NutrientQuantityRollup), global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.NutrientQuantityRollup.Parser, new[]{ "Quantity", "Nutrient" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.OxygenSaturation), global::Google.DevicesAndServices.Health.V4.OxygenSaturation.Parser, new[]{ "SampleTime", "Percentage" }, new[]{ "Percentage" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RestingHeartRatePersonalRangeRollupValue), global::Google.DevicesAndServices.Health.V4.RestingHeartRatePersonalRangeRollupValue.Parser, new[]{ "BeatsPerMinuteMin", "BeatsPerMinuteMax" }, new[]{ "BeatsPerMinuteMin", "BeatsPerMinuteMax" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit), global::Google.DevicesAndServices.Health.V4.FoodMeasurementUnit.Parser, new[]{ "DisplayName", "PluralDisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary), global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Parser, new[]{ "SampleTime", "DeepSleepStats", "LightSleepStats", "RemSleepStats", "FullSleepStats" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Types.RespiratoryRateSleepSummaryStatistics), global::Google.DevicesAndServices.Health.V4.RespiratoryRateSleepSummary.Types.RespiratoryRateSleepSummaryStatistics.Parser, new[]{ "BreathsPerMinute", "StandardDeviation", "SignalToNoise" }, new[]{ "BreathsPerMinute", "StandardDeviation", "SignalToNoise" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep), global::Google.DevicesAndServices.Health.V4.Sleep.Parser, new[]{ "Interval", "Type", "Stages", "OutOfBedSegments", "Metadata", "Summary", "CreateTime", "UpdateTime" }, null, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepType), typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStageType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStage), global::Google.DevicesAndServices.Health.V4.Sleep.Types.SleepStage.Parser, new[]{ "StartTime", "StartUtcOffset", "EndTime", "EndUtcOffset", "Type", "CreateTime", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Sleep.Types.OutOfBedSegment), global::Google.DevicesAndServices.Health.V4.Sleep.Types.OutOfBedSegment.Parser, new[]{ "StartTime", "StartUtcOffset", "EndTime", "EndUtcOffset" }, null, null, null, null),
@@ -507,8 +725,12 @@ namespace Google.DevicesAndServices.Health.V4 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.VO2Max), global::Google.DevicesAndServices.Health.V4.VO2Max.Parser, new[]{ "SampleTime", "Vo2Max", "MeasurementMethod" }, new[]{ "Vo2Max" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.VO2Max.Types.MeasurementMethod) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.Weight), global::Google.DevicesAndServices.Health.V4.Weight.Parser, new[]{ "SampleTime", "WeightGrams", "Notes" }, new[]{ "WeightGrams" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.WeightRollupValue), global::Google.DevicesAndServices.Health.V4.WeightRollupValue.Parser, new[]{ "WeightGramsAvg" }, new[]{ "WeightGramsAvg" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BloodGlucose), global::Google.DevicesAndServices.Health.V4.BloodGlucose.Parser, new[]{ "SampleTime", "BloodGlucoseMilligramsPerDeciliter", "MeasurementSource", "MealType", "MeasurementTiming", "Specimen", "Notes" }, new[]{ "BloodGlucoseMilligramsPerDeciliter" }, new[]{ typeof(global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource), typeof(global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType), typeof(global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming), typeof(global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue), global::Google.DevicesAndServices.Health.V4.BloodGlucoseRollupValue.Parser, new[]{ "BloodGlucoseMilligramsPerDeciliterAvg" }, new[]{ "BloodGlucoseMilligramsPerDeciliterAvg" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SedentaryPeriod), global::Google.DevicesAndServices.Health.V4.SedentaryPeriod.Parser, new[]{ "Interval" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SedentaryPeriodRollupValue), global::Google.DevicesAndServices.Health.V4.SedentaryPeriodRollupValue.Parser, new[]{ "DurationSum" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.SedentaryPeriodRollupValue), global::Google.DevicesAndServices.Health.V4.SedentaryPeriodRollupValue.Parser, new[]{ "DurationSum" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned), global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurned.Parser, new[]{ "Interval", "Kcal" }, new[]{ "Kcal" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue), global::Google.DevicesAndServices.Health.V4.ActiveEnergyBurnedRollupValue.Parser, new[]{ "KcalSum" }, new[]{ "KcalSum" }, null, null, null)
           }));
     }
     #endregion
@@ -539,6 +761,308 @@ namespace Google.DevicesAndServices.Health.V4 {
     /// The peak heart rate zone.
     /// </summary>
     [pbr::OriginalName("PEAK")] Peak = 4,
+  }
+
+  /// <summary>
+  /// Enum representing the access level of a food item.
+  /// </summary>
+  public enum FoodAccessLevel {
+    /// <summary>
+    /// Unspecified food access level.
+    /// </summary>
+    [pbr::OriginalName("FOOD_ACCESS_LEVEL_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Public food access level.
+    /// </summary>
+    [pbr::OriginalName("FOOD_ACCESS_LEVEL_PUBLIC")] Public = 1,
+    /// <summary>
+    /// Private food access level.
+    /// </summary>
+    [pbr::OriginalName("FOOD_ACCESS_LEVEL_PRIVATE")] Private = 2,
+  }
+
+  /// <summary>
+  /// Enum representing the meal type.
+  /// </summary>
+  public enum MealType {
+    /// <summary>
+    /// Unspecified meal type.
+    /// </summary>
+    [pbr::OriginalName("MEAL_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Value representing a meal before breakfast.
+    /// </summary>
+    [pbr::OriginalName("BEFORE_BREAKFAST")] BeforeBreakfast = 1,
+    /// <summary>
+    /// Value representing a breakfast.
+    /// </summary>
+    [pbr::OriginalName("BREAKFAST")] Breakfast = 2,
+    /// <summary>
+    /// Value representing a morning snack.
+    /// </summary>
+    [pbr::OriginalName("BEFORE_LUNCH")] BeforeLunch = 3,
+    /// <summary>
+    /// Value representing a lunch.
+    /// </summary>
+    [pbr::OriginalName("LUNCH")] Lunch = 4,
+    /// <summary>
+    /// Value representing an afternoon snack.
+    /// </summary>
+    [pbr::OriginalName("BEFORE_DINNER")] BeforeDinner = 5,
+    /// <summary>
+    /// Value representing dinner.
+    /// </summary>
+    [pbr::OriginalName("DINNER")] Dinner = 6,
+    /// <summary>
+    /// Value representing an evening snack.
+    /// </summary>
+    [pbr::OriginalName("AFTER_DINNER")] AfterDinner = 7,
+    /// <summary>
+    /// Value representing any meal outside of the usual three meals per day.
+    /// </summary>
+    [pbr::OriginalName("SNACK")] Snack = 8,
+    /// <summary>
+    /// Value representing any time (legacy NA).
+    /// </summary>
+    [pbr::OriginalName("ANYTIME")] Anytime = 9,
+  }
+
+  /// <summary>
+  /// Enum representing the unit of energy.
+  /// </summary>
+  public enum EnergyUnit {
+    /// <summary>
+    /// Unspecified energy unit.
+    /// </summary>
+    [pbr::OriginalName("ENERGY_UNIT_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Value representing joule.
+    /// </summary>
+    [pbr::OriginalName("JOULE")] Joule = 1,
+    /// <summary>
+    /// Value representing kilojoule.
+    /// </summary>
+    [pbr::OriginalName("KILOJOULE")] Kilojoule = 2,
+    /// <summary>
+    /// Value representing kilocalorie.
+    /// </summary>
+    [pbr::OriginalName("KILOCALORIE")] Kilocalorie = 3,
+    /// <summary>
+    /// Value representing small calorie.
+    /// </summary>
+    [pbr::OriginalName("SMALL_CALORIE")] SmallCalorie = 4,
+    /// <summary>
+    /// Value representing calorie.
+    /// </summary>
+    [pbr::OriginalName("CALORIE")] Calorie = 5,
+  }
+
+  /// <summary>
+  /// Holds information about a user logged food.
+  /// </summary>
+  public enum Nutrient {
+    /// <summary>
+    /// Unspecified nutrient.
+    /// </summary>
+    [pbr::OriginalName("NUTRIENT_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Value representing biotin nutrient.
+    /// </summary>
+    [pbr::OriginalName("BIOTIN")] Biotin = 1,
+    /// <summary>
+    /// Value representing caffeine nutrient.
+    /// </summary>
+    [pbr::OriginalName("CAFFEINE")] Caffeine = 2,
+    /// <summary>
+    /// Value representing calcium nutrient.
+    /// </summary>
+    [pbr::OriginalName("CALCIUM")] Calcium = 3,
+    /// <summary>
+    /// Value representing chloride nutrient.
+    /// </summary>
+    [pbr::OriginalName("CHLORIDE")] Chloride = 4,
+    /// <summary>
+    /// Value representing carbohydrates nutrient.
+    /// </summary>
+    [pbr::OriginalName("CARBOHYDRATES")] Carbohydrates = 5,
+    /// <summary>
+    /// Value representing cholesterol nutrient.
+    /// </summary>
+    [pbr::OriginalName("CHOLESTEROL")] Cholesterol = 6,
+    /// <summary>
+    /// Value representing chromium nutrient.
+    /// </summary>
+    [pbr::OriginalName("CHROMIUM")] Chromium = 7,
+    /// <summary>
+    /// Value representing copper nutrient.
+    /// </summary>
+    [pbr::OriginalName("COPPER")] Copper = 8,
+    /// <summary>
+    /// Value representing dietary fiber nutrient.
+    /// </summary>
+    [pbr::OriginalName("DIETARY_FIBER")] DietaryFiber = 9,
+    /// <summary>
+    /// Value representing folic acid nutrient.
+    /// </summary>
+    [pbr::OriginalName("FOLIC_ACID")] FolicAcid = 10,
+    /// <summary>
+    /// Value representing iodine nutrient.
+    /// </summary>
+    [pbr::OriginalName("IODINE")] Iodine = 11,
+    /// <summary>
+    /// Value representing iron nutrient.
+    /// </summary>
+    [pbr::OriginalName("IRON")] Iron = 12,
+    /// <summary>
+    /// Value representing magnesium nutrient.
+    /// </summary>
+    [pbr::OriginalName("MAGNESIUM")] Magnesium = 13,
+    /// <summary>
+    /// Value representing manganese nutrient.
+    /// </summary>
+    [pbr::OriginalName("MANGANESE")] Manganese = 14,
+    /// <summary>
+    /// Value representing molybdenum nutrient.
+    /// </summary>
+    [pbr::OriginalName("MOLYBDENUM")] Molybdenum = 15,
+    /// <summary>
+    /// Value representing monounsaturated fat nutrient.
+    /// </summary>
+    [pbr::OriginalName("MONOUNSATURATED_FAT")] MonounsaturatedFat = 16,
+    /// <summary>
+    /// Value representing niacin nutrient.
+    /// </summary>
+    [pbr::OriginalName("NIACIN")] Niacin = 17,
+    /// <summary>
+    /// Value representing pantothenic acid nutrient.
+    /// </summary>
+    [pbr::OriginalName("PANTOTHENIC_ACID")] PantothenicAcid = 18,
+    /// <summary>
+    /// Value representing phosphorus nutrient.
+    /// </summary>
+    [pbr::OriginalName("PHOSPHORUS")] Phosphorus = 19,
+    /// <summary>
+    /// Value representing polyunsaturated fat nutrient.
+    /// </summary>
+    [pbr::OriginalName("POLYUNSATURATED_FAT")] PolyunsaturatedFat = 20,
+    /// <summary>
+    /// Value representing potassium nutrient.
+    /// </summary>
+    [pbr::OriginalName("POTASSIUM")] Potassium = 21,
+    /// <summary>
+    /// Value representing protein nutrient.
+    /// </summary>
+    [pbr::OriginalName("PROTEIN")] Protein = 22,
+    /// <summary>
+    /// Value representing riboflavin nutrient.
+    /// </summary>
+    [pbr::OriginalName("RIBOFLAVIN")] Riboflavin = 23,
+    /// <summary>
+    /// Value representing saturated fat nutrient.
+    /// </summary>
+    [pbr::OriginalName("SATURATED_FAT")] SaturatedFat = 24,
+    /// <summary>
+    /// Value representing selenium nutrient.
+    /// </summary>
+    [pbr::OriginalName("SELENIUM")] Selenium = 25,
+    /// <summary>
+    /// Value representing sodium nutrient.
+    /// </summary>
+    [pbr::OriginalName("SODIUM")] Sodium = 26,
+    /// <summary>
+    /// Value representing sugar nutrient.
+    /// </summary>
+    [pbr::OriginalName("SUGAR")] Sugar = 27,
+    /// <summary>
+    /// Value representing thiamin nutrient.
+    /// </summary>
+    [pbr::OriginalName("THIAMIN")] Thiamin = 28,
+    /// <summary>
+    /// Value representing trans fat nutrient.
+    /// </summary>
+    [pbr::OriginalName("TRANS_FAT")] TransFat = 29,
+    /// <summary>
+    /// Value representing unsaturated fat nutrient.
+    /// </summary>
+    [pbr::OriginalName("UNSATURATED_FAT")] UnsaturatedFat = 30,
+    /// <summary>
+    /// Value representing vitamin A nutrient.
+    /// </summary>
+    [pbr::OriginalName("VITAMIN_A")] VitaminA = 31,
+    /// <summary>
+    /// Value representing vitamin B12 nutrient.
+    /// </summary>
+    [pbr::OriginalName("VITAMIN_B12")] VitaminB12 = 32,
+    /// <summary>
+    /// Value representing vitamin B6 nutrient.
+    /// </summary>
+    [pbr::OriginalName("VITAMIN_B6")] VitaminB6 = 33,
+    /// <summary>
+    /// Value representing vitamin C nutrient.
+    /// </summary>
+    [pbr::OriginalName("VITAMIN_C")] VitaminC = 34,
+    /// <summary>
+    /// Value representing vitamin D nutrient.
+    /// </summary>
+    [pbr::OriginalName("VITAMIN_D")] VitaminD = 35,
+    /// <summary>
+    /// Value representing vitamin E nutrient.
+    /// </summary>
+    [pbr::OriginalName("VITAMIN_E")] VitaminE = 36,
+    /// <summary>
+    /// Value representing vitamin K nutrient.
+    /// </summary>
+    [pbr::OriginalName("VITAMIN_K")] VitaminK = 37,
+    /// <summary>
+    /// Value representing zinc nutrient.
+    /// </summary>
+    [pbr::OriginalName("ZINC")] Zinc = 38,
+    /// <summary>
+    /// Value representing folate nutrient.
+    /// </summary>
+    [pbr::OriginalName("FOLATE")] Folate = 39,
+  }
+
+  /// <summary>
+  /// Enum representing the unit of weight.
+  /// </summary>
+  public enum WeightUnit {
+    /// <summary>
+    /// Unspecified weight unit.
+    /// </summary>
+    [pbr::OriginalName("WEIGHT_UNIT_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Value representing gram.
+    /// </summary>
+    [pbr::OriginalName("GRAM")] Gram = 1,
+    /// <summary>
+    /// Value representing kilogram.
+    /// </summary>
+    [pbr::OriginalName("KILOGRAM")] Kilogram = 2,
+    /// <summary>
+    /// Value representing ounce.
+    /// </summary>
+    [pbr::OriginalName("OUNCE")] Ounce = 3,
+    /// <summary>
+    /// Value representing pound.
+    /// </summary>
+    [pbr::OriginalName("POUND")] Pound = 4,
+    /// <summary>
+    /// Value representing stone.
+    /// </summary>
+    [pbr::OriginalName("STONE")] Stone = 5,
+    /// <summary>
+    /// Value representing milligram.
+    /// </summary>
+    [pbr::OriginalName("MILLIGRAM")] Milligram = 6,
+    /// <summary>
+    /// Value representing microgram.
+    /// </summary>
+    [pbr::OriginalName("MICROGRAM")] Microgram = 7,
+    /// <summary>
+    /// Value representing nanogram.
+    /// </summary>
+    [pbr::OriginalName("NANOGRAM")] Nanogram = 8,
   }
 
   /// <summary>
@@ -4033,6 +4557,774 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// Core body temperature measurement, distinct from peripheral body temperature,
+  /// reflects the temperature of the body's internal organs.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CoreBodyTemperature : pb::IMessage<CoreBodyTemperature>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CoreBodyTemperature> _parser = new pb::MessageParser<CoreBodyTemperature>(() => new CoreBodyTemperature());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CoreBodyTemperature> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoreBodyTemperature() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoreBodyTemperature(CoreBodyTemperature other) : this() {
+      _hasBits0 = other._hasBits0;
+      sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
+      temperatureCelsius_ = other.temperatureCelsius_;
+      measurementLocation_ = other.measurementLocation_;
+      id_ = other.id_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoreBodyTemperature Clone() {
+      return new CoreBodyTemperature(this);
+    }
+
+    /// <summary>Field number for the "sample_time" field.</summary>
+    public const int SampleTimeFieldNumber = 2;
+    private global::Google.DevicesAndServices.Health.V4.ObservationSampleTime sampleTime_;
+    /// <summary>
+    /// Required. The time at which core body temperature was measured.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.ObservationSampleTime SampleTime {
+      get { return sampleTime_; }
+      set {
+        sampleTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "temperature_celsius" field.</summary>
+    public const int TemperatureCelsiusFieldNumber = 3;
+    private readonly static double TemperatureCelsiusDefaultValue = 0D;
+
+    private double temperatureCelsius_;
+    /// <summary>
+    /// Required. The core body temperature in Celsius.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double TemperatureCelsius {
+      get { if ((_hasBits0 & 1) != 0) { return temperatureCelsius_; } else { return TemperatureCelsiusDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        temperatureCelsius_ = value;
+      }
+    }
+    /// <summary>Gets whether the "temperature_celsius" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTemperatureCelsius {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "temperature_celsius" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTemperatureCelsius() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "measurement_location" field.</summary>
+    public const int MeasurementLocationFieldNumber = 4;
+    private global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation measurementLocation_ = global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation.Unspecified;
+    /// <summary>
+    /// Optional. The location of the core body temperature measurement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation MeasurementLocation {
+      get { return measurementLocation_; }
+      set {
+        measurementLocation_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 5;
+    private string id_ = "";
+    /// <summary>
+    /// Optional. The unique identifier of the core body temperature measurement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CoreBodyTemperature);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CoreBodyTemperature other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(SampleTime, other.SampleTime)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TemperatureCelsius, other.TemperatureCelsius)) return false;
+      if (MeasurementLocation != other.MeasurementLocation) return false;
+      if (Id != other.Id) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
+      if (HasTemperatureCelsius) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TemperatureCelsius);
+      if (MeasurementLocation != global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation.Unspecified) hash ^= MeasurementLocation.GetHashCode();
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (sampleTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SampleTime);
+      }
+      if (HasTemperatureCelsius) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TemperatureCelsius);
+      }
+      if (MeasurementLocation != global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MeasurementLocation);
+      }
+      if (Id.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Id);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (sampleTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(SampleTime);
+      }
+      if (HasTemperatureCelsius) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TemperatureCelsius);
+      }
+      if (MeasurementLocation != global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MeasurementLocation);
+      }
+      if (Id.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Id);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (sampleTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
+      }
+      if (HasTemperatureCelsius) {
+        size += 1 + 8;
+      }
+      if (MeasurementLocation != global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MeasurementLocation);
+      }
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CoreBodyTemperature other) {
+      if (other == null) {
+        return;
+      }
+      if (other.sampleTime_ != null) {
+        if (sampleTime_ == null) {
+          SampleTime = new global::Google.DevicesAndServices.Health.V4.ObservationSampleTime();
+        }
+        SampleTime.MergeFrom(other.SampleTime);
+      }
+      if (other.HasTemperatureCelsius) {
+        TemperatureCelsius = other.TemperatureCelsius;
+      }
+      if (other.MeasurementLocation != global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation.Unspecified) {
+        MeasurementLocation = other.MeasurementLocation;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            if (sampleTime_ == null) {
+              SampleTime = new global::Google.DevicesAndServices.Health.V4.ObservationSampleTime();
+            }
+            input.ReadMessage(SampleTime);
+            break;
+          }
+          case 25: {
+            TemperatureCelsius = input.ReadDouble();
+            break;
+          }
+          case 32: {
+            MeasurementLocation = (global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (sampleTime_ == null) {
+              SampleTime = new global::Google.DevicesAndServices.Health.V4.ObservationSampleTime();
+            }
+            input.ReadMessage(SampleTime);
+            break;
+          }
+          case 25: {
+            TemperatureCelsius = input.ReadDouble();
+            break;
+          }
+          case 32: {
+            MeasurementLocation = (global::Google.DevicesAndServices.Health.V4.CoreBodyTemperature.Types.MeasurementLocation) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            Id = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the CoreBodyTemperature message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Measurement location for core body temperature.
+      /// </summary>
+      public enum MeasurementLocation {
+        /// <summary>
+        /// Measurement location is unspecified.
+        /// </summary>
+        [pbr::OriginalName("MEASUREMENT_LOCATION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Other measurement location.
+        /// </summary>
+        [pbr::OriginalName("OTHER")] Other = 1,
+        /// <summary>
+        /// Armpit measurement location.
+        /// </summary>
+        [pbr::OriginalName("ARMPIT")] Armpit = 2,
+        /// <summary>
+        /// Body measurement location.
+        /// </summary>
+        [pbr::OriginalName("BODY")] Body = 3,
+        /// <summary>
+        /// Ear measurement location.
+        /// </summary>
+        [pbr::OriginalName("EAR")] Ear = 4,
+        /// <summary>
+        /// Finger measurement location.
+        /// </summary>
+        [pbr::OriginalName("FINGER")] Finger = 5,
+        /// <summary>
+        /// Gastro-intestinal measurement location.
+        /// </summary>
+        [pbr::OriginalName("GASTRO_INTESTINAL")] GastroIntestinal = 6,
+        /// <summary>
+        /// Mouth measurement location.
+        /// </summary>
+        [pbr::OriginalName("MOUTH")] Mouth = 7,
+        /// <summary>
+        /// Rectum measurement location.
+        /// </summary>
+        [pbr::OriginalName("RECTUM")] Rectum = 8,
+        /// <summary>
+        /// Toe measurement location.
+        /// </summary>
+        [pbr::OriginalName("TOE")] Toe = 9,
+        /// <summary>
+        /// Ear drum measurement location.
+        /// </summary>
+        [pbr::OriginalName("EAR_DRUM")] EarDrum = 10,
+        /// <summary>
+        /// Temporal artery measurement location.
+        /// </summary>
+        [pbr::OriginalName("TEMPORAL_ARTERY")] TemporalArtery = 11,
+        /// <summary>
+        /// Forehead measurement location.
+        /// </summary>
+        [pbr::OriginalName("FOREHEAD")] Forehead = 12,
+        /// <summary>
+        /// Urinary bladder measurement location.
+        /// </summary>
+        [pbr::OriginalName("URINARY_BLADDER")] UrinaryBladder = 13,
+        /// <summary>
+        /// Nasal measurement location.
+        /// </summary>
+        [pbr::OriginalName("NASAL")] Nasal = 14,
+        /// <summary>
+        /// Nasopharyngeal measurement location.
+        /// </summary>
+        [pbr::OriginalName("NASOPHARYNGEAL")] Nasopharyngeal = 15,
+        /// <summary>
+        /// Wrist measurement location.
+        /// </summary>
+        [pbr::OriginalName("WRIST")] Wrist = 16,
+        /// <summary>
+        /// Vagina measurement location.
+        /// </summary>
+        [pbr::OriginalName("VAGINA")] Vagina = 17,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents the result of the rollup of the core body temperature data type.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CoreBodyTemperatureRollupValue : pb::IMessage<CoreBodyTemperatureRollupValue>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CoreBodyTemperatureRollupValue> _parser = new pb::MessageParser<CoreBodyTemperatureRollupValue>(() => new CoreBodyTemperatureRollupValue());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CoreBodyTemperatureRollupValue> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoreBodyTemperatureRollupValue() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoreBodyTemperatureRollupValue(CoreBodyTemperatureRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
+      temperatureCelsiusAvg_ = other.temperatureCelsiusAvg_;
+      temperatureCelsiusMax_ = other.temperatureCelsiusMax_;
+      temperatureCelsiusMin_ = other.temperatureCelsiusMin_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoreBodyTemperatureRollupValue Clone() {
+      return new CoreBodyTemperatureRollupValue(this);
+    }
+
+    /// <summary>Field number for the "temperature_celsius_avg" field.</summary>
+    public const int TemperatureCelsiusAvgFieldNumber = 1;
+    private readonly static double TemperatureCelsiusAvgDefaultValue = 0D;
+
+    private double temperatureCelsiusAvg_;
+    /// <summary>
+    /// Average core body temperature in Celsius.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double TemperatureCelsiusAvg {
+      get { if ((_hasBits0 & 1) != 0) { return temperatureCelsiusAvg_; } else { return TemperatureCelsiusAvgDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        temperatureCelsiusAvg_ = value;
+      }
+    }
+    /// <summary>Gets whether the "temperature_celsius_avg" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTemperatureCelsiusAvg {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "temperature_celsius_avg" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTemperatureCelsiusAvg() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "temperature_celsius_max" field.</summary>
+    public const int TemperatureCelsiusMaxFieldNumber = 2;
+    private readonly static double TemperatureCelsiusMaxDefaultValue = 0D;
+
+    private double temperatureCelsiusMax_;
+    /// <summary>
+    /// Maximum core body temperature in Celsius.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double TemperatureCelsiusMax {
+      get { if ((_hasBits0 & 2) != 0) { return temperatureCelsiusMax_; } else { return TemperatureCelsiusMaxDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        temperatureCelsiusMax_ = value;
+      }
+    }
+    /// <summary>Gets whether the "temperature_celsius_max" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTemperatureCelsiusMax {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "temperature_celsius_max" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTemperatureCelsiusMax() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "temperature_celsius_min" field.</summary>
+    public const int TemperatureCelsiusMinFieldNumber = 3;
+    private readonly static double TemperatureCelsiusMinDefaultValue = 0D;
+
+    private double temperatureCelsiusMin_;
+    /// <summary>
+    /// Minimum core body temperature in Celsius.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double TemperatureCelsiusMin {
+      get { if ((_hasBits0 & 4) != 0) { return temperatureCelsiusMin_; } else { return TemperatureCelsiusMinDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        temperatureCelsiusMin_ = value;
+      }
+    }
+    /// <summary>Gets whether the "temperature_celsius_min" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTemperatureCelsiusMin {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "temperature_celsius_min" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTemperatureCelsiusMin() {
+      _hasBits0 &= ~4;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CoreBodyTemperatureRollupValue);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CoreBodyTemperatureRollupValue other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TemperatureCelsiusAvg, other.TemperatureCelsiusAvg)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TemperatureCelsiusMax, other.TemperatureCelsiusMax)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TemperatureCelsiusMin, other.TemperatureCelsiusMin)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasTemperatureCelsiusAvg) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TemperatureCelsiusAvg);
+      if (HasTemperatureCelsiusMax) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TemperatureCelsiusMax);
+      if (HasTemperatureCelsiusMin) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TemperatureCelsiusMin);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasTemperatureCelsiusAvg) {
+        output.WriteRawTag(9);
+        output.WriteDouble(TemperatureCelsiusAvg);
+      }
+      if (HasTemperatureCelsiusMax) {
+        output.WriteRawTag(17);
+        output.WriteDouble(TemperatureCelsiusMax);
+      }
+      if (HasTemperatureCelsiusMin) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TemperatureCelsiusMin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasTemperatureCelsiusAvg) {
+        output.WriteRawTag(9);
+        output.WriteDouble(TemperatureCelsiusAvg);
+      }
+      if (HasTemperatureCelsiusMax) {
+        output.WriteRawTag(17);
+        output.WriteDouble(TemperatureCelsiusMax);
+      }
+      if (HasTemperatureCelsiusMin) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TemperatureCelsiusMin);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasTemperatureCelsiusAvg) {
+        size += 1 + 8;
+      }
+      if (HasTemperatureCelsiusMax) {
+        size += 1 + 8;
+      }
+      if (HasTemperatureCelsiusMin) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CoreBodyTemperatureRollupValue other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasTemperatureCelsiusAvg) {
+        TemperatureCelsiusAvg = other.TemperatureCelsiusAvg;
+      }
+      if (other.HasTemperatureCelsiusMax) {
+        TemperatureCelsiusMax = other.TemperatureCelsiusMax;
+      }
+      if (other.HasTemperatureCelsiusMin) {
+        TemperatureCelsiusMin = other.TemperatureCelsiusMin;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            TemperatureCelsiusAvg = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            TemperatureCelsiusMax = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            TemperatureCelsiusMin = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            TemperatureCelsiusAvg = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            TemperatureCelsiusMax = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            TemperatureCelsiusMin = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents the result of the rollup of the calories in heart rate zone data
   /// type.
   /// </summary>
@@ -4051,7 +5343,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4514,7 +5806,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5088,7 +6380,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5530,7 +6822,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5802,7 +7094,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6242,7 +7534,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -6801,7 +8093,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7185,7 +8477,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[17]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7635,7 +8927,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[18]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7905,7 +9197,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[19]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -8108,6 +9400,632 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// Represents an Electrocardiogram (ECG) measurement session.
+  /// This data type is based on SaMD feature and any changes to it may require
+  /// additional review.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Electrocardiogram : pb::IMessage<Electrocardiogram>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Electrocardiogram> _parser = new pb::MessageParser<Electrocardiogram>(() => new Electrocardiogram());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Electrocardiogram> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[22]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Electrocardiogram() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Electrocardiogram(Electrocardiogram other) : this() {
+      _hasBits0 = other._hasBits0;
+      interval_ = other.interval_ != null ? other.interval_.Clone() : null;
+      beatsPerMinuteAvg_ = other.beatsPerMinuteAvg_;
+      resultClassification_ = other.resultClassification_;
+      waveformSamples_ = other.waveformSamples_.Clone();
+      samplingFrequencyHertz_ = other.samplingFrequencyHertz_;
+      millivoltsScalingFactor_ = other.millivoltsScalingFactor_;
+      leadNumber_ = other.leadNumber_;
+      medicalDeviceInfo_ = other.medicalDeviceInfo_ != null ? other.medicalDeviceInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Electrocardiogram Clone() {
+      return new Electrocardiogram(this);
+    }
+
+    /// <summary>Field number for the "interval" field.</summary>
+    public const int IntervalFieldNumber = 1;
+    private global::Google.DevicesAndServices.Health.V4.SessionTimeInterval interval_;
+    /// <summary>
+    /// Required. Observed interval.
+    ///
+    /// NOTE: Historical ECG data lacks timezone offsets, so `start_utc_offset`
+    /// and `end_utc_offset` will be missing or default to zero. As a result,
+    /// the civil time fields within this interval will default to UTC.
+    /// It is recommended to use physical time fields instead for accurate
+    /// time referencing.
+    ///
+    /// NOTE: The `start_time` and `end_time` of the interval are equal,
+    /// representing the reading time.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.SessionTimeInterval Interval {
+      get { return interval_; }
+      set {
+        interval_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "beats_per_minute_avg" field.</summary>
+    public const int BeatsPerMinuteAvgFieldNumber = 2;
+    private readonly static long BeatsPerMinuteAvgDefaultValue = 0L;
+
+    private long beatsPerMinuteAvg_;
+    /// <summary>
+    /// Optional. Average heart rate recorded during ECG reading in beats per
+    /// minute.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long BeatsPerMinuteAvg {
+      get { if ((_hasBits0 & 1) != 0) { return beatsPerMinuteAvg_; } else { return BeatsPerMinuteAvgDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        beatsPerMinuteAvg_ = value;
+      }
+    }
+    /// <summary>Gets whether the "beats_per_minute_avg" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBeatsPerMinuteAvg {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "beats_per_minute_avg" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBeatsPerMinuteAvg() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "result_classification" field.</summary>
+    public const int ResultClassificationFieldNumber = 3;
+    private global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification resultClassification_ = global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification.Unspecified;
+    /// <summary>
+    /// Optional. The result classification of the ECG reading.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification ResultClassification {
+      get { return resultClassification_; }
+      set {
+        resultClassification_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "waveform_samples" field.</summary>
+    public const int WaveformSamplesFieldNumber = 4;
+    private static readonly pb::FieldCodec<int> _repeated_waveformSamples_codec
+        = pb::FieldCodec.ForSInt32(34);
+    private readonly pbc::RepeatedField<int> waveformSamples_ = new pbc::RepeatedField<int>();
+    /// <summary>
+    /// Optional. An array of voltage values representing lead I ECG values.
+    /// Each sample represents voltage difference in ECG graph.
+    /// The first value in array corresponds to the start of the reading.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> WaveformSamples {
+      get { return waveformSamples_; }
+    }
+
+    /// <summary>Field number for the "sampling_frequency_hertz" field.</summary>
+    public const int SamplingFrequencyHertzFieldNumber = 5;
+    private readonly static int SamplingFrequencyHertzDefaultValue = 0;
+
+    private int samplingFrequencyHertz_;
+    /// <summary>
+    /// Optional. The sampling frequency of waveform samples in hertz.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int SamplingFrequencyHertz {
+      get { if ((_hasBits0 & 2) != 0) { return samplingFrequencyHertz_; } else { return SamplingFrequencyHertzDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        samplingFrequencyHertz_ = value;
+      }
+    }
+    /// <summary>Gets whether the "sampling_frequency_hertz" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSamplingFrequencyHertz {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "sampling_frequency_hertz" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSamplingFrequencyHertz() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "millivolts_scaling_factor" field.</summary>
+    public const int MillivoltsScalingFactorFieldNumber = 6;
+    private readonly static int MillivoltsScalingFactorDefaultValue = 0;
+
+    private int millivoltsScalingFactor_;
+    /// <summary>
+    /// Optional. The factor by which to divide waveform samples to get voltage in
+    /// millivolts: millivolts = waveform_sample / millivolts_scaling_factor.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MillivoltsScalingFactor {
+      get { if ((_hasBits0 & 4) != 0) { return millivoltsScalingFactor_; } else { return MillivoltsScalingFactorDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        millivoltsScalingFactor_ = value;
+      }
+    }
+    /// <summary>Gets whether the "millivolts_scaling_factor" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMillivoltsScalingFactor {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "millivolts_scaling_factor" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMillivoltsScalingFactor() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "lead_number" field.</summary>
+    public const int LeadNumberFieldNumber = 7;
+    private readonly static int LeadNumberDefaultValue = 0;
+
+    private int leadNumber_;
+    /// <summary>
+    /// Optional. The number of leads used for ECG reading.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LeadNumber {
+      get { if ((_hasBits0 & 8) != 0) { return leadNumber_; } else { return LeadNumberDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        leadNumber_ = value;
+      }
+    }
+    /// <summary>Gets whether the "lead_number" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLeadNumber {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "lead_number" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLeadNumber() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "medical_device_info" field.</summary>
+    public const int MedicalDeviceInfoFieldNumber = 8;
+    private global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo medicalDeviceInfo_;
+    /// <summary>
+    /// Output only. The meta information for the compatible device used to conduct
+    /// the measurement.
+    ///
+    /// ECG measurements typically populate `firmware_version`, `feature_version`,
+    /// and `device_model`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo MedicalDeviceInfo {
+      get { return medicalDeviceInfo_; }
+      set {
+        medicalDeviceInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Electrocardiogram);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Electrocardiogram other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Interval, other.Interval)) return false;
+      if (BeatsPerMinuteAvg != other.BeatsPerMinuteAvg) return false;
+      if (ResultClassification != other.ResultClassification) return false;
+      if(!waveformSamples_.Equals(other.waveformSamples_)) return false;
+      if (SamplingFrequencyHertz != other.SamplingFrequencyHertz) return false;
+      if (MillivoltsScalingFactor != other.MillivoltsScalingFactor) return false;
+      if (LeadNumber != other.LeadNumber) return false;
+      if (!object.Equals(MedicalDeviceInfo, other.MedicalDeviceInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (interval_ != null) hash ^= Interval.GetHashCode();
+      if (HasBeatsPerMinuteAvg) hash ^= BeatsPerMinuteAvg.GetHashCode();
+      if (ResultClassification != global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification.Unspecified) hash ^= ResultClassification.GetHashCode();
+      hash ^= waveformSamples_.GetHashCode();
+      if (HasSamplingFrequencyHertz) hash ^= SamplingFrequencyHertz.GetHashCode();
+      if (HasMillivoltsScalingFactor) hash ^= MillivoltsScalingFactor.GetHashCode();
+      if (HasLeadNumber) hash ^= LeadNumber.GetHashCode();
+      if (medicalDeviceInfo_ != null) hash ^= MedicalDeviceInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (interval_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Interval);
+      }
+      if (HasBeatsPerMinuteAvg) {
+        output.WriteRawTag(16);
+        output.WriteInt64(BeatsPerMinuteAvg);
+      }
+      if (ResultClassification != global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ResultClassification);
+      }
+      waveformSamples_.WriteTo(output, _repeated_waveformSamples_codec);
+      if (HasSamplingFrequencyHertz) {
+        output.WriteRawTag(40);
+        output.WriteInt32(SamplingFrequencyHertz);
+      }
+      if (HasMillivoltsScalingFactor) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MillivoltsScalingFactor);
+      }
+      if (HasLeadNumber) {
+        output.WriteRawTag(56);
+        output.WriteInt32(LeadNumber);
+      }
+      if (medicalDeviceInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MedicalDeviceInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (interval_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Interval);
+      }
+      if (HasBeatsPerMinuteAvg) {
+        output.WriteRawTag(16);
+        output.WriteInt64(BeatsPerMinuteAvg);
+      }
+      if (ResultClassification != global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) ResultClassification);
+      }
+      waveformSamples_.WriteTo(ref output, _repeated_waveformSamples_codec);
+      if (HasSamplingFrequencyHertz) {
+        output.WriteRawTag(40);
+        output.WriteInt32(SamplingFrequencyHertz);
+      }
+      if (HasMillivoltsScalingFactor) {
+        output.WriteRawTag(48);
+        output.WriteInt32(MillivoltsScalingFactor);
+      }
+      if (HasLeadNumber) {
+        output.WriteRawTag(56);
+        output.WriteInt32(LeadNumber);
+      }
+      if (medicalDeviceInfo_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(MedicalDeviceInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (interval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
+      }
+      if (HasBeatsPerMinuteAvg) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(BeatsPerMinuteAvg);
+      }
+      if (ResultClassification != global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ResultClassification);
+      }
+      size += waveformSamples_.CalculateSize(_repeated_waveformSamples_codec);
+      if (HasSamplingFrequencyHertz) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(SamplingFrequencyHertz);
+      }
+      if (HasMillivoltsScalingFactor) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MillivoltsScalingFactor);
+      }
+      if (HasLeadNumber) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(LeadNumber);
+      }
+      if (medicalDeviceInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MedicalDeviceInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Electrocardiogram other) {
+      if (other == null) {
+        return;
+      }
+      if (other.interval_ != null) {
+        if (interval_ == null) {
+          Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+        }
+        Interval.MergeFrom(other.Interval);
+      }
+      if (other.HasBeatsPerMinuteAvg) {
+        BeatsPerMinuteAvg = other.BeatsPerMinuteAvg;
+      }
+      if (other.ResultClassification != global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification.Unspecified) {
+        ResultClassification = other.ResultClassification;
+      }
+      waveformSamples_.Add(other.waveformSamples_);
+      if (other.HasSamplingFrequencyHertz) {
+        SamplingFrequencyHertz = other.SamplingFrequencyHertz;
+      }
+      if (other.HasMillivoltsScalingFactor) {
+        MillivoltsScalingFactor = other.MillivoltsScalingFactor;
+      }
+      if (other.HasLeadNumber) {
+        LeadNumber = other.LeadNumber;
+      }
+      if (other.medicalDeviceInfo_ != null) {
+        if (medicalDeviceInfo_ == null) {
+          MedicalDeviceInfo = new global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo();
+        }
+        MedicalDeviceInfo.MergeFrom(other.MedicalDeviceInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (interval_ == null) {
+              Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+            }
+            input.ReadMessage(Interval);
+            break;
+          }
+          case 16: {
+            BeatsPerMinuteAvg = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ResultClassification = (global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification) input.ReadEnum();
+            break;
+          }
+          case 34:
+          case 32: {
+            waveformSamples_.AddEntriesFrom(input, _repeated_waveformSamples_codec);
+            break;
+          }
+          case 40: {
+            SamplingFrequencyHertz = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            MillivoltsScalingFactor = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            LeadNumber = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            if (medicalDeviceInfo_ == null) {
+              MedicalDeviceInfo = new global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo();
+            }
+            input.ReadMessage(MedicalDeviceInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (interval_ == null) {
+              Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+            }
+            input.ReadMessage(Interval);
+            break;
+          }
+          case 16: {
+            BeatsPerMinuteAvg = input.ReadInt64();
+            break;
+          }
+          case 24: {
+            ResultClassification = (global::Google.DevicesAndServices.Health.V4.Electrocardiogram.Types.ResultClassification) input.ReadEnum();
+            break;
+          }
+          case 34:
+          case 32: {
+            waveformSamples_.AddEntriesFrom(ref input, _repeated_waveformSamples_codec);
+            break;
+          }
+          case 40: {
+            SamplingFrequencyHertz = input.ReadInt32();
+            break;
+          }
+          case 48: {
+            MillivoltsScalingFactor = input.ReadInt32();
+            break;
+          }
+          case 56: {
+            LeadNumber = input.ReadInt32();
+            break;
+          }
+          case 66: {
+            if (medicalDeviceInfo_ == null) {
+              MedicalDeviceInfo = new global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo();
+            }
+            input.ReadMessage(MedicalDeviceInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Electrocardiogram message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The classification of the ECG reading rhythm.
+      /// </summary>
+      public enum ResultClassification {
+        /// <summary>
+        /// Unspecified result classification.
+        /// </summary>
+        [pbr::OriginalName("RESULT_CLASSIFICATION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Heart rhythm appears normal. Corresponds to result "Normal Sinus Rhythm".
+        /// </summary>
+        [pbr::OriginalName("NORMAL_SINUS_RHYTHM")] NormalSinusRhythm = 1,
+        /// <summary>
+        /// Signs of Atrial Fibrillation detected. Corresponds to result "Atrial
+        /// Fibrillation".
+        /// </summary>
+        [pbr::OriginalName("ATRIAL_FIBRILLATION")] AtrialFibrillation = 2,
+        /// <summary>
+        /// The reading is inconclusive as it could not be classified. Corresponds to
+        /// result "Inconclusive".
+        /// </summary>
+        [pbr::OriginalName("INCONCLUSIVE")] Inconclusive = 3,
+        /// <summary>
+        /// The reading is inconclusive as it could not be classified because
+        /// heart rate is high (>120bpm). Corresponds to result "Inconclusive: High
+        /// heart rate".
+        /// </summary>
+        [pbr::OriginalName("INCONCLUSIVE_HIGH_HEART_RATE")] InconclusiveHighHeartRate = 4,
+        /// <summary>
+        /// The reading is inconclusive as it could not be classified because
+        /// heart rate is low (&lt;50bpm). Corresponds to result "Inconclusive: Low
+        /// heart rate".
+        /// </summary>
+        [pbr::OriginalName("INCONCLUSIVE_LOW_HEART_RATE")] InconclusiveLowHeartRate = 5,
+        /// <summary>
+        /// The reading is unreadable.
+        /// </summary>
+        [pbr::OriginalName("UNREADABLE")] Unreadable = 6,
+        /// <summary>
+        /// The reading was not analyzed.
+        /// </summary>
+        [pbr::OriginalName("NOT_ANALYZED")] NotAnalyzed = 7,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// An exercise that stores information about a physical activity.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -8125,7 +10043,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[20]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10009,7 +11927,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10279,7 +12197,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[22]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10500,7 +12418,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -10721,7 +12639,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11354,7 +13272,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -11686,7 +13604,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[26]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12018,7 +13936,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[27]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12289,7 +14207,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[28]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12567,7 +14485,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[29]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -12839,7 +14757,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[30]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13166,7 +15084,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[31]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13428,7 +15346,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[32]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -13690,7 +15608,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[33]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -14155,6 +16073,1228 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// Represents an Irregular Rhythm Notification alert, indicating a potential
+  /// sign of atrial fibrillation (AFib).
+  /// This data type is based on SaMD feature and any changes to it may require
+  /// additional review.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class IrregularRhythmNotification : pb::IMessage<IrregularRhythmNotification>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IrregularRhythmNotification> _parser = new pb::MessageParser<IrregularRhythmNotification>(() => new IrregularRhythmNotification());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<IrregularRhythmNotification> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[37]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IrregularRhythmNotification() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IrregularRhythmNotification(IrregularRhythmNotification other) : this() {
+      interval_ = other.interval_ != null ? other.interval_.Clone() : null;
+      alertWindows_ = other.alertWindows_.Clone();
+      medicalDeviceInfo_ = other.medicalDeviceInfo_ != null ? other.medicalDeviceInfo_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IrregularRhythmNotification Clone() {
+      return new IrregularRhythmNotification(this);
+    }
+
+    /// <summary>Field number for the "interval" field.</summary>
+    public const int IntervalFieldNumber = 1;
+    private global::Google.DevicesAndServices.Health.V4.SessionTimeInterval interval_;
+    /// <summary>
+    /// Required. Observed interval.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.SessionTimeInterval Interval {
+      get { return interval_; }
+      set {
+        interval_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "alert_windows" field.</summary>
+    public const int AlertWindowsFieldNumber = 5;
+    private static readonly pb::FieldCodec<global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.AlertWindow> _repeated_alertWindows_codec
+        = pb::FieldCodec.ForMessage(42, global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.AlertWindow.Parser);
+    private readonly pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.AlertWindow> alertWindows_ = new pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.AlertWindow>();
+    /// <summary>
+    /// Optional. The overlapping analysis windows that were used to evaluate
+    /// rhythm for potential AFib, containing specific information about the user's
+    /// heart rhythm.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.AlertWindow> AlertWindows {
+      get { return alertWindows_; }
+    }
+
+    /// <summary>Field number for the "medical_device_info" field.</summary>
+    public const int MedicalDeviceInfoFieldNumber = 6;
+    private global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo medicalDeviceInfo_;
+    /// <summary>
+    /// Output only. The meta information for the compatible device used to conduct
+    /// the measurement.
+    ///
+    /// Irregular Rhythm Notification measurements typically populate
+    /// `algorithm_version`, `service_version`, and `device_model`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo MedicalDeviceInfo {
+      get { return medicalDeviceInfo_; }
+      set {
+        medicalDeviceInfo_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as IrregularRhythmNotification);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(IrregularRhythmNotification other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Interval, other.Interval)) return false;
+      if(!alertWindows_.Equals(other.alertWindows_)) return false;
+      if (!object.Equals(MedicalDeviceInfo, other.MedicalDeviceInfo)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (interval_ != null) hash ^= Interval.GetHashCode();
+      hash ^= alertWindows_.GetHashCode();
+      if (medicalDeviceInfo_ != null) hash ^= MedicalDeviceInfo.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (interval_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Interval);
+      }
+      alertWindows_.WriteTo(output, _repeated_alertWindows_codec);
+      if (medicalDeviceInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MedicalDeviceInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (interval_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Interval);
+      }
+      alertWindows_.WriteTo(ref output, _repeated_alertWindows_codec);
+      if (medicalDeviceInfo_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(MedicalDeviceInfo);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (interval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
+      }
+      size += alertWindows_.CalculateSize(_repeated_alertWindows_codec);
+      if (medicalDeviceInfo_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MedicalDeviceInfo);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(IrregularRhythmNotification other) {
+      if (other == null) {
+        return;
+      }
+      if (other.interval_ != null) {
+        if (interval_ == null) {
+          Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+        }
+        Interval.MergeFrom(other.Interval);
+      }
+      alertWindows_.Add(other.alertWindows_);
+      if (other.medicalDeviceInfo_ != null) {
+        if (medicalDeviceInfo_ == null) {
+          MedicalDeviceInfo = new global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo();
+        }
+        MedicalDeviceInfo.MergeFrom(other.MedicalDeviceInfo);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (interval_ == null) {
+              Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+            }
+            input.ReadMessage(Interval);
+            break;
+          }
+          case 42: {
+            alertWindows_.AddEntriesFrom(input, _repeated_alertWindows_codec);
+            break;
+          }
+          case 50: {
+            if (medicalDeviceInfo_ == null) {
+              MedicalDeviceInfo = new global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo();
+            }
+            input.ReadMessage(MedicalDeviceInfo);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (interval_ == null) {
+              Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+            }
+            input.ReadMessage(Interval);
+            break;
+          }
+          case 42: {
+            alertWindows_.AddEntriesFrom(ref input, _repeated_alertWindows_codec);
+            break;
+          }
+          case 50: {
+            if (medicalDeviceInfo_ == null) {
+              MedicalDeviceInfo = new global::Google.DevicesAndServices.Health.V4.MedicalDeviceInfo();
+            }
+            input.ReadMessage(MedicalDeviceInfo);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the IrregularRhythmNotification message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A single heart beat measurement.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class HeartBeat : pb::IMessage<HeartBeat>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<HeartBeat> _parser = new pb::MessageParser<HeartBeat>(() => new HeartBeat());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<HeartBeat> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HeartBeat() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HeartBeat(HeartBeat other) : this() {
+          _hasBits0 = other._hasBits0;
+          physicalTime_ = other.physicalTime_ != null ? other.physicalTime_.Clone() : null;
+          utcOffset_ = other.utcOffset_ != null ? other.utcOffset_.Clone() : null;
+          civilTime_ = other.civilTime_ != null ? other.civilTime_.Clone() : null;
+          beatsPerMinute_ = other.beatsPerMinute_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HeartBeat Clone() {
+          return new HeartBeat(this);
+        }
+
+        /// <summary>Field number for the "physical_time" field.</summary>
+        public const int PhysicalTimeFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp physicalTime_;
+        /// <summary>
+        /// Required. The time of the heart beat measurement.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp PhysicalTime {
+          get { return physicalTime_; }
+          set {
+            physicalTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "utc_offset" field.</summary>
+        public const int UtcOffsetFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Duration utcOffset_;
+        /// <summary>
+        /// Required. The UTC offset of the user's timezone when the heart beat
+        /// measurement occurred.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration UtcOffset {
+          get { return utcOffset_; }
+          set {
+            utcOffset_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "civil_time" field.</summary>
+        public const int CivilTimeFieldNumber = 3;
+        private global::Google.DevicesAndServices.Health.V4.CivilDateTime civilTime_;
+        /// <summary>
+        /// Output only. The civil time in the timezone the subject is in
+        /// at the time of the observation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.DevicesAndServices.Health.V4.CivilDateTime CivilTime {
+          get { return civilTime_; }
+          set {
+            civilTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "beats_per_minute" field.</summary>
+        public const int BeatsPerMinuteFieldNumber = 4;
+        private readonly static int BeatsPerMinuteDefaultValue = 0;
+
+        private int beatsPerMinute_;
+        /// <summary>
+        /// Required. The beats-per-minute value extrapolated from the time before
+        /// the following heart beat. This is calculated as 60000 / rr, where rr is
+        /// the gap between heart beats in milliseconds (IBI - Interbeat Interval).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int BeatsPerMinute {
+          get { if ((_hasBits0 & 1) != 0) { return beatsPerMinute_; } else { return BeatsPerMinuteDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            beatsPerMinute_ = value;
+          }
+        }
+        /// <summary>Gets whether the "beats_per_minute" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasBeatsPerMinute {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "beats_per_minute" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearBeatsPerMinute() {
+          _hasBits0 &= ~1;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as HeartBeat);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(HeartBeat other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(PhysicalTime, other.PhysicalTime)) return false;
+          if (!object.Equals(UtcOffset, other.UtcOffset)) return false;
+          if (!object.Equals(CivilTime, other.CivilTime)) return false;
+          if (BeatsPerMinute != other.BeatsPerMinute) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (physicalTime_ != null) hash ^= PhysicalTime.GetHashCode();
+          if (utcOffset_ != null) hash ^= UtcOffset.GetHashCode();
+          if (civilTime_ != null) hash ^= CivilTime.GetHashCode();
+          if (HasBeatsPerMinute) hash ^= BeatsPerMinute.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (physicalTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(PhysicalTime);
+          }
+          if (utcOffset_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(UtcOffset);
+          }
+          if (civilTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CivilTime);
+          }
+          if (HasBeatsPerMinute) {
+            output.WriteRawTag(32);
+            output.WriteInt32(BeatsPerMinute);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (physicalTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(PhysicalTime);
+          }
+          if (utcOffset_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(UtcOffset);
+          }
+          if (civilTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(CivilTime);
+          }
+          if (HasBeatsPerMinute) {
+            output.WriteRawTag(32);
+            output.WriteInt32(BeatsPerMinute);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (physicalTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(PhysicalTime);
+          }
+          if (utcOffset_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(UtcOffset);
+          }
+          if (civilTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CivilTime);
+          }
+          if (HasBeatsPerMinute) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(BeatsPerMinute);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(HeartBeat other) {
+          if (other == null) {
+            return;
+          }
+          if (other.physicalTime_ != null) {
+            if (physicalTime_ == null) {
+              PhysicalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            PhysicalTime.MergeFrom(other.PhysicalTime);
+          }
+          if (other.utcOffset_ != null) {
+            if (utcOffset_ == null) {
+              UtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            UtcOffset.MergeFrom(other.UtcOffset);
+          }
+          if (other.civilTime_ != null) {
+            if (civilTime_ == null) {
+              CivilTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+            }
+            CivilTime.MergeFrom(other.CivilTime);
+          }
+          if (other.HasBeatsPerMinute) {
+            BeatsPerMinute = other.BeatsPerMinute;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (physicalTime_ == null) {
+                  PhysicalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(PhysicalTime);
+                break;
+              }
+              case 18: {
+                if (utcOffset_ == null) {
+                  UtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(UtcOffset);
+                break;
+              }
+              case 26: {
+                if (civilTime_ == null) {
+                  CivilTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+                }
+                input.ReadMessage(CivilTime);
+                break;
+              }
+              case 32: {
+                BeatsPerMinute = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (physicalTime_ == null) {
+                  PhysicalTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(PhysicalTime);
+                break;
+              }
+              case 18: {
+                if (utcOffset_ == null) {
+                  UtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(UtcOffset);
+                break;
+              }
+              case 26: {
+                if (civilTime_ == null) {
+                  CivilTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+                }
+                input.ReadMessage(CivilTime);
+                break;
+              }
+              case 32: {
+                BeatsPerMinute = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// An analysis window evaluated for AFib.
+      ///
+      /// Note: The current version of the algorithm will only produce alerts if all
+      /// windows are positive. So anything returned from the API will always have
+      /// the positive bit set to true. Internally, windows can be negative, however.
+      /// We never save "inconclusive" windows (they aren't produced by the
+      /// algorithm).
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AlertWindow : pb::IMessage<AlertWindow>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AlertWindow> _parser = new pb::MessageParser<AlertWindow>(() => new AlertWindow());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AlertWindow> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AlertWindow() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AlertWindow(AlertWindow other) : this() {
+          startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
+          startUtcOffset_ = other.startUtcOffset_ != null ? other.startUtcOffset_.Clone() : null;
+          endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
+          endUtcOffset_ = other.endUtcOffset_ != null ? other.endUtcOffset_.Clone() : null;
+          civilStartTime_ = other.civilStartTime_ != null ? other.civilStartTime_.Clone() : null;
+          civilEndTime_ = other.civilEndTime_ != null ? other.civilEndTime_.Clone() : null;
+          positive_ = other.positive_;
+          heartBeats_ = other.heartBeats_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AlertWindow Clone() {
+          return new AlertWindow(this);
+        }
+
+        /// <summary>Field number for the "start_time" field.</summary>
+        public const int StartTimeFieldNumber = 1;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp startTime_;
+        /// <summary>
+        /// Required. Observed interval.
+        /// The start time of the analysis window.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
+          get { return startTime_; }
+          set {
+            startTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "start_utc_offset" field.</summary>
+        public const int StartUtcOffsetFieldNumber = 2;
+        private global::Google.Protobuf.WellKnownTypes.Duration startUtcOffset_;
+        /// <summary>
+        /// Required. The UTC offset of the user's timezone when the analysis window
+        /// started.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration StartUtcOffset {
+          get { return startUtcOffset_; }
+          set {
+            startUtcOffset_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "end_time" field.</summary>
+        public const int EndTimeFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Timestamp endTime_;
+        /// <summary>
+        /// Required. The end time of the analysis window.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
+          get { return endTime_; }
+          set {
+            endTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "end_utc_offset" field.</summary>
+        public const int EndUtcOffsetFieldNumber = 4;
+        private global::Google.Protobuf.WellKnownTypes.Duration endUtcOffset_;
+        /// <summary>
+        /// Required. The UTC offset of the user's timezone when the analysis window
+        /// ended.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration EndUtcOffset {
+          get { return endUtcOffset_; }
+          set {
+            endUtcOffset_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "civil_start_time" field.</summary>
+        public const int CivilStartTimeFieldNumber = 5;
+        private global::Google.DevicesAndServices.Health.V4.CivilDateTime civilStartTime_;
+        /// <summary>
+        /// Output only. Observed interval start time in civil time in the timezone
+        /// the subject is in at the start of the observed interval
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.DevicesAndServices.Health.V4.CivilDateTime CivilStartTime {
+          get { return civilStartTime_; }
+          set {
+            civilStartTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "civil_end_time" field.</summary>
+        public const int CivilEndTimeFieldNumber = 6;
+        private global::Google.DevicesAndServices.Health.V4.CivilDateTime civilEndTime_;
+        /// <summary>
+        /// Output only. Observed interval end time in civil time in the timezone the
+        /// subject is in at the end of the observed interval
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.DevicesAndServices.Health.V4.CivilDateTime CivilEndTime {
+          get { return civilEndTime_; }
+          set {
+            civilEndTime_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "positive" field.</summary>
+        public const int PositiveFieldNumber = 7;
+        private bool positive_;
+        /// <summary>
+        /// Optional. Flag indicating whether the window was positive for AFib or
+        /// not. A `true` value indicates that AFib was detected in this window. A
+        /// `false` value means AFib was not detected, but does not guarantee the
+        /// absence of AFib.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Positive {
+          get { return positive_; }
+          set {
+            positive_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "heart_beats" field.</summary>
+        public const int HeartBeatsFieldNumber = 8;
+        private static readonly pb::FieldCodec<global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.HeartBeat> _repeated_heartBeats_codec
+            = pb::FieldCodec.ForMessage(66, global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.HeartBeat.Parser);
+        private readonly pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.HeartBeat> heartBeats_ = new pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.HeartBeat>();
+        /// <summary>
+        /// Optional. All heart beats in the interval contained in this analysis
+        /// window.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.IrregularRhythmNotification.Types.HeartBeat> HeartBeats {
+          get { return heartBeats_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AlertWindow);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AlertWindow other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(StartTime, other.StartTime)) return false;
+          if (!object.Equals(StartUtcOffset, other.StartUtcOffset)) return false;
+          if (!object.Equals(EndTime, other.EndTime)) return false;
+          if (!object.Equals(EndUtcOffset, other.EndUtcOffset)) return false;
+          if (!object.Equals(CivilStartTime, other.CivilStartTime)) return false;
+          if (!object.Equals(CivilEndTime, other.CivilEndTime)) return false;
+          if (Positive != other.Positive) return false;
+          if(!heartBeats_.Equals(other.heartBeats_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (startTime_ != null) hash ^= StartTime.GetHashCode();
+          if (startUtcOffset_ != null) hash ^= StartUtcOffset.GetHashCode();
+          if (endTime_ != null) hash ^= EndTime.GetHashCode();
+          if (endUtcOffset_ != null) hash ^= EndUtcOffset.GetHashCode();
+          if (civilStartTime_ != null) hash ^= CivilStartTime.GetHashCode();
+          if (civilEndTime_ != null) hash ^= CivilEndTime.GetHashCode();
+          if (Positive != false) hash ^= Positive.GetHashCode();
+          hash ^= heartBeats_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (startTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartTime);
+          }
+          if (startUtcOffset_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(StartUtcOffset);
+          }
+          if (endTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(EndTime);
+          }
+          if (endUtcOffset_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(EndUtcOffset);
+          }
+          if (civilStartTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(CivilStartTime);
+          }
+          if (civilEndTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(CivilEndTime);
+          }
+          if (Positive != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(Positive);
+          }
+          heartBeats_.WriteTo(output, _repeated_heartBeats_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (startTime_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(StartTime);
+          }
+          if (startUtcOffset_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(StartUtcOffset);
+          }
+          if (endTime_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(EndTime);
+          }
+          if (endUtcOffset_ != null) {
+            output.WriteRawTag(34);
+            output.WriteMessage(EndUtcOffset);
+          }
+          if (civilStartTime_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(CivilStartTime);
+          }
+          if (civilEndTime_ != null) {
+            output.WriteRawTag(50);
+            output.WriteMessage(CivilEndTime);
+          }
+          if (Positive != false) {
+            output.WriteRawTag(56);
+            output.WriteBool(Positive);
+          }
+          heartBeats_.WriteTo(ref output, _repeated_heartBeats_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (startTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartTime);
+          }
+          if (startUtcOffset_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StartUtcOffset);
+          }
+          if (endTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndTime);
+          }
+          if (endUtcOffset_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(EndUtcOffset);
+          }
+          if (civilStartTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CivilStartTime);
+          }
+          if (civilEndTime_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(CivilEndTime);
+          }
+          if (Positive != false) {
+            size += 1 + 1;
+          }
+          size += heartBeats_.CalculateSize(_repeated_heartBeats_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AlertWindow other) {
+          if (other == null) {
+            return;
+          }
+          if (other.startTime_ != null) {
+            if (startTime_ == null) {
+              StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            StartTime.MergeFrom(other.StartTime);
+          }
+          if (other.startUtcOffset_ != null) {
+            if (startUtcOffset_ == null) {
+              StartUtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            StartUtcOffset.MergeFrom(other.StartUtcOffset);
+          }
+          if (other.endTime_ != null) {
+            if (endTime_ == null) {
+              EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            EndTime.MergeFrom(other.EndTime);
+          }
+          if (other.endUtcOffset_ != null) {
+            if (endUtcOffset_ == null) {
+              EndUtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            EndUtcOffset.MergeFrom(other.EndUtcOffset);
+          }
+          if (other.civilStartTime_ != null) {
+            if (civilStartTime_ == null) {
+              CivilStartTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+            }
+            CivilStartTime.MergeFrom(other.CivilStartTime);
+          }
+          if (other.civilEndTime_ != null) {
+            if (civilEndTime_ == null) {
+              CivilEndTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+            }
+            CivilEndTime.MergeFrom(other.CivilEndTime);
+          }
+          if (other.Positive != false) {
+            Positive = other.Positive;
+          }
+          heartBeats_.Add(other.heartBeats_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+              case 18: {
+                if (startUtcOffset_ == null) {
+                  StartUtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(StartUtcOffset);
+                break;
+              }
+              case 26: {
+                if (endTime_ == null) {
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EndTime);
+                break;
+              }
+              case 34: {
+                if (endUtcOffset_ == null) {
+                  EndUtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(EndUtcOffset);
+                break;
+              }
+              case 42: {
+                if (civilStartTime_ == null) {
+                  CivilStartTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+                }
+                input.ReadMessage(CivilStartTime);
+                break;
+              }
+              case 50: {
+                if (civilEndTime_ == null) {
+                  CivilEndTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+                }
+                input.ReadMessage(CivilEndTime);
+                break;
+              }
+              case 56: {
+                Positive = input.ReadBool();
+                break;
+              }
+              case 66: {
+                heartBeats_.AddEntriesFrom(input, _repeated_heartBeats_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (startTime_ == null) {
+                  StartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(StartTime);
+                break;
+              }
+              case 18: {
+                if (startUtcOffset_ == null) {
+                  StartUtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(StartUtcOffset);
+                break;
+              }
+              case 26: {
+                if (endTime_ == null) {
+                  EndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+                }
+                input.ReadMessage(EndTime);
+                break;
+              }
+              case 34: {
+                if (endUtcOffset_ == null) {
+                  EndUtcOffset = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(EndUtcOffset);
+                break;
+              }
+              case 42: {
+                if (civilStartTime_ == null) {
+                  CivilStartTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+                }
+                input.ReadMessage(CivilStartTime);
+                break;
+              }
+              case 50: {
+                if (civilEndTime_ == null) {
+                  CivilEndTime = new global::Google.DevicesAndServices.Health.V4.CivilDateTime();
+                }
+                input.ReadMessage(CivilEndTime);
+                break;
+              }
+              case 56: {
+                Positive = input.ReadBool();
+                break;
+              }
+              case 66: {
+                heartBeats_.AddEntriesFrom(ref input, _repeated_heartBeats_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Summary metrics for an exercise.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -14173,7 +17313,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[34]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15780,6 +18920,4106 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// Represents the weight quantity.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class WeightQuantity : pb::IMessage<WeightQuantity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WeightQuantity> _parser = new pb::MessageParser<WeightQuantity>(() => new WeightQuantity());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WeightQuantity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[39]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WeightQuantity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WeightQuantity(WeightQuantity other) : this() {
+      _hasBits0 = other._hasBits0;
+      grams_ = other.grams_;
+      userProvidedUnit_ = other.userProvidedUnit_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WeightQuantity Clone() {
+      return new WeightQuantity(this);
+    }
+
+    /// <summary>Field number for the "grams" field.</summary>
+    public const int GramsFieldNumber = 1;
+    private readonly static double GramsDefaultValue = 0D;
+
+    private double grams_;
+    /// <summary>
+    /// Required. Value representing the weight in grams.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Grams {
+      get { if ((_hasBits0 & 1) != 0) { return grams_; } else { return GramsDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        grams_ = value;
+      }
+    }
+    /// <summary>Gets whether the "grams" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasGrams {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "grams" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearGrams() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "user_provided_unit" field.</summary>
+    public const int UserProvidedUnitFieldNumber = 2;
+    private global::Google.DevicesAndServices.Health.V4.WeightUnit userProvidedUnit_ = global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified;
+    /// <summary>
+    /// Optional. Value representing the user provided unit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.WeightUnit UserProvidedUnit {
+      get { return userProvidedUnit_; }
+      set {
+        userProvidedUnit_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WeightQuantity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WeightQuantity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Grams, other.Grams)) return false;
+      if (UserProvidedUnit != other.UserProvidedUnit) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasGrams) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Grams);
+      if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) hash ^= UserProvidedUnit.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasGrams) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Grams);
+      }
+      if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) UserProvidedUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasGrams) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Grams);
+      }
+      if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) UserProvidedUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasGrams) {
+        size += 1 + 8;
+      }
+      if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserProvidedUnit);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WeightQuantity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasGrams) {
+        Grams = other.Grams;
+      }
+      if (other.UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) {
+        UserProvidedUnit = other.UserProvidedUnit;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            Grams = input.ReadDouble();
+            break;
+          }
+          case 16: {
+            UserProvidedUnit = (global::Google.DevicesAndServices.Health.V4.WeightUnit) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            Grams = input.ReadDouble();
+            break;
+          }
+          case 16: {
+            UserProvidedUnit = (global::Google.DevicesAndServices.Health.V4.WeightUnit) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents the energy quantity.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EnergyQuantity : pb::IMessage<EnergyQuantity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EnergyQuantity> _parser = new pb::MessageParser<EnergyQuantity>(() => new EnergyQuantity());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EnergyQuantity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[40]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnergyQuantity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnergyQuantity(EnergyQuantity other) : this() {
+      _hasBits0 = other._hasBits0;
+      kcal_ = other.kcal_;
+      userProvidedUnit_ = other.userProvidedUnit_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EnergyQuantity Clone() {
+      return new EnergyQuantity(this);
+    }
+
+    /// <summary>Field number for the "kcal" field.</summary>
+    public const int KcalFieldNumber = 1;
+    private readonly static double KcalDefaultValue = 0D;
+
+    private double kcal_;
+    /// <summary>
+    /// Required. Value representing the energy in kilocalories.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Kcal {
+      get { if ((_hasBits0 & 1) != 0) { return kcal_; } else { return KcalDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        kcal_ = value;
+      }
+    }
+    /// <summary>Gets whether the "kcal" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKcal {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "kcal" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKcal() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "user_provided_unit" field.</summary>
+    public const int UserProvidedUnitFieldNumber = 2;
+    private global::Google.DevicesAndServices.Health.V4.EnergyUnit userProvidedUnit_ = global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified;
+    /// <summary>
+    /// Optional. Value representing the user provided unit.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.EnergyUnit UserProvidedUnit {
+      get { return userProvidedUnit_; }
+      set {
+        userProvidedUnit_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EnergyQuantity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EnergyQuantity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Kcal, other.Kcal)) return false;
+      if (UserProvidedUnit != other.UserProvidedUnit) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasKcal) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Kcal);
+      if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) hash ^= UserProvidedUnit.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasKcal) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Kcal);
+      }
+      if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) UserProvidedUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasKcal) {
+        output.WriteRawTag(9);
+        output.WriteDouble(Kcal);
+      }
+      if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) UserProvidedUnit);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasKcal) {
+        size += 1 + 8;
+      }
+      if (UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserProvidedUnit);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EnergyQuantity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasKcal) {
+        Kcal = other.Kcal;
+      }
+      if (other.UserProvidedUnit != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) {
+        UserProvidedUnit = other.UserProvidedUnit;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            Kcal = input.ReadDouble();
+            break;
+          }
+          case 16: {
+            UserProvidedUnit = (global::Google.DevicesAndServices.Health.V4.EnergyUnit) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            Kcal = input.ReadDouble();
+            break;
+          }
+          case 16: {
+            UserProvidedUnit = (global::Google.DevicesAndServices.Health.V4.EnergyUnit) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents the quantity of a nutrient.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NutrientQuantity : pb::IMessage<NutrientQuantity>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NutrientQuantity> _parser = new pb::MessageParser<NutrientQuantity>(() => new NutrientQuantity());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NutrientQuantity> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[41]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutrientQuantity() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutrientQuantity(NutrientQuantity other) : this() {
+      quantity_ = other.quantity_ != null ? other.quantity_.Clone() : null;
+      nutrient_ = other.nutrient_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutrientQuantity Clone() {
+      return new NutrientQuantity(this);
+    }
+
+    /// <summary>Field number for the "quantity" field.</summary>
+    public const int QuantityFieldNumber = 1;
+    private global::Google.DevicesAndServices.Health.V4.WeightQuantity quantity_;
+    /// <summary>
+    /// Required. Value representing the quantity of the nutrient.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.WeightQuantity Quantity {
+      get { return quantity_; }
+      set {
+        quantity_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nutrient" field.</summary>
+    public const int NutrientFieldNumber = 2;
+    private global::Google.DevicesAndServices.Health.V4.Nutrient nutrient_ = global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified;
+    /// <summary>
+    /// Required. Value representing the nutrient.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.Nutrient Nutrient {
+      get { return nutrient_; }
+      set {
+        nutrient_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NutrientQuantity);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NutrientQuantity other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Quantity, other.Quantity)) return false;
+      if (Nutrient != other.Nutrient) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (quantity_ != null) hash ^= Quantity.GetHashCode();
+      if (Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) hash ^= Nutrient.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (quantity_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Quantity);
+      }
+      if (Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Nutrient);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (quantity_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Quantity);
+      }
+      if (Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) Nutrient);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (quantity_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Quantity);
+      }
+      if (Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Nutrient);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NutrientQuantity other) {
+      if (other == null) {
+        return;
+      }
+      if (other.quantity_ != null) {
+        if (quantity_ == null) {
+          Quantity = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+        }
+        Quantity.MergeFrom(other.Quantity);
+      }
+      if (other.Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) {
+        Nutrient = other.Nutrient;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (quantity_ == null) {
+              Quantity = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(Quantity);
+            break;
+          }
+          case 16: {
+            Nutrient = (global::Google.DevicesAndServices.Health.V4.Nutrient) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (quantity_ == null) {
+              Quantity = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(Quantity);
+            break;
+          }
+          case 16: {
+            Nutrient = (global::Google.DevicesAndServices.Health.V4.Nutrient) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Holds information about a user logged food.
+  ///
+  /// There are two ways of creating a nutrition log based on the food type:
+  /// 1. Identified food: Using the food field, which is a reference to a Food
+  /// resource. In this case fields `nutrients`, `energy`, `energy_from_fat`,
+  /// `total_carbohydrate`, `total_fat`, `food_display_name` will be populated
+  /// based on the referenced food.
+  /// 2. Anonymous food: Using the `food_display_name` field and setting
+  /// the  `nutrients`, `energy`, `energy_from_fat`, `total_carbohydrate`,
+  /// `total_fat` fields manually.
+  ///
+  /// The identified food is preferred over the anonymous food.
+  /// Nutrition logs created from anonymous food are not be editable.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NutritionLog : pb::IMessage<NutritionLog>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NutritionLog> _parser = new pb::MessageParser<NutritionLog>(() => new NutritionLog());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NutritionLog> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[42]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutritionLog() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutritionLog(NutritionLog other) : this() {
+      interval_ = other.interval_ != null ? other.interval_.Clone() : null;
+      nutrients_ = other.nutrients_.Clone();
+      energy_ = other.energy_ != null ? other.energy_.Clone() : null;
+      energyFromFat_ = other.energyFromFat_ != null ? other.energyFromFat_.Clone() : null;
+      totalCarbohydrate_ = other.totalCarbohydrate_ != null ? other.totalCarbohydrate_.Clone() : null;
+      totalFat_ = other.totalFat_ != null ? other.totalFat_.Clone() : null;
+      mealType_ = other.mealType_;
+      serving_ = other.serving_ != null ? other.serving_.Clone() : null;
+      food_ = other.food_;
+      foodDisplayName_ = other.foodDisplayName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutritionLog Clone() {
+      return new NutritionLog(this);
+    }
+
+    /// <summary>Field number for the "interval" field.</summary>
+    public const int IntervalFieldNumber = 2;
+    private global::Google.DevicesAndServices.Health.V4.SessionTimeInterval interval_;
+    /// <summary>
+    /// Required. Observed interval.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.SessionTimeInterval Interval {
+      get { return interval_; }
+      set {
+        interval_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nutrients" field.</summary>
+    public const int NutrientsFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.DevicesAndServices.Health.V4.NutrientQuantity> _repeated_nutrients_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.DevicesAndServices.Health.V4.NutrientQuantity.Parser);
+    private readonly pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutrientQuantity> nutrients_ = new pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutrientQuantity>();
+    /// <summary>
+    /// Optional. Value representing the nutrients of the nutrition log.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutrientQuantity> Nutrients {
+      get { return nutrients_; }
+    }
+
+    /// <summary>Field number for the "energy" field.</summary>
+    public const int EnergyFieldNumber = 4;
+    private global::Google.DevicesAndServices.Health.V4.EnergyQuantity energy_;
+    /// <summary>
+    /// Optional. Value representing the energy of the nutrition log.
+    /// For nutrition logs created from an identified food, this field will be
+    /// populated based on the referenced food. For anonymous food, this field will
+    /// be populated manually.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.EnergyQuantity Energy {
+      get { return energy_; }
+      set {
+        energy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "energy_from_fat" field.</summary>
+    public const int EnergyFromFatFieldNumber = 5;
+    private global::Google.DevicesAndServices.Health.V4.EnergyQuantity energyFromFat_;
+    /// <summary>
+    /// Optional. Value representing the energy from fat of the nutrition log.
+    /// For nutrition logs created from an identified food, this field will be
+    /// populated based on the referenced food. For anonymous food, this field will
+    /// be populated manually.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.EnergyQuantity EnergyFromFat {
+      get { return energyFromFat_; }
+      set {
+        energyFromFat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_carbohydrate" field.</summary>
+    public const int TotalCarbohydrateFieldNumber = 7;
+    private global::Google.DevicesAndServices.Health.V4.WeightQuantity totalCarbohydrate_;
+    /// <summary>
+    /// Optional. Value representing the total carbohydrate of the nutrition log.
+    /// For nutrition logs created from an identified food, this field will be
+    /// populated based on the referenced food. For anonymous food, this field will
+    /// be populated manually.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.WeightQuantity TotalCarbohydrate {
+      get { return totalCarbohydrate_; }
+      set {
+        totalCarbohydrate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_fat" field.</summary>
+    public const int TotalFatFieldNumber = 8;
+    private global::Google.DevicesAndServices.Health.V4.WeightQuantity totalFat_;
+    /// <summary>
+    /// Optional. Value representing the total fat of the nutrition log.
+    /// For nutrition logs created from an identified food, this field will be
+    /// populated based on the referenced food. For anonymous food, this field will
+    /// be populated manually.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.WeightQuantity TotalFat {
+      get { return totalFat_; }
+      set {
+        totalFat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "meal_type" field.</summary>
+    public const int MealTypeFieldNumber = 13;
+    private global::Google.DevicesAndServices.Health.V4.MealType mealType_ = global::Google.DevicesAndServices.Health.V4.MealType.Unspecified;
+    /// <summary>
+    /// Optional. Value representing the meal type of the nutrition log.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.MealType MealType {
+      get { return mealType_; }
+      set {
+        mealType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "serving" field.</summary>
+    public const int ServingFieldNumber = 14;
+    private global::Google.DevicesAndServices.Health.V4.NutritionLog.Types.Serving serving_;
+    /// <summary>
+    /// Optional. Value representing the nutrition log serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLog.Types.Serving Serving {
+      get { return serving_; }
+      set {
+        serving_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "food" field.</summary>
+    public const int FoodFieldNumber = 15;
+    private string food_ = "";
+    /// <summary>
+    /// Required. Represents the food ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Food {
+      get { return food_; }
+      set {
+        food_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "food_display_name" field.</summary>
+    public const int FoodDisplayNameFieldNumber = 16;
+    private string foodDisplayName_ = "";
+    /// <summary>
+    /// Value representing the display name of the food.
+    /// For nutrition logs created from an identified food, this field will be
+    /// populated based on the referenced food. For anonymous food, this field will
+    /// be populated manually.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string FoodDisplayName {
+      get { return foodDisplayName_; }
+      set {
+        foodDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NutritionLog);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NutritionLog other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Interval, other.Interval)) return false;
+      if(!nutrients_.Equals(other.nutrients_)) return false;
+      if (!object.Equals(Energy, other.Energy)) return false;
+      if (!object.Equals(EnergyFromFat, other.EnergyFromFat)) return false;
+      if (!object.Equals(TotalCarbohydrate, other.TotalCarbohydrate)) return false;
+      if (!object.Equals(TotalFat, other.TotalFat)) return false;
+      if (MealType != other.MealType) return false;
+      if (!object.Equals(Serving, other.Serving)) return false;
+      if (Food != other.Food) return false;
+      if (FoodDisplayName != other.FoodDisplayName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (interval_ != null) hash ^= Interval.GetHashCode();
+      hash ^= nutrients_.GetHashCode();
+      if (energy_ != null) hash ^= Energy.GetHashCode();
+      if (energyFromFat_ != null) hash ^= EnergyFromFat.GetHashCode();
+      if (totalCarbohydrate_ != null) hash ^= TotalCarbohydrate.GetHashCode();
+      if (totalFat_ != null) hash ^= TotalFat.GetHashCode();
+      if (MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) hash ^= MealType.GetHashCode();
+      if (serving_ != null) hash ^= Serving.GetHashCode();
+      if (Food.Length != 0) hash ^= Food.GetHashCode();
+      if (FoodDisplayName.Length != 0) hash ^= FoodDisplayName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (interval_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Interval);
+      }
+      nutrients_.WriteTo(output, _repeated_nutrients_codec);
+      if (energy_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Energy);
+      }
+      if (energyFromFat_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TotalFat);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) MealType);
+      }
+      if (serving_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Serving);
+      }
+      if (Food.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Food);
+      }
+      if (FoodDisplayName.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(FoodDisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (interval_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Interval);
+      }
+      nutrients_.WriteTo(ref output, _repeated_nutrients_codec);
+      if (energy_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Energy);
+      }
+      if (energyFromFat_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        output.WriteRawTag(66);
+        output.WriteMessage(TotalFat);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) {
+        output.WriteRawTag(104);
+        output.WriteEnum((int) MealType);
+      }
+      if (serving_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(Serving);
+      }
+      if (Food.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(Food);
+      }
+      if (FoodDisplayName.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(FoodDisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (interval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
+      }
+      size += nutrients_.CalculateSize(_repeated_nutrients_codec);
+      if (energy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Energy);
+      }
+      if (energyFromFat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalFat);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MealType);
+      }
+      if (serving_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Serving);
+      }
+      if (Food.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Food);
+      }
+      if (FoodDisplayName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(FoodDisplayName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NutritionLog other) {
+      if (other == null) {
+        return;
+      }
+      if (other.interval_ != null) {
+        if (interval_ == null) {
+          Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+        }
+        Interval.MergeFrom(other.Interval);
+      }
+      nutrients_.Add(other.nutrients_);
+      if (other.energy_ != null) {
+        if (energy_ == null) {
+          Energy = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+        }
+        Energy.MergeFrom(other.Energy);
+      }
+      if (other.energyFromFat_ != null) {
+        if (energyFromFat_ == null) {
+          EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+        }
+        EnergyFromFat.MergeFrom(other.EnergyFromFat);
+      }
+      if (other.totalCarbohydrate_ != null) {
+        if (totalCarbohydrate_ == null) {
+          TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+        }
+        TotalCarbohydrate.MergeFrom(other.TotalCarbohydrate);
+      }
+      if (other.totalFat_ != null) {
+        if (totalFat_ == null) {
+          TotalFat = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+        }
+        TotalFat.MergeFrom(other.TotalFat);
+      }
+      if (other.MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) {
+        MealType = other.MealType;
+      }
+      if (other.serving_ != null) {
+        if (serving_ == null) {
+          Serving = new global::Google.DevicesAndServices.Health.V4.NutritionLog.Types.Serving();
+        }
+        Serving.MergeFrom(other.Serving);
+      }
+      if (other.Food.Length != 0) {
+        Food = other.Food;
+      }
+      if (other.FoodDisplayName.Length != 0) {
+        FoodDisplayName = other.FoodDisplayName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            if (interval_ == null) {
+              Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+            }
+            input.ReadMessage(Interval);
+            break;
+          }
+          case 26: {
+            nutrients_.AddEntriesFrom(input, _repeated_nutrients_codec);
+            break;
+          }
+          case 34: {
+            if (energy_ == null) {
+              Energy = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(Energy);
+            break;
+          }
+          case 42: {
+            if (energyFromFat_ == null) {
+              EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyFromFat);
+            break;
+          }
+          case 58: {
+            if (totalCarbohydrate_ == null) {
+              TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(TotalCarbohydrate);
+            break;
+          }
+          case 66: {
+            if (totalFat_ == null) {
+              TotalFat = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(TotalFat);
+            break;
+          }
+          case 104: {
+            MealType = (global::Google.DevicesAndServices.Health.V4.MealType) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            if (serving_ == null) {
+              Serving = new global::Google.DevicesAndServices.Health.V4.NutritionLog.Types.Serving();
+            }
+            input.ReadMessage(Serving);
+            break;
+          }
+          case 122: {
+            Food = input.ReadString();
+            break;
+          }
+          case 130: {
+            FoodDisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            if (interval_ == null) {
+              Interval = new global::Google.DevicesAndServices.Health.V4.SessionTimeInterval();
+            }
+            input.ReadMessage(Interval);
+            break;
+          }
+          case 26: {
+            nutrients_.AddEntriesFrom(ref input, _repeated_nutrients_codec);
+            break;
+          }
+          case 34: {
+            if (energy_ == null) {
+              Energy = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(Energy);
+            break;
+          }
+          case 42: {
+            if (energyFromFat_ == null) {
+              EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyFromFat);
+            break;
+          }
+          case 58: {
+            if (totalCarbohydrate_ == null) {
+              TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(TotalCarbohydrate);
+            break;
+          }
+          case 66: {
+            if (totalFat_ == null) {
+              TotalFat = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(TotalFat);
+            break;
+          }
+          case 104: {
+            MealType = (global::Google.DevicesAndServices.Health.V4.MealType) input.ReadEnum();
+            break;
+          }
+          case 114: {
+            if (serving_ == null) {
+              Serving = new global::Google.DevicesAndServices.Health.V4.NutritionLog.Types.Serving();
+            }
+            input.ReadMessage(Serving);
+            break;
+          }
+          case 122: {
+            Food = input.ReadString();
+            break;
+          }
+          case 130: {
+            FoodDisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NutritionLog message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Represents different properties and information about the serving of a
+      /// specific food.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Serving : pb::IMessage<Serving>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Serving> _parser = new pb::MessageParser<Serving>(() => new Serving());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Serving> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.DevicesAndServices.Health.V4.NutritionLog.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Serving() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Serving(Serving other) : this() {
+          _hasBits0 = other._hasBits0;
+          amount_ = other.amount_;
+          foodMeasurementUnit_ = other.foodMeasurementUnit_;
+          foodMeasurementUnitDisplayName_ = other.foodMeasurementUnitDisplayName_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Serving Clone() {
+          return new Serving(this);
+        }
+
+        /// <summary>Field number for the "amount" field.</summary>
+        public const int AmountFieldNumber = 1;
+        private readonly static double AmountDefaultValue = 0D;
+
+        private double amount_;
+        /// <summary>
+        /// Optional. Amount of food consumed, fractional values are supported.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Amount {
+          get { if ((_hasBits0 & 1) != 0) { return amount_; } else { return AmountDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            amount_ = value;
+          }
+        }
+        /// <summary>Gets whether the "amount" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAmount {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "amount" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAmount() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "food_measurement_unit" field.</summary>
+        public const int FoodMeasurementUnitFieldNumber = 2;
+        private string foodMeasurementUnit_ = "";
+        /// <summary>
+        /// Required. Food measurement unit
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FoodMeasurementUnit {
+          get { return foodMeasurementUnit_; }
+          set {
+            foodMeasurementUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "food_measurement_unit_display_name" field.</summary>
+        public const int FoodMeasurementUnitDisplayNameFieldNumber = 3;
+        private string foodMeasurementUnitDisplayName_ = "";
+        /// <summary>
+        /// Output only. Legacy measurement unit for serving size in singular form
+        /// (e.g. "piece", "gram").
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FoodMeasurementUnitDisplayName {
+          get { return foodMeasurementUnitDisplayName_; }
+          set {
+            foodMeasurementUnitDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Serving);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Serving other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
+          if (FoodMeasurementUnit != other.FoodMeasurementUnit) return false;
+          if (FoodMeasurementUnitDisplayName != other.FoodMeasurementUnitDisplayName) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasAmount) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
+          if (FoodMeasurementUnit.Length != 0) hash ^= FoodMeasurementUnit.GetHashCode();
+          if (FoodMeasurementUnitDisplayName.Length != 0) hash ^= FoodMeasurementUnitDisplayName.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasAmount) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Amount);
+          }
+          if (FoodMeasurementUnit.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FoodMeasurementUnit);
+          }
+          if (FoodMeasurementUnitDisplayName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(FoodMeasurementUnitDisplayName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasAmount) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Amount);
+          }
+          if (FoodMeasurementUnit.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FoodMeasurementUnit);
+          }
+          if (FoodMeasurementUnitDisplayName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(FoodMeasurementUnitDisplayName);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasAmount) {
+            size += 1 + 8;
+          }
+          if (FoodMeasurementUnit.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FoodMeasurementUnit);
+          }
+          if (FoodMeasurementUnitDisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FoodMeasurementUnitDisplayName);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Serving other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasAmount) {
+            Amount = other.Amount;
+          }
+          if (other.FoodMeasurementUnit.Length != 0) {
+            FoodMeasurementUnit = other.FoodMeasurementUnit;
+          }
+          if (other.FoodMeasurementUnitDisplayName.Length != 0) {
+            FoodMeasurementUnitDisplayName = other.FoodMeasurementUnitDisplayName;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                Amount = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                FoodMeasurementUnit = input.ReadString();
+                break;
+              }
+              case 26: {
+                FoodMeasurementUnitDisplayName = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                Amount = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                FoodMeasurementUnit = input.ReadString();
+                break;
+              }
+              case 26: {
+                FoodMeasurementUnitDisplayName = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents a food item.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Food : pb::IMessage<Food>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Food> _parser = new pb::MessageParser<Food>(() => new Food());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Food> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[43]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Food() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Food(Food other) : this() {
+      displayName_ = other.displayName_;
+      brand_ = other.brand_;
+      accessLevel_ = other.accessLevel_;
+      description_ = other.description_;
+      languageCode_ = other.languageCode_;
+      mealType_ = other.mealType_;
+      nutrients_ = other.nutrients_.Clone();
+      energyFromFat_ = other.energyFromFat_ != null ? other.energyFromFat_.Clone() : null;
+      totalCarbohydrate_ = other.totalCarbohydrate_ != null ? other.totalCarbohydrate_.Clone() : null;
+      totalFat_ = other.totalFat_ != null ? other.totalFat_.Clone() : null;
+      energyMin_ = other.energyMin_ != null ? other.energyMin_.Clone() : null;
+      energyAvg_ = other.energyAvg_ != null ? other.energyAvg_.Clone() : null;
+      energyMax_ = other.energyMax_ != null ? other.energyMax_.Clone() : null;
+      defaultServing_ = other.defaultServing_ != null ? other.defaultServing_.Clone() : null;
+      servings_ = other.servings_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Food Clone() {
+      return new Food(this);
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 2;
+    private string displayName_ = "";
+    /// <summary>
+    /// Required. The display name of the food.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "brand" field.</summary>
+    public const int BrandFieldNumber = 3;
+    private string brand_ = "";
+    /// <summary>
+    /// Optional. The brand of the food.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Brand {
+      get { return brand_; }
+      set {
+        brand_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "access_level" field.</summary>
+    public const int AccessLevelFieldNumber = 4;
+    private global::Google.DevicesAndServices.Health.V4.FoodAccessLevel accessLevel_ = global::Google.DevicesAndServices.Health.V4.FoodAccessLevel.Unspecified;
+    /// <summary>
+    /// Required. The access level of the food.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.FoodAccessLevel AccessLevel {
+      get { return accessLevel_; }
+      set {
+        accessLevel_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 5;
+    private string description_ = "";
+    /// <summary>
+    /// Optional. The description of the food.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "language_code" field.</summary>
+    public const int LanguageCodeFieldNumber = 6;
+    private string languageCode_ = "";
+    /// <summary>
+    /// Optional. The language code where the food is available in format xx-XX.
+    /// Supported values are defined in
+    /// [Settings.food_language_code][google.devicesandservices.health.v4.Settings.food_language_code].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LanguageCode {
+      get { return languageCode_; }
+      set {
+        languageCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "meal_type" field.</summary>
+    public const int MealTypeFieldNumber = 10;
+    private global::Google.DevicesAndServices.Health.V4.MealType mealType_ = global::Google.DevicesAndServices.Health.V4.MealType.Unspecified;
+    /// <summary>
+    /// Optional. The meal type associated with this food.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.MealType MealType {
+      get { return mealType_; }
+      set {
+        mealType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nutrients" field.</summary>
+    public const int NutrientsFieldNumber = 12;
+    private static readonly pb::FieldCodec<global::Google.DevicesAndServices.Health.V4.NutrientQuantity> _repeated_nutrients_codec
+        = pb::FieldCodec.ForMessage(98, global::Google.DevicesAndServices.Health.V4.NutrientQuantity.Parser);
+    private readonly pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutrientQuantity> nutrients_ = new pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutrientQuantity>();
+    /// <summary>
+    /// Optional. Value representing the nutrients of the food for the default
+    /// serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutrientQuantity> Nutrients {
+      get { return nutrients_; }
+    }
+
+    /// <summary>Field number for the "energy_from_fat" field.</summary>
+    public const int EnergyFromFatFieldNumber = 13;
+    private global::Google.DevicesAndServices.Health.V4.EnergyQuantity energyFromFat_;
+    /// <summary>
+    /// Optional. Value representing the energy from fat of the food for the
+    /// default serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.EnergyQuantity EnergyFromFat {
+      get { return energyFromFat_; }
+      set {
+        energyFromFat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_carbohydrate" field.</summary>
+    public const int TotalCarbohydrateFieldNumber = 14;
+    private global::Google.DevicesAndServices.Health.V4.WeightQuantity totalCarbohydrate_;
+    /// <summary>
+    /// Optional. Value representing the total carbohydrate of the food for the
+    /// default serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.WeightQuantity TotalCarbohydrate {
+      get { return totalCarbohydrate_; }
+      set {
+        totalCarbohydrate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_fat" field.</summary>
+    public const int TotalFatFieldNumber = 15;
+    private global::Google.DevicesAndServices.Health.V4.WeightQuantity totalFat_;
+    /// <summary>
+    /// Optional. Value representing the total fat of the food for the default
+    /// serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.WeightQuantity TotalFat {
+      get { return totalFat_; }
+      set {
+        totalFat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "energy_min" field.</summary>
+    public const int EnergyMinFieldNumber = 16;
+    private global::Google.DevicesAndServices.Health.V4.EnergyQuantity energyMin_;
+    /// <summary>
+    /// Optional. Value representing the minimum energy of the food for the default
+    /// serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.EnergyQuantity EnergyMin {
+      get { return energyMin_; }
+      set {
+        energyMin_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "energy_avg" field.</summary>
+    public const int EnergyAvgFieldNumber = 17;
+    private global::Google.DevicesAndServices.Health.V4.EnergyQuantity energyAvg_;
+    /// <summary>
+    /// Optional. Value representing the average energy of the food for the default
+    /// serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.EnergyQuantity EnergyAvg {
+      get { return energyAvg_; }
+      set {
+        energyAvg_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "energy_max" field.</summary>
+    public const int EnergyMaxFieldNumber = 18;
+    private global::Google.DevicesAndServices.Health.V4.EnergyQuantity energyMax_;
+    /// <summary>
+    /// Optional. Value representing the maximum energy of the food for the default
+    /// serving.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.EnergyQuantity EnergyMax {
+      get { return energyMax_; }
+      set {
+        energyMax_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "default_serving" field.</summary>
+    public const int DefaultServingFieldNumber = 19;
+    private global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing defaultServing_;
+    /// <summary>
+    /// Required. Value representing the default serving of the food.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing DefaultServing {
+      get { return defaultServing_; }
+      set {
+        defaultServing_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "servings" field.</summary>
+    public const int ServingsFieldNumber = 20;
+    private static readonly pb::FieldCodec<global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing> _repeated_servings_codec
+        = pb::FieldCodec.ForMessage(162, global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing.Parser);
+    private readonly pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing> servings_ = new pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing>();
+    /// <summary>
+    /// Optional. The serving of the food.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing> Servings {
+      get { return servings_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Food);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Food other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisplayName != other.DisplayName) return false;
+      if (Brand != other.Brand) return false;
+      if (AccessLevel != other.AccessLevel) return false;
+      if (Description != other.Description) return false;
+      if (LanguageCode != other.LanguageCode) return false;
+      if (MealType != other.MealType) return false;
+      if(!nutrients_.Equals(other.nutrients_)) return false;
+      if (!object.Equals(EnergyFromFat, other.EnergyFromFat)) return false;
+      if (!object.Equals(TotalCarbohydrate, other.TotalCarbohydrate)) return false;
+      if (!object.Equals(TotalFat, other.TotalFat)) return false;
+      if (!object.Equals(EnergyMin, other.EnergyMin)) return false;
+      if (!object.Equals(EnergyAvg, other.EnergyAvg)) return false;
+      if (!object.Equals(EnergyMax, other.EnergyMax)) return false;
+      if (!object.Equals(DefaultServing, other.DefaultServing)) return false;
+      if(!servings_.Equals(other.servings_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Brand.Length != 0) hash ^= Brand.GetHashCode();
+      if (AccessLevel != global::Google.DevicesAndServices.Health.V4.FoodAccessLevel.Unspecified) hash ^= AccessLevel.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
+      if (MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) hash ^= MealType.GetHashCode();
+      hash ^= nutrients_.GetHashCode();
+      if (energyFromFat_ != null) hash ^= EnergyFromFat.GetHashCode();
+      if (totalCarbohydrate_ != null) hash ^= TotalCarbohydrate.GetHashCode();
+      if (totalFat_ != null) hash ^= TotalFat.GetHashCode();
+      if (energyMin_ != null) hash ^= EnergyMin.GetHashCode();
+      if (energyAvg_ != null) hash ^= EnergyAvg.GetHashCode();
+      if (energyMax_ != null) hash ^= EnergyMax.GetHashCode();
+      if (defaultServing_ != null) hash ^= DefaultServing.GetHashCode();
+      hash ^= servings_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Brand.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Brand);
+      }
+      if (AccessLevel != global::Google.DevicesAndServices.Health.V4.FoodAccessLevel.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) AccessLevel);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Description);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) MealType);
+      }
+      nutrients_.WriteTo(output, _repeated_nutrients_codec);
+      if (energyFromFat_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(TotalFat);
+      }
+      if (energyMin_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(EnergyMin);
+      }
+      if (energyAvg_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(EnergyAvg);
+      }
+      if (energyMax_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(EnergyMax);
+      }
+      if (defaultServing_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(DefaultServing);
+      }
+      servings_.WriteTo(output, _repeated_servings_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(DisplayName);
+      }
+      if (Brand.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Brand);
+      }
+      if (AccessLevel != global::Google.DevicesAndServices.Health.V4.FoodAccessLevel.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) AccessLevel);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Description);
+      }
+      if (LanguageCode.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(LanguageCode);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) {
+        output.WriteRawTag(80);
+        output.WriteEnum((int) MealType);
+      }
+      nutrients_.WriteTo(ref output, _repeated_nutrients_codec);
+      if (energyFromFat_ != null) {
+        output.WriteRawTag(106);
+        output.WriteMessage(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(TotalFat);
+      }
+      if (energyMin_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(EnergyMin);
+      }
+      if (energyAvg_ != null) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(EnergyAvg);
+      }
+      if (energyMax_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(EnergyMax);
+      }
+      if (defaultServing_ != null) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(DefaultServing);
+      }
+      servings_.WriteTo(ref output, _repeated_servings_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Brand.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Brand);
+      }
+      if (AccessLevel != global::Google.DevicesAndServices.Health.V4.FoodAccessLevel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) AccessLevel);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (LanguageCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LanguageCode);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MealType);
+      }
+      size += nutrients_.CalculateSize(_repeated_nutrients_codec);
+      if (energyFromFat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalFat);
+      }
+      if (energyMin_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EnergyMin);
+      }
+      if (energyAvg_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EnergyAvg);
+      }
+      if (energyMax_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EnergyMax);
+      }
+      if (defaultServing_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DefaultServing);
+      }
+      size += servings_.CalculateSize(_repeated_servings_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Food other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Brand.Length != 0) {
+        Brand = other.Brand;
+      }
+      if (other.AccessLevel != global::Google.DevicesAndServices.Health.V4.FoodAccessLevel.Unspecified) {
+        AccessLevel = other.AccessLevel;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.LanguageCode.Length != 0) {
+        LanguageCode = other.LanguageCode;
+      }
+      if (other.MealType != global::Google.DevicesAndServices.Health.V4.MealType.Unspecified) {
+        MealType = other.MealType;
+      }
+      nutrients_.Add(other.nutrients_);
+      if (other.energyFromFat_ != null) {
+        if (energyFromFat_ == null) {
+          EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+        }
+        EnergyFromFat.MergeFrom(other.EnergyFromFat);
+      }
+      if (other.totalCarbohydrate_ != null) {
+        if (totalCarbohydrate_ == null) {
+          TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+        }
+        TotalCarbohydrate.MergeFrom(other.TotalCarbohydrate);
+      }
+      if (other.totalFat_ != null) {
+        if (totalFat_ == null) {
+          TotalFat = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+        }
+        TotalFat.MergeFrom(other.TotalFat);
+      }
+      if (other.energyMin_ != null) {
+        if (energyMin_ == null) {
+          EnergyMin = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+        }
+        EnergyMin.MergeFrom(other.EnergyMin);
+      }
+      if (other.energyAvg_ != null) {
+        if (energyAvg_ == null) {
+          EnergyAvg = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+        }
+        EnergyAvg.MergeFrom(other.EnergyAvg);
+      }
+      if (other.energyMax_ != null) {
+        if (energyMax_ == null) {
+          EnergyMax = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+        }
+        EnergyMax.MergeFrom(other.EnergyMax);
+      }
+      if (other.defaultServing_ != null) {
+        if (defaultServing_ == null) {
+          DefaultServing = new global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing();
+        }
+        DefaultServing.MergeFrom(other.DefaultServing);
+      }
+      servings_.Add(other.servings_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Brand = input.ReadString();
+            break;
+          }
+          case 32: {
+            AccessLevel = (global::Google.DevicesAndServices.Health.V4.FoodAccessLevel) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            Description = input.ReadString();
+            break;
+          }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 80: {
+            MealType = (global::Google.DevicesAndServices.Health.V4.MealType) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            nutrients_.AddEntriesFrom(input, _repeated_nutrients_codec);
+            break;
+          }
+          case 106: {
+            if (energyFromFat_ == null) {
+              EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyFromFat);
+            break;
+          }
+          case 114: {
+            if (totalCarbohydrate_ == null) {
+              TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(TotalCarbohydrate);
+            break;
+          }
+          case 122: {
+            if (totalFat_ == null) {
+              TotalFat = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(TotalFat);
+            break;
+          }
+          case 130: {
+            if (energyMin_ == null) {
+              EnergyMin = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyMin);
+            break;
+          }
+          case 138: {
+            if (energyAvg_ == null) {
+              EnergyAvg = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyAvg);
+            break;
+          }
+          case 146: {
+            if (energyMax_ == null) {
+              EnergyMax = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyMax);
+            break;
+          }
+          case 154: {
+            if (defaultServing_ == null) {
+              DefaultServing = new global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing();
+            }
+            input.ReadMessage(DefaultServing);
+            break;
+          }
+          case 162: {
+            servings_.AddEntriesFrom(input, _repeated_servings_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 18: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            Brand = input.ReadString();
+            break;
+          }
+          case 32: {
+            AccessLevel = (global::Google.DevicesAndServices.Health.V4.FoodAccessLevel) input.ReadEnum();
+            break;
+          }
+          case 42: {
+            Description = input.ReadString();
+            break;
+          }
+          case 50: {
+            LanguageCode = input.ReadString();
+            break;
+          }
+          case 80: {
+            MealType = (global::Google.DevicesAndServices.Health.V4.MealType) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            nutrients_.AddEntriesFrom(ref input, _repeated_nutrients_codec);
+            break;
+          }
+          case 106: {
+            if (energyFromFat_ == null) {
+              EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyFromFat);
+            break;
+          }
+          case 114: {
+            if (totalCarbohydrate_ == null) {
+              TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(TotalCarbohydrate);
+            break;
+          }
+          case 122: {
+            if (totalFat_ == null) {
+              TotalFat = new global::Google.DevicesAndServices.Health.V4.WeightQuantity();
+            }
+            input.ReadMessage(TotalFat);
+            break;
+          }
+          case 130: {
+            if (energyMin_ == null) {
+              EnergyMin = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyMin);
+            break;
+          }
+          case 138: {
+            if (energyAvg_ == null) {
+              EnergyAvg = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyAvg);
+            break;
+          }
+          case 146: {
+            if (energyMax_ == null) {
+              EnergyMax = new global::Google.DevicesAndServices.Health.V4.EnergyQuantity();
+            }
+            input.ReadMessage(EnergyMax);
+            break;
+          }
+          case 154: {
+            if (defaultServing_ == null) {
+              DefaultServing = new global::Google.DevicesAndServices.Health.V4.Food.Types.FoodServing();
+            }
+            input.ReadMessage(DefaultServing);
+            break;
+          }
+          case 162: {
+            servings_.AddEntriesFrom(ref input, _repeated_servings_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Food message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Represents different properties and information about the serving of a
+      /// specific food.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FoodServing : pb::IMessage<FoodServing>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FoodServing> _parser = new pb::MessageParser<FoodServing>(() => new FoodServing());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FoodServing> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.DevicesAndServices.Health.V4.Food.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FoodServing() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FoodServing(FoodServing other) : this() {
+          _hasBits0 = other._hasBits0;
+          amount_ = other.amount_;
+          foodMeasurementUnit_ = other.foodMeasurementUnit_;
+          foodMeasurementUnitDisplayName_ = other.foodMeasurementUnitDisplayName_;
+          foodMeasurementUnitDisplayNamePlural_ = other.foodMeasurementUnitDisplayNamePlural_;
+          multiplier_ = other.multiplier_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FoodServing Clone() {
+          return new FoodServing(this);
+        }
+
+        /// <summary>Field number for the "amount" field.</summary>
+        public const int AmountFieldNumber = 1;
+        private readonly static double AmountDefaultValue = 0D;
+
+        private double amount_;
+        /// <summary>
+        /// Optional. Amount of food consumed, fractional values are supported.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Amount {
+          get { if ((_hasBits0 & 1) != 0) { return amount_; } else { return AmountDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            amount_ = value;
+          }
+        }
+        /// <summary>Gets whether the "amount" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasAmount {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "amount" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearAmount() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "food_measurement_unit" field.</summary>
+        public const int FoodMeasurementUnitFieldNumber = 2;
+        private string foodMeasurementUnit_ = "";
+        /// <summary>
+        /// Required. Food measurement unit
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FoodMeasurementUnit {
+          get { return foodMeasurementUnit_; }
+          set {
+            foodMeasurementUnit_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "food_measurement_unit_display_name" field.</summary>
+        public const int FoodMeasurementUnitDisplayNameFieldNumber = 3;
+        private string foodMeasurementUnitDisplayName_ = "";
+        /// <summary>
+        /// Output only. Legacy measurement unit for serving size in singular form
+        /// (e.g. "piece", "gram").
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FoodMeasurementUnitDisplayName {
+          get { return foodMeasurementUnitDisplayName_; }
+          set {
+            foodMeasurementUnitDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "food_measurement_unit_display_name_plural" field.</summary>
+        public const int FoodMeasurementUnitDisplayNamePluralFieldNumber = 4;
+        private string foodMeasurementUnitDisplayNamePlural_ = "";
+        /// <summary>
+        /// Output only. Legacy measurement unit for serving size in plural form
+        /// (e.g. "pieces", "grams").
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string FoodMeasurementUnitDisplayNamePlural {
+          get { return foodMeasurementUnitDisplayNamePlural_; }
+          set {
+            foodMeasurementUnitDisplayNamePlural_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "multiplier" field.</summary>
+        public const int MultiplierFieldNumber = 5;
+        private double multiplier_;
+        /// <summary>
+        /// Optional. Value representing the multiplier used to compute the energy
+        /// when using this serving instead of the default serving.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Multiplier {
+          get { return multiplier_; }
+          set {
+            multiplier_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FoodServing);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FoodServing other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Amount, other.Amount)) return false;
+          if (FoodMeasurementUnit != other.FoodMeasurementUnit) return false;
+          if (FoodMeasurementUnitDisplayName != other.FoodMeasurementUnitDisplayName) return false;
+          if (FoodMeasurementUnitDisplayNamePlural != other.FoodMeasurementUnitDisplayNamePlural) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Multiplier, other.Multiplier)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasAmount) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Amount);
+          if (FoodMeasurementUnit.Length != 0) hash ^= FoodMeasurementUnit.GetHashCode();
+          if (FoodMeasurementUnitDisplayName.Length != 0) hash ^= FoodMeasurementUnitDisplayName.GetHashCode();
+          if (FoodMeasurementUnitDisplayNamePlural.Length != 0) hash ^= FoodMeasurementUnitDisplayNamePlural.GetHashCode();
+          if (Multiplier != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Multiplier);
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasAmount) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Amount);
+          }
+          if (FoodMeasurementUnit.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FoodMeasurementUnit);
+          }
+          if (FoodMeasurementUnitDisplayName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(FoodMeasurementUnitDisplayName);
+          }
+          if (FoodMeasurementUnitDisplayNamePlural.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(FoodMeasurementUnitDisplayNamePlural);
+          }
+          if (Multiplier != 0D) {
+            output.WriteRawTag(41);
+            output.WriteDouble(Multiplier);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasAmount) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Amount);
+          }
+          if (FoodMeasurementUnit.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(FoodMeasurementUnit);
+          }
+          if (FoodMeasurementUnitDisplayName.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(FoodMeasurementUnitDisplayName);
+          }
+          if (FoodMeasurementUnitDisplayNamePlural.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(FoodMeasurementUnitDisplayNamePlural);
+          }
+          if (Multiplier != 0D) {
+            output.WriteRawTag(41);
+            output.WriteDouble(Multiplier);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasAmount) {
+            size += 1 + 8;
+          }
+          if (FoodMeasurementUnit.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FoodMeasurementUnit);
+          }
+          if (FoodMeasurementUnitDisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FoodMeasurementUnitDisplayName);
+          }
+          if (FoodMeasurementUnitDisplayNamePlural.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(FoodMeasurementUnitDisplayNamePlural);
+          }
+          if (Multiplier != 0D) {
+            size += 1 + 8;
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FoodServing other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasAmount) {
+            Amount = other.Amount;
+          }
+          if (other.FoodMeasurementUnit.Length != 0) {
+            FoodMeasurementUnit = other.FoodMeasurementUnit;
+          }
+          if (other.FoodMeasurementUnitDisplayName.Length != 0) {
+            FoodMeasurementUnitDisplayName = other.FoodMeasurementUnitDisplayName;
+          }
+          if (other.FoodMeasurementUnitDisplayNamePlural.Length != 0) {
+            FoodMeasurementUnitDisplayNamePlural = other.FoodMeasurementUnitDisplayNamePlural;
+          }
+          if (other.Multiplier != 0D) {
+            Multiplier = other.Multiplier;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                Amount = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                FoodMeasurementUnit = input.ReadString();
+                break;
+              }
+              case 26: {
+                FoodMeasurementUnitDisplayName = input.ReadString();
+                break;
+              }
+              case 34: {
+                FoodMeasurementUnitDisplayNamePlural = input.ReadString();
+                break;
+              }
+              case 41: {
+                Multiplier = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                Amount = input.ReadDouble();
+                break;
+              }
+              case 18: {
+                FoodMeasurementUnit = input.ReadString();
+                break;
+              }
+              case 26: {
+                FoodMeasurementUnitDisplayName = input.ReadString();
+                break;
+              }
+              case 34: {
+                FoodMeasurementUnitDisplayNamePlural = input.ReadString();
+                break;
+              }
+              case 41: {
+                Multiplier = input.ReadDouble();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents the result of the rollup of the nutrition log data type.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class NutritionLogRollupValue : pb::IMessage<NutritionLogRollupValue>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NutritionLogRollupValue> _parser = new pb::MessageParser<NutritionLogRollupValue>(() => new NutritionLogRollupValue());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NutritionLogRollupValue> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[44]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutritionLogRollupValue() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutritionLogRollupValue(NutritionLogRollupValue other) : this() {
+      nutrients_ = other.nutrients_.Clone();
+      energy_ = other.energy_ != null ? other.energy_.Clone() : null;
+      energyFromFat_ = other.energyFromFat_ != null ? other.energyFromFat_.Clone() : null;
+      totalCarbohydrate_ = other.totalCarbohydrate_ != null ? other.totalCarbohydrate_.Clone() : null;
+      totalFat_ = other.totalFat_ != null ? other.totalFat_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NutritionLogRollupValue Clone() {
+      return new NutritionLogRollupValue(this);
+    }
+
+    /// <summary>Field number for the "nutrients" field.</summary>
+    public const int NutrientsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.NutrientQuantityRollup> _repeated_nutrients_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.NutrientQuantityRollup.Parser);
+    private readonly pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.NutrientQuantityRollup> nutrients_ = new pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.NutrientQuantityRollup>();
+    /// <summary>
+    /// List of the nutrient roll-ups by the nutrient type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.NutrientQuantityRollup> Nutrients {
+      get { return nutrients_; }
+    }
+
+    /// <summary>Field number for the "energy" field.</summary>
+    public const int EnergyFieldNumber = 2;
+    private global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup energy_;
+    /// <summary>
+    /// Energy rollup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup Energy {
+      get { return energy_; }
+      set {
+        energy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "energy_from_fat" field.</summary>
+    public const int EnergyFromFatFieldNumber = 3;
+    private global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup energyFromFat_;
+    /// <summary>
+    /// Value
+    /// Energy from fat rollup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup EnergyFromFat {
+      get { return energyFromFat_; }
+      set {
+        energyFromFat_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_carbohydrate" field.</summary>
+    public const int TotalCarbohydrateFieldNumber = 4;
+    private global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup totalCarbohydrate_;
+    /// <summary>
+    /// Total carbohydrate rollup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup TotalCarbohydrate {
+      get { return totalCarbohydrate_; }
+      set {
+        totalCarbohydrate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "total_fat" field.</summary>
+    public const int TotalFatFieldNumber = 5;
+    private global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup totalFat_;
+    /// <summary>
+    /// Total fat rollup.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup TotalFat {
+      get { return totalFat_; }
+      set {
+        totalFat_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NutritionLogRollupValue);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NutritionLogRollupValue other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!nutrients_.Equals(other.nutrients_)) return false;
+      if (!object.Equals(Energy, other.Energy)) return false;
+      if (!object.Equals(EnergyFromFat, other.EnergyFromFat)) return false;
+      if (!object.Equals(TotalCarbohydrate, other.TotalCarbohydrate)) return false;
+      if (!object.Equals(TotalFat, other.TotalFat)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= nutrients_.GetHashCode();
+      if (energy_ != null) hash ^= Energy.GetHashCode();
+      if (energyFromFat_ != null) hash ^= EnergyFromFat.GetHashCode();
+      if (totalCarbohydrate_ != null) hash ^= TotalCarbohydrate.GetHashCode();
+      if (totalFat_ != null) hash ^= TotalFat.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      nutrients_.WriteTo(output, _repeated_nutrients_codec);
+      if (energy_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Energy);
+      }
+      if (energyFromFat_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TotalFat);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      nutrients_.WriteTo(ref output, _repeated_nutrients_codec);
+      if (energy_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Energy);
+      }
+      if (energyFromFat_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(TotalFat);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += nutrients_.CalculateSize(_repeated_nutrients_codec);
+      if (energy_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Energy);
+      }
+      if (energyFromFat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EnergyFromFat);
+      }
+      if (totalCarbohydrate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalCarbohydrate);
+      }
+      if (totalFat_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalFat);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NutritionLogRollupValue other) {
+      if (other == null) {
+        return;
+      }
+      nutrients_.Add(other.nutrients_);
+      if (other.energy_ != null) {
+        if (energy_ == null) {
+          Energy = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup();
+        }
+        Energy.MergeFrom(other.Energy);
+      }
+      if (other.energyFromFat_ != null) {
+        if (energyFromFat_ == null) {
+          EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup();
+        }
+        EnergyFromFat.MergeFrom(other.EnergyFromFat);
+      }
+      if (other.totalCarbohydrate_ != null) {
+        if (totalCarbohydrate_ == null) {
+          TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+        }
+        TotalCarbohydrate.MergeFrom(other.TotalCarbohydrate);
+      }
+      if (other.totalFat_ != null) {
+        if (totalFat_ == null) {
+          TotalFat = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+        }
+        TotalFat.MergeFrom(other.TotalFat);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            nutrients_.AddEntriesFrom(input, _repeated_nutrients_codec);
+            break;
+          }
+          case 18: {
+            if (energy_ == null) {
+              Energy = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup();
+            }
+            input.ReadMessage(Energy);
+            break;
+          }
+          case 26: {
+            if (energyFromFat_ == null) {
+              EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup();
+            }
+            input.ReadMessage(EnergyFromFat);
+            break;
+          }
+          case 34: {
+            if (totalCarbohydrate_ == null) {
+              TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+            }
+            input.ReadMessage(TotalCarbohydrate);
+            break;
+          }
+          case 42: {
+            if (totalFat_ == null) {
+              TotalFat = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+            }
+            input.ReadMessage(TotalFat);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            nutrients_.AddEntriesFrom(ref input, _repeated_nutrients_codec);
+            break;
+          }
+          case 18: {
+            if (energy_ == null) {
+              Energy = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup();
+            }
+            input.ReadMessage(Energy);
+            break;
+          }
+          case 26: {
+            if (energyFromFat_ == null) {
+              EnergyFromFat = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.EnergyQuantityRollup();
+            }
+            input.ReadMessage(EnergyFromFat);
+            break;
+          }
+          case 34: {
+            if (totalCarbohydrate_ == null) {
+              TotalCarbohydrate = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+            }
+            input.ReadMessage(TotalCarbohydrate);
+            break;
+          }
+          case 42: {
+            if (totalFat_ == null) {
+              TotalFat = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+            }
+            input.ReadMessage(TotalFat);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the NutritionLogRollupValue message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Rollup for the weight.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class WeightQuantityRollup : pb::IMessage<WeightQuantityRollup>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<WeightQuantityRollup> _parser = new pb::MessageParser<WeightQuantityRollup>(() => new WeightQuantityRollup());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<WeightQuantityRollup> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WeightQuantityRollup() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WeightQuantityRollup(WeightQuantityRollup other) : this() {
+          _hasBits0 = other._hasBits0;
+          gramsSum_ = other.gramsSum_;
+          userProvidedUnitLast_ = other.userProvidedUnitLast_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WeightQuantityRollup Clone() {
+          return new WeightQuantityRollup(this);
+        }
+
+        /// <summary>Field number for the "grams_sum" field.</summary>
+        public const int GramsSumFieldNumber = 1;
+        private readonly static double GramsSumDefaultValue = 0D;
+
+        private double gramsSum_;
+        /// <summary>
+        /// Required. The sum of the weight in grams.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double GramsSum {
+          get { if ((_hasBits0 & 1) != 0) { return gramsSum_; } else { return GramsSumDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            gramsSum_ = value;
+          }
+        }
+        /// <summary>Gets whether the "grams_sum" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasGramsSum {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "grams_sum" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearGramsSum() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "user_provided_unit_last" field.</summary>
+        public const int UserProvidedUnitLastFieldNumber = 2;
+        private global::Google.DevicesAndServices.Health.V4.WeightUnit userProvidedUnitLast_ = global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified;
+        /// <summary>
+        /// Optional. The user provided unit on the last element.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.DevicesAndServices.Health.V4.WeightUnit UserProvidedUnitLast {
+          get { return userProvidedUnitLast_; }
+          set {
+            userProvidedUnitLast_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as WeightQuantityRollup);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(WeightQuantityRollup other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(GramsSum, other.GramsSum)) return false;
+          if (UserProvidedUnitLast != other.UserProvidedUnitLast) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasGramsSum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(GramsSum);
+          if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) hash ^= UserProvidedUnitLast.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasGramsSum) {
+            output.WriteRawTag(9);
+            output.WriteDouble(GramsSum);
+          }
+          if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) UserProvidedUnitLast);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasGramsSum) {
+            output.WriteRawTag(9);
+            output.WriteDouble(GramsSum);
+          }
+          if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) UserProvidedUnitLast);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasGramsSum) {
+            size += 1 + 8;
+          }
+          if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserProvidedUnitLast);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(WeightQuantityRollup other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasGramsSum) {
+            GramsSum = other.GramsSum;
+          }
+          if (other.UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.WeightUnit.Unspecified) {
+            UserProvidedUnitLast = other.UserProvidedUnitLast;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                GramsSum = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                UserProvidedUnitLast = (global::Google.DevicesAndServices.Health.V4.WeightUnit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                GramsSum = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                UserProvidedUnitLast = (global::Google.DevicesAndServices.Health.V4.WeightUnit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Rollup for the energy quantity.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EnergyQuantityRollup : pb::IMessage<EnergyQuantityRollup>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EnergyQuantityRollup> _parser = new pb::MessageParser<EnergyQuantityRollup>(() => new EnergyQuantityRollup());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EnergyQuantityRollup> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EnergyQuantityRollup() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EnergyQuantityRollup(EnergyQuantityRollup other) : this() {
+          _hasBits0 = other._hasBits0;
+          kcalSum_ = other.kcalSum_;
+          userProvidedUnitLast_ = other.userProvidedUnitLast_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EnergyQuantityRollup Clone() {
+          return new EnergyQuantityRollup(this);
+        }
+
+        /// <summary>Field number for the "kcal_sum" field.</summary>
+        public const int KcalSumFieldNumber = 1;
+        private readonly static double KcalSumDefaultValue = 0D;
+
+        private double kcalSum_;
+        /// <summary>
+        /// Required. The sum of the energy in kilocalories.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double KcalSum {
+          get { if ((_hasBits0 & 1) != 0) { return kcalSum_; } else { return KcalSumDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            kcalSum_ = value;
+          }
+        }
+        /// <summary>Gets whether the "kcal_sum" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasKcalSum {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "kcal_sum" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearKcalSum() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "user_provided_unit_last" field.</summary>
+        public const int UserProvidedUnitLastFieldNumber = 2;
+        private global::Google.DevicesAndServices.Health.V4.EnergyUnit userProvidedUnitLast_ = global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified;
+        /// <summary>
+        /// Optional. The user provided unit on the last element.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.DevicesAndServices.Health.V4.EnergyUnit UserProvidedUnitLast {
+          get { return userProvidedUnitLast_; }
+          set {
+            userProvidedUnitLast_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EnergyQuantityRollup);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EnergyQuantityRollup other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(KcalSum, other.KcalSum)) return false;
+          if (UserProvidedUnitLast != other.UserProvidedUnitLast) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasKcalSum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(KcalSum);
+          if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) hash ^= UserProvidedUnitLast.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasKcalSum) {
+            output.WriteRawTag(9);
+            output.WriteDouble(KcalSum);
+          }
+          if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) UserProvidedUnitLast);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasKcalSum) {
+            output.WriteRawTag(9);
+            output.WriteDouble(KcalSum);
+          }
+          if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) UserProvidedUnitLast);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasKcalSum) {
+            size += 1 + 8;
+          }
+          if (UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) UserProvidedUnitLast);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EnergyQuantityRollup other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasKcalSum) {
+            KcalSum = other.KcalSum;
+          }
+          if (other.UserProvidedUnitLast != global::Google.DevicesAndServices.Health.V4.EnergyUnit.Unspecified) {
+            UserProvidedUnitLast = other.UserProvidedUnitLast;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                KcalSum = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                UserProvidedUnitLast = (global::Google.DevicesAndServices.Health.V4.EnergyUnit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                KcalSum = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                UserProvidedUnitLast = (global::Google.DevicesAndServices.Health.V4.EnergyUnit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Nutrient quantity rollup.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class NutrientQuantityRollup : pb::IMessage<NutrientQuantityRollup>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<NutrientQuantityRollup> _parser = new pb::MessageParser<NutrientQuantityRollup>(() => new NutrientQuantityRollup());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<NutrientQuantityRollup> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NutrientQuantityRollup() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NutrientQuantityRollup(NutrientQuantityRollup other) : this() {
+          quantity_ = other.quantity_ != null ? other.quantity_.Clone() : null;
+          nutrient_ = other.nutrient_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public NutrientQuantityRollup Clone() {
+          return new NutrientQuantityRollup(this);
+        }
+
+        /// <summary>Field number for the "quantity" field.</summary>
+        public const int QuantityFieldNumber = 1;
+        private global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup quantity_;
+        /// <summary>
+        /// Required. Aggregated nutrient weight.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup Quantity {
+          get { return quantity_; }
+          set {
+            quantity_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "nutrient" field.</summary>
+        public const int NutrientFieldNumber = 2;
+        private global::Google.DevicesAndServices.Health.V4.Nutrient nutrient_ = global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified;
+        /// <summary>
+        /// Required. Aggregated nutrient.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.DevicesAndServices.Health.V4.Nutrient Nutrient {
+          get { return nutrient_; }
+          set {
+            nutrient_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as NutrientQuantityRollup);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(NutrientQuantityRollup other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Quantity, other.Quantity)) return false;
+          if (Nutrient != other.Nutrient) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (quantity_ != null) hash ^= Quantity.GetHashCode();
+          if (Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) hash ^= Nutrient.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (quantity_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Quantity);
+          }
+          if (Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Nutrient);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (quantity_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Quantity);
+          }
+          if (Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Nutrient);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (quantity_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Quantity);
+          }
+          if (Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Nutrient);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(NutrientQuantityRollup other) {
+          if (other == null) {
+            return;
+          }
+          if (other.quantity_ != null) {
+            if (quantity_ == null) {
+              Quantity = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+            }
+            Quantity.MergeFrom(other.Quantity);
+          }
+          if (other.Nutrient != global::Google.DevicesAndServices.Health.V4.Nutrient.Unspecified) {
+            Nutrient = other.Nutrient;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (quantity_ == null) {
+                  Quantity = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+                }
+                input.ReadMessage(Quantity);
+                break;
+              }
+              case 16: {
+                Nutrient = (global::Google.DevicesAndServices.Health.V4.Nutrient) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (quantity_ == null) {
+                  Quantity = new global::Google.DevicesAndServices.Health.V4.NutritionLogRollupValue.Types.WeightQuantityRollup();
+                }
+                input.ReadMessage(Quantity);
+                break;
+              }
+              case 16: {
+                Nutrient = (global::Google.DevicesAndServices.Health.V4.Nutrient) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
   /// Captures the user's instantaneous oxygen saturation percentage (SpO2).
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -15798,7 +23038,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[35]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16068,7 +23308,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[36]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -16326,6 +23566,252 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// Represents a food measurement unit.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class FoodMeasurementUnit : pb::IMessage<FoodMeasurementUnit>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<FoodMeasurementUnit> _parser = new pb::MessageParser<FoodMeasurementUnit>(() => new FoodMeasurementUnit());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<FoodMeasurementUnit> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[47]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FoodMeasurementUnit() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FoodMeasurementUnit(FoodMeasurementUnit other) : this() {
+      displayName_ = other.displayName_;
+      pluralDisplayName_ = other.pluralDisplayName_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public FoodMeasurementUnit Clone() {
+      return new FoodMeasurementUnit(this);
+    }
+
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 1;
+    private string displayName_ = "";
+    /// <summary>
+    /// Required. The display name of the food measurement unit (e.g., "gram",
+    /// "piece").
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "plural_display_name" field.</summary>
+    public const int PluralDisplayNameFieldNumber = 2;
+    private string pluralDisplayName_ = "";
+    /// <summary>
+    /// Optional. The plural display name of the food measurement unit (e.g.,
+    /// "grams", "pieces").
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PluralDisplayName {
+      get { return pluralDisplayName_; }
+      set {
+        pluralDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as FoodMeasurementUnit);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(FoodMeasurementUnit other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (DisplayName != other.DisplayName) return false;
+      if (PluralDisplayName != other.PluralDisplayName) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (PluralDisplayName.Length != 0) hash ^= PluralDisplayName.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (PluralDisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PluralDisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(DisplayName);
+      }
+      if (PluralDisplayName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(PluralDisplayName);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (PluralDisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PluralDisplayName);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(FoodMeasurementUnit other) {
+      if (other == null) {
+        return;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.PluralDisplayName.Length != 0) {
+        PluralDisplayName = other.PluralDisplayName;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            PluralDisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 18: {
+            PluralDisplayName = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Records respiratory rate details during sleep.
   /// Can have multiple per day if the user sleeps multiple times.
   /// </summary>
@@ -16344,7 +23830,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[37]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -17092,7 +24578,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[38]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -19753,7 +27239,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[39]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20023,7 +27509,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[40]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20244,7 +27730,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[41]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20588,7 +28074,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[42]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -20809,7 +28295,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[43]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21063,7 +28549,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[44]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21518,7 +29004,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[45]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -21739,7 +29225,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[46]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[57]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22120,7 +29606,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[47]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[58]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22430,7 +29916,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[48]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[59]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22633,6 +30119,823 @@ namespace Google.DevicesAndServices.Health.V4 {
   }
 
   /// <summary>
+  /// Represents a blood glucose level measurement.
+  /// LINT: LEGACY_NAMES
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BloodGlucose : pb::IMessage<BloodGlucose>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BloodGlucose> _parser = new pb::MessageParser<BloodGlucose>(() => new BloodGlucose());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BloodGlucose> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[60]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BloodGlucose() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BloodGlucose(BloodGlucose other) : this() {
+      _hasBits0 = other._hasBits0;
+      sampleTime_ = other.sampleTime_ != null ? other.sampleTime_.Clone() : null;
+      bloodGlucoseMilligramsPerDeciliter_ = other.bloodGlucoseMilligramsPerDeciliter_;
+      measurementSource_ = other.measurementSource_;
+      mealType_ = other.mealType_;
+      measurementTiming_ = other.measurementTiming_;
+      specimen_ = other.specimen_;
+      notes_ = other.notes_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BloodGlucose Clone() {
+      return new BloodGlucose(this);
+    }
+
+    /// <summary>Field number for the "sample_time" field.</summary>
+    public const int SampleTimeFieldNumber = 1;
+    private global::Google.DevicesAndServices.Health.V4.ObservationSampleTime sampleTime_;
+    /// <summary>
+    /// Required. The time at which blood glucose was measured.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.ObservationSampleTime SampleTime {
+      get { return sampleTime_; }
+      set {
+        sampleTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "blood_glucose_milligrams_per_deciliter" field.</summary>
+    public const int BloodGlucoseMilligramsPerDeciliterFieldNumber = 2;
+    private readonly static double BloodGlucoseMilligramsPerDeciliterDefaultValue = 0D;
+
+    private double bloodGlucoseMilligramsPerDeciliter_;
+    /// <summary>
+    /// Required. Blood glucose level concentration in mg/dL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double BloodGlucoseMilligramsPerDeciliter {
+      get { if ((_hasBits0 & 1) != 0) { return bloodGlucoseMilligramsPerDeciliter_; } else { return BloodGlucoseMilligramsPerDeciliterDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        bloodGlucoseMilligramsPerDeciliter_ = value;
+      }
+    }
+    /// <summary>Gets whether the "blood_glucose_milligrams_per_deciliter" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBloodGlucoseMilligramsPerDeciliter {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "blood_glucose_milligrams_per_deciliter" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBloodGlucoseMilligramsPerDeciliter() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "measurement_source" field.</summary>
+    public const int MeasurementSourceFieldNumber = 3;
+    private global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource measurementSource_ = global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource.Unspecified;
+    /// <summary>
+    /// Optional. Source of the measurement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource MeasurementSource {
+      get { return measurementSource_; }
+      set {
+        measurementSource_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "meal_type" field.</summary>
+    public const int MealTypeFieldNumber = 4;
+    private global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType mealType_ = global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType.Unspecified;
+    /// <summary>
+    /// Optional. Meal type of the measurement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType MealType {
+      get { return mealType_; }
+      set {
+        mealType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "measurement_timing" field.</summary>
+    public const int MeasurementTimingFieldNumber = 5;
+    private global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming measurementTiming_ = global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming.Unspecified;
+    /// <summary>
+    /// Optional. Timing of the measurement.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming MeasurementTiming {
+      get { return measurementTiming_; }
+      set {
+        measurementTiming_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "specimen" field.</summary>
+    public const int SpecimenFieldNumber = 6;
+    private global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen specimen_ = global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen.Unspecified;
+    /// <summary>
+    /// Optional. Type of body fluid used to measure the blood glucose.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen Specimen {
+      get { return specimen_; }
+      set {
+        specimen_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "notes" field.</summary>
+    public const int NotesFieldNumber = 8;
+    private string notes_ = "";
+    /// <summary>
+    /// Optional. Standard free-form notes captured at manual logging.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Notes {
+      get { return notes_; }
+      set {
+        notes_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BloodGlucose);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BloodGlucose other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(SampleTime, other.SampleTime)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(BloodGlucoseMilligramsPerDeciliter, other.BloodGlucoseMilligramsPerDeciliter)) return false;
+      if (MeasurementSource != other.MeasurementSource) return false;
+      if (MealType != other.MealType) return false;
+      if (MeasurementTiming != other.MeasurementTiming) return false;
+      if (Specimen != other.Specimen) return false;
+      if (Notes != other.Notes) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (sampleTime_ != null) hash ^= SampleTime.GetHashCode();
+      if (HasBloodGlucoseMilligramsPerDeciliter) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BloodGlucoseMilligramsPerDeciliter);
+      if (MeasurementSource != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource.Unspecified) hash ^= MeasurementSource.GetHashCode();
+      if (MealType != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType.Unspecified) hash ^= MealType.GetHashCode();
+      if (MeasurementTiming != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming.Unspecified) hash ^= MeasurementTiming.GetHashCode();
+      if (Specimen != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen.Unspecified) hash ^= Specimen.GetHashCode();
+      if (Notes.Length != 0) hash ^= Notes.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (sampleTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SampleTime);
+      }
+      if (HasBloodGlucoseMilligramsPerDeciliter) {
+        output.WriteRawTag(17);
+        output.WriteDouble(BloodGlucoseMilligramsPerDeciliter);
+      }
+      if (MeasurementSource != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) MeasurementSource);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MealType);
+      }
+      if (MeasurementTiming != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) MeasurementTiming);
+      }
+      if (Specimen != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Specimen);
+      }
+      if (Notes.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Notes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (sampleTime_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(SampleTime);
+      }
+      if (HasBloodGlucoseMilligramsPerDeciliter) {
+        output.WriteRawTag(17);
+        output.WriteDouble(BloodGlucoseMilligramsPerDeciliter);
+      }
+      if (MeasurementSource != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) MeasurementSource);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) MealType);
+      }
+      if (MeasurementTiming != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) MeasurementTiming);
+      }
+      if (Specimen != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) Specimen);
+      }
+      if (Notes.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(Notes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (sampleTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SampleTime);
+      }
+      if (HasBloodGlucoseMilligramsPerDeciliter) {
+        size += 1 + 8;
+      }
+      if (MeasurementSource != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MeasurementSource);
+      }
+      if (MealType != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MealType);
+      }
+      if (MeasurementTiming != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) MeasurementTiming);
+      }
+      if (Specimen != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Specimen);
+      }
+      if (Notes.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Notes);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BloodGlucose other) {
+      if (other == null) {
+        return;
+      }
+      if (other.sampleTime_ != null) {
+        if (sampleTime_ == null) {
+          SampleTime = new global::Google.DevicesAndServices.Health.V4.ObservationSampleTime();
+        }
+        SampleTime.MergeFrom(other.SampleTime);
+      }
+      if (other.HasBloodGlucoseMilligramsPerDeciliter) {
+        BloodGlucoseMilligramsPerDeciliter = other.BloodGlucoseMilligramsPerDeciliter;
+      }
+      if (other.MeasurementSource != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource.Unspecified) {
+        MeasurementSource = other.MeasurementSource;
+      }
+      if (other.MealType != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType.Unspecified) {
+        MealType = other.MealType;
+      }
+      if (other.MeasurementTiming != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming.Unspecified) {
+        MeasurementTiming = other.MeasurementTiming;
+      }
+      if (other.Specimen != global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen.Unspecified) {
+        Specimen = other.Specimen;
+      }
+      if (other.Notes.Length != 0) {
+        Notes = other.Notes;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (sampleTime_ == null) {
+              SampleTime = new global::Google.DevicesAndServices.Health.V4.ObservationSampleTime();
+            }
+            input.ReadMessage(SampleTime);
+            break;
+          }
+          case 17: {
+            BloodGlucoseMilligramsPerDeciliter = input.ReadDouble();
+            break;
+          }
+          case 24: {
+            MeasurementSource = (global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            MealType = (global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            MeasurementTiming = (global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            Specimen = (global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            Notes = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (sampleTime_ == null) {
+              SampleTime = new global::Google.DevicesAndServices.Health.V4.ObservationSampleTime();
+            }
+            input.ReadMessage(SampleTime);
+            break;
+          }
+          case 17: {
+            BloodGlucoseMilligramsPerDeciliter = input.ReadDouble();
+            break;
+          }
+          case 24: {
+            MeasurementSource = (global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementSource) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            MealType = (global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MealType) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            MeasurementTiming = (global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.MeasurementTiming) input.ReadEnum();
+            break;
+          }
+          case 48: {
+            Specimen = (global::Google.DevicesAndServices.Health.V4.BloodGlucose.Types.Specimen) input.ReadEnum();
+            break;
+          }
+          case 66: {
+            Notes = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the BloodGlucose message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The clinical method or tool used to measure the blood glucose level.
+      /// </summary>
+      public enum MeasurementSource {
+        /// <summary>
+        /// Unspecified measurement source.
+        /// </summary>
+        [pbr::OriginalName("MEASUREMENT_SOURCE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Self-monitoring of blood glucose (Blood glucose meter)
+        /// </summary>
+        [pbr::OriginalName("SELF_MONITORING_BLOOD_GLUCOSE")] SelfMonitoringBloodGlucose = 1,
+        /// <summary>
+        /// Continuous glucose monitoring device
+        /// </summary>
+        [pbr::OriginalName("CONTINUOUS_GLUCOSE_MONITORING")] ContinuousGlucoseMonitoring = 2,
+        /// <summary>
+        /// Laboratory test
+        /// </summary>
+        [pbr::OriginalName("LAB_TEST")] LabTest = 3,
+      }
+
+      /// <summary>
+      /// Meal type associated with the measurement.
+      /// </summary>
+      public enum MealType {
+        /// <summary>
+        /// Unspecified meal type.
+        /// </summary>
+        [pbr::OriginalName("MEAL_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Breakfast.
+        /// </summary>
+        [pbr::OriginalName("BREAKFAST")] Breakfast = 1,
+        /// <summary>
+        /// Lunch.
+        /// </summary>
+        [pbr::OriginalName("LUNCH")] Lunch = 2,
+        /// <summary>
+        /// Dinner.
+        /// </summary>
+        [pbr::OriginalName("DINNER")] Dinner = 3,
+        /// <summary>
+        /// Snack.
+        /// </summary>
+        [pbr::OriginalName("SNACK")] Snack = 4,
+      }
+
+      /// <summary>
+      /// Timing of the measurement.
+      /// </summary>
+      public enum MeasurementTiming {
+        /// <summary>
+        /// Unspecified measurement timing.
+        /// </summary>
+        [pbr::OriginalName("MEASUREMENT_TIMING_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Measurement taken after meal.
+        /// </summary>
+        [pbr::OriginalName("AFTER_MEAL")] AfterMeal = 1,
+        /// <summary>
+        /// Measurement taken before meal.
+        /// </summary>
+        [pbr::OriginalName("BEFORE_MEAL")] BeforeMeal = 2,
+        /// <summary>
+        /// Measurement taken while fasting.
+        /// </summary>
+        [pbr::OriginalName("FASTING")] Fasting = 3,
+        /// <summary>
+        /// General measurement (not associated with a meal or time of day).
+        /// </summary>
+        [pbr::OriginalName("GENERAL")] General = 4,
+        /// <summary>
+        /// Measurement taken before bed.
+        /// </summary>
+        [pbr::OriginalName("BEFORE_BED")] BeforeBed = 5,
+        /// <summary>
+        /// Measurement taken over night.
+        /// </summary>
+        [pbr::OriginalName("OVER_NIGHT")] OverNight = 6,
+      }
+
+      /// <summary>
+      /// Type of body fluid used to measure the blood glucose.
+      /// </summary>
+      public enum Specimen {
+        /// <summary>
+        /// Unspecified specimen.
+        /// </summary>
+        [pbr::OriginalName("SPECIMEN_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Capillary blood.
+        /// </summary>
+        [pbr::OriginalName("CAPILLARY_BLOOD")] CapillaryBlood = 1,
+        /// <summary>
+        /// Interstitial fluid.
+        /// </summary>
+        [pbr::OriginalName("INTERSTITIAL_FLUID")] InterstitialFluid = 2,
+        /// <summary>
+        /// Plasma.
+        /// </summary>
+        [pbr::OriginalName("PLASMA")] Plasma = 3,
+        /// <summary>
+        /// Serum.
+        /// </summary>
+        [pbr::OriginalName("SERUM")] Serum = 4,
+        /// <summary>
+        /// Tears.
+        /// </summary>
+        [pbr::OriginalName("TEARS")] Tears = 5,
+        /// <summary>
+        /// Whole blood.
+        /// </summary>
+        [pbr::OriginalName("WHOLE_BLOOD")] WholeBlood = 6,
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents the result of the rollup of the blood glucose data type.
+  /// LINT: LEGACY_NAMES
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BloodGlucoseRollupValue : pb::IMessage<BloodGlucoseRollupValue>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BloodGlucoseRollupValue> _parser = new pb::MessageParser<BloodGlucoseRollupValue>(() => new BloodGlucoseRollupValue());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BloodGlucoseRollupValue> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[61]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BloodGlucoseRollupValue() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BloodGlucoseRollupValue(BloodGlucoseRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
+      bloodGlucoseMilligramsPerDeciliterAvg_ = other.bloodGlucoseMilligramsPerDeciliterAvg_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BloodGlucoseRollupValue Clone() {
+      return new BloodGlucoseRollupValue(this);
+    }
+
+    /// <summary>Field number for the "blood_glucose_milligrams_per_deciliter_avg" field.</summary>
+    public const int BloodGlucoseMilligramsPerDeciliterAvgFieldNumber = 1;
+    private readonly static double BloodGlucoseMilligramsPerDeciliterAvgDefaultValue = 0D;
+
+    private double bloodGlucoseMilligramsPerDeciliterAvg_;
+    /// <summary>
+    /// Average blood glucose level in mg/dL.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double BloodGlucoseMilligramsPerDeciliterAvg {
+      get { if ((_hasBits0 & 1) != 0) { return bloodGlucoseMilligramsPerDeciliterAvg_; } else { return BloodGlucoseMilligramsPerDeciliterAvgDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        bloodGlucoseMilligramsPerDeciliterAvg_ = value;
+      }
+    }
+    /// <summary>Gets whether the "blood_glucose_milligrams_per_deciliter_avg" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBloodGlucoseMilligramsPerDeciliterAvg {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "blood_glucose_milligrams_per_deciliter_avg" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBloodGlucoseMilligramsPerDeciliterAvg() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BloodGlucoseRollupValue);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BloodGlucoseRollupValue other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(BloodGlucoseMilligramsPerDeciliterAvg, other.BloodGlucoseMilligramsPerDeciliterAvg)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasBloodGlucoseMilligramsPerDeciliterAvg) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(BloodGlucoseMilligramsPerDeciliterAvg);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasBloodGlucoseMilligramsPerDeciliterAvg) {
+        output.WriteRawTag(9);
+        output.WriteDouble(BloodGlucoseMilligramsPerDeciliterAvg);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasBloodGlucoseMilligramsPerDeciliterAvg) {
+        output.WriteRawTag(9);
+        output.WriteDouble(BloodGlucoseMilligramsPerDeciliterAvg);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasBloodGlucoseMilligramsPerDeciliterAvg) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BloodGlucoseRollupValue other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasBloodGlucoseMilligramsPerDeciliterAvg) {
+        BloodGlucoseMilligramsPerDeciliterAvg = other.BloodGlucoseMilligramsPerDeciliterAvg;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            BloodGlucoseMilligramsPerDeciliterAvg = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            BloodGlucoseMilligramsPerDeciliterAvg = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// SedentaryPeriod
   ///
   /// SedentaryPeriod data represents the periods of time that the user was
@@ -22653,7 +30956,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[49]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[62]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -22866,7 +31169,7 @@ namespace Google.DevicesAndServices.Health.V4 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[50]; }
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[63]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -23052,6 +31355,497 @@ namespace Google.DevicesAndServices.Health.V4 {
               DurationSum = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(DurationSum);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Energy burned as part of an activity, excluding the basal energy burn.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ActiveEnergyBurned : pb::IMessage<ActiveEnergyBurned>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ActiveEnergyBurned> _parser = new pb::MessageParser<ActiveEnergyBurned>(() => new ActiveEnergyBurned());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ActiveEnergyBurned> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[64]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActiveEnergyBurned() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActiveEnergyBurned(ActiveEnergyBurned other) : this() {
+      _hasBits0 = other._hasBits0;
+      interval_ = other.interval_ != null ? other.interval_.Clone() : null;
+      kcal_ = other.kcal_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActiveEnergyBurned Clone() {
+      return new ActiveEnergyBurned(this);
+    }
+
+    /// <summary>Field number for the "interval" field.</summary>
+    public const int IntervalFieldNumber = 1;
+    private global::Google.DevicesAndServices.Health.V4.ObservationTimeInterval interval_;
+    /// <summary>
+    /// Required. Observed interval
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.DevicesAndServices.Health.V4.ObservationTimeInterval Interval {
+      get { return interval_; }
+      set {
+        interval_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "kcal" field.</summary>
+    public const int KcalFieldNumber = 2;
+    private readonly static double KcalDefaultValue = 0D;
+
+    private double kcal_;
+    /// <summary>
+    /// Required. Energy burned during an activity, measured in kilocalories.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Kcal {
+      get { if ((_hasBits0 & 1) != 0) { return kcal_; } else { return KcalDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        kcal_ = value;
+      }
+    }
+    /// <summary>Gets whether the "kcal" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKcal {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "kcal" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKcal() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ActiveEnergyBurned);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ActiveEnergyBurned other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(Interval, other.Interval)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Kcal, other.Kcal)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (interval_ != null) hash ^= Interval.GetHashCode();
+      if (HasKcal) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Kcal);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (interval_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Interval);
+      }
+      if (HasKcal) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Kcal);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (interval_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(Interval);
+      }
+      if (HasKcal) {
+        output.WriteRawTag(17);
+        output.WriteDouble(Kcal);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (interval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Interval);
+      }
+      if (HasKcal) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ActiveEnergyBurned other) {
+      if (other == null) {
+        return;
+      }
+      if (other.interval_ != null) {
+        if (interval_ == null) {
+          Interval = new global::Google.DevicesAndServices.Health.V4.ObservationTimeInterval();
+        }
+        Interval.MergeFrom(other.Interval);
+      }
+      if (other.HasKcal) {
+        Kcal = other.Kcal;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (interval_ == null) {
+              Interval = new global::Google.DevicesAndServices.Health.V4.ObservationTimeInterval();
+            }
+            input.ReadMessage(Interval);
+            break;
+          }
+          case 17: {
+            Kcal = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (interval_ == null) {
+              Interval = new global::Google.DevicesAndServices.Health.V4.ObservationTimeInterval();
+            }
+            input.ReadMessage(Interval);
+            break;
+          }
+          case 17: {
+            Kcal = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents the result of the rollup of active energy burned.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ActiveEnergyBurnedRollupValue : pb::IMessage<ActiveEnergyBurnedRollupValue>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ActiveEnergyBurnedRollupValue> _parser = new pb::MessageParser<ActiveEnergyBurnedRollupValue>(() => new ActiveEnergyBurnedRollupValue());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ActiveEnergyBurnedRollupValue> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.DevicesAndServices.Health.V4.DataModelReflection.Descriptor.MessageTypes[65]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActiveEnergyBurnedRollupValue() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActiveEnergyBurnedRollupValue(ActiveEnergyBurnedRollupValue other) : this() {
+      _hasBits0 = other._hasBits0;
+      kcalSum_ = other.kcalSum_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActiveEnergyBurnedRollupValue Clone() {
+      return new ActiveEnergyBurnedRollupValue(this);
+    }
+
+    /// <summary>Field number for the "kcal_sum" field.</summary>
+    public const int KcalSumFieldNumber = 1;
+    private readonly static double KcalSumDefaultValue = 0D;
+
+    private double kcalSum_;
+    /// <summary>
+    /// Output only. Sum of the active energy burned in kilocalories.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double KcalSum {
+      get { if ((_hasBits0 & 1) != 0) { return kcalSum_; } else { return KcalSumDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        kcalSum_ = value;
+      }
+    }
+    /// <summary>Gets whether the "kcal_sum" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKcalSum {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "kcal_sum" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKcalSum() {
+      _hasBits0 &= ~1;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ActiveEnergyBurnedRollupValue);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ActiveEnergyBurnedRollupValue other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(KcalSum, other.KcalSum)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasKcalSum) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(KcalSum);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasKcalSum) {
+        output.WriteRawTag(9);
+        output.WriteDouble(KcalSum);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasKcalSum) {
+        output.WriteRawTag(9);
+        output.WriteDouble(KcalSum);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasKcalSum) {
+        size += 1 + 8;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ActiveEnergyBurnedRollupValue other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasKcalSum) {
+        KcalSum = other.KcalSum;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            KcalSum = input.ReadDouble();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            KcalSum = input.ReadDouble();
             break;
           }
         }

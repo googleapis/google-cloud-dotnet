@@ -2912,6 +2912,1128 @@
       ]
     },
     {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscription_sync",
+      "title": "CreateSubscriptionRequestObject",
+      "description": "Snippet for CreateSubscription",
+      "file": "DataSubscriptionServiceClient.CreateSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscription",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscription",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.Subscription",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscription_async",
+      "title": "CreateSubscriptionRequestObjectAsync",
+      "description": "Snippet for CreateSubscriptionAsync",
+      "file": "DataSubscriptionServiceClient.CreateSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriptionAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscription_sync_flattened",
+      "title": "CreateSubscription",
+      "description": "Snippet for CreateSubscription",
+      "file": "DataSubscriptionServiceClient.CreateSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscription",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload",
+            "name": "subscription"
+          },
+          {
+            "type": "System.String",
+            "name": "subscriptionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.Subscription",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscription_async_flattened",
+      "title": "CreateSubscriptionAsync",
+      "description": "Snippet for CreateSubscriptionAsync",
+      "file": "DataSubscriptionServiceClient.CreateSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriptionAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload",
+            "name": "subscription"
+          },
+          {
+            "type": "System.String",
+            "name": "subscriptionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscription_sync_flattened_resourceNames",
+      "title": "CreateSubscriptionResourceNames",
+      "description": "Snippet for CreateSubscription",
+      "file": "DataSubscriptionServiceClient.CreateSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscription",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscription",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.SubscriberName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload",
+            "name": "subscription"
+          },
+          {
+            "type": "System.String",
+            "name": "subscriptionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.Subscription",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_CreateSubscription_async_flattened_resourceNames",
+      "title": "CreateSubscriptionResourceNamesAsync",
+      "description": "Snippet for CreateSubscriptionAsync",
+      "file": "DataSubscriptionServiceClient.CreateSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSubscriptionAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.CreateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.SubscriberName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.DevicesAndServices.Health.V4.CreateSubscriptionPayload",
+            "name": "subscription"
+          },
+          {
+            "type": "System.String",
+            "name": "subscriptionId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.CreateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscriptions_sync",
+      "title": "ListSubscriptionsRequestObject",
+      "description": "Snippet for ListSubscriptions",
+      "file": "DataSubscriptionServiceClient.ListSubscriptionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptions",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse, Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscriptions",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscriptions_async",
+      "title": "ListSubscriptionsRequestObjectAsync",
+      "description": "Snippet for ListSubscriptionsAsync",
+      "file": "DataSubscriptionServiceClient.ListSubscriptionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptionsAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscriptionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.ListSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse, Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscriptions",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscriptions_sync_flattened",
+      "title": "ListSubscriptions",
+      "description": "Snippet for ListSubscriptions",
+      "file": "DataSubscriptionServiceClient.ListSubscriptionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptions",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscriptions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse, Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscriptions",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscriptions_async_flattened",
+      "title": "ListSubscriptionsAsync",
+      "description": "Snippet for ListSubscriptionsAsync",
+      "file": "DataSubscriptionServiceClient.ListSubscriptionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptionsAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscriptionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse, Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscriptions",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscriptions_sync_flattened_resourceNames",
+      "title": "ListSubscriptionsResourceNames",
+      "description": "Snippet for ListSubscriptions",
+      "file": "DataSubscriptionServiceClient.ListSubscriptionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptions",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.SubscriberName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse, Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscriptions",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_ListSubscriptions_async_flattened_resourceNames",
+      "title": "ListSubscriptionsResourceNamesAsync",
+      "description": "Snippet for ListSubscriptionsAsync",
+      "file": "DataSubscriptionServiceClient.ListSubscriptionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSubscriptionsAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.ListSubscriptionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.SubscriberName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListSubscriptionsResponse, Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSubscriptions",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.ListSubscriptions",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_UpdateSubscription_sync",
+      "title": "UpdateSubscriptionRequestObject",
+      "description": "Snippet for UpdateSubscription",
+      "file": "DataSubscriptionServiceClient.UpdateSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscription",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.UpdateSubscription",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.Subscription",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.UpdateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_UpdateSubscription_async",
+      "title": "UpdateSubscriptionRequestObjectAsync",
+      "description": "Snippet for UpdateSubscriptionAsync",
+      "file": "DataSubscriptionServiceClient.UpdateSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriptionAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.UpdateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.UpdateSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.UpdateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_UpdateSubscription_sync_flattened",
+      "title": "UpdateSubscription",
+      "description": "Snippet for UpdateSubscription",
+      "file": "DataSubscriptionServiceClient.UpdateSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscription",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.UpdateSubscription",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.Subscription",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.Subscription",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.UpdateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_UpdateSubscription_async_flattened",
+      "title": "UpdateSubscriptionAsync",
+      "description": "Snippet for UpdateSubscriptionAsync",
+      "file": "DataSubscriptionServiceClient.UpdateSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSubscriptionAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.UpdateSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.Subscription",
+            "name": "subscription"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.Subscription>",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.UpdateSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscription_sync",
+      "title": "DeleteSubscriptionRequestObject",
+      "description": "Snippet for DeleteSubscription",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscription_async",
+      "title": "DeleteSubscriptionRequestObjectAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.DeleteSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscription_sync_flattened",
+      "title": "DeleteSubscription",
+      "description": "Snippet for DeleteSubscription",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscription_async_flattened",
+      "title": "DeleteSubscriptionAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscription_sync_flattened_resourceNames",
+      "title": "DeleteSubscriptionResourceNames",
+      "description": "Snippet for DeleteSubscription",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscription",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscription",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_DataSubscriptionService_DeleteSubscription_async_flattened_resourceNames",
+      "title": "DeleteSubscriptionResourceNamesAsync",
+      "description": "Snippet for DeleteSubscriptionAsync",
+      "file": "DataSubscriptionServiceClient.DeleteSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSubscriptionAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient.DeleteSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.SubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task",
+        "client": {
+          "shortName": "DataSubscriptionServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.DataSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSubscription",
+          "fullName": "google.devicesandservices.health.v4.DataSubscriptionService.DeleteSubscription",
+          "service": {
+            "shortName": "DataSubscriptionService",
+            "fullName": "google.devicesandservices.health.v4.DataSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "health_v4_generated_HealthProfileService_GetProfile_sync",
       "title": "GetProfileRequestObject",
       "description": "Snippet for GetProfile",
@@ -4168,6 +5290,899 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetIrnProfile_sync",
+      "title": "GetIrnProfileRequestObject",
+      "description": "Snippet for GetIrnProfile",
+      "file": "HealthProfileServiceClient.GetIrnProfileRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIrnProfile",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetIrnProfile",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.GetIrnProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.IrnProfile",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetIrnProfile",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetIrnProfile",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetIrnProfile_async",
+      "title": "GetIrnProfileRequestObjectAsync",
+      "description": "Snippet for GetIrnProfileAsync",
+      "file": "HealthProfileServiceClient.GetIrnProfileRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIrnProfileAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetIrnProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.GetIrnProfileRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.IrnProfile>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetIrnProfile",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetIrnProfile",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetIrnProfile_sync_flattened",
+      "title": "GetIrnProfile",
+      "description": "Snippet for GetIrnProfile",
+      "file": "HealthProfileServiceClient.GetIrnProfileSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIrnProfile",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetIrnProfile",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.IrnProfile",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetIrnProfile",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetIrnProfile",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetIrnProfile_async_flattened",
+      "title": "GetIrnProfileAsync",
+      "description": "Snippet for GetIrnProfileAsync",
+      "file": "HealthProfileServiceClient.GetIrnProfileAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIrnProfileAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetIrnProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.IrnProfile>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetIrnProfile",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetIrnProfile",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetIrnProfile_sync_flattened_resourceNames",
+      "title": "GetIrnProfileResourceNames",
+      "description": "Snippet for GetIrnProfile",
+      "file": "HealthProfileServiceClient.GetIrnProfileResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIrnProfile",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetIrnProfile",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.IrnProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.IrnProfile",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetIrnProfile",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetIrnProfile",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetIrnProfile_async_flattened_resourceNames",
+      "title": "GetIrnProfileResourceNamesAsync",
+      "description": "Snippet for GetIrnProfileAsync",
+      "file": "HealthProfileServiceClient.GetIrnProfileResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetIrnProfileAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetIrnProfileAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.IrnProfileName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.IrnProfile>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetIrnProfile",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetIrnProfile",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetPairedDevice_sync",
+      "title": "GetPairedDeviceRequestObject",
+      "description": "Snippet for GetPairedDevice",
+      "file": "HealthProfileServiceClient.GetPairedDeviceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPairedDevice",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetPairedDevice",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.PairedDevice",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetPairedDevice",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetPairedDevice",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetPairedDevice_async",
+      "title": "GetPairedDeviceRequestObjectAsync",
+      "description": "Snippet for GetPairedDeviceAsync",
+      "file": "HealthProfileServiceClient.GetPairedDeviceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPairedDeviceAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetPairedDeviceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.GetPairedDeviceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetPairedDevice",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetPairedDevice",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetPairedDevice_sync_flattened",
+      "title": "GetPairedDevice",
+      "description": "Snippet for GetPairedDevice",
+      "file": "HealthProfileServiceClient.GetPairedDeviceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPairedDevice",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetPairedDevice",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.PairedDevice",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetPairedDevice",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetPairedDevice",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetPairedDevice_async_flattened",
+      "title": "GetPairedDeviceAsync",
+      "description": "Snippet for GetPairedDeviceAsync",
+      "file": "HealthProfileServiceClient.GetPairedDeviceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPairedDeviceAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetPairedDeviceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetPairedDevice",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetPairedDevice",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetPairedDevice_sync_flattened_resourceNames",
+      "title": "GetPairedDeviceResourceNames",
+      "description": "Snippet for GetPairedDevice",
+      "file": "HealthProfileServiceClient.GetPairedDeviceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPairedDevice",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetPairedDevice",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.PairedDeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.DevicesAndServices.Health.V4.PairedDevice",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetPairedDevice",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetPairedDevice",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_GetPairedDevice_async_flattened_resourceNames",
+      "title": "GetPairedDeviceResourceNamesAsync",
+      "description": "Snippet for GetPairedDeviceAsync",
+      "file": "HealthProfileServiceClient.GetPairedDeviceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetPairedDeviceAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.GetPairedDeviceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.PairedDeviceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "GetPairedDevice",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.GetPairedDevice",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_ListPairedDevices_sync",
+      "title": "ListPairedDevicesRequestObject",
+      "description": "Snippet for ListPairedDevices",
+      "file": "HealthProfileServiceClient.ListPairedDevicesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPairedDevices",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.ListPairedDevices",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse, Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "ListPairedDevices",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.ListPairedDevices",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_ListPairedDevices_async",
+      "title": "ListPairedDevicesRequestObjectAsync",
+      "description": "Snippet for ListPairedDevicesAsync",
+      "file": "HealthProfileServiceClient.ListPairedDevicesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPairedDevicesAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.ListPairedDevicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.ListPairedDevicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse, Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "ListPairedDevices",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.ListPairedDevices",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_ListPairedDevices_sync_flattened",
+      "title": "ListPairedDevices",
+      "description": "Snippet for ListPairedDevices",
+      "file": "HealthProfileServiceClient.ListPairedDevicesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPairedDevices",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.ListPairedDevices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse, Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "ListPairedDevices",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.ListPairedDevices",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_ListPairedDevices_async_flattened",
+      "title": "ListPairedDevicesAsync",
+      "description": "Snippet for ListPairedDevicesAsync",
+      "file": "HealthProfileServiceClient.ListPairedDevicesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPairedDevicesAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.ListPairedDevicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse, Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "ListPairedDevices",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.ListPairedDevices",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_ListPairedDevices_sync_flattened_resourceNames",
+      "title": "ListPairedDevicesResourceNames",
+      "description": "Snippet for ListPairedDevices",
+      "file": "HealthProfileServiceClient.ListPairedDevicesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPairedDevices",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.ListPairedDevices",
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse, Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "ListPairedDevices",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.ListPairedDevices",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "health_v4_generated_HealthProfileService_ListPairedDevices_async_flattened_resourceNames",
+      "title": "ListPairedDevicesResourceNamesAsync",
+      "description": "Snippet for ListPairedDevicesAsync",
+      "file": "HealthProfileServiceClient.ListPairedDevicesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListPairedDevicesAsync",
+        "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient.ListPairedDevicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.DevicesAndServices.Health.V4.UserName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.DevicesAndServices.Health.V4.ListPairedDevicesResponse, Google.DevicesAndServices.Health.V4.PairedDevice>",
+        "client": {
+          "shortName": "HealthProfileServiceClient",
+          "fullName": "Google.DevicesAndServices.Health.V4.HealthProfileServiceClient"
+        },
+        "method": {
+          "shortName": "ListPairedDevices",
+          "fullName": "google.devicesandservices.health.v4.HealthProfileService.ListPairedDevices",
+          "service": {
+            "shortName": "HealthProfileService",
+            "fullName": "google.devicesandservices.health.v4.HealthProfileService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
           "type": "SHORT"
         }
       ]
