@@ -33,7 +33,7 @@ namespace Google.Ads.DataManager.V1 {
             "PwoOd2FybmluZ19jb3VudHMYASADKAsyJy5nb29nbGUuYWRzLmRhdGFtYW5h",
             "Z2VyLnYxLldhcm5pbmdDb3VudCJoCgxXYXJuaW5nQ291bnQSFAoMcmVjb3Jk",
             "X2NvdW50GAEgASgDEkIKBnJlYXNvbhgCIAEoDjIyLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24q1wsKFVByb2Nl",
+            "YW1hbmFnZXIudjEuUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24q/BEKFVByb2Nl",
             "c3NpbmdFcnJvclJlYXNvbhInCiNQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9V",
             "TlNQRUNJRklFRBAAEjMKL1BST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFM",
             "SURfQ1VTVE9NX1ZBUklBQkxFEAESNwozUFJPQ0VTU0lOR19FUlJPUl9SRUFT",
@@ -67,23 +67,41 @@ namespace Google.Ads.DataManager.V1 {
             "RVJST1JfT1BFUkFUSU5HX0FDQ09VTlRfTUlTTUFUQ0hfRk9SX0FEX0lERU5U",
             "SUZJRVIQGhJUClBQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9PTkVfUEVSX0NM",
             "SUNLX0NPTlZFUlNJT05fQUNUSU9OX05PVF9QRVJNSVRURURfV0lUSF9CUkFJ",
-            "RBAcKv8DChdQcm9jZXNzaW5nV2FybmluZ1JlYXNvbhIpCiVQUk9DRVNTSU5H",
-            "X1dBUk5JTkdfUkVBU09OX1VOU1BFQ0lGSUVEEAASMwovUFJPQ0VTU0lOR19X",
-            "QVJOSU5HX1JFQVNPTl9LRUtfUEVSTUlTU0lPTl9ERU5JRUQQARIyCi5QUk9D",
-            "RVNTSU5HX1dBUk5JTkdfUkVBU09OX0RFS19ERUNSWVBUSU9OX0VSUk9SEAIS",
-            "LgoqUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9ERUNSWVBUSU9OX0VSUk9S",
-            "EAMSLQopUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9XSVBfQVVUSF9GQUlM",
-            "RUQQBBIpCiVQUk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX0lOVkFMSURfV0lQ",
-            "EAUSKQolUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9JTlZBTElEX0tFSxAG",
-            "Ej4KOlBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fVVNFUl9JREVOVElGSUVS",
-            "X0RFQ1JZUFRJT05fRVJST1IQBxIsCihQUk9DRVNTSU5HX1dBUk5JTkdfUkVB",
-            "U09OX0lOVEVSTkFMX0VSUk9SEAgSLQopUFJPQ0VTU0lOR19XQVJOSU5HX1JF",
-            "QVNPTl9BV1NfQVVUSF9GQUlMRUQQCULSAQodY29tLmdvb2dsZS5hZHMuZGF0",
-            "YW1hbmFnZXIudjFCFVByb2Nlc3NpbmdFcnJvcnNQcm90b1ABWkFjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7",
-            "ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlH",
-            "b29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFN",
-            "YW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "RBAcEi4KKlBST0NFU1NJTkdfRVJST1JfUkVBU09OX01BVENIX0lEX05PVF9G",
+            "T1VORBAdEjoKNlBST0NFU1NJTkdfRVJST1JfUkVBU09OX1VTRVJfSURfTk9U",
+            "X0ZPVU5EX0ZPUl9NQVRDSF9JRBAeEjcKM1BST0NFU1NJTkdfRVJST1JfUkVB",
+            "U09OX1VTRVJfSURfTk9UX0ZPVU5EX0ZPUl9HQ0xJRBAfEjcKM1BST0NFU1NJ",
+            "TkdfRVJST1JfUkVBU09OX1VTRVJfSURfTk9UX0ZPVU5EX0ZPUl9EQ0xJRBAg",
+            "EjIKLlBST0NFU1NJTkdfRVJST1JfUkVBU09OX0lOVkFMSURfQURfSURFTlRJ",
+            "RklFUlMQIRI0CjBQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9JTlZBTElEX01P",
+            "QklMRV9JRF9GT1JNQVQQIhI6CjZQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9P",
+            "UklHSU5BTF9DT05WRVJTSU9OU19OT1RfRk9VTkQQIxIxCi1QUk9DRVNTSU5H",
+            "X0VSUk9SX1JFQVNPTl9FVkVOVF9JRF9ERUNPREVfRVJST1IQJBI/CjtQUk9D",
+            "RVNTSU5HX0VSUk9SX1JFQVNPTl9VU0VSX0lEX05PVF9GT1VORF9GT1JfSU1Q",
+            "UkVTU0lPTl9JRBAlEi0KKVBST0NFU1NJTkdfRVJST1JfUkVBU09OX1VTRVJf",
+            "SURfTk9UX0ZPVU5EECYSNQoxUFJPQ0VTU0lOR19FUlJPUl9SRUFTT05fQ09O",
+            "VkVSU0lPTl9QUkVDRURFU19DTElDSxAnEiwKKFBST0NFU1NJTkdfRVJST1Jf",
+            "UkVBU09OX1RPT19SRUNFTlRfQ0xJQ0sQKBIpCiVQUk9DRVNTSU5HX0VSUk9S",
+            "X1JFQVNPTl9JTlZBTElEX0NMSUNLECkSPwo7UFJPQ0VTU0lOR19FUlJPUl9S",
+            "RUFTT05fSU5WQUxJRF9PUEVSQVRJTkdfQUNDT1VOVF9GT1JfQ0xJQ0sQKhIr",
+            "CidQUk9DRVNTSU5HX0VSUk9SX1JFQVNPTl9DTElDS19OT1RfRk9VTkQQKyr/",
+            "AwoXUHJvY2Vzc2luZ1dhcm5pbmdSZWFzb24SKQolUFJPQ0VTU0lOR19XQVJO",
+            "SU5HX1JFQVNPTl9VTlNQRUNJRklFRBAAEjMKL1BST0NFU1NJTkdfV0FSTklO",
+            "R19SRUFTT05fS0VLX1BFUk1JU1NJT05fREVOSUVEEAESMgouUFJPQ0VTU0lO",
+            "R19XQVJOSU5HX1JFQVNPTl9ERUtfREVDUllQVElPTl9FUlJPUhACEi4KKlBS",
+            "T0NFU1NJTkdfV0FSTklOR19SRUFTT05fREVDUllQVElPTl9FUlJPUhADEi0K",
+            "KVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fV0lQX0FVVEhfRkFJTEVEEAQS",
+            "KQolUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9JTlZBTElEX1dJUBAFEikK",
+            "JVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05fSU5WQUxJRF9LRUsQBhI+CjpQ",
+            "Uk9DRVNTSU5HX1dBUk5JTkdfUkVBU09OX1VTRVJfSURFTlRJRklFUl9ERUNS",
+            "WVBUSU9OX0VSUk9SEAcSLAooUFJPQ0VTU0lOR19XQVJOSU5HX1JFQVNPTl9J",
+            "TlRFUk5BTF9FUlJPUhAIEi0KKVBST0NFU1NJTkdfV0FSTklOR19SRUFTT05f",
+            "QVdTX0FVVEhfRkFJTEVEEAlC0gEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5h",
+            "Z2VyLnYxQhVQcm9jZXNzaW5nRXJyb3JzUHJvdG9QAVpBY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFt",
+            "YW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xl",
+            "XEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdl",
+            "cjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.ProcessingErrorReason), typeof(global::Google.Ads.DataManager.V1.ProcessingWarningReason), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -99,6 +117,7 @@ namespace Google.Ads.DataManager.V1 {
   #region Enums
   /// <summary>
   /// The processing error reason.
+  /// New reasons may be added in the future.
   /// </summary>
   public enum ProcessingErrorReason {
     /// <summary>
@@ -226,6 +245,69 @@ namespace Google.Ads.DataManager.V1 {
     /// One-per-click conversion actions cannot be used with BRAIDs.
     /// </summary>
     [pbr::OriginalName("PROCESSING_ERROR_REASON_ONE_PER_CLICK_CONVERSION_ACTION_NOT_PERMITTED_WITH_BRAID")] OnePerClickConversionActionNotPermittedWithBraid = 28,
+    /// <summary>
+    /// The match ID can not be found.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_MATCH_ID_NOT_FOUND")] MatchIdNotFound = 29,
+    /// <summary>
+    /// The user ID can not be found for the match ID.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_USER_ID_NOT_FOUND_FOR_MATCH_ID")] UserIdNotFoundForMatchId = 30,
+    /// <summary>
+    /// The user ID can not be found for the GCLID.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_USER_ID_NOT_FOUND_FOR_GCLID")] UserIdNotFoundForGclid = 31,
+    /// <summary>
+    /// The user ID can not be found for the DCLID.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_USER_ID_NOT_FOUND_FOR_DCLID")] UserIdNotFoundForDclid = 32,
+    /// <summary>
+    /// There are ad identifiers that are invalid.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_INVALID_AD_IDENTIFIERS")] InvalidAdIdentifiers = 33,
+    /// <summary>
+    /// The mobile ID format is invalid.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_INVALID_MOBILE_ID_FORMAT")] InvalidMobileIdFormat = 34,
+    /// <summary>
+    /// The original conversions can't be found.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_ORIGINAL_CONVERSIONS_NOT_FOUND")] OriginalConversionsNotFound = 35,
+    /// <summary>
+    /// The event ID (dclid or impression ID) cannot be decoded.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_EVENT_ID_DECODE_ERROR")] EventIdDecodeError = 36,
+    /// <summary>
+    /// The user ID cannot be found for the given impression ID.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_USER_ID_NOT_FOUND_FOR_IMPRESSION_ID")] UserIdNotFoundForImpressionId = 37,
+    /// <summary>
+    /// The user ID cannot be found.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_USER_ID_NOT_FOUND")] UserIdNotFound = 38,
+    /// <summary>
+    /// The event timestamp on the event was earlier than the associated click.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_CONVERSION_PRECEDES_CLICK")] ConversionPrecedesClick = 39,
+    /// <summary>
+    /// The click occurred too recently.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_TOO_RECENT_CLICK")] TooRecentClick = 40,
+    /// <summary>
+    /// The event can't be attributed to a click (GCLID). This may be because the
+    /// click did not come from a Google Ads campaign, for example.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_INVALID_CLICK")] InvalidClick = 41,
+    /// <summary>
+    /// The click from the event isn't associated with the
+    /// [`operating_account`][google.ads.datamanager.v1.Destination.operating_account]
+    /// of the destination.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_INVALID_OPERATING_ACCOUNT_FOR_CLICK")] InvalidOperatingAccountForClick = 42,
+    /// <summary>
+    /// A corresponding click can't be found that matches the provided attributes.
+    /// </summary>
+    [pbr::OriginalName("PROCESSING_ERROR_REASON_CLICK_NOT_FOUND")] ClickNotFound = 43,
   }
 
   /// <summary>

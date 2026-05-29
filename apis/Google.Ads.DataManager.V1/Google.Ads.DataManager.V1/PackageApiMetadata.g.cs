@@ -36,6 +36,7 @@ namespace Google.Ads.DataManager.V1
             yield return ConsentReflection.Descriptor;
             yield return DestinationReflection.Descriptor;
             yield return DeviceInfoReflection.Descriptor;
+            yield return EncryptedUserIdReflection.Descriptor;
             yield return EncryptionInfoReflection.Descriptor;
             yield return ErrorReflection.Descriptor;
             yield return EventReflection.Descriptor;
