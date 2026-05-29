@@ -1,11 +1,5 @@
 # Version history
 
-## Version 1.8.0, released 2026-05-29
-
-### New features
-
-- Add support for GCS Storage Control Intelligence Finding APIs
-
 ## Version 1.7.0, released 2026-02-09
 
 ### New features
