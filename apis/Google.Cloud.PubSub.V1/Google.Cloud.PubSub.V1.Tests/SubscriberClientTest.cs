@@ -156,9 +156,10 @@ namespace Google.Cloud.PubSub.V1.Tests
             {
                 public En(
                     IEnumerable<ServerAction> msgs, IScheduler scheduler, TaskHelper taskHelper, IClock clock,
-                    bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
+                    bool useMsgAsId, CancellationToken? ct, bool isExactlyOnceDelivery, bool messageOrderingEnabled,
+                    bool disablePongs)
                 {
-                    _msgsEn = msgs.Select((x, i) => (i, x)).GetEnumerator();
+                    _serverActions = msgs.Select((x, i) => (i, x)).GetEnumerator();
                     _scheduler = scheduler;
                     _taskHelper = taskHelper;
                     _clock = clock;
@@ -166,6 +167,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                     _ct = ct ?? CancellationToken.None;
                     _isExactlyOnceDelivery = isExactlyOnceDelivery;
                     _messageOrderingEnabled = messageOrderingEnabled;
+                    _disablePongs = disablePongs;
+                    _nextPongUtc = _clock.GetCurrentDateTimeUtc() + TimeSpan.FromSeconds(15);
                 }
 
                 private readonly IScheduler _scheduler;
@@ -174,47 +177,88 @@ namespace Google.Cloud.PubSub.V1.Tests
                 private readonly bool _useMsgAsId;
                 private readonly bool _isExactlyOnceDelivery;
                 private readonly bool _messageOrderingEnabled;
+                private readonly bool _disablePongs;
                 private readonly CancellationToken _ct;
 
-                private readonly IEnumerator<(int Index, ServerAction Action)> _msgsEn;
+                private readonly IEnumerator<(int Index, ServerAction Action)> _serverActions;
+
+                private DateTime _nextPongUtc;
+                private (int Index, ServerAction Action)? _nextActionToYield;
+                private (int Index, ServerAction Action) _currentlyYieldingAction;
+                private TimeSpan _remainingDelayBeforeAction;
+                private bool _isCurrentResponseAPong;
 
                 public async Task<bool> MoveNext(CancellationToken cancellationToken)
                 {
-                    if (_msgsEn.MoveNext())
+                    if (_nextActionToYield == null)
                     {
-                        // TODO: This is not correct. The real server cancels the entire call if this cancellationtoken is cancelled.
-                        using (var cts = CancellationTokenSource.CreateLinkedTokenSource(_ct, cancellationToken))
+                        if (!_serverActions.MoveNext())
                         {
+                            return false;
+                        }
+                        _nextActionToYield = _serverActions.Current;
+                        _remainingDelayBeforeAction = _nextActionToYield.Value.Action.PreInterval;
+                    }
+
+                    // The real server cancels the entire call if this cancellationtoken is cancelled.
+                    using (var cts = CancellationTokenSource.CreateLinkedTokenSource(_ct, cancellationToken))
+                    {
+                        var now = _clock.GetCurrentDateTimeUtc();
+                        var timeUntilPong = _nextPongUtc - now;
+
+                        if (!_disablePongs && _remainingDelayBeforeAction > timeUntilPong)
+                        {
+                            var delay = timeUntilPong > TimeSpan.Zero ? timeUntilPong : TimeSpan.Zero;
                             var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
-                                () => _scheduler.Delay(_msgsEn.Current.Action.PreInterval, cts.Token));
+                                () => _scheduler.Delay(delay, cts.Token));
                             if (isCancelled)
                             {
                                 // This mimics behaviour of a real server
                                 throw new RpcException(new Status(StatusCode.Cancelled, "Operation cancelled"));
                             }
-                            if (_msgsEn.Current.Action.MoveNextEx != null)
+                            _remainingDelayBeforeAction -= delay;
+                            _nextPongUtc += TimeSpan.FromSeconds(15);
+                            _isCurrentResponseAPong = true;
+                            return true;
+                        }
+                        else
+                        {
+                            var isCancelled = await _taskHelper.ConfigureAwaitHideCancellation(
+                                () => _scheduler.Delay(_remainingDelayBeforeAction, cts.Token));
+                            if (isCancelled)
                             {
-                                throw _msgsEn.Current.Action.MoveNextEx;
+                                // This mimics behaviour of a real server
+                                throw new RpcException(new Status(StatusCode.Cancelled, "Operation cancelled"));
+                            }
+                            _currentlyYieldingAction = _nextActionToYield.Value;
+                            _nextActionToYield = null;
+                            _isCurrentResponseAPong = false;
+                            if (_currentlyYieldingAction.Action.MoveNextEx != null)
+                            {
+                                throw _currentlyYieldingAction.Action.MoveNextEx;
                             }
                             return true;
                         }
                     }
-                    return false;
                 }
 
                 public StreamingPullResponse Current
                 {
                     get
                     {
-                        if (_msgsEn.Current.Action.CurrentEx != null)
+                        if (_isCurrentResponseAPong)
                         {
-                            throw _msgsEn.Current.Action.CurrentEx;
+                            return new StreamingPullResponse();
                         }
-                        var messages = _msgsEn.Current.Action.Msgs.Select((s, i) =>
-                            MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_msgsEn.Current.Index, i), s, _msgsEn.Current.Action.DeliveryAttempt));
+                        if (_currentlyYieldingAction.Action.CurrentEx != null)
+                        {
+                            throw _currentlyYieldingAction.Action.CurrentEx;
+                        }
+                        var messages = _currentlyYieldingAction.Action.Msgs?.Select((s, i) =>
+                            MakeReceivedMessage(_useMsgAsId ? s : MakeMsgId(_currentlyYieldingAction.Index, i), s, _currentlyYieldingAction.Action.DeliveryAttempt));
                         return new StreamingPullResponse
                         {
-                            ReceivedMessages = { messages },
+                            ReceivedMessages = { messages ?? Enumerable.Empty<ReceivedMessage>() },
                             SubscriptionProperties = new()
                             {
                                 ExactlyOnceDeliveryEnabled = _isExactlyOnceDelivery,
@@ -234,12 +278,12 @@ namespace Google.Cloud.PubSub.V1.Tests
                 public PullStream(TimeSpan writeAsyncPreDelay,
                     IEnumerable<ServerAction> msgs, List<DateTime> writeCompletes, List<DateTime> streamPings,
                     IScheduler scheduler, IClock clock, TaskHelper taskHelper, bool useMsgAsId, CancellationToken? ct,
-                    bool isExactlyOnceDelivery, bool messageOrderingEnabled)
+                    bool isExactlyOnceDelivery, bool messageOrderingEnabled, bool disablePongs)
                 {
                     _taskHelper = taskHelper;
                     _scheduler = scheduler;
                     _writeAsyncPreDelay = writeAsyncPreDelay; // delay within the WriteAsync() method. Simulating network or server slowness.
-                    var responseStream = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct, isExactlyOnceDelivery, messageOrderingEnabled);
+                    var responseStream = new En(msgs, scheduler, taskHelper, clock, useMsgAsId, ct, isExactlyOnceDelivery, messageOrderingEnabled, disablePongs);
                     // Set disposeAction parameter of AsyncDuplexStreamingCall to No-op as it is called internally while disposing stream.
                     _call = new AsyncDuplexStreamingCall<StreamingPullRequest, StreamingPullResponse>(null, responseStream, Task.FromResult(new Metadata()), null, null, () => { });
                     _clock = clock;
@@ -290,7 +334,8 @@ namespace Google.Cloud.PubSub.V1.Tests
             public FakeSubscriberServiceApiClient(
                 IEnumerator<IEnumerable<ServerAction>> msgsEn, IScheduler scheduler, IClock clock,
                 TaskHelper taskHelper, TimeSpan writeAsyncPreDelay, bool useMsgAsId,
-                AckModifyAckDeadlineAction ackModifyAckDeadlineAction, bool isExactlyOnceDelivery, bool messageOrderingEnabled)
+                AckModifyAckDeadlineAction ackModifyAckDeadlineAction, bool isExactlyOnceDelivery,
+                bool messageOrderingEnabled, bool disablePongs)
             {
                 _msgsEn = msgsEn;
                 _scheduler = scheduler;
@@ -302,6 +347,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 _numberOfAckModifyAckDeadlineFailures = 0;
                 _isExactlyOnceDelivery = isExactlyOnceDelivery;
                 _messageOrderingEnabled = messageOrderingEnabled;
+                _disablePongs = disablePongs;
             }
 
             private readonly object _lock = new object();
@@ -314,6 +360,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             private readonly AckModifyAckDeadlineAction _ackModifyAckDeadlineAction; // Simulates Ack ModifyAckDeadline errors.
             private readonly bool _isExactlyOnceDelivery;
             private readonly bool _messageOrderingEnabled;
+            private readonly bool _disablePongs;
             private int _numberOfAckModifyAckDeadlineFailures;
 
             private readonly List<TimedId> _extends = new List<TimedId>();
@@ -346,7 +393,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                     var msgs = _msgsEn.Current;
                     return new PullStream(_writeAsyncPreDelay, msgs, _writeCompletes, _streamPings,
                         _scheduler, _clock, _taskHelper, _useMsgAsId, callSettings?.CancellationToken,
-                        _isExactlyOnceDelivery, _messageOrderingEnabled);
+                        _isExactlyOnceDelivery, _messageOrderingEnabled, _disablePongs);
                 }
             }
 
@@ -500,16 +547,18 @@ namespace Google.Cloud.PubSub.V1.Tests
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
                 bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null,
-                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null) =>
+                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false,
+                TimeSpan? disposeTimeout = null, bool disablePongs = false) =>
                 Create(new[] { msgs }, ackDeadline, ackExtendWindow, flowMaxElements, flowMaxBytes, clientCount: 1, threadCount,
-                    writeAsyncPreDelay, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled, disposeTimeout);
+                    writeAsyncPreDelay, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled, disposeTimeout, disablePongs);
 
             public static Fake Create(IReadOnlyList<IEnumerable<ServerAction>> msgs,
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
                 bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null,
-                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null)
+                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false,
+                TimeSpan? disposeTimeout = null, bool disablePongs = false)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
@@ -518,7 +567,7 @@ namespace Google.Cloud.PubSub.V1.Tests
                 var clients = Enumerable.Range(0, clientCount)
                     .Select(_ => new FakeSubscriberServiceApiClient(
                         msgEn, scheduler, scheduler.Clock, taskHelper, writeAsyncPreDelay ?? TimeSpan.Zero, useMsgAsId,
-                        ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled))
+                        ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled, disablePongs))
                     .ToList();
                 var settings = new SubscriberClient.Settings
                 {
@@ -1053,27 +1102,58 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Fact]
         public void StreamPings()
         {
-            const int pingPeriodSeconds = 25; // From SubscriberClient.
-            const int pingCount = 10;
+            const int pingPeriodSeconds = 30; // From SubscriberClient.
+            const int pingPeriods = 10;
             var msgs = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "1" }), ServerAction.Inf() };
             using (var fake = Fake.Create(new[] { msgs }))
             {
                 var th = fake.TaskHelper;
                 fake.Scheduler.Run(async () =>
                 {
-                    var incompleteTcs = new TaskCompletionSource<SubscriberClient.Reply>();
-                    var subTask = fake.Subscriber.StartAsync((msg, ct) => incompleteTcs.Task);
+                    var subTask = fake.Subscriber.StartAsync((msg, ct) => Task.FromResult(SubscriberClient.Reply.Ack));
                     // Wait for the time required for pingCount stream pings.
-                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(pingPeriodSeconds * pingCount) + TimeSpan.FromSeconds(1), CancellationToken.None));
-                    // Complete the handler task, which will cause pings to stop.
-                    incompleteTcs.SetCanceled();
-                    // Wait a bit longer, to check no more pings happen.
-                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(pingPeriodSeconds * 4), CancellationToken.None));
+                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(pingPeriodSeconds * pingPeriods) + TimeSpan.FromSeconds(1), CancellationToken.None));
                     // Stop subscriber.
                     await th.ConfigureAwait(fake.Subscriber.StopAsync(CancellationToken.None));
                     await th.ConfigureAwait(subTask);
-                    var expectedPings = Enumerable.Range(0, pingCount).Select(i => fake.Time0 + TimeSpan.FromSeconds(pingPeriodSeconds * (i + 1)));
+                    var expectedPings = Enumerable.Range(0, pingPeriods + 1).Select(i => fake.Time0 + TimeSpan.FromSeconds(pingPeriodSeconds * i));
+                    Assert.Equal(expectedPings.Count(), fake.Subscribers[0].StreamPings.Count);
                     Assert.Equal(expectedPings, fake.Subscribers[0].StreamPings);
+                });
+            }
+        }
+
+        [Fact]
+        public void DeadStreamWatchdog_TriggersOnSilence()
+        {
+            var msgs1 = new[] {
+                ServerAction.Data(TimeSpan.Zero, new[] { "msg1" }),
+                ServerAction.Data(TimeSpan.FromSeconds(1000), new[] { "msgNeverReceived" })
+            };
+            var msgs2 = new[] {
+                ServerAction.Data(TimeSpan.Zero, new[] { "msg2" }),
+                ServerAction.Inf()
+            };
+            using (var fake = Fake.Create(new[] { msgs1, msgs2 }, disablePongs: true))
+            {
+                var th = fake.TaskHelper;
+                var handledMsgs = new List<string>();
+                fake.Scheduler.Run(async () =>
+                {
+                    var subTask = fake.Subscriber.StartAsync(async (msg, ct) =>
+                    {
+                        await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(1), ct));
+                        handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                        return SubscriberClient.Reply.Ack;
+                    });
+                    // Wait long enough for the watchdog to trigger and establish a new stream.
+                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(60), CancellationToken.None));
+
+                    // The first stream should be closed and a second opened.
+                    Assert.Equal(2, fake.Subscribers[0].StreamingPulls.Count);
+                    // The first and third message should be successfully processed, while the second was never received
+                    Assert.Equal(new[] { "msg1", "msg2" }, handledMsgs);
+
                 });
             }
         }
@@ -1958,7 +2038,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void StreamingPullRetry_UnavailableAfterShortDelayTriggersRetryWithBackoff()
         {
             var exception = new RpcException(new Status(StatusCode.Unavailable, "Stream terminated"));
-            TimeSpan streamDuration = TimeSpan.FromSeconds(30);
+            TimeSpan streamDuration = TimeSpan.FromSeconds(10);
             using var fake = Fake.Create(CreateBadMoveNextSequence(streamDuration, exception, 5, includeTrailing: true));
             var start = fake.Scheduler.Clock.GetCurrentDateTimeUtc();
 

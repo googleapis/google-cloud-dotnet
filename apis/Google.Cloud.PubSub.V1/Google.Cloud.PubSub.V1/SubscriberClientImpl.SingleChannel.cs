@@ -127,7 +127,14 @@ public sealed partial class SubscriberClientImpl
             );
 
         // Stream shutdown occurs after 1 minute, so ensure we're always before that.
-        private static readonly TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(25);
+        private static readonly TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(30);
+        private static readonly TimeSpan s_streamPongTimeout = TimeSpan.FromSeconds(15);
+        private static readonly TimeSpan s_deadStreamWatchdogPeriod = TimeSpan.FromSeconds(10);
+        private static readonly int s_streamProtocolVersion = 1;
+        private long _lastResponseUtcTicks;
+        private long _lastPingUtcTicks;
+        private CancellationTokenSource _pullMoveNextCts;
+        private Task<bool> _currentMoveNextTask;
 
         // This dictionary will only have ids that can be retried for temporary errors while calling Acknowledgement or ModifyAckDeadline RPCs.
         // We store the first time of error corresponding to the AckId, so that we retry only for specified duration
@@ -194,8 +201,9 @@ public sealed partial class SubscriberClientImpl
             _clientIndex = clientIndex;
             _handler = handler;
             _hardStopCts = subscriber._globalHardStopCts;
-            _pushStopCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
             _softStopCts = subscriber._globalSoftStopCts;
+            _pullMoveNextCts = new CancellationTokenSource();
+            _pushStopCts = CancellationTokenSource.CreateLinkedTokenSource(_hardStopCts.Token);
             _subscriptionName = subscriber.SubscriptionName;
             _normalLeaseTiming = subscriber._normalLeaseTiming;
             _exactlyOnceDeliveryLeaseTiming = subscriber._exactlyOnceDeliveryLeaseTiming;
@@ -220,6 +228,8 @@ public sealed partial class SubscriberClientImpl
             HandlePush();
             // Start stream-keep-alive ping
             HandleStreamPing();
+            // Start watchdog for dead streams
+            DeadStreamWatchdog();
             // Start event loop.
             // This loop exits by an action throwing a error or cancellation exception.
             while (!(_pullComplete && IsPushComplete()))
@@ -236,7 +246,7 @@ public sealed partial class SubscriberClientImpl
                 }
                 var task = nextContinuation.Task;
                 var next = nextContinuation.NextAction;
-                if (next.IsPull && (task.IsCanceled || (task.IsFaulted && (task.Exception.IsCancellation() || task.Exception.IsRpcCancellation()))))
+                if (next.IsPull && (task.IsCanceled || (task.IsFaulted && (task.Exception.IsCancellation() || task.Exception.IsRpcCancellation()))) && _softStopCts.IsCancellationRequested)
                 {
                     // Pull has been cancelled by user, shutdown pull stream and don't run continuation.
                     // RPC exceptions are dealt with in the relevant handlers.
@@ -330,12 +340,16 @@ public sealed partial class SubscriberClientImpl
             _pull = _client.StreamingPull(CallSettings.FromCancellationToken(_softStopCts.Token));
             // Cancellation not needed in this WriteAsync call. The StreamingPull() cancellation
             // (above) will cause this call to cancel if _softStopCts is cancelled.
+            var nowTicks = _clock.GetCurrentDateTimeUtc().Ticks;
+            Interlocked.Exchange(ref _lastPingUtcTicks, nowTicks);
+            Interlocked.Exchange(ref _lastResponseUtcTicks, nowTicks);
             Task initTask = _pull.WriteAsync(new StreamingPullRequest
             {
                 SubscriptionAsSubscriptionName = _subscriptionName,
                 StreamAckDeadlineSeconds = EffectiveLeaseTiming.AckDeadlineSeconds,
                 MaxOutstandingMessages = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingElementCount,
-                MaxOutstandingBytes = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingByteCount
+                MaxOutstandingBytes = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingByteCount,
+                ProtocolVersion = s_streamProtocolVersion
             });
             Add(initTask, Next(true, () => HandlePullMoveNext(initTask)));
         }
@@ -397,8 +411,31 @@ public sealed partial class SubscriberClientImpl
             {
                 // Call MoveNext to receive more messages.
                 // Cancellation is handled by the cancellation-token passed when the stream is created.
-                var moveNextTask = _pull.GrpcCall.ResponseStream.MoveNext(CancellationToken.None);
-                Add(moveNextTask, Next(true, () => HandlePullMessageData(moveNextTask)));
+                _currentMoveNextTask = InstrumentedMoveNext();
+                Add(_currentMoveNextTask, Next(true, () => HandlePullMessageData(_currentMoveNextTask)));
+            }
+
+            async Task<bool> InstrumentedMoveNext()
+            {
+                // Instrument MoveNext to allow background detection of dead streams.
+                var pullMoveNextCts = _pullMoveNextCts;
+                try
+                {
+                    var result = await _taskHelper.ConfigureAwait(_pull.GrpcCall.ResponseStream.MoveNext(pullMoveNextCts.Token));
+                    Interlocked.Exchange(ref _lastResponseUtcTicks, _clock.GetCurrentDateTimeUtc().Ticks);
+                    return result;
+                }
+                catch (Exception e) when (e.IsCancellation() || e.IsRpcCancellation())
+                {
+                    if (_pullMoveNextCts.IsCancellationRequested)
+                    {
+                        // The cancellation token soruce is used up so replace it with a new one for subsequent calls
+                        // and dispose of the the old one.
+                        Interlocked.Exchange(ref _pullMoveNextCts, new CancellationTokenSource());
+                        pullMoveNextCts.Dispose();
+                    }
+                    throw;
+                }
             }
         }
 
@@ -1088,6 +1125,36 @@ public sealed partial class SubscriberClientImpl
             }
         }
 
+        private void DeadStreamWatchdog()
+        {
+            if (_softStopCts.IsCancellationRequested)
+            {
+                return;
+            }
+
+            long nowTicks = _clock.GetCurrentDateTimeUtc().Ticks;
+
+            // These fields are updated by a separate thread so we perform a memory safe read.
+            long lastResponseTicks = Interlocked.Read(ref _lastResponseUtcTicks);
+            long lastPingTicks = Interlocked.Read(ref _lastPingUtcTicks);
+
+            // A stream is considered dead if we are actively waiting for data and either:
+            // 1. The most recent ping has timed out (no response within s_streamPongTimeout).
+            // 2. We missed an entire ping period. This catches the edge case where a newly sent
+            //    ping resets the timeout clock on a connection that is already dead.
+            bool noResponseSinceLastPing = lastPingTicks > lastResponseTicks;
+            bool currentPingTimedOut = noResponseSinceLastPing && nowTicks - lastPingTicks > s_streamPongTimeout.Ticks;
+            bool previousPingTimedOut = lastPingTicks - lastResponseTicks > s_streamPingPeriod.Ticks;
+
+            if (_currentMoveNextTask is { IsCompleted: false } && (currentPingTimedOut || previousPingTimedOut))
+            {
+                _logger?.LogWarning("Dead stream detected for client {index}. Triggering recovery.", _clientIndex);
+                // The stream is unresponsive. Cancelling the MoveNext call triggers recovery in the main event loop.
+                _pullMoveNextCts.Cancel();
+            }
+            Add(_scheduler.Delay(s_deadStreamWatchdogPeriod, _softStopCts.Token), Next(false, DeadStreamWatchdog));
+        }
+
         private void HandleStreamPing()
         {
             // Need to explicitly check this, as the continuation passed to Add() may be executed
@@ -1099,18 +1166,16 @@ public sealed partial class SubscriberClientImpl
             }
             // Schedule next ping, this never stops whilst this subscriber as active
             Add(_scheduler.Delay(s_streamPingPeriod, _softStopCts.Token), Next(false, HandleStreamPing));
-            // If messages are currently being processed, then ping the stream periodically;
-            // this ensures the stream isn't closed.
-            // If the stream is closed, then all gRPC-buffered messages have their server-side
-            // expiry timers started, when the client hasn't yet started processing these messages.
-            // This can lead to unncessarily duplicated messages.
-            if (!IsPushComplete() && _pull != null)
+            // If the stream is open, ping it periodically to ensure it isn't closed by the server
+            // or intermediate infrastructure due to inactivity.
+            if (_pull != null)
             {
                 // Write an empty message to the stream.
                 // Don't wait for this to complete, it doesn't matter if or when it completes.
                 // This is only a best-effort attempt to reduce duplicate messages.
                 try
                 {
+                    Interlocked.Exchange(ref _lastPingUtcTicks, _clock.GetCurrentDateTimeUtc().Ticks);
                     _pull.WriteAsync(new StreamingPullRequest());
                 }
                 catch
