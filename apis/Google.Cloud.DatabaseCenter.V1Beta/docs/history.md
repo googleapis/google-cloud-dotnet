@@ -1,11 +1,5 @@
 # Version history
 
-## Version 1.0.0-beta08, released 2026-05-29
-
-### New features
-
-- Add a AggregateQueryStats  API
-
 ## Version 1.0.0-beta07, released 2026-04-13
 
 ### New features
