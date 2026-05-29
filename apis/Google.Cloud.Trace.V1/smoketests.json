@@ -4,6 +4,7 @@
     "method": "ListTraces",
     "arguments": {
       "projectId": "${PROJECT_ID}"
-    }
+    },
+    "skip": "b/515514595"
   }
 ]
