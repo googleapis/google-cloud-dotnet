@@ -2733,12 +2733,12 @@
         },
         {
             "id": "Google.Cloud.Recommender.V1",
-            "currentVersion": "3.8.0",
+            "currentVersion": "3.9.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T09:27:21.864373495Z",
+            "releaseTimestamp": "2026-05-29T17:06:09.926265942Z",
             "lastGeneratedCommit": "1676bd0af0bf0dee8f9b3855ac6abab7b7a580bc",
-            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "1676bd0af0bf0dee8f9b3855ac6abab7b7a580bc",
             "apiPaths": [
                 "google/cloud/recommender/v1"
             ],

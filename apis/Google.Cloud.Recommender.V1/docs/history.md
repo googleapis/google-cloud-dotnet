@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.9.0, released 2026-05-29
+
+### New features
+
+- Support utilization insights and cloud hub
+
+### Documentation improvements
+
+- Add identifier annotation for field name
+
 ## Version 3.8.0, released 2025-11-06
 
 ### New features
