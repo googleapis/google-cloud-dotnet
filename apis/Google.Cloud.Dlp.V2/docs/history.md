@@ -1,19 +1,5 @@
 # Version history
 
-## Version 4.25.0, released 2026-05-29
-
-### New features
-
-- Supporting Conversation Content Type
-
-### Documentation improvements
-
-- A comment for enum value `INVALID_TRANSFORM` in enum `TransformationResultStatusType` is changed
-- A comment for enum value `BIGQUERY_MAX_ROW_SIZE_EXCEEDED` in enum `TransformationResultStatusType` is changed
-- A comment for enum value `METADATA_UNRETRIEVABLE` in enum `TransformationResultStatusType` is changed
-- A comment for enum value `SUCCESS` in enum `TransformationResultStatusType` is changed
-- A comment for field `profile_table` in message `.google.privacy.dlp.v2.DataProfileAction` is changed
-
 ## Version 4.24.0, released 2026-04-06
 
 ### New features
