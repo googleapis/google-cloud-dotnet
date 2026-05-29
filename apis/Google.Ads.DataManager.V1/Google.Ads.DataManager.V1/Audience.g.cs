@@ -28,32 +28,43 @@ namespace Google.Ads.DataManager.V1 {
             "b29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxGidnb29nbGUvYWRzL2RhdGFtYW5h",
             "Z2VyL3YxL2NvbnNlbnQucHJvdG8aKWdvb2dsZS9hZHMvZGF0YW1hbmFnZXIv",
             "djEvdXNlcl9kYXRhLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
-            "LnByb3RvIqIDCg5BdWRpZW5jZU1lbWJlchIjChZkZXN0aW5hdGlvbl9yZWZl",
-            "cmVuY2VzGAEgAygJQgPgQQESOAoJdXNlcl9kYXRhGAIgASgLMiMuZ29vZ2xl",
-            "LmFkcy5kYXRhbWFuYWdlci52MS5Vc2VyRGF0YUgAEjgKCXBhaXJfZGF0YRgE",
-            "IAEoCzIjLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUGFpckRhdGFIABI8",
-            "Cgttb2JpbGVfZGF0YRgFIAEoCzIlLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
-            "djEuTW9iaWxlRGF0YUgAEj0KDHVzZXJfaWRfZGF0YRgGIAEoCzIlLmdvb2ds",
-            "ZS5hZHMuZGF0YW1hbmFnZXIudjEuVXNlcklkRGF0YUgAEjgKCXBwaWRfZGF0",
-            "YRgHIAEoCzIjLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHBpZERhdGFI",
-            "ABI4Cgdjb25zZW50GAMgASgLMiIuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
-            "MS5Db25zZW50QgPgQQFCBgoEZGF0YSIhCghQYWlyRGF0YRIVCghwYWlyX2lk",
-            "cxgBIAMoCUID4EECIiUKCk1vYmlsZURhdGESFwoKbW9iaWxlX2lkcxgBIAMo",
-            "CUID4EECIiIKClVzZXJJZERhdGESFAoHdXNlcl9pZBgBIAEoCUID4EECIh4K",
-            "CFBwaWREYXRhEhIKBXBwaWRzGAEgAygJQgPgQQJCygEKHWNvbS5nb29nbGUu",
-            "YWRzLmRhdGFtYW5hZ2VyLnYxQg1BdWRpZW5jZVByb3RvUAFaQWNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtk",
-            "YXRhbWFuYWdlcnBiqgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdv",
-            "b2dsZVxBZHNcRGF0YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1h",
-            "bmFnZXI6OlYxYgZwcm90bzM="));
+            "LnByb3RvGhtnb29nbGUvYXBpL2ZpZWxkX2luZm8ucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i5gMKDkF1ZGllbmNlTWVtYmVyEiMK",
+            "FmRlc3RpbmF0aW9uX3JlZmVyZW5jZXMYASADKAlCA+BBARI4Cgl1c2VyX2Rh",
+            "dGEYAiABKAsyIy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlVzZXJEYXRh",
+            "SAASOAoJcGFpcl9kYXRhGAQgASgLMiMuZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
+            "ci52MS5QYWlyRGF0YUgAEjwKC21vYmlsZV9kYXRhGAUgASgLMiUuZ29vZ2xl",
+            "LmFkcy5kYXRhbWFuYWdlci52MS5Nb2JpbGVEYXRhSAASPQoMdXNlcl9pZF9k",
+            "YXRhGAYgASgLMiUuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Vc2VySWRE",
+            "YXRhSAASOAoJcHBpZF9kYXRhGAcgASgLMiMuZ29vZ2xlLmFkcy5kYXRhbWFu",
+            "YWdlci52MS5QcGlkRGF0YUgAEkIKDmNvbXBvc2l0ZV9kYXRhGAggASgLMigu",
+            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Db21wb3NpdGVEYXRhSAASOAoH",
+            "Y29uc2VudBgDIAEoCzIiLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQ29u",
+            "c2VudEID4EEBQgYKBGRhdGEiIQoIUGFpckRhdGESFQoIcGFpcl9pZHMYASAD",
+            "KAlCA+BBAiIlCgpNb2JpbGVEYXRhEhcKCm1vYmlsZV9pZHMYASADKAlCA+BB",
+            "AiIiCgpVc2VySWREYXRhEhQKB3VzZXJfaWQYASABKAlCA+BBAiIeCghQcGlk",
+            "RGF0YRISCgVwcGlkcxgBIAMoCUID4EECIoUBCg1Db21wb3NpdGVEYXRhEjsK",
+            "CXVzZXJfZGF0YRgBIAEoCzIjLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEu",
+            "VXNlckRhdGFCA+BBARI3CgdpcF9kYXRhGAIgAygLMiEuZ29vZ2xlLmFkcy5k",
+            "YXRhbWFuYWdlci52MS5JcERhdGFCA+BBASKhAQoGSXBEYXRhEh8KCmlwX2Fk",
+            "ZHJlc3MYASABKAlCC+BBAuKMz9cIAggEEjsKEm9ic2VydmVfc3RhcnRfdGlt",
+            "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARI5ChBv",
+            "YnNlcnZlX2VuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcEID4EEBQsoBCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUIN",
+            "QXVkaWVuY2VQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5h",
+            "Z2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2ds",
+            "ZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2Vy",
+            "XFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.UserDataReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.UserDataReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AudienceMember), global::Google.Ads.DataManager.V1.AudienceMember.Parser, new[]{ "DestinationReferences", "UserData", "PairData", "MobileData", "UserIdData", "PpidData", "Consent" }, new[]{ "Data" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AudienceMember), global::Google.Ads.DataManager.V1.AudienceMember.Parser, new[]{ "DestinationReferences", "UserData", "PairData", "MobileData", "UserIdData", "PpidData", "CompositeData", "Consent" }, new[]{ "Data" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PairData), global::Google.Ads.DataManager.V1.PairData.Parser, new[]{ "PairIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.MobileData), global::Google.Ads.DataManager.V1.MobileData.Parser, new[]{ "MobileIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.UserIdData), global::Google.Ads.DataManager.V1.UserIdData.Parser, new[]{ "UserId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PpidData), global::Google.Ads.DataManager.V1.PpidData.Parser, new[]{ "Ppids" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PpidData), global::Google.Ads.DataManager.V1.PpidData.Parser, new[]{ "Ppids" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CompositeData), global::Google.Ads.DataManager.V1.CompositeData.Parser, new[]{ "UserData", "IpData" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.IpData), global::Google.Ads.DataManager.V1.IpData.Parser, new[]{ "IpAddress", "ObserveStartTime", "ObserveEndTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -115,6 +126,9 @@ namespace Google.Ads.DataManager.V1 {
           break;
         case DataOneofCase.PpidData:
           PpidData = other.PpidData.Clone();
+          break;
+        case DataOneofCase.CompositeData:
+          CompositeData = other.CompositeData.Clone();
           break;
       }
 
@@ -224,6 +238,21 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "composite_data" field.</summary>
+    public const int CompositeDataFieldNumber = 8;
+    /// <summary>
+    /// Group of multiple identifier types.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.CompositeData CompositeData {
+      get { return dataCase_ == DataOneofCase.CompositeData ? (global::Google.Ads.DataManager.V1.CompositeData) data_ : null; }
+      set {
+        data_ = value;
+        dataCase_ = value == null ? DataOneofCase.None : DataOneofCase.CompositeData;
+      }
+    }
+
     /// <summary>Field number for the "consent" field.</summary>
     public const int ConsentFieldNumber = 3;
     private global::Google.Ads.DataManager.V1.Consent consent_;
@@ -248,6 +277,7 @@ namespace Google.Ads.DataManager.V1 {
       MobileData = 5,
       UserIdData = 6,
       PpidData = 7,
+      CompositeData = 8,
     }
     private DataOneofCase dataCase_ = DataOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -284,6 +314,7 @@ namespace Google.Ads.DataManager.V1 {
       if (!object.Equals(MobileData, other.MobileData)) return false;
       if (!object.Equals(UserIdData, other.UserIdData)) return false;
       if (!object.Equals(PpidData, other.PpidData)) return false;
+      if (!object.Equals(CompositeData, other.CompositeData)) return false;
       if (!object.Equals(Consent, other.Consent)) return false;
       if (DataCase != other.DataCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -299,6 +330,7 @@ namespace Google.Ads.DataManager.V1 {
       if (dataCase_ == DataOneofCase.MobileData) hash ^= MobileData.GetHashCode();
       if (dataCase_ == DataOneofCase.UserIdData) hash ^= UserIdData.GetHashCode();
       if (dataCase_ == DataOneofCase.PpidData) hash ^= PpidData.GetHashCode();
+      if (dataCase_ == DataOneofCase.CompositeData) hash ^= CompositeData.GetHashCode();
       if (consent_ != null) hash ^= Consent.GetHashCode();
       hash ^= (int) dataCase_;
       if (_unknownFields != null) {
@@ -344,6 +376,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(PpidData);
       }
+      if (dataCase_ == DataOneofCase.CompositeData) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CompositeData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -379,6 +415,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(PpidData);
       }
+      if (dataCase_ == DataOneofCase.CompositeData) {
+        output.WriteRawTag(66);
+        output.WriteMessage(CompositeData);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -404,6 +444,9 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (dataCase_ == DataOneofCase.PpidData) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PpidData);
+      }
+      if (dataCase_ == DataOneofCase.CompositeData) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CompositeData);
       }
       if (consent_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Consent);
@@ -457,6 +500,12 @@ namespace Google.Ads.DataManager.V1 {
             PpidData = new global::Google.Ads.DataManager.V1.PpidData();
           }
           PpidData.MergeFrom(other.PpidData);
+          break;
+        case DataOneofCase.CompositeData:
+          if (CompositeData == null) {
+            CompositeData = new global::Google.Ads.DataManager.V1.CompositeData();
+          }
+          CompositeData.MergeFrom(other.CompositeData);
           break;
       }
 
@@ -535,6 +584,15 @@ namespace Google.Ads.DataManager.V1 {
             PpidData = subBuilder;
             break;
           }
+          case 66: {
+            global::Google.Ads.DataManager.V1.CompositeData subBuilder = new global::Google.Ads.DataManager.V1.CompositeData();
+            if (dataCase_ == DataOneofCase.CompositeData) {
+              subBuilder.MergeFrom(CompositeData);
+            }
+            input.ReadMessage(subBuilder);
+            CompositeData = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -608,6 +666,15 @@ namespace Google.Ads.DataManager.V1 {
             }
             input.ReadMessage(subBuilder);
             PpidData = subBuilder;
+            break;
+          }
+          case 66: {
+            global::Google.Ads.DataManager.V1.CompositeData subBuilder = new global::Google.Ads.DataManager.V1.CompositeData();
+            if (dataCase_ == DataOneofCase.CompositeData) {
+              subBuilder.MergeFrom(CompositeData);
+            }
+            input.ReadMessage(subBuilder);
+            CompositeData = subBuilder;
             break;
           }
         }
@@ -1404,6 +1471,556 @@ namespace Google.Ads.DataManager.V1 {
             break;
           case 10: {
             ppids_.AddEntriesFrom(ref input, _repeated_ppids_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Composite data holding identifiers and associated data for a user.
+  /// At least one of `user_data` or `ip_data` is required.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CompositeData : pb::IMessage<CompositeData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CompositeData> _parser = new pb::MessageParser<CompositeData>(() => new CompositeData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CompositeData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.AudienceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompositeData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompositeData(CompositeData other) : this() {
+      userData_ = other.userData_ != null ? other.userData_.Clone() : null;
+      ipData_ = other.ipData_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CompositeData Clone() {
+      return new CompositeData(this);
+    }
+
+    /// <summary>Field number for the "user_data" field.</summary>
+    public const int UserDataFieldNumber = 1;
+    private global::Google.Ads.DataManager.V1.UserData userData_;
+    /// <summary>
+    /// Optional. User-provided data that identifies the user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.UserData UserData {
+      get { return userData_; }
+      set {
+        userData_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ip_data" field.</summary>
+    public const int IpDataFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.IpData> _repeated_ipData_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.DataManager.V1.IpData.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.IpData> ipData_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.IpData>();
+    /// <summary>
+    /// Optional. IP address data representing customer interaction used to build
+    /// the audience.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.IpData> IpData {
+      get { return ipData_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CompositeData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CompositeData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UserData, other.UserData)) return false;
+      if(!ipData_.Equals(other.ipData_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (userData_ != null) hash ^= UserData.GetHashCode();
+      hash ^= ipData_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (userData_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UserData);
+      }
+      ipData_.WriteTo(output, _repeated_ipData_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (userData_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UserData);
+      }
+      ipData_.WriteTo(ref output, _repeated_ipData_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (userData_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserData);
+      }
+      size += ipData_.CalculateSize(_repeated_ipData_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CompositeData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.userData_ != null) {
+        if (userData_ == null) {
+          UserData = new global::Google.Ads.DataManager.V1.UserData();
+        }
+        UserData.MergeFrom(other.UserData);
+      }
+      ipData_.Add(other.ipData_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (userData_ == null) {
+              UserData = new global::Google.Ads.DataManager.V1.UserData();
+            }
+            input.ReadMessage(UserData);
+            break;
+          }
+          case 18: {
+            ipData_.AddEntriesFrom(input, _repeated_ipData_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (userData_ == null) {
+              UserData = new global::Google.Ads.DataManager.V1.UserData();
+            }
+            input.ReadMessage(UserData);
+            break;
+          }
+          case 18: {
+            ipData_.AddEntriesFrom(ref input, _repeated_ipData_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// IP address information for a user.
+  /// We recommend including observe_start_time and observe_end_time to help
+  /// improve Customer Match match rates.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class IpData : pb::IMessage<IpData>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<IpData> _parser = new pb::MessageParser<IpData>(() => new IpData());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<IpData> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.AudienceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IpData() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IpData(IpData other) : this() {
+      ipAddress_ = other.ipAddress_;
+      observeStartTime_ = other.observeStartTime_ != null ? other.observeStartTime_.Clone() : null;
+      observeEndTime_ = other.observeEndTime_ != null ? other.observeEndTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public IpData Clone() {
+      return new IpData(this);
+    }
+
+    /// <summary>Field number for the "ip_address" field.</summary>
+    public const int IpAddressFieldNumber = 1;
+    private string ipAddress_ = "";
+    /// <summary>
+    /// Required. IP address captured at the time of customer interaction.
+    /// Accepts standard string formats for both IPv4 and IPv6.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string IpAddress {
+      get { return ipAddress_; }
+      set {
+        ipAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "observe_start_time" field.</summary>
+    public const int ObserveStartTimeFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp observeStartTime_;
+    /// <summary>
+    /// Optional. First recorded interaction time from this IP address in a
+    /// session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ObserveStartTime {
+      get { return observeStartTime_; }
+      set {
+        observeStartTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "observe_end_time" field.</summary>
+    public const int ObserveEndTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp observeEndTime_;
+    /// <summary>
+    /// Optional. Last recorded interaction time from this IP address in a session.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ObserveEndTime {
+      get { return observeEndTime_; }
+      set {
+        observeEndTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as IpData);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(IpData other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (IpAddress != other.IpAddress) return false;
+      if (!object.Equals(ObserveStartTime, other.ObserveStartTime)) return false;
+      if (!object.Equals(ObserveEndTime, other.ObserveEndTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (IpAddress.Length != 0) hash ^= IpAddress.GetHashCode();
+      if (observeStartTime_ != null) hash ^= ObserveStartTime.GetHashCode();
+      if (observeEndTime_ != null) hash ^= ObserveEndTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(IpAddress);
+      }
+      if (observeStartTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ObserveStartTime);
+      }
+      if (observeEndTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ObserveEndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (IpAddress.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(IpAddress);
+      }
+      if (observeStartTime_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(ObserveStartTime);
+      }
+      if (observeEndTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ObserveEndTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (IpAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(IpAddress);
+      }
+      if (observeStartTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ObserveStartTime);
+      }
+      if (observeEndTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ObserveEndTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(IpData other) {
+      if (other == null) {
+        return;
+      }
+      if (other.IpAddress.Length != 0) {
+        IpAddress = other.IpAddress;
+      }
+      if (other.observeStartTime_ != null) {
+        if (observeStartTime_ == null) {
+          ObserveStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ObserveStartTime.MergeFrom(other.ObserveStartTime);
+      }
+      if (other.observeEndTime_ != null) {
+        if (observeEndTime_ == null) {
+          ObserveEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ObserveEndTime.MergeFrom(other.ObserveEndTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (observeStartTime_ == null) {
+              ObserveStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ObserveStartTime);
+            break;
+          }
+          case 26: {
+            if (observeEndTime_ == null) {
+              ObserveEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ObserveEndTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            IpAddress = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (observeStartTime_ == null) {
+              ObserveStartTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ObserveStartTime);
+            break;
+          }
+          case 26: {
+            if (observeEndTime_ == null) {
+              ObserveEndTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ObserveEndTime);
             break;
           }
         }

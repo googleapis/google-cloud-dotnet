@@ -28,63 +28,69 @@ namespace Google.Ads.DataManager.V1 {
             "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxGilnb29nbGUvYWRzL2RhdGFtYW5hZ2Vy",
             "L3YxL2NhcnRfZGF0YS5wcm90bxonZ29vZ2xlL2Fkcy9kYXRhbWFuYWdlci92",
             "MS9jb25zZW50LnByb3RvGitnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Rl",
-            "dmljZV9pbmZvLnByb3RvGjJnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2V4",
-            "cGVyaW1lbnRhbF9maWVsZC5wcm90bxopZ29vZ2xlL2Fkcy9kYXRhbWFuYWdl",
-            "ci92MS91c2VyX2RhdGEucHJvdG8aL2dvb2dsZS9hZHMvZGF0YW1hbmFnZXIv",
-            "djEvdXNlcl9wcm9wZXJ0aWVzLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
-            "aGF2aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "IsYJCgVFdmVudBIjChZkZXN0aW5hdGlvbl9yZWZlcmVuY2VzGAEgAygJQgPg",
-            "QQESGwoOdHJhbnNhY3Rpb25faWQYAiABKAlCA+BBARI4Cg9ldmVudF90aW1l",
-            "c3RhbXAYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQIS",
-            "PwoWbGFzdF91cGRhdGVkX3RpbWVzdGFtcBgEIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBARI7Cgl1c2VyX2RhdGEYBSABKAsyIy5nb29n",
-            "bGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlVzZXJEYXRhQgPgQQESOAoHY29uc2Vu",
-            "dBgGIAEoCzIiLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQ29uc2VudEID",
-            "4EEBEkUKDmFkX2lkZW50aWZpZXJzGAcgASgLMiguZ29vZ2xlLmFkcy5kYXRh",
-            "bWFuYWdlci52MS5BZElkZW50aWZpZXJzQgPgQQESFQoIY3VycmVuY3kYCCAB",
-            "KAlCA+BBARIiChBjb252ZXJzaW9uX3ZhbHVlGAkgASgBQgPgQQFIAIgBARJB",
-            "CgxldmVudF9zb3VyY2UYCiABKA4yJi5nb29nbGUuYWRzLmRhdGFtYW5hZ2Vy",
-            "LnYxLkV2ZW50U291cmNlQgPgQQESRQoRZXZlbnRfZGV2aWNlX2luZm8YCyAB",
-            "KAsyJS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRldmljZUluZm9CA+BB",
-            "ARI7CgljYXJ0X2RhdGEYDCABKAsyIy5nb29nbGUuYWRzLmRhdGFtYW5hZ2Vy",
-            "LnYxLkNhcnREYXRhQgPgQQESSAoQY3VzdG9tX3ZhcmlhYmxlcxgNIAMoCzIp",
-            "Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQ3VzdG9tVmFyaWFibGVCA+BB",
-            "ARJOChNleHBlcmltZW50YWxfZmllbGRzGA4gAygLMiwuZ29vZ2xlLmFkcy5k",
-            "YXRhbWFuYWdlci52MS5FeHBlcmltZW50YWxGaWVsZEID4EEBEkcKD3VzZXJf",
-            "cHJvcGVydGllcxgPIAEoCzIpLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEu",
-            "VXNlclByb3BlcnRpZXNCA+BBARIXCgpldmVudF9uYW1lGBAgASgJQgPgQQES",
-            "FgoJY2xpZW50X2lkGBEgASgJQgPgQQESFAoHdXNlcl9pZBgSIAEoCUID4EEB",
-            "ElMKG2FkZGl0aW9uYWxfZXZlbnRfcGFyYW1ldGVycxgTIAMoCzIpLmdvb2ds",
-            "ZS5hZHMuZGF0YW1hbmFnZXIudjEuRXZlbnRQYXJhbWV0ZXJCA+BBARJHChV0",
-            "aGlyZF9wYXJ0eV91c2VyX2RhdGEYFCABKAsyIy5nb29nbGUuYWRzLmRhdGFt",
-            "YW5hZ2VyLnYxLlVzZXJEYXRhQgPgQQESRQoOZXZlbnRfbG9jYXRpb24YFSAB",
-            "KAsyKC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkV2ZW50TG9jYXRpb25C",
-            "A+BBARIcCg9hcHBfaW5zdGFuY2VfaWQYFiABKAlCA+BBAUITChFfY29udmVy",
-            "c2lvbl92YWx1ZSLbAQoNQWRJZGVudGlmaWVycxIfChJzZXNzaW9uX2F0dHJp",
-            "YnV0ZXMYASABKAlCA+BBARISCgVnY2xpZBgCIAEoCUID4EEBEhMKBmdicmFp",
-            "ZBgDIAEoCUID4EEBEhMKBndicmFpZBgEIAEoCUID4EEBEkwKGGxhbmRpbmdf",
-            "cGFnZV9kZXZpY2VfaW5mbxgFIAEoCzIlLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
-            "ZXIudjEuRGV2aWNlSW5mb0ID4EEBEh0KEG1vYmlsZV9kZXZpY2VfaWQYBiAB",
-            "KAlCA+BBASJgCg5DdXN0b21WYXJpYWJsZRIVCgh2YXJpYWJsZRgBIAEoCUID",
-            "4EEBEhIKBXZhbHVlGAIgASgJQgPgQQESIwoWZGVzdGluYXRpb25fcmVmZXJl",
-            "bmNlcxgDIAMoCUID4EEBIkEKDkV2ZW50UGFyYW1ldGVyEhsKDnBhcmFtZXRl",
-            "cl9uYW1lGAEgASgJQgPgQQISEgoFdmFsdWUYAiABKAlCA+BBAiKvAQoNRXZl",
-            "bnRMb2NhdGlvbhIVCghzdG9yZV9pZBgBIAEoCUID4EEBEhEKBGNpdHkYAiAB",
-            "KAlCA+BBARIdChBzdWJkaXZpc2lvbl9jb2RlGAMgASgJQgPgQQESGAoLcmVn",
-            "aW9uX2NvZGUYBCABKAlCA+BBARIeChFzdWJjb250aW5lbnRfY29kZRgFIAEo",
-            "CUID4EEBEhsKDmNvbnRpbmVudF9jb2RlGAYgASgJQgPgQQEqbgoLRXZlbnRT",
-            "b3VyY2USHAoYRVZFTlRfU09VUkNFX1VOU1BFQ0lGSUVEEAASBwoDV0VCEAES",
-            "BwoDQVBQEAISDAoISU5fU1RPUkUQAxIJCgVQSE9ORRAEEgsKB01FU1NBR0UQ",
-            "BhIJCgVPVEhFUhAFQscBCh1jb20uZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52",
-            "MUIKRXZlbnRQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5h",
-            "Z2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2ds",
-            "ZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2Vy",
-            "XFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "dmljZV9pbmZvLnByb3RvGjFnb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2Vu",
+            "Y3J5cHRlZF91c2VyX2lkLnByb3RvGjJnb29nbGUvYWRzL2RhdGFtYW5hZ2Vy",
+            "L3YxL2V4cGVyaW1lbnRhbF9maWVsZC5wcm90bxopZ29vZ2xlL2Fkcy9kYXRh",
+            "bWFuYWdlci92MS91c2VyX2RhdGEucHJvdG8aL2dvb2dsZS9hZHMvZGF0YW1h",
+            "bmFnZXIvdjEvdXNlcl9wcm9wZXJ0aWVzLnByb3RvGh9nb29nbGUvYXBpL2Zp",
+            "ZWxkX2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
+            "LnByb3RvIv8JCgVFdmVudBIjChZkZXN0aW5hdGlvbl9yZWZlcmVuY2VzGAEg",
+            "AygJQgPgQQESGwoOdHJhbnNhY3Rpb25faWQYAiABKAlCA+BBARI4Cg9ldmVu",
+            "dF90aW1lc3RhbXAYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQISPwoWbGFzdF91cGRhdGVkX3RpbWVzdGFtcBgEIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBARI7Cgl1c2VyX2RhdGEYBSABKAsy",
+            "Iy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlVzZXJEYXRhQgPgQQESOAoH",
+            "Y29uc2VudBgGIAEoCzIiLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQ29u",
+            "c2VudEID4EEBEkUKDmFkX2lkZW50aWZpZXJzGAcgASgLMiguZ29vZ2xlLmFk",
+            "cy5kYXRhbWFuYWdlci52MS5BZElkZW50aWZpZXJzQgPgQQESFQoIY3VycmVu",
+            "Y3kYCCABKAlCA+BBARIiChBjb252ZXJzaW9uX3ZhbHVlGAkgASgBQgPgQQFI",
+            "AIgBARIiChBjb252ZXJzaW9uX2NvdW50GBcgASgBQgPgQQFIAYgBARJBCgxl",
+            "dmVudF9zb3VyY2UYCiABKA4yJi5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYx",
+            "LkV2ZW50U291cmNlQgPgQQESRQoRZXZlbnRfZGV2aWNlX2luZm8YCyABKAsy",
+            "JS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRldmljZUluZm9CA+BBARI7",
+            "CgljYXJ0X2RhdGEYDCABKAsyIy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYx",
+            "LkNhcnREYXRhQgPgQQESSAoQY3VzdG9tX3ZhcmlhYmxlcxgNIAMoCzIpLmdv",
+            "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuQ3VzdG9tVmFyaWFibGVCA+BBARJO",
+            "ChNleHBlcmltZW50YWxfZmllbGRzGA4gAygLMiwuZ29vZ2xlLmFkcy5kYXRh",
+            "bWFuYWdlci52MS5FeHBlcmltZW50YWxGaWVsZEID4EEBEkcKD3VzZXJfcHJv",
+            "cGVydGllcxgPIAEoCzIpLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuVXNl",
+            "clByb3BlcnRpZXNCA+BBARIXCgpldmVudF9uYW1lGBAgASgJQgPgQQESFgoJ",
+            "Y2xpZW50X2lkGBEgASgJQgPgQQESFAoHdXNlcl9pZBgSIAEoCUID4EEBElMK",
+            "G2FkZGl0aW9uYWxfZXZlbnRfcGFyYW1ldGVycxgTIAMoCzIpLmdvb2dsZS5h",
+            "ZHMuZGF0YW1hbmFnZXIudjEuRXZlbnRQYXJhbWV0ZXJCA+BBARJHChV0aGly",
+            "ZF9wYXJ0eV91c2VyX2RhdGEYFCABKAsyIy5nb29nbGUuYWRzLmRhdGFtYW5h",
+            "Z2VyLnYxLlVzZXJEYXRhQgPgQQESRQoOZXZlbnRfbG9jYXRpb24YFSABKAsy",
+            "KC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkV2ZW50TG9jYXRpb25CA+BB",
+            "ARIcCg9hcHBfaW5zdGFuY2VfaWQYFiABKAlCA+BBAUITChFfY29udmVyc2lv",
+            "bl92YWx1ZUITChFfY29udmVyc2lvbl9jb3VudCLvAgoNQWRJZGVudGlmaWVy",
+            "cxIfChJzZXNzaW9uX2F0dHJpYnV0ZXMYASABKAlCA+BBARISCgVnY2xpZBgC",
+            "IAEoCUID4EEBEhMKBmdicmFpZBgDIAEoCUID4EEBEhMKBndicmFpZBgEIAEo",
+            "CUID4EEBEkwKGGxhbmRpbmdfcGFnZV9kZXZpY2VfaW5mbxgFIAEoCzIlLmdv",
+            "b2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuRGV2aWNlSW5mb0ID4EEBEh0KEG1v",
+            "YmlsZV9kZXZpY2VfaWQYBiABKAlCA+BBARISCgVkY2xpZBgHIAEoCUID4EEB",
+            "EhoKDWltcHJlc3Npb25faWQYCCABKAlCA+BBARIVCghtYXRjaF9pZBgJIAEo",
+            "CUID4EEBEksKEmVuY3J5cHRlZF91c2VyX2lkcxgKIAMoCzIqLmdvb2dsZS5h",
+            "ZHMuZGF0YW1hbmFnZXIudjEuRW5jcnlwdGVkVXNlcklkQgPgQQEiYAoOQ3Vz",
+            "dG9tVmFyaWFibGUSFQoIdmFyaWFibGUYASABKAlCA+BBARISCgV2YWx1ZRgC",
+            "IAEoCUID4EEBEiMKFmRlc3RpbmF0aW9uX3JlZmVyZW5jZXMYAyADKAlCA+BB",
+            "ASJBCg5FdmVudFBhcmFtZXRlchIbCg5wYXJhbWV0ZXJfbmFtZRgBIAEoCUID",
+            "4EECEhIKBXZhbHVlGAIgASgJQgPgQQIirwEKDUV2ZW50TG9jYXRpb24SFQoI",
+            "c3RvcmVfaWQYASABKAlCA+BBARIRCgRjaXR5GAIgASgJQgPgQQESHQoQc3Vi",
+            "ZGl2aXNpb25fY29kZRgDIAEoCUID4EEBEhgKC3JlZ2lvbl9jb2RlGAQgASgJ",
+            "QgPgQQESHgoRc3ViY29udGluZW50X2NvZGUYBSABKAlCA+BBARIbCg5jb250",
+            "aW5lbnRfY29kZRgGIAEoCUID4EEBKm4KC0V2ZW50U291cmNlEhwKGEVWRU5U",
+            "X1NPVVJDRV9VTlNQRUNJRklFRBAAEgcKA1dFQhABEgcKA0FQUBACEgwKCElO",
+            "X1NUT1JFEAMSCQoFUEhPTkUQBBILCgdNRVNTQUdFEAYSCQoFT1RIRVIQBULH",
+            "AQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCCkV2ZW50UHJvdG9Q",
+            "AVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFuYWdlci9hcGl2MS9kYXRh",
+            "bWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29nbGUuQWRzLkRhdGFNYW5h",
+            "Z2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdlclxWMeoCHEdvb2dsZTo6",
+            "QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.CartDataReflection.Descriptor, global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.DeviceInfoReflection.Descriptor, global::Google.Ads.DataManager.V1.ExperimentalFieldReflection.Descriptor, global::Google.Ads.DataManager.V1.UserDataReflection.Descriptor, global::Google.Ads.DataManager.V1.UserPropertiesReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.CartDataReflection.Descriptor, global::Google.Ads.DataManager.V1.ConsentReflection.Descriptor, global::Google.Ads.DataManager.V1.DeviceInfoReflection.Descriptor, global::Google.Ads.DataManager.V1.EncryptedUserIdReflection.Descriptor, global::Google.Ads.DataManager.V1.ExperimentalFieldReflection.Descriptor, global::Google.Ads.DataManager.V1.UserDataReflection.Descriptor, global::Google.Ads.DataManager.V1.UserPropertiesReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.EventSource), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Event), global::Google.Ads.DataManager.V1.Event.Parser, new[]{ "DestinationReferences", "TransactionId", "EventTimestamp", "LastUpdatedTimestamp", "UserData", "Consent", "AdIdentifiers", "Currency", "ConversionValue", "EventSource", "EventDeviceInfo", "CartData", "CustomVariables", "ExperimentalFields", "UserProperties", "EventName", "ClientId", "UserId", "AdditionalEventParameters", "ThirdPartyUserData", "EventLocation", "AppInstanceId" }, new[]{ "ConversionValue" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AdIdentifiers), global::Google.Ads.DataManager.V1.AdIdentifiers.Parser, new[]{ "SessionAttributes", "Gclid", "Gbraid", "Wbraid", "LandingPageDeviceInfo", "MobileDeviceId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.Event), global::Google.Ads.DataManager.V1.Event.Parser, new[]{ "DestinationReferences", "TransactionId", "EventTimestamp", "LastUpdatedTimestamp", "UserData", "Consent", "AdIdentifiers", "Currency", "ConversionValue", "ConversionCount", "EventSource", "EventDeviceInfo", "CartData", "CustomVariables", "ExperimentalFields", "UserProperties", "EventName", "ClientId", "UserId", "AdditionalEventParameters", "ThirdPartyUserData", "EventLocation", "AppInstanceId" }, new[]{ "ConversionValue", "ConversionCount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AdIdentifiers), global::Google.Ads.DataManager.V1.AdIdentifiers.Parser, new[]{ "SessionAttributes", "Gclid", "Gbraid", "Wbraid", "LandingPageDeviceInfo", "MobileDeviceId", "Dclid", "ImpressionId", "MatchId", "EncryptedUserIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CustomVariable), global::Google.Ads.DataManager.V1.CustomVariable.Parser, new[]{ "Variable", "Value", "DestinationReferences" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.EventParameter), global::Google.Ads.DataManager.V1.EventParameter.Parser, new[]{ "ParameterName", "Value" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.EventLocation), global::Google.Ads.DataManager.V1.EventLocation.Parser, new[]{ "StoreId", "City", "SubdivisionCode", "RegionCode", "SubcontinentCode", "ContinentCode" }, null, null, null, null)
@@ -180,6 +186,7 @@ namespace Google.Ads.DataManager.V1 {
       adIdentifiers_ = other.adIdentifiers_ != null ? other.adIdentifiers_.Clone() : null;
       currency_ = other.currency_;
       conversionValue_ = other.conversionValue_;
+      conversionCount_ = other.conversionCount_;
       eventSource_ = other.eventSource_;
       eventDeviceInfo_ = other.eventDeviceInfo_ != null ? other.eventDeviceInfo_.Clone() : null;
       cartData_ = other.cartData_ != null ? other.cartData_.Clone() : null;
@@ -358,6 +365,37 @@ namespace Google.Ads.DataManager.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearConversionValue() {
       _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "conversion_count" field.</summary>
+    public const int ConversionCountFieldNumber = 23;
+    private readonly static double ConversionCountDefaultValue = 0D;
+
+    private double conversionCount_;
+    /// <summary>
+    /// Optional. The conversion quantity associated with the event, for
+    /// counting-based conversions.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ConversionCount {
+      get { if ((_hasBits0 & 2) != 0) { return conversionCount_; } else { return ConversionCountDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        conversionCount_ = value;
+      }
+    }
+    /// <summary>Gets whether the "conversion_count" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasConversionCount {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "conversion_count" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConversionCount() {
+      _hasBits0 &= ~2;
     }
 
     /// <summary>Field number for the "event_source" field.</summary>
@@ -589,6 +627,7 @@ namespace Google.Ads.DataManager.V1 {
       if (!object.Equals(AdIdentifiers, other.AdIdentifiers)) return false;
       if (Currency != other.Currency) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ConversionValue, other.ConversionValue)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ConversionCount, other.ConversionCount)) return false;
       if (EventSource != other.EventSource) return false;
       if (!object.Equals(EventDeviceInfo, other.EventDeviceInfo)) return false;
       if (!object.Equals(CartData, other.CartData)) return false;
@@ -618,6 +657,7 @@ namespace Google.Ads.DataManager.V1 {
       if (adIdentifiers_ != null) hash ^= AdIdentifiers.GetHashCode();
       if (Currency.Length != 0) hash ^= Currency.GetHashCode();
       if (HasConversionValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ConversionValue);
+      if (HasConversionCount) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ConversionCount);
       if (EventSource != global::Google.Ads.DataManager.V1.EventSource.Unspecified) hash ^= EventSource.GetHashCode();
       if (eventDeviceInfo_ != null) hash ^= EventDeviceInfo.GetHashCode();
       if (cartData_ != null) hash ^= CartData.GetHashCode();
@@ -725,6 +765,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(178, 1);
         output.WriteString(AppInstanceId);
       }
+      if (HasConversionCount) {
+        output.WriteRawTag(185, 1);
+        output.WriteDouble(ConversionCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -811,6 +855,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(178, 1);
         output.WriteString(AppInstanceId);
       }
+      if (HasConversionCount) {
+        output.WriteRawTag(185, 1);
+        output.WriteDouble(ConversionCount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -845,6 +893,9 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (HasConversionValue) {
         size += 1 + 8;
+      }
+      if (HasConversionCount) {
+        size += 2 + 8;
       }
       if (EventSource != global::Google.Ads.DataManager.V1.EventSource.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) EventSource);
@@ -930,6 +981,9 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (other.HasConversionValue) {
         ConversionValue = other.ConversionValue;
+      }
+      if (other.HasConversionCount) {
+        ConversionCount = other.ConversionCount;
       }
       if (other.EventSource != global::Google.Ads.DataManager.V1.EventSource.Unspecified) {
         EventSource = other.EventSource;
@@ -1116,6 +1170,10 @@ namespace Google.Ads.DataManager.V1 {
             AppInstanceId = input.ReadString();
             break;
           }
+          case 185: {
+            ConversionCount = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -1253,6 +1311,10 @@ namespace Google.Ads.DataManager.V1 {
             AppInstanceId = input.ReadString();
             break;
           }
+          case 185: {
+            ConversionCount = input.ReadDouble();
+            break;
+          }
         }
       }
     }
@@ -1305,6 +1367,10 @@ namespace Google.Ads.DataManager.V1 {
       wbraid_ = other.wbraid_;
       landingPageDeviceInfo_ = other.landingPageDeviceInfo_ != null ? other.landingPageDeviceInfo_.Clone() : null;
       mobileDeviceId_ = other.mobileDeviceId_;
+      dclid_ = other.dclid_;
+      impressionId_ = other.impressionId_;
+      matchId_ = other.matchId_;
+      encryptedUserIds_ = other.encryptedUserIds_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1408,6 +1474,65 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "dclid" field.</summary>
+    public const int DclidFieldNumber = 7;
+    private string dclid_ = "";
+    /// <summary>
+    /// Optional. The display click ID associated with this event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Dclid {
+      get { return dclid_; }
+      set {
+        dclid_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "impression_id" field.</summary>
+    public const int ImpressionIdFieldNumber = 8;
+    private string impressionId_ = "";
+    /// <summary>
+    /// Optional. The impression ID associated with this event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ImpressionId {
+      get { return impressionId_; }
+      set {
+        impressionId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "match_id" field.</summary>
+    public const int MatchIdFieldNumber = 9;
+    private string matchId_ = "";
+    /// <summary>
+    /// Optional. The match ID field used to join this event with a previous event.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MatchId {
+      get { return matchId_; }
+      set {
+        matchId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "encrypted_user_ids" field.</summary>
+    public const int EncryptedUserIdsFieldNumber = 10;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.EncryptedUserId> _repeated_encryptedUserIds_codec
+        = pb::FieldCodec.ForMessage(82, global::Google.Ads.DataManager.V1.EncryptedUserId.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.EncryptedUserId> encryptedUserIds_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.EncryptedUserId>();
+    /// <summary>
+    /// Optional. Any number of encrypted user IDs.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.EncryptedUserId> EncryptedUserIds {
+      get { return encryptedUserIds_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1429,6 +1554,10 @@ namespace Google.Ads.DataManager.V1 {
       if (Wbraid != other.Wbraid) return false;
       if (!object.Equals(LandingPageDeviceInfo, other.LandingPageDeviceInfo)) return false;
       if (MobileDeviceId != other.MobileDeviceId) return false;
+      if (Dclid != other.Dclid) return false;
+      if (ImpressionId != other.ImpressionId) return false;
+      if (MatchId != other.MatchId) return false;
+      if(!encryptedUserIds_.Equals(other.encryptedUserIds_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1442,6 +1571,10 @@ namespace Google.Ads.DataManager.V1 {
       if (Wbraid.Length != 0) hash ^= Wbraid.GetHashCode();
       if (landingPageDeviceInfo_ != null) hash ^= LandingPageDeviceInfo.GetHashCode();
       if (MobileDeviceId.Length != 0) hash ^= MobileDeviceId.GetHashCode();
+      if (Dclid.Length != 0) hash ^= Dclid.GetHashCode();
+      if (ImpressionId.Length != 0) hash ^= ImpressionId.GetHashCode();
+      if (MatchId.Length != 0) hash ^= MatchId.GetHashCode();
+      hash ^= encryptedUserIds_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1484,6 +1617,19 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(50);
         output.WriteString(MobileDeviceId);
       }
+      if (Dclid.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Dclid);
+      }
+      if (ImpressionId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ImpressionId);
+      }
+      if (MatchId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(MatchId);
+      }
+      encryptedUserIds_.WriteTo(output, _repeated_encryptedUserIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1518,6 +1664,19 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(50);
         output.WriteString(MobileDeviceId);
       }
+      if (Dclid.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Dclid);
+      }
+      if (ImpressionId.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(ImpressionId);
+      }
+      if (MatchId.Length != 0) {
+        output.WriteRawTag(74);
+        output.WriteString(MatchId);
+      }
+      encryptedUserIds_.WriteTo(ref output, _repeated_encryptedUserIds_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1546,6 +1705,16 @@ namespace Google.Ads.DataManager.V1 {
       if (MobileDeviceId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(MobileDeviceId);
       }
+      if (Dclid.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Dclid);
+      }
+      if (ImpressionId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ImpressionId);
+      }
+      if (MatchId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MatchId);
+      }
+      size += encryptedUserIds_.CalculateSize(_repeated_encryptedUserIds_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1579,6 +1748,16 @@ namespace Google.Ads.DataManager.V1 {
       if (other.MobileDeviceId.Length != 0) {
         MobileDeviceId = other.MobileDeviceId;
       }
+      if (other.Dclid.Length != 0) {
+        Dclid = other.Dclid;
+      }
+      if (other.ImpressionId.Length != 0) {
+        ImpressionId = other.ImpressionId;
+      }
+      if (other.MatchId.Length != 0) {
+        MatchId = other.MatchId;
+      }
+      encryptedUserIds_.Add(other.encryptedUserIds_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1625,6 +1804,22 @@ namespace Google.Ads.DataManager.V1 {
             MobileDeviceId = input.ReadString();
             break;
           }
+          case 58: {
+            Dclid = input.ReadString();
+            break;
+          }
+          case 66: {
+            ImpressionId = input.ReadString();
+            break;
+          }
+          case 74: {
+            MatchId = input.ReadString();
+            break;
+          }
+          case 82: {
+            encryptedUserIds_.AddEntriesFrom(input, _repeated_encryptedUserIds_codec);
+            break;
+          }
         }
       }
     #endif
@@ -1669,6 +1864,22 @@ namespace Google.Ads.DataManager.V1 {
           }
           case 50: {
             MobileDeviceId = input.ReadString();
+            break;
+          }
+          case 58: {
+            Dclid = input.ReadString();
+            break;
+          }
+          case 66: {
+            ImpressionId = input.ReadString();
+            break;
+          }
+          case 74: {
+            MatchId = input.ReadString();
+            break;
+          }
+          case 82: {
+            encryptedUserIds_.AddEntriesFrom(ref input, _repeated_encryptedUserIds_codec);
             break;
           }
         }
