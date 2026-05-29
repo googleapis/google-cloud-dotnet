@@ -1,5 +1,24 @@
 # Version history
 
+## Version 3.12.0, released 2026-05-29
+
+### New features
+
+- Expose QueryId on row
+- Add stateless query fast path optimization to ExecuteQuery
+- Add stateless query execution
+- Adding ConfigurationModifier action to CreateModelExtractJobOptions
+- Add JobConfigurationModifier field to JobCreationOptions
+- Add RequestModifier to Create, Get, Patch, Update DatasetOptions
+
+### Bug fixes
+
+- Default UseInt64Timestamp to true
+
+### Documentation improvements
+
+- Document WRITE_TRUNCATE_DATA
+
 ## Version 3.11.0, released 2025-02-03
 
 ### Bug fixes
