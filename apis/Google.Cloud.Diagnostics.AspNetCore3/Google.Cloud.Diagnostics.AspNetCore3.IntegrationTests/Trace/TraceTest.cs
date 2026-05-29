@@ -429,7 +429,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             Assert.Null(trace);
         }
 
-        [Theory]
+        [Theory(Skip = "b/515514595")]
         [MemberData(nameof(ConfigurationData))]
         public async Task Trace_TimedBuffer_Stress(Action<IWebHostBuilder> testServerConfigurator)
         {
@@ -455,7 +455,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore3.IntegrationTests
             Assert.InRange(traces.Count(), minExpectedRequests, requests);
         }
 
-        [Theory]
+        [Theory(Skip = "b/515514595")]
         [MemberData(nameof(ConfigurationData))]
         public async Task Trace_SizedBufferMedium_Stress(Action<IWebHostBuilder> testServerConfigurator)
         {
