@@ -25,104 +25,105 @@ namespace Google.Cloud.Recommender.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBnb29nbGUvY2xvdWQvcmVjb21tZW5kZXIvdjEvcmVjb21tZW5kYXRpb24u",
-            "cHJvdG8SG2dvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MRoZZ29vZ2xlL2Fw",
-            "aS9yZXNvdXJjZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnBy",
-            "b3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJv",
-            "dG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90",
-            "byKiCQoOUmVjb21tZW5kYXRpb24SDAoEbmFtZRgBIAEoCRITCgtkZXNjcmlw",
-            "dGlvbhgCIAEoCRIbChNyZWNvbW1lbmRlcl9zdWJ0eXBlGAwgASgJEjUKEWxh",
-            "c3RfcmVmcmVzaF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
-            "dGFtcBI7Cg5wcmltYXJ5X2ltcGFjdBgFIAEoCzIjLmdvb2dsZS5jbG91ZC5y",
-            "ZWNvbW1lbmRlci52MS5JbXBhY3QSPgoRYWRkaXRpb25hbF9pbXBhY3QYBiAD",
-            "KAsyIy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuSW1wYWN0EkYKCHBy",
-            "aW9yaXR5GBEgASgOMjQuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLlJl",
-            "Y29tbWVuZGF0aW9uLlByaW9yaXR5EkMKB2NvbnRlbnQYByABKAsyMi5nb29n",
-            "bGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVjb21tZW5kYXRpb25Db250ZW50",
-            "EkgKCnN0YXRlX2luZm8YCiABKAsyNC5nb29nbGUuY2xvdWQucmVjb21tZW5k",
-            "ZXIudjEuUmVjb21tZW5kYXRpb25TdGF0ZUluZm8SDAoEZXRhZxgLIAEoCRJZ",
-            "ChNhc3NvY2lhdGVkX2luc2lnaHRzGA4gAygLMjwuZ29vZ2xlLmNsb3VkLnJl",
-            "Y29tbWVuZGVyLnYxLlJlY29tbWVuZGF0aW9uLkluc2lnaHRSZWZlcmVuY2US",
-            "FAoMeG9yX2dyb3VwX2lkGBIgASgJGiMKEEluc2lnaHRSZWZlcmVuY2USDwoH",
-            "aW5zaWdodBgBIAEoCSJECghQcmlvcml0eRIYChRQUklPUklUWV9VTlNQRUNJ",
-            "RklFRBAAEgYKAlA0EAESBgoCUDMQAhIGCgJQMhADEgYKAlAxEAQ62gPqQdYD",
-            "CilyZWNvbW1lbmRlci5nb29nbGVhcGlzLmNvbS9SZWNvbW1lbmRhdGlvbhJj",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlY29t",
+            "cHJvdG8SG2dvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MRofZ29vZ2xlL2Fw",
+            "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
+            "cm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhxnb29nbGUv",
+            "cHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
+            "YW1wLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90byLBCQoOUmVjb21t",
+            "ZW5kYXRpb24SEQoEbmFtZRgBIAEoCUID4EEIEhMKC2Rlc2NyaXB0aW9uGAIg",
+            "ASgJEhsKE3JlY29tbWVuZGVyX3N1YnR5cGUYDCABKAkSNQoRbGFzdF9yZWZy",
+            "ZXNoX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjsK",
+            "DnByaW1hcnlfaW1wYWN0GAUgASgLMiMuZ29vZ2xlLmNsb3VkLnJlY29tbWVu",
+            "ZGVyLnYxLkltcGFjdBI+ChFhZGRpdGlvbmFsX2ltcGFjdBgGIAMoCzIjLmdv",
+            "b2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5JbXBhY3QSRgoIcHJpb3JpdHkY",
+            "ESABKA4yNC5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVjb21tZW5k",
+            "YXRpb24uUHJpb3JpdHkSQwoHY29udGVudBgHIAEoCzIyLmdvb2dsZS5jbG91",
+            "ZC5yZWNvbW1lbmRlci52MS5SZWNvbW1lbmRhdGlvbkNvbnRlbnQSSAoKc3Rh",
+            "dGVfaW5mbxgKIAEoCzI0Lmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5S",
+            "ZWNvbW1lbmRhdGlvblN0YXRlSW5mbxIMCgRldGFnGAsgASgJElkKE2Fzc29j",
+            "aWF0ZWRfaW5zaWdodHMYDiADKAsyPC5nb29nbGUuY2xvdWQucmVjb21tZW5k",
+            "ZXIudjEuUmVjb21tZW5kYXRpb24uSW5zaWdodFJlZmVyZW5jZRIUCgx4b3Jf",
+            "Z3JvdXBfaWQYEiABKAkSGAoQdGFyZ2V0X3Jlc291cmNlcxgTIAMoCRojChBJ",
+            "bnNpZ2h0UmVmZXJlbmNlEg8KB2luc2lnaHQYASABKAkiRAoIUHJpb3JpdHkS",
+            "GAoUUFJJT1JJVFlfVU5TUEVDSUZJRUQQABIGCgJQNBABEgYKAlAzEAISBgoC",
+            "UDIQAxIGCgJQMRAEOtoD6kHWAwopcmVjb21tZW5kZXIuZ29vZ2xlYXBpcy5j",
+            "b20vUmVjb21tZW5kYXRpb24SY3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfS9yZWNv",
+            "bW1lbmRhdGlvbnMve3JlY29tbWVuZGF0aW9ufRJyYmlsbGluZ0FjY291bnRz",
+            "L3tiaWxsaW5nX2FjY291bnR9L2xvY2F0aW9ucy97bG9jYXRpb259L3JlY29t",
             "bWVuZGVycy97cmVjb21tZW5kZXJ9L3JlY29tbWVuZGF0aW9ucy97cmVjb21t",
-            "ZW5kYXRpb259EnJiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRl",
-            "cn0vcmVjb21tZW5kYXRpb25zL3tyZWNvbW1lbmRhdGlvbn0SYWZvbGRlcnMv",
-            "e2ZvbGRlcn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJzL3ty",
-            "ZWNvbW1lbmRlcn0vcmVjb21tZW5kYXRpb25zL3tyZWNvbW1lbmRhdGlvbn0S",
-            "bW9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn0vcmVjb21tZW5kYXRp",
-            "b25zL3tyZWNvbW1lbmRhdGlvbn0iiQEKFVJlY29tbWVuZGF0aW9uQ29udGVu",
-            "dBJFChBvcGVyYXRpb25fZ3JvdXBzGAIgAygLMisuZ29vZ2xlLmNsb3VkLnJl",
-            "Y29tbWVuZGVyLnYxLk9wZXJhdGlvbkdyb3VwEikKCG92ZXJ2aWV3GAMgASgL",
-            "MhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdCJMCg5PcGVyYXRpb25Hcm91cBI6",
-            "CgpvcGVyYXRpb25zGAEgAygLMiYuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVy",
-            "LnYxLk9wZXJhdGlvbiLXBAoJT3BlcmF0aW9uEg4KBmFjdGlvbhgBIAEoCRIV",
-            "Cg1yZXNvdXJjZV90eXBlGAIgASgJEhAKCHJlc291cmNlGAMgASgJEgwKBHBh",
-            "dGgYBCABKAkSFwoPc291cmNlX3Jlc291cmNlGAUgASgJEhMKC3NvdXJjZV9w",
-            "YXRoGAYgASgJEicKBXZhbHVlGAcgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZh",
-            "bHVlSAASQgoNdmFsdWVfbWF0Y2hlchgKIAEoCzIpLmdvb2dsZS5jbG91ZC5y",
-            "ZWNvbW1lbmRlci52MS5WYWx1ZU1hdGNoZXJIABJNCgxwYXRoX2ZpbHRlcnMY",
-            "CCADKAsyNy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuT3BlcmF0aW9u",
-            "LlBhdGhGaWx0ZXJzRW50cnkSWgoTcGF0aF92YWx1ZV9tYXRjaGVycxgLIAMo",
-            "CzI9Lmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5PcGVyYXRpb24uUGF0",
-            "aFZhbHVlTWF0Y2hlcnNFbnRyeRpKChBQYXRoRmlsdGVyc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5WYWx1",
-            "ZToCOAEaYwoWUGF0aFZhbHVlTWF0Y2hlcnNFbnRyeRILCgNrZXkYASABKAkS",
-            "OAoFdmFsdWUYAiABKAsyKS5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEu",
-            "VmFsdWVNYXRjaGVyOgI4AUIMCgpwYXRoX3ZhbHVlIjoKDFZhbHVlTWF0Y2hl",
-            "chIZCg9tYXRjaGVzX3BhdHRlcm4YASABKAlIAEIPCg1tYXRjaF92YXJpYW50",
-            "IpMBCg5Db3N0UHJvamVjdGlvbhIgCgRjb3N0GAEgASgLMhIuZ29vZ2xlLnR5",
-            "cGUuTW9uZXkSKwoIZHVyYXRpb24YAiABKAsyGS5nb29nbGUucHJvdG9idWYu",
-            "RHVyYXRpb24SMgoWY29zdF9pbl9sb2NhbF9jdXJyZW5jeRgDIAEoCzISLmdv",
-            "b2dsZS50eXBlLk1vbmV5Ij4KElNlY3VyaXR5UHJvamVjdGlvbhIoCgdkZXRh",
-            "aWxzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdCJZChhTdXN0YWlu",
-            "YWJpbGl0eVByb2plY3Rpb24SEAoIa2dfY19vMmUYASABKAESKwoIZHVyYXRp",
-            "b24YAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb24i7AEKFVJlbGlh",
-            "YmlsaXR5UHJvamVjdGlvbhJKCgVyaXNrcxgBIAMoDjI7Lmdvb2dsZS5jbG91",
-            "ZC5yZWNvbW1lbmRlci52MS5SZWxpYWJpbGl0eVByb2plY3Rpb24uUmlza1R5",
-            "cGUSKAoHZGV0YWlscxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3Qi",
-            "XQoIUmlza1R5cGUSGQoVUklTS19UWVBFX1VOU1BFQ0lGSUVEEAASFgoSU0VS",
-            "VklDRV9ESVNSVVBUSU9OEAESDQoJREFUQV9MT1NTEAISDwoLQUNDRVNTX0RF",
-            "TlkQAyKoBAoGSW1wYWN0Ej4KCGNhdGVnb3J5GAEgASgOMiwuZ29vZ2xlLmNs",
-            "b3VkLnJlY29tbWVuZGVyLnYxLkltcGFjdC5DYXRlZ29yeRJGCg9jb3N0X3By",
-            "b2plY3Rpb24YZCABKAsyKy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEu",
-            "Q29zdFByb2plY3Rpb25IABJOChNzZWN1cml0eV9wcm9qZWN0aW9uGGUgASgL",
-            "Mi8uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLlNlY3VyaXR5UHJvamVj",
-            "dGlvbkgAEloKGXN1c3RhaW5hYmlsaXR5X3Byb2plY3Rpb24YZiABKAsyNS5n",
-            "b29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuU3VzdGFpbmFiaWxpdHlQcm9q",
-            "ZWN0aW9uSAASVAoWcmVsaWFiaWxpdHlfcHJvamVjdGlvbhhnIAEoCzIyLmdv",
-            "b2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5SZWxpYWJpbGl0eVByb2plY3Rp",
-            "b25IACKFAQoIQ2F0ZWdvcnkSGAoUQ0FURUdPUllfVU5TUEVDSUZJRUQQABII",
-            "CgRDT1NUEAESDAoIU0VDVVJJVFkQAhIPCgtQRVJGT1JNQU5DRRADEhEKDU1B",
-            "TkFHRUFCSUxJVFkQBBISCg5TVVNUQUlOQUJJTElUWRAFEg8KC1JFTElBQklM",
-            "SVRZEAZCDAoKcHJvamVjdGlvbiLeAgoXUmVjb21tZW5kYXRpb25TdGF0ZUlu",
-            "Zm8SSQoFc3RhdGUYASABKA4yOi5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIu",
-            "djEuUmVjb21tZW5kYXRpb25TdGF0ZUluZm8uU3RhdGUSXwoOc3RhdGVfbWV0",
-            "YWRhdGEYAiADKAsyRy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVj",
-            "b21tZW5kYXRpb25TdGF0ZUluZm8uU3RhdGVNZXRhZGF0YUVudHJ5GjQKElN0",
-            "YXRlTWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBImEKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZF",
-            "EAESCwoHQ0xBSU1FRBAGEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxFRBAEEg0K",
-            "CURJU01JU1NFRBAFQt4DCh9jb20uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVy",
-            "LnYxUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28vcmVjb21tZW5kZXIvYXBpdjEv",
-            "cmVjb21tZW5kZXJwYjtyZWNvbW1lbmRlcnBiogIEQ1JFQ6oCG0dvb2dsZS5D",
-            "bG91ZC5SZWNvbW1lbmRlci5WMepBzwIKJnJlY29tbWVuZGVyLmdvb2dsZWFw",
-            "aXMuY29tL1JlY29tbWVuZGVyEkJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn0SUWJp",
-            "bGxpbmdBY2NvdW50cy97YmlsbGluZ19hY2NvdW50fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfRJAZm9sZGVycy97",
-            "Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9yZWNvbW1lbmRlcnMve3Jl",
-            "Y29tbWVuZGVyfRJMb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfWIG",
-            "cHJvdG8z"));
+            "ZW5kYXRpb259EmFmb2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L3JlY29tbWVuZGVycy97cmVjb21tZW5kZXJ9L3JlY29tbWVuZGF0aW9u",
+            "cy97cmVjb21tZW5kYXRpb259Em1vcmdhbml6YXRpb25zL3tvcmdhbml6YXRp",
+            "b259L2xvY2F0aW9ucy97bG9jYXRpb259L3JlY29tbWVuZGVycy97cmVjb21t",
+            "ZW5kZXJ9L3JlY29tbWVuZGF0aW9ucy97cmVjb21tZW5kYXRpb259IokBChVS",
+            "ZWNvbW1lbmRhdGlvbkNvbnRlbnQSRQoQb3BlcmF0aW9uX2dyb3VwcxgCIAMo",
+            "CzIrLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5PcGVyYXRpb25Hcm91",
+            "cBIpCghvdmVydmlldxgDIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3Qi",
+            "TAoOT3BlcmF0aW9uR3JvdXASOgoKb3BlcmF0aW9ucxgBIAMoCzImLmdvb2ds",
+            "ZS5jbG91ZC5yZWNvbW1lbmRlci52MS5PcGVyYXRpb24i1wQKCU9wZXJhdGlv",
+            "bhIOCgZhY3Rpb24YASABKAkSFQoNcmVzb3VyY2VfdHlwZRgCIAEoCRIQCghy",
+            "ZXNvdXJjZRgDIAEoCRIMCgRwYXRoGAQgASgJEhcKD3NvdXJjZV9yZXNvdXJj",
+            "ZRgFIAEoCRITCgtzb3VyY2VfcGF0aBgGIAEoCRInCgV2YWx1ZRgHIAEoCzIW",
+            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZUgAEkIKDXZhbHVlX21hdGNoZXIYCiAB",
+            "KAsyKS5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuVmFsdWVNYXRjaGVy",
+            "SAASTQoMcGF0aF9maWx0ZXJzGAggAygLMjcuZ29vZ2xlLmNsb3VkLnJlY29t",
+            "bWVuZGVyLnYxLk9wZXJhdGlvbi5QYXRoRmlsdGVyc0VudHJ5EloKE3BhdGhf",
+            "dmFsdWVfbWF0Y2hlcnMYCyADKAsyPS5nb29nbGUuY2xvdWQucmVjb21tZW5k",
+            "ZXIudjEuT3BlcmF0aW9uLlBhdGhWYWx1ZU1hdGNoZXJzRW50cnkaSgoQUGF0",
+            "aEZpbHRlcnNFbnRyeRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5n",
+            "b29nbGUucHJvdG9idWYuVmFsdWU6AjgBGmMKFlBhdGhWYWx1ZU1hdGNoZXJz",
+            "RW50cnkSCwoDa2V5GAEgASgJEjgKBXZhbHVlGAIgASgLMikuZ29vZ2xlLmNs",
+            "b3VkLnJlY29tbWVuZGVyLnYxLlZhbHVlTWF0Y2hlcjoCOAFCDAoKcGF0aF92",
+            "YWx1ZSI6CgxWYWx1ZU1hdGNoZXISGQoPbWF0Y2hlc19wYXR0ZXJuGAEgASgJ",
+            "SABCDwoNbWF0Y2hfdmFyaWFudCKTAQoOQ29zdFByb2plY3Rpb24SIAoEY29z",
+            "dBgBIAEoCzISLmdvb2dsZS50eXBlLk1vbmV5EisKCGR1cmF0aW9uGAIgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEjIKFmNvc3RfaW5fbG9jYWxf",
+            "Y3VycmVuY3kYAyABKAsyEi5nb29nbGUudHlwZS5Nb25leSI+ChJTZWN1cml0",
+            "eVByb2plY3Rpb24SKAoHZGV0YWlscxgCIAEoCzIXLmdvb2dsZS5wcm90b2J1",
+            "Zi5TdHJ1Y3QiWQoYU3VzdGFpbmFiaWxpdHlQcm9qZWN0aW9uEhAKCGtnX2Nf",
+            "bzJlGAEgASgBEisKCGR1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
+            "LkR1cmF0aW9uIuwBChVSZWxpYWJpbGl0eVByb2plY3Rpb24SSgoFcmlza3MY",
+            "ASADKA4yOy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVsaWFiaWxp",
+            "dHlQcm9qZWN0aW9uLlJpc2tUeXBlEigKB2RldGFpbHMYAiABKAsyFy5nb29n",
+            "bGUucHJvdG9idWYuU3RydWN0Il0KCFJpc2tUeXBlEhkKFVJJU0tfVFlQRV9V",
+            "TlNQRUNJRklFRBAAEhYKElNFUlZJQ0VfRElTUlVQVElPThABEg0KCURBVEFf",
+            "TE9TUxACEg8KC0FDQ0VTU19ERU5ZEAMiuQQKBkltcGFjdBI+CghjYXRlZ29y",
+            "eRgBIAEoDjIsLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52MS5JbXBhY3Qu",
+            "Q2F0ZWdvcnkSRgoPY29zdF9wcm9qZWN0aW9uGGQgASgLMisuZ29vZ2xlLmNs",
+            "b3VkLnJlY29tbWVuZGVyLnYxLkNvc3RQcm9qZWN0aW9uSAASTgoTc2VjdXJp",
+            "dHlfcHJvamVjdGlvbhhlIAEoCzIvLmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRl",
+            "ci52MS5TZWN1cml0eVByb2plY3Rpb25IABJaChlzdXN0YWluYWJpbGl0eV9w",
+            "cm9qZWN0aW9uGGYgASgLMjUuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYx",
+            "LlN1c3RhaW5hYmlsaXR5UHJvamVjdGlvbkgAElQKFnJlbGlhYmlsaXR5X3By",
+            "b2plY3Rpb24YZyABKAsyMi5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEu",
+            "UmVsaWFiaWxpdHlQcm9qZWN0aW9uSAASDwoHc2VydmljZRgDIAEoCSKFAQoI",
+            "Q2F0ZWdvcnkSGAoUQ0FURUdPUllfVU5TUEVDSUZJRUQQABIICgRDT1NUEAES",
+            "DAoIU0VDVVJJVFkQAhIPCgtQRVJGT1JNQU5DRRADEhEKDU1BTkFHRUFCSUxJ",
+            "VFkQBBISCg5TVVNUQUlOQUJJTElUWRAFEg8KC1JFTElBQklMSVRZEAZCDAoK",
+            "cHJvamVjdGlvbiLeAgoXUmVjb21tZW5kYXRpb25TdGF0ZUluZm8SSQoFc3Rh",
+            "dGUYASABKA4yOi5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVjb21t",
+            "ZW5kYXRpb25TdGF0ZUluZm8uU3RhdGUSXwoOc3RhdGVfbWV0YWRhdGEYAiAD",
+            "KAsyRy5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuUmVjb21tZW5kYXRp",
+            "b25TdGF0ZUluZm8uU3RhdGVNZXRhZGF0YUVudHJ5GjQKElN0YXRlTWV0YWRh",
+            "dGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBImEKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESCwoHQ0xB",
+            "SU1FRBAGEg0KCVNVQ0NFRURFRBADEgoKBkZBSUxFRBAEEg0KCURJU01JU1NF",
+            "RBAFQt4DCh9jb20uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxUAFaQWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vcmVjb21tZW5kZXIvYXBpdjEvcmVjb21tZW5k",
+            "ZXJwYjtyZWNvbW1lbmRlcnBiogIEQ1JFQ6oCG0dvb2dsZS5DbG91ZC5SZWNv",
+            "bW1lbmRlci5WMepBzwIKJnJlY29tbWVuZGVyLmdvb2dsZWFwaXMuY29tL1Jl",
+            "Y29tbWVuZGVyEkJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vcmVjb21tZW5kZXJzL3tyZWNvbW1lbmRlcn0SUWJpbGxpbmdBY2Nv",
+            "dW50cy97YmlsbGluZ19hY2NvdW50fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9y",
+            "ZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfRJAZm9sZGVycy97Zm9sZGVyfS9s",
+            "b2NhdGlvbnMve2xvY2F0aW9ufS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVy",
+            "fRJMb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9yZWNvbW1lbmRlcnMve3JlY29tbWVuZGVyfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation), global::Google.Cloud.Recommender.V1.Recommendation.Parser, new[]{ "Name", "Description", "RecommenderSubtype", "LastRefreshTime", "PrimaryImpact", "AdditionalImpact", "Priority", "Content", "StateInfo", "Etag", "AssociatedInsights", "XorGroupId" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.Recommendation.Types.Priority) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference), global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference.Parser, new[]{ "Insight" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation), global::Google.Cloud.Recommender.V1.Recommendation.Parser, new[]{ "Name", "Description", "RecommenderSubtype", "LastRefreshTime", "PrimaryImpact", "AdditionalImpact", "Priority", "Content", "StateInfo", "Etag", "AssociatedInsights", "XorGroupId", "TargetResources" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.Recommendation.Types.Priority) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference), global::Google.Cloud.Recommender.V1.Recommendation.Types.InsightReference.Parser, new[]{ "Insight" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationContent), global::Google.Cloud.Recommender.V1.RecommendationContent.Parser, new[]{ "OperationGroups", "Overview" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.OperationGroup), global::Google.Cloud.Recommender.V1.OperationGroup.Parser, new[]{ "Operations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Operation), global::Google.Cloud.Recommender.V1.Operation.Parser, new[]{ "Action", "ResourceType", "Resource", "Path", "SourceResource", "SourcePath", "Value", "ValueMatcher", "PathFilters", "PathValueMatchers" }, new[]{ "PathValue" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
@@ -131,7 +132,7 @@ namespace Google.Cloud.Recommender.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.SecurityProjection), global::Google.Cloud.Recommender.V1.SecurityProjection.Parser, new[]{ "Details" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.SustainabilityProjection), global::Google.Cloud.Recommender.V1.SustainabilityProjection.Parser, new[]{ "KgCO2E", "Duration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.ReliabilityProjection), global::Google.Cloud.Recommender.V1.ReliabilityProjection.Parser, new[]{ "Risks", "Details" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.ReliabilityProjection.Types.RiskType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Impact), global::Google.Cloud.Recommender.V1.Impact.Parser, new[]{ "Category", "CostProjection", "SecurityProjection", "SustainabilityProjection", "ReliabilityProjection" }, new[]{ "Projection" }, new[]{ typeof(global::Google.Cloud.Recommender.V1.Impact.Types.Category) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Impact), global::Google.Cloud.Recommender.V1.Impact.Parser, new[]{ "Category", "CostProjection", "SecurityProjection", "SustainabilityProjection", "ReliabilityProjection", "Service" }, new[]{ "Projection" }, new[]{ typeof(global::Google.Cloud.Recommender.V1.Impact.Types.Category) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo), global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Parser, new[]{ "State", "StateMetadata" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.RecommendationStateInfo.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -190,6 +191,7 @@ namespace Google.Cloud.Recommender.V1 {
       etag_ = other.etag_;
       associatedInsights_ = other.associatedInsights_.Clone();
       xorGroupId_ = other.xorGroupId_;
+      targetResources_ = other.targetResources_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -203,7 +205,7 @@ namespace Google.Cloud.Recommender.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Name of recommendation.
+    /// Identifier. Name of recommendation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -394,6 +396,20 @@ namespace Google.Cloud.Recommender.V1 {
       }
     }
 
+    /// <summary>Field number for the "target_resources" field.</summary>
+    public const int TargetResourcesFieldNumber = 19;
+    private static readonly pb::FieldCodec<string> _repeated_targetResources_codec
+        = pb::FieldCodec.ForString(154);
+    private readonly pbc::RepeatedField<string> targetResources_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Fully qualified resource names that this recommendation is targeting.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetResources {
+      get { return targetResources_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -421,6 +437,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (Etag != other.Etag) return false;
       if(!associatedInsights_.Equals(other.associatedInsights_)) return false;
       if (XorGroupId != other.XorGroupId) return false;
+      if(!targetResources_.Equals(other.targetResources_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -440,6 +457,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= associatedInsights_.GetHashCode();
       if (XorGroupId.Length != 0) hash ^= XorGroupId.GetHashCode();
+      hash ^= targetResources_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -500,6 +518,7 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(146, 1);
         output.WriteString(XorGroupId);
       }
+      targetResources_.WriteTo(output, _repeated_targetResources_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -552,6 +571,7 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(146, 1);
         output.WriteString(XorGroupId);
       }
+      targetResources_.WriteTo(ref output, _repeated_targetResources_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -594,6 +614,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (XorGroupId.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(XorGroupId);
       }
+      size += targetResources_.CalculateSize(_repeated_targetResources_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -650,6 +671,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (other.XorGroupId.Length != 0) {
         XorGroupId = other.XorGroupId;
       }
+      targetResources_.Add(other.targetResources_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -729,6 +751,10 @@ namespace Google.Cloud.Recommender.V1 {
             XorGroupId = input.ReadString();
             break;
           }
+          case 154: {
+            targetResources_.AddEntriesFrom(input, _repeated_targetResources_codec);
+            break;
+          }
         }
       }
     #endif
@@ -806,6 +832,10 @@ namespace Google.Cloud.Recommender.V1 {
           }
           case 146: {
             XorGroupId = input.ReadString();
+            break;
+          }
+          case 154: {
+            targetResources_.AddEntriesFrom(ref input, _repeated_targetResources_codec);
             break;
           }
         }
@@ -3495,6 +3525,7 @@ namespace Google.Cloud.Recommender.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Impact(Impact other) : this() {
       category_ = other.category_;
+      service_ = other.service_;
       switch (other.ProjectionCase) {
         case ProjectionOneofCase.CostProjection:
           CostProjection = other.CostProjection.Clone();
@@ -3594,6 +3625,21 @@ namespace Google.Cloud.Recommender.V1 {
       }
     }
 
+    /// <summary>Field number for the "service" field.</summary>
+    public const int ServiceFieldNumber = 3;
+    private string service_ = "";
+    /// <summary>
+    /// The service that this impact is associated with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Service {
+      get { return service_; }
+      set {
+        service_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object projection_;
     /// <summary>Enum of possible cases for the "projection" oneof.</summary>
     public enum ProjectionOneofCase {
@@ -3637,6 +3683,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (!object.Equals(SecurityProjection, other.SecurityProjection)) return false;
       if (!object.Equals(SustainabilityProjection, other.SustainabilityProjection)) return false;
       if (!object.Equals(ReliabilityProjection, other.ReliabilityProjection)) return false;
+      if (Service != other.Service) return false;
       if (ProjectionCase != other.ProjectionCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -3650,6 +3697,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (projectionCase_ == ProjectionOneofCase.SecurityProjection) hash ^= SecurityProjection.GetHashCode();
       if (projectionCase_ == ProjectionOneofCase.SustainabilityProjection) hash ^= SustainabilityProjection.GetHashCode();
       if (projectionCase_ == ProjectionOneofCase.ReliabilityProjection) hash ^= ReliabilityProjection.GetHashCode();
+      if (Service.Length != 0) hash ^= Service.GetHashCode();
       hash ^= (int) projectionCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -3672,6 +3720,10 @@ namespace Google.Cloud.Recommender.V1 {
       if (Category != global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Category);
+      }
+      if (Service.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Service);
       }
       if (projectionCase_ == ProjectionOneofCase.CostProjection) {
         output.WriteRawTag(162, 6);
@@ -3702,6 +3754,10 @@ namespace Google.Cloud.Recommender.V1 {
       if (Category != global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified) {
         output.WriteRawTag(8);
         output.WriteEnum((int) Category);
+      }
+      if (Service.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Service);
       }
       if (projectionCase_ == ProjectionOneofCase.CostProjection) {
         output.WriteRawTag(162, 6);
@@ -3744,6 +3800,9 @@ namespace Google.Cloud.Recommender.V1 {
       if (projectionCase_ == ProjectionOneofCase.ReliabilityProjection) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(ReliabilityProjection);
       }
+      if (Service.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Service);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -3758,6 +3817,9 @@ namespace Google.Cloud.Recommender.V1 {
       }
       if (other.Category != global::Google.Cloud.Recommender.V1.Impact.Types.Category.Unspecified) {
         Category = other.Category;
+      }
+      if (other.Service.Length != 0) {
+        Service = other.Service;
       }
       switch (other.ProjectionCase) {
         case ProjectionOneofCase.CostProjection:
@@ -3807,6 +3869,10 @@ namespace Google.Cloud.Recommender.V1 {
             break;
           case 8: {
             Category = (global::Google.Cloud.Recommender.V1.Impact.Types.Category) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Service = input.ReadString();
             break;
           }
           case 802: {
@@ -3866,6 +3932,10 @@ namespace Google.Cloud.Recommender.V1 {
             break;
           case 8: {
             Category = (global::Google.Cloud.Recommender.V1.Impact.Types.Category) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            Service = input.ReadString();
             break;
           }
           case 802: {
