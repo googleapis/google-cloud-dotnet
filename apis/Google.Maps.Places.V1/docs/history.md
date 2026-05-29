@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta21, released 2026-05-29
+
+### New features
+
+- Add transit_station data to Places API (New)
+
 ## Version 1.0.0-beta20, released 2026-03-23
 
 ### New features
