@@ -6772,7 +6772,7 @@
     },
     {
       "id": "Google.DevicesAndServices.Health.V4",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Google Health",
       "productUrl": "https://developers.google.com/health/api",
