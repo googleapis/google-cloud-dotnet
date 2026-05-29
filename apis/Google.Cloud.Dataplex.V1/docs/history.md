@@ -1,29 +1,5 @@
 # Version history
 
-## Version 3.15.0, released 2026-05-29
-
-### New features
-
-- Add `RequestDataProductAccess` method to request access to `DataAssets` with in a `DataProduct`
-- Add `ApprovalWorkflowService` to manage `ChangeRequest` resource
-- Add `ModifyEntry` method to `CatalogService`
-- Add `UnstructuredDataOptions` message
-- Add `Mode` enum in `DataProfileSpec` message
-- Add `CancelDataScanJob` method to `DataScanService`
-- Add `DataQualityRuleTemplate` message
-
-### Documentation improvements
-
-- A comment for message `Aspect` is changed
-- A comment for field `view` in message `.google.cloud.dataplex.v1.GetEntryRequest` is changed
-- A comment for field `view` in message `.google.cloud.dataplex.v1.LookupEntryRequest` is changed
-- A comment for field `resources` in message `.google.cloud.dataplex.v1.LookupContextRequest` is changed
-- A comment for field `options` in message `.google.cloud.dataplex.v1.LookupContextRequest` is changed
-- A comment for field `context` in message `.google.cloud.dataplex.v1.LookupContextResponse` is changed
-- A comment for field `data_scan_id` in message `.google.cloud.dataplex.v1.CreateDataScanRequest` is changed
-- A comment for message `DataScan` is changed
-- A comment for field `resource` in message `.google.cloud.dataplex.v1.DataSource` is changed
-
 ## Version 3.14.0, released 2026-04-13
 
 ### New features
