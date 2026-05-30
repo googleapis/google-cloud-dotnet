@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.12.0, released 2026-05-29
+
+### New features
+
+- Add allow_requester_specified_not_before_time and requested_not_before_time fields to PrivateCA v1 API
+
+### Documentation improvements
+
+- Update comments for backdate_duration field in CaPool
+- Update comments for parent field in ListCertificatesRequest
+
 ## Version 3.11.0, released 2025-11-06
 
 ### New features
