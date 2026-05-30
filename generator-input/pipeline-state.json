@@ -4772,12 +4772,12 @@
         },
         {
             "id": "Google.Cloud.DatabaseCenter.V1Beta",
-            "currentVersion": "1.0.0-beta07",
+            "currentVersion": "1.0.0-beta08",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-04-13T15:51:17.900931023Z",
+            "releaseTimestamp": "2026-05-30T00:06:27.569781236Z",
             "lastGeneratedCommit": "d4c5fdde3d61752ee3adf63d79b2f0ebe9bb26cc",
-            "lastReleasedCommit": "7f9e9ff15720fac72c4ba3212343ba6e6102c920",
+            "lastReleasedCommit": "d4c5fdde3d61752ee3adf63d79b2f0ebe9bb26cc",
             "apiPaths": [
                 "google/cloud/databasecenter/v1beta"
             ],
