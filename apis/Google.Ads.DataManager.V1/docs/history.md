@@ -1,5 +1,37 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2026-05-30
+
+### New features
+
+- Add encrypted_user_id.proto and the EncryptedUserId resource
+- Add composite_data to AudienceMember to support multiple identifier types
+- Add FLOODLIGHT_CONFIG to the list of destination types
+- Add conversion_count, dclid, impression_id, match_id, and encrypted_user_ids to the Event resource
+- Add new error reasons to ErrorReason for field length, element counts, location detection, and missing insights
+- Add new processing error reasons for ID lookup failures and click attribution
+- Add composite data ingestion and removal statuses to RequestStatusPerDestination
+- Add the coupon_codes field to CartData to track coupon redemptions for Google Ads and Google Analytics
+- Add the ItemCustomVariable resource to track per-item custom variables
+- Add merchant_id, merchant_feed_label, merchant_feed_language_code, conversion_value, and custom_variables fields to Item
+- Add the https://www.googleapis.com/auth/datamanager.partnerlink OAuth scope to PartnerLinkService
+- Add metadata fields to DeviceInfo to provide details about the user’s device
+- Add several new values to the ErrorReason enum to support store sales and Google Analytics validation
+- Add third_party_user_data, event_location, and app_instance_id to Event
+- Add the MESSAGE value to the EventSource enum
+- Add mobile_device_id to AdIdentifiers for Google Analytics
+- Add a processing error reason related to BRAIDs and one-per-click conversions
+- Add youtube_members_count and gmail_members_count fields to the SizeInfo resource
+
+### Documentation improvements
+
+- Update the comment for value FIELD_VALUE_TOO_LONG in enum ErrorReason
+- Update the comment for the `ProcessingErrorReason` enum
+- Update the description of transaction_id in Event to clarify its use for tag and SDK conversions
+- Update the description of enum value for PROCESSING_WARNING_REASON_USER_IDENTIFIER_DECRYPTION_ERROR to resolve typo
+- Update RequestStatus enum value descriptions to include details on error and warning information
+- Clarify population behavior for error_info and warning_info fields in RequestStatusPerDestination
+
 ## Version 1.0.0-beta06, released 2026-03-30
 
 ### New features
