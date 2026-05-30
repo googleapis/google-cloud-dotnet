@@ -5025,12 +5025,12 @@
         },
         {
             "id": "Google.DevicesAndServices.Health.V4",
-            "currentVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta02",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-05-11T17:08:37.925902854Z",
+            "releaseTimestamp": "2026-05-30T00:07:31.212445455Z",
             "lastGeneratedCommit": "8490ca4edad1b34f62b174292264c07607681100",
-            "lastReleasedCommit": "283af41e26f6f394a9bfca7b38ce2e698937c7de",
+            "lastReleasedCommit": "8490ca4edad1b34f62b174292264c07607681100",
             "apiPaths": [
                 "google/devicesandservices/health/v4"
             ],
