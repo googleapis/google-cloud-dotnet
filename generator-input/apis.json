@@ -273,7 +273,7 @@
     },
     {
       "id": "Google.Backstory",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Malachite Common Protos",
       "productUrl": "https://cloud.google.com/chronicle/docs/secops/secops-overview",
