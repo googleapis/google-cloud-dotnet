@@ -2898,12 +2898,12 @@
         },
         {
             "id": "Google.Cloud.Security.PrivateCA.V1",
-            "currentVersion": "3.11.0",
+            "currentVersion": "3.12.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-06T09:40:23.840364689Z",
+            "releaseTimestamp": "2026-05-29T23:58:49.000612106Z",
             "lastGeneratedCommit": "ec2e5108648ebb5ba2f9da69bdb2494e38f734df",
-            "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastReleasedCommit": "ec2e5108648ebb5ba2f9da69bdb2494e38f734df",
             "apiPaths": [
                 "google/cloud/security/privateca/v1"
             ],
