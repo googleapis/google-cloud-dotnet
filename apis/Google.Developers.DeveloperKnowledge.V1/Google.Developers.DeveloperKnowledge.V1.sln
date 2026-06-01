@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Developers.DeveloperKnowledge.V1", "Google.Developers.DeveloperKnowledge.V1\Google.Developers.DeveloperKnowledge.V1.csproj", "{97262973-74E5-866F-06CF-B61429D7DE34}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Developers.DeveloperKnowledge.V1.Snippets", "Google.Developers.DeveloperKnowledge.V1.Snippets\Google.Developers.DeveloperKnowledge.V1.Snippets.csproj", "{39D56D92-BDBB-2C2A-8AF3-00BCA92BB6BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Developers.DeveloperKnowledge.V1.GeneratedSnippets", "Google.Developers.DeveloperKnowledge.V1.GeneratedSnippets\Google.Developers.DeveloperKnowledge.V1.GeneratedSnippets.csproj", "{B77C2217-5DAF-9854-3DEF-F2F8B893AC20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{97262973-74E5-866F-06CF-B61429D7DE34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97262973-74E5-866F-06CF-B61429D7DE34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97262973-74E5-866F-06CF-B61429D7DE34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97262973-74E5-866F-06CF-B61429D7DE34}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39D56D92-BDBB-2C2A-8AF3-00BCA92BB6BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39D56D92-BDBB-2C2A-8AF3-00BCA92BB6BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39D56D92-BDBB-2C2A-8AF3-00BCA92BB6BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39D56D92-BDBB-2C2A-8AF3-00BCA92BB6BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77C2217-5DAF-9854-3DEF-F2F8B893AC20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77C2217-5DAF-9854-3DEF-F2F8B893AC20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77C2217-5DAF-9854-3DEF-F2F8B893AC20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77C2217-5DAF-9854-3DEF-F2F8B893AC20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

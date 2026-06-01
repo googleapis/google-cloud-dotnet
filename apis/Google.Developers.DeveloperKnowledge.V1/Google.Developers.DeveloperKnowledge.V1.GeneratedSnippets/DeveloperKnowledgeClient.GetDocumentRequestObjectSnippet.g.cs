@@ -16,13 +16,12 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async_flattened_resourceNames]
-    using Google.Developers.Knowledge.V1;
-    using System.Threading.Tasks;
+    // [START developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync]
+    using Google.Developers.DeveloperKnowledge.V1;
 
     public sealed partial class GeneratedDeveloperKnowledgeClientSnippets
     {
-        /// <summary>Snippet for GetDocumentAsync</summary>
+        /// <summary>Snippet for GetDocument</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,15 +29,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetDocumentResourceNamesAsync()
+        public void GetDocumentRequestObject()
         {
             // Create client
-            DeveloperKnowledgeClient developerKnowledgeClient = await DeveloperKnowledgeClient.CreateAsync();
+            DeveloperKnowledgeClient developerKnowledgeClient = DeveloperKnowledgeClient.Create();
             // Initialize request argument(s)
-            DocumentName name = DocumentName.FromDocument("[DOCUMENT]");
+            GetDocumentRequest request = new GetDocumentRequest
+            {
+                DocumentName = DocumentName.FromDocument("[DOCUMENT]"),
+                View = DocumentView.Unspecified,
+            };
             // Make the request
-            Document response = await developerKnowledgeClient.GetDocumentAsync(name);
+            Document response = developerKnowledgeClient.GetDocument(request);
         }
     }
-    // [END developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async_flattened_resourceNames]
+    // [END developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync]
 }

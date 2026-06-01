@@ -4996,7 +4996,7 @@
             ]
         },
         {
-            "id": "Google.Developers.Knowledge.V1",
+            "id": "Google.Developers.DeveloperKnowledge.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",

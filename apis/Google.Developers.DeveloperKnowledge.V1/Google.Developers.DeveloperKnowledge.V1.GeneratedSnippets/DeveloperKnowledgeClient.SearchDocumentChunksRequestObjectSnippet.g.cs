@@ -18,7 +18,7 @@ namespace GoogleCSharpSnippets
 {
     // [START developerknowledge_v1_generated_DeveloperKnowledge_SearchDocumentChunks_sync]
     using Google.Api.Gax;
-    using Google.Developers.Knowledge.V1;
+    using Google.Developers.DeveloperKnowledge.V1;
     using System;
 
     public sealed partial class GeneratedDeveloperKnowledgeClientSnippets

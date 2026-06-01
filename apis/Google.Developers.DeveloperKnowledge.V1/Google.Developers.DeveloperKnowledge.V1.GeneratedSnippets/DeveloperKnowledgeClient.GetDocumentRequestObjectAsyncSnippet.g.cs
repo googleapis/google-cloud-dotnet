@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync_flattened]
-    using Google.Developers.Knowledge.V1;
+    // [START developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async]
+    using Google.Developers.DeveloperKnowledge.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedDeveloperKnowledgeClientSnippets
     {
-        /// <summary>Snippet for GetDocument</summary>
+        /// <summary>Snippet for GetDocumentAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,15 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetDocument()
+        public async Task GetDocumentRequestObjectAsync()
         {
             // Create client
-            DeveloperKnowledgeClient developerKnowledgeClient = DeveloperKnowledgeClient.Create();
+            DeveloperKnowledgeClient developerKnowledgeClient = await DeveloperKnowledgeClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "documents/[DOCUMENT]";
+            GetDocumentRequest request = new GetDocumentRequest
+            {
+                DocumentName = DocumentName.FromDocument("[DOCUMENT]"),
+                View = DocumentView.Unspecified,
+            };
             // Make the request
-            Document response = developerKnowledgeClient.GetDocument(name);
+            Document response = await developerKnowledgeClient.GetDocumentAsync(request);
         }
     }
-    // [END developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync_flattened]
+    // [END developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async]
 }

@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START developerknowledge_v1_generated_DeveloperKnowledge_BatchGetDocuments_async]
-    using Google.Developers.Knowledge.V1;
+    // [START developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async_flattened]
+    using Google.Developers.DeveloperKnowledge.V1;
     using System.Threading.Tasks;
 
     public sealed partial class GeneratedDeveloperKnowledgeClientSnippets
     {
-        /// <summary>Snippet for BatchGetDocumentsAsync</summary>
+        /// <summary>Snippet for GetDocumentAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,22 +30,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task BatchGetDocumentsRequestObjectAsync()
+        public async Task GetDocumentAsync()
         {
             // Create client
             DeveloperKnowledgeClient developerKnowledgeClient = await DeveloperKnowledgeClient.CreateAsync();
             // Initialize request argument(s)
-            BatchGetDocumentsRequest request = new BatchGetDocumentsRequest
-            {
-                DocumentNames =
-                {
-                    DocumentName.FromDocument("[DOCUMENT]"),
-                },
-                View = DocumentView.Unspecified,
-            };
+            string name = "documents/[DOCUMENT]";
             // Make the request
-            BatchGetDocumentsResponse response = await developerKnowledgeClient.BatchGetDocumentsAsync(request);
+            Document response = await developerKnowledgeClient.GetDocumentAsync(name);
         }
     }
-    // [END developerknowledge_v1_generated_DeveloperKnowledge_BatchGetDocuments_async]
+    // [END developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_async_flattened]
 }

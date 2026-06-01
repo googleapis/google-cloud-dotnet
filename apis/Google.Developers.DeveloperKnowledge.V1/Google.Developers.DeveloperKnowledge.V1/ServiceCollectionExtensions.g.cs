@@ -16,7 +16,7 @@
 
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
-using gdkv = Google.Developers.Knowledge.V1;
+using gddv = Google.Developers.DeveloperKnowledge.V1;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 using sys = System;
@@ -27,7 +27,7 @@ namespace Microsoft.Extensions.DependencyInjection
     public static partial class ServiceCollectionExtensions
     {
         /// <summary>
-        /// Adds a singleton <see cref="gdkv::DeveloperKnowledgeClient"/> to <paramref name="services"/>.
+        /// Adds a singleton <see cref="gddv::DeveloperKnowledgeClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -36,16 +36,16 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
-        public static IServiceCollection AddDeveloperKnowledgeClient(this IServiceCollection services, sys::Action<gdkv::DeveloperKnowledgeClientBuilder> action = null) =>
+        public static IServiceCollection AddDeveloperKnowledgeClient(this IServiceCollection services, sys::Action<gddv::DeveloperKnowledgeClientBuilder> action = null) =>
             services.AddSingleton(provider =>
             {
-                gdkv::DeveloperKnowledgeClientBuilder builder = new gdkv::DeveloperKnowledgeClientBuilder();
+                gddv::DeveloperKnowledgeClientBuilder builder = new gddv::DeveloperKnowledgeClientBuilder();
                 action?.Invoke(builder);
                 return builder.Build(provider);
             });
 
         /// <summary>
-        /// Adds a singleton <see cref="gdkv::DeveloperKnowledgeClient"/> to <paramref name="services"/>.
+        /// Adds a singleton <see cref="gddv::DeveloperKnowledgeClient"/> to <paramref name="services"/>.
         /// </summary>
         /// <param name="services">
         /// The service collection to add the client to. The services are used to configure the client when requested.
@@ -54,10 +54,10 @@ namespace Microsoft.Extensions.DependencyInjection
         /// An optional action to invoke on the client builder. This is invoked before services from
         /// <paramref name="services"/> are used.
         /// </param>
-        public static IServiceCollection AddDeveloperKnowledgeClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gdkv::DeveloperKnowledgeClientBuilder> action) =>
+        public static IServiceCollection AddDeveloperKnowledgeClient(this IServiceCollection services, sys::Action<sys::IServiceProvider, gddv::DeveloperKnowledgeClientBuilder> action) =>
             services.AddSingleton(provider =>
             {
-                gdkv::DeveloperKnowledgeClientBuilder builder = new gdkv::DeveloperKnowledgeClientBuilder();
+                gddv::DeveloperKnowledgeClientBuilder builder = new gddv::DeveloperKnowledgeClientBuilder();
                 action?.Invoke(provider, builder);
                 return builder.Build(provider);
             });

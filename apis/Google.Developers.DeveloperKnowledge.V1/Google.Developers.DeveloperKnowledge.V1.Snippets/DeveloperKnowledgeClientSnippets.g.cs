@@ -17,7 +17,7 @@
 namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
-    using Google.Developers.Knowledge.V1;
+    using Google.Developers.DeveloperKnowledge.V1;
     using System;
     using System.Threading.Tasks;
 
