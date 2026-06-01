@@ -41,6 +41,8 @@ namespace GoogleCSharpSnippets
                 NodeVersion = "",
                 ImageType = "",
                 Name = "",
+                Image = "",
+                ImageProject = "",
                 Locations = { "", },
                 WorkloadMetadataConfig = new WorkloadMetadataConfig(),
                 UpgradeSettings = new NodePool.Types.UpgradeSettings(),
