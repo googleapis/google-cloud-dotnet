@@ -1,5 +1,17 @@
 # Version history
 
+## Version 3.39.0, released 2026-06-01
+
+### New features
+
+- Add custom node image configuration
+- Add GKE agent sandbox configuration
+- Add Dataplane V2 scalability mode
+
+### Documentation improvements
+
+- Various documentation improvements
+
 ## Version 3.38.0, released 2026-05-18
 
 ### New features
