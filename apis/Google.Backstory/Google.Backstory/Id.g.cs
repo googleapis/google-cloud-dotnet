@@ -31,10 +31,10 @@ namespace Google.Backstory {
             "RVRSWRABEhMKD1JVTEVfREVURUNUSU9OUxACEg0KCVVQUEVSQ0FTRRADEhgK",
             "FE1BQ0hJTkVfSU5URUxMSUdFTkNFEAQSGwoXU0VDVVJJVFlfQ09NTUFORF9D",
             "RU5URVIQBRIPCgtVTlNQRUNJRklFRBAGEg4KClNPQVJfQUxFUlQQBxIPCgtW",
-            "SVJVU19UT1RBTBAIQo0BChRjb20uZ29vZ2xlLmJhY2tzdG9yeVABWjlnb29n",
-            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2JhY2tzdG9yeTti",
-            "YWNrc3RvcnmqAhBHb29nbGUuQmFja3N0b3J5ygIQR29vZ2xlXEJhY2tzdG9y",
-            "eeoCEUdvb2dsZTo6QmFja3N0b3J5YgZwcm90bzM="));
+            "SVJVU19UT1RBTBAIQokBChRjb20uZ29vZ2xlLmJhY2tzdG9yeVABWjVjbG91",
+            "ZC5nb29nbGUuY29tL2dvL2JhY2tzdG9yeS9iYWNrc3RvcnlwYjtiYWNrc3Rv",
+            "cnlwYqoCEEdvb2dsZS5CYWNrc3RvcnnKAhBHb29nbGVcQmFja3N0b3J56gIR",
+            "R29vZ2xlOjpCYWNrc3RvcnliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

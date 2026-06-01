@@ -1166,10 +1166,10 @@ namespace Google.Backstory {
             "Q0lPVVMQARIUChBSRUFTT05fTUFMSUNJT1VTEAISFgoSUkVBU09OX01BSU5U",
             "RU5BTkNFEAMqXgoNVGhyZWF0VmVyZGljdBIeChpUSFJFQVRfVkVSRElDVF9V",
             "TlNQRUNJRklFRBAAEg4KClVOREVURUNURUQQARIOCgpTVVNQSUNJT1VTEAIS",
-            "DQoJTUFMSUNJT1VTEANCjQEKFGNvbS5nb29nbGUuYmFja3N0b3J5UAFaOWdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmFja3N0b3J5",
-            "O2JhY2tzdG9yeaoCEEdvb2dsZS5CYWNrc3RvcnnKAhBHb29nbGVcQmFja3N0",
-            "b3J56gIRR29vZ2xlOjpCYWNrc3RvcnliBnByb3RvMw=="));
+            "DQoJTUFMSUNJT1VTEANCiQEKFGNvbS5nb29nbGUuYmFja3N0b3J5UAFaNWNs",
+            "b3VkLmdvb2dsZS5jb20vZ28vYmFja3N0b3J5L2JhY2tzdG9yeXBiO2JhY2tz",
+            "dG9yeXBiqgIQR29vZ2xlLkJhY2tzdG9yecoCEEdvb2dsZVxCYWNrc3Rvcnnq",
+            "AhFHb29nbGU6OkJhY2tzdG9yeWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Backstory.DataAccessReflection.Descriptor, global::Google.Backstory.EntityRiskReflection.Descriptor, global::Google.Backstory.IdReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Backstory.Verdict), typeof(global::Google.Backstory.Reputation), typeof(global::Google.Backstory.Status), typeof(global::Google.Backstory.Priority), typeof(global::Google.Backstory.Reason), typeof(global::Google.Backstory.ThreatVerdict), }, null, new pbr::GeneratedClrTypeInfo[] {
