@@ -28,7 +28,7 @@ using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
 
-namespace Google.Developers.Knowledge.V1
+namespace Google.Developers.DeveloperKnowledge.V1
 {
     /// <summary>Settings for <see cref="DeveloperKnowledgeClient"/> instances.</summary>
     public sealed partial class DeveloperKnowledgeSettings : gaxgrpc::ServiceSettingsBase

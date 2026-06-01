@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace Google.Developers.Knowledge.V1 {
+namespace Google.Developers.DeveloperKnowledge.V1 {
 
   /// <summary>Holder for reflection information generated from google/developers/knowledge/v1/developerknowledge.proto</summary>
   public static partial class DeveloperknowledgeReflection {
@@ -72,22 +72,23 @@ namespace Google.Developers.Knowledge.V1 {
             "b3dsZWRnZS52MS5CYXRjaEdldERvY3VtZW50c1Jlc3BvbnNlIh6C0+STAhgS",
             "Fi92MS9kb2N1bWVudHM6YmF0Y2hHZXQaVcpBIWRldmVsb3Blcmtub3dsZWRn",
             "ZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvY2xvdWQtcGxhdGZvcm1C3wEKImNvbS5nb29nbGUuZGV2ZWxvcGVy",
+            "L2F1dGgvY2xvdWQtcGxhdGZvcm1CiQIKImNvbS5nb29nbGUuZGV2ZWxvcGVy",
             "cy5rbm93bGVkZ2UudjFCF0RldmVsb3Blcktub3dsZWRnZVByb3RvUAFaR2dv",
             "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2ZWxvcGVy",
-            "cy9rbm93bGVkZ2UvdjE7a25vd2xlZGdlygInR29vZ2xlXERldmVsb3BlcnNc",
-            "RGV2ZWxvcGVyS25vd2xlZGdlXFYx6gIqR29vZ2xlOjpEZXZlbG9wZXJzOjpE",
-            "ZXZlbG9wZXJLbm93bGVkZ2U6OlYxYgZwcm90bzM="));
+            "cy9rbm93bGVkZ2UvdjE7a25vd2xlZGdlqgInR29vZ2xlLkRldmVsb3BlcnMu",
+            "RGV2ZWxvcGVyS25vd2xlZGdlLlYxygInR29vZ2xlXERldmVsb3BlcnNcRGV2",
+            "ZWxvcGVyS25vd2xlZGdlXFYx6gIqR29vZ2xlOjpEZXZlbG9wZXJzOjpEZXZl",
+            "bG9wZXJLbm93bGVkZ2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Developers.Knowledge.V1.DocumentView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.Knowledge.V1.Document), global::Google.Developers.Knowledge.V1.Document.Parser, new[]{ "Name", "Uri", "Content", "Description", "DataSource", "Title", "UpdateTime", "View" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest), global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest.Parser, new[]{ "Query", "PageSize", "PageToken", "Filter" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse), global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse.Parser, new[]{ "Results", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.Knowledge.V1.GetDocumentRequest), global::Google.Developers.Knowledge.V1.GetDocumentRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest), global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest.Parser, new[]{ "Names", "View" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse), global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse.Parser, new[]{ "Documents" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.Knowledge.V1.DocumentChunk), global::Google.Developers.Knowledge.V1.DocumentChunk.Parser, new[]{ "Parent", "Id", "Content", "Document" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Developers.DeveloperKnowledge.V1.DocumentView), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.Document), global::Google.Developers.DeveloperKnowledge.V1.Document.Parser, new[]{ "Name", "Uri", "Content", "Description", "DataSource", "Title", "UpdateTime", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest), global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest.Parser, new[]{ "Query", "PageSize", "PageToken", "Filter" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse), global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse.Parser, new[]{ "Results", "NextPageToken" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest), global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest.Parser, new[]{ "Name", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest), global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest.Parser, new[]{ "Names", "View" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse), global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse.Parser, new[]{ "Documents" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk), global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk.Parser, new[]{ "Parent", "Id", "Content", "Document" }, null, null, null, null)
           }));
     }
     #endregion
@@ -155,7 +156,7 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Developers.Knowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Developers.DeveloperKnowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -304,7 +305,7 @@ namespace Google.Developers.Knowledge.V1 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 8;
-    private global::Google.Developers.Knowledge.V1.DocumentView view_ = global::Google.Developers.Knowledge.V1.DocumentView.Unspecified;
+    private global::Google.Developers.DeveloperKnowledge.V1.DocumentView view_ = global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified;
     /// <summary>
     /// Output only. Specifies the
     /// [DocumentView][google.developers.knowledge.v1.DocumentView] of the
@@ -312,7 +313,7 @@ namespace Google.Developers.Knowledge.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Developers.Knowledge.V1.DocumentView View {
+    public global::Google.Developers.DeveloperKnowledge.V1.DocumentView View {
       get { return view_; }
       set {
         view_ = value;
@@ -356,7 +357,7 @@ namespace Google.Developers.Knowledge.V1 {
       if (DataSource.Length != 0) hash ^= DataSource.GetHashCode();
       if (Title.Length != 0) hash ^= Title.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) hash ^= View.GetHashCode();
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) hash ^= View.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -403,7 +404,7 @@ namespace Google.Developers.Knowledge.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(UpdateTime);
       }
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         output.WriteRawTag(64);
         output.WriteEnum((int) View);
       }
@@ -445,7 +446,7 @@ namespace Google.Developers.Knowledge.V1 {
         output.WriteRawTag(58);
         output.WriteMessage(UpdateTime);
       }
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         output.WriteRawTag(64);
         output.WriteEnum((int) View);
       }
@@ -480,7 +481,7 @@ namespace Google.Developers.Knowledge.V1 {
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
@@ -519,7 +520,7 @@ namespace Google.Developers.Knowledge.V1 {
         }
         UpdateTime.MergeFrom(other.UpdateTime);
       }
-      if (other.View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (other.View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         View = other.View;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -573,7 +574,7 @@ namespace Google.Developers.Knowledge.V1 {
             break;
           }
           case 64: {
-            View = (global::Google.Developers.Knowledge.V1.DocumentView) input.ReadEnum();
+            View = (global::Google.Developers.DeveloperKnowledge.V1.DocumentView) input.ReadEnum();
             break;
           }
         }
@@ -627,7 +628,7 @@ namespace Google.Developers.Knowledge.V1 {
             break;
           }
           case 64: {
-            View = (global::Google.Developers.Knowledge.V1.DocumentView) input.ReadEnum();
+            View = (global::Google.Developers.DeveloperKnowledge.V1.DocumentView) input.ReadEnum();
             break;
           }
         }
@@ -656,7 +657,7 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Developers.Knowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Developers.DeveloperKnowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1030,7 +1031,7 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Developers.Knowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Developers.DeveloperKnowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1063,9 +1064,9 @@ namespace Google.Developers.Knowledge.V1 {
 
     /// <summary>Field number for the "results" field.</summary>
     public const int ResultsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Developers.Knowledge.V1.DocumentChunk> _repeated_results_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Developers.Knowledge.V1.DocumentChunk.Parser);
-    private readonly pbc::RepeatedField<global::Google.Developers.Knowledge.V1.DocumentChunk> results_ = new pbc::RepeatedField<global::Google.Developers.Knowledge.V1.DocumentChunk>();
+    private static readonly pb::FieldCodec<global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk> _repeated_results_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk.Parser);
+    private readonly pbc::RepeatedField<global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk> results_ = new pbc::RepeatedField<global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk>();
     /// <summary>
     /// Contains the search results for the given query. Each
     /// [DocumentChunk][google.developers.knowledge.v1.DocumentChunk] in this list
@@ -1079,7 +1080,7 @@ namespace Google.Developers.Knowledge.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Developers.Knowledge.V1.DocumentChunk> Results {
+    public pbc::RepeatedField<global::Google.Developers.DeveloperKnowledge.V1.DocumentChunk> Results {
       get { return results_; }
     }
 
@@ -1273,7 +1274,7 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Developers.Knowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Developers.DeveloperKnowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1323,7 +1324,7 @@ namespace Google.Developers.Knowledge.V1 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 2;
-    private global::Google.Developers.Knowledge.V1.DocumentView view_ = global::Google.Developers.Knowledge.V1.DocumentView.Unspecified;
+    private global::Google.Developers.DeveloperKnowledge.V1.DocumentView view_ = global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified;
     /// <summary>
     /// Optional. Specifies the
     /// [DocumentView][google.developers.knowledge.v1.DocumentView] of the
@@ -1333,7 +1334,7 @@ namespace Google.Developers.Knowledge.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Developers.Knowledge.V1.DocumentView View {
+    public global::Google.Developers.DeveloperKnowledge.V1.DocumentView View {
       get { return view_; }
       set {
         view_ = value;
@@ -1365,7 +1366,7 @@ namespace Google.Developers.Knowledge.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) hash ^= View.GetHashCode();
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) hash ^= View.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1388,7 +1389,7 @@ namespace Google.Developers.Knowledge.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) View);
       }
@@ -1406,7 +1407,7 @@ namespace Google.Developers.Knowledge.V1 {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) View);
       }
@@ -1423,7 +1424,7 @@ namespace Google.Developers.Knowledge.V1 {
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
@@ -1441,7 +1442,7 @@ namespace Google.Developers.Knowledge.V1 {
       if (other.Name.Length != 0) {
         Name = other.Name;
       }
-      if (other.View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (other.View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         View = other.View;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1468,7 +1469,7 @@ namespace Google.Developers.Knowledge.V1 {
             break;
           }
           case 16: {
-            View = (global::Google.Developers.Knowledge.V1.DocumentView) input.ReadEnum();
+            View = (global::Google.Developers.DeveloperKnowledge.V1.DocumentView) input.ReadEnum();
             break;
           }
         }
@@ -1495,7 +1496,7 @@ namespace Google.Developers.Knowledge.V1 {
             break;
           }
           case 16: {
-            View = (global::Google.Developers.Knowledge.V1.DocumentView) input.ReadEnum();
+            View = (global::Google.Developers.DeveloperKnowledge.V1.DocumentView) input.ReadEnum();
             break;
           }
         }
@@ -1524,7 +1525,7 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Developers.Knowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Developers.DeveloperKnowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1576,7 +1577,7 @@ namespace Google.Developers.Knowledge.V1 {
 
     /// <summary>Field number for the "view" field.</summary>
     public const int ViewFieldNumber = 2;
-    private global::Google.Developers.Knowledge.V1.DocumentView view_ = global::Google.Developers.Knowledge.V1.DocumentView.Unspecified;
+    private global::Google.Developers.DeveloperKnowledge.V1.DocumentView view_ = global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified;
     /// <summary>
     /// Optional. Specifies the
     /// [DocumentView][google.developers.knowledge.v1.DocumentView] of the
@@ -1586,7 +1587,7 @@ namespace Google.Developers.Knowledge.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Developers.Knowledge.V1.DocumentView View {
+    public global::Google.Developers.DeveloperKnowledge.V1.DocumentView View {
       get { return view_; }
       set {
         view_ = value;
@@ -1618,7 +1619,7 @@ namespace Google.Developers.Knowledge.V1 {
     public override int GetHashCode() {
       int hash = 1;
       hash ^= names_.GetHashCode();
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) hash ^= View.GetHashCode();
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) hash ^= View.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1638,7 +1639,7 @@ namespace Google.Developers.Knowledge.V1 {
       output.WriteRawMessage(this);
     #else
       names_.WriteTo(output, _repeated_names_codec);
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) View);
       }
@@ -1653,7 +1654,7 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       names_.WriteTo(ref output, _repeated_names_codec);
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         output.WriteRawTag(16);
         output.WriteEnum((int) View);
       }
@@ -1668,7 +1669,7 @@ namespace Google.Developers.Knowledge.V1 {
     public int CalculateSize() {
       int size = 0;
       size += names_.CalculateSize(_repeated_names_codec);
-      if (View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) View);
       }
       if (_unknownFields != null) {
@@ -1684,7 +1685,7 @@ namespace Google.Developers.Knowledge.V1 {
         return;
       }
       names_.Add(other.names_);
-      if (other.View != global::Google.Developers.Knowledge.V1.DocumentView.Unspecified) {
+      if (other.View != global::Google.Developers.DeveloperKnowledge.V1.DocumentView.Unspecified) {
         View = other.View;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -1711,7 +1712,7 @@ namespace Google.Developers.Knowledge.V1 {
             break;
           }
           case 16: {
-            View = (global::Google.Developers.Knowledge.V1.DocumentView) input.ReadEnum();
+            View = (global::Google.Developers.DeveloperKnowledge.V1.DocumentView) input.ReadEnum();
             break;
           }
         }
@@ -1738,7 +1739,7 @@ namespace Google.Developers.Knowledge.V1 {
             break;
           }
           case 16: {
-            View = (global::Google.Developers.Knowledge.V1.DocumentView) input.ReadEnum();
+            View = (global::Google.Developers.DeveloperKnowledge.V1.DocumentView) input.ReadEnum();
             break;
           }
         }
@@ -1767,7 +1768,7 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Developers.Knowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Developers.DeveloperKnowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1799,15 +1800,15 @@ namespace Google.Developers.Knowledge.V1 {
 
     /// <summary>Field number for the "documents" field.</summary>
     public const int DocumentsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::Google.Developers.Knowledge.V1.Document> _repeated_documents_codec
-        = pb::FieldCodec.ForMessage(10, global::Google.Developers.Knowledge.V1.Document.Parser);
-    private readonly pbc::RepeatedField<global::Google.Developers.Knowledge.V1.Document> documents_ = new pbc::RepeatedField<global::Google.Developers.Knowledge.V1.Document>();
+    private static readonly pb::FieldCodec<global::Google.Developers.DeveloperKnowledge.V1.Document> _repeated_documents_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Developers.DeveloperKnowledge.V1.Document.Parser);
+    private readonly pbc::RepeatedField<global::Google.Developers.DeveloperKnowledge.V1.Document> documents_ = new pbc::RepeatedField<global::Google.Developers.DeveloperKnowledge.V1.Document>();
     /// <summary>
     /// Contains the documents requested.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::Google.Developers.Knowledge.V1.Document> Documents {
+    public pbc::RepeatedField<global::Google.Developers.DeveloperKnowledge.V1.Document> Documents {
       get { return documents_; }
     }
 
@@ -1965,7 +1966,7 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Developers.Knowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Developers.DeveloperKnowledge.V1.DeveloperknowledgeReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2049,7 +2050,7 @@ namespace Google.Developers.Knowledge.V1 {
 
     /// <summary>Field number for the "document" field.</summary>
     public const int DocumentFieldNumber = 4;
-    private global::Google.Developers.Knowledge.V1.Document document_;
+    private global::Google.Developers.DeveloperKnowledge.V1.Document document_;
     /// <summary>
     /// Output only. Represents metadata about the
     /// [Document][google.developers.knowledge.v1.Document] this chunk is from. The
@@ -2068,7 +2069,7 @@ namespace Google.Developers.Knowledge.V1 {
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::Google.Developers.Knowledge.V1.Document Document {
+    public global::Google.Developers.DeveloperKnowledge.V1.Document Document {
       get { return document_; }
       set {
         document_ = value;
@@ -2210,7 +2211,7 @@ namespace Google.Developers.Knowledge.V1 {
       }
       if (other.document_ != null) {
         if (document_ == null) {
-          Document = new global::Google.Developers.Knowledge.V1.Document();
+          Document = new global::Google.Developers.DeveloperKnowledge.V1.Document();
         }
         Document.MergeFrom(other.Document);
       }
@@ -2247,7 +2248,7 @@ namespace Google.Developers.Knowledge.V1 {
           }
           case 34: {
             if (document_ == null) {
-              Document = new global::Google.Developers.Knowledge.V1.Document();
+              Document = new global::Google.Developers.DeveloperKnowledge.V1.Document();
             }
             input.ReadMessage(Document);
             break;
@@ -2285,7 +2286,7 @@ namespace Google.Developers.Knowledge.V1 {
           }
           case 34: {
             if (document_ == null) {
-              Document = new global::Google.Developers.Knowledge.V1.Document();
+              Document = new global::Google.Developers.DeveloperKnowledge.V1.Document();
             }
             input.ReadMessage(Document);
             break;

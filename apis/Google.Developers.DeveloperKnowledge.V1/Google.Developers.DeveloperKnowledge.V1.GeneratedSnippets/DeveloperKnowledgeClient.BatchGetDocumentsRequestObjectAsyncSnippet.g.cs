@@ -16,12 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START developerknowledge_v1_generated_DeveloperKnowledge_BatchGetDocuments_sync]
-    using Google.Developers.Knowledge.V1;
+    // [START developerknowledge_v1_generated_DeveloperKnowledge_BatchGetDocuments_async]
+    using Google.Developers.DeveloperKnowledge.V1;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedDeveloperKnowledgeClientSnippets
     {
-        /// <summary>Snippet for BatchGetDocuments</summary>
+        /// <summary>Snippet for BatchGetDocumentsAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -29,10 +30,10 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void BatchGetDocumentsRequestObject()
+        public async Task BatchGetDocumentsRequestObjectAsync()
         {
             // Create client
-            DeveloperKnowledgeClient developerKnowledgeClient = DeveloperKnowledgeClient.Create();
+            DeveloperKnowledgeClient developerKnowledgeClient = await DeveloperKnowledgeClient.CreateAsync();
             // Initialize request argument(s)
             BatchGetDocumentsRequest request = new BatchGetDocumentsRequest
             {
@@ -43,8 +44,8 @@ namespace GoogleCSharpSnippets
                 View = DocumentView.Unspecified,
             };
             // Make the request
-            BatchGetDocumentsResponse response = developerKnowledgeClient.BatchGetDocuments(request);
+            BatchGetDocumentsResponse response = await developerKnowledgeClient.BatchGetDocumentsAsync(request);
         }
     }
-    // [END developerknowledge_v1_generated_DeveloperKnowledge_BatchGetDocuments_sync]
+    // [END developerknowledge_v1_generated_DeveloperKnowledge_BatchGetDocuments_async]
 }

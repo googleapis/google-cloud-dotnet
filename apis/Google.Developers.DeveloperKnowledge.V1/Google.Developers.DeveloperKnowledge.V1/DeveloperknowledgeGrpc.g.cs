@@ -22,7 +22,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace Google.Developers.Knowledge.V1 {
+namespace Google.Developers.DeveloperKnowledge.V1 {
   /// <summary>
   /// The Developer Knowledge API provides programmatic access to Google's public
   /// developer documentation, enabling you to integrate this knowledge base into
@@ -79,20 +79,20 @@ namespace Google.Developers.Knowledge.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest> __Marshaller_google_developers_knowledge_v1_SearchDocumentChunksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest> __Marshaller_google_developers_knowledge_v1_SearchDocumentChunksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse> __Marshaller_google_developers_knowledge_v1_SearchDocumentChunksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse> __Marshaller_google_developers_knowledge_v1_SearchDocumentChunksResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Developers.Knowledge.V1.GetDocumentRequest> __Marshaller_google_developers_knowledge_v1_GetDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.Knowledge.V1.GetDocumentRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest> __Marshaller_google_developers_knowledge_v1_GetDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Developers.Knowledge.V1.Document> __Marshaller_google_developers_knowledge_v1_Document = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.Knowledge.V1.Document.Parser));
+    static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.Document> __Marshaller_google_developers_knowledge_v1_Document = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.Document.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest> __Marshaller_google_developers_knowledge_v1_BatchGetDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest> __Marshaller_google_developers_knowledge_v1_BatchGetDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse> __Marshaller_google_developers_knowledge_v1_BatchGetDocumentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse.Parser));
+    static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse> __Marshaller_google_developers_knowledge_v1_BatchGetDocumentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse> __Method_SearchDocumentChunks = new grpc::Method<global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse>(
+    static readonly grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse> __Method_SearchDocumentChunks = new grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "SearchDocumentChunks",
@@ -100,7 +100,7 @@ namespace Google.Developers.Knowledge.V1 {
         __Marshaller_google_developers_knowledge_v1_SearchDocumentChunksResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Developers.Knowledge.V1.GetDocumentRequest, global::Google.Developers.Knowledge.V1.Document> __Method_GetDocument = new grpc::Method<global::Google.Developers.Knowledge.V1.GetDocumentRequest, global::Google.Developers.Knowledge.V1.Document>(
+    static readonly grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest, global::Google.Developers.DeveloperKnowledge.V1.Document> __Method_GetDocument = new grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest, global::Google.Developers.DeveloperKnowledge.V1.Document>(
         grpc::MethodType.Unary,
         __ServiceName,
         "GetDocument",
@@ -108,7 +108,7 @@ namespace Google.Developers.Knowledge.V1 {
         __Marshaller_google_developers_knowledge_v1_Document);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest, global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse> __Method_BatchGetDocuments = new grpc::Method<global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest, global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse>(
+    static readonly grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest, global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse> __Method_BatchGetDocuments = new grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest, global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "BatchGetDocuments",
@@ -118,7 +118,7 @@ namespace Google.Developers.Knowledge.V1 {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::Google.Developers.Knowledge.V1.DeveloperknowledgeReflection.Descriptor.Services[0]; }
+      get { return global::Google.Developers.DeveloperKnowledge.V1.DeveloperknowledgeReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Base class for server-side implementations of DeveloperKnowledge</summary>
@@ -143,7 +143,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse> SearchDocumentChunks(global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse> SearchDocumentChunks(global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -155,7 +155,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Developers.Knowledge.V1.Document> GetDocument(global::Google.Developers.Knowledge.V1.GetDocumentRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Developers.DeveloperKnowledge.V1.Document> GetDocument(global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -167,7 +167,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse> BatchGetDocuments(global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse> BatchGetDocuments(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -221,7 +221,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse SearchDocumentChunks(global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse SearchDocumentChunks(global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchDocumentChunks(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -243,7 +243,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse SearchDocumentChunks(global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest request, grpc::CallOptions options)
+      public virtual global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse SearchDocumentChunks(global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_SearchDocumentChunks, null, options, request);
       }
@@ -267,7 +267,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse> SearchDocumentChunksAsync(global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse> SearchDocumentChunksAsync(global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return SearchDocumentChunksAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -289,7 +289,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse> SearchDocumentChunksAsync(global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse> SearchDocumentChunksAsync(global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_SearchDocumentChunks, null, options, request);
       }
@@ -302,7 +302,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Developers.Knowledge.V1.Document GetDocument(global::Google.Developers.Knowledge.V1.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Developers.DeveloperKnowledge.V1.Document GetDocument(global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -313,7 +313,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Developers.Knowledge.V1.Document GetDocument(global::Google.Developers.Knowledge.V1.GetDocumentRequest request, grpc::CallOptions options)
+      public virtual global::Google.Developers.DeveloperKnowledge.V1.Document GetDocument(global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_GetDocument, null, options, request);
       }
@@ -326,7 +326,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Developers.Knowledge.V1.Document> GetDocumentAsync(global::Google.Developers.Knowledge.V1.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Developers.DeveloperKnowledge.V1.Document> GetDocumentAsync(global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return GetDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -337,7 +337,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Developers.Knowledge.V1.Document> GetDocumentAsync(global::Google.Developers.Knowledge.V1.GetDocumentRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Developers.DeveloperKnowledge.V1.Document> GetDocumentAsync(global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetDocument, null, options, request);
       }
@@ -350,7 +350,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse BatchGetDocuments(global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse BatchGetDocuments(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchGetDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -361,7 +361,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The response received from the server.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse BatchGetDocuments(global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest request, grpc::CallOptions options)
+      public virtual global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse BatchGetDocuments(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_BatchGetDocuments, null, options, request);
       }
@@ -374,7 +374,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="cancellationToken">An optional token for canceling the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse> BatchGetDocumentsAsync(global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse> BatchGetDocumentsAsync(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return BatchGetDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
@@ -385,7 +385,7 @@ namespace Google.Developers.Knowledge.V1 {
       /// <param name="options">The options for the call.</param>
       /// <returns>The call object.</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse> BatchGetDocumentsAsync(global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse> BatchGetDocumentsAsync(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchGetDocuments, null, options, request);
       }
@@ -415,9 +415,9 @@ namespace Google.Developers.Knowledge.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, DeveloperKnowledgeBase serviceImpl)
     {
-      serviceBinder.AddMethod(__Method_SearchDocumentChunks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.Knowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.Knowledge.V1.SearchDocumentChunksResponse>(serviceImpl.SearchDocumentChunks));
-      serviceBinder.AddMethod(__Method_GetDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.Knowledge.V1.GetDocumentRequest, global::Google.Developers.Knowledge.V1.Document>(serviceImpl.GetDocument));
-      serviceBinder.AddMethod(__Method_BatchGetDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.Knowledge.V1.BatchGetDocumentsRequest, global::Google.Developers.Knowledge.V1.BatchGetDocumentsResponse>(serviceImpl.BatchGetDocuments));
+      serviceBinder.AddMethod(__Method_SearchDocumentChunks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse>(serviceImpl.SearchDocumentChunks));
+      serviceBinder.AddMethod(__Method_GetDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest, global::Google.Developers.DeveloperKnowledge.V1.Document>(serviceImpl.GetDocument));
+      serviceBinder.AddMethod(__Method_BatchGetDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest, global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse>(serviceImpl.BatchGetDocuments));
     }
 
   }

@@ -16,10 +16,10 @@
 
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
-using gdkv = Google.Developers.Knowledge.V1;
+using gddv = Google.Developers.DeveloperKnowledge.V1;
 using sys = System;
 
-namespace Google.Developers.Knowledge.V1
+namespace Google.Developers.DeveloperKnowledge.V1
 {
     /// <summary>Resource name for the <c>Document</c> resource.</summary>
     public sealed partial class DocumentName : gax::IResourceName, sys::IEquatable<DocumentName>
@@ -230,11 +230,11 @@ namespace Google.Developers.Knowledge.V1
     public partial class Document
     {
         /// <summary>
-        /// <see cref="gdkv::DocumentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gddv::DocumentName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gdkv::DocumentName DocumentName
+        public gddv::DocumentName DocumentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gdkv::DocumentName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gddv::DocumentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
@@ -242,11 +242,11 @@ namespace Google.Developers.Knowledge.V1
     public partial class GetDocumentRequest
     {
         /// <summary>
-        /// <see cref="gdkv::DocumentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// <see cref="gddv::DocumentName"/>-typed view over the <see cref="Name"/> resource name property.
         /// </summary>
-        public gdkv::DocumentName DocumentName
+        public gddv::DocumentName DocumentName
         {
-            get => string.IsNullOrEmpty(Name) ? null : gdkv::DocumentName.Parse(Name, allowUnparsed: true);
+            get => string.IsNullOrEmpty(Name) ? null : gddv::DocumentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

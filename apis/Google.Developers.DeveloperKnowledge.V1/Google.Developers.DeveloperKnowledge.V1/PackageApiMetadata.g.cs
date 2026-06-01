@@ -19,13 +19,13 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gpr = Google.Protobuf.Reflection;
 using scg = System.Collections.Generic;
 
-namespace Google.Developers.Knowledge.V1
+namespace Google.Developers.DeveloperKnowledge.V1
 {
     /// <summary>Static class to provide common access to package-wide API metadata.</summary>
     internal static class PackageApiMetadata
     {
         /// <summary>The <see cref="gaxgrpc::ApiMetadata"/> for services in this package.</summary>
-        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Developers.Knowledge.V1", GetFileDescriptors)
+        internal static gaxgrpc::ApiMetadata ApiMetadata { get; } = new gaxgrpc::ApiMetadata("Google.Developers.DeveloperKnowledge.V1", GetFileDescriptors)
             .WithRequestNumericEnumJsonEncoding(true);
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()

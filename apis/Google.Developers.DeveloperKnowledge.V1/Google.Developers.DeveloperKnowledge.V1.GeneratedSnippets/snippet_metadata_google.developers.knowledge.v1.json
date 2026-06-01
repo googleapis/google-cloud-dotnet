@@ -1,6 +1,6 @@
 {
   "clientLibrary": {
-    "name": "Google.Developers.Knowledge.V1",
+    "name": "Google.Developers.DeveloperKnowledge.V1",
     "language": "C_SHARP",
     "apis": [
       {
@@ -18,10 +18,10 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "SearchDocumentChunks",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.SearchDocumentChunks",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.SearchDocumentChunks",
         "parameters": [
           {
-            "type": "Google.Developers.Knowledge.V1.SearchDocumentChunksRequest",
+            "type": "Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest",
             "name": "request"
           },
           {
@@ -29,10 +29,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Developers.Knowledge.V1.SearchDocumentChunksResponse, Google.Developers.Knowledge.V1.DocumentChunk>",
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse, Google.Developers.DeveloperKnowledge.V1.DocumentChunk>",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "SearchDocumentChunks",
@@ -66,11 +66,11 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "SearchDocumentChunksAsync",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.SearchDocumentChunksAsync",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.SearchDocumentChunksAsync",
         "async": true,
         "parameters": [
           {
-            "type": "Google.Developers.Knowledge.V1.SearchDocumentChunksRequest",
+            "type": "Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest",
             "name": "request"
           },
           {
@@ -78,10 +78,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Developers.Knowledge.V1.SearchDocumentChunksResponse, Google.Developers.Knowledge.V1.DocumentChunk>",
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse, Google.Developers.DeveloperKnowledge.V1.DocumentChunk>",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "SearchDocumentChunks",
@@ -115,10 +115,10 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "GetDocument",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocument",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.GetDocument",
         "parameters": [
           {
-            "type": "Google.Developers.Knowledge.V1.GetDocumentRequest",
+            "type": "Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest",
             "name": "request"
           },
           {
@@ -126,10 +126,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Developers.Knowledge.V1.Document",
+        "resultType": "Google.Developers.DeveloperKnowledge.V1.Document",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "GetDocument",
@@ -163,11 +163,11 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "GetDocumentAsync",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
         "async": true,
         "parameters": [
           {
-            "type": "Google.Developers.Knowledge.V1.GetDocumentRequest",
+            "type": "Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest",
             "name": "request"
           },
           {
@@ -175,10 +175,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Developers.Knowledge.V1.Document>",
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.DeveloperKnowledge.V1.Document>",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "GetDocument",
@@ -212,7 +212,7 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "GetDocument",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocument",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.GetDocument",
         "parameters": [
           {
             "type": "System.String",
@@ -223,10 +223,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Developers.Knowledge.V1.Document",
+        "resultType": "Google.Developers.DeveloperKnowledge.V1.Document",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "GetDocument",
@@ -259,7 +259,7 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "GetDocumentAsync",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
         "async": true,
         "parameters": [
           {
@@ -271,10 +271,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Developers.Knowledge.V1.Document>",
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.DeveloperKnowledge.V1.Document>",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "GetDocument",
@@ -307,10 +307,10 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "GetDocument",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocument",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.GetDocument",
         "parameters": [
           {
-            "type": "Google.Developers.Knowledge.V1.DocumentName",
+            "type": "Google.Developers.DeveloperKnowledge.V1.DocumentName",
             "name": "name"
           },
           {
@@ -318,10 +318,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Developers.Knowledge.V1.Document",
+        "resultType": "Google.Developers.DeveloperKnowledge.V1.Document",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "GetDocument",
@@ -354,11 +354,11 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "GetDocumentAsync",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.GetDocumentAsync",
         "async": true,
         "parameters": [
           {
-            "type": "Google.Developers.Knowledge.V1.DocumentName",
+            "type": "Google.Developers.DeveloperKnowledge.V1.DocumentName",
             "name": "name"
           },
           {
@@ -366,10 +366,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Developers.Knowledge.V1.Document>",
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.DeveloperKnowledge.V1.Document>",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "GetDocument",
@@ -402,10 +402,10 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "BatchGetDocuments",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.BatchGetDocuments",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.BatchGetDocuments",
         "parameters": [
           {
-            "type": "Google.Developers.Knowledge.V1.BatchGetDocumentsRequest",
+            "type": "Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest",
             "name": "request"
           },
           {
@@ -413,10 +413,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "Google.Developers.Knowledge.V1.BatchGetDocumentsResponse",
+        "resultType": "Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "BatchGetDocuments",
@@ -450,11 +450,11 @@
       "language": "C_SHARP",
       "clientMethod": {
         "shortName": "BatchGetDocumentsAsync",
-        "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient.BatchGetDocumentsAsync",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.BatchGetDocumentsAsync",
         "async": true,
         "parameters": [
           {
-            "type": "Google.Developers.Knowledge.V1.BatchGetDocumentsRequest",
+            "type": "Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest",
             "name": "request"
           },
           {
@@ -462,10 +462,10 @@
             "name": "callSettings"
           }
         ],
-        "resultType": "System.Threading.Tasks.Task<Google.Developers.Knowledge.V1.BatchGetDocumentsResponse>",
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse>",
         "client": {
           "shortName": "DeveloperKnowledgeClient",
-          "fullName": "Google.Developers.Knowledge.V1.DeveloperKnowledgeClient"
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
         },
         "method": {
           "shortName": "BatchGetDocuments",

@@ -16,8 +16,8 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync_flattened_resourceNames]
-    using Google.Developers.Knowledge.V1;
+    // [START developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync_flattened]
+    using Google.Developers.DeveloperKnowledge.V1;
 
     public sealed partial class GeneratedDeveloperKnowledgeClientSnippets
     {
@@ -29,15 +29,15 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void GetDocumentResourceNames()
+        public void GetDocument()
         {
             // Create client
             DeveloperKnowledgeClient developerKnowledgeClient = DeveloperKnowledgeClient.Create();
             // Initialize request argument(s)
-            DocumentName name = DocumentName.FromDocument("[DOCUMENT]");
+            string name = "documents/[DOCUMENT]";
             // Make the request
             Document response = developerKnowledgeClient.GetDocument(name);
         }
     }
-    // [END developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync_flattened_resourceNames]
+    // [END developerknowledge_v1_generated_DeveloperKnowledge_GetDocument_sync_flattened]
 }

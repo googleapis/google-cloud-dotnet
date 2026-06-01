@@ -6754,7 +6754,7 @@
       "includeCommonResourcesProto": true
     },
     {
-      "id": "Google.Developers.Knowledge.V1",
+      "id": "Google.Developers.DeveloperKnowledge.V1",
       "version": "1.0.0-beta00",
       "type": "grpc",
       "productName": "Developer Knowledge",
