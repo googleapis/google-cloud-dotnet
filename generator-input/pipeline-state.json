@@ -5059,7 +5059,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-30T00:09:42.459488441Z",
-            "lastGeneratedCommit": "31cd12474afa38f9341410abc0a4514c5f83510f",
+            "lastGeneratedCommit": "96eefa39128a99f4dff4a57a64a1177b858f1b3f",
             "lastReleasedCommit": "31cd12474afa38f9341410abc0a4514c5f83510f",
             "apiPaths": [
                 "backstory"

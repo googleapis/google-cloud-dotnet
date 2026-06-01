@@ -45,10 +45,10 @@ namespace Google.Backstory {
             "bmdlX2VuZF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
             "cBIYChByaXNrX3Njb3JlX2RlbHRhGAIgASgFEhsKE3ByZXZpb3VzX3Jpc2tf",
             "c2NvcmUYAyABKAUSIAoYcmlza19zY29yZV9udW1lcmljX2RlbHRhGAQgASgF",
-            "Qp4BChRjb20uZ29vZ2xlLmJhY2tzdG9yeUIPRW50aXR5Umlza1Byb3RvUAFa",
-            "OWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYmFja3N0",
-            "b3J5O2JhY2tzdG9yeaoCEEdvb2dsZS5CYWNrc3RvcnnKAhBHb29nbGVcQmFj",
-            "a3N0b3J56gIRR29vZ2xlOjpCYWNrc3RvcnliBnByb3RvMw=="));
+            "QpoBChRjb20uZ29vZ2xlLmJhY2tzdG9yeUIPRW50aXR5Umlza1Byb3RvUAFa",
+            "NWNsb3VkLmdvb2dsZS5jb20vZ28vYmFja3N0b3J5L2JhY2tzdG9yeXBiO2Jh",
+            "Y2tzdG9yeXBiqgIQR29vZ2xlLkJhY2tzdG9yecoCEEdvb2dsZVxCYWNrc3Rv",
+            "cnnqAhFHb29nbGU6OkJhY2tzdG9yeWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
