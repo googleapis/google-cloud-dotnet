@@ -1272,7 +1272,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-11T16:33:10.636862606Z",
-            "lastGeneratedCommit": "2db75e6407764fee24d335b4a9759a7529dd3aa9",
+            "lastGeneratedCommit": "169dd3e4b9ca8549c7ac8a513567cc7d4dec7c83",
             "lastReleasedCommit": "2db75e6407764fee24d335b4a9759a7529dd3aa9",
             "apiPaths": [
                 "google/cloud/dataproc/v1"
