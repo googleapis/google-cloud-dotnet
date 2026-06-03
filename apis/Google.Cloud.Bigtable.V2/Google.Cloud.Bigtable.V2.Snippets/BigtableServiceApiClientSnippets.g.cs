@@ -1657,6 +1657,13 @@ namespace GoogleCSharpSnippets
                 },
                 ResumeToken = ByteString.Empty,
                 PreparedQuery = ByteString.Empty,
+                ViewParameters =
+                {
+                    {
+                        "",
+                        new gcbv::Value()
+                    },
+                },
             };
             // Make the request, returning a streaming response
             using gcbv::BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(request);

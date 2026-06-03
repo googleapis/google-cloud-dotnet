@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 Params = { { "", new Value() }, },
                 ResumeToken = ByteString.Empty,
                 PreparedQuery = ByteString.Empty,
+                ViewParameters = { { "", new Value() }, },
             };
             // Make the request, returning a streaming response
             using BigtableServiceApiClient.ExecuteQueryStream response = bigtableServiceApiClient.ExecuteQuery(request);
