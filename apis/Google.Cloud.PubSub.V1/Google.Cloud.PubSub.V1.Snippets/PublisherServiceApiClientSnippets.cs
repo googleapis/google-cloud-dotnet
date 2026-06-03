@@ -100,6 +100,42 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
+        public void CreateTopicWithSMT()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+
+            // Snippet: CreateTopicWithSMT(TopicName,*,*,*,*)
+
+            // Create the javascript UDF. FunctionName and name in the javascript function definition must match
+            JavaScriptUDF javaScriptUDF = new JavaScriptUDF
+            {
+                FunctionName = "process",
+                Code =  "function process(message, metadata) {"
+                    +   "   var data = JSON.parse(message.data);"
+                    +   "   delete data['ssn'];"
+                    +   "   message.data = JSON.stringify(data);"
+                    +   "   return message;"
+                    +   "}"
+            };
+
+            MessageTransform messageTransform = new MessageTransform
+            {
+                JavascriptUdf = javaScriptUDF,
+            };
+
+            Topic createTopicRequest = new Topic
+            {
+                TopicName = new TopicName(projectId, topicId),
+                MessageTransforms = { messageTransform }
+            };
+            Topic topic = PublisherServiceApiClient.Create().CreateTopic(createTopicRequest);
+
+            Console.WriteLine($"Created {topic.Name} with {topic.MessageTransforms.Count} transforms");
+            // End Snippet
+        }
+
+        [Fact]
         public void Publish()
         {
             string projectId = _fixture.ProjectId;

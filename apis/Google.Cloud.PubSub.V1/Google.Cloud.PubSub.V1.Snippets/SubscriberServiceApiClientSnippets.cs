@@ -218,6 +218,49 @@ namespace Google.Cloud.PubSub.V1.Snippets
         }
 
         [Fact]
+        public void CreateSubscriptionWithSMT()
+        {
+            string projectId = _fixture.ProjectId;
+            string topicId = _fixture.CreateTopicId();
+            string subscriptionId = _fixture.CreateSubscriptionId();
+
+            PublisherServiceApiClient.Create().CreateTopic(new TopicName(projectId, topicId));
+
+            // Snippet: CreateSubscriptionWithSMT(SubscriptionName,*,*,*,*)
+            SubscriberServiceApiClient client = SubscriberServiceApiClient.Create();
+
+            // Create the javascript UDF. FunctionName and name in the javascript function definition must match
+            JavaScriptUDF javaScriptUDF = new JavaScriptUDF
+            {
+                FunctionName = "process",
+                Code =  "function process(message, metadata) {"
+                    +   "   var data = JSON.parse(message.data);"
+                    +   "   delete data['ssn'];"
+                    +   "   message.data = JSON.stringify(data);"
+                    +   "   return message;"
+                    +   "}"
+            };
+
+            MessageTransform messageTransform = new MessageTransform
+            {
+                JavascriptUdf = javaScriptUDF,
+            };
+
+            SubscriptionName subscriptionName = new SubscriptionName(projectId, subscriptionId);
+            Subscription createSubscriptionRequest = new Subscription
+            {
+                SubscriptionName = subscriptionName,
+                TopicAsTopicName = new TopicName(projectId, topicId),
+                AckDeadlineSeconds = 60,
+                MessageTransforms = { messageTransform },
+            };
+
+            Subscription subscription = client.CreateSubscription(createSubscriptionRequest);
+            Console.WriteLine($"Created {subscription.Name} with {subscription.MessageTransforms.Count} transforms");
+            // End Snippet
+        }
+
+        [Fact]
         public void Pull()
         {
             string projectId = _fixture.ProjectId;
