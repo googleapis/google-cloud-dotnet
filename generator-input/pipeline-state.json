@@ -3679,7 +3679,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T17:15:31.627748464Z",
-            "lastGeneratedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
+            "lastGeneratedCommit": "54517c18fb174040eb32f7527d0009d89de73a6d",
             "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/workstations/v1"

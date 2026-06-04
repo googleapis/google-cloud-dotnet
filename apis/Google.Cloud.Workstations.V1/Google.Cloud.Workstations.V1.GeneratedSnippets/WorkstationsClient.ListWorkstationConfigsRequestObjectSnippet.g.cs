@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             ListWorkstationConfigsRequest request = new ListWorkstationConfigsRequest
             {
                 ParentAsWorkstationClusterName = WorkstationClusterName.FromProjectLocationWorkstationCluster("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> response = workstationsClient.ListWorkstationConfigs(request);

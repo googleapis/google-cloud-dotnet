@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 WorkstationAsWorkstationName = WorkstationName.FromProjectLocationWorkstationClusterWorkstationConfigWorkstation("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]", "[WORKSTATION_CONFIG]", "[WORKSTATION]"),
                 ExpireTime = new Timestamp(),
+                Port = 0,
             };
             // Make the request
             GenerateAccessTokenResponse response = await workstationsClient.GenerateAccessTokenAsync(request);

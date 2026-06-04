@@ -124,6 +124,7 @@ namespace GoogleCSharpSnippets
             ListWorkstationClustersRequest request = new ListWorkstationClustersRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListWorkstationClustersResponse, WorkstationCluster> response = workstationsClient.ListWorkstationClusters(request);
@@ -172,6 +173,7 @@ namespace GoogleCSharpSnippets
             ListWorkstationClustersRequest request = new ListWorkstationClustersRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListWorkstationClustersResponse, WorkstationCluster> response = workstationsClient.ListWorkstationClustersAsync(request);
@@ -1005,6 +1007,7 @@ namespace GoogleCSharpSnippets
             ListWorkstationConfigsRequest request = new ListWorkstationConfigsRequest
             {
                 ParentAsWorkstationClusterName = WorkstationClusterName.FromProjectLocationWorkstationCluster("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> response = workstationsClient.ListWorkstationConfigs(request);
@@ -1053,6 +1056,7 @@ namespace GoogleCSharpSnippets
             ListWorkstationConfigsRequest request = new ListWorkstationConfigsRequest
             {
                 ParentAsWorkstationClusterName = WorkstationClusterName.FromProjectLocationWorkstationCluster("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListWorkstationConfigsResponse, WorkstationConfig> response = workstationsClient.ListWorkstationConfigsAsync(request);
@@ -2162,6 +2166,7 @@ namespace GoogleCSharpSnippets
             ListWorkstationsRequest request = new ListWorkstationsRequest
             {
                 ParentAsWorkstationConfigName = WorkstationConfigName.FromProjectLocationWorkstationClusterWorkstationConfig("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]", "[WORKSTATION_CONFIG]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListWorkstationsResponse, Workstation> response = workstationsClient.ListWorkstations(request);
@@ -2210,6 +2215,7 @@ namespace GoogleCSharpSnippets
             ListWorkstationsRequest request = new ListWorkstationsRequest
             {
                 ParentAsWorkstationConfigName = WorkstationConfigName.FromProjectLocationWorkstationClusterWorkstationConfig("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]", "[WORKSTATION_CONFIG]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListWorkstationsResponse, Workstation> response = workstationsClient.ListWorkstationsAsync(request);
@@ -3232,6 +3238,7 @@ namespace GoogleCSharpSnippets
                 WorkstationName = WorkstationName.FromProjectLocationWorkstationClusterWorkstationConfigWorkstation("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]", "[WORKSTATION_CONFIG]", "[WORKSTATION]"),
                 ValidateOnly = false,
                 Etag = "",
+                BoostConfig = "",
             };
             // Make the request
             Operation<Workstation, OperationMetadata> response = workstationsClient.StartWorkstation(request);
@@ -3267,6 +3274,7 @@ namespace GoogleCSharpSnippets
                 WorkstationName = WorkstationName.FromProjectLocationWorkstationClusterWorkstationConfigWorkstation("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]", "[WORKSTATION_CONFIG]", "[WORKSTATION]"),
                 ValidateOnly = false,
                 Etag = "",
+                BoostConfig = "",
             };
             // Make the request
             Operation<Workstation, OperationMetadata> response = await workstationsClient.StartWorkstationAsync(request);
@@ -3605,6 +3613,7 @@ namespace GoogleCSharpSnippets
             {
                 WorkstationAsWorkstationName = WorkstationName.FromProjectLocationWorkstationClusterWorkstationConfigWorkstation("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]", "[WORKSTATION_CONFIG]", "[WORKSTATION]"),
                 ExpireTime = new Timestamp(),
+                Port = 0,
             };
             // Make the request
             GenerateAccessTokenResponse response = workstationsClient.GenerateAccessToken(request);
@@ -3623,6 +3632,7 @@ namespace GoogleCSharpSnippets
             {
                 WorkstationAsWorkstationName = WorkstationName.FromProjectLocationWorkstationClusterWorkstationConfigWorkstation("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]", "[WORKSTATION_CONFIG]", "[WORKSTATION]"),
                 ExpireTime = new Timestamp(),
+                Port = 0,
             };
             // Make the request
             GenerateAccessTokenResponse response = await workstationsClient.GenerateAccessTokenAsync(request);

@@ -3,7 +3,7 @@
 //     source: google/cloud/workstations/v1/workstations.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -527,6 +527,8 @@ namespace Google.Cloud.Workstations.V1 {
       /// <summary>
       /// Returns a short-lived credential that can be used to send authenticated and
       /// authorized traffic to a workstation.
+      /// Once generated this token cannot be revoked and is good for the lifetime
+      /// of the token.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1489,6 +1491,8 @@ namespace Google.Cloud.Workstations.V1 {
       /// <summary>
       /// Returns a short-lived credential that can be used to send authenticated and
       /// authorized traffic to a workstation.
+      /// Once generated this token cannot be revoked and is good for the lifetime
+      /// of the token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1503,6 +1507,8 @@ namespace Google.Cloud.Workstations.V1 {
       /// <summary>
       /// Returns a short-lived credential that can be used to send authenticated and
       /// authorized traffic to a workstation.
+      /// Once generated this token cannot be revoked and is good for the lifetime
+      /// of the token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1515,6 +1521,8 @@ namespace Google.Cloud.Workstations.V1 {
       /// <summary>
       /// Returns a short-lived credential that can be used to send authenticated and
       /// authorized traffic to a workstation.
+      /// Once generated this token cannot be revoked and is good for the lifetime
+      /// of the token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1529,6 +1537,8 @@ namespace Google.Cloud.Workstations.V1 {
       /// <summary>
       /// Returns a short-lived credential that can be used to send authenticated and
       /// authorized traffic to a workstation.
+      /// Once generated this token cannot be revoked and is good for the lifetime
+      /// of the token.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
