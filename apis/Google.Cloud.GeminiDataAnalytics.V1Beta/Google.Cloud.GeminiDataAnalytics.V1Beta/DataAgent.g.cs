@@ -29,7 +29,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "Y3MudjFiZXRhGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhln",
             "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGkJnb29nbGUvY2xvdWQvZ2VtaW5p",
             "ZGF0YWFuYWx5dGljcy92MWJldGEvZGF0YV9hbmFseXRpY3NfYWdlbnQucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iowUKCURhdGFB",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i8AUKCURhdGFB",
             "Z2VudBJbChRkYXRhX2FuYWx5dGljc19hZ2VudBhlIAEoCzI7Lmdvb2dsZS5j",
             "bG91ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YS5EYXRhQW5hbHl0aWNz",
             "QWdlbnRIABIUCgRuYW1lGAEgASgJQgbgQQHgQQgSGQoMZGlzcGxheV9uYW1l",
@@ -40,22 +40,24 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "dXBkYXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "QgPgQQMSNAoLZGVsZXRlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9idWYu",
             "VGltZXN0YW1wQgPgQQMSMwoKcHVyZ2VfdGltZRgNIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOooB6kGGAQosZ2VtaW5pZGF0YWFu",
-            "YWx5dGljcy5nb29nbGVhcGlzLmNvbS9EYXRhQWdlbnQSP3Byb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9kYXRhQWdlbnRzL3tkYXRh",
-            "X2FnZW50fSoKZGF0YUFnZW50czIJZGF0YUFnZW50QgYKBHR5cGVCnwIKK2Nv",
-            "bS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGFCDkRh",
-            "dGFBZ2VudFByb3RvUAFaXWNsb3VkLmdvb2dsZS5jb20vZ28vZ2VtaW5pZGF0",
-            "YWFuYWx5dGljcy9hcGl2MWJldGEvZ2VtaW5pZGF0YWFuYWx5dGljc3BiO2dl",
-            "bWluaWRhdGFhbmFseXRpY3NwYqoCJ0dvb2dsZS5DbG91ZC5HZW1pbmlEYXRh",
-            "QW5hbHl0aWNzLlYxQmV0YcoCJ0dvb2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5h",
-            "bHl0aWNzXFYxYmV0YeoCKkdvb2dsZTo6Q2xvdWQ6OkdlbWluaURhdGFBbmFs",
-            "eXRpY3M6OlYxYmV0YWIGcHJvdG8z"));
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI/CgdrbXNfa2V5GA4gASgJQingQQH6",
+            "QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleUgBiAEBGi0K",
+            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6",
+            "igHqQYYBCixnZW1pbmlkYXRhYW5hbHl0aWNzLmdvb2dsZWFwaXMuY29tL0Rh",
+            "dGFBZ2VudBI/cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
+            "b259L2RhdGFBZ2VudHMve2RhdGFfYWdlbnR9KgpkYXRhQWdlbnRzMglkYXRh",
+            "QWdlbnRCBgoEdHlwZUIKCghfa21zX2tleUKfAgorY29tLmdvb2dsZS5jbG91",
+            "ZC5nZW1pbmlkYXRhYW5hbHl0aWNzLnYxYmV0YUIORGF0YUFnZW50UHJvdG9Q",
+            "AVpdY2xvdWQuZ29vZ2xlLmNvbS9nby9nZW1pbmlkYXRhYW5hbHl0aWNzL2Fw",
+            "aXYxYmV0YS9nZW1pbmlkYXRhYW5hbHl0aWNzcGI7Z2VtaW5pZGF0YWFuYWx5",
+            "dGljc3BiqgInR29vZ2xlLkNsb3VkLkdlbWluaURhdGFBbmFseXRpY3MuVjFC",
+            "ZXRhygInR29vZ2xlXENsb3VkXEdlbWluaURhdGFBbmFseXRpY3NcVjFiZXRh",
+            "6gIqR29vZ2xlOjpDbG91ZDo6R2VtaW5pRGF0YUFuYWx5dGljczo6VjFiZXRh",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAnalyticsAgentReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent.Parser, new[]{ "DataAnalyticsAgent", "Name", "DisplayName", "Description", "Labels", "CreateTime", "UpdateTime", "DeleteTime", "PurgeTime" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent), global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAgent.Parser, new[]{ "DataAnalyticsAgent", "Name", "DisplayName", "Description", "Labels", "CreateTime", "UpdateTime", "DeleteTime", "PurgeTime", "KmsKey" }, new[]{ "Type", "KmsKey" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -108,6 +110,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
       purgeTime_ = other.purgeTime_ != null ? other.purgeTime_.Clone() : null;
+      kmsKey_ = other.kmsKey_;
       switch (other.TypeCase) {
         case TypeOneofCase.DataAnalyticsAgent:
           DataAnalyticsAgent = other.DataAnalyticsAgent.Clone();
@@ -279,6 +282,38 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "kms_key" field.</summary>
+    public const int KmsKeyFieldNumber = 14;
+    private readonly static string KmsKeyDefaultValue = "";
+
+    private string kmsKey_;
+    /// <summary>
+    /// Optional. Customer managed encryption key (CMEK) to use for encrypting the
+    /// DataAgent resources. Cloud KMS CryptoKeys must reside in the same location
+    /// as the DataAgent. The expected format is
+    /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKey {
+      get { return kmsKey_ ?? KmsKeyDefaultValue; }
+      set {
+        kmsKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "kms_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKmsKey {
+      get { return kmsKey_ != null; }
+    }
+    /// <summary>Clears the value of the "kms_key" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKmsKey() {
+      kmsKey_ = null;
+    }
+
     private object type_;
     /// <summary>Enum of possible cases for the "type" oneof.</summary>
     public enum TypeOneofCase {
@@ -323,6 +358,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
       if (!object.Equals(PurgeTime, other.PurgeTime)) return false;
+      if (KmsKey != other.KmsKey) return false;
       if (TypeCase != other.TypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -340,6 +376,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
       if (purgeTime_ != null) hash ^= PurgeTime.GetHashCode();
+      if (HasKmsKey) hash ^= KmsKey.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -388,6 +425,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(106);
         output.WriteMessage(PurgeTime);
       }
+      if (HasKmsKey) {
+        output.WriteRawTag(114);
+        output.WriteString(KmsKey);
+      }
       if (typeCase_ == TypeOneofCase.DataAnalyticsAgent) {
         output.WriteRawTag(170, 6);
         output.WriteMessage(DataAnalyticsAgent);
@@ -431,6 +472,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteRawTag(106);
         output.WriteMessage(PurgeTime);
       }
+      if (HasKmsKey) {
+        output.WriteRawTag(114);
+        output.WriteString(KmsKey);
+      }
       if (typeCase_ == TypeOneofCase.DataAnalyticsAgent) {
         output.WriteRawTag(170, 6);
         output.WriteMessage(DataAnalyticsAgent);
@@ -469,6 +514,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       if (purgeTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PurgeTime);
+      }
+      if (HasKmsKey) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKey);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -515,6 +563,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         PurgeTime.MergeFrom(other.PurgeTime);
+      }
+      if (other.HasKmsKey) {
+        KmsKey = other.KmsKey;
       }
       switch (other.TypeCase) {
         case TypeOneofCase.DataAnalyticsAgent:
@@ -588,6 +639,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             input.ReadMessage(PurgeTime);
             break;
           }
+          case 114: {
+            KmsKey = input.ReadString();
+            break;
+          }
           case 810: {
             global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAnalyticsAgent subBuilder = new global::Google.Cloud.GeminiDataAnalytics.V1Beta.DataAnalyticsAgent();
             if (typeCase_ == TypeOneofCase.DataAnalyticsAgent) {
@@ -658,6 +713,10 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
               PurgeTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(PurgeTime);
+            break;
+          }
+          case 114: {
+            KmsKey = input.ReadString();
             break;
           }
           case 810: {

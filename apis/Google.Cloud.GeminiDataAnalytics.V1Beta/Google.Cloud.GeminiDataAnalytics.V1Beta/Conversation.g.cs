@@ -29,44 +29,50 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             "dGljcy52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
             "G2dvb2dsZS9hcGkvZmllbGRfaW5mby5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
             "dXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLK",
-            "AwoMQ29udmVyc2F0aW9uEhQKBG5hbWUYASABKAlCBuBBAeBBCBITCgZhZ2Vu",
+            "BAoMQ29udmVyc2F0aW9uEhQKBG5hbWUYASABKAlCBuBBAeBBCBITCgZhZ2Vu",
             "dHMYAiADKAlCA+BBAhI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5w",
             "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI3Cg5sYXN0X3VzZWRfdGltZRgEIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJWCgZsYWJlbHMY",
             "CSADKAsyQS5nb29nbGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJl",
-            "dGEuQ29udmVyc2F0aW9uLkxhYmVsc0VudHJ5QgPgQQEaLQoLTGFiZWxzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATqYAepBlAEKL2dl",
-            "bWluaWRhdGFhbmFseXRpY3MuZ29vZ2xlYXBpcy5jb20vQ29udmVyc2F0aW9u",
-            "EkRwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vY29u",
-            "dmVyc2F0aW9ucy97Y29udmVyc2F0aW9ufSoNY29udmVyc2F0aW9uczIMY29u",
-            "dmVyc2F0aW9uIvUBChlDcmVhdGVDb252ZXJzYXRpb25SZXF1ZXN0EkcKBnBh",
-            "cmVudBgBIAEoCUI34EEC+kExEi9nZW1pbmlkYXRhYW5hbHl0aWNzLmdvb2ds",
-            "ZWFwaXMuY29tL0NvbnZlcnNhdGlvbhIcCg9jb252ZXJzYXRpb25faWQYAiAB",
-            "KAlCA+BBARJQCgxjb252ZXJzYXRpb24YAyABKAsyNS5nb29nbGUuY2xvdWQu",
-            "Z2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuQ29udmVyc2F0aW9uQgPgQQIS",
-            "HwoKcmVxdWVzdF9pZBgEIAEoCUIL4EEB4ozP1wgCCAEiXwoWR2V0Q29udmVy",
-            "c2F0aW9uUmVxdWVzdBJFCgRuYW1lGAEgASgJQjfgQQL6QTEKL2dlbWluaWRh",
-            "dGFhbmFseXRpY3MuZ29vZ2xlYXBpcy5jb20vQ29udmVyc2F0aW9uIqkBChhM",
-            "aXN0Q29udmVyc2F0aW9uc1JlcXVlc3QSRwoGcGFyZW50GAEgASgJQjfgQQL6",
-            "QTESL2dlbWluaWRhdGFhbmFseXRpY3MuZ29vZ2xlYXBpcy5jb20vQ29udmVy",
-            "c2F0aW9uEhYKCXBhZ2Vfc2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4Y",
-            "AyABKAlCA+BBARITCgZmaWx0ZXIYBCABKAlCA+BBASKCAQoZTGlzdENvbnZl",
-            "cnNhdGlvbnNSZXNwb25zZRJMCg1jb252ZXJzYXRpb25zGAEgAygLMjUuZ29v",
-            "Z2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhLkNvbnZlcnNh",
-            "dGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiYgoZRGVsZXRlQ29udmVy",
-            "c2F0aW9uUmVxdWVzdBJFCgRuYW1lGAEgASgJQjfgQQL6QTEKL2dlbWluaWRh",
-            "dGFhbmFseXRpY3MuZ29vZ2xlYXBpcy5jb20vQ29udmVyc2F0aW9uQqICCitj",
-            "b20uZ29vZ2xlLmNsb3VkLmdlbWluaWRhdGFhbmFseXRpY3MudjFiZXRhQhFD",
-            "b252ZXJzYXRpb25Qcm90b1ABWl1jbG91ZC5nb29nbGUuY29tL2dvL2dlbWlu",
-            "aWRhdGFhbmFseXRpY3MvYXBpdjFiZXRhL2dlbWluaWRhdGFhbmFseXRpY3Nw",
-            "YjtnZW1pbmlkYXRhYW5hbHl0aWNzcGKqAidHb29nbGUuQ2xvdWQuR2VtaW5p",
-            "RGF0YUFuYWx5dGljcy5WMUJldGHKAidHb29nbGVcQ2xvdWRcR2VtaW5pRGF0",
-            "YUFuYWx5dGljc1xWMWJldGHqAipHb29nbGU6OkNsb3VkOjpHZW1pbmlEYXRh",
-            "QW5hbHl0aWNzOjpWMWJldGFiBnByb3RvMw=="));
+            "dGEuQ29udmVyc2F0aW9uLkxhYmVsc0VudHJ5QgPgQQESPwoHa21zX2tleRgK",
+            "IAEoCUIp4EEB+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9L",
+            "ZXlIAIgBARIfCg1tZW1vcnlfcGF1c2VkGAsgASgIQgPgQQFIAYgBARotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOpgB",
+            "6kGUAQovZ2VtaW5pZGF0YWFuYWx5dGljcy5nb29nbGVhcGlzLmNvbS9Db252",
+            "ZXJzYXRpb24SRHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9jb252ZXJzYXRpb25zL3tjb252ZXJzYXRpb259Kg1jb252ZXJzYXRp",
+            "b25zMgxjb252ZXJzYXRpb25CCgoIX2ttc19rZXlCEAoOX21lbW9yeV9wYXVz",
+            "ZWQi9QEKGUNyZWF0ZUNvbnZlcnNhdGlvblJlcXVlc3QSRwoGcGFyZW50GAEg",
+            "ASgJQjfgQQL6QTESL2dlbWluaWRhdGFhbmFseXRpY3MuZ29vZ2xlYXBpcy5j",
+            "b20vQ29udmVyc2F0aW9uEhwKD2NvbnZlcnNhdGlvbl9pZBgCIAEoCUID4EEB",
+            "ElAKDGNvbnZlcnNhdGlvbhgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5nZW1pbmlk",
+            "YXRhYW5hbHl0aWNzLnYxYmV0YS5Db252ZXJzYXRpb25CA+BBAhIfCgpyZXF1",
+            "ZXN0X2lkGAQgASgJQgvgQQHijM/XCAIIASJfChZHZXRDb252ZXJzYXRpb25S",
+            "ZXF1ZXN0EkUKBG5hbWUYASABKAlCN+BBAvpBMQovZ2VtaW5pZGF0YWFuYWx5",
+            "dGljcy5nb29nbGVhcGlzLmNvbS9Db252ZXJzYXRpb24iqQEKGExpc3RDb252",
+            "ZXJzYXRpb25zUmVxdWVzdBJHCgZwYXJlbnQYASABKAlCN+BBAvpBMRIvZ2Vt",
+            "aW5pZGF0YWFuYWx5dGljcy5nb29nbGVhcGlzLmNvbS9Db252ZXJzYXRpb24S",
+            "FgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID",
+            "4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBIoIBChlMaXN0Q29udmVyc2F0aW9u",
+            "c1Jlc3BvbnNlEkwKDWNvbnZlcnNhdGlvbnMYASADKAsyNS5nb29nbGUuY2xv",
+            "dWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGEuQ29udmVyc2F0aW9uEhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCSJiChlEZWxldGVDb252ZXJzYXRpb25S",
+            "ZXF1ZXN0EkUKBG5hbWUYASABKAlCN+BBAvpBMQovZ2VtaW5pZGF0YWFuYWx5",
+            "dGljcy5nb29nbGVhcGlzLmNvbS9Db252ZXJzYXRpb25CtQMKK2NvbS5nb29n",
+            "bGUuY2xvdWQuZ2VtaW5pZGF0YWFuYWx5dGljcy52MWJldGFCEUNvbnZlcnNh",
+            "dGlvblByb3RvUAFaXWNsb3VkLmdvb2dsZS5jb20vZ28vZ2VtaW5pZGF0YWFu",
+            "YWx5dGljcy9hcGl2MWJldGEvZ2VtaW5pZGF0YWFuYWx5dGljc3BiO2dlbWlu",
+            "aWRhdGFhbmFseXRpY3NwYqoCJ0dvb2dsZS5DbG91ZC5HZW1pbmlEYXRhQW5h",
+            "bHl0aWNzLlYxQmV0YcoCJ0dvb2dsZVxDbG91ZFxHZW1pbmlEYXRhQW5hbHl0",
+            "aWNzXFYxYmV0YeoCKkdvb2dsZTo6Q2xvdWQ6OkdlbWluaURhdGFBbmFseXRp",
+            "Y3M6OlYxYmV0YepBjwEKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0",
+            "b0tleRJTcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
+            "L2tleVJpbmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX0q",
+            "CmNyeXB0b0tleXMyCWNyeXB0b0tleWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Conversation), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Conversation.Parser, new[]{ "Name", "Agents", "CreateTime", "LastUsedTime", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.Conversation), global::Google.Cloud.GeminiDataAnalytics.V1Beta.Conversation.Parser, new[]{ "Name", "Agents", "CreateTime", "LastUsedTime", "Labels", "KmsKey", "MemoryPaused" }, new[]{ "KmsKey", "MemoryPaused" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateConversationRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.CreateConversationRequest.Parser, new[]{ "Parent", "ConversationId", "Conversation", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.GetConversationRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.GetConversationRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsRequest), global::Google.Cloud.GeminiDataAnalytics.V1Beta.ListConversationsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
@@ -89,6 +95,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
   {
     private static readonly pb::MessageParser<Conversation> _parser = new pb::MessageParser<Conversation>(() => new Conversation());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Conversation> Parser { get { return _parser; } }
@@ -116,11 +123,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Conversation(Conversation other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       agents_ = other.agents_.Clone();
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       lastUsedTime_ = other.lastUsedTime_ != null ? other.lastUsedTime_.Clone() : null;
       labels_ = other.labels_.Clone();
+      kmsKey_ = other.kmsKey_;
+      memoryPaused_ = other.memoryPaused_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -219,6 +229,70 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "kms_key" field.</summary>
+    public const int KmsKeyFieldNumber = 10;
+    private readonly static string KmsKeyDefaultValue = "";
+
+    private string kmsKey_;
+    /// <summary>
+    /// Optional. Customer managed encryption key (CMEK) to use for encrypting the
+    /// Conversation resources. Encryption will happen at Titan layer, we will pass
+    /// the KMS key to Titan.
+    ///
+    /// Format:
+    /// projects/{project_id}/locations/{location}/keyRings/{key_ring_name}/cryptoKeys/{key_name}.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KmsKey {
+      get { return kmsKey_ ?? KmsKeyDefaultValue; }
+      set {
+        kmsKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "kms_key" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasKmsKey {
+      get { return kmsKey_ != null; }
+    }
+    /// <summary>Clears the value of the "kms_key" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearKmsKey() {
+      kmsKey_ = null;
+    }
+
+    /// <summary>Field number for the "memory_paused" field.</summary>
+    public const int MemoryPausedFieldNumber = 11;
+    private readonly static bool MemoryPausedDefaultValue = false;
+
+    private bool memoryPaused_;
+    /// <summary>
+    /// Optional. Whether memory is paused for this conversation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool MemoryPaused {
+      get { if ((_hasBits0 & 1) != 0) { return memoryPaused_; } else { return MemoryPausedDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        memoryPaused_ = value;
+      }
+    }
+    /// <summary>Gets whether the "memory_paused" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasMemoryPaused {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "memory_paused" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearMemoryPaused() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -239,6 +313,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(LastUsedTime, other.LastUsedTime)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (KmsKey != other.KmsKey) return false;
+      if (MemoryPaused != other.MemoryPaused) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -251,6 +327,8 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (lastUsedTime_ != null) hash ^= LastUsedTime.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (HasKmsKey) hash ^= KmsKey.GetHashCode();
+      if (HasMemoryPaused) hash ^= MemoryPaused.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -283,6 +361,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteMessage(LastUsedTime);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (HasKmsKey) {
+        output.WriteRawTag(82);
+        output.WriteString(KmsKey);
+      }
+      if (HasMemoryPaused) {
+        output.WriteRawTag(88);
+        output.WriteBool(MemoryPaused);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -307,6 +393,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         output.WriteMessage(LastUsedTime);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (HasKmsKey) {
+        output.WriteRawTag(82);
+        output.WriteString(KmsKey);
+      }
+      if (HasMemoryPaused) {
+        output.WriteRawTag(88);
+        output.WriteBool(MemoryPaused);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -328,6 +422,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastUsedTime);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (HasKmsKey) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KmsKey);
+      }
+      if (HasMemoryPaused) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -357,6 +457,12 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
         LastUsedTime.MergeFrom(other.LastUsedTime);
       }
       labels_.MergeFrom(other.labels_);
+      if (other.HasKmsKey) {
+        KmsKey = other.KmsKey;
+      }
+      if (other.HasMemoryPaused) {
+        MemoryPaused = other.MemoryPaused;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -402,6 +508,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 82: {
+            KmsKey = input.ReadString();
+            break;
+          }
+          case 88: {
+            MemoryPaused = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -445,6 +559,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
           }
           case 74: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 82: {
+            KmsKey = input.ReadString();
+            break;
+          }
+          case 88: {
+            MemoryPaused = input.ReadBool();
             break;
           }
         }
@@ -1072,8 +1194,9 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     private int pageSize_;
     /// <summary>
     /// Optional. Requested page size. Server may return fewer items than
-    /// requested. The max page size is 100. All larger page sizes will be coerced
-    /// to 100. If unspecified, server will pick 50 as an approperiate default.
+    /// requested. The max page size is `100`. All larger page sizes will be
+    /// coerced to `100`. If unspecified, server will pick `50` as an appropriate
+    /// default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
