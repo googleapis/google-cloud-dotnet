@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 WorkstationName = WorkstationName.FromProjectLocationWorkstationClusterWorkstationConfigWorkstation("[PROJECT]", "[LOCATION]", "[WORKSTATION_CLUSTER]", "[WORKSTATION_CONFIG]", "[WORKSTATION]"),
                 ValidateOnly = false,
                 Etag = "",
+                BoostConfig = "",
             };
             // Make the request
             Operation<Workstation, OperationMetadata> response = await workstationsClient.StartWorkstationAsync(request);

@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             ListWorkstationClustersRequest request = new ListWorkstationClustersRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListWorkstationClustersResponse, WorkstationCluster> response = workstationsClient.ListWorkstationClustersAsync(request);

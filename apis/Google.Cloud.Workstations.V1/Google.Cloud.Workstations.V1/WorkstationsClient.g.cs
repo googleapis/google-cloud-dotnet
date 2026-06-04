@@ -1886,7 +1886,7 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstationConfig">
-        /// Required. Config to create.
+        /// Required. Workstation configuration to create.
         /// </param>
         /// <param name="workstationConfigId">
         /// Required. ID to use for the workstation configuration.
@@ -1908,7 +1908,7 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstationConfig">
-        /// Required. Config to create.
+        /// Required. Workstation configuration to create.
         /// </param>
         /// <param name="workstationConfigId">
         /// Required. ID to use for the workstation configuration.
@@ -1930,7 +1930,7 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstationConfig">
-        /// Required. Config to create.
+        /// Required. Workstation configuration to create.
         /// </param>
         /// <param name="workstationConfigId">
         /// Required. ID to use for the workstation configuration.
@@ -1947,7 +1947,7 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstationConfig">
-        /// Required. Config to create.
+        /// Required. Workstation configuration to create.
         /// </param>
         /// <param name="workstationConfigId">
         /// Required. ID to use for the workstation configuration.
@@ -1969,7 +1969,7 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstationConfig">
-        /// Required. Config to create.
+        /// Required. Workstation configuration to create.
         /// </param>
         /// <param name="workstationConfigId">
         /// Required. ID to use for the workstation configuration.
@@ -1991,7 +1991,7 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstationConfig">
-        /// Required. Config to create.
+        /// Required. Workstation configuration to create.
         /// </param>
         /// <param name="workstationConfigId">
         /// Required. ID to use for the workstation configuration.
@@ -2059,7 +2059,7 @@ namespace Google.Cloud.Workstations.V1
         /// Updates an existing workstation configuration.
         /// </summary>
         /// <param name="workstationConfig">
-        /// Required. Config to update.
+        /// Required. Workstation configuration to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask specifying which fields in the workstation configuration
@@ -2078,7 +2078,7 @@ namespace Google.Cloud.Workstations.V1
         /// Updates an existing workstation configuration.
         /// </summary>
         /// <param name="workstationConfig">
-        /// Required. Config to update.
+        /// Required. Workstation configuration to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask specifying which fields in the workstation configuration
@@ -2097,7 +2097,7 @@ namespace Google.Cloud.Workstations.V1
         /// Updates an existing workstation configuration.
         /// </summary>
         /// <param name="workstationConfig">
-        /// Required. Config to update.
+        /// Required. Workstation configuration to update.
         /// </param>
         /// <param name="updateMask">
         /// Required. Mask specifying which fields in the workstation configuration
@@ -2712,7 +2712,11 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstation">
-        /// Required. Workstation to create.
+        /// Required. Workstation to create. If source_workstation is specified, the
+        /// user must have `workstations.workstations.use` permission on the source
+        /// workstation, and the Cloud Workstations Service Agent for the project where
+        /// you are creating the new workstation must have compute.disks.createSnapshot
+        /// and compute.snapshots.useReadOnly on the source project.
         /// </param>
         /// <param name="workstationId">
         /// Required. ID to use for the workstation.
@@ -2734,7 +2738,11 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstation">
-        /// Required. Workstation to create.
+        /// Required. Workstation to create. If source_workstation is specified, the
+        /// user must have `workstations.workstations.use` permission on the source
+        /// workstation, and the Cloud Workstations Service Agent for the project where
+        /// you are creating the new workstation must have compute.disks.createSnapshot
+        /// and compute.snapshots.useReadOnly on the source project.
         /// </param>
         /// <param name="workstationId">
         /// Required. ID to use for the workstation.
@@ -2756,7 +2764,11 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstation">
-        /// Required. Workstation to create.
+        /// Required. Workstation to create. If source_workstation is specified, the
+        /// user must have `workstations.workstations.use` permission on the source
+        /// workstation, and the Cloud Workstations Service Agent for the project where
+        /// you are creating the new workstation must have compute.disks.createSnapshot
+        /// and compute.snapshots.useReadOnly on the source project.
         /// </param>
         /// <param name="workstationId">
         /// Required. ID to use for the workstation.
@@ -2773,7 +2785,11 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstation">
-        /// Required. Workstation to create.
+        /// Required. Workstation to create. If source_workstation is specified, the
+        /// user must have `workstations.workstations.use` permission on the source
+        /// workstation, and the Cloud Workstations Service Agent for the project where
+        /// you are creating the new workstation must have compute.disks.createSnapshot
+        /// and compute.snapshots.useReadOnly on the source project.
         /// </param>
         /// <param name="workstationId">
         /// Required. ID to use for the workstation.
@@ -2795,7 +2811,11 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstation">
-        /// Required. Workstation to create.
+        /// Required. Workstation to create. If source_workstation is specified, the
+        /// user must have `workstations.workstations.use` permission on the source
+        /// workstation, and the Cloud Workstations Service Agent for the project where
+        /// you are creating the new workstation must have compute.disks.createSnapshot
+        /// and compute.snapshots.useReadOnly on the source project.
         /// </param>
         /// <param name="workstationId">
         /// Required. ID to use for the workstation.
@@ -2817,7 +2837,11 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Parent resource name.
         /// </param>
         /// <param name="workstation">
-        /// Required. Workstation to create.
+        /// Required. Workstation to create. If source_workstation is specified, the
+        /// user must have `workstations.workstations.use` permission on the source
+        /// workstation, and the Cloud Workstations Service Agent for the project where
+        /// you are creating the new workstation must have compute.disks.createSnapshot
+        /// and compute.snapshots.useReadOnly on the source project.
         /// </param>
         /// <param name="workstationId">
         /// Required. ID to use for the workstation.
@@ -2888,8 +2912,8 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Workstation to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask specifying which fields in the workstation configuration
-        /// should be updated.
+        /// Required. Mask specifying which fields in the workstation should be
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2907,8 +2931,8 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Workstation to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask specifying which fields in the workstation configuration
-        /// should be updated.
+        /// Required. Mask specifying which fields in the workstation should be
+        /// updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2926,8 +2950,8 @@ namespace Google.Cloud.Workstations.V1
         /// Required. Workstation to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. Mask specifying which fields in the workstation configuration
-        /// should be updated.
+        /// Required. Mask specifying which fields in the workstation should be
+        /// updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3331,6 +3355,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3341,6 +3367,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3351,6 +3379,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -3361,6 +3391,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="workstation">
         /// Required. Name of the workstation for which the access token should be
@@ -3377,6 +3409,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="workstation">
         /// Required. Name of the workstation for which the access token should be
@@ -3393,6 +3427,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="workstation">
         /// Required. Name of the workstation for which the access token should be
@@ -3406,6 +3442,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="workstation">
         /// Required. Name of the workstation for which the access token should be
@@ -3422,6 +3460,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="workstation">
         /// Required. Name of the workstation for which the access token should be
@@ -3438,6 +3478,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="workstation">
         /// Required. Name of the workstation for which the access token should be
@@ -4175,6 +4217,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4188,6 +4232,8 @@ namespace Google.Cloud.Workstations.V1
         /// <summary>
         /// Returns a short-lived credential that can be used to send authenticated and
         /// authorized traffic to a workstation.
+        /// Once generated this token cannot be revoked and is good for the lifetime
+        /// of the token.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
