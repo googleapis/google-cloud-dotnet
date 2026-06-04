@@ -160,7 +160,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
     {
       /// <summary>
       /// Answers a data question by generating a stream of
-      /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
+      /// [Message][google.cloud.geminidataanalytics.v1.Message] objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -276,7 +276,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
 
       /// <summary>
       /// Answers a data question by generating a stream of
-      /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
+      /// [Message][google.cloud.geminidataanalytics.v1.Message] objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -290,7 +290,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta {
       }
       /// <summary>
       /// Answers a data question by generating a stream of
-      /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
+      /// [Message][google.cloud.geminidataanalytics.v1.Message] objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

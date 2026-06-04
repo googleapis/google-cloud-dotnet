@@ -334,7 +334,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         /// <summary>
         /// Answers a data question by generating a stream of
-        /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
+        /// [Message][google.cloud.geminidataanalytics.v1.Message] objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1211,7 +1211,7 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
 
         /// <summary>
         /// Answers a data question by generating a stream of
-        /// [Message][google.cloud.geminidataanalytics.v1alpha.Message] objects.
+        /// [Message][google.cloud.geminidataanalytics.v1.Message] objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

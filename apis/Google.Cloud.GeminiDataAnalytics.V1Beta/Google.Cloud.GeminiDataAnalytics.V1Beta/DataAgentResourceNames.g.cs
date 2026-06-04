@@ -281,5 +281,14 @@ namespace Google.Cloud.GeminiDataAnalytics.V1Beta
             get => string.IsNullOrEmpty(Name) ? null : gcgv::DataAgentName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CryptoKeyName"/>-typed view over the <see cref="KmsKey"/> resource name property.
+        /// </summary>
+        public CryptoKeyName KmsKeyAsCryptoKeyName
+        {
+            get => string.IsNullOrEmpty(KmsKey) ? null : CryptoKeyName.Parse(KmsKey, allowUnparsed: true);
+            set => KmsKey = value?.ToString() ?? "";
+        }
     }
 }
