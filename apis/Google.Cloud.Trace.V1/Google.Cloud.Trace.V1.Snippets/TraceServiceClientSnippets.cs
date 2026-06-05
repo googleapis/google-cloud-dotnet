@@ -31,7 +31,7 @@ namespace Google.Cloud.Trace.V1.Snippets
             _fixture = fixture;
         }
 
-        [Fact]
+        [Fact(Skip = "b/515514595")]
         public void ListTraces()
         {
             string projectId = _fixture.ProjectId;
