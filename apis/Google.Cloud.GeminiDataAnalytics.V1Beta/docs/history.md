@@ -1,5 +1,81 @@
 # Version history
 
+## Version 1.0.0-beta10, released 2026-06-08
+
+### New features
+
+- A new field `user_functions` is added to message `.google.cloud.geminidataanalytics.v1beta.Context`
+- A new message `UserFunctions` is added
+- A new message `BigQueryRoutine` is added
+- A new message `BigQueryRoutineReference` is added
+- A new field `parameters` is added to message `.google.cloud.geminidataanalytics.v1beta.ExampleQuery`
+- A new message `QueryParameter` is added
+- A new message `MatchedQuery` is added
+- A new message `QueryParameterValues` is added
+- A new message `Citation` is added
+- A new message `CitationSource` is added
+- A new message `CitationAnchor` is added
+- A new resource_definition `cloudkms.googleapis.com/CryptoKey` is added
+- A new field `kms_key` is added to message `.google.cloud.geminidataanalytics.v1beta.Conversation`
+- A new field `memory_paused` is added to message `.google.cloud.geminidataanalytics.v1beta.Conversation`
+- A new field `kms_key` is added to message `.google.cloud.geminidataanalytics.v1beta.DataAgent`
+- A new message `Parameter` is added
+- A new field `credentials` is added to message `.google.cloud.geminidataanalytics.v1beta.ChatRequest`
+- A new field `citation` is added to message `.google.cloud.geminidataanalytics.v1beta.SystemMessage`
+- A new value `FOLLOWUP_QUESTIONS` is added to enum `TextType`
+- A new field `matched_query` is added to message `.google.cloud.geminidataanalytics.v1beta.DataMessage`
+- A new field `property_graph_references` is added to message `.google.cloud.geminidataanalytics.v1beta.BigQueryTableReferences`
+- A new field `location_boundary` is added to message `.google.cloud.geminidataanalytics.v1beta.BigQueryTableReference`
+- A new message `DatabaseTableReference` is added
+- A new field `database_table_references` is added to message `.google.cloud.geminidataanalytics.v1beta.AlloyDbDatabaseReference`
+- A new field `database_table_references` is added to message `.google.cloud.geminidataanalytics.v1beta.SpannerDatabaseReference`
+- A new field `database_table_references` is added to message `.google.cloud.geminidataanalytics.v1beta.CloudSqlDatabaseReference`
+- A new message `BigQueryPropertyGraphReference` is added
+- A new field `bigquery_property_graph_reference` is added to message `.google.cloud.geminidataanalytics.v1beta.Datasource`
+
+### Bug fixes
+
+- Changed proto3 optional flag of an existing field `value` in message `.google.cloud.geminidataanalytics.v1beta.LookerQuery`
+- The type of an existing field `parameters` is changed from `.google.cloud.geminidataanalytics.v1beta.ParameterizedSecureViewParameters.ParametersEntry` to `.google.cloud.geminidataanalytics.v1beta.ParameterizedSecureViewParameters.Parameter` in message `.google.cloud.geminidataanalytics.v1beta.ParameterizedSecureViewParameters`
+- An existing field `region` is removed from message `.google.cloud.geminidataanalytics.v1beta.SpannerDatabaseReference`
+
+### Documentation improvements
+
+- A comment for field `sources` in message `.google.cloud.geminidataanalytics.v1beta.Context` is changed
+- A comment for field `confidence_score` in message `.google.cloud.geminidataanalytics.v1beta.Context` is changed
+- A comment for field `example_queries` in message `.google.cloud.geminidataanalytics.v1beta.Context` is changed
+- A comment for field `looker_golden_queries` in message `.google.cloud.geminidataanalytics.v1beta.Context` is changed
+- A comment for field `glossary_terms` in message `.google.cloud.geminidataanalytics.v1beta.Context` is changed
+- A comment for field `value` in message `.google.cloud.geminidataanalytics.v1beta.LookerQuery` is changed
+- A comment for field `page_size` in message `.google.cloud.geminidataanalytics.v1beta.ListConversationsRequest` is changed
+- A comment for method `Chat` in service `DataChatService` is changed
+- A comment for field `parameters` in message `.google.cloud.geminidataanalytics.v1beta.ParameterizedSecureViewParameters` is changed
+- A comment for field `page_size` in message `.google.cloud.geminidataanalytics.v1beta.ListMessagesRequest` is changed
+- A comment for field `project` in message `.google.cloud.geminidataanalytics.v1beta.ChatRequest` is changed
+- A comment for field `credentials` in message `.google.cloud.geminidataanalytics.v1beta.DataAgentContext` is changed
+- A comment for message `SystemMessage` is changed
+- A comment for field `clarification` in message `.google.cloud.geminidataanalytics.v1beta.SystemMessage` is changed
+- A comment for field `generated_looker_query` in message `.google.cloud.geminidataanalytics.v1beta.DataMessage` is changed
+- A comment for message `ClarificationQuestion` is changed
+- A comment for enum `SelectionMode` is changed
+- A comment for enum value `SELECTION_MODE_UNSPECIFIED` in enum `SelectionMode` is changed
+- A comment for enum value `SINGLE_SELECT` in enum `SelectionMode` is changed
+- A comment for enum value `MULTI_SELECT` in enum `SelectionMode` is changed
+- A comment for enum `ClarificationQuestionType` is changed
+- A comment for enum value `CLARIFICATION_QUESTION_TYPE_UNSPECIFIED` in enum `ClarificationQuestionType` is changed
+- A comment for enum value `FILTER_VALUES` in enum `ClarificationQuestionType` is changed
+- A comment for enum value `FIELDS` in enum `ClarificationQuestionType` is changed
+- A comment for field `question` in message `.google.cloud.geminidataanalytics.v1beta.ClarificationQuestion` is changed
+- A comment for field `selection_mode` in message `.google.cloud.geminidataanalytics.v1beta.ClarificationQuestion` is changed
+- A comment for field `options` in message `.google.cloud.geminidataanalytics.v1beta.ClarificationQuestion` is changed
+- A comment for field `clarification_question_type` in message `.google.cloud.geminidataanalytics.v1beta.ClarificationQuestion` is changed
+- A comment for message `ClarificationMessage` is changed
+- A comment for field `questions` in message `.google.cloud.geminidataanalytics.v1beta.ClarificationMessage` is changed
+- A comment for message `BigQueryTableReferences` is changed
+- A comment for field `studio_references` in message `.google.cloud.geminidataanalytics.v1beta.StudioDatasourceReferences` is changed
+- A comment for field `credentials` in message `.google.cloud.geminidataanalytics.v1beta.LookerExploreReferences` is changed
+- A comment for field `category` in message `.google.cloud.geminidataanalytics.v1beta.Field` is changed
+
 ## Version 1.0.0-beta09, released 2026-03-16
 
 ### New features
