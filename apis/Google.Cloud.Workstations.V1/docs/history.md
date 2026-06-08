@@ -1,5 +1,28 @@
 # Version history
 
+## Version 1.5.0, released 2026-06-08
+
+### New features
+
+- Custom domain and HTTP/2 support for Workstation Clusters
+- Performance boosting support (BoostConfig) for workstations
+- Accelerator (GPU) support for workstation configurations
+- Ephemeral directory support for non-persistent storage
+- Hyperdisk Balanced High Availability support for persistent directories
+- Disk archival timeout for cost optimization of persistent disks
+- Resource manager tags for Workstation Clusters and underlying VMs
+- Startup script and custom instance metadata support for workstations
+- User-level workstation limits (max_usable_workstations)
+- Linux auditd logging and ability to disable TCP/SSH connections
+- Configurable allowed ports for workstation access
+- Workstation cloning support and environment variable overrides
+- Filtering support for List operations across clusters, configs, and workstations
+- Port-specific access token generation
+
+### Documentation improvements
+
+- Updated docs to reflect api changes
+
 ## Version 1.4.0, released 2025-11-06
 
 ### New features
