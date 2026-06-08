@@ -3143,7 +3143,7 @@
     },
     {
       "id": "Google.Cloud.GeminiDataAnalytics.V1Beta",
-      "version": "1.0.0-beta09",
+      "version": "1.0.0-beta10",
       "type": "grpc",
       "productName": "Data Analytics API with Gemini",
       "productUrl": "https://cloud.google.com/gemini/docs/conversational-analytics-api/overview",
