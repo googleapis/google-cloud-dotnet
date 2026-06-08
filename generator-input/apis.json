@@ -5176,7 +5176,7 @@
     },
     {
       "id": "Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1",
-      "version": "1.0.0-beta04",
+      "version": "1.0.0-beta05",
       "type": "grpc",
       "productName": "SaaS Runtime",
       "productUrl": "https://cloud.google.com/saas-runtime/docs/overview",
