@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.28.0, released 2026-06-08
+
+### New features
+
+- Add view parameters to ExecuteQueryRequest
+
 ## Version 3.27.0, released 2026-05-04
 
 ### New features
