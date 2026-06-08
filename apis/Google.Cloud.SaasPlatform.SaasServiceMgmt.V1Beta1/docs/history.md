@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2026-06-08
+
+### New features
+
+- Add new Unit Conditions for App creation and registration
+
 ## Version 1.0.0-beta04, released 2026-05-30
 
 ### New features
