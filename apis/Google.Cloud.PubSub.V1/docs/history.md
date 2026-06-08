@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.35.0, released 2026-06-08
+
+### New features
+
+- Support WaitForProcessing and NackInmediately shutdown options.
+
 ## Version 3.34.0, released 2026-05-04
 
 ### Bug fixes
