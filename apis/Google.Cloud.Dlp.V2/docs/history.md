@@ -1,5 +1,15 @@
 # Version history
 
+## Version 4.26.0, released 2026-06-08
+
+### New features
+
+- Supporting SDP Batch Content
+
+### Documentation improvements
+
+- A comment for field `participant_id` in message `.google.privacy.dlp.v2.ConversationMessage` is changed
+
 ## Version 4.25.0, released 2026-05-29
 
 ### New features
