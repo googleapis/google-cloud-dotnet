@@ -4997,10 +4997,12 @@
         },
         {
             "id": "Google.Developers.DeveloperKnowledge.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-06-08T14:55:31.914956651Z",
             "lastGeneratedCommit": "dae2a496666e372c1ebf56ceb54fe7f467a2c10e",
+            "lastReleasedCommit": "dae2a496666e372c1ebf56ceb54fe7f467a2c10e",
             "apiPaths": [
                 "google/developers/knowledge/v1"
             ],
