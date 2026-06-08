@@ -1,5 +1,11 @@
 # Version history
 
+## Version 4.15.0, released 2026-06-08
+
+### New features
+
+- Add filter to ListObjectOptions and integration tests for object context
+
 ## Version 4.14.0, released 2026-01-26
 
 ### New features
