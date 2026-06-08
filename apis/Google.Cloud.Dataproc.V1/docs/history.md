@@ -1,5 +1,15 @@
 # Version history
 
+## Version 5.26.0, released 2026-06-08
+
+### New features
+
+- Add vcore_seconds and memory_mb_seconds to YarnApplication in Dataproc v1
+
+### Documentation improvements
+
+- A comment for field `filter` in message `.google.cloud.dataproc.v1.ListJobsRequest` is changed
+
 ## Version 5.25.0, released 2026-05-11
 
 ### New features
