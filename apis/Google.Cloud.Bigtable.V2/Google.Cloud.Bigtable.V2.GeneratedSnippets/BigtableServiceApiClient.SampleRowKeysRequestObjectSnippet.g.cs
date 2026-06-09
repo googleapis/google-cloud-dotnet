@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 AppProfileId = "",
                 AuthorizedViewNameAsAuthorizedViewName = AuthorizedViewName.FromProjectInstanceTableAuthorizedView("[PROJECT]", "[INSTANCE]", "[TABLE]", "[AUTHORIZED_VIEW]"),
                 MaterializedViewNameAsMaterializedViewName = MaterializedViewName.FromProjectInstanceMaterializedView("[PROJECT]", "[INSTANCE]", "[MATERIALIZED_VIEW]"),
+                RowRange = new RowRange(),
             };
             // Make the request, returning a streaming response
             using BigtableServiceApiClient.SampleRowKeysStream response = bigtableServiceApiClient.SampleRowKeys(request);
