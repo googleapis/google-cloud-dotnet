@@ -29,82 +29,88 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
             "cm90bxo3Z29vZ2xlL2Nsb3VkL29yYWNsZWRhdGFiYXNlL3YxL3BsdWdnYWJs",
             "ZV9kYXRhYmFzZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
-            "cm90bxobZ29vZ2xlL3R5cGUvZGF5b2Z3ZWVrLnByb3RvIsgGCghEYXRhYmFz",
+            "cm90bxobZ29vZ2xlL3R5cGUvZGF5b2Z3ZWVrLnByb3RvIs0ICghEYXRhYmFz",
             "ZRIRCgRuYW1lGAEgASgJQgPgQQgSFAoHZGJfbmFtZRgCIAEoCUID4EEBEhsK",
             "DmRiX3VuaXF1ZV9uYW1lGAMgASgJQgPgQQESGwoOYWRtaW5fcGFzc3dvcmQY",
-            "BCABKAlCA+BBAhIgChN0ZGVfd2FsbGV0X3Bhc3N3b3JkGAUgASgJQgPgQQES",
-            "GgoNY2hhcmFjdGVyX3NldBgGIAEoCUID4EEBEhsKDm5jaGFyYWN0ZXJfc2V0",
-            "GAcgASgJQgPgQQESFAoHb2NpX3VybBgIIAEoCUID4EEDEjQKC2NyZWF0ZV90",
-            "aW1lGAkgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEksK",
-            "CnByb3BlcnRpZXMYCiABKAsyMi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
-            "c2UudjEuRGF0YWJhc2VQcm9wZXJ0aWVzQgPgQQESGAoLZGF0YWJhc2VfaWQY",
-            "CyABKAlCA+BBARIZCgxkYl9ob21lX25hbWUYDCABKAlCA+BBARIcCg9nY3Bf",
-            "b3JhY2xlX3pvbmUYDSABKAlCA+BBAxJjChNvcHNfaW5zaWdodHNfc3RhdHVz",
-            "GA4gASgOMkEuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRhdGFi",
-            "YXNlLk9wZXJhdGlvbnNJbnNpZ2h0c1N0YXR1c0ID4EEDIqwBChhPcGVyYXRp",
-            "b25zSW5zaWdodHNTdGF0dXMSKgomT1BFUkFUSU9OU19JTlNJR0hUU19TVEFU",
-            "VVNfVU5TUEVDSUZJRUQQABIMCghFTkFCTElORxABEgsKB0VOQUJMRUQQAhIN",
-            "CglESVNBQkxJTkcQAxIPCgtOT1RfRU5BQkxFRBAEEhMKD0ZBSUxFRF9FTkFC",
-            "TElORxAFEhQKEEZBSUxFRF9ESVNBQkxJTkcQBjp+6kF7CiZvcmFjbGVkYXRh",
-            "YmFzZS5nb29nbGVhcGlzLmNvbS9EYXRhYmFzZRI8cHJvamVjdHMve3Byb2pl",
-            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFiYXNlcy97ZGF0YWJhc2V9",
-            "KglkYXRhYmFzZXMyCGRhdGFiYXNlIqoEChJEYXRhYmFzZVByb3BlcnRpZXMS",
-            "XQoFc3RhdGUYASABKA4ySS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
-            "djEuRGF0YWJhc2VQcm9wZXJ0aWVzLkRhdGFiYXNlTGlmZWN5Y2xlU3RhdGVC",
-            "A+BBAxIXCgpkYl92ZXJzaW9uGAIgASgJQgPgQQISTQoQZGJfYmFja3VwX2Nv",
-            "bmZpZxgDIAEoCzIuLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5E",
-            "YkJhY2t1cENvbmZpZ0ID4EEBEmEKGmRhdGFiYXNlX21hbmFnZW1lbnRfY29u",
-            "ZmlnGAQgASgLMjguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRh",
-            "dGFiYXNlTWFuYWdlbWVudENvbmZpZ0ID4EEDIukBChZEYXRhYmFzZUxpZmVj",
-            "eWNsZVN0YXRlEigKJERBVEFCQVNFX0xJRkVDWUNMRV9TVEFURV9VTlNQRUNJ",
-            "RklFRBAAEhAKDFBST1ZJU0lPTklORxABEg0KCUFWQUlMQUJMRRACEgwKCFVQ",
-            "REFUSU5HEAMSFgoSQkFDS1VQX0lOX1BST0dSRVNTEAQSDQoJVVBHUkFESU5H",
-            "EAUSDgoKQ09OVkVSVElORxAGEg8KC1RFUk1JTkFUSU5HEAcSDgoKVEVSTUlO",
-            "QVRFRBAIEhIKDlJFU1RPUkVfRkFJTEVEEAkSCgoGRkFJTEVEEAoinAkKDkRi",
-            "QmFja3VwQ29uZmlnEiAKE2F1dG9fYmFja3VwX2VuYWJsZWQYASABKAhCA+BB",
-            "ARJwChpiYWNrdXBfZGVzdGluYXRpb25fZGV0YWlscxgCIAMoCzJHLmdvb2ds",
-            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EYkJhY2t1cENvbmZpZy5CYWNr",
-            "dXBEZXN0aW5hdGlvbkRldGFpbHNCA+BBARIiChVyZXRlbnRpb25fcGVyaW9k",
-            "X2RheXMYAyABKAVCA+BBARJoChZiYWNrdXBfZGVsZXRpb25fcG9saWN5GAQg",
-            "ASgOMkMuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRiQmFja3Vw",
-            "Q29uZmlnLkJhY2t1cERlbGV0aW9uUG9saWN5QgPgQQESOQoUYXV0b19mdWxs",
-            "X2JhY2t1cF9kYXkYBSABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWtCA+BB",
-            "ARJhChdhdXRvX2Z1bGxfYmFja3VwX3dpbmRvdxgGIAEoDjI7Lmdvb2dsZS5j",
-            "bG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EYkJhY2t1cENvbmZpZy5CYWNrdXBX",
-            "aW5kb3dCA+BBARJoCh5hdXRvX2luY3JlbWVudGFsX2JhY2t1cF93aW5kb3cY",
-            "ByABKA4yOy5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGJCYWNr",
-            "dXBDb25maWcuQmFja3VwV2luZG93QgPgQQEacwoYQmFja3VwRGVzdGluYXRp",
-            "b25EZXRhaWxzElcKBHR5cGUYASABKA4yRC5nb29nbGUuY2xvdWQub3JhY2xl",
-            "ZGF0YWJhc2UudjEuRGJCYWNrdXBDb25maWcuQmFja3VwRGVzdGluYXRpb25U",
-            "eXBlQgPgQQEiiAEKFUJhY2t1cERlc3RpbmF0aW9uVHlwZRInCiNCQUNLVVBf",
-            "REVTVElOQVRJT05fVFlQRV9VTlNQRUNJRklFRBAAEgcKA05GUxABEhYKElJF",
-            "Q09WRVJZX0FQUExJQU5DRRACEhAKDE9CSkVDVF9TVE9SRRADEgkKBUxPQ0FM",
-            "EAQSCAoEREJSUxAFIuQBCgxCYWNrdXBXaW5kb3cSHQoZQkFDS1VQX1dJTkRP",
-            "V19VTlNQRUNJRklFRBAAEgwKCFNMT1RfT05FEAESDAoIU0xPVF9UV08QAhIO",
-            "CgpTTE9UX1RIUkVFEAMSDQoJU0xPVF9GT1VSEAQSDQoJU0xPVF9GSVZFEAUS",
-            "DAoIU0xPVF9TSVgQBhIOCgpTTE9UX1NFVkVOEAcSDgoKU0xPVF9FSUdIVBAI",
-            "Eg0KCVNMT1RfTklORRAJEgwKCFNMT1RfVEVOEAoSDwoLU0xPVF9FTEVWRU4Q",
-            "CxIPCgtTTE9UX1RXRUxWRRAMInkKFEJhY2t1cERlbGV0aW9uUG9saWN5EiYK",
-            "IkJBQ0tVUF9ERUxFVElPTl9QT0xJQ1lfVU5TUEVDSUZJRUQQABIWChJERUxF",
-            "VEVfSU1NRURJQVRFTFkQARIhCh1ERUxFVEVfQUZURVJfUkVURU5USU9OX1BF",
-            "UklPRBACIlIKEkdldERhdGFiYXNlUmVxdWVzdBI8CgRuYW1lGAEgASgJQi7g",
-            "QQL6QSgKJm9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNl",
-            "IpwBChRMaXN0RGF0YWJhc2VzUmVxdWVzdBI+CgZwYXJlbnQYASABKAlCLuBB",
-            "AvpBKBImb3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2US",
-            "FgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID",
-            "4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBIm0KFUxpc3REYXRhYmFzZXNSZXNw",
-            "b25zZRI7CglkYXRhYmFzZXMYASADKAsyKC5nb29nbGUuY2xvdWQub3JhY2xl",
-            "ZGF0YWJhc2UudjEuRGF0YWJhc2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJ",
-            "QucBCiJjb20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxQg1EYXRh",
-            "YmFzZVByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3JhY2xlZGF0YWJh",
-            "c2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRhYmFzZXBiqgIe",
-            "R29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29vZ2xlXENsb3Vk",
-            "XE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6T3JhY2xlRGF0",
-            "YWJhc2U6OlYxYgZwcm90bzM="));
+            "BCABKAlCA+BBARJZCh1hZG1pbl9wYXNzd29yZF9zZWNyZXRfdmVyc2lvbhgR",
+            "IAEoCUIy4EEB+kEsCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Nl",
+            "Y3JldFZlcnNpb24SIAoTdGRlX3dhbGxldF9wYXNzd29yZBgFIAEoCUID4EEB",
+            "El4KInRkZV93YWxsZXRfcGFzc3dvcmRfc2VjcmV0X3ZlcnNpb24YEiABKAlC",
+            "MuBBAfpBLAoqc2VjcmV0bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRW",
+            "ZXJzaW9uEhoKDWNoYXJhY3Rlcl9zZXQYBiABKAlCA+BBARIbCg5uY2hhcmFj",
+            "dGVyX3NldBgHIAEoCUID4EEBEhQKB29jaV91cmwYCCABKAlCA+BBAxI0Cgtj",
+            "cmVhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxJLCgpwcm9wZXJ0aWVzGAogASgLMjIuZ29vZ2xlLmNsb3VkLm9yYWNs",
+            "ZWRhdGFiYXNlLnYxLkRhdGFiYXNlUHJvcGVydGllc0ID4EEBEhgKC2RhdGFi",
+            "YXNlX2lkGAsgASgJQgPgQQESGQoMZGJfaG9tZV9uYW1lGAwgASgJQgPgQQES",
+            "HAoPZ2NwX29yYWNsZV96b25lGA0gASgJQgPgQQMSYwoTb3BzX2luc2lnaHRz",
+            "X3N0YXR1cxgOIAEoDjJBLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
+            "MS5EYXRhYmFzZS5PcGVyYXRpb25zSW5zaWdodHNTdGF0dXNCA+BBAxIiChVw",
+            "bHVnZ2FibGVfZGF0YWJhc2VfaWQYDyABKAlCA+BBARIkChdwbHVnZ2FibGVf",
+            "ZGF0YWJhc2VfbmFtZRgQIAEoCUID4EEBIqwBChhPcGVyYXRpb25zSW5zaWdo",
+            "dHNTdGF0dXMSKgomT1BFUkFUSU9OU19JTlNJR0hUU19TVEFUVVNfVU5TUEVD",
+            "SUZJRUQQABIMCghFTkFCTElORxABEgsKB0VOQUJMRUQQAhINCglESVNBQkxJ",
+            "TkcQAxIPCgtOT1RfRU5BQkxFRBAEEhMKD0ZBSUxFRF9FTkFCTElORxAFEhQK",
+            "EEZBSUxFRF9ESVNBQkxJTkcQBjp+6kF7CiZvcmFjbGVkYXRhYmFzZS5nb29n",
+            "bGVhcGlzLmNvbS9EYXRhYmFzZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2RhdGFiYXNlcy97ZGF0YWJhc2V9KglkYXRhYmFz",
+            "ZXMyCGRhdGFiYXNlIqoEChJEYXRhYmFzZVByb3BlcnRpZXMSXQoFc3RhdGUY",
+            "ASABKA4ySS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGF0YWJh",
+            "c2VQcm9wZXJ0aWVzLkRhdGFiYXNlTGlmZWN5Y2xlU3RhdGVCA+BBAxIXCgpk",
+            "Yl92ZXJzaW9uGAIgASgJQgPgQQISTQoQZGJfYmFja3VwX2NvbmZpZxgDIAEo",
+            "CzIuLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5EYkJhY2t1cENv",
+            "bmZpZ0ID4EEBEmEKGmRhdGFiYXNlX21hbmFnZW1lbnRfY29uZmlnGAQgASgL",
+            "MjguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRhdGFiYXNlTWFu",
+            "YWdlbWVudENvbmZpZ0ID4EEDIukBChZEYXRhYmFzZUxpZmVjeWNsZVN0YXRl",
+            "EigKJERBVEFCQVNFX0xJRkVDWUNMRV9TVEFURV9VTlNQRUNJRklFRBAAEhAK",
+            "DFBST1ZJU0lPTklORxABEg0KCUFWQUlMQUJMRRACEgwKCFVQREFUSU5HEAMS",
+            "FgoSQkFDS1VQX0lOX1BST0dSRVNTEAQSDQoJVVBHUkFESU5HEAUSDgoKQ09O",
+            "VkVSVElORxAGEg8KC1RFUk1JTkFUSU5HEAcSDgoKVEVSTUlOQVRFRBAIEhIK",
+            "DlJFU1RPUkVfRkFJTEVEEAkSCgoGRkFJTEVEEAoinAkKDkRiQmFja3VwQ29u",
+            "ZmlnEiAKE2F1dG9fYmFja3VwX2VuYWJsZWQYASABKAhCA+BBARJwChpiYWNr",
+            "dXBfZGVzdGluYXRpb25fZGV0YWlscxgCIAMoCzJHLmdvb2dsZS5jbG91ZC5v",
+            "cmFjbGVkYXRhYmFzZS52MS5EYkJhY2t1cENvbmZpZy5CYWNrdXBEZXN0aW5h",
+            "dGlvbkRldGFpbHNCA+BBARIiChVyZXRlbnRpb25fcGVyaW9kX2RheXMYAyAB",
+            "KAVCA+BBARJoChZiYWNrdXBfZGVsZXRpb25fcG9saWN5GAQgASgOMkMuZ29v",
+            "Z2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRiQmFja3VwQ29uZmlnLkJh",
+            "Y2t1cERlbGV0aW9uUG9saWN5QgPgQQESOQoUYXV0b19mdWxsX2JhY2t1cF9k",
+            "YXkYBSABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWtCA+BBARJhChdhdXRv",
+            "X2Z1bGxfYmFja3VwX3dpbmRvdxgGIAEoDjI7Lmdvb2dsZS5jbG91ZC5vcmFj",
+            "bGVkYXRhYmFzZS52MS5EYkJhY2t1cENvbmZpZy5CYWNrdXBXaW5kb3dCA+BB",
+            "ARJoCh5hdXRvX2luY3JlbWVudGFsX2JhY2t1cF93aW5kb3cYByABKA4yOy5n",
+            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGJCYWNrdXBDb25maWcu",
+            "QmFja3VwV2luZG93QgPgQQEacwoYQmFja3VwRGVzdGluYXRpb25EZXRhaWxz",
+            "ElcKBHR5cGUYASABKA4yRC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djEuRGJCYWNrdXBDb25maWcuQmFja3VwRGVzdGluYXRpb25UeXBlQgPgQQEi",
+            "iAEKFUJhY2t1cERlc3RpbmF0aW9uVHlwZRInCiNCQUNLVVBfREVTVElOQVRJ",
+            "T05fVFlQRV9VTlNQRUNJRklFRBAAEgcKA05GUxABEhYKElJFQ09WRVJZX0FQ",
+            "UExJQU5DRRACEhAKDE9CSkVDVF9TVE9SRRADEgkKBUxPQ0FMEAQSCAoEREJS",
+            "UxAFIuQBCgxCYWNrdXBXaW5kb3cSHQoZQkFDS1VQX1dJTkRPV19VTlNQRUNJ",
+            "RklFRBAAEgwKCFNMT1RfT05FEAESDAoIU0xPVF9UV08QAhIOCgpTTE9UX1RI",
+            "UkVFEAMSDQoJU0xPVF9GT1VSEAQSDQoJU0xPVF9GSVZFEAUSDAoIU0xPVF9T",
+            "SVgQBhIOCgpTTE9UX1NFVkVOEAcSDgoKU0xPVF9FSUdIVBAIEg0KCVNMT1Rf",
+            "TklORRAJEgwKCFNMT1RfVEVOEAoSDwoLU0xPVF9FTEVWRU4QCxIPCgtTTE9U",
+            "X1RXRUxWRRAMInkKFEJhY2t1cERlbGV0aW9uUG9saWN5EiYKIkJBQ0tVUF9E",
+            "RUxFVElPTl9QT0xJQ1lfVU5TUEVDSUZJRUQQABIWChJERUxFVEVfSU1NRURJ",
+            "QVRFTFkQARIhCh1ERUxFVEVfQUZURVJfUkVURU5USU9OX1BFUklPRBACIlIK",
+            "EkdldERhdGFiYXNlUmVxdWVzdBI8CgRuYW1lGAEgASgJQi7gQQL6QSgKJm9y",
+            "YWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0RhdGFiYXNlIpwBChRMaXN0",
+            "RGF0YWJhc2VzUmVxdWVzdBI+CgZwYXJlbnQYASABKAlCLuBBAvpBKBImb3Jh",
+            "Y2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vRGF0YWJhc2USFgoJcGFnZV9z",
+            "aXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZp",
+            "bHRlchgEIAEoCUID4EEBIm0KFUxpc3REYXRhYmFzZXNSZXNwb25zZRI7Cglk",
+            "YXRhYmFzZXMYASADKAsyKC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
+            "djEuRGF0YWJhc2USFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJQucBCiJjb20u",
+            "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxQg1EYXRhYmFzZVByb3Rv",
+            "UAFaSmNsb3VkLmdvb2dsZS5jb20vZ28vb3JhY2xlZGF0YWJhc2UvYXBpdjEv",
+            "b3JhY2xlZGF0YWJhc2VwYjtvcmFjbGVkYXRhYmFzZXBiqgIeR29vZ2xlLkNs",
+            "b3VkLk9yYWNsZURhdGFiYXNlLlYxygIeR29vZ2xlXENsb3VkXE9yYWNsZURh",
+            "dGFiYXNlXFYx6gIhR29vZ2xlOjpDbG91ZDo6T3JhY2xlRGF0YWJhc2U6OlYx",
+            "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.PluggableDatabaseReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.Database), global::Google.Cloud.OracleDatabase.V1.Database.Parser, new[]{ "Name", "DbName", "DbUniqueName", "AdminPassword", "TdeWalletPassword", "CharacterSet", "NcharacterSet", "OciUrl", "CreateTime", "Properties", "DatabaseId", "DbHomeName", "GcpOracleZone", "OpsInsightsStatus" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.Database.Types.OperationsInsightsStatus) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.Database), global::Google.Cloud.OracleDatabase.V1.Database.Parser, new[]{ "Name", "DbName", "DbUniqueName", "AdminPassword", "AdminPasswordSecretVersion", "TdeWalletPassword", "TdeWalletPasswordSecretVersion", "CharacterSet", "NcharacterSet", "OciUrl", "CreateTime", "Properties", "DatabaseId", "DbHomeName", "GcpOracleZone", "OpsInsightsStatus", "PluggableDatabaseId", "PluggableDatabaseName" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.Database.Types.OperationsInsightsStatus) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseProperties), global::Google.Cloud.OracleDatabase.V1.DatabaseProperties.Parser, new[]{ "State", "DbVersion", "DbBackupConfig", "DatabaseManagementConfig" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.DatabaseProperties.Types.DatabaseLifecycleState) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DbBackupConfig), global::Google.Cloud.OracleDatabase.V1.DbBackupConfig.Parser, new[]{ "AutoBackupEnabled", "BackupDestinationDetails", "RetentionPeriodDays", "BackupDeletionPolicy", "AutoFullBackupDay", "AutoFullBackupWindow", "AutoIncrementalBackupWindow" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.DbBackupConfig.Types.BackupDestinationType), typeof(global::Google.Cloud.OracleDatabase.V1.DbBackupConfig.Types.BackupWindow), typeof(global::Google.Cloud.OracleDatabase.V1.DbBackupConfig.Types.BackupDeletionPolicy) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DbBackupConfig.Types.BackupDestinationDetails), global::Google.Cloud.OracleDatabase.V1.DbBackupConfig.Types.BackupDestinationDetails.Parser, new[]{ "Type" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GetDatabaseRequest), global::Google.Cloud.OracleDatabase.V1.GetDatabaseRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -159,7 +165,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       dbName_ = other.dbName_;
       dbUniqueName_ = other.dbUniqueName_;
       adminPassword_ = other.adminPassword_;
+      adminPasswordSecretVersion_ = other.adminPasswordSecretVersion_;
       tdeWalletPassword_ = other.tdeWalletPassword_;
+      tdeWalletPasswordSecretVersion_ = other.tdeWalletPasswordSecretVersion_;
       characterSet_ = other.characterSet_;
       ncharacterSet_ = other.ncharacterSet_;
       ociUrl_ = other.ociUrl_;
@@ -169,6 +177,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       dbHomeName_ = other.dbHomeName_;
       gcpOracleZone_ = other.gcpOracleZone_;
       opsInsightsStatus_ = other.opsInsightsStatus_;
+      pluggableDatabaseId_ = other.pluggableDatabaseId_;
+      pluggableDatabaseName_ = other.pluggableDatabaseName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -230,7 +240,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int AdminPasswordFieldNumber = 4;
     private string adminPassword_ = "";
     /// <summary>
-    /// Required. The password for the default ADMIN user.
+    /// Optional. The password for the default ADMIN user.
+    /// Note: Only one of `admin_password_secret_version` or `admin_password` can
+    /// be populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -241,11 +253,31 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "admin_password_secret_version" field.</summary>
+    public const int AdminPasswordSecretVersionFieldNumber = 17;
+    private string adminPasswordSecretVersion_ = "";
+    /// <summary>
+    /// Optional. The resource name of a secret version in Secret Manager which
+    /// contains the database admin user's password. Format:
+    /// projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+    /// `admin_password_secret_version` or `admin_password` can be populated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdminPasswordSecretVersion {
+      get { return adminPasswordSecretVersion_; }
+      set {
+        adminPasswordSecretVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "tde_wallet_password" field.</summary>
     public const int TdeWalletPasswordFieldNumber = 5;
     private string tdeWalletPassword_ = "";
     /// <summary>
     /// Optional. The TDE wallet password for the database.
+    /// Note: Only one of `tde_wallet_password_secret_version` or
+    /// `tde_wallet_password` can be populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -253,6 +285,25 @@ namespace Google.Cloud.OracleDatabase.V1 {
       get { return tdeWalletPassword_; }
       set {
         tdeWalletPassword_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "tde_wallet_password_secret_version" field.</summary>
+    public const int TdeWalletPasswordSecretVersionFieldNumber = 18;
+    private string tdeWalletPasswordSecretVersion_ = "";
+    /// <summary>
+    /// Optional. The resource name of a secret version in Secret Manager which
+    /// contains the TDE wallet password for the database. Format:
+    /// projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+    /// `tde_wallet_password_secret_version` or `tde_wallet_password` can be
+    /// populated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TdeWalletPasswordSecretVersion {
+      get { return tdeWalletPasswordSecretVersion_; }
+      set {
+        tdeWalletPasswordSecretVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -393,6 +444,39 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "pluggable_database_id" field.</summary>
+    public const int PluggableDatabaseIdFieldNumber = 15;
+    private string pluggableDatabaseId_ = "";
+    /// <summary>
+    /// Optional. The ID of the pluggable database associated with the Database.
+    /// The ID must be unique within the project and location.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PluggableDatabaseId {
+      get { return pluggableDatabaseId_; }
+      set {
+        pluggableDatabaseId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pluggable_database_name" field.</summary>
+    public const int PluggableDatabaseNameFieldNumber = 16;
+    private string pluggableDatabaseName_ = "";
+    /// <summary>
+    /// Optional. The pluggable database associated with the Database. The name
+    /// must begin with an alphabetic character and can contain a maximum of thirty
+    /// alphanumeric characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PluggableDatabaseName {
+      get { return pluggableDatabaseName_; }
+      set {
+        pluggableDatabaseName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -412,7 +496,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DbName != other.DbName) return false;
       if (DbUniqueName != other.DbUniqueName) return false;
       if (AdminPassword != other.AdminPassword) return false;
+      if (AdminPasswordSecretVersion != other.AdminPasswordSecretVersion) return false;
       if (TdeWalletPassword != other.TdeWalletPassword) return false;
+      if (TdeWalletPasswordSecretVersion != other.TdeWalletPasswordSecretVersion) return false;
       if (CharacterSet != other.CharacterSet) return false;
       if (NcharacterSet != other.NcharacterSet) return false;
       if (OciUrl != other.OciUrl) return false;
@@ -422,6 +508,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DbHomeName != other.DbHomeName) return false;
       if (GcpOracleZone != other.GcpOracleZone) return false;
       if (OpsInsightsStatus != other.OpsInsightsStatus) return false;
+      if (PluggableDatabaseId != other.PluggableDatabaseId) return false;
+      if (PluggableDatabaseName != other.PluggableDatabaseName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -433,7 +521,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DbName.Length != 0) hash ^= DbName.GetHashCode();
       if (DbUniqueName.Length != 0) hash ^= DbUniqueName.GetHashCode();
       if (AdminPassword.Length != 0) hash ^= AdminPassword.GetHashCode();
+      if (AdminPasswordSecretVersion.Length != 0) hash ^= AdminPasswordSecretVersion.GetHashCode();
       if (TdeWalletPassword.Length != 0) hash ^= TdeWalletPassword.GetHashCode();
+      if (TdeWalletPasswordSecretVersion.Length != 0) hash ^= TdeWalletPasswordSecretVersion.GetHashCode();
       if (CharacterSet.Length != 0) hash ^= CharacterSet.GetHashCode();
       if (NcharacterSet.Length != 0) hash ^= NcharacterSet.GetHashCode();
       if (OciUrl.Length != 0) hash ^= OciUrl.GetHashCode();
@@ -443,6 +533,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DbHomeName.Length != 0) hash ^= DbHomeName.GetHashCode();
       if (GcpOracleZone.Length != 0) hash ^= GcpOracleZone.GetHashCode();
       if (OpsInsightsStatus != global::Google.Cloud.OracleDatabase.V1.Database.Types.OperationsInsightsStatus.Unspecified) hash ^= OpsInsightsStatus.GetHashCode();
+      if (PluggableDatabaseId.Length != 0) hash ^= PluggableDatabaseId.GetHashCode();
+      if (PluggableDatabaseName.Length != 0) hash ^= PluggableDatabaseName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -517,6 +609,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(112);
         output.WriteEnum((int) OpsInsightsStatus);
       }
+      if (PluggableDatabaseId.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(PluggableDatabaseId);
+      }
+      if (PluggableDatabaseName.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(PluggableDatabaseName);
+      }
+      if (AdminPasswordSecretVersion.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(AdminPasswordSecretVersion);
+      }
+      if (TdeWalletPasswordSecretVersion.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(TdeWalletPasswordSecretVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -583,6 +691,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(112);
         output.WriteEnum((int) OpsInsightsStatus);
       }
+      if (PluggableDatabaseId.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(PluggableDatabaseId);
+      }
+      if (PluggableDatabaseName.Length != 0) {
+        output.WriteRawTag(130, 1);
+        output.WriteString(PluggableDatabaseName);
+      }
+      if (AdminPasswordSecretVersion.Length != 0) {
+        output.WriteRawTag(138, 1);
+        output.WriteString(AdminPasswordSecretVersion);
+      }
+      if (TdeWalletPasswordSecretVersion.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(TdeWalletPasswordSecretVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -605,8 +729,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (AdminPassword.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AdminPassword);
       }
+      if (AdminPasswordSecretVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AdminPasswordSecretVersion);
+      }
       if (TdeWalletPassword.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TdeWalletPassword);
+      }
+      if (TdeWalletPasswordSecretVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(TdeWalletPasswordSecretVersion);
       }
       if (CharacterSet.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CharacterSet);
@@ -635,6 +765,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (OpsInsightsStatus != global::Google.Cloud.OracleDatabase.V1.Database.Types.OperationsInsightsStatus.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) OpsInsightsStatus);
       }
+      if (PluggableDatabaseId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PluggableDatabaseId);
+      }
+      if (PluggableDatabaseName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PluggableDatabaseName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -659,8 +795,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (other.AdminPassword.Length != 0) {
         AdminPassword = other.AdminPassword;
       }
+      if (other.AdminPasswordSecretVersion.Length != 0) {
+        AdminPasswordSecretVersion = other.AdminPasswordSecretVersion;
+      }
       if (other.TdeWalletPassword.Length != 0) {
         TdeWalletPassword = other.TdeWalletPassword;
+      }
+      if (other.TdeWalletPasswordSecretVersion.Length != 0) {
+        TdeWalletPasswordSecretVersion = other.TdeWalletPasswordSecretVersion;
       }
       if (other.CharacterSet.Length != 0) {
         CharacterSet = other.CharacterSet;
@@ -694,6 +836,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.OpsInsightsStatus != global::Google.Cloud.OracleDatabase.V1.Database.Types.OperationsInsightsStatus.Unspecified) {
         OpsInsightsStatus = other.OpsInsightsStatus;
+      }
+      if (other.PluggableDatabaseId.Length != 0) {
+        PluggableDatabaseId = other.PluggableDatabaseId;
+      }
+      if (other.PluggableDatabaseName.Length != 0) {
+        PluggableDatabaseName = other.PluggableDatabaseName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -776,6 +924,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
             OpsInsightsStatus = (global::Google.Cloud.OracleDatabase.V1.Database.Types.OperationsInsightsStatus) input.ReadEnum();
             break;
           }
+          case 122: {
+            PluggableDatabaseId = input.ReadString();
+            break;
+          }
+          case 130: {
+            PluggableDatabaseName = input.ReadString();
+            break;
+          }
+          case 138: {
+            AdminPasswordSecretVersion = input.ReadString();
+            break;
+          }
+          case 146: {
+            TdeWalletPasswordSecretVersion = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -855,6 +1019,22 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 112: {
             OpsInsightsStatus = (global::Google.Cloud.OracleDatabase.V1.Database.Types.OperationsInsightsStatus) input.ReadEnum();
+            break;
+          }
+          case 122: {
+            PluggableDatabaseId = input.ReadString();
+            break;
+          }
+          case 130: {
+            PluggableDatabaseName = input.ReadString();
+            break;
+          }
+          case 138: {
+            AdminPasswordSecretVersion = input.ReadString();
+            break;
+          }
+          case 146: {
+            TdeWalletPasswordSecretVersion = input.ReadString();
             break;
           }
         }

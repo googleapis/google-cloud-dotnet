@@ -11284,6 +11284,3330 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListGoldengateDeployments</summary>
+        public void ListGoldengateDeploymentsRequestObject()
+        {
+            // Snippet: ListGoldengateDeployments(ListGoldengateDeploymentsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListGoldengateDeploymentsRequest request = new ListGoldengateDeploymentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> response = oracleDatabaseClient.ListGoldengateDeployments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeployment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentsAsync</summary>
+        public async Task ListGoldengateDeploymentsRequestObjectAsync()
+        {
+            // Snippet: ListGoldengateDeploymentsAsync(ListGoldengateDeploymentsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGoldengateDeploymentsRequest request = new ListGoldengateDeploymentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> response = oracleDatabaseClient.ListGoldengateDeploymentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeployments</summary>
+        public void ListGoldengateDeployments()
+        {
+            // Snippet: ListGoldengateDeployments(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> response = oracleDatabaseClient.ListGoldengateDeployments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeployment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentsAsync</summary>
+        public async Task ListGoldengateDeploymentsAsync()
+        {
+            // Snippet: ListGoldengateDeploymentsAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> response = oracleDatabaseClient.ListGoldengateDeploymentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeployments</summary>
+        public void ListGoldengateDeploymentsResourceNames()
+        {
+            // Snippet: ListGoldengateDeployments(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> response = oracleDatabaseClient.ListGoldengateDeployments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeployment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentsAsync</summary>
+        public async Task ListGoldengateDeploymentsResourceNamesAsync()
+        {
+            // Snippet: ListGoldengateDeploymentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> response = oracleDatabaseClient.ListGoldengateDeploymentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeployment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeployment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeployment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeployment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeployment</summary>
+        public void GetGoldengateDeploymentRequestObject()
+        {
+            // Snippet: GetGoldengateDeployment(GetGoldengateDeploymentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetGoldengateDeploymentRequest request = new GetGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]"),
+            };
+            // Make the request
+            GoldengateDeployment response = oracleDatabaseClient.GetGoldengateDeployment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentAsync</summary>
+        public async Task GetGoldengateDeploymentRequestObjectAsync()
+        {
+            // Snippet: GetGoldengateDeploymentAsync(GetGoldengateDeploymentRequest, CallSettings)
+            // Additional: GetGoldengateDeploymentAsync(GetGoldengateDeploymentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoldengateDeploymentRequest request = new GetGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]"),
+            };
+            // Make the request
+            GoldengateDeployment response = await oracleDatabaseClient.GetGoldengateDeploymentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeployment</summary>
+        public void GetGoldengateDeployment()
+        {
+            // Snippet: GetGoldengateDeployment(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeployments/[GOLDENGATE_DEPLOYMENT]";
+            // Make the request
+            GoldengateDeployment response = oracleDatabaseClient.GetGoldengateDeployment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentAsync</summary>
+        public async Task GetGoldengateDeploymentAsync()
+        {
+            // Snippet: GetGoldengateDeploymentAsync(string, CallSettings)
+            // Additional: GetGoldengateDeploymentAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeployments/[GOLDENGATE_DEPLOYMENT]";
+            // Make the request
+            GoldengateDeployment response = await oracleDatabaseClient.GetGoldengateDeploymentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeployment</summary>
+        public void GetGoldengateDeploymentResourceNames()
+        {
+            // Snippet: GetGoldengateDeployment(GoldengateDeploymentName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateDeploymentName name = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]");
+            // Make the request
+            GoldengateDeployment response = oracleDatabaseClient.GetGoldengateDeployment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentAsync</summary>
+        public async Task GetGoldengateDeploymentResourceNamesAsync()
+        {
+            // Snippet: GetGoldengateDeploymentAsync(GoldengateDeploymentName, CallSettings)
+            // Additional: GetGoldengateDeploymentAsync(GoldengateDeploymentName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateDeploymentName name = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]");
+            // Make the request
+            GoldengateDeployment response = await oracleDatabaseClient.GetGoldengateDeploymentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateDeployment</summary>
+        public void CreateGoldengateDeploymentRequestObject()
+        {
+            // Snippet: CreateGoldengateDeployment(CreateGoldengateDeploymentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CreateGoldengateDeploymentRequest request = new CreateGoldengateDeploymentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GoldengateDeploymentId = "",
+                GoldengateDeployment = new GoldengateDeployment(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateDeployment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateDeploymentAsync</summary>
+        public async Task CreateGoldengateDeploymentRequestObjectAsync()
+        {
+            // Snippet: CreateGoldengateDeploymentAsync(CreateGoldengateDeploymentRequest, CallSettings)
+            // Additional: CreateGoldengateDeploymentAsync(CreateGoldengateDeploymentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateGoldengateDeploymentRequest request = new CreateGoldengateDeploymentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GoldengateDeploymentId = "",
+                GoldengateDeployment = new GoldengateDeployment(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateDeploymentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateDeployment</summary>
+        public void CreateGoldengateDeployment()
+        {
+            // Snippet: CreateGoldengateDeployment(string, GoldengateDeployment, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            GoldengateDeployment goldengateDeployment = new GoldengateDeployment();
+            string goldengateDeploymentId = "";
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateDeployment(parent, goldengateDeployment, goldengateDeploymentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateDeploymentAsync</summary>
+        public async Task CreateGoldengateDeploymentAsync()
+        {
+            // Snippet: CreateGoldengateDeploymentAsync(string, GoldengateDeployment, string, CallSettings)
+            // Additional: CreateGoldengateDeploymentAsync(string, GoldengateDeployment, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            GoldengateDeployment goldengateDeployment = new GoldengateDeployment();
+            string goldengateDeploymentId = "";
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateDeploymentAsync(parent, goldengateDeployment, goldengateDeploymentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateDeployment</summary>
+        public void CreateGoldengateDeploymentResourceNames()
+        {
+            // Snippet: CreateGoldengateDeployment(LocationName, GoldengateDeployment, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            GoldengateDeployment goldengateDeployment = new GoldengateDeployment();
+            string goldengateDeploymentId = "";
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateDeployment(parent, goldengateDeployment, goldengateDeploymentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateDeploymentAsync</summary>
+        public async Task CreateGoldengateDeploymentResourceNamesAsync()
+        {
+            // Snippet: CreateGoldengateDeploymentAsync(LocationName, GoldengateDeployment, string, CallSettings)
+            // Additional: CreateGoldengateDeploymentAsync(LocationName, GoldengateDeployment, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            GoldengateDeployment goldengateDeployment = new GoldengateDeployment();
+            string goldengateDeploymentId = "";
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateDeploymentAsync(parent, goldengateDeployment, goldengateDeploymentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateDeployment</summary>
+        public void DeleteGoldengateDeploymentRequestObject()
+        {
+            // Snippet: DeleteGoldengateDeployment(DeleteGoldengateDeploymentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DeleteGoldengateDeploymentRequest request = new DeleteGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateDeployment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateDeploymentAsync</summary>
+        public async Task DeleteGoldengateDeploymentRequestObjectAsync()
+        {
+            // Snippet: DeleteGoldengateDeploymentAsync(DeleteGoldengateDeploymentRequest, CallSettings)
+            // Additional: DeleteGoldengateDeploymentAsync(DeleteGoldengateDeploymentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteGoldengateDeploymentRequest request = new DeleteGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateDeploymentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateDeployment</summary>
+        public void DeleteGoldengateDeployment()
+        {
+            // Snippet: DeleteGoldengateDeployment(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeployments/[GOLDENGATE_DEPLOYMENT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateDeployment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateDeploymentAsync</summary>
+        public async Task DeleteGoldengateDeploymentAsync()
+        {
+            // Snippet: DeleteGoldengateDeploymentAsync(string, CallSettings)
+            // Additional: DeleteGoldengateDeploymentAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeployments/[GOLDENGATE_DEPLOYMENT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateDeploymentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateDeployment</summary>
+        public void DeleteGoldengateDeploymentResourceNames()
+        {
+            // Snippet: DeleteGoldengateDeployment(GoldengateDeploymentName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateDeploymentName name = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateDeployment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateDeploymentAsync</summary>
+        public async Task DeleteGoldengateDeploymentResourceNamesAsync()
+        {
+            // Snippet: DeleteGoldengateDeploymentAsync(GoldengateDeploymentName, CallSettings)
+            // Additional: DeleteGoldengateDeploymentAsync(GoldengateDeploymentName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateDeploymentName name = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateDeploymentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGoldengateDeployment</summary>
+        public void StopGoldengateDeploymentRequestObject()
+        {
+            // Snippet: StopGoldengateDeployment(StopGoldengateDeploymentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            StopGoldengateDeploymentRequest request = new StopGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]"),
+            };
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.StopGoldengateDeployment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceStopGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGoldengateDeploymentAsync</summary>
+        public async Task StopGoldengateDeploymentRequestObjectAsync()
+        {
+            // Snippet: StopGoldengateDeploymentAsync(StopGoldengateDeploymentRequest, CallSettings)
+            // Additional: StopGoldengateDeploymentAsync(StopGoldengateDeploymentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            StopGoldengateDeploymentRequest request = new StopGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]"),
+            };
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.StopGoldengateDeploymentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceStopGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGoldengateDeployment</summary>
+        public void StopGoldengateDeployment()
+        {
+            // Snippet: StopGoldengateDeployment(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeployments/[GOLDENGATE_DEPLOYMENT]";
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.StopGoldengateDeployment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceStopGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGoldengateDeploymentAsync</summary>
+        public async Task StopGoldengateDeploymentAsync()
+        {
+            // Snippet: StopGoldengateDeploymentAsync(string, CallSettings)
+            // Additional: StopGoldengateDeploymentAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeployments/[GOLDENGATE_DEPLOYMENT]";
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.StopGoldengateDeploymentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceStopGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGoldengateDeployment</summary>
+        public void StopGoldengateDeploymentResourceNames()
+        {
+            // Snippet: StopGoldengateDeployment(GoldengateDeploymentName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateDeploymentName name = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]");
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.StopGoldengateDeployment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceStopGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StopGoldengateDeploymentAsync</summary>
+        public async Task StopGoldengateDeploymentResourceNamesAsync()
+        {
+            // Snippet: StopGoldengateDeploymentAsync(GoldengateDeploymentName, CallSettings)
+            // Additional: StopGoldengateDeploymentAsync(GoldengateDeploymentName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateDeploymentName name = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]");
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.StopGoldengateDeploymentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceStopGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartGoldengateDeployment</summary>
+        public void StartGoldengateDeploymentRequestObject()
+        {
+            // Snippet: StartGoldengateDeployment(StartGoldengateDeploymentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            StartGoldengateDeploymentRequest request = new StartGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]"),
+            };
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.StartGoldengateDeployment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceStartGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartGoldengateDeploymentAsync</summary>
+        public async Task StartGoldengateDeploymentRequestObjectAsync()
+        {
+            // Snippet: StartGoldengateDeploymentAsync(StartGoldengateDeploymentRequest, CallSettings)
+            // Additional: StartGoldengateDeploymentAsync(StartGoldengateDeploymentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            StartGoldengateDeploymentRequest request = new StartGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]"),
+            };
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.StartGoldengateDeploymentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceStartGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartGoldengateDeployment</summary>
+        public void StartGoldengateDeployment()
+        {
+            // Snippet: StartGoldengateDeployment(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeployments/[GOLDENGATE_DEPLOYMENT]";
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.StartGoldengateDeployment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceStartGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartGoldengateDeploymentAsync</summary>
+        public async Task StartGoldengateDeploymentAsync()
+        {
+            // Snippet: StartGoldengateDeploymentAsync(string, CallSettings)
+            // Additional: StartGoldengateDeploymentAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeployments/[GOLDENGATE_DEPLOYMENT]";
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.StartGoldengateDeploymentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceStartGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartGoldengateDeployment</summary>
+        public void StartGoldengateDeploymentResourceNames()
+        {
+            // Snippet: StartGoldengateDeployment(GoldengateDeploymentName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateDeploymentName name = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]");
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = oracleDatabaseClient.StartGoldengateDeployment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceStartGoldengateDeployment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartGoldengateDeploymentAsync</summary>
+        public async Task StartGoldengateDeploymentResourceNamesAsync()
+        {
+            // Snippet: StartGoldengateDeploymentAsync(GoldengateDeploymentName, CallSettings)
+            // Additional: StartGoldengateDeploymentAsync(GoldengateDeploymentName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateDeploymentName name = GoldengateDeploymentName.FromProjectLocationGoldengateDeployment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT]");
+            // Make the request
+            Operation<GoldengateDeployment, OperationMetadata> response = await oracleDatabaseClient.StartGoldengateDeploymentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateDeployment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateDeployment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateDeployment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceStartGoldengateDeploymentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateDeployment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnections</summary>
+        public void ListGoldengateConnectionsRequestObject()
+        {
+            // Snippet: ListGoldengateConnections(ListGoldengateConnectionsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListGoldengateConnectionsRequest request = new ListGoldengateConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> response = oracleDatabaseClient.ListGoldengateConnections(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionsAsync</summary>
+        public async Task ListGoldengateConnectionsRequestObjectAsync()
+        {
+            // Snippet: ListGoldengateConnectionsAsync(ListGoldengateConnectionsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGoldengateConnectionsRequest request = new ListGoldengateConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> response = oracleDatabaseClient.ListGoldengateConnectionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnections</summary>
+        public void ListGoldengateConnections()
+        {
+            // Snippet: ListGoldengateConnections(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> response = oracleDatabaseClient.ListGoldengateConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionsAsync</summary>
+        public async Task ListGoldengateConnectionsAsync()
+        {
+            // Snippet: ListGoldengateConnectionsAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> response = oracleDatabaseClient.ListGoldengateConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnections</summary>
+        public void ListGoldengateConnectionsResourceNames()
+        {
+            // Snippet: ListGoldengateConnections(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> response = oracleDatabaseClient.ListGoldengateConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionsAsync</summary>
+        public async Task ListGoldengateConnectionsResourceNamesAsync()
+        {
+            // Snippet: ListGoldengateConnectionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> response = oracleDatabaseClient.ListGoldengateConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnection</summary>
+        public void GetGoldengateConnectionRequestObject()
+        {
+            // Snippet: GetGoldengateConnection(GetGoldengateConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetGoldengateConnectionRequest request = new GetGoldengateConnectionRequest
+            {
+                GoldengateConnectionName = GoldengateConnectionName.FromProjectLocationGoldengateConnection("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION]"),
+            };
+            // Make the request
+            GoldengateConnection response = oracleDatabaseClient.GetGoldengateConnection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAsync</summary>
+        public async Task GetGoldengateConnectionRequestObjectAsync()
+        {
+            // Snippet: GetGoldengateConnectionAsync(GetGoldengateConnectionRequest, CallSettings)
+            // Additional: GetGoldengateConnectionAsync(GetGoldengateConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoldengateConnectionRequest request = new GetGoldengateConnectionRequest
+            {
+                GoldengateConnectionName = GoldengateConnectionName.FromProjectLocationGoldengateConnection("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION]"),
+            };
+            // Make the request
+            GoldengateConnection response = await oracleDatabaseClient.GetGoldengateConnectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnection</summary>
+        public void GetGoldengateConnection()
+        {
+            // Snippet: GetGoldengateConnection(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnections/[GOLDENGATE_CONNECTION]";
+            // Make the request
+            GoldengateConnection response = oracleDatabaseClient.GetGoldengateConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAsync</summary>
+        public async Task GetGoldengateConnectionAsync()
+        {
+            // Snippet: GetGoldengateConnectionAsync(string, CallSettings)
+            // Additional: GetGoldengateConnectionAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnections/[GOLDENGATE_CONNECTION]";
+            // Make the request
+            GoldengateConnection response = await oracleDatabaseClient.GetGoldengateConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnection</summary>
+        public void GetGoldengateConnectionResourceNames()
+        {
+            // Snippet: GetGoldengateConnection(GoldengateConnectionName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateConnectionName name = GoldengateConnectionName.FromProjectLocationGoldengateConnection("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION]");
+            // Make the request
+            GoldengateConnection response = oracleDatabaseClient.GetGoldengateConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAsync</summary>
+        public async Task GetGoldengateConnectionResourceNamesAsync()
+        {
+            // Snippet: GetGoldengateConnectionAsync(GoldengateConnectionName, CallSettings)
+            // Additional: GetGoldengateConnectionAsync(GoldengateConnectionName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateConnectionName name = GoldengateConnectionName.FromProjectLocationGoldengateConnection("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION]");
+            // Make the request
+            GoldengateConnection response = await oracleDatabaseClient.GetGoldengateConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnection</summary>
+        public void CreateGoldengateConnectionRequestObject()
+        {
+            // Snippet: CreateGoldengateConnection(CreateGoldengateConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CreateGoldengateConnectionRequest request = new CreateGoldengateConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GoldengateConnectionId = "",
+                GoldengateConnection = new GoldengateConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAsync</summary>
+        public async Task CreateGoldengateConnectionRequestObjectAsync()
+        {
+            // Snippet: CreateGoldengateConnectionAsync(CreateGoldengateConnectionRequest, CallSettings)
+            // Additional: CreateGoldengateConnectionAsync(CreateGoldengateConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateGoldengateConnectionRequest request = new CreateGoldengateConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GoldengateConnectionId = "",
+                GoldengateConnection = new GoldengateConnection(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnection</summary>
+        public void CreateGoldengateConnection()
+        {
+            // Snippet: CreateGoldengateConnection(string, GoldengateConnection, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            GoldengateConnection goldengateConnection = new GoldengateConnection();
+            string goldengateConnectionId = "";
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateConnection(parent, goldengateConnection, goldengateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAsync</summary>
+        public async Task CreateGoldengateConnectionAsync()
+        {
+            // Snippet: CreateGoldengateConnectionAsync(string, GoldengateConnection, string, CallSettings)
+            // Additional: CreateGoldengateConnectionAsync(string, GoldengateConnection, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            GoldengateConnection goldengateConnection = new GoldengateConnection();
+            string goldengateConnectionId = "";
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateConnectionAsync(parent, goldengateConnection, goldengateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnection</summary>
+        public void CreateGoldengateConnectionResourceNames()
+        {
+            // Snippet: CreateGoldengateConnection(LocationName, GoldengateConnection, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            GoldengateConnection goldengateConnection = new GoldengateConnection();
+            string goldengateConnectionId = "";
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateConnection(parent, goldengateConnection, goldengateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAsync</summary>
+        public async Task CreateGoldengateConnectionResourceNamesAsync()
+        {
+            // Snippet: CreateGoldengateConnectionAsync(LocationName, GoldengateConnection, string, CallSettings)
+            // Additional: CreateGoldengateConnectionAsync(LocationName, GoldengateConnection, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            GoldengateConnection goldengateConnection = new GoldengateConnection();
+            string goldengateConnectionId = "";
+            // Make the request
+            Operation<GoldengateConnection, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateConnectionAsync(parent, goldengateConnection, goldengateConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnection, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnection</summary>
+        public void DeleteGoldengateConnectionRequestObject()
+        {
+            // Snippet: DeleteGoldengateConnection(DeleteGoldengateConnectionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DeleteGoldengateConnectionRequest request = new DeleteGoldengateConnectionRequest
+            {
+                GoldengateConnectionName = GoldengateConnectionName.FromProjectLocationGoldengateConnection("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAsync</summary>
+        public async Task DeleteGoldengateConnectionRequestObjectAsync()
+        {
+            // Snippet: DeleteGoldengateConnectionAsync(DeleteGoldengateConnectionRequest, CallSettings)
+            // Additional: DeleteGoldengateConnectionAsync(DeleteGoldengateConnectionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteGoldengateConnectionRequest request = new DeleteGoldengateConnectionRequest
+            {
+                GoldengateConnectionName = GoldengateConnectionName.FromProjectLocationGoldengateConnection("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnection</summary>
+        public void DeleteGoldengateConnection()
+        {
+            // Snippet: DeleteGoldengateConnection(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnections/[GOLDENGATE_CONNECTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAsync</summary>
+        public async Task DeleteGoldengateConnectionAsync()
+        {
+            // Snippet: DeleteGoldengateConnectionAsync(string, CallSettings)
+            // Additional: DeleteGoldengateConnectionAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnections/[GOLDENGATE_CONNECTION]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnection</summary>
+        public void DeleteGoldengateConnectionResourceNames()
+        {
+            // Snippet: DeleteGoldengateConnection(GoldengateConnectionName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateConnectionName name = GoldengateConnectionName.FromProjectLocationGoldengateConnection("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAsync</summary>
+        public async Task DeleteGoldengateConnectionResourceNamesAsync()
+        {
+            // Snippet: DeleteGoldengateConnectionAsync(GoldengateConnectionName, CallSettings)
+            // Additional: DeleteGoldengateConnectionAsync(GoldengateConnectionName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateConnectionName name = GoldengateConnectionName.FromProjectLocationGoldengateConnection("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentVersion</summary>
+        public void GetGoldengateDeploymentVersionRequestObject()
+        {
+            // Snippet: GetGoldengateDeploymentVersion(GetGoldengateDeploymentVersionRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetGoldengateDeploymentVersionRequest request = new GetGoldengateDeploymentVersionRequest
+            {
+                GoldengateDeploymentVersionName = GoldengateDeploymentVersionName.FromProjectLocationGoldengateDeploymentVersion("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_VERSION]"),
+            };
+            // Make the request
+            GoldengateDeploymentVersion response = oracleDatabaseClient.GetGoldengateDeploymentVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentVersionAsync</summary>
+        public async Task GetGoldengateDeploymentVersionRequestObjectAsync()
+        {
+            // Snippet: GetGoldengateDeploymentVersionAsync(GetGoldengateDeploymentVersionRequest, CallSettings)
+            // Additional: GetGoldengateDeploymentVersionAsync(GetGoldengateDeploymentVersionRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoldengateDeploymentVersionRequest request = new GetGoldengateDeploymentVersionRequest
+            {
+                GoldengateDeploymentVersionName = GoldengateDeploymentVersionName.FromProjectLocationGoldengateDeploymentVersion("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_VERSION]"),
+            };
+            // Make the request
+            GoldengateDeploymentVersion response = await oracleDatabaseClient.GetGoldengateDeploymentVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentVersion</summary>
+        public void GetGoldengateDeploymentVersion()
+        {
+            // Snippet: GetGoldengateDeploymentVersion(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentVersions/[GOLDENGATE_DEPLOYMENT_VERSION]";
+            // Make the request
+            GoldengateDeploymentVersion response = oracleDatabaseClient.GetGoldengateDeploymentVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentVersionAsync</summary>
+        public async Task GetGoldengateDeploymentVersionAsync()
+        {
+            // Snippet: GetGoldengateDeploymentVersionAsync(string, CallSettings)
+            // Additional: GetGoldengateDeploymentVersionAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentVersions/[GOLDENGATE_DEPLOYMENT_VERSION]";
+            // Make the request
+            GoldengateDeploymentVersion response = await oracleDatabaseClient.GetGoldengateDeploymentVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentVersion</summary>
+        public void GetGoldengateDeploymentVersionResourceNames()
+        {
+            // Snippet: GetGoldengateDeploymentVersion(GoldengateDeploymentVersionName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateDeploymentVersionName name = GoldengateDeploymentVersionName.FromProjectLocationGoldengateDeploymentVersion("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_VERSION]");
+            // Make the request
+            GoldengateDeploymentVersion response = oracleDatabaseClient.GetGoldengateDeploymentVersion(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentVersionAsync</summary>
+        public async Task GetGoldengateDeploymentVersionResourceNamesAsync()
+        {
+            // Snippet: GetGoldengateDeploymentVersionAsync(GoldengateDeploymentVersionName, CallSettings)
+            // Additional: GetGoldengateDeploymentVersionAsync(GoldengateDeploymentVersionName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateDeploymentVersionName name = GoldengateDeploymentVersionName.FromProjectLocationGoldengateDeploymentVersion("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_VERSION]");
+            // Make the request
+            GoldengateDeploymentVersion response = await oracleDatabaseClient.GetGoldengateDeploymentVersionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentVersions</summary>
+        public void ListGoldengateDeploymentVersionsRequestObject()
+        {
+            // Snippet: ListGoldengateDeploymentVersions(ListGoldengateDeploymentVersionsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListGoldengateDeploymentVersionsRequest request = new ListGoldengateDeploymentVersionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> response = oracleDatabaseClient.ListGoldengateDeploymentVersions(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentVersionsAsync</summary>
+        public async Task ListGoldengateDeploymentVersionsRequestObjectAsync()
+        {
+            // Snippet: ListGoldengateDeploymentVersionsAsync(ListGoldengateDeploymentVersionsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGoldengateDeploymentVersionsRequest request = new ListGoldengateDeploymentVersionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> response = oracleDatabaseClient.ListGoldengateDeploymentVersionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentVersions</summary>
+        public void ListGoldengateDeploymentVersions()
+        {
+            // Snippet: ListGoldengateDeploymentVersions(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> response = oracleDatabaseClient.ListGoldengateDeploymentVersions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentVersionsAsync</summary>
+        public async Task ListGoldengateDeploymentVersionsAsync()
+        {
+            // Snippet: ListGoldengateDeploymentVersionsAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> response = oracleDatabaseClient.ListGoldengateDeploymentVersionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentVersions</summary>
+        public void ListGoldengateDeploymentVersionsResourceNames()
+        {
+            // Snippet: ListGoldengateDeploymentVersions(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> response = oracleDatabaseClient.ListGoldengateDeploymentVersions(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentVersion> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentVersionsAsync</summary>
+        public async Task ListGoldengateDeploymentVersionsResourceNamesAsync()
+        {
+            // Snippet: ListGoldengateDeploymentVersionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> response = oracleDatabaseClient.ListGoldengateDeploymentVersionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentVersion item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentVersionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentVersion item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentVersion> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentVersion item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentType</summary>
+        public void GetGoldengateDeploymentTypeRequestObject()
+        {
+            // Snippet: GetGoldengateDeploymentType(GetGoldengateDeploymentTypeRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetGoldengateDeploymentTypeRequest request = new GetGoldengateDeploymentTypeRequest
+            {
+                GoldengateDeploymentTypeName = GoldengateDeploymentTypeName.FromProjectLocationGoldengateDeploymentType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_TYPE]"),
+            };
+            // Make the request
+            GoldengateDeploymentType response = oracleDatabaseClient.GetGoldengateDeploymentType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentTypeAsync</summary>
+        public async Task GetGoldengateDeploymentTypeRequestObjectAsync()
+        {
+            // Snippet: GetGoldengateDeploymentTypeAsync(GetGoldengateDeploymentTypeRequest, CallSettings)
+            // Additional: GetGoldengateDeploymentTypeAsync(GetGoldengateDeploymentTypeRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoldengateDeploymentTypeRequest request = new GetGoldengateDeploymentTypeRequest
+            {
+                GoldengateDeploymentTypeName = GoldengateDeploymentTypeName.FromProjectLocationGoldengateDeploymentType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_TYPE]"),
+            };
+            // Make the request
+            GoldengateDeploymentType response = await oracleDatabaseClient.GetGoldengateDeploymentTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentType</summary>
+        public void GetGoldengateDeploymentType()
+        {
+            // Snippet: GetGoldengateDeploymentType(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentTypes/[GOLDENGATE_DEPLOYMENT_TYPE]";
+            // Make the request
+            GoldengateDeploymentType response = oracleDatabaseClient.GetGoldengateDeploymentType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentTypeAsync</summary>
+        public async Task GetGoldengateDeploymentTypeAsync()
+        {
+            // Snippet: GetGoldengateDeploymentTypeAsync(string, CallSettings)
+            // Additional: GetGoldengateDeploymentTypeAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentTypes/[GOLDENGATE_DEPLOYMENT_TYPE]";
+            // Make the request
+            GoldengateDeploymentType response = await oracleDatabaseClient.GetGoldengateDeploymentTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentType</summary>
+        public void GetGoldengateDeploymentTypeResourceNames()
+        {
+            // Snippet: GetGoldengateDeploymentType(GoldengateDeploymentTypeName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateDeploymentTypeName name = GoldengateDeploymentTypeName.FromProjectLocationGoldengateDeploymentType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_TYPE]");
+            // Make the request
+            GoldengateDeploymentType response = oracleDatabaseClient.GetGoldengateDeploymentType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentTypeAsync</summary>
+        public async Task GetGoldengateDeploymentTypeResourceNamesAsync()
+        {
+            // Snippet: GetGoldengateDeploymentTypeAsync(GoldengateDeploymentTypeName, CallSettings)
+            // Additional: GetGoldengateDeploymentTypeAsync(GoldengateDeploymentTypeName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateDeploymentTypeName name = GoldengateDeploymentTypeName.FromProjectLocationGoldengateDeploymentType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_TYPE]");
+            // Make the request
+            GoldengateDeploymentType response = await oracleDatabaseClient.GetGoldengateDeploymentTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentTypes</summary>
+        public void ListGoldengateDeploymentTypesRequestObject()
+        {
+            // Snippet: ListGoldengateDeploymentTypes(ListGoldengateDeploymentTypesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListGoldengateDeploymentTypesRequest request = new ListGoldengateDeploymentTypesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> response = oracleDatabaseClient.ListGoldengateDeploymentTypes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentTypesAsync</summary>
+        public async Task ListGoldengateDeploymentTypesRequestObjectAsync()
+        {
+            // Snippet: ListGoldengateDeploymentTypesAsync(ListGoldengateDeploymentTypesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGoldengateDeploymentTypesRequest request = new ListGoldengateDeploymentTypesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> response = oracleDatabaseClient.ListGoldengateDeploymentTypesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentTypes</summary>
+        public void ListGoldengateDeploymentTypes()
+        {
+            // Snippet: ListGoldengateDeploymentTypes(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> response = oracleDatabaseClient.ListGoldengateDeploymentTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentTypesAsync</summary>
+        public async Task ListGoldengateDeploymentTypesAsync()
+        {
+            // Snippet: ListGoldengateDeploymentTypesAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> response = oracleDatabaseClient.ListGoldengateDeploymentTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentTypes</summary>
+        public void ListGoldengateDeploymentTypesResourceNames()
+        {
+            // Snippet: ListGoldengateDeploymentTypes(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> response = oracleDatabaseClient.ListGoldengateDeploymentTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentTypesAsync</summary>
+        public async Task ListGoldengateDeploymentTypesResourceNamesAsync()
+        {
+            // Snippet: ListGoldengateDeploymentTypesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> response = oracleDatabaseClient.ListGoldengateDeploymentTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentEnvironment</summary>
+        public void GetGoldengateDeploymentEnvironmentRequestObject()
+        {
+            // Snippet: GetGoldengateDeploymentEnvironment(GetGoldengateDeploymentEnvironmentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetGoldengateDeploymentEnvironmentRequest request = new GetGoldengateDeploymentEnvironmentRequest
+            {
+                GoldengateDeploymentEnvironmentName = GoldengateDeploymentEnvironmentName.FromProjectLocationGoldengateDeploymentEnvironment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]"),
+            };
+            // Make the request
+            GoldengateDeploymentEnvironment response = oracleDatabaseClient.GetGoldengateDeploymentEnvironment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentEnvironmentAsync</summary>
+        public async Task GetGoldengateDeploymentEnvironmentRequestObjectAsync()
+        {
+            // Snippet: GetGoldengateDeploymentEnvironmentAsync(GetGoldengateDeploymentEnvironmentRequest, CallSettings)
+            // Additional: GetGoldengateDeploymentEnvironmentAsync(GetGoldengateDeploymentEnvironmentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoldengateDeploymentEnvironmentRequest request = new GetGoldengateDeploymentEnvironmentRequest
+            {
+                GoldengateDeploymentEnvironmentName = GoldengateDeploymentEnvironmentName.FromProjectLocationGoldengateDeploymentEnvironment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]"),
+            };
+            // Make the request
+            GoldengateDeploymentEnvironment response = await oracleDatabaseClient.GetGoldengateDeploymentEnvironmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentEnvironment</summary>
+        public void GetGoldengateDeploymentEnvironment()
+        {
+            // Snippet: GetGoldengateDeploymentEnvironment(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentEnvironments/[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]";
+            // Make the request
+            GoldengateDeploymentEnvironment response = oracleDatabaseClient.GetGoldengateDeploymentEnvironment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentEnvironmentAsync</summary>
+        public async Task GetGoldengateDeploymentEnvironmentAsync()
+        {
+            // Snippet: GetGoldengateDeploymentEnvironmentAsync(string, CallSettings)
+            // Additional: GetGoldengateDeploymentEnvironmentAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentEnvironments/[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]";
+            // Make the request
+            GoldengateDeploymentEnvironment response = await oracleDatabaseClient.GetGoldengateDeploymentEnvironmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentEnvironment</summary>
+        public void GetGoldengateDeploymentEnvironmentResourceNames()
+        {
+            // Snippet: GetGoldengateDeploymentEnvironment(GoldengateDeploymentEnvironmentName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateDeploymentEnvironmentName name = GoldengateDeploymentEnvironmentName.FromProjectLocationGoldengateDeploymentEnvironment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]");
+            // Make the request
+            GoldengateDeploymentEnvironment response = oracleDatabaseClient.GetGoldengateDeploymentEnvironment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateDeploymentEnvironmentAsync</summary>
+        public async Task GetGoldengateDeploymentEnvironmentResourceNamesAsync()
+        {
+            // Snippet: GetGoldengateDeploymentEnvironmentAsync(GoldengateDeploymentEnvironmentName, CallSettings)
+            // Additional: GetGoldengateDeploymentEnvironmentAsync(GoldengateDeploymentEnvironmentName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateDeploymentEnvironmentName name = GoldengateDeploymentEnvironmentName.FromProjectLocationGoldengateDeploymentEnvironment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]");
+            // Make the request
+            GoldengateDeploymentEnvironment response = await oracleDatabaseClient.GetGoldengateDeploymentEnvironmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentEnvironments</summary>
+        public void ListGoldengateDeploymentEnvironmentsRequestObject()
+        {
+            // Snippet: ListGoldengateDeploymentEnvironments(ListGoldengateDeploymentEnvironmentsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListGoldengateDeploymentEnvironmentsRequest request = new ListGoldengateDeploymentEnvironmentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> response = oracleDatabaseClient.ListGoldengateDeploymentEnvironments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentEnvironment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentEnvironment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentEnvironment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentEnvironment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentEnvironmentsAsync</summary>
+        public async Task ListGoldengateDeploymentEnvironmentsRequestObjectAsync()
+        {
+            // Snippet: ListGoldengateDeploymentEnvironmentsAsync(ListGoldengateDeploymentEnvironmentsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGoldengateDeploymentEnvironmentsRequest request = new ListGoldengateDeploymentEnvironmentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> response = oracleDatabaseClient.ListGoldengateDeploymentEnvironmentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentEnvironment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentEnvironment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentEnvironment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentEnvironment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentEnvironments</summary>
+        public void ListGoldengateDeploymentEnvironments()
+        {
+            // Snippet: ListGoldengateDeploymentEnvironments(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> response = oracleDatabaseClient.ListGoldengateDeploymentEnvironments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentEnvironment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentEnvironment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentEnvironment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentEnvironment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentEnvironmentsAsync</summary>
+        public async Task ListGoldengateDeploymentEnvironmentsAsync()
+        {
+            // Snippet: ListGoldengateDeploymentEnvironmentsAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> response = oracleDatabaseClient.ListGoldengateDeploymentEnvironmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentEnvironment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentEnvironment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentEnvironment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentEnvironment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentEnvironments</summary>
+        public void ListGoldengateDeploymentEnvironmentsResourceNames()
+        {
+            // Snippet: ListGoldengateDeploymentEnvironments(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> response = oracleDatabaseClient.ListGoldengateDeploymentEnvironments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateDeploymentEnvironment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateDeploymentEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentEnvironment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentEnvironment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentEnvironment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateDeploymentEnvironmentsAsync</summary>
+        public async Task ListGoldengateDeploymentEnvironmentsResourceNamesAsync()
+        {
+            // Snippet: ListGoldengateDeploymentEnvironmentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> response = oracleDatabaseClient.ListGoldengateDeploymentEnvironmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateDeploymentEnvironment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateDeploymentEnvironmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateDeploymentEnvironment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateDeploymentEnvironment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateDeploymentEnvironment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionType</summary>
+        public void GetGoldengateConnectionTypeRequestObject()
+        {
+            // Snippet: GetGoldengateConnectionType(GetGoldengateConnectionTypeRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetGoldengateConnectionTypeRequest request = new GetGoldengateConnectionTypeRequest
+            {
+                GoldengateConnectionTypeName = GoldengateConnectionTypeName.FromProjectLocationGoldengateConnectionType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_TYPE]"),
+            };
+            // Make the request
+            GoldengateConnectionType response = oracleDatabaseClient.GetGoldengateConnectionType(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionTypeAsync</summary>
+        public async Task GetGoldengateConnectionTypeRequestObjectAsync()
+        {
+            // Snippet: GetGoldengateConnectionTypeAsync(GetGoldengateConnectionTypeRequest, CallSettings)
+            // Additional: GetGoldengateConnectionTypeAsync(GetGoldengateConnectionTypeRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoldengateConnectionTypeRequest request = new GetGoldengateConnectionTypeRequest
+            {
+                GoldengateConnectionTypeName = GoldengateConnectionTypeName.FromProjectLocationGoldengateConnectionType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_TYPE]"),
+            };
+            // Make the request
+            GoldengateConnectionType response = await oracleDatabaseClient.GetGoldengateConnectionTypeAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionType</summary>
+        public void GetGoldengateConnectionType()
+        {
+            // Snippet: GetGoldengateConnectionType(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionTypes/[GOLDENGATE_CONNECTION_TYPE]";
+            // Make the request
+            GoldengateConnectionType response = oracleDatabaseClient.GetGoldengateConnectionType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionTypeAsync</summary>
+        public async Task GetGoldengateConnectionTypeAsync()
+        {
+            // Snippet: GetGoldengateConnectionTypeAsync(string, CallSettings)
+            // Additional: GetGoldengateConnectionTypeAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionTypes/[GOLDENGATE_CONNECTION_TYPE]";
+            // Make the request
+            GoldengateConnectionType response = await oracleDatabaseClient.GetGoldengateConnectionTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionType</summary>
+        public void GetGoldengateConnectionTypeResourceNames()
+        {
+            // Snippet: GetGoldengateConnectionType(GoldengateConnectionTypeName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateConnectionTypeName name = GoldengateConnectionTypeName.FromProjectLocationGoldengateConnectionType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_TYPE]");
+            // Make the request
+            GoldengateConnectionType response = oracleDatabaseClient.GetGoldengateConnectionType(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionTypeAsync</summary>
+        public async Task GetGoldengateConnectionTypeResourceNamesAsync()
+        {
+            // Snippet: GetGoldengateConnectionTypeAsync(GoldengateConnectionTypeName, CallSettings)
+            // Additional: GetGoldengateConnectionTypeAsync(GoldengateConnectionTypeName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateConnectionTypeName name = GoldengateConnectionTypeName.FromProjectLocationGoldengateConnectionType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_TYPE]");
+            // Make the request
+            GoldengateConnectionType response = await oracleDatabaseClient.GetGoldengateConnectionTypeAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionTypes</summary>
+        public void ListGoldengateConnectionTypesRequestObject()
+        {
+            // Snippet: ListGoldengateConnectionTypes(ListGoldengateConnectionTypesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListGoldengateConnectionTypesRequest request = new ListGoldengateConnectionTypesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> response = oracleDatabaseClient.ListGoldengateConnectionTypes(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnectionType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionTypesAsync</summary>
+        public async Task ListGoldengateConnectionTypesRequestObjectAsync()
+        {
+            // Snippet: ListGoldengateConnectionTypesAsync(ListGoldengateConnectionTypesRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGoldengateConnectionTypesRequest request = new ListGoldengateConnectionTypesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> response = oracleDatabaseClient.ListGoldengateConnectionTypesAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnectionType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionTypes</summary>
+        public void ListGoldengateConnectionTypes()
+        {
+            // Snippet: ListGoldengateConnectionTypes(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> response = oracleDatabaseClient.ListGoldengateConnectionTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnectionType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionTypesAsync</summary>
+        public async Task ListGoldengateConnectionTypesAsync()
+        {
+            // Snippet: ListGoldengateConnectionTypesAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> response = oracleDatabaseClient.ListGoldengateConnectionTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnectionType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionTypes</summary>
+        public void ListGoldengateConnectionTypesResourceNames()
+        {
+            // Snippet: ListGoldengateConnectionTypes(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> response = oracleDatabaseClient.ListGoldengateConnectionTypes(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnectionType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionType> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionTypesAsync</summary>
+        public async Task ListGoldengateConnectionTypesResourceNamesAsync()
+        {
+            // Snippet: ListGoldengateConnectionTypesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> response = oracleDatabaseClient.ListGoldengateConnectionTypesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnectionType item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionTypesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionType item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionType> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionType item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for ListDbVersions</summary>
         public void ListDbVersionsRequestObject()
         {
@@ -11837,6 +15161,844 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionAssignments</summary>
+        public void ListGoldengateConnectionAssignmentsRequestObject()
+        {
+            // Snippet: ListGoldengateConnectionAssignments(ListGoldengateConnectionAssignmentsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ListGoldengateConnectionAssignmentsRequest request = new ListGoldengateConnectionAssignmentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> response = oracleDatabaseClient.ListGoldengateConnectionAssignments(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnectionAssignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionAssignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionAssignment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionAssignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionAssignmentsAsync</summary>
+        public async Task ListGoldengateConnectionAssignmentsRequestObjectAsync()
+        {
+            // Snippet: ListGoldengateConnectionAssignmentsAsync(ListGoldengateConnectionAssignmentsRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ListGoldengateConnectionAssignmentsRequest request = new ListGoldengateConnectionAssignmentsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Filter = "",
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> response = oracleDatabaseClient.ListGoldengateConnectionAssignmentsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnectionAssignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionAssignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionAssignment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionAssignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionAssignments</summary>
+        public void ListGoldengateConnectionAssignments()
+        {
+            // Snippet: ListGoldengateConnectionAssignments(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> response = oracleDatabaseClient.ListGoldengateConnectionAssignments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnectionAssignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionAssignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionAssignment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionAssignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionAssignmentsAsync</summary>
+        public async Task ListGoldengateConnectionAssignmentsAsync()
+        {
+            // Snippet: ListGoldengateConnectionAssignmentsAsync(string, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> response = oracleDatabaseClient.ListGoldengateConnectionAssignmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnectionAssignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionAssignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionAssignment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionAssignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionAssignments</summary>
+        public void ListGoldengateConnectionAssignmentsResourceNames()
+        {
+            // Snippet: ListGoldengateConnectionAssignments(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> response = oracleDatabaseClient.ListGoldengateConnectionAssignments(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (GoldengateConnectionAssignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListGoldengateConnectionAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionAssignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionAssignment> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionAssignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListGoldengateConnectionAssignmentsAsync</summary>
+        public async Task ListGoldengateConnectionAssignmentsResourceNamesAsync()
+        {
+            // Snippet: ListGoldengateConnectionAssignmentsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> response = oracleDatabaseClient.ListGoldengateConnectionAssignmentsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (GoldengateConnectionAssignment item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListGoldengateConnectionAssignmentsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (GoldengateConnectionAssignment item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<GoldengateConnectionAssignment> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (GoldengateConnectionAssignment item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAssignment</summary>
+        public void GetGoldengateConnectionAssignmentRequestObject()
+        {
+            // Snippet: GetGoldengateConnectionAssignment(GetGoldengateConnectionAssignmentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GetGoldengateConnectionAssignmentRequest request = new GetGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]"),
+            };
+            // Make the request
+            GoldengateConnectionAssignment response = oracleDatabaseClient.GetGoldengateConnectionAssignment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAssignmentAsync</summary>
+        public async Task GetGoldengateConnectionAssignmentRequestObjectAsync()
+        {
+            // Snippet: GetGoldengateConnectionAssignmentAsync(GetGoldengateConnectionAssignmentRequest, CallSettings)
+            // Additional: GetGoldengateConnectionAssignmentAsync(GetGoldengateConnectionAssignmentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GetGoldengateConnectionAssignmentRequest request = new GetGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]"),
+            };
+            // Make the request
+            GoldengateConnectionAssignment response = await oracleDatabaseClient.GetGoldengateConnectionAssignmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAssignment</summary>
+        public void GetGoldengateConnectionAssignment()
+        {
+            // Snippet: GetGoldengateConnectionAssignment(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionAssignments/[GOLDENGATE_CONNECTION_ASSIGNMENT]";
+            // Make the request
+            GoldengateConnectionAssignment response = oracleDatabaseClient.GetGoldengateConnectionAssignment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAssignmentAsync</summary>
+        public async Task GetGoldengateConnectionAssignmentAsync()
+        {
+            // Snippet: GetGoldengateConnectionAssignmentAsync(string, CallSettings)
+            // Additional: GetGoldengateConnectionAssignmentAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionAssignments/[GOLDENGATE_CONNECTION_ASSIGNMENT]";
+            // Make the request
+            GoldengateConnectionAssignment response = await oracleDatabaseClient.GetGoldengateConnectionAssignmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAssignment</summary>
+        public void GetGoldengateConnectionAssignmentResourceNames()
+        {
+            // Snippet: GetGoldengateConnectionAssignment(GoldengateConnectionAssignmentName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateConnectionAssignmentName name = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]");
+            // Make the request
+            GoldengateConnectionAssignment response = oracleDatabaseClient.GetGoldengateConnectionAssignment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetGoldengateConnectionAssignmentAsync</summary>
+        public async Task GetGoldengateConnectionAssignmentResourceNamesAsync()
+        {
+            // Snippet: GetGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName, CallSettings)
+            // Additional: GetGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateConnectionAssignmentName name = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]");
+            // Make the request
+            GoldengateConnectionAssignment response = await oracleDatabaseClient.GetGoldengateConnectionAssignmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAssignment</summary>
+        public void CreateGoldengateConnectionAssignmentRequestObject()
+        {
+            // Snippet: CreateGoldengateConnectionAssignment(CreateGoldengateConnectionAssignmentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CreateGoldengateConnectionAssignmentRequest request = new CreateGoldengateConnectionAssignmentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GoldengateConnectionAssignmentId = "",
+                GoldengateConnectionAssignment = new GoldengateConnectionAssignment(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateConnectionAssignment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateConnectionAssignment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAssignmentAsync</summary>
+        public async Task CreateGoldengateConnectionAssignmentRequestObjectAsync()
+        {
+            // Snippet: CreateGoldengateConnectionAssignmentAsync(CreateGoldengateConnectionAssignmentRequest, CallSettings)
+            // Additional: CreateGoldengateConnectionAssignmentAsync(CreateGoldengateConnectionAssignmentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateGoldengateConnectionAssignmentRequest request = new CreateGoldengateConnectionAssignmentRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                GoldengateConnectionAssignmentId = "",
+                GoldengateConnectionAssignment = new GoldengateConnectionAssignment(),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateConnectionAssignmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateConnectionAssignmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAssignment</summary>
+        public void CreateGoldengateConnectionAssignment()
+        {
+            // Snippet: CreateGoldengateConnectionAssignment(string, GoldengateConnectionAssignment, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            GoldengateConnectionAssignment goldengateConnectionAssignment = new GoldengateConnectionAssignment();
+            string goldengateConnectionAssignmentId = "";
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateConnectionAssignment(parent, goldengateConnectionAssignment, goldengateConnectionAssignmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateConnectionAssignment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAssignmentAsync</summary>
+        public async Task CreateGoldengateConnectionAssignmentAsync()
+        {
+            // Snippet: CreateGoldengateConnectionAssignmentAsync(string, GoldengateConnectionAssignment, string, CallSettings)
+            // Additional: CreateGoldengateConnectionAssignmentAsync(string, GoldengateConnectionAssignment, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            GoldengateConnectionAssignment goldengateConnectionAssignment = new GoldengateConnectionAssignment();
+            string goldengateConnectionAssignmentId = "";
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateConnectionAssignmentAsync(parent, goldengateConnectionAssignment, goldengateConnectionAssignmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateConnectionAssignmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAssignment</summary>
+        public void CreateGoldengateConnectionAssignmentResourceNames()
+        {
+            // Snippet: CreateGoldengateConnectionAssignment(LocationName, GoldengateConnectionAssignment, string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            GoldengateConnectionAssignment goldengateConnectionAssignment = new GoldengateConnectionAssignment();
+            string goldengateConnectionAssignmentId = "";
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = oracleDatabaseClient.CreateGoldengateConnectionAssignment(parent, goldengateConnectionAssignment, goldengateConnectionAssignmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceCreateGoldengateConnectionAssignment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateGoldengateConnectionAssignmentAsync</summary>
+        public async Task CreateGoldengateConnectionAssignmentResourceNamesAsync()
+        {
+            // Snippet: CreateGoldengateConnectionAssignmentAsync(LocationName, GoldengateConnectionAssignment, string, CallSettings)
+            // Additional: CreateGoldengateConnectionAssignmentAsync(LocationName, GoldengateConnectionAssignment, string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            GoldengateConnectionAssignment goldengateConnectionAssignment = new GoldengateConnectionAssignment();
+            string goldengateConnectionAssignmentId = "";
+            // Make the request
+            Operation<GoldengateConnectionAssignment, OperationMetadata> response = await oracleDatabaseClient.CreateGoldengateConnectionAssignmentAsync(parent, goldengateConnectionAssignment, goldengateConnectionAssignmentId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<GoldengateConnectionAssignment, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            GoldengateConnectionAssignment result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<GoldengateConnectionAssignment, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceCreateGoldengateConnectionAssignmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                GoldengateConnectionAssignment retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAssignment</summary>
+        public void DeleteGoldengateConnectionAssignmentRequestObject()
+        {
+            // Snippet: DeleteGoldengateConnectionAssignment(DeleteGoldengateConnectionAssignmentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            DeleteGoldengateConnectionAssignmentRequest request = new DeleteGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateConnectionAssignment(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAssignment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAssignmentAsync</summary>
+        public async Task DeleteGoldengateConnectionAssignmentRequestObjectAsync()
+        {
+            // Snippet: DeleteGoldengateConnectionAssignmentAsync(DeleteGoldengateConnectionAssignmentRequest, CallSettings)
+            // Additional: DeleteGoldengateConnectionAssignmentAsync(DeleteGoldengateConnectionAssignmentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteGoldengateConnectionAssignmentRequest request = new DeleteGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]"),
+                RequestId = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateConnectionAssignmentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAssignmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAssignment</summary>
+        public void DeleteGoldengateConnectionAssignment()
+        {
+            // Snippet: DeleteGoldengateConnectionAssignment(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionAssignments/[GOLDENGATE_CONNECTION_ASSIGNMENT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateConnectionAssignment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAssignment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAssignmentAsync</summary>
+        public async Task DeleteGoldengateConnectionAssignmentAsync()
+        {
+            // Snippet: DeleteGoldengateConnectionAssignmentAsync(string, CallSettings)
+            // Additional: DeleteGoldengateConnectionAssignmentAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionAssignments/[GOLDENGATE_CONNECTION_ASSIGNMENT]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateConnectionAssignmentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAssignmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAssignment</summary>
+        public void DeleteGoldengateConnectionAssignmentResourceNames()
+        {
+            // Snippet: DeleteGoldengateConnectionAssignment(GoldengateConnectionAssignmentName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateConnectionAssignmentName name = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = oracleDatabaseClient.DeleteGoldengateConnectionAssignment(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAssignment(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteGoldengateConnectionAssignmentAsync</summary>
+        public async Task DeleteGoldengateConnectionAssignmentResourceNamesAsync()
+        {
+            // Snippet: DeleteGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName, CallSettings)
+            // Additional: DeleteGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateConnectionAssignmentName name = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await oracleDatabaseClient.DeleteGoldengateConnectionAssignmentAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceDeleteGoldengateConnectionAssignmentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestGoldengateConnectionAssignment</summary>
+        public void TestGoldengateConnectionAssignmentRequestObject()
+        {
+            // Snippet: TestGoldengateConnectionAssignment(TestGoldengateConnectionAssignmentRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            TestGoldengateConnectionAssignmentRequest request = new TestGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]"),
+                Type = TestGoldengateConnectionAssignmentRequest.Types.TestType.Unspecified,
+            };
+            // Make the request
+            TestGoldengateConnectionAssignmentResponse response = oracleDatabaseClient.TestGoldengateConnectionAssignment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestGoldengateConnectionAssignmentAsync</summary>
+        public async Task TestGoldengateConnectionAssignmentRequestObjectAsync()
+        {
+            // Snippet: TestGoldengateConnectionAssignmentAsync(TestGoldengateConnectionAssignmentRequest, CallSettings)
+            // Additional: TestGoldengateConnectionAssignmentAsync(TestGoldengateConnectionAssignmentRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            TestGoldengateConnectionAssignmentRequest request = new TestGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]"),
+                Type = TestGoldengateConnectionAssignmentRequest.Types.TestType.Unspecified,
+            };
+            // Make the request
+            TestGoldengateConnectionAssignmentResponse response = await oracleDatabaseClient.TestGoldengateConnectionAssignmentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestGoldengateConnectionAssignment</summary>
+        public void TestGoldengateConnectionAssignment()
+        {
+            // Snippet: TestGoldengateConnectionAssignment(string, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionAssignments/[GOLDENGATE_CONNECTION_ASSIGNMENT]";
+            // Make the request
+            TestGoldengateConnectionAssignmentResponse response = oracleDatabaseClient.TestGoldengateConnectionAssignment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestGoldengateConnectionAssignmentAsync</summary>
+        public async Task TestGoldengateConnectionAssignmentAsync()
+        {
+            // Snippet: TestGoldengateConnectionAssignmentAsync(string, CallSettings)
+            // Additional: TestGoldengateConnectionAssignmentAsync(string, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionAssignments/[GOLDENGATE_CONNECTION_ASSIGNMENT]";
+            // Make the request
+            TestGoldengateConnectionAssignmentResponse response = await oracleDatabaseClient.TestGoldengateConnectionAssignmentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestGoldengateConnectionAssignment</summary>
+        public void TestGoldengateConnectionAssignmentResourceNames()
+        {
+            // Snippet: TestGoldengateConnectionAssignment(GoldengateConnectionAssignmentName, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            GoldengateConnectionAssignmentName name = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]");
+            // Make the request
+            TestGoldengateConnectionAssignmentResponse response = oracleDatabaseClient.TestGoldengateConnectionAssignment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for TestGoldengateConnectionAssignmentAsync</summary>
+        public async Task TestGoldengateConnectionAssignmentResourceNamesAsync()
+        {
+            // Snippet: TestGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName, CallSettings)
+            // Additional: TestGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            GoldengateConnectionAssignmentName name = GoldengateConnectionAssignmentName.FromProjectLocationGoldengateConnectionAssignment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_ASSIGNMENT]");
+            // Make the request
+            TestGoldengateConnectionAssignmentResponse response = await oracleDatabaseClient.TestGoldengateConnectionAssignmentAsync(name);
             // End snippet
         }
     }

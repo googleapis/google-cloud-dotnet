@@ -105,15 +105,15 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "cmVudBgBIAEoCUIu4EEC+kEoEiZvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlz",
             "LmNvbS9EYlN5c3RlbRIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
             "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3Jk",
-            "ZXJfYnkYBSABKAlCA+BBASJuChVMaXN0RGJTeXN0ZW1zUmVzcG9uc2USPAoK",
-            "ZGJfc3lzdGVtcxgBIAMoCzIoLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFz",
-            "ZS52MS5EYlN5c3RlbRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAlC5wEKImNv",
-            "bS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjFCDURiU3lzdGVtUHJv",
-            "dG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9vcmFjbGVkYXRhYmFzZS9hcGl2",
-            "MS9vcmFjbGVkYXRhYmFzZXBiO29yYWNsZWRhdGFiYXNlcGKqAh5Hb29nbGUu",
-            "Q2xvdWQuT3JhY2xlRGF0YWJhc2UuVjHKAh5Hb29nbGVcQ2xvdWRcT3JhY2xl",
-            "RGF0YWJhc2VcVjHqAiFHb29nbGU6OkNsb3VkOjpPcmFjbGVEYXRhYmFzZTo6",
-            "VjFiBnByb3RvMw=="));
+            "ZXJfYnkYBSABKAlCA+BBASKDAQoVTGlzdERiU3lzdGVtc1Jlc3BvbnNlEjwK",
+            "CmRiX3N5c3RlbXMYASADKAsyKC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJh",
+            "c2UudjEuRGJTeXN0ZW0SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3Vu",
+            "cmVhY2hhYmxlGAMgAygJQucBCiJjb20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRh",
+            "dGFiYXNlLnYxQg1EYlN5c3RlbVByb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vb3JhY2xlZGF0YWJhc2UvYXBpdjEvb3JhY2xlZGF0YWJhc2VwYjtvcmFj",
+            "bGVkYXRhYmFzZXBiqgIeR29vZ2xlLkNsb3VkLk9yYWNsZURhdGFiYXNlLlYx",
+            "ygIeR29vZ2xlXENsb3VkXE9yYWNsZURhdGFiYXNlXFYx6gIhR29vZ2xlOjpD",
+            "bG91ZDo6T3JhY2xlRGF0YWJhc2U6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.DatabaseReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DatetimeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -126,7 +126,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.DeleteDbSystemRequest), global::Google.Cloud.OracleDatabase.V1.DeleteDbSystemRequest.Parser, new[]{ "Name", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GetDbSystemRequest), global::Google.Cloud.OracleDatabase.V1.GetDbSystemRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListDbSystemsRequest), global::Google.Cloud.OracleDatabase.V1.ListDbSystemsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListDbSystemsResponse), global::Google.Cloud.OracleDatabase.V1.ListDbSystemsResponse.Parser, new[]{ "DbSystems", "NextPageToken" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListDbSystemsResponse), global::Google.Cloud.OracleDatabase.V1.ListDbSystemsResponse.Parser, new[]{ "DbSystems", "NextPageToken", "Unreachable" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2322,7 +2322,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
         /// </summary>
         [pbr::OriginalName("STORAGE_MANAGEMENT_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Automatic storage management.
+        /// Automatic storage management. This option is not supported. Only LVM is
+        /// supported.
         /// </summary>
         [pbr::OriginalName("ASM")] Asm = 1,
         /// <summary>
@@ -3884,6 +3885,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public ListDbSystemsResponse(ListDbSystemsResponse other) : this() {
       dbSystems_ = other.dbSystems_.Clone();
       nextPageToken_ = other.nextPageToken_;
+      unreachable_ = other.unreachable_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3922,6 +3924,21 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
     }
 
+    /// <summary>Field number for the "unreachable" field.</summary>
+    public const int UnreachableFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_unreachable_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> unreachable_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Unreachable locations when listing resources across all locations using
+    /// wildcard location '-'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> Unreachable {
+      get { return unreachable_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3939,6 +3956,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if(!dbSystems_.Equals(other.dbSystems_)) return false;
       if (NextPageToken != other.NextPageToken) return false;
+      if(!unreachable_.Equals(other.unreachable_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3948,6 +3966,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       int hash = 1;
       hash ^= dbSystems_.GetHashCode();
       if (NextPageToken.Length != 0) hash ^= NextPageToken.GetHashCode();
+      hash ^= unreachable_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3971,6 +3990,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3986,6 +4006,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(18);
         output.WriteString(NextPageToken);
       }
+      unreachable_.WriteTo(ref output, _repeated_unreachable_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4000,6 +4021,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (NextPageToken.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NextPageToken);
       }
+      size += unreachable_.CalculateSize(_repeated_unreachable_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4016,6 +4038,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (other.NextPageToken.Length != 0) {
         NextPageToken = other.NextPageToken;
       }
+      unreachable_.Add(other.unreachable_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -4043,6 +4066,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
             NextPageToken = input.ReadString();
             break;
           }
+          case 26: {
+            unreachable_.AddEntriesFrom(input, _repeated_unreachable_codec);
+            break;
+          }
         }
       }
     #endif
@@ -4068,6 +4095,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 18: {
             NextPageToken = input.ReadString();
+            break;
+          }
+          case 26: {
+            unreachable_.AddEntriesFrom(ref input, _repeated_unreachable_codec);
             break;
           }
         }

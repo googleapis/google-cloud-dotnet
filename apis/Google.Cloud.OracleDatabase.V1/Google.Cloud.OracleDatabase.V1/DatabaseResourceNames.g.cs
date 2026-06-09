@@ -274,6 +274,26 @@ namespace Google.Cloud.OracleDatabase.V1
             get => string.IsNullOrEmpty(Name) ? null : gcov::DatabaseName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="AdminPasswordSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName AdminPasswordSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(AdminPasswordSecretVersion) ? null : SecretVersionName.Parse(AdminPasswordSecretVersion, allowUnparsed: true);
+            set => AdminPasswordSecretVersion = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="TdeWalletPasswordSecretVersion"/> resource
+        /// name property.
+        /// </summary>
+        public SecretVersionName TdeWalletPasswordSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(TdeWalletPasswordSecretVersion) ? null : SecretVersionName.Parse(TdeWalletPasswordSecretVersion, allowUnparsed: true);
+            set => TdeWalletPasswordSecretVersion = value?.ToString() ?? "";
+        }
     }
 
     public partial class GetDatabaseRequest
