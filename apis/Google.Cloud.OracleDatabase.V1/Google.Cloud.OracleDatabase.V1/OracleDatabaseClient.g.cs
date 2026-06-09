@@ -130,8 +130,39 @@ namespace Google.Cloud.OracleDatabase.V1
             CreateDbSystemOperationsSettings = existing.CreateDbSystemOperationsSettings.Clone();
             DeleteDbSystemSettings = existing.DeleteDbSystemSettings;
             DeleteDbSystemOperationsSettings = existing.DeleteDbSystemOperationsSettings.Clone();
+            ListGoldengateDeploymentsSettings = existing.ListGoldengateDeploymentsSettings;
+            GetGoldengateDeploymentSettings = existing.GetGoldengateDeploymentSettings;
+            CreateGoldengateDeploymentSettings = existing.CreateGoldengateDeploymentSettings;
+            CreateGoldengateDeploymentOperationsSettings = existing.CreateGoldengateDeploymentOperationsSettings.Clone();
+            DeleteGoldengateDeploymentSettings = existing.DeleteGoldengateDeploymentSettings;
+            DeleteGoldengateDeploymentOperationsSettings = existing.DeleteGoldengateDeploymentOperationsSettings.Clone();
+            StopGoldengateDeploymentSettings = existing.StopGoldengateDeploymentSettings;
+            StopGoldengateDeploymentOperationsSettings = existing.StopGoldengateDeploymentOperationsSettings.Clone();
+            StartGoldengateDeploymentSettings = existing.StartGoldengateDeploymentSettings;
+            StartGoldengateDeploymentOperationsSettings = existing.StartGoldengateDeploymentOperationsSettings.Clone();
+            ListGoldengateConnectionsSettings = existing.ListGoldengateConnectionsSettings;
+            GetGoldengateConnectionSettings = existing.GetGoldengateConnectionSettings;
+            CreateGoldengateConnectionSettings = existing.CreateGoldengateConnectionSettings;
+            CreateGoldengateConnectionOperationsSettings = existing.CreateGoldengateConnectionOperationsSettings.Clone();
+            DeleteGoldengateConnectionSettings = existing.DeleteGoldengateConnectionSettings;
+            DeleteGoldengateConnectionOperationsSettings = existing.DeleteGoldengateConnectionOperationsSettings.Clone();
+            GetGoldengateDeploymentVersionSettings = existing.GetGoldengateDeploymentVersionSettings;
+            ListGoldengateDeploymentVersionsSettings = existing.ListGoldengateDeploymentVersionsSettings;
+            GetGoldengateDeploymentTypeSettings = existing.GetGoldengateDeploymentTypeSettings;
+            ListGoldengateDeploymentTypesSettings = existing.ListGoldengateDeploymentTypesSettings;
+            GetGoldengateDeploymentEnvironmentSettings = existing.GetGoldengateDeploymentEnvironmentSettings;
+            ListGoldengateDeploymentEnvironmentsSettings = existing.ListGoldengateDeploymentEnvironmentsSettings;
+            GetGoldengateConnectionTypeSettings = existing.GetGoldengateConnectionTypeSettings;
+            ListGoldengateConnectionTypesSettings = existing.ListGoldengateConnectionTypesSettings;
             ListDbVersionsSettings = existing.ListDbVersionsSettings;
             ListDatabaseCharacterSetsSettings = existing.ListDatabaseCharacterSetsSettings;
+            ListGoldengateConnectionAssignmentsSettings = existing.ListGoldengateConnectionAssignmentsSettings;
+            GetGoldengateConnectionAssignmentSettings = existing.GetGoldengateConnectionAssignmentSettings;
+            CreateGoldengateConnectionAssignmentSettings = existing.CreateGoldengateConnectionAssignmentSettings;
+            CreateGoldengateConnectionAssignmentOperationsSettings = existing.CreateGoldengateConnectionAssignmentOperationsSettings.Clone();
+            DeleteGoldengateConnectionAssignmentSettings = existing.DeleteGoldengateConnectionAssignmentSettings;
+            DeleteGoldengateConnectionAssignmentOperationsSettings = existing.DeleteGoldengateConnectionAssignmentOperationsSettings.Clone();
+            TestGoldengateConnectionAssignmentSettings = existing.TestGoldengateConnectionAssignmentSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -1558,6 +1589,420 @@ namespace Google.Cloud.OracleDatabase.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListGoldengateDeployments</c> and
+        /// <c>OracleDatabaseClient.ListGoldengateDeploymentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGoldengateDeploymentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetGoldengateDeployment</c> and <c>OracleDatabaseClient.GetGoldengateDeploymentAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoldengateDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.CreateGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.CreateGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateGoldengateDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.CreateGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.CreateGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateGoldengateDeploymentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.DeleteGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.DeleteGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteGoldengateDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.DeleteGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.DeleteGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteGoldengateDeploymentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.StopGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.StopGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StopGoldengateDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.StopGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.StopGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StopGoldengateDeploymentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.StartGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.StartGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartGoldengateDeploymentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.StartGoldengateDeployment</c> and
+        /// <c>OracleDatabaseClient.StartGoldengateDeploymentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartGoldengateDeploymentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListGoldengateConnections</c> and
+        /// <c>OracleDatabaseClient.ListGoldengateConnectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGoldengateConnectionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetGoldengateConnection</c> and <c>OracleDatabaseClient.GetGoldengateConnectionAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoldengateConnectionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.CreateGoldengateConnection</c> and
+        /// <c>OracleDatabaseClient.CreateGoldengateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateGoldengateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.CreateGoldengateConnection</c> and
+        /// <c>OracleDatabaseClient.CreateGoldengateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateGoldengateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.DeleteGoldengateConnection</c> and
+        /// <c>OracleDatabaseClient.DeleteGoldengateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteGoldengateConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.DeleteGoldengateConnection</c> and
+        /// <c>OracleDatabaseClient.DeleteGoldengateConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteGoldengateConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetGoldengateDeploymentVersion</c> and
+        /// <c>OracleDatabaseClient.GetGoldengateDeploymentVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoldengateDeploymentVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListGoldengateDeploymentVersions</c> and
+        /// <c>OracleDatabaseClient.ListGoldengateDeploymentVersionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGoldengateDeploymentVersionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetGoldengateDeploymentType</c> and
+        /// <c>OracleDatabaseClient.GetGoldengateDeploymentTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoldengateDeploymentTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListGoldengateDeploymentTypes</c> and
+        /// <c>OracleDatabaseClient.ListGoldengateDeploymentTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGoldengateDeploymentTypesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetGoldengateDeploymentEnvironment</c> and
+        /// <c>OracleDatabaseClient.GetGoldengateDeploymentEnvironmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoldengateDeploymentEnvironmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListGoldengateDeploymentEnvironments</c> and
+        /// <c>OracleDatabaseClient.ListGoldengateDeploymentEnvironmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGoldengateDeploymentEnvironmentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetGoldengateConnectionType</c> and
+        /// <c>OracleDatabaseClient.GetGoldengateConnectionTypeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoldengateConnectionTypeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListGoldengateConnectionTypes</c> and
+        /// <c>OracleDatabaseClient.ListGoldengateConnectionTypesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGoldengateConnectionTypesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>OracleDatabaseClient.ListDbVersions</c> and <c>OracleDatabaseClient.ListDbVersionsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -1598,6 +2043,125 @@ namespace Google.Cloud.OracleDatabase.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListDatabaseCharacterSetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.ListGoldengateConnectionAssignments</c> and
+        /// <c>OracleDatabaseClient.ListGoldengateConnectionAssignmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListGoldengateConnectionAssignmentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.GetGoldengateConnectionAssignment</c> and
+        /// <c>OracleDatabaseClient.GetGoldengateConnectionAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetGoldengateConnectionAssignmentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.CreateGoldengateConnectionAssignment</c> and
+        /// <c>OracleDatabaseClient.CreateGoldengateConnectionAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateGoldengateConnectionAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.CreateGoldengateConnectionAssignment</c>
+        ///  and <c>OracleDatabaseClient.CreateGoldengateConnectionAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateGoldengateConnectionAssignmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.DeleteGoldengateConnectionAssignment</c> and
+        /// <c>OracleDatabaseClient.DeleteGoldengateConnectionAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteGoldengateConnectionAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OracleDatabaseClient.DeleteGoldengateConnectionAssignment</c>
+        ///  and <c>OracleDatabaseClient.DeleteGoldengateConnectionAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteGoldengateConnectionAssignmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OracleDatabaseClient.TestGoldengateConnectionAssignment</c> and
+        /// <c>OracleDatabaseClient.TestGoldengateConnectionAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings TestGoldengateConnectionAssignmentSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -6004,7 +6568,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to switch over to.
+        /// Optional. The peer database name to switch over to. Required for
+        /// cross-region standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6012,7 +6577,7 @@ namespace Google.Cloud.OracleDatabase.V1
             SwitchoverAutonomousDatabase(new SwitchoverAutonomousDatabaseRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PeerAutonomousDatabase = gax::GaxPreconditions.CheckNotNullOrEmpty(peerAutonomousDatabase, nameof(peerAutonomousDatabase)),
+                PeerAutonomousDatabase = peerAutonomousDatabase ?? "",
             }, callSettings);
 
         /// <summary>
@@ -6024,7 +6589,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to switch over to.
+        /// Optional. The peer database name to switch over to. Required for
+        /// cross-region standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6032,7 +6598,7 @@ namespace Google.Cloud.OracleDatabase.V1
             SwitchoverAutonomousDatabaseAsync(new SwitchoverAutonomousDatabaseRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PeerAutonomousDatabase = gax::GaxPreconditions.CheckNotNullOrEmpty(peerAutonomousDatabase, nameof(peerAutonomousDatabase)),
+                PeerAutonomousDatabase = peerAutonomousDatabase ?? "",
             }, callSettings);
 
         /// <summary>
@@ -6044,7 +6610,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to switch over to.
+        /// Optional. The peer database name to switch over to. Required for
+        /// cross-region standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6060,7 +6627,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to switch over to.
+        /// Optional. The peer database name to switch over to. Required for
+        /// cross-region standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6068,7 +6636,7 @@ namespace Google.Cloud.OracleDatabase.V1
             SwitchoverAutonomousDatabase(new SwitchoverAutonomousDatabaseRequest
             {
                 AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PeerAutonomousDatabaseAsAutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(peerAutonomousDatabase, nameof(peerAutonomousDatabase)),
+                PeerAutonomousDatabaseAsAutonomousDatabaseName = peerAutonomousDatabase,
             }, callSettings);
 
         /// <summary>
@@ -6080,7 +6648,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to switch over to.
+        /// Optional. The peer database name to switch over to. Required for
+        /// cross-region standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6088,7 +6657,7 @@ namespace Google.Cloud.OracleDatabase.V1
             SwitchoverAutonomousDatabaseAsync(new SwitchoverAutonomousDatabaseRequest
             {
                 AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PeerAutonomousDatabaseAsAutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(peerAutonomousDatabase, nameof(peerAutonomousDatabase)),
+                PeerAutonomousDatabaseAsAutonomousDatabaseName = peerAutonomousDatabase,
             }, callSettings);
 
         /// <summary>
@@ -6100,7 +6669,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to switch over to.
+        /// Optional. The peer database name to switch over to. Required for
+        /// cross-region standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6173,7 +6743,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to fail over to.
+        /// Optional. The peer database name to fail over to. Required for cross-region
+        /// standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6181,7 +6752,7 @@ namespace Google.Cloud.OracleDatabase.V1
             FailoverAutonomousDatabase(new FailoverAutonomousDatabaseRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PeerAutonomousDatabase = gax::GaxPreconditions.CheckNotNullOrEmpty(peerAutonomousDatabase, nameof(peerAutonomousDatabase)),
+                PeerAutonomousDatabase = peerAutonomousDatabase ?? "",
             }, callSettings);
 
         /// <summary>
@@ -6193,7 +6764,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to fail over to.
+        /// Optional. The peer database name to fail over to. Required for cross-region
+        /// standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6201,7 +6773,7 @@ namespace Google.Cloud.OracleDatabase.V1
             FailoverAutonomousDatabaseAsync(new FailoverAutonomousDatabaseRequest
             {
                 Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
-                PeerAutonomousDatabase = gax::GaxPreconditions.CheckNotNullOrEmpty(peerAutonomousDatabase, nameof(peerAutonomousDatabase)),
+                PeerAutonomousDatabase = peerAutonomousDatabase ?? "",
             }, callSettings);
 
         /// <summary>
@@ -6213,7 +6785,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to fail over to.
+        /// Optional. The peer database name to fail over to. Required for cross-region
+        /// standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6229,7 +6802,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to fail over to.
+        /// Optional. The peer database name to fail over to. Required for cross-region
+        /// standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6237,7 +6811,7 @@ namespace Google.Cloud.OracleDatabase.V1
             FailoverAutonomousDatabase(new FailoverAutonomousDatabaseRequest
             {
                 AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PeerAutonomousDatabaseAsAutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(peerAutonomousDatabase, nameof(peerAutonomousDatabase)),
+                PeerAutonomousDatabaseAsAutonomousDatabaseName = peerAutonomousDatabase,
             }, callSettings);
 
         /// <summary>
@@ -6249,7 +6823,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to fail over to.
+        /// Optional. The peer database name to fail over to. Required for cross-region
+        /// standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6257,7 +6832,7 @@ namespace Google.Cloud.OracleDatabase.V1
             FailoverAutonomousDatabaseAsync(new FailoverAutonomousDatabaseRequest
             {
                 AutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
-                PeerAutonomousDatabaseAsAutonomousDatabaseName = gax::GaxPreconditions.CheckNotNull(peerAutonomousDatabase, nameof(peerAutonomousDatabase)),
+                PeerAutonomousDatabaseAsAutonomousDatabaseName = peerAutonomousDatabase,
             }, callSettings);
 
         /// <summary>
@@ -6269,7 +6844,8 @@ namespace Google.Cloud.OracleDatabase.V1
         /// projects/{project}/locations/{location}/autonomousDatabases/{autonomous_database}.
         /// </param>
         /// <param name="peerAutonomousDatabase">
-        /// Required. The peer database name to fail over to.
+        /// Optional. The peer database name to fail over to. Required for cross-region
+        /// standby, and must be omitted for in-region Data Guard.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -10294,6 +10870,2570 @@ namespace Google.Cloud.OracleDatabase.V1
             DeleteDbSystemAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Lists all the GoldengateDeployments for the given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeployment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> ListGoldengateDeployments(ListGoldengateDeploymentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the GoldengateDeployments for the given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeployment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> ListGoldengateDeploymentsAsync(ListGoldengateDeploymentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the GoldengateDeployments for the given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for GoldengateDeployments in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeployment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> ListGoldengateDeployments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentsRequest request = new ListGoldengateDeploymentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeployments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateDeployments for the given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for GoldengateDeployments in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeployment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> ListGoldengateDeploymentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentsRequest request = new ListGoldengateDeploymentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateDeployments for the given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for GoldengateDeployments in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeployment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> ListGoldengateDeployments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentsRequest request = new ListGoldengateDeploymentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeployments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateDeployments for the given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for GoldengateDeployments in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeployment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> ListGoldengateDeploymentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentsRequest request = new ListGoldengateDeploymentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeployment GetGoldengateDeployment(GetGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeployment> GetGoldengateDeploymentAsync(GetGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeployment> GetGoldengateDeploymentAsync(GetGoldengateDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeployment GetGoldengateDeployment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeployment(new GetGoldengateDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeployment> GetGoldengateDeploymentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentAsync(new GetGoldengateDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeployment> GetGoldengateDeploymentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeployment GetGoldengateDeployment(GoldengateDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeployment(new GetGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeployment> GetGoldengateDeploymentAsync(GoldengateDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentAsync(new GetGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeployment> GetGoldengateDeploymentAsync(GoldengateDeploymentName name, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> CreateGoldengateDeployment(CreateGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> CreateGoldengateDeploymentAsync(CreateGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> CreateGoldengateDeploymentAsync(CreateGoldengateDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            CreateGoldengateDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateGoldengateDeployment</c>.</summary>
+        public virtual lro::OperationsClient CreateGoldengateDeploymentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> PollOnceCreateGoldengateDeployment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateDeployment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> PollOnceCreateGoldengateDeploymentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateDeployment in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateDeploymentId">
+        /// Required. The ID of the GoldengateDeployment to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> CreateGoldengateDeployment(string parent, GoldengateDeployment goldengateDeployment, string goldengateDeploymentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateDeployment(new CreateGoldengateDeploymentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GoldengateDeploymentId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateDeploymentId, nameof(goldengateDeploymentId)),
+                GoldengateDeployment = gax::GaxPreconditions.CheckNotNull(goldengateDeployment, nameof(goldengateDeployment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateDeployment in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateDeploymentId">
+        /// Required. The ID of the GoldengateDeployment to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> CreateGoldengateDeploymentAsync(string parent, GoldengateDeployment goldengateDeployment, string goldengateDeploymentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateDeploymentAsync(new CreateGoldengateDeploymentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GoldengateDeploymentId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateDeploymentId, nameof(goldengateDeploymentId)),
+                GoldengateDeployment = gax::GaxPreconditions.CheckNotNull(goldengateDeployment, nameof(goldengateDeployment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateDeployment in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateDeploymentId">
+        /// Required. The ID of the GoldengateDeployment to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> CreateGoldengateDeploymentAsync(string parent, GoldengateDeployment goldengateDeployment, string goldengateDeploymentId, st::CancellationToken cancellationToken) =>
+            CreateGoldengateDeploymentAsync(parent, goldengateDeployment, goldengateDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateDeployment in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateDeploymentId">
+        /// Required. The ID of the GoldengateDeployment to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> CreateGoldengateDeployment(gagr::LocationName parent, GoldengateDeployment goldengateDeployment, string goldengateDeploymentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateDeployment(new CreateGoldengateDeploymentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GoldengateDeploymentId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateDeploymentId, nameof(goldengateDeploymentId)),
+                GoldengateDeployment = gax::GaxPreconditions.CheckNotNull(goldengateDeployment, nameof(goldengateDeployment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateDeployment in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateDeploymentId">
+        /// Required. The ID of the GoldengateDeployment to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> CreateGoldengateDeploymentAsync(gagr::LocationName parent, GoldengateDeployment goldengateDeployment, string goldengateDeploymentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateDeploymentAsync(new CreateGoldengateDeploymentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GoldengateDeploymentId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateDeploymentId, nameof(goldengateDeploymentId)),
+                GoldengateDeployment = gax::GaxPreconditions.CheckNotNull(goldengateDeployment, nameof(goldengateDeployment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateDeployment in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateDeployment">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateDeploymentId">
+        /// Required. The ID of the GoldengateDeployment to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> CreateGoldengateDeploymentAsync(gagr::LocationName parent, GoldengateDeployment goldengateDeployment, string goldengateDeploymentId, st::CancellationToken cancellationToken) =>
+            CreateGoldengateDeploymentAsync(parent, goldengateDeployment, goldengateDeploymentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateDeployment(DeleteGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateDeploymentAsync(DeleteGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateDeploymentAsync(DeleteGoldengateDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteGoldengateDeployment</c>.</summary>
+        public virtual lro::OperationsClient DeleteGoldengateDeploymentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteGoldengateDeployment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteGoldengateDeploymentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateDeployment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateDeployment(new DeleteGoldengateDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateDeploymentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateDeploymentAsync(new DeleteGoldengateDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateDeploymentAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateDeployment(GoldengateDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateDeployment(new DeleteGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateDeploymentAsync(GoldengateDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateDeploymentAsync(new DeleteGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateDeploymentAsync(GoldengateDeploymentName name, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> StopGoldengateDeployment(StopGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StopGoldengateDeploymentAsync(StopGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StopGoldengateDeploymentAsync(StopGoldengateDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            StopGoldengateDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StopGoldengateDeployment</c>.</summary>
+        public virtual lro::OperationsClient StopGoldengateDeploymentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> PollOnceStopGoldengateDeployment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateDeployment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StopGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> PollOnceStopGoldengateDeploymentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StopGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> StopGoldengateDeployment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StopGoldengateDeployment(new StopGoldengateDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StopGoldengateDeploymentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StopGoldengateDeploymentAsync(new StopGoldengateDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StopGoldengateDeploymentAsync(string name, st::CancellationToken cancellationToken) =>
+            StopGoldengateDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> StopGoldengateDeployment(GoldengateDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            StopGoldengateDeployment(new StopGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StopGoldengateDeploymentAsync(GoldengateDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            StopGoldengateDeploymentAsync(new StopGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StopGoldengateDeploymentAsync(GoldengateDeploymentName name, st::CancellationToken cancellationToken) =>
+            StopGoldengateDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> StartGoldengateDeployment(StartGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StartGoldengateDeploymentAsync(StartGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StartGoldengateDeploymentAsync(StartGoldengateDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            StartGoldengateDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartGoldengateDeployment</c>.</summary>
+        public virtual lro::OperationsClient StartGoldengateDeploymentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> PollOnceStartGoldengateDeployment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateDeployment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartGoldengateDeployment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> PollOnceStartGoldengateDeploymentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateDeployment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartGoldengateDeploymentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> StartGoldengateDeployment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StartGoldengateDeployment(new StartGoldengateDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StartGoldengateDeploymentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            StartGoldengateDeploymentAsync(new StartGoldengateDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StartGoldengateDeploymentAsync(string name, st::CancellationToken cancellationToken) =>
+            StartGoldengateDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateDeployment, OperationMetadata> StartGoldengateDeployment(GoldengateDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            StartGoldengateDeployment(new StartGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StartGoldengateDeploymentAsync(GoldengateDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            StartGoldengateDeploymentAsync(new StartGoldengateDeploymentRequest
+            {
+                GoldengateDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the Goldengate Deployment in the following format:
+        /// projects/{project}/locations/{location}/goldengateDeployments/{goldengate_deployment}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StartGoldengateDeploymentAsync(GoldengateDeploymentName name, st::CancellationToken cancellationToken) =>
+            StartGoldengateDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the GoldengateConnections for the given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> ListGoldengateConnections(ListGoldengateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the GoldengateConnections for the given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> ListGoldengateConnectionsAsync(ListGoldengateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the GoldengateConnections for the given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for GoldengateConnections in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> ListGoldengateConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionsRequest request = new ListGoldengateConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateConnections for the given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for GoldengateConnections in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> ListGoldengateConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionsRequest request = new ListGoldengateConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateConnections for the given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for GoldengateConnections in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> ListGoldengateConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionsRequest request = new ListGoldengateConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateConnections for the given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for GoldengateConnections in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> ListGoldengateConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionsRequest request = new ListGoldengateConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnection GetGoldengateConnection(GetGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnection> GetGoldengateConnectionAsync(GetGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnection> GetGoldengateConnectionAsync(GetGoldengateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnection GetGoldengateConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnection(new GetGoldengateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnection> GetGoldengateConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionAsync(new GetGoldengateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnection> GetGoldengateConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnection GetGoldengateConnection(GoldengateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnection(new GetGoldengateConnectionRequest
+            {
+                GoldengateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnection> GetGoldengateConnectionAsync(GoldengateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionAsync(new GetGoldengateConnectionRequest
+            {
+                GoldengateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnection> GetGoldengateConnectionAsync(GoldengateConnectionName name, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnection, OperationMetadata> CreateGoldengateConnection(CreateGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> CreateGoldengateConnectionAsync(CreateGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> CreateGoldengateConnectionAsync(CreateGoldengateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            CreateGoldengateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateGoldengateConnection</c>.</summary>
+        public virtual lro::OperationsClient CreateGoldengateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGoldengateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoldengateConnection, OperationMetadata> PollOnceCreateGoldengateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGoldengateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGoldengateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> PollOnceCreateGoldengateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGoldengateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateConnectionId">
+        /// Required. The ID of the GoldengateConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnection, OperationMetadata> CreateGoldengateConnection(string parent, GoldengateConnection goldengateConnection, string goldengateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateConnection(new CreateGoldengateConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GoldengateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateConnectionId, nameof(goldengateConnectionId)),
+                GoldengateConnection = gax::GaxPreconditions.CheckNotNull(goldengateConnection, nameof(goldengateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateConnectionId">
+        /// Required. The ID of the GoldengateConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> CreateGoldengateConnectionAsync(string parent, GoldengateConnection goldengateConnection, string goldengateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateConnectionAsync(new CreateGoldengateConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GoldengateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateConnectionId, nameof(goldengateConnectionId)),
+                GoldengateConnection = gax::GaxPreconditions.CheckNotNull(goldengateConnection, nameof(goldengateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateConnectionId">
+        /// Required. The ID of the GoldengateConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> CreateGoldengateConnectionAsync(string parent, GoldengateConnection goldengateConnection, string goldengateConnectionId, st::CancellationToken cancellationToken) =>
+            CreateGoldengateConnectionAsync(parent, goldengateConnection, goldengateConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateConnectionId">
+        /// Required. The ID of the GoldengateConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnection, OperationMetadata> CreateGoldengateConnection(gagr::LocationName parent, GoldengateConnection goldengateConnection, string goldengateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateConnection(new CreateGoldengateConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GoldengateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateConnectionId, nameof(goldengateConnectionId)),
+                GoldengateConnection = gax::GaxPreconditions.CheckNotNull(goldengateConnection, nameof(goldengateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateConnectionId">
+        /// Required. The ID of the GoldengateConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> CreateGoldengateConnectionAsync(gagr::LocationName parent, GoldengateConnection goldengateConnection, string goldengateConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateConnectionAsync(new CreateGoldengateConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GoldengateConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateConnectionId, nameof(goldengateConnectionId)),
+                GoldengateConnection = gax::GaxPreconditions.CheckNotNull(goldengateConnection, nameof(goldengateConnection)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The value for parent of the GoldengateConnection in the following
+        /// format: projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="goldengateConnection">
+        /// Required. The resource being created.
+        /// </param>
+        /// <param name="goldengateConnectionId">
+        /// Required. The ID of the GoldengateConnection to create. This value is
+        /// restricted to (^[a-z]([a-z0-9-]{0,61}[a-z0-9])?$) and must be a maximum of
+        /// 63 characters in length. The value must start with a letter and end with a
+        /// letter or a number.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> CreateGoldengateConnectionAsync(gagr::LocationName parent, GoldengateConnection goldengateConnection, string goldengateConnectionId, st::CancellationToken cancellationToken) =>
+            CreateGoldengateConnectionAsync(parent, goldengateConnection, goldengateConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateConnection(DeleteGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAsync(DeleteGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAsync(DeleteGoldengateConnectionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteGoldengateConnection</c>.</summary>
+        public virtual lro::OperationsClient DeleteGoldengateConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGoldengateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteGoldengateConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGoldengateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGoldengateConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteGoldengateConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGoldengateConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateConnection(new DeleteGoldengateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateConnectionAsync(new DeleteGoldengateConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateConnection(GoldengateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateConnection(new DeleteGoldengateConnectionRequest
+            {
+                GoldengateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAsync(GoldengateConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateConnectionAsync(new DeleteGoldengateConnectionRequest
+            {
+                GoldengateConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnection in the following format:
+        /// projects/{project}/locations/{location}/goldengateConnections/{goldengate_connection}.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAsync(GoldengateConnectionName name, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentVersion GetGoldengateDeploymentVersion(GetGoldengateDeploymentVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentVersion> GetGoldengateDeploymentVersionAsync(GetGoldengateDeploymentVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentVersion> GetGoldengateDeploymentVersionAsync(GetGoldengateDeploymentVersionRequest request, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentVersion to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentVersions/{goldengate_deployment_version}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentVersion GetGoldengateDeploymentVersion(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentVersion(new GetGoldengateDeploymentVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentVersion to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentVersions/{goldengate_deployment_version}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentVersion> GetGoldengateDeploymentVersionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentVersionAsync(new GetGoldengateDeploymentVersionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentVersion to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentVersions/{goldengate_deployment_version}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentVersion> GetGoldengateDeploymentVersionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentVersion to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentVersions/{goldengate_deployment_version}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentVersion GetGoldengateDeploymentVersion(GoldengateDeploymentVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentVersion(new GetGoldengateDeploymentVersionRequest
+            {
+                GoldengateDeploymentVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentVersion to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentVersions/{goldengate_deployment_version}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentVersion> GetGoldengateDeploymentVersionAsync(GoldengateDeploymentVersionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentVersionAsync(new GetGoldengateDeploymentVersionRequest
+            {
+                GoldengateDeploymentVersionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentVersion to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentVersions/{goldengate_deployment_version}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentVersion> GetGoldengateDeploymentVersionAsync(GoldengateDeploymentVersionName name, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists GoldengateDeploymentVersions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> ListGoldengateDeploymentVersions(ListGoldengateDeploymentVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldengateDeploymentVersions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeploymentVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> ListGoldengateDeploymentVersionsAsync(ListGoldengateDeploymentVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldengateDeploymentVersions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListGoldengateDeploymentVersionsRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> ListGoldengateDeploymentVersions(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentVersionsRequest request = new ListGoldengateDeploymentVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentVersions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentVersions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListGoldengateDeploymentVersionsRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeploymentVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> ListGoldengateDeploymentVersionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentVersionsRequest request = new ListGoldengateDeploymentVersionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentVersionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentVersions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListGoldengateDeploymentVersionsRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentVersion"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> ListGoldengateDeploymentVersions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentVersionsRequest request = new ListGoldengateDeploymentVersionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentVersions(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentVersions in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListGoldengateDeploymentVersionsRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeploymentVersion"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> ListGoldengateDeploymentVersionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentVersionsRequest request = new ListGoldengateDeploymentVersionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentVersionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentType GetGoldengateDeploymentType(GetGoldengateDeploymentTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentType> GetGoldengateDeploymentTypeAsync(GetGoldengateDeploymentTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentType> GetGoldengateDeploymentTypeAsync(GetGoldengateDeploymentTypeRequest request, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentType to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentType GetGoldengateDeploymentType(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentType(new GetGoldengateDeploymentTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentType to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentType> GetGoldengateDeploymentTypeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentTypeAsync(new GetGoldengateDeploymentTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentType to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentType> GetGoldengateDeploymentTypeAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentType to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentType GetGoldengateDeploymentType(GoldengateDeploymentTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentType(new GetGoldengateDeploymentTypeRequest
+            {
+                GoldengateDeploymentTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentType to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentType> GetGoldengateDeploymentTypeAsync(GoldengateDeploymentTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentTypeAsync(new GetGoldengateDeploymentTypeRequest
+            {
+                GoldengateDeploymentTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateDeploymentType to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentType> GetGoldengateDeploymentTypeAsync(GoldengateDeploymentTypeName name, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists GoldenGateDeploymentTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> ListGoldengateDeploymentTypes(ListGoldengateDeploymentTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldenGateDeploymentTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeploymentType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> ListGoldengateDeploymentTypesAsync(ListGoldengateDeploymentTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldenGateDeploymentTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> ListGoldengateDeploymentTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentTypesRequest request = new ListGoldengateDeploymentTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentTypes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldenGateDeploymentTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeploymentType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> ListGoldengateDeploymentTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentTypesRequest request = new ListGoldengateDeploymentTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentTypesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldenGateDeploymentTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> ListGoldengateDeploymentTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentTypesRequest request = new ListGoldengateDeploymentTypesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentTypes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldenGateDeploymentTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeploymentType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> ListGoldengateDeploymentTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentTypesRequest request = new ListGoldengateDeploymentTypesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentTypesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentEnvironment GetGoldengateDeploymentEnvironment(GetGoldengateDeploymentEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentEnvironment> GetGoldengateDeploymentEnvironmentAsync(GetGoldengateDeploymentEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentEnvironment> GetGoldengateDeploymentEnvironmentAsync(GetGoldengateDeploymentEnvironmentRequest request, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentEnvironmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource with the format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentEnvironments/{goldengate_deployment_environment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentEnvironment GetGoldengateDeploymentEnvironment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentEnvironment(new GetGoldengateDeploymentEnvironmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource with the format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentEnvironments/{goldengate_deployment_environment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentEnvironment> GetGoldengateDeploymentEnvironmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentEnvironmentAsync(new GetGoldengateDeploymentEnvironmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource with the format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentEnvironments/{goldengate_deployment_environment}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentEnvironment> GetGoldengateDeploymentEnvironmentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource with the format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentEnvironments/{goldengate_deployment_environment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateDeploymentEnvironment GetGoldengateDeploymentEnvironment(GoldengateDeploymentEnvironmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentEnvironment(new GetGoldengateDeploymentEnvironmentRequest
+            {
+                GoldengateDeploymentEnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource with the format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentEnvironments/{goldengate_deployment_environment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentEnvironment> GetGoldengateDeploymentEnvironmentAsync(GoldengateDeploymentEnvironmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateDeploymentEnvironmentAsync(new GetGoldengateDeploymentEnvironmentRequest
+            {
+                GoldengateDeploymentEnvironmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource with the format:
+        /// projects/{project}/locations/{location}/goldengateDeploymentEnvironments/{goldengate_deployment_environment}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateDeploymentEnvironment> GetGoldengateDeploymentEnvironmentAsync(GoldengateDeploymentEnvironmentName name, st::CancellationToken cancellationToken) =>
+            GetGoldengateDeploymentEnvironmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists GoldengateDeploymentEnvironments in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentEnvironment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> ListGoldengateDeploymentEnvironments(ListGoldengateDeploymentEnvironmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldengateDeploymentEnvironments in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GoldengateDeploymentEnvironment"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> ListGoldengateDeploymentEnvironmentsAsync(ListGoldengateDeploymentEnvironmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldengateDeploymentEnvironments in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of
+        /// GoldengateDeploymentEnvironments. Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentEnvironment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> ListGoldengateDeploymentEnvironments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentEnvironmentsRequest request = new ListGoldengateDeploymentEnvironmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentEnvironments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentEnvironments in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of
+        /// GoldengateDeploymentEnvironments. Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GoldengateDeploymentEnvironment"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> ListGoldengateDeploymentEnvironmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentEnvironmentsRequest request = new ListGoldengateDeploymentEnvironmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentEnvironmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentEnvironments in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of
+        /// GoldengateDeploymentEnvironments. Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentEnvironment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> ListGoldengateDeploymentEnvironments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentEnvironmentsRequest request = new ListGoldengateDeploymentEnvironmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentEnvironments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentEnvironments in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of
+        /// GoldengateDeploymentEnvironments. Format:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GoldengateDeploymentEnvironment"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> ListGoldengateDeploymentEnvironmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateDeploymentEnvironmentsRequest request = new ListGoldengateDeploymentEnvironmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateDeploymentEnvironmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnectionType GetGoldengateConnectionType(GetGoldengateConnectionTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionType> GetGoldengateConnectionTypeAsync(GetGoldengateConnectionTypeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionType> GetGoldengateConnectionTypeAsync(GetGoldengateConnectionTypeRequest request, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionTypeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format:
+        /// projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_type}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnectionType GetGoldengateConnectionType(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionType(new GetGoldengateConnectionTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format:
+        /// projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_type}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionType> GetGoldengateConnectionTypeAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionTypeAsync(new GetGoldengateConnectionTypeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format:
+        /// projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_type}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionType> GetGoldengateConnectionTypeAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format:
+        /// projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_type}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnectionType GetGoldengateConnectionType(GoldengateConnectionTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionType(new GetGoldengateConnectionTypeRequest
+            {
+                GoldengateConnectionTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format:
+        /// projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_type}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionType> GetGoldengateConnectionTypeAsync(GoldengateConnectionTypeName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionTypeAsync(new GetGoldengateConnectionTypeRequest
+            {
+                GoldengateConnectionTypeName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the resource in the format:
+        /// projects/{project}/locations/{location}/goldengateConnectionTypes/{goldengate_connection_type}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionType> GetGoldengateConnectionTypeAsync(GoldengateConnectionTypeName name, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionTypeAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists GoldengateConnectionTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnectionType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> ListGoldengateConnectionTypes(ListGoldengateConnectionTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldengateConnectionTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateConnectionType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> ListGoldengateConnectionTypesAsync(ListGoldengateConnectionTypesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldengateConnectionTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListGoldengateConnectionTypesRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnectionType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> ListGoldengateConnectionTypes(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionTypesRequest request = new ListGoldengateConnectionTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionTypes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListGoldengateConnectionTypesRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateConnectionType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> ListGoldengateConnectionTypesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionTypesRequest request = new ListGoldengateConnectionTypesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionTypesAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListGoldengateConnectionTypesRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnectionType"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> ListGoldengateConnectionTypes(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionTypesRequest request = new ListGoldengateConnectionTypesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionTypes(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionTypes in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ListGoldengateConnectionTypesRequest
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateConnectionType"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> ListGoldengateConnectionTypesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionTypesRequest request = new ListGoldengateConnectionTypesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionTypesAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// List DbVersions for the given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -10600,6 +13740,729 @@ namespace Google.Cloud.OracleDatabase.V1
             }
             return ListDatabaseCharacterSetsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists GoldengateConnectionAssignments in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnectionAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> ListGoldengateConnectionAssignments(ListGoldengateConnectionAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldengateConnectionAssignments in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GoldengateConnectionAssignment"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> ListGoldengateConnectionAssignmentsAsync(ListGoldengateConnectionAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists GoldengateConnectionAssignments in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the GoldengateConnectionAssignments.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnectionAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> ListGoldengateConnectionAssignments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionAssignmentsRequest request = new ListGoldengateConnectionAssignmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionAssignments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionAssignments in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the GoldengateConnectionAssignments.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GoldengateConnectionAssignment"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> ListGoldengateConnectionAssignmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionAssignmentsRequest request = new ListGoldengateConnectionAssignmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionAssignmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionAssignments in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the GoldengateConnectionAssignments.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnectionAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> ListGoldengateConnectionAssignments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionAssignmentsRequest request = new ListGoldengateConnectionAssignmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionAssignments(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionAssignments in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent value for the GoldengateConnectionAssignments.
+        /// Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GoldengateConnectionAssignment"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> ListGoldengateConnectionAssignmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListGoldengateConnectionAssignmentsRequest request = new ListGoldengateConnectionAssignmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListGoldengateConnectionAssignmentsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnectionAssignment GetGoldengateConnectionAssignment(GetGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionAssignment> GetGoldengateConnectionAssignmentAsync(GetGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionAssignment> GetGoldengateConnectionAssignmentAsync(GetGoldengateConnectionAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnectionAssignment GetGoldengateConnectionAssignment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionAssignment(new GetGoldengateConnectionAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionAssignment> GetGoldengateConnectionAssignmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionAssignmentAsync(new GetGoldengateConnectionAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionAssignment> GetGoldengateConnectionAssignmentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual GoldengateConnectionAssignment GetGoldengateConnectionAssignment(GoldengateConnectionAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionAssignment(new GetGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionAssignment> GetGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetGoldengateConnectionAssignmentAsync(new GetGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to retrieve.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<GoldengateConnectionAssignment> GetGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName name, st::CancellationToken cancellationToken) =>
+            GetGoldengateConnectionAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnectionAssignment, OperationMetadata> CreateGoldengateConnectionAssignment(CreateGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> CreateGoldengateConnectionAssignmentAsync(CreateGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> CreateGoldengateConnectionAssignmentAsync(CreateGoldengateConnectionAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            CreateGoldengateConnectionAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateGoldengateConnectionAssignment</c>.</summary>
+        public virtual lro::OperationsClient CreateGoldengateConnectionAssignmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGoldengateConnectionAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<GoldengateConnectionAssignment, OperationMetadata> PollOnceCreateGoldengateConnectionAssignment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateConnectionAssignment, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGoldengateConnectionAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateGoldengateConnectionAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> PollOnceCreateGoldengateConnectionAssignmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<GoldengateConnectionAssignment, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateGoldengateConnectionAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this GoldengateConnectionAssignment
+        /// will be created. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="goldengateConnectionAssignmentId">
+        /// Required. The ID of the GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnectionAssignment, OperationMetadata> CreateGoldengateConnectionAssignment(string parent, GoldengateConnectionAssignment goldengateConnectionAssignment, string goldengateConnectionAssignmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateConnectionAssignment(new CreateGoldengateConnectionAssignmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GoldengateConnectionAssignmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateConnectionAssignmentId, nameof(goldengateConnectionAssignmentId)),
+                GoldengateConnectionAssignment = gax::GaxPreconditions.CheckNotNull(goldengateConnectionAssignment, nameof(goldengateConnectionAssignment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this GoldengateConnectionAssignment
+        /// will be created. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="goldengateConnectionAssignmentId">
+        /// Required. The ID of the GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> CreateGoldengateConnectionAssignmentAsync(string parent, GoldengateConnectionAssignment goldengateConnectionAssignment, string goldengateConnectionAssignmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateConnectionAssignmentAsync(new CreateGoldengateConnectionAssignmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                GoldengateConnectionAssignmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateConnectionAssignmentId, nameof(goldengateConnectionAssignmentId)),
+                GoldengateConnectionAssignment = gax::GaxPreconditions.CheckNotNull(goldengateConnectionAssignment, nameof(goldengateConnectionAssignment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this GoldengateConnectionAssignment
+        /// will be created. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="goldengateConnectionAssignmentId">
+        /// Required. The ID of the GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> CreateGoldengateConnectionAssignmentAsync(string parent, GoldengateConnectionAssignment goldengateConnectionAssignment, string goldengateConnectionAssignmentId, st::CancellationToken cancellationToken) =>
+            CreateGoldengateConnectionAssignmentAsync(parent, goldengateConnectionAssignment, goldengateConnectionAssignmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this GoldengateConnectionAssignment
+        /// will be created. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="goldengateConnectionAssignmentId">
+        /// Required. The ID of the GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<GoldengateConnectionAssignment, OperationMetadata> CreateGoldengateConnectionAssignment(gagr::LocationName parent, GoldengateConnectionAssignment goldengateConnectionAssignment, string goldengateConnectionAssignmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateConnectionAssignment(new CreateGoldengateConnectionAssignmentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GoldengateConnectionAssignmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateConnectionAssignmentId, nameof(goldengateConnectionAssignmentId)),
+                GoldengateConnectionAssignment = gax::GaxPreconditions.CheckNotNull(goldengateConnectionAssignment, nameof(goldengateConnectionAssignment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this GoldengateConnectionAssignment
+        /// will be created. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="goldengateConnectionAssignmentId">
+        /// Required. The ID of the GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> CreateGoldengateConnectionAssignmentAsync(gagr::LocationName parent, GoldengateConnectionAssignment goldengateConnectionAssignment, string goldengateConnectionAssignmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateGoldengateConnectionAssignmentAsync(new CreateGoldengateConnectionAssignmentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                GoldengateConnectionAssignmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(goldengateConnectionAssignmentId, nameof(goldengateConnectionAssignmentId)),
+                GoldengateConnectionAssignment = gax::GaxPreconditions.CheckNotNull(goldengateConnectionAssignment, nameof(goldengateConnectionAssignment)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource where this GoldengateConnectionAssignment
+        /// will be created. Format: projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="goldengateConnectionAssignment">
+        /// Required. The GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="goldengateConnectionAssignmentId">
+        /// Required. The ID of the GoldengateConnectionAssignment to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> CreateGoldengateConnectionAssignmentAsync(gagr::LocationName parent, GoldengateConnectionAssignment goldengateConnectionAssignment, string goldengateConnectionAssignmentId, st::CancellationToken cancellationToken) =>
+            CreateGoldengateConnectionAssignmentAsync(parent, goldengateConnectionAssignment, goldengateConnectionAssignmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateConnectionAssignment(DeleteGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAssignmentAsync(DeleteGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAssignmentAsync(DeleteGoldengateConnectionAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateConnectionAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteGoldengateConnectionAssignment</c>.</summary>
+        public virtual lro::OperationsClient DeleteGoldengateConnectionAssignmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGoldengateConnectionAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteGoldengateConnectionAssignment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGoldengateConnectionAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteGoldengateConnectionAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteGoldengateConnectionAssignmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteGoldengateConnectionAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateConnectionAssignment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateConnectionAssignment(new DeleteGoldengateConnectionAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAssignmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateConnectionAssignmentAsync(new DeleteGoldengateConnectionAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAssignmentAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateConnectionAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateConnectionAssignment(GoldengateConnectionAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateConnectionAssignment(new DeleteGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteGoldengateConnectionAssignmentAsync(new DeleteGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the GoldengateConnectionAssignment to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName name, st::CancellationToken cancellationToken) =>
+            DeleteGoldengateConnectionAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestGoldengateConnectionAssignmentResponse TestGoldengateConnectionAssignment(TestGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignmentAsync(TestGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignmentAsync(TestGoldengateConnectionAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            TestGoldengateConnectionAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the connection assignment for which to test connection.
+        /// projects/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestGoldengateConnectionAssignmentResponse TestGoldengateConnectionAssignment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TestGoldengateConnectionAssignment(new TestGoldengateConnectionAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the connection assignment for which to test connection.
+        /// projects/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            TestGoldengateConnectionAssignmentAsync(new TestGoldengateConnectionAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the connection assignment for which to test connection.
+        /// projects/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignmentAsync(string name, st::CancellationToken cancellationToken) =>
+            TestGoldengateConnectionAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the connection assignment for which to test connection.
+        /// projects/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TestGoldengateConnectionAssignmentResponse TestGoldengateConnectionAssignment(GoldengateConnectionAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            TestGoldengateConnectionAssignment(new TestGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the connection assignment for which to test connection.
+        /// projects/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            TestGoldengateConnectionAssignmentAsync(new TestGoldengateConnectionAssignmentRequest
+            {
+                GoldengateConnectionAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the connection assignment for which to test connection.
+        /// projects/{project}/locations/{region}/goldengateConnectionAssignments/{goldengate_connection_assignment}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignmentAsync(GoldengateConnectionAssignmentName name, st::CancellationToken cancellationToken) =>
+            TestGoldengateConnectionAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>OracleDatabase client wrapper implementation, for convenient use.</summary>
@@ -10720,9 +14583,55 @@ namespace Google.Cloud.OracleDatabase.V1
 
         private readonly gaxgrpc::ApiCall<DeleteDbSystemRequest, lro::Operation> _callDeleteDbSystem;
 
+        private readonly gaxgrpc::ApiCall<ListGoldengateDeploymentsRequest, ListGoldengateDeploymentsResponse> _callListGoldengateDeployments;
+
+        private readonly gaxgrpc::ApiCall<GetGoldengateDeploymentRequest, GoldengateDeployment> _callGetGoldengateDeployment;
+
+        private readonly gaxgrpc::ApiCall<CreateGoldengateDeploymentRequest, lro::Operation> _callCreateGoldengateDeployment;
+
+        private readonly gaxgrpc::ApiCall<DeleteGoldengateDeploymentRequest, lro::Operation> _callDeleteGoldengateDeployment;
+
+        private readonly gaxgrpc::ApiCall<StopGoldengateDeploymentRequest, lro::Operation> _callStopGoldengateDeployment;
+
+        private readonly gaxgrpc::ApiCall<StartGoldengateDeploymentRequest, lro::Operation> _callStartGoldengateDeployment;
+
+        private readonly gaxgrpc::ApiCall<ListGoldengateConnectionsRequest, ListGoldengateConnectionsResponse> _callListGoldengateConnections;
+
+        private readonly gaxgrpc::ApiCall<GetGoldengateConnectionRequest, GoldengateConnection> _callGetGoldengateConnection;
+
+        private readonly gaxgrpc::ApiCall<CreateGoldengateConnectionRequest, lro::Operation> _callCreateGoldengateConnection;
+
+        private readonly gaxgrpc::ApiCall<DeleteGoldengateConnectionRequest, lro::Operation> _callDeleteGoldengateConnection;
+
+        private readonly gaxgrpc::ApiCall<GetGoldengateDeploymentVersionRequest, GoldengateDeploymentVersion> _callGetGoldengateDeploymentVersion;
+
+        private readonly gaxgrpc::ApiCall<ListGoldengateDeploymentVersionsRequest, ListGoldengateDeploymentVersionsResponse> _callListGoldengateDeploymentVersions;
+
+        private readonly gaxgrpc::ApiCall<GetGoldengateDeploymentTypeRequest, GoldengateDeploymentType> _callGetGoldengateDeploymentType;
+
+        private readonly gaxgrpc::ApiCall<ListGoldengateDeploymentTypesRequest, ListGoldengateDeploymentTypesResponse> _callListGoldengateDeploymentTypes;
+
+        private readonly gaxgrpc::ApiCall<GetGoldengateDeploymentEnvironmentRequest, GoldengateDeploymentEnvironment> _callGetGoldengateDeploymentEnvironment;
+
+        private readonly gaxgrpc::ApiCall<ListGoldengateDeploymentEnvironmentsRequest, ListGoldengateDeploymentEnvironmentsResponse> _callListGoldengateDeploymentEnvironments;
+
+        private readonly gaxgrpc::ApiCall<GetGoldengateConnectionTypeRequest, GoldengateConnectionType> _callGetGoldengateConnectionType;
+
+        private readonly gaxgrpc::ApiCall<ListGoldengateConnectionTypesRequest, ListGoldengateConnectionTypesResponse> _callListGoldengateConnectionTypes;
+
         private readonly gaxgrpc::ApiCall<ListDbVersionsRequest, ListDbVersionsResponse> _callListDbVersions;
 
         private readonly gaxgrpc::ApiCall<ListDatabaseCharacterSetsRequest, ListDatabaseCharacterSetsResponse> _callListDatabaseCharacterSets;
+
+        private readonly gaxgrpc::ApiCall<ListGoldengateConnectionAssignmentsRequest, ListGoldengateConnectionAssignmentsResponse> _callListGoldengateConnectionAssignments;
+
+        private readonly gaxgrpc::ApiCall<GetGoldengateConnectionAssignmentRequest, GoldengateConnectionAssignment> _callGetGoldengateConnectionAssignment;
+
+        private readonly gaxgrpc::ApiCall<CreateGoldengateConnectionAssignmentRequest, lro::Operation> _callCreateGoldengateConnectionAssignment;
+
+        private readonly gaxgrpc::ApiCall<DeleteGoldengateConnectionAssignmentRequest, lro::Operation> _callDeleteGoldengateConnectionAssignment;
+
+        private readonly gaxgrpc::ApiCall<TestGoldengateConnectionAssignmentRequest, TestGoldengateConnectionAssignmentResponse> _callTestGoldengateConnectionAssignment;
 
         /// <summary>
         /// Constructs a client wrapper for the OracleDatabase service, with the specified gRPC client and settings.
@@ -10764,6 +14673,14 @@ namespace Google.Cloud.OracleDatabase.V1
             DeleteExascaleDbStorageVaultOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteExascaleDbStorageVaultOperationsSettings, logger);
             CreateDbSystemOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDbSystemOperationsSettings, logger);
             DeleteDbSystemOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDbSystemOperationsSettings, logger);
+            CreateGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGoldengateDeploymentOperationsSettings, logger);
+            DeleteGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGoldengateDeploymentOperationsSettings, logger);
+            StopGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StopGoldengateDeploymentOperationsSettings, logger);
+            StartGoldengateDeploymentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartGoldengateDeploymentOperationsSettings, logger);
+            CreateGoldengateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGoldengateConnectionOperationsSettings, logger);
+            DeleteGoldengateConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGoldengateConnectionOperationsSettings, logger);
+            CreateGoldengateConnectionAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateGoldengateConnectionAssignmentOperationsSettings, logger);
+            DeleteGoldengateConnectionAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteGoldengateConnectionAssignmentOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListCloudExadataInfrastructures = clientHelper.BuildApiCall<ListCloudExadataInfrastructuresRequest, ListCloudExadataInfrastructuresResponse>("ListCloudExadataInfrastructures", grpcClient.ListCloudExadataInfrastructuresAsync, grpcClient.ListCloudExadataInfrastructures, effectiveSettings.ListCloudExadataInfrastructuresSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCloudExadataInfrastructures);
@@ -10933,12 +14850,81 @@ namespace Google.Cloud.OracleDatabase.V1
             _callDeleteDbSystem = clientHelper.BuildApiCall<DeleteDbSystemRequest, lro::Operation>("DeleteDbSystem", grpcClient.DeleteDbSystemAsync, grpcClient.DeleteDbSystem, effectiveSettings.DeleteDbSystemSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDbSystem);
             Modify_DeleteDbSystemApiCall(ref _callDeleteDbSystem);
+            _callListGoldengateDeployments = clientHelper.BuildApiCall<ListGoldengateDeploymentsRequest, ListGoldengateDeploymentsResponse>("ListGoldengateDeployments", grpcClient.ListGoldengateDeploymentsAsync, grpcClient.ListGoldengateDeployments, effectiveSettings.ListGoldengateDeploymentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGoldengateDeployments);
+            Modify_ListGoldengateDeploymentsApiCall(ref _callListGoldengateDeployments);
+            _callGetGoldengateDeployment = clientHelper.BuildApiCall<GetGoldengateDeploymentRequest, GoldengateDeployment>("GetGoldengateDeployment", grpcClient.GetGoldengateDeploymentAsync, grpcClient.GetGoldengateDeployment, effectiveSettings.GetGoldengateDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoldengateDeployment);
+            Modify_GetGoldengateDeploymentApiCall(ref _callGetGoldengateDeployment);
+            _callCreateGoldengateDeployment = clientHelper.BuildApiCall<CreateGoldengateDeploymentRequest, lro::Operation>("CreateGoldengateDeployment", grpcClient.CreateGoldengateDeploymentAsync, grpcClient.CreateGoldengateDeployment, effectiveSettings.CreateGoldengateDeploymentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateGoldengateDeployment);
+            Modify_CreateGoldengateDeploymentApiCall(ref _callCreateGoldengateDeployment);
+            _callDeleteGoldengateDeployment = clientHelper.BuildApiCall<DeleteGoldengateDeploymentRequest, lro::Operation>("DeleteGoldengateDeployment", grpcClient.DeleteGoldengateDeploymentAsync, grpcClient.DeleteGoldengateDeployment, effectiveSettings.DeleteGoldengateDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteGoldengateDeployment);
+            Modify_DeleteGoldengateDeploymentApiCall(ref _callDeleteGoldengateDeployment);
+            _callStopGoldengateDeployment = clientHelper.BuildApiCall<StopGoldengateDeploymentRequest, lro::Operation>("StopGoldengateDeployment", grpcClient.StopGoldengateDeploymentAsync, grpcClient.StopGoldengateDeployment, effectiveSettings.StopGoldengateDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStopGoldengateDeployment);
+            Modify_StopGoldengateDeploymentApiCall(ref _callStopGoldengateDeployment);
+            _callStartGoldengateDeployment = clientHelper.BuildApiCall<StartGoldengateDeploymentRequest, lro::Operation>("StartGoldengateDeployment", grpcClient.StartGoldengateDeploymentAsync, grpcClient.StartGoldengateDeployment, effectiveSettings.StartGoldengateDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStartGoldengateDeployment);
+            Modify_StartGoldengateDeploymentApiCall(ref _callStartGoldengateDeployment);
+            _callListGoldengateConnections = clientHelper.BuildApiCall<ListGoldengateConnectionsRequest, ListGoldengateConnectionsResponse>("ListGoldengateConnections", grpcClient.ListGoldengateConnectionsAsync, grpcClient.ListGoldengateConnections, effectiveSettings.ListGoldengateConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGoldengateConnections);
+            Modify_ListGoldengateConnectionsApiCall(ref _callListGoldengateConnections);
+            _callGetGoldengateConnection = clientHelper.BuildApiCall<GetGoldengateConnectionRequest, GoldengateConnection>("GetGoldengateConnection", grpcClient.GetGoldengateConnectionAsync, grpcClient.GetGoldengateConnection, effectiveSettings.GetGoldengateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoldengateConnection);
+            Modify_GetGoldengateConnectionApiCall(ref _callGetGoldengateConnection);
+            _callCreateGoldengateConnection = clientHelper.BuildApiCall<CreateGoldengateConnectionRequest, lro::Operation>("CreateGoldengateConnection", grpcClient.CreateGoldengateConnectionAsync, grpcClient.CreateGoldengateConnection, effectiveSettings.CreateGoldengateConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateGoldengateConnection);
+            Modify_CreateGoldengateConnectionApiCall(ref _callCreateGoldengateConnection);
+            _callDeleteGoldengateConnection = clientHelper.BuildApiCall<DeleteGoldengateConnectionRequest, lro::Operation>("DeleteGoldengateConnection", grpcClient.DeleteGoldengateConnectionAsync, grpcClient.DeleteGoldengateConnection, effectiveSettings.DeleteGoldengateConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteGoldengateConnection);
+            Modify_DeleteGoldengateConnectionApiCall(ref _callDeleteGoldengateConnection);
+            _callGetGoldengateDeploymentVersion = clientHelper.BuildApiCall<GetGoldengateDeploymentVersionRequest, GoldengateDeploymentVersion>("GetGoldengateDeploymentVersion", grpcClient.GetGoldengateDeploymentVersionAsync, grpcClient.GetGoldengateDeploymentVersion, effectiveSettings.GetGoldengateDeploymentVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoldengateDeploymentVersion);
+            Modify_GetGoldengateDeploymentVersionApiCall(ref _callGetGoldengateDeploymentVersion);
+            _callListGoldengateDeploymentVersions = clientHelper.BuildApiCall<ListGoldengateDeploymentVersionsRequest, ListGoldengateDeploymentVersionsResponse>("ListGoldengateDeploymentVersions", grpcClient.ListGoldengateDeploymentVersionsAsync, grpcClient.ListGoldengateDeploymentVersions, effectiveSettings.ListGoldengateDeploymentVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGoldengateDeploymentVersions);
+            Modify_ListGoldengateDeploymentVersionsApiCall(ref _callListGoldengateDeploymentVersions);
+            _callGetGoldengateDeploymentType = clientHelper.BuildApiCall<GetGoldengateDeploymentTypeRequest, GoldengateDeploymentType>("GetGoldengateDeploymentType", grpcClient.GetGoldengateDeploymentTypeAsync, grpcClient.GetGoldengateDeploymentType, effectiveSettings.GetGoldengateDeploymentTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoldengateDeploymentType);
+            Modify_GetGoldengateDeploymentTypeApiCall(ref _callGetGoldengateDeploymentType);
+            _callListGoldengateDeploymentTypes = clientHelper.BuildApiCall<ListGoldengateDeploymentTypesRequest, ListGoldengateDeploymentTypesResponse>("ListGoldengateDeploymentTypes", grpcClient.ListGoldengateDeploymentTypesAsync, grpcClient.ListGoldengateDeploymentTypes, effectiveSettings.ListGoldengateDeploymentTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGoldengateDeploymentTypes);
+            Modify_ListGoldengateDeploymentTypesApiCall(ref _callListGoldengateDeploymentTypes);
+            _callGetGoldengateDeploymentEnvironment = clientHelper.BuildApiCall<GetGoldengateDeploymentEnvironmentRequest, GoldengateDeploymentEnvironment>("GetGoldengateDeploymentEnvironment", grpcClient.GetGoldengateDeploymentEnvironmentAsync, grpcClient.GetGoldengateDeploymentEnvironment, effectiveSettings.GetGoldengateDeploymentEnvironmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoldengateDeploymentEnvironment);
+            Modify_GetGoldengateDeploymentEnvironmentApiCall(ref _callGetGoldengateDeploymentEnvironment);
+            _callListGoldengateDeploymentEnvironments = clientHelper.BuildApiCall<ListGoldengateDeploymentEnvironmentsRequest, ListGoldengateDeploymentEnvironmentsResponse>("ListGoldengateDeploymentEnvironments", grpcClient.ListGoldengateDeploymentEnvironmentsAsync, grpcClient.ListGoldengateDeploymentEnvironments, effectiveSettings.ListGoldengateDeploymentEnvironmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGoldengateDeploymentEnvironments);
+            Modify_ListGoldengateDeploymentEnvironmentsApiCall(ref _callListGoldengateDeploymentEnvironments);
+            _callGetGoldengateConnectionType = clientHelper.BuildApiCall<GetGoldengateConnectionTypeRequest, GoldengateConnectionType>("GetGoldengateConnectionType", grpcClient.GetGoldengateConnectionTypeAsync, grpcClient.GetGoldengateConnectionType, effectiveSettings.GetGoldengateConnectionTypeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoldengateConnectionType);
+            Modify_GetGoldengateConnectionTypeApiCall(ref _callGetGoldengateConnectionType);
+            _callListGoldengateConnectionTypes = clientHelper.BuildApiCall<ListGoldengateConnectionTypesRequest, ListGoldengateConnectionTypesResponse>("ListGoldengateConnectionTypes", grpcClient.ListGoldengateConnectionTypesAsync, grpcClient.ListGoldengateConnectionTypes, effectiveSettings.ListGoldengateConnectionTypesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGoldengateConnectionTypes);
+            Modify_ListGoldengateConnectionTypesApiCall(ref _callListGoldengateConnectionTypes);
             _callListDbVersions = clientHelper.BuildApiCall<ListDbVersionsRequest, ListDbVersionsResponse>("ListDbVersions", grpcClient.ListDbVersionsAsync, grpcClient.ListDbVersions, effectiveSettings.ListDbVersionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDbVersions);
             Modify_ListDbVersionsApiCall(ref _callListDbVersions);
             _callListDatabaseCharacterSets = clientHelper.BuildApiCall<ListDatabaseCharacterSetsRequest, ListDatabaseCharacterSetsResponse>("ListDatabaseCharacterSets", grpcClient.ListDatabaseCharacterSetsAsync, grpcClient.ListDatabaseCharacterSets, effectiveSettings.ListDatabaseCharacterSetsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListDatabaseCharacterSets);
             Modify_ListDatabaseCharacterSetsApiCall(ref _callListDatabaseCharacterSets);
+            _callListGoldengateConnectionAssignments = clientHelper.BuildApiCall<ListGoldengateConnectionAssignmentsRequest, ListGoldengateConnectionAssignmentsResponse>("ListGoldengateConnectionAssignments", grpcClient.ListGoldengateConnectionAssignmentsAsync, grpcClient.ListGoldengateConnectionAssignments, effectiveSettings.ListGoldengateConnectionAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListGoldengateConnectionAssignments);
+            Modify_ListGoldengateConnectionAssignmentsApiCall(ref _callListGoldengateConnectionAssignments);
+            _callGetGoldengateConnectionAssignment = clientHelper.BuildApiCall<GetGoldengateConnectionAssignmentRequest, GoldengateConnectionAssignment>("GetGoldengateConnectionAssignment", grpcClient.GetGoldengateConnectionAssignmentAsync, grpcClient.GetGoldengateConnectionAssignment, effectiveSettings.GetGoldengateConnectionAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetGoldengateConnectionAssignment);
+            Modify_GetGoldengateConnectionAssignmentApiCall(ref _callGetGoldengateConnectionAssignment);
+            _callCreateGoldengateConnectionAssignment = clientHelper.BuildApiCall<CreateGoldengateConnectionAssignmentRequest, lro::Operation>("CreateGoldengateConnectionAssignment", grpcClient.CreateGoldengateConnectionAssignmentAsync, grpcClient.CreateGoldengateConnectionAssignment, effectiveSettings.CreateGoldengateConnectionAssignmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateGoldengateConnectionAssignment);
+            Modify_CreateGoldengateConnectionAssignmentApiCall(ref _callCreateGoldengateConnectionAssignment);
+            _callDeleteGoldengateConnectionAssignment = clientHelper.BuildApiCall<DeleteGoldengateConnectionAssignmentRequest, lro::Operation>("DeleteGoldengateConnectionAssignment", grpcClient.DeleteGoldengateConnectionAssignmentAsync, grpcClient.DeleteGoldengateConnectionAssignment, effectiveSettings.DeleteGoldengateConnectionAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteGoldengateConnectionAssignment);
+            Modify_DeleteGoldengateConnectionAssignmentApiCall(ref _callDeleteGoldengateConnectionAssignment);
+            _callTestGoldengateConnectionAssignment = clientHelper.BuildApiCall<TestGoldengateConnectionAssignmentRequest, TestGoldengateConnectionAssignmentResponse>("TestGoldengateConnectionAssignment", grpcClient.TestGoldengateConnectionAssignmentAsync, grpcClient.TestGoldengateConnectionAssignment, effectiveSettings.TestGoldengateConnectionAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callTestGoldengateConnectionAssignment);
+            Modify_TestGoldengateConnectionAssignmentApiCall(ref _callTestGoldengateConnectionAssignment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -11056,9 +15042,55 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_DeleteDbSystemApiCall(ref gaxgrpc::ApiCall<DeleteDbSystemRequest, lro::Operation> call);
 
+        partial void Modify_ListGoldengateDeploymentsApiCall(ref gaxgrpc::ApiCall<ListGoldengateDeploymentsRequest, ListGoldengateDeploymentsResponse> call);
+
+        partial void Modify_GetGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<GetGoldengateDeploymentRequest, GoldengateDeployment> call);
+
+        partial void Modify_CreateGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<CreateGoldengateDeploymentRequest, lro::Operation> call);
+
+        partial void Modify_DeleteGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<DeleteGoldengateDeploymentRequest, lro::Operation> call);
+
+        partial void Modify_StopGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<StopGoldengateDeploymentRequest, lro::Operation> call);
+
+        partial void Modify_StartGoldengateDeploymentApiCall(ref gaxgrpc::ApiCall<StartGoldengateDeploymentRequest, lro::Operation> call);
+
+        partial void Modify_ListGoldengateConnectionsApiCall(ref gaxgrpc::ApiCall<ListGoldengateConnectionsRequest, ListGoldengateConnectionsResponse> call);
+
+        partial void Modify_GetGoldengateConnectionApiCall(ref gaxgrpc::ApiCall<GetGoldengateConnectionRequest, GoldengateConnection> call);
+
+        partial void Modify_CreateGoldengateConnectionApiCall(ref gaxgrpc::ApiCall<CreateGoldengateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteGoldengateConnectionApiCall(ref gaxgrpc::ApiCall<DeleteGoldengateConnectionRequest, lro::Operation> call);
+
+        partial void Modify_GetGoldengateDeploymentVersionApiCall(ref gaxgrpc::ApiCall<GetGoldengateDeploymentVersionRequest, GoldengateDeploymentVersion> call);
+
+        partial void Modify_ListGoldengateDeploymentVersionsApiCall(ref gaxgrpc::ApiCall<ListGoldengateDeploymentVersionsRequest, ListGoldengateDeploymentVersionsResponse> call);
+
+        partial void Modify_GetGoldengateDeploymentTypeApiCall(ref gaxgrpc::ApiCall<GetGoldengateDeploymentTypeRequest, GoldengateDeploymentType> call);
+
+        partial void Modify_ListGoldengateDeploymentTypesApiCall(ref gaxgrpc::ApiCall<ListGoldengateDeploymentTypesRequest, ListGoldengateDeploymentTypesResponse> call);
+
+        partial void Modify_GetGoldengateDeploymentEnvironmentApiCall(ref gaxgrpc::ApiCall<GetGoldengateDeploymentEnvironmentRequest, GoldengateDeploymentEnvironment> call);
+
+        partial void Modify_ListGoldengateDeploymentEnvironmentsApiCall(ref gaxgrpc::ApiCall<ListGoldengateDeploymentEnvironmentsRequest, ListGoldengateDeploymentEnvironmentsResponse> call);
+
+        partial void Modify_GetGoldengateConnectionTypeApiCall(ref gaxgrpc::ApiCall<GetGoldengateConnectionTypeRequest, GoldengateConnectionType> call);
+
+        partial void Modify_ListGoldengateConnectionTypesApiCall(ref gaxgrpc::ApiCall<ListGoldengateConnectionTypesRequest, ListGoldengateConnectionTypesResponse> call);
+
         partial void Modify_ListDbVersionsApiCall(ref gaxgrpc::ApiCall<ListDbVersionsRequest, ListDbVersionsResponse> call);
 
         partial void Modify_ListDatabaseCharacterSetsApiCall(ref gaxgrpc::ApiCall<ListDatabaseCharacterSetsRequest, ListDatabaseCharacterSetsResponse> call);
+
+        partial void Modify_ListGoldengateConnectionAssignmentsApiCall(ref gaxgrpc::ApiCall<ListGoldengateConnectionAssignmentsRequest, ListGoldengateConnectionAssignmentsResponse> call);
+
+        partial void Modify_GetGoldengateConnectionAssignmentApiCall(ref gaxgrpc::ApiCall<GetGoldengateConnectionAssignmentRequest, GoldengateConnectionAssignment> call);
+
+        partial void Modify_CreateGoldengateConnectionAssignmentApiCall(ref gaxgrpc::ApiCall<CreateGoldengateConnectionAssignmentRequest, lro::Operation> call);
+
+        partial void Modify_DeleteGoldengateConnectionAssignmentApiCall(ref gaxgrpc::ApiCall<DeleteGoldengateConnectionAssignmentRequest, lro::Operation> call);
+
+        partial void Modify_TestGoldengateConnectionAssignmentApiCall(ref gaxgrpc::ApiCall<TestGoldengateConnectionAssignmentRequest, TestGoldengateConnectionAssignmentResponse> call);
 
         partial void OnConstruction(OracleDatabase.OracleDatabaseClient grpcClient, OracleDatabaseSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -11180,9 +15212,55 @@ namespace Google.Cloud.OracleDatabase.V1
 
         partial void Modify_DeleteDbSystemRequest(ref DeleteDbSystemRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListGoldengateDeploymentsRequest(ref ListGoldengateDeploymentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoldengateDeploymentRequest(ref GetGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateGoldengateDeploymentRequest(ref CreateGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteGoldengateDeploymentRequest(ref DeleteGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StopGoldengateDeploymentRequest(ref StopGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StartGoldengateDeploymentRequest(ref StartGoldengateDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListGoldengateConnectionsRequest(ref ListGoldengateConnectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoldengateConnectionRequest(ref GetGoldengateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateGoldengateConnectionRequest(ref CreateGoldengateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteGoldengateConnectionRequest(ref DeleteGoldengateConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoldengateDeploymentVersionRequest(ref GetGoldengateDeploymentVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListGoldengateDeploymentVersionsRequest(ref ListGoldengateDeploymentVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoldengateDeploymentTypeRequest(ref GetGoldengateDeploymentTypeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListGoldengateDeploymentTypesRequest(ref ListGoldengateDeploymentTypesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoldengateDeploymentEnvironmentRequest(ref GetGoldengateDeploymentEnvironmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListGoldengateDeploymentEnvironmentsRequest(ref ListGoldengateDeploymentEnvironmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoldengateConnectionTypeRequest(ref GetGoldengateConnectionTypeRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListGoldengateConnectionTypesRequest(ref ListGoldengateConnectionTypesRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListDbVersionsRequest(ref ListDbVersionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListDatabaseCharacterSetsRequest(ref ListDatabaseCharacterSetsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListGoldengateConnectionAssignmentsRequest(ref ListGoldengateConnectionAssignmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetGoldengateConnectionAssignmentRequest(ref GetGoldengateConnectionAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateGoldengateConnectionAssignmentRequest(ref CreateGoldengateConnectionAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteGoldengateConnectionAssignmentRequest(ref DeleteGoldengateConnectionAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_TestGoldengateConnectionAssignmentRequest(ref TestGoldengateConnectionAssignmentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Exadata Infrastructures in a given project and location.
@@ -12626,6 +16704,458 @@ namespace Google.Cloud.OracleDatabase.V1
         }
 
         /// <summary>
+        /// Lists all the GoldengateDeployments for the given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeployment"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> ListGoldengateDeployments(ListGoldengateDeploymentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateDeploymentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGoldengateDeploymentsRequest, ListGoldengateDeploymentsResponse, GoldengateDeployment>(_callListGoldengateDeployments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateDeployments for the given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeployment"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListGoldengateDeploymentsResponse, GoldengateDeployment> ListGoldengateDeploymentsAsync(ListGoldengateDeploymentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateDeploymentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGoldengateDeploymentsRequest, ListGoldengateDeploymentsResponse, GoldengateDeployment>(_callListGoldengateDeployments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoldengateDeployment GetGoldengateDeployment(GetGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateDeploymentRequest(ref request, ref callSettings);
+            return _callGetGoldengateDeployment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoldengateDeployment> GetGoldengateDeploymentAsync(GetGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateDeploymentRequest(ref request, ref callSettings);
+            return _callGetGoldengateDeployment.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateGoldengateDeployment</c>.</summary>
+        public override lro::OperationsClient CreateGoldengateDeploymentOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoldengateDeployment, OperationMetadata> CreateGoldengateDeployment(CreateGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateDeployment, OperationMetadata>(_callCreateGoldengateDeployment.Sync(request, callSettings), CreateGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new GoldengateDeployment in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> CreateGoldengateDeploymentAsync(CreateGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateDeployment, OperationMetadata>(await _callCreateGoldengateDeployment.Async(request, callSettings).ConfigureAwait(false), CreateGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteGoldengateDeployment</c>.</summary>
+        public override lro::OperationsClient DeleteGoldengateDeploymentOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateDeployment(DeleteGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteGoldengateDeployment.Sync(request, callSettings), DeleteGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateDeploymentAsync(DeleteGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteGoldengateDeployment.Async(request, callSettings).ConfigureAwait(false), DeleteGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StopGoldengateDeployment</c>.</summary>
+        public override lro::OperationsClient StopGoldengateDeploymentOperationsClient { get; }
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoldengateDeployment, OperationMetadata> StopGoldengateDeployment(StopGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateDeployment, OperationMetadata>(_callStopGoldengateDeployment.Sync(request, callSettings), StopGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>
+        /// Stops a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StopGoldengateDeploymentAsync(StopGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StopGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateDeployment, OperationMetadata>(await _callStopGoldengateDeployment.Async(request, callSettings).ConfigureAwait(false), StopGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StartGoldengateDeployment</c>.</summary>
+        public override lro::OperationsClient StartGoldengateDeploymentOperationsClient { get; }
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoldengateDeployment, OperationMetadata> StartGoldengateDeployment(StartGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateDeployment, OperationMetadata>(_callStartGoldengateDeployment.Sync(request, callSettings), StartGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>
+        /// Starts a single GoldengateDeployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoldengateDeployment, OperationMetadata>> StartGoldengateDeploymentAsync(StartGoldengateDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartGoldengateDeploymentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateDeployment, OperationMetadata>(await _callStartGoldengateDeployment.Async(request, callSettings).ConfigureAwait(false), StartGoldengateDeploymentOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateConnections for the given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnection"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> ListGoldengateConnections(ListGoldengateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGoldengateConnectionsRequest, ListGoldengateConnectionsResponse, GoldengateConnection>(_callListGoldengateConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the GoldengateConnections for the given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateConnection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListGoldengateConnectionsResponse, GoldengateConnection> ListGoldengateConnectionsAsync(ListGoldengateConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGoldengateConnectionsRequest, ListGoldengateConnectionsResponse, GoldengateConnection>(_callListGoldengateConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoldengateConnection GetGoldengateConnection(GetGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateConnectionRequest(ref request, ref callSettings);
+            return _callGetGoldengateConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoldengateConnection> GetGoldengateConnectionAsync(GetGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateConnectionRequest(ref request, ref callSettings);
+            return _callGetGoldengateConnection.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateGoldengateConnection</c>.</summary>
+        public override lro::OperationsClient CreateGoldengateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoldengateConnection, OperationMetadata> CreateGoldengateConnection(CreateGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGoldengateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateConnection, OperationMetadata>(_callCreateGoldengateConnection.Sync(request, callSettings), CreateGoldengateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new GoldengateConnection in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoldengateConnection, OperationMetadata>> CreateGoldengateConnectionAsync(CreateGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGoldengateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateConnection, OperationMetadata>(await _callCreateGoldengateConnection.Async(request, callSettings).ConfigureAwait(false), CreateGoldengateConnectionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteGoldengateConnection</c>.</summary>
+        public override lro::OperationsClient DeleteGoldengateConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateConnection(DeleteGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGoldengateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteGoldengateConnection.Sync(request, callSettings), DeleteGoldengateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single GoldengateConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAsync(DeleteGoldengateConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGoldengateConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteGoldengateConnection.Async(request, callSettings).ConfigureAwait(false), DeleteGoldengateConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoldengateDeploymentVersion GetGoldengateDeploymentVersion(GetGoldengateDeploymentVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateDeploymentVersionRequest(ref request, ref callSettings);
+            return _callGetGoldengateDeploymentVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentVersion.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoldengateDeploymentVersion> GetGoldengateDeploymentVersionAsync(GetGoldengateDeploymentVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateDeploymentVersionRequest(ref request, ref callSettings);
+            return _callGetGoldengateDeploymentVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentVersions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentVersion"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> ListGoldengateDeploymentVersions(ListGoldengateDeploymentVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateDeploymentVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGoldengateDeploymentVersionsRequest, ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion>(_callListGoldengateDeploymentVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentVersions in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeploymentVersion"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion> ListGoldengateDeploymentVersionsAsync(ListGoldengateDeploymentVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateDeploymentVersionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGoldengateDeploymentVersionsRequest, ListGoldengateDeploymentVersionsResponse, GoldengateDeploymentVersion>(_callListGoldengateDeploymentVersions, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoldengateDeploymentType GetGoldengateDeploymentType(GetGoldengateDeploymentTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateDeploymentTypeRequest(ref request, ref callSettings);
+            return _callGetGoldengateDeploymentType.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldenGateDeploymentType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoldengateDeploymentType> GetGoldengateDeploymentTypeAsync(GetGoldengateDeploymentTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateDeploymentTypeRequest(ref request, ref callSettings);
+            return _callGetGoldengateDeploymentType.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldenGateDeploymentTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentType"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> ListGoldengateDeploymentTypes(ListGoldengateDeploymentTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateDeploymentTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGoldengateDeploymentTypesRequest, ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType>(_callListGoldengateDeploymentTypes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldenGateDeploymentTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateDeploymentType"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType> ListGoldengateDeploymentTypesAsync(ListGoldengateDeploymentTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateDeploymentTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGoldengateDeploymentTypesRequest, ListGoldengateDeploymentTypesResponse, GoldengateDeploymentType>(_callListGoldengateDeploymentTypes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoldengateDeploymentEnvironment GetGoldengateDeploymentEnvironment(GetGoldengateDeploymentEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateDeploymentEnvironmentRequest(ref request, ref callSettings);
+            return _callGetGoldengateDeploymentEnvironment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateDeploymentEnvironment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoldengateDeploymentEnvironment> GetGoldengateDeploymentEnvironmentAsync(GetGoldengateDeploymentEnvironmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateDeploymentEnvironmentRequest(ref request, ref callSettings);
+            return _callGetGoldengateDeploymentEnvironment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentEnvironments in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateDeploymentEnvironment"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> ListGoldengateDeploymentEnvironments(ListGoldengateDeploymentEnvironmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateDeploymentEnvironmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGoldengateDeploymentEnvironmentsRequest, ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment>(_callListGoldengateDeploymentEnvironments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateDeploymentEnvironments in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GoldengateDeploymentEnvironment"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment> ListGoldengateDeploymentEnvironmentsAsync(ListGoldengateDeploymentEnvironmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateDeploymentEnvironmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGoldengateDeploymentEnvironmentsRequest, ListGoldengateDeploymentEnvironmentsResponse, GoldengateDeploymentEnvironment>(_callListGoldengateDeploymentEnvironments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoldengateConnectionType GetGoldengateConnectionType(GetGoldengateConnectionTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateConnectionTypeRequest(ref request, ref callSettings);
+            return _callGetGoldengateConnectionType.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionType.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoldengateConnectionType> GetGoldengateConnectionTypeAsync(GetGoldengateConnectionTypeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateConnectionTypeRequest(ref request, ref callSettings);
+            return _callGetGoldengateConnectionType.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnectionType"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> ListGoldengateConnectionTypes(ListGoldengateConnectionTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateConnectionTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGoldengateConnectionTypesRequest, ListGoldengateConnectionTypesResponse, GoldengateConnectionType>(_callListGoldengateConnectionTypes, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionTypes in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="GoldengateConnectionType"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListGoldengateConnectionTypesResponse, GoldengateConnectionType> ListGoldengateConnectionTypesAsync(ListGoldengateConnectionTypesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateConnectionTypesRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGoldengateConnectionTypesRequest, ListGoldengateConnectionTypesResponse, GoldengateConnectionType>(_callListGoldengateConnectionTypes, request, callSettings);
+        }
+
+        /// <summary>
         /// List DbVersions for the given project and location.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -12671,6 +17201,136 @@ namespace Google.Cloud.OracleDatabase.V1
         {
             Modify_ListDatabaseCharacterSetsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListDatabaseCharacterSetsRequest, ListDatabaseCharacterSetsResponse, DatabaseCharacterSet>(_callListDatabaseCharacterSets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionAssignments in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="GoldengateConnectionAssignment"/> resources.</returns>
+        public override gax::PagedEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> ListGoldengateConnectionAssignments(ListGoldengateConnectionAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateConnectionAssignmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListGoldengateConnectionAssignmentsRequest, ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment>(_callListGoldengateConnectionAssignments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists GoldengateConnectionAssignments in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="GoldengateConnectionAssignment"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment> ListGoldengateConnectionAssignmentsAsync(ListGoldengateConnectionAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListGoldengateConnectionAssignmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListGoldengateConnectionAssignmentsRequest, ListGoldengateConnectionAssignmentsResponse, GoldengateConnectionAssignment>(_callListGoldengateConnectionAssignments, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override GoldengateConnectionAssignment GetGoldengateConnectionAssignment(GetGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return _callGetGoldengateConnectionAssignment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<GoldengateConnectionAssignment> GetGoldengateConnectionAssignmentAsync(GetGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return _callGetGoldengateConnectionAssignment.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateGoldengateConnectionAssignment</c>.</summary>
+        public override lro::OperationsClient CreateGoldengateConnectionAssignmentOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<GoldengateConnectionAssignment, OperationMetadata> CreateGoldengateConnectionAssignment(CreateGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateConnectionAssignment, OperationMetadata>(_callCreateGoldengateConnectionAssignment.Sync(request, callSettings), CreateGoldengateConnectionAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new GoldengateConnectionAssignment in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<GoldengateConnectionAssignment, OperationMetadata>> CreateGoldengateConnectionAssignmentAsync(CreateGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<GoldengateConnectionAssignment, OperationMetadata>(await _callCreateGoldengateConnectionAssignment.Async(request, callSettings).ConfigureAwait(false), CreateGoldengateConnectionAssignmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteGoldengateConnectionAssignment</c>.</summary>
+        public override lro::OperationsClient DeleteGoldengateConnectionAssignmentOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteGoldengateConnectionAssignment(DeleteGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteGoldengateConnectionAssignment.Sync(request, callSettings), DeleteGoldengateConnectionAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteGoldengateConnectionAssignmentAsync(DeleteGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteGoldengateConnectionAssignment.Async(request, callSettings).ConfigureAwait(false), DeleteGoldengateConnectionAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TestGoldengateConnectionAssignmentResponse TestGoldengateConnectionAssignment(TestGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return _callTestGoldengateConnectionAssignment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Tests a single GoldengateConnectionAssignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TestGoldengateConnectionAssignmentResponse> TestGoldengateConnectionAssignmentAsync(TestGoldengateConnectionAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_TestGoldengateConnectionAssignmentRequest(ref request, ref callSettings);
+            return _callTestGoldengateConnectionAssignment.Async(request, callSettings);
         }
     }
 
@@ -12754,11 +17414,39 @@ namespace Google.Cloud.OracleDatabase.V1
     {
     }
 
+    public partial class ListGoldengateDeploymentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListGoldengateConnectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListGoldengateDeploymentVersionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListGoldengateDeploymentTypesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListGoldengateDeploymentEnvironmentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListGoldengateConnectionTypesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListDbVersionsRequest : gaxgrpc::IPageRequest
     {
     }
 
     public partial class ListDatabaseCharacterSetsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListGoldengateConnectionAssignmentsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -12923,6 +17611,56 @@ namespace Google.Cloud.OracleDatabase.V1
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
+    public partial class ListGoldengateDeploymentsResponse : gaxgrpc::IPageResponse<GoldengateDeployment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GoldengateDeployment> GetEnumerator() => GoldengateDeployments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListGoldengateConnectionsResponse : gaxgrpc::IPageResponse<GoldengateConnection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GoldengateConnection> GetEnumerator() => GoldengateConnections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListGoldengateDeploymentVersionsResponse : gaxgrpc::IPageResponse<GoldengateDeploymentVersion>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GoldengateDeploymentVersion> GetEnumerator() =>
+            GoldengateDeploymentVersions.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListGoldengateDeploymentTypesResponse : gaxgrpc::IPageResponse<GoldengateDeploymentType>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GoldengateDeploymentType> GetEnumerator() => GoldengateDeploymentTypes.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListGoldengateDeploymentEnvironmentsResponse : gaxgrpc::IPageResponse<GoldengateDeploymentEnvironment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GoldengateDeploymentEnvironment> GetEnumerator() =>
+            GoldengateDeploymentEnvironments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListGoldengateConnectionTypesResponse : gaxgrpc::IPageResponse<GoldengateConnectionType>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GoldengateConnectionType> GetEnumerator() => GoldengateConnectionTypes.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
     public partial class ListDbVersionsResponse : gaxgrpc::IPageResponse<DbVersion>
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
@@ -12935,6 +17673,15 @@ namespace Google.Cloud.OracleDatabase.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<DatabaseCharacterSet> GetEnumerator() => DatabaseCharacterSets.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListGoldengateConnectionAssignmentsResponse : gaxgrpc::IPageResponse<GoldengateConnectionAssignment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<GoldengateConnectionAssignment> GetEnumerator() =>
+            GoldengateConnectionAssignments.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

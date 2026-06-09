@@ -71,8 +71,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "Z29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRhdGFDb2xsZWN0aW9u",
             "T3B0aW9uc0ID4EEBElIKBXN0YXRlGBQgASgOMj4uZ29vZ2xlLmNsb3VkLm9y",
             "YWNsZWRhdGFiYXNlLnYxLkNsb3VkVm1DbHVzdGVyUHJvcGVydGllcy5TdGF0",
-            "ZUID4EEDEiMKFnNjYW5fbGlzdGVuZXJfcG9ydF90Y3AYFSABKAVCA+BBAxIn",
-            "ChpzY2FuX2xpc3RlbmVyX3BvcnRfdGNwX3NzbBgWIAEoBUID4EEDEhMKBmRv",
+            "ZUID4EEDEiMKFnNjYW5fbGlzdGVuZXJfcG9ydF90Y3AYFSABKAVCA+BBARIn",
+            "ChpzY2FuX2xpc3RlbmVyX3BvcnRfdGNwX3NzbBgWIAEoBUID4EEBEhMKBmRv",
             "bWFpbhgXIAEoCUID4EEDEhUKCHNjYW5fZG5zGBggASgJQgPgQQMSFQoIaG9z",
             "dG5hbWUYGSABKAlCA+BBAxIbCg5jcHVfY29yZV9jb3VudBgaIAEoBUID4EEC",
             "EhsKDnN5c3RlbV92ZXJzaW9uGBsgASgJQgPgQQESGAoLc2Nhbl9pcF9pZHMY",
@@ -1219,7 +1219,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int ScanListenerPortTcpFieldNumber = 21;
     private int scanListenerPortTcp_;
     /// <summary>
-    /// Output only. SCAN listener port - TCP
+    /// Optional. SCAN listener port - TCP
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1234,7 +1234,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int ScanListenerPortTcpSslFieldNumber = 22;
     private int scanListenerPortTcpSsl_;
     /// <summary>
-    /// Output only. SCAN listener port - TLS
+    /// Optional. SCAN listener port - TLS
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

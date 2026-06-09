@@ -31,239 +31,248 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "djEvY29tbW9uLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
             "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aG2dvb2dsZS90",
             "eXBlL2RheW9md2Vlay5wcm90bxobZ29vZ2xlL3R5cGUvdGltZW9mZGF5LnBy",
-            "b3RvIrIIChJBdXRvbm9tb3VzRGF0YWJhc2USEQoEbmFtZRgBIAEoCUID4EEI",
-            "EhUKCGRhdGFiYXNlGAIgASgJQgPgQQESGQoMZGlzcGxheV9uYW1lGAMgASgJ",
-            "QgPgQQESGwoOZW50aXRsZW1lbnRfaWQYBSABKAlCA+BBAxIbCg5hZG1pbl9w",
-            "YXNzd29yZBgGIAEoCUID4EEBElUKCnByb3BlcnRpZXMYByABKAsyPC5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNl",
-            "UHJvcGVydGllc0ID4EEBElMKBmxhYmVscxgIIAMoCzI+Lmdvb2dsZS5jbG91",
-            "ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2UuTGFiZWxz",
-            "RW50cnlCA+BBARI3CgduZXR3b3JrGAkgASgJQibgQQH6QSAKHmNvbXB1dGUu",
-            "Z29vZ2xlYXBpcy5jb20vTmV0d29yaxIRCgRjaWRyGAogASgJQgPgQQESRQoL",
-            "b2RiX25ldHdvcmsYECABKAlCMOBBAfpBKgoob3JhY2xlZGF0YWJhc2UuZ29v",
-            "Z2xlYXBpcy5jb20vT2RiTmV0d29yaxJDCgpvZGJfc3VibmV0GBEgASgJQi/g",
-            "QQH6QSkKJ29yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09kYlN1Ym5l",
-            "dBJICg1zb3VyY2VfY29uZmlnGAsgASgLMiwuZ29vZ2xlLmNsb3VkLm9yYWNs",
-            "ZWRhdGFiYXNlLnYxLlNvdXJjZUNvbmZpZ0ID4EEBElsKGXBlZXJfYXV0b25v",
-            "bW91c19kYXRhYmFzZXMYDCADKAlCOOBBA/pBMgowb3JhY2xlZGF0YWJhc2Uu",
-            "Z29vZ2xlYXBpcy5jb20vQXV0b25vbW91c0RhdGFiYXNlEjQKC2NyZWF0ZV90",
-            "aW1lGA0gASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDElgK",
-            "JWRpc2FzdGVyX3JlY292ZXJ5X3N1cHBvcnRlZF9sb2NhdGlvbnMYDyADKAlC",
-            "KeBBA/pBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uGi0K",
-            "C0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6",
-            "sgHqQa4BCjBvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9BdXRvbm9t",
-            "b3VzRGF0YWJhc2USUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9hdXRvbm9tb3VzRGF0YWJhc2VzL3thdXRvbm9tb3VzX2RhdGFi",
-            "YXNlfSoTYXV0b25vbW91c0RhdGFiYXNlczISYXV0b25vbW91c0RhdGFiYXNl",
-            "IpkBCgxTb3VyY2VDb25maWcSVQoTYXV0b25vbW91c19kYXRhYmFzZRgBIAEo",
-            "CUI44EEB+kEyCjBvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9BdXRv",
-            "bm9tb3VzRGF0YWJhc2USMgolYXV0b21hdGljX2JhY2t1cHNfcmVwbGljYXRp",
-            "b25fZW5hYmxlZBgCIAEoCEID4EEBIsAnChxBdXRvbm9tb3VzRGF0YWJhc2VQ",
-            "cm9wZXJ0aWVzEhEKBG9jaWQYASABKAlCA+BBAxIaCg1jb21wdXRlX2NvdW50",
-            "GAIgASgCQgPgQQESGwoOY3B1X2NvcmVfY291bnQYAyABKAVCA+BBARIhChRk",
-            "YXRhX3N0b3JhZ2Vfc2l6ZV90YhgEIAEoBUID4EEBEiEKFGRhdGFfc3RvcmFn",
-            "ZV9zaXplX2diGD8gASgFQgPgQQESRAoLZGJfd29ya2xvYWQYBSABKA4yKi5n",
-            "b29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuREJXb3JrbG9hZEID4EEC",
-            "EmUKCmRiX2VkaXRpb24YBiABKA4yTC5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
-            "YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5EYXRhYmFz",
-            "ZUVkaXRpb25CA+BBARIaCg1jaGFyYWN0ZXJfc2V0GAggASgJQgPgQQESHAoP",
-            "bl9jaGFyYWN0ZXJfc2V0GAkgASgJQgPgQQESIAoTcHJpdmF0ZV9lbmRwb2lu",
-            "dF9pcBgKIAEoCUID4EEBEiMKFnByaXZhdGVfZW5kcG9pbnRfbGFiZWwYCyAB",
-            "KAlCA+BBARIXCgpkYl92ZXJzaW9uGAwgASgJQgPgQQESJAoXaXNfYXV0b19z",
-            "Y2FsaW5nX2VuYWJsZWQYDiABKAhCA+BBARIsCh9pc19zdG9yYWdlX2F1dG9f",
-            "c2NhbGluZ19lbmFibGVkGA8gASgIQgPgQQESYwoMbGljZW5zZV90eXBlGBAg",
-            "ASgOMkguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21v",
-            "dXNEYXRhYmFzZVByb3BlcnRpZXMuTGljZW5zZVR5cGVCA+BBAhJPChFjdXN0",
-            "b21lcl9jb250YWN0cxgRIAMoCzIvLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRh",
-            "YmFzZS52MS5DdXN0b21lckNvbnRhY3RCA+BBARIWCglzZWNyZXRfaWQYEiAB",
-            "KAlCA+BBARIVCgh2YXVsdF9pZBgTIAEoCUID4EEBEnwKGW1haW50ZW5hbmNl",
-            "X3NjaGVkdWxlX3R5cGUYFCABKA4yVC5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
-            "YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5NYWludGVu",
-            "YW5jZVNjaGVkdWxlVHlwZUID4EEBEiUKGG10bHNfY29ubmVjdGlvbl9yZXF1",
-            "aXJlZBgiIAEoCEID4EEBEikKHGJhY2t1cF9yZXRlbnRpb25fcGVyaW9kX2Rh",
-            "eXMYOSABKAVCA+BBARItCiBhY3R1YWxfdXNlZF9kYXRhX3N0b3JhZ2Vfc2l6",
-            "ZV90YhgVIAEoAUID4EEDEiYKGWFsbG9jYXRlZF9zdG9yYWdlX3NpemVfdGIY",
-            "FiABKAFCA+BBAxJRCgxhcGV4X2RldGFpbHMYFyABKAsyNi5nb29nbGUuY2xv",
-            "dWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlQXBleEID",
-            "4EEDEjIKIGFyZV9wcmltYXJ5X2FsbG93bGlzdGVkX2lwc191c2VkGBggASgI",
-            "QgPgQQNIAIgBARIeChFsaWZlY3ljbGVfZGV0YWlscxgZIAEoCUID4EEDEjkK",
-            "BXN0YXRlGBogASgOMiUuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
-            "LlN0YXRlQgPgQQMSLQogYXV0b25vbW91c19jb250YWluZXJfZGF0YWJhc2Vf",
-            "aWQYGyABKAlCA+BBAxInChphdmFpbGFibGVfdXBncmFkZV92ZXJzaW9ucxgc",
-            "IAMoCUID4EEDEmQKEmNvbm5lY3Rpb25fc3RyaW5ncxgdIAEoCzJDLmdvb2ds",
-            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VD",
-            "b25uZWN0aW9uU3RyaW5nc0ID4EEDEl4KD2Nvbm5lY3Rpb25fdXJscxgeIAEo",
-            "CzJALmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3Vz",
-            "RGF0YWJhc2VDb25uZWN0aW9uVXJsc0ID4EEDEkUKHWZhaWxlZF9kYXRhX3Jl",
-            "Y292ZXJ5X2R1cmF0aW9uGB8gASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
-            "aW9uQgPgQQMSHQoQbWVtb3J5X3RhYmxlX2dicxggIAEoBUID4EEDEigKG2lz",
-            "X2xvY2FsX2RhdGFfZ3VhcmRfZW5hYmxlZBghIAEoCEID4EEDEjgKK2xvY2Fs",
+            "b3RvIqgJChJBdXRvbm9tb3VzRGF0YWJhc2USEQoEbmFtZRgBIAEoCUID4EEI",
+            "EhgKCGRhdGFiYXNlGAIgASgJQgbgQQHgQQUSHAoMZGlzcGxheV9uYW1lGAMg",
+            "ASgJQgbgQQHgQQUSGwoOZW50aXRsZW1lbnRfaWQYBSABKAlCA+BBAxIeCg5h",
+            "ZG1pbl9wYXNzd29yZBgGIAEoCUIG4EEB4EEFElwKHWFkbWluX3Bhc3N3b3Jk",
+            "X3NlY3JldF92ZXJzaW9uGBIgASgJQjXgQQHgQQX6QSwKKnNlY3JldG1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vU2VjcmV0VmVyc2lvbhJVCgpwcm9wZXJ0aWVz",
+            "GAcgASgLMjwuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9u",
+            "b21vdXNEYXRhYmFzZVByb3BlcnRpZXNCA+BBARJTCgZsYWJlbHMYCCADKAsy",
+            "Pi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0Rh",
+            "dGFiYXNlLkxhYmVsc0VudHJ5QgPgQQESOgoHbmV0d29yaxgJIAEoCUIp4EEB",
+            "4EEF+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSFAoEY2lk",
+            "chgKIAEoCUIG4EEB4EEFEkgKC29kYl9uZXR3b3JrGBAgASgJQjPgQQHgQQX6",
+            "QSoKKG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL09kYk5ldHdvcmsS",
+            "RgoKb2RiX3N1Ym5ldBgRIAEoCUIy4EEB4EEF+kEpCidvcmFjbGVkYXRhYmFz",
+            "ZS5nb29nbGVhcGlzLmNvbS9PZGJTdWJuZXQSSwoNc291cmNlX2NvbmZpZxgL",
+            "IAEoCzIsLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5Tb3VyY2VD",
+            "b25maWdCBuBBAeBBBRJbChlwZWVyX2F1dG9ub21vdXNfZGF0YWJhc2VzGAwg",
+            "AygJQjjgQQP6QTIKMG9yYWNsZWRhdGFiYXNlLmdvb2dsZWFwaXMuY29tL0F1",
+            "dG9ub21vdXNEYXRhYmFzZRI0CgtjcmVhdGVfdGltZRgNIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJYCiVkaXNhc3Rlcl9yZWNvdmVy",
+            "eV9zdXBwb3J0ZWRfbG9jYXRpb25zGA8gAygJQingQQP6QSMKIWxvY2F0aW9u",
+            "cy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhotCgtMYWJlbHNFbnRyeRILCgNr",
+            "ZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOrIB6kGuAQowb3JhY2xlZGF0",
+            "YWJhc2UuZ29vZ2xlYXBpcy5jb20vQXV0b25vbW91c0RhdGFiYXNlElFwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXV0b25vbW91",
+            "c0RhdGFiYXNlcy97YXV0b25vbW91c19kYXRhYmFzZX0qE2F1dG9ub21vdXNE",
+            "YXRhYmFzZXMyEmF1dG9ub21vdXNEYXRhYmFzZSKZAQoMU291cmNlQ29uZmln",
+            "ElUKE2F1dG9ub21vdXNfZGF0YWJhc2UYASABKAlCOOBBAfpBMgowb3JhY2xl",
+            "ZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vQXV0b25vbW91c0RhdGFiYXNlEjIK",
+            "JWF1dG9tYXRpY19iYWNrdXBzX3JlcGxpY2F0aW9uX2VuYWJsZWQYAiABKAhC",
+            "A+BBASLgKQocQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcxIRCgRvY2lk",
+            "GAEgASgJQgPgQQMSHQoNY29tcHV0ZV9jb3VudBgCIAEoAkIG4EEB4EEFEh4K",
+            "DmNwdV9jb3JlX2NvdW50GAMgASgFQgbgQQHgQQUSJAoUZGF0YV9zdG9yYWdl",
+            "X3NpemVfdGIYBCABKAVCBuBBAeBBBRIkChRkYXRhX3N0b3JhZ2Vfc2l6ZV9n",
+            "Yhg/IAEoBUIG4EEB4EEFEkcKC2RiX3dvcmtsb2FkGAUgASgOMiouZ29vZ2xl",
+            "LmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRCV29ya2xvYWRCBuBBAuBBBRJo",
+            "CgpkYl9lZGl0aW9uGAYgASgOMkwuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
+            "YXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuRGF0YWJhc2VF",
+            "ZGl0aW9uQgbgQQHgQQUSHQoNY2hhcmFjdGVyX3NldBgIIAEoCUIG4EEB4EEF",
+            "Eh8KD25fY2hhcmFjdGVyX3NldBgJIAEoCUIG4EEB4EEFEiMKE3ByaXZhdGVf",
+            "ZW5kcG9pbnRfaXAYCiABKAlCBuBBAeBBBRImChZwcml2YXRlX2VuZHBvaW50",
+            "X2xhYmVsGAsgASgJQgbgQQHgQQUSGgoKZGJfdmVyc2lvbhgMIAEoCUIG4EEB",
+            "4EEFEicKF2lzX2F1dG9fc2NhbGluZ19lbmFibGVkGA4gASgIQgbgQQHgQQUS",
+            "LwofaXNfc3RvcmFnZV9hdXRvX3NjYWxpbmdfZW5hYmxlZBgPIAEoCEIG4EEB",
+            "4EEFEmYKDGxpY2Vuc2VfdHlwZRgQIAEoDjJILmdvb2dsZS5jbG91ZC5vcmFj",
+            "bGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VQcm9wZXJ0aWVzLkxp",
+            "Y2Vuc2VUeXBlQgbgQQLgQQUSUgoRY3VzdG9tZXJfY29udGFjdHMYESADKAsy",
+            "Ly5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQ3VzdG9tZXJDb250",
+            "YWN0QgbgQQHgQQUSGQoJc2VjcmV0X2lkGBIgASgJQgbgQQHgQQUSGAoIdmF1",
+            "bHRfaWQYEyABKAlCBuBBAeBBBRJ/ChltYWludGVuYW5jZV9zY2hlZHVsZV90",
+            "eXBlGBQgASgOMlQuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1",
+            "dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuTWFpbnRlbmFuY2VTY2hlZHVs",
+            "ZVR5cGVCBuBBAeBBBRIoChhtdGxzX2Nvbm5lY3Rpb25fcmVxdWlyZWQYIiAB",
+            "KAhCBuBBAeBBBRIsChxiYWNrdXBfcmV0ZW50aW9uX3BlcmlvZF9kYXlzGDkg",
+            "ASgFQgbgQQHgQQUSLQogYWN0dWFsX3VzZWRfZGF0YV9zdG9yYWdlX3NpemVf",
+            "dGIYFSABKAFCA+BBAxImChlhbGxvY2F0ZWRfc3RvcmFnZV9zaXplX3RiGBYg",
+            "ASgBQgPgQQMSUQoMYXBleF9kZXRhaWxzGBcgASgLMjYuZ29vZ2xlLmNsb3Vk",
+            "Lm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZUFwZXhCA+BB",
+            "AxIyCiBhcmVfcHJpbWFyeV9hbGxvd2xpc3RlZF9pcHNfdXNlZBgYIAEoCEID",
+            "4EEDSACIAQESHgoRbGlmZWN5Y2xlX2RldGFpbHMYGSABKAlCA+BBAxI5CgVz",
+            "dGF0ZRgaIAEoDjIlLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5T",
+            "dGF0ZUID4EEDEi0KIGF1dG9ub21vdXNfY29udGFpbmVyX2RhdGFiYXNlX2lk",
+            "GBsgASgJQgPgQQMSJwoaYXZhaWxhYmxlX3VwZ3JhZGVfdmVyc2lvbnMYHCAD",
+            "KAlCA+BBAxJkChJjb25uZWN0aW9uX3N0cmluZ3MYHSABKAsyQy5nb29nbGUu",
+            "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlQ29u",
+            "bmVjdGlvblN0cmluZ3NCA+BBAxJeCg9jb25uZWN0aW9uX3VybHMYHiABKAsy",
+            "QC5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0Rh",
+            "dGFiYXNlQ29ubmVjdGlvblVybHNCA+BBAxJFCh1mYWlsZWRfZGF0YV9yZWNv",
+            "dmVyeV9kdXJhdGlvbhgfIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
+            "bkID4EEDEh0KEG1lbW9yeV90YWJsZV9nYnMYICABKAVCA+BBAxIqChtpc19s",
+            "b2NhbF9kYXRhX2d1YXJkX2VuYWJsZWQYISABKAhCBRgB4EEDEjoKK2xvY2Fs",
             "X2FkZ19hdXRvX2ZhaWxvdmVyX21heF9kYXRhX2xvc3NfbGltaXQYIyABKAVC",
-            "A+BBAxJfChBsb2NhbF9zdGFuZGJ5X2RiGCQgASgLMkAuZ29vZ2xlLmNsb3Vk",
-            "Lm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVN0YW5kYnlT",
-            "dW1tYXJ5QgPgQQMSLwoibWVtb3J5X3Blcl9vcmFjbGVfY29tcHV0ZV91bml0",
-            "X2dicxglIAEoBUID4EEDEoEBChxsb2NhbF9kaXNhc3Rlcl9yZWNvdmVyeV90",
-            "eXBlGCYgASgOMlYuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1",
-            "dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuTG9jYWxEaXNhc3RlclJlY292",
-            "ZXJ5VHlwZUID4EEDEmgKD2RhdGFfc2FmZV9zdGF0ZRgnIAEoDjJKLmdvb2ds",
-            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VQ",
-            "cm9wZXJ0aWVzLkRhdGFTYWZlU3RhdGVCA+BBAxJ8ChlkYXRhYmFzZV9tYW5h",
-            "Z2VtZW50X3N0YXRlGCggASgOMlQuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
-            "YXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuRGF0YWJhc2VN",
-            "YW5hZ2VtZW50U3RhdGVCA+BBAxJdCglvcGVuX21vZGUYKSABKA4yRS5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNl",
-            "UHJvcGVydGllcy5PcGVuTW9kZUID4EEDEl8KGW9wZXJhdGlvbnNfaW5zaWdo",
-            "dHNfc3RhdGUYKiABKA4yNy5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
-            "djEuT3BlcmF0aW9uc0luc2lnaHRzU3RhdGVCA+BBAxIYCgtwZWVyX2RiX2lk",
-            "cxgrIAMoCUID4EEDEmsKEHBlcm1pc3Npb25fbGV2ZWwYLCABKA4yTC5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNl",
-            "UHJvcGVydGllcy5QZXJtaXNzaW9uTGV2ZWxCA+BBAxIdChBwcml2YXRlX2Vu",
-            "ZHBvaW50GC0gASgJQgPgQQMSawoQcmVmcmVzaGFibGVfbW9kZRguIAEoDjJM",
-            "Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0",
-            "YWJhc2VQcm9wZXJ0aWVzLlJlZnJlc2hhYmxlTW9kZUID4EEDEm0KEXJlZnJl",
-            "c2hhYmxlX3N0YXRlGC8gASgOMk0uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFi",
-            "YXNlLnYxLkF1dG9ub21vdXNEYXRhYmFzZVByb3BlcnRpZXMuUmVmcmVzaGFi",
-            "bGVTdGF0ZUID4EEDElQKBHJvbGUYMCABKA4yQS5nb29nbGUuY2xvdWQub3Jh",
-            "Y2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5S",
-            "b2xlQgPgQQMSYwobc2NoZWR1bGVkX29wZXJhdGlvbl9kZXRhaWxzGEAgAygL",
-            "MjkuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLlNjaGVkdWxlZE9w",
-            "ZXJhdGlvbkRldGFpbHNCA+BBAxIiChVzcWxfd2ViX2RldmVsb3Blcl91cmwY",
-            "MiABKAlCA+BBAxIkChdzdXBwb3J0ZWRfY2xvbmVfcmVnaW9ucxgzIAMoCUID",
-            "4EEDEicKGnVzZWRfZGF0YV9zdG9yYWdlX3NpemVfdGJzGDUgASgFQgPgQQMS",
-            "FAoHb2NpX3VybBg2IAEoCUID4EEDEi8KInRvdGFsX2F1dG9fYmFja3VwX3N0",
-            "b3JhZ2Vfc2l6ZV9nYnMYOyABKAJCA+BBAxJDChpuZXh0X2xvbmdfdGVybV9i",
-            "YWNrdXBfdGltZRg8IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
-            "A+BBAxJFChxkYXRhX2d1YXJkX3JvbGVfY2hhbmdlZF90aW1lGD0gASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkwKI2Rpc2FzdGVyX3Jl",
-            "Y292ZXJ5X3JvbGVfY2hhbmdlZF90aW1lGD4gASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEj8KFm1haW50ZW5hbmNlX2JlZ2luX3RpbWUY",
-            "QSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSPQoUbWFp",
-            "bnRlbmFuY2VfZW5kX3RpbWUYQiABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSHAoPYWxsb3dsaXN0ZWRfaXBzGEMgAygJQgPgQQESSgoO",
-            "ZW5jcnlwdGlvbl9rZXkYRCABKAsyLS5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
-            "YWJhc2UudjEuRW5jcnlwdGlvbktleUID4EEBEmYKHmVuY3J5cHRpb25fa2V5",
-            "X2hpc3RvcnlfZW50cmllcxhFIAMoCzI5Lmdvb2dsZS5jbG91ZC5vcmFjbGVk",
-            "YXRhYmFzZS52MS5FbmNyeXB0aW9uS2V5SGlzdG9yeUVudHJ5QgPgQQMSIAoT",
-            "c2VydmljZV9hZ2VudF9lbWFpbBhGIAEoCUID4EEDImEKD0RhdGFiYXNlRWRp",
-            "dGlvbhIgChxEQVRBQkFTRV9FRElUSU9OX1VOU1BFQ0lGSUVEEAASFAoQU1RB",
-            "TkRBUkRfRURJVElPThABEhYKEkVOVEVSUFJJU0VfRURJVElPThACIl0KC0xp",
-            "Y2Vuc2VUeXBlEhwKGExJQ0VOU0VfVFlQRV9VTlNQRUNJRklFRBAAEhQKEExJ",
-            "Q0VOU0VfSU5DTFVERUQQARIaChZCUklOR19ZT1VSX09XTl9MSUNFTlNFEAIi",
-            "XAoXTWFpbnRlbmFuY2VTY2hlZHVsZVR5cGUSKQolTUFJTlRFTkFOQ0VfU0NI",
-            "RURVTEVfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUVBUkxZEAESCwoHUkVHVUxB",
-            "UhACImQKGUxvY2FsRGlzYXN0ZXJSZWNvdmVyeVR5cGUSLAooTE9DQUxfRElT",
-            "QVNURVJfUkVDT1ZFUllfVFlQRV9VTlNQRUNJRklFRBAAEgcKA0FERxABEhAK",
-            "DEJBQ0tVUF9CQVNFRBACIoQBCg1EYXRhU2FmZVN0YXRlEh8KG0RBVEFfU0FG",
-            "RV9TVEFURV9VTlNQRUNJRklFRBAAEg8KC1JFR0lTVEVSSU5HEAESDgoKUkVH",
-            "SVNURVJFRBACEhEKDURFUkVHSVNURVJJTkcQAxISCg5OT1RfUkVHSVNURVJF",
-            "RBAEEgoKBkZBSUxFRBAFIqoBChdEYXRhYmFzZU1hbmFnZW1lbnRTdGF0ZRIp",
-            "CiVEQVRBQkFTRV9NQU5BR0VNRU5UX1NUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
-            "RU5BQkxJTkcQARILCgdFTkFCTEVEEAISDQoJRElTQUJMSU5HEAMSDwoLTk9U",
-            "X0VOQUJMRUQQBBITCg9GQUlMRURfRU5BQkxJTkcQBRIUChBGQUlMRURfRElT",
-            "QUJMSU5HEAYiRAoIT3Blbk1vZGUSGQoVT1BFTl9NT0RFX1VOU1BFQ0lGSUVE",
-            "EAASDQoJUkVBRF9PTkxZEAESDgoKUkVBRF9XUklURRACIlUKD1Blcm1pc3Np",
-            "b25MZXZlbBIgChxQRVJNSVNTSU9OX0xFVkVMX1VOU1BFQ0lGSUVEEAASDgoK",
-            "UkVTVFJJQ1RFRBABEhAKDFVOUkVTVFJJQ1RFRBACIk4KD1JlZnJlc2hhYmxl",
-            "TW9kZRIgChxSRUZSRVNIQUJMRV9NT0RFX1VOU1BFQ0lGSUVEEAASDQoJQVVU",
-            "T01BVElDEAESCgoGTUFOVUFMEAIiWQoQUmVmcmVzaGFibGVTdGF0ZRIhCh1S",
-            "RUZSRVNIQUJMRV9TVEFURV9VTlNQRUNJRklFRBAAEg4KClJFRlJFU0hJTkcQ",
-            "ARISCg5OT1RfUkVGUkVTSElORxACInMKBFJvbGUSFAoQUk9MRV9VTlNQRUNJ",
-            "RklFRBAAEgsKB1BSSU1BUlkQARILCgdTVEFOREJZEAISFAoQRElTQUJMRURf",
-            "U1RBTkRCWRADEg8KC0JBQ0tVUF9DT1BZEAQSFAoQU05BUFNIT1RfU1RBTkRC",
-            "WRAFQiMKIV9hcmVfcHJpbWFyeV9hbGxvd2xpc3RlZF9pcHNfdXNlZCKhAQoZ",
-            "RW5jcnlwdGlvbktleUhpc3RvcnlFbnRyeRJKCg5lbmNyeXB0aW9uX2tleRgB",
-            "IAEoCzItLmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5FbmNyeXB0",
-            "aW9uS2V5QgPgQQMSOAoPYWN0aXZhdGlvbl90aW1lGAIgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIugBCg1FbmNyeXB0aW9uS2V5Ek0K",
-            "CHByb3ZpZGVyGAEgASgOMjYuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNl",
-            "LnYxLkVuY3J5cHRpb25LZXkuUHJvdmlkZXJCA+BBARI6CgdrbXNfa2V5GAIg",
-            "ASgJQingQQH6QSMKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tl",
-            "eSJMCghQcm92aWRlchIYChRQUk9WSURFUl9VTlNQRUNJRklFRBAAEhIKDkdP",
-            "T0dMRV9NQU5BR0VEEAESEgoOT1JBQ0xFX01BTkFHRUQQAiJOChZBdXRvbm9t",
-            "b3VzRGF0YWJhc2VBcGV4EhkKDGFwZXhfdmVyc2lvbhgBIAEoCUID4EEDEhkK",
-            "DG9yZHNfdmVyc2lvbhgCIAEoCUID4EEDIqoCCiNBdXRvbm9tb3VzRGF0YWJh",
-            "c2VDb25uZWN0aW9uU3RyaW5ncxJZChZhbGxfY29ubmVjdGlvbl9zdHJpbmdz",
-            "GAEgASgLMjQuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkFsbENv",
-            "bm5lY3Rpb25TdHJpbmdzQgPgQQMSFgoJZGVkaWNhdGVkGAIgASgJQgPgQQMS",
-            "EQoEaGlnaBgDIAEoCUID4EEDEhAKA2xvdxgEIAEoCUID4EEDEhMKBm1lZGl1",
-            "bRgFIAEoCUID4EEDElYKCHByb2ZpbGVzGAYgAygLMj8uZ29vZ2xlLmNsb3Vk",
-            "Lm9yYWNsZWRhdGFiYXNlLnYxLkRhdGFiYXNlQ29ubmVjdGlvblN0cmluZ1By",
-            "b2ZpbGVCA+BBAyKyCQofRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmls",
-            "ZRJqCg5jb25zdW1lcl9ncm91cBgBIAEoDjJNLmdvb2dsZS5jbG91ZC5vcmFj",
-            "bGVkYXRhYmFzZS52MS5EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQcm9maWxl",
-            "LkNvbnN1bWVyR3JvdXBCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BB",
-            "AxJkCgtob3N0X2Zvcm1hdBgDIAEoDjJKLmdvb2dsZS5jbG91ZC5vcmFjbGVk",
-            "YXRhYmFzZS52MS5EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQcm9maWxlLkhv",
-            "c3RGb3JtYXRCA+BBAxIYCgtpc19yZWdpb25hbBgEIAEoCEID4EEDEl8KCHBy",
-            "b3RvY29sGAUgASgOMkguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYx",
-            "LkRhdGFiYXNlQ29ubmVjdGlvblN0cmluZ1Byb2ZpbGUuUHJvdG9jb2xCA+BB",
-            "AxJmCgxzZXNzaW9uX21vZGUYBiABKA4ySy5nb29nbGUuY2xvdWQub3JhY2xl",
-            "ZGF0YWJhc2UudjEuRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmlsZS5T",
-            "ZXNzaW9uTW9kZUID4EEDEmgKDXN5bnRheF9mb3JtYXQYByABKA4yTC5nb29n",
-            "bGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRGF0YWJhc2VDb25uZWN0aW9u",
-            "U3RyaW5nUHJvZmlsZS5TeW50YXhGb3JtYXRCA+BBAxJyChJ0bHNfYXV0aGVu",
-            "dGljYXRpb24YCCABKA4yUS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2Uu",
-            "djEuRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmlsZS5UTFNBdXRoZW50",
-            "aWNhdGlvbkID4EEDEhIKBXZhbHVlGAkgASgJQgPgQQMiZAoNQ29uc3VtZXJH",
-            "cm91cBIeChpDT05TVU1FUl9HUk9VUF9VTlNQRUNJRklFRBAAEggKBEhJR0gQ",
-            "ARIKCgZNRURJVU0QAhIHCgNMT1cQAxIGCgJUUBAEEgwKCFRQVVJHRU5UEAUi",
-            "OwoKSG9zdEZvcm1hdBIbChdIT1NUX0ZPUk1BVF9VTlNQRUNJRklFRBAAEggK",
-            "BEZRRE4QARIGCgJJUBACIjcKCFByb3RvY29sEhgKFFBST1RPQ09MX1VOU1BF",
-            "Q0lGSUVEEAASBwoDVENQEAESCAoEVENQUxACIkUKC1Nlc3Npb25Nb2RlEhwK",
-            "GFNFU1NJT05fTU9ERV9VTlNQRUNJRklFRBAAEgoKBkRJUkVDVBABEgwKCElO",
-            "RElSRUNUEAIiWQoMU3ludGF4Rm9ybWF0Eh0KGVNZTlRBWF9GT1JNQVRfVU5T",
-            "UEVDSUZJRUQQABIICgRMT05HEAESDQoJRVpDT05ORUNUEAISEQoNRVpDT05O",
-            "RUNUUExVUxADIk8KEVRMU0F1dGhlbnRpY2F0aW9uEiIKHlRMU19BVVRIRU5U",
-            "SUNBVElPTl9VTlNQRUNJRklFRBAAEgoKBlNFUlZFUhABEgoKBk1VVFVBTBAC",
-            "IlAKFEFsbENvbm5lY3Rpb25TdHJpbmdzEhEKBGhpZ2gYASABKAlCA+BBAxIQ",
-            "CgNsb3cYAiABKAlCA+BBAxITCgZtZWRpdW0YAyABKAlCA+BBAyKtAgogQXV0",
-            "b25vbW91c0RhdGFiYXNlQ29ubmVjdGlvblVybHMSFQoIYXBleF91cmkYASAB",
-            "KAlCA+BBAxIkChdkYXRhYmFzZV90cmFuc2Zvcm1zX3VyaRgCIAEoCUID4EED",
-            "Eh0KEGdyYXBoX3N0dWRpb191cmkYAyABKAlCA+BBAxIqCh1tYWNoaW5lX2xl",
-            "YXJuaW5nX25vdGVib29rX3VyaRgEIAEoCUID4EEDEjEKJG1hY2hpbmVfbGVh",
-            "cm5pbmdfdXNlcl9tYW5hZ2VtZW50X3VyaRgFIAEoCUID4EEDEhkKDG1vbmdv",
-            "X2RiX3VyaRgGIAEoCUID4EEDEhUKCG9yZHNfdXJpGAcgASgJQgPgQQMSHAoP",
-            "c3FsX2Rldl93ZWJfdXJpGAggASgJQgPgQQMizQIKIEF1dG9ub21vdXNEYXRh",
-            "YmFzZVN0YW5kYnlTdW1tYXJ5EjkKEWxhZ190aW1lX2R1cmF0aW9uGAEgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQMSHgoRbGlmZWN5Y2xl",
-            "X2RldGFpbHMYAiABKAlCA+BBAxI5CgVzdGF0ZRgDIAEoDjIlLmdvb2dsZS5j",
-            "bG91ZC5vcmFjbGVkYXRhYmFzZS52MS5TdGF0ZUID4EEDEkUKHGRhdGFfZ3Vh",
-            "cmRfcm9sZV9jaGFuZ2VkX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSTAojZGlzYXN0ZXJfcmVjb3Zlcnlfcm9sZV9jaGFu",
-            "Z2VkX3RpbWUYBSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
-            "QQMirgEKGVNjaGVkdWxlZE9wZXJhdGlvbkRldGFpbHMSMAoLZGF5X29mX3dl",
-            "ZWsYASABKA4yFi5nb29nbGUudHlwZS5EYXlPZldlZWtCA+BBAxIvCgpzdGFy",
-            "dF90aW1lGAQgASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5QgPgQQMSLgoJ",
-            "c3RvcF90aW1lGAUgASgLMhYuZ29vZ2xlLnR5cGUuVGltZU9mRGF5QgPgQQMq",
-            "QgoMR2VuZXJhdGVUeXBlEh0KGUdFTkVSQVRFX1RZUEVfVU5TUEVDSUZJRUQQ",
-            "ABIHCgNBTEwQARIKCgZTSU5HTEUQAiqrAwoFU3RhdGUSFQoRU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABIQCgxQUk9WSVNJT05JTkcQARINCglBVkFJTEFCTEUQAhIM",
-            "CghTVE9QUElORxADEgsKB1NUT1BQRUQQBBIMCghTVEFSVElORxAFEg8KC1RF",
-            "Uk1JTkFUSU5HEAYSDgoKVEVSTUlOQVRFRBAHEg8KC1VOQVZBSUxBQkxFEAgS",
-            "FwoTUkVTVE9SRV9JTl9QUk9HUkVTUxAJEhIKDlJFU1RPUkVfRkFJTEVEEAoS",
-            "FgoSQkFDS1VQX0lOX1BST0dSRVNTEAsSFQoRU0NBTEVfSU5fUFJPR1JFU1MQ",
-            "DBIdChlBVkFJTEFCTEVfTkVFRFNfQVRURU5USU9OEA0SDAoIVVBEQVRJTkcQ",
-            "DhIbChdNQUlOVEVOQU5DRV9JTl9QUk9HUkVTUxAPEg4KClJFU1RBUlRJTkcQ",
-            "EBIOCgpSRUNSRUFUSU5HEBESGwoXUk9MRV9DSEFOR0VfSU5fUFJPR1JFU1MQ",
-            "EhINCglVUEdSQURJTkcQExIQCgxJTkFDQ0VTU0lCTEUQFBILCgdTVEFOREJZ",
-            "EBUqqgEKF09wZXJhdGlvbnNJbnNpZ2h0c1N0YXRlEikKJU9QRVJBVElPTlNf",
-            "SU5TSUdIVFNfU1RBVEVfVU5TUEVDSUZJRUQQABIMCghFTkFCTElORxABEgsK",
-            "B0VOQUJMRUQQAhINCglESVNBQkxJTkcQAxIPCgtOT1RfRU5BQkxFRBAEEhMK",
-            "D0ZBSUxFRF9FTkFCTElORxAFEhQKEEZBSUxFRF9ESVNBQkxJTkcQBipOCgpE",
-            "Qldvcmtsb2FkEhsKF0RCX1dPUktMT0FEX1VOU1BFQ0lGSUVEEAASCAoET0xU",
-            "UBABEgYKAkRXEAISBwoDQUpEEAMSCAoEQVBFWBAEQvEBCiJjb20uZ29vZ2xl",
-            "LmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxQhdBdXRvbm9tb3VzRGF0YWJhc2VQ",
-            "cm90b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2Fw",
-            "aXYxL29yYWNsZWRhdGFiYXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2ds",
-            "ZS5DbG91ZC5PcmFjbGVEYXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFj",
-            "bGVEYXRhYmFzZVxWMeoCIUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNl",
-            "OjpWMWIGcHJvdG8z"));
+            "BRgB4EEDEl8KEGxvY2FsX3N0YW5kYnlfZGIYJCABKAsyQC5nb29nbGUuY2xv",
+            "dWQub3JhY2xlZGF0YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlU3RhbmRi",
+            "eVN1bW1hcnlCA+BBAxIvCiJtZW1vcnlfcGVyX29yYWNsZV9jb21wdXRlX3Vu",
+            "aXRfZ2JzGCUgASgFQgPgQQMSgQEKHGxvY2FsX2Rpc2FzdGVyX3JlY292ZXJ5",
+            "X3R5cGUYJiABKA4yVi5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEu",
+            "QXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5Mb2NhbERpc2FzdGVyUmVj",
+            "b3ZlcnlUeXBlQgPgQQMSaAoPZGF0YV9zYWZlX3N0YXRlGCcgASgOMkouZ29v",
+            "Z2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNEYXRhYmFz",
+            "ZVByb3BlcnRpZXMuRGF0YVNhZmVTdGF0ZUID4EEDEnwKGWRhdGFiYXNlX21h",
+            "bmFnZW1lbnRfc3RhdGUYKCABKA4yVC5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
+            "YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5EYXRhYmFz",
+            "ZU1hbmFnZW1lbnRTdGF0ZUID4EEDEl0KCW9wZW5fbW9kZRgpIAEoDjJFLmdv",
+            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJh",
+            "c2VQcm9wZXJ0aWVzLk9wZW5Nb2RlQgPgQQMSXwoZb3BlcmF0aW9uc19pbnNp",
+            "Z2h0c19zdGF0ZRgqIAEoDjI3Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFz",
+            "ZS52MS5PcGVyYXRpb25zSW5zaWdodHNTdGF0ZUID4EEDEhgKC3BlZXJfZGJf",
+            "aWRzGCsgAygJQgPgQQMSawoQcGVybWlzc2lvbl9sZXZlbBgsIAEoDjJMLmdv",
+            "b2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJh",
+            "c2VQcm9wZXJ0aWVzLlBlcm1pc3Npb25MZXZlbEID4EEDEh0KEHByaXZhdGVf",
+            "ZW5kcG9pbnQYLSABKAlCA+BBAxJrChByZWZyZXNoYWJsZV9tb2RlGC4gASgO",
+            "MkwuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkF1dG9ub21vdXNE",
+            "YXRhYmFzZVByb3BlcnRpZXMuUmVmcmVzaGFibGVNb2RlQgPgQQMSbQoRcmVm",
+            "cmVzaGFibGVfc3RhdGUYLyABKA4yTS5nb29nbGUuY2xvdWQub3JhY2xlZGF0",
+            "YWJhc2UudjEuQXV0b25vbW91c0RhdGFiYXNlUHJvcGVydGllcy5SZWZyZXNo",
+            "YWJsZVN0YXRlQgPgQQMSVAoEcm9sZRgwIAEoDjJBLmdvb2dsZS5jbG91ZC5v",
+            "cmFjbGVkYXRhYmFzZS52MS5BdXRvbm9tb3VzRGF0YWJhc2VQcm9wZXJ0aWVz",
+            "LlJvbGVCA+BBAxJjChtzY2hlZHVsZWRfb3BlcmF0aW9uX2RldGFpbHMYQCAD",
+            "KAsyOS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuU2NoZWR1bGVk",
+            "T3BlcmF0aW9uRGV0YWlsc0ID4EEDEiIKFXNxbF93ZWJfZGV2ZWxvcGVyX3Vy",
+            "bBgyIAEoCUID4EEDEiQKF3N1cHBvcnRlZF9jbG9uZV9yZWdpb25zGDMgAygJ",
+            "QgPgQQMSJwoadXNlZF9kYXRhX3N0b3JhZ2Vfc2l6ZV90YnMYNSABKAVCA+BB",
+            "AxIUCgdvY2lfdXJsGDYgASgJQgPgQQMSLwoidG90YWxfYXV0b19iYWNrdXBf",
+            "c3RvcmFnZV9zaXplX2dicxg7IAEoAkID4EEDEkMKGm5leHRfbG9uZ190ZXJt",
+            "X2JhY2t1cF90aW1lGDwgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDEkUKHGRhdGFfZ3VhcmRfcm9sZV9jaGFuZ2VkX3RpbWUYPSABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSTAojZGlzYXN0ZXJf",
+            "cmVjb3Zlcnlfcm9sZV9jaGFuZ2VkX3RpbWUYPiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSPwoWbWFpbnRlbmFuY2VfYmVnaW5fdGlt",
+            "ZRhBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI9ChRt",
+            "YWludGVuYW5jZV9lbmRfdGltZRhCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
+            "aW1lc3RhbXBCA+BBAxIfCg9hbGxvd2xpc3RlZF9pcHMYQyADKAlCBuBBAeBB",
+            "BRJKCg5lbmNyeXB0aW9uX2tleRhEIAEoCzItLmdvb2dsZS5jbG91ZC5vcmFj",
+            "bGVkYXRhYmFzZS52MS5FbmNyeXB0aW9uS2V5QgPgQQESZgoeZW5jcnlwdGlv",
+            "bl9rZXlfaGlzdG9yeV9lbnRyaWVzGEUgAygLMjkuZ29vZ2xlLmNsb3VkLm9y",
+            "YWNsZWRhdGFiYXNlLnYxLkVuY3J5cHRpb25LZXlIaXN0b3J5RW50cnlCA+BB",
+            "AxIgChNzZXJ2aWNlX2FnZW50X2VtYWlsGEYgASgJQgPgQQMSKgoYbG9jYWxf",
+            "ZGF0YV9ndWFyZF9lbmFibGVkGEcgASgIQgPgQQFIAYgBARJGCjRsb2NhbF9h",
+            "ZGdfYXV0b19mYWlsb3Zlcl9tYXhfZGF0YV9sb3NzX2xpbWl0X2R1cmF0aW9u",
+            "GEggASgFQgPgQQFIAogBASJhCg9EYXRhYmFzZUVkaXRpb24SIAocREFUQUJB",
+            "U0VfRURJVElPTl9VTlNQRUNJRklFRBAAEhQKEFNUQU5EQVJEX0VESVRJT04Q",
+            "ARIWChJFTlRFUlBSSVNFX0VESVRJT04QAiJdCgtMaWNlbnNlVHlwZRIcChhM",
+            "SUNFTlNFX1RZUEVfVU5TUEVDSUZJRUQQABIUChBMSUNFTlNFX0lOQ0xVREVE",
+            "EAESGgoWQlJJTkdfWU9VUl9PV05fTElDRU5TRRACIlwKF01haW50ZW5hbmNl",
+            "U2NoZWR1bGVUeXBlEikKJU1BSU5URU5BTkNFX1NDSEVEVUxFX1RZUEVfVU5T",
+            "UEVDSUZJRUQQABIJCgVFQVJMWRABEgsKB1JFR1VMQVIQAiJ3ChlMb2NhbERp",
+            "c2FzdGVyUmVjb3ZlcnlUeXBlEiwKKExPQ0FMX0RJU0FTVEVSX1JFQ09WRVJZ",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABIHCgNBREcQARIQCgxCQUNLVVBfQkFTRUQQ",
+            "AhIRCg1OT1RfQVZBSUxBQkxFEAMihAEKDURhdGFTYWZlU3RhdGUSHwobREFU",
+            "QV9TQUZFX1NUQVRFX1VOU1BFQ0lGSUVEEAASDwoLUkVHSVNURVJJTkcQARIO",
+            "CgpSRUdJU1RFUkVEEAISEQoNREVSRUdJU1RFUklORxADEhIKDk5PVF9SRUdJ",
+            "U1RFUkVEEAQSCgoGRkFJTEVEEAUiqgEKF0RhdGFiYXNlTWFuYWdlbWVudFN0",
+            "YXRlEikKJURBVEFCQVNFX01BTkFHRU1FTlRfU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABIMCghFTkFCTElORxABEgsKB0VOQUJMRUQQAhINCglESVNBQkxJTkcQAxIP",
+            "CgtOT1RfRU5BQkxFRBAEEhMKD0ZBSUxFRF9FTkFCTElORxAFEhQKEEZBSUxF",
+            "RF9ESVNBQkxJTkcQBiJECghPcGVuTW9kZRIZChVPUEVOX01PREVfVU5TUEVD",
+            "SUZJRUQQABINCglSRUFEX09OTFkQARIOCgpSRUFEX1dSSVRFEAIiVQoPUGVy",
+            "bWlzc2lvbkxldmVsEiAKHFBFUk1JU1NJT05fTEVWRUxfVU5TUEVDSUZJRUQQ",
+            "ABIOCgpSRVNUUklDVEVEEAESEAoMVU5SRVNUUklDVEVEEAIiTgoPUmVmcmVz",
+            "aGFibGVNb2RlEiAKHFJFRlJFU0hBQkxFX01PREVfVU5TUEVDSUZJRUQQABIN",
+            "CglBVVRPTUFUSUMQARIKCgZNQU5VQUwQAiJZChBSZWZyZXNoYWJsZVN0YXRl",
+            "EiEKHVJFRlJFU0hBQkxFX1NUQVRFX1VOU1BFQ0lGSUVEEAASDgoKUkVGUkVT",
+            "SElORxABEhIKDk5PVF9SRUZSRVNISU5HEAIicwoEUm9sZRIUChBST0xFX1VO",
+            "U1BFQ0lGSUVEEAASCwoHUFJJTUFSWRABEgsKB1NUQU5EQlkQAhIUChBESVNB",
+            "QkxFRF9TVEFOREJZEAMSDwoLQkFDS1VQX0NPUFkQBBIUChBTTkFQU0hPVF9T",
+            "VEFOREJZEAVCIwohX2FyZV9wcmltYXJ5X2FsbG93bGlzdGVkX2lwc191c2Vk",
+            "QhsKGV9sb2NhbF9kYXRhX2d1YXJkX2VuYWJsZWRCNwo1X2xvY2FsX2FkZ19h",
+            "dXRvX2ZhaWxvdmVyX21heF9kYXRhX2xvc3NfbGltaXRfZHVyYXRpb24ioQEK",
+            "GUVuY3J5cHRpb25LZXlIaXN0b3J5RW50cnkSSgoOZW5jcnlwdGlvbl9rZXkY",
+            "ASABKAsyLS5nb29nbGUuY2xvdWQub3JhY2xlZGF0YWJhc2UudjEuRW5jcnlw",
+            "dGlvbktleUID4EEDEjgKD2FjdGl2YXRpb25fdGltZRgCIAEoCzIaLmdvb2ds",
+            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAyLoAQoNRW5jcnlwdGlvbktleRJN",
+            "Cghwcm92aWRlchgBIAEoDjI2Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFz",
+            "ZS52MS5FbmNyeXB0aW9uS2V5LlByb3ZpZGVyQgPgQQESOgoHa21zX2tleRgC",
+            "IAEoCUIp4EEB+kEjCiFjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9L",
+            "ZXkiTAoIUHJvdmlkZXISGAoUUFJPVklERVJfVU5TUEVDSUZJRUQQABISCg5H",
+            "T09HTEVfTUFOQUdFRBABEhIKDk9SQUNMRV9NQU5BR0VEEAIiTgoWQXV0b25v",
+            "bW91c0RhdGFiYXNlQXBleBIZCgxhcGV4X3ZlcnNpb24YASABKAlCA+BBAxIZ",
+            "CgxvcmRzX3ZlcnNpb24YAiABKAlCA+BBAyKqAgojQXV0b25vbW91c0RhdGFi",
+            "YXNlQ29ubmVjdGlvblN0cmluZ3MSWQoWYWxsX2Nvbm5lY3Rpb25fc3RyaW5n",
+            "cxgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MS5BbGxD",
+            "b25uZWN0aW9uU3RyaW5nc0ID4EEDEhYKCWRlZGljYXRlZBgCIAEoCUID4EED",
+            "EhEKBGhpZ2gYAyABKAlCA+BBAxIQCgNsb3cYBCABKAlCA+BBAxITCgZtZWRp",
+            "dW0YBSABKAlCA+BBAxJWCghwcm9maWxlcxgGIAMoCzI/Lmdvb2dsZS5jbG91",
+            "ZC5vcmFjbGVkYXRhYmFzZS52MS5EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQ",
+            "cm9maWxlQgPgQQMisgkKH0RhdGFiYXNlQ29ubmVjdGlvblN0cmluZ1Byb2Zp",
+            "bGUSagoOY29uc3VtZXJfZ3JvdXAYASABKA4yTS5nb29nbGUuY2xvdWQub3Jh",
+            "Y2xlZGF0YWJhc2UudjEuRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmls",
+            "ZS5Db25zdW1lckdyb3VwQgPgQQMSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPg",
+            "QQMSZAoLaG9zdF9mb3JtYXQYAyABKA4ySi5nb29nbGUuY2xvdWQub3JhY2xl",
+            "ZGF0YWJhc2UudjEuRGF0YWJhc2VDb25uZWN0aW9uU3RyaW5nUHJvZmlsZS5I",
+            "b3N0Rm9ybWF0QgPgQQMSGAoLaXNfcmVnaW9uYWwYBCABKAhCA+BBAxJfCghw",
+            "cm90b2NvbBgFIAEoDjJILmdvb2dsZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52",
+            "MS5EYXRhYmFzZUNvbm5lY3Rpb25TdHJpbmdQcm9maWxlLlByb3RvY29sQgPg",
+            "QQMSZgoMc2Vzc2lvbl9tb2RlGAYgASgOMksuZ29vZ2xlLmNsb3VkLm9yYWNs",
+            "ZWRhdGFiYXNlLnYxLkRhdGFiYXNlQ29ubmVjdGlvblN0cmluZ1Byb2ZpbGUu",
+            "U2Vzc2lvbk1vZGVCA+BBAxJoCg1zeW50YXhfZm9ybWF0GAcgASgOMkwuZ29v",
+            "Z2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkRhdGFiYXNlQ29ubmVjdGlv",
+            "blN0cmluZ1Byb2ZpbGUuU3ludGF4Rm9ybWF0QgPgQQMScgoSdGxzX2F1dGhl",
+            "bnRpY2F0aW9uGAggASgOMlEuZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNl",
+            "LnYxLkRhdGFiYXNlQ29ubmVjdGlvblN0cmluZ1Byb2ZpbGUuVExTQXV0aGVu",
+            "dGljYXRpb25CA+BBAxISCgV2YWx1ZRgJIAEoCUID4EEDImQKDUNvbnN1bWVy",
+            "R3JvdXASHgoaQ09OU1VNRVJfR1JPVVBfVU5TUEVDSUZJRUQQABIICgRISUdI",
+            "EAESCgoGTUVESVVNEAISBwoDTE9XEAMSBgoCVFAQBBIMCghUUFVSR0VOVBAF",
+            "IjsKCkhvc3RGb3JtYXQSGwoXSE9TVF9GT1JNQVRfVU5TUEVDSUZJRUQQABII",
+            "CgRGUUROEAESBgoCSVAQAiI3CghQcm90b2NvbBIYChRQUk9UT0NPTF9VTlNQ",
+            "RUNJRklFRBAAEgcKA1RDUBABEggKBFRDUFMQAiJFCgtTZXNzaW9uTW9kZRIc",
+            "ChhTRVNTSU9OX01PREVfVU5TUEVDSUZJRUQQABIKCgZESVJFQ1QQARIMCghJ",
+            "TkRJUkVDVBACIlkKDFN5bnRheEZvcm1hdBIdChlTWU5UQVhfRk9STUFUX1VO",
+            "U1BFQ0lGSUVEEAASCAoETE9ORxABEg0KCUVaQ09OTkVDVBACEhEKDUVaQ09O",
+            "TkVDVFBMVVMQAyJPChFUTFNBdXRoZW50aWNhdGlvbhIiCh5UTFNfQVVUSEVO",
+            "VElDQVRJT05fVU5TUEVDSUZJRUQQABIKCgZTRVJWRVIQARIKCgZNVVRVQUwQ",
+            "AiJQChRBbGxDb25uZWN0aW9uU3RyaW5ncxIRCgRoaWdoGAEgASgJQgPgQQMS",
+            "EAoDbG93GAIgASgJQgPgQQMSEwoGbWVkaXVtGAMgASgJQgPgQQMirQIKIEF1",
+            "dG9ub21vdXNEYXRhYmFzZUNvbm5lY3Rpb25VcmxzEhUKCGFwZXhfdXJpGAEg",
+            "ASgJQgPgQQMSJAoXZGF0YWJhc2VfdHJhbnNmb3Jtc191cmkYAiABKAlCA+BB",
+            "AxIdChBncmFwaF9zdHVkaW9fdXJpGAMgASgJQgPgQQMSKgodbWFjaGluZV9s",
+            "ZWFybmluZ19ub3RlYm9va191cmkYBCABKAlCA+BBAxIxCiRtYWNoaW5lX2xl",
+            "YXJuaW5nX3VzZXJfbWFuYWdlbWVudF91cmkYBSABKAlCA+BBAxIZCgxtb25n",
+            "b19kYl91cmkYBiABKAlCA+BBAxIVCghvcmRzX3VyaRgHIAEoCUID4EEDEhwK",
+            "D3NxbF9kZXZfd2ViX3VyaRgIIAEoCUID4EEDIs0CCiBBdXRvbm9tb3VzRGF0",
+            "YWJhc2VTdGFuZGJ5U3VtbWFyeRI5ChFsYWdfdGltZV9kdXJhdGlvbhgBIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbkID4EEDEh4KEWxpZmVjeWNs",
+            "ZV9kZXRhaWxzGAIgASgJQgPgQQMSOQoFc3RhdGUYAyABKA4yJS5nb29nbGUu",
+            "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuU3RhdGVCA+BBAxJFChxkYXRhX2d1",
+            "YXJkX3JvbGVfY2hhbmdlZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDEkwKI2Rpc2FzdGVyX3JlY292ZXJ5X3JvbGVfY2hh",
+            "bmdlZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDIq4BChlTY2hlZHVsZWRPcGVyYXRpb25EZXRhaWxzEjAKC2RheV9vZl93",
+            "ZWVrGAEgASgOMhYuZ29vZ2xlLnR5cGUuRGF5T2ZXZWVrQgPgQQMSLwoKc3Rh",
+            "cnRfdGltZRgEIAEoCzIWLmdvb2dsZS50eXBlLlRpbWVPZkRheUID4EEDEi4K",
+            "CXN0b3BfdGltZRgFIAEoCzIWLmdvb2dsZS50eXBlLlRpbWVPZkRheUID4EED",
+            "KkIKDEdlbmVyYXRlVHlwZRIdChlHRU5FUkFURV9UWVBFX1VOU1BFQ0lGSUVE",
+            "EAASBwoDQUxMEAESCgoGU0lOR0xFEAIqqwMKBVN0YXRlEhUKEVNUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASEAoMUFJPVklTSU9OSU5HEAESDQoJQVZBSUxBQkxFEAIS",
+            "DAoIU1RPUFBJTkcQAxILCgdTVE9QUEVEEAQSDAoIU1RBUlRJTkcQBRIPCgtU",
+            "RVJNSU5BVElORxAGEg4KClRFUk1JTkFURUQQBxIPCgtVTkFWQUlMQUJMRRAI",
+            "EhcKE1JFU1RPUkVfSU5fUFJPR1JFU1MQCRISCg5SRVNUT1JFX0ZBSUxFRBAK",
+            "EhYKEkJBQ0tVUF9JTl9QUk9HUkVTUxALEhUKEVNDQUxFX0lOX1BST0dSRVNT",
+            "EAwSHQoZQVZBSUxBQkxFX05FRURTX0FUVEVOVElPThANEgwKCFVQREFUSU5H",
+            "EA4SGwoXTUFJTlRFTkFOQ0VfSU5fUFJPR1JFU1MQDxIOCgpSRVNUQVJUSU5H",
+            "EBASDgoKUkVDUkVBVElORxAREhsKF1JPTEVfQ0hBTkdFX0lOX1BST0dSRVNT",
+            "EBISDQoJVVBHUkFESU5HEBMSEAoMSU5BQ0NFU1NJQkxFEBQSCwoHU1RBTkRC",
+            "WRAVKqoBChdPcGVyYXRpb25zSW5zaWdodHNTdGF0ZRIpCiVPUEVSQVRJT05T",
+            "X0lOU0lHSFRTX1NUQVRFX1VOU1BFQ0lGSUVEEAASDAoIRU5BQkxJTkcQARIL",
+            "CgdFTkFCTEVEEAISDQoJRElTQUJMSU5HEAMSDwoLTk9UX0VOQUJMRUQQBBIT",
+            "Cg9GQUlMRURfRU5BQkxJTkcQBRIUChBGQUlMRURfRElTQUJMSU5HEAYqTgoK",
+            "REJXb3JrbG9hZBIbChdEQl9XT1JLTE9BRF9VTlNQRUNJRklFRBAAEggKBE9M",
+            "VFAQARIGCgJEVxACEgcKA0FKRBADEggKBEFQRVgQBELxAQoiY29tLmdvb2ds",
+            "ZS5jbG91ZC5vcmFjbGVkYXRhYmFzZS52MUIXQXV0b25vbW91c0RhdGFiYXNl",
+            "UHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9vcmFjbGVkYXRhYmFzZS9h",
+            "cGl2MS9vcmFjbGVkYXRhYmFzZXBiO29yYWNsZWRhdGFiYXNlcGKqAh5Hb29n",
+            "bGUuQ2xvdWQuT3JhY2xlRGF0YWJhc2UuVjHKAh5Hb29nbGVcQ2xvdWRcT3Jh",
+            "Y2xlRGF0YWJhc2VcVjHqAiFHb29nbGU6OkNsb3VkOjpPcmFjbGVEYXRhYmFz",
+            "ZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.OracleDatabase.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.DayofweekReflection.Descriptor, global::Google.Type.TimeofdayReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.OracleDatabase.V1.GenerateType), typeof(global::Google.Cloud.OracleDatabase.V1.State), typeof(global::Google.Cloud.OracleDatabase.V1.OperationsInsightsState), typeof(global::Google.Cloud.OracleDatabase.V1.DBWorkload), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabase), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabase.Parser, new[]{ "Name", "Database", "DisplayName", "EntitlementId", "AdminPassword", "Properties", "Labels", "Network", "Cidr", "OdbNetwork", "OdbSubnet", "SourceConfig", "PeerAutonomousDatabases", "CreateTime", "DisasterRecoverySupportedLocations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabase), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabase.Parser, new[]{ "Name", "Database", "DisplayName", "EntitlementId", "AdminPassword", "AdminPasswordSecretVersion", "Properties", "Labels", "Network", "Cidr", "OdbNetwork", "OdbSubnet", "SourceConfig", "PeerAutonomousDatabases", "CreateTime", "DisasterRecoverySupportedLocations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.SourceConfig), global::Google.Cloud.OracleDatabase.V1.SourceConfig.Parser, new[]{ "AutonomousDatabase", "AutomaticBackupsReplicationEnabled" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Parser, new[]{ "Ocid", "ComputeCount", "CpuCoreCount", "DataStorageSizeTb", "DataStorageSizeGb", "DbWorkload", "DbEdition", "CharacterSet", "NCharacterSet", "PrivateEndpointIp", "PrivateEndpointLabel", "DbVersion", "IsAutoScalingEnabled", "IsStorageAutoScalingEnabled", "LicenseType", "CustomerContacts", "SecretId", "VaultId", "MaintenanceScheduleType", "MtlsConnectionRequired", "BackupRetentionPeriodDays", "ActualUsedDataStorageSizeTb", "AllocatedStorageSizeTb", "ApexDetails", "ArePrimaryAllowlistedIpsUsed", "LifecycleDetails", "State", "AutonomousContainerDatabaseId", "AvailableUpgradeVersions", "ConnectionStrings", "ConnectionUrls", "FailedDataRecoveryDuration", "MemoryTableGbs", "IsLocalDataGuardEnabled", "LocalAdgAutoFailoverMaxDataLossLimit", "LocalStandbyDb", "MemoryPerOracleComputeUnitGbs", "LocalDisasterRecoveryType", "DataSafeState", "DatabaseManagementState", "OpenMode", "OperationsInsightsState", "PeerDbIds", "PermissionLevel", "PrivateEndpoint", "RefreshableMode", "RefreshableState", "Role", "ScheduledOperationDetails", "SqlWebDeveloperUrl", "SupportedCloneRegions", "UsedDataStorageSizeTbs", "OciUrl", "TotalAutoBackupStorageSizeGbs", "NextLongTermBackupTime", "DataGuardRoleChangedTime", "DisasterRecoveryRoleChangedTime", "MaintenanceBeginTime", "MaintenanceEndTime", "AllowlistedIps", "EncryptionKey", "EncryptionKeyHistoryEntries", "ServiceAgentEmail" }, new[]{ "ArePrimaryAllowlistedIpsUsed" }, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseEdition), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.MaintenanceScheduleType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LocalDisasterRecoveryType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DataSafeState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseManagementState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.OpenMode), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.PermissionLevel), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.RefreshableMode), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.RefreshableState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.Role) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Parser, new[]{ "Ocid", "ComputeCount", "CpuCoreCount", "DataStorageSizeTb", "DataStorageSizeGb", "DbWorkload", "DbEdition", "CharacterSet", "NCharacterSet", "PrivateEndpointIp", "PrivateEndpointLabel", "DbVersion", "IsAutoScalingEnabled", "IsStorageAutoScalingEnabled", "LicenseType", "CustomerContacts", "SecretId", "VaultId", "MaintenanceScheduleType", "MtlsConnectionRequired", "BackupRetentionPeriodDays", "ActualUsedDataStorageSizeTb", "AllocatedStorageSizeTb", "ApexDetails", "ArePrimaryAllowlistedIpsUsed", "LifecycleDetails", "State", "AutonomousContainerDatabaseId", "AvailableUpgradeVersions", "ConnectionStrings", "ConnectionUrls", "FailedDataRecoveryDuration", "MemoryTableGbs", "IsLocalDataGuardEnabled", "LocalAdgAutoFailoverMaxDataLossLimit", "LocalStandbyDb", "MemoryPerOracleComputeUnitGbs", "LocalDisasterRecoveryType", "DataSafeState", "DatabaseManagementState", "OpenMode", "OperationsInsightsState", "PeerDbIds", "PermissionLevel", "PrivateEndpoint", "RefreshableMode", "RefreshableState", "Role", "ScheduledOperationDetails", "SqlWebDeveloperUrl", "SupportedCloneRegions", "UsedDataStorageSizeTbs", "OciUrl", "TotalAutoBackupStorageSizeGbs", "NextLongTermBackupTime", "DataGuardRoleChangedTime", "DisasterRecoveryRoleChangedTime", "MaintenanceBeginTime", "MaintenanceEndTime", "AllowlistedIps", "EncryptionKey", "EncryptionKeyHistoryEntries", "ServiceAgentEmail", "LocalDataGuardEnabled", "LocalAdgAutoFailoverMaxDataLossLimitDuration" }, new[]{ "ArePrimaryAllowlistedIpsUsed", "LocalDataGuardEnabled", "LocalAdgAutoFailoverMaxDataLossLimitDuration" }, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseEdition), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LicenseType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.MaintenanceScheduleType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LocalDisasterRecoveryType), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DataSafeState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseManagementState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.OpenMode), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.PermissionLevel), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.RefreshableMode), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.RefreshableState), typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.Role) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry), global::Google.Cloud.OracleDatabase.V1.EncryptionKeyHistoryEntry.Parser, new[]{ "EncryptionKey", "ActivationTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.EncryptionKey), global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Parser, new[]{ "Provider", "KmsKey" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.EncryptionKey.Types.Provider) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseApex), global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseApex.Parser, new[]{ "ApexVersion", "OrdsVersion" }, null, null, null, null),
@@ -500,6 +509,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       displayName_ = other.displayName_;
       entitlementId_ = other.entitlementId_;
       adminPassword_ = other.adminPassword_;
+      adminPasswordSecretVersion_ = other.adminPasswordSecretVersion_;
       properties_ = other.properties_ != null ? other.properties_.Clone() : null;
       labels_ = other.labels_.Clone();
       network_ = other.network_;
@@ -540,9 +550,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DatabaseFieldNumber = 2;
     private string database_ = "";
     /// <summary>
-    /// Optional. The name of the Autonomous Database. The database name must be
-    /// unique in the project. The name must begin with a letter and can contain a
-    /// maximum of 30 alphanumeric characters.
+    /// Optional. Immutable. The name of the Autonomous Database. The database name
+    /// must be unique in the project. The name must begin with a letter and can
+    /// contain a maximum of 30 alphanumeric characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -557,8 +567,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DisplayNameFieldNumber = 3;
     private string displayName_ = "";
     /// <summary>
-    /// Optional. The display name for the Autonomous Database. The name does not
-    /// have to be unique within your project.
+    /// Optional. Immutable. The display name for the Autonomous Database. The name
+    /// does not have to be unique within your project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -589,7 +599,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int AdminPasswordFieldNumber = 6;
     private string adminPassword_ = "";
     /// <summary>
-    /// Optional. The password for the default ADMIN user.
+    /// Optional. Immutable. The password for the default ADMIN user.
+    /// Note: Only one of `admin_password_secret_version` or `admin_password` can
+    /// be populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -597,6 +609,24 @@ namespace Google.Cloud.OracleDatabase.V1 {
       get { return adminPassword_; }
       set {
         adminPassword_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "admin_password_secret_version" field.</summary>
+    public const int AdminPasswordSecretVersionFieldNumber = 18;
+    private string adminPasswordSecretVersion_ = "";
+    /// <summary>
+    /// Optional. Immutable. The resource name of a secret version in Secret
+    /// Manager which contains the database admin user's password. Format:
+    /// projects/{project}/secrets/{secret}/versions/{version}. Note: Only one of
+    /// `admin_password_secret_version` or `admin_password` can be populated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AdminPasswordSecretVersion {
+      get { return adminPasswordSecretVersion_; }
+      set {
+        adminPasswordSecretVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -633,8 +663,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int NetworkFieldNumber = 9;
     private string network_ = "";
     /// <summary>
-    /// Optional. The name of the VPC network used by the Autonomous Database in
-    /// the following format: projects/{project}/global/networks/{network}
+    /// Optional. Immutable. The name of the VPC network used by the Autonomous
+    /// Database in the following format:
+    /// projects/{project}/global/networks/{network}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -649,7 +680,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CidrFieldNumber = 10;
     private string cidr_ = "";
     /// <summary>
-    /// Optional. The subnet CIDR range for the Autonomous Database.
+    /// Optional. Immutable. The subnet CIDR range for the Autonomous Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -664,8 +695,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int OdbNetworkFieldNumber = 16;
     private string odbNetwork_ = "";
     /// <summary>
-    /// Optional. The name of the OdbNetwork associated with the Autonomous
-    /// Database. Format:
+    /// Optional. Immutable. The name of the OdbNetwork associated with the
+    /// Autonomous Database. Format:
     /// projects/{project}/locations/{location}/odbNetworks/{odb_network} It is
     /// optional but if specified, this should match the parent ODBNetwork of the
     /// OdbSubnet.
@@ -683,8 +714,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int OdbSubnetFieldNumber = 17;
     private string odbSubnet_ = "";
     /// <summary>
-    /// Optional. The name of the OdbSubnet associated with the Autonomous
-    /// Database. Format:
+    /// Optional. Immutable. The name of the OdbSubnet associated with the
+    /// Autonomous Database. Format:
     /// projects/{project}/locations/{location}/odbNetworks/{odb_network}/odbSubnets/{odb_subnet}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -700,9 +731,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int SourceConfigFieldNumber = 11;
     private global::Google.Cloud.OracleDatabase.V1.SourceConfig sourceConfig_;
     /// <summary>
-    /// Optional. The source Autonomous Database configuration for the standby
-    /// Autonomous Database. The source Autonomous Database is configured while
-    /// creating the Peer Autonomous Database and can't be updated after creation.
+    /// Optional. Immutable. The source Autonomous Database configuration for the
+    /// standby Autonomous Database. The source Autonomous Database is configured
+    /// while creating the Peer Autonomous Database and can't be updated after
+    /// creation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -778,6 +810,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DisplayName != other.DisplayName) return false;
       if (EntitlementId != other.EntitlementId) return false;
       if (AdminPassword != other.AdminPassword) return false;
+      if (AdminPasswordSecretVersion != other.AdminPasswordSecretVersion) return false;
       if (!object.Equals(Properties, other.Properties)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       if (Network != other.Network) return false;
@@ -800,6 +833,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (EntitlementId.Length != 0) hash ^= EntitlementId.GetHashCode();
       if (AdminPassword.Length != 0) hash ^= AdminPassword.GetHashCode();
+      if (AdminPasswordSecretVersion.Length != 0) hash ^= AdminPasswordSecretVersion.GetHashCode();
       if (properties_ != null) hash ^= Properties.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
@@ -879,6 +913,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(138, 1);
         output.WriteString(OdbSubnet);
       }
+      if (AdminPasswordSecretVersion.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(AdminPasswordSecretVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -940,6 +978,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(138, 1);
         output.WriteString(OdbSubnet);
       }
+      if (AdminPasswordSecretVersion.Length != 0) {
+        output.WriteRawTag(146, 1);
+        output.WriteString(AdminPasswordSecretVersion);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -964,6 +1006,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (AdminPassword.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AdminPassword);
+      }
+      if (AdminPasswordSecretVersion.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(AdminPasswordSecretVersion);
       }
       if (properties_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Properties);
@@ -1015,6 +1060,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
       }
       if (other.AdminPassword.Length != 0) {
         AdminPassword = other.AdminPassword;
+      }
+      if (other.AdminPasswordSecretVersion.Length != 0) {
+        AdminPasswordSecretVersion = other.AdminPasswordSecretVersion;
       }
       if (other.properties_ != null) {
         if (properties_ == null) {
@@ -1137,6 +1185,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
             OdbSubnet = input.ReadString();
             break;
           }
+          case 146: {
+            AdminPasswordSecretVersion = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1223,6 +1275,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 138: {
             OdbSubnet = input.ReadString();
+            break;
+          }
+          case 146: {
+            AdminPasswordSecretVersion = input.ReadString();
             break;
           }
         }
@@ -1581,6 +1637,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       encryptionKey_ = other.encryptionKey_ != null ? other.encryptionKey_.Clone() : null;
       encryptionKeyHistoryEntries_ = other.encryptionKeyHistoryEntries_.Clone();
       serviceAgentEmail_ = other.serviceAgentEmail_;
+      localDataGuardEnabled_ = other.localDataGuardEnabled_;
+      localAdgAutoFailoverMaxDataLossLimitDuration_ = other.localAdgAutoFailoverMaxDataLossLimitDuration_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1610,7 +1668,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int ComputeCountFieldNumber = 2;
     private float computeCount_;
     /// <summary>
-    /// Optional. The number of compute servers for the Autonomous Database.
+    /// Optional. Immutable. The number of compute servers for the Autonomous
+    /// Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1625,7 +1684,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CpuCoreCountFieldNumber = 3;
     private int cpuCoreCount_;
     /// <summary>
-    /// Optional. The number of CPU cores to be made available to the database.
+    /// Optional. Immutable. The number of CPU cores to be made available to the
+    /// database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1640,7 +1700,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DataStorageSizeTbFieldNumber = 4;
     private int dataStorageSizeTb_;
     /// <summary>
-    /// Optional. The size of the data stored in the database, in terabytes.
+    /// Optional. Immutable. The size of the data stored in the database, in
+    /// terabytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1655,7 +1716,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DataStorageSizeGbFieldNumber = 63;
     private int dataStorageSizeGb_;
     /// <summary>
-    /// Optional. The size of the data stored in the database, in gigabytes.
+    /// Optional. Immutable. The size of the data stored in the database, in
+    /// gigabytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1670,7 +1732,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DbWorkloadFieldNumber = 5;
     private global::Google.Cloud.OracleDatabase.V1.DBWorkload dbWorkload_ = global::Google.Cloud.OracleDatabase.V1.DBWorkload.Unspecified;
     /// <summary>
-    /// Required. The workload type of the Autonomous Database.
+    /// Required. Immutable. The workload type of the Autonomous Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1685,7 +1747,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DbEditionFieldNumber = 6;
     private global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseEdition dbEdition_ = global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.DatabaseEdition.Unspecified;
     /// <summary>
-    /// Optional. The edition of the Autonomous Databases.
+    /// Optional. Immutable. The edition of the Autonomous Databases.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1700,8 +1762,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int CharacterSetFieldNumber = 8;
     private string characterSet_ = "";
     /// <summary>
-    /// Optional. The character set for the Autonomous Database. The default is
-    /// AL32UTF8.
+    /// Optional. Immutable. The character set for the Autonomous Database. The
+    /// default is AL32UTF8.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1716,8 +1778,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int NCharacterSetFieldNumber = 9;
     private string nCharacterSet_ = "";
     /// <summary>
-    /// Optional. The national character set for the Autonomous Database. The
-    /// default is AL16UTF16.
+    /// Optional. Immutable. The national character set for the Autonomous
+    /// Database. The default is AL16UTF16.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1732,7 +1794,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int PrivateEndpointIpFieldNumber = 10;
     private string privateEndpointIp_ = "";
     /// <summary>
-    /// Optional. The private endpoint IP address for the Autonomous Database.
+    /// Optional. Immutable. The private endpoint IP address for the Autonomous
+    /// Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1747,7 +1810,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int PrivateEndpointLabelFieldNumber = 11;
     private string privateEndpointLabel_ = "";
     /// <summary>
-    /// Optional. The private endpoint label for the Autonomous Database.
+    /// Optional. Immutable. The private endpoint label for the Autonomous
+    /// Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1762,7 +1826,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int DbVersionFieldNumber = 12;
     private string dbVersion_ = "";
     /// <summary>
-    /// Optional. The Oracle Database version for the Autonomous Database.
+    /// Optional. Immutable. The Oracle Database version for the Autonomous
+    /// Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1777,8 +1842,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int IsAutoScalingEnabledFieldNumber = 14;
     private bool isAutoScalingEnabled_;
     /// <summary>
-    /// Optional. This field indicates if auto scaling is enabled for the
-    /// Autonomous Database CPU core count.
+    /// Optional. Immutable. This field indicates if auto scaling is enabled for
+    /// the Autonomous Database CPU core count.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1793,8 +1858,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int IsStorageAutoScalingEnabledFieldNumber = 15;
     private bool isStorageAutoScalingEnabled_;
     /// <summary>
-    /// Optional. This field indicates if auto scaling is enabled for the
-    /// Autonomous Database storage.
+    /// Optional. Immutable. This field indicates if auto scaling is enabled for
+    /// the Autonomous Database storage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1809,7 +1874,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int LicenseTypeFieldNumber = 16;
     private global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LicenseType licenseType_ = global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.LicenseType.Unspecified;
     /// <summary>
-    /// Required. The license type used for the Autonomous Database.
+    /// Required. Immutable. The license type used for the Autonomous Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1826,7 +1891,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
         = pb::FieldCodec.ForMessage(138, global::Google.Cloud.OracleDatabase.V1.CustomerContact.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.OracleDatabase.V1.CustomerContact> customerContacts_ = new pbc::RepeatedField<global::Google.Cloud.OracleDatabase.V1.CustomerContact>();
     /// <summary>
-    /// Optional. The list of customer contacts.
+    /// Optional. Immutable. The list of customer contacts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1838,7 +1903,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int SecretIdFieldNumber = 18;
     private string secretId_ = "";
     /// <summary>
-    /// Optional. The ID of the Oracle Cloud Infrastructure vault secret.
+    /// Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault
+    /// secret.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1853,7 +1919,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int VaultIdFieldNumber = 19;
     private string vaultId_ = "";
     /// <summary>
-    /// Optional. The ID of the Oracle Cloud Infrastructure vault.
+    /// Optional. Immutable. The ID of the Oracle Cloud Infrastructure vault.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1868,7 +1934,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int MaintenanceScheduleTypeFieldNumber = 20;
     private global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.MaintenanceScheduleType maintenanceScheduleType_ = global::Google.Cloud.OracleDatabase.V1.AutonomousDatabaseProperties.Types.MaintenanceScheduleType.Unspecified;
     /// <summary>
-    /// Optional. The maintenance schedule of the Autonomous Database.
+    /// Optional. Immutable. The maintenance schedule of the Autonomous Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1883,8 +1949,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int MtlsConnectionRequiredFieldNumber = 34;
     private bool mtlsConnectionRequired_;
     /// <summary>
-    /// Optional. This field specifies if the Autonomous Database requires mTLS
-    /// connections.
+    /// Optional. Immutable. This field specifies if the Autonomous Database
+    /// requires mTLS connections.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1899,9 +1965,9 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int BackupRetentionPeriodDaysFieldNumber = 57;
     private int backupRetentionPeriodDays_;
     /// <summary>
-    /// Optional. The retention period for the Autonomous Database. This field is
-    /// specified in days, can range from 1 day to 60 days, and has a default value
-    /// of 60 days.
+    /// Optional. Immutable. The retention period for the Autonomous Database. This
+    /// field is specified in days, can range from 1 day to 60 days, and has a
+    /// default value of 60 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2124,9 +2190,11 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int IsLocalDataGuardEnabledFieldNumber = 33;
     private bool isLocalDataGuardEnabled_;
     /// <summary>
-    /// Output only. This field indicates whether the Autonomous Database has local
-    /// (in-region) Data Guard enabled.
+    /// Output only. Deprecated: Please use `local_data_guard_enabled` instead.
+    /// This field indicates whether the Autonomous Database has local (in-region)
+    /// Data Guard enabled.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsLocalDataGuardEnabled {
@@ -2140,9 +2208,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
     public const int LocalAdgAutoFailoverMaxDataLossLimitFieldNumber = 35;
     private int localAdgAutoFailoverMaxDataLossLimit_;
     /// <summary>
-    /// Output only. This field indicates the maximum data loss limit for an
-    /// Autonomous Database, in seconds.
+    /// Output only. Deprecated: Please use
+    /// `local_adg_auto_failover_max_data_loss_limit_duration` instead.
+    /// This field indicates the maximum data loss limit for an Autonomous
+    /// Database, in seconds.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LocalAdgAutoFailoverMaxDataLossLimit {
@@ -2527,7 +2598,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
         = pb::FieldCodec.ForString(538);
     private readonly pbc::RepeatedField<string> allowlistedIps_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Optional. The list of allowlisted IP addresses for the Autonomous Database.
+    /// Optional. Immutable. The list of allowlisted IP addresses for the
+    /// Autonomous Database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2581,6 +2653,69 @@ namespace Google.Cloud.OracleDatabase.V1 {
       set {
         serviceAgentEmail_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
+    }
+
+    /// <summary>Field number for the "local_data_guard_enabled" field.</summary>
+    public const int LocalDataGuardEnabledFieldNumber = 71;
+    private readonly static bool LocalDataGuardEnabledDefaultValue = false;
+
+    private bool localDataGuardEnabled_;
+    /// <summary>
+    /// Optional. Indicates whether the Autonomous Database has a local (in-region)
+    /// standby database. Not applicable to cross-region Data Guard or dedicated
+    /// Exadata infrastructure.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool LocalDataGuardEnabled {
+      get { if ((_hasBits0 & 2) != 0) { return localDataGuardEnabled_; } else { return LocalDataGuardEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        localDataGuardEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "local_data_guard_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLocalDataGuardEnabled {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "local_data_guard_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLocalDataGuardEnabled() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "local_adg_auto_failover_max_data_loss_limit_duration" field.</summary>
+    public const int LocalAdgAutoFailoverMaxDataLossLimitDurationFieldNumber = 72;
+    private readonly static int LocalAdgAutoFailoverMaxDataLossLimitDurationDefaultValue = 0;
+
+    private int localAdgAutoFailoverMaxDataLossLimitDuration_;
+    /// <summary>
+    /// Optional. This field indicates the maximum data loss limit for an
+    /// Autonomous Database, in seconds.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int LocalAdgAutoFailoverMaxDataLossLimitDuration {
+      get { if ((_hasBits0 & 4) != 0) { return localAdgAutoFailoverMaxDataLossLimitDuration_; } else { return LocalAdgAutoFailoverMaxDataLossLimitDurationDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        localAdgAutoFailoverMaxDataLossLimitDuration_ = value;
+      }
+    }
+    /// <summary>Gets whether the "local_adg_auto_failover_max_data_loss_limit_duration" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLocalAdgAutoFailoverMaxDataLossLimitDuration {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "local_adg_auto_failover_max_data_loss_limit_duration" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLocalAdgAutoFailoverMaxDataLossLimitDuration() {
+      _hasBits0 &= ~4;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2661,6 +2796,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (!object.Equals(EncryptionKey, other.EncryptionKey)) return false;
       if(!encryptionKeyHistoryEntries_.Equals(other.encryptionKeyHistoryEntries_)) return false;
       if (ServiceAgentEmail != other.ServiceAgentEmail) return false;
+      if (LocalDataGuardEnabled != other.LocalDataGuardEnabled) return false;
+      if (LocalAdgAutoFailoverMaxDataLossLimitDuration != other.LocalAdgAutoFailoverMaxDataLossLimitDuration) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2731,6 +2868,8 @@ namespace Google.Cloud.OracleDatabase.V1 {
       if (encryptionKey_ != null) hash ^= EncryptionKey.GetHashCode();
       hash ^= encryptionKeyHistoryEntries_.GetHashCode();
       if (ServiceAgentEmail.Length != 0) hash ^= ServiceAgentEmail.GetHashCode();
+      if (HasLocalDataGuardEnabled) hash ^= LocalDataGuardEnabled.GetHashCode();
+      if (HasLocalAdgAutoFailoverMaxDataLossLimitDuration) hash ^= LocalAdgAutoFailoverMaxDataLossLimitDuration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2980,6 +3119,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(178, 4);
         output.WriteString(ServiceAgentEmail);
       }
+      if (HasLocalDataGuardEnabled) {
+        output.WriteRawTag(184, 4);
+        output.WriteBool(LocalDataGuardEnabled);
+      }
+      if (HasLocalAdgAutoFailoverMaxDataLossLimitDuration) {
+        output.WriteRawTag(192, 4);
+        output.WriteInt32(LocalAdgAutoFailoverMaxDataLossLimitDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3221,6 +3368,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
         output.WriteRawTag(178, 4);
         output.WriteString(ServiceAgentEmail);
       }
+      if (HasLocalDataGuardEnabled) {
+        output.WriteRawTag(184, 4);
+        output.WriteBool(LocalDataGuardEnabled);
+      }
+      if (HasLocalAdgAutoFailoverMaxDataLossLimitDuration) {
+        output.WriteRawTag(192, 4);
+        output.WriteInt32(LocalAdgAutoFailoverMaxDataLossLimitDuration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3405,6 +3560,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       size += encryptionKeyHistoryEntries_.CalculateSize(_repeated_encryptionKeyHistoryEntries_codec);
       if (ServiceAgentEmail.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(ServiceAgentEmail);
+      }
+      if (HasLocalDataGuardEnabled) {
+        size += 2 + 1;
+      }
+      if (HasLocalAdgAutoFailoverMaxDataLossLimitDuration) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(LocalAdgAutoFailoverMaxDataLossLimitDuration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3625,6 +3786,12 @@ namespace Google.Cloud.OracleDatabase.V1 {
       encryptionKeyHistoryEntries_.Add(other.encryptionKeyHistoryEntries_);
       if (other.ServiceAgentEmail.Length != 0) {
         ServiceAgentEmail = other.ServiceAgentEmail;
+      }
+      if (other.HasLocalDataGuardEnabled) {
+        LocalDataGuardEnabled = other.LocalDataGuardEnabled;
+      }
+      if (other.HasLocalAdgAutoFailoverMaxDataLossLimitDuration) {
+        LocalAdgAutoFailoverMaxDataLossLimitDuration = other.LocalAdgAutoFailoverMaxDataLossLimitDuration;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3928,6 +4095,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
           }
           case 562: {
             ServiceAgentEmail = input.ReadString();
+            break;
+          }
+          case 568: {
+            LocalDataGuardEnabled = input.ReadBool();
+            break;
+          }
+          case 576: {
+            LocalAdgAutoFailoverMaxDataLossLimitDuration = input.ReadInt32();
             break;
           }
         }
@@ -4234,6 +4409,14 @@ namespace Google.Cloud.OracleDatabase.V1 {
             ServiceAgentEmail = input.ReadString();
             break;
           }
+          case 568: {
+            LocalDataGuardEnabled = input.ReadBool();
+            break;
+          }
+          case 576: {
+            LocalAdgAutoFailoverMaxDataLossLimitDuration = input.ReadInt32();
+            break;
+          }
         }
       }
     }
@@ -4315,6 +4498,10 @@ namespace Google.Cloud.OracleDatabase.V1 {
         /// Backup based recovery.
         /// </summary>
         [pbr::OriginalName("BACKUP_BASED")] BackupBased = 2,
+        /// <summary>
+        /// Local disaster recovery is not available.
+        /// </summary>
+        [pbr::OriginalName("NOT_AVAILABLE")] NotAvailable = 3,
       }
 
       /// <summary>

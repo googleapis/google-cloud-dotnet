@@ -348,6 +348,16 @@ namespace Google.Cloud.OracleDatabase.V1
             get => string.IsNullOrEmpty(OdbSubnet) ? null : OdbSubnetName.Parse(OdbSubnet, allowUnparsed: true);
             set => OdbSubnet = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="SecretVersionName"/>-typed view over the <see cref="AdminPasswordSecretVersion"/> resource name
+        /// property.
+        /// </summary>
+        public SecretVersionName AdminPasswordSecretVersionAsSecretVersionName
+        {
+            get => string.IsNullOrEmpty(AdminPasswordSecretVersion) ? null : SecretVersionName.Parse(AdminPasswordSecretVersion, allowUnparsed: true);
+            set => AdminPasswordSecretVersion = value?.ToString() ?? "";
+        }
     }
 
     public partial class SourceConfig
