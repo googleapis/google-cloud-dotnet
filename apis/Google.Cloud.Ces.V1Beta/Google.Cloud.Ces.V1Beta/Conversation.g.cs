@@ -29,7 +29,7 @@ namespace Google.Cloud.Ces.V1Beta {
             "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29n",
             "bGUvY2xvdWQvY2VzL3YxYmV0YS9jb21tb24ucHJvdG8aJWdvb2dsZS9jbG91",
             "ZC9jZXMvdjFiZXRhL2V4YW1wbGUucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8irAoKDENvbnZlcnNhdGlvbhIRCgRuYW1lGAEgASgJ",
+            "aW1lc3RhbXAucHJvdG8iwgoKDENvbnZlcnNhdGlvbhIRCgRuYW1lGAEgASgJ",
             "QgPgQQgSMwoKc3RhcnRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5U",
             "aW1lc3RhbXBCA+BBAxIxCghlbmRfdGltZRgEIAEoCzIaLmdvb2dsZS5wcm90",
             "b2J1Zi5UaW1lc3RhbXBCA+BBAxI+CgV0dXJucxgGIAMoCzIqLmdvb2dsZS5j",
@@ -51,17 +51,17 @@ namespace Google.Cloud.Ces.V1Beta {
             "EhwKGENIQU5ORUxfVFlQRV9VTlNQRUNJRklFRBAAEggKBFRFWFQQARIJCgVB",
             "VURJTxACEg4KCk1VTFRJTU9EQUwQAyJTCgZTb3VyY2USFgoSU09VUkNFX1VO",
             "U1BFQ0lGSUVEEAASCAoETElWRRABEg0KCVNJTVVMQVRPUhACEggKBEVWQUwQ",
-            "AxIOCgpBR0VOVF9UT09MEAQitQEKCUlucHV0VHlwZRIaChZJTlBVVF9UWVBF",
+            "AxIOCgpBR0VOVF9UT09MEAQiywEKCUlucHV0VHlwZRIaChZJTlBVVF9UWVBF",
             "X1VOU1BFQ0lGSUVEEAASEwoPSU5QVVRfVFlQRV9URVhUEAESFAoQSU5QVVRf",
-            "VFlQRV9BVURJTxACEhQKEElOUFVUX1RZUEVfSU1BR0UQAxITCg9JTlBVVF9U",
-            "WVBFX0JMT0IQBBIcChhJTlBVVF9UWVBFX1RPT0xfUkVTUE9OU0UQBRIYChRJ",
-            "TlBVVF9UWVBFX1ZBUklBQkxFUxAGOpMB6kGPAQofY2VzLmdvb2dsZWFwaXMu",
-            "Y29tL0NvbnZlcnNhdGlvbhJPcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2FwcHMve2FwcH0vY29udmVyc2F0aW9ucy97Y29udmVy",
-            "c2F0aW9ufSoNY29udmVyc2F0aW9uczIMY29udmVyc2F0aW9uQmEKG2NvbS5n",
-            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YUIRQ29udmVyc2F0aW9uUHJvdG9QAVot",
-            "Y2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFiZXRhL2Nlc3BiO2Nlc3Bi",
-            "YgZwcm90bzM="));
+            "VFlQRV9FVkVOVBAHEhQKEElOUFVUX1RZUEVfQVVESU8QAhIUChBJTlBVVF9U",
+            "WVBFX0lNQUdFEAMSEwoPSU5QVVRfVFlQRV9CTE9CEAQSHAoYSU5QVVRfVFlQ",
+            "RV9UT09MX1JFU1BPTlNFEAUSGAoUSU5QVVRfVFlQRV9WQVJJQUJMRVMQBjqT",
+            "AepBjwEKH2Nlcy5nb29nbGVhcGlzLmNvbS9Db252ZXJzYXRpb24ST3Byb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hcHBzL3thcHB9",
+            "L2NvbnZlcnNhdGlvbnMve2NvbnZlcnNhdGlvbn0qDWNvbnZlcnNhdGlvbnMy",
+            "DGNvbnZlcnNhdGlvbkJhChtjb20uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGFC",
+            "EUNvbnZlcnNhdGlvblByb3RvUAFaLWNsb3VkLmdvb2dsZS5jb20vZ28vY2Vz",
+            "L2FwaXYxYmV0YS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ExampleReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -818,27 +818,31 @@ namespace Google.Cloud.Ces.V1Beta {
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The input message is text.
+        /// Text input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_TEXT")] Text = 1,
         /// <summary>
-        /// The input message is audio.
+        /// Event input.
+        /// </summary>
+        [pbr::OriginalName("INPUT_TYPE_EVENT")] Event = 7,
+        /// <summary>
+        /// Audio input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_AUDIO")] Audio = 2,
         /// <summary>
-        /// The input message is image.
+        /// Image input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_IMAGE")] Image = 3,
         /// <summary>
-        /// The input message is blob file.
+        /// Blob input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_BLOB")] Blob = 4,
         /// <summary>
-        /// The input message is client function tool response.
+        /// Client function tool response input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_TOOL_RESPONSE")] ToolResponse = 5,
         /// <summary>
-        /// The input message are variables.
+        /// Variables input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_VARIABLES")] Variables = 6,
       }

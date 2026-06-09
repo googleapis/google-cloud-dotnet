@@ -291,6 +291,31 @@ namespace Google.Cloud.Ces.V1Beta
         public static bool operator !=(DeploymentName a, DeploymentName b) => !(a == b);
     }
 
+    public partial class ExperimentConfig
+    {
+        public partial class Types
+        {
+            public partial class VersionRelease
+            {
+                public partial class Types
+                {
+                    public partial class TrafficAllocation
+                    {
+                        /// <summary>
+                        /// <see cref="AppVersionName"/>-typed view over the <see cref="AppVersion"/> resource name
+                        /// property.
+                        /// </summary>
+                        public AppVersionName AppVersionAsAppVersionName
+                        {
+                            get => string.IsNullOrEmpty(AppVersion) ? null : AppVersionName.Parse(AppVersion, allowUnparsed: true);
+                            set => AppVersion = value?.ToString() ?? "";
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     public partial class Deployment
     {
         /// <summary>

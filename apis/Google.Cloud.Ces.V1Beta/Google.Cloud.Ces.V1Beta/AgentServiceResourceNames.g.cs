@@ -739,6 +739,27 @@ namespace Google.Cloud.Ces.V1Beta
 
         public partial class Types
         {
+            public partial class AppVersionContext
+            {
+                /// <summary>
+                /// <see cref="AppVersionName"/>-typed view over the <see cref="AppVersion"/> resource name property.
+                /// </summary>
+                public AppVersionName AppVersionAsAppVersionName
+                {
+                    get => string.IsNullOrEmpty(AppVersion) ? null : AppVersionName.Parse(AppVersion, allowUnparsed: true);
+                    set => AppVersion = value?.ToString() ?? "";
+                }
+
+                /// <summary>
+                /// <see cref="AgentName"/>-typed view over the <see cref="AgentResourceName"/> resource name property.
+                /// </summary>
+                public AgentName AgentResourceNameAsAgentName
+                {
+                    get => string.IsNullOrEmpty(AgentResourceName) ? null : AgentName.Parse(AgentResourceName, allowUnparsed: true);
+                    set => AgentResourceName = value?.ToString() ?? "";
+                }
+            }
+
             public partial class AppGenerationConfig
             {
                 /// <summary>

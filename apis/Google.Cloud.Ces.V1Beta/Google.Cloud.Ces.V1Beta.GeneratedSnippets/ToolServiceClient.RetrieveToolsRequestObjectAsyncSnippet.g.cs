@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             {
                 ToolsetAsToolsetName = ToolsetName.FromProjectLocationAppToolset("[PROJECT]", "[LOCATION]", "[APP]", "[TOOLSET]"),
                 ToolIds = { "", },
+                BypassPersistenceConfig = false,
             };
             // Make the request
             RetrieveToolsResponse response = await toolServiceClient.RetrieveToolsAsync(request);

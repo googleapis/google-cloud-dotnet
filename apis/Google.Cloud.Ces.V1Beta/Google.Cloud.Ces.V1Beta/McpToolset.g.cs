@@ -27,23 +27,35 @@ namespace Google.Cloud.Ces.V1Beta {
             "Cilnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9tY3BfdG9vbHNldC5wcm90bxIX",
             "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
             "YXZpb3IucHJvdG8aImdvb2dsZS9jbG91ZC9jZXMvdjFiZXRhL2F1dGgucHJv",
-            "dG8aJGdvb2dsZS9jbG91ZC9jZXMvdjFiZXRhL2NvbW1vbi5wcm90byKWAwoK",
-            "TWNwVG9vbHNldBIbCg5zZXJ2ZXJfYWRkcmVzcxgBIAEoCUID4EECEksKEmFw",
-            "aV9hdXRoZW50aWNhdGlvbhgCIAEoCzIqLmdvb2dsZS5jbG91ZC5jZXMudjFi",
-            "ZXRhLkFwaUF1dGhlbnRpY2F0aW9uQgPgQQESVgoYc2VydmljZV9kaXJlY3Rv",
-            "cnlfY29uZmlnGAMgASgLMi8uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuU2Vy",
-            "dmljZURpcmVjdG9yeUNvbmZpZ0ID4EEBEjsKCnRsc19jb25maWcYBCABKAsy",
-            "Ii5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5UbHNDb25maWdCA+BBARJTCg5j",
-            "dXN0b21faGVhZGVycxgFIAMoCzI2Lmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
-            "Lk1jcFRvb2xzZXQuQ3VzdG9tSGVhZGVyc0VudHJ5QgPgQQEaNAoSQ3VzdG9t",
-            "SGVhZGVyc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAFC",
-            "XwobY29tLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhQg9NY3BUb29sc2V0UHJv",
-            "dG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFiZXRhL2Nlc3Bi",
-            "O2Nlc3BiYgZwcm90bzM="));
+            "dG8aJGdvb2dsZS9jbG91ZC9jZXMvdjFiZXRhL2NvbW1vbi5wcm90bxokZ29v",
+            "Z2xlL2Nsb3VkL2Nlcy92MWJldGEvc2NoZW1hLnByb3RvIt0DCgpNY3BUb29s",
+            "c2V0EhsKDnNlcnZlcl9hZGRyZXNzGAEgASgJQgPgQQISSwoSYXBpX2F1dGhl",
+            "bnRpY2F0aW9uGAIgASgLMiouZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQXBp",
+            "QXV0aGVudGljYXRpb25CA+BBARJWChhzZXJ2aWNlX2RpcmVjdG9yeV9jb25m",
+            "aWcYAyABKAsyLy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5TZXJ2aWNlRGly",
+            "ZWN0b3J5Q29uZmlnQgPgQQESOwoKdGxzX2NvbmZpZxgEIAEoCzIiLmdvb2ds",
+            "ZS5jbG91ZC5jZXMudjFiZXRhLlRsc0NvbmZpZ0ID4EEBElMKDmN1c3RvbV9o",
+            "ZWFkZXJzGAUgAygLMjYuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuTWNwVG9v",
+            "bHNldC5DdXN0b21IZWFkZXJzRW50cnlCA+BBARJFCg50b29sX292ZXJyaWRl",
+            "cxgGIAMoCzIoLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLk1jcFRvb2xPdmVy",
+            "cmlkZUID4EEBGjQKEkN1c3RvbUhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkS",
+            "DQoFdmFsdWUYAiABKAk6AjgBIqYBCg9NY3BUb29sT3ZlcnJpZGUSEQoEdG9v",
+            "bBgBIAEoCUID4EECEhoKDW5hbWVfb3ZlcnJpZGUYAiABKAlCA+BBARIhChRk",
+            "ZXNjcmlwdGlvbl9vdmVycmlkZRgDIAEoCUID4EEBEkEKCHNuYXBzaG90GAQg",
+            "ASgLMiouZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuTWNwVG9vbERlZmluaXRp",
+            "b25CA+BBAyKmAQoRTWNwVG9vbERlZmluaXRpb24SGAoLZGVzY3JpcHRpb24Y",
+            "ASABKAlCA+BBAxI6CgxpbnB1dF9zY2hlbWEYAiABKAsyHy5nb29nbGUuY2xv",
+            "dWQuY2VzLnYxYmV0YS5TY2hlbWFCA+BBAxI7Cg1vdXRwdXRfc2NoZW1hGAMg",
+            "ASgLMh8uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuU2NoZW1hQgPgQQNCXwob",
+            "Y29tLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhQg9NY3BUb29sc2V0UHJvdG9Q",
+            "AVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFiZXRhL2Nlc3BiO2Nl",
+            "c3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AuthReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AuthReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.SchemaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.McpToolset), global::Google.Cloud.Ces.V1Beta.McpToolset.Parser, new[]{ "ServerAddress", "ApiAuthentication", "ServiceDirectoryConfig", "TlsConfig", "CustomHeaders" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.McpToolset), global::Google.Cloud.Ces.V1Beta.McpToolset.Parser, new[]{ "ServerAddress", "ApiAuthentication", "ServiceDirectoryConfig", "TlsConfig", "CustomHeaders", "ToolOverrides" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.McpToolOverride), global::Google.Cloud.Ces.V1Beta.McpToolOverride.Parser, new[]{ "Tool", "NameOverride", "DescriptionOverride", "Snapshot" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.McpToolDefinition), global::Google.Cloud.Ces.V1Beta.McpToolDefinition.Parser, new[]{ "Description", "InputSchema", "OutputSchema" }, null, null, null, null)
           }));
     }
     #endregion
@@ -94,6 +106,7 @@ namespace Google.Cloud.Ces.V1Beta {
       serviceDirectoryConfig_ = other.serviceDirectoryConfig_ != null ? other.serviceDirectoryConfig_.Clone() : null;
       tlsConfig_ = other.tlsConfig_ != null ? other.tlsConfig_.Clone() : null;
       customHeaders_ = other.customHeaders_.Clone();
+      toolOverrides_ = other.toolOverrides_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -191,6 +204,22 @@ namespace Google.Cloud.Ces.V1Beta {
       get { return customHeaders_; }
     }
 
+    /// <summary>Field number for the "tool_overrides" field.</summary>
+    public const int ToolOverridesFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Ces.V1Beta.McpToolOverride> _repeated_toolOverrides_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Cloud.Ces.V1Beta.McpToolOverride.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Ces.V1Beta.McpToolOverride> toolOverrides_ = new pbc::RepeatedField<global::Google.Cloud.Ces.V1Beta.McpToolOverride>();
+    /// <summary>
+    /// Optional. Overrides for individual tools within this toolset.
+    /// This allows overriding specific details like descriptions, names,
+    /// or pinning the tools' states so they aren't fully dynamic.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Ces.V1Beta.McpToolOverride> ToolOverrides {
+      get { return toolOverrides_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -211,6 +240,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (!object.Equals(ServiceDirectoryConfig, other.ServiceDirectoryConfig)) return false;
       if (!object.Equals(TlsConfig, other.TlsConfig)) return false;
       if (!CustomHeaders.Equals(other.CustomHeaders)) return false;
+      if(!toolOverrides_.Equals(other.toolOverrides_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -223,6 +253,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (serviceDirectoryConfig_ != null) hash ^= ServiceDirectoryConfig.GetHashCode();
       if (tlsConfig_ != null) hash ^= TlsConfig.GetHashCode();
       hash ^= CustomHeaders.GetHashCode();
+      hash ^= toolOverrides_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -258,6 +289,7 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteMessage(TlsConfig);
       }
       customHeaders_.WriteTo(output, _map_customHeaders_codec);
+      toolOverrides_.WriteTo(output, _repeated_toolOverrides_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -285,6 +317,7 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteMessage(TlsConfig);
       }
       customHeaders_.WriteTo(ref output, _map_customHeaders_codec);
+      toolOverrides_.WriteTo(ref output, _repeated_toolOverrides_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -308,6 +341,7 @@ namespace Google.Cloud.Ces.V1Beta {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TlsConfig);
       }
       size += customHeaders_.CalculateSize(_map_customHeaders_codec);
+      size += toolOverrides_.CalculateSize(_repeated_toolOverrides_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -342,6 +376,7 @@ namespace Google.Cloud.Ces.V1Beta {
         TlsConfig.MergeFrom(other.TlsConfig);
       }
       customHeaders_.MergeFrom(other.customHeaders_);
+      toolOverrides_.Add(other.toolOverrides_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -390,6 +425,10 @@ namespace Google.Cloud.Ces.V1Beta {
             customHeaders_.AddEntriesFrom(input, _map_customHeaders_codec);
             break;
           }
+          case 50: {
+            toolOverrides_.AddEntriesFrom(input, _repeated_toolOverrides_codec);
+            break;
+          }
         }
       }
     #endif
@@ -436,6 +475,654 @@ namespace Google.Cloud.Ces.V1Beta {
           }
           case 42: {
             customHeaders_.AddEntriesFrom(ref input, _map_customHeaders_codec);
+            break;
+          }
+          case 50: {
+            toolOverrides_.AddEntriesFrom(ref input, _repeated_toolOverrides_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Overrides associated with a given tool in a Toolset.
+  /// This enables "pinning" or "overriding" of tool definitions from the external
+  /// dynamic server.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class McpToolOverride : pb::IMessage<McpToolOverride>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<McpToolOverride> _parser = new pb::MessageParser<McpToolOverride>(() => new McpToolOverride());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<McpToolOverride> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Ces.V1Beta.McpToolsetReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McpToolOverride() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McpToolOverride(McpToolOverride other) : this() {
+      tool_ = other.tool_;
+      nameOverride_ = other.nameOverride_;
+      descriptionOverride_ = other.descriptionOverride_;
+      snapshot_ = other.snapshot_ != null ? other.snapshot_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McpToolOverride Clone() {
+      return new McpToolOverride(this);
+    }
+
+    /// <summary>Field number for the "tool" field.</summary>
+    public const int ToolFieldNumber = 1;
+    private string tool_ = "";
+    /// <summary>
+    /// Required. The original name of the tool as it is emitted by the MCP server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Tool {
+      get { return tool_; }
+      set {
+        tool_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name_override" field.</summary>
+    public const int NameOverrideFieldNumber = 2;
+    private string nameOverride_ = "";
+    /// <summary>
+    /// Optional. If present, this tool uses this name in the Agent instead of the
+    /// original name. This is primarily used as an alias if the MCP server offers
+    /// poorly named tools.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NameOverride {
+      get { return nameOverride_; }
+      set {
+        nameOverride_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description_override" field.</summary>
+    public const int DescriptionOverrideFieldNumber = 3;
+    private string descriptionOverride_ = "";
+    /// <summary>
+    /// Optional. If present, this tool uses this description instead of the
+    /// original description from the server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DescriptionOverride {
+      get { return descriptionOverride_; }
+      set {
+        descriptionOverride_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "snapshot" field.</summary>
+    public const int SnapshotFieldNumber = 4;
+    private global::Google.Cloud.Ces.V1Beta.McpToolDefinition snapshot_;
+    /// <summary>
+    /// Output only. If present, this tool is "Pinned" and uses the snapshot values
+    /// as fallbacks if the server becomes temporarily unavailable or if no
+    /// Override is present.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.McpToolDefinition Snapshot {
+      get { return snapshot_; }
+      set {
+        snapshot_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as McpToolOverride);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(McpToolOverride other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Tool != other.Tool) return false;
+      if (NameOverride != other.NameOverride) return false;
+      if (DescriptionOverride != other.DescriptionOverride) return false;
+      if (!object.Equals(Snapshot, other.Snapshot)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Tool.Length != 0) hash ^= Tool.GetHashCode();
+      if (NameOverride.Length != 0) hash ^= NameOverride.GetHashCode();
+      if (DescriptionOverride.Length != 0) hash ^= DescriptionOverride.GetHashCode();
+      if (snapshot_ != null) hash ^= Snapshot.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Tool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Tool);
+      }
+      if (NameOverride.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NameOverride);
+      }
+      if (DescriptionOverride.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DescriptionOverride);
+      }
+      if (snapshot_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Snapshot);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Tool.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Tool);
+      }
+      if (NameOverride.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(NameOverride);
+      }
+      if (DescriptionOverride.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(DescriptionOverride);
+      }
+      if (snapshot_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Snapshot);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Tool.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Tool);
+      }
+      if (NameOverride.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NameOverride);
+      }
+      if (DescriptionOverride.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DescriptionOverride);
+      }
+      if (snapshot_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Snapshot);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(McpToolOverride other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Tool.Length != 0) {
+        Tool = other.Tool;
+      }
+      if (other.NameOverride.Length != 0) {
+        NameOverride = other.NameOverride;
+      }
+      if (other.DescriptionOverride.Length != 0) {
+        DescriptionOverride = other.DescriptionOverride;
+      }
+      if (other.snapshot_ != null) {
+        if (snapshot_ == null) {
+          Snapshot = new global::Google.Cloud.Ces.V1Beta.McpToolDefinition();
+        }
+        Snapshot.MergeFrom(other.Snapshot);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Tool = input.ReadString();
+            break;
+          }
+          case 18: {
+            NameOverride = input.ReadString();
+            break;
+          }
+          case 26: {
+            DescriptionOverride = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (snapshot_ == null) {
+              Snapshot = new global::Google.Cloud.Ces.V1Beta.McpToolDefinition();
+            }
+            input.ReadMessage(Snapshot);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Tool = input.ReadString();
+            break;
+          }
+          case 18: {
+            NameOverride = input.ReadString();
+            break;
+          }
+          case 26: {
+            DescriptionOverride = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (snapshot_ == null) {
+              Snapshot = new global::Google.Cloud.Ces.V1Beta.McpToolDefinition();
+            }
+            input.ReadMessage(Snapshot);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Container for a tool's core definition elements that are snapshot.
+  /// Schemas in the snapshot are used as-is and cannot be overridden.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class McpToolDefinition : pb::IMessage<McpToolDefinition>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<McpToolDefinition> _parser = new pb::MessageParser<McpToolDefinition>(() => new McpToolDefinition());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<McpToolDefinition> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Ces.V1Beta.McpToolsetReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McpToolDefinition() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McpToolDefinition(McpToolDefinition other) : this() {
+      description_ = other.description_;
+      inputSchema_ = other.inputSchema_ != null ? other.inputSchema_.Clone() : null;
+      outputSchema_ = other.outputSchema_ != null ? other.outputSchema_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public McpToolDefinition Clone() {
+      return new McpToolDefinition(this);
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 1;
+    private string description_ = "";
+    /// <summary>
+    /// Output only. The description of the MCP tool. This can be overridden
+    /// by `description_override` in `McpToolOverride`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "input_schema" field.</summary>
+    public const int InputSchemaFieldNumber = 2;
+    private global::Google.Cloud.Ces.V1Beta.Schema inputSchema_;
+    /// <summary>
+    /// Output only. The schema of the input arguments of the MCP tool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.Schema InputSchema {
+      get { return inputSchema_; }
+      set {
+        inputSchema_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "output_schema" field.</summary>
+    public const int OutputSchemaFieldNumber = 3;
+    private global::Google.Cloud.Ces.V1Beta.Schema outputSchema_;
+    /// <summary>
+    /// Output only. The schema of the output arguments of the MCP tool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.Schema OutputSchema {
+      get { return outputSchema_; }
+      set {
+        outputSchema_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as McpToolDefinition);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(McpToolDefinition other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Description != other.Description) return false;
+      if (!object.Equals(InputSchema, other.InputSchema)) return false;
+      if (!object.Equals(OutputSchema, other.OutputSchema)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (inputSchema_ != null) hash ^= InputSchema.GetHashCode();
+      if (outputSchema_ != null) hash ^= OutputSchema.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Description.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Description);
+      }
+      if (inputSchema_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InputSchema);
+      }
+      if (outputSchema_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OutputSchema);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Description.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Description);
+      }
+      if (inputSchema_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(InputSchema);
+      }
+      if (outputSchema_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(OutputSchema);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (inputSchema_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InputSchema);
+      }
+      if (outputSchema_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OutputSchema);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(McpToolDefinition other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
+      }
+      if (other.inputSchema_ != null) {
+        if (inputSchema_ == null) {
+          InputSchema = new global::Google.Cloud.Ces.V1Beta.Schema();
+        }
+        InputSchema.MergeFrom(other.InputSchema);
+      }
+      if (other.outputSchema_ != null) {
+        if (outputSchema_ == null) {
+          OutputSchema = new global::Google.Cloud.Ces.V1Beta.Schema();
+        }
+        OutputSchema.MergeFrom(other.OutputSchema);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Description = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (inputSchema_ == null) {
+              InputSchema = new global::Google.Cloud.Ces.V1Beta.Schema();
+            }
+            input.ReadMessage(InputSchema);
+            break;
+          }
+          case 26: {
+            if (outputSchema_ == null) {
+              OutputSchema = new global::Google.Cloud.Ces.V1Beta.Schema();
+            }
+            input.ReadMessage(OutputSchema);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Description = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (inputSchema_ == null) {
+              InputSchema = new global::Google.Cloud.Ces.V1Beta.Schema();
+            }
+            input.ReadMessage(InputSchema);
+            break;
+          }
+          case 26: {
+            if (outputSchema_ == null) {
+              OutputSchema = new global::Google.Cloud.Ces.V1Beta.Schema();
+            }
+            input.ReadMessage(OutputSchema);
             break;
           }
         }

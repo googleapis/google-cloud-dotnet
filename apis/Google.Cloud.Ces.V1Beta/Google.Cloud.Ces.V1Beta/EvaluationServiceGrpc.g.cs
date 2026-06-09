@@ -159,6 +159,12 @@ namespace Google.Cloud.Ces.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.TestPersonaVoiceResponse> __Marshaller_google_cloud_ces_v1beta_TestPersonaVoiceResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.TestPersonaVoiceResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.ExportEvaluationsRequest> __Marshaller_google_cloud_ces_v1beta_ExportEvaluationsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.ExportEvaluationsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest> __Marshaller_google_cloud_ces_v1beta_ExportEvaluationRunsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest> __Marshaller_google_cloud_ces_v1beta_ExportEvaluationResultsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest> __Marshaller_google_cloud_ces_v1beta_RunEvaluationResultMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.RunEvaluationRequest, global::Google.LongRunning.Operation> __Method_RunEvaluation = new grpc::Method<global::Google.Cloud.Ces.V1Beta.RunEvaluationRequest, global::Google.LongRunning.Operation>(
@@ -414,6 +420,30 @@ namespace Google.Cloud.Ces.V1Beta {
         __ServiceName,
         "ExportEvaluations",
         __Marshaller_google_cloud_ces_v1beta_ExportEvaluationsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest, global::Google.LongRunning.Operation> __Method_ExportEvaluationRuns = new grpc::Method<global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportEvaluationRuns",
+        __Marshaller_google_cloud_ces_v1beta_ExportEvaluationRunsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest, global::Google.LongRunning.Operation> __Method_ExportEvaluationResults = new grpc::Method<global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportEvaluationResults",
+        __Marshaller_google_cloud_ces_v1beta_ExportEvaluationResultsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest, global::Google.LongRunning.Operation> __Method_RunEvaluationResultMetrics = new grpc::Method<global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RunEvaluationResultMetrics",
+        __Marshaller_google_cloud_ces_v1beta_RunEvaluationResultMetricsRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -809,6 +839,42 @@ namespace Google.Cloud.Ces.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportEvaluations(global::Google.Cloud.Ces.V1Beta.ExportEvaluationsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports evaluations runs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportEvaluationRuns(global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports evaluations results.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportEvaluationResults(global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Runs metrics on an existing evaluation result.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RunEvaluationResultMetrics(global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2390,6 +2456,150 @@ namespace Google.Cloud.Ces.V1Beta {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ExportEvaluations, null, options, request);
       }
+      /// <summary>
+      /// Exports evaluations runs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportEvaluationRuns(global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportEvaluationRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports evaluations runs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportEvaluationRuns(global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportEvaluationRuns, null, options, request);
+      }
+      /// <summary>
+      /// Exports evaluations runs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportEvaluationRunsAsync(global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportEvaluationRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports evaluations runs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportEvaluationRunsAsync(global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportEvaluationRuns, null, options, request);
+      }
+      /// <summary>
+      /// Exports evaluations results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportEvaluationResults(global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportEvaluationResults(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports evaluations results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportEvaluationResults(global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportEvaluationResults, null, options, request);
+      }
+      /// <summary>
+      /// Exports evaluations results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportEvaluationResultsAsync(global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportEvaluationResultsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports evaluations results.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportEvaluationResultsAsync(global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportEvaluationResults, null, options, request);
+      }
+      /// <summary>
+      /// Runs metrics on an existing evaluation result.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RunEvaluationResultMetrics(global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunEvaluationResultMetrics(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs metrics on an existing evaluation result.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RunEvaluationResultMetrics(global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RunEvaluationResultMetrics, null, options, request);
+      }
+      /// <summary>
+      /// Runs metrics on an existing evaluation result.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunEvaluationResultMetricsAsync(global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RunEvaluationResultMetricsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Runs metrics on an existing evaluation result.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RunEvaluationResultMetricsAsync(global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RunEvaluationResultMetrics, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override EvaluationServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -2435,7 +2645,10 @@ namespace Google.Cloud.Ces.V1Beta {
           .AddMethod(__Method_UpdateScheduledEvaluationRun, serviceImpl.UpdateScheduledEvaluationRun)
           .AddMethod(__Method_DeleteScheduledEvaluationRun, serviceImpl.DeleteScheduledEvaluationRun)
           .AddMethod(__Method_TestPersonaVoice, serviceImpl.TestPersonaVoice)
-          .AddMethod(__Method_ExportEvaluations, serviceImpl.ExportEvaluations).Build();
+          .AddMethod(__Method_ExportEvaluations, serviceImpl.ExportEvaluations)
+          .AddMethod(__Method_ExportEvaluationRuns, serviceImpl.ExportEvaluationRuns)
+          .AddMethod(__Method_ExportEvaluationResults, serviceImpl.ExportEvaluationResults)
+          .AddMethod(__Method_RunEvaluationResultMetrics, serviceImpl.RunEvaluationResultMetrics).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -2477,6 +2690,9 @@ namespace Google.Cloud.Ces.V1Beta {
       serviceBinder.AddMethod(__Method_DeleteScheduledEvaluationRun, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.DeleteScheduledEvaluationRunRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteScheduledEvaluationRun));
       serviceBinder.AddMethod(__Method_TestPersonaVoice, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.TestPersonaVoiceRequest, global::Google.Cloud.Ces.V1Beta.TestPersonaVoiceResponse>(serviceImpl.TestPersonaVoice));
       serviceBinder.AddMethod(__Method_ExportEvaluations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.ExportEvaluationsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportEvaluations));
+      serviceBinder.AddMethod(__Method_ExportEvaluationRuns, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportEvaluationRuns));
+      serviceBinder.AddMethod(__Method_ExportEvaluationResults, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportEvaluationResults));
+      serviceBinder.AddMethod(__Method_RunEvaluationResultMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest, global::Google.LongRunning.Operation>(serviceImpl.RunEvaluationResultMetrics));
     }
 
   }

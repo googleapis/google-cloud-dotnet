@@ -27,53 +27,58 @@ namespace Google.Cloud.Ces.V1Beta {
             "CiJnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS90b29sLnByb3RvEhdnb29nbGUu",
             "Y2xvdWQuY2VzLnYxYmV0YRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxooZ29vZ2xlL2Nsb3Vk",
-            "L2Nlcy92MWJldGEvYWdlbnRfdG9vbC5wcm90bxotZ29vZ2xlL2Nsb3VkL2Nl",
-            "cy92MWJldGEvY2xpZW50X2Z1bmN0aW9uLnByb3RvGiRnb29nbGUvY2xvdWQv",
-            "Y2VzL3YxYmV0YS9jb21tb24ucHJvdG8aLGdvb2dsZS9jbG91ZC9jZXMvdjFi",
-            "ZXRhL2Nvbm5lY3Rvcl90b29sLnByb3RvGi1nb29nbGUvY2xvdWQvY2VzL3Yx",
-            "YmV0YS9kYXRhX3N0b3JlX3Rvb2wucHJvdG8aI2dvb2dsZS9jbG91ZC9jZXMv",
-            "djFiZXRhL2Zha2VzLnByb3RvGi5nb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9m",
-            "aWxlX3NlYXJjaF90b29sLnByb3RvGjBnb29nbGUvY2xvdWQvY2VzL3YxYmV0",
-            "YS9nb29nbGVfc2VhcmNoX3Rvb2wucHJvdG8aJmdvb2dsZS9jbG91ZC9jZXMv",
-            "djFiZXRhL21jcF90b29sLnByb3RvGitnb29nbGUvY2xvdWQvY2VzL3YxYmV0",
-            "YS9vcGVuX2FwaV90b29sLnByb3RvGi1nb29nbGUvY2xvdWQvY2VzL3YxYmV0",
-            "YS9weXRob25fZnVuY3Rpb24ucHJvdG8aKWdvb2dsZS9jbG91ZC9jZXMvdjFi",
-            "ZXRhL3N5c3RlbV90b29sLnByb3RvGilnb29nbGUvY2xvdWQvY2VzL3YxYmV0",
-            "YS93aWRnZXRfdG9vbC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFt",
-            "cC5wcm90byLNCQoEVG9vbBJHCg9jbGllbnRfZnVuY3Rpb24YAiABKAsyJy5n",
-            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YS5DbGllbnRGdW5jdGlvbkID4EEBSAAS",
-            "QgoNb3Blbl9hcGlfdG9vbBgDIAEoCzIkLmdvb2dsZS5jbG91ZC5jZXMudjFi",
-            "ZXRhLk9wZW5BcGlUb29sQgPgQQFIABJMChJnb29nbGVfc2VhcmNoX3Rvb2wY",
-            "BSABKAsyKS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5Hb29nbGVTZWFyY2hU",
-            "b29sQgPgQQFIABJFCg5jb25uZWN0b3JfdG9vbBgIIAEoCzImLmdvb2dsZS5j",
-            "bG91ZC5jZXMudjFiZXRhLkNvbm5lY3RvclRvb2xCA+BBAUgAEkYKD2RhdGFf",
-            "c3RvcmVfdG9vbBgKIAEoCzImLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkRh",
-            "dGFTdG9yZVRvb2xCA+BBAUgAEkcKD3B5dGhvbl9mdW5jdGlvbhgLIAEoCzIn",
-            "Lmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlB5dGhvbkZ1bmN0aW9uQgPgQQFI",
-            "ABI5CghtY3BfdG9vbBgQIAEoCzIgLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
-            "Lk1jcFRvb2xCA+BBAUgAEkgKEGZpbGVfc2VhcmNoX3Rvb2wYESABKAsyJy5n",
-            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YS5GaWxlU2VhcmNoVG9vbEID4EEBSAAS",
-            "PwoLc3lzdGVtX3Rvb2wYEiABKAsyIy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0",
-            "YS5TeXN0ZW1Ub29sQgPgQQFIABI9CgphZ2VudF90b29sGBcgASgLMiIuZ29v",
-            "Z2xlLmNsb3VkLmNlcy52MWJldGEuQWdlbnRUb29sQgPgQQFIABI/Cgt3aWRn",
-            "ZXRfdG9vbBgYIAEoCzIjLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLldpZGdl",
-            "dFRvb2xCA+BBAUgAEhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5X25h",
-            "bWUYDSABKAlCA+BBAxJDCg5leGVjdXRpb25fdHlwZRgMIAEoDjImLmdvb2ds",
-            "ZS5jbG91ZC5jZXMudjFiZXRhLkV4ZWN1dGlvblR5cGVCA+BBARI0CgtjcmVh",
-            "dGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BB",
-            "AxI0Cgt1cGRhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXBCA+BBAxIMCgRldGFnGA4gASgJEh4KEWdlbmVyYXRlZF9zdW1tYXJ5",
-            "GA8gASgJQgPgQQMSRgoQdG9vbF9mYWtlX2NvbmZpZxgUIAEoCzInLmdvb2ds",
-            "ZS5jbG91ZC5jZXMudjFiZXRhLlRvb2xGYWtlQ29uZmlnQgPgQQE6aupBZwoX",
-            "Y2VzLmdvb2dsZWFwaXMuY29tL1Rvb2wSP3Byb2plY3RzL3twcm9qZWN0fS9s",
-            "b2NhdGlvbnMve2xvY2F0aW9ufS9hcHBzL3thcHB9L3Rvb2xzL3t0b29sfSoF",
-            "dG9vbHMyBHRvb2xCCwoJdG9vbF90eXBlQlkKG2NvbS5nb29nbGUuY2xvdWQu",
-            "Y2VzLnYxYmV0YUIJVG9vbFByb3RvUAFaLWNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "Y2VzL2FwaXYxYmV0YS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
+            "L2Nlcy92MWJldGEvYWdlbnRfY2FyZC5wcm90bxooZ29vZ2xlL2Nsb3VkL2Nl",
+            "cy92MWJldGEvYWdlbnRfdG9vbC5wcm90bxotZ29vZ2xlL2Nsb3VkL2Nlcy92",
+            "MWJldGEvY2xpZW50X2Z1bmN0aW9uLnByb3RvGiRnb29nbGUvY2xvdWQvY2Vz",
+            "L3YxYmV0YS9jb21tb24ucHJvdG8aLGdvb2dsZS9jbG91ZC9jZXMvdjFiZXRh",
+            "L2Nvbm5lY3Rvcl90b29sLnByb3RvGi1nb29nbGUvY2xvdWQvY2VzL3YxYmV0",
+            "YS9kYXRhX3N0b3JlX3Rvb2wucHJvdG8aI2dvb2dsZS9jbG91ZC9jZXMvdjFi",
+            "ZXRhL2Zha2VzLnByb3RvGi5nb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9maWxl",
+            "X3NlYXJjaF90b29sLnByb3RvGjBnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9n",
+            "b29nbGVfc2VhcmNoX3Rvb2wucHJvdG8aJmdvb2dsZS9jbG91ZC9jZXMvdjFi",
+            "ZXRhL21jcF90b29sLnByb3RvGitnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9v",
+            "cGVuX2FwaV90b29sLnByb3RvGi1nb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9w",
+            "eXRob25fZnVuY3Rpb24ucHJvdG8aKWdvb2dsZS9jbG91ZC9jZXMvdjFiZXRh",
+            "L3N5c3RlbV90b29sLnByb3RvGilnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS93",
+            "aWRnZXRfdG9vbC5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnBy",
+            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIsoKCgRUb29s",
+            "EkcKD2NsaWVudF9mdW5jdGlvbhgCIAEoCzInLmdvb2dsZS5jbG91ZC5jZXMu",
+            "djFiZXRhLkNsaWVudEZ1bmN0aW9uQgPgQQFIABJCCg1vcGVuX2FwaV90b29s",
+            "GAMgASgLMiQuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuT3BlbkFwaVRvb2xC",
+            "A+BBAUgAEkwKEmdvb2dsZV9zZWFyY2hfdG9vbBgFIAEoCzIpLmdvb2dsZS5j",
+            "bG91ZC5jZXMudjFiZXRhLkdvb2dsZVNlYXJjaFRvb2xCA+BBAUgAEkUKDmNv",
+            "bm5lY3Rvcl90b29sGAggASgLMiYuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
+            "Q29ubmVjdG9yVG9vbEID4EEBSAASRgoPZGF0YV9zdG9yZV90b29sGAogASgL",
+            "MiYuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuRGF0YVN0b3JlVG9vbEID4EEB",
+            "SAASRwoPcHl0aG9uX2Z1bmN0aW9uGAsgASgLMicuZ29vZ2xlLmNsb3VkLmNl",
+            "cy52MWJldGEuUHl0aG9uRnVuY3Rpb25CA+BBAUgAEjkKCG1jcF90b29sGBAg",
+            "ASgLMiAuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuTWNwVG9vbEID4EEBSAAS",
+            "SAoQZmlsZV9zZWFyY2hfdG9vbBgRIAEoCzInLmdvb2dsZS5jbG91ZC5jZXMu",
+            "djFiZXRhLkZpbGVTZWFyY2hUb29sQgPgQQFIABI/CgtzeXN0ZW1fdG9vbBgS",
+            "IAEoCzIjLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLlN5c3RlbVRvb2xCA+BB",
+            "AUgAEj0KCmFnZW50X3Rvb2wYFyABKAsyIi5nb29nbGUuY2xvdWQuY2VzLnYx",
+            "YmV0YS5BZ2VudFRvb2xCA+BBAUgAEj8KC3dpZGdldF90b29sGBggASgLMiMu",
+            "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGEuV2lkZ2V0VG9vbEID4EEBSAASSgoR",
+            "cmVtb3RlX2FnZW50X3Rvb2wYGSABKAsyKC5nb29nbGUuY2xvdWQuY2VzLnYx",
+            "YmV0YS5SZW1vdGVBZ2VudFRvb2xCA+BBAUgAEhEKBG5hbWUYASABKAlCA+BB",
+            "CBIZCgxkaXNwbGF5X25hbWUYDSABKAlCA+BBAxJDCg5leGVjdXRpb25fdHlw",
+            "ZRgMIAEoDjImLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkV4ZWN1dGlvblR5",
+            "cGVCA+BBARIvCgd0aW1lb3V0GBYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uQgPgQQESNAoLY3JlYXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYByABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSDAoEZXRhZxgOIAEoCRIe",
+            "ChFnZW5lcmF0ZWRfc3VtbWFyeRgPIAEoCUID4EEDEkYKEHRvb2xfZmFrZV9j",
+            "b25maWcYFCABKAsyJy5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5Ub29sRmFr",
+            "ZUNvbmZpZ0ID4EEBOmrqQWcKF2Nlcy5nb29nbGVhcGlzLmNvbS9Ub29sEj9w",
+            "cm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXBwcy97",
+            "YXBwfS90b29scy97dG9vbH0qBXRvb2xzMgR0b29sQgsKCXRvb2xfdHlwZUJZ",
+            "Chtjb20uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGFCCVRvb2xQcm90b1ABWi1j",
+            "bG91ZC5nb29nbGUuY29tL2dvL2Nlcy9hcGl2MWJldGEvY2VzcGI7Y2VzcGJi",
+            "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AgentToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ClientFunctionReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ConnectorToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.DataStoreToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.FakesReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.FileSearchToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.GoogleSearchToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.McpToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.OpenApiToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.PythonFunctionReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.SystemToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.WidgetToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AgentCardReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AgentToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ClientFunctionReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ConnectorToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.DataStoreToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.FakesReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.FileSearchToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.GoogleSearchToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.McpToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.OpenApiToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.PythonFunctionReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.SystemToolReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.WidgetToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Tool), global::Google.Cloud.Ces.V1Beta.Tool.Parser, new[]{ "ClientFunction", "OpenApiTool", "GoogleSearchTool", "ConnectorTool", "DataStoreTool", "PythonFunction", "McpTool", "FileSearchTool", "SystemTool", "AgentTool", "WidgetTool", "Name", "DisplayName", "ExecutionType", "CreateTime", "UpdateTime", "Etag", "GeneratedSummary", "ToolFakeConfig" }, new[]{ "ToolType" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Tool), global::Google.Cloud.Ces.V1Beta.Tool.Parser, new[]{ "ClientFunction", "OpenApiTool", "GoogleSearchTool", "ConnectorTool", "DataStoreTool", "PythonFunction", "McpTool", "FileSearchTool", "SystemTool", "AgentTool", "WidgetTool", "RemoteAgentTool", "Name", "DisplayName", "ExecutionType", "Timeout", "CreateTime", "UpdateTime", "Etag", "GeneratedSummary", "ToolFakeConfig" }, new[]{ "ToolType" }, null, null, null)
           }));
     }
     #endregion
@@ -122,6 +127,7 @@ namespace Google.Cloud.Ces.V1Beta {
       name_ = other.name_;
       displayName_ = other.displayName_;
       executionType_ = other.executionType_;
+      timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
@@ -160,6 +166,9 @@ namespace Google.Cloud.Ces.V1Beta {
           break;
         case ToolTypeOneofCase.WidgetTool:
           WidgetTool = other.WidgetTool.Clone();
+          break;
+        case ToolTypeOneofCase.RemoteAgentTool:
+          RemoteAgentTool = other.RemoteAgentTool.Clone();
           break;
       }
 
@@ -338,6 +347,21 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "remote_agent_tool" field.</summary>
+    public const int RemoteAgentToolFieldNumber = 25;
+    /// <summary>
+    /// Optional. The remote agent tool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.RemoteAgentTool RemoteAgentTool {
+      get { return toolTypeCase_ == ToolTypeOneofCase.RemoteAgentTool ? (global::Google.Cloud.Ces.V1Beta.RemoteAgentTool) toolType_ : null; }
+      set {
+        toolType_ = value;
+        toolTypeCase_ = value == null ? ToolTypeOneofCase.None : ToolTypeOneofCase.RemoteAgentTool;
+      }
+    }
+
     /// <summary>Field number for the "name" field.</summary>
     public const int NameFieldNumber = 1;
     private string name_ = "";
@@ -390,6 +414,23 @@ namespace Google.Cloud.Ces.V1Beta {
       get { return executionType_; }
       set {
         executionType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "timeout" field.</summary>
+    public const int TimeoutFieldNumber = 22;
+    private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
+    /// <summary>
+    /// Optional. The timeout for the tool execution. If not set, the default
+    /// timeout is 30 seconds for `SYNCHRONOUS` tools and 60 seconds for
+    /// `ASYNCHRONOUS` tools.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Timeout {
+      get { return timeout_; }
+      set {
+        timeout_ = value;
       }
     }
 
@@ -486,6 +527,7 @@ namespace Google.Cloud.Ces.V1Beta {
       SystemTool = 18,
       AgentTool = 23,
       WidgetTool = 24,
+      RemoteAgentTool = 25,
     }
     private ToolTypeOneofCase toolTypeCase_ = ToolTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -527,9 +569,11 @@ namespace Google.Cloud.Ces.V1Beta {
       if (!object.Equals(SystemTool, other.SystemTool)) return false;
       if (!object.Equals(AgentTool, other.AgentTool)) return false;
       if (!object.Equals(WidgetTool, other.WidgetTool)) return false;
+      if (!object.Equals(RemoteAgentTool, other.RemoteAgentTool)) return false;
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (ExecutionType != other.ExecutionType) return false;
+      if (!object.Equals(Timeout, other.Timeout)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
@@ -554,9 +598,11 @@ namespace Google.Cloud.Ces.V1Beta {
       if (toolTypeCase_ == ToolTypeOneofCase.SystemTool) hash ^= SystemTool.GetHashCode();
       if (toolTypeCase_ == ToolTypeOneofCase.AgentTool) hash ^= AgentTool.GetHashCode();
       if (toolTypeCase_ == ToolTypeOneofCase.WidgetTool) hash ^= WidgetTool.GetHashCode();
+      if (toolTypeCase_ == ToolTypeOneofCase.RemoteAgentTool) hash ^= RemoteAgentTool.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (ExecutionType != global::Google.Cloud.Ces.V1Beta.ExecutionType.Unspecified) hash ^= ExecutionType.GetHashCode();
+      if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
@@ -649,6 +695,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(162, 1);
         output.WriteMessage(ToolFakeConfig);
       }
+      if (timeout_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(Timeout);
+      }
       if (toolTypeCase_ == ToolTypeOneofCase.AgentTool) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(AgentTool);
@@ -656,6 +706,10 @@ namespace Google.Cloud.Ces.V1Beta {
       if (toolTypeCase_ == ToolTypeOneofCase.WidgetTool) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(WidgetTool);
+      }
+      if (toolTypeCase_ == ToolTypeOneofCase.RemoteAgentTool) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(RemoteAgentTool);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -735,6 +789,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(162, 1);
         output.WriteMessage(ToolFakeConfig);
       }
+      if (timeout_ != null) {
+        output.WriteRawTag(178, 1);
+        output.WriteMessage(Timeout);
+      }
       if (toolTypeCase_ == ToolTypeOneofCase.AgentTool) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(AgentTool);
@@ -742,6 +800,10 @@ namespace Google.Cloud.Ces.V1Beta {
       if (toolTypeCase_ == ToolTypeOneofCase.WidgetTool) {
         output.WriteRawTag(194, 1);
         output.WriteMessage(WidgetTool);
+      }
+      if (toolTypeCase_ == ToolTypeOneofCase.RemoteAgentTool) {
+        output.WriteRawTag(202, 1);
+        output.WriteMessage(RemoteAgentTool);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -786,6 +848,9 @@ namespace Google.Cloud.Ces.V1Beta {
       if (toolTypeCase_ == ToolTypeOneofCase.WidgetTool) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(WidgetTool);
       }
+      if (toolTypeCase_ == ToolTypeOneofCase.RemoteAgentTool) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(RemoteAgentTool);
+      }
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
       }
@@ -794,6 +859,9 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (ExecutionType != global::Google.Cloud.Ces.V1Beta.ExecutionType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ExecutionType);
+      }
+      if (timeout_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Timeout);
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -830,6 +898,12 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (other.ExecutionType != global::Google.Cloud.Ces.V1Beta.ExecutionType.Unspecified) {
         ExecutionType = other.ExecutionType;
+      }
+      if (other.timeout_ != null) {
+        if (timeout_ == null) {
+          Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Timeout.MergeFrom(other.Timeout);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -921,6 +995,12 @@ namespace Google.Cloud.Ces.V1Beta {
             WidgetTool = new global::Google.Cloud.Ces.V1Beta.WidgetTool();
           }
           WidgetTool.MergeFrom(other.WidgetTool);
+          break;
+        case ToolTypeOneofCase.RemoteAgentTool:
+          if (RemoteAgentTool == null) {
+            RemoteAgentTool = new global::Google.Cloud.Ces.V1Beta.RemoteAgentTool();
+          }
+          RemoteAgentTool.MergeFrom(other.RemoteAgentTool);
           break;
       }
 
@@ -1065,6 +1145,13 @@ namespace Google.Cloud.Ces.V1Beta {
             input.ReadMessage(ToolFakeConfig);
             break;
           }
+          case 178: {
+            if (timeout_ == null) {
+              Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Timeout);
+            break;
+          }
           case 186: {
             global::Google.Cloud.Ces.V1Beta.AgentTool subBuilder = new global::Google.Cloud.Ces.V1Beta.AgentTool();
             if (toolTypeCase_ == ToolTypeOneofCase.AgentTool) {
@@ -1081,6 +1168,15 @@ namespace Google.Cloud.Ces.V1Beta {
             }
             input.ReadMessage(subBuilder);
             WidgetTool = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Cloud.Ces.V1Beta.RemoteAgentTool subBuilder = new global::Google.Cloud.Ces.V1Beta.RemoteAgentTool();
+            if (toolTypeCase_ == ToolTypeOneofCase.RemoteAgentTool) {
+              subBuilder.MergeFrom(RemoteAgentTool);
+            }
+            input.ReadMessage(subBuilder);
+            RemoteAgentTool = subBuilder;
             break;
           }
         }
@@ -1224,6 +1320,13 @@ namespace Google.Cloud.Ces.V1Beta {
             input.ReadMessage(ToolFakeConfig);
             break;
           }
+          case 178: {
+            if (timeout_ == null) {
+              Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Timeout);
+            break;
+          }
           case 186: {
             global::Google.Cloud.Ces.V1Beta.AgentTool subBuilder = new global::Google.Cloud.Ces.V1Beta.AgentTool();
             if (toolTypeCase_ == ToolTypeOneofCase.AgentTool) {
@@ -1240,6 +1343,15 @@ namespace Google.Cloud.Ces.V1Beta {
             }
             input.ReadMessage(subBuilder);
             WidgetTool = subBuilder;
+            break;
+          }
+          case 202: {
+            global::Google.Cloud.Ces.V1Beta.RemoteAgentTool subBuilder = new global::Google.Cloud.Ces.V1Beta.RemoteAgentTool();
+            if (toolTypeCase_ == ToolTypeOneofCase.RemoteAgentTool) {
+              subBuilder.MergeFrom(RemoteAgentTool);
+            }
+            input.ReadMessage(subBuilder);
+            RemoteAgentTool = subBuilder;
             break;
           }
         }
