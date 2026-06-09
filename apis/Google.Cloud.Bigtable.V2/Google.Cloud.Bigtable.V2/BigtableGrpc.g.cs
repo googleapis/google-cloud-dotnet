@@ -268,6 +268,9 @@ namespace Google.Cloud.Bigtable.V2 {
       /// delimit contiguous sections of the table of approximately equal size,
       /// which can be used to break up the data for distributed tasks like
       /// mapreduces.
+      ///
+      /// If a `row_range` is provided in the request, the returned samples will be
+      /// restricted to the specified range.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="responseStream">Used for sending responses back to the client.</param>
@@ -530,6 +533,9 @@ namespace Google.Cloud.Bigtable.V2 {
       /// delimit contiguous sections of the table of approximately equal size,
       /// which can be used to break up the data for distributed tasks like
       /// mapreduces.
+      ///
+      /// If a `row_range` is provided in the request, the returned samples will be
+      /// restricted to the specified range.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -546,6 +552,9 @@ namespace Google.Cloud.Bigtable.V2 {
       /// delimit contiguous sections of the table of approximately equal size,
       /// which can be used to break up the data for distributed tasks like
       /// mapreduces.
+      ///
+      /// If a `row_range` is provided in the request, the returned samples will be
+      /// restricted to the specified range.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

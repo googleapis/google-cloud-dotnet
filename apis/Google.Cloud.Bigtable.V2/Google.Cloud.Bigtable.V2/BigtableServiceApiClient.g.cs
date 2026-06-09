@@ -562,6 +562,9 @@ namespace Google.Cloud.Bigtable.V2
         /// delimit contiguous sections of the table of approximately equal size,
         /// which can be used to break up the data for distributed tasks like
         /// mapreduces.
+        /// 
+        /// If a `row_range` is provided in the request, the returned samples will be
+        /// restricted to the specified range.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -574,6 +577,9 @@ namespace Google.Cloud.Bigtable.V2
         /// delimit contiguous sections of the table of approximately equal size,
         /// which can be used to break up the data for distributed tasks like
         /// mapreduces.
+        /// 
+        /// If a `row_range` is provided in the request, the returned samples will be
+        /// restricted to the specified range.
         /// </summary>
         /// <param name="tableName">
         /// Optional. The unique name of the table from which to sample row keys.
@@ -594,6 +600,9 @@ namespace Google.Cloud.Bigtable.V2
         /// delimit contiguous sections of the table of approximately equal size,
         /// which can be used to break up the data for distributed tasks like
         /// mapreduces.
+        /// 
+        /// If a `row_range` is provided in the request, the returned samples will be
+        /// restricted to the specified range.
         /// </summary>
         /// <param name="tableName">
         /// Optional. The unique name of the table from which to sample row keys.
@@ -614,6 +623,9 @@ namespace Google.Cloud.Bigtable.V2
         /// delimit contiguous sections of the table of approximately equal size,
         /// which can be used to break up the data for distributed tasks like
         /// mapreduces.
+        /// 
+        /// If a `row_range` is provided in the request, the returned samples will be
+        /// restricted to the specified range.
         /// </summary>
         /// <param name="tableName">
         /// Optional. The unique name of the table from which to sample row keys.
@@ -639,6 +651,9 @@ namespace Google.Cloud.Bigtable.V2
         /// delimit contiguous sections of the table of approximately equal size,
         /// which can be used to break up the data for distributed tasks like
         /// mapreduces.
+        /// 
+        /// If a `row_range` is provided in the request, the returned samples will be
+        /// restricted to the specified range.
         /// </summary>
         /// <param name="tableName">
         /// Optional. The unique name of the table from which to sample row keys.
@@ -3518,6 +3533,9 @@ namespace Google.Cloud.Bigtable.V2
         /// delimit contiguous sections of the table of approximately equal size,
         /// which can be used to break up the data for distributed tasks like
         /// mapreduces.
+        /// 
+        /// If a `row_range` is provided in the request, the returned samples will be
+        /// restricted to the specified range.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
