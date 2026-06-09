@@ -26,15 +26,18 @@ namespace Google.Cloud.Ces.V1Beta {
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9weXRob25fZnVuY3Rpb24ucHJv",
             "dG8SF2dvb2dsZS5jbG91ZC5jZXMudjFiZXRhGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvIlcKDlB5dGhvbkZ1bmN0aW9uEhEKBG5hbWUYASAB",
-            "KAlCA+BBARIYCgtweXRob25fY29kZRgCIAEoCUID4EEBEhgKC2Rlc2NyaXB0",
-            "aW9uGAMgASgJQgPgQQNCYwobY29tLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRh",
-            "QhNQeXRob25GdW5jdGlvblByb3RvUAFaLWNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "Y2VzL2FwaXYxYmV0YS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
+            "X2JlaGF2aW9yLnByb3RvGiRnb29nbGUvY2xvdWQvY2VzL3YxYmV0YS9jb21t",
+            "b24ucHJvdG8irwEKDlB5dGhvbkZ1bmN0aW9uEhEKBG5hbWUYASABKAlCA+BB",
+            "ARIYCgtweXRob25fY29kZRgCIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAMg",
+            "ASgJQgPgQQMSVgoYc2VydmljZV9kaXJlY3RvcnlfY29uZmlnGAQgASgLMi8u",
+            "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGEuU2VydmljZURpcmVjdG9yeUNvbmZp",
+            "Z0ID4EEBQmMKG2NvbS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YUITUHl0aG9u",
+            "RnVuY3Rpb25Qcm90b1ABWi1jbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9hcGl2",
+            "MWJldGEvY2VzcGI7Y2VzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.PythonFunction), global::Google.Cloud.Ces.V1Beta.PythonFunction.Parser, new[]{ "Name", "PythonCode", "Description" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.PythonFunction), global::Google.Cloud.Ces.V1Beta.PythonFunction.Parser, new[]{ "Name", "PythonCode", "Description", "ServiceDirectoryConfig" }, null, null, null, null)
           }));
     }
     #endregion
@@ -82,6 +85,7 @@ namespace Google.Cloud.Ces.V1Beta {
       name_ = other.name_;
       pythonCode_ = other.pythonCode_;
       description_ = other.description_;
+      serviceDirectoryConfig_ = other.serviceDirectoryConfig_ != null ? other.serviceDirectoryConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -139,6 +143,21 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "service_directory_config" field.</summary>
+    public const int ServiceDirectoryConfigFieldNumber = 4;
+    private global::Google.Cloud.Ces.V1Beta.ServiceDirectoryConfig serviceDirectoryConfig_;
+    /// <summary>
+    /// Optional. Service Directory configuration for the tool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.ServiceDirectoryConfig ServiceDirectoryConfig {
+      get { return serviceDirectoryConfig_; }
+      set {
+        serviceDirectoryConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -157,6 +176,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (Name != other.Name) return false;
       if (PythonCode != other.PythonCode) return false;
       if (Description != other.Description) return false;
+      if (!object.Equals(ServiceDirectoryConfig, other.ServiceDirectoryConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -167,6 +187,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (PythonCode.Length != 0) hash ^= PythonCode.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (serviceDirectoryConfig_ != null) hash ^= ServiceDirectoryConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -197,6 +218,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(Description);
       }
+      if (serviceDirectoryConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ServiceDirectoryConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -219,6 +244,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(26);
         output.WriteString(Description);
       }
+      if (serviceDirectoryConfig_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ServiceDirectoryConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -237,6 +266,9 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (serviceDirectoryConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceDirectoryConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -258,6 +290,12 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.serviceDirectoryConfig_ != null) {
+        if (serviceDirectoryConfig_ == null) {
+          ServiceDirectoryConfig = new global::Google.Cloud.Ces.V1Beta.ServiceDirectoryConfig();
+        }
+        ServiceDirectoryConfig.MergeFrom(other.ServiceDirectoryConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -290,6 +328,13 @@ namespace Google.Cloud.Ces.V1Beta {
             Description = input.ReadString();
             break;
           }
+          case 34: {
+            if (serviceDirectoryConfig_ == null) {
+              ServiceDirectoryConfig = new global::Google.Cloud.Ces.V1Beta.ServiceDirectoryConfig();
+            }
+            input.ReadMessage(ServiceDirectoryConfig);
+            break;
+          }
         }
       }
     #endif
@@ -319,6 +364,13 @@ namespace Google.Cloud.Ces.V1Beta {
           }
           case 26: {
             Description = input.ReadString();
+            break;
+          }
+          case 34: {
+            if (serviceDirectoryConfig_ == null) {
+              ServiceDirectoryConfig = new global::Google.Cloud.Ces.V1Beta.ServiceDirectoryConfig();
+            }
+            input.ReadMessage(ServiceDirectoryConfig);
             break;
           }
         }

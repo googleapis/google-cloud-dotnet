@@ -385,6 +385,18 @@
                 "DeleteScheduledEvaluationRunAsync"
               ]
             },
+            "ExportEvaluationResults": {
+              "methods": [
+                "ExportEvaluationResults",
+                "ExportEvaluationResultsAsync"
+              ]
+            },
+            "ExportEvaluationRuns": {
+              "methods": [
+                "ExportEvaluationRuns",
+                "ExportEvaluationRunsAsync"
+              ]
+            },
             "ExportEvaluations": {
               "methods": [
                 "ExportEvaluations",
@@ -479,6 +491,12 @@
               "methods": [
                 "RunEvaluation",
                 "RunEvaluationAsync"
+              ]
+            },
+            "RunEvaluationResultMetrics": {
+              "methods": [
+                "RunEvaluationResultMetrics",
+                "RunEvaluationResultMetricsAsync"
               ]
             },
             "TestPersonaVoice": {

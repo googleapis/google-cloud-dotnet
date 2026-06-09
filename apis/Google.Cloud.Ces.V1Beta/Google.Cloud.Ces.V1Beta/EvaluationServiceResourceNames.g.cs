@@ -20,6 +20,19 @@ using gccv = Google.Cloud.Ces.V1Beta;
 
 namespace Google.Cloud.Ces.V1Beta
 {
+    public partial class RunEvaluationResultMetricsRequest
+    {
+        /// <summary>
+        /// <see cref="EvaluationResultName"/>-typed view over the <see cref="EvaluationResultId"/> resource name
+        /// property.
+        /// </summary>
+        public EvaluationResultName EvaluationResultIdAsEvaluationResultName
+        {
+            get => string.IsNullOrEmpty(EvaluationResultId) ? null : EvaluationResultName.Parse(EvaluationResultId, allowUnparsed: true);
+            set => EvaluationResultId = value?.ToString() ?? "";
+        }
+    }
+
     public partial class RunEvaluationResponse
     {
         /// <summary>
@@ -359,6 +372,44 @@ namespace Google.Cloud.Ces.V1Beta
         public gax::ResourceNameList<EvaluationName> EvaluationNames
         {
             get => new gax::ResourceNameList<EvaluationName>(Names, s => string.IsNullOrEmpty(s) ? null : EvaluationName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class ExportEvaluationResultsRequest
+    {
+        /// <summary>
+        /// <see cref="EvaluationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public EvaluationName ParentAsEvaluationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : EvaluationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="EvaluationResultName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<EvaluationResultName> EvaluationResultNames
+        {
+            get => new gax::ResourceNameList<EvaluationResultName>(Names, s => string.IsNullOrEmpty(s) ? null : EvaluationResultName.Parse(s, allowUnparsed: true));
+        }
+    }
+
+    public partial class ExportEvaluationRunsRequest
+    {
+        /// <summary><see cref="AppName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public AppName ParentAsAppName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : AppName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="EvaluationRunName"/>-typed view over the <see cref="Names"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<EvaluationRunName> EvaluationRunNames
+        {
+            get => new gax::ResourceNameList<EvaluationRunName>(Names, s => string.IsNullOrEmpty(s) ? null : EvaluationRunName.Parse(s, allowUnparsed: true));
         }
     }
 }

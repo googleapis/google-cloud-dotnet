@@ -22,6 +22,7 @@ namespace GoogleCSharpSnippets
     using Google.Protobuf;
     using Google.Protobuf.WellKnownTypes;
     using System;
+    using System.Collections.Generic;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -4711,6 +4712,607 @@ namespace GoogleCSharpSnippets
             {
                 // If it has completed, then access the result
                 ExportEvaluationsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationRuns</summary>
+        public void ExportEvaluationRunsRequestObject()
+        {
+            // Snippet: ExportEvaluationRuns(ExportEvaluationRunsRequest, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            ExportEvaluationRunsRequest request = new ExportEvaluationRunsRequest
+            {
+                ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                EvaluationRunNames =
+                {
+                    EvaluationRunName.FromProjectLocationAppEvaluationRun("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION_RUN]"),
+                },
+                ExportOptions = new ExportOptions(),
+            };
+            // Make the request
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> response = evaluationServiceClient.ExportEvaluationRuns(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportEvaluationRunsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceExportEvaluationRuns(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationRunsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationRunsAsync</summary>
+        public async Task ExportEvaluationRunsRequestObjectAsync()
+        {
+            // Snippet: ExportEvaluationRunsAsync(ExportEvaluationRunsRequest, CallSettings)
+            // Additional: ExportEvaluationRunsAsync(ExportEvaluationRunsRequest, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportEvaluationRunsRequest request = new ExportEvaluationRunsRequest
+            {
+                ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
+                EvaluationRunNames =
+                {
+                    EvaluationRunName.FromProjectLocationAppEvaluationRun("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION_RUN]"),
+                },
+                ExportOptions = new ExportOptions(),
+            };
+            // Make the request
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> response = await evaluationServiceClient.ExportEvaluationRunsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportEvaluationRunsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceExportEvaluationRunsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationRunsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationRuns</summary>
+        public void ExportEvaluationRuns()
+        {
+            // Snippet: ExportEvaluationRuns(string, IEnumerable<string>, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluationRuns/[EVALUATION_RUN]",
+            };
+            // Make the request
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> response = evaluationServiceClient.ExportEvaluationRuns(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportEvaluationRunsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceExportEvaluationRuns(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationRunsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationRunsAsync</summary>
+        public async Task ExportEvaluationRunsAsync()
+        {
+            // Snippet: ExportEvaluationRunsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: ExportEvaluationRunsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluationRuns/[EVALUATION_RUN]",
+            };
+            // Make the request
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> response = await evaluationServiceClient.ExportEvaluationRunsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportEvaluationRunsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceExportEvaluationRunsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationRunsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationRuns</summary>
+        public void ExportEvaluationRunsResourceNames()
+        {
+            // Snippet: ExportEvaluationRuns(AppName, IEnumerable<EvaluationRunName>, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            AppName parent = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]");
+            IEnumerable<EvaluationRunName> names = new EvaluationRunName[]
+            {
+                EvaluationRunName.FromProjectLocationAppEvaluationRun("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION_RUN]"),
+            };
+            // Make the request
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> response = evaluationServiceClient.ExportEvaluationRuns(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportEvaluationRunsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceExportEvaluationRuns(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationRunsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationRunsAsync</summary>
+        public async Task ExportEvaluationRunsResourceNamesAsync()
+        {
+            // Snippet: ExportEvaluationRunsAsync(AppName, IEnumerable<EvaluationRunName>, CallSettings)
+            // Additional: ExportEvaluationRunsAsync(AppName, IEnumerable<EvaluationRunName>, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AppName parent = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]");
+            IEnumerable<EvaluationRunName> names = new EvaluationRunName[]
+            {
+                EvaluationRunName.FromProjectLocationAppEvaluationRun("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION_RUN]"),
+            };
+            // Make the request
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> response = await evaluationServiceClient.ExportEvaluationRunsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportEvaluationRunsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationRunsResponse, ExportEvaluationRunsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceExportEvaluationRunsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationRunsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationResults</summary>
+        public void ExportEvaluationResultsRequestObject()
+        {
+            // Snippet: ExportEvaluationResults(ExportEvaluationResultsRequest, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            ExportEvaluationResultsRequest request = new ExportEvaluationResultsRequest
+            {
+                ParentAsEvaluationName = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]"),
+                EvaluationResultNames =
+                {
+                    EvaluationResultName.FromProjectLocationAppEvaluationEvaluationResult("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]", "[EVALUATION_RESULT]"),
+                },
+                ExportOptions = new ExportOptions(),
+            };
+            // Make the request
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> response = evaluationServiceClient.ExportEvaluationResults(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportEvaluationResultsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceExportEvaluationResults(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationResultsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationResultsAsync</summary>
+        public async Task ExportEvaluationResultsRequestObjectAsync()
+        {
+            // Snippet: ExportEvaluationResultsAsync(ExportEvaluationResultsRequest, CallSettings)
+            // Additional: ExportEvaluationResultsAsync(ExportEvaluationResultsRequest, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportEvaluationResultsRequest request = new ExportEvaluationResultsRequest
+            {
+                ParentAsEvaluationName = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]"),
+                EvaluationResultNames =
+                {
+                    EvaluationResultName.FromProjectLocationAppEvaluationEvaluationResult("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]", "[EVALUATION_RESULT]"),
+                },
+                ExportOptions = new ExportOptions(),
+            };
+            // Make the request
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> response = await evaluationServiceClient.ExportEvaluationResultsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportEvaluationResultsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceExportEvaluationResultsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationResultsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationResults</summary>
+        public void ExportEvaluationResults()
+        {
+            // Snippet: ExportEvaluationResults(string, IEnumerable<string>, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]/results/[EVALUATION_RESULT]",
+            };
+            // Make the request
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> response = evaluationServiceClient.ExportEvaluationResults(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportEvaluationResultsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceExportEvaluationResults(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationResultsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationResultsAsync</summary>
+        public async Task ExportEvaluationResultsAsync()
+        {
+            // Snippet: ExportEvaluationResultsAsync(string, IEnumerable<string>, CallSettings)
+            // Additional: ExportEvaluationResultsAsync(string, IEnumerable<string>, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]";
+            IEnumerable<string> names = new string[]
+            {
+                "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]/results/[EVALUATION_RESULT]",
+            };
+            // Make the request
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> response = await evaluationServiceClient.ExportEvaluationResultsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportEvaluationResultsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceExportEvaluationResultsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationResultsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationResults</summary>
+        public void ExportEvaluationResultsResourceNames()
+        {
+            // Snippet: ExportEvaluationResults(EvaluationName, IEnumerable<EvaluationResultName>, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            EvaluationName parent = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]");
+            IEnumerable<EvaluationResultName> names = new EvaluationResultName[]
+            {
+                EvaluationResultName.FromProjectLocationAppEvaluationEvaluationResult("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]", "[EVALUATION_RESULT]"),
+            };
+            // Make the request
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> response = evaluationServiceClient.ExportEvaluationResults(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ExportEvaluationResultsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceExportEvaluationResults(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationResultsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportEvaluationResultsAsync</summary>
+        public async Task ExportEvaluationResultsResourceNamesAsync()
+        {
+            // Snippet: ExportEvaluationResultsAsync(EvaluationName, IEnumerable<EvaluationResultName>, CallSettings)
+            // Additional: ExportEvaluationResultsAsync(EvaluationName, IEnumerable<EvaluationResultName>, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EvaluationName parent = EvaluationName.FromProjectLocationAppEvaluation("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]");
+            IEnumerable<EvaluationResultName> names = new EvaluationResultName[]
+            {
+                EvaluationResultName.FromProjectLocationAppEvaluationEvaluationResult("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]", "[EVALUATION_RESULT]"),
+            };
+            // Make the request
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> response = await evaluationServiceClient.ExportEvaluationResultsAsync(parent, names);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ExportEvaluationResultsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ExportEvaluationResultsResponse, ExportEvaluationResultsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceExportEvaluationResultsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ExportEvaluationResultsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunEvaluationResultMetrics</summary>
+        public void RunEvaluationResultMetricsRequestObject()
+        {
+            // Snippet: RunEvaluationResultMetrics(RunEvaluationResultMetricsRequest, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            RunEvaluationResultMetricsRequest request = new RunEvaluationResultMetricsRequest
+            {
+                EvaluationResultIdAsEvaluationResultName = EvaluationResultName.FromProjectLocationAppEvaluationEvaluationResult("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]", "[EVALUATION_RESULT]"),
+            };
+            // Make the request
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> response = evaluationServiceClient.RunEvaluationResultMetrics(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunEvaluationResultMetricsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceRunEvaluationResultMetrics(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunEvaluationResultMetricsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunEvaluationResultMetricsAsync</summary>
+        public async Task RunEvaluationResultMetricsRequestObjectAsync()
+        {
+            // Snippet: RunEvaluationResultMetricsAsync(RunEvaluationResultMetricsRequest, CallSettings)
+            // Additional: RunEvaluationResultMetricsAsync(RunEvaluationResultMetricsRequest, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RunEvaluationResultMetricsRequest request = new RunEvaluationResultMetricsRequest
+            {
+                EvaluationResultIdAsEvaluationResultName = EvaluationResultName.FromProjectLocationAppEvaluationEvaluationResult("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]", "[EVALUATION_RESULT]"),
+            };
+            // Make the request
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> response = await evaluationServiceClient.RunEvaluationResultMetricsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunEvaluationResultMetricsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceRunEvaluationResultMetricsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunEvaluationResultMetricsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunEvaluationResultMetrics</summary>
+        public void RunEvaluationResultMetrics()
+        {
+            // Snippet: RunEvaluationResultMetrics(string, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            string evaluationResultId = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]/results/[EVALUATION_RESULT]";
+            // Make the request
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> response = evaluationServiceClient.RunEvaluationResultMetrics(evaluationResultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunEvaluationResultMetricsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceRunEvaluationResultMetrics(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunEvaluationResultMetricsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunEvaluationResultMetricsAsync</summary>
+        public async Task RunEvaluationResultMetricsAsync()
+        {
+            // Snippet: RunEvaluationResultMetricsAsync(string, CallSettings)
+            // Additional: RunEvaluationResultMetricsAsync(string, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string evaluationResultId = "projects/[PROJECT]/locations/[LOCATION]/apps/[APP]/evaluations/[EVALUATION]/results/[EVALUATION_RESULT]";
+            // Make the request
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> response = await evaluationServiceClient.RunEvaluationResultMetricsAsync(evaluationResultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunEvaluationResultMetricsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceRunEvaluationResultMetricsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunEvaluationResultMetricsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunEvaluationResultMetrics</summary>
+        public void RunEvaluationResultMetricsResourceNames()
+        {
+            // Snippet: RunEvaluationResultMetrics(EvaluationResultName, CallSettings)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = EvaluationServiceClient.Create();
+            // Initialize request argument(s)
+            EvaluationResultName evaluationResultId = EvaluationResultName.FromProjectLocationAppEvaluationEvaluationResult("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]", "[EVALUATION_RESULT]");
+            // Make the request
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> response = evaluationServiceClient.RunEvaluationResultMetrics(evaluationResultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            RunEvaluationResultMetricsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> retrievedResponse = evaluationServiceClient.PollOnceRunEvaluationResultMetrics(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunEvaluationResultMetricsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RunEvaluationResultMetricsAsync</summary>
+        public async Task RunEvaluationResultMetricsResourceNamesAsync()
+        {
+            // Snippet: RunEvaluationResultMetricsAsync(EvaluationResultName, CallSettings)
+            // Additional: RunEvaluationResultMetricsAsync(EvaluationResultName, CancellationToken)
+            // Create client
+            EvaluationServiceClient evaluationServiceClient = await EvaluationServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EvaluationResultName evaluationResultId = EvaluationResultName.FromProjectLocationAppEvaluationEvaluationResult("[PROJECT]", "[LOCATION]", "[APP]", "[EVALUATION]", "[EVALUATION_RESULT]");
+            // Make the request
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> response = await evaluationServiceClient.RunEvaluationResultMetricsAsync(evaluationResultId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            RunEvaluationResultMetricsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<RunEvaluationResultMetricsResponse, RunEvaluationResultMetricsOperationMetadata> retrievedResponse = await evaluationServiceClient.PollOnceRunEvaluationResultMetricsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                RunEvaluationResultMetricsResponse retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }

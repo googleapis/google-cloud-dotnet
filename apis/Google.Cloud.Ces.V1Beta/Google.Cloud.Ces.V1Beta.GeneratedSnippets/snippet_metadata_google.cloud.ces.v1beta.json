@@ -26165,6 +26165,899 @@
       ]
     },
     {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationRuns_sync",
+      "title": "ExportEvaluationRunsRequestObject",
+      "description": "Snippet for ExportEvaluationRuns",
+      "file": "EvaluationServiceClient.ExportEvaluationRunsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationRuns",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationRunsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationRunsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationRuns",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationRuns",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationRuns_async",
+      "title": "ExportEvaluationRunsRequestObjectAsync",
+      "description": "Snippet for ExportEvaluationRunsAsync",
+      "file": "EvaluationServiceClient.ExportEvaluationRunsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationRunsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationRunsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.ExportEvaluationRunsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationRunsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationRunsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationRuns",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationRuns",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationRuns_sync_flattened",
+      "title": "ExportEvaluationRuns",
+      "description": "Snippet for ExportEvaluationRuns",
+      "file": "EvaluationServiceClient.ExportEvaluationRunsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationRuns",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationRuns",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationRunsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationRunsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationRuns",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationRuns",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationRuns_async_flattened",
+      "title": "ExportEvaluationRunsAsync",
+      "description": "Snippet for ExportEvaluationRunsAsync",
+      "file": "EvaluationServiceClient.ExportEvaluationRunsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationRunsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationRunsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationRunsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationRunsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationRuns",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationRuns",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationRuns_sync_flattened_resourceNames",
+      "title": "ExportEvaluationRunsResourceNames",
+      "description": "Snippet for ExportEvaluationRuns",
+      "file": "EvaluationServiceClient.ExportEvaluationRunsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationRuns",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationRuns",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationRunName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationRunsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationRunsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationRuns",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationRuns",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationRuns_async_flattened_resourceNames",
+      "title": "ExportEvaluationRunsResourceNamesAsync",
+      "description": "Snippet for ExportEvaluationRunsAsync",
+      "file": "EvaluationServiceClient.ExportEvaluationRunsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationRunsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationRunsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.AppName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationRunName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationRunsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationRunsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationRuns",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationRuns",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationResults_sync",
+      "title": "ExportEvaluationResultsRequestObject",
+      "description": "Snippet for ExportEvaluationResults",
+      "file": "EvaluationServiceClient.ExportEvaluationResultsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationResults",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationResultsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationResultsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationResults",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationResults_async",
+      "title": "ExportEvaluationResultsRequestObjectAsync",
+      "description": "Snippet for ExportEvaluationResultsAsync",
+      "file": "EvaluationServiceClient.ExportEvaluationResultsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationResultsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationResultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.ExportEvaluationResultsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationResultsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationResultsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationResults",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 67,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 65,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationResults_sync_flattened",
+      "title": "ExportEvaluationResults",
+      "description": "Snippet for ExportEvaluationResults",
+      "file": "EvaluationServiceClient.ExportEvaluationResultsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationResults",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationResults",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationResultsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationResultsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationResults",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationResults_async_flattened",
+      "title": "ExportEvaluationResultsAsync",
+      "description": "Snippet for ExportEvaluationResultsAsync",
+      "file": "EvaluationServiceClient.ExportEvaluationResultsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationResultsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationResultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.Collections.Generic.IEnumerable",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationResultsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationResultsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationResults",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationResults_sync_flattened_resourceNames",
+      "title": "ExportEvaluationResultsResourceNames",
+      "description": "Snippet for ExportEvaluationResults",
+      "file": "EvaluationServiceClient.ExportEvaluationResultsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationResults",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationResults",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationResultName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationResultsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationResultsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationResults",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_ExportEvaluationResults_async_flattened_resourceNames",
+      "title": "ExportEvaluationResultsResourceNamesAsync",
+      "description": "Snippet for ExportEvaluationResultsAsync",
+      "file": "EvaluationServiceClient.ExportEvaluationResultsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ExportEvaluationResultsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.ExportEvaluationResultsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationResultName",
+            "name": "names"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.ExportEvaluationResultsResponse, Google.Cloud.Ces.V1Beta.ExportEvaluationResultsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "ExportEvaluationResults",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.ExportEvaluationResults",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_RunEvaluationResultMetrics_sync",
+      "title": "RunEvaluationResultMetricsRequestObject",
+      "description": "Snippet for RunEvaluationResultMetrics",
+      "file": "EvaluationServiceClient.RunEvaluationResultMetricsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationResultMetrics",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.RunEvaluationResultMetrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsResponse, Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "RunEvaluationResultMetrics",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.RunEvaluationResultMetrics",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_RunEvaluationResultMetrics_async",
+      "title": "RunEvaluationResultMetricsRequestObjectAsync",
+      "description": "Snippet for RunEvaluationResultMetricsAsync",
+      "file": "EvaluationServiceClient.RunEvaluationResultMetricsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationResultMetricsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.RunEvaluationResultMetricsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsResponse, Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "RunEvaluationResultMetrics",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.RunEvaluationResultMetrics",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_RunEvaluationResultMetrics_sync_flattened",
+      "title": "RunEvaluationResultMetrics",
+      "description": "Snippet for RunEvaluationResultMetrics",
+      "file": "EvaluationServiceClient.RunEvaluationResultMetricsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationResultMetrics",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.RunEvaluationResultMetrics",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "evaluationResultId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsResponse, Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "RunEvaluationResultMetrics",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.RunEvaluationResultMetrics",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_RunEvaluationResultMetrics_async_flattened",
+      "title": "RunEvaluationResultMetricsAsync",
+      "description": "Snippet for RunEvaluationResultMetricsAsync",
+      "file": "EvaluationServiceClient.RunEvaluationResultMetricsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationResultMetricsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.RunEvaluationResultMetricsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "evaluationResultId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsResponse, Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "RunEvaluationResultMetrics",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.RunEvaluationResultMetrics",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_RunEvaluationResultMetrics_sync_flattened_resourceNames",
+      "title": "RunEvaluationResultMetricsResourceNames",
+      "description": "Snippet for RunEvaluationResultMetrics",
+      "file": "EvaluationServiceClient.RunEvaluationResultMetricsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationResultMetrics",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.RunEvaluationResultMetrics",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationResultName",
+            "name": "evaluationResultId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsResponse, Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsOperationMetadata>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "RunEvaluationResultMetrics",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.RunEvaluationResultMetrics",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 58,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 56,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "ces_v1beta_generated_EvaluationService_RunEvaluationResultMetrics_async_flattened_resourceNames",
+      "title": "RunEvaluationResultMetricsResourceNamesAsync",
+      "description": "Snippet for RunEvaluationResultMetricsAsync",
+      "file": "EvaluationServiceClient.RunEvaluationResultMetricsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "RunEvaluationResultMetricsAsync",
+        "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient.RunEvaluationResultMetricsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Ces.V1Beta.EvaluationResultName",
+            "name": "evaluationResultId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsResponse, Google.Cloud.Ces.V1Beta.RunEvaluationResultMetricsOperationMetadata>>",
+        "client": {
+          "shortName": "EvaluationServiceClient",
+          "fullName": "Google.Cloud.Ces.V1Beta.EvaluationServiceClient"
+        },
+        "method": {
+          "shortName": "RunEvaluationResultMetrics",
+          "fullName": "google.cloud.ces.v1beta.EvaluationService.RunEvaluationResultMetrics",
+          "service": {
+            "shortName": "EvaluationService",
+            "fullName": "google.cloud.ces.v1beta.EvaluationService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "ces_v1beta_generated_SessionService_RunSession_sync",
       "title": "RunSessionRequestObject",
       "description": "Snippet for RunSession",
@@ -26589,12 +27482,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -26638,12 +27531,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 46,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 44,
+          "end": 45,
           "type": "SHORT"
         }
       ]
