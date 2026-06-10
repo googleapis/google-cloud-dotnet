@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 ModelResponseData = new DataItem(),
                 UserPrompt = "",
                 MultiLanguageDetectionMetadata = new MultiLanguageDetectionMetadata(),
+                StreamingMode = StreamingMode.Unspecified,
             };
             // Make the request
             SanitizeModelResponseResponse response = await modelArmorClient.SanitizeModelResponseAsync(request);
