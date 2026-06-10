@@ -52,7 +52,7 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
     public SubscriberClientImpl(SubscriptionName subscriptionName, IEnumerable<SubscriberServiceApiClient> clients, Settings settings, Func<Task> shutdown)
         : this(subscriptionName, clients, settings, shutdown, TaskHelper.Default) { }
 
-    internal SubscriberClientImpl(SubscriptionName subscriptionName, IEnumerable<SubscriberServiceApiClient> clients, Settings settings, Func<Task> shutdown, TaskHelper taskHelper)
+    internal SubscriberClientImpl(SubscriptionName subscriptionName, IEnumerable<SubscriberServiceApiClient> clients, Settings settings, Func<Task> shutdown, TaskHelper taskHelper, TimeSpan? streamPongPeriod = null)
     {
         SubscriptionName = GaxPreconditions.CheckNotNull(subscriptionName, nameof(subscriptionName));
         GaxPreconditions.CheckNotNull(clients, nameof(clients));
@@ -78,7 +78,14 @@ public sealed partial class SubscriberClientImpl : SubscriberClient
             Timeout = settings.DisposeTimeout ?? DefaultDisposeTimeout
         };
         Logger = settings.Logger;
+        StreamPongPeriod = streamPongPeriod;
     }
+
+    /// <summary>
+    /// For testing only. The deadline duration before the next expected Keep-Alive Pong from the server is due. 
+    /// Defaults to 15 seconds if not specified.
+    /// </summary>
+    internal TimeSpan? StreamPongPeriod { get; }
 
     private readonly object _lock = new object();
     private readonly SubscriberServiceApiClient[] _clients;

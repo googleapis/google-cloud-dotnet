@@ -126,9 +126,6 @@ public sealed partial class SubscriberClientImpl
             retryFilter: _ => false // Ignored
             );
 
-        // Stream shutdown occurs after 1 minute, so ensure we're always before that.
-        private static readonly TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(25);
-
         // This dictionary will only have ids that can be retried for temporary errors while calling Acknowledgement or ModifyAckDeadline RPCs.
         // We store the first time of error corresponding to the AckId, so that we retry only for specified duration
         // which is a requirement for exactly once delivery subscription.
@@ -179,6 +176,7 @@ public sealed partial class SubscriberClientImpl
         private bool _exactlyOnceDeliveryEnabled = false; // True if subscription is exactly once, else false.
         private bool _messageOrderingEnabled = false; // True if subscription has ordering enabled, else false.
         private readonly RetryState _retryState;
+        private readonly KeepAliveMonitor _keepAliveMonitor;
         private readonly ILogger _logger;
         private readonly int _clientIndex; // The index of this client within the overall SubscriberClient, in the range 1-ClientCount. Only used for logging.
 
@@ -219,6 +217,7 @@ public sealed partial class SubscriberClientImpl
             _continuationQueue = new AsyncSingleRecvQueue<TaskNextAction>(subscriber._taskHelper);
             _logger = subscriber.Logger;
             _retryState = new RetryState(clock, _logger, s_defaultPullRetryTiming, TimeSpan.FromSeconds(0.5), _clientIndex);
+            _keepAliveMonitor = new KeepAliveMonitor(clock, subscriber._scheduler, subscriber._taskHelper, subscriber.StreamPongPeriod);
         }
 
         internal async Task StartAsync()
@@ -357,9 +356,11 @@ public sealed partial class SubscriberClientImpl
                 SubscriptionAsSubscriptionName = _subscriptionName,
                 StreamAckDeadlineSeconds = EffectiveLeaseTiming.AckDeadlineSeconds,
                 MaxOutstandingMessages = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingElementCount,
-                MaxOutstandingBytes = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingByteCount
+                MaxOutstandingBytes = _useLegacyFlowControl ? 0 : _flow.MaxOutstandingByteCount,
+                ProtocolVersion = KeepAliveMonitor.StreamProtocolVersion
             });
             Add(initTask, Next(true, () => HandlePullMoveNext(initTask)));
+            _keepAliveMonitor.OnStreamStarted();
         }
 
         /// <summary>
@@ -386,6 +387,17 @@ public sealed partial class SubscriberClientImpl
         private void RestartPullAfterRetriableFailure(Exception e)
         {
             _logger?.LogDebug(e, "Recoverable error in streaming pull for client {index}; will retry.", _clientIndex);
+            StopStreamingPull();
+            StartStreamingPull();
+        }
+
+        /// <summary>
+        /// Restarts the streaming pull immediately when the keep-alive deadline is exceeded.
+        /// </summary>
+        private void RestartPullOnDeadline()
+        {
+            _logger?.LogDebug("Keep alive signal from service not received as expected for client {index}; restarting stream.", _clientIndex);
+            _retryState.OnDeadStream();
             StopStreamingPull();
             StartStreamingPull();
         }
@@ -419,14 +431,20 @@ public sealed partial class SubscriberClientImpl
             {
                 // Call MoveNext to receive more messages.
                 // Cancellation is handled by the cancellation-token passed when the stream is created.
-                var moveNextTask = _pull.GrpcCall.ResponseStream.MoveNext(CancellationToken.None);
-                Add(moveNextTask, Next(true, () => HandlePullMessageData(moveNextTask)));
+                var moveNextTask = _pull.GrpcCall.ResponseStream.MoveNext(default);
+                var monitoredMoveNextTask = _keepAliveMonitor.Monitor(moveNextTask);
+                Add(monitoredMoveNextTask, Next(true, () => HandlePullMessageData(moveNextTask)));
             }
         }
 
         // Message-stream has messages (or not, depending on moveNextResult)
         private void HandlePullMessageData(Task<bool> moveNextTask)
         {
+            if (!moveNextTask.IsCompleted)
+            {
+                RestartPullOnDeadline();
+                return;
+            }
             if (moveNextTask.Exception is Exception ex)
             {
                 RestartPullOrThrow(ex);
@@ -442,6 +460,12 @@ public sealed partial class SubscriberClientImpl
                 try
                 {
                     current = _pull.GrpcCall.ResponseStream.Current;
+                    if (current.ReceivedMessages.Count == 0)
+                    {
+                        // Empty keep-alive response (pong), with no subscription properties set; nothing to do, but schedule the next read.
+                        Add(Task.CompletedTask, Next(true, () => HandlePullMoveNext(null)));
+                        return;
+                    }
                     _exactlyOnceDeliveryEnabled = current.SubscriptionProperties?.ExactlyOnceDeliveryEnabled ?? false;
                     _messageOrderingEnabled = current.SubscriptionProperties?.MessageOrderingEnabled ?? false;
                 }
@@ -453,6 +477,7 @@ public sealed partial class SubscriberClientImpl
                 var receivedMessages = current.ReceivedMessages;
                 var msgs = receivedMessages.ToList();
                 receivedMessages.Clear();
+
                 // Get all ack-ids, used to extend leases as required.
                 var msgIds = new HashSet<string>(msgs.Select(x => x.AckId));
                 _receiptModAckForExactlyOnceDelivery = _exactlyOnceDeliveryEnabled;
@@ -1165,14 +1190,14 @@ public sealed partial class SubscriberClientImpl
                 return;
             }
             // Schedule next ping, this never stops whilst this subscriber as active
-            Add(_scheduler.Delay(s_streamPingPeriod, _pullCts.Token), Next(false, HandleStreamPing));
-            // If messages are currently being processed, then ping the stream periodically;
-            // this ensures the stream isn't closed.
+            Add(_scheduler.Delay(KeepAliveMonitor.s_streamPingPeriod, _pullCts.Token), Next(false, HandleStreamPing));
+            // Ping the stream periodically; this ensures the stream isn't closed.
             // If the stream is closed, then all gRPC-buffered messages have their server-side
             // expiry timers started, when the client hasn't yet started processing these messages.
             // This can lead to unncessarily duplicated messages.
-            if (!IsPushComplete() && _pull != null)
+            if (_pull != null)
             {
+                _keepAliveMonitor.RecordPing();
                 // Write an empty message to the stream.
                 // Don't wait for this to complete, it doesn't matter if or when it completes.
                 // This is only a best-effort attempt to reduce duplicate messages.
@@ -1390,6 +1415,118 @@ public sealed partial class SubscriberClientImpl
                 OnSuccess();
                 // Backoff briefly.
                 Backoff = _disconnectBackoff;
+            }
+
+            internal void OnDeadStream()
+            {
+                // We will be recreating the stream so increment the backoff.
+                Backoff = _backoffTiming.NextBackoff(Backoff ?? TimeSpan.Zero);
+            }
+        }
+
+        private class KeepAliveMonitor
+        {
+            // Protocol V1 contract: Client sends pings every 30s, and a pong from the service is expected within 15s.
+            internal const long StreamProtocolVersion = 1;
+            internal static readonly TimeSpan s_streamPingPeriod = TimeSpan.FromSeconds(30);
+            private static readonly TimeSpan s_defaultStreamPongPeriod = TimeSpan.FromSeconds(15);
+            private static readonly TimeSpan s_streamTimeoutGracePeriod = TimeSpan.FromSeconds(1);
+
+            private readonly IClock _clock;
+            private readonly IScheduler _scheduler;
+            private readonly TaskHelper _taskHelper;
+            private readonly TimeSpan _streamPongPeriod;
+            private readonly TimeSpan _nextStreamPongPeriod;
+            private long _lastPingTicks;
+            private long _lastPongTicks;
+
+            internal KeepAliveMonitor(IClock clock, IScheduler scheduler, TaskHelper taskHelper, TimeSpan? streamPongPeriod = null)
+            {
+                _clock = clock;
+                _scheduler = scheduler;
+                _taskHelper = taskHelper;
+                _streamPongPeriod = streamPongPeriod ?? s_defaultStreamPongPeriod;
+                _nextStreamPongPeriod = s_streamPingPeriod + _streamPongPeriod;
+            }
+
+            /// <summary>
+            /// Resets the keep-alive state when a new streaming pull session starts.
+            /// </summary>
+            internal void OnStreamStarted()
+            {
+                // Stream initialization does not trigger a keep-alive response. We assume an initial pong
+                // to allow sufficient time (30s ping interval + 15s pong deadline) for the first scheduled
+                // ping/pong cycle to complete, preventing a premature timeout at startup.
+                long nowTicks = _clock.GetCurrentDateTimeUtc().Ticks;
+                _lastPingTicks = nowTicks;
+                Interlocked.Exchange(ref _lastPongTicks, nowTicks);
+            }
+
+            internal void RecordPing()
+            {
+                _lastPingTicks = _clock.GetCurrentDateTimeUtc().Ticks;
+            }
+
+            private void RecordPong()
+            {
+                long nowTicks = _clock.GetCurrentDateTimeUtc().Ticks;
+                Interlocked.Exchange(ref _lastPongTicks, nowTicks);
+            }
+
+            /// <summary>
+            /// Monitors the given task to ensure it completes within the keep-alive timeout.
+            /// </summary>
+            /// <param name="original">The task representing the operation to monitor.</param>
+            /// <returns>A task representing the monitored operation.</returns>
+            internal Task Monitor(Task<bool> original)
+            {
+                var delayCts = new CancellationTokenSource();
+                Task delay = _scheduler.Delay(GetTimeTillNextPong(), delayCts.Token);
+
+                return Task.WhenAny(DelayWithCleanup(), OriginalWithPongRecorded());
+
+                async Task OriginalWithPongRecorded()
+                {
+                    try
+                    {
+                        await _taskHelper.ConfigureAwait(original);
+                        RecordPong();
+                        delayCts.Cancel();
+                    }
+                    catch (Exception) when (delay.Status == TaskStatus.RanToCompletion)
+                    {
+                        // No-op. We do this to observe the exception that will be thrown when deadline
+                        // hits and the original task fails.
+                    }
+                }
+
+                async Task DelayWithCleanup()
+                {
+                    try
+                    {
+                        await _taskHelper.ConfigureAwait(delay);
+                    }
+                    finally
+                    {
+                        // Either this finished or was cancelled, in either case we are no longer using the
+                        // CancellationTokenSource and so can dispose of it.
+                        delayCts.Dispose();
+                    }
+                }
+            }
+
+            /// <summary>
+            /// Calculates the remaining time before the next expected pong from the server is due.
+            /// </summary>
+            private TimeSpan GetTimeTillNextPong()
+            {
+                long lastPingTicks = _lastPingTicks;
+                long lastPongTicks = Interlocked.Read(ref _lastPongTicks);
+                bool pongReceived = lastPongTicks >= lastPingTicks;
+
+                var elapsed = TimeSpan.FromTicks(_clock.GetCurrentDateTimeUtc().Ticks - lastPingTicks);
+                var delay = pongReceived ? _nextStreamPongPeriod - elapsed : _streamPongPeriod - elapsed;
+                return delay > s_streamTimeoutGracePeriod ? delay : s_streamTimeoutGracePeriod;
             }
         }
     }
