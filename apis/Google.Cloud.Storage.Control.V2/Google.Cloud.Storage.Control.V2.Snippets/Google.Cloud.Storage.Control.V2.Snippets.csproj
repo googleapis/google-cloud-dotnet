@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFrameworks>net8.0;net462</TargetFrameworks>
@@ -15,6 +15,7 @@
     <PackageReference Include="Xunit.SkippableFact" />
     <PackageReference Include="xunit" />
     <PackageReference Include="xunit.runner.visualstudio" />
+    <ProjectReference Include="..\..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
 </Project>
