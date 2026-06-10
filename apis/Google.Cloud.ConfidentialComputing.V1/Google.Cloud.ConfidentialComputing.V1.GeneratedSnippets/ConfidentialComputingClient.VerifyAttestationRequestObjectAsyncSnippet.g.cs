@@ -45,6 +45,7 @@ namespace GoogleCSharpSnippets
                 TdCcel = new TdxCcelAttestation(),
                 Attester = "",
                 NvidiaAttestation = new NvidiaAttestation(),
+                InstanceAsInstanceName = InstanceName.FromProjectZoneInstance("[PROJECT]", "[ZONE]", "[INSTANCE]"),
             };
             // Make the request
             VerifyAttestationResponse response = await confidentialComputingClient.VerifyAttestationAsync(request);
