@@ -28,7 +28,7 @@
       "allowedVersions": "<9.0.0"
     },
     {
-      "matchPaths": [
+      "matchFileNames": [
         "apis/Google.Cloud.Diagnostics.AspNetCore3/**"
       ],
       "matchPackagePrefixes": [
@@ -37,7 +37,7 @@
       "allowedVersions": "<3.2.0"
     },
     {
-      "matchPaths": [
+      "matchFileNames": [
         "apis/Google.Cloud.Dialogflow.V2/**"
       ],
       "matchPackagePrefixes": [
