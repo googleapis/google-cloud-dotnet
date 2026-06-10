@@ -370,7 +370,8 @@
         "System.Collections.Immutable",
         "dotnet-sdk"
       ],
-      "allowedVersions": "<9.0.0"
+      "allowedVersions": "<9.0.0",
+      "minimumReleaseAge": "7 days"
     },
     {
       "matchPaths": [
