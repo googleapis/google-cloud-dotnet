@@ -25,28 +25,32 @@ namespace Google.Cloud.Firestore.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiBnb29nbGUvZmlyZXN0b3JlL3YxL2NvbW1vbi5wcm90bxITZ29vZ2xlLmZp",
-            "cmVzdG9yZS52MRofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIj",
-            "CgxEb2N1bWVudE1hc2sSEwoLZmllbGRfcGF0aHMYASADKAkiZQoMUHJlY29u",
-            "ZGl0aW9uEhAKBmV4aXN0cxgBIAEoCEgAEjEKC3VwZGF0ZV90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEgAQhAKDmNvbmRpdGlvbl90",
-            "eXBlIqkCChJUcmFuc2FjdGlvbk9wdGlvbnMSRQoJcmVhZF9vbmx5GAIgASgL",
-            "MjAuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVh",
-            "ZE9ubHlIABJHCgpyZWFkX3dyaXRlGAMgASgLMjEuZ29vZ2xlLmZpcmVzdG9y",
-            "ZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZFdyaXRlSAAaJgoJUmVhZFdy",
-            "aXRlEhkKEXJldHJ5X3RyYW5zYWN0aW9uGAEgASgMGlMKCFJlYWRPbmx5Ei8K",
-            "CXJlYWRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBI",
-            "AEIWChRjb25zaXN0ZW5jeV9zZWxlY3RvckIGCgRtb2RlQsMBChdjb20uZ29v",
-            "Z2xlLmZpcmVzdG9yZS52MUILQ29tbW9uUHJvdG9QAVo7Y2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9maXJlc3RvcmUvYXBpdjEvZmlyZXN0b3JlcGI7ZmlyZXN0b3Jl",
-            "cGKiAgRHQ0ZTqgIZR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5WMcoCGUdvb2ds",
-            "ZVxDbG91ZFxGaXJlc3RvcmVcVjHqAhxHb29nbGU6OkNsb3VkOjpGaXJlc3Rv",
-            "cmU6OlYxYgZwcm90bzM="));
+            "cmVzdG9yZS52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxof",
+            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byIjCgxEb2N1bWVudE1h",
+            "c2sSEwoLZmllbGRfcGF0aHMYASADKAkiZQoMUHJlY29uZGl0aW9uEhAKBmV4",
+            "aXN0cxgBIAEoCEgAEjEKC3VwZGF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEgAQhAKDmNvbmRpdGlvbl90eXBlItcDChJUcmFu",
+            "c2FjdGlvbk9wdGlvbnMSRQoJcmVhZF9vbmx5GAIgASgLMjAuZ29vZ2xlLmZp",
+            "cmVzdG9yZS52MS5UcmFuc2FjdGlvbk9wdGlvbnMuUmVhZE9ubHlIABJHCgpy",
+            "ZWFkX3dyaXRlGAMgASgLMjEuZ29vZ2xlLmZpcmVzdG9yZS52MS5UcmFuc2Fj",
+            "dGlvbk9wdGlvbnMuUmVhZFdyaXRlSAAafgoJUmVhZFdyaXRlEhkKEXJldHJ5",
+            "X3RyYW5zYWN0aW9uGAEgASgMElYKEGNvbmN1cnJlbmN5X21vZGUYAiABKA4y",
+            "Ny5nb29nbGUuZmlyZXN0b3JlLnYxLlRyYW5zYWN0aW9uT3B0aW9ucy5Db25j",
+            "dXJyZW5jeU1vZGVCA+BBARpTCghSZWFkT25seRIvCglyZWFkX3RpbWUYAiAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wSABCFgoUY29uc2lzdGVu",
+            "Y3lfc2VsZWN0b3IiVAoPQ29uY3VycmVuY3lNb2RlEiAKHENPTkNVUlJFTkNZ",
+            "X01PREVfVU5TUEVDSUZJRUQQABIOCgpPUFRJTUlTVElDEAESDwoLUEVTU0lN",
+            "SVNUSUMQAkIGCgRtb2RlQsMBChdjb20uZ29vZ2xlLmZpcmVzdG9yZS52MUIL",
+            "Q29tbW9uUHJvdG9QAVo7Y2xvdWQuZ29vZ2xlLmNvbS9nby9maXJlc3RvcmUv",
+            "YXBpdjEvZmlyZXN0b3JlcGI7ZmlyZXN0b3JlcGKiAgRHQ0ZTqgIZR29vZ2xl",
+            "LkNsb3VkLkZpcmVzdG9yZS5WMcoCGUdvb2dsZVxDbG91ZFxGaXJlc3RvcmVc",
+            "VjHqAhxHb29nbGU6OkNsb3VkOjpGaXJlc3RvcmU6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.DocumentMask), global::Google.Cloud.Firestore.V1.DocumentMask.Parser, new[]{ "FieldPaths" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.Precondition), global::Google.Cloud.Firestore.V1.Precondition.Parser, new[]{ "Exists", "UpdateTime" }, new[]{ "ConditionType" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions), global::Google.Cloud.Firestore.V1.TransactionOptions.Parser, new[]{ "ReadOnly", "ReadWrite" }, new[]{ "Mode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "RetryTransaction" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions), global::Google.Cloud.Firestore.V1.TransactionOptions.Parser, new[]{ "ReadOnly", "ReadWrite" }, new[]{ "Mode" }, new[]{ typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadWrite.Parser, new[]{ "RetryTransaction", "ConcurrencyMode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly), global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ReadOnly.Parser, new[]{ "ReadTime" }, new[]{ "ConsistencySelector" }, null, null, null)})
           }));
     }
@@ -867,10 +871,25 @@ namespace Google.Cloud.Firestore.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
+      /// The type of concurrency control mode for transactions.
+      /// </summary>
+      public enum ConcurrencyMode {
+        /// <summary>
+        /// Start the transaction with the database-level default concurrency mode.
+        /// </summary>
+        [pbr::OriginalName("CONCURRENCY_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Use optimistic concurrency control for the new transaction.
+        /// </summary>
+        [pbr::OriginalName("OPTIMISTIC")] Optimistic = 1,
+        /// <summary>
+        /// Use pessimistic concurrency control for the new transaction.
+        /// </summary>
+        [pbr::OriginalName("PESSIMISTIC")] Pessimistic = 2,
+      }
+
+      /// <summary>
       /// Options for a transaction that can be used to read and write documents.
-      ///
-      /// Firestore does not allow 3rd party auth requests to create read-write.
-      /// transactions.
       /// </summary>
       [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
       public sealed partial class ReadWrite : pb::IMessage<ReadWrite>
@@ -908,6 +927,7 @@ namespace Google.Cloud.Firestore.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ReadWrite(ReadWrite other) : this() {
           retryTransaction_ = other.retryTransaction_;
+          concurrencyMode_ = other.concurrencyMode_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -932,6 +952,28 @@ namespace Google.Cloud.Firestore.V1 {
           }
         }
 
+        /// <summary>Field number for the "concurrency_mode" field.</summary>
+        public const int ConcurrencyModeFieldNumber = 2;
+        private global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode concurrencyMode_ = global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode.Unspecified;
+        /// <summary>
+        /// Optional. The concurrency control mode to use for this transaction.
+        ///
+        /// A database is able to use different concurrency modes for different
+        /// transactions simultaneously.
+        ///
+        /// 3rd party auth requests are only allowed to create optimistic
+        /// read-write transactions and must specify that here even if the
+        /// database-level setting is already configured to optimistic.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode ConcurrencyMode {
+          get { return concurrencyMode_; }
+          set {
+            concurrencyMode_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -948,6 +990,7 @@ namespace Google.Cloud.Firestore.V1 {
             return true;
           }
           if (RetryTransaction != other.RetryTransaction) return false;
+          if (ConcurrencyMode != other.ConcurrencyMode) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -956,6 +999,7 @@ namespace Google.Cloud.Firestore.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (RetryTransaction.Length != 0) hash ^= RetryTransaction.GetHashCode();
+          if (ConcurrencyMode != global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode.Unspecified) hash ^= ConcurrencyMode.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -978,6 +1022,10 @@ namespace Google.Cloud.Firestore.V1 {
             output.WriteRawTag(10);
             output.WriteBytes(RetryTransaction);
           }
+          if (ConcurrencyMode != global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ConcurrencyMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -992,6 +1040,10 @@ namespace Google.Cloud.Firestore.V1 {
             output.WriteRawTag(10);
             output.WriteBytes(RetryTransaction);
           }
+          if (ConcurrencyMode != global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) ConcurrencyMode);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1004,6 +1056,9 @@ namespace Google.Cloud.Firestore.V1 {
           int size = 0;
           if (RetryTransaction.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeBytesSize(RetryTransaction);
+          }
+          if (ConcurrencyMode != global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConcurrencyMode);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -1019,6 +1074,9 @@ namespace Google.Cloud.Firestore.V1 {
           }
           if (other.RetryTransaction.Length != 0) {
             RetryTransaction = other.RetryTransaction;
+          }
+          if (other.ConcurrencyMode != global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode.Unspecified) {
+            ConcurrencyMode = other.ConcurrencyMode;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -1043,6 +1101,10 @@ namespace Google.Cloud.Firestore.V1 {
                 RetryTransaction = input.ReadBytes();
                 break;
               }
+              case 16: {
+                ConcurrencyMode = (global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode) input.ReadEnum();
+                break;
+              }
             }
           }
         #endif
@@ -1064,6 +1126,10 @@ namespace Google.Cloud.Firestore.V1 {
                 break;
               case 10: {
                 RetryTransaction = input.ReadBytes();
+                break;
+              }
+              case 16: {
+                ConcurrencyMode = (global::Google.Cloud.Firestore.V1.TransactionOptions.Types.ConcurrencyMode) input.ReadEnum();
                 break;
               }
             }

@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 Database = "",
                 StructuredPipeline = new StructuredPipeline(),
                 Transaction = ByteString.Empty,
+                AutoCommitTransaction = false,
             };
             // Make the request, returning a streaming response
             using FirestoreClient.ExecutePipelineStream response = firestoreClient.ExecutePipeline(request);
