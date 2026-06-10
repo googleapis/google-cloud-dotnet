@@ -1147,6 +1147,9 @@ namespace Google.Cloud.Firestore.V1
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// For example:
         /// `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+        /// 
+        /// Use `projects/{project_id}/databases/{database_id}/documents` to list
+        /// top-level collections.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1183,6 +1186,9 @@ namespace Google.Cloud.Firestore.V1
         /// `projects/{project_id}/databases/{database_id}/documents/{document_path}`.
         /// For example:
         /// `projects/my-project/databases/my-database/documents/chatrooms/my-chatroom`
+        /// 
+        /// Use `projects/{project_id}/databases/{database_id}/documents` to list
+        /// top-level collections.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
