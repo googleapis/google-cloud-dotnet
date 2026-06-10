@@ -54,6 +54,7 @@ namespace Google.Cloud.PubSub.V1.Tests
             public static ServerAction Inf() => new ServerAction(TimeSpan.FromDays(365), null, null, null);
             public static ServerAction BadMoveNext(TimeSpan preInterval, RpcException ex) => new ServerAction(preInterval, null, ex, null);
             public static ServerAction BadCurrent(TimeSpan preInterval, RpcException ex) => new ServerAction(preInterval, null, null, ex);
+            public static ServerAction Pong(TimeSpan preInterval) => new ServerAction(preInterval, Array.Empty<string>(), null, null);
 
             private ServerAction(TimeSpan preInterval, IEnumerable<string> msgs, RpcException moveNextEx, RpcException currentEx, int? deliveryAttempt = null)
             {
@@ -500,16 +501,18 @@ namespace Google.Cloud.PubSub.V1.Tests
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
                 bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null,
-                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null) =>
+                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null,
+                TimeSpan? streamPongPeriod = null) =>
                 Create(new[] { msgs }, ackDeadline, ackExtendWindow, flowMaxElements, flowMaxBytes, clientCount: 1, threadCount,
-                    writeAsyncPreDelay, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled, disposeTimeout);
+                    writeAsyncPreDelay, useMsgAsId, ackModifyAckDeadlineAction, isExactlyOnceDelivery, messageOrderingEnabled, disposeTimeout, streamPongPeriod);
 
             public static Fake Create(IReadOnlyList<IEnumerable<ServerAction>> msgs,
                 TimeSpan? ackDeadline = null, TimeSpan? ackExtendWindow = null,
                 int? flowMaxElements = null, int? flowMaxBytes = null,
                 int clientCount = 1, int threadCount = 1, TimeSpan? writeAsyncPreDelay = null,
                 bool useMsgAsId = false, AckModifyAckDeadlineAction ackModifyAckDeadlineAction = null,
-                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null)
+                bool isExactlyOnceDelivery = false, bool messageOrderingEnabled = false, TimeSpan? disposeTimeout = null,
+                TimeSpan? streamPongPeriod = null)
             {
                 var scheduler = new TestScheduler(threadCount: threadCount);
                 TaskHelper taskHelper = scheduler.TaskHelper;
@@ -534,7 +537,8 @@ namespace Google.Cloud.PubSub.V1.Tests
                     clientShutdowns.Locked(() => clientShutdowns.Add(scheduler.Clock.GetCurrentDateTimeUtc()));
                     return Task.FromResult(0);
                 }
-                var subs = new SubscriberClientImpl(new SubscriptionName("projectid", "subscriptionid"), clients, settings, Shutdown, taskHelper);
+                // Default the pong period to 100 years to simplify tests that aren't validating keep alive.
+                var subs = new SubscriberClientImpl(new SubscriptionName("projectid", "subscriptionid"), clients, settings, Shutdown, taskHelper, streamPongPeriod ?? TimeSpan.FromDays(36500));
                 return new Fake
                 {
                     Scheduler = scheduler,
@@ -1153,7 +1157,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         [Theory, CombinatorialData]
         public void StreamPings(ShutdownMode shutdownMode)
         {
-            const int pingPeriodSeconds = 25; // From SubscriberClient.
+            const int pingPeriodSeconds = 30; // From SubscriberClient.
             const int pingCount = 10;
             var msgs = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "1" }), ServerAction.Inf() };
             using (var fake = Fake.Create(new[] { msgs }))
@@ -1163,17 +1167,118 @@ namespace Google.Cloud.PubSub.V1.Tests
                 {
                     var incompleteTcs = new TaskCompletionSource<SubscriberClient.Reply>();
                     var subTask = fake.Subscriber.StartAsync((msg, ct) => incompleteTcs.Task);
+                    var initialWait = TimeSpan.FromSeconds(pingPeriodSeconds * pingCount) + TimeSpan.FromSeconds(1);
+                    var secondaryWait = TimeSpan.FromSeconds(pingPeriodSeconds * 4);
                     // Wait for the time required for pingCount stream pings.
-                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(pingPeriodSeconds * pingCount) + TimeSpan.FromSeconds(1), CancellationToken.None));
+                    await th.ConfigureAwait(fake.Scheduler.Delay(initialWait, CancellationToken.None));
                     // Complete the handler task, which will cause pings to stop.
                     incompleteTcs.SetCanceled();
                     // Wait a bit longer, to check no more pings happen.
-                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(pingPeriodSeconds * 4), CancellationToken.None));
+                    await th.ConfigureAwait(fake.Scheduler.Delay(secondaryWait, CancellationToken.None));
                     // Stop subscriber.
                     await th.ConfigureAwait(fake.Subscriber.StopAsync(new ShutdownOptions { Mode = shutdownMode }));
                     await th.ConfigureAwait(subTask);
-                    var expectedPings = Enumerable.Range(0, pingCount).Select(i => fake.Time0 + TimeSpan.FromSeconds(pingPeriodSeconds * (i + 1)));
+                    // Pings continue every 30s until StopAsync. Total count includes the initial ping at T=0 plus one for each elapsed interval.
+                    var totalDuration = initialWait + secondaryWait;
+                    var expectedPingCount = (int)Math.Floor(totalDuration.TotalSeconds / pingPeriodSeconds) + 1;
+                    var expectedPings = Enumerable.Range(0, expectedPingCount).Select(i => fake.Time0 + TimeSpan.FromSeconds(pingPeriodSeconds * i));
                     Assert.Equal(expectedPings, fake.Subscribers[0].StreamPings);
+                });
+            }
+        }
+
+        [Fact]
+        public void StreamTimeoutRestarts()
+        {
+            var msgs1 = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg1" }), ServerAction.Inf() };
+            var msgs2 = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg2" }), ServerAction.Inf() };
+            using (var fake = Fake.Create(new List<IEnumerable<ServerAction>> { msgs1, msgs2 }, streamPongPeriod: TimeSpan.FromSeconds(15)))
+            {
+                var th = fake.TaskHelper;
+                var handledMsgs = new List<string>();
+                fake.Scheduler.Run(async () =>
+                {
+                    var subTask = fake.Subscriber.StartAsync((msg, ct) =>
+                    {
+                        handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                        return Task.FromResult(SubscriberClient.Reply.Ack);
+                    });
+                    // Wait for more than the timeout.
+                    // The first stream starts at T=0.
+                    // Ping is scheduled for T=30.
+                    // If no response by T=45, it should timeout.
+                    // We wait 50s to ensure the timeout (at T=45) fires and restart completes.
+                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(50), CancellationToken.None));
+
+                    // Stop subscriber.
+                    await th.ConfigureAwait(fake.Subscriber.StopAsync(new ShutdownOptions { Mode = ShutdownMode.WaitForProcessing }));
+                    await th.ConfigureAwait(subTask);
+
+                    // We expect 2 streaming pulls (initial + restart).
+                    Assert.Equal(2, fake.Subscribers[0].StreamingPulls.Count);
+                    // We expect both messages to be processed.
+                    Assert.Equal(new[] { "msg1", "msg2" }, handledMsgs);
+                });
+            }
+        }
+
+        [Fact]
+        public void NoStreamRestartWhenActivelyReceivingPongs()
+        {
+            // Send protocol Pongs (empty payloads) to keep the stream alive.
+            var msgs = new[]
+            {
+                ServerAction.Pong(TimeSpan.FromSeconds(45)),
+                ServerAction.Pong(TimeSpan.FromSeconds(30)),
+                ServerAction.Pong(TimeSpan.FromSeconds(30)),
+                ServerAction.Pong(TimeSpan.FromSeconds(30)),
+                ServerAction.Inf()
+            };
+            using (var fake = Fake.CreateClientForSingleResponseStream(msgs, streamPongPeriod: TimeSpan.FromSeconds(15)))
+            {
+                var th = fake.TaskHelper;
+                fake.Scheduler.Run(async () =>
+                {
+                    var startTask = fake.Subscriber.StartAsync((msg, ct) => Task.FromResult(SubscriberClient.Reply.Ack));
+                    // Wait for 105s. Since Data arrives first after 45s then every 30s timeout should never trigger.
+                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(105), CancellationToken.None));
+                    await th.ConfigureAwait(fake.Subscriber.StopAsync(new ShutdownOptions { Mode = ShutdownMode.WaitForProcessing }));
+                    await th.ConfigureAwait(startTask);
+
+                    // Verify exactly 1 streaming pull was used (no restarts).
+                    Assert.Equal(1, fake.Subscribers[0].StreamingPulls.Count);
+                });
+            }
+        }
+
+        [Fact]
+        public void ShutdownWhenWaitingOnMoveNext()
+        {
+            var msgs = new[] { ServerAction.Data(TimeSpan.Zero, new[] { "msg1" }), ServerAction.Inf() };
+            using (var fake = Fake.CreateClientForSingleResponseStream(msgs, streamPongPeriod: TimeSpan.FromSeconds(15)))
+            {
+                var th = fake.TaskHelper;
+                var handledMsgs = new List<string>();
+                fake.Scheduler.Run(async () =>
+                {
+                    var startTask = fake.Subscriber.StartAsync((msg, ct) =>
+                    {
+                        handledMsgs.Locked(() => handledMsgs.Add(msg.Data.ToStringUtf8()));
+                        return Task.FromResult(SubscriberClient.Reply.Ack);
+                    });
+                    // Wait 5s. At T=0s, msg1 is processed instantly. At T=5s, the subscriber is actively
+                    // blocked waiting on the next message (Inf() interval) with the Pong Monitor loop engaged.
+                    await th.ConfigureAwait(fake.Scheduler.Delay(TimeSpan.FromSeconds(5), CancellationToken.None));
+                    var stopTask = fake.Subscriber.StopAsync(new ShutdownOptions { Mode = ShutdownMode.WaitForProcessing });
+
+                    // StopAsync cancels the in-flight read and its engaged Pong Monitor loop, exiting instantly.
+                    await th.ConfigureAwait(stopTask);
+                    await th.ConfigureAwait(startTask);
+
+                    var elapsed = fake.Scheduler.Clock.GetCurrentDateTimeUtc() - fake.Time0;
+                    Assert.True(elapsed.TotalSeconds < 30, $"Shutdown waited for the ping/pong interval. Elapsed seconds: {elapsed.TotalSeconds}");
+                    Assert.Equal(new[] { "msg1" }, handledMsgs);
+                    Assert.Equal(1, fake.Subscribers[0].StreamingPulls.Count);
                 });
             }
         }
