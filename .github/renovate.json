@@ -357,6 +357,11 @@
   "ignoreDeps": [
     "Grpc.Core"
   ],
+  "enabledManagers": [
+    "github-actions",
+    "dockerfile",
+    "nuget"
+  ],
   "packageRules": [
     {
       "matchPackagePrefixes": [
