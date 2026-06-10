@@ -1,4 +1,8 @@
 {
+  "enabledManagers": [
+    "nuget",
+    "github-actions"
+  ],
   "extends": [
     "config:base",
     ":disableDependencyDashboard"
