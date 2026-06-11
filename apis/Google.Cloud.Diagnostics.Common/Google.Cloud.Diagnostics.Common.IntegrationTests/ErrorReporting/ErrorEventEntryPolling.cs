@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             : base(timeout, sleepInterval)
         { }
 
-        public static ErrorEventEntryPolling Default { get; } = new ErrorEventEntryPolling(null, null);
+        public static ErrorEventEntryPolling Default { get; } = new ErrorEventEntryPolling(TimeSpan.FromMinutes(15), null);
 
         public static ErrorEventEntryPolling NoRetry { get; } = new ErrorEventEntryPolling(TimeSpan.Zero, TimeSpan.Zero);
 
