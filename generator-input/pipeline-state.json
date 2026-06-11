@@ -4491,6 +4491,15 @@
             ]
         },
         {
+            "id": "Google.Cloud.Tools.SecretManagerHelper",
+            "nextVersion": "0.1.0",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "sourcePaths": [
+                "tools/Google.Cloud.Tools.SecretManagerHelper"
+            ]
+        },
+        {
             "id": "Google.Shopping.Merchant.Conversions.V1",
             "currentVersion": "1.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
