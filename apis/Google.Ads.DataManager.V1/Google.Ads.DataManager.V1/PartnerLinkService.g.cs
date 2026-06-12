@@ -41,50 +41,86 @@ namespace Google.Ads.DataManager.V1 {
             "ASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSEwoGZmlsdGVyGAQgASgJQgPgQQEi",
             "dAoaU2VhcmNoUGFydG5lckxpbmtzUmVzcG9uc2USPQoNcGFydG5lcl9saW5r",
             "cxgBIAMoCzImLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUGFydG5lckxp",
-            "bmsSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIuUCCgtQYXJ0bmVyTGluaxIR",
+            "bmsSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJItcECgtQYXJ0bmVyTGluaxIR",
             "CgRuYW1lGAEgASgJQgPgQQgSHAoPcGFydG5lcl9saW5rX2lkGAIgASgJQgPg",
             "QQMSRgoOb3duaW5nX2FjY291bnQYAyABKAsyKS5nb29nbGUuYWRzLmRhdGFt",
             "YW5hZ2VyLnYxLlByb2R1Y3RBY2NvdW50QgPgQQISRwoPcGFydG5lcl9hY2Nv",
             "dW50GAQgASgLMikuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5Qcm9kdWN0",
-            "QWNjb3VudEID4EECOpMB6kGPAQomZGF0YW1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b20vUGFydG5lckxpbmsSSmFjY291bnRUeXBlcy97YWNjb3VudF90eXBlfS9h",
-            "Y2NvdW50cy97YWNjb3VudH0vcGFydG5lckxpbmtzL3twYXJ0bmVyX2xpbmt9",
-            "KgxwYXJ0bmVyTGlua3MyC3BhcnRuZXJMaW5rMuYFChJQYXJ0bmVyTGlua1Nl",
-            "cnZpY2US0QEKEUNyZWF0ZVBhcnRuZXJMaW5rEjMuZ29vZ2xlLmFkcy5kYXRh",
-            "bWFuYWdlci52MS5DcmVhdGVQYXJ0bmVyTGlua1JlcXVlc3QaJi5nb29nbGUu",
-            "YWRzLmRhdGFtYW5hZ2VyLnYxLlBhcnRuZXJMaW5rIl/aQRNwYXJlbnQscGFy",
-            "dG5lcl9saW5rgtPkkwJDIjMvdjEve3BhcmVudD1hY2NvdW50VHlwZXMvKi9h",
-            "Y2NvdW50cy8qfS9wYXJ0bmVyTGlua3M6DHBhcnRuZXJfbGluaxKkAQoRRGVs",
-            "ZXRlUGFydG5lckxpbmsSMy5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkRl",
-            "bGV0ZVBhcnRuZXJMaW5rUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0",
-            "eSJC2kEEbmFtZYLT5JMCNSozL3YxL3tuYW1lPWFjY291bnRUeXBlcy8qL2Fj",
-            "Y291bnRzLyovcGFydG5lckxpbmtzLyp9Es4BChJTZWFyY2hQYXJ0bmVyTGlu",
-            "a3MSNC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlNlYXJjaFBhcnRuZXJM",
-            "aW5rc1JlcXVlc3QaNS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLlNlYXJj",
-            "aFBhcnRuZXJMaW5rc1Jlc3BvbnNlIkvaQQZwYXJlbnSC0+STAjwSOi92MS97",
-            "cGFyZW50PWFjY291bnRUeXBlcy8qL2FjY291bnRzLyp9L3BhcnRuZXJMaW5r",
-            "czpzZWFyY2gagwHKQRpkYXRhbWFuYWdlci5nb29nbGVhcGlzLmNvbdJBY2h0",
-            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGF0YW1hbmFnZXIsaHR0",
-            "cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kYXRhbWFuYWdlci5wYXJ0",
-            "bmVybGlua0LUAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCF1Bh",
-            "cnRuZXJMaW5rU2VydmljZVByb3RvUAFaQWNsb3VkLmdvb2dsZS5jb20vZ28v",
-            "ZGF0YW1hbmFnZXIvYXBpdjEvZGF0YW1hbmFnZXJwYjtkYXRhbWFuYWdlcnBi",
-            "qgIZR29vZ2xlLkFkcy5EYXRhTWFuYWdlci5WMcoCGUdvb2dsZVxBZHNcRGF0",
-            "YU1hbmFnZXJcVjHqAhxHb29nbGU6OkFkczo6RGF0YU1hbmFnZXI6OlYxYgZw",
-            "cm90bzM="));
+            "QWNjb3VudEID4EECEkIKC2ZlYXR1cmVfc2V0GAUgASgOMiUuZ29vZ2xlLmFk",
+            "cy5kYXRhbWFuYWdlci52MS5GZWF0dXJlU2V0QgbgQQHgQQUSWAoYcGFydG5l",
+            "cl9jdXN0b21lcl9hY2NvdW50GAYgASgLMjEuZ29vZ2xlLmFkcy5kYXRhbWFu",
+            "YWdlci52MS5QYXJ0bmVyQ3VzdG9tZXJBY2NvdW50QgPgQQESUgoVcGFydG5l",
+            "cl9saW5rX21ldGFkYXRhGAcgASgLMi4uZ29vZ2xlLmFkcy5kYXRhbWFuYWdl",
+            "ci52MS5QYXJ0bmVyTGlua01ldGFkYXRhQgPgQQE6kwHqQY8BCiZkYXRhbWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9QYXJ0bmVyTGluaxJKYWNjb3VudFR5cGVz",
+            "L3thY2NvdW50X3R5cGV9L2FjY291bnRzL3thY2NvdW50fS9wYXJ0bmVyTGlu",
+            "a3Mve3BhcnRuZXJfbGlua30qDHBhcnRuZXJMaW5rczILcGFydG5lckxpbmsi",
+            "ZwoWUGFydG5lckN1c3RvbWVyQWNjb3VudBIXCgphY2NvdW50X2lkGAEgASgJ",
+            "QgPgQQISGQoMYWNjb3VudF9uYW1lGAIgASgJQgPgQQESGQoMYWNjb3VudF90",
+            "eXBlGAMgASgJQgPgQQEiaAoTUGFydG5lckxpbmtNZXRhZGF0YRJRChFpbXBs",
+            "aWNpdF9hY2NvdW50cxgBIAMoCzIxLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIu",
+            "djEuUGFydG5lckN1c3RvbWVyQWNjb3VudEID4EEBKn0KCkZlYXR1cmVTZXQS",
+            "GwoXRkVBVFVSRV9TRVRfVU5TUEVDSUZJRUQQABItCilGRUFUVVJFX1NFVF9B",
+            "VURJRU5DRV9BTkRfRVZFTlRfTUFOQUdFTUVOVBABEiMKH0ZFQVRVUkVfU0VU",
+            "X0FEX0VWRU5UX01BTkFHRU1FTlQQAjLmBQoSUGFydG5lckxpbmtTZXJ2aWNl",
+            "EtEBChFDcmVhdGVQYXJ0bmVyTGluaxIzLmdvb2dsZS5hZHMuZGF0YW1hbmFn",
+            "ZXIudjEuQ3JlYXRlUGFydG5lckxpbmtSZXF1ZXN0GiYuZ29vZ2xlLmFkcy5k",
+            "YXRhbWFuYWdlci52MS5QYXJ0bmVyTGluayJf2kETcGFyZW50LHBhcnRuZXJf",
+            "bGlua4LT5JMCQyIzL3YxL3twYXJlbnQ9YWNjb3VudFR5cGVzLyovYWNjb3Vu",
+            "dHMvKn0vcGFydG5lckxpbmtzOgxwYXJ0bmVyX2xpbmsSpAEKEURlbGV0ZVBh",
+            "cnRuZXJMaW5rEjMuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5EZWxldGVQ",
+            "YXJ0bmVyTGlua1JlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiQtpB",
+            "BG5hbWWC0+STAjUqMy92MS97bmFtZT1hY2NvdW50VHlwZXMvKi9hY2NvdW50",
+            "cy8qL3BhcnRuZXJMaW5rcy8qfRLOAQoSU2VhcmNoUGFydG5lckxpbmtzEjQu",
+            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5TZWFyY2hQYXJ0bmVyTGlua3NS",
+            "ZXF1ZXN0GjUuZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MS5TZWFyY2hQYXJ0",
+            "bmVyTGlua3NSZXNwb25zZSJL2kEGcGFyZW50gtPkkwI8EjovdjEve3BhcmVu",
+            "dD1hY2NvdW50VHlwZXMvKi9hY2NvdW50cy8qfS9wYXJ0bmVyTGlua3M6c2Vh",
+            "cmNoGoMBykEaZGF0YW1hbmFnZXIuZ29vZ2xlYXBpcy5jb23SQWNodHRwczov",
+            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2RhdGFtYW5hZ2VyLGh0dHBzOi8v",
+            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGF0YW1hbmFnZXIucGFydG5lcmxp",
+            "bmtC1AEKHWNvbS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxQhdQYXJ0bmVy",
+            "TGlua1NlcnZpY2VQcm90b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFt",
+            "YW5hZ2VyL2FwaXYxL2RhdGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdv",
+            "b2dsZS5BZHMuRGF0YU1hbmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5h",
+            "Z2VyXFYx6gIcR29vZ2xlOjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.DataManager.V1.DestinationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Ads.DataManager.V1.FeatureSet), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CreatePartnerLinkRequest), global::Google.Ads.DataManager.V1.CreatePartnerLinkRequest.Parser, new[]{ "Parent", "PartnerLink" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.DeletePartnerLinkRequest), global::Google.Ads.DataManager.V1.DeletePartnerLinkRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.SearchPartnerLinksRequest), global::Google.Ads.DataManager.V1.SearchPartnerLinksRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.SearchPartnerLinksResponse), global::Google.Ads.DataManager.V1.SearchPartnerLinksResponse.Parser, new[]{ "PartnerLinks", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PartnerLink), global::Google.Ads.DataManager.V1.PartnerLink.Parser, new[]{ "Name", "PartnerLinkId", "OwningAccount", "PartnerAccount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PartnerLink), global::Google.Ads.DataManager.V1.PartnerLink.Parser, new[]{ "Name", "PartnerLinkId", "OwningAccount", "PartnerAccount", "FeatureSet", "PartnerCustomerAccount", "PartnerLinkMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PartnerCustomerAccount), global::Google.Ads.DataManager.V1.PartnerCustomerAccount.Parser, new[]{ "AccountId", "AccountName", "AccountType" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.PartnerLinkMetadata), global::Google.Ads.DataManager.V1.PartnerLinkMetadata.Parser, new[]{ "ImplicitAccounts" }, null, null, null, null)
           }));
     }
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// The set of supported features for a partner link.
+  /// </summary>
+  public enum FeatureSet {
+    /// <summary>
+    /// Unspecified feature set. If unspecified, the system behavior defaults to
+    /// [FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT][google.ads.datamanager.v1.FeatureSet.FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT].
+    /// </summary>
+    [pbr::OriginalName("FEATURE_SET_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Indicates a link used for audience and event management.
+    /// </summary>
+    [pbr::OriginalName("FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT")] AudienceAndEventManagement = 1,
+    /// <summary>
+    /// Indicates a link used for ad event management.
+    /// </summary>
+    [pbr::OriginalName("FEATURE_SET_AD_EVENT_MANAGEMENT")] AdEventManagement = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Request to create a [PartnerLink][google.ads.datamanager.v1.PartnerLink]
@@ -1186,6 +1222,9 @@ namespace Google.Ads.DataManager.V1 {
       partnerLinkId_ = other.partnerLinkId_;
       owningAccount_ = other.owningAccount_ != null ? other.owningAccount_.Clone() : null;
       partnerAccount_ = other.partnerAccount_ != null ? other.partnerAccount_.Clone() : null;
+      featureSet_ = other.featureSet_;
+      partnerCustomerAccount_ = other.partnerCustomerAccount_ != null ? other.partnerCustomerAccount_.Clone() : null;
+      partnerLinkMetadata_ = other.partnerLinkMetadata_ != null ? other.partnerLinkMetadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1257,6 +1296,58 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "feature_set" field.</summary>
+    public const int FeatureSetFieldNumber = 5;
+    private global::Google.Ads.DataManager.V1.FeatureSet featureSet_ = global::Google.Ads.DataManager.V1.FeatureSet.Unspecified;
+    /// <summary>
+    /// Optional. Immutable. The set of features supported for the partner link.
+    /// If not specified, the system behavior defaults to
+    /// [FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT][google.ads.datamanager.v1.FeatureSet.FEATURE_SET_AUDIENCE_AND_EVENT_MANAGEMENT].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.FeatureSet FeatureSet {
+      get { return featureSet_; }
+      set {
+        featureSet_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "partner_customer_account" field.</summary>
+    public const int PartnerCustomerAccountFieldNumber = 6;
+    private global::Google.Ads.DataManager.V1.PartnerCustomerAccount partnerCustomerAccount_;
+    /// <summary>
+    /// Optional. The customer account in the partner system.
+    /// This is required for partner links with the
+    /// [FEATURE_SET_AD_EVENT_MANAGEMENT][google.ads.datamanager.v1.FeatureSet.FEATURE_SET_AD_EVENT_MANAGEMENT]
+    /// feature set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.PartnerCustomerAccount PartnerCustomerAccount {
+      get { return partnerCustomerAccount_; }
+      set {
+        partnerCustomerAccount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "partner_link_metadata" field.</summary>
+    public const int PartnerLinkMetadataFieldNumber = 7;
+    private global::Google.Ads.DataManager.V1.PartnerLinkMetadata partnerLinkMetadata_;
+    /// <summary>
+    /// Optional. Metadata associated with the partner link.
+    /// This is optional and only accepted for partner links with the
+    /// [FEATURE_SET_AD_EVENT_MANAGEMENT][google.ads.datamanager.v1.FeatureSet.FEATURE_SET_AD_EVENT_MANAGEMENT].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.PartnerLinkMetadata PartnerLinkMetadata {
+      get { return partnerLinkMetadata_; }
+      set {
+        partnerLinkMetadata_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1276,6 +1367,9 @@ namespace Google.Ads.DataManager.V1 {
       if (PartnerLinkId != other.PartnerLinkId) return false;
       if (!object.Equals(OwningAccount, other.OwningAccount)) return false;
       if (!object.Equals(PartnerAccount, other.PartnerAccount)) return false;
+      if (FeatureSet != other.FeatureSet) return false;
+      if (!object.Equals(PartnerCustomerAccount, other.PartnerCustomerAccount)) return false;
+      if (!object.Equals(PartnerLinkMetadata, other.PartnerLinkMetadata)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1287,6 +1381,9 @@ namespace Google.Ads.DataManager.V1 {
       if (PartnerLinkId.Length != 0) hash ^= PartnerLinkId.GetHashCode();
       if (owningAccount_ != null) hash ^= OwningAccount.GetHashCode();
       if (partnerAccount_ != null) hash ^= PartnerAccount.GetHashCode();
+      if (FeatureSet != global::Google.Ads.DataManager.V1.FeatureSet.Unspecified) hash ^= FeatureSet.GetHashCode();
+      if (partnerCustomerAccount_ != null) hash ^= PartnerCustomerAccount.GetHashCode();
+      if (partnerLinkMetadata_ != null) hash ^= PartnerLinkMetadata.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1321,6 +1418,18 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(PartnerAccount);
       }
+      if (FeatureSet != global::Google.Ads.DataManager.V1.FeatureSet.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) FeatureSet);
+      }
+      if (partnerCustomerAccount_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PartnerCustomerAccount);
+      }
+      if (partnerLinkMetadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(PartnerLinkMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1347,6 +1456,18 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(PartnerAccount);
       }
+      if (FeatureSet != global::Google.Ads.DataManager.V1.FeatureSet.Unspecified) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) FeatureSet);
+      }
+      if (partnerCustomerAccount_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(PartnerCustomerAccount);
+      }
+      if (partnerLinkMetadata_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(PartnerLinkMetadata);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1368,6 +1489,15 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (partnerAccount_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartnerAccount);
+      }
+      if (FeatureSet != global::Google.Ads.DataManager.V1.FeatureSet.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) FeatureSet);
+      }
+      if (partnerCustomerAccount_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartnerCustomerAccount);
+      }
+      if (partnerLinkMetadata_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PartnerLinkMetadata);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1398,6 +1528,21 @@ namespace Google.Ads.DataManager.V1 {
           PartnerAccount = new global::Google.Ads.DataManager.V1.ProductAccount();
         }
         PartnerAccount.MergeFrom(other.PartnerAccount);
+      }
+      if (other.FeatureSet != global::Google.Ads.DataManager.V1.FeatureSet.Unspecified) {
+        FeatureSet = other.FeatureSet;
+      }
+      if (other.partnerCustomerAccount_ != null) {
+        if (partnerCustomerAccount_ == null) {
+          PartnerCustomerAccount = new global::Google.Ads.DataManager.V1.PartnerCustomerAccount();
+        }
+        PartnerCustomerAccount.MergeFrom(other.PartnerCustomerAccount);
+      }
+      if (other.partnerLinkMetadata_ != null) {
+        if (partnerLinkMetadata_ == null) {
+          PartnerLinkMetadata = new global::Google.Ads.DataManager.V1.PartnerLinkMetadata();
+        }
+        PartnerLinkMetadata.MergeFrom(other.PartnerLinkMetadata);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1440,6 +1585,24 @@ namespace Google.Ads.DataManager.V1 {
             input.ReadMessage(PartnerAccount);
             break;
           }
+          case 40: {
+            FeatureSet = (global::Google.Ads.DataManager.V1.FeatureSet) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (partnerCustomerAccount_ == null) {
+              PartnerCustomerAccount = new global::Google.Ads.DataManager.V1.PartnerCustomerAccount();
+            }
+            input.ReadMessage(PartnerCustomerAccount);
+            break;
+          }
+          case 58: {
+            if (partnerLinkMetadata_ == null) {
+              PartnerLinkMetadata = new global::Google.Ads.DataManager.V1.PartnerLinkMetadata();
+            }
+            input.ReadMessage(PartnerLinkMetadata);
+            break;
+          }
         }
       }
     #endif
@@ -1479,6 +1642,502 @@ namespace Google.Ads.DataManager.V1 {
               PartnerAccount = new global::Google.Ads.DataManager.V1.ProductAccount();
             }
             input.ReadMessage(PartnerAccount);
+            break;
+          }
+          case 40: {
+            FeatureSet = (global::Google.Ads.DataManager.V1.FeatureSet) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            if (partnerCustomerAccount_ == null) {
+              PartnerCustomerAccount = new global::Google.Ads.DataManager.V1.PartnerCustomerAccount();
+            }
+            input.ReadMessage(PartnerCustomerAccount);
+            break;
+          }
+          case 58: {
+            if (partnerLinkMetadata_ == null) {
+              PartnerLinkMetadata = new global::Google.Ads.DataManager.V1.PartnerLinkMetadata();
+            }
+            input.ReadMessage(PartnerLinkMetadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents a customer account in the partner's system.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PartnerCustomerAccount : pb::IMessage<PartnerCustomerAccount>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PartnerCustomerAccount> _parser = new pb::MessageParser<PartnerCustomerAccount>(() => new PartnerCustomerAccount());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PartnerCustomerAccount> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.PartnerLinkServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PartnerCustomerAccount() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PartnerCustomerAccount(PartnerCustomerAccount other) : this() {
+      accountId_ = other.accountId_;
+      accountName_ = other.accountName_;
+      accountType_ = other.accountType_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PartnerCustomerAccount Clone() {
+      return new PartnerCustomerAccount(this);
+    }
+
+    /// <summary>Field number for the "account_id" field.</summary>
+    public const int AccountIdFieldNumber = 1;
+    private string accountId_ = "";
+    /// <summary>
+    /// Required. The identifier of the customer account in the partner's ID space.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AccountId {
+      get { return accountId_; }
+      set {
+        accountId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "account_name" field.</summary>
+    public const int AccountNameFieldNumber = 2;
+    private string accountName_ = "";
+    /// <summary>
+    /// Optional. The name of the account.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AccountName {
+      get { return accountName_; }
+      set {
+        accountName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "account_type" field.</summary>
+    public const int AccountTypeFieldNumber = 3;
+    private string accountType_ = "";
+    /// <summary>
+    /// Optional. The type of the account. Can be used to distinguish between
+    /// advertiser accounts and business level accounts, for example.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AccountType {
+      get { return accountType_; }
+      set {
+        accountType_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PartnerCustomerAccount);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PartnerCustomerAccount other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AccountId != other.AccountId) return false;
+      if (AccountName != other.AccountName) return false;
+      if (AccountType != other.AccountType) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AccountId.Length != 0) hash ^= AccountId.GetHashCode();
+      if (AccountName.Length != 0) hash ^= AccountName.GetHashCode();
+      if (AccountType.Length != 0) hash ^= AccountType.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AccountId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AccountId);
+      }
+      if (AccountName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AccountName);
+      }
+      if (AccountType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AccountType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AccountId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AccountId);
+      }
+      if (AccountName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(AccountName);
+      }
+      if (AccountType.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(AccountType);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AccountId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountId);
+      }
+      if (AccountName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountName);
+      }
+      if (AccountType.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AccountType);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PartnerCustomerAccount other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AccountId.Length != 0) {
+        AccountId = other.AccountId;
+      }
+      if (other.AccountName.Length != 0) {
+        AccountName = other.AccountName;
+      }
+      if (other.AccountType.Length != 0) {
+        AccountType = other.AccountType;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AccountId = input.ReadString();
+            break;
+          }
+          case 18: {
+            AccountName = input.ReadString();
+            break;
+          }
+          case 26: {
+            AccountType = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AccountId = input.ReadString();
+            break;
+          }
+          case 18: {
+            AccountName = input.ReadString();
+            break;
+          }
+          case 26: {
+            AccountType = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents metadata associated with a partner link.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PartnerLinkMetadata : pb::IMessage<PartnerLinkMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PartnerLinkMetadata> _parser = new pb::MessageParser<PartnerLinkMetadata>(() => new PartnerLinkMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PartnerLinkMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.PartnerLinkServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PartnerLinkMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PartnerLinkMetadata(PartnerLinkMetadata other) : this() {
+      implicitAccounts_ = other.implicitAccounts_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PartnerLinkMetadata Clone() {
+      return new PartnerLinkMetadata(this);
+    }
+
+    /// <summary>Field number for the "implicit_accounts" field.</summary>
+    public const int ImplicitAccountsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Ads.DataManager.V1.PartnerCustomerAccount> _repeated_implicitAccounts_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.DataManager.V1.PartnerCustomerAccount.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.DataManager.V1.PartnerCustomerAccount> implicitAccounts_ = new pbc::RepeatedField<global::Google.Ads.DataManager.V1.PartnerCustomerAccount>();
+    /// <summary>
+    /// Optional. The list of implicit accounts.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.DataManager.V1.PartnerCustomerAccount> ImplicitAccounts {
+      get { return implicitAccounts_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PartnerLinkMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PartnerLinkMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!implicitAccounts_.Equals(other.implicitAccounts_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= implicitAccounts_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      implicitAccounts_.WriteTo(output, _repeated_implicitAccounts_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      implicitAccounts_.WriteTo(ref output, _repeated_implicitAccounts_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += implicitAccounts_.CalculateSize(_repeated_implicitAccounts_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PartnerLinkMetadata other) {
+      if (other == null) {
+        return;
+      }
+      implicitAccounts_.Add(other.implicitAccounts_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            implicitAccounts_.AddEntriesFrom(input, _repeated_implicitAccounts_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            implicitAccounts_.AddEntriesFrom(ref input, _repeated_implicitAccounts_codec);
             break;
           }
         }

@@ -302,6 +302,8 @@ namespace Google.Ads.DataManager.V1 {
     [pbr::OriginalName("UNSUPPORTED_LINKED_ACCOUNT_FOR_DATA_PARTNER")] UnsupportedLinkedAccountForDataPartner = 38,
     /// <summary>
     /// Events data contains no user identifiers or ad identifiers.
+    /// For Floodlight Event ingestion this error indicates requests contains no ad
+    /// identifiers.
     /// </summary>
     [pbr::OriginalName("NO_IDENTIFIERS_PROVIDED")] NoIdentifiersProvided = 39,
     /// <summary>
