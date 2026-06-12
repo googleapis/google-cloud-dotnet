@@ -161,7 +161,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. Name of the TcpRoute resource. It matches pattern
-    /// `projects/*/locations/global/tcpRoutes/tcp_route_name>`.
+    /// `projects/*/locations/*/tcpRoutes/tcp_route_name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -259,7 +259,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     /// one of the routing rules to route the requests served by the mesh.
     ///
     /// Each mesh reference should match the pattern:
-    /// `projects/*/locations/global/meshes/&lt;mesh_name>`
+    /// `projects/*/locations/*/meshes/&lt;mesh_name>`
     ///
     /// The attached Mesh should be of a type SIDECAR
     /// </summary>
@@ -279,7 +279,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     /// as one of the routing rules to route the requests served by the gateway.
     ///
     /// Each gateway reference should match the pattern:
-    /// `projects/*/locations/global/gateways/&lt;gateway_name>`
+    /// `projects/*/locations/*/gateways/&lt;gateway_name>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1722,7 +1722,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project and location from which the TcpRoutes should be
-    /// listed, specified in the format `projects/*/locations/global`.
+    /// listed, specified in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2315,7 +2315,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the TcpRoute to get. Must be in the format
-    /// `projects/*/locations/global/tcpRoutes/*`.
+    /// `projects/*/locations/*/tcpRoutes/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2522,7 +2522,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource of the TcpRoute. Must be in the
-    /// format `projects/*/locations/global`.
+    /// format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3080,7 +3080,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the TcpRoute to delete. Must be in the format
-    /// `projects/*/locations/global/tcpRoutes/*`.
+    /// `projects/*/locations/*/tcpRoutes/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

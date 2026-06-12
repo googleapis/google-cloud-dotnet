@@ -4261,6 +4261,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReturnPartialSuccess = false,
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListHttpRoutesResponse, HttpRoute> response = networkServicesClient.ListHttpRoutes(request);
@@ -4310,6 +4311,7 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReturnPartialSuccess = false,
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListHttpRoutesResponse, HttpRoute> response = networkServicesClient.ListHttpRoutesAsync(request);
@@ -4627,6 +4629,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 HttpRouteId = "",
                 HttpRoute = new HttpRoute(),
+                RequestId = "",
             };
             // Make the request
             Operation<HttpRoute, OperationMetadata> response = networkServicesClient.CreateHttpRoute(request);
@@ -4662,6 +4665,7 @@ namespace GoogleCSharpSnippets
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 HttpRouteId = "",
                 HttpRoute = new HttpRoute(),
+                RequestId = "",
             };
             // Make the request
             Operation<HttpRoute, OperationMetadata> response = await networkServicesClient.CreateHttpRouteAsync(request);
@@ -10195,6 +10199,879 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentGateways</summary>
+        public void ListAgentGatewaysRequestObject()
+        {
+            // Snippet: ListAgentGateways(ListAgentGatewaysRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            ListAgentGatewaysRequest request = new ListAgentGatewaysRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<ListAgentGatewaysResponse, AgentGateway> response = networkServicesClient.ListAgentGateways(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AgentGateway item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAgentGatewaysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentGateway item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentGateway> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentGateway item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentGatewaysAsync</summary>
+        public async Task ListAgentGatewaysRequestObjectAsync()
+        {
+            // Snippet: ListAgentGatewaysAsync(ListAgentGatewaysRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            ListAgentGatewaysRequest request = new ListAgentGatewaysRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListAgentGatewaysResponse, AgentGateway> response = networkServicesClient.ListAgentGatewaysAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AgentGateway item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAgentGatewaysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentGateway item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentGateway> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentGateway item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentGateways</summary>
+        public void ListAgentGateways()
+        {
+            // Snippet: ListAgentGateways(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListAgentGatewaysResponse, AgentGateway> response = networkServicesClient.ListAgentGateways(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AgentGateway item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAgentGatewaysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentGateway item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentGateway> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentGateway item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentGatewaysAsync</summary>
+        public async Task ListAgentGatewaysAsync()
+        {
+            // Snippet: ListAgentGatewaysAsync(string, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListAgentGatewaysResponse, AgentGateway> response = networkServicesClient.ListAgentGatewaysAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AgentGateway item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAgentGatewaysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentGateway item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentGateway> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentGateway item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentGateways</summary>
+        public void ListAgentGatewaysResourceNames()
+        {
+            // Snippet: ListAgentGateways(LocationName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListAgentGatewaysResponse, AgentGateway> response = networkServicesClient.ListAgentGateways(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (AgentGateway item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListAgentGatewaysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentGateway item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentGateway> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentGateway item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListAgentGatewaysAsync</summary>
+        public async Task ListAgentGatewaysResourceNamesAsync()
+        {
+            // Snippet: ListAgentGatewaysAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListAgentGatewaysResponse, AgentGateway> response = networkServicesClient.ListAgentGatewaysAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (AgentGateway item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (ListAgentGatewaysResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (AgentGateway item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<AgentGateway> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (AgentGateway item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentGateway</summary>
+        public void GetAgentGatewayRequestObject()
+        {
+            // Snippet: GetAgentGateway(GetAgentGatewayRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            GetAgentGatewayRequest request = new GetAgentGatewayRequest
+            {
+                AgentGatewayName = AgentGatewayName.FromProjectLocationAgentGateway("[PROJECT]", "[LOCATION]", "[AGENT_GATEWAY]"),
+            };
+            // Make the request
+            AgentGateway response = networkServicesClient.GetAgentGateway(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentGatewayAsync</summary>
+        public async Task GetAgentGatewayRequestObjectAsync()
+        {
+            // Snippet: GetAgentGatewayAsync(GetAgentGatewayRequest, CallSettings)
+            // Additional: GetAgentGatewayAsync(GetAgentGatewayRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAgentGatewayRequest request = new GetAgentGatewayRequest
+            {
+                AgentGatewayName = AgentGatewayName.FromProjectLocationAgentGateway("[PROJECT]", "[LOCATION]", "[AGENT_GATEWAY]"),
+            };
+            // Make the request
+            AgentGateway response = await networkServicesClient.GetAgentGatewayAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentGateway</summary>
+        public void GetAgentGateway()
+        {
+            // Snippet: GetAgentGateway(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agentGateways/[AGENT_GATEWAY]";
+            // Make the request
+            AgentGateway response = networkServicesClient.GetAgentGateway(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentGatewayAsync</summary>
+        public async Task GetAgentGatewayAsync()
+        {
+            // Snippet: GetAgentGatewayAsync(string, CallSettings)
+            // Additional: GetAgentGatewayAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agentGateways/[AGENT_GATEWAY]";
+            // Make the request
+            AgentGateway response = await networkServicesClient.GetAgentGatewayAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentGateway</summary>
+        public void GetAgentGatewayResourceNames()
+        {
+            // Snippet: GetAgentGateway(AgentGatewayName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            AgentGatewayName name = AgentGatewayName.FromProjectLocationAgentGateway("[PROJECT]", "[LOCATION]", "[AGENT_GATEWAY]");
+            // Make the request
+            AgentGateway response = networkServicesClient.GetAgentGateway(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAgentGatewayAsync</summary>
+        public async Task GetAgentGatewayResourceNamesAsync()
+        {
+            // Snippet: GetAgentGatewayAsync(AgentGatewayName, CallSettings)
+            // Additional: GetAgentGatewayAsync(AgentGatewayName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentGatewayName name = AgentGatewayName.FromProjectLocationAgentGateway("[PROJECT]", "[LOCATION]", "[AGENT_GATEWAY]");
+            // Make the request
+            AgentGateway response = await networkServicesClient.GetAgentGatewayAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentGateway</summary>
+        public void CreateAgentGatewayRequestObject()
+        {
+            // Snippet: CreateAgentGateway(CreateAgentGatewayRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            CreateAgentGatewayRequest request = new CreateAgentGatewayRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AgentGatewayId = "",
+                AgentGateway = new AgentGateway(),
+            };
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = networkServicesClient.CreateAgentGateway(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateAgentGateway(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentGatewayAsync</summary>
+        public async Task CreateAgentGatewayRequestObjectAsync()
+        {
+            // Snippet: CreateAgentGatewayAsync(CreateAgentGatewayRequest, CallSettings)
+            // Additional: CreateAgentGatewayAsync(CreateAgentGatewayRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateAgentGatewayRequest request = new CreateAgentGatewayRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                AgentGatewayId = "",
+                AgentGateway = new AgentGateway(),
+            };
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = await networkServicesClient.CreateAgentGatewayAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateAgentGatewayAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentGateway</summary>
+        public void CreateAgentGateway()
+        {
+            // Snippet: CreateAgentGateway(string, AgentGateway, string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AgentGateway agentGateway = new AgentGateway();
+            string agentGatewayId = "";
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = networkServicesClient.CreateAgentGateway(parent, agentGateway, agentGatewayId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateAgentGateway(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentGatewayAsync</summary>
+        public async Task CreateAgentGatewayAsync()
+        {
+            // Snippet: CreateAgentGatewayAsync(string, AgentGateway, string, CallSettings)
+            // Additional: CreateAgentGatewayAsync(string, AgentGateway, string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            AgentGateway agentGateway = new AgentGateway();
+            string agentGatewayId = "";
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = await networkServicesClient.CreateAgentGatewayAsync(parent, agentGateway, agentGatewayId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateAgentGatewayAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentGateway</summary>
+        public void CreateAgentGatewayResourceNames()
+        {
+            // Snippet: CreateAgentGateway(LocationName, AgentGateway, string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AgentGateway agentGateway = new AgentGateway();
+            string agentGatewayId = "";
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = networkServicesClient.CreateAgentGateway(parent, agentGateway, agentGatewayId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateAgentGateway(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateAgentGatewayAsync</summary>
+        public async Task CreateAgentGatewayResourceNamesAsync()
+        {
+            // Snippet: CreateAgentGatewayAsync(LocationName, AgentGateway, string, CallSettings)
+            // Additional: CreateAgentGatewayAsync(LocationName, AgentGateway, string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            AgentGateway agentGateway = new AgentGateway();
+            string agentGatewayId = "";
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = await networkServicesClient.CreateAgentGatewayAsync(parent, agentGateway, agentGatewayId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceCreateAgentGatewayAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAgentGateway</summary>
+        public void UpdateAgentGatewayRequestObject()
+        {
+            // Snippet: UpdateAgentGateway(UpdateAgentGatewayRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            UpdateAgentGatewayRequest request = new UpdateAgentGatewayRequest
+            {
+                UpdateMask = new FieldMask(),
+                AgentGateway = new AgentGateway(),
+            };
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = networkServicesClient.UpdateAgentGateway(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceUpdateAgentGateway(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAgentGatewayAsync</summary>
+        public async Task UpdateAgentGatewayRequestObjectAsync()
+        {
+            // Snippet: UpdateAgentGatewayAsync(UpdateAgentGatewayRequest, CallSettings)
+            // Additional: UpdateAgentGatewayAsync(UpdateAgentGatewayRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAgentGatewayRequest request = new UpdateAgentGatewayRequest
+            {
+                UpdateMask = new FieldMask(),
+                AgentGateway = new AgentGateway(),
+            };
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = await networkServicesClient.UpdateAgentGatewayAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateAgentGatewayAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAgentGateway</summary>
+        public void UpdateAgentGateway()
+        {
+            // Snippet: UpdateAgentGateway(AgentGateway, FieldMask, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            AgentGateway agentGateway = new AgentGateway();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = networkServicesClient.UpdateAgentGateway(agentGateway, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceUpdateAgentGateway(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAgentGatewayAsync</summary>
+        public async Task UpdateAgentGatewayAsync()
+        {
+            // Snippet: UpdateAgentGatewayAsync(AgentGateway, FieldMask, CallSettings)
+            // Additional: UpdateAgentGatewayAsync(AgentGateway, FieldMask, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentGateway agentGateway = new AgentGateway();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<AgentGateway, OperationMetadata> response = await networkServicesClient.UpdateAgentGatewayAsync(agentGateway, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<AgentGateway, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            AgentGateway result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateAgentGatewayAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                AgentGateway retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentGateway</summary>
+        public void DeleteAgentGatewayRequestObject()
+        {
+            // Snippet: DeleteAgentGateway(DeleteAgentGatewayRequest, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            DeleteAgentGatewayRequest request = new DeleteAgentGatewayRequest
+            {
+                AgentGatewayName = AgentGatewayName.FromProjectLocationAgentGateway("[PROJECT]", "[LOCATION]", "[AGENT_GATEWAY]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteAgentGateway(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteAgentGateway(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentGatewayAsync</summary>
+        public async Task DeleteAgentGatewayRequestObjectAsync()
+        {
+            // Snippet: DeleteAgentGatewayAsync(DeleteAgentGatewayRequest, CallSettings)
+            // Additional: DeleteAgentGatewayAsync(DeleteAgentGatewayRequest, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteAgentGatewayRequest request = new DeleteAgentGatewayRequest
+            {
+                AgentGatewayName = AgentGatewayName.FromProjectLocationAgentGateway("[PROJECT]", "[LOCATION]", "[AGENT_GATEWAY]"),
+                Etag = "",
+            };
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteAgentGatewayAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteAgentGatewayAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentGateway</summary>
+        public void DeleteAgentGateway()
+        {
+            // Snippet: DeleteAgentGateway(string, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agentGateways/[AGENT_GATEWAY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteAgentGateway(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteAgentGateway(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentGatewayAsync</summary>
+        public async Task DeleteAgentGatewayAsync()
+        {
+            // Snippet: DeleteAgentGatewayAsync(string, CallSettings)
+            // Additional: DeleteAgentGatewayAsync(string, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agentGateways/[AGENT_GATEWAY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteAgentGatewayAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteAgentGatewayAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentGateway</summary>
+        public void DeleteAgentGatewayResourceNames()
+        {
+            // Snippet: DeleteAgentGateway(AgentGatewayName, CallSettings)
+            // Create client
+            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            // Initialize request argument(s)
+            AgentGatewayName name = AgentGatewayName.FromProjectLocationAgentGateway("[PROJECT]", "[LOCATION]", "[AGENT_GATEWAY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = networkServicesClient.DeleteAgentGateway(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceDeleteAgentGateway(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteAgentGatewayAsync</summary>
+        public async Task DeleteAgentGatewayResourceNamesAsync()
+        {
+            // Snippet: DeleteAgentGatewayAsync(AgentGatewayName, CallSettings)
+            // Additional: DeleteAgentGatewayAsync(AgentGatewayName, CancellationToken)
+            // Create client
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
+            // Initialize request argument(s)
+            AgentGatewayName name = AgentGatewayName.FromProjectLocationAgentGateway("[PROJECT]", "[LOCATION]", "[AGENT_GATEWAY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteAgentGatewayAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteAgentGatewayAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

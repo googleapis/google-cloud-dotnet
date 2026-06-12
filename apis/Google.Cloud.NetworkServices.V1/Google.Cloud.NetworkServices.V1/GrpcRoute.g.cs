@@ -205,7 +205,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. Name of the GrpcRoute resource. It matches pattern
-    /// `projects/*/locations/global/grpcRoutes/&lt;grpc_route_name>`
+    /// `projects/*/locations/*/grpcRoutes/&lt;grpc_route_name>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -345,7 +345,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     /// one of the routing rules to route the requests served by the mesh.
     ///
     /// Each mesh reference should match the pattern:
-    /// `projects/*/locations/global/meshes/&lt;mesh_name>`
+    /// `projects/*/locations/*/meshes/&lt;mesh_name>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -364,7 +364,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     /// gateway.
     ///
     /// Each gateway reference should match the pattern:
-    /// `projects/*/locations/global/gateways/&lt;gateway_name>`
+    /// `projects/*/locations/*/gateways/&lt;gateway_name>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4033,7 +4033,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project and location from which the GrpcRoutes should be
-    /// listed, specified in the format `projects/*/locations/global`.
+    /// listed, specified in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4626,7 +4626,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the GrpcRoute to get. Must be in the format
-    /// `projects/*/locations/global/grpcRoutes/*`.
+    /// `projects/*/locations/*/grpcRoutes/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4833,7 +4833,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource of the GrpcRoute. Must be in the
-    /// format `projects/*/locations/global`.
+    /// format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5391,7 +5391,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the GrpcRoute to delete. Must be in the format
-    /// `projects/*/locations/global/grpcRoutes/*`.
+    /// `projects/*/locations/*/grpcRoutes/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

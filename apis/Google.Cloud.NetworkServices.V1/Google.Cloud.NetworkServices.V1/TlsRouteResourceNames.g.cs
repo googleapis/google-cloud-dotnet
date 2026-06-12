@@ -272,6 +272,269 @@ namespace Google.Cloud.NetworkServices.V1
         public static bool operator !=(TlsRouteName a, TlsRouteName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>TargetTcpProxy</c> resource.</summary>
+    public sealed partial class TargetTcpProxyName : gax::IResourceName, sys::IEquatable<TargetTcpProxyName>
+    {
+        /// <summary>The possible contents of <see cref="TargetTcpProxyName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>.
+            /// </summary>
+            ProjectLocationTargetTcpProxy = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationTargetTcpProxy = new gax::PathTemplate("projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}");
+
+        /// <summary>Creates a <see cref="TargetTcpProxyName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TargetTcpProxyName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static TargetTcpProxyName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TargetTcpProxyName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="TargetTcpProxyName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="targetTcpProxyId">The <c>TargetTcpProxy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TargetTcpProxyName"/> constructed from the provided ids.</returns>
+        public static TargetTcpProxyName FromProjectLocationTargetTcpProxy(string projectId, string locationId, string targetTcpProxyId) =>
+            new TargetTcpProxyName(ResourceNameType.ProjectLocationTargetTcpProxy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), targetTcpProxyId: gax::GaxPreconditions.CheckNotNullOrEmpty(targetTcpProxyId, nameof(targetTcpProxyId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TargetTcpProxyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="targetTcpProxyId">The <c>TargetTcpProxy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TargetTcpProxyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string targetTcpProxyId) =>
+            FormatProjectLocationTargetTcpProxy(projectId, locationId, targetTcpProxyId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TargetTcpProxyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="targetTcpProxyId">The <c>TargetTcpProxy</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TargetTcpProxyName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>.
+        /// </returns>
+        public static string FormatProjectLocationTargetTcpProxy(string projectId, string locationId, string targetTcpProxyId) =>
+            s_projectLocationTargetTcpProxy.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(targetTcpProxyId, nameof(targetTcpProxyId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TargetTcpProxyName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="targetTcpProxyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TargetTcpProxyName"/> if successful.</returns>
+        public static TargetTcpProxyName Parse(string targetTcpProxyName) => Parse(targetTcpProxyName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TargetTcpProxyName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="targetTcpProxyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="TargetTcpProxyName"/> if successful.</returns>
+        public static TargetTcpProxyName Parse(string targetTcpProxyName, bool allowUnparsed) =>
+            TryParse(targetTcpProxyName, allowUnparsed, out TargetTcpProxyName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TargetTcpProxyName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="targetTcpProxyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TargetTcpProxyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string targetTcpProxyName, out TargetTcpProxyName result) =>
+            TryParse(targetTcpProxyName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TargetTcpProxyName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="targetTcpProxyName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TargetTcpProxyName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string targetTcpProxyName, bool allowUnparsed, out TargetTcpProxyName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(targetTcpProxyName, nameof(targetTcpProxyName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationTargetTcpProxy.TryParseName(targetTcpProxyName, out resourceName))
+            {
+                result = FromProjectLocationTargetTcpProxy(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(targetTcpProxyName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private TargetTcpProxyName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null, string targetTcpProxyId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
+            ProjectId = projectId;
+            TargetTcpProxyId = targetTcpProxyId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TargetTcpProxyName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/targetTcpProxies/{target_tcp_proxy}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="targetTcpProxyId">The <c>TargetTcpProxy</c> ID. Must not be <c>null</c> or empty.</param>
+        public TargetTcpProxyName(string projectId, string locationId, string targetTcpProxyId) : this(ResourceNameType.ProjectLocationTargetTcpProxy, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), targetTcpProxyId: gax::GaxPreconditions.CheckNotNullOrEmpty(targetTcpProxyId, nameof(targetTcpProxyId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>TargetTcpProxy</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string TargetTcpProxyId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationTargetTcpProxy: return s_projectLocationTargetTcpProxy.Expand(ProjectId, LocationId, TargetTcpProxyId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as TargetTcpProxyName);
+
+        /// <inheritdoc/>
+        public bool Equals(TargetTcpProxyName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(TargetTcpProxyName a, TargetTcpProxyName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(TargetTcpProxyName a, TargetTcpProxyName b) => !(a == b);
+    }
+
     public partial class TlsRoute
     {
         /// <summary>
@@ -295,6 +558,14 @@ namespace Google.Cloud.NetworkServices.V1
         public gax::ResourceNameList<GatewayName> GatewaysAsGatewayNames
         {
             get => new gax::ResourceNameList<GatewayName>(Gateways, s => string.IsNullOrEmpty(s) ? null : GatewayName.Parse(s, allowUnparsed: true));
+        }
+
+        /// <summary>
+        /// <see cref="TargetTcpProxyName"/>-typed view over the <see cref="TargetProxies"/> resource name property.
+        /// </summary>
+        public gax::ResourceNameList<TargetTcpProxyName> TargetProxiesAsTargetTcpProxyNames
+        {
+            get => new gax::ResourceNameList<TargetTcpProxyName>(TargetProxies, s => string.IsNullOrEmpty(s) ? null : TargetTcpProxyName.Parse(s, allowUnparsed: true));
         }
 
         public partial class Types
