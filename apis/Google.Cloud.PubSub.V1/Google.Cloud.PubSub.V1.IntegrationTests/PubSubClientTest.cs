@@ -258,11 +258,11 @@ namespace Google.Cloud.PubSub.V1.IntegrationTests
 
             if (cancelAfterRecvCount is int cancelAfter)
             {
-                // Because we are using linked tokens for cancellation, which do not guarantee
-                // atomicity between when a parent token is cancelled to when the linked token is cancelled,
-                // there's still a chance that we get some more messages after cancelling, even with NackImmediately.
-                // So we expect up to 3 times messages in flight after the cutoff message count.
-                Assert.True(recvCount >= cancelAfter && recvCount <= cancelAfter + 3 * maxMessagesInFlight, $"Incorrect recvCount: {recvCount}");
+                // When we are shutting down the stream, the client may still grab a few more messages before the cancellation fully propagates.
+                // We allow an additional buffer up to the maximum size of a single pre-fetch batch, as those messages may already be sitting in the local buffer.
+                // Note: Introducing additional delays into the shutdown/continuation path may make this test flaky by giving the client more time to process buffered messages.
+                int prefetchSize = 1_000;
+                Assert.True(recvCount >= cancelAfter && recvCount <= cancelAfter + prefetchSize, $"Incorrect recvCount: {recvCount}");
             }
             else
             {
