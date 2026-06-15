@@ -81,10 +81,10 @@ namespace Google.Cloud.NetworkServices.V1 {
     [pbr::OriginalName("NONE")] None = 1,
     /// <summary>
     /// Envoy will insert default internal debug headers into upstream requests:
-    /// x-envoy-attempt-count
-    /// x-envoy-is-timeout-retry
-    /// x-envoy-expected-rq-timeout-ms
-    /// x-envoy-original-path
+    /// x-envoy-attempt-count,
+    /// x-envoy-is-timeout-retry,
+    /// x-envoy-expected-rq-timeout-ms,
+    /// x-envoy-original-path,
     /// x-envoy-upstream-stream-duration-ms
     /// </summary>
     [pbr::OriginalName("DEBUG_HEADERS")] DebugHeaders = 2,

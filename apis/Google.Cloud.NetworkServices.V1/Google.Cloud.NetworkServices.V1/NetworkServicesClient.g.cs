@@ -140,6 +140,14 @@ namespace Google.Cloud.NetworkServices.V1
             GetMeshRouteViewSettings = existing.GetMeshRouteViewSettings;
             ListGatewayRouteViewsSettings = existing.ListGatewayRouteViewsSettings;
             ListMeshRouteViewsSettings = existing.ListMeshRouteViewsSettings;
+            ListAgentGatewaysSettings = existing.ListAgentGatewaysSettings;
+            GetAgentGatewaySettings = existing.GetAgentGatewaySettings;
+            CreateAgentGatewaySettings = existing.CreateAgentGatewaySettings;
+            CreateAgentGatewayOperationsSettings = existing.CreateAgentGatewayOperationsSettings.Clone();
+            UpdateAgentGatewaySettings = existing.UpdateAgentGatewaySettings;
+            UpdateAgentGatewayOperationsSettings = existing.UpdateAgentGatewayOperationsSettings.Clone();
+            DeleteAgentGatewaySettings = existing.DeleteAgentGatewaySettings;
+            DeleteAgentGatewayOperationsSettings = existing.DeleteAgentGatewayOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
@@ -1436,6 +1444,120 @@ namespace Google.Cloud.NetworkServices.V1
         public gaxgrpc::CallSettings ListMeshRouteViewsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.ListAgentGateways</c> and <c>NetworkServicesClient.ListAgentGatewaysAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAgentGatewaysSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.GetAgentGateway</c> and <c>NetworkServicesClient.GetAgentGatewayAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAgentGatewaySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.CreateAgentGateway</c> and <c>NetworkServicesClient.CreateAgentGatewayAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateAgentGatewaySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkServicesClient.CreateAgentGateway</c> and
+        /// <c>NetworkServicesClient.CreateAgentGatewayAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateAgentGatewayOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.UpdateAgentGateway</c> and <c>NetworkServicesClient.UpdateAgentGatewayAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAgentGatewaySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkServicesClient.UpdateAgentGateway</c> and
+        /// <c>NetworkServicesClient.UpdateAgentGatewayAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateAgentGatewayOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>NetworkServicesClient.DeleteAgentGateway</c> and <c>NetworkServicesClient.DeleteAgentGatewayAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAgentGatewaySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>NetworkServicesClient.DeleteAgentGateway</c> and
+        /// <c>NetworkServicesClient.DeleteAgentGatewayAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAgentGatewayOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -1615,7 +1737,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the EndpointPolicies should
-        /// be listed, specified in the format `projects/*/locations/global`.
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1649,7 +1771,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the EndpointPolicies should
-        /// be listed, specified in the format `projects/*/locations/global`.
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1683,7 +1805,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the EndpointPolicies should
-        /// be listed, specified in the format `projects/*/locations/global`.
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1717,7 +1839,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the EndpointPolicies should
-        /// be listed, specified in the format `projects/*/locations/global`.
+        /// be listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1778,7 +1900,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to get. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1793,7 +1915,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to get. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1808,7 +1930,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to get. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1820,7 +1942,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to get. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1835,7 +1957,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to get. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1850,7 +1972,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to get. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1916,7 +2038,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the EndpointPolicy. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="endpointPolicy">
         /// Required. EndpointPolicy resource to be created.
@@ -1940,7 +2062,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the EndpointPolicy. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="endpointPolicy">
         /// Required. EndpointPolicy resource to be created.
@@ -1964,7 +2086,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the EndpointPolicy. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="endpointPolicy">
         /// Required. EndpointPolicy resource to be created.
@@ -1983,7 +2105,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the EndpointPolicy. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="endpointPolicy">
         /// Required. EndpointPolicy resource to be created.
@@ -2007,7 +2129,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the EndpointPolicy. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="endpointPolicy">
         /// Required. EndpointPolicy resource to be created.
@@ -2031,7 +2153,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the EndpointPolicy. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="endpointPolicy">
         /// Required. EndpointPolicy resource to be created.
@@ -2220,7 +2342,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to delete. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2235,7 +2357,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to delete. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2250,7 +2372,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to delete. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2262,7 +2384,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to delete. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -2277,7 +2399,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to delete. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -2292,7 +2414,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the EndpointPolicy to delete. Must be in the format
-        /// `projects/*/locations/global/endpointPolicies/*`.
+        /// `projects/*/locations/*/endpointPolicies/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4380,7 +4502,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the GrpcRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4414,7 +4536,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the GrpcRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4448,7 +4570,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the GrpcRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4482,7 +4604,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the GrpcRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -4543,7 +4665,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to get. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4558,7 +4680,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to get. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4573,7 +4695,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to get. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4585,7 +4707,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to get. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4600,7 +4722,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to get. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4615,7 +4737,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to get. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -4680,7 +4802,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the GrpcRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="grpcRoute">
         /// Required. GrpcRoute resource to be created.
@@ -4703,7 +4825,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the GrpcRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="grpcRoute">
         /// Required. GrpcRoute resource to be created.
@@ -4726,7 +4848,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the GrpcRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="grpcRoute">
         /// Required. GrpcRoute resource to be created.
@@ -4744,7 +4866,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the GrpcRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="grpcRoute">
         /// Required. GrpcRoute resource to be created.
@@ -4767,7 +4889,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the GrpcRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="grpcRoute">
         /// Required. GrpcRoute resource to be created.
@@ -4790,7 +4912,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the GrpcRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="grpcRoute">
         /// Required. GrpcRoute resource to be created.
@@ -4976,7 +5098,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to delete. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -4991,7 +5113,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to delete. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5006,7 +5128,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to delete. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5018,7 +5140,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to delete. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5033,7 +5155,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to delete. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5048,7 +5170,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the GrpcRoute to delete. Must be in the format
-        /// `projects/*/locations/global/grpcRoutes/*`.
+        /// `projects/*/locations/*/grpcRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5078,7 +5200,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the HttpRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5112,7 +5234,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the HttpRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5146,7 +5268,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the HttpRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5180,7 +5302,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the HttpRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5241,7 +5363,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to get. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5256,7 +5378,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to get. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5271,7 +5393,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to get. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5283,7 +5405,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to get. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5298,7 +5420,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to get. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5313,7 +5435,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to get. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5378,7 +5500,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the HttpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="httpRoute">
         /// Required. HttpRoute resource to be created.
@@ -5401,7 +5523,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the HttpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="httpRoute">
         /// Required. HttpRoute resource to be created.
@@ -5424,7 +5546,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the HttpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="httpRoute">
         /// Required. HttpRoute resource to be created.
@@ -5442,7 +5564,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the HttpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="httpRoute">
         /// Required. HttpRoute resource to be created.
@@ -5465,7 +5587,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the HttpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="httpRoute">
         /// Required. HttpRoute resource to be created.
@@ -5488,7 +5610,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the HttpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="httpRoute">
         /// Required. HttpRoute resource to be created.
@@ -5674,7 +5796,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5689,7 +5811,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5704,7 +5826,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5716,7 +5838,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5731,7 +5853,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5746,7 +5868,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the HttpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/httpRoutes/*`.
+        /// `projects/*/locations/*/httpRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5776,7 +5898,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the TcpRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5810,7 +5932,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the TcpRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5844,7 +5966,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the TcpRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5878,7 +6000,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the TcpRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -5939,7 +6061,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to get. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5954,7 +6076,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to get. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5969,7 +6091,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to get. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5981,7 +6103,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to get. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5996,7 +6118,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to get. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6011,7 +6133,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to get. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6076,7 +6198,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TcpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tcpRoute">
         /// Required. TcpRoute resource to be created.
@@ -6099,7 +6221,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TcpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tcpRoute">
         /// Required. TcpRoute resource to be created.
@@ -6122,7 +6244,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TcpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tcpRoute">
         /// Required. TcpRoute resource to be created.
@@ -6140,7 +6262,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TcpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tcpRoute">
         /// Required. TcpRoute resource to be created.
@@ -6163,7 +6285,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TcpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tcpRoute">
         /// Required. TcpRoute resource to be created.
@@ -6186,7 +6308,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TcpRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tcpRoute">
         /// Required. TcpRoute resource to be created.
@@ -6372,7 +6494,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6387,7 +6509,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6402,7 +6524,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6414,7 +6536,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6429,7 +6551,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6444,7 +6566,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TcpRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tcpRoutes/*`.
+        /// `projects/*/locations/*/tcpRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6474,7 +6596,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the TlsRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6508,7 +6630,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the TlsRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6542,7 +6664,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the TlsRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6576,7 +6698,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the TlsRoutes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -6637,7 +6759,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to get. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6652,7 +6774,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to get. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6667,7 +6789,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to get. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6679,7 +6801,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to get. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -6694,7 +6816,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to get. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6709,7 +6831,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to get. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6774,7 +6896,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TlsRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tlsRoute">
         /// Required. TlsRoute resource to be created.
@@ -6797,7 +6919,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TlsRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tlsRoute">
         /// Required. TlsRoute resource to be created.
@@ -6820,7 +6942,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TlsRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tlsRoute">
         /// Required. TlsRoute resource to be created.
@@ -6838,7 +6960,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TlsRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tlsRoute">
         /// Required. TlsRoute resource to be created.
@@ -6861,7 +6983,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TlsRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tlsRoute">
         /// Required. TlsRoute resource to be created.
@@ -6884,7 +7006,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the TlsRoute. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="tlsRoute">
         /// Required. TlsRoute resource to be created.
@@ -7070,7 +7192,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7085,7 +7207,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7100,7 +7222,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7112,7 +7234,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -7127,7 +7249,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7142,7 +7264,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the TlsRoute to delete. Must be in the format
-        /// `projects/*/locations/global/tlsRoutes/*`.
+        /// `projects/*/locations/*/tlsRoutes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -7873,7 +7995,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the Meshes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7907,7 +8029,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the Meshes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7941,7 +8063,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the Meshes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -7975,7 +8097,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The project and location from which the Meshes should be
-        /// listed, specified in the format `projects/*/locations/global`.
+        /// listed, specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -8036,7 +8158,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to get. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8051,7 +8173,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to get. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8066,7 +8188,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to get. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8078,7 +8200,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to get. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8093,7 +8215,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to get. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8108,7 +8230,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to get. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8173,7 +8295,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the Mesh. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="mesh">
         /// Required. Mesh resource to be created.
@@ -8196,7 +8318,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the Mesh. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="mesh">
         /// Required. Mesh resource to be created.
@@ -8219,7 +8341,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the Mesh. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="mesh">
         /// Required. Mesh resource to be created.
@@ -8237,7 +8359,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the Mesh. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="mesh">
         /// Required. Mesh resource to be created.
@@ -8260,7 +8382,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the Mesh. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="mesh">
         /// Required. Mesh resource to be created.
@@ -8283,7 +8405,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource of the Mesh. Must be in the
-        /// format `projects/*/locations/global`.
+        /// format `projects/*/locations/*`.
         /// </param>
         /// <param name="mesh">
         /// Required. Mesh resource to be created.
@@ -8469,7 +8591,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to delete. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8484,7 +8606,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to delete. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8499,7 +8621,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to delete. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8511,7 +8633,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to delete. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -8526,7 +8648,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to delete. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8541,7 +8663,7 @@ namespace Google.Cloud.NetworkServices.V1
         /// </summary>
         /// <param name="name">
         /// Required. A name of the Mesh to delete. Must be in the format
-        /// `projects/*/locations/global/meshes/*`.
+        /// `projects/*/locations/*/meshes/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -9820,6 +9942,707 @@ namespace Google.Cloud.NetworkServices.V1
             }
             return ListMeshRouteViewsAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Lists AgentGateways in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AgentGateway"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAgentGatewaysResponse, AgentGateway> ListAgentGateways(ListAgentGatewaysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AgentGateways in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AgentGateway"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAgentGatewaysResponse, AgentGateway> ListAgentGatewaysAsync(ListAgentGatewaysRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists AgentGateways in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the AgentGateways should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AgentGateway"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAgentGatewaysResponse, AgentGateway> ListAgentGateways(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAgentGatewaysRequest request = new ListAgentGatewaysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAgentGateways(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AgentGateways in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the AgentGateways should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AgentGateway"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAgentGatewaysResponse, AgentGateway> ListAgentGatewaysAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAgentGatewaysRequest request = new ListAgentGatewaysRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAgentGatewaysAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AgentGateways in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the AgentGateways should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AgentGateway"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAgentGatewaysResponse, AgentGateway> ListAgentGateways(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAgentGatewaysRequest request = new ListAgentGatewaysRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAgentGateways(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AgentGateways in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location from which the AgentGateways should be
+        /// listed, specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AgentGateway"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAgentGatewaysResponse, AgentGateway> ListAgentGatewaysAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAgentGatewaysRequest request = new ListAgentGatewaysRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAgentGatewaysAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentGateway GetAgentGateway(GetAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentGateway> GetAgentGatewayAsync(GetAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentGateway> GetAgentGatewayAsync(GetAgentGatewayRequest request, st::CancellationToken cancellationToken) =>
+            GetAgentGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to get. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentGateway GetAgentGateway(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAgentGateway(new GetAgentGatewayRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to get. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentGateway> GetAgentGatewayAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAgentGatewayAsync(new GetAgentGatewayRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to get. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentGateway> GetAgentGatewayAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAgentGatewayAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to get. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AgentGateway GetAgentGateway(AgentGatewayName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAgentGateway(new GetAgentGatewayRequest
+            {
+                AgentGatewayName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to get. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentGateway> GetAgentGatewayAsync(AgentGatewayName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAgentGatewayAsync(new GetAgentGatewayRequest
+            {
+                AgentGatewayName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to get. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AgentGateway> GetAgentGatewayAsync(AgentGatewayName name, st::CancellationToken cancellationToken) =>
+            GetAgentGatewayAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AgentGateway, OperationMetadata> CreateAgentGateway(CreateAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> CreateAgentGatewayAsync(CreateAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> CreateAgentGatewayAsync(CreateAgentGatewayRequest request, st::CancellationToken cancellationToken) =>
+            CreateAgentGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateAgentGateway</c>.</summary>
+        public virtual lro::OperationsClient CreateAgentGatewayOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateAgentGateway</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AgentGateway, OperationMetadata> PollOnceCreateAgentGateway(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AgentGateway, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAgentGatewayOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateAgentGateway</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> PollOnceCreateAgentGatewayAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AgentGateway, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateAgentGatewayOperationsClient, callSettings);
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the AgentGateway. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="agentGateway">
+        /// Required. AgentGateway resource to be created.
+        /// </param>
+        /// <param name="agentGatewayId">
+        /// Required. Short name of the AgentGateway resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AgentGateway, OperationMetadata> CreateAgentGateway(string parent, AgentGateway agentGateway, string agentGatewayId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAgentGateway(new CreateAgentGatewayRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AgentGatewayId = gax::GaxPreconditions.CheckNotNullOrEmpty(agentGatewayId, nameof(agentGatewayId)),
+                AgentGateway = gax::GaxPreconditions.CheckNotNull(agentGateway, nameof(agentGateway)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the AgentGateway. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="agentGateway">
+        /// Required. AgentGateway resource to be created.
+        /// </param>
+        /// <param name="agentGatewayId">
+        /// Required. Short name of the AgentGateway resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> CreateAgentGatewayAsync(string parent, AgentGateway agentGateway, string agentGatewayId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAgentGatewayAsync(new CreateAgentGatewayRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                AgentGatewayId = gax::GaxPreconditions.CheckNotNullOrEmpty(agentGatewayId, nameof(agentGatewayId)),
+                AgentGateway = gax::GaxPreconditions.CheckNotNull(agentGateway, nameof(agentGateway)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the AgentGateway. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="agentGateway">
+        /// Required. AgentGateway resource to be created.
+        /// </param>
+        /// <param name="agentGatewayId">
+        /// Required. Short name of the AgentGateway resource to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> CreateAgentGatewayAsync(string parent, AgentGateway agentGateway, string agentGatewayId, st::CancellationToken cancellationToken) =>
+            CreateAgentGatewayAsync(parent, agentGateway, agentGatewayId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the AgentGateway. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="agentGateway">
+        /// Required. AgentGateway resource to be created.
+        /// </param>
+        /// <param name="agentGatewayId">
+        /// Required. Short name of the AgentGateway resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AgentGateway, OperationMetadata> CreateAgentGateway(gagr::LocationName parent, AgentGateway agentGateway, string agentGatewayId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAgentGateway(new CreateAgentGatewayRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AgentGatewayId = gax::GaxPreconditions.CheckNotNullOrEmpty(agentGatewayId, nameof(agentGatewayId)),
+                AgentGateway = gax::GaxPreconditions.CheckNotNull(agentGateway, nameof(agentGateway)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the AgentGateway. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="agentGateway">
+        /// Required. AgentGateway resource to be created.
+        /// </param>
+        /// <param name="agentGatewayId">
+        /// Required. Short name of the AgentGateway resource to be created.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> CreateAgentGatewayAsync(gagr::LocationName parent, AgentGateway agentGateway, string agentGatewayId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateAgentGatewayAsync(new CreateAgentGatewayRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                AgentGatewayId = gax::GaxPreconditions.CheckNotNullOrEmpty(agentGatewayId, nameof(agentGatewayId)),
+                AgentGateway = gax::GaxPreconditions.CheckNotNull(agentGateway, nameof(agentGateway)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource of the AgentGateway. Must be in the
+        /// format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="agentGateway">
+        /// Required. AgentGateway resource to be created.
+        /// </param>
+        /// <param name="agentGatewayId">
+        /// Required. Short name of the AgentGateway resource to be created.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> CreateAgentGatewayAsync(gagr::LocationName parent, AgentGateway agentGateway, string agentGatewayId, st::CancellationToken cancellationToken) =>
+            CreateAgentGatewayAsync(parent, agentGateway, agentGatewayId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the parameters of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AgentGateway, OperationMetadata> UpdateAgentGateway(UpdateAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> UpdateAgentGatewayAsync(UpdateAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the parameters of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> UpdateAgentGatewayAsync(UpdateAgentGatewayRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAgentGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateAgentGateway</c>.</summary>
+        public virtual lro::OperationsClient UpdateAgentGatewayOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateAgentGateway</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<AgentGateway, OperationMetadata> PollOnceUpdateAgentGateway(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AgentGateway, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAgentGatewayOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateAgentGateway</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> PollOnceUpdateAgentGatewayAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<AgentGateway, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateAgentGatewayOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AgentGateway.
+        /// </summary>
+        /// <param name="agentGateway">
+        /// Required. Updated AgentGateway resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// AgentGateway resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<AgentGateway, OperationMetadata> UpdateAgentGateway(AgentGateway agentGateway, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAgentGateway(new UpdateAgentGatewayRequest
+            {
+                UpdateMask = updateMask,
+                AgentGateway = gax::GaxPreconditions.CheckNotNull(agentGateway, nameof(agentGateway)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AgentGateway.
+        /// </summary>
+        /// <param name="agentGateway">
+        /// Required. Updated AgentGateway resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// AgentGateway resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> UpdateAgentGatewayAsync(AgentGateway agentGateway, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAgentGatewayAsync(new UpdateAgentGatewayRequest
+            {
+                UpdateMask = updateMask,
+                AgentGateway = gax::GaxPreconditions.CheckNotNull(agentGateway, nameof(agentGateway)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the parameters of a single AgentGateway.
+        /// </summary>
+        /// <param name="agentGateway">
+        /// Required. Updated AgentGateway resource.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask is used to specify the fields to be overwritten in the
+        /// AgentGateway resource by the update.
+        /// The fields specified in the update_mask are relative to the resource, not
+        /// the full request. A field will be overwritten if it is in the mask. If the
+        /// user does not provide a mask then all fields will be overwritten.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<AgentGateway, OperationMetadata>> UpdateAgentGatewayAsync(AgentGateway agentGateway, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAgentGatewayAsync(agentGateway, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAgentGateway(DeleteAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAgentGatewayAsync(DeleteAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAgentGatewayAsync(DeleteAgentGatewayRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAgentGatewayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAgentGateway</c>.</summary>
+        public virtual lro::OperationsClient DeleteAgentGatewayOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAgentGateway</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAgentGateway(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAgentGatewayOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAgentGateway</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAgentGatewayAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAgentGatewayOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to delete. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAgentGateway(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAgentGateway(new DeleteAgentGatewayRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to delete. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAgentGatewayAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAgentGatewayAsync(new DeleteAgentGatewayRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to delete. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAgentGatewayAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAgentGatewayAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to delete. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAgentGateway(AgentGatewayName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAgentGateway(new DeleteAgentGatewayRequest
+            {
+                AgentGatewayName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to delete. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAgentGatewayAsync(AgentGatewayName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAgentGatewayAsync(new DeleteAgentGatewayRequest
+            {
+                AgentGatewayName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="name">
+        /// Required. A name of the AgentGateway to delete. Must be in the format
+        /// `projects/*/locations/*/agentGateways/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAgentGatewayAsync(AgentGatewayName name, st::CancellationToken cancellationToken) =>
+            DeleteAgentGatewayAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>NetworkServices client wrapper implementation, for convenient use.</summary>
@@ -9944,6 +10767,16 @@ namespace Google.Cloud.NetworkServices.V1
 
         private readonly gaxgrpc::ApiCall<ListMeshRouteViewsRequest, ListMeshRouteViewsResponse> _callListMeshRouteViews;
 
+        private readonly gaxgrpc::ApiCall<ListAgentGatewaysRequest, ListAgentGatewaysResponse> _callListAgentGateways;
+
+        private readonly gaxgrpc::ApiCall<GetAgentGatewayRequest, AgentGateway> _callGetAgentGateway;
+
+        private readonly gaxgrpc::ApiCall<CreateAgentGatewayRequest, lro::Operation> _callCreateAgentGateway;
+
+        private readonly gaxgrpc::ApiCall<UpdateAgentGatewayRequest, lro::Operation> _callUpdateAgentGateway;
+
+        private readonly gaxgrpc::ApiCall<DeleteAgentGatewayRequest, lro::Operation> _callDeleteAgentGateway;
+
         /// <summary>
         /// Constructs a client wrapper for the NetworkServices service, with the specified gRPC client and settings.
         /// </summary>
@@ -9991,6 +10824,9 @@ namespace Google.Cloud.NetworkServices.V1
             CreateServiceLbPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateServiceLbPolicyOperationsSettings, logger);
             UpdateServiceLbPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateServiceLbPolicyOperationsSettings, logger);
             DeleteServiceLbPolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteServiceLbPolicyOperationsSettings, logger);
+            CreateAgentGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateAgentGatewayOperationsSettings, logger);
+            UpdateAgentGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAgentGatewayOperationsSettings, logger);
+            DeleteAgentGatewayOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAgentGatewayOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callListEndpointPolicies = clientHelper.BuildApiCall<ListEndpointPoliciesRequest, ListEndpointPoliciesResponse>("ListEndpointPolicies", grpcClient.ListEndpointPoliciesAsync, grpcClient.ListEndpointPolicies, effectiveSettings.ListEndpointPoliciesSettings).WithGoogleRequestParam("parent", request => request.Parent);
@@ -10167,6 +11003,21 @@ namespace Google.Cloud.NetworkServices.V1
             _callListMeshRouteViews = clientHelper.BuildApiCall<ListMeshRouteViewsRequest, ListMeshRouteViewsResponse>("ListMeshRouteViews", grpcClient.ListMeshRouteViewsAsync, grpcClient.ListMeshRouteViews, effectiveSettings.ListMeshRouteViewsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListMeshRouteViews);
             Modify_ListMeshRouteViewsApiCall(ref _callListMeshRouteViews);
+            _callListAgentGateways = clientHelper.BuildApiCall<ListAgentGatewaysRequest, ListAgentGatewaysResponse>("ListAgentGateways", grpcClient.ListAgentGatewaysAsync, grpcClient.ListAgentGateways, effectiveSettings.ListAgentGatewaysSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAgentGateways);
+            Modify_ListAgentGatewaysApiCall(ref _callListAgentGateways);
+            _callGetAgentGateway = clientHelper.BuildApiCall<GetAgentGatewayRequest, AgentGateway>("GetAgentGateway", grpcClient.GetAgentGatewayAsync, grpcClient.GetAgentGateway, effectiveSettings.GetAgentGatewaySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAgentGateway);
+            Modify_GetAgentGatewayApiCall(ref _callGetAgentGateway);
+            _callCreateAgentGateway = clientHelper.BuildApiCall<CreateAgentGatewayRequest, lro::Operation>("CreateAgentGateway", grpcClient.CreateAgentGatewayAsync, grpcClient.CreateAgentGateway, effectiveSettings.CreateAgentGatewaySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateAgentGateway);
+            Modify_CreateAgentGatewayApiCall(ref _callCreateAgentGateway);
+            _callUpdateAgentGateway = clientHelper.BuildApiCall<UpdateAgentGatewayRequest, lro::Operation>("UpdateAgentGateway", grpcClient.UpdateAgentGatewayAsync, grpcClient.UpdateAgentGateway, effectiveSettings.UpdateAgentGatewaySettings).WithGoogleRequestParam("agent_gateway.name", request => request.AgentGateway?.Name);
+            Modify_ApiCall(ref _callUpdateAgentGateway);
+            Modify_UpdateAgentGatewayApiCall(ref _callUpdateAgentGateway);
+            _callDeleteAgentGateway = clientHelper.BuildApiCall<DeleteAgentGatewayRequest, lro::Operation>("DeleteAgentGateway", grpcClient.DeleteAgentGatewayAsync, grpcClient.DeleteAgentGateway, effectiveSettings.DeleteAgentGatewaySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAgentGateway);
+            Modify_DeleteAgentGatewayApiCall(ref _callDeleteAgentGateway);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -10287,6 +11138,16 @@ namespace Google.Cloud.NetworkServices.V1
         partial void Modify_ListGatewayRouteViewsApiCall(ref gaxgrpc::ApiCall<ListGatewayRouteViewsRequest, ListGatewayRouteViewsResponse> call);
 
         partial void Modify_ListMeshRouteViewsApiCall(ref gaxgrpc::ApiCall<ListMeshRouteViewsRequest, ListMeshRouteViewsResponse> call);
+
+        partial void Modify_ListAgentGatewaysApiCall(ref gaxgrpc::ApiCall<ListAgentGatewaysRequest, ListAgentGatewaysResponse> call);
+
+        partial void Modify_GetAgentGatewayApiCall(ref gaxgrpc::ApiCall<GetAgentGatewayRequest, AgentGateway> call);
+
+        partial void Modify_CreateAgentGatewayApiCall(ref gaxgrpc::ApiCall<CreateAgentGatewayRequest, lro::Operation> call);
+
+        partial void Modify_UpdateAgentGatewayApiCall(ref gaxgrpc::ApiCall<UpdateAgentGatewayRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAgentGatewayApiCall(ref gaxgrpc::ApiCall<DeleteAgentGatewayRequest, lro::Operation> call);
 
         partial void OnConstruction(NetworkServices.NetworkServicesClient grpcClient, NetworkServicesSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -10414,6 +11275,16 @@ namespace Google.Cloud.NetworkServices.V1
         partial void Modify_ListGatewayRouteViewsRequest(ref ListGatewayRouteViewsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListMeshRouteViewsRequest(ref ListMeshRouteViewsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAgentGatewaysRequest(ref ListAgentGatewaysRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAgentGatewayRequest(ref GetAgentGatewayRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateAgentGatewayRequest(ref CreateAgentGatewayRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAgentGatewayRequest(ref UpdateAgentGatewayRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAgentGatewayRequest(ref DeleteAgentGatewayRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists EndpointPolicies in a given project and location.
@@ -11910,6 +12781,135 @@ namespace Google.Cloud.NetworkServices.V1
             Modify_ListMeshRouteViewsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListMeshRouteViewsRequest, ListMeshRouteViewsResponse, MeshRouteView>(_callListMeshRouteViews, request, callSettings);
         }
+
+        /// <summary>
+        /// Lists AgentGateways in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AgentGateway"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAgentGatewaysResponse, AgentGateway> ListAgentGateways(ListAgentGatewaysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAgentGatewaysRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAgentGatewaysRequest, ListAgentGatewaysResponse, AgentGateway>(_callListAgentGateways, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists AgentGateways in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AgentGateway"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAgentGatewaysResponse, AgentGateway> ListAgentGatewaysAsync(ListAgentGatewaysRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAgentGatewaysRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAgentGatewaysRequest, ListAgentGatewaysResponse, AgentGateway>(_callListAgentGateways, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AgentGateway GetAgentGateway(GetAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAgentGatewayRequest(ref request, ref callSettings);
+            return _callGetAgentGateway.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AgentGateway> GetAgentGatewayAsync(GetAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAgentGatewayRequest(ref request, ref callSettings);
+            return _callGetAgentGateway.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateAgentGateway</c>.</summary>
+        public override lro::OperationsClient CreateAgentGatewayOperationsClient { get; }
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AgentGateway, OperationMetadata> CreateAgentGateway(CreateAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAgentGatewayRequest(ref request, ref callSettings);
+            return new lro::Operation<AgentGateway, OperationMetadata>(_callCreateAgentGateway.Sync(request, callSettings), CreateAgentGatewayOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates a new AgentGateway in a given project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AgentGateway, OperationMetadata>> CreateAgentGatewayAsync(CreateAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateAgentGatewayRequest(ref request, ref callSettings);
+            return new lro::Operation<AgentGateway, OperationMetadata>(await _callCreateAgentGateway.Async(request, callSettings).ConfigureAwait(false), CreateAgentGatewayOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateAgentGateway</c>.</summary>
+        public override lro::OperationsClient UpdateAgentGatewayOperationsClient { get; }
+
+        /// <summary>
+        /// Updates the parameters of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<AgentGateway, OperationMetadata> UpdateAgentGateway(UpdateAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAgentGatewayRequest(ref request, ref callSettings);
+            return new lro::Operation<AgentGateway, OperationMetadata>(_callUpdateAgentGateway.Sync(request, callSettings), UpdateAgentGatewayOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates the parameters of a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<AgentGateway, OperationMetadata>> UpdateAgentGatewayAsync(UpdateAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAgentGatewayRequest(ref request, ref callSettings);
+            return new lro::Operation<AgentGateway, OperationMetadata>(await _callUpdateAgentGateway.Async(request, callSettings).ConfigureAwait(false), UpdateAgentGatewayOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAgentGateway</c>.</summary>
+        public override lro::OperationsClient DeleteAgentGatewayOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAgentGateway(DeleteAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAgentGatewayRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAgentGateway.Sync(request, callSettings), DeleteAgentGatewayOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single AgentGateway.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAgentGatewayAsync(DeleteAgentGatewayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAgentGatewayRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAgentGateway.Async(request, callSettings).ConfigureAwait(false), DeleteAgentGatewayOperationsClient);
+        }
     }
 
     public partial class ListEndpointPoliciesRequest : gaxgrpc::IPageRequest
@@ -11961,6 +12961,10 @@ namespace Google.Cloud.NetworkServices.V1
     }
 
     public partial class ListMeshRouteViewsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAgentGatewaysRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -12064,6 +13068,14 @@ namespace Google.Cloud.NetworkServices.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<MeshRouteView> GetEnumerator() => MeshRouteViews.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAgentGatewaysResponse : gaxgrpc::IPageResponse<AgentGateway>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AgentGateway> GetEnumerator() => AgentGateways.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -86,6 +86,7 @@ namespace Google.Cloud.NetworkServices.V1
             yield return gciv::OptionsReflection.Descriptor;
             yield return gciv::PolicyReflection.Descriptor;
             yield return gcl::LocationsReflection.Descriptor;
+            yield return AgentGatewayReflection.Descriptor;
             yield return CommonReflection.Descriptor;
             yield return DepReflection.Descriptor;
             yield return EndpointPolicyReflection.Descriptor;
