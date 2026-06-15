@@ -62,7 +62,7 @@
     <PackageVersion Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
     <PackageVersion Include="ConfigureAwaitChecker.Analyzer" Version="5.0.0" />
     <PackageVersion Include="BenchmarkDotNet" Version="0.13.12" />
-    <PackageVersion Include="Xunit.Combinatorial" Version="1.6.24" />
+    <PackageVersion Include="Xunit.Combinatorial" Version="1.7.31" />
     <PackageVersion Include="System.Diagnostics.StackTrace" Version="4.3.0" />
     <PackageVersion Include="System.ValueTuple" Version="4.6.2" />
     <PackageVersion Include="log4net" Version="3.3.0" />
