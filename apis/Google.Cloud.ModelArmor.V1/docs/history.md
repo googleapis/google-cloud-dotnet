@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-06-15
+
+### New features
+
+- Add streaming methods StreamSanitizeUserPrompt and StreamSanitizeModelResponse
+- Add StreamingMode enum and field to sanitize requests
+
 ## Version 1.0.0-beta05, released 2025-11-05
 
 ### New features

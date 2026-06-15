@@ -4280,12 +4280,12 @@
         },
         {
             "id": "Google.Cloud.ModelArmor.V1",
-            "currentVersion": "1.0.0-beta05",
+            "currentVersion": "1.0.0-beta06",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T22:17:29.452870924Z",
+            "releaseTimestamp": "2026-06-15T15:03:32.002854967Z",
             "lastGeneratedCommit": "591ae025072c1608bd7b38039feeb296f640605a",
-            "lastReleasedCommit": "36533b09a6b383f3c30d13c3c26092154ecf5388",
+            "lastReleasedCommit": "591ae025072c1608bd7b38039feeb296f640605a",
             "apiPaths": [
                 "google/cloud/modelarmor/v1"
             ],
