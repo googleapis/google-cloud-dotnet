@@ -1,5 +1,15 @@
 # Version history
 
+## Version 3.29.0, released 2026-06-15
+
+### New features
+
+- Add support for filtering SampleRowKeys to a specific row_range
+
+### Documentation improvements
+
+- Comments in SampleRowKeys updated to reflect the new row_range field
+
 ## Version 3.28.0, released 2026-06-08
 
 ### New features
