@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.6.0, released 2026-06-15
+
+### New features
+
+- Add v1 client libraries for Oracle Database Goldengate
+
 ## Version 1.5.0, released 2025-11-06
 
 ### New features
