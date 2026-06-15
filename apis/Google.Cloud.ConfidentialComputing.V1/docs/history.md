@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.12.0, released 2026-06-15
+
+### New features
+
+- Add instance field to VerifyAttestationRequest
+
 ## Version 1.11.0, released 2026-02-09
 
 ### New features
