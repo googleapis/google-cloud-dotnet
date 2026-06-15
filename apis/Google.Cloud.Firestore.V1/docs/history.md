@@ -4,6 +4,19 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 4.3.0, released 2026-06-15
+
+### New features
+
+- Expose the 'auto_commit_transaction' option for the ExecutePipeline API
+- Expose the 'concurrency_mode' option for the Cloud Firestore API
+
+### Documentation improvements
+
+- A comment for message `TransactionOptions` is changed to better detail the new 'concurrency_mode' option.
+- A comment for field `parent` in message `.google.firestore.v1.ListCollectionIdsRequest` is changed to describe how to list top-level collections.
+- A comment for field `order_by` in message `.google.firestore.v1.StructuredQuery` is updated to describe default behavior for ENTERPRISE edition databases
+
 ## Version 4.2.0, released 2026-03-05
 
 ### New features
