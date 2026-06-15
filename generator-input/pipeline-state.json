@@ -2658,10 +2658,10 @@
         },
         {
             "id": "Google.Cloud.PubSub.V1",
-            "currentVersion": "3.35.0",
+            "currentVersion": "3.36.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-06-08T14:26:27.155467914Z",
+            "releaseTimestamp": "2026-06-15T14:19:58.747873030Z",
             "lastGeneratedCommit": "8c6e40489b4ab4f1886154a32ece2f0b5db52b27",
             "lastReleasedCommit": "8c6e40489b4ab4f1886154a32ece2f0b5db52b27",
             "apiPaths": [

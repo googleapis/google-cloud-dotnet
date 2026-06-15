@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.36.0, released 2026-06-15
+
+### New features
+
+- Streaming pull keepalive
+
 ## Version 3.35.0, released 2026-06-08
 
 ### New features
