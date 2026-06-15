@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-06-15
+
+### New features
+
+- Update cloud ml ces v1beta client libraries
+
+### Documentation improvements
+
+- Update comments for `audio_recording_config` and `bigquery_export_settings` in `LoggingSettings`.
+- Update comments for various `InputType` enum values.
+- Update comments for `root_span`, `turns`, and `max_turns` in `Evaluation`.
+
 ## Version 1.0.0-beta05, released 2026-05-04
 
 ### New features
