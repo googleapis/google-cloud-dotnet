@@ -19,6 +19,12 @@
       "commands": [
         "generate-sbom"
       ]
+    },
+    "Google.Cloud.Tools.SecretManagerHelper": {
+      "version": "1.0.0",
+      "commands": [
+        "secret-manager-helper"
+      ]
     }
   }
 }
