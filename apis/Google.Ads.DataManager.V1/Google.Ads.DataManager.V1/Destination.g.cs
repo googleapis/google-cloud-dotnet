@@ -37,7 +37,7 @@ namespace Google.Ads.DataManager.V1 {
             "cHJvZHVjdBgBIAEoDjIiLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHJv",
             "ZHVjdEICGAESFwoKYWNjb3VudF9pZBgCIAEoCUID4EECElAKDGFjY291bnRf",
             "dHlwZRgDIAEoDjI1Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuUHJvZHVj",
-            "dEFjY291bnQuQWNjb3VudFR5cGVCA+BBASLhAQoLQWNjb3VudFR5cGUSHAoY",
+            "dEFjY291bnQuQWNjb3VudFR5cGVCA+BBAiLhAQoLQWNjb3VudFR5cGUSHAoY",
             "QUNDT1VOVF9UWVBFX1VOU1BFQ0lGSUVEEAASDgoKR09PR0xFX0FEUxABEhkK",
             "FURJU1BMQVlfVklERU9fUEFSVE5FUhACEhwKGERJU1BMQVlfVklERU9fQURW",
             "RVJUSVNFUhADEhAKDERBVEFfUEFSVE5FUhAEEh0KGUdPT0dMRV9BTkFMWVRJ",
@@ -591,7 +591,7 @@ namespace Google.Ads.DataManager.V1 {
     public const int AccountTypeFieldNumber = 3;
     private global::Google.Ads.DataManager.V1.ProductAccount.Types.AccountType accountType_ = global::Google.Ads.DataManager.V1.ProductAccount.Types.AccountType.Unspecified;
     /// <summary>
-    /// Optional. The type of the account. For example, `GOOGLE_ADS`.
+    /// Required. The type of the account. For example, `GOOGLE_ADS`.
     /// Either `account_type` or the deprecated `product` is required.
     /// If both are set, the values must match.
     /// </summary>

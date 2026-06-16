@@ -30,6 +30,7 @@ namespace Google.Ads.DataManager.V1
 
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
+            yield return AdEventReflection.Descriptor;
             yield return AgeRangeReflection.Descriptor;
             yield return AudienceReflection.Descriptor;
             yield return CartDataReflection.Descriptor;
@@ -63,6 +64,7 @@ namespace Google.Ads.DataManager.V1
             yield return UserListLicenseStatusReflection.Descriptor;
             yield return UserListServiceReflection.Descriptor;
             yield return UserPropertiesReflection.Descriptor;
+            yield return ViewabilityInfoReflection.Descriptor;
         }
     }
 }
