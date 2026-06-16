@@ -16,14 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkservices_v1_generated_NetworkServices_CreateHttpRoute_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START networkservices_v1_generated_NetworkServices_DeleteAgentGateway_async_flattened]
     using Google.Cloud.NetworkServices.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedNetworkServicesClientSnippets
     {
-        /// <summary>Snippet for CreateHttpRoute</summary>
+        /// <summary>Snippet for DeleteAgentGatewayAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,37 +32,31 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateHttpRouteRequestObject()
+        public async Task DeleteAgentGatewayAsync()
         {
             // Create client
-            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
             // Initialize request argument(s)
-            CreateHttpRouteRequest request = new CreateHttpRouteRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                HttpRouteId = "",
-                HttpRoute = new HttpRoute(),
-                RequestId = "",
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/agentGateways/[AGENT_GATEWAY]";
             // Make the request
-            Operation<HttpRoute, OperationMetadata> response = networkServicesClient.CreateHttpRoute(request);
+            Operation<Empty, OperationMetadata> response = await networkServicesClient.DeleteAgentGatewayAsync(name);
 
             // Poll until the returned long-running operation is complete
-            Operation<HttpRoute, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            HttpRoute result = completedResponse.Result;
+            Empty result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<HttpRoute, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateHttpRoute(operationName);
+            Operation<Empty, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceDeleteAgentGatewayAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                HttpRoute retrievedResult = retrievedResponse.Result;
+                Empty retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END networkservices_v1_generated_NetworkServices_CreateHttpRoute_sync]
+    // [END networkservices_v1_generated_NetworkServices_DeleteAgentGateway_async_flattened]
 }

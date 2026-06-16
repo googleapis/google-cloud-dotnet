@@ -3,7 +3,7 @@
 //     source: google/cloud/networkservices/v1/network_services.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -233,6 +233,20 @@ namespace Google.Cloud.NetworkServices.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest> __Marshaller_google_cloud_networkservices_v1_ListMeshRouteViewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse> __Marshaller_google_cloud_networkservices_v1_ListMeshRouteViewsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest> __Marshaller_google_cloud_networkservices_v1_ListAgentGatewaysRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse> __Marshaller_google_cloud_networkservices_v1_ListAgentGatewaysResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest> __Marshaller_google_cloud_networkservices_v1_GetAgentGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.AgentGateway> __Marshaller_google_cloud_networkservices_v1_AgentGateway = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.AgentGateway.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest> __Marshaller_google_cloud_networkservices_v1_CreateAgentGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest> __Marshaller_google_cloud_networkservices_v1_UpdateAgentGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest> __Marshaller_google_cloud_networkservices_v1_DeleteAgentGatewayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesRequest, global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesResponse> __Method_ListEndpointPolicies = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesRequest, global::Google.Cloud.NetworkServices.V1.ListEndpointPoliciesResponse>(
@@ -697,6 +711,46 @@ namespace Google.Cloud.NetworkServices.V1 {
         "ListMeshRouteViews",
         __Marshaller_google_cloud_networkservices_v1_ListMeshRouteViewsRequest,
         __Marshaller_google_cloud_networkservices_v1_ListMeshRouteViewsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest, global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse> __Method_ListAgentGateways = new grpc::Method<global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest, global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAgentGateways",
+        __Marshaller_google_cloud_networkservices_v1_ListAgentGatewaysRequest,
+        __Marshaller_google_cloud_networkservices_v1_ListAgentGatewaysResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest, global::Google.Cloud.NetworkServices.V1.AgentGateway> __Method_GetAgentGateway = new grpc::Method<global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest, global::Google.Cloud.NetworkServices.V1.AgentGateway>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAgentGateway",
+        __Marshaller_google_cloud_networkservices_v1_GetAgentGatewayRequest,
+        __Marshaller_google_cloud_networkservices_v1_AgentGateway);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest, global::Google.LongRunning.Operation> __Method_CreateAgentGateway = new grpc::Method<global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateAgentGateway",
+        __Marshaller_google_cloud_networkservices_v1_CreateAgentGatewayRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest, global::Google.LongRunning.Operation> __Method_UpdateAgentGateway = new grpc::Method<global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAgentGateway",
+        __Marshaller_google_cloud_networkservices_v1_UpdateAgentGatewayRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest, global::Google.LongRunning.Operation> __Method_DeleteAgentGateway = new grpc::Method<global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAgentGateway",
+        __Marshaller_google_cloud_networkservices_v1_DeleteAgentGatewayRequest,
+        __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1404,6 +1458,66 @@ namespace Google.Cloud.NetworkServices.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse> ListMeshRouteViews(global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists AgentGateways in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse> ListAgentGateways(global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkServices.V1.AgentGateway> GetAgentGateway(global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a new AgentGateway in a given project and location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateAgentGateway(global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the parameters of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateAgentGateway(global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAgentGateway(global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -4237,6 +4351,246 @@ namespace Google.Cloud.NetworkServices.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListMeshRouteViews, null, options, request);
       }
+      /// <summary>
+      /// Lists AgentGateways in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse ListAgentGateways(global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAgentGateways(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AgentGateways in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse ListAgentGateways(global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAgentGateways, null, options, request);
+      }
+      /// <summary>
+      /// Lists AgentGateways in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse> ListAgentGatewaysAsync(global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAgentGatewaysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists AgentGateways in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse> ListAgentGatewaysAsync(global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAgentGateways, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.AgentGateway GetAgentGateway(global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAgentGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkServices.V1.AgentGateway GetAgentGateway(global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAgentGateway, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.AgentGateway> GetAgentGatewayAsync(global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAgentGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkServices.V1.AgentGateway> GetAgentGatewayAsync(global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAgentGateway, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AgentGateway in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAgentGateway(global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAgentGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AgentGateway in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation CreateAgentGateway(global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateAgentGateway, null, options, request);
+      }
+      /// <summary>
+      /// Creates a new AgentGateway in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAgentGatewayAsync(global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateAgentGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a new AgentGateway in a given project and location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateAgentGatewayAsync(global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateAgentGateway, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAgentGateway(global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAgentGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateAgentGateway(global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAgentGateway, null, options, request);
+      }
+      /// <summary>
+      /// Updates the parameters of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAgentGatewayAsync(global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAgentGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the parameters of a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateAgentGatewayAsync(global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAgentGateway, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAgentGateway(global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAgentGateway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAgentGateway(global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAgentGateway, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAgentGatewayAsync(global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAgentGatewayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single AgentGateway.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAgentGatewayAsync(global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAgentGateway, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override NetworkServicesClient NewInstance(ClientBaseConfiguration configuration)
@@ -4308,7 +4662,12 @@ namespace Google.Cloud.NetworkServices.V1 {
           .AddMethod(__Method_GetGatewayRouteView, serviceImpl.GetGatewayRouteView)
           .AddMethod(__Method_GetMeshRouteView, serviceImpl.GetMeshRouteView)
           .AddMethod(__Method_ListGatewayRouteViews, serviceImpl.ListGatewayRouteViews)
-          .AddMethod(__Method_ListMeshRouteViews, serviceImpl.ListMeshRouteViews).Build();
+          .AddMethod(__Method_ListMeshRouteViews, serviceImpl.ListMeshRouteViews)
+          .AddMethod(__Method_ListAgentGateways, serviceImpl.ListAgentGateways)
+          .AddMethod(__Method_GetAgentGateway, serviceImpl.GetAgentGateway)
+          .AddMethod(__Method_CreateAgentGateway, serviceImpl.CreateAgentGateway)
+          .AddMethod(__Method_UpdateAgentGateway, serviceImpl.UpdateAgentGateway)
+          .AddMethod(__Method_DeleteAgentGateway, serviceImpl.DeleteAgentGateway).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -4376,6 +4735,11 @@ namespace Google.Cloud.NetworkServices.V1 {
       serviceBinder.AddMethod(__Method_GetMeshRouteView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetMeshRouteViewRequest, global::Google.Cloud.NetworkServices.V1.MeshRouteView>(serviceImpl.GetMeshRouteView));
       serviceBinder.AddMethod(__Method_ListGatewayRouteViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsRequest, global::Google.Cloud.NetworkServices.V1.ListGatewayRouteViewsResponse>(serviceImpl.ListGatewayRouteViews));
       serviceBinder.AddMethod(__Method_ListMeshRouteViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsRequest, global::Google.Cloud.NetworkServices.V1.ListMeshRouteViewsResponse>(serviceImpl.ListMeshRouteViews));
+      serviceBinder.AddMethod(__Method_ListAgentGateways, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest, global::Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse>(serviceImpl.ListAgentGateways));
+      serviceBinder.AddMethod(__Method_GetAgentGateway, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest, global::Google.Cloud.NetworkServices.V1.AgentGateway>(serviceImpl.GetAgentGateway));
+      serviceBinder.AddMethod(__Method_CreateAgentGateway, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateAgentGateway));
+      serviceBinder.AddMethod(__Method_UpdateAgentGateway, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateAgentGateway));
+      serviceBinder.AddMethod(__Method_DeleteAgentGateway, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAgentGateway));
     }
 
   }

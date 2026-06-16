@@ -29,7 +29,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
             "dG8aLGdvb2dsZS9jbG91ZC9uZXR3b3Jrc2VydmljZXMvdjEvY29tbW9uLnBy",
             "b3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xl",
-            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKRBAoETWVzaBIRCgRuYW1lGAEg",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKfBAoETWVzaBIRCgRuYW1lGAEg",
             "ASgJQgPgQQgSFgoJc2VsZl9saW5rGAkgASgJQgPgQQMSNAoLY3JlYXRlX3Rp",
             "bWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoL",
             "dXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
@@ -38,34 +38,35 @@ namespace Google.Cloud.NetworkServices.V1 {
             "b24YBSABKAlCA+BBARIeChFpbnRlcmNlcHRpb25fcG9ydBgIIAEoBUID4EEB",
             "Ek4KDWVudm95X2hlYWRlcnMYECABKA4yLS5nb29nbGUuY2xvdWQubmV0d29y",
             "a3NlcnZpY2VzLnYxLkVudm95SGVhZGVyc0ID4EEBSACIAQEaLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpf6kFcCiNu",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpt6kFqCiNu",
             "ZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaBI1cHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21lc2hlcy97bWVzaH1C",
-            "EAoOX2Vudm95X2hlYWRlcnMinAEKEUxpc3RNZXNoZXNSZXF1ZXN0EjsKBnBh",
-            "cmVudBgBIAEoCUIr4EEC+kElEiNuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBp",
-            "cy5jb20vTWVzaBIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgD",
-            "IAEoCRIjChZyZXR1cm5fcGFydGlhbF9zdWNjZXNzGAQgASgIQgPgQQEieQoS",
-            "TGlzdE1lc2hlc1Jlc3BvbnNlEjUKBm1lc2hlcxgBIAMoCzIlLmdvb2dsZS5j",
-            "bG91ZC5uZXR3b3Jrc2VydmljZXMudjEuTWVzaBIXCg9uZXh0X3BhZ2VfdG9r",
-            "ZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiSwoOR2V0TWVzaFJlcXVl",
-            "c3QSOQoEbmFtZRgBIAEoCUIr4EEC+kElCiNuZXR3b3Jrc2VydmljZXMuZ29v",
-            "Z2xlYXBpcy5jb20vTWVzaCKgAQoRQ3JlYXRlTWVzaFJlcXVlc3QSOwoGcGFy",
-            "ZW50GAEgASgJQivgQQL6QSUSI25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlz",
-            "LmNvbS9NZXNoEhQKB21lc2hfaWQYAiABKAlCA+BBAhI4CgRtZXNoGAMgASgL",
-            "MiUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5NZXNoQgPgQQIi",
-            "gwEKEVVwZGF0ZU1lc2hSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBEjgKBG1lc2gYAiABKAsy",
-            "JS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLk1lc2hCA+BBAiJO",
-            "ChFEZWxldGVNZXNoUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI25l",
-            "dHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoQuQCCiNjb20uZ29v",
-            "Z2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MUIJTWVzaFByb3RvUAFaTWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya3NlcnZpY2VzL2FwaXYxL25ldHdv",
-            "cmtzZXJ2aWNlc3BiO25ldHdvcmtzZXJ2aWNlc3BiqgIfR29vZ2xlLkNsb3Vk",
-            "Lk5ldHdvcmtTZXJ2aWNlcy5WMcoCH0dvb2dsZVxDbG91ZFxOZXR3b3JrU2Vy",
-            "dmljZXNcVjHqAiJHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VydmljZXM6OlYx",
-            "6kF3Cihjb21wdXRlLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBdHRhY2htZW50",
-            "Ektwcm9qZWN0cy97cHJvamVjdH0vcmVnaW9ucy97cmVnaW9ufS9zZXJ2aWNl",
-            "QXR0YWNobWVudHMve3NlcnZpY2VfYXR0YWNobWVudH1iBnByb3RvMw=="));
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21lc2hlcy97bWVzaH0q",
+            "Bm1lc2hlczIEbWVzaEIQCg5fZW52b3lfaGVhZGVycyKcAQoRTGlzdE1lc2hl",
+            "c1JlcXVlc3QSOwoGcGFyZW50GAEgASgJQivgQQL6QSUSI25ldHdvcmtzZXJ2",
+            "aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIS",
+            "CgpwYWdlX3Rva2VuGAMgASgJEiMKFnJldHVybl9wYXJ0aWFsX3N1Y2Nlc3MY",
+            "BCABKAhCA+BBASJ5ChJMaXN0TWVzaGVzUmVzcG9uc2USNQoGbWVzaGVzGAEg",
+            "AygLMiUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5NZXNoEhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJL",
+            "Cg5HZXRNZXNoUmVxdWVzdBI5CgRuYW1lGAEgASgJQivgQQL6QSUKI25ldHdv",
+            "cmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9NZXNoIqABChFDcmVhdGVNZXNo",
+            "UmVxdWVzdBI7CgZwYXJlbnQYASABKAlCK+BBAvpBJRIjbmV0d29ya3NlcnZp",
+            "Y2VzLmdvb2dsZWFwaXMuY29tL01lc2gSFAoHbWVzaF9pZBgCIAEoCUID4EEC",
+            "EjgKBG1lc2gYAyABKAsyJS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2Vz",
+            "LnYxLk1lc2hCA+BBAiKDAQoRVXBkYXRlTWVzaFJlcXVlc3QSNAoLdXBkYXRl",
+            "X21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQES",
+            "OAoEbWVzaBgCIAEoCzIlLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMu",
+            "djEuTWVzaEID4EECIk4KEURlbGV0ZU1lc2hSZXF1ZXN0EjkKBG5hbWUYASAB",
+            "KAlCK+BBAvpBJQojbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL01l",
+            "c2hC5AIKI2NvbS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxQglN",
+            "ZXNoUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3b3Jrc2Vydmlj",
+            "ZXMvYXBpdjEvbmV0d29ya3NlcnZpY2VzcGI7bmV0d29ya3NlcnZpY2VzcGKq",
+            "Ah9Hb29nbGUuQ2xvdWQuTmV0d29ya1NlcnZpY2VzLlYxygIfR29vZ2xlXENs",
+            "b3VkXE5ldHdvcmtTZXJ2aWNlc1xWMeoCIkdvb2dsZTo6Q2xvdWQ6Ok5ldHdv",
+            "cmtTZXJ2aWNlczo6VjHqQXcKKGNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vU2Vy",
+            "dmljZUF0dGFjaG1lbnQSS3Byb2plY3RzL3twcm9qZWN0fS9yZWdpb25zL3ty",
+            "ZWdpb259L3NlcnZpY2VBdHRhY2htZW50cy97c2VydmljZV9hdHRhY2htZW50",
+            "fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkServices.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -146,7 +147,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. Name of the Mesh resource. It matches pattern
-    /// `projects/*/locations/global/meshes/&lt;mesh_name>`.
+    /// `projects/*/locations/*/meshes/&lt;mesh_name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -657,7 +658,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project and location from which the Meshes should be
-    /// listed, specified in the format `projects/*/locations/global`.
+    /// listed, specified in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1249,7 +1250,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the Mesh to get. Must be in the format
-    /// `projects/*/locations/global/meshes/*`.
+    /// `projects/*/locations/*/meshes/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1456,7 +1457,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource of the Mesh. Must be in the
-    /// format `projects/*/locations/global`.
+    /// format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2014,7 +2015,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the Mesh to delete. Must be in the format
-    /// `projects/*/locations/global/meshes/*`.
+    /// `projects/*/locations/*/meshes/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

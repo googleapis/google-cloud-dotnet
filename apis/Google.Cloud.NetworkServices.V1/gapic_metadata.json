@@ -139,6 +139,12 @@
         "grpc": {
           "libraryClient": "NetworkServicesClient",
           "rpcs": {
+            "CreateAgentGateway": {
+              "methods": [
+                "CreateAgentGateway",
+                "CreateAgentGatewayAsync"
+              ]
+            },
             "CreateEndpointPolicy": {
               "methods": [
                 "CreateEndpointPolicy",
@@ -205,6 +211,12 @@
                 "CreateWasmPluginVersionAsync"
               ]
             },
+            "DeleteAgentGateway": {
+              "methods": [
+                "DeleteAgentGateway",
+                "DeleteAgentGatewayAsync"
+              ]
+            },
             "DeleteEndpointPolicy": {
               "methods": [
                 "DeleteEndpointPolicy",
@@ -269,6 +281,12 @@
               "methods": [
                 "DeleteWasmPluginVersion",
                 "DeleteWasmPluginVersionAsync"
+              ]
+            },
+            "GetAgentGateway": {
+              "methods": [
+                "GetAgentGateway",
+                "GetAgentGatewayAsync"
               ]
             },
             "GetEndpointPolicy": {
@@ -349,6 +367,12 @@
                 "GetWasmPluginVersionAsync"
               ]
             },
+            "ListAgentGateways": {
+              "methods": [
+                "ListAgentGateways",
+                "ListAgentGatewaysAsync"
+              ]
+            },
             "ListEndpointPolicies": {
               "methods": [
                 "ListEndpointPolicies",
@@ -425,6 +449,12 @@
               "methods": [
                 "ListWasmPlugins",
                 "ListWasmPluginsAsync"
+              ]
+            },
+            "UpdateAgentGateway": {
+              "methods": [
+                "UpdateAgentGateway",
+                "UpdateAgentGatewayAsync"
               ]
             },
             "UpdateEndpointPolicy": {

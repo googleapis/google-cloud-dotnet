@@ -29,7 +29,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
             "cHJvdG8aLGdvb2dsZS9jbG91ZC9uZXR3b3Jrc2VydmljZXMvdjEvY29tbW9u",
             "LnByb3RvGiBnb29nbGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKECwoHR2F0ZXdheRIRCgRu",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byK+CwoHR2F0ZXdheRIRCgRu",
             "YW1lGAEgASgJQgPgQQgSFgoJc2VsZl9saW5rGA0gASgJQgPgQQMSNAoLY3Jl",
             "YXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
             "QQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
@@ -38,68 +38,69 @@ namespace Google.Cloud.NetworkServices.V1 {
             "ZGVzY3JpcHRpb24YBSABKAlCA+BBARJACgR0eXBlGAYgASgOMi0uZ29vZ2xl",
             "LmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5HYXRld2F5LlR5cGVCA+BBBRI5",
             "CglhZGRyZXNzZXMYByADKAlCJuBBAfpBIAoeY29tcHV0ZS5nb29nbGVhcGlz",
-            "LmNvbS9BZGRyZXNzEhIKBXBvcnRzGAsgAygFQgPgQQISEgoFc2NvcGUYCCAB",
-            "KAlCA+BBARJRChFzZXJ2ZXJfdGxzX3BvbGljeRgJIAEoCUI24EEB+kEwCi5u",
-            "ZXR3b3Jrc2VjdXJpdHkuZ29vZ2xlYXBpcy5jb20vU2VydmVyVGxzUG9saWN5",
-            "Ek8KEGNlcnRpZmljYXRlX3VybHMYDiADKAlCNeBBAfpBLwotY2VydGlmaWNh",
-            "dGVtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NlcnRpZmljYXRlEl0KF2dhdGV3",
-            "YXlfc2VjdXJpdHlfcG9saWN5GBIgASgJQjzgQQH6QTYKNG5ldHdvcmtzZWN1",
-            "cml0eS5nb29nbGVhcGlzLmNvbS9HYXRld2F5U2VjdXJpdHlQb2xpY3kSNwoH",
-            "bmV0d29yaxgQIAEoCUIm4EEB+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29t",
-            "L05ldHdvcmsSPQoKc3VibmV0d29yaxgRIAEoCUIp4EEB+kEjCiFjb21wdXRl",
-            "Lmdvb2dsZWFwaXMuY29tL1N1Ym5ldHdvcmsSSwoKaXBfdmVyc2lvbhgVIAEo",
-            "DjIyLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuR2F0ZXdheS5J",
-            "cFZlcnNpb25CA+BBARJOCg1lbnZveV9oZWFkZXJzGBwgASgOMi0uZ29vZ2xl",
-            "LmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5FbnZveUhlYWRlcnNCA+BBAUgA",
-            "iAEBEk8KDHJvdXRpbmdfbW9kZRggIAEoDjI0Lmdvb2dsZS5jbG91ZC5uZXR3",
-            "b3Jrc2VydmljZXMudjEuR2F0ZXdheS5Sb3V0aW5nTW9kZUID4EEBGi0KC0xh",
-            "YmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiQwoE",
-            "VHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASDQoJT1BFTl9NRVNIEAESFgoS",
-            "U0VDVVJFX1dFQl9HQVRFV0FZEAIiOwoJSXBWZXJzaW9uEhoKFklQX1ZFUlNJ",
-            "T05fVU5TUEVDSUZJRUQQABIICgRJUFY0EAESCAoESVBWNhACIkMKC1JvdXRp",
-            "bmdNb2RlEhkKFUVYUExJQ0lUX1JPVVRJTkdfTU9ERRAAEhkKFU5FWFRfSE9Q",
-            "X1JPVVRJTkdfTU9ERRABOmfqQWQKJm5ldHdvcmtzZXJ2aWNlcy5nb29nbGVh",
-            "cGlzLmNvbS9HYXRld2F5Ejpwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L3tsb2NhdGlvbn0vZ2F0ZXdheXMve2dhdGV3YXl9QhAKDl9lbnZveV9oZWFk",
-            "ZXJzInwKE0xpc3RHYXRld2F5c1JlcXVlc3QSPgoGcGFyZW50GAEgASgJQi7g",
-            "QQL6QSgSJm5ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9HYXRld2F5",
-            "EhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJIoABChRM",
-            "aXN0R2F0ZXdheXNSZXNwb25zZRI6CghnYXRld2F5cxgBIAMoCzIoLmdvb2ds",
-            "ZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuR2F0ZXdheRIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAkiUQoRR2V0R2F0",
-            "ZXdheVJlcXVlc3QSPAoEbmFtZRgBIAEoCUIu4EEC+kEoCiZuZXR3b3Jrc2Vy",
-            "dmljZXMuZ29vZ2xlYXBpcy5jb20vR2F0ZXdheSKvAQoUQ3JlYXRlR2F0ZXdh",
-            "eVJlcXVlc3QSPgoGcGFyZW50GAEgASgJQi7gQQL6QSgSJm5ldHdvcmtzZXJ2",
-            "aWNlcy5nb29nbGVhcGlzLmNvbS9HYXRld2F5EhcKCmdhdGV3YXlfaWQYAiAB",
-            "KAlCA+BBAhI+CgdnYXRld2F5GAMgASgLMiguZ29vZ2xlLmNsb3VkLm5ldHdv",
-            "cmtzZXJ2aWNlcy52MS5HYXRld2F5QgPgQQIijAEKFFVwZGF0ZUdhdGV3YXlS",
-            "ZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LkZpZWxkTWFza0ID4EEBEj4KB2dhdGV3YXkYAiABKAsyKC5nb29nbGUuY2xv",
-            "dWQubmV0d29ya3NlcnZpY2VzLnYxLkdhdGV3YXlCA+BBAiJUChREZWxldGVH",
-            "YXRld2F5UmVxdWVzdBI8CgRuYW1lGAEgASgJQi7gQQL6QSgKJm5ldHdvcmtz",
-            "ZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9HYXRld2F5QokGCiNjb20uZ29vZ2xl",
-            "LmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MUIMR2F0ZXdheVByb3RvUAFaTWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya3NlcnZpY2VzL2FwaXYxL25ldHdv",
-            "cmtzZXJ2aWNlc3BiO25ldHdvcmtzZXJ2aWNlc3BiqgIfR29vZ2xlLkNsb3Vk",
-            "Lk5ldHdvcmtTZXJ2aWNlcy5WMcoCH0dvb2dsZVxDbG91ZFxOZXR3b3JrU2Vy",
-            "dmljZXNcVjHqAiJHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VydmljZXM6OlYx",
-            "6kGRAQo0bmV0d29ya3NlY3VyaXR5Lmdvb2dsZWFwaXMuY29tL0dhdGV3YXlT",
-            "ZWN1cml0eVBvbGljeRJZcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L2dhdGV3YXlTZWN1cml0eVBvbGljaWVzL3tnYXRld2F5X3Nl",
-            "Y3VyaXR5X3BvbGljeX3qQWEKIWNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vU3Vi",
-            "bmV0d29yaxI8cHJvamVjdHMve3Byb2plY3R9L3JlZ2lvbnMve3JlZ2lvbn0v",
-            "c3VibmV0d29ya3Mve3N1Ym5ldHdvcmt96kFOCh5jb21wdXRlLmdvb2dsZWFw",
-            "aXMuY29tL05ldHdvcmsSLHByb2plY3RzL3twcm9qZWN0fS9nbG9iYWwvbmV0",
-            "d29ya3Mve25ldHdvcmt96kFZCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL0Fk",
-            "ZHJlc3MSN3Byb2plY3RzL3twcm9qZWN0fS9yZWdpb25zL3tyZWdpb259L2Fk",
-            "ZHJlc3Nlcy97YWRkcmVzc33qQXMKLWNlcnRpZmljYXRlbWFuYWdlci5nb29n",
-            "bGVhcGlzLmNvbS9DZXJ0aWZpY2F0ZRJCcHJvamVjdHMve3Byb2plY3R9L2xv",
-            "Y2F0aW9ucy97bG9jYXRpb259L2NlcnRpZmljYXRlcy97Y2VydGlmaWNhdGV9",
-            "YgZwcm90bzM="));
+            "LmNvbS9BZGRyZXNzEhIKBXBvcnRzGAsgAygFQgPgQQISFgoJYWxsX3BvcnRz",
+            "GCIgASgIQgPgQQESEgoFc2NvcGUYCCABKAlCA+BBARJRChFzZXJ2ZXJfdGxz",
+            "X3BvbGljeRgJIAEoCUI24EEB+kEwCi5uZXR3b3Jrc2VjdXJpdHkuZ29vZ2xl",
+            "YXBpcy5jb20vU2VydmVyVGxzUG9saWN5Ek8KEGNlcnRpZmljYXRlX3VybHMY",
+            "DiADKAlCNeBBAfpBLwotY2VydGlmaWNhdGVtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL0NlcnRpZmljYXRlEl0KF2dhdGV3YXlfc2VjdXJpdHlfcG9saWN5GBIg",
+            "ASgJQjzgQQH6QTYKNG5ldHdvcmtzZWN1cml0eS5nb29nbGVhcGlzLmNvbS9H",
+            "YXRld2F5U2VjdXJpdHlQb2xpY3kSNwoHbmV0d29yaxgQIAEoCUIm4EEB+kEg",
+            "Ch5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsSPQoKc3VibmV0d29y",
+            "axgRIAEoCUIp4EEB+kEjCiFjb21wdXRlLmdvb2dsZWFwaXMuY29tL1N1Ym5l",
+            "dHdvcmsSSwoKaXBfdmVyc2lvbhgVIAEoDjIyLmdvb2dsZS5jbG91ZC5uZXR3",
+            "b3Jrc2VydmljZXMudjEuR2F0ZXdheS5JcFZlcnNpb25CA+BBARJOCg1lbnZv",
+            "eV9oZWFkZXJzGBwgASgOMi0uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNl",
+            "cy52MS5FbnZveUhlYWRlcnNCA+BBAUgAiAEBEk8KDHJvdXRpbmdfbW9kZRgg",
+            "IAEoDjI0Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuR2F0ZXdh",
+            "eS5Sb3V0aW5nTW9kZUID4EEBEiAKE2FsbG93X2dsb2JhbF9hY2Nlc3MYISAB",
+            "KAhCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIkMKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEg0KCU9Q",
+            "RU5fTUVTSBABEhYKElNFQ1VSRV9XRUJfR0FURVdBWRACIjsKCUlwVmVyc2lv",
+            "bhIaChZJUF9WRVJTSU9OX1VOU1BFQ0lGSUVEEAASCAoESVBWNBABEggKBElQ",
+            "VjYQAiJDCgtSb3V0aW5nTW9kZRIZChVFWFBMSUNJVF9ST1VUSU5HX01PREUQ",
+            "ABIZChVORVhUX0hPUF9ST1VUSU5HX01PREUQATpn6kFkCiZuZXR3b3Jrc2Vy",
+            "dmljZXMuZ29vZ2xlYXBpcy5jb20vR2F0ZXdheRI6cHJvamVjdHMve3Byb2pl",
+            "Y3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2dhdGV3YXlzL3tnYXRld2F5fUIQ",
+            "Cg5fZW52b3lfaGVhZGVycyJ8ChNMaXN0R2F0ZXdheXNSZXF1ZXN0Ej4KBnBh",
+            "cmVudBgBIAEoCUIu4EEC+kEoEiZuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBp",
+            "cy5jb20vR2F0ZXdheRIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tl",
+            "bhgDIAEoCSKAAQoUTGlzdEdhdGV3YXlzUmVzcG9uc2USOgoIZ2F0ZXdheXMY",
+            "ASADKAsyKC5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkdhdGV3",
+            "YXkSFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMg",
+            "AygJIlEKEUdldEdhdGV3YXlSZXF1ZXN0EjwKBG5hbWUYASABKAlCLuBBAvpB",
+            "KAombmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL0dhdGV3YXkirwEK",
+            "FENyZWF0ZUdhdGV3YXlSZXF1ZXN0Ej4KBnBhcmVudBgBIAEoCUIu4EEC+kEo",
+            "EiZuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vR2F0ZXdheRIXCgpn",
+            "YXRld2F5X2lkGAIgASgJQgPgQQISPgoHZ2F0ZXdheRgDIAEoCzIoLmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuR2F0ZXdheUID4EECIowBChRV",
+            "cGRhdGVHYXRld2F5UmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdv",
+            "b2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBARI+CgdnYXRld2F5GAIgASgL",
+            "MiguZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5HYXRld2F5QgPg",
+            "QQIiVAoURGVsZXRlR2F0ZXdheVJlcXVlc3QSPAoEbmFtZRgBIAEoCUIu4EEC",
+            "+kEoCiZuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vR2F0ZXdheUKJ",
+            "BgojY29tLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjFCDEdhdGV3",
+            "YXlQcm90b1ABWk1jbG91ZC5nb29nbGUuY29tL2dvL25ldHdvcmtzZXJ2aWNl",
+            "cy9hcGl2MS9uZXR3b3Jrc2VydmljZXNwYjtuZXR3b3Jrc2VydmljZXNwYqoC",
+            "H0dvb2dsZS5DbG91ZC5OZXR3b3JrU2VydmljZXMuVjHKAh9Hb29nbGVcQ2xv",
+            "dWRcTmV0d29ya1NlcnZpY2VzXFYx6gIiR29vZ2xlOjpDbG91ZDo6TmV0d29y",
+            "a1NlcnZpY2VzOjpWMepBkQEKNG5ldHdvcmtzZWN1cml0eS5nb29nbGVhcGlz",
+            "LmNvbS9HYXRld2F5U2VjdXJpdHlQb2xpY3kSWXByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9nYXRld2F5U2VjdXJpdHlQb2xpY2ll",
+            "cy97Z2F0ZXdheV9zZWN1cml0eV9wb2xpY3l96kFhCiFjb21wdXRlLmdvb2ds",
+            "ZWFwaXMuY29tL1N1Ym5ldHdvcmsSPHByb2plY3RzL3twcm9qZWN0fS9yZWdp",
+            "b25zL3tyZWdpb259L3N1Ym5ldHdvcmtzL3tzdWJuZXR3b3JrfepBTgoeY29t",
+            "cHV0ZS5nb29nbGVhcGlzLmNvbS9OZXR3b3JrEixwcm9qZWN0cy97cHJvamVj",
+            "dH0vZ2xvYmFsL25ldHdvcmtzL3tuZXR3b3JrfepBWQoeY29tcHV0ZS5nb29n",
+            "bGVhcGlzLmNvbS9BZGRyZXNzEjdwcm9qZWN0cy97cHJvamVjdH0vcmVnaW9u",
+            "cy97cmVnaW9ufS9hZGRyZXNzZXMve2FkZHJlc3N96kFzCi1jZXJ0aWZpY2F0",
+            "ZW1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ2VydGlmaWNhdGUSQnByb2plY3Rz",
+            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jZXJ0aWZpY2F0ZXMv",
+            "e2NlcnRpZmljYXRlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkServices.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.Gateway), global::Google.Cloud.NetworkServices.V1.Gateway.Parser, new[]{ "Name", "SelfLink", "CreateTime", "UpdateTime", "Labels", "Description", "Type", "Addresses", "Ports", "Scope", "ServerTlsPolicy", "CertificateUrls", "GatewaySecurityPolicy", "Network", "Subnetwork", "IpVersion", "EnvoyHeaders", "RoutingMode" }, new[]{ "EnvoyHeaders" }, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.Gateway.Types.Type), typeof(global::Google.Cloud.NetworkServices.V1.Gateway.Types.IpVersion), typeof(global::Google.Cloud.NetworkServices.V1.Gateway.Types.RoutingMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.Gateway), global::Google.Cloud.NetworkServices.V1.Gateway.Parser, new[]{ "Name", "SelfLink", "CreateTime", "UpdateTime", "Labels", "Description", "Type", "Addresses", "Ports", "AllPorts", "Scope", "ServerTlsPolicy", "CertificateUrls", "GatewaySecurityPolicy", "Network", "Subnetwork", "IpVersion", "EnvoyHeaders", "RoutingMode", "AllowGlobalAccess" }, new[]{ "EnvoyHeaders" }, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.Gateway.Types.Type), typeof(global::Google.Cloud.NetworkServices.V1.Gateway.Types.IpVersion), typeof(global::Google.Cloud.NetworkServices.V1.Gateway.Types.RoutingMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListGatewaysRequest), global::Google.Cloud.NetworkServices.V1.ListGatewaysRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.ListGatewaysResponse), global::Google.Cloud.NetworkServices.V1.ListGatewaysResponse.Parser, new[]{ "Gateways", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.GetGatewayRequest), global::Google.Cloud.NetworkServices.V1.GetGatewayRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -164,6 +165,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       type_ = other.type_;
       addresses_ = other.addresses_.Clone();
       ports_ = other.ports_.Clone();
+      allPorts_ = other.allPorts_;
       scope_ = other.scope_;
       serverTlsPolicy_ = other.serverTlsPolicy_;
       certificateUrls_ = other.certificateUrls_.Clone();
@@ -173,6 +175,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       ipVersion_ = other.ipVersion_;
       envoyHeaders_ = other.envoyHeaders_;
       routingMode_ = other.routingMode_;
+      allowGlobalAccess_ = other.allowGlobalAccess_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -316,7 +319,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     /// <summary>
     /// Required. One or more port numbers (1-65535), on which the Gateway will
     /// receive traffic. The proxy binds to the specified ports.
-    /// Gateways of type 'SECURE_WEB_GATEWAY' are limited to 1 port.
+    /// Gateways of type 'SECURE_WEB_GATEWAY' are limited to 5 ports.
     /// Gateways of type 'OPEN_MESH' listen on 0.0.0.0 for IPv4 and :: for IPv6 and
     /// support multiple ports.
     /// </summary>
@@ -324,6 +327,23 @@ namespace Google.Cloud.NetworkServices.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> Ports {
       get { return ports_; }
+    }
+
+    /// <summary>Field number for the "all_ports" field.</summary>
+    public const int AllPortsFieldNumber = 34;
+    private bool allPorts_;
+    /// <summary>
+    /// Optional. If true, the Gateway will listen on all ports. This is mutually
+    /// exclusive with the `ports` field. This field only applies to gateways of
+    /// type 'SECURE_WEB_GATEWAY'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllPorts {
+      get { return allPorts_; }
+      set {
+        allPorts_ = value;
+      }
     }
 
     /// <summary>Field number for the "scope" field.</summary>
@@ -505,6 +525,23 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
     }
 
+    /// <summary>Field number for the "allow_global_access" field.</summary>
+    public const int AllowGlobalAccessFieldNumber = 33;
+    private bool allowGlobalAccess_;
+    /// <summary>
+    /// Optional. If true, the gateway will allow traffic from clients outside of
+    /// the region where the gateway is located.
+    /// This field is configurable only for gateways of type SECURE_WEB_GATEWAY.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AllowGlobalAccess {
+      get { return allowGlobalAccess_; }
+      set {
+        allowGlobalAccess_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -529,6 +566,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Type != other.Type) return false;
       if(!addresses_.Equals(other.addresses_)) return false;
       if(!ports_.Equals(other.ports_)) return false;
+      if (AllPorts != other.AllPorts) return false;
       if (Scope != other.Scope) return false;
       if (ServerTlsPolicy != other.ServerTlsPolicy) return false;
       if(!certificateUrls_.Equals(other.certificateUrls_)) return false;
@@ -538,6 +576,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (IpVersion != other.IpVersion) return false;
       if (EnvoyHeaders != other.EnvoyHeaders) return false;
       if (RoutingMode != other.RoutingMode) return false;
+      if (AllowGlobalAccess != other.AllowGlobalAccess) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -554,6 +593,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (Type != global::Google.Cloud.NetworkServices.V1.Gateway.Types.Type.Unspecified) hash ^= Type.GetHashCode();
       hash ^= addresses_.GetHashCode();
       hash ^= ports_.GetHashCode();
+      if (AllPorts != false) hash ^= AllPorts.GetHashCode();
       if (Scope.Length != 0) hash ^= Scope.GetHashCode();
       if (ServerTlsPolicy.Length != 0) hash ^= ServerTlsPolicy.GetHashCode();
       hash ^= certificateUrls_.GetHashCode();
@@ -563,6 +603,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if (IpVersion != global::Google.Cloud.NetworkServices.V1.Gateway.Types.IpVersion.Unspecified) hash ^= IpVersion.GetHashCode();
       if (HasEnvoyHeaders) hash ^= EnvoyHeaders.GetHashCode();
       if (RoutingMode != global::Google.Cloud.NetworkServices.V1.Gateway.Types.RoutingMode.ExplicitRoutingMode) hash ^= RoutingMode.GetHashCode();
+      if (AllowGlobalAccess != false) hash ^= AllowGlobalAccess.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -641,6 +682,14 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(128, 2);
         output.WriteEnum((int) RoutingMode);
       }
+      if (AllowGlobalAccess != false) {
+        output.WriteRawTag(136, 2);
+        output.WriteBool(AllowGlobalAccess);
+      }
+      if (AllPorts != false) {
+        output.WriteRawTag(144, 2);
+        output.WriteBool(AllPorts);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -711,6 +760,14 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteRawTag(128, 2);
         output.WriteEnum((int) RoutingMode);
       }
+      if (AllowGlobalAccess != false) {
+        output.WriteRawTag(136, 2);
+        output.WriteBool(AllowGlobalAccess);
+      }
+      if (AllPorts != false) {
+        output.WriteRawTag(144, 2);
+        output.WriteBool(AllPorts);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -742,6 +799,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       size += addresses_.CalculateSize(_repeated_addresses_codec);
       size += ports_.CalculateSize(_repeated_ports_codec);
+      if (AllPorts != false) {
+        size += 2 + 1;
+      }
       if (Scope.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Scope);
       }
@@ -766,6 +826,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (RoutingMode != global::Google.Cloud.NetworkServices.V1.Gateway.Types.RoutingMode.ExplicitRoutingMode) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) RoutingMode);
+      }
+      if (AllowGlobalAccess != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -806,6 +869,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       addresses_.Add(other.addresses_);
       ports_.Add(other.ports_);
+      if (other.AllPorts != false) {
+        AllPorts = other.AllPorts;
+      }
       if (other.Scope.Length != 0) {
         Scope = other.Scope;
       }
@@ -830,6 +896,9 @@ namespace Google.Cloud.NetworkServices.V1 {
       }
       if (other.RoutingMode != global::Google.Cloud.NetworkServices.V1.Gateway.Types.RoutingMode.ExplicitRoutingMode) {
         RoutingMode = other.RoutingMode;
+      }
+      if (other.AllowGlobalAccess != false) {
+        AllowGlobalAccess = other.AllowGlobalAccess;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -929,6 +998,14 @@ namespace Google.Cloud.NetworkServices.V1 {
             RoutingMode = (global::Google.Cloud.NetworkServices.V1.Gateway.Types.RoutingMode) input.ReadEnum();
             break;
           }
+          case 264: {
+            AllowGlobalAccess = input.ReadBool();
+            break;
+          }
+          case 272: {
+            AllPorts = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1025,6 +1102,14 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 256: {
             RoutingMode = (global::Google.Cloud.NetworkServices.V1.Gateway.Types.RoutingMode) input.ReadEnum();
+            break;
+          }
+          case 264: {
+            AllowGlobalAccess = input.ReadBool();
+            break;
+          }
+          case 272: {
+            AllPorts = input.ReadBool();
             break;
           }
         }
