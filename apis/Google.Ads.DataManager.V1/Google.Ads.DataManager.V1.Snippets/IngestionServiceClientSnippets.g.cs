@@ -163,6 +163,43 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for IngestAdEvents</summary>
+        public void IngestAdEventsRequestObject()
+        {
+            // Snippet: IngestAdEvents(IngestAdEventsRequest, CallSettings)
+            // Create client
+            IngestionServiceClient ingestionServiceClient = IngestionServiceClient.Create();
+            // Initialize request argument(s)
+            IngestAdEventsRequest request = new IngestAdEventsRequest
+            {
+                AdEvents = { new AdEvent(), },
+                EncryptionInfo = new EncryptionInfo(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            IngestAdEventsResponse response = ingestionServiceClient.IngestAdEvents(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for IngestAdEventsAsync</summary>
+        public async Task IngestAdEventsRequestObjectAsync()
+        {
+            // Snippet: IngestAdEventsAsync(IngestAdEventsRequest, CallSettings)
+            // Additional: IngestAdEventsAsync(IngestAdEventsRequest, CancellationToken)
+            // Create client
+            IngestionServiceClient ingestionServiceClient = await IngestionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IngestAdEventsRequest request = new IngestAdEventsRequest
+            {
+                AdEvents = { new AdEvent(), },
+                EncryptionInfo = new EncryptionInfo(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            IngestAdEventsResponse response = await ingestionServiceClient.IngestAdEventsAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for RetrieveRequestStatus</summary>
         public void RetrieveRequestStatusRequestObject()
         {

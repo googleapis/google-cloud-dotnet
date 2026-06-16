@@ -26,32 +26,36 @@ namespace Google.Ads.DataManager.V1 {
           string.Concat(
             "Ci9nb29nbGUvYWRzL2RhdGFtYW5hZ2VyL3YxL2VuY3J5cHRpb25faW5mby5w",
             "cm90bxIZZ29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MRofZ29vZ2xlL2FwaS9m",
-            "aWVsZF9iZWhhdmlvci5wcm90byK7AQoORW5jcnlwdGlvbkluZm8STAoUZ2Nw",
+            "aWVsZF9iZWhhdmlvci5wcm90byKKAgoORW5jcnlwdGlvbkluZm8STAoUZ2Nw",
             "X3dyYXBwZWRfa2V5X2luZm8YASABKAsyLC5nb29nbGUuYWRzLmRhdGFtYW5h",
             "Z2VyLnYxLkdjcFdyYXBwZWRLZXlJbmZvSAASTAoUYXdzX3dyYXBwZWRfa2V5",
             "X2luZm8YAiABKAsyLC5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkF3c1dy",
-            "YXBwZWRLZXlJbmZvSABCDQoLd3JhcHBlZF9rZXki6gEKEUdjcFdyYXBwZWRL",
-            "ZXlJbmZvEksKCGtleV90eXBlGAEgASgOMjQuZ29vZ2xlLmFkcy5kYXRhbWFu",
-            "YWdlci52MS5HY3BXcmFwcGVkS2V5SW5mby5LZXlUeXBlQgPgQQISGQoMd2lw",
-            "X3Byb3ZpZGVyGAIgASgJQgPgQQISFAoHa2VrX3VyaRgDIAEoCUID4EECEhoK",
-            "DWVuY3J5cHRlZF9kZWsYBCABKAlCA+BBAiI7CgdLZXlUeXBlEhgKFEtFWV9U",
-            "WVBFX1VOU1BFQ0lGSUVEEAASFgoSWENIQUNIQTIwX1BPTFkxMzA1EAEi5gEK",
-            "EUF3c1dyYXBwZWRLZXlJbmZvEksKCGtleV90eXBlGAEgASgOMjQuZ29vZ2xl",
-            "LmFkcy5kYXRhbWFuYWdlci52MS5Bd3NXcmFwcGVkS2V5SW5mby5LZXlUeXBl",
-            "QgPgQQISFQoIcm9sZV9hcm4YAiABKAlCA+BBAhIUCgdrZWtfdXJpGAMgASgJ",
-            "QgPgQQISGgoNZW5jcnlwdGVkX2RlaxgEIAEoCUID4EECIjsKB0tleVR5cGUS",
-            "GAoUS0VZX1RZUEVfVU5TUEVDSUZJRUQQABIWChJYQ0hBQ0hBMjBfUE9MWTEz",
-            "MDUQAULQAQodY29tLmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjFCE0VuY3J5",
-            "cHRpb25JbmZvUHJvdG9QAVpBY2xvdWQuZ29vZ2xlLmNvbS9nby9kYXRhbWFu",
-            "YWdlci9hcGl2MS9kYXRhbWFuYWdlcnBiO2RhdGFtYW5hZ2VycGKqAhlHb29n",
-            "bGUuQWRzLkRhdGFNYW5hZ2VyLlYxygIZR29vZ2xlXEFkc1xEYXRhTWFuYWdl",
-            "clxWMeoCHEdvb2dsZTo6QWRzOjpEYXRhTWFuYWdlcjo6VjFiBnByb3RvMw=="));
+            "YXBwZWRLZXlJbmZvSAASTQoUY29vcmRpbmF0b3Jfa2V5X2luZm8YAyABKAsy",
+            "LS5nb29nbGUuYWRzLmRhdGFtYW5hZ2VyLnYxLkNvb3JkaW5hdG9yS2V5SW5m",
+            "b0gAQg0KC3dyYXBwZWRfa2V5IuoBChFHY3BXcmFwcGVkS2V5SW5mbxJLCghr",
+            "ZXlfdHlwZRgBIAEoDjI0Lmdvb2dsZS5hZHMuZGF0YW1hbmFnZXIudjEuR2Nw",
+            "V3JhcHBlZEtleUluZm8uS2V5VHlwZUID4EECEhkKDHdpcF9wcm92aWRlchgC",
+            "IAEoCUID4EECEhQKB2tla191cmkYAyABKAlCA+BBAhIaCg1lbmNyeXB0ZWRf",
+            "ZGVrGAQgASgJQgPgQQIiOwoHS2V5VHlwZRIYChRLRVlfVFlQRV9VTlNQRUNJ",
+            "RklFRBAAEhYKElhDSEFDSEEyMF9QT0xZMTMwNRABIuYBChFBd3NXcmFwcGVk",
+            "S2V5SW5mbxJLCghrZXlfdHlwZRgBIAEoDjI0Lmdvb2dsZS5hZHMuZGF0YW1h",
+            "bmFnZXIudjEuQXdzV3JhcHBlZEtleUluZm8uS2V5VHlwZUID4EECEhUKCHJv",
+            "bGVfYXJuGAIgASgJQgPgQQISFAoHa2VrX3VyaRgDIAEoCUID4EECEhoKDWVu",
+            "Y3J5cHRlZF9kZWsYBCABKAlCA+BBAiI7CgdLZXlUeXBlEhgKFEtFWV9UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASFgoSWENIQUNIQTIwX1BPTFkxMzA1EAEiKQoSQ29v",
+            "cmRpbmF0b3JLZXlJbmZvEhMKBmtleV9pZBgBIAEoCUID4EECQtABCh1jb20u",
+            "Z29vZ2xlLmFkcy5kYXRhbWFuYWdlci52MUITRW5jcnlwdGlvbkluZm9Qcm90",
+            "b1ABWkFjbG91ZC5nb29nbGUuY29tL2dvL2RhdGFtYW5hZ2VyL2FwaXYxL2Rh",
+            "dGFtYW5hZ2VycGI7ZGF0YW1hbmFnZXJwYqoCGUdvb2dsZS5BZHMuRGF0YU1h",
+            "bmFnZXIuVjHKAhlHb29nbGVcQWRzXERhdGFNYW5hZ2VyXFYx6gIcR29vZ2xl",
+            "OjpBZHM6OkRhdGFNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.EncryptionInfo), global::Google.Ads.DataManager.V1.EncryptionInfo.Parser, new[]{ "GcpWrappedKeyInfo", "AwsWrappedKeyInfo" }, new[]{ "WrappedKey" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.EncryptionInfo), global::Google.Ads.DataManager.V1.EncryptionInfo.Parser, new[]{ "GcpWrappedKeyInfo", "AwsWrappedKeyInfo", "CoordinatorKeyInfo" }, new[]{ "WrappedKey" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo), global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo.Parser, new[]{ "KeyType", "WipProvider", "KekUri", "EncryptedDek" }, null, new[]{ typeof(global::Google.Ads.DataManager.V1.GcpWrappedKeyInfo.Types.KeyType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo), global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Parser, new[]{ "KeyType", "RoleArn", "KekUri", "EncryptedDek" }, null, new[]{ typeof(global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo), global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Parser, new[]{ "KeyType", "RoleArn", "KekUri", "EncryptedDek" }, null, new[]{ typeof(global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo.Types.KeyType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.DataManager.V1.CoordinatorKeyInfo), global::Google.Ads.DataManager.V1.CoordinatorKeyInfo.Parser, new[]{ "KeyId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -103,6 +107,9 @@ namespace Google.Ads.DataManager.V1 {
         case WrappedKeyOneofCase.AwsWrappedKeyInfo:
           AwsWrappedKeyInfo = other.AwsWrappedKeyInfo.Clone();
           break;
+        case WrappedKeyOneofCase.CoordinatorKeyInfo:
+          CoordinatorKeyInfo = other.CoordinatorKeyInfo.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -144,12 +151,35 @@ namespace Google.Ads.DataManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "coordinator_key_info" field.</summary>
+    public const int CoordinatorKeyInfoFieldNumber = 3;
+    /// <summary>
+    /// Key information for the chosen coordinator key.
+    ///
+    /// This is not supported for the
+    /// [IngestEvents][google.ads.datamanager.v1.IngestionService.IngestEvents],
+    /// [IngestAudienceMembers][google.ads.datamanager.v1.IngestionService.IngestAudienceMembers],
+    /// and
+    /// [RemoveAudienceMembers][google.ads.datamanager.v1.IngestionService.RemoveAudienceMembers]
+    /// methods.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.DataManager.V1.CoordinatorKeyInfo CoordinatorKeyInfo {
+      get { return wrappedKeyCase_ == WrappedKeyOneofCase.CoordinatorKeyInfo ? (global::Google.Ads.DataManager.V1.CoordinatorKeyInfo) wrappedKey_ : null; }
+      set {
+        wrappedKey_ = value;
+        wrappedKeyCase_ = value == null ? WrappedKeyOneofCase.None : WrappedKeyOneofCase.CoordinatorKeyInfo;
+      }
+    }
+
     private object wrappedKey_;
     /// <summary>Enum of possible cases for the "wrapped_key" oneof.</summary>
     public enum WrappedKeyOneofCase {
       None = 0,
       GcpWrappedKeyInfo = 1,
       AwsWrappedKeyInfo = 2,
+      CoordinatorKeyInfo = 3,
     }
     private WrappedKeyOneofCase wrappedKeyCase_ = WrappedKeyOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -182,6 +212,7 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (!object.Equals(GcpWrappedKeyInfo, other.GcpWrappedKeyInfo)) return false;
       if (!object.Equals(AwsWrappedKeyInfo, other.AwsWrappedKeyInfo)) return false;
+      if (!object.Equals(CoordinatorKeyInfo, other.CoordinatorKeyInfo)) return false;
       if (WrappedKeyCase != other.WrappedKeyCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -192,6 +223,7 @@ namespace Google.Ads.DataManager.V1 {
       int hash = 1;
       if (wrappedKeyCase_ == WrappedKeyOneofCase.GcpWrappedKeyInfo) hash ^= GcpWrappedKeyInfo.GetHashCode();
       if (wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo) hash ^= AwsWrappedKeyInfo.GetHashCode();
+      if (wrappedKeyCase_ == WrappedKeyOneofCase.CoordinatorKeyInfo) hash ^= CoordinatorKeyInfo.GetHashCode();
       hash ^= (int) wrappedKeyCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -219,6 +251,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(AwsWrappedKeyInfo);
       }
+      if (wrappedKeyCase_ == WrappedKeyOneofCase.CoordinatorKeyInfo) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CoordinatorKeyInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -237,6 +273,10 @@ namespace Google.Ads.DataManager.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(AwsWrappedKeyInfo);
       }
+      if (wrappedKeyCase_ == WrappedKeyOneofCase.CoordinatorKeyInfo) {
+        output.WriteRawTag(26);
+        output.WriteMessage(CoordinatorKeyInfo);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -252,6 +292,9 @@ namespace Google.Ads.DataManager.V1 {
       }
       if (wrappedKeyCase_ == WrappedKeyOneofCase.AwsWrappedKeyInfo) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AwsWrappedKeyInfo);
+      }
+      if (wrappedKeyCase_ == WrappedKeyOneofCase.CoordinatorKeyInfo) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CoordinatorKeyInfo);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -277,6 +320,12 @@ namespace Google.Ads.DataManager.V1 {
             AwsWrappedKeyInfo = new global::Google.Ads.DataManager.V1.AwsWrappedKeyInfo();
           }
           AwsWrappedKeyInfo.MergeFrom(other.AwsWrappedKeyInfo);
+          break;
+        case WrappedKeyOneofCase.CoordinatorKeyInfo:
+          if (CoordinatorKeyInfo == null) {
+            CoordinatorKeyInfo = new global::Google.Ads.DataManager.V1.CoordinatorKeyInfo();
+          }
+          CoordinatorKeyInfo.MergeFrom(other.CoordinatorKeyInfo);
           break;
       }
 
@@ -317,6 +366,15 @@ namespace Google.Ads.DataManager.V1 {
             AwsWrappedKeyInfo = subBuilder;
             break;
           }
+          case 26: {
+            global::Google.Ads.DataManager.V1.CoordinatorKeyInfo subBuilder = new global::Google.Ads.DataManager.V1.CoordinatorKeyInfo();
+            if (wrappedKeyCase_ == WrappedKeyOneofCase.CoordinatorKeyInfo) {
+              subBuilder.MergeFrom(CoordinatorKeyInfo);
+            }
+            input.ReadMessage(subBuilder);
+            CoordinatorKeyInfo = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -352,6 +410,15 @@ namespace Google.Ads.DataManager.V1 {
             }
             input.ReadMessage(subBuilder);
             AwsWrappedKeyInfo = subBuilder;
+            break;
+          }
+          case 26: {
+            global::Google.Ads.DataManager.V1.CoordinatorKeyInfo subBuilder = new global::Google.Ads.DataManager.V1.CoordinatorKeyInfo();
+            if (wrappedKeyCase_ == WrappedKeyOneofCase.CoordinatorKeyInfo) {
+              subBuilder.MergeFrom(CoordinatorKeyInfo);
+            }
+            input.ReadMessage(subBuilder);
+            CoordinatorKeyInfo = subBuilder;
             break;
           }
         }
@@ -1062,6 +1129,210 @@ namespace Google.Ads.DataManager.V1 {
 
     }
     #endregion
+
+  }
+
+  /// <summary>
+  /// Information about the coordinator key.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CoordinatorKeyInfo : pb::IMessage<CoordinatorKeyInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CoordinatorKeyInfo> _parser = new pb::MessageParser<CoordinatorKeyInfo>(() => new CoordinatorKeyInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CoordinatorKeyInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.DataManager.V1.EncryptionInfoReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoordinatorKeyInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoordinatorKeyInfo(CoordinatorKeyInfo other) : this() {
+      keyId_ = other.keyId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CoordinatorKeyInfo Clone() {
+      return new CoordinatorKeyInfo(this);
+    }
+
+    /// <summary>Field number for the "key_id" field.</summary>
+    public const int KeyIdFieldNumber = 1;
+    private string keyId_ = "";
+    /// <summary>
+    /// Required. The ID of the chosen coordinator key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KeyId {
+      get { return keyId_; }
+      set {
+        keyId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CoordinatorKeyInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CoordinatorKeyInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (KeyId != other.KeyId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (KeyId.Length != 0) hash ^= KeyId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (KeyId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(KeyId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (KeyId.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(KeyId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (KeyId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CoordinatorKeyInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.KeyId.Length != 0) {
+        KeyId = other.KeyId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            KeyId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            KeyId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
