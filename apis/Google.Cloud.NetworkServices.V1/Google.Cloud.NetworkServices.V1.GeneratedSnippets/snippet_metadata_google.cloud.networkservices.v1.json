@@ -12556,12 +12556,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 78,
+          "end": 79,
           "type": "SHORT"
         }
       ]
@@ -12605,12 +12605,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 81,
+          "end": 82,
           "type": "FULL"
         },
         {
           "start": 38,
-          "end": 79,
+          "end": 80,
           "type": "SHORT"
         }
       ]
@@ -13162,12 +13162,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 64,
+          "end": 65,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 62,
+          "end": 63,
           "type": "SHORT"
         }
       ]
@@ -13211,12 +13211,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 65,
+          "end": 66,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 63,
+          "end": 64,
           "type": "SHORT"
         }
       ]
@@ -22198,6 +22198,1418 @@
         {
           "start": 37,
           "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListAgentGateways_sync",
+      "title": "ListAgentGatewaysRequestObject",
+      "description": "Snippet for ListAgentGateways",
+      "file": "NetworkServicesClient.ListAgentGatewaysRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentGateways",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListAgentGateways",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse, Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListAgentGateways",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListAgentGateways",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListAgentGateways_async",
+      "title": "ListAgentGatewaysRequestObjectAsync",
+      "description": "Snippet for ListAgentGatewaysAsync",
+      "file": "NetworkServicesClient.ListAgentGatewaysRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentGatewaysAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListAgentGatewaysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.ListAgentGatewaysRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse, Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListAgentGateways",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListAgentGateways",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListAgentGateways_sync_flattened",
+      "title": "ListAgentGateways",
+      "description": "Snippet for ListAgentGateways",
+      "file": "NetworkServicesClient.ListAgentGatewaysSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentGateways",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListAgentGateways",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse, Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListAgentGateways",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListAgentGateways",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListAgentGateways_async_flattened",
+      "title": "ListAgentGatewaysAsync",
+      "description": "Snippet for ListAgentGatewaysAsync",
+      "file": "NetworkServicesClient.ListAgentGatewaysAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentGatewaysAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListAgentGatewaysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse, Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListAgentGateways",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListAgentGateways",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListAgentGateways_sync_flattened_resourceNames",
+      "title": "ListAgentGatewaysResourceNames",
+      "description": "Snippet for ListAgentGateways",
+      "file": "NetworkServicesClient.ListAgentGatewaysResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentGateways",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListAgentGateways",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse, Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListAgentGateways",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListAgentGateways",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_ListAgentGateways_async_flattened_resourceNames",
+      "title": "ListAgentGatewaysResourceNamesAsync",
+      "description": "Snippet for ListAgentGatewaysAsync",
+      "file": "NetworkServicesClient.ListAgentGatewaysResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentGatewaysAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.ListAgentGatewaysAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.NetworkServices.V1.ListAgentGatewaysResponse, Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "ListAgentGateways",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.ListAgentGateways",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetAgentGateway_sync",
+      "title": "GetAgentGatewayRequestObject",
+      "description": "Snippet for GetAgentGateway",
+      "file": "NetworkServicesClient.GetAgentGatewayRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetAgentGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.AgentGateway",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetAgentGateway_async",
+      "title": "GetAgentGatewayRequestObjectAsync",
+      "description": "Snippet for GetAgentGatewayAsync",
+      "file": "NetworkServicesClient.GetAgentGatewayRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.GetAgentGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetAgentGateway_sync_flattened",
+      "title": "GetAgentGateway",
+      "description": "Snippet for GetAgentGateway",
+      "file": "NetworkServicesClient.GetAgentGatewaySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetAgentGateway",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.AgentGateway",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetAgentGateway_async_flattened",
+      "title": "GetAgentGatewayAsync",
+      "description": "Snippet for GetAgentGatewayAsync",
+      "file": "NetworkServicesClient.GetAgentGatewayAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetAgentGateway_sync_flattened_resourceNames",
+      "title": "GetAgentGatewayResourceNames",
+      "description": "Snippet for GetAgentGateway",
+      "file": "NetworkServicesClient.GetAgentGatewayResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetAgentGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGatewayName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkServices.V1.AgentGateway",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_GetAgentGateway_async_flattened_resourceNames",
+      "title": "GetAgentGatewayResourceNamesAsync",
+      "description": "Snippet for GetAgentGatewayAsync",
+      "file": "NetworkServicesClient.GetAgentGatewayResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.GetAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGatewayName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkServices.V1.AgentGateway>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "GetAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.GetAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateAgentGateway_sync",
+      "title": "CreateAgentGatewayRequestObject",
+      "description": "Snippet for CreateAgentGateway",
+      "file": "NetworkServicesClient.CreateAgentGatewayRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateAgentGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateAgentGateway_async",
+      "title": "CreateAgentGatewayRequestObjectAsync",
+      "description": "Snippet for CreateAgentGatewayAsync",
+      "file": "NetworkServicesClient.CreateAgentGatewayRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.CreateAgentGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateAgentGateway_sync_flattened",
+      "title": "CreateAgentGateway",
+      "description": "Snippet for CreateAgentGateway",
+      "file": "NetworkServicesClient.CreateAgentGatewaySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateAgentGateway",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGateway",
+            "name": "agentGateway"
+          },
+          {
+            "type": "System.String",
+            "name": "agentGatewayId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateAgentGateway_async_flattened",
+      "title": "CreateAgentGatewayAsync",
+      "description": "Snippet for CreateAgentGatewayAsync",
+      "file": "NetworkServicesClient.CreateAgentGatewayAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGateway",
+            "name": "agentGateway"
+          },
+          {
+            "type": "System.String",
+            "name": "agentGatewayId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateAgentGateway_sync_flattened_resourceNames",
+      "title": "CreateAgentGatewayResourceNames",
+      "description": "Snippet for CreateAgentGateway",
+      "file": "NetworkServicesClient.CreateAgentGatewayResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateAgentGateway",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGateway",
+            "name": "agentGateway"
+          },
+          {
+            "type": "System.String",
+            "name": "agentGatewayId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_CreateAgentGateway_async_flattened_resourceNames",
+      "title": "CreateAgentGatewayResourceNamesAsync",
+      "description": "Snippet for CreateAgentGatewayAsync",
+      "file": "NetworkServicesClient.CreateAgentGatewayResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.CreateAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGateway",
+            "name": "agentGateway"
+          },
+          {
+            "type": "System.String",
+            "name": "agentGatewayId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "CreateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.CreateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateAgentGateway_sync",
+      "title": "UpdateAgentGatewayRequestObject",
+      "description": "Snippet for UpdateAgentGateway",
+      "file": "NetworkServicesClient.UpdateAgentGatewayRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateAgentGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateAgentGateway_async",
+      "title": "UpdateAgentGatewayRequestObjectAsync",
+      "description": "Snippet for UpdateAgentGatewayAsync",
+      "file": "NetworkServicesClient.UpdateAgentGatewayRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.UpdateAgentGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateAgentGateway_sync_flattened",
+      "title": "UpdateAgentGateway",
+      "description": "Snippet for UpdateAgentGateway",
+      "file": "NetworkServicesClient.UpdateAgentGatewaySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateAgentGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGateway",
+            "name": "agentGateway"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_UpdateAgentGateway_async_flattened",
+      "title": "UpdateAgentGatewayAsync",
+      "description": "Snippet for UpdateAgentGatewayAsync",
+      "file": "NetworkServicesClient.UpdateAgentGatewayAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.UpdateAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGateway",
+            "name": "agentGateway"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.NetworkServices.V1.AgentGateway, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "UpdateAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.UpdateAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteAgentGateway_sync",
+      "title": "DeleteAgentGatewayRequestObject",
+      "description": "Snippet for DeleteAgentGateway",
+      "file": "NetworkServicesClient.DeleteAgentGatewayRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteAgentGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteAgentGateway_async",
+      "title": "DeleteAgentGatewayRequestObjectAsync",
+      "description": "Snippet for DeleteAgentGatewayAsync",
+      "file": "NetworkServicesClient.DeleteAgentGatewayRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.DeleteAgentGatewayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteAgentGateway_sync_flattened",
+      "title": "DeleteAgentGateway",
+      "description": "Snippet for DeleteAgentGateway",
+      "file": "NetworkServicesClient.DeleteAgentGatewaySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteAgentGateway",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteAgentGateway_async_flattened",
+      "title": "DeleteAgentGatewayAsync",
+      "description": "Snippet for DeleteAgentGatewayAsync",
+      "file": "NetworkServicesClient.DeleteAgentGatewayAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteAgentGateway_sync_flattened_resourceNames",
+      "title": "DeleteAgentGatewayResourceNames",
+      "description": "Snippet for DeleteAgentGateway",
+      "file": "NetworkServicesClient.DeleteAgentGatewayResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentGateway",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteAgentGateway",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGatewayName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkservices_v1_generated_NetworkServices_DeleteAgentGateway_async_flattened_resourceNames",
+      "title": "DeleteAgentGatewayResourceNamesAsync",
+      "description": "Snippet for DeleteAgentGatewayAsync",
+      "file": "NetworkServicesClient.DeleteAgentGatewayResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAgentGatewayAsync",
+        "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient.DeleteAgentGatewayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkServices.V1.AgentGatewayName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.NetworkServices.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "NetworkServicesClient",
+          "fullName": "Google.Cloud.NetworkServices.V1.NetworkServicesClient"
+        },
+        "method": {
+          "shortName": "DeleteAgentGateway",
+          "fullName": "google.cloud.networkservices.v1.NetworkServices.DeleteAgentGateway",
+          "service": {
+            "shortName": "NetworkServices",
+            "fullName": "google.cloud.networkservices.v1.NetworkServices"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
           "type": "SHORT"
         }
       ]

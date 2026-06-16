@@ -16,14 +16,15 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkservices_v1_generated_NetworkServices_CreateHttpRoute_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START networkservices_v1_generated_NetworkServices_UpdateAgentGateway_async_flattened]
     using Google.Cloud.NetworkServices.V1;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
+    using System.Threading.Tasks;
 
     public sealed partial class GeneratedNetworkServicesClientSnippets
     {
-        /// <summary>Snippet for CreateHttpRoute</summary>
+        /// <summary>Snippet for UpdateAgentGatewayAsync</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -31,37 +32,32 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateHttpRouteRequestObject()
+        public async Task UpdateAgentGatewayAsync()
         {
             // Create client
-            NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
+            NetworkServicesClient networkServicesClient = await NetworkServicesClient.CreateAsync();
             // Initialize request argument(s)
-            CreateHttpRouteRequest request = new CreateHttpRouteRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                HttpRouteId = "",
-                HttpRoute = new HttpRoute(),
-                RequestId = "",
-            };
+            AgentGateway agentGateway = new AgentGateway();
+            FieldMask updateMask = new FieldMask();
             // Make the request
-            Operation<HttpRoute, OperationMetadata> response = networkServicesClient.CreateHttpRoute(request);
+            Operation<AgentGateway, OperationMetadata> response = await networkServicesClient.UpdateAgentGatewayAsync(agentGateway, updateMask);
 
             // Poll until the returned long-running operation is complete
-            Operation<HttpRoute, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            Operation<AgentGateway, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
             // Retrieve the operation result
-            HttpRoute result = completedResponse.Result;
+            AgentGateway result = completedResponse.Result;
 
             // Or get the name of the operation
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
-            Operation<HttpRoute, OperationMetadata> retrievedResponse = networkServicesClient.PollOnceCreateHttpRoute(operationName);
+            Operation<AgentGateway, OperationMetadata> retrievedResponse = await networkServicesClient.PollOnceUpdateAgentGatewayAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
                 // If it has completed, then access the result
-                HttpRoute retrievedResult = retrievedResponse.Result;
+                AgentGateway retrievedResult = retrievedResponse.Result;
             }
         }
     }
-    // [END networkservices_v1_generated_NetworkServices_CreateHttpRoute_sync]
+    // [END networkservices_v1_generated_NetworkServices_UpdateAgentGateway_async_flattened]
 }

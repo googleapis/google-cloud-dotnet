@@ -29,7 +29,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
             "ZS5wcm90bxoeZ29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGiBnb29n",
             "bGUvcHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byLUCAoIVGxzUm91dGUSEQoEbmFtZRgBIAEoCUID",
+            "L3RpbWVzdGFtcC5wcm90byKbCQoIVGxzUm91dGUSEQoEbmFtZRgBIAEoCUID",
             "4EEIEhYKCXNlbGZfbGluaxgIIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAIg",
             "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0",
             "ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
@@ -38,50 +38,54 @@ namespace Google.Cloud.NetworkServices.V1 {
             "UnVsZUID4EECEjsKBm1lc2hlcxgGIAMoCUIr4EEB+kElCiNuZXR3b3Jrc2Vy",
             "dmljZXMuZ29vZ2xlYXBpcy5jb20vTWVzaBJACghnYXRld2F5cxgHIAMoCUIu",
             "4EEB+kEoCiZuZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vR2F0ZXdh",
-            "eRJKCgZsYWJlbHMYCyADKAsyNS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZp",
-            "Y2VzLnYxLlRsc1JvdXRlLkxhYmVsc0VudHJ5QgPgQQEaowEKCVJvdXRlUnVs",
-            "ZRJKCgdtYXRjaGVzGAEgAygLMjQuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2",
-            "aWNlcy52MS5UbHNSb3V0ZS5Sb3V0ZU1hdGNoQgPgQQISSgoGYWN0aW9uGAIg",
-            "ASgLMjUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5UbHNSb3V0",
-            "ZS5Sb3V0ZUFjdGlvbkID4EECGjYKClJvdXRlTWF0Y2gSFQoIc25pX2hvc3QY",
-            "ASADKAlCA+BBARIRCgRhbHBuGAIgAygJQgPgQQEamgEKC1JvdXRlQWN0aW9u",
-            "ElUKDGRlc3RpbmF0aW9ucxgBIAMoCzI6Lmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "c2VydmljZXMudjEuVGxzUm91dGUuUm91dGVEZXN0aW5hdGlvbkID4EECEjQK",
-            "DGlkbGVfdGltZW91dBgEIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlv",
-            "bkID4EEBGmwKEFJvdXRlRGVzdGluYXRpb24SQwoMc2VydmljZV9uYW1lGAEg",
-            "ASgJQi3gQQL6QScKJWNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vQmFja2VuZFNl",
-            "cnZpY2USEwoGd2VpZ2h0GAIgASgFQgPgQQEaLQoLTGFiZWxzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpr6kFoCiduZXR3b3Jrc2Vy",
-            "dmljZXMuZ29vZ2xlYXBpcy5jb20vVGxzUm91dGUSPXByb2plY3RzL3twcm9q",
-            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS90bHNSb3V0ZXMve3Rsc19yb3V0",
-            "ZX0iowEKFExpc3RUbHNSb3V0ZXNSZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv",
-            "4EEC+kEpEiduZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20vVGxzUm91",
-            "dGUSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSIwoW",
-            "cmV0dXJuX3BhcnRpYWxfc3VjY2VzcxgEIAEoCEID4EEBIoQBChVMaXN0VGxz",
-            "Um91dGVzUmVzcG9uc2USPQoKdGxzX3JvdXRlcxgBIAMoCzIpLmdvb2dsZS5j",
-            "bG91ZC5uZXR3b3Jrc2VydmljZXMudjEuVGxzUm91dGUSFwoPbmV4dF9wYWdl",
-            "X3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIlMKEkdldFRsc1Jv",
-            "dXRlUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6QSkKJ25ldHdvcmtzZXJ2",
-            "aWNlcy5nb29nbGVhcGlzLmNvbS9UbHNSb3V0ZSK2AQoVQ3JlYXRlVGxzUm91",
-            "dGVSZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv4EEC+kEpEiduZXR3b3Jrc2Vy",
-            "dmljZXMuZ29vZ2xlYXBpcy5jb20vVGxzUm91dGUSGQoMdGxzX3JvdXRlX2lk",
-            "GAIgASgJQgPgQQISQQoJdGxzX3JvdXRlGAMgASgLMikuZ29vZ2xlLmNsb3Vk",
-            "Lm5ldHdvcmtzZXJ2aWNlcy52MS5UbHNSb3V0ZUID4EECIpABChVVcGRhdGVU",
-            "bHNSb3V0ZVJlcXVlc3QSNAoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuRmllbGRNYXNrQgPgQQESQQoJdGxzX3JvdXRlGAIgASgLMiku",
-            "Z29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5UbHNSb3V0ZUID4EEC",
-            "IlYKFURlbGV0ZVRsc1JvdXRlUmVxdWVzdBI9CgRuYW1lGAEgASgJQi/gQQL6",
-            "QSkKJ25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9UbHNSb3V0ZULu",
-            "AQojY29tLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjFCDVRsc1Jv",
-            "dXRlUHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3b3Jrc2Vydmlj",
-            "ZXMvYXBpdjEvbmV0d29ya3NlcnZpY2VzcGI7bmV0d29ya3NlcnZpY2VzcGKq",
-            "Ah9Hb29nbGUuQ2xvdWQuTmV0d29ya1NlcnZpY2VzLlYxygIfR29vZ2xlXENs",
-            "b3VkXE5ldHdvcmtTZXJ2aWNlc1xWMeoCIkdvb2dsZTo6Q2xvdWQ6Ok5ldHdv",
-            "cmtTZXJ2aWNlczo6VjFiBnByb3RvMw=="));
+            "eRJFCg50YXJnZXRfcHJveGllcxgNIAMoCUIt4EEB+kEnCiVjb21wdXRlLmdv",
+            "b2dsZWFwaXMuY29tL1RhcmdldFRjcFByb3h5EkoKBmxhYmVscxgLIAMoCzI1",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuVGxzUm91dGUuTGFi",
+            "ZWxzRW50cnlCA+BBARqjAQoJUm91dGVSdWxlEkoKB21hdGNoZXMYASADKAsy",
+            "NC5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLlRsc1JvdXRlLlJv",
+            "dXRlTWF0Y2hCA+BBAhJKCgZhY3Rpb24YAiABKAsyNS5nb29nbGUuY2xvdWQu",
+            "bmV0d29ya3NlcnZpY2VzLnYxLlRsc1JvdXRlLlJvdXRlQWN0aW9uQgPgQQIa",
+            "NgoKUm91dGVNYXRjaBIVCghzbmlfaG9zdBgBIAMoCUID4EEBEhEKBGFscG4Y",
+            "AiADKAlCA+BBARqaAQoLUm91dGVBY3Rpb24SVQoMZGVzdGluYXRpb25zGAEg",
+            "AygLMjouZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MS5UbHNSb3V0",
+            "ZS5Sb3V0ZURlc3RpbmF0aW9uQgPgQQISNAoMaWRsZV90aW1lb3V0GAQgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQEabAoQUm91dGVEZXN0",
+            "aW5hdGlvbhJDCgxzZXJ2aWNlX25hbWUYASABKAlCLeBBAvpBJwolY29tcHV0",
+            "ZS5nb29nbGVhcGlzLmNvbS9CYWNrZW5kU2VydmljZRITCgZ3ZWlnaHQYAiAB",
+            "KAVCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBOmvqQWgKJ25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNv",
+            "bS9UbHNSb3V0ZRI9cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L3Rsc1JvdXRlcy97dGxzX3JvdXRlfSKjAQoUTGlzdFRsc1JvdXRl",
+            "c1JlcXVlc3QSPwoGcGFyZW50GAEgASgJQi/gQQL6QSkSJ25ldHdvcmtzZXJ2",
+            "aWNlcy5nb29nbGVhcGlzLmNvbS9UbHNSb3V0ZRIRCglwYWdlX3NpemUYAiAB",
+            "KAUSEgoKcGFnZV90b2tlbhgDIAEoCRIjChZyZXR1cm5fcGFydGlhbF9zdWNj",
+            "ZXNzGAQgASgIQgPgQQEihAEKFUxpc3RUbHNSb3V0ZXNSZXNwb25zZRI9Cgp0",
+            "bHNfcm91dGVzGAEgAygLMikuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNl",
+            "cy52MS5UbHNSb3V0ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5y",
+            "ZWFjaGFibGUYAyADKAkiUwoSR2V0VGxzUm91dGVSZXF1ZXN0Ej0KBG5hbWUY",
+            "ASABKAlCL+BBAvpBKQonbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29t",
+            "L1Rsc1JvdXRlIrYBChVDcmVhdGVUbHNSb3V0ZVJlcXVlc3QSPwoGcGFyZW50",
+            "GAEgASgJQi/gQQL6QSkSJ25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNv",
+            "bS9UbHNSb3V0ZRIZCgx0bHNfcm91dGVfaWQYAiABKAlCA+BBAhJBCgl0bHNf",
+            "cm91dGUYAyABKAsyKS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYx",
+            "LlRsc1JvdXRlQgPgQQIikAEKFVVwZGF0ZVRsc1JvdXRlUmVxdWVzdBI0Cgt1",
+            "cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tC",
+            "A+BBARJBCgl0bHNfcm91dGUYAiABKAsyKS5nb29nbGUuY2xvdWQubmV0d29y",
+            "a3NlcnZpY2VzLnYxLlRsc1JvdXRlQgPgQQIiVgoVRGVsZXRlVGxzUm91dGVS",
+            "ZXF1ZXN0Ej0KBG5hbWUYASABKAlCL+BBAvpBKQonbmV0d29ya3NlcnZpY2Vz",
+            "Lmdvb2dsZWFwaXMuY29tL1Rsc1JvdXRlQuUCCiNjb20uZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmtzZXJ2aWNlcy52MUINVGxzUm91dGVQcm90b1ABWk1jbG91ZC5n",
+            "b29nbGUuY29tL2dvL25ldHdvcmtzZXJ2aWNlcy9hcGl2MS9uZXR3b3Jrc2Vy",
+            "dmljZXNwYjtuZXR3b3Jrc2VydmljZXNwYqoCH0dvb2dsZS5DbG91ZC5OZXR3",
+            "b3JrU2VydmljZXMuVjHKAh9Hb29nbGVcQ2xvdWRcTmV0d29ya1NlcnZpY2Vz",
+            "XFYx6gIiR29vZ2xlOjpDbG91ZDo6TmV0d29ya1NlcnZpY2VzOjpWMepBdAol",
+            "Y29tcHV0ZS5nb29nbGVhcGlzLmNvbS9UYXJnZXRUY3BQcm94eRJLcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3RhcmdldFRjcFBy",
+            "b3hpZXMve3RhcmdldF90Y3BfcHJveHl9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TlsRoute), global::Google.Cloud.NetworkServices.V1.TlsRoute.Parser, new[]{ "Name", "SelfLink", "CreateTime", "UpdateTime", "Description", "Rules", "Meshes", "Gateways", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteRule), global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteRule.Parser, new[]{ "Matches", "Action" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TlsRoute), global::Google.Cloud.NetworkServices.V1.TlsRoute.Parser, new[]{ "Name", "SelfLink", "CreateTime", "UpdateTime", "Description", "Rules", "Meshes", "Gateways", "TargetProxies", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteRule), global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteRule.Parser, new[]{ "Matches", "Action" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteMatch), global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteMatch.Parser, new[]{ "SniHost", "Alpn" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteAction), global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteAction.Parser, new[]{ "Destinations", "IdleTimeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteDestination), global::Google.Cloud.NetworkServices.V1.TlsRoute.Types.RouteDestination.Parser, new[]{ "ServiceName", "Weight" }, null, null, null, null),
@@ -145,6 +149,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       rules_ = other.rules_.Clone();
       meshes_ = other.meshes_.Clone();
       gateways_ = other.gateways_.Clone();
+      targetProxies_ = other.targetProxies_.Clone();
       labels_ = other.labels_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -160,7 +165,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Identifier. Name of the TlsRoute resource. It matches pattern
-    /// `projects/*/locations/global/tlsRoutes/tls_route_name>`.
+    /// `projects/*/locations/*/tlsRoutes/tls_route_name>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -258,7 +263,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     /// one of the routing rules to route the requests served by the mesh.
     ///
     /// Each mesh reference should match the pattern:
-    /// `projects/*/locations/global/meshes/&lt;mesh_name>`
+    /// `projects/*/locations/*/meshes/&lt;mesh_name>`
     ///
     /// The attached Mesh should be of a type SIDECAR
     /// </summary>
@@ -278,12 +283,31 @@ namespace Google.Cloud.NetworkServices.V1 {
     /// as one of the routing rules to route the requests served by the gateway.
     ///
     /// Each gateway reference should match the pattern:
-    /// `projects/*/locations/global/gateways/&lt;gateway_name>`
+    /// `projects/*/locations/*/gateways/&lt;gateway_name>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Gateways {
       get { return gateways_; }
+    }
+
+    /// <summary>Field number for the "target_proxies" field.</summary>
+    public const int TargetProxiesFieldNumber = 13;
+    private static readonly pb::FieldCodec<string> _repeated_targetProxies_codec
+        = pb::FieldCodec.ForString(106);
+    private readonly pbc::RepeatedField<string> targetProxies_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. TargetProxies defines a list of TargetTcpProxies this TlsRoute is
+    /// attached to, as one of the routing rules to route the requests served by
+    /// the TargetTcpProxy.
+    ///
+    /// Each TargetTcpProxy reference should match the pattern:
+    /// `projects/*/locations/*/targetTcpProxies/&lt;target_tcp_proxy_name>`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> TargetProxies {
+      get { return targetProxies_; }
     }
 
     /// <summary>Field number for the "labels" field.</summary>
@@ -323,6 +347,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       if(!rules_.Equals(other.rules_)) return false;
       if(!meshes_.Equals(other.meshes_)) return false;
       if(!gateways_.Equals(other.gateways_)) return false;
+      if(!targetProxies_.Equals(other.targetProxies_)) return false;
       if (!Labels.Equals(other.Labels)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -339,6 +364,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       hash ^= rules_.GetHashCode();
       hash ^= meshes_.GetHashCode();
       hash ^= gateways_.GetHashCode();
+      hash ^= targetProxies_.GetHashCode();
       hash ^= Labels.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -382,6 +408,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteString(SelfLink);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      targetProxies_.WriteTo(output, _repeated_targetProxies_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -416,6 +443,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         output.WriteString(SelfLink);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      targetProxies_.WriteTo(ref output, _repeated_targetProxies_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -444,6 +472,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       size += rules_.CalculateSize(_repeated_rules_codec);
       size += meshes_.CalculateSize(_repeated_meshes_codec);
       size += gateways_.CalculateSize(_repeated_gateways_codec);
+      size += targetProxies_.CalculateSize(_repeated_targetProxies_codec);
       size += labels_.CalculateSize(_map_labels_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -481,6 +510,7 @@ namespace Google.Cloud.NetworkServices.V1 {
       rules_.Add(other.rules_);
       meshes_.Add(other.meshes_);
       gateways_.Add(other.gateways_);
+      targetProxies_.Add(other.targetProxies_);
       labels_.MergeFrom(other.labels_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -543,6 +573,10 @@ namespace Google.Cloud.NetworkServices.V1 {
             labels_.AddEntriesFrom(input, _map_labels_codec);
             break;
           }
+          case 106: {
+            targetProxies_.AddEntriesFrom(input, _repeated_targetProxies_codec);
+            break;
+          }
         }
       }
     #endif
@@ -602,6 +636,10 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
           case 90: {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
+            break;
+          }
+          case 106: {
+            targetProxies_.AddEntriesFrom(ref input, _repeated_targetProxies_codec);
             break;
           }
         }
@@ -1647,7 +1685,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The project and location from which the TlsRoutes should be
-    /// listed, specified in the format `projects/*/locations/global`.
+    /// listed, specified in the format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2240,7 +2278,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the TlsRoute to get. Must be in the format
-    /// `projects/*/locations/global/tlsRoutes/*`.
+    /// `projects/*/locations/*/tlsRoutes/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2447,7 +2485,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The parent resource of the TlsRoute. Must be in the
-    /// format `projects/*/locations/global`.
+    /// format `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3005,7 +3043,7 @@ namespace Google.Cloud.NetworkServices.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. A name of the TlsRoute to delete. Must be in the format
-    /// `projects/*/locations/global/tlsRoutes/*`.
+    /// `projects/*/locations/*/tlsRoutes/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

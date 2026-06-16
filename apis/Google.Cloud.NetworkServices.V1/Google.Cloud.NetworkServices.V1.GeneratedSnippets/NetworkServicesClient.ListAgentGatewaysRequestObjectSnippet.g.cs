@@ -16,7 +16,7 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkservices_v1_generated_NetworkServices_ListHttpRoutes_sync]
+    // [START networkservices_v1_generated_NetworkServices_ListAgentGateways_sync]
     using Google.Api.Gax;
     using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkServices.V1;
@@ -24,7 +24,7 @@ namespace GoogleCSharpSnippets
 
     public sealed partial class GeneratedNetworkServicesClientSnippets
     {
-        /// <summary>Snippet for ListHttpRoutes</summary>
+        /// <summary>Snippet for ListAgentGateways</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -32,33 +32,32 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ListHttpRoutesRequestObject()
+        public void ListAgentGatewaysRequestObject()
         {
             // Create client
             NetworkServicesClient networkServicesClient = NetworkServicesClient.Create();
             // Initialize request argument(s)
-            ListHttpRoutesRequest request = new ListHttpRoutesRequest
+            ListAgentGatewaysRequest request = new ListAgentGatewaysRequest
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 ReturnPartialSuccess = false,
-                Filter = "",
             };
             // Make the request
-            PagedEnumerable<ListHttpRoutesResponse, HttpRoute> response = networkServicesClient.ListHttpRoutes(request);
+            PagedEnumerable<ListAgentGatewaysResponse, AgentGateway> response = networkServicesClient.ListAgentGateways(request);
 
             // Iterate over all response items, lazily performing RPCs as required
-            foreach (HttpRoute item in response)
+            foreach (AgentGateway item in response)
             {
                 // Do something with each item
                 Console.WriteLine(item);
             }
 
             // Or iterate over pages (of server-defined size), performing one RPC per page
-            foreach (ListHttpRoutesResponse page in response.AsRawResponses())
+            foreach (ListAgentGatewaysResponse page in response.AsRawResponses())
             {
                 // Do something with each page of items
                 Console.WriteLine("A page of results:");
-                foreach (HttpRoute item in page)
+                foreach (AgentGateway item in page)
                 {
                     // Do something with each item
                     Console.WriteLine(item);
@@ -67,10 +66,10 @@ namespace GoogleCSharpSnippets
 
             // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
             int pageSize = 10;
-            Page<HttpRoute> singlePage = response.ReadPage(pageSize);
+            Page<AgentGateway> singlePage = response.ReadPage(pageSize);
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
-            foreach (HttpRoute item in singlePage)
+            foreach (AgentGateway item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -79,5 +78,5 @@ namespace GoogleCSharpSnippets
             string nextPageToken = singlePage.NextPageToken;
         }
     }
-    // [END networkservices_v1_generated_NetworkServices_ListHttpRoutes_sync]
+    // [END networkservices_v1_generated_NetworkServices_ListAgentGateways_sync]
 }
