@@ -4492,9 +4492,10 @@
         },
         {
             "id": "Google.Cloud.Tools.SecretManagerHelper",
-            "nextVersion": "0.1.0",
+            "currentVersion": "0.1.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-06-18T20:54:29.790259281Z",
             "sourcePaths": [
                 "tools/Google.Cloud.Tools.SecretManagerHelper"
             ]
