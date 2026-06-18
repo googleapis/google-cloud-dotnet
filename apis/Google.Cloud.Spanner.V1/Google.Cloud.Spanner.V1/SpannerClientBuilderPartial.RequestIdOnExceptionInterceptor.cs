@@ -54,9 +54,9 @@ public partial class SpannerClientBuilder
               return new AsyncUnaryCall<TResponse>(
                   WrapExceptionAsync(call.ResponseAsync, context.Options),
                   WrapExceptionAsync(call.ResponseHeadersAsync, context.Options),
-                  call.GetStatus,
-                  call.GetTrailers,
-                  call.Dispose);
+                  WrapExceptionFunc(call.GetStatus, context.Options),
+                  WrapExceptionFunc(call.GetTrailers, context.Options),
+                  WrapExceptionAction(call.Dispose, context.Options));
         }
 
         /// <inheritdoc/>
@@ -69,9 +69,9 @@ public partial class SpannerClientBuilder
                 new SpannerRequestIdStreamWriter<TRequest>(call.RequestStream, context.Options),
                 WrapExceptionAsync(call.ResponseAsync, context.Options),
                 WrapExceptionAsync(call.ResponseHeadersAsync, context.Options),
-                call.GetStatus,
-                call.GetTrailers,
-                call.Dispose);
+                WrapExceptionFunc(call.GetStatus, context.Options),
+                WrapExceptionFunc(call.GetTrailers, context.Options),
+                WrapExceptionAction(call.Dispose, context.Options));
         }
 
         /// <inheritdoc/>
@@ -86,9 +86,9 @@ public partial class SpannerClientBuilder
             return new AsyncServerStreamingCall<TResponse>(
                 wrappedResponseStream,
                 WrapExceptionAsync(call.ResponseHeadersAsync, context.Options),
-                call.GetStatus,
-                call.GetTrailers,
-                call.Dispose);
+                WrapExceptionFunc(call.GetStatus, context.Options),
+                WrapExceptionFunc(call.GetTrailers, context.Options),
+                WrapExceptionAction(call.Dispose, context.Options));
         }
 
         /// <inheritdoc/>
@@ -104,9 +104,9 @@ public partial class SpannerClientBuilder
                 wrappedRequestStream,
                 wrappedResponseStream,
                 WrapExceptionAsync(call.ResponseHeadersAsync, context.Options),
-                call.GetStatus,
-                call.GetTrailers,
-                call.Dispose);
+                WrapExceptionFunc(call.GetStatus, context.Options),
+                WrapExceptionFunc(call.GetTrailers, context.Options),
+                WrapExceptionAction(call.Dispose, context.Options));
         }
 
         /// <summary>
@@ -120,7 +120,7 @@ public partial class SpannerClientBuilder
             }
             catch (Exception e)
             {
-                EnrichException(e, options);
+                MaybeEnrichException(e, options);
                 throw;
             }
         }
@@ -136,7 +136,7 @@ public partial class SpannerClientBuilder
             }
             catch (Exception e)
             {
-                EnrichException(e, options);
+                MaybeEnrichException(e, options);
                 throw;
             }
         }
@@ -152,9 +152,47 @@ public partial class SpannerClientBuilder
             }
             catch (Exception e)
             {
-               EnrichException(e, options);
+               MaybeEnrichException(e, options);
                throw;
             }
+        }
+
+        /// <summary>
+        /// Wraps a function, adding the request ID to any exceptions thrown.
+        /// </summary>
+        private static Func<T> WrapExceptionFunc<T>(Func<T> action, CallOptions options)
+        {
+            return () =>
+            {
+                try
+                {
+                    return action();
+                }
+                catch (Exception e)
+                {
+                    MaybeEnrichException(e, options);
+                    throw;
+                }
+            };
+        }
+
+        /// <summary>
+        /// Wraps an action, adding the request ID to any exceptions thrown.
+        /// </summary>
+        private static Action WrapExceptionAction(Action action, CallOptions options)
+        {
+            return () =>
+            {
+                try
+                {
+                    action();
+                }
+                catch (Exception e)
+                {
+                    MaybeEnrichException(e, options);
+                    throw;
+                }
+            };
         }
 
         /// <summary>
@@ -163,7 +201,7 @@ public partial class SpannerClientBuilder
         /// <param name="e">The exception to enrich.</param>
         /// <param name="options">The <see cref="CallOptions"/> containing the request ID.</param>
         /// <returns>The enriched exception (the same instance passed in).</returns>
-        private static Exception EnrichException(Exception e, CallOptions options)
+        private static Exception MaybeEnrichException(Exception e, CallOptions options)
         {
             var requestId = GetRequestIdFromOptions(options);
             if (requestId != null)
