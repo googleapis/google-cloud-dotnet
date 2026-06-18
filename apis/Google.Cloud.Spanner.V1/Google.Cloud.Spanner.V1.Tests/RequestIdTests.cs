@@ -31,7 +31,7 @@ public class RequestIdTests
     [MemberData(nameof(SpannerClientActions))]
     public void RequestId_Format(Action<SpannerClient> action)
     {
-        var invoker = new SyncFailureCallInvoker(0);
+        var invoker = new SyncFailureCallInvoker(numberOfFailuresToSimulate: 0);
         var client = new SpannerClientBuilder { CallInvoker = invoker }.Build();
 
         action(client);
@@ -55,11 +55,32 @@ public class RequestIdTests
     [MemberData(nameof(SpannerClientActions))]
     public void SetsHeaderOnRpcCalls(Action<SpannerClient> action)
     {
-        var invoker = new SyncFailureCallInvoker(0);
+        var invoker = new SyncFailureCallInvoker(numberOfFailuresToSimulate: 0);
         var client = new SpannerClientBuilder { CallInvoker = invoker }.Build();
         action(client);
         Metadata.Entry entry = Assert.Single(invoker.CapturedMetadata[0], e => e.Key == "x-goog-spanner-request-id");
         Assert.NotNull(entry.Value);
+    }
+
+    [Theory]
+    [MemberData(nameof(SpannerClientActions))]
+    public void ClientsShareProcessIdButNotRequestId(Action<SpannerClient> action)
+    {
+        var invoker1 = new SyncFailureCallInvoker(numberOfFailuresToSimulate: 0);
+        var invoker2 = new SyncFailureCallInvoker(numberOfFailuresToSimulate: 0);
+        var client1 = new SpannerClientBuilder { CallInvoker = invoker1 }.Build();
+        var client2 = new SpannerClientBuilder { CallInvoker = invoker2 }.Build();
+
+        action(client1);
+        action(client2);
+
+        Metadata.Entry requestIdEntry1 = Assert.Single(invoker1.CapturedMetadata[0], e => e.Key == "x-goog-spanner-request-id");
+        Metadata.Entry requestIdEntry2 = Assert.Single(invoker2.CapturedMetadata[0], e => e.Key == "x-goog-spanner-request-id");
+
+        // The request IDs should never match
+        Assert.NotNull(requestIdEntry1.Value);
+        Assert.NotNull(requestIdEntry2.Value);
+        Assert.NotEqual(requestIdEntry1.Value, requestIdEntry2.Value);
     }
 
     [Fact]

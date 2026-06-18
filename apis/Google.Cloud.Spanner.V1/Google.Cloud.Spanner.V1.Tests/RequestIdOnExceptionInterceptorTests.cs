@@ -81,6 +81,30 @@ public class RequestIdOnExceptionInterceptorTests
     }
 
     [Fact]
+    public void AsyncUnaryCall_GetStatusThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncUnaryCall(getStatus: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncUnaryCall(_fakeRequest, _unaryContext, (req, ctx) => call).GetStatus());
+    }
+
+    [Fact]
+    public void AsyncUnaryCall_GetTrailersThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncUnaryCall(getTrailers: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncUnaryCall(_fakeRequest, _unaryContext, (req, ctx) => call).GetTrailers());
+    }
+
+    [Fact]
+    public void AsyncUnaryCall_DisposeThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncUnaryCall(dispose: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncUnaryCall(_fakeRequest, _unaryContext, (req, ctx) => call).Dispose());
+    }
+
+    [Fact]
     public async Task AsyncClientStreamingCall_ResponseAsyncThrows_ExceptionEnriched()
     {
         var call = CreateAsyncClientStreamingCall(response: Task.FromException<string>(s_exception));
@@ -114,6 +138,30 @@ public class RequestIdOnExceptionInterceptorTests
     }
 
     [Fact]
+    public void AsyncClientStreamingCall_GetStatusThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncClientStreamingCall(getStatus: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncClientStreamingCall(_clientStreamingContext, ctx => call).GetStatus());
+    }
+
+    [Fact]
+    public void AsyncClientStreamingCall_GetTrailersThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncClientStreamingCall(getTrailers: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncClientStreamingCall(_clientStreamingContext, ctx => call).GetTrailers());
+    }
+
+    [Fact]
+    public void AsyncClientStreamingCall_DisposeThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncClientStreamingCall(dispose: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncClientStreamingCall(_clientStreamingContext, ctx => call).Dispose());
+    }
+
+    [Fact]
     public async Task AsyncServerStreamingCall_ResponseHeadersAsyncThrows_ExceptionEnriched()
     {
         var call = CreateAsyncServerStreamingCall(headers: Task.FromException<Metadata>(s_exception));
@@ -127,6 +175,30 @@ public class RequestIdOnExceptionInterceptorTests
         var call = CreateAsyncServerStreamingCall(responseStream: new ThrowingAsyncStreamReader<string>(s_exception));
         await AssertThrowsEnrichedExceptionAsync(() =>
             s_interceptor.AsyncServerStreamingCall(_fakeRequest, _serverStreamingContext, (req, ctx) => call).ResponseStream.MoveNext(default));
+    }
+
+    [Fact]
+    public void AsyncServerStreamingCall_GetStatusThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncServerStreamingCall(getStatus: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncServerStreamingCall(_fakeRequest, _serverStreamingContext, (req, ctx) => call).GetStatus());
+    }
+
+    [Fact]
+    public void AsyncServerStreamingCall_GetTrailersThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncServerStreamingCall(getTrailers: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncServerStreamingCall(_fakeRequest, _serverStreamingContext, (req, ctx) => call).GetTrailers());
+    }
+
+    [Fact]
+    public void AsyncServerStreamingCall_DisposeThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncServerStreamingCall(dispose: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncServerStreamingCall(_fakeRequest, _serverStreamingContext, (req, ctx) => call).Dispose());
     }
 
     [Fact]
@@ -159,6 +231,30 @@ public class RequestIdOnExceptionInterceptorTests
         var call = CreateAsyncDuplexStreamingCall(responseStream: new ThrowingAsyncStreamReader<string>(s_exception));
         await AssertThrowsEnrichedExceptionAsync(() =>
             s_interceptor.AsyncDuplexStreamingCall(_duplexStreamingContext, (ctx) => call).ResponseStream.MoveNext(default));
+    }
+
+    [Fact]
+    public void AsyncDuplexStreamingCall_GetStatusThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncDuplexStreamingCall(getStatus: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncDuplexStreamingCall(_duplexStreamingContext, ctx => call).GetStatus());
+    }
+
+    [Fact]
+    public void AsyncDuplexStreamingCall_GetTrailersThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncDuplexStreamingCall(getTrailers: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncDuplexStreamingCall(_duplexStreamingContext, ctx => call).GetTrailers());
+    }
+
+    [Fact]
+    public void AsyncDuplexStreamingCall_DisposeThrows_ExceptionEnriched()
+    {
+        var call = CreateAsyncDuplexStreamingCall(dispose: () => throw s_exception);
+        AssertThrowsEnrichedException(() =>
+            s_interceptor.AsyncDuplexStreamingCall(_duplexStreamingContext, ctx => call).Dispose());
     }
 
     /// <summary>
@@ -203,47 +299,61 @@ public class RequestIdOnExceptionInterceptorTests
             null,
             s_options);
 
-    private static AsyncUnaryCall<string> CreateAsyncUnaryCall(Task<string> response = null, Task<Metadata> headers = null) =>
+    private static AsyncUnaryCall<string> CreateAsyncUnaryCall(
+        Task<string> response = null,
+        Task<Metadata> headers = null,
+        Func<Status> getStatus = null,
+        Func<Metadata> getTrailers = null,
+        Action dispose = null) =>
         new AsyncUnaryCall<string>(
             response ?? Task.FromResult("1"),
             headers ?? Task.FromResult(new Metadata()),
-            () => Status.DefaultSuccess,
-            () => new Metadata(),
-            () => { });
+            getStatus ?? (() => Status.DefaultSuccess),
+            getTrailers ?? (() => new Metadata()),
+            dispose ?? (() => { }));
 
     private static AsyncClientStreamingCall<string, string> CreateAsyncClientStreamingCall(
         IClientStreamWriter<string> requestStream = null,
         Task<string> response = null,
-        Task<Metadata> headers = null) =>
+        Task<Metadata> headers = null,
+        Func<Status> getStatus = null,
+        Func<Metadata> getTrailers = null,
+        Action dispose = null) =>
         new AsyncClientStreamingCall<string, string>(
             requestStream ?? new ThrowingClientStreamWriter<string>(null),
             response ?? Task.FromResult("1"),
             headers ?? Task.FromResult(new Metadata()),
-            () => Status.DefaultSuccess,
-            () => new Metadata(),
-            () => { });
+            getStatus ?? (() => Status.DefaultSuccess),
+            getTrailers ?? (() => new Metadata()),
+            dispose ?? (() => { }));
 
     private static AsyncServerStreamingCall<string> CreateAsyncServerStreamingCall(
         IAsyncStreamReader<string> responseStream = null,
-        Task<Metadata> headers = null) =>
+        Task<Metadata> headers = null,
+        Func<Status> getStatus = null,
+        Func<Metadata> getTrailers = null,
+        Action dispose = null) =>
         new AsyncServerStreamingCall<string>(
             responseStream ?? new ThrowingAsyncStreamReader<string>(null),
             headers ?? Task.FromResult(new Metadata()),
-            () => Status.DefaultSuccess,
-            () => new Metadata(),
-            () => { });
+            getStatus ?? (() => Status.DefaultSuccess),
+            getTrailers ?? (() => new Metadata()),
+            dispose ?? (() => { }));
 
     private static AsyncDuplexStreamingCall<string, string> CreateAsyncDuplexStreamingCall(
         IClientStreamWriter<string> requestStream = null,
         IAsyncStreamReader<string> responseStream = null,
-        Task<Metadata> headers = null) =>
+        Task<Metadata> headers = null,
+        Func<Status> getStatus = null,
+        Func<Metadata> getTrailers = null,
+        Action dispose = null) =>
         new AsyncDuplexStreamingCall<string, string>(
             requestStream ?? new ThrowingClientStreamWriter<string>(null),
             responseStream ?? new ThrowingAsyncStreamReader<string>(null),
             headers ?? Task.FromResult(new Metadata()),
-            () => Status.DefaultSuccess,
-            () => new Metadata(),
-            () => { });
+            getStatus ?? (() => Status.DefaultSuccess),
+            getTrailers ?? (() => new Metadata()),
+            dispose ?? (() => { }));
 
     private class ThrowingAsyncStreamReader<T> : IAsyncStreamReader<T>
     {
