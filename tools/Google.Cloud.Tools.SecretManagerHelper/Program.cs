@@ -24,7 +24,7 @@ public class Program
     /// and writes it to standard output.
     /// </summary>
     /// <param name="args">Project Name and Secret Id. These are passed in using standard grammar
-    /// like dotnet run --project <project-name> --secret <secret-id>
+    /// like 'dotnet run --project &lt;project-name&gt; --secret &lt;secret-id&gt;'
     /// </param>
     /// <returns>0 if the secret was successfully fetched and output; 1 otherwise.</returns>
     public static async Task<int> Main(string[] args)
