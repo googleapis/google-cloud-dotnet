@@ -1,5 +1,24 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2026-06-18
+
+### New features
+
+- Add AdEvent message and related enums for ingesting ad event data
+- Add IPV4/IPV6 format annotation to DeviceInfo.ip_address
+- Add CoordinatorKeyInfo for specifying coordinator keys
+- Add IngestAdEvents resource for uploading ad events to Google Analytics
+- Add FeatureSet, PartnerCustomerAccount, PartnerLinkMetadata and related fields for partner link configuration
+- Add ViewabilityInfo resource and related enums for ad viewability details
+
+### Bug fixes
+
+- Update account_type in message ProductAccount to be required
+
+### Documentation improvements
+
+- Clarify NO_IDENTIFIERS_PROVIDED error for Floodlight Event ingestion
+
 ## Version 1.0.0-beta07, released 2026-05-30
 
 ### New features
