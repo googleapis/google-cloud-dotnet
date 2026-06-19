@@ -324,19 +324,6 @@ namespace Google.Cloud.OracleDatabase.V1
         }
     }
 
-    public partial class GetGoldengateConnectionTypeRequest
-    {
-        /// <summary>
-        /// <see cref="gcov::GoldengateConnectionTypeName"/>-typed view over the <see cref="Name"/> resource name
-        /// property.
-        /// </summary>
-        public gcov::GoldengateConnectionTypeName GoldengateConnectionTypeName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gcov::GoldengateConnectionTypeName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
     public partial class ListGoldengateConnectionTypesRequest
     {
         /// <summary>

@@ -326,19 +326,6 @@ namespace Google.Cloud.OracleDatabase.V1
         }
     }
 
-    public partial class GetGoldengateDeploymentVersionRequest
-    {
-        /// <summary>
-        /// <see cref="gcov::GoldengateDeploymentVersionName"/>-typed view over the <see cref="Name"/> resource name
-        /// property.
-        /// </summary>
-        public gcov::GoldengateDeploymentVersionName GoldengateDeploymentVersionName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gcov::GoldengateDeploymentVersionName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
     public partial class ListGoldengateDeploymentVersionsRequest
     {
         /// <summary>
