@@ -329,6 +329,26 @@
       "includeCommonResourcesProto": false
     },
     {
+      "id": "Google.Cloud.AgentRegistry.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Agent Registry",
+      "productUrl": "https://docs.cloud.google.com/agent-registry/overview",
+      "description": "Agent Registry is a centralized, unified catalog that lets you store, discover, and govern Model Context Protocol (MCP) servers, tools, and AI agents within Google Cloud.",
+      "tags": [],
+      "dependencies": {
+        "Google.Cloud.Location": "2.4.0",
+        "Google.LongRunning": "3.5.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/agentregistry/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "agentregistry",
+      "serviceConfigFile": "agentregistry_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.AlloyDb.V1",
       "version": "1.15.0",
       "type": "grpc",
