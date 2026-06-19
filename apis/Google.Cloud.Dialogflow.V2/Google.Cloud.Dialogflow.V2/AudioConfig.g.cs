@@ -93,20 +93,20 @@ namespace Google.Cloud.Dialogflow.V2 {
             "U3NtbFZvaWNlR2VuZGVyEiEKHVNTTUxfVk9JQ0VfR0VOREVSX1VOU1BFQ0lG",
             "SUVEEAASGgoWU1NNTF9WT0lDRV9HRU5ERVJfTUFMRRABEhwKGFNTTUxfVk9J",
             "Q0VfR0VOREVSX0ZFTUFMRRACEh0KGVNTTUxfVk9JQ0VfR0VOREVSX05FVVRS",
-            "QUwQAyqMAgoTT3V0cHV0QXVkaW9FbmNvZGluZxIlCiFPVVRQVVRfQVVESU9f",
+            "QUwQAyqQAgoTT3V0cHV0QXVkaW9FbmNvZGluZxIlCiFPVVRQVVRfQVVESU9f",
             "RU5DT0RJTkdfVU5TUEVDSUZJRUQQABIjCh9PVVRQVVRfQVVESU9fRU5DT0RJ",
-            "TkdfTElORUFSXzE2EAESHQoZT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QMxAC",
-            "EiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19NUDNfNjRfS0JQUxAEEiIKHk9V",
-            "VFBVVF9BVURJT19FTkNPRElOR19PR0dfT1BVUxADEh8KG09VVFBVVF9BVURJ",
-            "T19FTkNPRElOR19NVUxBVxAFEh4KGk9VVFBVVF9BVURJT19FTkNPRElOR19B",
-            "TEFXEAZC0wIKHmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQQXVk",
-            "aW9Db25maWdQcm90b1ABWj5jbG91ZC5nb29nbGUuY29tL2dvL2RpYWxvZ2Zs",
-            "b3cvYXBpdjIvZGlhbG9nZmxvd3BiO2RpYWxvZ2Zsb3dwYqICAkRGqgIaR29v",
-            "Z2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjLqQVUKG2F1dG9tbC5nb29nbGVhcGlz",
-            "LmNvbS9Nb2RlbBI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L21vZGVscy97bW9kZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5j",
-            "b20vUGhyYXNlU2V0Ej9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vcGhyYXNlU2V0cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
+            "TkdfTElORUFSXzE2EAESIQoZT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QMxAC",
+            "GgIIARIlCiFPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVAzXzY0X0tCUFMQBBIi",
+            "Ch5PVVRQVVRfQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQAxIfChtPVVRQVVRf",
+            "QVVESU9fRU5DT0RJTkdfTVVMQVcQBRIeChpPVVRQVVRfQVVESU9fRU5DT0RJ",
+            "TkdfQUxBVxAGQtMCCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJC",
+            "EEF1ZGlvQ29uZmlnUHJvdG9QAVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFs",
+            "b2dmbG93L2FwaXYyL2RpYWxvZ2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoC",
+            "Gkdvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYy6kFVChthdXRvbWwuZ29vZ2xl",
+            "YXBpcy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfepBYgofc3BlZWNoLmdvb2dsZWFw",
+            "aXMuY29tL1BocmFzZVNldBI/cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
+            "cy97bG9jYXRpb259L3BocmFzZVNldHMve3BocmFzZV9zZXR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.TelephonyDtmf), typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -353,8 +353,9 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// </summary>
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_LINEAR_16")] Linear16 = 1,
     /// <summary>
-    /// MP3 audio at 32kbps.
+    /// MP3 audio at 64kbps.
     /// </summary>
+    [global::System.ObsoleteAttribute]
     [pbr::OriginalName("OUTPUT_AUDIO_ENCODING_MP3")] Mp3 = 2,
     /// <summary>
     /// MP3 audio at 64kbps.
