@@ -554,5 +554,48 @@ namespace GoogleCSharpSnippets
             ReferenceList response = await referenceListServiceClient.UpdateReferenceListAsync(referenceList, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for VerifyReferenceList</summary>
+        public void VerifyReferenceListRequestObject()
+        {
+            // Snippet: VerifyReferenceList(VerifyReferenceListRequest, CallSettings)
+            // Create client
+            ReferenceListServiceClient referenceListServiceClient = ReferenceListServiceClient.Create();
+            // Initialize request argument(s)
+            VerifyReferenceListRequest request = new VerifyReferenceListRequest
+            {
+                InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SyntaxType = ReferenceListSyntaxType.Unspecified,
+                Entries =
+                {
+                    new ReferenceListEntry(),
+                },
+            };
+            // Make the request
+            VerifyReferenceListResponse response = referenceListServiceClient.VerifyReferenceList(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyReferenceListAsync</summary>
+        public async Task VerifyReferenceListRequestObjectAsync()
+        {
+            // Snippet: VerifyReferenceListAsync(VerifyReferenceListRequest, CallSettings)
+            // Additional: VerifyReferenceListAsync(VerifyReferenceListRequest, CancellationToken)
+            // Create client
+            ReferenceListServiceClient referenceListServiceClient = await ReferenceListServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VerifyReferenceListRequest request = new VerifyReferenceListRequest
+            {
+                InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SyntaxType = ReferenceListSyntaxType.Unspecified,
+                Entries =
+                {
+                    new ReferenceListEntry(),
+                },
+            };
+            // Make the request
+            VerifyReferenceListResponse response = await referenceListServiceClient.VerifyReferenceListAsync(request);
+            // End snippet
+        }
     }
 }

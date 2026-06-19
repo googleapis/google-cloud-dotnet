@@ -67,6 +67,7 @@ namespace Google.Cloud.Chronicle.V1
             yield return NativeDashboardReflection.Descriptor;
             yield return ReferenceListReflection.Descriptor;
             yield return RuleReflection.Descriptor;
+            yield return RuleExecutionErrorReflection.Descriptor;
             yield return lro::OperationsReflection.Descriptor;
         }
     }

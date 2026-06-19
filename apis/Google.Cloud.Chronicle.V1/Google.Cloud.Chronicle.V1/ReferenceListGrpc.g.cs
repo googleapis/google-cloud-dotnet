@@ -3,7 +3,7 @@
 //     source: google/cloud/chronicle/v1/reference_list.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -75,6 +75,10 @@ namespace Google.Cloud.Chronicle.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Chronicle.V1.CreateReferenceListRequest> __Marshaller_google_cloud_chronicle_v1_CreateReferenceListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Chronicle.V1.CreateReferenceListRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Chronicle.V1.UpdateReferenceListRequest> __Marshaller_google_cloud_chronicle_v1_UpdateReferenceListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Chronicle.V1.UpdateReferenceListRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest> __Marshaller_google_cloud_chronicle_v1_VerifyReferenceListRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse> __Marshaller_google_cloud_chronicle_v1_VerifyReferenceListResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Chronicle.V1.GetReferenceListRequest, global::Google.Cloud.Chronicle.V1.ReferenceList> __Method_GetReferenceList = new grpc::Method<global::Google.Cloud.Chronicle.V1.GetReferenceListRequest, global::Google.Cloud.Chronicle.V1.ReferenceList>(
@@ -107,6 +111,14 @@ namespace Google.Cloud.Chronicle.V1 {
         "UpdateReferenceList",
         __Marshaller_google_cloud_chronicle_v1_UpdateReferenceListRequest,
         __Marshaller_google_cloud_chronicle_v1_ReferenceList);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest, global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse> __Method_VerifyReferenceList = new grpc::Method<global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest, global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "VerifyReferenceList",
+        __Marshaller_google_cloud_chronicle_v1_VerifyReferenceListRequest,
+        __Marshaller_google_cloud_chronicle_v1_VerifyReferenceListResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -162,6 +174,18 @@ namespace Google.Cloud.Chronicle.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Chronicle.V1.ReferenceList> UpdateReferenceList(global::Google.Cloud.Chronicle.V1.UpdateReferenceListRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// VerifyReferenceList validates list content and returns line errors, if any.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse> VerifyReferenceList(global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -387,6 +411,54 @@ namespace Google.Cloud.Chronicle.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateReferenceList, null, options, request);
       }
+      /// <summary>
+      /// VerifyReferenceList validates list content and returns line errors, if any.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse VerifyReferenceList(global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyReferenceList(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// VerifyReferenceList validates list content and returns line errors, if any.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse VerifyReferenceList(global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_VerifyReferenceList, null, options, request);
+      }
+      /// <summary>
+      /// VerifyReferenceList validates list content and returns line errors, if any.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse> VerifyReferenceListAsync(global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyReferenceListAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// VerifyReferenceList validates list content and returns line errors, if any.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse> VerifyReferenceListAsync(global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_VerifyReferenceList, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ReferenceListServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -404,7 +476,8 @@ namespace Google.Cloud.Chronicle.V1 {
           .AddMethod(__Method_GetReferenceList, serviceImpl.GetReferenceList)
           .AddMethod(__Method_ListReferenceLists, serviceImpl.ListReferenceLists)
           .AddMethod(__Method_CreateReferenceList, serviceImpl.CreateReferenceList)
-          .AddMethod(__Method_UpdateReferenceList, serviceImpl.UpdateReferenceList).Build();
+          .AddMethod(__Method_UpdateReferenceList, serviceImpl.UpdateReferenceList)
+          .AddMethod(__Method_VerifyReferenceList, serviceImpl.VerifyReferenceList).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -418,6 +491,7 @@ namespace Google.Cloud.Chronicle.V1 {
       serviceBinder.AddMethod(__Method_ListReferenceLists, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.ListReferenceListsRequest, global::Google.Cloud.Chronicle.V1.ListReferenceListsResponse>(serviceImpl.ListReferenceLists));
       serviceBinder.AddMethod(__Method_CreateReferenceList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.CreateReferenceListRequest, global::Google.Cloud.Chronicle.V1.ReferenceList>(serviceImpl.CreateReferenceList));
       serviceBinder.AddMethod(__Method_UpdateReferenceList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.UpdateReferenceListRequest, global::Google.Cloud.Chronicle.V1.ReferenceList>(serviceImpl.UpdateReferenceList));
+      serviceBinder.AddMethod(__Method_VerifyReferenceList, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.VerifyReferenceListRequest, global::Google.Cloud.Chronicle.V1.VerifyReferenceListResponse>(serviceImpl.VerifyReferenceList));
     }
 
   }

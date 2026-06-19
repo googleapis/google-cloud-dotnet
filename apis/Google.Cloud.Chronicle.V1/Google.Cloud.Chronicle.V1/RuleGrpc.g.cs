@@ -3,7 +3,7 @@
 //     source: google/cloud/chronicle/v1/rule.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -80,6 +80,10 @@ namespace Google.Cloud.Chronicle.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest> __Marshaller_google_cloud_chronicle_v1_VerifyRuleTextRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse> __Marshaller_google_cloud_chronicle_v1_VerifyRuleTextResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Chronicle.V1.ListRuleRevisionsRequest> __Marshaller_google_cloud_chronicle_v1_ListRuleRevisionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Chronicle.V1.ListRuleRevisionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Chronicle.V1.ListRuleRevisionsResponse> __Marshaller_google_cloud_chronicle_v1_ListRuleRevisionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Chronicle.V1.ListRuleRevisionsResponse.Parser));
@@ -145,6 +149,14 @@ namespace Google.Cloud.Chronicle.V1 {
         "DeleteRule",
         __Marshaller_google_cloud_chronicle_v1_DeleteRuleRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest, global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse> __Method_VerifyRuleText = new grpc::Method<global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest, global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "VerifyRuleText",
+        __Marshaller_google_cloud_chronicle_v1_VerifyRuleTextRequest,
+        __Marshaller_google_cloud_chronicle_v1_VerifyRuleTextResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Chronicle.V1.ListRuleRevisionsRequest, global::Google.Cloud.Chronicle.V1.ListRuleRevisionsResponse> __Method_ListRuleRevisions = new grpc::Method<global::Google.Cloud.Chronicle.V1.ListRuleRevisionsRequest, global::Google.Cloud.Chronicle.V1.ListRuleRevisionsResponse>(
@@ -268,6 +280,18 @@ namespace Google.Cloud.Chronicle.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRule(global::Google.Cloud.Chronicle.V1.DeleteRuleRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Verifies the given rule text.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse> VerifyRuleText(global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -627,6 +651,54 @@ namespace Google.Cloud.Chronicle.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRuleAsync(global::Google.Cloud.Chronicle.V1.DeleteRuleRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRule, null, options, request);
+      }
+      /// <summary>
+      /// Verifies the given rule text.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse VerifyRuleText(global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyRuleText(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Verifies the given rule text.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse VerifyRuleText(global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_VerifyRuleText, null, options, request);
+      }
+      /// <summary>
+      /// Verifies the given rule text.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse> VerifyRuleTextAsync(global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return VerifyRuleTextAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Verifies the given rule text.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse> VerifyRuleTextAsync(global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_VerifyRuleText, null, options, request);
       }
       /// <summary>
       /// Lists all revisions of the rule.
@@ -995,6 +1067,7 @@ namespace Google.Cloud.Chronicle.V1 {
           .AddMethod(__Method_ListRules, serviceImpl.ListRules)
           .AddMethod(__Method_UpdateRule, serviceImpl.UpdateRule)
           .AddMethod(__Method_DeleteRule, serviceImpl.DeleteRule)
+          .AddMethod(__Method_VerifyRuleText, serviceImpl.VerifyRuleText)
           .AddMethod(__Method_ListRuleRevisions, serviceImpl.ListRuleRevisions)
           .AddMethod(__Method_CreateRetrohunt, serviceImpl.CreateRetrohunt)
           .AddMethod(__Method_GetRetrohunt, serviceImpl.GetRetrohunt)
@@ -1016,6 +1089,7 @@ namespace Google.Cloud.Chronicle.V1 {
       serviceBinder.AddMethod(__Method_ListRules, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.ListRulesRequest, global::Google.Cloud.Chronicle.V1.ListRulesResponse>(serviceImpl.ListRules));
       serviceBinder.AddMethod(__Method_UpdateRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.UpdateRuleRequest, global::Google.Cloud.Chronicle.V1.Rule>(serviceImpl.UpdateRule));
       serviceBinder.AddMethod(__Method_DeleteRule, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.DeleteRuleRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRule));
+      serviceBinder.AddMethod(__Method_VerifyRuleText, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.VerifyRuleTextRequest, global::Google.Cloud.Chronicle.V1.VerifyRuleTextResponse>(serviceImpl.VerifyRuleText));
       serviceBinder.AddMethod(__Method_ListRuleRevisions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.ListRuleRevisionsRequest, global::Google.Cloud.Chronicle.V1.ListRuleRevisionsResponse>(serviceImpl.ListRuleRevisions));
       serviceBinder.AddMethod(__Method_CreateRetrohunt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.CreateRetrohuntRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRetrohunt));
       serviceBinder.AddMethod(__Method_GetRetrohunt, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Chronicle.V1.GetRetrohuntRequest, global::Google.Cloud.Chronicle.V1.Retrohunt>(serviceImpl.GetRetrohunt));
