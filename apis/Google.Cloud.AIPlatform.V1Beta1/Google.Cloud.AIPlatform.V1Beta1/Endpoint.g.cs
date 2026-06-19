@@ -112,36 +112,40 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             "bhgDIAEoCzI0Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEuQmln",
             "UXVlcnlEZXN0aW5hdGlvbhI0CidyZXF1ZXN0X3Jlc3BvbnNlX2xvZ2dpbmdf",
             "c2NoZW1hX3ZlcnNpb24YBCABKAlCA+BBAxIbChNlbmFibGVfb3RlbF9sb2dn",
-            "aW5nGAYgASgIInQKFFB1Ymxpc2hlck1vZGVsQ29uZmlnElwKDmxvZ2dpbmdf",
-            "Y29uZmlnGAMgASgLMkQuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFiZXRh",
-            "MS5QcmVkaWN0UmVxdWVzdFJlc3BvbnNlTG9nZ2luZ0NvbmZpZyJOChZDbGll",
-            "bnRDb25uZWN0aW9uQ29uZmlnEjQKEWluZmVyZW5jZV90aW1lb3V0GAEgASgL",
-            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uIjUKFkZhc3RlckRlcGxveW1l",
-            "bnRDb25maWcSGwoTZmFzdF90cnlvdXRfZW5hYmxlZBgCIAEoCCL3AQoOUm9s",
-            "bG91dE9wdGlvbnMSIgoYbWF4X3VuYXZhaWxhYmxlX3JlcGxpY2FzGAMgASgF",
-            "SAASJAoabWF4X3VuYXZhaWxhYmxlX3BlcmNlbnRhZ2UYBCABKAVIABIcChJt",
-            "YXhfc3VyZ2VfcmVwbGljYXMYBSABKAVIARIeChRtYXhfc3VyZ2VfcGVyY2Vu",
-            "dGFnZRgGIAEoBUgBEh8KF3ByZXZpb3VzX2RlcGxveWVkX21vZGVsGAEgASgJ",
-            "EhwKD3JldmlzaW9uX251bWJlchgCIAEoBUID4EEDQhEKD21heF91bmF2YWls",
-            "YWJsZUILCgltYXhfc3VyZ2UimgEKG0dlbkFpQWR2YW5jZWRGZWF0dXJlc0Nv",
-            "bmZpZxJaCgpyYWdfY29uZmlnGAEgASgLMkYuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjFiZXRhMS5HZW5BaUFkdmFuY2VkRmVhdHVyZXNDb25maWcuUmFn",
-            "Q29uZmlnGh8KCVJhZ0NvbmZpZxISCgplbmFibGVfcmFnGAEgASgIIqMDChdT",
-            "cGVjdWxhdGl2ZURlY29kaW5nU3BlYxJxChdkcmFmdF9tb2RlbF9zcGVjdWxh",
-            "dGlvbhgCIAEoCzJOLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0YTEu",
-            "U3BlY3VsYXRpdmVEZWNvZGluZ1NwZWMuRHJhZnRNb2RlbFNwZWN1bGF0aW9u",
-            "SAASZgoRbmdyYW1fc3BlY3VsYXRpb24YAyABKAsySS5nb29nbGUuY2xvdWQu",
-            "YWlwbGF0Zm9ybS52MWJldGExLlNwZWN1bGF0aXZlRGVjb2RpbmdTcGVjLk5n",
-            "cmFtU3BlY3VsYXRpb25IABIfChdzcGVjdWxhdGl2ZV90b2tlbl9jb3VudBgB",
-            "IAEoBRpVChVEcmFmdE1vZGVsU3BlY3VsYXRpb24SPAoLZHJhZnRfbW9kZWwY",
-            "ASABKAlCJ+BBAvpBIQofYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2Rl",
-            "bBomChBOZ3JhbVNwZWN1bGF0aW9uEhIKCm5ncmFtX3NpemUYASABKAVCDQoL",
-            "c3BlY3VsYXRpb25C5AEKI2NvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
-            "MWJldGExQg1FbmRwb2ludFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20vZ28v",
-            "YWlwbGF0Zm9ybS9hcGl2MWJldGExL2FpcGxhdGZvcm1wYjthaXBsYXRmb3Jt",
-            "cGKqAh9Hb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMUJldGExygIfR29vZ2xl",
-            "XENsb3VkXEFJUGxhdGZvcm1cVjFiZXRhMeoCIkdvb2dsZTo6Q2xvdWQ6OkFJ",
-            "UGxhdGZvcm06OlYxYmV0YTFiBnByb3RvMw=="));
+            "aW5nGAYgASgIIqUCChRQdWJsaXNoZXJNb2RlbENvbmZpZxJcCg5sb2dnaW5n",
+            "X2NvbmZpZxgDIAEoCzJELmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxYmV0",
+            "YTEuUHJlZGljdFJlcXVlc3RSZXNwb25zZUxvZ2dpbmdDb25maWcSbwodZGF0",
+            "YV9zaGFyaW5nX2VuYWJsZWRfcHJvdmlkZXIYBCABKA4yQy5nb29nbGUuY2xv",
+            "dWQuYWlwbGF0Zm9ybS52MWJldGExLlB1Ymxpc2hlck1vZGVsQ29uZmlnLk1v",
+            "ZGVsUHJvdmlkZXJCA+BBASI+Cg1Nb2RlbFByb3ZpZGVyEh4KGk1PREVMX1BS",
+            "T1ZJREVSX1VOU1BFQ0lGSUVEEAASDQoJQU5USFJPUElDEAEiTgoWQ2xpZW50",
+            "Q29ubmVjdGlvbkNvbmZpZxI0ChFpbmZlcmVuY2VfdGltZW91dBgBIAEoCzIZ",
+            "Lmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbiI1ChZGYXN0ZXJEZXBsb3ltZW50",
+            "Q29uZmlnEhsKE2Zhc3RfdHJ5b3V0X2VuYWJsZWQYAiABKAgi9wEKDlJvbGxv",
+            "dXRPcHRpb25zEiIKGG1heF91bmF2YWlsYWJsZV9yZXBsaWNhcxgDIAEoBUgA",
+            "EiQKGm1heF91bmF2YWlsYWJsZV9wZXJjZW50YWdlGAQgASgFSAASHAoSbWF4",
+            "X3N1cmdlX3JlcGxpY2FzGAUgASgFSAESHgoUbWF4X3N1cmdlX3BlcmNlbnRh",
+            "Z2UYBiABKAVIARIfChdwcmV2aW91c19kZXBsb3llZF9tb2RlbBgBIAEoCRIc",
+            "Cg9yZXZpc2lvbl9udW1iZXIYAiABKAVCA+BBA0IRCg9tYXhfdW5hdmFpbGFi",
+            "bGVCCwoJbWF4X3N1cmdlIpoBChtHZW5BaUFkdmFuY2VkRmVhdHVyZXNDb25m",
+            "aWcSWgoKcmFnX2NvbmZpZxgBIAEoCzJGLmdvb2dsZS5jbG91ZC5haXBsYXRm",
+            "b3JtLnYxYmV0YTEuR2VuQWlBZHZhbmNlZEZlYXR1cmVzQ29uZmlnLlJhZ0Nv",
+            "bmZpZxofCglSYWdDb25maWcSEgoKZW5hYmxlX3JhZxgBIAEoCCKjAwoXU3Bl",
+            "Y3VsYXRpdmVEZWNvZGluZ1NwZWMScQoXZHJhZnRfbW9kZWxfc3BlY3VsYXRp",
+            "b24YAiABKAsyTi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MWJldGExLlNw",
+            "ZWN1bGF0aXZlRGVjb2RpbmdTcGVjLkRyYWZ0TW9kZWxTcGVjdWxhdGlvbkgA",
+            "EmYKEW5ncmFtX3NwZWN1bGF0aW9uGAMgASgLMkkuZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFiZXRhMS5TcGVjdWxhdGl2ZURlY29kaW5nU3BlYy5OZ3Jh",
+            "bVNwZWN1bGF0aW9uSAASHwoXc3BlY3VsYXRpdmVfdG9rZW5fY291bnQYASAB",
+            "KAUaVQoVRHJhZnRNb2RlbFNwZWN1bGF0aW9uEjwKC2RyYWZ0X21vZGVsGAEg",
+            "ASgJQifgQQL6QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwa",
+            "JgoQTmdyYW1TcGVjdWxhdGlvbhISCgpuZ3JhbV9zaXplGAEgASgFQg0KC3Nw",
+            "ZWN1bGF0aW9uQuQBCiNjb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjFi",
+            "ZXRhMUINRW5kcG9pbnRQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dvL2Fp",
+            "cGxhdGZvcm0vYXBpdjFiZXRhMS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBi",
+            "qgIfR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjFCZXRhMcoCH0dvb2dsZVxD",
+            "bG91ZFxBSVBsYXRmb3JtXFYxYmV0YTHqAiJHb29nbGU6OkNsb3VkOjpBSVBs",
+            "YXRmb3JtOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1Beta1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -150,7 +154,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1Beta1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig), global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig.Parser, new[]{ "Enabled", "SamplingRate", "BigqueryDestination", "RequestResponseLoggingSchemaVersion", "EnableOtelLogging" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig), global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Parser, new[]{ "LoggingConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig), global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Parser, new[]{ "LoggingConfig", "DataSharingEnabledProvider" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig), global::Google.Cloud.AIPlatform.V1Beta1.ClientConnectionConfig.Parser, new[]{ "InferenceTimeout" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig), global::Google.Cloud.AIPlatform.V1Beta1.FasterDeploymentConfig.Parser, new[]{ "FastTryoutEnabled" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions), global::Google.Cloud.AIPlatform.V1Beta1.RolloutOptions.Parser, new[]{ "MaxUnavailableReplicas", "MaxUnavailablePercentage", "MaxSurgeReplicas", "MaxSurgePercentage", "PreviousDeployedModel", "RevisionNumber" }, new[]{ "MaxUnavailable", "MaxSurge" }, null, null, null),
@@ -3604,6 +3608,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublisherModelConfig(PublisherModelConfig other) : this() {
       loggingConfig_ = other.loggingConfig_ != null ? other.loggingConfig_.Clone() : null;
+      dataSharingEnabledProvider_ = other.dataSharingEnabledProvider_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3628,6 +3633,24 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "data_sharing_enabled_provider" field.</summary>
+    public const int DataSharingEnabledProviderFieldNumber = 4;
+    private global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider dataSharingEnabledProvider_ = global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider.Unspecified;
+    /// <summary>
+    /// Optional. The model provider (publisher) for which the customer has enabled
+    /// data sharing. For publisher models that are configured to require data
+    /// sharing, a prediction request is only allowed when the model's publisher
+    /// matches this provider. Otherwise, the request is rejected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider DataSharingEnabledProvider {
+      get { return dataSharingEnabledProvider_; }
+      set {
+        dataSharingEnabledProvider_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3644,6 +3667,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         return true;
       }
       if (!object.Equals(LoggingConfig, other.LoggingConfig)) return false;
+      if (DataSharingEnabledProvider != other.DataSharingEnabledProvider) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3652,6 +3676,7 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
     public override int GetHashCode() {
       int hash = 1;
       if (loggingConfig_ != null) hash ^= LoggingConfig.GetHashCode();
+      if (DataSharingEnabledProvider != global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider.Unspecified) hash ^= DataSharingEnabledProvider.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3674,6 +3699,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(LoggingConfig);
       }
+      if (DataSharingEnabledProvider != global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) DataSharingEnabledProvider);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3688,6 +3717,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
         output.WriteRawTag(26);
         output.WriteMessage(LoggingConfig);
       }
+      if (DataSharingEnabledProvider != global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) DataSharingEnabledProvider);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3700,6 +3733,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
       int size = 0;
       if (loggingConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LoggingConfig);
+      }
+      if (DataSharingEnabledProvider != global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DataSharingEnabledProvider);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3718,6 +3754,9 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
           LoggingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig();
         }
         LoggingConfig.MergeFrom(other.LoggingConfig);
+      }
+      if (other.DataSharingEnabledProvider != global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider.Unspecified) {
+        DataSharingEnabledProvider = other.DataSharingEnabledProvider;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3743,6 +3782,10 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
               LoggingConfig = new global::Google.Cloud.AIPlatform.V1Beta1.PredictRequestResponseLoggingConfig();
             }
             input.ReadMessage(LoggingConfig);
+            break;
+          }
+          case 32: {
+            DataSharingEnabledProvider = (global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider) input.ReadEnum();
             break;
           }
         }
@@ -3771,10 +3814,36 @@ namespace Google.Cloud.AIPlatform.V1Beta1 {
             input.ReadMessage(LoggingConfig);
             break;
           }
+          case 32: {
+            DataSharingEnabledProvider = (global::Google.Cloud.AIPlatform.V1Beta1.PublisherModelConfig.Types.ModelProvider) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the PublisherModelConfig message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// A model provider (publisher) that prediction data may be shared with.
+      /// </summary>
+      public enum ModelProvider {
+        /// <summary>
+        /// Unspecified model provider.
+        /// </summary>
+        [pbr::OriginalName("MODEL_PROVIDER_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Anthropic.
+        /// </summary>
+        [pbr::OriginalName("ANTHROPIC")] Anthropic = 1,
+      }
+
+    }
+    #endregion
 
   }
 
