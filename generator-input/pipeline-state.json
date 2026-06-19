@@ -5094,6 +5094,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.NetworkSecurity.V1/Google.Cloud.NetworkSecurity.V1"
             ]
+        },
+        {
+            "id": "Google.Cloud.AgentRegistry.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/cloud/agentregistry/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Cloud.AgentRegistry.V1/Google.Cloud.AgentRegistry.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [
