@@ -27,20 +27,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Cihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9jZXNfYXBwLnByb3RvEhpn",
             "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MhofZ29vZ2xlL2FwaS9maWVsZF9i",
             "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxolZ29v",
-            "Z2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvdG9vbC5wcm90byKeAQoKQ2VzQXBw",
+            "Z2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvdG9vbC5wcm90byKSAgoKQ2VzQXBw",
             "U3BlYxIvCgdjZXNfYXBwGAEgASgJQh7gQQH6QRgKFmNlcy5nb29nbGVhcGlz",
             "LmNvbS9BcHASXwoYY29uZmlybWF0aW9uX3JlcXVpcmVtZW50GAIgASgOMjgu",
             "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuVG9vbC5Db25maXJtYXRpb25S",
-            "ZXF1aXJlbWVudEID4EEBQuABCh5jb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjJCC0Nlc0FwcFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vZGlh",
-            "bG9nZmxvdy9hcGl2Mi9kaWFsb2dmbG93cGI7ZGlhbG9nZmxvd3BiogICREaq",
-            "AhpHb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMupBTAoWY2VzLmdvb2dsZWFw",
-            "aXMuY29tL0FwcBIycHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2FwcHMve2FwcH1iBnByb3RvMw=="));
+            "ZXF1aXJlbWVudEID4EEBEiMKEXByb2FjdGl2ZV9lbmFibGVkGAMgASgIQgPg",
+            "QQFIAIgBARIiChByZWFjdGl2ZV9lbmFibGVkGAQgASgIQgPgQQFIAYgBAUIU",
+            "ChJfcHJvYWN0aXZlX2VuYWJsZWRCEwoRX3JlYWN0aXZlX2VuYWJsZWRC4AEK",
+            "HmNvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkILQ2VzQXBwUHJvdG9Q",
+            "AVo+Y2xvdWQuZ29vZ2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYyL2RpYWxv",
+            "Z2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCGkdvb2dsZS5DbG91ZC5EaWFs",
+            "b2dmbG93LlYy6kFMChZjZXMuZ29vZ2xlYXBpcy5jb20vQXBwEjJwcm9qZWN0",
+            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXBwcy97YXBwfWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ToolReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CesAppSpec), global::Google.Cloud.Dialogflow.V2.CesAppSpec.Parser, new[]{ "CesApp", "ConfirmationRequirement" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.CesAppSpec), global::Google.Cloud.Dialogflow.V2.CesAppSpec.Parser, new[]{ "CesApp", "ConfirmationRequirement", "ProactiveEnabled", "ReactiveEnabled" }, new[]{ "ProactiveEnabled", "ReactiveEnabled" }, null, null, null)
           }));
     }
     #endregion
@@ -58,6 +61,7 @@ namespace Google.Cloud.Dialogflow.V2 {
   {
     private static readonly pb::MessageParser<CesAppSpec> _parser = new pb::MessageParser<CesAppSpec>(() => new CesAppSpec());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CesAppSpec> Parser { get { return _parser; } }
@@ -85,8 +89,11 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CesAppSpec(CesAppSpec other) : this() {
+      _hasBits0 = other._hasBits0;
       cesApp_ = other.cesApp_;
       confirmationRequirement_ = other.confirmationRequirement_;
+      proactiveEnabled_ = other.proactiveEnabled_;
+      reactiveEnabled_ = other.reactiveEnabled_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -127,6 +134,72 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
     }
 
+    /// <summary>Field number for the "proactive_enabled" field.</summary>
+    public const int ProactiveEnabledFieldNumber = 3;
+    private readonly static bool ProactiveEnabledDefaultValue = false;
+
+    private bool proactiveEnabled_;
+    /// <summary>
+    /// Optional. Only applicable for CompanionAgent.
+    /// Indicates whether the ces app is enabled in proactive mode.
+    /// At least one of `proactive_enabled` or `reactive_enabled` should be
+    /// true; otherwise, the ces app will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ProactiveEnabled {
+      get { if ((_hasBits0 & 1) != 0) { return proactiveEnabled_; } else { return ProactiveEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        proactiveEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "proactive_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasProactiveEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "proactive_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearProactiveEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "reactive_enabled" field.</summary>
+    public const int ReactiveEnabledFieldNumber = 4;
+    private readonly static bool ReactiveEnabledDefaultValue = false;
+
+    private bool reactiveEnabled_;
+    /// <summary>
+    /// Optional. Only applicable for CompanionAgent.
+    /// Indicates whether the ces app is enabled in reactive mode.
+    /// At least one of `proactive_enabled` or `reactive_enabled` should be
+    /// true; otherwise, the ces app will be ignored.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ReactiveEnabled {
+      get { if ((_hasBits0 & 2) != 0) { return reactiveEnabled_; } else { return ReactiveEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        reactiveEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "reactive_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReactiveEnabled {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "reactive_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReactiveEnabled() {
+      _hasBits0 &= ~2;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -144,6 +217,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (CesApp != other.CesApp) return false;
       if (ConfirmationRequirement != other.ConfirmationRequirement) return false;
+      if (ProactiveEnabled != other.ProactiveEnabled) return false;
+      if (ReactiveEnabled != other.ReactiveEnabled) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -153,6 +228,8 @@ namespace Google.Cloud.Dialogflow.V2 {
       int hash = 1;
       if (CesApp.Length != 0) hash ^= CesApp.GetHashCode();
       if (ConfirmationRequirement != global::Google.Cloud.Dialogflow.V2.Tool.Types.ConfirmationRequirement.Unspecified) hash ^= ConfirmationRequirement.GetHashCode();
+      if (HasProactiveEnabled) hash ^= ProactiveEnabled.GetHashCode();
+      if (HasReactiveEnabled) hash ^= ReactiveEnabled.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -179,6 +256,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(16);
         output.WriteEnum((int) ConfirmationRequirement);
       }
+      if (HasProactiveEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(ProactiveEnabled);
+      }
+      if (HasReactiveEnabled) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReactiveEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -197,6 +282,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         output.WriteRawTag(16);
         output.WriteEnum((int) ConfirmationRequirement);
       }
+      if (HasProactiveEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(ProactiveEnabled);
+      }
+      if (HasReactiveEnabled) {
+        output.WriteRawTag(32);
+        output.WriteBool(ReactiveEnabled);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -212,6 +305,12 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (ConfirmationRequirement != global::Google.Cloud.Dialogflow.V2.Tool.Types.ConfirmationRequirement.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConfirmationRequirement);
+      }
+      if (HasProactiveEnabled) {
+        size += 1 + 1;
+      }
+      if (HasReactiveEnabled) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -230,6 +329,12 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
       if (other.ConfirmationRequirement != global::Google.Cloud.Dialogflow.V2.Tool.Types.ConfirmationRequirement.Unspecified) {
         ConfirmationRequirement = other.ConfirmationRequirement;
+      }
+      if (other.HasProactiveEnabled) {
+        ProactiveEnabled = other.ProactiveEnabled;
+      }
+      if (other.HasReactiveEnabled) {
+        ReactiveEnabled = other.ReactiveEnabled;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -258,6 +363,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             ConfirmationRequirement = (global::Google.Cloud.Dialogflow.V2.Tool.Types.ConfirmationRequirement) input.ReadEnum();
             break;
           }
+          case 24: {
+            ProactiveEnabled = input.ReadBool();
+            break;
+          }
+          case 32: {
+            ReactiveEnabled = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -283,6 +396,14 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           case 16: {
             ConfirmationRequirement = (global::Google.Cloud.Dialogflow.V2.Tool.Types.ConfirmationRequirement) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            ProactiveEnabled = input.ReadBool();
+            break;
+          }
+          case 32: {
+            ReactiveEnabled = input.ReadBool();
             break;
           }
         }
