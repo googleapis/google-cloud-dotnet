@@ -148,6 +148,18 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f");
         }
 
+        private static IEnumerable<Color> GetTopLevelEnumsForArray()
+        {
+            yield return Color.Blue;
+            yield return Color.Red;
+        }
+
+        private static IEnumerable<Pet.Types.Species> GetNestedEnumsForArray()
+        {
+            yield return Pet.Types.Species.Horse;
+            yield return Pet.Types.Species.Cat;
+        }
+
         private static readonly BigInteger MaxValueForPgNumeric = BigInteger.Pow(10, 147455) - 1;
 
         private static readonly string ExpectedMaxValueForPgNumeric = MaxValueForPgNumeric.ToString();
@@ -382,6 +394,10 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { s_bytesToEncode, SpannerDbType.Bytes, Quote(s_base64Encoded) };
             yield return new object[] { "passthrubadbytes", SpannerDbType.Bytes, Quote("passthrubadbytes") };
 
+            // Protobuf Enum
+            yield return new object[] { Color.Red, SpannerDbType.FromClrType(typeof(Color)), Quote(((long) Color.Red).ToString()) };
+            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(((long) Pet.Types.Species.Dog).ToString()) };
+
             // List test cases (list of type X).
             yield return new object[]
             {
@@ -442,6 +458,16 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new List<Guid>(GetGuidsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Uuid),
                 "[ \"00000000-0000-0000-0000-000000000000\", \"8f8c4746-17b1-4d9f-a634-58e11942095f\" ]"
+            };
+            yield return new object[]
+            {
+                new List<Color>(GetTopLevelEnumsForArray()), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))),
+                $"[ {Quote(((long) Color.Blue).ToString())}, {Quote(((long) Color.Red).ToString())} ]"
+            };
+            yield return new object[]
+            {
+                new List<Pet.Types.Species>(GetNestedEnumsForArray()), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))),
+                $"[ {Quote(((long) Pet.Types.Species.Horse).ToString())}, {Quote(((long) Pet.Types.Species.Cat).ToString())} ]"
             };
             // JSON can not be converted from Value to Clr, as there is no unique Clr type for JSON.
             yield return new object[]
@@ -878,6 +904,36 @@ namespace Google.Cloud.Spanner.Data.Tests
             { 0L, SpannerDbType.Int64, typeof(long) },
             { null, SpannerDbType.String, typeof(string) }
         };
+
+        [Fact]
+        public void ToProtobufType_DifferentEnumTypeAndValue_ThrowsException()
+        {
+            var protobufEnumValue = Color.Red;
+            var differentProtobufEnumDbType = SpannerDbType.FromClrType(typeof(Pet.Types.Species));
+
+            _ = Assert.Throws<ArgumentException>(()
+                => differentProtobufEnumDbType.ToProtobufValue(protobufEnumValue));
+        }
+
+        [Fact]
+        public void ConvertToClrType_DifferentEnumTargetTypeAndValue_ThrowsException()
+        {
+            var protobufEnumWireValue = Value.ForString(((long)Color.Red).ToString());
+            var differentProtobufEnumDbType = SpannerDbType.FromClrType(typeof(Color));
+
+            _ = Assert.Throws<ArgumentException>(()
+                => differentProtobufEnumDbType.ConvertToClrType<Pet.Types.Species>(protobufValue: protobufEnumWireValue, SpannerConversionOptions.Default));
+        }
+
+        [Fact]
+        public void ConvertToClrType_DifferentSpannerEnumDbType_ThrowsException()
+        {
+            var protobufEnumWireValue = Value.ForString(((long) Color.Red).ToString());
+            var differentProtobufEnumDbType = SpannerDbType.FromClrType(typeof(Pet.Types.Species));
+
+            _ = Assert.Throws<ArgumentException>(()
+                => differentProtobufEnumDbType.ConvertToClrType<Color>(protobufValue: protobufEnumWireValue, SpannerConversionOptions.Default));
+        }
 
         [Theory]
         [MemberData(nameof(UseClrDefaultForNulls))]
