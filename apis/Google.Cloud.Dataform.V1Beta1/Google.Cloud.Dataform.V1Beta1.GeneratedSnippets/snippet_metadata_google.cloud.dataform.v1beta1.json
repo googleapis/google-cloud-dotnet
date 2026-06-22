@@ -335,12 +335,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -384,12 +384,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 46,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -1080,6 +1080,309 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolderTree_sync",
+      "title": "DeleteTeamFolderTreeRequestObject",
+      "description": "Snippet for DeleteTeamFolderTree",
+      "file": "DataformClient.DeleteTeamFolderTreeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderTree",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderTree",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolderTree_async",
+      "title": "DeleteTeamFolderTreeRequestObjectAsync",
+      "description": "Snippet for DeleteTeamFolderTreeAsync",
+      "file": "DataformClient.DeleteTeamFolderTreeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderTreeAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderTreeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolderTree_sync_flattened",
+      "title": "DeleteTeamFolderTree",
+      "description": "Snippet for DeleteTeamFolderTree",
+      "file": "DataformClient.DeleteTeamFolderTreeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderTree",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderTree",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolderTree_async_flattened",
+      "title": "DeleteTeamFolderTreeAsync",
+      "description": "Snippet for DeleteTeamFolderTreeAsync",
+      "file": "DataformClient.DeleteTeamFolderTreeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderTreeAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderTreeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolderTree_sync_flattened_resourceNames",
+      "title": "DeleteTeamFolderTreeResourceNames",
+      "description": "Snippet for DeleteTeamFolderTree",
+      "file": "DataformClient.DeleteTeamFolderTreeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderTree",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderTree",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolderName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteTeamFolderTree_async_flattened_resourceNames",
+      "title": "DeleteTeamFolderTreeResourceNamesAsync",
+      "description": "Snippet for DeleteTeamFolderTreeAsync",
+      "file": "DataformClient.DeleteTeamFolderTreeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTeamFolderTreeAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteTeamFolderTreeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.TeamFolderName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteTeamFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteTeamFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -1825,12 +2128,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 47,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 45,
+          "end": 44,
           "type": "SHORT"
         }
       ]
@@ -1874,12 +2177,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 48,
+          "end": 47,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 46,
+          "end": 45,
           "type": "SHORT"
         }
       ]
@@ -2570,6 +2873,309 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolderTree_sync",
+      "title": "DeleteFolderTreeRequestObject",
+      "description": "Snippet for DeleteFolderTree",
+      "file": "DataformClient.DeleteFolderTreeRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderTree",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderTree",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolderTree_async",
+      "title": "DeleteFolderTreeRequestObjectAsync",
+      "description": "Snippet for DeleteFolderTreeAsync",
+      "file": "DataformClient.DeleteFolderTreeRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderTreeAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderTreeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolderTree_sync_flattened",
+      "title": "DeleteFolderTree",
+      "description": "Snippet for DeleteFolderTree",
+      "file": "DataformClient.DeleteFolderTreeSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderTree",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderTree",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolderTree_async_flattened",
+      "title": "DeleteFolderTreeAsync",
+      "description": "Snippet for DeleteFolderTreeAsync",
+      "file": "DataformClient.DeleteFolderTreeAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderTreeAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderTreeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolderTree_sync_flattened_resourceNames",
+      "title": "DeleteFolderTreeResourceNames",
+      "description": "Snippet for DeleteFolderTree",
+      "file": "DataformClient.DeleteFolderTreeResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderTree",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderTree",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteFolderTree_async_flattened_resourceNames",
+      "title": "DeleteFolderTreeResourceNamesAsync",
+      "description": "Snippet for DeleteFolderTreeAsync",
+      "file": "DataformClient.DeleteFolderTreeResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteFolderTreeAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteFolderTreeAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.FolderName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteFolderTree",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteFolderTree",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
           "type": "SHORT"
         }
       ]
@@ -4920,6 +5526,309 @@
         {
           "start": 35,
           "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteRepositoryLongRunning_sync",
+      "title": "DeleteRepositoryLongRunningRequestObject",
+      "description": "Snippet for DeleteRepositoryLongRunning",
+      "file": "DataformClient.DeleteRepositoryLongRunningRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryLongRunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningResponse, Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteRepositoryLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteRepositoryLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteRepositoryLongRunning_async",
+      "title": "DeleteRepositoryLongRunningRequestObjectAsync",
+      "description": "Snippet for DeleteRepositoryLongRunningAsync",
+      "file": "DataformClient.DeleteRepositoryLongRunningRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningResponse, Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteRepositoryLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteRepositoryLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteRepositoryLongRunning_sync_flattened",
+      "title": "DeleteRepositoryLongRunning",
+      "description": "Snippet for DeleteRepositoryLongRunning",
+      "file": "DataformClient.DeleteRepositoryLongRunningSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryLongRunning",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningResponse, Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteRepositoryLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteRepositoryLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteRepositoryLongRunning_async_flattened",
+      "title": "DeleteRepositoryLongRunningAsync",
+      "description": "Snippet for DeleteRepositoryLongRunningAsync",
+      "file": "DataformClient.DeleteRepositoryLongRunningAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningResponse, Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteRepositoryLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteRepositoryLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteRepositoryLongRunning_sync_flattened_resourceNames",
+      "title": "DeleteRepositoryLongRunningResourceNames",
+      "description": "Snippet for DeleteRepositoryLongRunning",
+      "file": "DataformClient.DeleteRepositoryLongRunningResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryLongRunning",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryLongRunning",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningResponse, Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningMetadata>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteRepositoryLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteRepositoryLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "dataform_v1beta1_generated_Dataform_DeleteRepositoryLongRunning_async_flattened_resourceNames",
+      "title": "DeleteRepositoryLongRunningResourceNamesAsync",
+      "description": "Snippet for DeleteRepositoryLongRunningAsync",
+      "file": "DataformClient.DeleteRepositoryLongRunningResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteRepositoryLongRunningAsync",
+        "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient.DeleteRepositoryLongRunningAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Dataform.V1Beta1.RepositoryName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningResponse, Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningMetadata>>",
+        "client": {
+          "shortName": "DataformClient",
+          "fullName": "Google.Cloud.Dataform.V1Beta1.DataformClient"
+        },
+        "method": {
+          "shortName": "DeleteRepositoryLongRunning",
+          "fullName": "google.cloud.dataform.v1beta1.Dataform.DeleteRepositoryLongRunning",
+          "service": {
+            "shortName": "Dataform",
+            "fullName": "google.cloud.dataform.v1beta1.Dataform"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
           "type": "SHORT"
         }
       ]
@@ -7832,12 +8741,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 79,
+          "end": 80,
           "type": "FULL"
         },
         {
           "start": 36,
-          "end": 77,
+          "end": 78,
           "type": "SHORT"
         }
       ]
@@ -7881,12 +8790,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 80,
+          "end": 81,
           "type": "FULL"
         },
         {
           "start": 37,
-          "end": 78,
+          "end": 79,
           "type": "SHORT"
         }
       ]

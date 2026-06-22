@@ -16,13 +16,14 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START dataform_v1beta1_generated_Dataform_CreateFolder_sync]
-    using Google.Api.Gax.ResourceNames;
+    // [START dataform_v1beta1_generated_Dataform_DeleteFolderTree_sync_flattened]
     using Google.Cloud.Dataform.V1Beta1;
+    using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
 
     public sealed partial class GeneratedDataformClientSnippets
     {
-        /// <summary>Snippet for CreateFolder</summary>
+        /// <summary>Snippet for DeleteFolderTree</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +31,32 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void CreateFolderRequestObject()
+        public void DeleteFolderTree()
         {
             // Create client
             DataformClient dataformClient = DataformClient.Create();
             // Initialize request argument(s)
-            CreateFolderRequest request = new CreateFolderRequest
-            {
-                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
-                Folder = new Folder(),
-            };
+            string name = "projects/[PROJECT]/locations/[LOCATION]/folders/[FOLDER]";
+            bool force = false;
             // Make the request
-            Folder response = dataformClient.CreateFolder(request);
+            Operation<Empty, DeleteFolderTreeMetadata> response = dataformClient.DeleteFolderTree(name, force);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, DeleteFolderTreeMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, DeleteFolderTreeMetadata> retrievedResponse = dataformClient.PollOnceDeleteFolderTree(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
         }
     }
-    // [END dataform_v1beta1_generated_Dataform_CreateFolder_sync]
+    // [END dataform_v1beta1_generated_Dataform_DeleteFolderTree_sync_flattened]
 }
