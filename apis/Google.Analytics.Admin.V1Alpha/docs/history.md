@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.0.0-alpha30, released 2026-06-22
+
+### New features
+
+- Add a can_edit field to the PropertySummary resource to indicate if a user has permission to edit the property
+- Add the UpdateReportingIdentitySettings method to the to allow updating reporting identity settings for a property
+
 ## Version 2.0.0-alpha29, released 2026-05-04
 
 ### New features
