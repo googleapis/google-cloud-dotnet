@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-beta30, released 2026-06-22
+
+### New features
+
+- Added support for new AnswerType types
+- Added support for SIP config in conversation profile
+- Added support for proactive and reactive in CES app
+- Added support for new knowledge suggestion
+
+### Bug fixes
+
+- Hide ConversationModelConfig as ConversationModel isn't visible
+
+### Documentation improvements
+
+- Clarified OUTPUT_AUDIO_ENCODING_MP3
+
 ## Version 1.0.0-beta29, released 2026-03-30
 
 ### New features
