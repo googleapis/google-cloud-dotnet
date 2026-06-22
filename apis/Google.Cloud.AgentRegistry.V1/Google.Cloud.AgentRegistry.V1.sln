@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32516.85
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AgentRegistry.V1", "Google.Cloud.AgentRegistry.V1\Google.Cloud.AgentRegistry.V1.csproj", "{CC834A72-F2ED-468F-D0F5-7D9C13284A86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AgentRegistry.V1.Snippets", "Google.Cloud.AgentRegistry.V1.Snippets\Google.Cloud.AgentRegistry.V1.Snippets.csproj", "{7960700E-50D3-AB7F-63E8-F84F67B73F91}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.AgentRegistry.V1.GeneratedSnippets", "Google.Cloud.AgentRegistry.V1.GeneratedSnippets\Google.Cloud.AgentRegistry.V1.GeneratedSnippets.csproj", "{30183E48-40D6-F14B-27E5-1BAE1B032676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.ClientTesting", "..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj", "{29974B0C-A7B0-8CA8-AE32-99F622C89044}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC834A72-F2ED-468F-D0F5-7D9C13284A86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC834A72-F2ED-468F-D0F5-7D9C13284A86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC834A72-F2ED-468F-D0F5-7D9C13284A86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC834A72-F2ED-468F-D0F5-7D9C13284A86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7960700E-50D3-AB7F-63E8-F84F67B73F91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7960700E-50D3-AB7F-63E8-F84F67B73F91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7960700E-50D3-AB7F-63E8-F84F67B73F91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7960700E-50D3-AB7F-63E8-F84F67B73F91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30183E48-40D6-F14B-27E5-1BAE1B032676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30183E48-40D6-F14B-27E5-1BAE1B032676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30183E48-40D6-F14B-27E5-1BAE1B032676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30183E48-40D6-F14B-27E5-1BAE1B032676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29974B0C-A7B0-8CA8-AE32-99F622C89044}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
