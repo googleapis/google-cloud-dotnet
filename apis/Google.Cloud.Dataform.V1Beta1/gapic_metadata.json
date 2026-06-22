@@ -88,6 +88,12 @@
                 "DeleteFolderAsync"
               ]
             },
+            "DeleteFolderTree": {
+              "methods": [
+                "DeleteFolderTree",
+                "DeleteFolderTreeAsync"
+              ]
+            },
             "DeleteReleaseConfig": {
               "methods": [
                 "DeleteReleaseConfig",
@@ -100,10 +106,22 @@
                 "DeleteRepositoryAsync"
               ]
             },
+            "DeleteRepositoryLongRunning": {
+              "methods": [
+                "DeleteRepositoryLongRunning",
+                "DeleteRepositoryLongRunningAsync"
+              ]
+            },
             "DeleteTeamFolder": {
               "methods": [
                 "DeleteTeamFolder",
                 "DeleteTeamFolderAsync"
+              ]
+            },
+            "DeleteTeamFolderTree": {
+              "methods": [
+                "DeleteTeamFolderTree",
+                "DeleteTeamFolderTreeAsync"
               ]
             },
             "DeleteWorkflowConfig": {

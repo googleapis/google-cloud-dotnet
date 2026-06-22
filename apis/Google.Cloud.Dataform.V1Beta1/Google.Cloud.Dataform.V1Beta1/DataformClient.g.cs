@@ -54,12 +54,16 @@ namespace Google.Cloud.Dataform.V1Beta1
             CreateTeamFolderSettings = existing.CreateTeamFolderSettings;
             UpdateTeamFolderSettings = existing.UpdateTeamFolderSettings;
             DeleteTeamFolderSettings = existing.DeleteTeamFolderSettings;
+            DeleteTeamFolderTreeSettings = existing.DeleteTeamFolderTreeSettings;
+            DeleteTeamFolderTreeOperationsSettings = existing.DeleteTeamFolderTreeOperationsSettings.Clone();
             QueryTeamFolderContentsSettings = existing.QueryTeamFolderContentsSettings;
             SearchTeamFoldersSettings = existing.SearchTeamFoldersSettings;
             GetFolderSettings = existing.GetFolderSettings;
             CreateFolderSettings = existing.CreateFolderSettings;
             UpdateFolderSettings = existing.UpdateFolderSettings;
             DeleteFolderSettings = existing.DeleteFolderSettings;
+            DeleteFolderTreeSettings = existing.DeleteFolderTreeSettings;
+            DeleteFolderTreeOperationsSettings = existing.DeleteFolderTreeOperationsSettings.Clone();
             QueryFolderContentsSettings = existing.QueryFolderContentsSettings;
             QueryUserRootContentsSettings = existing.QueryUserRootContentsSettings;
             MoveFolderSettings = existing.MoveFolderSettings;
@@ -69,6 +73,8 @@ namespace Google.Cloud.Dataform.V1Beta1
             CreateRepositorySettings = existing.CreateRepositorySettings;
             UpdateRepositorySettings = existing.UpdateRepositorySettings;
             DeleteRepositorySettings = existing.DeleteRepositorySettings;
+            DeleteRepositoryLongRunningSettings = existing.DeleteRepositoryLongRunningSettings;
+            DeleteRepositoryLongRunningOperationsSettings = existing.DeleteRepositoryLongRunningOperationsSettings.Clone();
             MoveRepositorySettings = existing.MoveRepositorySettings;
             MoveRepositoryOperationsSettings = existing.MoveRepositoryOperationsSettings.Clone();
             CommitRepositoryChangesSettings = existing.CommitRepositoryChangesSettings;
@@ -180,6 +186,36 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.DeleteTeamFolderTree</c> and <c>DataformClient.DeleteTeamFolderTreeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTeamFolderTreeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataformClient.DeleteTeamFolderTree</c> and
+        /// <c>DataformClient.DeleteTeamFolderTreeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteTeamFolderTreeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>DataformClient.QueryTeamFolderContents</c> and <c>DataformClient.QueryTeamFolderContentsAsync</c>.
         /// </summary>
         /// <remarks>
@@ -249,6 +285,36 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteFolderSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.DeleteFolderTree</c> and <c>DataformClient.DeleteFolderTreeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteFolderTreeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataformClient.DeleteFolderTree</c> and
+        /// <c>DataformClient.DeleteFolderTreeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteFolderTreeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -363,6 +429,37 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteRepositorySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataformClient.DeleteRepositoryLongRunning</c> and <c>DataformClient.DeleteRepositoryLongRunningAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteRepositoryLongRunningSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DataformClient.DeleteRepositoryLongRunning</c> and
+        /// <c>DataformClient.DeleteRepositoryLongRunningAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteRepositoryLongRunningOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1605,6 +1702,211 @@ namespace Google.Cloud.Dataform.V1Beta1
             DeleteTeamFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> DeleteTeamFolderTree(DeleteTeamFolderTreeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteTeamFolderTreeAsync(DeleteTeamFolderTreeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteTeamFolderTreeAsync(DeleteTeamFolderTreeRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTeamFolderTreeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteTeamFolderTree</c>.</summary>
+        public virtual lro::OperationsClient DeleteTeamFolderTreeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteTeamFolderTree</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> PollOnceDeleteTeamFolderTree(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteTeamFolderTreeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteTeamFolderTree</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> PollOnceDeleteTeamFolderTreeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteTeamFolderTreeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// Format: projects/{project}/locations/{location}/teamFolders/{team_folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> DeleteTeamFolderTree(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTeamFolderTree(new DeleteTeamFolderTreeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// Format: projects/{project}/locations/{location}/teamFolders/{team_folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteTeamFolderTreeAsync(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTeamFolderTreeAsync(new DeleteTeamFolderTreeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// Format: projects/{project}/locations/{location}/teamFolders/{team_folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteTeamFolderTreeAsync(string name, bool force, st::CancellationToken cancellationToken) =>
+            DeleteTeamFolderTreeAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// Format: projects/{project}/locations/{location}/teamFolders/{team_folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> DeleteTeamFolderTree(TeamFolderName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTeamFolderTree(new DeleteTeamFolderTreeRequest
+            {
+                TeamFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// Format: projects/{project}/locations/{location}/teamFolders/{team_folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteTeamFolderTreeAsync(TeamFolderName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTeamFolderTreeAsync(new DeleteTeamFolderTreeRequest
+            {
+                TeamFolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The TeamFolder's name.
+        /// Format: projects/{project}/locations/{location}/teamFolders/{team_folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteTeamFolderTreeAsync(TeamFolderName name, bool force, st::CancellationToken cancellationToken) =>
+            DeleteTeamFolderTreeAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1632,7 +1934,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="teamFolder">
-        /// Required. Name of the team_folder whose contents to list.
+        /// Required. Resource name of the TeamFolder to list contents for.
         /// Format: `projects/*/locations/*/teamFolders/*`.
         /// </param>
         /// <param name="pageToken">
@@ -1669,7 +1971,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="teamFolder">
-        /// Required. Name of the team_folder whose contents to list.
+        /// Required. Resource name of the TeamFolder to list contents for.
         /// Format: `projects/*/locations/*/teamFolders/*`.
         /// </param>
         /// <param name="pageToken">
@@ -1706,7 +2008,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="teamFolder">
-        /// Required. Name of the team_folder whose contents to list.
+        /// Required. Resource name of the TeamFolder to list contents for.
         /// Format: `projects/*/locations/*/teamFolders/*`.
         /// </param>
         /// <param name="pageToken">
@@ -1743,7 +2045,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="teamFolder">
-        /// Required. Name of the team_folder whose contents to list.
+        /// Required. Resource name of the TeamFolder to list contents for.
         /// Format: `projects/*/locations/*/teamFolders/*`.
         /// </param>
         /// <param name="pageToken">
@@ -2231,6 +2533,210 @@ namespace Google.Cloud.Dataform.V1Beta1
             DeleteFolderAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> DeleteFolderTree(DeleteFolderTreeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteFolderTreeAsync(DeleteFolderTreeRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteFolderTreeAsync(DeleteFolderTreeRequest request, st::CancellationToken cancellationToken) =>
+            DeleteFolderTreeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteFolderTree</c>.</summary>
+        public virtual lro::OperationsClient DeleteFolderTreeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteFolderTree</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> PollOnceDeleteFolderTree(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFolderTreeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteFolderTree</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> PollOnceDeleteFolderTreeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteFolderTreeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// Format: projects/{project}/locations/{location}/folders/{folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> DeleteFolderTree(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderTree(new DeleteFolderTreeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// Format: projects/{project}/locations/{location}/folders/{folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteFolderTreeAsync(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderTreeAsync(new DeleteFolderTreeRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// Format: projects/{project}/locations/{location}/folders/{folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteFolderTreeAsync(string name, bool force, st::CancellationToken cancellationToken) =>
+            DeleteFolderTreeAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// Format: projects/{project}/locations/{location}/folders/{folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> DeleteFolderTree(FolderName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderTree(new DeleteFolderTreeRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// Format: projects/{project}/locations/{location}/folders/{folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteFolderTreeAsync(FolderName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFolderTreeAsync(new DeleteFolderTreeRequest
+            {
+                FolderName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Folder's name.
+        /// Format: projects/{project}/locations/{location}/folders/{folder}
+        /// </param>
+        /// <param name="force">
+        /// Optional. If `false` (default): The operation will fail if any
+        /// Repository within the folder hierarchy has associated Release Configs or
+        /// Workflow Configs.
+        /// 
+        /// If `true`: The operation will attempt to delete everything, including any
+        /// Release Configs and Workflow Configs linked to Repositories within the
+        /// folder hierarchy. This permanently removes schedules and resources.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteFolderTreeAsync(FolderName name, bool force, st::CancellationToken cancellationToken) =>
+            DeleteFolderTreeAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2257,7 +2763,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="folder">
-        /// Required. Name of the folder whose contents to list.
+        /// Required. Resource name of the Folder to list contents for.
         /// Format: projects/*/locations/*/folders/*
         /// </param>
         /// <param name="pageToken">
@@ -2293,7 +2799,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="folder">
-        /// Required. Name of the folder whose contents to list.
+        /// Required. Resource name of the Folder to list contents for.
         /// Format: projects/*/locations/*/folders/*
         /// </param>
         /// <param name="pageToken">
@@ -2330,7 +2836,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="folder">
-        /// Required. Name of the folder whose contents to list.
+        /// Required. Resource name of the Folder to list contents for.
         /// Format: projects/*/locations/*/folders/*
         /// </param>
         /// <param name="pageToken">
@@ -2366,7 +2872,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="folder">
-        /// Required. Name of the folder whose contents to list.
+        /// Required. Resource name of the Folder to list contents for.
         /// Format: projects/*/locations/*/folders/*
         /// </param>
         /// <param name="pageToken">
@@ -2432,7 +2938,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// contained in any other folder.
         /// </summary>
         /// <param name="location">
-        /// Required. Location of the user root folder whose contents to list.
+        /// Required. Location of the user root folder to list contents for.
         /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
@@ -2470,7 +2976,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// contained in any other folder.
         /// </summary>
         /// <param name="location">
-        /// Required. Location of the user root folder whose contents to list.
+        /// Required. Location of the user root folder to list contents for.
         /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
@@ -2509,7 +3015,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// contained in any other folder.
         /// </summary>
         /// <param name="location">
-        /// Required. Location of the user root folder whose contents to list.
+        /// Required. Location of the user root folder to list contents for.
         /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
@@ -2547,7 +3053,7 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// contained in any other folder.
         /// </summary>
         /// <param name="location">
-        /// Required. Location of the user root folder whose contents to list.
+        /// Required. Location of the user root folder to list contents for.
         /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
@@ -3397,6 +3903,196 @@ namespace Google.Cloud.Dataform.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteRepositoryAsync(RepositoryName name, st::CancellationToken cancellationToken) =>
             DeleteRepositoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata> DeleteRepositoryLongRunning(DeleteRepositoryLongRunningRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>> DeleteRepositoryLongRunningAsync(DeleteRepositoryLongRunningRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>> DeleteRepositoryLongRunningAsync(DeleteRepositoryLongRunningRequest request, st::CancellationToken cancellationToken) =>
+            DeleteRepositoryLongRunningAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteRepositoryLongRunning</c>.</summary>
+        public virtual lro::OperationsClient DeleteRepositoryLongRunningOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRepositoryLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata> PollOnceDeleteRepositoryLongRunning(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRepositoryLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteRepositoryLongRunning</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>> PollOnceDeleteRepositoryLongRunningAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteRepositoryLongRunningOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The repository's name.
+        /// </param>
+        /// <param name="force">
+        /// Optional. If set to true, child resources of this repository (compilation
+        /// results and workflow invocations) will also be deleted. Otherwise, the
+        /// request will only succeed if the repository has no child resources.
+        /// 
+        /// **Note:** *This flag doesn't support deletion of workspaces, release
+        /// configs or workflow configs. If any of such resources exists in the
+        /// repository, the request will fail.*
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata> DeleteRepositoryLongRunning(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRepositoryLongRunning(new DeleteRepositoryLongRunningRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The repository's name.
+        /// </param>
+        /// <param name="force">
+        /// Optional. If set to true, child resources of this repository (compilation
+        /// results and workflow invocations) will also be deleted. Otherwise, the
+        /// request will only succeed if the repository has no child resources.
+        /// 
+        /// **Note:** *This flag doesn't support deletion of workspaces, release
+        /// configs or workflow configs. If any of such resources exists in the
+        /// repository, the request will fail.*
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>> DeleteRepositoryLongRunningAsync(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRepositoryLongRunningAsync(new DeleteRepositoryLongRunningRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The repository's name.
+        /// </param>
+        /// <param name="force">
+        /// Optional. If set to true, child resources of this repository (compilation
+        /// results and workflow invocations) will also be deleted. Otherwise, the
+        /// request will only succeed if the repository has no child resources.
+        /// 
+        /// **Note:** *This flag doesn't support deletion of workspaces, release
+        /// configs or workflow configs. If any of such resources exists in the
+        /// repository, the request will fail.*
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>> DeleteRepositoryLongRunningAsync(string name, bool force, st::CancellationToken cancellationToken) =>
+            DeleteRepositoryLongRunningAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The repository's name.
+        /// </param>
+        /// <param name="force">
+        /// Optional. If set to true, child resources of this repository (compilation
+        /// results and workflow invocations) will also be deleted. Otherwise, the
+        /// request will only succeed if the repository has no child resources.
+        /// 
+        /// **Note:** *This flag doesn't support deletion of workspaces, release
+        /// configs or workflow configs. If any of such resources exists in the
+        /// repository, the request will fail.*
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata> DeleteRepositoryLongRunning(RepositoryName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRepositoryLongRunning(new DeleteRepositoryLongRunningRequest
+            {
+                RepositoryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The repository's name.
+        /// </param>
+        /// <param name="force">
+        /// Optional. If set to true, child resources of this repository (compilation
+        /// results and workflow invocations) will also be deleted. Otherwise, the
+        /// request will only succeed if the repository has no child resources.
+        /// 
+        /// **Note:** *This flag doesn't support deletion of workspaces, release
+        /// configs or workflow configs. If any of such resources exists in the
+        /// repository, the request will fail.*
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>> DeleteRepositoryLongRunningAsync(RepositoryName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRepositoryLongRunningAsync(new DeleteRepositoryLongRunningRequest
+            {
+                RepositoryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The repository's name.
+        /// </param>
+        /// <param name="force">
+        /// Optional. If set to true, child resources of this repository (compilation
+        /// results and workflow invocations) will also be deleted. Otherwise, the
+        /// request will only succeed if the repository has no child resources.
+        /// 
+        /// **Note:** *This flag doesn't support deletion of workspaces, release
+        /// configs or workflow configs. If any of such resources exists in the
+        /// repository, the request will fail.*
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>> DeleteRepositoryLongRunningAsync(RepositoryName name, bool force, st::CancellationToken cancellationToken) =>
+            DeleteRepositoryLongRunningAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Moves a Repository to a new location.
@@ -7352,6 +8048,8 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         private readonly gaxgrpc::ApiCall<DeleteTeamFolderRequest, wkt::Empty> _callDeleteTeamFolder;
 
+        private readonly gaxgrpc::ApiCall<DeleteTeamFolderTreeRequest, lro::Operation> _callDeleteTeamFolderTree;
+
         private readonly gaxgrpc::ApiCall<QueryTeamFolderContentsRequest, QueryTeamFolderContentsResponse> _callQueryTeamFolderContents;
 
         private readonly gaxgrpc::ApiCall<SearchTeamFoldersRequest, SearchTeamFoldersResponse> _callSearchTeamFolders;
@@ -7363,6 +8061,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         private readonly gaxgrpc::ApiCall<UpdateFolderRequest, Folder> _callUpdateFolder;
 
         private readonly gaxgrpc::ApiCall<DeleteFolderRequest, wkt::Empty> _callDeleteFolder;
+
+        private readonly gaxgrpc::ApiCall<DeleteFolderTreeRequest, lro::Operation> _callDeleteFolderTree;
 
         private readonly gaxgrpc::ApiCall<QueryFolderContentsRequest, QueryFolderContentsResponse> _callQueryFolderContents;
 
@@ -7379,6 +8079,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         private readonly gaxgrpc::ApiCall<UpdateRepositoryRequest, Repository> _callUpdateRepository;
 
         private readonly gaxgrpc::ApiCall<DeleteRepositoryRequest, wkt::Empty> _callDeleteRepository;
+
+        private readonly gaxgrpc::ApiCall<DeleteRepositoryLongRunningRequest, lro::Operation> _callDeleteRepositoryLongRunning;
 
         private readonly gaxgrpc::ApiCall<MoveRepositoryRequest, lro::Operation> _callMoveRepository;
 
@@ -7501,7 +8203,10 @@ namespace Google.Cloud.Dataform.V1Beta1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            DeleteTeamFolderTreeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTeamFolderTreeOperationsSettings, logger);
+            DeleteFolderTreeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFolderTreeOperationsSettings, logger);
             MoveFolderOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveFolderOperationsSettings, logger);
+            DeleteRepositoryLongRunningOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRepositoryLongRunningOperationsSettings, logger);
             MoveRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MoveRepositoryOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
@@ -7517,6 +8222,9 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callDeleteTeamFolder = clientHelper.BuildApiCall<DeleteTeamFolderRequest, wkt::Empty>("DeleteTeamFolder", grpcClient.DeleteTeamFolderAsync, grpcClient.DeleteTeamFolder, effectiveSettings.DeleteTeamFolderSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTeamFolder);
             Modify_DeleteTeamFolderApiCall(ref _callDeleteTeamFolder);
+            _callDeleteTeamFolderTree = clientHelper.BuildApiCall<DeleteTeamFolderTreeRequest, lro::Operation>("DeleteTeamFolderTree", grpcClient.DeleteTeamFolderTreeAsync, grpcClient.DeleteTeamFolderTree, effectiveSettings.DeleteTeamFolderTreeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteTeamFolderTree);
+            Modify_DeleteTeamFolderTreeApiCall(ref _callDeleteTeamFolderTree);
             _callQueryTeamFolderContents = clientHelper.BuildApiCall<QueryTeamFolderContentsRequest, QueryTeamFolderContentsResponse>("QueryTeamFolderContents", grpcClient.QueryTeamFolderContentsAsync, grpcClient.QueryTeamFolderContents, effectiveSettings.QueryTeamFolderContentsSettings).WithGoogleRequestParam("team_folder", request => request.TeamFolder);
             Modify_ApiCall(ref _callQueryTeamFolderContents);
             Modify_QueryTeamFolderContentsApiCall(ref _callQueryTeamFolderContents);
@@ -7535,6 +8243,9 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callDeleteFolder = clientHelper.BuildApiCall<DeleteFolderRequest, wkt::Empty>("DeleteFolder", grpcClient.DeleteFolderAsync, grpcClient.DeleteFolder, effectiveSettings.DeleteFolderSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteFolder);
             Modify_DeleteFolderApiCall(ref _callDeleteFolder);
+            _callDeleteFolderTree = clientHelper.BuildApiCall<DeleteFolderTreeRequest, lro::Operation>("DeleteFolderTree", grpcClient.DeleteFolderTreeAsync, grpcClient.DeleteFolderTree, effectiveSettings.DeleteFolderTreeSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteFolderTree);
+            Modify_DeleteFolderTreeApiCall(ref _callDeleteFolderTree);
             _callQueryFolderContents = clientHelper.BuildApiCall<QueryFolderContentsRequest, QueryFolderContentsResponse>("QueryFolderContents", grpcClient.QueryFolderContentsAsync, grpcClient.QueryFolderContents, effectiveSettings.QueryFolderContentsSettings).WithGoogleRequestParam("folder", request => request.Folder);
             Modify_ApiCall(ref _callQueryFolderContents);
             Modify_QueryFolderContentsApiCall(ref _callQueryFolderContents);
@@ -7559,6 +8270,9 @@ namespace Google.Cloud.Dataform.V1Beta1
             _callDeleteRepository = clientHelper.BuildApiCall<DeleteRepositoryRequest, wkt::Empty>("DeleteRepository", grpcClient.DeleteRepositoryAsync, grpcClient.DeleteRepository, effectiveSettings.DeleteRepositorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRepository);
             Modify_DeleteRepositoryApiCall(ref _callDeleteRepository);
+            _callDeleteRepositoryLongRunning = clientHelper.BuildApiCall<DeleteRepositoryLongRunningRequest, lro::Operation>("DeleteRepositoryLongRunning", grpcClient.DeleteRepositoryLongRunningAsync, grpcClient.DeleteRepositoryLongRunning, effectiveSettings.DeleteRepositoryLongRunningSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteRepositoryLongRunning);
+            Modify_DeleteRepositoryLongRunningApiCall(ref _callDeleteRepositoryLongRunning);
             _callMoveRepository = clientHelper.BuildApiCall<MoveRepositoryRequest, lro::Operation>("MoveRepository", grpcClient.MoveRepositoryAsync, grpcClient.MoveRepository, effectiveSettings.MoveRepositorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callMoveRepository);
             Modify_MoveRepositoryApiCall(ref _callMoveRepository);
@@ -7731,6 +8445,8 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_DeleteTeamFolderApiCall(ref gaxgrpc::ApiCall<DeleteTeamFolderRequest, wkt::Empty> call);
 
+        partial void Modify_DeleteTeamFolderTreeApiCall(ref gaxgrpc::ApiCall<DeleteTeamFolderTreeRequest, lro::Operation> call);
+
         partial void Modify_QueryTeamFolderContentsApiCall(ref gaxgrpc::ApiCall<QueryTeamFolderContentsRequest, QueryTeamFolderContentsResponse> call);
 
         partial void Modify_SearchTeamFoldersApiCall(ref gaxgrpc::ApiCall<SearchTeamFoldersRequest, SearchTeamFoldersResponse> call);
@@ -7742,6 +8458,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_UpdateFolderApiCall(ref gaxgrpc::ApiCall<UpdateFolderRequest, Folder> call);
 
         partial void Modify_DeleteFolderApiCall(ref gaxgrpc::ApiCall<DeleteFolderRequest, wkt::Empty> call);
+
+        partial void Modify_DeleteFolderTreeApiCall(ref gaxgrpc::ApiCall<DeleteFolderTreeRequest, lro::Operation> call);
 
         partial void Modify_QueryFolderContentsApiCall(ref gaxgrpc::ApiCall<QueryFolderContentsRequest, QueryFolderContentsResponse> call);
 
@@ -7758,6 +8476,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_UpdateRepositoryApiCall(ref gaxgrpc::ApiCall<UpdateRepositoryRequest, Repository> call);
 
         partial void Modify_DeleteRepositoryApiCall(ref gaxgrpc::ApiCall<DeleteRepositoryRequest, wkt::Empty> call);
+
+        partial void Modify_DeleteRepositoryLongRunningApiCall(ref gaxgrpc::ApiCall<DeleteRepositoryLongRunningRequest, lro::Operation> call);
 
         partial void Modify_MoveRepositoryApiCall(ref gaxgrpc::ApiCall<MoveRepositoryRequest, lro::Operation> call);
 
@@ -7884,6 +8604,8 @@ namespace Google.Cloud.Dataform.V1Beta1
 
         partial void Modify_DeleteTeamFolderRequest(ref DeleteTeamFolderRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteTeamFolderTreeRequest(ref DeleteTeamFolderTreeRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_QueryTeamFolderContentsRequest(ref QueryTeamFolderContentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SearchTeamFoldersRequest(ref SearchTeamFoldersRequest request, ref gaxgrpc::CallSettings settings);
@@ -7895,6 +8617,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_UpdateFolderRequest(ref UpdateFolderRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteFolderRequest(ref DeleteFolderRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteFolderTreeRequest(ref DeleteFolderTreeRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_QueryFolderContentsRequest(ref QueryFolderContentsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -7911,6 +8635,8 @@ namespace Google.Cloud.Dataform.V1Beta1
         partial void Modify_UpdateRepositoryRequest(ref UpdateRepositoryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteRepositoryRequest(ref DeleteRepositoryRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteRepositoryLongRunningRequest(ref DeleteRepositoryLongRunningRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_MoveRepositoryRequest(ref MoveRepositoryRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -8114,6 +8840,35 @@ namespace Google.Cloud.Dataform.V1Beta1
             return _callDeleteTeamFolder.Async(request, callSettings);
         }
 
+        /// <summary>The long-running operations client for <c>DeleteTeamFolderTree</c>.</summary>
+        public override lro::OperationsClient DeleteTeamFolderTreeOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> DeleteTeamFolderTree(DeleteTeamFolderTreeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTeamFolderTreeRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>(_callDeleteTeamFolderTree.Sync(request, callSettings), DeleteTeamFolderTreeOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteTeamFolderTreeAsync(DeleteTeamFolderTreeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTeamFolderTreeRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>(await _callDeleteTeamFolderTree.Async(request, callSettings).ConfigureAwait(false), DeleteTeamFolderTreeOperationsClient);
+        }
+
         /// <summary>
         /// Returns the contents of a given TeamFolder.
         /// </summary>
@@ -8269,6 +9024,35 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             Modify_DeleteFolderRequest(ref request, ref callSettings);
             return _callDeleteFolder.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteFolderTree</c>.</summary>
+        public override lro::OperationsClient DeleteFolderTreeOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, DeleteFolderTreeMetadata> DeleteFolderTree(DeleteFolderTreeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFolderTreeRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>(_callDeleteFolderTree.Sync(request, callSettings), DeleteFolderTreeOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+        /// ReleaseConfigs, and WorkflowConfigs).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>> DeleteFolderTreeAsync(DeleteFolderTreeRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteFolderTreeRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, DeleteFolderTreeMetadata>(await _callDeleteFolderTree.Async(request, callSettings).ConfigureAwait(false), DeleteFolderTreeOperationsClient);
         }
 
         /// <summary>
@@ -8494,6 +9278,33 @@ namespace Google.Cloud.Dataform.V1Beta1
         {
             Modify_DeleteRepositoryRequest(ref request, ref callSettings);
             return _callDeleteRepository.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteRepositoryLongRunning</c>.</summary>
+        public override lro::OperationsClient DeleteRepositoryLongRunningOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata> DeleteRepositoryLongRunning(DeleteRepositoryLongRunningRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRepositoryLongRunningRequest(ref request, ref callSettings);
+            return new lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>(_callDeleteRepositoryLongRunning.Sync(request, callSettings), DeleteRepositoryLongRunningOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a single repository asynchronously.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>> DeleteRepositoryLongRunningAsync(DeleteRepositoryLongRunningRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteRepositoryLongRunningRequest(ref request, ref callSettings);
+            return new lro::Operation<DeleteRepositoryLongRunningResponse, DeleteRepositoryLongRunningMetadata>(await _callDeleteRepositoryLongRunning.Async(request, callSettings).ConfigureAwait(false), DeleteRepositoryLongRunningOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>MoveRepository</c>.</summary>

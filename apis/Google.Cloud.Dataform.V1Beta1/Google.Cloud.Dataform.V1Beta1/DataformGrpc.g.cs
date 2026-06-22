@@ -77,6 +77,10 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest> __Marshaller_google_cloud_dataform_v1beta1_DeleteTeamFolderTreeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsRequest> __Marshaller_google_cloud_dataform_v1beta1_QueryTeamFolderContentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse> __Marshaller_google_cloud_dataform_v1beta1_QueryTeamFolderContentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse.Parser));
@@ -95,6 +99,8 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.DeleteFolderRequest> __Marshaller_google_cloud_dataform_v1beta1_DeleteFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.DeleteFolderRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest> __Marshaller_google_cloud_dataform_v1beta1_DeleteFolderTreeRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsRequest> __Marshaller_google_cloud_dataform_v1beta1_QueryFolderContentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse> __Marshaller_google_cloud_dataform_v1beta1_QueryFolderContentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse.Parser));
@@ -104,8 +110,6 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse> __Marshaller_google_cloud_dataform_v1beta1_QueryUserRootContentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.MoveFolderRequest> __Marshaller_google_cloud_dataform_v1beta1_MoveFolderRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.MoveFolderRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.ListRepositoriesRequest> __Marshaller_google_cloud_dataform_v1beta1_ListRepositoriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.ListRepositoriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -120,6 +124,8 @@ namespace Google.Cloud.Dataform.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.UpdateRepositoryRequest> __Marshaller_google_cloud_dataform_v1beta1_UpdateRepositoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.UpdateRepositoryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryRequest> __Marshaller_google_cloud_dataform_v1beta1_DeleteRepositoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest> __Marshaller_google_cloud_dataform_v1beta1_DeleteRepositoryLongRunningRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dataform.V1Beta1.MoveRepositoryRequest> __Marshaller_google_cloud_dataform_v1beta1_MoveRepositoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dataform.V1Beta1.MoveRepositoryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -338,6 +344,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest, global::Google.LongRunning.Operation> __Method_DeleteTeamFolderTree = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTeamFolderTree",
+        __Marshaller_google_cloud_dataform_v1beta1_DeleteTeamFolderTreeRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse> __Method_QueryTeamFolderContents = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -384,6 +398,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         "DeleteFolder",
         __Marshaller_google_cloud_dataform_v1beta1_DeleteFolderRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest, global::Google.LongRunning.Operation> __Method_DeleteFolderTree = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteFolderTree",
+        __Marshaller_google_cloud_dataform_v1beta1_DeleteFolderTreeRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse> __Method_QueryFolderContents = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse>(
@@ -448,6 +470,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         "DeleteRepository",
         __Marshaller_google_cloud_dataform_v1beta1_DeleteRepositoryRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest, global::Google.LongRunning.Operation> __Method_DeleteRepositoryLongRunning = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteRepositoryLongRunning",
+        __Marshaller_google_cloud_dataform_v1beta1_DeleteRepositoryLongRunningRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dataform.V1Beta1.MoveRepositoryRequest, global::Google.LongRunning.Operation> __Method_MoveRepository = new grpc::Method<global::Google.Cloud.Dataform.V1Beta1.MoveRepositoryRequest, global::Google.LongRunning.Operation>(
@@ -932,6 +962,19 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       }
 
       /// <summary>
+      /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteTeamFolderTree(global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Returns the contents of a given TeamFolder.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -1000,6 +1043,19 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFolder(global::Google.Cloud.Dataform.V1Beta1.DeleteFolderRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteFolderTree(global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1106,6 +1162,18 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRepository(global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a single repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteRepositoryLongRunning(global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1999,6 +2067,58 @@ namespace Google.Cloud.Dataform.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTeamFolder, null, options, request);
       }
       /// <summary>
+      /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteTeamFolderTree(global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTeamFolderTree(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteTeamFolderTree(global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTeamFolderTree, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteTeamFolderTreeAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTeamFolderTreeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a TeamFolder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteTeamFolderTreeAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTeamFolderTree, null, options, request);
+      }
+      /// <summary>
       /// Returns the contents of a given TeamFolder.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -2289,6 +2409,58 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteFolderAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteFolderRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteFolder, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFolderTree(global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFolderTree(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteFolderTree(global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteFolderTree, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFolderTreeAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteFolderTreeAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a Folder with its contents (Folders, Repositories, Workspaces,
+      /// ReleaseConfigs, and WorkflowConfigs).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteFolderTreeAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteFolderTree, null, options, request);
       }
       /// <summary>
       /// Returns the contents of a given Folder.
@@ -2713,6 +2885,54 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteRepositoryAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteRepository, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRepositoryLongRunning(global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRepositoryLongRunning(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteRepositoryLongRunning(global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteRepositoryLongRunning, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a single repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRepositoryLongRunningAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteRepositoryLongRunningAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a single repository asynchronously.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteRepositoryLongRunningAsync(global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteRepositoryLongRunning, null, options, request);
       }
       /// <summary>
       /// Moves a Repository to a new location.
@@ -5400,12 +5620,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           .AddMethod(__Method_CreateTeamFolder, serviceImpl.CreateTeamFolder)
           .AddMethod(__Method_UpdateTeamFolder, serviceImpl.UpdateTeamFolder)
           .AddMethod(__Method_DeleteTeamFolder, serviceImpl.DeleteTeamFolder)
+          .AddMethod(__Method_DeleteTeamFolderTree, serviceImpl.DeleteTeamFolderTree)
           .AddMethod(__Method_QueryTeamFolderContents, serviceImpl.QueryTeamFolderContents)
           .AddMethod(__Method_SearchTeamFolders, serviceImpl.SearchTeamFolders)
           .AddMethod(__Method_GetFolder, serviceImpl.GetFolder)
           .AddMethod(__Method_CreateFolder, serviceImpl.CreateFolder)
           .AddMethod(__Method_UpdateFolder, serviceImpl.UpdateFolder)
           .AddMethod(__Method_DeleteFolder, serviceImpl.DeleteFolder)
+          .AddMethod(__Method_DeleteFolderTree, serviceImpl.DeleteFolderTree)
           .AddMethod(__Method_QueryFolderContents, serviceImpl.QueryFolderContents)
           .AddMethod(__Method_QueryUserRootContents, serviceImpl.QueryUserRootContents)
           .AddMethod(__Method_MoveFolder, serviceImpl.MoveFolder)
@@ -5414,6 +5636,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
           .AddMethod(__Method_CreateRepository, serviceImpl.CreateRepository)
           .AddMethod(__Method_UpdateRepository, serviceImpl.UpdateRepository)
           .AddMethod(__Method_DeleteRepository, serviceImpl.DeleteRepository)
+          .AddMethod(__Method_DeleteRepositoryLongRunning, serviceImpl.DeleteRepositoryLongRunning)
           .AddMethod(__Method_MoveRepository, serviceImpl.MoveRepository)
           .AddMethod(__Method_CommitRepositoryChanges, serviceImpl.CommitRepositoryChanges)
           .AddMethod(__Method_ReadRepositoryFile, serviceImpl.ReadRepositoryFile)
@@ -5480,12 +5703,14 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_CreateTeamFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateTeamFolderRequest, global::Google.Cloud.Dataform.V1Beta1.TeamFolder>(serviceImpl.CreateTeamFolder));
       serviceBinder.AddMethod(__Method_UpdateTeamFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.UpdateTeamFolderRequest, global::Google.Cloud.Dataform.V1Beta1.TeamFolder>(serviceImpl.UpdateTeamFolder));
       serviceBinder.AddMethod(__Method_DeleteTeamFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTeamFolder));
+      serviceBinder.AddMethod(__Method_DeleteTeamFolderTree, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteTeamFolderTreeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTeamFolderTree));
       serviceBinder.AddMethod(__Method_QueryTeamFolderContents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryTeamFolderContentsResponse>(serviceImpl.QueryTeamFolderContents));
       serviceBinder.AddMethod(__Method_SearchTeamFolders, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.SearchTeamFoldersRequest, global::Google.Cloud.Dataform.V1Beta1.SearchTeamFoldersResponse>(serviceImpl.SearchTeamFolders));
       serviceBinder.AddMethod(__Method_GetFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.GetFolderRequest, global::Google.Cloud.Dataform.V1Beta1.Folder>(serviceImpl.GetFolder));
       serviceBinder.AddMethod(__Method_CreateFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateFolderRequest, global::Google.Cloud.Dataform.V1Beta1.Folder>(serviceImpl.CreateFolder));
       serviceBinder.AddMethod(__Method_UpdateFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.UpdateFolderRequest, global::Google.Cloud.Dataform.V1Beta1.Folder>(serviceImpl.UpdateFolder));
       serviceBinder.AddMethod(__Method_DeleteFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteFolderRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFolder));
+      serviceBinder.AddMethod(__Method_DeleteFolderTree, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteFolderTreeRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteFolderTree));
       serviceBinder.AddMethod(__Method_QueryFolderContents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryFolderContentsResponse>(serviceImpl.QueryFolderContents));
       serviceBinder.AddMethod(__Method_QueryUserRootContents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsRequest, global::Google.Cloud.Dataform.V1Beta1.QueryUserRootContentsResponse>(serviceImpl.QueryUserRootContents));
       serviceBinder.AddMethod(__Method_MoveFolder, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.MoveFolderRequest, global::Google.LongRunning.Operation>(serviceImpl.MoveFolder));
@@ -5494,6 +5719,7 @@ namespace Google.Cloud.Dataform.V1Beta1 {
       serviceBinder.AddMethod(__Method_CreateRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CreateRepositoryRequest, global::Google.Cloud.Dataform.V1Beta1.Repository>(serviceImpl.CreateRepository));
       serviceBinder.AddMethod(__Method_UpdateRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.UpdateRepositoryRequest, global::Google.Cloud.Dataform.V1Beta1.Repository>(serviceImpl.UpdateRepository));
       serviceBinder.AddMethod(__Method_DeleteRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteRepository));
+      serviceBinder.AddMethod(__Method_DeleteRepositoryLongRunning, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.DeleteRepositoryLongRunningRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteRepositoryLongRunning));
       serviceBinder.AddMethod(__Method_MoveRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.MoveRepositoryRequest, global::Google.LongRunning.Operation>(serviceImpl.MoveRepository));
       serviceBinder.AddMethod(__Method_CommitRepositoryChanges, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesRequest, global::Google.Cloud.Dataform.V1Beta1.CommitRepositoryChangesResponse>(serviceImpl.CommitRepositoryChanges));
       serviceBinder.AddMethod(__Method_ReadRepositoryFile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileRequest, global::Google.Cloud.Dataform.V1Beta1.ReadRepositoryFileResponse>(serviceImpl.ReadRepositoryFile));

@@ -40,7 +40,6 @@ namespace GoogleCSharpSnippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 TeamFolder = new TeamFolder(),
-                TeamFolderId = "",
             };
             // Make the request
             TeamFolder response = await dataformClient.CreateTeamFolderAsync(request);
