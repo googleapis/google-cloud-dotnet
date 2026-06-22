@@ -202,6 +202,7 @@ namespace Google.Analytics.Admin.V1Alpha
             UpdateSubpropertySyncConfigSettings = existing.UpdateSubpropertySyncConfigSettings;
             GetSubpropertySyncConfigSettings = existing.GetSubpropertySyncConfigSettings;
             GetReportingIdentitySettingsSettings = existing.GetReportingIdentitySettingsSettings;
+            UpdateReportingIdentitySettingsSettings = existing.UpdateReportingIdentitySettingsSettings;
             GetUserProvidedDataSettingsSettings = existing.GetUserProvidedDataSettingsSettings;
             OnCopy(existing);
         }
@@ -3405,6 +3406,28 @@ namespace Google.Analytics.Admin.V1Alpha
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetReportingIdentitySettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>AnalyticsAdminServiceClient.UpdateReportingIdentitySettings</c> and
+        /// <c>AnalyticsAdminServiceClient.UpdateReportingIdentitySettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.Unknown"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateReportingIdentitySettingsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.Unknown)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -21126,6 +21149,98 @@ namespace Google.Analytics.Admin.V1Alpha
             GetReportingIdentitySettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates the reporting identity settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingIdentitySettings UpdateReportingIdentitySettings(UpdateReportingIdentitySettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the reporting identity settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> UpdateReportingIdentitySettingsAsync(UpdateReportingIdentitySettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the reporting identity settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> UpdateReportingIdentitySettingsAsync(UpdateReportingIdentitySettingsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateReportingIdentitySettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the reporting identity settings for this property.
+        /// </summary>
+        /// <param name="reportingIdentitySettings">
+        /// Required. The reporting identity settings to update.
+        /// The settings' `name` field is used to identify the settings.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated. Field names must be in snake
+        /// case (for example, "field_to_update"). Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match all
+        /// fields. If omitted, the service will treat it as an implied field mask
+        /// equivalent to all fields that are populated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ReportingIdentitySettings UpdateReportingIdentitySettings(ReportingIdentitySettings reportingIdentitySettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateReportingIdentitySettings(new UpdateReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettings = gax::GaxPreconditions.CheckNotNull(reportingIdentitySettings, nameof(reportingIdentitySettings)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the reporting identity settings for this property.
+        /// </summary>
+        /// <param name="reportingIdentitySettings">
+        /// Required. The reporting identity settings to update.
+        /// The settings' `name` field is used to identify the settings.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated. Field names must be in snake
+        /// case (for example, "field_to_update"). Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match all
+        /// fields. If omitted, the service will treat it as an implied field mask
+        /// equivalent to all fields that are populated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> UpdateReportingIdentitySettingsAsync(ReportingIdentitySettings reportingIdentitySettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateReportingIdentitySettingsAsync(new UpdateReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettings = gax::GaxPreconditions.CheckNotNull(reportingIdentitySettings, nameof(reportingIdentitySettings)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the reporting identity settings for this property.
+        /// </summary>
+        /// <param name="reportingIdentitySettings">
+        /// Required. The reporting identity settings to update.
+        /// The settings' `name` field is used to identify the settings.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to be updated. Field names must be in snake
+        /// case (for example, "field_to_update"). Omitted fields will not be updated.
+        /// To replace the entire entity, use one path with the string "*" to match all
+        /// fields. If omitted, the service will treat it as an implied field mask
+        /// equivalent to all fields that are populated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ReportingIdentitySettings> UpdateReportingIdentitySettingsAsync(ReportingIdentitySettings reportingIdentitySettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateReportingIdentitySettingsAsync(reportingIdentitySettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Looks up settings related to user-provided data for a property.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -21550,6 +21665,8 @@ namespace Google.Analytics.Admin.V1Alpha
         private readonly gaxgrpc::ApiCall<GetSubpropertySyncConfigRequest, SubpropertySyncConfig> _callGetSubpropertySyncConfig;
 
         private readonly gaxgrpc::ApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings> _callGetReportingIdentitySettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateReportingIdentitySettingsRequest, ReportingIdentitySettings> _callUpdateReportingIdentitySettings;
 
         private readonly gaxgrpc::ApiCall<GetUserProvidedDataSettingsRequest, UserProvidedDataSettings> _callGetUserProvidedDataSettings;
 
@@ -22041,6 +22158,9 @@ namespace Google.Analytics.Admin.V1Alpha
             _callGetReportingIdentitySettings = clientHelper.BuildApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings>("GetReportingIdentitySettings", grpcClient.GetReportingIdentitySettingsAsync, grpcClient.GetReportingIdentitySettings, effectiveSettings.GetReportingIdentitySettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetReportingIdentitySettings);
             Modify_GetReportingIdentitySettingsApiCall(ref _callGetReportingIdentitySettings);
+            _callUpdateReportingIdentitySettings = clientHelper.BuildApiCall<UpdateReportingIdentitySettingsRequest, ReportingIdentitySettings>("UpdateReportingIdentitySettings", grpcClient.UpdateReportingIdentitySettingsAsync, grpcClient.UpdateReportingIdentitySettings, effectiveSettings.UpdateReportingIdentitySettingsSettings).WithGoogleRequestParam("reporting_identity_settings.name", request => request.ReportingIdentitySettings?.Name);
+            Modify_ApiCall(ref _callUpdateReportingIdentitySettings);
+            Modify_UpdateReportingIdentitySettingsApiCall(ref _callUpdateReportingIdentitySettings);
             _callGetUserProvidedDataSettings = clientHelper.BuildApiCall<GetUserProvidedDataSettingsRequest, UserProvidedDataSettings>("GetUserProvidedDataSettings", grpcClient.GetUserProvidedDataSettingsAsync, grpcClient.GetUserProvidedDataSettings, effectiveSettings.GetUserProvidedDataSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetUserProvidedDataSettings);
             Modify_GetUserProvidedDataSettingsApiCall(ref _callGetUserProvidedDataSettings);
@@ -22357,6 +22477,8 @@ namespace Google.Analytics.Admin.V1Alpha
 
         partial void Modify_GetReportingIdentitySettingsApiCall(ref gaxgrpc::ApiCall<GetReportingIdentitySettingsRequest, ReportingIdentitySettings> call);
 
+        partial void Modify_UpdateReportingIdentitySettingsApiCall(ref gaxgrpc::ApiCall<UpdateReportingIdentitySettingsRequest, ReportingIdentitySettings> call);
+
         partial void Modify_GetUserProvidedDataSettingsApiCall(ref gaxgrpc::ApiCall<GetUserProvidedDataSettingsRequest, UserProvidedDataSettings> call);
 
         partial void OnConstruction(AnalyticsAdminService.AnalyticsAdminServiceClient grpcClient, AnalyticsAdminServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
@@ -22671,6 +22793,8 @@ namespace Google.Analytics.Admin.V1Alpha
         partial void Modify_GetSubpropertySyncConfigRequest(ref GetSubpropertySyncConfigRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetReportingIdentitySettingsRequest(ref GetReportingIdentitySettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateReportingIdentitySettingsRequest(ref UpdateReportingIdentitySettingsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetUserProvidedDataSettingsRequest(ref GetUserProvidedDataSettingsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -26592,6 +26716,30 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             Modify_GetReportingIdentitySettingsRequest(ref request, ref callSettings);
             return _callGetReportingIdentitySettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the reporting identity settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ReportingIdentitySettings UpdateReportingIdentitySettings(UpdateReportingIdentitySettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateReportingIdentitySettingsRequest(ref request, ref callSettings);
+            return _callUpdateReportingIdentitySettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the reporting identity settings for this property.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ReportingIdentitySettings> UpdateReportingIdentitySettingsAsync(UpdateReportingIdentitySettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateReportingIdentitySettingsRequest(ref request, ref callSettings);
+            return _callUpdateReportingIdentitySettings.Async(request, callSettings);
         }
 
         /// <summary>
