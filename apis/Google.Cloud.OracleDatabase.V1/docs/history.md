@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.7.0, released 2026-06-22
+
+### New features
+
+- Expand Oracle Database v1 API to add support for Exascale on Dedicated Infrastructure
+
+### Bug fixes
+
+- Remove unsupported Get APIs support
+
 ## Version 1.6.0, released 2026-06-15
 
 ### New features
