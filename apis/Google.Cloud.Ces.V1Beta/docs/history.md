@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2026-06-22
+
+### Bug fixes
+
+- An existing field `root_agent` is removed from message `.google.cloud.ces.v1.AgentTool`
+
 ## Version 1.0.0-beta06, released 2026-06-15
 
 ### New features
