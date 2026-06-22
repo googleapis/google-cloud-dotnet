@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-06-22
+
+### New features
+
+- GA updates for new Rule and ReferenceList Service Client libraries
+- GA RuleExecutionErrorService Client libraries
+
 ## Version 1.0.0-beta05, released 2026-05-04
 
 ### New features
