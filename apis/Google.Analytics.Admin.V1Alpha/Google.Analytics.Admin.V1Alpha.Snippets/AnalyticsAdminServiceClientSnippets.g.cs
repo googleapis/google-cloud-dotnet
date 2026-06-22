@@ -17236,6 +17236,70 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateReportingIdentitySettings</summary>
+        public void UpdateReportingIdentitySettingsRequestObject()
+        {
+            // Snippet: UpdateReportingIdentitySettings(UpdateReportingIdentitySettingsRequest, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateReportingIdentitySettingsRequest request = new UpdateReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettings = new ReportingIdentitySettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ReportingIdentitySettings response = analyticsAdminServiceClient.UpdateReportingIdentitySettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReportingIdentitySettingsAsync</summary>
+        public async Task UpdateReportingIdentitySettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateReportingIdentitySettingsAsync(UpdateReportingIdentitySettingsRequest, CallSettings)
+            // Additional: UpdateReportingIdentitySettingsAsync(UpdateReportingIdentitySettingsRequest, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateReportingIdentitySettingsRequest request = new UpdateReportingIdentitySettingsRequest
+            {
+                ReportingIdentitySettings = new ReportingIdentitySettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.UpdateReportingIdentitySettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReportingIdentitySettings</summary>
+        public void UpdateReportingIdentitySettings()
+        {
+            // Snippet: UpdateReportingIdentitySettings(ReportingIdentitySettings, FieldMask, CallSettings)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = AnalyticsAdminServiceClient.Create();
+            // Initialize request argument(s)
+            ReportingIdentitySettings reportingIdentitySettings = new ReportingIdentitySettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ReportingIdentitySettings response = analyticsAdminServiceClient.UpdateReportingIdentitySettings(reportingIdentitySettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateReportingIdentitySettingsAsync</summary>
+        public async Task UpdateReportingIdentitySettingsAsync()
+        {
+            // Snippet: UpdateReportingIdentitySettingsAsync(ReportingIdentitySettings, FieldMask, CallSettings)
+            // Additional: UpdateReportingIdentitySettingsAsync(ReportingIdentitySettings, FieldMask, CancellationToken)
+            // Create client
+            AnalyticsAdminServiceClient analyticsAdminServiceClient = await AnalyticsAdminServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ReportingIdentitySettings reportingIdentitySettings = new ReportingIdentitySettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ReportingIdentitySettings response = await analyticsAdminServiceClient.UpdateReportingIdentitySettingsAsync(reportingIdentitySettings, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetUserProvidedDataSettings</summary>
         public void GetUserProvidedDataSettingsRequestObject()
         {

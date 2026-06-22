@@ -37,7 +37,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-04T18:11:55.535835456Z",
-            "lastGeneratedCommit": "fc968708d27f9aeb9f1c50a3e32d53810df843fd",
+            "lastGeneratedCommit": "70b1e9ff15e0fb99a856a858208aef56bd464081",
             "lastReleasedCommit": "fc968708d27f9aeb9f1c50a3e32d53810df843fd",
             "apiPaths": [
                 "google/analytics/admin/v1alpha"

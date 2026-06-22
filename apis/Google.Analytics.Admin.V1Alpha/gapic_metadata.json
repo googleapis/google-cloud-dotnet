@@ -916,6 +916,12 @@
                 "UpdateReportingDataAnnotationAsync"
               ]
             },
+            "UpdateReportingIdentitySettings": {
+              "methods": [
+                "UpdateReportingIdentitySettings",
+                "UpdateReportingIdentitySettingsAsync"
+              ]
+            },
             "UpdateSKAdNetworkConversionValueSchema": {
               "methods": [
                 "UpdateSKAdNetworkConversionValueSchema",
