@@ -50,6 +50,7 @@ namespace Google.Cloud.Chronicle.V1
             ListReferenceListsSettings = existing.ListReferenceListsSettings;
             CreateReferenceListSettings = existing.CreateReferenceListSettings;
             UpdateReferenceListSettings = existing.UpdateReferenceListSettings;
+            VerifyReferenceListSettings = existing.VerifyReferenceListSettings;
             OnCopy(existing);
         }
 
@@ -118,6 +119,25 @@ namespace Google.Cloud.Chronicle.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings UpdateReferenceListSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ReferenceListServiceClient.VerifyReferenceList</c> and
+        /// <c>ReferenceListServiceClient.VerifyReferenceListAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings VerifyReferenceListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ReferenceListServiceSettings"/> object.</returns>
@@ -192,11 +212,15 @@ namespace Google.Cloud.Chronicle.V1
         /// <remarks>
         /// The default ReferenceListService scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/chronicle</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chronicle.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/chronicle",
+            "https://www.googleapis.com/auth/chronicle.readonly",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -820,6 +844,33 @@ namespace Google.Cloud.Chronicle.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<ReferenceList> UpdateReferenceListAsync(ReferenceList referenceList, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateReferenceListAsync(referenceList, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// VerifyReferenceList validates list content and returns line errors, if any.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyReferenceListResponse VerifyReferenceList(VerifyReferenceListRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// VerifyReferenceList validates list content and returns line errors, if any.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyReferenceListResponse> VerifyReferenceListAsync(VerifyReferenceListRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// VerifyReferenceList validates list content and returns line errors, if any.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyReferenceListResponse> VerifyReferenceListAsync(VerifyReferenceListRequest request, st::CancellationToken cancellationToken) =>
+            VerifyReferenceListAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ReferenceListService client wrapper implementation, for convenient use.</summary>
@@ -835,6 +886,8 @@ namespace Google.Cloud.Chronicle.V1
         private readonly gaxgrpc::ApiCall<CreateReferenceListRequest, ReferenceList> _callCreateReferenceList;
 
         private readonly gaxgrpc::ApiCall<UpdateReferenceListRequest, ReferenceList> _callUpdateReferenceList;
+
+        private readonly gaxgrpc::ApiCall<VerifyReferenceListRequest, VerifyReferenceListResponse> _callVerifyReferenceList;
 
         /// <summary>
         /// Constructs a client wrapper for the ReferenceListService service, with the specified gRPC client and
@@ -864,6 +917,9 @@ namespace Google.Cloud.Chronicle.V1
             _callUpdateReferenceList = clientHelper.BuildApiCall<UpdateReferenceListRequest, ReferenceList>("UpdateReferenceList", grpcClient.UpdateReferenceListAsync, grpcClient.UpdateReferenceList, effectiveSettings.UpdateReferenceListSettings).WithGoogleRequestParam("reference_list.name", request => request.ReferenceList?.Name);
             Modify_ApiCall(ref _callUpdateReferenceList);
             Modify_UpdateReferenceListApiCall(ref _callUpdateReferenceList);
+            _callVerifyReferenceList = clientHelper.BuildApiCall<VerifyReferenceListRequest, VerifyReferenceListResponse>("VerifyReferenceList", grpcClient.VerifyReferenceListAsync, grpcClient.VerifyReferenceList, effectiveSettings.VerifyReferenceListSettings).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callVerifyReferenceList);
+            Modify_VerifyReferenceListApiCall(ref _callVerifyReferenceList);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -877,6 +933,8 @@ namespace Google.Cloud.Chronicle.V1
 
         partial void Modify_UpdateReferenceListApiCall(ref gaxgrpc::ApiCall<UpdateReferenceListRequest, ReferenceList> call);
 
+        partial void Modify_VerifyReferenceListApiCall(ref gaxgrpc::ApiCall<VerifyReferenceListRequest, VerifyReferenceListResponse> call);
+
         partial void OnConstruction(ReferenceListService.ReferenceListServiceClient grpcClient, ReferenceListServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ReferenceListService client</summary>
@@ -889,6 +947,8 @@ namespace Google.Cloud.Chronicle.V1
         partial void Modify_CreateReferenceListRequest(ref CreateReferenceListRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateReferenceListRequest(ref UpdateReferenceListRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_VerifyReferenceListRequest(ref VerifyReferenceListRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Gets a single reference list.
@@ -984,6 +1044,30 @@ namespace Google.Cloud.Chronicle.V1
         {
             Modify_UpdateReferenceListRequest(ref request, ref callSettings);
             return _callUpdateReferenceList.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// VerifyReferenceList validates list content and returns line errors, if any.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override VerifyReferenceListResponse VerifyReferenceList(VerifyReferenceListRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyReferenceListRequest(ref request, ref callSettings);
+            return _callVerifyReferenceList.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// VerifyReferenceList validates list content and returns line errors, if any.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<VerifyReferenceListResponse> VerifyReferenceListAsync(VerifyReferenceListRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyReferenceListRequest(ref request, ref callSettings);
+            return _callVerifyReferenceList.Async(request, callSettings);
         }
     }
 

@@ -330,6 +330,18 @@ namespace Google.Cloud.Chronicle.V1
         }
     }
 
+    public partial class VerifyReferenceListRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ReferenceList
     {
         /// <summary>
