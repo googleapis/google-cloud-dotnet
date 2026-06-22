@@ -89,7 +89,7 @@ void UploadFile(MemoryStream memoryStream, string destination, string bucketName
     // Create a new Storage client.
     StorageClient client = string.IsNullOrWhiteSpace(credentialsPath) || credentialsPath == "adc"
         ? StorageClient.Create()
-        : StorageClient.Create(GoogleCredential.FromFile(credentialsPath));
+        : StorageClient.Create(CredentialFactory.FromFile<ServiceAccountCredential>(credentialsPath).ToGoogleCredential());
     client.UploadObject(bucketName, destination, null, memoryStream);
 }
 
