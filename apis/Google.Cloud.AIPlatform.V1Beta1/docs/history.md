@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta79, released 2026-06-22
+
+### New features
+
+- Add data_sharing_enabled_provider field (ModelProvider enum) to PublisherModelConfig
+
 ## Version 1.0.0-beta78, released 2026-05-11
 
 ### New features
