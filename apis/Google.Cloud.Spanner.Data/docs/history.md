@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.13.0-beta07, released 2026-06-22
+
+### New features
+
+- Enrich exceptions from gRPC callbacks with the request ID
+
 ## Version 5.13.0-beta06, released 2026-05-11
 
 ### New features
