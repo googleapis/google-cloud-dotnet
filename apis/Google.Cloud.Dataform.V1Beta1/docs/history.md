@@ -1,5 +1,19 @@
 # Version history
 
+## Version 1.0.0-beta12, released 2026-06-22
+
+### New features
+
+- Add support for recursive folder and team folder deletions
+- Add long-running operations for asynchronous repository deletion
+- Add Developer Connect integration for Git repository authentication
+- Add effective default branch field and granular access token error status for repositories
+- Add directory metadata views to retrieve file sizes and modification timestamps
+
+### Documentation improvements
+
+- Clarify field usage guidelines and default values in API reference documentation
+
 ## Version 1.0.0-beta11, released 2026-02-16
 
 ### New features
