@@ -384,8 +384,8 @@ namespace Google.Cloud.Spanner.Data
         internal static SpannerDbType ForProtobuf(string protobufTypeName) =>
             new SpannerDbType(protobufTypeName);
 
-        internal static SpannerDbType ForProtobufEnum(string protobyfEnumName) =>
-            new SpannerDbType(TypeCode.Enum, protobyfEnumName);
+        internal static SpannerDbType ForProtobufEnum(string protobufEnumName) =>
+            new SpannerDbType(TypeCode.Enum, protobufEnumName);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.
