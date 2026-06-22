@@ -1,5 +1,15 @@
 # Version history
 
+## Version 5.27.0, released 2026-06-22
+
+### New features
+
+- Add `ConfidentialInstanceType` field to support selection of confidential compute technology
+
+### Documentation improvements
+
+- Update comments for ConfidentialInstanceConfig and related fields
+
 ## Version 5.26.0, released 2026-06-08
 
 ### New features
