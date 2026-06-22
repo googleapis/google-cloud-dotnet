@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta11, released 2026-06-22
+
+### New features
+
+- Add can_edit field to AccountSummary resource to indicate if the user has permission to edit the property
+- Update resource name fields to IDENTIFIER and add plural/singular options
+- Update sharing_with_google_any_sales_enabled field in DataSharingSettings to be deprecated, as it is no longer used and always returns false
+
+### Documentation improvements
+
+- Mark pagination fields as optional and update descriptions
+
 ## Version 1.0.0-beta10, released 2025-11-03
 
 ### New features
