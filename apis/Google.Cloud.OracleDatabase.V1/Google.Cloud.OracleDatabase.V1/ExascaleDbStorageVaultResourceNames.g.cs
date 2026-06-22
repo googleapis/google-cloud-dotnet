@@ -309,6 +309,16 @@ namespace Google.Cloud.OracleDatabase.V1
             get => string.IsNullOrEmpty(Name) ? null : gcov::ExascaleDbStorageVaultName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CloudExadataInfrastructureName"/>-typed view over the <see cref="ExadataInfrastructure"/>
+        /// resource name property.
+        /// </summary>
+        public CloudExadataInfrastructureName ExadataInfrastructureAsCloudExadataInfrastructureName
+        {
+            get => string.IsNullOrEmpty(ExadataInfrastructure) ? null : CloudExadataInfrastructureName.Parse(ExadataInfrastructure, allowUnparsed: true);
+            set => ExadataInfrastructure = value?.ToString() ?? "";
+        }
     }
 
     public partial class GetExascaleDbStorageVaultRequest

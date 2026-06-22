@@ -340,5 +340,15 @@ namespace Google.Cloud.OracleDatabase.V1
             get => string.IsNullOrEmpty(BackupOdbSubnet) ? null : OdbSubnetName.Parse(BackupOdbSubnet, allowUnparsed: true);
             set => BackupOdbSubnet = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="ExascaleDbStorageVaultName"/>-typed view over the <see cref="ExascaleDbStorageVault"/> resource
+        /// name property.
+        /// </summary>
+        public ExascaleDbStorageVaultName ExascaleDbStorageVaultAsExascaleDbStorageVaultName
+        {
+            get => string.IsNullOrEmpty(ExascaleDbStorageVault) ? null : ExascaleDbStorageVaultName.Parse(ExascaleDbStorageVault, allowUnparsed: true);
+            set => ExascaleDbStorageVault = value?.ToString() ?? "";
+        }
     }
 }
