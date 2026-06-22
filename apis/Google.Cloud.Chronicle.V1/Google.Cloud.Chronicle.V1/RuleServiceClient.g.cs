@@ -52,6 +52,7 @@ namespace Google.Cloud.Chronicle.V1
             ListRulesSettings = existing.ListRulesSettings;
             UpdateRuleSettings = existing.UpdateRuleSettings;
             DeleteRuleSettings = existing.DeleteRuleSettings;
+            VerifyRuleTextSettings = existing.VerifyRuleTextSettings;
             ListRuleRevisionsSettings = existing.ListRuleRevisionsSettings;
             CreateRetrohuntSettings = existing.CreateRetrohuntSettings;
             CreateRetrohuntOperationsSettings = existing.CreateRetrohuntOperationsSettings.Clone();
@@ -136,6 +137,24 @@ namespace Google.Cloud.Chronicle.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteRuleSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RuleServiceClient.VerifyRuleText</c> and <c>RuleServiceClient.VerifyRuleTextAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings VerifyRuleTextSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -341,11 +360,15 @@ namespace Google.Cloud.Chronicle.V1
         /// <remarks>
         /// The default RuleService scopes are:
         /// <list type="bullet">
+        /// <item><description>https://www.googleapis.com/auth/chronicle</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chronicle.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
+            "https://www.googleapis.com/auth/chronicle",
+            "https://www.googleapis.com/auth/chronicle.readonly",
             "https://www.googleapis.com/auth/cloud-platform",
         });
 
@@ -1037,6 +1060,145 @@ namespace Google.Cloud.Chronicle.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeleteRuleAsync(RuleName name, st::CancellationToken cancellationToken) =>
             DeleteRuleAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyRuleTextResponse VerifyRuleText(VerifyRuleTextRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyRuleTextResponse> VerifyRuleTextAsync(VerifyRuleTextRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyRuleTextResponse> VerifyRuleTextAsync(VerifyRuleTextRequest request, st::CancellationToken cancellationToken) =>
+            VerifyRuleTextAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The name of the parent resource, which is the SecOps instance
+        /// associated with the request. Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="ruleText">
+        /// Required. The rule text to verify as a UTF-8 string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyRuleTextResponse VerifyRuleText(string instance, string ruleText, gaxgrpc::CallSettings callSettings = null) =>
+            VerifyRuleText(new VerifyRuleTextRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                RuleText = gax::GaxPreconditions.CheckNotNullOrEmpty(ruleText, nameof(ruleText)),
+            }, callSettings);
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The name of the parent resource, which is the SecOps instance
+        /// associated with the request. Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="ruleText">
+        /// Required. The rule text to verify as a UTF-8 string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyRuleTextResponse> VerifyRuleTextAsync(string instance, string ruleText, gaxgrpc::CallSettings callSettings = null) =>
+            VerifyRuleTextAsync(new VerifyRuleTextRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                RuleText = gax::GaxPreconditions.CheckNotNullOrEmpty(ruleText, nameof(ruleText)),
+            }, callSettings);
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The name of the parent resource, which is the SecOps instance
+        /// associated with the request. Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="ruleText">
+        /// Required. The rule text to verify as a UTF-8 string.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyRuleTextResponse> VerifyRuleTextAsync(string instance, string ruleText, st::CancellationToken cancellationToken) =>
+            VerifyRuleTextAsync(instance, ruleText, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The name of the parent resource, which is the SecOps instance
+        /// associated with the request. Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="ruleText">
+        /// Required. The rule text to verify as a UTF-8 string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual VerifyRuleTextResponse VerifyRuleText(InstanceName instance, string ruleText, gaxgrpc::CallSettings callSettings = null) =>
+            VerifyRuleText(new VerifyRuleTextRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                RuleText = gax::GaxPreconditions.CheckNotNullOrEmpty(ruleText, nameof(ruleText)),
+            }, callSettings);
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The name of the parent resource, which is the SecOps instance
+        /// associated with the request. Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="ruleText">
+        /// Required. The rule text to verify as a UTF-8 string.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyRuleTextResponse> VerifyRuleTextAsync(InstanceName instance, string ruleText, gaxgrpc::CallSettings callSettings = null) =>
+            VerifyRuleTextAsync(new VerifyRuleTextRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                RuleText = gax::GaxPreconditions.CheckNotNullOrEmpty(ruleText, nameof(ruleText)),
+            }, callSettings);
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The name of the parent resource, which is the SecOps instance
+        /// associated with the request. Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}`
+        /// </param>
+        /// <param name="ruleText">
+        /// Required. The rule text to verify as a UTF-8 string.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<VerifyRuleTextResponse> VerifyRuleTextAsync(InstanceName instance, string ruleText, st::CancellationToken cancellationToken) =>
+            VerifyRuleTextAsync(instance, ruleText, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists all revisions of the rule.
@@ -2039,6 +2201,8 @@ namespace Google.Cloud.Chronicle.V1
 
         private readonly gaxgrpc::ApiCall<DeleteRuleRequest, wkt::Empty> _callDeleteRule;
 
+        private readonly gaxgrpc::ApiCall<VerifyRuleTextRequest, VerifyRuleTextResponse> _callVerifyRuleText;
+
         private readonly gaxgrpc::ApiCall<ListRuleRevisionsRequest, ListRuleRevisionsResponse> _callListRuleRevisions;
 
         private readonly gaxgrpc::ApiCall<CreateRetrohuntRequest, lro::Operation> _callCreateRetrohunt;
@@ -2084,6 +2248,9 @@ namespace Google.Cloud.Chronicle.V1
             _callDeleteRule = clientHelper.BuildApiCall<DeleteRuleRequest, wkt::Empty>("DeleteRule", grpcClient.DeleteRuleAsync, grpcClient.DeleteRule, effectiveSettings.DeleteRuleSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteRule);
             Modify_DeleteRuleApiCall(ref _callDeleteRule);
+            _callVerifyRuleText = clientHelper.BuildApiCall<VerifyRuleTextRequest, VerifyRuleTextResponse>("VerifyRuleText", grpcClient.VerifyRuleTextAsync, grpcClient.VerifyRuleText, effectiveSettings.VerifyRuleTextSettings).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callVerifyRuleText);
+            Modify_VerifyRuleTextApiCall(ref _callVerifyRuleText);
             _callListRuleRevisions = clientHelper.BuildApiCall<ListRuleRevisionsRequest, ListRuleRevisionsResponse>("ListRuleRevisions", grpcClient.ListRuleRevisionsAsync, grpcClient.ListRuleRevisions, effectiveSettings.ListRuleRevisionsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callListRuleRevisions);
             Modify_ListRuleRevisionsApiCall(ref _callListRuleRevisions);
@@ -2120,6 +2287,8 @@ namespace Google.Cloud.Chronicle.V1
 
         partial void Modify_DeleteRuleApiCall(ref gaxgrpc::ApiCall<DeleteRuleRequest, wkt::Empty> call);
 
+        partial void Modify_VerifyRuleTextApiCall(ref gaxgrpc::ApiCall<VerifyRuleTextRequest, VerifyRuleTextResponse> call);
+
         partial void Modify_ListRuleRevisionsApiCall(ref gaxgrpc::ApiCall<ListRuleRevisionsRequest, ListRuleRevisionsResponse> call);
 
         partial void Modify_CreateRetrohuntApiCall(ref gaxgrpc::ApiCall<CreateRetrohuntRequest, lro::Operation> call);
@@ -2148,6 +2317,8 @@ namespace Google.Cloud.Chronicle.V1
         partial void Modify_UpdateRuleRequest(ref UpdateRuleRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteRuleRequest(ref DeleteRuleRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_VerifyRuleTextRequest(ref VerifyRuleTextRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRuleRevisionsRequest(ref ListRuleRevisionsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2281,6 +2452,30 @@ namespace Google.Cloud.Chronicle.V1
         {
             Modify_DeleteRuleRequest(ref request, ref callSettings);
             return _callDeleteRule.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override VerifyRuleTextResponse VerifyRuleText(VerifyRuleTextRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyRuleTextRequest(ref request, ref callSettings);
+            return _callVerifyRuleText.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Verifies the given rule text.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<VerifyRuleTextResponse> VerifyRuleTextAsync(VerifyRuleTextRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_VerifyRuleTextRequest(ref request, ref callSettings);
+            return _callVerifyRuleText.Async(request, callSettings);
         }
 
         /// <summary>

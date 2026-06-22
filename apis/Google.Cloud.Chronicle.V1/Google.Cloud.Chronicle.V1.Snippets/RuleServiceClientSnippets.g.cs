@@ -641,6 +641,99 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for VerifyRuleText</summary>
+        public void VerifyRuleTextRequestObject()
+        {
+            // Snippet: VerifyRuleText(VerifyRuleTextRequest, CallSettings)
+            // Create client
+            RuleServiceClient ruleServiceClient = RuleServiceClient.Create();
+            // Initialize request argument(s)
+            VerifyRuleTextRequest request = new VerifyRuleTextRequest
+            {
+                InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                RuleText = "",
+            };
+            // Make the request
+            VerifyRuleTextResponse response = ruleServiceClient.VerifyRuleText(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyRuleTextAsync</summary>
+        public async Task VerifyRuleTextRequestObjectAsync()
+        {
+            // Snippet: VerifyRuleTextAsync(VerifyRuleTextRequest, CallSettings)
+            // Additional: VerifyRuleTextAsync(VerifyRuleTextRequest, CancellationToken)
+            // Create client
+            RuleServiceClient ruleServiceClient = await RuleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            VerifyRuleTextRequest request = new VerifyRuleTextRequest
+            {
+                InstanceAsInstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                RuleText = "",
+            };
+            // Make the request
+            VerifyRuleTextResponse response = await ruleServiceClient.VerifyRuleTextAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyRuleText</summary>
+        public void VerifyRuleText()
+        {
+            // Snippet: VerifyRuleText(string, string, CallSettings)
+            // Create client
+            RuleServiceClient ruleServiceClient = RuleServiceClient.Create();
+            // Initialize request argument(s)
+            string instance = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            string ruleText = "";
+            // Make the request
+            VerifyRuleTextResponse response = ruleServiceClient.VerifyRuleText(instance, ruleText);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyRuleTextAsync</summary>
+        public async Task VerifyRuleTextAsync()
+        {
+            // Snippet: VerifyRuleTextAsync(string, string, CallSettings)
+            // Additional: VerifyRuleTextAsync(string, string, CancellationToken)
+            // Create client
+            RuleServiceClient ruleServiceClient = await RuleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string instance = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            string ruleText = "";
+            // Make the request
+            VerifyRuleTextResponse response = await ruleServiceClient.VerifyRuleTextAsync(instance, ruleText);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyRuleText</summary>
+        public void VerifyRuleTextResourceNames()
+        {
+            // Snippet: VerifyRuleText(InstanceName, string, CallSettings)
+            // Create client
+            RuleServiceClient ruleServiceClient = RuleServiceClient.Create();
+            // Initialize request argument(s)
+            InstanceName instance = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            string ruleText = "";
+            // Make the request
+            VerifyRuleTextResponse response = ruleServiceClient.VerifyRuleText(instance, ruleText);
+            // End snippet
+        }
+
+        /// <summary>Snippet for VerifyRuleTextAsync</summary>
+        public async Task VerifyRuleTextResourceNamesAsync()
+        {
+            // Snippet: VerifyRuleTextAsync(InstanceName, string, CallSettings)
+            // Additional: VerifyRuleTextAsync(InstanceName, string, CancellationToken)
+            // Create client
+            RuleServiceClient ruleServiceClient = await RuleServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName instance = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            string ruleText = "";
+            // Make the request
+            VerifyRuleTextResponse response = await ruleServiceClient.VerifyRuleTextAsync(instance, ruleText);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListRuleRevisions</summary>
         public void ListRuleRevisionsRequestObject()
         {
