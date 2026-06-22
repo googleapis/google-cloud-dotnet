@@ -1,5 +1,18 @@
 # Version history
 
+## Version 4.30.0, released 2026-06-22
+
+### New features
+
+- Added support for new AnswerType types
+- Added support for SIP config in conversation profile
+- Added support for proactive and reactive in CES app
+- Added support for new knowledge suggestion
+
+### Documentation improvements
+
+- Clarified OUTPUT_AUDIO_ENCODING_MP3
+
 ## Version 4.29.0, released 2026-03-30
 
 ### New features
