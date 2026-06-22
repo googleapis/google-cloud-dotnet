@@ -779,6 +779,197 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ConfigureExascaleCloudExadataInfrastructure</summary>
+        public void ConfigureExascaleCloudExadataInfrastructureRequestObject()
+        {
+            // Snippet: ConfigureExascaleCloudExadataInfrastructure(ConfigureExascaleCloudExadataInfrastructureRequest, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            ConfigureExascaleCloudExadataInfrastructureRequest request = new ConfigureExascaleCloudExadataInfrastructureRequest
+            {
+                CloudExadataInfrastructureName = CloudExadataInfrastructureName.FromProjectLocationCloudExadataInfrastructure("[PROJECT]", "[LOCATION]", "[CLOUD_EXADATA_INFRASTRUCTURE]"),
+                TotalStorageSizeGb = 0,
+                RequestId = "",
+            };
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructure(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceConfigureExascaleCloudExadataInfrastructure(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureExascaleCloudExadataInfrastructureAsync</summary>
+        public async Task ConfigureExascaleCloudExadataInfrastructureRequestObjectAsync()
+        {
+            // Snippet: ConfigureExascaleCloudExadataInfrastructureAsync(ConfigureExascaleCloudExadataInfrastructureRequest, CallSettings)
+            // Additional: ConfigureExascaleCloudExadataInfrastructureAsync(ConfigureExascaleCloudExadataInfrastructureRequest, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            ConfigureExascaleCloudExadataInfrastructureRequest request = new ConfigureExascaleCloudExadataInfrastructureRequest
+            {
+                CloudExadataInfrastructureName = CloudExadataInfrastructureName.FromProjectLocationCloudExadataInfrastructure("[PROJECT]", "[LOCATION]", "[CLOUD_EXADATA_INFRASTRUCTURE]"),
+                TotalStorageSizeGb = 0,
+                RequestId = "",
+            };
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = await oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructureAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceConfigureExascaleCloudExadataInfrastructureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureExascaleCloudExadataInfrastructure</summary>
+        public void ConfigureExascaleCloudExadataInfrastructure()
+        {
+            // Snippet: ConfigureExascaleCloudExadataInfrastructure(string, int, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/cloudExadataInfrastructures/[CLOUD_EXADATA_INFRASTRUCTURE]";
+            int totalStorageSizeGb = 0;
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructure(name, totalStorageSizeGb);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceConfigureExascaleCloudExadataInfrastructure(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureExascaleCloudExadataInfrastructureAsync</summary>
+        public async Task ConfigureExascaleCloudExadataInfrastructureAsync()
+        {
+            // Snippet: ConfigureExascaleCloudExadataInfrastructureAsync(string, int, CallSettings)
+            // Additional: ConfigureExascaleCloudExadataInfrastructureAsync(string, int, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/cloudExadataInfrastructures/[CLOUD_EXADATA_INFRASTRUCTURE]";
+            int totalStorageSizeGb = 0;
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = await oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructureAsync(name, totalStorageSizeGb);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceConfigureExascaleCloudExadataInfrastructureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureExascaleCloudExadataInfrastructure</summary>
+        public void ConfigureExascaleCloudExadataInfrastructureResourceNames()
+        {
+            // Snippet: ConfigureExascaleCloudExadataInfrastructure(CloudExadataInfrastructureName, int, CallSettings)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
+            // Initialize request argument(s)
+            CloudExadataInfrastructureName name = CloudExadataInfrastructureName.FromProjectLocationCloudExadataInfrastructure("[PROJECT]", "[LOCATION]", "[CLOUD_EXADATA_INFRASTRUCTURE]");
+            int totalStorageSizeGb = 0;
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructure(name, totalStorageSizeGb);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = oracleDatabaseClient.PollOnceConfigureExascaleCloudExadataInfrastructure(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ConfigureExascaleCloudExadataInfrastructureAsync</summary>
+        public async Task ConfigureExascaleCloudExadataInfrastructureResourceNamesAsync()
+        {
+            // Snippet: ConfigureExascaleCloudExadataInfrastructureAsync(CloudExadataInfrastructureName, int, CallSettings)
+            // Additional: ConfigureExascaleCloudExadataInfrastructureAsync(CloudExadataInfrastructureName, int, CancellationToken)
+            // Create client
+            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
+            // Initialize request argument(s)
+            CloudExadataInfrastructureName name = CloudExadataInfrastructureName.FromProjectLocationCloudExadataInfrastructure("[PROJECT]", "[LOCATION]", "[CLOUD_EXADATA_INFRASTRUCTURE]");
+            int totalStorageSizeGb = 0;
+            // Make the request
+            Operation<CloudExadataInfrastructure, OperationMetadata> response = await oracleDatabaseClient.ConfigureExascaleCloudExadataInfrastructureAsync(name, totalStorageSizeGb);
+
+            // Poll until the returned long-running operation is complete
+            Operation<CloudExadataInfrastructure, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            CloudExadataInfrastructure result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<CloudExadataInfrastructure, OperationMetadata> retrievedResponse = await oracleDatabaseClient.PollOnceConfigureExascaleCloudExadataInfrastructureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                CloudExadataInfrastructure retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListCloudVmClusters</summary>
         public void ListCloudVmClustersRequestObject()
         {
@@ -13148,93 +13339,6 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetGoldengateDeploymentVersion</summary>
-        public void GetGoldengateDeploymentVersionRequestObject()
-        {
-            // Snippet: GetGoldengateDeploymentVersion(GetGoldengateDeploymentVersionRequest, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            GetGoldengateDeploymentVersionRequest request = new GetGoldengateDeploymentVersionRequest
-            {
-                GoldengateDeploymentVersionName = GoldengateDeploymentVersionName.FromProjectLocationGoldengateDeploymentVersion("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_VERSION]"),
-            };
-            // Make the request
-            GoldengateDeploymentVersion response = oracleDatabaseClient.GetGoldengateDeploymentVersion(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentVersionAsync</summary>
-        public async Task GetGoldengateDeploymentVersionRequestObjectAsync()
-        {
-            // Snippet: GetGoldengateDeploymentVersionAsync(GetGoldengateDeploymentVersionRequest, CallSettings)
-            // Additional: GetGoldengateDeploymentVersionAsync(GetGoldengateDeploymentVersionRequest, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            GetGoldengateDeploymentVersionRequest request = new GetGoldengateDeploymentVersionRequest
-            {
-                GoldengateDeploymentVersionName = GoldengateDeploymentVersionName.FromProjectLocationGoldengateDeploymentVersion("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_VERSION]"),
-            };
-            // Make the request
-            GoldengateDeploymentVersion response = await oracleDatabaseClient.GetGoldengateDeploymentVersionAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentVersion</summary>
-        public void GetGoldengateDeploymentVersion()
-        {
-            // Snippet: GetGoldengateDeploymentVersion(string, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentVersions/[GOLDENGATE_DEPLOYMENT_VERSION]";
-            // Make the request
-            GoldengateDeploymentVersion response = oracleDatabaseClient.GetGoldengateDeploymentVersion(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentVersionAsync</summary>
-        public async Task GetGoldengateDeploymentVersionAsync()
-        {
-            // Snippet: GetGoldengateDeploymentVersionAsync(string, CallSettings)
-            // Additional: GetGoldengateDeploymentVersionAsync(string, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentVersions/[GOLDENGATE_DEPLOYMENT_VERSION]";
-            // Make the request
-            GoldengateDeploymentVersion response = await oracleDatabaseClient.GetGoldengateDeploymentVersionAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentVersion</summary>
-        public void GetGoldengateDeploymentVersionResourceNames()
-        {
-            // Snippet: GetGoldengateDeploymentVersion(GoldengateDeploymentVersionName, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            GoldengateDeploymentVersionName name = GoldengateDeploymentVersionName.FromProjectLocationGoldengateDeploymentVersion("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_VERSION]");
-            // Make the request
-            GoldengateDeploymentVersion response = oracleDatabaseClient.GetGoldengateDeploymentVersion(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentVersionAsync</summary>
-        public async Task GetGoldengateDeploymentVersionResourceNamesAsync()
-        {
-            // Snippet: GetGoldengateDeploymentVersionAsync(GoldengateDeploymentVersionName, CallSettings)
-            // Additional: GetGoldengateDeploymentVersionAsync(GoldengateDeploymentVersionName, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            GoldengateDeploymentVersionName name = GoldengateDeploymentVersionName.FromProjectLocationGoldengateDeploymentVersion("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_VERSION]");
-            // Make the request
-            GoldengateDeploymentVersion response = await oracleDatabaseClient.GetGoldengateDeploymentVersionAsync(name);
-            // End snippet
-        }
-
         /// <summary>Snippet for ListGoldengateDeploymentVersions</summary>
         public void ListGoldengateDeploymentVersionsRequestObject()
         {
@@ -13510,93 +13614,6 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentType</summary>
-        public void GetGoldengateDeploymentTypeRequestObject()
-        {
-            // Snippet: GetGoldengateDeploymentType(GetGoldengateDeploymentTypeRequest, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            GetGoldengateDeploymentTypeRequest request = new GetGoldengateDeploymentTypeRequest
-            {
-                GoldengateDeploymentTypeName = GoldengateDeploymentTypeName.FromProjectLocationGoldengateDeploymentType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_TYPE]"),
-            };
-            // Make the request
-            GoldengateDeploymentType response = oracleDatabaseClient.GetGoldengateDeploymentType(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentTypeAsync</summary>
-        public async Task GetGoldengateDeploymentTypeRequestObjectAsync()
-        {
-            // Snippet: GetGoldengateDeploymentTypeAsync(GetGoldengateDeploymentTypeRequest, CallSettings)
-            // Additional: GetGoldengateDeploymentTypeAsync(GetGoldengateDeploymentTypeRequest, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            GetGoldengateDeploymentTypeRequest request = new GetGoldengateDeploymentTypeRequest
-            {
-                GoldengateDeploymentTypeName = GoldengateDeploymentTypeName.FromProjectLocationGoldengateDeploymentType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_TYPE]"),
-            };
-            // Make the request
-            GoldengateDeploymentType response = await oracleDatabaseClient.GetGoldengateDeploymentTypeAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentType</summary>
-        public void GetGoldengateDeploymentType()
-        {
-            // Snippet: GetGoldengateDeploymentType(string, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentTypes/[GOLDENGATE_DEPLOYMENT_TYPE]";
-            // Make the request
-            GoldengateDeploymentType response = oracleDatabaseClient.GetGoldengateDeploymentType(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentTypeAsync</summary>
-        public async Task GetGoldengateDeploymentTypeAsync()
-        {
-            // Snippet: GetGoldengateDeploymentTypeAsync(string, CallSettings)
-            // Additional: GetGoldengateDeploymentTypeAsync(string, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentTypes/[GOLDENGATE_DEPLOYMENT_TYPE]";
-            // Make the request
-            GoldengateDeploymentType response = await oracleDatabaseClient.GetGoldengateDeploymentTypeAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentType</summary>
-        public void GetGoldengateDeploymentTypeResourceNames()
-        {
-            // Snippet: GetGoldengateDeploymentType(GoldengateDeploymentTypeName, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            GoldengateDeploymentTypeName name = GoldengateDeploymentTypeName.FromProjectLocationGoldengateDeploymentType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_TYPE]");
-            // Make the request
-            GoldengateDeploymentType response = oracleDatabaseClient.GetGoldengateDeploymentType(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentTypeAsync</summary>
-        public async Task GetGoldengateDeploymentTypeResourceNamesAsync()
-        {
-            // Snippet: GetGoldengateDeploymentTypeAsync(GoldengateDeploymentTypeName, CallSettings)
-            // Additional: GetGoldengateDeploymentTypeAsync(GoldengateDeploymentTypeName, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            GoldengateDeploymentTypeName name = GoldengateDeploymentTypeName.FromProjectLocationGoldengateDeploymentType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_TYPE]");
-            // Make the request
-            GoldengateDeploymentType response = await oracleDatabaseClient.GetGoldengateDeploymentTypeAsync(name);
             // End snippet
         }
 
@@ -13880,93 +13897,6 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
-        /// <summary>Snippet for GetGoldengateDeploymentEnvironment</summary>
-        public void GetGoldengateDeploymentEnvironmentRequestObject()
-        {
-            // Snippet: GetGoldengateDeploymentEnvironment(GetGoldengateDeploymentEnvironmentRequest, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            GetGoldengateDeploymentEnvironmentRequest request = new GetGoldengateDeploymentEnvironmentRequest
-            {
-                GoldengateDeploymentEnvironmentName = GoldengateDeploymentEnvironmentName.FromProjectLocationGoldengateDeploymentEnvironment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]"),
-            };
-            // Make the request
-            GoldengateDeploymentEnvironment response = oracleDatabaseClient.GetGoldengateDeploymentEnvironment(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentEnvironmentAsync</summary>
-        public async Task GetGoldengateDeploymentEnvironmentRequestObjectAsync()
-        {
-            // Snippet: GetGoldengateDeploymentEnvironmentAsync(GetGoldengateDeploymentEnvironmentRequest, CallSettings)
-            // Additional: GetGoldengateDeploymentEnvironmentAsync(GetGoldengateDeploymentEnvironmentRequest, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            GetGoldengateDeploymentEnvironmentRequest request = new GetGoldengateDeploymentEnvironmentRequest
-            {
-                GoldengateDeploymentEnvironmentName = GoldengateDeploymentEnvironmentName.FromProjectLocationGoldengateDeploymentEnvironment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]"),
-            };
-            // Make the request
-            GoldengateDeploymentEnvironment response = await oracleDatabaseClient.GetGoldengateDeploymentEnvironmentAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentEnvironment</summary>
-        public void GetGoldengateDeploymentEnvironment()
-        {
-            // Snippet: GetGoldengateDeploymentEnvironment(string, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentEnvironments/[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]";
-            // Make the request
-            GoldengateDeploymentEnvironment response = oracleDatabaseClient.GetGoldengateDeploymentEnvironment(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentEnvironmentAsync</summary>
-        public async Task GetGoldengateDeploymentEnvironmentAsync()
-        {
-            // Snippet: GetGoldengateDeploymentEnvironmentAsync(string, CallSettings)
-            // Additional: GetGoldengateDeploymentEnvironmentAsync(string, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateDeploymentEnvironments/[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]";
-            // Make the request
-            GoldengateDeploymentEnvironment response = await oracleDatabaseClient.GetGoldengateDeploymentEnvironmentAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentEnvironment</summary>
-        public void GetGoldengateDeploymentEnvironmentResourceNames()
-        {
-            // Snippet: GetGoldengateDeploymentEnvironment(GoldengateDeploymentEnvironmentName, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            GoldengateDeploymentEnvironmentName name = GoldengateDeploymentEnvironmentName.FromProjectLocationGoldengateDeploymentEnvironment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]");
-            // Make the request
-            GoldengateDeploymentEnvironment response = oracleDatabaseClient.GetGoldengateDeploymentEnvironment(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateDeploymentEnvironmentAsync</summary>
-        public async Task GetGoldengateDeploymentEnvironmentResourceNamesAsync()
-        {
-            // Snippet: GetGoldengateDeploymentEnvironmentAsync(GoldengateDeploymentEnvironmentName, CallSettings)
-            // Additional: GetGoldengateDeploymentEnvironmentAsync(GoldengateDeploymentEnvironmentName, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            GoldengateDeploymentEnvironmentName name = GoldengateDeploymentEnvironmentName.FromProjectLocationGoldengateDeploymentEnvironment("[PROJECT]", "[LOCATION]", "[GOLDENGATE_DEPLOYMENT_ENVIRONMENT]");
-            // Make the request
-            GoldengateDeploymentEnvironment response = await oracleDatabaseClient.GetGoldengateDeploymentEnvironmentAsync(name);
-            // End snippet
-        }
-
         /// <summary>Snippet for ListGoldengateDeploymentEnvironments</summary>
         public void ListGoldengateDeploymentEnvironmentsRequestObject()
         {
@@ -14240,93 +14170,6 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateConnectionType</summary>
-        public void GetGoldengateConnectionTypeRequestObject()
-        {
-            // Snippet: GetGoldengateConnectionType(GetGoldengateConnectionTypeRequest, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            GetGoldengateConnectionTypeRequest request = new GetGoldengateConnectionTypeRequest
-            {
-                GoldengateConnectionTypeName = GoldengateConnectionTypeName.FromProjectLocationGoldengateConnectionType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_TYPE]"),
-            };
-            // Make the request
-            GoldengateConnectionType response = oracleDatabaseClient.GetGoldengateConnectionType(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateConnectionTypeAsync</summary>
-        public async Task GetGoldengateConnectionTypeRequestObjectAsync()
-        {
-            // Snippet: GetGoldengateConnectionTypeAsync(GetGoldengateConnectionTypeRequest, CallSettings)
-            // Additional: GetGoldengateConnectionTypeAsync(GetGoldengateConnectionTypeRequest, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            GetGoldengateConnectionTypeRequest request = new GetGoldengateConnectionTypeRequest
-            {
-                GoldengateConnectionTypeName = GoldengateConnectionTypeName.FromProjectLocationGoldengateConnectionType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_TYPE]"),
-            };
-            // Make the request
-            GoldengateConnectionType response = await oracleDatabaseClient.GetGoldengateConnectionTypeAsync(request);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateConnectionType</summary>
-        public void GetGoldengateConnectionType()
-        {
-            // Snippet: GetGoldengateConnectionType(string, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionTypes/[GOLDENGATE_CONNECTION_TYPE]";
-            // Make the request
-            GoldengateConnectionType response = oracleDatabaseClient.GetGoldengateConnectionType(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateConnectionTypeAsync</summary>
-        public async Task GetGoldengateConnectionTypeAsync()
-        {
-            // Snippet: GetGoldengateConnectionTypeAsync(string, CallSettings)
-            // Additional: GetGoldengateConnectionTypeAsync(string, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            string name = "projects/[PROJECT]/locations/[LOCATION]/goldengateConnectionTypes/[GOLDENGATE_CONNECTION_TYPE]";
-            // Make the request
-            GoldengateConnectionType response = await oracleDatabaseClient.GetGoldengateConnectionTypeAsync(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateConnectionType</summary>
-        public void GetGoldengateConnectionTypeResourceNames()
-        {
-            // Snippet: GetGoldengateConnectionType(GoldengateConnectionTypeName, CallSettings)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = OracleDatabaseClient.Create();
-            // Initialize request argument(s)
-            GoldengateConnectionTypeName name = GoldengateConnectionTypeName.FromProjectLocationGoldengateConnectionType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_TYPE]");
-            // Make the request
-            GoldengateConnectionType response = oracleDatabaseClient.GetGoldengateConnectionType(name);
-            // End snippet
-        }
-
-        /// <summary>Snippet for GetGoldengateConnectionTypeAsync</summary>
-        public async Task GetGoldengateConnectionTypeResourceNamesAsync()
-        {
-            // Snippet: GetGoldengateConnectionTypeAsync(GoldengateConnectionTypeName, CallSettings)
-            // Additional: GetGoldengateConnectionTypeAsync(GoldengateConnectionTypeName, CancellationToken)
-            // Create client
-            OracleDatabaseClient oracleDatabaseClient = await OracleDatabaseClient.CreateAsync();
-            // Initialize request argument(s)
-            GoldengateConnectionTypeName name = GoldengateConnectionTypeName.FromProjectLocationGoldengateConnectionType("[PROJECT]", "[LOCATION]", "[GOLDENGATE_CONNECTION_TYPE]");
-            // Make the request
-            GoldengateConnectionType response = await oracleDatabaseClient.GetGoldengateConnectionTypeAsync(name);
             // End snippet
         }
 

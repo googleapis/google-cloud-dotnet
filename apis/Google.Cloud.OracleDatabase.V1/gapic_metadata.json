@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "OracleDatabaseClient",
           "rpcs": {
+            "ConfigureExascaleCloudExadataInfrastructure": {
+              "methods": [
+                "ConfigureExascaleCloudExadataInfrastructure",
+                "ConfigureExascaleCloudExadataInfrastructureAsync"
+              ]
+            },
             "CreateAutonomousDatabase": {
               "methods": [
                 "CreateAutonomousDatabase",
@@ -208,34 +214,10 @@
                 "GetGoldengateConnectionAssignmentAsync"
               ]
             },
-            "GetGoldengateConnectionType": {
-              "methods": [
-                "GetGoldengateConnectionType",
-                "GetGoldengateConnectionTypeAsync"
-              ]
-            },
             "GetGoldengateDeployment": {
               "methods": [
                 "GetGoldengateDeployment",
                 "GetGoldengateDeploymentAsync"
-              ]
-            },
-            "GetGoldengateDeploymentEnvironment": {
-              "methods": [
-                "GetGoldengateDeploymentEnvironment",
-                "GetGoldengateDeploymentEnvironmentAsync"
-              ]
-            },
-            "GetGoldengateDeploymentType": {
-              "methods": [
-                "GetGoldengateDeploymentType",
-                "GetGoldengateDeploymentTypeAsync"
-              ]
-            },
-            "GetGoldengateDeploymentVersion": {
-              "methods": [
-                "GetGoldengateDeploymentVersion",
-                "GetGoldengateDeploymentVersionAsync"
               ]
             },
             "GetOdbNetwork": {

@@ -324,4 +324,17 @@ namespace Google.Cloud.OracleDatabase.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ConfigureExascaleCloudExadataInfrastructureRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::CloudExadataInfrastructureName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcov::CloudExadataInfrastructureName CloudExadataInfrastructureName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::CloudExadataInfrastructureName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

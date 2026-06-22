@@ -51,29 +51,26 @@ namespace Google.Cloud.OracleDatabase.V1 {
             "YXRlRGVwbG95bWVudFR5cGUSXnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
             "bnMve2xvY2F0aW9ufS9nb2xkZW5nYXRlRGVwbG95bWVudFR5cGVzL3tnb2xk",
             "ZW5nYXRlX2RlcGxveW1lbnRfdHlwZX0qGWdvbGRlbmdhdGVEZXBsb3ltZW50",
-            "VHlwZXMyGGdvbGRlbmdhdGVEZXBsb3ltZW50VHlwZSJyCiJHZXRHb2xkZW5n",
-            "YXRlRGVwbG95bWVudFR5cGVSZXF1ZXN0EkwKBG5hbWUYASABKAlCPuBBAvpB",
-            "OAo2b3JhY2xlZGF0YWJhc2UuZ29vZ2xlYXBpcy5jb20vR29sZGVuZ2F0ZURl",
-            "cGxveW1lbnRUeXBlItMBCiRMaXN0R29sZGVuZ2F0ZURlcGxveW1lbnRUeXBl",
-            "c1JlcXVlc3QSTgoGcGFyZW50GAEgASgJQj7gQQL6QTgSNm9yYWNsZWRhdGFi",
-            "YXNlLmdvb2dsZWFwaXMuY29tL0dvbGRlbmdhdGVEZXBsb3ltZW50VHlwZRIW",
-            "CglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2VuGAMgASgJQgPg",
-            "QQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3JkZXJfYnkYBSABKAlCA+BB",
-            "ASK5AQolTGlzdEdvbGRlbmdhdGVEZXBsb3ltZW50VHlwZXNSZXNwb25zZRJd",
-            "Chtnb2xkZW5nYXRlX2RlcGxveW1lbnRfdHlwZXMYASADKAsyOC5nb29nbGUu",
-            "Y2xvdWQub3JhY2xlZGF0YWJhc2UudjEuR29sZGVuZ2F0ZURlcGxveW1lbnRU",
-            "eXBlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIYCgt1bnJlYWNoYWJsZRgD",
-            "IAMoCUID4EEGQvcBCiJjb20uZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNl",
-            "LnYxQh1Hb2xkZW5nYXRlRGVwbG95bWVudFR5cGVQcm90b1ABWkpjbG91ZC5n",
-            "b29nbGUuY29tL2dvL29yYWNsZWRhdGFiYXNlL2FwaXYxL29yYWNsZWRhdGFi",
-            "YXNlcGI7b3JhY2xlZGF0YWJhc2VwYqoCHkdvb2dsZS5DbG91ZC5PcmFjbGVE",
-            "YXRhYmFzZS5WMcoCHkdvb2dsZVxDbG91ZFxPcmFjbGVEYXRhYmFzZVxWMeoC",
-            "IUdvb2dsZTo6Q2xvdWQ6Ok9yYWNsZURhdGFiYXNlOjpWMWIGcHJvdG8z"));
+            "VHlwZXMyGGdvbGRlbmdhdGVEZXBsb3ltZW50VHlwZSLTAQokTGlzdEdvbGRl",
+            "bmdhdGVEZXBsb3ltZW50VHlwZXNSZXF1ZXN0Ek4KBnBhcmVudBgBIAEoCUI+",
+            "4EEC+kE4EjZvcmFjbGVkYXRhYmFzZS5nb29nbGVhcGlzLmNvbS9Hb2xkZW5n",
+            "YXRlRGVwbG95bWVudFR5cGUSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoK",
+            "cGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBEhUK",
+            "CG9yZGVyX2J5GAUgASgJQgPgQQEiuQEKJUxpc3RHb2xkZW5nYXRlRGVwbG95",
+            "bWVudFR5cGVzUmVzcG9uc2USXQobZ29sZGVuZ2F0ZV9kZXBsb3ltZW50X3R5",
+            "cGVzGAEgAygLMjguZ29vZ2xlLmNsb3VkLm9yYWNsZWRhdGFiYXNlLnYxLkdv",
+            "bGRlbmdhdGVEZXBsb3ltZW50VHlwZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
+            "KAkSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBBkL3AQoiY29tLmdvb2dsZS5j",
+            "bG91ZC5vcmFjbGVkYXRhYmFzZS52MUIdR29sZGVuZ2F0ZURlcGxveW1lbnRU",
+            "eXBlUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9vcmFjbGVkYXRhYmFz",
+            "ZS9hcGl2MS9vcmFjbGVkYXRhYmFzZXBiO29yYWNsZWRhdGFiYXNlcGKqAh5H",
+            "b29nbGUuQ2xvdWQuT3JhY2xlRGF0YWJhc2UuVjHKAh5Hb29nbGVcQ2xvdWRc",
+            "T3JhY2xlRGF0YWJhc2VcVjHqAiFHb29nbGU6OkNsb3VkOjpPcmFjbGVEYXRh",
+            "YmFzZTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentType), global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentType.Parser, new[]{ "Name", "DeploymentType", "Category", "ConnectionTypes", "DisplayName", "OggVersion", "SourceTechnologies", "SupportedCapabilities", "SupportedTechnologiesUrl", "TargetTechnologies", "DefaultUsername" }, null, new[]{ typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentType.Types.DeploymentType), typeof(global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentType.Types.DeploymentCategory) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.GetGoldengateDeploymentTypeRequest), global::Google.Cloud.OracleDatabase.V1.GetGoldengateDeploymentTypeRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentTypesRequest), global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentTypesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentTypesResponse), global::Google.Cloud.OracleDatabase.V1.ListGoldengateDeploymentTypesResponse.Parser, new[]{ "GoldengateDeploymentTypes", "NextPageToken", "Unreachable" }, null, null, null, null)
           }));
@@ -728,212 +725,6 @@ namespace Google.Cloud.OracleDatabase.V1 {
   }
 
   /// <summary>
-  /// Message for getting a GoldengateDeploymentType.
-  /// </summary>
-  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetGoldengateDeploymentTypeRequest : pb::IMessage<GetGoldengateDeploymentTypeRequest>
-  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      , pb::IBufferMessage
-  #endif
-  {
-    private static readonly pb::MessageParser<GetGoldengateDeploymentTypeRequest> _parser = new pb::MessageParser<GetGoldengateDeploymentTypeRequest>(() => new GetGoldengateDeploymentTypeRequest());
-    private pb::UnknownFieldSet _unknownFields;
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetGoldengateDeploymentTypeRequest> Parser { get { return _parser; } }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentTypeReflection.Descriptor.MessageTypes[1]; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    pbr::MessageDescriptor pb::IMessage.Descriptor {
-      get { return Descriptor; }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetGoldengateDeploymentTypeRequest() {
-      OnConstruction();
-    }
-
-    partial void OnConstruction();
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetGoldengateDeploymentTypeRequest(GetGoldengateDeploymentTypeRequest other) : this() {
-      name_ = other.name_;
-      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetGoldengateDeploymentTypeRequest Clone() {
-      return new GetGoldengateDeploymentTypeRequest(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    /// <summary>
-    /// Required. The name of the GoldengateDeploymentType to retrieve.
-    /// Format:
-    /// projects/{project}/locations/{location}/goldengateDeploymentTypes/{goldengate_deployment_type}
-    /// </summary>
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override bool Equals(object other) {
-      return Equals(other as GetGoldengateDeploymentTypeRequest);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetGoldengateDeploymentTypeRequest other) {
-      if (ReferenceEquals(other, null)) {
-        return false;
-      }
-      if (ReferenceEquals(other, this)) {
-        return true;
-      }
-      if (Name != other.Name) return false;
-      return Equals(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override int GetHashCode() {
-      int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (_unknownFields != null) {
-        hash ^= _unknownFields.GetHashCode();
-      }
-      return hash;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public override string ToString() {
-      return pb::JsonFormatter.ToDiagnosticString(this);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void WriteTo(pb::CodedOutputStream output) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      output.WriteRawMessage(this);
-    #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(output);
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (_unknownFields != null) {
-        _unknownFields.WriteTo(ref output);
-      }
-    }
-    #endif
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int CalculateSize() {
-      int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (_unknownFields != null) {
-        size += _unknownFields.CalculateSize();
-      }
-      return size;
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetGoldengateDeploymentTypeRequest other) {
-      if (other == null) {
-        return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
-    }
-
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(pb::CodedInputStream input) {
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-      input.ReadRawMessage(this);
-    #else
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-        }
-      }
-    #endif
-    }
-
-    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
-      uint tag;
-      while ((tag = input.ReadTag()) != 0) {
-      if ((tag & 7) == 4) {
-        // Abort on any end group tag.
-        return;
-      }
-      switch(tag) {
-          default:
-            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
-            break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-        }
-      }
-    }
-    #endif
-
-  }
-
-  /// <summary>
   /// Message for listing GoldengateDeploymentTypes.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -951,7 +742,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentTypeReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentTypeReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1322,7 +1113,7 @@ namespace Google.Cloud.OracleDatabase.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentTypeReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.OracleDatabase.V1.GoldengateDeploymentTypeReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
