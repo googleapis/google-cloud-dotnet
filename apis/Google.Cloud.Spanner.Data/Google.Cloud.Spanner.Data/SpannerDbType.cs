@@ -157,6 +157,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         private string ProtobufTypeName { get; }
 
+        /// <summary>
+        /// The fully qualified protobuf enum name if this is a protobuf enum. Null for non-protobuf enums
+        /// </summary>
+        private string ProtobufEnumName { get; }
+
         private SpannerDbType(TypeCode typeCode, TypeAnnotationCode typeAnnotationCode = TypeAnnotationCode.Unspecified, int? size = null)
         {
             GaxPreconditions.CheckNonNegative(size.GetValueOrDefault(), "Size must be nonnegative.");
@@ -189,6 +194,9 @@ namespace Google.Cloud.Spanner.Data
 
         private SpannerDbType(string protobufTypeName)
             : this(TypeCode.Proto) => ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
+
+        private SpannerDbType(TypeCode typeCode, string protobufEnumName)
+            : this(typeCode) => ProtobufEnumName = GaxPreconditions.CheckNotNullOrEmpty(protobufEnumName, nameof(protobufEnumName));
 
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
@@ -315,6 +323,8 @@ namespace Google.Cloud.Spanner.Data
                     return new SpannerDbType(type.StructType.Fields.Select(f => new StructField(f.Name, FromProtobufType(f.Type))).ToList());
                 case TypeCode.Proto:
                     return new SpannerDbType(type.ProtoTypeFqn);
+                case TypeCode.Enum:
+                    return ForProtobufEnum(type.ProtoTypeFqn);
                 default:
                     return FromType(type);
             }
@@ -373,6 +383,9 @@ namespace Google.Cloud.Spanner.Data
         // Internal for testing, and to continue with the practice of not exposing constructors even internally.
         internal static SpannerDbType ForProtobuf(string protobufTypeName) =>
             new SpannerDbType(protobufTypeName);
+
+        internal static SpannerDbType ForProtobufEnum(string protobyfEnumName) =>
+            new SpannerDbType(TypeCode.Enum, protobyfEnumName);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.

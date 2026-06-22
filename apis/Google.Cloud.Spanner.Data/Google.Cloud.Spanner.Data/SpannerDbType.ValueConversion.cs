@@ -110,6 +110,11 @@ namespace Google.Cloud.Spanner.Data
                 return Guid.Parse(ConvertToClrTypeImpl<string>(protobufValue, options));
             }
 
+            if (targetClrType.IsEnum)
+            {
+                return System.Enum.ToObject(targetClrType, ConvertToClrTypeImpl<long>(protobufValue, options));
+            }
+
             return ConvertToClrTypeImpl(protobufValue, targetClrType, options);
         }
 

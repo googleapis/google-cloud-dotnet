@@ -235,6 +235,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 return $"PROTO<{ProtobufTypeName}>";
             }
+            if(ProtobufEnumName != null)
+            {
+                return $"PROTO<{ProtobufEnumName}>";
+            }
             if (TypeAnnotationCode == TypeAnnotationCode.PgNumeric)
             {
                 return "NUMERIC{PG}";
