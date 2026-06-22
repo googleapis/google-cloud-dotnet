@@ -148,6 +148,24 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f");
         }
 
+        private static IEnumerable<DayOfWeek> GetEnumsForArray()
+        {
+            yield return DayOfWeek.Monday;
+            yield return DayOfWeek.Thursday;
+        }
+
+        private static IEnumerable<Color> GetTopLevelEnumsForArray()
+        {
+            yield return Color.Blue;
+            yield return Color.Red;
+        }
+
+        private static IEnumerable<Pet.Types.Species> GetNestedEnumsForArray()
+        {
+            yield return Pet.Types.Species.Horse;
+            yield return Pet.Types.Species.Cat;
+        }
+
         private static readonly BigInteger MaxValueForPgNumeric = BigInteger.Pow(10, 147455) - 1;
 
         private static readonly string ExpectedMaxValueForPgNumeric = MaxValueForPgNumeric.ToString();
@@ -205,6 +223,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (ushort) 1, SpannerDbType.Float32, "1" };
             yield return new object[] { "1", SpannerDbType.Float32, "1" };
             yield return new object[] { "1.5", SpannerDbType.Float32, "1.5" };
+            yield return new object[] { Color.Red, SpannerDbType.Float32, "1" };
+            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.Float32, "2" };
             yield return new object[] { DBNull.Value, SpannerDbType.Float32, "null" };
 
             // Spanner type = Float64 tests.
@@ -226,6 +246,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (ushort)1, SpannerDbType.Float64, "1" };
             yield return new object[] { "1", SpannerDbType.Float64, "1" };
             yield return new object[] { "1.5", SpannerDbType.Float64, "1.5" };
+            yield return new object[] { Color.Red, SpannerDbType.Float64, "1" };
+            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.Float64, "2" };
             yield return new object[] { DBNull.Value, SpannerDbType.Float64, "null" };
 
             // Spanner type = Int64 tests.
@@ -246,6 +268,8 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (ulong)1, SpannerDbType.Int64, Quote("1") };
             yield return new object[] { (short)1, SpannerDbType.Int64, Quote("1") };
             yield return new object[] { (ushort)1, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { Color.Red, SpannerDbType.Int64, Quote("1") };
+            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.Int64, Quote("2") };
             yield return new object[] { "1", SpannerDbType.Int64, Quote("1") };
 
             // Spanner type = Bool tests.
@@ -300,6 +324,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { (short)1, SpannerDbType.String, Quote("1") };
             yield return new object[] { (ushort)1, SpannerDbType.String, Quote("1") };
             yield return new object[] { s_testDate, SpannerDbType.String, Quote("2017-01-31T03:15:30.5Z") };
+            yield return new object[] { Color.Red, SpannerDbType.String, Quote(Color.Red.ToString()) };
+            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.String, Quote(Pet.Types.Species.Dog.ToString()) };
+
             // Spanner type = Numeric tests.
             yield return new object[] { SpannerNumeric.Epsilon, SpannerDbType.Numeric, Quote("0.000000001") };
             yield return new object[] { (byte)1, SpannerDbType.Numeric, Quote("1") };
@@ -382,11 +409,22 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { s_bytesToEncode, SpannerDbType.Bytes, Quote(s_base64Encoded) };
             yield return new object[] { "passthrubadbytes", SpannerDbType.Bytes, Quote("passthrubadbytes") };
 
+            // Protobuf Enum
+            yield return new object[] { Color.Red, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(((long) Color.Red).ToString()) };
+            yield return new object[] { Pet.Types.Species.Dog, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(((long) Pet.Types.Species.Dog).ToString()) };
+            yield return new object[] { 1, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(1.ToString()) };
+            yield return new object[] { "1", SpannerDbType.FromClrType(typeof(Pet.Types.Species)), Quote(1.ToString()) };
+
             // List test cases (list of type X).
             yield return new object[]
             {
                 new List<string>(GetStringsForArray()), SpannerDbType.ArrayOf(SpannerDbType.String),
                 "[ \"abc\", \"123\", \"def\" ]"
+            };
+            yield return new object[]
+            {
+                new List<DayOfWeek>(GetEnumsForArray()), SpannerDbType.ArrayOf(SpannerDbType.String),
+                $"[ {Quote(DayOfWeek.Monday.ToString())}, {Quote(DayOfWeek.Thursday.ToString())} ]"
             };
             yield return new object[]
             {
@@ -442,6 +480,16 @@ namespace Google.Cloud.Spanner.Data.Tests
             {
                 new List<Guid>(GetGuidsForArray()), SpannerDbType.ArrayOf(SpannerDbType.Uuid),
                 "[ \"00000000-0000-0000-0000-000000000000\", \"8f8c4746-17b1-4d9f-a634-58e11942095f\" ]"
+            };
+            yield return new object[]
+            {
+                new List<Color>(GetTopLevelEnumsForArray()), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))),
+                $"[ {Quote(((long) Color.Blue).ToString())}, {Quote(((long) Color.Red).ToString())} ]"
+            };
+            yield return new object[]
+            {
+                new List<Pet.Types.Species>(GetNestedEnumsForArray()), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))),
+                $"[ {Quote(((long) Pet.Types.Species.Horse).ToString())}, {Quote(((long) Pet.Types.Species.Cat).ToString())} ]"
             };
             // JSON can not be converted from Value to Clr, as there is no unique Clr type for JSON.
             yield return new object[]

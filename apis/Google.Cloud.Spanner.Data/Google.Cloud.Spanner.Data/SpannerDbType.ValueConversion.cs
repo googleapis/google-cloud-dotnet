@@ -306,6 +306,20 @@ namespace Google.Cloud.Spanner.Data
                         return Value.ForString(V1.Interval.Parse(stringValue).ToString());
                     }
                     throw new ArgumentException($"Interval parameters must be of type {typeof(Interval).FullName} or string");
+                case TypeCode.Enum:
+                    if (value is string enumStr)
+                    {
+                        return Value.ForString(enumStr);
+                    }
+                    if (value is System.Enum or sbyte or short or int or long)
+                    {
+                        return Value.ForString(Convert.ToInt64(value, InvariantCulture).ToString(InvariantCulture));
+                    }
+                    if (value is byte or ushort or uint or ulong)
+                    {
+                        return Value.ForString(Convert.ToUInt64(value, InvariantCulture).ToString(InvariantCulture));
+                    }
+                    throw new ArgumentException($"Enum parameters must be of one of the following types: System.Enum, string, sbyte, short, int, long, byte, ushort, uint, ulong");
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
             }
@@ -720,6 +734,18 @@ namespace Google.Cloud.Spanner.Data
                             $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}");
                 }
             }
+
+            if (targetClrType.IsEnum)
+            {
+                return wireValue.KindCase switch
+                {
+                    Value.KindOneofCase.NumberValue => System.Enum.ToObject(targetClrType, Convert.ToInt64(wireValue.NumberValue, InvariantCulture)),
+                    Value.KindOneofCase.StringValue => System.Enum.Parse(targetClrType, wireValue.StringValue),
+                    _ => throw new InvalidOperationException(
+                            $"Invalid Type conversion from {wireValue.KindCase} to {targetClrType.FullName}")
+                };
+            }
+
             if (typeof(IList).IsAssignableFrom(targetClrType))
             {
                 if (targetClrType == typeof(IList))

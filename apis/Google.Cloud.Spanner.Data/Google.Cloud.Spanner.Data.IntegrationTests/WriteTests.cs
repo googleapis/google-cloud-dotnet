@@ -82,13 +82,17 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BoolValue", SpannerDbType.Bool, null },
                 { "Float32Value", SpannerDbType.Float32, null },
                 { "Int64Value", SpannerDbType.Int64, null },
+                { "Int64BackedEnumValue", SpannerDbType.Int64, null },
                 { "Float64Value", SpannerDbType.Float64, null },
                 { "StringValue", SpannerDbType.String, null },
+                { "StringBackedEnumValue", SpannerDbType.String, null },
                 { "BytesValue", SpannerDbType.Bytes, null },
                 { "TimestampValue", SpannerDbType.Timestamp, null },
                 { "DateValue", SpannerDbType.Date, null },
                 { "NumericValue", SpannerDbType.Numeric, null },
                 { "JsonValue", SpannerDbType.Json, null },
+                { "TopLevelEnumValue", SpannerDbType.FromClrType(typeof(Color)), null },
+                { "NestedEnumValue", SpannerDbType.FromClrType(typeof(Pet.Types.Species)), null },
                 { "ProtobufDurationValue", SpannerDbType.FromClrType(typeof(Duration)), null },
                 { "ProtobufRectangleValue", SpannerDbType.FromClrType(typeof(Rectangle)), null },
                 { "ProtobufPersonValue", SpannerDbType.FromClrType(typeof(Person)), null },
@@ -105,6 +109,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), null },
                 { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null },
                 { "JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), null },
+                { "TopLevelEnumArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))), null },
+                { "NestedEnumArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))), null },
                 { "ProtobufDurationArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))), null },
                 { "ProtobufRectangleArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))), null },
                 { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), null },
@@ -125,9 +131,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64BackedEnumValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float32Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("StringValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("StringBackedEnumValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("DateValue")));
@@ -136,6 +144,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufDurationValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufRectangleValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufPersonValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("TopLevelEnumValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64ArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float32ArrayValue")));
@@ -153,6 +162,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufPersonArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufValueWrapperArrayValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("ProtobufValueArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("TopLevelEnumArrayValue")));
 
                 if (_fixture.RunningOnEmulator || !isDml)
                 {
@@ -214,13 +224,21 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             var testUuid = Guid.NewGuid();
             Guid?[] testUuidArray = { Guid.NewGuid(), null, Guid.NewGuid() };
 
+            var testTopLevelEnum = Color.Red;
+            var testNestedEnum = Pet.Types.Species.Horse;
+
+            Color?[] testTopLevelEnumArray = [Color.Blue, null, Color.Unspecified];
+            Pet.Types.Species?[] testNestedEnumArray = [Pet.Types.Species.Dog, null, Pet.Types.Species.Unspecified];
+
             var parameters = new SpannerParameterCollection
             {
                 { "BoolValue", SpannerDbType.Bool, true },
                 { "Int64Value", SpannerDbType.Int64, 1 },
+                { "Int64BackedEnumValue", SpannerDbType.Int64, DayOfWeek.Monday },
                 { "Float32Value", SpannerDbType.Float32, 2.718f },
                 { "Float64Value", SpannerDbType.Float64, 3.14 },
                 { "StringValue", SpannerDbType.String, "abc" },
+                { "StringBackedEnumValue", SpannerDbType.String, DayOfWeek.Monday },
                 { "BytesValue", SpannerDbType.Bytes, new byte[] { 4, 5, 6 } },
                 { "TimestampValue", SpannerDbType.Timestamp, testTimestamp },
                 { "DateValue", SpannerDbType.Date, testDate },
@@ -230,6 +248,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufRectangleValue", SpannerDbType.FromClrType(typeof(Rectangle)), testRectangle },
                 { "ProtobufPersonValue", SpannerDbType.FromClrType(typeof(Person)), testPerson },
                 { "ProtobufValueWrapperValue", SpannerDbType.FromClrType(typeof(ValueWrapper)), testValueWrapper },
+                { "TopLevelEnumValue", SpannerDbType.FromClrType(typeof(Color)), testTopLevelEnum },
+                { "NestedEnumValue", SpannerDbType.FromClrType(typeof(Pet.Types.Species)), testNestedEnum },
                 { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), bArray },
                 { "Float32ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float32), fArray },
                 { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), lArray },
@@ -246,6 +266,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufPersonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))), pArray },
                 { "ProtobufValueWrapperArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))), vwArray },
                 { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), pvArray },
+                { "TopLevelEnumArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))), testTopLevelEnumArray },
+                { "NestedEnumArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))), testNestedEnumArray },
                 { "UuidValue", SpannerDbType.Uuid, testUuid },
                 { "UuidArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Uuid), testUuidArray },
             };
@@ -262,9 +284,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 Assert.True(reader.GetFieldValue<bool>(reader.GetOrdinal("BoolValue")));
                 Assert.Equal(1, reader.GetFieldValue<long>(reader.GetOrdinal("Int64Value")));
+                Assert.Equal((long) DayOfWeek.Monday, reader.GetFieldValue<long>(reader.GetOrdinal("Int64BackedEnumValue")));
                 Assert.Equal(2.718f, reader.GetFieldValue<float>(reader.GetOrdinal("Float32Value")), 3);
                 Assert.Equal(3.14, reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")), 2);
                 Assert.Equal("abc", reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
+                Assert.Equal(DayOfWeek.Monday.ToString(), reader.GetFieldValue<string>(reader.GetOrdinal("StringBackedEnumValue")));
                 Assert.Equal(new byte[] { 4, 5, 6 }, reader.GetFieldValue<byte[]>(reader.GetOrdinal("BytesValue")));
                 long length = reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, null, 0, int.MaxValue);
                 Assert.Equal(3L, length);
@@ -278,6 +302,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(testRectangle, reader.GetFieldValue<Rectangle>(reader.GetOrdinal("ProtobufRectangleValue")));
                 Assert.Equal(testPerson, reader.GetFieldValue<Person>(reader.GetOrdinal("ProtobufPersonValue")));
                 Assert.Equal(testValueWrapper, reader.GetFieldValue<ValueWrapper>(reader.GetOrdinal("ProtobufValueWrapperValue")));
+                Assert.Equal(testTopLevelEnum, reader.GetFieldValue<Color>(reader.GetOrdinal("TopLevelEnumValue")));
+                Assert.Equal(testNestedEnum, reader.GetFieldValue<Pet.Types.Species>(reader.GetOrdinal("NestedEnumValue")));
                 Assert.Equal(bArray, reader.GetFieldValue<bool?[]>(reader.GetOrdinal("BoolArrayValue")));
                 Assert.Equal(lArray, reader.GetFieldValue<long?[]>(reader.GetOrdinal("Int64ArrayValue")));
                 Assert.Equal(fArray, reader.GetFieldValue<float?[]>(reader.GetOrdinal("Float32ArrayValue")));
@@ -294,6 +320,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(pArray, reader.GetFieldValue<Person[]>(reader.GetOrdinal("ProtobufPersonArrayValue")));
                 Assert.Equal(vwArray, reader.GetFieldValue<ValueWrapper[]>(reader.GetOrdinal("ProtobufValueWrapperArrayValue")));
                 Assert.Equal(pvArray, reader.GetFieldValue<Value[]>(reader.GetOrdinal("ProtobufValueArrayValue")));
+                Assert.Equal(testTopLevelEnumArray, reader.GetFieldValue<Color?[]>(reader.GetOrdinal("TopLevelEnumArrayValue")));
+                Assert.Equal(testNestedEnumArray, reader.GetFieldValue<Pet.Types.Species?[]>(reader.GetOrdinal("NestedEnumArrayValue")));
                 Assert.Equal(testUuid, reader.GetFieldValue<Guid>(reader.GetOrdinal("UuidValue")));
                 Assert.Equal(testUuidArray, reader.GetFieldValue<Guid?[]>(reader.GetOrdinal("UuidArrayValue")));
                 if (_fixture.RunningOnEmulator || !isDml)
@@ -388,6 +416,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), new Value[0] },
                 { "ProtobufPersonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))), new Person[0] },
                 { "ProtobufValueWrapperArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))), new ValueWrapper[0] },
+                { "TopLevelEnumArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))), new Color[0] },
+                { "NestedEnumArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))), new Pet.Types.Species[0] },
             };
 
             Assert.Equal(1, await InsertAsync(parameters));
@@ -408,6 +438,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(new Value[0], reader.GetFieldValue<Value[]>(reader.GetOrdinal("ProtobufValueArrayValue")));
                 Assert.Equal(new Person[0], reader.GetFieldValue<Person[]>(reader.GetOrdinal("ProtobufPersonArrayValue")));
                 Assert.Equal(new ValueWrapper[0], reader.GetFieldValue<ValueWrapper[]>(reader.GetOrdinal("ProtobufValueWrapperArrayValue")));
+                Assert.Equal(new Color[0], reader.GetFieldValue<Color[]>(reader.GetOrdinal("TopLevelEnumArrayValue")));
+                Assert.Equal(new Pet.Types.Species[0], reader.GetFieldValue<Pet.Types.Species[]>(reader.GetOrdinal("NestedEnumArrayValue")));
             }, GetConnection(), GetWriteTestReader);
         }
 

@@ -47,12 +47,14 @@ namespace Google.Cloud.Spanner.Data.Tests
             yield return new object[] { SpannerDbType.String, DbType.String, true };
             yield return new object[] { SpannerDbType.Uuid, DbType.Guid, true };
             // There is no DbType that will map automatically to SpannerDbType.Json, SpannerDbType.PgJsonb,
-            // SpannerDbType.PgOid, SpannerDbType protobuf or SpannerDbType.Interval.
+            // SpannerDbType.PgOid, SpannerDbType protobuf, Protobuf Enum, or SpannerDbType.Interval.
             yield return new object[] { SpannerDbType.Json, DbType.String, false };
             yield return new object[] { SpannerDbType.PgJsonb, DbType.String, false };
             yield return new object[] { SpannerDbType.PgOid, DbType.Int64, false };
             yield return new object[] { SpannerDbType.FromClrType(typeof(Duration)), DbType.Object, false };
             yield return new object[] { SpannerDbType.FromClrType(typeof(Rectangle)), DbType.Object, false };
+            yield return new object[] { SpannerDbType.FromClrType(typeof(Color)), DbType.Object, false };
+            yield return new object[] { SpannerDbType.FromClrType(typeof(Pet.Types.Species)), DbType.Object, false };
             yield return new object[] { SpannerDbType.Interval, DbType.Object, false };
         }
 
@@ -110,6 +112,9 @@ namespace Google.Cloud.Spanner.Data.Tests
             // We also test with Duration and Rectangle as a general case.
             yield return new object[] { Duration.FromTimeSpan(TimeSpan.FromSeconds(10)), SpannerDbType.FromClrType(typeof(Duration)), DbType.Object, typeof(Value) };
             yield return new object[] { testRectangle, SpannerDbType.FromClrType(typeof(Rectangle)), DbType.Object, typeof(Value) };
+
+            yield return new object[] { Color.Red, SpannerDbType.FromClrType(typeof(Color)), DbType.Object, typeof(Value) };
+            yield return new object[] { Pet.Types.Species.Cat, SpannerDbType.FromClrType(typeof(Pet.Types.Species)), DbType.Object, typeof(Value) };
         }
 
         [Theory]

@@ -111,6 +111,13 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Uuid { get; } = new SpannerDbType(TypeCode.Uuid);
 
+        /// <summary>
+        /// Protobuf message
+        /// </summary>
+        internal const string ProtobufMessage = "Protobuf Message";
+
+        internal const string ProtobufEnum = "Protobuf Enum";
+
         private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
             = new Dictionary<V1.Type, SpannerDbType>
             {
@@ -187,8 +194,8 @@ namespace Google.Cloud.Spanner.Data
         private SpannerDbType(List<StructField> structFields)
             : this(TypeCode.Struct) => StructFields = structFields;
 
-        private SpannerDbType(string protobufTypeName)
-            : this(TypeCode.Proto) => ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
+        private SpannerDbType(TypeCode typeCode, string protobufTypeName)
+            : this(typeCode) => ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
 
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
@@ -314,7 +321,8 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Struct:
                     return new SpannerDbType(type.StructType.Fields.Select(f => new StructField(f.Name, FromProtobufType(f.Type))).ToList());
                 case TypeCode.Proto:
-                    return new SpannerDbType(type.ProtoTypeFqn);
+                case TypeCode.Enum:
+                    return new SpannerDbType(type.Code, type.ProtoTypeFqn);
                 default:
                     return FromType(type);
             }
@@ -341,6 +349,7 @@ namespace Google.Cloud.Spanner.Data
                             }
                     };
                 case TypeCode.Proto:
+                case TypeCode.Enum:
                     return new V1.Type
                     {
                         Code = TypeCode,
@@ -372,7 +381,10 @@ namespace Google.Cloud.Spanner.Data
 
         // Internal for testing, and to continue with the practice of not exposing constructors even internally.
         internal static SpannerDbType ForProtobuf(string protobufTypeName) =>
-            new SpannerDbType(protobufTypeName);
+            new SpannerDbType(TypeCode.Proto, protobufTypeName);
+
+        // Internal for testing
+        internal static SpannerDbType ForEnum(string enumFQN) => new(TypeCode.Enum, enumFQN);
 
         /// <summary>
         /// Returns a SpannerDbType given a ClrType.
@@ -425,7 +437,11 @@ namespace Google.Cloud.Spanner.Data
             }
             if (ProtobufCache.GetProtobufMessageDescriptor(type) is MessageDescriptor descriptor)
             {
-                return new SpannerDbType(descriptor.FullName);
+                return new SpannerDbType(TypeCode.Proto, descriptor.FullName);
+            }
+            if (type.IsEnum && ProtobufEnumCache.GetEnumDescriptor(type) is EnumDescriptor enumDescriptor)
+            {
+                return new SpannerDbType(TypeCode.Enum, enumDescriptor.FullName);
             }
             if (type == typeof(Interval))
             {
