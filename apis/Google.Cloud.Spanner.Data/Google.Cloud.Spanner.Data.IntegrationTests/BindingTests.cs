@@ -42,6 +42,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private static readonly ValueWrapper testValueWrapper = new ValueWrapper { OneValue = Value.ForString("Hello") };
 
+        private static readonly Color testColor = Color.Red;
+
+        private static readonly Pet.Types.Species testSpecies = Pet.Types.Species.Cat;
+
         private readonly SpannerDatabaseFixture _fixture;
 
         public BindingTests(SpannerDatabaseFixture fixture) =>
@@ -66,6 +70,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.FromClrType(typeof(Rectangle)),
             SpannerDbType.FromClrType(typeof(Person)),
             SpannerDbType.FromClrType(typeof(ValueWrapper)),
+            SpannerDbType.FromClrType(typeof(Color)),
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             SpannerDbType.ArrayOf(SpannerDbType.String),
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
@@ -83,6 +88,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))),
         };
 
         // These SpannerDbTypes are unsupported on production.
@@ -391,6 +397,34 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindProtobufValueWrapperEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             new ValueWrapper[] { });
+
+        [Fact]
+        public async Task BindTopLevelEnum() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Color)), testColor, r => r.GetFieldValue<Color>(0));
+
+        [Fact]
+        public async Task BindNestedEnum() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Pet.Types.Species)), testSpecies, r => r.GetFieldValue<Pet.Types.Species>(0));
+
+        [Fact]
+        public async Task BindTopLevelEnumArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))),
+                new Color?[] { testColor, null, Color.Unspecified });
+
+        [Fact]
+        public async Task BindNestedEnumArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))),
+                new Pet.Types.Species?[] { testSpecies, null, Pet.Types.Species.Unspecified });
+
+        [Fact]
+        public async Task BindTopLevelEnumEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))),
+            new Color[] { });
+
+        [Fact]
+        public async Task BindNestedEnumEmptyArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))),
+                new Pet.Types.Species?[] { });
 
         private void MaybeSkipIfOnProduction(SpannerDbType spannerDbType) =>
             Skip.If(!_fixture.RunningOnEmulator && BindProductionUnsupportedNullData.Any<SpannerDbType>(spannerDbType.Equals),

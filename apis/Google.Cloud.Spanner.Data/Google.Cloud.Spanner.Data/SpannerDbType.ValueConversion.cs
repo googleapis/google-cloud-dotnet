@@ -14,6 +14,7 @@
 
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf;
+using Google.Protobuf.Reflection;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections;
@@ -306,6 +307,12 @@ namespace Google.Cloud.Spanner.Data
                         return Value.ForString(V1.Interval.Parse(stringValue).ToString());
                     }
                     throw new ArgumentException($"Interval parameters must be of type {typeof(Interval).FullName} or string");
+                case TypeCode.Enum:
+                    if (ProtobufTypeName == ProtobufEnumCache.GetEnumDescriptor(value.GetType())?.FullName)
+                    {
+                        return Value.ForString(Convert.ToInt64(value, InvariantCulture).ToString(InvariantCulture));
+                    }
+                    throw new ArgumentException($"Expected Protobuf enum of type {ProtobufTypeName}");
                 default:
                     throw new ArgumentOutOfRangeException(nameof(TypeCode), TypeCode, null);
             }
@@ -751,6 +758,14 @@ namespace Google.Cloud.Spanner.Data
             {
                 var messageBytes = Convert.FromBase64String(wireValue.StringValue);
                 return parser.ParseFrom(messageBytes);
+            }
+
+            if (TypeCode == TypeCode.Enum
+                && ProtobufEnumCache.GetEnumDescriptor(targetClrType) is EnumDescriptor enumDescriptor
+                && ProtobufTypeName == enumDescriptor.FullName)
+            {
+                // Spanner Protobufs are returned as stringified enum integer constants, e.g. "2"
+                return System.Enum.Parse(targetClrType, wireValue.StringValue);
             }
 
             throw new ArgumentException(

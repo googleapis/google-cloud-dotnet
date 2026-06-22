@@ -17,6 +17,7 @@ using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Xunit;
 using static Google.Cloud.Spanner.Data.SpannerConversionOptions;
 
@@ -57,6 +58,12 @@ namespace Google.Cloud.Spanner.Data.Tests
                 {SpannerDbType.FromClrType(typeof(Duration)), SpannerDbType.ForProtobuf(Duration.Descriptor.FullName)};
             yield return new object[]
                 {SpannerDbType.FromClrType(typeof(Rectangle)), SpannerDbType.ForProtobuf(Rectangle.Descriptor.FullName)};
+            // Top Level Enum
+            yield return new object[]
+                {SpannerDbType.FromClrType(typeof(Color)), SpannerDbType.ForEnum(ColorReflection.Descriptor.EnumTypes.Single().FullName)};
+            // Nested Enum
+            yield return new object[]
+                {SpannerDbType.FromClrType(typeof(Pet.Types.Species)), SpannerDbType.ForEnum(Pet.Descriptor.EnumTypes.Single().FullName)};
         }
 
         [Theory]
@@ -138,6 +145,14 @@ namespace Google.Cloud.Spanner.Data.Tests
 
             yield return new object[] { $"PROTO<{Rectangle.Descriptor.FullName}>", SpannerDbType.FromClrType(typeof(Rectangle)) };
             yield return new object[] { $"ARRAY<PROTO<{Rectangle.Descriptor.FullName}>>", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))) };
+
+            // Top Level Enum
+            yield return new object[] { $"ENUM<{ColorReflection.Descriptor.EnumTypes.Single().FullName}>", SpannerDbType.FromClrType(typeof(Color)) };
+            yield return new object[] { $"ARRAY<ENUM<{ColorReflection.Descriptor.EnumTypes.Single().FullName}>>", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Color))) };
+
+            // Nested Enum
+            yield return new object[] { $"ENUM<{Pet.Descriptor.EnumTypes.Single().FullName}>", SpannerDbType.FromClrType(typeof(Pet.Types.Species)) };
+            yield return new object[] { $"ARRAY<ENUM<{Pet.Descriptor.EnumTypes.Single().FullName}>>", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Pet.Types.Species))) };
 
             yield return new object[] { "ARRAY <  STRING (   5 )>", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
             yield return new object[] { "ARRAY<  STRING (   5 )  > ", SpannerDbType.ArrayOf(SpannerDbType.String.WithSize(5)) };
