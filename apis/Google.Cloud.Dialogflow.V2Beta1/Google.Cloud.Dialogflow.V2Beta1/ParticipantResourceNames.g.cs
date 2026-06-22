@@ -897,6 +897,25 @@ namespace Google.Cloud.Dialogflow.V2Beta1
         }
     }
 
+    public partial class KnowledgeAssistAnswer
+    {
+        public partial class Types
+        {
+            public partial class AdditionalSuggestedQueryResult
+            {
+                /// <summary>
+                /// <see cref="AnswerRecordName"/>-typed view over the <see cref="AnswerRecord"/> resource name
+                /// property.
+                /// </summary>
+                public AnswerRecordName AnswerRecordAsAnswerRecordName
+                {
+                    get => string.IsNullOrEmpty(AnswerRecord) ? null : AnswerRecordName.Parse(AnswerRecord, allowUnparsed: true);
+                    set => AnswerRecord = value?.ToString() ?? "";
+                }
+            }
+        }
+    }
+
     public partial class BidiStreamingAnalyzeContentRequest
     {
         public partial class Types
