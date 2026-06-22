@@ -1,0 +1,132 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.agentregistry.v1",
+  "libraryPackage": "Google.Cloud.AgentRegistry.V1",
+  "services": {
+    "AgentRegistry": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AgentRegistryClient",
+          "rpcs": {
+            "CreateBinding": {
+              "methods": [
+                "CreateBinding",
+                "CreateBindingAsync"
+              ]
+            },
+            "CreateService": {
+              "methods": [
+                "CreateService",
+                "CreateServiceAsync"
+              ]
+            },
+            "DeleteBinding": {
+              "methods": [
+                "DeleteBinding",
+                "DeleteBindingAsync"
+              ]
+            },
+            "DeleteService": {
+              "methods": [
+                "DeleteService",
+                "DeleteServiceAsync"
+              ]
+            },
+            "FetchAvailableBindings": {
+              "methods": [
+                "FetchAvailableBindings",
+                "FetchAvailableBindingsAsync"
+              ]
+            },
+            "GetAgent": {
+              "methods": [
+                "GetAgent",
+                "GetAgentAsync"
+              ]
+            },
+            "GetBinding": {
+              "methods": [
+                "GetBinding",
+                "GetBindingAsync"
+              ]
+            },
+            "GetEndpoint": {
+              "methods": [
+                "GetEndpoint",
+                "GetEndpointAsync"
+              ]
+            },
+            "GetMcpServer": {
+              "methods": [
+                "GetMcpServer",
+                "GetMcpServerAsync"
+              ]
+            },
+            "GetService": {
+              "methods": [
+                "GetService",
+                "GetServiceAsync"
+              ]
+            },
+            "ListAgents": {
+              "methods": [
+                "ListAgents",
+                "ListAgentsAsync"
+              ]
+            },
+            "ListBindings": {
+              "methods": [
+                "ListBindings",
+                "ListBindingsAsync"
+              ]
+            },
+            "ListEndpoints": {
+              "methods": [
+                "ListEndpoints",
+                "ListEndpointsAsync"
+              ]
+            },
+            "ListMcpServers": {
+              "methods": [
+                "ListMcpServers",
+                "ListMcpServersAsync"
+              ]
+            },
+            "ListServices": {
+              "methods": [
+                "ListServices",
+                "ListServicesAsync"
+              ]
+            },
+            "SearchAgents": {
+              "methods": [
+                "SearchAgents",
+                "SearchAgentsAsync"
+              ]
+            },
+            "SearchMcpServers": {
+              "methods": [
+                "SearchMcpServers",
+                "SearchMcpServersAsync"
+              ]
+            },
+            "UpdateBinding": {
+              "methods": [
+                "UpdateBinding",
+                "UpdateBindingAsync"
+              ]
+            },
+            "UpdateService": {
+              "methods": [
+                "UpdateService",
+                "UpdateServiceAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

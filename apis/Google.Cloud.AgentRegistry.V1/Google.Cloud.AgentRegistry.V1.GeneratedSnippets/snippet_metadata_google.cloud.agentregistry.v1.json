@@ -1,0 +1,5613 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.AgentRegistry.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.agentregistry.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListAgents_sync",
+      "title": "ListAgentsRequestObject",
+      "description": "Snippet for ListAgents",
+      "file": "AgentRegistryClient.ListAgentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgents",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListAgents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListAgents_async",
+      "title": "ListAgentsRequestObjectAsync",
+      "description": "Snippet for ListAgentsAsync",
+      "file": "AgentRegistryClient.ListAgentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListAgents_sync_flattened",
+      "title": "ListAgents",
+      "description": "Snippet for ListAgents",
+      "file": "AgentRegistryClient.ListAgentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgents",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListAgents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListAgents_async_flattened",
+      "title": "ListAgentsAsync",
+      "description": "Snippet for ListAgentsAsync",
+      "file": "AgentRegistryClient.ListAgentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListAgents_sync_flattened_resourceNames",
+      "title": "ListAgentsResourceNames",
+      "description": "Snippet for ListAgents",
+      "file": "AgentRegistryClient.ListAgentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgents",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListAgents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListAgents_async_flattened_resourceNames",
+      "title": "ListAgentsResourceNamesAsync",
+      "description": "Snippet for ListAgentsAsync",
+      "file": "AgentRegistryClient.ListAgentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAgentsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchAgents_sync",
+      "title": "SearchAgentsRequestObject",
+      "description": "Snippet for SearchAgents",
+      "file": "AgentRegistryClient.SearchAgentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAgents",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchAgents",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.SearchAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.SearchAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchAgents_async",
+      "title": "SearchAgentsRequestObjectAsync",
+      "description": "Snippet for SearchAgentsAsync",
+      "file": "AgentRegistryClient.SearchAgentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAgentsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.SearchAgentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.SearchAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchAgents_sync_flattened",
+      "title": "SearchAgents",
+      "description": "Snippet for SearchAgents",
+      "file": "AgentRegistryClient.SearchAgentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAgents",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchAgents",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.SearchAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchAgents_async_flattened",
+      "title": "SearchAgentsAsync",
+      "description": "Snippet for SearchAgentsAsync",
+      "file": "AgentRegistryClient.SearchAgentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAgentsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.SearchAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchAgents_sync_flattened_resourceNames",
+      "title": "SearchAgentsResourceNames",
+      "description": "Snippet for SearchAgents",
+      "file": "AgentRegistryClient.SearchAgentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAgents",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchAgents",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.SearchAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchAgents_async_flattened_resourceNames",
+      "title": "SearchAgentsResourceNamesAsync",
+      "description": "Snippet for SearchAgentsAsync",
+      "file": "AgentRegistryClient.SearchAgentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchAgentsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchAgentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.SearchAgentsResponse, Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchAgents",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchAgents",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetAgent_sync",
+      "title": "GetAgentRequestObject",
+      "description": "Snippet for GetAgent",
+      "file": "AgentRegistryClient.GetAgentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgent",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Agent",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAgent",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetAgent",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetAgent_async",
+      "title": "GetAgentRequestObjectAsync",
+      "description": "Snippet for GetAgentAsync",
+      "file": "AgentRegistryClient.GetAgentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetAgentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAgent",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetAgent",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetAgent_sync_flattened",
+      "title": "GetAgent",
+      "description": "Snippet for GetAgent",
+      "file": "AgentRegistryClient.GetAgentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgent",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetAgent",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Agent",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAgent",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetAgent",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetAgent_async_flattened",
+      "title": "GetAgentAsync",
+      "description": "Snippet for GetAgentAsync",
+      "file": "AgentRegistryClient.GetAgentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAgent",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetAgent",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetAgent_sync_flattened_resourceNames",
+      "title": "GetAgentResourceNames",
+      "description": "Snippet for GetAgent",
+      "file": "AgentRegistryClient.GetAgentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgent",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetAgent",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.AgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Agent",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAgent",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetAgent",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetAgent_async_flattened_resourceNames",
+      "title": "GetAgentResourceNamesAsync",
+      "description": "Snippet for GetAgentAsync",
+      "file": "AgentRegistryClient.GetAgentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAgentAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetAgentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.AgentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Agent>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetAgent",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetAgent",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListEndpoints_sync",
+      "title": "ListEndpointsRequestObject",
+      "description": "Snippet for ListEndpoints",
+      "file": "AgentRegistryClient.ListEndpointsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEndpoints",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListEndpoints",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListEndpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListEndpointsResponse, Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListEndpoints",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListEndpoints",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListEndpoints_async",
+      "title": "ListEndpointsRequestObjectAsync",
+      "description": "Snippet for ListEndpointsAsync",
+      "file": "AgentRegistryClient.ListEndpointsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEndpointsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListEndpointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListEndpointsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListEndpointsResponse, Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListEndpoints",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListEndpoints",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListEndpoints_sync_flattened",
+      "title": "ListEndpoints",
+      "description": "Snippet for ListEndpoints",
+      "file": "AgentRegistryClient.ListEndpointsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEndpoints",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListEndpoints",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListEndpointsResponse, Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListEndpoints",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListEndpoints",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListEndpoints_async_flattened",
+      "title": "ListEndpointsAsync",
+      "description": "Snippet for ListEndpointsAsync",
+      "file": "AgentRegistryClient.ListEndpointsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEndpointsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListEndpointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListEndpointsResponse, Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListEndpoints",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListEndpoints",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListEndpoints_sync_flattened_resourceNames",
+      "title": "ListEndpointsResourceNames",
+      "description": "Snippet for ListEndpoints",
+      "file": "AgentRegistryClient.ListEndpointsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEndpoints",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListEndpoints",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListEndpointsResponse, Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListEndpoints",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListEndpoints",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListEndpoints_async_flattened_resourceNames",
+      "title": "ListEndpointsResourceNamesAsync",
+      "description": "Snippet for ListEndpointsAsync",
+      "file": "AgentRegistryClient.ListEndpointsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListEndpointsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListEndpointsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListEndpointsResponse, Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListEndpoints",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListEndpoints",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetEndpoint_sync",
+      "title": "GetEndpointRequestObject",
+      "description": "Snippet for GetEndpoint",
+      "file": "AgentRegistryClient.GetEndpointRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEndpoint",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Endpoint",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetEndpoint",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetEndpoint",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetEndpoint_async",
+      "title": "GetEndpointRequestObjectAsync",
+      "description": "Snippet for GetEndpointAsync",
+      "file": "AgentRegistryClient.GetEndpointRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEndpointAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetEndpointAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetEndpointRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetEndpoint",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetEndpoint",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetEndpoint_sync_flattened",
+      "title": "GetEndpoint",
+      "description": "Snippet for GetEndpoint",
+      "file": "AgentRegistryClient.GetEndpointSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEndpoint",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetEndpoint",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Endpoint",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetEndpoint",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetEndpoint",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetEndpoint_async_flattened",
+      "title": "GetEndpointAsync",
+      "description": "Snippet for GetEndpointAsync",
+      "file": "AgentRegistryClient.GetEndpointAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEndpointAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetEndpointAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetEndpoint",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetEndpoint",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetEndpoint_sync_flattened_resourceNames",
+      "title": "GetEndpointResourceNames",
+      "description": "Snippet for GetEndpoint",
+      "file": "AgentRegistryClient.GetEndpointResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEndpoint",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetEndpoint",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Endpoint",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetEndpoint",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetEndpoint",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetEndpoint_async_flattened_resourceNames",
+      "title": "GetEndpointResourceNamesAsync",
+      "description": "Snippet for GetEndpointAsync",
+      "file": "AgentRegistryClient.GetEndpointResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetEndpointAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetEndpointAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.EndpointName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Endpoint>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetEndpoint",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetEndpoint",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListMcpServers_sync",
+      "title": "ListMcpServersRequestObject",
+      "description": "Snippet for ListMcpServers",
+      "file": "AgentRegistryClient.ListMcpServersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServers",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListMcpServers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListMcpServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListMcpServers_async",
+      "title": "ListMcpServersRequestObjectAsync",
+      "description": "Snippet for ListMcpServersAsync",
+      "file": "AgentRegistryClient.ListMcpServersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServersAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListMcpServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListMcpServers_sync_flattened",
+      "title": "ListMcpServers",
+      "description": "Snippet for ListMcpServers",
+      "file": "AgentRegistryClient.ListMcpServersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServers",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListMcpServers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListMcpServers_async_flattened",
+      "title": "ListMcpServersAsync",
+      "description": "Snippet for ListMcpServersAsync",
+      "file": "AgentRegistryClient.ListMcpServersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServersAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListMcpServers_sync_flattened_resourceNames",
+      "title": "ListMcpServersResourceNames",
+      "description": "Snippet for ListMcpServers",
+      "file": "AgentRegistryClient.ListMcpServersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServers",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListMcpServers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListMcpServers_async_flattened_resourceNames",
+      "title": "ListMcpServersResourceNamesAsync",
+      "description": "Snippet for ListMcpServersAsync",
+      "file": "AgentRegistryClient.ListMcpServersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListMcpServersAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchMcpServers_sync",
+      "title": "SearchMcpServersRequestObject",
+      "description": "Snippet for SearchMcpServers",
+      "file": "AgentRegistryClient.SearchMcpServersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMcpServers",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchMcpServers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.SearchMcpServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.SearchMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchMcpServers_async",
+      "title": "SearchMcpServersRequestObjectAsync",
+      "description": "Snippet for SearchMcpServersAsync",
+      "file": "AgentRegistryClient.SearchMcpServersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMcpServersAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.SearchMcpServersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.SearchMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchMcpServers_sync_flattened",
+      "title": "SearchMcpServers",
+      "description": "Snippet for SearchMcpServers",
+      "file": "AgentRegistryClient.SearchMcpServersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMcpServers",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchMcpServers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.SearchMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchMcpServers_async_flattened",
+      "title": "SearchMcpServersAsync",
+      "description": "Snippet for SearchMcpServersAsync",
+      "file": "AgentRegistryClient.SearchMcpServersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMcpServersAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.SearchMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchMcpServers_sync_flattened_resourceNames",
+      "title": "SearchMcpServersResourceNames",
+      "description": "Snippet for SearchMcpServers",
+      "file": "AgentRegistryClient.SearchMcpServersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMcpServers",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchMcpServers",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.SearchMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_SearchMcpServers_async_flattened_resourceNames",
+      "title": "SearchMcpServersResourceNamesAsync",
+      "description": "Snippet for SearchMcpServersAsync",
+      "file": "AgentRegistryClient.SearchMcpServersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "SearchMcpServersAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.SearchMcpServersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.SearchMcpServersResponse, Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "SearchMcpServers",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.SearchMcpServers",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetMcpServer_sync",
+      "title": "GetMcpServerRequestObject",
+      "description": "Snippet for GetMcpServer",
+      "file": "AgentRegistryClient.GetMcpServerRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServer",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetMcpServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetMcpServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.McpServer",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetMcpServer",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetMcpServer_async",
+      "title": "GetMcpServerRequestObjectAsync",
+      "description": "Snippet for GetMcpServerAsync",
+      "file": "AgentRegistryClient.GetMcpServerRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServerAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetMcpServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetMcpServerRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetMcpServer",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetMcpServer_sync_flattened",
+      "title": "GetMcpServer",
+      "description": "Snippet for GetMcpServer",
+      "file": "AgentRegistryClient.GetMcpServerSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServer",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetMcpServer",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.McpServer",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetMcpServer",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetMcpServer_async_flattened",
+      "title": "GetMcpServerAsync",
+      "description": "Snippet for GetMcpServerAsync",
+      "file": "AgentRegistryClient.GetMcpServerAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServerAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetMcpServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetMcpServer",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetMcpServer_sync_flattened_resourceNames",
+      "title": "GetMcpServerResourceNames",
+      "description": "Snippet for GetMcpServer",
+      "file": "AgentRegistryClient.GetMcpServerResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServer",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetMcpServer",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.McpServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.McpServer",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetMcpServer",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetMcpServer_async_flattened_resourceNames",
+      "title": "GetMcpServerResourceNamesAsync",
+      "description": "Snippet for GetMcpServerAsync",
+      "file": "AgentRegistryClient.GetMcpServerResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetMcpServerAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetMcpServerAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.McpServerName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.McpServer>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetMcpServer",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetMcpServer",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListServices_sync",
+      "title": "ListServicesRequestObject",
+      "description": "Snippet for ListServices",
+      "file": "AgentRegistryClient.ListServicesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServices",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListServicesResponse, Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListServices",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListServices_async",
+      "title": "ListServicesRequestObjectAsync",
+      "description": "Snippet for ListServicesAsync",
+      "file": "AgentRegistryClient.ListServicesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServicesAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListServicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListServicesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListServicesResponse, Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListServices",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListServices_sync_flattened",
+      "title": "ListServices",
+      "description": "Snippet for ListServices",
+      "file": "AgentRegistryClient.ListServicesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServices",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListServices",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListServicesResponse, Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListServices",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListServices_async_flattened",
+      "title": "ListServicesAsync",
+      "description": "Snippet for ListServicesAsync",
+      "file": "AgentRegistryClient.ListServicesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServicesAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListServicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListServicesResponse, Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListServices",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListServices_sync_flattened_resourceNames",
+      "title": "ListServicesResourceNames",
+      "description": "Snippet for ListServices",
+      "file": "AgentRegistryClient.ListServicesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServices",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListServices",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListServicesResponse, Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListServices",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListServices_async_flattened_resourceNames",
+      "title": "ListServicesResourceNamesAsync",
+      "description": "Snippet for ListServicesAsync",
+      "file": "AgentRegistryClient.ListServicesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListServicesAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListServicesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListServicesResponse, Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListServices",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListServices",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetService_sync",
+      "title": "GetServiceRequestObject",
+      "description": "Snippet for GetService",
+      "file": "AgentRegistryClient.GetServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Service",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetService_async",
+      "title": "GetServiceRequestObjectAsync",
+      "description": "Snippet for GetServiceAsync",
+      "file": "AgentRegistryClient.GetServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetService_sync_flattened",
+      "title": "GetService",
+      "description": "Snippet for GetService",
+      "file": "AgentRegistryClient.GetServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Service",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetService_async_flattened",
+      "title": "GetServiceAsync",
+      "description": "Snippet for GetServiceAsync",
+      "file": "AgentRegistryClient.GetServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetService_sync_flattened_resourceNames",
+      "title": "GetServiceResourceNames",
+      "description": "Snippet for GetService",
+      "file": "AgentRegistryClient.GetServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Service",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetService_async_flattened_resourceNames",
+      "title": "GetServiceResourceNamesAsync",
+      "description": "Snippet for GetServiceAsync",
+      "file": "AgentRegistryClient.GetServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Service>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateService_sync",
+      "title": "CreateServiceRequestObject",
+      "description": "Snippet for CreateService",
+      "file": "AgentRegistryClient.CreateServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.CreateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateService_async",
+      "title": "CreateServiceRequestObjectAsync",
+      "description": "Snippet for CreateServiceAsync",
+      "file": "AgentRegistryClient.CreateServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.CreateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateService_sync_flattened",
+      "title": "CreateService",
+      "description": "Snippet for CreateService",
+      "file": "AgentRegistryClient.CreateServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateService_async_flattened",
+      "title": "CreateServiceAsync",
+      "description": "Snippet for CreateServiceAsync",
+      "file": "AgentRegistryClient.CreateServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateService_sync_flattened_resourceNames",
+      "title": "CreateServiceResourceNames",
+      "description": "Snippet for CreateService",
+      "file": "AgentRegistryClient.CreateServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateService",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateService_async_flattened_resourceNames",
+      "title": "CreateServiceResourceNamesAsync",
+      "description": "Snippet for CreateServiceAsync",
+      "file": "AgentRegistryClient.CreateServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Service",
+            "name": "service"
+          },
+          {
+            "type": "System.String",
+            "name": "serviceId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_UpdateService_sync",
+      "title": "UpdateServiceRequestObject",
+      "description": "Snippet for UpdateService",
+      "file": "AgentRegistryClient.UpdateServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.UpdateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.UpdateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.UpdateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_UpdateService_async",
+      "title": "UpdateServiceRequestObjectAsync",
+      "description": "Snippet for UpdateServiceAsync",
+      "file": "AgentRegistryClient.UpdateServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.UpdateServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.UpdateServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.UpdateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_UpdateService_sync_flattened",
+      "title": "UpdateService",
+      "description": "Snippet for UpdateService",
+      "file": "AgentRegistryClient.UpdateServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.UpdateService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Service",
+            "name": "service"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.UpdateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_UpdateService_async_flattened",
+      "title": "UpdateServiceAsync",
+      "description": "Snippet for UpdateServiceAsync",
+      "file": "AgentRegistryClient.UpdateServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.UpdateServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Service",
+            "name": "service"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Service, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.UpdateService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteService_sync",
+      "title": "DeleteServiceRequestObject",
+      "description": "Snippet for DeleteService",
+      "file": "AgentRegistryClient.DeleteServiceRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteService_async",
+      "title": "DeleteServiceRequestObjectAsync",
+      "description": "Snippet for DeleteServiceAsync",
+      "file": "AgentRegistryClient.DeleteServiceRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.DeleteServiceRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteService_sync_flattened",
+      "title": "DeleteService",
+      "description": "Snippet for DeleteService",
+      "file": "AgentRegistryClient.DeleteServiceSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteService",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteService_async_flattened",
+      "title": "DeleteServiceAsync",
+      "description": "Snippet for DeleteServiceAsync",
+      "file": "AgentRegistryClient.DeleteServiceAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteService_sync_flattened_resourceNames",
+      "title": "DeleteServiceResourceNames",
+      "description": "Snippet for DeleteService",
+      "file": "AgentRegistryClient.DeleteServiceResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteService",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteService",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteService_async_flattened_resourceNames",
+      "title": "DeleteServiceResourceNamesAsync",
+      "description": "Snippet for DeleteServiceAsync",
+      "file": "AgentRegistryClient.DeleteServiceResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteServiceAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteServiceAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ServiceName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteService",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteService",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListBindings_sync",
+      "title": "ListBindingsRequestObject",
+      "description": "Snippet for ListBindings",
+      "file": "AgentRegistryClient.ListBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindings",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListBindings_async",
+      "title": "ListBindingsRequestObjectAsync",
+      "description": "Snippet for ListBindingsAsync",
+      "file": "AgentRegistryClient.ListBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.ListBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListBindings_sync_flattened",
+      "title": "ListBindings",
+      "description": "Snippet for ListBindings",
+      "file": "AgentRegistryClient.ListBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindings",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListBindings_async_flattened",
+      "title": "ListBindingsAsync",
+      "description": "Snippet for ListBindingsAsync",
+      "file": "AgentRegistryClient.ListBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListBindings_sync_flattened_resourceNames",
+      "title": "ListBindingsResourceNames",
+      "description": "Snippet for ListBindings",
+      "file": "AgentRegistryClient.ListBindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindings",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListBindings",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.ListBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_ListBindings_async_flattened_resourceNames",
+      "title": "ListBindingsResourceNamesAsync",
+      "description": "Snippet for ListBindingsAsync",
+      "file": "AgentRegistryClient.ListBindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListBindingsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.ListBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.ListBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "ListBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.ListBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetBinding_sync",
+      "title": "GetBindingRequestObject",
+      "description": "Snippet for GetBinding",
+      "file": "AgentRegistryClient.GetBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Binding",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetBinding_async",
+      "title": "GetBindingRequestObjectAsync",
+      "description": "Snippet for GetBindingAsync",
+      "file": "AgentRegistryClient.GetBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.GetBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetBinding_sync_flattened",
+      "title": "GetBinding",
+      "description": "Snippet for GetBinding",
+      "file": "AgentRegistryClient.GetBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Binding",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetBinding_async_flattened",
+      "title": "GetBindingAsync",
+      "description": "Snippet for GetBindingAsync",
+      "file": "AgentRegistryClient.GetBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetBinding_sync_flattened_resourceNames",
+      "title": "GetBindingResourceNames",
+      "description": "Snippet for GetBinding",
+      "file": "AgentRegistryClient.GetBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.BindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.AgentRegistry.V1.Binding",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_GetBinding_async_flattened_resourceNames",
+      "title": "GetBindingResourceNamesAsync",
+      "description": "Snippet for GetBindingAsync",
+      "file": "AgentRegistryClient.GetBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.GetBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.BindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "GetBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.GetBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateBinding_sync",
+      "title": "CreateBindingRequestObject",
+      "description": "Snippet for CreateBinding",
+      "file": "AgentRegistryClient.CreateBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.CreateBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateBinding_async",
+      "title": "CreateBindingRequestObjectAsync",
+      "description": "Snippet for CreateBindingAsync",
+      "file": "AgentRegistryClient.CreateBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.CreateBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 66,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 64,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateBinding_sync_flattened",
+      "title": "CreateBinding",
+      "description": "Snippet for CreateBinding",
+      "file": "AgentRegistryClient.CreateBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Binding",
+            "name": "binding"
+          },
+          {
+            "type": "System.String",
+            "name": "bindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateBinding_async_flattened",
+      "title": "CreateBindingAsync",
+      "description": "Snippet for CreateBindingAsync",
+      "file": "AgentRegistryClient.CreateBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Binding",
+            "name": "binding"
+          },
+          {
+            "type": "System.String",
+            "name": "bindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateBinding_sync_flattened_resourceNames",
+      "title": "CreateBindingResourceNames",
+      "description": "Snippet for CreateBinding",
+      "file": "AgentRegistryClient.CreateBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateBinding",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Binding",
+            "name": "binding"
+          },
+          {
+            "type": "System.String",
+            "name": "bindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_CreateBinding_async_flattened_resourceNames",
+      "title": "CreateBindingResourceNamesAsync",
+      "description": "Snippet for CreateBindingAsync",
+      "file": "AgentRegistryClient.CreateBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.CreateBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Binding",
+            "name": "binding"
+          },
+          {
+            "type": "System.String",
+            "name": "bindingId"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "CreateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.CreateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_UpdateBinding_sync",
+      "title": "UpdateBindingRequestObject",
+      "description": "Snippet for UpdateBinding",
+      "file": "AgentRegistryClient.UpdateBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.UpdateBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.UpdateBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.UpdateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_UpdateBinding_async",
+      "title": "UpdateBindingRequestObjectAsync",
+      "description": "Snippet for UpdateBindingAsync",
+      "file": "AgentRegistryClient.UpdateBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.UpdateBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.UpdateBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.UpdateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_UpdateBinding_sync_flattened",
+      "title": "UpdateBinding",
+      "description": "Snippet for UpdateBinding",
+      "file": "AgentRegistryClient.UpdateBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.UpdateBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Binding",
+            "name": "binding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.UpdateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_UpdateBinding_async_flattened",
+      "title": "UpdateBindingAsync",
+      "description": "Snippet for UpdateBindingAsync",
+      "file": "AgentRegistryClient.UpdateBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.UpdateBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.Binding",
+            "name": "binding"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.AgentRegistry.V1.Binding, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "UpdateBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.UpdateBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 61,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 59,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteBinding_sync",
+      "title": "DeleteBindingRequestObject",
+      "description": "Snippet for DeleteBinding",
+      "file": "AgentRegistryClient.DeleteBindingRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.DeleteBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteBinding_async",
+      "title": "DeleteBindingRequestObjectAsync",
+      "description": "Snippet for DeleteBindingAsync",
+      "file": "AgentRegistryClient.DeleteBindingRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.DeleteBindingRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteBinding_sync_flattened",
+      "title": "DeleteBinding",
+      "description": "Snippet for DeleteBinding",
+      "file": "AgentRegistryClient.DeleteBindingSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteBinding",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteBinding_async_flattened",
+      "title": "DeleteBindingAsync",
+      "description": "Snippet for DeleteBindingAsync",
+      "file": "AgentRegistryClient.DeleteBindingAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteBinding_sync_flattened_resourceNames",
+      "title": "DeleteBindingResourceNames",
+      "description": "Snippet for DeleteBinding",
+      "file": "AgentRegistryClient.DeleteBindingResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBinding",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteBinding",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.BindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_DeleteBinding_async_flattened_resourceNames",
+      "title": "DeleteBindingResourceNamesAsync",
+      "description": "Snippet for DeleteBindingAsync",
+      "file": "AgentRegistryClient.DeleteBindingResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteBindingAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.DeleteBindingAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.BindingName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.AgentRegistry.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "DeleteBinding",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.DeleteBinding",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_FetchAvailableBindings_sync",
+      "title": "FetchAvailableBindingsRequestObject",
+      "description": "Snippet for FetchAvailableBindings",
+      "file": "AgentRegistryClient.FetchAvailableBindingsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAvailableBindings",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.FetchAvailableBindings",
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "FetchAvailableBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.FetchAvailableBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_FetchAvailableBindings_async",
+      "title": "FetchAvailableBindingsRequestObjectAsync",
+      "description": "Snippet for FetchAvailableBindingsAsync",
+      "file": "AgentRegistryClient.FetchAvailableBindingsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAvailableBindingsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.FetchAvailableBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "FetchAvailableBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.FetchAvailableBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_FetchAvailableBindings_sync_flattened",
+      "title": "FetchAvailableBindings",
+      "description": "Snippet for FetchAvailableBindings",
+      "file": "AgentRegistryClient.FetchAvailableBindingsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAvailableBindings",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.FetchAvailableBindings",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "FetchAvailableBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.FetchAvailableBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_FetchAvailableBindings_async_flattened",
+      "title": "FetchAvailableBindingsAsync",
+      "description": "Snippet for FetchAvailableBindingsAsync",
+      "file": "AgentRegistryClient.FetchAvailableBindingsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAvailableBindingsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.FetchAvailableBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "FetchAvailableBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.FetchAvailableBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_FetchAvailableBindings_sync_flattened_resourceNames",
+      "title": "FetchAvailableBindingsResourceNames",
+      "description": "Snippet for FetchAvailableBindings",
+      "file": "AgentRegistryClient.FetchAvailableBindingsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAvailableBindings",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.FetchAvailableBindings",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "FetchAvailableBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.FetchAvailableBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "agentregistry_v1_generated_AgentRegistry_FetchAvailableBindings_async_flattened_resourceNames",
+      "title": "FetchAvailableBindingsResourceNamesAsync",
+      "description": "Snippet for FetchAvailableBindingsAsync",
+      "file": "AgentRegistryClient.FetchAvailableBindingsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FetchAvailableBindingsAsync",
+        "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient.FetchAvailableBindingsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.AgentRegistry.V1.FetchAvailableBindingsResponse, Google.Cloud.AgentRegistry.V1.Binding>",
+        "client": {
+          "shortName": "AgentRegistryClient",
+          "fullName": "Google.Cloud.AgentRegistry.V1.AgentRegistryClient"
+        },
+        "method": {
+          "shortName": "FetchAvailableBindings",
+          "fullName": "google.cloud.agentregistry.v1.AgentRegistry.FetchAvailableBindings",
+          "service": {
+            "shortName": "AgentRegistry",
+            "fullName": "google.cloud.agentregistry.v1.AgentRegistry"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
