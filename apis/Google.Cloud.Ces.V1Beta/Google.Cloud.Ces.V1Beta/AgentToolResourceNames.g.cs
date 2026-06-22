@@ -15,22 +15,11 @@
 // Generated code. DO NOT EDIT!
 
 #pragma warning disable CS8981
-using sys = System;
 
 namespace Google.Cloud.Ces.V1Beta
 {
     public partial class AgentTool
     {
-        /// <summary>
-        /// <see cref="AgentName"/>-typed view over the <see cref="RootAgent"/> resource name property.
-        /// </summary>
-        [sys::ObsoleteAttribute]
-        public AgentName RootAgentAsAgentName
-        {
-            get => string.IsNullOrEmpty(RootAgent) ? null : AgentName.Parse(RootAgent, allowUnparsed: true);
-            set => RootAgent = value?.ToString() ?? "";
-        }
-
         /// <summary><see cref="AgentName"/>-typed view over the <see cref="Agent"/> resource name property.</summary>
         public AgentName AgentAsAgentName
         {
