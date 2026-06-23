@@ -273,6 +273,7 @@ internal sealed class NonSourceGenerator
                     propertyGroup,
                     dependenciesItemGroup);
 
+            // Old style of project file augmentation (to be removed during migration to Librarian):
             // To keep generator inputs and outputs cleanly separated, we look for an augmentation file
             // with a ".csproj.google" extension in the API-specific "tweaks" directory (under generator-input/tweaks).
             // If this exists, it's expected to be an XML file, and any elements under the root
@@ -294,6 +295,16 @@ internal sealed class NonSourceGenerator
                     doc.Add(augmentationDoc.Root.Elements());
                 }
             }
+
+            // New style of project file augmentation: a conditional import. We can then have the .csproj.google
+            // files in the production location rather than in generator-input. This doesn't work for "ReplaceAll"
+            // project files, but once we've migrated to Librarian those won't be generated anyway.
+            // It's fine to have both approaches in place at the same time: we'd expect to have at most *either*
+            // a file to import *or* a file to add directly (in the code above).
+            var importFile = $"{projectName}.csproj.google";
+            doc.Add(new XElement("Import",
+                new XAttribute("Project", importFile),
+                new XAttribute("Condition", $"Exists('{importFile}')")));
 
             // Don't use File.CreateText as that omits the byte order mark.
             // While byte order marks are nasty, Visual Studio will add it back any time a project file is
