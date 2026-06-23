@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
             {
                 CollectionName = CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, OperationMetadata> response = await vectorSearchServiceClient.DeleteCollectionAsync(request);

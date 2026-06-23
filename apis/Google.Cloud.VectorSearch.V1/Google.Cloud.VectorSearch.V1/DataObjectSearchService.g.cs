@@ -65,8 +65,8 @@ namespace Google.Cloud.VectorSearch.V1 {
             "b3RvYnVmLlN0cnVjdEID4EEBEhcKBXRvcF9rGAQgASgFQgPgQQFIAIgBARJC",
             "CgtzZWFyY2hfaGludBgHIAEoCzIoLmdvb2dsZS5jbG91ZC52ZWN0b3JzZWFy",
             "Y2gudjEuU2VhcmNoSGludEID4EEBQggKBl90b3BfayLeAQoKVGV4dFNlYXJj",
-            "aBIYCgtzZWFyY2hfdGV4dBgBIAEoCUID4EECEh0KEGRhdGFfZmllbGRfbmFt",
-            "ZXMYAiADKAlCA+BBAhJGCg1vdXRwdXRfZmllbGRzGAMgASgLMiouZ29vZ2xl",
+            "aBIYCgtzZWFyY2hfdGV4dBgBIAEoCUID4EEBEh0KEGRhdGFfZmllbGRfbmFt",
+            "ZXMYAiADKAlCA+BBARJGCg1vdXRwdXRfZmllbGRzGAMgASgLMiouZ29vZ2xl",
             "LmNsb3VkLnZlY3RvcnNlYXJjaC52MS5PdXRwdXRGaWVsZHNCA+BBARIXCgV0",
             "b3BfaxgEIAEoBUID4EEBSACIAQESLAoGZmlsdGVyGAUgASgLMhcuZ29vZ2xl",
             "LnByb3RvYnVmLlN0cnVjdEID4EEBQggKBl90b3BfayLuAgoYU2VhcmNoRGF0",
@@ -2623,7 +2623,7 @@ namespace Google.Cloud.VectorSearch.V1 {
     public const int SearchTextFieldNumber = 1;
     private string searchText_ = "";
     /// <summary>
-    /// Required. The query text.
+    /// Optional. The query text. Required when using the default text search mode.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2640,7 +2640,8 @@ namespace Google.Cloud.VectorSearch.V1 {
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> dataFieldNames_ = new pbc::RepeatedField<string>();
     /// <summary>
-    /// Required. The data field names to search.
+    /// Optional. The data field names to search. Required when using the default
+    /// text search mode.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

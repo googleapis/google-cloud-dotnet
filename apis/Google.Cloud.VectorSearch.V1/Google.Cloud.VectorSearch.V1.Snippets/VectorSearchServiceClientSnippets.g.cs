@@ -734,6 +734,7 @@ namespace GoogleCSharpSnippets
             {
                 CollectionName = gcvv::CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, gcvv::OperationMetadata> response = vectorSearchServiceClient.DeleteCollection(request);
@@ -768,6 +769,7 @@ namespace GoogleCSharpSnippets
             {
                 CollectionName = gcvv::CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
                 RequestId = "",
+                Force = false,
             };
             // Make the request
             Operation<Empty, gcvv::OperationMetadata> response = await vectorSearchServiceClient.DeleteCollectionAsync(request);
@@ -1865,6 +1867,7 @@ namespace GoogleCSharpSnippets
             {
                 CollectionName = gcvv::CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
                 GcsDestination = new gcvv::ExportDataObjectsRequest.Types.GcsExportDestination(),
+                FieldFilter = new gcvv::ExportDataObjectsRequest.Types.FieldFilter(),
             };
             // Make the request
             Operation<gcvv::ExportDataObjectsResponse, gcvv::ExportDataObjectsMetadata> response = vectorSearchServiceClient.ExportDataObjects(request);
@@ -1899,6 +1902,7 @@ namespace GoogleCSharpSnippets
             {
                 CollectionName = gcvv::CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
                 GcsDestination = new gcvv::ExportDataObjectsRequest.Types.GcsExportDestination(),
+                FieldFilter = new gcvv::ExportDataObjectsRequest.Types.FieldFilter(),
             };
             // Make the request
             Operation<gcvv::ExportDataObjectsResponse, gcvv::ExportDataObjectsMetadata> response = await vectorSearchServiceClient.ExportDataObjectsAsync(request);

@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
             {
                 CollectionName = CollectionName.FromProjectLocationCollection("[PROJECT]", "[LOCATION]", "[COLLECTION]"),
                 GcsDestination = new ExportDataObjectsRequest.Types.GcsExportDestination(),
+                FieldFilter = new ExportDataObjectsRequest.Types.FieldFilter(),
             };
             // Make the request
             Operation<ExportDataObjectsResponse, ExportDataObjectsMetadata> response = await vectorSearchServiceClient.ExportDataObjectsAsync(request);
