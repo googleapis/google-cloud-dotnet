@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package fantasy;
+
+option csharp_namespace = "Fantasy";
+
+enum CharacterClass {
+  CHARACTER_CLASS_UNSPECIFIED = 0;
+  WARRIOR = 1;
+  MAGE = 2;
+  ROGUE = 3;
+  CLERIC = 4;
+}
