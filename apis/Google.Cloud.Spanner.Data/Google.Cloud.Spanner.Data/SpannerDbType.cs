@@ -315,6 +315,10 @@ namespace Google.Cloud.Spanner.Data
                     return new SpannerDbType(type.StructType.Fields.Select(f => new StructField(f.Name, FromProtobufType(f.Type))).ToList());
                 case TypeCode.Proto:
                     return new SpannerDbType(type.ProtoTypeFqn);
+                case TypeCode.Enum:
+                    // This is handled here because equality logic prevent enum type working in s_simpleTypes,
+                    // but we also don't want to carry arround the proto FQN since we dont use it
+                    return new SpannerDbType(TypeCode.Enum);
                 default:
                     return FromType(type);
             }
