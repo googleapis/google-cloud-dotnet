@@ -242,8 +242,8 @@ namespace Google.Cloud.NetworkSecurity.V1 {
     public const int DataPathIdFieldNumber = 12;
     private ulong dataPathId_;
     /// <summary>
-    /// Output only. Identifier used by the data-path. Unique within {container,
-    /// location}.
+    /// Output only. Identifier used by the data-path. Unique within \{container,
+    /// location\}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
