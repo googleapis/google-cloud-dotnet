@@ -41,7 +41,8 @@ namespace Google.Cloud.Spanner.Data.Tests
                     { "", SpannerDbType.PgOid, 2 },
                     { "", SpannerDbType.String, "test" },
                     { "", SpannerDbType.Timestamp, new DateTime(2021, 9, 10, 9, 37, 10, DateTimeKind.Utc) },
-                    { "", SpannerDbType.Uuid, Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f") }
+                    { "", SpannerDbType.Uuid, Guid.Parse("8f8c4746-17b1-4d9f-a634-58e11942095f") },
+                    { "", SpannerDbType.Enum, KeyTestEnum.Monday },
                 });
 
             var actual = key.ToProtobuf(SpannerConversionOptions.Default);
@@ -63,10 +64,19 @@ namespace Google.Cloud.Spanner.Data.Tests
                     Value.ForString("2"),
                     Value.ForString("test"),
                     Value.ForString("2021-09-10T09:37:10Z"),
-                    Value.ForString("8f8c4746-17b1-4d9f-a634-58e11942095f")
+                    Value.ForString("8f8c4746-17b1-4d9f-a634-58e11942095f"),
+                    Value.ForString("2")
                 }
             };
             Assert.Equal(expected, actual);
+        }
+
+        private enum KeyTestEnum
+        {
+            Unspecified = 0,
+            Sunday = 1,
+            Monday = 2,
+            Tuesday = 3
         }
 
         [Fact]

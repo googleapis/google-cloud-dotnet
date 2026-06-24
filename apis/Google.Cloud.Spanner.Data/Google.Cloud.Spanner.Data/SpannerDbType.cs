@@ -111,6 +111,11 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         public static SpannerDbType Uuid { get; } = new SpannerDbType(TypeCode.Uuid);
 
+        /// <summary>
+        /// Representation of Spanner Protobuf Enum type.
+        /// </summary>
+        public static SpannerDbType Enum { get; } = new SpannerDbType(TypeCode.Enum);
+
         private static readonly Dictionary<V1.Type, SpannerDbType> s_simpleTypes
             = new Dictionary<V1.Type, SpannerDbType>
             {
@@ -318,7 +323,7 @@ namespace Google.Cloud.Spanner.Data
                 case TypeCode.Enum:
                     // This is handled here because equality logic prevent enum type working in s_simpleTypes,
                     // but we also don't want to carry arround the proto FQN since we dont use it
-                    return new SpannerDbType(TypeCode.Enum);
+                    return Enum;
                 default:
                     return FromType(type);
             }
