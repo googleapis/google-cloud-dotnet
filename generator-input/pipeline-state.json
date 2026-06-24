@@ -5100,7 +5100,7 @@
             "id": "Google.Cloud.AgentRegistry.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "5403278d28f43d2071393d7ad306c5f1cdfd9d90",
             "apiPaths": [
                 "google/cloud/agentregistry/v1"
