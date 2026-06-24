@@ -157,11 +157,6 @@ namespace Google.Cloud.Spanner.Data
         /// </summary>
         private string ProtobufTypeName { get; }
 
-        /// <summary>
-        /// The fully qualified protobuf enum name if this is a protobuf enum. Null for non-protobuf enums
-        /// </summary>
-        private string ProtobufEnumName { get; }
-
         private SpannerDbType(TypeCode typeCode, TypeAnnotationCode typeAnnotationCode = TypeAnnotationCode.Unspecified, int? size = null)
         {
             GaxPreconditions.CheckNonNegative(size.GetValueOrDefault(), "Size must be nonnegative.");
