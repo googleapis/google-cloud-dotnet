@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project>
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Bigtable.V2.IntegrationTests\Google.Cloud.Bigtable.V2.IntegrationTests.csproj" />
   </ItemGroup>
