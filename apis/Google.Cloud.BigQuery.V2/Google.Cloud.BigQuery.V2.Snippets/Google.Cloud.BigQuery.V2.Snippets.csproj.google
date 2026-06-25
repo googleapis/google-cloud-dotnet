@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.NET.Sdk">
+<Project>
   <!-- For BigQueryTableExtensions -->
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.BigQuery.V2.IntegrationTests\Google.Cloud.BigQuery.V2.IntegrationTests.csproj" />
