@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Fantasy;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
@@ -89,6 +90,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateValue", SpannerDbType.Date, null },
                 { "NumericValue", SpannerDbType.Numeric, null },
                 { "JsonValue", SpannerDbType.Json, null },
+                { "EnumValue", SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass)), null },
                 { "ProtobufDurationValue", SpannerDbType.FromClrType(typeof(Duration)), null },
                 { "ProtobufRectangleValue", SpannerDbType.FromClrType(typeof(Rectangle)), null },
                 { "ProtobufPersonValue", SpannerDbType.FromClrType(typeof(Person)), null },
@@ -105,6 +107,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), null },
                 { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null },
                 { "JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), null },
+                { "EnumArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass))), null },
                 { "ProtobufDurationArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Duration))), null },
                 { "ProtobufRectangleArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Rectangle))), null },
                 { "ProtobufValueArrayValue", SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))), null },

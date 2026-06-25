@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Fantasy;
 using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Spanner.V1.Internal.Logging;
@@ -79,7 +80,8 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
                 Rectangle.Descriptor.File.ToProto(),
                 ValueWrapper.Descriptor.File.ToProto(),
                 Value.Descriptor.File.ToProto(),
-                Person.Descriptor.File.ToProto()
+                Person.Descriptor.File.ToProto(),
+                Character.Descriptor.File.ToProto(),
             }
         };
 
@@ -90,6 +92,7 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
             $", {Rectangle.Descriptor.FullName}" +
             $", {Duration.Descriptor.FullName}" +
             $", {Person.Descriptor.FullName}" +
+            $", {Character.Descriptor.FullName}" +
             $", {ValueWrapper.Descriptor.FullName}" +
             $", {Value.Descriptor.FindFieldByNumber(Value.NullValueFieldNumber).EnumType.FullName}" +
             $", {ListValue.Descriptor.FullName}" +

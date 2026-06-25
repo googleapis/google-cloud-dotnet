@@ -436,6 +436,10 @@ namespace Google.Cloud.Spanner.Data
             {
                 return new SpannerDbType(descriptor.FullName);
             }
+            if (type.IsEnum)
+            {
+                return Enum;
+            }
             if (type == typeof(Interval))
             {
                 return Interval;
