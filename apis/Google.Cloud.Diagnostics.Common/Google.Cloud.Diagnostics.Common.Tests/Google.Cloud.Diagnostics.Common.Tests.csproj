@@ -20,10 +20,5 @@
     <PackageReference Include="xunit.runner.visualstudio" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
-  <PropertyGroup>
-    <!-- Make sure we get suitable stack traces for tests -->
-    <DebugType>pdbonly</DebugType>
-    <DebugType Condition="'$(TargetFramework)' == 'net8.0'">portable</DebugType>
-  </PropertyGroup>
   <Import Project="Google.Cloud.Diagnostics.Common.Tests.csproj.google" Condition="Exists('Google.Cloud.Diagnostics.Common.Tests.csproj.google')" />
 </Project>
