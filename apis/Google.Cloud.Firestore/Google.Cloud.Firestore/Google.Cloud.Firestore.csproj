@@ -15,10 +15,5 @@
     <PackageReference Include="System.Collections.Immutable" />
     <PackageReference Include="System.Linq.AsyncEnumerable" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Update="Filter.*.cs">
-      <DependentUpon>Filter.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
   <Import Project="Google.Cloud.Firestore.csproj.google" Condition="Exists('Google.Cloud.Firestore.csproj.google')" />
 </Project>

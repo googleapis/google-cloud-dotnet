@@ -12,13 +12,5 @@
     <PackageReference Include="Google.Api.Gax.Rest" />
     <PackageReference Include="Google.Apis.Bigquery.v2" VersionOverride="[1.74.0.4090, 2.0.0.0)" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Update="BigQueryClient.*.cs">
-      <DependentUpon>BigQueryClient.cs</DependentUpon>
-    </Compile>
-    <Compile Update="BigQueryClientImpl.*.cs">
-      <DependentUpon>BigQueryClientImpl.cs</DependentUpon>
-    </Compile>
-  </ItemGroup>
   <Import Project="Google.Cloud.BigQuery.V2.csproj.google" Condition="Exists('Google.Cloud.BigQuery.V2.csproj.google')" />
 </Project>

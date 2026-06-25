@@ -17,8 +17,5 @@
     <PackageReference Include="xunit.runner.visualstudio" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="*.txt" />
-  </ItemGroup>
   <Import Project="Google.Cloud.Translation.V2.IntegrationTests.csproj.google" Condition="Exists('Google.Cloud.Translation.V2.IntegrationTests.csproj.google')" />
 </Project>

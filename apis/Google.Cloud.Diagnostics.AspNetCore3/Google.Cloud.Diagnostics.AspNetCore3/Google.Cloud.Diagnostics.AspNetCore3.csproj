@@ -11,15 +11,5 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <ProjectReference Include="..\..\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common\Google.Cloud.Diagnostics.Common.csproj" />
   </ItemGroup>
-  <ItemGroup>
-    <FrameworkReference Include="Microsoft.AspNetCore.App" />
-  </ItemGroup>
-  <PropertyGroup>
-    <!--
-    - The (indirect) System.Management and System.CodeDom dependencies complain
-    - on older frameworks, but we use them carefully.
-    -->
-    <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
-  </PropertyGroup>
   <Import Project="Google.Cloud.Diagnostics.AspNetCore3.csproj.google" Condition="Exists('Google.Cloud.Diagnostics.AspNetCore3.csproj.google')" />
 </Project>
