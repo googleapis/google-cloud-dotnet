@@ -4,10 +4,17 @@ package fantasy;
 
 option csharp_namespace = "Fantasy";
 
-enum CharacterClass {
-  CHARACTER_CLASS_UNSPECIFIED = 0;
-  WARRIOR = 1;
-  MAGE = 2;
-  ROGUE = 3;
-  CLERIC = 4;
+message Character {
+
+  enum CharacterClass {
+    CHARACTER_CLASS_UNSPECIFIED = 0;
+    WARRIOR = 1;
+    MAGE = 2;
+    ROGUE = 3;
+    CLERIC = 4;
+  }
+
+  string name = 1;
+  CharacterClass character_class = 2;
+  int64 level = 3;
 }

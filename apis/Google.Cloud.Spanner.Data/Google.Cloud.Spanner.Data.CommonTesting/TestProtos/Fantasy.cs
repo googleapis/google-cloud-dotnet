@@ -24,24 +24,308 @@ namespace Fantasy {
     static FantasyReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "Cg1mYW50YXN5LnByb3RvEgdmYW50YXN5Kl8KDkNoYXJhY3RlckNsYXNzEh8K",
-            "G0NIQVJBQ1RFUl9DTEFTU19VTlNQRUNJRklFRBAAEgsKB1dBUlJJT1IQARII",
-            "CgRNQUdFEAISCQoFUk9HVUUQAxIKCgZDTEVSSUMQBEIKqgIHRmFudGFzeWIG",
-            "cHJvdG8z"));
+            "Cg1mYW50YXN5LnByb3RvEgdmYW50YXN5IsUBCglDaGFyYWN0ZXISDAoEbmFt",
+            "ZRgBIAEoCRI6Cg9jaGFyYWN0ZXJfY2xhc3MYAiABKA4yIS5mYW50YXN5LkNo",
+            "YXJhY3Rlci5DaGFyYWN0ZXJDbGFzcxINCgVsZXZlbBgDIAEoAyJfCg5DaGFy",
+            "YWN0ZXJDbGFzcxIfChtDSEFSQUNURVJfQ0xBU1NfVU5TUEVDSUZJRUQQABIL",
+            "CgdXQVJSSU9SEAESCAoETUFHRRACEgkKBVJPR1VFEAMSCgoGQ0xFUklDEARC",
+            "CqoCB0ZhbnRhc3liBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Fantasy.CharacterClass), }, null, null));
+          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Fantasy.Character), global::Fantasy.Character.Parser, new[]{ "Name", "CharacterClass", "Level" }, null, new[]{ typeof(global::Fantasy.Character.Types.CharacterClass) }, null, null)
+          }));
     }
     #endregion
 
   }
-  #region Enums
-  public enum CharacterClass {
-    [pbr::OriginalName("CHARACTER_CLASS_UNSPECIFIED")] Unspecified = 0,
-    [pbr::OriginalName("WARRIOR")] Warrior = 1,
-    [pbr::OriginalName("MAGE")] Mage = 2,
-    [pbr::OriginalName("ROGUE")] Rogue = 3,
-    [pbr::OriginalName("CLERIC")] Cleric = 4,
+  #region Messages
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class Character : pb::IMessage<Character>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<Character> _parser = new pb::MessageParser<Character>(() => new Character());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<Character> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Fantasy.FantasyReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Character() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Character(Character other) : this() {
+      name_ = other.name_;
+      characterClass_ = other.characterClass_;
+      level_ = other.level_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public Character Clone() {
+      return new Character(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "character_class" field.</summary>
+    public const int CharacterClassFieldNumber = 2;
+    private global::Fantasy.Character.Types.CharacterClass characterClass_ = global::Fantasy.Character.Types.CharacterClass.Unspecified;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Fantasy.Character.Types.CharacterClass CharacterClass {
+      get { return characterClass_; }
+      set {
+        characterClass_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "level" field.</summary>
+    public const int LevelFieldNumber = 3;
+    private long level_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Level {
+      get { return level_; }
+      set {
+        level_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as Character);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(Character other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      if (CharacterClass != other.CharacterClass) return false;
+      if (Level != other.Level) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (CharacterClass != global::Fantasy.Character.Types.CharacterClass.Unspecified) hash ^= CharacterClass.GetHashCode();
+      if (Level != 0L) hash ^= Level.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (CharacterClass != global::Fantasy.Character.Types.CharacterClass.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) CharacterClass);
+      }
+      if (Level != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Level);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (CharacterClass != global::Fantasy.Character.Types.CharacterClass.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) CharacterClass);
+      }
+      if (Level != 0L) {
+        output.WriteRawTag(24);
+        output.WriteInt64(Level);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (CharacterClass != global::Fantasy.Character.Types.CharacterClass.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CharacterClass);
+      }
+      if (Level != 0L) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(Level);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(Character other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      if (other.CharacterClass != global::Fantasy.Character.Types.CharacterClass.Unspecified) {
+        CharacterClass = other.CharacterClass;
+      }
+      if (other.Level != 0L) {
+        Level = other.Level;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            CharacterClass = (global::Fantasy.Character.Types.CharacterClass) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Level = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            CharacterClass = (global::Fantasy.Character.Types.CharacterClass) input.ReadEnum();
+            break;
+          }
+          case 24: {
+            Level = input.ReadInt64();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Character message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      public enum CharacterClass {
+        [pbr::OriginalName("CHARACTER_CLASS_UNSPECIFIED")] Unspecified = 0,
+        [pbr::OriginalName("WARRIOR")] Warrior = 1,
+        [pbr::OriginalName("MAGE")] Mage = 2,
+        [pbr::OriginalName("ROGUE")] Rogue = 3,
+        [pbr::OriginalName("CLERIC")] Cleric = 4,
+      }
+
+    }
+    #endregion
+
   }
 
   #endregion

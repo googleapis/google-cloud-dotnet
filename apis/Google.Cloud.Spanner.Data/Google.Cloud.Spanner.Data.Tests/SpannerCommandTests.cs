@@ -1405,6 +1405,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     {"bool", SpannerDbType.Bool, true},
                     {"interval", SpannerDbType.Interval, Interval.Parse("P1Y2M3D")},
                     {"uuid", SpannerDbType.Uuid, new Guid("8f8c4746-17b1-4d9f-a634-58e11942095f")},
+                    {"enum", SpannerDbType.Enum, Fantasy.Character.Types.CharacterClass.Mage},
                 }));
             using var reader = await command.ExecuteReaderAsync();
             Assert.True(reader.HasRows);
@@ -1427,6 +1428,7 @@ namespace Google.Cloud.Spanner.Data.Tests
                     new Value { BoolValue = true },
                     new Value { StringValue = "P1Y2M3D" },
                     new Value { StringValue = "8f8c4746-17b1-4d9f-a634-58e11942095f"},
+                    new Value { StringValue = "2"},
                 } } } })),
                 Arg.Any<CallSettings>());
         }
