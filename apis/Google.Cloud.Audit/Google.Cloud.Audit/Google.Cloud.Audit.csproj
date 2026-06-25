@@ -11,4 +11,5 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.5.0, 4.0.0)" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Audit.csproj.google" Condition="Exists('Google.Cloud.Audit.csproj.google')" />
 </Project>

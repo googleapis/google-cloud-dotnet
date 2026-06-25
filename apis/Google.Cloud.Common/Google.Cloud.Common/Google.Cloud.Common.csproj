@@ -11,4 +11,5 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.CommonProtos" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Common.csproj.google" Condition="Exists('Google.Cloud.Common.csproj.google')" />
 </Project>

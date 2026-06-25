@@ -20,4 +20,5 @@
       <DependentUpon>BigQueryClientImpl.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <Import Project="Google.Cloud.BigQuery.V2.csproj.google" Condition="Exists('Google.Cloud.BigQuery.V2.csproj.google')" />
 </Project>

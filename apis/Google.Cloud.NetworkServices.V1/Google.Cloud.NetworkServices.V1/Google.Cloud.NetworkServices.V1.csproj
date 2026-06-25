@@ -15,4 +15,5 @@
     <PackageReference Include="Google.LongRunning" VersionOverride="[3.5.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
+  <Import Project="Google.Cloud.NetworkServices.V1.csproj.google" Condition="Exists('Google.Cloud.NetworkServices.V1.csproj.google')" />
 </Project>

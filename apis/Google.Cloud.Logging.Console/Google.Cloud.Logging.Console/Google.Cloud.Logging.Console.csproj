@@ -11,4 +11,5 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Logging.Console.csproj.google" Condition="Exists('Google.Cloud.Logging.Console.csproj.google')" />
 </Project>

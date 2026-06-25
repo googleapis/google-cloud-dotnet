@@ -8,4 +8,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Translation.V2\Google.Cloud.Translation.V2.csproj" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Translation.V2.LanguageCodeGenerator.csproj.google" Condition="Exists('Google.Cloud.Translation.V2.LanguageCodeGenerator.csproj.google')" />
 </Project>

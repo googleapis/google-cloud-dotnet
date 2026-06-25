@@ -11,4 +11,5 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Cloud.Iam.V1" VersionOverride="[3.5.0, 4.0.0)" />
   </ItemGroup>
+  <Import Project="Google.Cloud.BigQuery.Logging.V1.csproj.google" Condition="Exists('Google.Cloud.BigQuery.Logging.V1.csproj.google')" />
 </Project>

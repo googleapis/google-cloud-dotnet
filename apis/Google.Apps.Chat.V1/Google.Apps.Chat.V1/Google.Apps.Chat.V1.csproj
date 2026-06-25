@@ -13,4 +13,5 @@
     <PackageReference Include="Google.Apps.Card.V1" VersionOverride="[1.0.0-beta02, 2.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
+  <Import Project="Google.Apps.Chat.V1.csproj.google" Condition="Exists('Google.Apps.Chat.V1.csproj.google')" />
 </Project>

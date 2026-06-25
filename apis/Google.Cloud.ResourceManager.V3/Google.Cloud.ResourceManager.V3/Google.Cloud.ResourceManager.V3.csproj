@@ -14,4 +14,5 @@
     <PackageReference Include="Google.LongRunning" VersionOverride="[3.5.0, 4.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
+  <Import Project="Google.Cloud.ResourceManager.V3.csproj.google" Condition="Exists('Google.Cloud.ResourceManager.V3.csproj.google')" />
 </Project>

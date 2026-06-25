@@ -11,4 +11,5 @@
     <PackageReference Include="Grpc.AspNetCore" />
     <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel.Core" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Bigtable.V2.ConformanceTests.csproj.google" Condition="Exists('Google.Cloud.Bigtable.V2.ConformanceTests.csproj.google')" />
 </Project>

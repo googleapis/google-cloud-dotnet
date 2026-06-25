@@ -11,4 +11,5 @@
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Firestore.Benchmarks.csproj.google" Condition="Exists('Google.Cloud.Firestore.Benchmarks.csproj.google')" />
 </Project>

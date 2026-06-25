@@ -8,4 +8,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.BigQuery.V2\Google.Cloud.BigQuery.V2.csproj" />
   </ItemGroup>
+  <Import Project="Google.Cloud.BigQuery.V2.CleanTestData.csproj.google" Condition="Exists('Google.Cloud.BigQuery.V2.CleanTestData.csproj.google')" />
 </Project>

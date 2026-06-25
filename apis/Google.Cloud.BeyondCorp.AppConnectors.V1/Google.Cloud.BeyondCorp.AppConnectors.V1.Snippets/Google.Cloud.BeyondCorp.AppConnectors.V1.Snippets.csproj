@@ -17,4 +17,5 @@
     <PackageReference Include="xunit.runner.visualstudio" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
+  <Import Project="Google.Cloud.BeyondCorp.AppConnectors.V1.Snippets.csproj.google" Condition="Exists('Google.Cloud.BeyondCorp.AppConnectors.V1.Snippets.csproj.google')" />
 </Project>

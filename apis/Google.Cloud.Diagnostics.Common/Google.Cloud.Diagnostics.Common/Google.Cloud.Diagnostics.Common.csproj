@@ -15,4 +15,5 @@
     <PackageReference Include="Microsoft.Extensions.Http" />
     <PackageReference Include="System.Diagnostics.StackTrace" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Diagnostics.Common.csproj.google" Condition="Exists('Google.Cloud.Diagnostics.Common.csproj.google')" />
 </Project>

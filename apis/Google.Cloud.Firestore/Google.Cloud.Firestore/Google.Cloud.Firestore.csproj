@@ -20,4 +20,5 @@
       <DependentUpon>Filter.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <Import Project="Google.Cloud.Firestore.csproj.google" Condition="Exists('Google.Cloud.Firestore.csproj.google')" />
 </Project>

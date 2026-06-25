@@ -22,4 +22,5 @@
     <EmbeddedResource Include="nlog-jsonTemplate.xml" />
     <EmbeddedResource Include="nlog-template.xml" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Logging.NLog.Snippets.csproj.google" Condition="Exists('Google.Cloud.Logging.NLog.Snippets.csproj.google')" />
 </Project>
