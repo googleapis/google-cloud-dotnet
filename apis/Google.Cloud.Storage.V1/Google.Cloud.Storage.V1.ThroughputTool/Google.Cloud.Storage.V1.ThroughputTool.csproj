@@ -8,4 +8,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Storage.V1\Google.Cloud.Storage.V1.csproj" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Storage.V1.ThroughputTool.csproj.google" Condition="Exists('Google.Cloud.Storage.V1.ThroughputTool.csproj.google')" />
 </Project>

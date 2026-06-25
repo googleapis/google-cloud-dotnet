@@ -34,4 +34,5 @@
       <DependentUpon>QueryTest.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <Import Project="Google.Cloud.Firestore.Tests.csproj.google" Condition="Exists('Google.Cloud.Firestore.Tests.csproj.google')" />
 </Project>

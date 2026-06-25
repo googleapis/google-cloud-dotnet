@@ -43,4 +43,5 @@
       <DependentUpon>SpannerConnectionTests.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <Import Project="Google.Cloud.Spanner.Data.Tests.csproj.google" Condition="Exists('Google.Cloud.Spanner.Data.Tests.csproj.google')" />
 </Project>

@@ -12,4 +12,5 @@
     <PackageReference Include="Google.Api.CommonProtos" />
     <PackageReference Include="Google.Api.Gax" />
   </ItemGroup>
+  <Import Project="Google.Cloud.OsLogin.Common.csproj.google" Condition="Exists('Google.Cloud.OsLogin.Common.csproj.google')" />
 </Project>

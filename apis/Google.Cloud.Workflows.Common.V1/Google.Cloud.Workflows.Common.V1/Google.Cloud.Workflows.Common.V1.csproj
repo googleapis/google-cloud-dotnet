@@ -11,4 +11,5 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.Gax" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Workflows.Common.V1.csproj.google" Condition="Exists('Google.Cloud.Workflows.Common.V1.csproj.google')" />
 </Project>

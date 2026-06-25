@@ -16,4 +16,5 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <Import Project="Google.Cloud.Spanner.Data.Ycsb.csproj.google" Condition="Exists('Google.Cloud.Spanner.Data.Ycsb.csproj.google')" />
 </Project>

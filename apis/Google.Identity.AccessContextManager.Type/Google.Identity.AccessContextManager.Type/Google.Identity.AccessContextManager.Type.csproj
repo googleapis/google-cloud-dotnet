@@ -11,4 +11,5 @@
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
     <PackageReference Include="Google.Api.CommonProtos" />
   </ItemGroup>
+  <Import Project="Google.Identity.AccessContextManager.Type.csproj.google" Condition="Exists('Google.Identity.AccessContextManager.Type.csproj.google')" />
 </Project>

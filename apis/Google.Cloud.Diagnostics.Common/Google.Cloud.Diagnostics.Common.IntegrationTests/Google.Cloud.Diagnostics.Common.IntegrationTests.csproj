@@ -26,4 +26,5 @@
     <DebugType Condition="'$(TargetFramework)' == 'net462'">pdbonly</DebugType>
     <DebugType Condition="'$(TargetFramework)' == 'net8.0'">portable</DebugType>
   </PropertyGroup>
+  <Import Project="Google.Cloud.Diagnostics.Common.IntegrationTests.csproj.google" Condition="Exists('Google.Cloud.Diagnostics.Common.IntegrationTests.csproj.google')" />
 </Project>

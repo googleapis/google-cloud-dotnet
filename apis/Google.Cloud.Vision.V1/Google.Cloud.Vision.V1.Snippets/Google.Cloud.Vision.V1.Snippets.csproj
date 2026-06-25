@@ -21,4 +21,5 @@
     <EmbeddedResource Include="*.jpg" />
     <EmbeddedResource Include="*.png" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Vision.V1.Snippets.csproj.google" Condition="Exists('Google.Cloud.Vision.V1.Snippets.csproj.google')" />
 </Project>

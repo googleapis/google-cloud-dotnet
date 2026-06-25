@@ -11,4 +11,5 @@
   <ItemGroup>
     <PackageReference Include="BenchmarkDotNet" />
   </ItemGroup>
+  <Import Project="Google.Cloud.BigQuery.V2.Benchmarks.csproj.google" Condition="Exists('Google.Cloud.BigQuery.V2.Benchmarks.csproj.google')" />
 </Project>

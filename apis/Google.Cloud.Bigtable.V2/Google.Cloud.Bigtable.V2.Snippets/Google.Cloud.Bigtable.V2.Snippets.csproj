@@ -22,4 +22,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Bigtable.V2.IntegrationTests\Google.Cloud.Bigtable.V2.IntegrationTests.csproj" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Bigtable.V2.Snippets.csproj.google" Condition="Exists('Google.Cloud.Bigtable.V2.Snippets.csproj.google')" />
 </Project>

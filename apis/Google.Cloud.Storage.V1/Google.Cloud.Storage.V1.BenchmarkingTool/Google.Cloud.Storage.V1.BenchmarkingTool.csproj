@@ -11,4 +11,5 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\tools\Google.Cloud.ClientTesting\Google.Cloud.ClientTesting.csproj" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Storage.V1.BenchmarkingTool.csproj.google" Condition="Exists('Google.Cloud.Storage.V1.BenchmarkingTool.csproj.google')" />
 </Project>

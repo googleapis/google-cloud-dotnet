@@ -18,4 +18,5 @@
     <PackageReference Include="xunit.runner.visualstudio" />
     <Service Include="{82a7f48d-3b50-4b1e-b82e-3ada8210c358}" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Spanner.V1.GeneratedSnippets.csproj.google" Condition="Exists('Google.Cloud.Spanner.V1.GeneratedSnippets.csproj.google')" />
 </Project>

@@ -29,4 +29,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Diagnostics.Common.IntegrationTests\Google.Cloud.Diagnostics.Common.IntegrationTests.csproj" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Diagnostics.Common.Snippets.csproj.google" Condition="Exists('Google.Cloud.Diagnostics.Common.Snippets.csproj.google')" />
 </Project>

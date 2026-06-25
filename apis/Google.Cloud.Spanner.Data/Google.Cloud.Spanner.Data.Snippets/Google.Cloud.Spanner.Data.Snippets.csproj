@@ -26,4 +26,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Spanner.Data.CommonTesting\Google.Cloud.Spanner.Data.CommonTesting.csproj" />
   </ItemGroup>
+  <Import Project="Google.Cloud.Spanner.Data.Snippets.csproj.google" Condition="Exists('Google.Cloud.Spanner.Data.Snippets.csproj.google')" />
 </Project>

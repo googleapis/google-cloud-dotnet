@@ -21,4 +21,5 @@
   <PropertyGroup Condition="'$(TargetFramework)' == 'net452'">
     <DebugType>Full</DebugType>
   </PropertyGroup>
+  <Import Project="Google.Cloud.Logging.NLog.Tests.csproj.google" Condition="Exists('Google.Cloud.Logging.NLog.Tests.csproj.google')" />
 </Project>

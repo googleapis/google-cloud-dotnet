@@ -21,4 +21,5 @@
     -->
     <SuppressTfmSupportBuildWarnings>true</SuppressTfmSupportBuildWarnings>
   </PropertyGroup>
+  <Import Project="Google.Cloud.Diagnostics.AspNetCore3.csproj.google" Condition="Exists('Google.Cloud.Diagnostics.AspNetCore3.csproj.google')" />
 </Project>

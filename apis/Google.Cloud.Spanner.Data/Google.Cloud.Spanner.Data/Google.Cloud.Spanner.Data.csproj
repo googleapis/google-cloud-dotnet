@@ -33,4 +33,5 @@
       <DependentUpon>SpannerCommandTextBuilder.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <Import Project="Google.Cloud.Spanner.Data.csproj.google" Condition="Exists('Google.Cloud.Spanner.Data.csproj.google')" />
 </Project>

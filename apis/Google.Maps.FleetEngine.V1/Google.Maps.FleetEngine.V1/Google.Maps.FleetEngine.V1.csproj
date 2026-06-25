@@ -13,4 +13,5 @@
     <PackageReference Include="Google.Geo.Type" VersionOverride="[1.3.0, 2.0.0)" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
+  <Import Project="Google.Maps.FleetEngine.V1.csproj.google" Condition="Exists('Google.Maps.FleetEngine.V1.csproj.google')" />
 </Project>

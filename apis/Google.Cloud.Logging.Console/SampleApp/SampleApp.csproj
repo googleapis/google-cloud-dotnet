@@ -8,4 +8,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Google.Cloud.Logging.Console\Google.Cloud.Logging.Console.csproj" />
   </ItemGroup>
+  <Import Project="SampleApp.csproj.google" Condition="Exists('SampleApp.csproj.google')" />
 </Project>

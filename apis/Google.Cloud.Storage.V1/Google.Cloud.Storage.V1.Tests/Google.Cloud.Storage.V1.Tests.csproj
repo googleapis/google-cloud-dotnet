@@ -25,4 +25,5 @@
       <DependentUpon>UrlSignerTest.cs</DependentUpon>
     </Compile>
   </ItemGroup>
+  <Import Project="Google.Cloud.Storage.V1.Tests.csproj.google" Condition="Exists('Google.Cloud.Storage.V1.Tests.csproj.google')" />
 </Project>

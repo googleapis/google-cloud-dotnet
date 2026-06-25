@@ -12,4 +12,5 @@
     <PackageReference Include="Google.Api.Gax.Grpc" />
     <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
   </ItemGroup>
+  <Import Project="Google.LongRunning.csproj.google" Condition="Exists('Google.LongRunning.csproj.google')" />
 </Project>
