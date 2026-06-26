@@ -42,22 +42,22 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "ASgOMi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5Ub29sQ2Fs",
             "bC5TdGF0ZUID4EEDIkUKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAAS",
             "DQoJVFJJR0dFUkVEEAESFgoSTkVFRFNfQ09ORklSTUFUSU9OEAJCCAoGc291",
-            "cmNlIvcDCg5Ub29sQ2FsbFJlc3VsdBI2CgR0b29sGAEgASgJQibgQQH6QSAK",
+            "cmNlIoYECg5Ub29sQ2FsbFJlc3VsdBI2CgR0b29sGAEgASgJQibgQQH6QSAK",
             "HmRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vVG9vbEgAEjMKCGNlc190b29s",
             "GAwgASgJQh/gQQH6QRkKF2Nlcy5nb29nbGVhcGlzLmNvbS9Ub29sSAASOQoL",
             "Y2VzX3Rvb2xzZXQYDSABKAlCIuBBAfpBHAoaY2VzLmdvb2dsZWFwaXMuY29t",
             "L1Rvb2xzZXRIABIxCgdjZXNfYXBwGAsgASgJQh7gQQH6QRgKFmNlcy5nb29n",
-            "bGVhcGlzLmNvbS9BcHBIABITCgZhY3Rpb24YAiABKAlCA+BBARJGCgVlcnJv",
+            "bGVhcGlzLmNvbS9BcHBIABITCgZhY3Rpb24YAiABKAlCA+BBARJLCgVlcnJv",
             "chgDIAEoCzI1Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuVG9v",
-            "bENhbGxSZXN1bHQuRXJyb3JIARIVCgtyYXdfY29udGVudBgFIAEoDEgBEhEK",
-            "B2NvbnRlbnQYBiABKAlIARI0CgtjcmVhdGVfdGltZRgHIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIaCg1hbnN3ZXJfcmVjb3JkGAkg",
-            "ASgJQgPgQQEaHQoFRXJyb3ISFAoHbWVzc2FnZRgBIAEoCUID4EEBQggKBnNv",
-            "dXJjZUIICgZyZXN1bHRCogEKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
-            "dy52MmJldGExQg1Ub29sQ2FsbFByb3RvUAFaQ2Nsb3VkLmdvb2dsZS5jb20v",
-            "Z28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtkaWFsb2dm",
-            "bG93cGKiAgJERqoCH0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYyQmV0YTFi",
-            "BnByb3RvMw=="));
+            "bENhbGxSZXN1bHQuRXJyb3JCA+BBAUgBEhoKC3Jhd19jb250ZW50GAUgASgM",
+            "QgPgQQFIARIWCgdjb250ZW50GAYgASgJQgPgQQFIARI0CgtjcmVhdGVfdGlt",
+            "ZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIaCg1h",
+            "bnN3ZXJfcmVjb3JkGAkgASgJQgPgQQEaHQoFRXJyb3ISFAoHbWVzc2FnZRgB",
+            "IAEoCUID4EEBQggKBnNvdXJjZUIICgZyZXN1bHRCogEKI2NvbS5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52MmJldGExQg1Ub29sQ2FsbFByb3RvUAFaQ2Ns",
+            "b3VkLmdvb2dsZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2RpYWxv",
+            "Z2Zsb3dwYjtkaWFsb2dmbG93cGKiAgJERqoCH0dvb2dsZS5DbG91ZC5EaWFs",
+            "b2dmbG93LlYyQmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1039,7 +1039,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>Field number for the "error" field.</summary>
     public const int ErrorFieldNumber = 3;
     /// <summary>
-    /// The tool call's error.
+    /// Optional. The tool call's error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1054,7 +1054,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>Field number for the "raw_content" field.</summary>
     public const int RawContentFieldNumber = 5;
     /// <summary>
-    /// Only populated if the response content is not utf-8 encoded.
+    /// Optional. Only populated if the response content is not utf-8 encoded.
     /// (by definition byte fields are base64 encoded).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1084,7 +1084,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
     /// <summary>Field number for the "content" field.</summary>
     public const int ContentFieldNumber = 6;
     /// <summary>
-    /// Only populated if the response content is utf-8 encoded.
+    /// Optional. Only populated if the response content is utf-8 encoded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
