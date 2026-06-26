@@ -93,6 +93,7 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
             $", {Duration.Descriptor.FullName}" +
             $", {Person.Descriptor.FullName}" +
             $", {Character.Descriptor.FullName}" +
+            $", {Character.Descriptor.FindFieldByNumber(Character.CharacterClassFieldNumber).EnumType.FullName}" +
             $", {ValueWrapper.Descriptor.FullName}" +
             $", {Value.Descriptor.FindFieldByNumber(Value.NullValueFieldNumber).EnumType.FullName}" +
             $", {ListValue.Descriptor.FullName}" +

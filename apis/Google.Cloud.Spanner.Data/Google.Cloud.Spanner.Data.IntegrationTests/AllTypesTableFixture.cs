@@ -147,7 +147,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufPersonArrayValue            ARRAY<{Person.Descriptor.FullName}>,
                             UuidArrayValue                      ARRAY<UUID>,
                             EnumArrayValue                      ARRAY<{EnumFullyQualifiedName.CharacterClassFQN}>,
-                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>,
+                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>
                           ) PRIMARY KEY(K)");
 
         private string MaybeEmptyOnProduction(string text, bool skip) => skip && !RunningOnEmulator ? "" : text;

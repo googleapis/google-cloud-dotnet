@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Fantasy;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -76,6 +77,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
                 { "ProtobufPersonValue", typeof(Value), SpannerDbType.FromClrType(typeof(Person)) },
                 { "ProtobufValueWrapperValue", typeof(Value), SpannerDbType.FromClrType(typeof(ValueWrapper)) },
+                { "EnumValue", typeof(long), SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass)) },
                 { "UuidValue", typeof(Guid), SpannerDbType.Uuid },
 
                 // Array types.
@@ -95,6 +97,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
                 { "ProtobufPersonArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))) },
                 { "ProtobufValueWrapperArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))) },
+                { "EnumArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass))) },
                 { "UuidArrayValue", typeof(List<Guid>), SpannerDbType.ArrayOf(SpannerDbType.Uuid) },
             };
 

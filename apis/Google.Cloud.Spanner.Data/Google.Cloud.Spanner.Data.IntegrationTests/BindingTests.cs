@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Fantasy;
 using Google.Cloud.Spanner.Data.CommonTesting;
 using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
@@ -42,6 +43,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         private static readonly ValueWrapper testValueWrapper = new ValueWrapper { OneValue = Value.ForString("Hello") };
 
+        private static readonly Character.Types.CharacterClass testCharacterClass = Character.Types.CharacterClass.Warrior;
+
         private readonly SpannerDatabaseFixture _fixture;
 
         public BindingTests(SpannerDatabaseFixture fixture) =>
@@ -66,6 +69,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.FromClrType(typeof(Rectangle)),
             SpannerDbType.FromClrType(typeof(Person)),
             SpannerDbType.FromClrType(typeof(ValueWrapper)),
+            SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass)),
             SpannerDbType.ArrayOf(SpannerDbType.Bool),
             SpannerDbType.ArrayOf(SpannerDbType.String),
             SpannerDbType.ArrayOf(SpannerDbType.Int64),
@@ -83,6 +87,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))),
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass))),
         };
 
         // These SpannerDbTypes are unsupported on production.
@@ -391,6 +396,20 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         public async Task BindProtobufValueWrapperEmptyArray() => await TestBindNonNull(
             SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))),
             new ValueWrapper[] { });
+
+        [Fact]
+        public async Task BindProtobufEnum() => await TestBindNonNull(
+            SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass)), testCharacterClass, r => r.GetFieldValue<Character.Types.CharacterClass>(0));
+
+        [Fact]
+        public async Task BindProtobufEnumArray() => await TestBindNonNull(
+                SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass))),
+                new Character.Types.CharacterClass?[] { testCharacterClass, null, Character.Types.CharacterClass.Unspecified });
+
+        [Fact]
+        public async Task BindProtobufEnumEmptyArray() => await TestBindNonNull(
+            SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass))),
+            new Character.Types.CharacterClass[] { });
 
         private void MaybeSkipIfOnProduction(SpannerDbType spannerDbType) =>
             Skip.If(!_fixture.RunningOnEmulator && BindProductionUnsupportedNullData.Any<SpannerDbType>(spannerDbType.Equals),
