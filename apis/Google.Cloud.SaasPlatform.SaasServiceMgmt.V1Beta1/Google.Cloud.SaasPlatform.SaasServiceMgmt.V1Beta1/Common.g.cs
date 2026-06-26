@@ -47,8 +47,8 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
             "VFJVRRACEhAKDFNUQVRVU19GQUxTRRADIrsBCgRUeXBlEhQKEFRZUEVfVU5T",
             "UEVDSUZJRUQQABIOCgpUWVBFX1JFQURZEAESEQoNVFlQRV9VUERBVElORxAC",
             "EhQKEFRZUEVfUFJPVklTSU9ORUQQAxIYChRUWVBFX09QRVJBVElPTl9FUlJP",
-            "UhAEEiYKIlRZUEVfQVBQX0NSRUFURURfT1JfQUxSRUFEWV9FWElTVFMQBRIi",
-            "Ch5UWVBFX0FQUF9DT01QT05FTlRTX1JFR0lTVEVSRUQQBiLpBAoWVW5pdE9w",
+            "UhAEEiYKIlRZUEVfQVBQX0NSRUFURURfT1JfQUxSRUFEWV9FWElTVFMQBhIi",
+            "Ch5UWVBFX0FQUF9DT01QT05FTlRTX1JFR0lTVEVSRUQQByLpBAoWVW5pdE9w",
             "ZXJhdGlvbkNvbmRpdGlvbhJlCgZzdGF0dXMYASABKA4yUC5nb29nbGUuY2xv",
             "dWQuc2Fhc3BsYXRmb3JtLnNhYXNzZXJ2aWNlbWdtdC52MWJldGExLlVuaXRP",
             "cGVyYXRpb25Db25kaXRpb24uU3RhdHVzQgPgQQISYQoEdHlwZRgCIAEoDjJO",
@@ -1178,11 +1178,11 @@ namespace Google.Cloud.SaasPlatform.SaasServiceMgmt.V1Beta1 {
         /// Indicates if AppHub app has been created or if Apphub app has already
         /// existed.
         /// </summary>
-        [pbr::OriginalName("TYPE_APP_CREATED_OR_ALREADY_EXISTS")] AppCreatedOrAlreadyExists = 5,
+        [pbr::OriginalName("TYPE_APP_CREATED_OR_ALREADY_EXISTS")] AppCreatedOrAlreadyExists = 6,
         /// <summary>
         /// Indicates if services and workloads have been registered with AppHub.
         /// </summary>
-        [pbr::OriginalName("TYPE_APP_COMPONENTS_REGISTERED")] AppComponentsRegistered = 6,
+        [pbr::OriginalName("TYPE_APP_COMPONENTS_REGISTERED")] AppComponentsRegistered = 7,
       }
 
     }
