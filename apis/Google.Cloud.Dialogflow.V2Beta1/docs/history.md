@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta31, released 2026-06-29
+
+### New features
+
+- StreamingRecognitionResult has two new MessageType: SPEECH_ACTIVITY_BEGIN and SPEECH_ACTIVITY_END
+- SearchKnowledgeDebugInfo contains ces_debug_info
+
 ## Version 1.0.0-beta30, released 2026-06-22
 
 ### New features
