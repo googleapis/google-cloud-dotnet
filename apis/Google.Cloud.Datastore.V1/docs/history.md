@@ -1,5 +1,16 @@
 # Version history
 
+## Version 5.2.0, released 2026-06-29
+
+### New features
+
+- Introduce RequestOptions message and request_options field on Datastore v1 request messages to enable request tagging
+
+### Documentation improvements
+
+- A comment for field `batch` in message `.google.datastore.v1.RunQueryResponse` is changed
+- A comment for field `distance_threshold` in message `.google.datastore.v1.FindNearest` is changed
+
 ## Version 5.1.0, released 2026-01-19
 
 ### New features
