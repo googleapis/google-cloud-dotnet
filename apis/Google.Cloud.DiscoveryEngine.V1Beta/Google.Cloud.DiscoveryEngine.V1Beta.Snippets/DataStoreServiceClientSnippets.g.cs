@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
                 DataStore = new DataStore(),
                 DataStoreId = "",
                 CreateAdvancedSiteSearch = false,
+                CmekConfigNameAsCmekConfigName = CmekConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SkipDefaultSchemaCreation = false,
             };
             // Make the request
@@ -76,6 +77,7 @@ namespace GoogleCSharpSnippets
                 DataStore = new DataStore(),
                 DataStoreId = "",
                 CreateAdvancedSiteSearch = false,
+                CmekConfigNameAsCmekConfigName = CmekConfigName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 SkipDefaultSchemaCreation = false,
             };
             // Make the request

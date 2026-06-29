@@ -46,6 +46,7 @@ namespace GoogleCSharpSnippets
                 UpdateMask = new FieldMask(),
                 AutoGenerateIds = false,
                 IdField = "",
+                ForceRefreshContent = false,
             };
             // Make the request
             Operation<ImportDocumentsResponse, ImportDocumentsMetadata> response = await documentServiceClient.ImportDocumentsAsync(request);

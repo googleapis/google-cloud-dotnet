@@ -27,7 +27,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "CkRnb29nbGUvY2xvdWQvZGlzY292ZXJ5ZW5naW5lL3YxYmV0YS9kb2N1bWVu",
             "dF9wcm9jZXNzaW5nX2NvbmZpZy5wcm90bxIjZ29vZ2xlLmNsb3VkLmRpc2Nv",
             "dmVyeWVuZ2luZS52MWJldGEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
-            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8izAwKGERvY3VtZW50",
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8i+g4KGERvY3VtZW50",
             "UHJvY2Vzc2luZ0NvbmZpZxIMCgRuYW1lGAEgASgJEmUKD2NodW5raW5nX2Nv",
             "bmZpZxgDIAEoCzJMLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFi",
             "ZXRhLkRvY3VtZW50UHJvY2Vzc2luZ0NvbmZpZy5DaHVua2luZ0NvbmZpZxJr",
@@ -42,7 +42,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "bmdDb25maWcuTGF5b3V0QmFzZWRDaHVua2luZ0NvbmZpZ0gAGlIKGUxheW91",
             "dEJhc2VkQ2h1bmtpbmdDb25maWcSEgoKY2h1bmtfc2l6ZRgBIAEoBRIhChlp",
             "bmNsdWRlX2FuY2VzdG9yX2hlYWRpbmdzGAIgASgIQgwKCmNodW5rX21vZGUa",
-            "sAQKDVBhcnNpbmdDb25maWcSggEKFmRpZ2l0YWxfcGFyc2luZ19jb25maWcY",
+            "3gYKDVBhcnNpbmdDb25maWcSggEKFmRpZ2l0YWxfcGFyc2luZ19jb25maWcY",
             "ASABKAsyYC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5E",
             "b2N1bWVudFByb2Nlc3NpbmdDb25maWcuUGFyc2luZ0NvbmZpZy5EaWdpdGFs",
             "UGFyc2luZ0NvbmZpZ0gAEnoKEm9jcl9wYXJzaW5nX2NvbmZpZxgCIAEoCzJc",
@@ -53,31 +53,38 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "aW5nQ29uZmlnLlBhcnNpbmdDb25maWcuTGF5b3V0UGFyc2luZ0NvbmZpZ0gA",
             "GhYKFERpZ2l0YWxQYXJzaW5nQ29uZmlnGlMKEE9jclBhcnNpbmdDb25maWcS",
             "JgoaZW5oYW5jZWRfZG9jdW1lbnRfZWxlbWVudHMYASADKAlCAhgBEhcKD3Vz",
-            "ZV9uYXRpdmVfdGV4dBgCIAEoCBoVChNMYXlvdXRQYXJzaW5nQ29uZmlnQhcK",
-            "FXR5cGVfZGVkaWNhdGVkX2NvbmZpZxqKAQobUGFyc2luZ0NvbmZpZ092ZXJy",
-            "aWRlc0VudHJ5EgsKA2tleRgBIAEoCRJaCgV2YWx1ZRgCIAEoCzJLLmdvb2ds",
-            "ZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkRvY3VtZW50UHJvY2Vz",
-            "c2luZ0NvbmZpZy5QYXJzaW5nQ29uZmlnOgI4ATqKAupBhgIKN2Rpc2NvdmVy",
-            "eWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Eb2N1bWVudFByb2Nlc3NpbmdDb25m",
-            "aWcSWHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9k",
-            "YXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9kb2N1bWVudFByb2Nlc3NpbmdDb25m",
-            "aWcScXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9j",
-            "b2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9y",
-            "ZX0vZG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnQqQCCidjb20uZ29vZ2xlLmNs",
-            "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFCHURvY3VtZW50UHJvY2Vzc2lu",
-            "Z0NvbmZpZ1Byb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5",
-            "ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnll",
-            "bmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNj",
-            "b3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVu",
-            "Z2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6",
-            "OlYxYmV0YWIGcHJvdG8z"));
+            "ZV9uYXRpdmVfdGV4dBgCIAEoCBrCAgoTTGF5b3V0UGFyc2luZ0NvbmZpZxIk",
+            "ChdlbmFibGVfdGFibGVfYW5ub3RhdGlvbhgBIAEoCEID4EEBEiQKF2VuYWJs",
+            "ZV9pbWFnZV9hbm5vdGF0aW9uGAIgASgIQgPgQQESJgoZZW5hYmxlX2xsbV9s",
+            "YXlvdXRfcGFyc2luZxgFIAEoCEID4EEBEiUKGHN0cnVjdHVyZWRfY29udGVu",
+            "dF90eXBlcxgJIAMoCUID4EEBEiIKFWV4Y2x1ZGVfaHRtbF9lbGVtZW50cxgK",
+            "IAMoCUID4EEBEiEKFGV4Y2x1ZGVfaHRtbF9jbGFzc2VzGAsgAygJQgPgQQES",
+            "HQoQZXhjbHVkZV9odG1sX2lkcxgMIAMoCUID4EEBEioKHWVuYWJsZV9nZXRf",
+            "cHJvY2Vzc2VkX2RvY3VtZW50GA4gASgIQgPgQQFCFwoVdHlwZV9kZWRpY2F0",
+            "ZWRfY29uZmlnGooBChtQYXJzaW5nQ29uZmlnT3ZlcnJpZGVzRW50cnkSCwoD",
+            "a2V5GAEgASgJEloKBXZhbHVlGAIgASgLMksuZ29vZ2xlLmNsb3VkLmRpc2Nv",
+            "dmVyeWVuZ2luZS52MWJldGEuRG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnLlBh",
+            "cnNpbmdDb25maWc6AjgBOooC6kGGAgo3ZGlzY292ZXJ5ZW5naW5lLmdvb2ds",
+            "ZWFwaXMuY29tL0RvY3VtZW50UHJvY2Vzc2luZ0NvbmZpZxJYcHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2RhdGFTdG9yZXMve2Rh",
+            "dGFfc3RvcmV9L2RvY3VtZW50UHJvY2Vzc2luZ0NvbmZpZxJxcHJvamVjdHMv",
+            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tj",
+            "b2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9kb2N1bWVudFBy",
+            "b2Nlc3NpbmdDb25maWdCpAIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5",
+            "ZW5naW5lLnYxYmV0YUIdRG9jdW1lbnRQcm9jZXNzaW5nQ29uZmlnUHJvdG9Q",
+            "AVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFi",
+            "ZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElT",
+            "Q09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5W",
+            "MUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoC",
+            "Jkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Parser, new[]{ "Name", "ChunkingConfig", "DefaultParsingConfig", "ParsingConfigOverrides" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ChunkingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ChunkingConfig.Parser, new[]{ "LayoutBasedChunkingConfig" }, new[]{ "ChunkMode" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ChunkingConfig.Types.LayoutBasedChunkingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ChunkingConfig.Types.LayoutBasedChunkingConfig.Parser, new[]{ "ChunkSize", "IncludeAncestorHeadings" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Parser, new[]{ "DigitalParsingConfig", "OcrParsingConfig", "LayoutParsingConfig" }, new[]{ "TypeDedicatedConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Types.DigitalParsingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Types.DigitalParsingConfig.Parser, null, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Types.OcrParsingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Types.OcrParsingConfig.Parser, new[]{ "EnhancedDocumentElements", "UseNativeText" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Types.LayoutParsingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Types.LayoutParsingConfig.Parser, null, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Types.LayoutParsingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentProcessingConfig.Types.ParsingConfig.Types.LayoutParsingConfig.Parser, new[]{ "EnableTableAnnotation", "EnableImageAnnotation", "EnableLlmLayoutParsing", "StructuredContentTypes", "ExcludeHtmlElements", "ExcludeHtmlClasses", "ExcludeHtmlIds", "EnableGetProcessedDocument" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -1749,6 +1756,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public LayoutParsingConfig(LayoutParsingConfig other) : this() {
+              enableTableAnnotation_ = other.enableTableAnnotation_;
+              enableImageAnnotation_ = other.enableImageAnnotation_;
+              enableLlmLayoutParsing_ = other.enableLlmLayoutParsing_;
+              structuredContentTypes_ = other.structuredContentTypes_.Clone();
+              excludeHtmlElements_ = other.excludeHtmlElements_.Clone();
+              excludeHtmlClasses_ = other.excludeHtmlClasses_.Clone();
+              excludeHtmlIds_ = other.excludeHtmlIds_.Clone();
+              enableGetProcessedDocument_ = other.enableGetProcessedDocument_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
@@ -1756,6 +1771,128 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public LayoutParsingConfig Clone() {
               return new LayoutParsingConfig(this);
+            }
+
+            /// <summary>Field number for the "enable_table_annotation" field.</summary>
+            public const int EnableTableAnnotationFieldNumber = 1;
+            private bool enableTableAnnotation_;
+            /// <summary>
+            /// Optional. If true, the LLM based annotation is added to the table
+            /// during parsing.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool EnableTableAnnotation {
+              get { return enableTableAnnotation_; }
+              set {
+                enableTableAnnotation_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "enable_image_annotation" field.</summary>
+            public const int EnableImageAnnotationFieldNumber = 2;
+            private bool enableImageAnnotation_;
+            /// <summary>
+            /// Optional. If true, the LLM based annotation is added to the image
+            /// during parsing.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool EnableImageAnnotation {
+              get { return enableImageAnnotation_; }
+              set {
+                enableImageAnnotation_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "enable_llm_layout_parsing" field.</summary>
+            public const int EnableLlmLayoutParsingFieldNumber = 5;
+            private bool enableLlmLayoutParsing_;
+            /// <summary>
+            /// Optional. If true, the pdf layout will be refined using an LLM.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool EnableLlmLayoutParsing {
+              get { return enableLlmLayoutParsing_; }
+              set {
+                enableLlmLayoutParsing_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "structured_content_types" field.</summary>
+            public const int StructuredContentTypesFieldNumber = 9;
+            private static readonly pb::FieldCodec<string> _repeated_structuredContentTypes_codec
+                = pb::FieldCodec.ForString(74);
+            private readonly pbc::RepeatedField<string> structuredContentTypes_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. Contains the required structure types to extract from the
+            /// document. Supported values:
+            ///
+            /// * `shareholder-structure`
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> StructuredContentTypes {
+              get { return structuredContentTypes_; }
+            }
+
+            /// <summary>Field number for the "exclude_html_elements" field.</summary>
+            public const int ExcludeHtmlElementsFieldNumber = 10;
+            private static readonly pb::FieldCodec<string> _repeated_excludeHtmlElements_codec
+                = pb::FieldCodec.ForString(82);
+            private readonly pbc::RepeatedField<string> excludeHtmlElements_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. List of HTML elements to exclude from the parsed content.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> ExcludeHtmlElements {
+              get { return excludeHtmlElements_; }
+            }
+
+            /// <summary>Field number for the "exclude_html_classes" field.</summary>
+            public const int ExcludeHtmlClassesFieldNumber = 11;
+            private static readonly pb::FieldCodec<string> _repeated_excludeHtmlClasses_codec
+                = pb::FieldCodec.ForString(90);
+            private readonly pbc::RepeatedField<string> excludeHtmlClasses_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. List of HTML classes to exclude from the parsed content.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> ExcludeHtmlClasses {
+              get { return excludeHtmlClasses_; }
+            }
+
+            /// <summary>Field number for the "exclude_html_ids" field.</summary>
+            public const int ExcludeHtmlIdsFieldNumber = 12;
+            private static readonly pb::FieldCodec<string> _repeated_excludeHtmlIds_codec
+                = pb::FieldCodec.ForString(98);
+            private readonly pbc::RepeatedField<string> excludeHtmlIds_ = new pbc::RepeatedField<string>();
+            /// <summary>
+            /// Optional. List of HTML ids to exclude from the parsed content.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<string> ExcludeHtmlIds {
+              get { return excludeHtmlIds_; }
+            }
+
+            /// <summary>Field number for the "enable_get_processed_document" field.</summary>
+            public const int EnableGetProcessedDocumentFieldNumber = 14;
+            private bool enableGetProcessedDocument_;
+            /// <summary>
+            /// Optional. If true, the processed document will be made available for
+            /// the GetProcessedDocument API.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool EnableGetProcessedDocument {
+              get { return enableGetProcessedDocument_; }
+              set {
+                enableGetProcessedDocument_ = value;
+              }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1773,6 +1910,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               if (ReferenceEquals(other, this)) {
                 return true;
               }
+              if (EnableTableAnnotation != other.EnableTableAnnotation) return false;
+              if (EnableImageAnnotation != other.EnableImageAnnotation) return false;
+              if (EnableLlmLayoutParsing != other.EnableLlmLayoutParsing) return false;
+              if(!structuredContentTypes_.Equals(other.structuredContentTypes_)) return false;
+              if(!excludeHtmlElements_.Equals(other.excludeHtmlElements_)) return false;
+              if(!excludeHtmlClasses_.Equals(other.excludeHtmlClasses_)) return false;
+              if(!excludeHtmlIds_.Equals(other.excludeHtmlIds_)) return false;
+              if (EnableGetProcessedDocument != other.EnableGetProcessedDocument) return false;
               return Equals(_unknownFields, other._unknownFields);
             }
 
@@ -1780,6 +1925,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
+              if (EnableTableAnnotation != false) hash ^= EnableTableAnnotation.GetHashCode();
+              if (EnableImageAnnotation != false) hash ^= EnableImageAnnotation.GetHashCode();
+              if (EnableLlmLayoutParsing != false) hash ^= EnableLlmLayoutParsing.GetHashCode();
+              hash ^= structuredContentTypes_.GetHashCode();
+              hash ^= excludeHtmlElements_.GetHashCode();
+              hash ^= excludeHtmlClasses_.GetHashCode();
+              hash ^= excludeHtmlIds_.GetHashCode();
+              if (EnableGetProcessedDocument != false) hash ^= EnableGetProcessedDocument.GetHashCode();
               if (_unknownFields != null) {
                 hash ^= _unknownFields.GetHashCode();
               }
@@ -1798,6 +1951,26 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
             #else
+              if (EnableTableAnnotation != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(EnableTableAnnotation);
+              }
+              if (EnableImageAnnotation != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(EnableImageAnnotation);
+              }
+              if (EnableLlmLayoutParsing != false) {
+                output.WriteRawTag(40);
+                output.WriteBool(EnableLlmLayoutParsing);
+              }
+              structuredContentTypes_.WriteTo(output, _repeated_structuredContentTypes_codec);
+              excludeHtmlElements_.WriteTo(output, _repeated_excludeHtmlElements_codec);
+              excludeHtmlClasses_.WriteTo(output, _repeated_excludeHtmlClasses_codec);
+              excludeHtmlIds_.WriteTo(output, _repeated_excludeHtmlIds_codec);
+              if (EnableGetProcessedDocument != false) {
+                output.WriteRawTag(112);
+                output.WriteBool(EnableGetProcessedDocument);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(output);
               }
@@ -1808,6 +1981,26 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (EnableTableAnnotation != false) {
+                output.WriteRawTag(8);
+                output.WriteBool(EnableTableAnnotation);
+              }
+              if (EnableImageAnnotation != false) {
+                output.WriteRawTag(16);
+                output.WriteBool(EnableImageAnnotation);
+              }
+              if (EnableLlmLayoutParsing != false) {
+                output.WriteRawTag(40);
+                output.WriteBool(EnableLlmLayoutParsing);
+              }
+              structuredContentTypes_.WriteTo(ref output, _repeated_structuredContentTypes_codec);
+              excludeHtmlElements_.WriteTo(ref output, _repeated_excludeHtmlElements_codec);
+              excludeHtmlClasses_.WriteTo(ref output, _repeated_excludeHtmlClasses_codec);
+              excludeHtmlIds_.WriteTo(ref output, _repeated_excludeHtmlIds_codec);
+              if (EnableGetProcessedDocument != false) {
+                output.WriteRawTag(112);
+                output.WriteBool(EnableGetProcessedDocument);
+              }
               if (_unknownFields != null) {
                 _unknownFields.WriteTo(ref output);
               }
@@ -1818,6 +2011,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
+              if (EnableTableAnnotation != false) {
+                size += 1 + 1;
+              }
+              if (EnableImageAnnotation != false) {
+                size += 1 + 1;
+              }
+              if (EnableLlmLayoutParsing != false) {
+                size += 1 + 1;
+              }
+              size += structuredContentTypes_.CalculateSize(_repeated_structuredContentTypes_codec);
+              size += excludeHtmlElements_.CalculateSize(_repeated_excludeHtmlElements_codec);
+              size += excludeHtmlClasses_.CalculateSize(_repeated_excludeHtmlClasses_codec);
+              size += excludeHtmlIds_.CalculateSize(_repeated_excludeHtmlIds_codec);
+              if (EnableGetProcessedDocument != false) {
+                size += 1 + 1;
+              }
               if (_unknownFields != null) {
                 size += _unknownFields.CalculateSize();
               }
@@ -1829,6 +2038,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             public void MergeFrom(LayoutParsingConfig other) {
               if (other == null) {
                 return;
+              }
+              if (other.EnableTableAnnotation != false) {
+                EnableTableAnnotation = other.EnableTableAnnotation;
+              }
+              if (other.EnableImageAnnotation != false) {
+                EnableImageAnnotation = other.EnableImageAnnotation;
+              }
+              if (other.EnableLlmLayoutParsing != false) {
+                EnableLlmLayoutParsing = other.EnableLlmLayoutParsing;
+              }
+              structuredContentTypes_.Add(other.structuredContentTypes_);
+              excludeHtmlElements_.Add(other.excludeHtmlElements_);
+              excludeHtmlClasses_.Add(other.excludeHtmlClasses_);
+              excludeHtmlIds_.Add(other.excludeHtmlIds_);
+              if (other.EnableGetProcessedDocument != false) {
+                EnableGetProcessedDocument = other.EnableGetProcessedDocument;
               }
               _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
             }
@@ -1849,6 +2074,38 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                   default:
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
                     break;
+                  case 8: {
+                    EnableTableAnnotation = input.ReadBool();
+                    break;
+                  }
+                  case 16: {
+                    EnableImageAnnotation = input.ReadBool();
+                    break;
+                  }
+                  case 40: {
+                    EnableLlmLayoutParsing = input.ReadBool();
+                    break;
+                  }
+                  case 74: {
+                    structuredContentTypes_.AddEntriesFrom(input, _repeated_structuredContentTypes_codec);
+                    break;
+                  }
+                  case 82: {
+                    excludeHtmlElements_.AddEntriesFrom(input, _repeated_excludeHtmlElements_codec);
+                    break;
+                  }
+                  case 90: {
+                    excludeHtmlClasses_.AddEntriesFrom(input, _repeated_excludeHtmlClasses_codec);
+                    break;
+                  }
+                  case 98: {
+                    excludeHtmlIds_.AddEntriesFrom(input, _repeated_excludeHtmlIds_codec);
+                    break;
+                  }
+                  case 112: {
+                    EnableGetProcessedDocument = input.ReadBool();
+                    break;
+                  }
                 }
               }
             #endif
@@ -1868,6 +2125,38 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                   default:
                     _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
                     break;
+                  case 8: {
+                    EnableTableAnnotation = input.ReadBool();
+                    break;
+                  }
+                  case 16: {
+                    EnableImageAnnotation = input.ReadBool();
+                    break;
+                  }
+                  case 40: {
+                    EnableLlmLayoutParsing = input.ReadBool();
+                    break;
+                  }
+                  case 74: {
+                    structuredContentTypes_.AddEntriesFrom(ref input, _repeated_structuredContentTypes_codec);
+                    break;
+                  }
+                  case 82: {
+                    excludeHtmlElements_.AddEntriesFrom(ref input, _repeated_excludeHtmlElements_codec);
+                    break;
+                  }
+                  case 90: {
+                    excludeHtmlClasses_.AddEntriesFrom(ref input, _repeated_excludeHtmlClasses_codec);
+                    break;
+                  }
+                  case 98: {
+                    excludeHtmlIds_.AddEntriesFrom(ref input, _repeated_excludeHtmlIds_codec);
+                    break;
+                  }
+                  case 112: {
+                    EnableGetProcessedDocument = input.ReadBool();
+                    break;
+                  }
                 }
               }
             }

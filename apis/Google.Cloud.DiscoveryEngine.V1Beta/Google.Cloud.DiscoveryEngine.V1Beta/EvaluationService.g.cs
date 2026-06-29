@@ -34,58 +34,63 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "ZXJ5LnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
             "byJXChRHZXRFdmFsdWF0aW9uUmVxdWVzdBI/CgRuYW1lGAEgASgJQjHgQQL6",
             "QSsKKWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNvbS9FdmFsdWF0aW9u",
-            "IoABChZMaXN0RXZhbHVhdGlvbnNSZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv",
+            "IooBChZMaXN0RXZhbHVhdGlvbnNSZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv",
             "4EEC+kEpCidkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
-            "b24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkieAoX",
-            "TGlzdEV2YWx1YXRpb25zUmVzcG9uc2USRAoLZXZhbHVhdGlvbnMYASADKAsy",
-            "Ly5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5FdmFsdWF0",
-            "aW9uEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSKkAQoXQ3JlYXRlRXZhbHVh",
-            "dGlvblJlcXVlc3QSPwoGcGFyZW50GAEgASgJQi/gQQL6QSkKJ2Rpc2NvdmVy",
-            "eWVuZ2luZS5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhJICgpldmFsdWF0aW9u",
-            "GAIgASgLMi8uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
-            "RXZhbHVhdGlvbkID4EECIhoKGENyZWF0ZUV2YWx1YXRpb25NZXRhZGF0YSKM",
-            "AQocTGlzdEV2YWx1YXRpb25SZXN1bHRzUmVxdWVzdBJFCgpldmFsdWF0aW9u",
-            "GAEgASgJQjHgQQL6QSsKKWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNv",
-            "bS9FdmFsdWF0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2Vu",
-            "GAMgASgJIt4CCh1MaXN0RXZhbHVhdGlvblJlc3VsdHNSZXNwb25zZRJvChJl",
-            "dmFsdWF0aW9uX3Jlc3VsdHMYASADKAsyUy5nb29nbGUuY2xvdWQuZGlzY292",
-            "ZXJ5ZW5naW5lLnYxYmV0YS5MaXN0RXZhbHVhdGlvblJlc3VsdHNSZXNwb25z",
-            "ZS5FdmFsdWF0aW9uUmVzdWx0EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRqy",
-            "AQoQRXZhbHVhdGlvblJlc3VsdBJLCgxzYW1wbGVfcXVlcnkYASABKAsyMC5n",
-            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TYW1wbGVRdWVy",
-            "eUID4EEDElEKD3F1YWxpdHlfbWV0cmljcxgCIAEoCzIzLmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlF1YWxpdHlNZXRyaWNzQgPgQQMy",
-            "vAgKEUV2YWx1YXRpb25TZXJ2aWNlEr8BCg1HZXRFdmFsdWF0aW9uEjkuZ29v",
-            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuR2V0RXZhbHVhdGlv",
-            "blJlcXVlc3QaLy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0",
-            "YS5FdmFsdWF0aW9uIkLaQQRuYW1lgtPkkwI1EjMvdjFiZXRhL3tuYW1lPXBy",
-            "b2plY3RzLyovbG9jYXRpb25zLyovZXZhbHVhdGlvbnMvKn0S0gEKD0xpc3RF",
-            "dmFsdWF0aW9ucxI7Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFi",
-            "ZXRhLkxpc3RFdmFsdWF0aW9uc1JlcXVlc3QaPC5nb29nbGUuY2xvdWQuZGlz",
-            "Y292ZXJ5ZW5naW5lLnYxYmV0YS5MaXN0RXZhbHVhdGlvbnNSZXNwb25zZSJE",
-            "2kEGcGFyZW50gtPkkwI1EjMvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKn0vZXZhbHVhdGlvbnMSvgIKEENyZWF0ZUV2YWx1YXRpb24S",
-            "PC5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5DcmVhdGVF",
-            "dmFsdWF0aW9uUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24izAHKQW4KLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
-            "LkV2YWx1YXRpb24SPGdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFi",
-            "ZXRhLkNyZWF0ZUV2YWx1YXRpb25NZXRhZGF0YdpBEXBhcmVudCxldmFsdWF0",
-            "aW9ugtPkkwJBIjMvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKn0vZXZhbHVhdGlvbnM6CmV2YWx1YXRpb24S+gEKFUxpc3RFdmFsdWF0",
-            "aW9uUmVzdWx0cxJBLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFi",
-            "ZXRhLkxpc3RFdmFsdWF0aW9uUmVzdWx0c1JlcXVlc3QaQi5nb29nbGUuY2xv",
-            "dWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5MaXN0RXZhbHVhdGlvblJlc3Vs",
-            "dHNSZXNwb25zZSJa2kEKZXZhbHVhdGlvboLT5JMCRxJFL3YxYmV0YS97ZXZh",
-            "bHVhdGlvbj1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2V2YWx1YXRpb25zLyp9",
-            "Omxpc3RSZXN1bHRzGlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5j",
-            "b23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBs",
-            "YXRmb3JtQp0CCidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52",
-            "MWJldGFCFkV2YWx1YXRpb25TZXJ2aWNlUHJvdG9QAVpRY2xvdWQuZ29vZ2xl",
-            "LmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVu",
-            "Z2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIj",
-            "R29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVc",
-            "Q2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6",
-            "OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90bzM="));
+            "b24SFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEo",
+            "CUID4EEBIngKF0xpc3RFdmFsdWF0aW9uc1Jlc3BvbnNlEkQKC2V2YWx1YXRp",
+            "b25zGAEgAygLMi8uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJl",
+            "dGEuRXZhbHVhdGlvbhIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkipAEKF0Ny",
+            "ZWF0ZUV2YWx1YXRpb25SZXF1ZXN0Ej8KBnBhcmVudBgBIAEoCUIv4EEC+kEp",
+            "CidkaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SSAoK",
+            "ZXZhbHVhdGlvbhgCIAEoCzIvLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjFiZXRhLkV2YWx1YXRpb25CA+BBAiIaChhDcmVhdGVFdmFsdWF0aW9u",
+            "TWV0YWRhdGEilgEKHExpc3RFdmFsdWF0aW9uUmVzdWx0c1JlcXVlc3QSRQoK",
+            "ZXZhbHVhdGlvbhgBIAEoCUIx4EEC+kErCilkaXNjb3ZlcnllbmdpbmUuZ29v",
+            "Z2xlYXBpcy5jb20vRXZhbHVhdGlvbhIWCglwYWdlX3NpemUYAiABKAVCA+BB",
+            "ARIXCgpwYWdlX3Rva2VuGAMgASgJQgPgQQEi3gIKHUxpc3RFdmFsdWF0aW9u",
+            "UmVzdWx0c1Jlc3BvbnNlEm8KEmV2YWx1YXRpb25fcmVzdWx0cxgBIAMoCzJT",
+            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkxpc3RFdmFs",
+            "dWF0aW9uUmVzdWx0c1Jlc3BvbnNlLkV2YWx1YXRpb25SZXN1bHQSFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAIgASgJGrIBChBFdmFsdWF0aW9uUmVzdWx0EksKDHNh",
+            "bXBsZV9xdWVyeRgBIAEoCzIwLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
+            "bmUudjFiZXRhLlNhbXBsZVF1ZXJ5QgPgQQMSUQoPcXVhbGl0eV9tZXRyaWNz",
+            "GAIgASgLMjMuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEu",
+            "UXVhbGl0eU1ldHJpY3NCA+BBAzL7CQoRRXZhbHVhdGlvblNlcnZpY2USvwEK",
+            "DUdldEV2YWx1YXRpb24SOS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5l",
+            "LnYxYmV0YS5HZXRFdmFsdWF0aW9uUmVxdWVzdBovLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkV2YWx1YXRpb24iQtpBBG5hbWWC0+ST",
+            "AjUSMy92MWJldGEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9ldmFs",
+            "dWF0aW9ucy8qfRLSAQoPTGlzdEV2YWx1YXRpb25zEjsuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGEuTGlzdEV2YWx1YXRpb25zUmVxdWVz",
+            "dBo8Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLkxpc3RF",
+            "dmFsdWF0aW9uc1Jlc3BvbnNlIkTaQQZwYXJlbnSC0+STAjUSMy92MWJldGEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9ldmFsdWF0aW9ucxK+",
+            "AgoQQ3JlYXRlRXZhbHVhdGlvbhI8Lmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnll",
+            "bmdpbmUudjFiZXRhLkNyZWF0ZUV2YWx1YXRpb25SZXF1ZXN0Gh0uZ29vZ2xl",
+            "LmxvbmdydW5uaW5nLk9wZXJhdGlvbiLMAcpBbgouZ29vZ2xlLmNsb3VkLmRp",
+            "c2NvdmVyeWVuZ2luZS52MWJldGEuRXZhbHVhdGlvbhI8Z29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGEuQ3JlYXRlRXZhbHVhdGlvbk1ldGFk",
+            "YXRh2kERcGFyZW50LGV2YWx1YXRpb26C0+STAkEiMy92MWJldGEve3BhcmVu",
+            "dD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9ldmFsdWF0aW9uczoKZXZhbHVh",
+            "dGlvbhL6AQoVTGlzdEV2YWx1YXRpb25SZXN1bHRzEkEuZ29vZ2xlLmNsb3Vk",
+            "LmRpc2NvdmVyeWVuZ2luZS52MWJldGEuTGlzdEV2YWx1YXRpb25SZXN1bHRz",
+            "UmVxdWVzdBpCLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
+            "Lkxpc3RFdmFsdWF0aW9uUmVzdWx0c1Jlc3BvbnNlIlraQQpldmFsdWF0aW9u",
+            "gtPkkwJHEkUvdjFiZXRhL3tldmFsdWF0aW9uPXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyovZXZhbHVhdGlvbnMvKn06bGlzdFJlc3VsdHMakALKQR5kaXNjb3Zl",
+            "cnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQesBaHR0cHM6Ly93d3cuZ29vZ2xl",
+            "YXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29n",
+            "bGVhcGlzLmNvbS9hdXRoL2Rpc2NvdmVyeWVuZ2luZS5hc3Npc3QucmVhZHdy",
+            "aXRlLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlzY292ZXJ5",
+            "ZW5naW5lLnJlYWR3cml0ZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Rpc2NvdmVyeWVuZ2luZS5zZXJ2aW5nLnJlYWR3cml0ZUKdAgonY29t",
+            "Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQhZFdmFsdWF0",
+            "aW9uU2VydmljZVByb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292",
+            "ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zl",
+            "cnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5E",
+            "aXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVy",
+            "eUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdp",
+            "bmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.EvaluationReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.SampleQueryReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -395,7 +400,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of
+    /// Optional. Maximum number of
     /// [Evaluation][google.cloud.discoveryengine.v1beta.Evaluation]s to return. If
     /// unspecified, defaults to 100. The maximum allowed value is 1000. Values
     /// above 1000 will be coerced to 1000.
@@ -415,7 +420,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// A page token
+    /// Optional. A page token
     /// [ListEvaluationsResponse.next_page_token][google.cloud.discoveryengine.v1beta.ListEvaluationsResponse.next_page_token],
     /// received from a previous
     /// [EvaluationService.ListEvaluations][google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluations]
@@ -1344,9 +1349,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// Required. The evaluation resource name, such as
     /// `projects/{project}/locations/{location}/evaluations/{evaluation}`.
     ///
-    /// If the caller does not have permission to list [EvaluationResult][]
-    /// under this evaluation, regardless of whether or not this evaluation
-    /// set exists, a `PERMISSION_DENIED` error is returned.
+    /// If the caller does not have permission to list
+    /// [ListEvaluationResultsResponse.EvaluationResult][google.cloud.discoveryengine.v1beta.ListEvaluationResultsResponse.EvaluationResult]
+    /// under this evaluation, regardless of whether or not this evaluation set
+    /// exists, a `PERMISSION_DENIED` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1361,9 +1367,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Maximum number of [EvaluationResult][] to return. If unspecified,
-    /// defaults to 100. The maximum allowed value is 1000. Values above 1000 will
-    /// be coerced to 1000.
+    /// Optional. Maximum number of
+    /// [ListEvaluationResultsResponse.EvaluationResult][google.cloud.discoveryengine.v1beta.ListEvaluationResultsResponse.EvaluationResult]
+    /// to return. If unspecified, defaults to 100. The maximum allowed value is
+    /// 1000. Values above 1000 will be coerced to 1000.
     ///
     /// If this field is negative, an `INVALID_ARGUMENT` error is returned.
     /// </summary>
@@ -1380,7 +1387,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int PageTokenFieldNumber = 3;
     private string pageToken_ = "";
     /// <summary>
-    /// A page token
+    /// Optional. A page token
     /// [ListEvaluationResultsResponse.next_page_token][google.cloud.discoveryengine.v1beta.ListEvaluationResultsResponse.next_page_token],
     /// received from a previous
     /// [EvaluationService.ListEvaluationResults][google.cloud.discoveryengine.v1beta.EvaluationService.ListEvaluationResults]
@@ -1646,8 +1653,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         = pb::FieldCodec.ForMessage(10, global::Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse.Types.EvaluationResult.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse.Types.EvaluationResult> evaluationResults_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.ListEvaluationResultsResponse.Types.EvaluationResult>();
     /// <summary>
-    /// The
-    /// [EvaluationResult][google.cloud.discoveryengine.v1beta.ListEvaluationResultsResponse.EvaluationResult]s.
+    /// The evaluation results for the
+    /// [SampleQuery][google.cloud.discoveryengine.v1beta.SampleQuery]s.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

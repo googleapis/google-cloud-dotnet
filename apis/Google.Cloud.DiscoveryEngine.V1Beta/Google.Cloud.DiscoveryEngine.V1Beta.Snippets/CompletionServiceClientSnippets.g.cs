@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Cloud.DiscoveryEngine.V1Beta;
     using Google.LongRunning;
+    using Google.Protobuf.WellKnownTypes;
     using System.Threading.Tasks;
 
     /// <summary>Generated snippets.</summary>
@@ -84,6 +85,11 @@ namespace GoogleCSharpSnippets
                     AdvancedCompleteQueryRequest.Types.SuggestionType.Unspecified,
                 },
                 UserInfo = new UserInfo(),
+                SuggestionTypeSpecs =
+                {
+                    new AdvancedCompleteQueryRequest.Types.SuggestionTypeSpec(),
+                },
+                ExperimentIds = { "", },
             };
             // Make the request
             AdvancedCompleteQueryResponse response = completionServiceClient.AdvancedCompleteQuery(request);
@@ -111,6 +117,11 @@ namespace GoogleCSharpSnippets
                     AdvancedCompleteQueryRequest.Types.SuggestionType.Unspecified,
                 },
                 UserInfo = new UserInfo(),
+                SuggestionTypeSpecs =
+                {
+                    new AdvancedCompleteQueryRequest.Types.SuggestionTypeSpec(),
+                },
+                ExperimentIds = { "", },
             };
             // Make the request
             AdvancedCompleteQueryResponse response = await completionServiceClient.AdvancedCompleteQueryAsync(request);
@@ -380,6 +391,47 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 PurgeCompletionSuggestionsResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveSuggestion</summary>
+        public void RemoveSuggestionRequestObject()
+        {
+            // Snippet: RemoveSuggestion(RemoveSuggestionRequest, CallSettings)
+            // Create client
+            CompletionServiceClient completionServiceClient = CompletionServiceClient.Create();
+            // Initialize request argument(s)
+            RemoveSuggestionRequest request = new RemoveSuggestionRequest
+            {
+                CompletionConfigAsCompletionConfigName = CompletionConfigName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                SearchHistorySuggestion = "",
+                UserPseudoId = "",
+                UserInfo = new UserInfo(),
+                RemoveTime = new Timestamp(),
+            };
+            // Make the request
+            RemoveSuggestionResponse response = completionServiceClient.RemoveSuggestion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RemoveSuggestionAsync</summary>
+        public async Task RemoveSuggestionRequestObjectAsync()
+        {
+            // Snippet: RemoveSuggestionAsync(RemoveSuggestionRequest, CallSettings)
+            // Additional: RemoveSuggestionAsync(RemoveSuggestionRequest, CancellationToken)
+            // Create client
+            CompletionServiceClient completionServiceClient = await CompletionServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RemoveSuggestionRequest request = new RemoveSuggestionRequest
+            {
+                CompletionConfigAsCompletionConfigName = CompletionConfigName.FromProjectLocationDataStore("[PROJECT]", "[LOCATION]", "[DATA_STORE]"),
+                SearchHistorySuggestion = "",
+                UserPseudoId = "",
+                UserInfo = new UserInfo(),
+                RemoveTime = new Timestamp(),
+            };
+            // Make the request
+            RemoveSuggestionResponse response = await completionServiceClient.RemoveSuggestionAsync(request);
             // End snippet
         }
     }

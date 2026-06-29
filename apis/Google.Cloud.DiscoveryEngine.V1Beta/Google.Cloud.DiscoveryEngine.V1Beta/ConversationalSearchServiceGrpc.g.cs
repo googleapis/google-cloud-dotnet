@@ -3,7 +3,7 @@
 //     source: google/cloud/discoveryengine/v1beta/conversational_search_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -163,6 +163,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         __Marshaller_google_cloud_discoveryengine_v1beta_AnswerQueryResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryResponse> __Method_StreamAnswerQuery = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryResponse>(
+        grpc::MethodType.ServerStreaming,
+        __ServiceName,
+        "StreamAnswerQuery",
+        __Marshaller_google_cloud_discoveryengine_v1beta_AnswerQueryRequest,
+        __Marshaller_google_cloud_discoveryengine_v1beta_AnswerQueryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.GetAnswerRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Answer> __Method_GetAnswer = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.GetAnswerRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Answer>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -312,6 +320,25 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryResponse> AnswerQuery(global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Answer query method (streaming).
+      ///
+      /// It takes one
+      /// [AnswerQueryRequest][google.cloud.discoveryengine.v1beta.AnswerQueryRequest]
+      /// and returns multiple
+      /// [AnswerQueryResponse][google.cloud.discoveryengine.v1beta.AnswerQueryResponse]
+      /// messages in a stream.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="responseStream">Used for sending responses back to the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>A task indicating completion of the handler.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task StreamAnswerQuery(global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryRequest request, grpc::IServerStreamWriter<global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryResponse> responseStream, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -813,6 +840,42 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_AnswerQuery, null, options, request);
       }
       /// <summary>
+      /// Answer query method (streaming).
+      ///
+      /// It takes one
+      /// [AnswerQueryRequest][google.cloud.discoveryengine.v1beta.AnswerQueryRequest]
+      /// and returns multiple
+      /// [AnswerQueryResponse][google.cloud.discoveryengine.v1beta.AnswerQueryResponse]
+      /// messages in a stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryResponse> StreamAnswerQuery(global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StreamAnswerQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Answer query method (streaming).
+      ///
+      /// It takes one
+      /// [AnswerQueryRequest][google.cloud.discoveryengine.v1beta.AnswerQueryRequest]
+      /// and returns multiple
+      /// [AnswerQueryResponse][google.cloud.discoveryengine.v1beta.AnswerQueryResponse]
+      /// messages in a stream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncServerStreamingCall<global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryResponse> StreamAnswerQuery(global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncServerStreamingCall(__Method_StreamAnswerQuery, null, options, request);
+      }
+      /// <summary>
       /// Gets a Answer.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1165,6 +1228,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           .AddMethod(__Method_GetConversation, serviceImpl.GetConversation)
           .AddMethod(__Method_ListConversations, serviceImpl.ListConversations)
           .AddMethod(__Method_AnswerQuery, serviceImpl.AnswerQuery)
+          .AddMethod(__Method_StreamAnswerQuery, serviceImpl.StreamAnswerQuery)
           .AddMethod(__Method_GetAnswer, serviceImpl.GetAnswer)
           .AddMethod(__Method_CreateSession, serviceImpl.CreateSession)
           .AddMethod(__Method_DeleteSession, serviceImpl.DeleteSession)
@@ -1187,6 +1251,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       serviceBinder.AddMethod(__Method_GetConversation, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.GetConversationRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Conversation>(serviceImpl.GetConversation));
       serviceBinder.AddMethod(__Method_ListConversations, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.ListConversationsRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.ListConversationsResponse>(serviceImpl.ListConversations));
       serviceBinder.AddMethod(__Method_AnswerQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryResponse>(serviceImpl.AnswerQuery));
+      serviceBinder.AddMethod(__Method_StreamAnswerQuery, serviceImpl == null ? null : new grpc::ServerStreamingServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerQueryResponse>(serviceImpl.StreamAnswerQuery));
       serviceBinder.AddMethod(__Method_GetAnswer, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.GetAnswerRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Answer>(serviceImpl.GetAnswer));
       serviceBinder.AddMethod(__Method_CreateSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.CreateSessionRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Session>(serviceImpl.CreateSession));
       serviceBinder.AddMethod(__Method_DeleteSession, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.DeleteSessionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteSession));

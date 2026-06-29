@@ -236,5 +236,62 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ProjectName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        public partial class Types
+        {
+            public partial class CustomerProvidedConfig
+            {
+                public partial class Types
+                {
+                    public partial class NotebooklmConfig
+                    {
+                        public partial class Types
+                        {
+                            public partial class ModelArmorConfig
+                            {
+                                /// <summary>
+                                /// <see cref="TemplateName"/>-typed view over the <see cref="UserPromptTemplate"/>
+                                /// resource name property.
+                                /// </summary>
+                                public TemplateName UserPromptTemplateAsTemplateName
+                                {
+                                    get => string.IsNullOrEmpty(UserPromptTemplate) ? null : TemplateName.Parse(UserPromptTemplate, allowUnparsed: true);
+                                    set => UserPromptTemplate = value?.ToString() ?? "";
+                                }
+
+                                /// <summary>
+                                /// <see cref="TemplateName"/>-typed view over the <see cref="ResponseTemplate"/>
+                                /// resource name property.
+                                /// </summary>
+                                public TemplateName ResponseTemplateAsTemplateName
+                                {
+                                    get => string.IsNullOrEmpty(ResponseTemplate) ? null : TemplateName.Parse(ResponseTemplate, allowUnparsed: true);
+                                    set => ResponseTemplate = value?.ToString() ?? "";
+                                }
+                            }
+
+                            public partial class DataProtectionPolicy
+                            {
+                                public partial class Types
+                                {
+                                    public partial class SensitiveDataProtectionPolicy
+                                    {
+                                        /// <summary>
+                                        /// <see cref="ContentPolicyName"/>-typed view over the <see cref="Policy"/>
+                                        /// resource name property.
+                                        /// </summary>
+                                        public ContentPolicyName PolicyAsContentPolicyName
+                                        {
+                                            get => string.IsNullOrEmpty(Policy) ? null : ContentPolicyName.Parse(Policy, allowUnparsed: true);
+                                            set => Policy = value?.ToString() ?? "";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }

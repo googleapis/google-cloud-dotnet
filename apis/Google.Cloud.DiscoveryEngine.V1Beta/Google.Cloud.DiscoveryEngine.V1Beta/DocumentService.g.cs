@@ -80,7 +80,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "Lmdvb2dsZWFwaXMuY29tL0ZoaXJSZXNvdXJjZUgAQg8KDW1hdGNoZXJfdmFs",
             "dWUiVQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdJTkRFWEVE",
             "EAESFgoSTk9UX0lOX1RBUkdFVF9TSVRFEAISEAoMTk9UX0lOX0lOREVYEAMy",
-            "oRcKD0RvY3VtZW50U2VydmljZRKsAgoLR2V0RG9jdW1lbnQSNy5nb29nbGUu",
+            "nxgKD0RvY3VtZW50U2VydmljZRKsAgoLR2V0RG9jdW1lbnQSNy5nb29nbGUu",
             "Y2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5HZXREb2N1bWVudFJlcXVl",
             "c3QaLS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5Eb2N1",
             "bWVudCK0AdpBBG5hbWWC0+STAqYBEkkvdjFiZXRhL3tuYW1lPXByb2plY3Rz",
@@ -144,15 +144,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "cmVzLyovYnJhbmNoZXMvKn0vYmF0Y2hHZXREb2N1bWVudHNNZXRhZGF0YVpp",
             "EmcvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb2xs",
             "ZWN0aW9ucy8qL2RhdGFTdG9yZXMvKi9icmFuY2hlcy8qfS9iYXRjaEdldERv",
-            "Y3VtZW50c01ldGFkYXRhGlLKQR5kaXNjb3ZlcnllbmdpbmUuZ29vZ2xlYXBp",
-            "cy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3Vk",
-            "LXBsYXRmb3JtQpsCCidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
-            "ZS52MWJldGFCFERvY3VtZW50U2VydmljZVByb3RvUAFaUWNsb3VkLmdvb2ds",
-            "ZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3Zlcnll",
-            "bmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoC",
-            "I0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xl",
-            "XENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3Vk",
-            "OjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
+            "Y3VtZW50c01ldGFkYXRhGs8BykEeZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFw",
+            "aXMuY29t0kGqAWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xv",
+            "dWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9k",
+            "aXNjb3ZlcnllbmdpbmUucmVhZHdyaXRlLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvZGlzY292ZXJ5ZW5naW5lLnNlcnZpbmcucmVhZHdyaXRl",
+            "QpsCCidjb20uZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGFC",
+            "FERvY3VtZW50U2VydmljZVByb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "ZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtk",
+            "aXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5D",
+            "bG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERp",
+            "c2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3Zl",
+            "cnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.DocumentReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ImportConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.PurgeConfigReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -1035,7 +1038,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// Otherwise, an `ALREADY_EXISTS` error is returned.
     ///
     /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-    /// standard with a length limit of 63 characters. Otherwise, an
+    /// standard with a length limit of 128 characters. Otherwise, an
     /// `INVALID_ARGUMENT` error is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

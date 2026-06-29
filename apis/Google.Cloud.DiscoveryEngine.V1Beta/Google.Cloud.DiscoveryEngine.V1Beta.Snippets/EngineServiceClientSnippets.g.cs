@@ -18,6 +18,7 @@ namespace GoogleCSharpSnippets
 {
     using Google.Api.Gax;
     using Google.Cloud.DiscoveryEngine.V1Beta;
+    using Google.Cloud.Iam.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1187,6 +1188,190 @@ namespace GoogleCSharpSnippets
                 // If it has completed, then access the result
                 TuneEngineResponse retrievedResult = retrievedResponse.Result;
             }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyRequestObject()
+        {
+            // Snippet: GetIamPolicy(GetIamPolicyRequest, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = engineServiceClient.GetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: GetIamPolicyAsync(GetIamPolicyRequest, CallSettings)
+            // Additional: GetIamPolicyAsync(GetIamPolicyRequest, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetIamPolicyRequest request = new GetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Options = new GetPolicyOptions(),
+            };
+            // Make the request
+            Policy response = await engineServiceClient.GetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicy()
+        {
+            // Snippet: GetIamPolicy(string, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = engineServiceClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyAsync()
+        {
+            // Snippet: GetIamPolicyAsync(string, CallSettings)
+            // Additional: GetIamPolicyAsync(string, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            // Make the request
+            Policy response = await engineServiceClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicy</summary>
+        public void GetIamPolicyResourceNames()
+        {
+            // Snippet: GetIamPolicy(IResourceName, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = engineServiceClient.GetIamPolicy(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetIamPolicyAsync</summary>
+        public async Task GetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: GetIamPolicyAsync(IResourceName, CallSettings)
+            // Additional: GetIamPolicyAsync(IResourceName, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Policy response = await engineServiceClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyRequestObject()
+        {
+            // Snippet: SetIamPolicy(SetIamPolicyRequest, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = engineServiceClient.SetIamPolicy(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyRequestObjectAsync()
+        {
+            // Snippet: SetIamPolicyAsync(SetIamPolicyRequest, CallSettings)
+            // Additional: SetIamPolicyAsync(SetIamPolicyRequest, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SetIamPolicyRequest request = new SetIamPolicyRequest
+            {
+                ResourceAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Policy = new Policy(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Policy response = await engineServiceClient.SetIamPolicyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicy()
+        {
+            // Snippet: SetIamPolicy(string, Policy, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = engineServiceClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyAsync()
+        {
+            // Snippet: SetIamPolicyAsync(string, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(string, Policy, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string resource = "a/wildcard/resource";
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await engineServiceClient.SetIamPolicyAsync(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicy</summary>
+        public void SetIamPolicyResourceNames()
+        {
+            // Snippet: SetIamPolicy(IResourceName, Policy, CallSettings)
+            // Create client
+            EngineServiceClient engineServiceClient = EngineServiceClient.Create();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = engineServiceClient.SetIamPolicy(resource, policy);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetIamPolicyAsync</summary>
+        public async Task SetIamPolicyResourceNamesAsync()
+        {
+            // Snippet: SetIamPolicyAsync(IResourceName, Policy, CallSettings)
+            // Additional: SetIamPolicyAsync(IResourceName, Policy, CancellationToken)
+            // Create client
+            EngineServiceClient engineServiceClient = await EngineServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
+            Policy policy = new Policy();
+            // Make the request
+            Policy response = await engineServiceClient.SetIamPolicyAsync(resource, policy);
             // End snippet
         }
     }

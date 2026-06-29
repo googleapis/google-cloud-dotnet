@@ -47,6 +47,7 @@ namespace GoogleCSharpSnippets
                 QueryUnderstandingSpec = new AnswerQueryRequest.Types.QueryUnderstandingSpec(),
                 UserPseudoId = "",
                 UserLabels = { { "", "" }, },
+                EndUserSpec = new AnswerQueryRequest.Types.EndUserSpec(),
             };
             // Make the request
             AnswerQueryResponse response = conversationalSearchServiceClient.AnswerQuery(request);

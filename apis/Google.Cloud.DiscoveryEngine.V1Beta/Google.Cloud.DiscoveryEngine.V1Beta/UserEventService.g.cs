@@ -42,7 +42,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "dWVzdBJACgZwYXJlbnQYASABKAlCMOBBAvpBKgooZGlzY292ZXJ5ZW5naW5l",
             "Lmdvb2dsZWFwaXMuY29tL0RhdGFTdG9yZRIXCgp1c2VyX2V2ZW50GAIgASgJ",
             "QgPgQQISEAoDdXJpGAMgASgJSACIAQESEAoDZXRzGAQgASgDSAGIAQFCBgoE",
-            "X3VyaUIGCgRfZXRzMvwMChBVc2VyRXZlbnRTZXJ2aWNlEoQDCg5Xcml0ZVVz",
+            "X3VyaUIGCgRfZXRzMvsOChBVc2VyRXZlbnRTZXJ2aWNlEoQDCg5Xcml0ZVVz",
             "ZXJFdmVudBI6Lmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRh",
             "LldyaXRlVXNlckV2ZW50UmVxdWVzdBouLmdvb2dsZS5jbG91ZC5kaXNjb3Zl",
             "cnllbmdpbmUudjFiZXRhLlVzZXJFdmVudCKFAoLT5JMC/gEiRS92MWJldGEv",
@@ -68,24 +68,30 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "cy8qL2xvY2F0aW9ucy8qL2RhdGFTdG9yZXMvKn0vdXNlckV2ZW50czpwdXJn",
             "ZToBKlpYIlMvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
             "Ki9jb2xsZWN0aW9ucy8qL2RhdGFTdG9yZXMvKn0vdXNlckV2ZW50czpwdXJn",
-            "ZToBKhKeAwoQSW1wb3J0VXNlckV2ZW50cxI8Lmdvb2dsZS5jbG91ZC5kaXNj",
+            "ZToBKhLeAwoQSW1wb3J0VXNlckV2ZW50cxI8Lmdvb2dsZS5jbG91ZC5kaXNj",
             "b3ZlcnllbmdpbmUudjFiZXRhLkltcG9ydFVzZXJFdmVudHNSZXF1ZXN0Gh0u",
-            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKsAspBfAo8Z29vZ2xlLmNs",
+            "Z29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiLsAspBfAo8Z29vZ2xlLmNs",
             "b3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuSW1wb3J0VXNlckV2ZW50c1Jl",
             "c3BvbnNlEjxnb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5J",
-            "bXBvcnRVc2VyRXZlbnRzTWV0YWRhdGGC0+STAqYBIkYvdjFiZXRhL3twYXJl",
+            "bXBvcnRVc2VyRXZlbnRzTWV0YWRhdGGC0+STAuYBIkYvdjFiZXRhL3twYXJl",
             "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9kYXRhU3RvcmVzLyp9L3VzZXJF",
             "dmVudHM6aW1wb3J0OgEqWlkiVC92MWJldGEve3BhcmVudD1wcm9qZWN0cy8q",
             "L2xvY2F0aW9ucy8qL2NvbGxlY3Rpb25zLyovZGF0YVN0b3Jlcy8qfS91c2Vy",
-            "RXZlbnRzOmltcG9ydDoBKhpSykEeZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFw",
-            "aXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91",
-            "ZC1wbGF0Zm9ybUKcAgonY29tLmdvb2dsZS5jbG91ZC5kaXNjb3Zlcnllbmdp",
-            "bmUudjFiZXRhQhVVc2VyRXZlbnRTZXJ2aWNlUHJvdG9QAVpRY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9kaXNjb3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVy",
-            "eWVuZ2luZXBiO2Rpc2NvdmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5F",
-            "qgIjR29vZ2xlLkNsb3VkLkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29n",
-            "bGVcQ2xvdWRcRGlzY292ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xv",
-            "dWQ6OkRpc2NvdmVyeUVuZ2luZTo6VjFiZXRhYgZwcm90bzM="));
+            "RXZlbnRzOmltcG9ydDoBKlo+IjkvdjFiZXRhL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKn0vdXNlckV2ZW50czppbXBvcnQ6ASoakALKQR5kaXNj",
+            "b3ZlcnllbmdpbmUuZ29vZ2xlYXBpcy5jb23SQesBaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Rpc2NvdmVyeWVuZ2luZS5hc3Npc3QucmVh",
+            "ZHdyaXRlLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvZGlzY292",
+            "ZXJ5ZW5naW5lLnJlYWR3cml0ZSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
+            "bS9hdXRoL2Rpc2NvdmVyeWVuZ2luZS5zZXJ2aW5nLnJlYWR3cml0ZUKcAgon",
+            "Y29tLmdvb2dsZS5jbG91ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhQhVVc2Vy",
+            "RXZlbnRTZXJ2aWNlUHJvdG9QAVpRY2xvdWQuZ29vZ2xlLmNvbS9nby9kaXNj",
+            "b3ZlcnllbmdpbmUvYXBpdjFiZXRhL2Rpc2NvdmVyeWVuZ2luZXBiO2Rpc2Nv",
+            "dmVyeWVuZ2luZXBiogIPRElTQ09WRVJZRU5HSU5FqgIjR29vZ2xlLkNsb3Vk",
+            "LkRpc2NvdmVyeUVuZ2luZS5WMUJldGHKAiNHb29nbGVcQ2xvdWRcRGlzY292",
+            "ZXJ5RW5naW5lXFYxYmV0YeoCJkdvb2dsZTo6Q2xvdWQ6OkRpc2NvdmVyeUVu",
+            "Z2luZTo6VjFiZXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.ImportConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.PurgeConfigReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.UserEventReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -156,11 +162,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore] level, the
     /// format is:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
-    /// If the write user event action is applied in [Location][] level, for
-    /// example, the event with
-    /// [Document][google.cloud.discoveryengine.v1beta.Document] across multiple
-    /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore], the format is:
-    /// `projects/{project}/locations/{location}`.
+    /// If the write user event action is applied in
+    /// [Location][google.cloud.location.Location] level, for example, the event
+    /// with [Document][google.cloud.discoveryengine.v1beta.Document] across
+    /// multiple [DataStore][google.cloud.discoveryengine.v1beta.DataStore], the
+    /// format is: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -457,8 +463,16 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent DataStore resource name, such as
+    /// Required. The parent resource name.
+    /// If the collect user event action is applied in
+    /// [DataStore][google.cloud.discoveryengine.v1beta.DataStore] level, the
+    /// format is:
     /// `projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}`.
+    /// If the collect user event action is applied in
+    /// [Location][google.cloud.location.Location] level, for example, the event
+    /// with [Document][google.cloud.discoveryengine.v1beta.Document] across
+    /// multiple [DataStore][google.cloud.discoveryengine.v1beta.DataStore], the
+    /// format is: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
