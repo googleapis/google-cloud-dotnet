@@ -23,5 +23,5 @@ public static class EnumFullyQualifiedName
     /// The string representing the FQN of the CharacterClass enum in the `fantasy` package
     /// This is not readily available from the C# compiled proto class
     /// </summary>
-    public const string CharacterClassFQN = "ENUM<fantasy.Character.CharacterClass>";
+    public const string CharacterClassFQN = "fantasy.Character.CharacterClass";
 }

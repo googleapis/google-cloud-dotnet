@@ -77,7 +77,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueValue", typeof(Value), SpannerDbType.FromClrType(typeof(Value)) },
                 { "ProtobufPersonValue", typeof(Value), SpannerDbType.FromClrType(typeof(Person)) },
                 { "ProtobufValueWrapperValue", typeof(Value), SpannerDbType.FromClrType(typeof(ValueWrapper)) },
-                { "EnumValue", typeof(long), SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass)) },
+                { "EnumValue", typeof(Value), SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass)) },
                 { "UuidValue", typeof(Guid), SpannerDbType.Uuid },
 
                 // Array types.
@@ -97,7 +97,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "ProtobufValueArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Value))) },
                 { "ProtobufPersonArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Person))) },
                 { "ProtobufValueWrapperArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(ValueWrapper))) },
-                { "EnumArrayValue", typeof(List<long>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass))) },
+                { "EnumArrayValue", typeof(List<Value>), SpannerDbType.ArrayOf(SpannerDbType.FromClrType(typeof(Character.Types.CharacterClass))) },
                 { "UuidArrayValue", typeof(List<Guid>), SpannerDbType.ArrayOf(SpannerDbType.Uuid) },
             };
 

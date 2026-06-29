@@ -20,6 +20,7 @@ using Google.Protobuf.Reflection;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using System;
+using System.Linq;
 
 namespace Google.Cloud.Spanner.Data.CommonTesting;
 
@@ -93,7 +94,7 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
             $", {Duration.Descriptor.FullName}" +
             $", {Person.Descriptor.FullName}" +
             $", {Character.Descriptor.FullName}" +
-            $", {Character.Descriptor.FindFieldByNumber(Character.CharacterClassFieldNumber).EnumType.FullName}" +
+            $", {Character.Descriptor.EnumTypes.Single(t => t.ClrType == typeof(Character.Types.CharacterClass)).FullName}" +
             $", {ValueWrapper.Descriptor.FullName}" +
             $", {Value.Descriptor.FindFieldByNumber(Value.NullValueFieldNumber).EnumType.FullName}" +
             $", {ListValue.Descriptor.FullName}" +
