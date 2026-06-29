@@ -1,5 +1,17 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-06-29
+
+### New features
+
+- Added `force` field to DeleteCollectionRequest to allow deleting a Collection together with its Indexes and DataObjects
+- Added `FieldFilter` message and `field_filter` field to ExportDataObjects to restrict which top-level Data Object fields are emitted
+- Relaxed `search_text` and `data_field_names` on data object search from REQUIRED to OPTIONAL (required only for the default text search mode)
+
+### Documentation improvements
+
+- Updated documentation for listing locations
+
 ## Version 1.0.0-beta05, released 2026-04-13
 
 ### New features
