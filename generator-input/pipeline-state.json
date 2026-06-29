@@ -5097,10 +5097,12 @@
         },
         {
             "id": "Google.Cloud.AgentRegistry.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-06-29T14:25:47.226264884Z",
             "lastGeneratedCommit": "5403278d28f43d2071393d7ad306c5f1cdfd9d90",
+            "lastReleasedCommit": "5403278d28f43d2071393d7ad306c5f1cdfd9d90",
             "apiPaths": [
                 "google/cloud/agentregistry/v1"
             ],
