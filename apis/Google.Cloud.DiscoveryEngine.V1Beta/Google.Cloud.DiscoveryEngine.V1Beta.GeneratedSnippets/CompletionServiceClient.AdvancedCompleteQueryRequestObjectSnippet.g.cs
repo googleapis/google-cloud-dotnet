@@ -47,6 +47,11 @@ namespace GoogleCSharpSnippets
                     AdvancedCompleteQueryRequest.Types.SuggestionType.Unspecified,
                 },
                 UserInfo = new UserInfo(),
+                SuggestionTypeSpecs =
+                {
+                    new AdvancedCompleteQueryRequest.Types.SuggestionTypeSpec(),
+                },
+                ExperimentIds = { "", },
             };
             // Make the request
             AdvancedCompleteQueryResponse response = completionServiceClient.AdvancedCompleteQuery(request);

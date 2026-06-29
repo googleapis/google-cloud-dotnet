@@ -72,4 +72,17 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             }
         }
     }
+
+    public partial class RemoveSuggestionRequest
+    {
+        /// <summary>
+        /// <see cref="CompletionConfigName"/>-typed view over the <see cref="CompletionConfig"/> resource name
+        /// property.
+        /// </summary>
+        public CompletionConfigName CompletionConfigAsCompletionConfigName
+        {
+            get => string.IsNullOrEmpty(CompletionConfig) ? null : CompletionConfigName.Parse(CompletionConfig, allowUnparsed: true);
+            set => CompletionConfig = value?.ToString() ?? "";
+        }
+    }
 }

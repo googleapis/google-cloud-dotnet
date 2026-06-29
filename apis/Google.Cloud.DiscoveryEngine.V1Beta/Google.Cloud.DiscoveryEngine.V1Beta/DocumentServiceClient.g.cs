@@ -326,11 +326,15 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// The default DocumentService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.serving.readwrite</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/discoveryengine.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.serving.readwrite",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -791,7 +795,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -831,7 +835,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -871,7 +875,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -906,7 +910,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -946,7 +950,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -986,7 +990,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Otherwise, an `ALREADY_EXISTS` error is returned.
         /// 
         /// This field must conform to [RFC-1034](https://tools.ietf.org/html/rfc1034)
-        /// standard with a length limit of 63 characters. Otherwise, an
+        /// standard with a length limit of 128 characters. Otherwise, an
         /// `INVALID_ARGUMENT` error is returned.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>

@@ -50,6 +50,14 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             /// .
             /// </summary>
             ProjectLocationCollectionEngineSession = 3,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}</c>
+            /// .
+            /// </summary>
+            ProjectLocationCollectionEngineCollaborativeProjectSession = 4,
         }
 
         private static gax::PathTemplate s_projectLocationDataStoreSession = new gax::PathTemplate("projects/{project}/locations/{location}/dataStores/{data_store}/sessions/{session}");
@@ -57,6 +65,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         private static gax::PathTemplate s_projectLocationCollectionDataStoreSession = new gax::PathTemplate("projects/{project}/locations/{location}/collections/{collection}/dataStores/{data_store}/sessions/{session}");
 
         private static gax::PathTemplate s_projectLocationCollectionEngineSession = new gax::PathTemplate("projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}");
+
+        private static gax::PathTemplate s_projectLocationCollectionEngineCollaborativeProjectSession = new gax::PathTemplate("projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}");
 
         /// <summary>Creates a <see cref="SessionName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -105,6 +115,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <returns>A new instance of <see cref="SessionName"/> constructed from the provided ids.</returns>
         public static SessionName FromProjectLocationCollectionEngineSession(string projectId, string locationId, string collectionId, string engineId, string sessionId) =>
             new SessionName(ResourceNameType.ProjectLocationCollectionEngineSession, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), collectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), engineId: gax::GaxPreconditions.CheckNotNullOrEmpty(engineId, nameof(engineId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)));
+
+        /// <summary>
+        /// Creates a <see cref="SessionName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="engineId">The <c>Engine</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collaborativeProjectId">
+        /// The <c>CollaborativeProject</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="SessionName"/> constructed from the provided ids.</returns>
+        public static SessionName FromProjectLocationCollectionEngineCollaborativeProjectSession(string projectId, string locationId, string collectionId, string engineId, string collaborativeProjectId, string sessionId) =>
+            new SessionName(ResourceNameType.ProjectLocationCollectionEngineCollaborativeProjectSession, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), collectionId: gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), engineId: gax::GaxPreconditions.CheckNotNullOrEmpty(engineId, nameof(engineId)), collaborativeProjectId: gax::GaxPreconditions.CheckNotNullOrEmpty(collaborativeProjectId, nameof(collaborativeProjectId)), sessionId: gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="SessionName"/> with pattern
@@ -172,6 +200,29 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         public static string FormatProjectLocationCollectionEngineSession(string projectId, string locationId, string collectionId, string engineId, string sessionId) =>
             s_projectLocationCollectionEngineSession.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(engineId, nameof(engineId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="SessionName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collectionId">The <c>Collection</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="engineId">The <c>Engine</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="collaborativeProjectId">
+        /// The <c>CollaborativeProject</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="sessionId">The <c>Session</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="SessionName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationCollectionEngineCollaborativeProjectSession(string projectId, string locationId, string collectionId, string engineId, string collaborativeProjectId, string sessionId) =>
+            s_projectLocationCollectionEngineCollaborativeProjectSession.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(collectionId, nameof(collectionId)), gax::GaxPreconditions.CheckNotNullOrEmpty(engineId, nameof(engineId)), gax::GaxPreconditions.CheckNotNullOrEmpty(collaborativeProjectId, nameof(collaborativeProjectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(sessionId, nameof(sessionId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="SessionName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
@@ -190,6 +241,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -219,6 +276,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -256,6 +319,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <c>projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}</c>
         /// </description>
         /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}</c>
+        /// </description>
+        /// </item>
         /// </list>
         /// </remarks>
         /// <param name="sessionName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -286,6 +355,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <item>
         /// <description>
         /// <c>projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/sessions/{session}</c>
+        /// </description>
+        /// </item>
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/collections/{collection}/engines/{engine}/collaborativeProjects/{collaborative_project}/sessions/{session}</c>
         /// </description>
         /// </item>
         /// </list>
@@ -320,6 +395,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
                 result = FromProjectLocationCollectionEngineSession(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
                 return true;
             }
+            if (s_projectLocationCollectionEngineCollaborativeProjectSession.TryParseName(sessionName, out resourceName))
+            {
+                result = FromProjectLocationCollectionEngineCollaborativeProjectSession(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4], resourceName[5]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(sessionName, out gax::UnparsedResourceName unparsedResourceName))
@@ -332,10 +412,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             return false;
         }
 
-        private SessionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string collectionId = null, string dataStoreId = null, string engineId = null, string locationId = null, string projectId = null, string sessionId = null)
+        private SessionName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string collaborativeProjectId = null, string collectionId = null, string dataStoreId = null, string engineId = null, string locationId = null, string projectId = null, string sessionId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            CollaborativeProjectId = collaborativeProjectId;
             CollectionId = collectionId;
             DataStoreId = dataStoreId;
             EngineId = engineId;
@@ -364,6 +445,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// unparsed resource name.
         /// </summary>
         public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>CollaborativeProject</c> ID. May be <c>null</c>, depending on which resource name is contained by
+        /// this instance.
+        /// </summary>
+        public string CollaborativeProjectId { get; }
 
         /// <summary>
         /// The <c>Collection</c> ID. May be <c>null</c>, depending on which resource name is contained by this
@@ -409,6 +496,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
                 case ResourceNameType.ProjectLocationDataStoreSession: return s_projectLocationDataStoreSession.Expand(ProjectId, LocationId, DataStoreId, SessionId);
                 case ResourceNameType.ProjectLocationCollectionDataStoreSession: return s_projectLocationCollectionDataStoreSession.Expand(ProjectId, LocationId, CollectionId, DataStoreId, SessionId);
                 case ResourceNameType.ProjectLocationCollectionEngineSession: return s_projectLocationCollectionEngineSession.Expand(ProjectId, LocationId, CollectionId, EngineId, SessionId);
+                case ResourceNameType.ProjectLocationCollectionEngineCollaborativeProjectSession: return s_projectLocationCollectionEngineCollaborativeProjectSession.Expand(ProjectId, LocationId, CollectionId, EngineId, CollaborativeProjectId, SessionId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

@@ -40,20 +40,23 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "eWVuZ2luZS52MWJldGEuUmFua1JlcXVlc3QuVXNlckxhYmVsc0VudHJ5GjEK",
             "D1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
             "AjgBIlMKDFJhbmtSZXNwb25zZRJDCgdyZWNvcmRzGAUgAygLMjIuZ29vZ2xl",
-            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUmFua2luZ1JlY29yZDKh",
-            "AgoLUmFua1NlcnZpY2USvQEKBFJhbmsSMC5nb29nbGUuY2xvdWQuZGlzY292",
+            "LmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuUmFua2luZ1JlY29yZDKf",
+            "AwoLUmFua1NlcnZpY2USvQEKBFJhbmsSMC5nb29nbGUuY2xvdWQuZGlzY292",
             "ZXJ5ZW5naW5lLnYxYmV0YS5SYW5rUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5k",
             "aXNjb3ZlcnllbmdpbmUudjFiZXRhLlJhbmtSZXNwb25zZSJQgtPkkwJKIkUv",
             "djFiZXRhL3tyYW5raW5nX2NvbmZpZz1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L3JhbmtpbmdDb25maWdzLyp9OnJhbms6ASoaUspBHmRpc2NvdmVyeWVuZ2lu",
-            "ZS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29t",
-            "L2F1dGgvY2xvdWQtcGxhdGZvcm1ClwIKJ2NvbS5nb29nbGUuY2xvdWQuZGlz",
-            "Y292ZXJ5ZW5naW5lLnYxYmV0YUIQUmFua1NlcnZpY2VQcm90b1ABWlFjbG91",
-            "ZC5nb29nbGUuY29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEvZGlz",
-            "Y292ZXJ5ZW5naW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllF",
-            "TkdJTkWqAiNHb29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0YcoC",
-            "I0dvb2dsZVxDbG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29vZ2xl",
-            "OjpDbG91ZDo6RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
+            "L3JhbmtpbmdDb25maWdzLyp9OnJhbms6ASoazwHKQR5kaXNjb3Zlcnllbmdp",
+            "bmUuZ29vZ2xlYXBpcy5jb23SQaoBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlz",
+            "LmNvbS9hdXRoL2Rpc2NvdmVyeWVuZ2luZS5yZWFkd3JpdGUsaHR0cHM6Ly93",
+            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9kaXNjb3ZlcnllbmdpbmUuc2Vydmlu",
+            "Zy5yZWFkd3JpdGVClwIKJ2NvbS5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
+            "aW5lLnYxYmV0YUIQUmFua1NlcnZpY2VQcm90b1ABWlFjbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2Rpc2NvdmVyeWVuZ2luZS9hcGl2MWJldGEvZGlzY292ZXJ5ZW5n",
+            "aW5lcGI7ZGlzY292ZXJ5ZW5naW5lcGKiAg9ESVNDT1ZFUllFTkdJTkWqAiNH",
+            "b29nbGUuQ2xvdWQuRGlzY292ZXJ5RW5naW5lLlYxQmV0YcoCI0dvb2dsZVxD",
+            "bG91ZFxEaXNjb3ZlcnlFbmdpbmVcVjFiZXRh6gImR29vZ2xlOjpDbG91ZDo6",
+            "RGlzY292ZXJ5RW5naW5lOjpWMWJldGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -177,6 +180,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     private float score_;
     /// <summary>
     /// The score of this record based on the given query and selected model.
+    /// The score will be rounded to 4 decimal places. If the score is close to 0,
+    /// it will be rounded to 0.00001 to avoid returning unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -478,7 +483,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// <summary>
     /// The identifier of the model to use. It is one of:
     ///
-    /// * `semantic-ranker-512@latest`: Semantic ranking model with maxiumn input
+    /// * `semantic-ranker-512@latest`: Semantic ranking model with maximum input
     /// token size 512.
     ///
     /// It is set to `semantic-ranker-512@latest` by default if unspecified.
@@ -529,7 +534,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.DiscoveryEngine.V1Beta.RankingRecord.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.RankingRecord> records_ = new pbc::RepeatedField<global::Google.Cloud.DiscoveryEngine.V1Beta.RankingRecord>();
     /// <summary>
-    /// Required. A list of records to rank. At most 200 records to rank.
+    /// Required. A list of records to rank.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

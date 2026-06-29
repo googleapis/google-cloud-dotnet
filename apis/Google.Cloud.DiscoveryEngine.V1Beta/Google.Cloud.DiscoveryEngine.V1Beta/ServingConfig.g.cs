@@ -30,7 +30,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "ZS9hcGkvcmVzb3VyY2UucHJvdG8aMGdvb2dsZS9jbG91ZC9kaXNjb3Zlcnll",
             "bmdpbmUvdjFiZXRhL2NvbW1vbi5wcm90bxo4Z29vZ2xlL2Nsb3VkL2Rpc2Nv",
             "dmVyeWVuZ2luZS92MWJldGEvc2VhcmNoX3NlcnZpY2UucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipQ0KDVNlcnZpbmdDb25maWcS",
+            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iog4KDVNlcnZpbmdDb25maWcS",
             "VgoMbWVkaWFfY29uZmlnGAcgASgLMj4uZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
             "eWVuZ2luZS52MWJldGEuU2VydmluZ0NvbmZpZy5NZWRpYUNvbmZpZ0gAEloK",
             "DmdlbmVyaWNfY29uZmlnGAogASgLMkAuZ29vZ2xlLmNsb3VkLmRpc2NvdmVy",
@@ -49,37 +49,50 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "GA8gAygJEiMKG29uZXdheV9zeW5vbnltc19jb250cm9sX2lkcxgQIAMoCRIe",
             "ChZkaXNzb2NpYXRlX2NvbnRyb2xfaWRzGBEgAygJEh8KF3JlcGxhY2VtZW50",
             "X2NvbnRyb2xfaWRzGBIgAygJEhoKEmlnbm9yZV9jb250cm9sX2lkcxgTIAMo",
-            "CRJkChRwZXJzb25hbGl6YXRpb25fc3BlYxgZIAEoCzJGLmdvb2dsZS5jbG91",
-            "ZC5kaXNjb3ZlcnllbmdpbmUudjFiZXRhLlNlYXJjaFJlcXVlc3QuUGVyc29u",
-            "YWxpemF0aW9uU3BlYxr3AQoLTWVkaWFDb25maWcSLgokY29udGVudF93YXRj",
-            "aGVkX3BlcmNlbnRhZ2VfdGhyZXNob2xkGAIgASgCSAASKwohY29udGVudF93",
-            "YXRjaGVkX3NlY29uZHNfdGhyZXNob2xkGAUgASgCSAASGwoTZGVtb3Rpb25f",
-            "ZXZlbnRfdHlwZRgBIAEoCRItCiBkZW1vdGVfY29udGVudF93YXRjaGVkX3Bh",
-            "c3RfZGF5cxglIAEoBUID4EEBEiUKHWNvbnRlbnRfZnJlc2huZXNzX2N1dG9m",
-            "Zl9kYXlzGAQgASgFQhgKFmRlbW90ZV9jb250ZW50X3dhdGNoZWQacgoNR2Vu",
-            "ZXJpY0NvbmZpZxJhChNjb250ZW50X3NlYXJjaF9zcGVjGAEgASgLMkQuZ29v",
-            "Z2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2luZS52MWJldGEuU2VhcmNoUmVxdWVz",
-            "dC5Db250ZW50U2VhcmNoU3BlYzqAA+pB/AIKLGRpc2NvdmVyeWVuZ2luZS5n",
-            "b29nbGVhcGlzLmNvbS9TZXJ2aW5nQ29uZmlnEl9wcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZGF0YVN0b3Jlcy97ZGF0YV9zdG9y",
-            "ZX0vc2VydmluZ0NvbmZpZ3Mve3NlcnZpbmdfY29uZmlnfRJ4cHJvamVjdHMv",
-            "e3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2NvbGxlY3Rpb25zL3tj",
-            "b2xsZWN0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9zZXJ2aW5nQ29u",
-            "Zmlncy97c2VydmluZ19jb25maWd9EnFwcm9qZWN0cy97cHJvamVjdH0vbG9j",
-            "YXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259L2Vu",
-            "Z2luZXMve2VuZ2luZX0vc2VydmluZ0NvbmZpZ3Mve3NlcnZpbmdfY29uZmln",
-            "fUIRCg92ZXJ0aWNhbF9jb25maWdCmQIKJ2NvbS5nb29nbGUuY2xvdWQuZGlz",
-            "Y292ZXJ5ZW5naW5lLnYxYmV0YUISU2VydmluZ0NvbmZpZ1Byb3RvUAFaUWNs",
-            "b3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5naW5lL2FwaXYxYmV0YS9k",
-            "aXNjb3ZlcnllbmdpbmVwYjtkaXNjb3ZlcnllbmdpbmVwYqICD0RJU0NPVkVS",
-            "WUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3ZlcnlFbmdpbmUuVjFCZXRh",
-            "ygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2luZVxWMWJldGHqAiZHb29n",
-            "bGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYxYmV0YWIGcHJvdG8z"));
+            "CRIbChNwcm9tb3RlX2NvbnRyb2xfaWRzGBogAygJEmQKFHBlcnNvbmFsaXph",
+            "dGlvbl9zcGVjGBkgASgLMkYuZ29vZ2xlLmNsb3VkLmRpc2NvdmVyeWVuZ2lu",
+            "ZS52MWJldGEuU2VhcmNoUmVxdWVzdC5QZXJzb25hbGl6YXRpb25TcGVjEl4K",
+            "FmFuc3dlcl9nZW5lcmF0aW9uX3NwZWMYGyABKAsyOS5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5BbnN3ZXJHZW5lcmF0aW9uU3BlY0ID",
+            "4EEBGvcBCgtNZWRpYUNvbmZpZxIuCiRjb250ZW50X3dhdGNoZWRfcGVyY2Vu",
+            "dGFnZV90aHJlc2hvbGQYAiABKAJIABIrCiFjb250ZW50X3dhdGNoZWRfc2Vj",
+            "b25kc190aHJlc2hvbGQYBSABKAJIABIbChNkZW1vdGlvbl9ldmVudF90eXBl",
+            "GAEgASgJEi0KIGRlbW90ZV9jb250ZW50X3dhdGNoZWRfcGFzdF9kYXlzGCUg",
+            "ASgFQgPgQQESJQodY29udGVudF9mcmVzaG5lc3NfY3V0b2ZmX2RheXMYBCAB",
+            "KAVCGAoWZGVtb3RlX2NvbnRlbnRfd2F0Y2hlZBpyCg1HZW5lcmljQ29uZmln",
+            "EmEKE2NvbnRlbnRfc2VhcmNoX3NwZWMYASABKAsyRC5nb29nbGUuY2xvdWQu",
+            "ZGlzY292ZXJ5ZW5naW5lLnYxYmV0YS5TZWFyY2hSZXF1ZXN0LkNvbnRlbnRT",
+            "ZWFyY2hTcGVjOoAD6kH8AgosZGlzY292ZXJ5ZW5naW5lLmdvb2dsZWFwaXMu",
+            "Y29tL1NlcnZpbmdDb25maWcSX3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
+            "bnMve2xvY2F0aW9ufS9kYXRhU3RvcmVzL3tkYXRhX3N0b3JlfS9zZXJ2aW5n",
+            "Q29uZmlncy97c2VydmluZ19jb25maWd9Enhwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vY29sbGVjdGlvbnMve2NvbGxlY3Rpb259",
+            "L2RhdGFTdG9yZXMve2RhdGFfc3RvcmV9L3NlcnZpbmdDb25maWdzL3tzZXJ2",
+            "aW5nX2NvbmZpZ30ScXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9jb2xsZWN0aW9ucy97Y29sbGVjdGlvbn0vZW5naW5lcy97ZW5n",
+            "aW5lfS9zZXJ2aW5nQ29uZmlncy97c2VydmluZ19jb25maWd9QhEKD3ZlcnRp",
+            "Y2FsX2NvbmZpZyL+AgoUQW5zd2VyR2VuZXJhdGlvblNwZWMSfgocdXNlcl9k",
+            "ZWZpbmVkX2NsYXNzaWZpZXJfc3BlYxgBIAEoCzJTLmdvb2dsZS5jbG91ZC5k",
+            "aXNjb3ZlcnllbmdpbmUudjFiZXRhLkFuc3dlckdlbmVyYXRpb25TcGVjLlVz",
+            "ZXJEZWZpbmVkQ2xhc3NpZmllclNwZWNCA+BBARrlAQoZVXNlckRlZmluZWRD",
+            "bGFzc2lmaWVyU3BlYxIrCh5lbmFibGVfdXNlcl9kZWZpbmVkX2NsYXNzaWZp",
+            "ZXIYASABKAhCA+BBARIVCghwcmVhbWJsZRgCIAEoCUID4EEBEhUKCG1vZGVs",
+            "X2lkGAMgASgJQgPgQQESGAoLdGFza19tYXJrZXIYBCABKAlCA+BBARISCgV0",
+            "b3BfcBgFIAEoAUID4EEBEhIKBXRvcF9rGAYgASgDQgPgQQESGAoLdGVtcGVy",
+            "YXR1cmUYByABKAFCA+BBARIRCgRzZWVkGAggASgFQgPgQQFCmQIKJ2NvbS5n",
+            "b29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5naW5lLnYxYmV0YUISU2VydmluZ0Nv",
+            "bmZpZ1Byb3RvUAFaUWNsb3VkLmdvb2dsZS5jb20vZ28vZGlzY292ZXJ5ZW5n",
+            "aW5lL2FwaXYxYmV0YS9kaXNjb3ZlcnllbmdpbmVwYjtkaXNjb3Zlcnllbmdp",
+            "bmVwYqICD0RJU0NPVkVSWUVOR0lORaoCI0dvb2dsZS5DbG91ZC5EaXNjb3Zl",
+            "cnlFbmdpbmUuVjFCZXRhygIjR29vZ2xlXENsb3VkXERpc2NvdmVyeUVuZ2lu",
+            "ZVxWMWJldGHqAiZHb29nbGU6OkNsb3VkOjpEaXNjb3ZlcnlFbmdpbmU6OlYx",
+            "YmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.DiscoveryEngine.V1Beta.SearchServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Parser, new[]{ "MediaConfig", "GenericConfig", "Name", "DisplayName", "SolutionType", "ModelId", "DiversityLevel", "EmbeddingConfig", "RankingExpression", "CreateTime", "UpdateTime", "FilterControlIds", "BoostControlIds", "RedirectControlIds", "SynonymsControlIds", "OnewaySynonymsControlIds", "DissociateControlIds", "ReplacementControlIds", "IgnoreControlIds", "PersonalizationSpec" }, new[]{ "VerticalConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.MediaConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.MediaConfig.Parser, new[]{ "ContentWatchedPercentageThreshold", "ContentWatchedSecondsThreshold", "DemotionEventType", "DemoteContentWatchedPastDays", "ContentFreshnessCutoffDays" }, new[]{ "DemoteContentWatched" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.GenericConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.GenericConfig.Parser, new[]{ "ContentSearchSpec" }, null, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Parser, new[]{ "MediaConfig", "GenericConfig", "Name", "DisplayName", "SolutionType", "ModelId", "DiversityLevel", "EmbeddingConfig", "RankingExpression", "CreateTime", "UpdateTime", "FilterControlIds", "BoostControlIds", "RedirectControlIds", "SynonymsControlIds", "OnewaySynonymsControlIds", "DissociateControlIds", "ReplacementControlIds", "IgnoreControlIds", "PromoteControlIds", "PersonalizationSpec", "AnswerGenerationSpec" }, new[]{ "VerticalConfig" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.MediaConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.MediaConfig.Parser, new[]{ "ContentWatchedPercentageThreshold", "ContentWatchedSecondsThreshold", "DemotionEventType", "DemoteContentWatchedPastDays", "ContentFreshnessCutoffDays" }, new[]{ "DemoteContentWatched" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.GenericConfig), global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfig.Types.GenericConfig.Parser, new[]{ "ContentSearchSpec" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Parser, new[]{ "UserDefinedClassifierSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec), global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec.Parser, new[]{ "EnableUserDefinedClassifier", "Preamble", "ModelId", "TaskMarker", "TopP", "TopK", "Temperature", "Seed" }, null, null, null, null)})
           }));
     }
     #endregion
@@ -144,7 +157,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       dissociateControlIds_ = other.dissociateControlIds_.Clone();
       replacementControlIds_ = other.replacementControlIds_.Clone();
       ignoreControlIds_ = other.ignoreControlIds_.Clone();
+      promoteControlIds_ = other.promoteControlIds_.Clone();
       personalizationSpec_ = other.personalizationSpec_ != null ? other.personalizationSpec_.Clone() : null;
+      answerGenerationSpec_ = other.answerGenerationSpec_ != null ? other.answerGenerationSpec_.Clone() : null;
       switch (other.VerticalConfigCase) {
         case VerticalConfigOneofCase.MediaConfig:
           MediaConfig = other.MediaConfig.Clone();
@@ -323,9 +338,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     /// The ranking expression controls the customized ranking on retrieval
     /// documents. To leverage this, document embedding is required. The ranking
     /// expression setting in ServingConfig applies to all search requests served
-    /// by the serving config. However, if
-    /// [SearchRequest.ranking_expression][google.cloud.discoveryengine.v1beta.SearchRequest.ranking_expression]
-    /// is specified, it overrides the ServingConfig ranking expression.
+    /// by the serving config. However, if `SearchRequest.ranking_expression` is
+    /// specified, it overrides the ServingConfig ranking expression.
     ///
     /// The ranking expression is a single function or multiple functions that are
     /// joined by "+".
@@ -545,6 +559,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       get { return ignoreControlIds_; }
     }
 
+    /// <summary>Field number for the "promote_control_ids" field.</summary>
+    public const int PromoteControlIdsFieldNumber = 26;
+    private static readonly pb::FieldCodec<string> _repeated_promoteControlIds_codec
+        = pb::FieldCodec.ForString(210);
+    private readonly pbc::RepeatedField<string> promoteControlIds_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Condition promote specifications.
+    ///
+    /// Maximum number of specifications is 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> PromoteControlIds {
+      get { return promoteControlIds_; }
+    }
+
     /// <summary>Field number for the "personalization_spec" field.</summary>
     public const int PersonalizationSpecFieldNumber = 25;
     private global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.PersonalizationSpec personalizationSpec_;
@@ -566,6 +596,21 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       get { return personalizationSpec_; }
       set {
         personalizationSpec_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "answer_generation_spec" field.</summary>
+    public const int AnswerGenerationSpecFieldNumber = 27;
+    private global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec answerGenerationSpec_;
+    /// <summary>
+    /// Optional. The specification for answer generation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec AnswerGenerationSpec {
+      get { return answerGenerationSpec_; }
+      set {
+        answerGenerationSpec_ = value;
       }
     }
 
@@ -624,7 +669,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       if(!dissociateControlIds_.Equals(other.dissociateControlIds_)) return false;
       if(!replacementControlIds_.Equals(other.replacementControlIds_)) return false;
       if(!ignoreControlIds_.Equals(other.ignoreControlIds_)) return false;
+      if(!promoteControlIds_.Equals(other.promoteControlIds_)) return false;
       if (!object.Equals(PersonalizationSpec, other.PersonalizationSpec)) return false;
+      if (!object.Equals(AnswerGenerationSpec, other.AnswerGenerationSpec)) return false;
       if (VerticalConfigCase != other.VerticalConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -652,7 +699,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       hash ^= dissociateControlIds_.GetHashCode();
       hash ^= replacementControlIds_.GetHashCode();
       hash ^= ignoreControlIds_.GetHashCode();
+      hash ^= promoteControlIds_.GetHashCode();
       if (personalizationSpec_ != null) hash ^= PersonalizationSpec.GetHashCode();
+      if (answerGenerationSpec_ != null) hash ^= AnswerGenerationSpec.GetHashCode();
       hash ^= (int) verticalConfigCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -728,6 +777,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(202, 1);
         output.WriteMessage(PersonalizationSpec);
       }
+      promoteControlIds_.WriteTo(output, _repeated_promoteControlIds_codec);
+      if (answerGenerationSpec_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(AnswerGenerationSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -794,6 +848,11 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         output.WriteRawTag(202, 1);
         output.WriteMessage(PersonalizationSpec);
       }
+      promoteControlIds_.WriteTo(ref output, _repeated_promoteControlIds_codec);
+      if (answerGenerationSpec_ != null) {
+        output.WriteRawTag(218, 1);
+        output.WriteMessage(AnswerGenerationSpec);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -845,8 +904,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       size += dissociateControlIds_.CalculateSize(_repeated_dissociateControlIds_codec);
       size += replacementControlIds_.CalculateSize(_repeated_replacementControlIds_codec);
       size += ignoreControlIds_.CalculateSize(_repeated_ignoreControlIds_codec);
+      size += promoteControlIds_.CalculateSize(_repeated_promoteControlIds_codec);
       if (personalizationSpec_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(PersonalizationSpec);
+      }
+      if (answerGenerationSpec_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(AnswerGenerationSpec);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -904,11 +967,18 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       dissociateControlIds_.Add(other.dissociateControlIds_);
       replacementControlIds_.Add(other.replacementControlIds_);
       ignoreControlIds_.Add(other.ignoreControlIds_);
+      promoteControlIds_.Add(other.promoteControlIds_);
       if (other.personalizationSpec_ != null) {
         if (personalizationSpec_ == null) {
           PersonalizationSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.PersonalizationSpec();
         }
         PersonalizationSpec.MergeFrom(other.PersonalizationSpec);
+      }
+      if (other.answerGenerationSpec_ != null) {
+        if (answerGenerationSpec_ == null) {
+          AnswerGenerationSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec();
+        }
+        AnswerGenerationSpec.MergeFrom(other.AnswerGenerationSpec);
       }
       switch (other.VerticalConfigCase) {
         case VerticalConfigOneofCase.MediaConfig:
@@ -1046,6 +1116,17 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             input.ReadMessage(PersonalizationSpec);
             break;
           }
+          case 210: {
+            promoteControlIds_.AddEntriesFrom(input, _repeated_promoteControlIds_codec);
+            break;
+          }
+          case 218: {
+            if (answerGenerationSpec_ == null) {
+              AnswerGenerationSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec();
+            }
+            input.ReadMessage(AnswerGenerationSpec);
+            break;
+          }
         }
       }
     #endif
@@ -1165,6 +1246,17 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
               PersonalizationSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.PersonalizationSpec();
             }
             input.ReadMessage(PersonalizationSpec);
+            break;
+          }
+          case 210: {
+            promoteControlIds_.AddEntriesFrom(ref input, _repeated_promoteControlIds_codec);
+            break;
+          }
+          case 218: {
+            if (answerGenerationSpec_ == null) {
+              AnswerGenerationSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec();
+            }
+            input.ReadMessage(AnswerGenerationSpec);
             break;
           }
         }
@@ -1837,6 +1929,712 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
                   ContentSearchSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.SearchRequest.Types.ContentSearchSpec();
                 }
                 input.ReadMessage(ContentSearchSpec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The specification for answer generation.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class AnswerGenerationSpec : pb::IMessage<AnswerGenerationSpec>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AnswerGenerationSpec> _parser = new pb::MessageParser<AnswerGenerationSpec>(() => new AnswerGenerationSpec());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AnswerGenerationSpec> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.DiscoveryEngine.V1Beta.ServingConfigReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnswerGenerationSpec() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnswerGenerationSpec(AnswerGenerationSpec other) : this() {
+      userDefinedClassifierSpec_ = other.userDefinedClassifierSpec_ != null ? other.userDefinedClassifierSpec_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AnswerGenerationSpec Clone() {
+      return new AnswerGenerationSpec(this);
+    }
+
+    /// <summary>Field number for the "user_defined_classifier_spec" field.</summary>
+    public const int UserDefinedClassifierSpecFieldNumber = 1;
+    private global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec userDefinedClassifierSpec_;
+    /// <summary>
+    /// Optional. The specification for user specified classifier spec.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec UserDefinedClassifierSpec {
+      get { return userDefinedClassifierSpec_; }
+      set {
+        userDefinedClassifierSpec_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AnswerGenerationSpec);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AnswerGenerationSpec other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(UserDefinedClassifierSpec, other.UserDefinedClassifierSpec)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (userDefinedClassifierSpec_ != null) hash ^= UserDefinedClassifierSpec.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (userDefinedClassifierSpec_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UserDefinedClassifierSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (userDefinedClassifierSpec_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(UserDefinedClassifierSpec);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (userDefinedClassifierSpec_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UserDefinedClassifierSpec);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AnswerGenerationSpec other) {
+      if (other == null) {
+        return;
+      }
+      if (other.userDefinedClassifierSpec_ != null) {
+        if (userDefinedClassifierSpec_ == null) {
+          UserDefinedClassifierSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec();
+        }
+        UserDefinedClassifierSpec.MergeFrom(other.UserDefinedClassifierSpec);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (userDefinedClassifierSpec_ == null) {
+              UserDefinedClassifierSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec();
+            }
+            input.ReadMessage(UserDefinedClassifierSpec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (userDefinedClassifierSpec_ == null) {
+              UserDefinedClassifierSpec = new global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Types.UserDefinedClassifierSpec();
+            }
+            input.ReadMessage(UserDefinedClassifierSpec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the AnswerGenerationSpec message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The specification for user defined classifier.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class UserDefinedClassifierSpec : pb::IMessage<UserDefinedClassifierSpec>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<UserDefinedClassifierSpec> _parser = new pb::MessageParser<UserDefinedClassifierSpec>(() => new UserDefinedClassifierSpec());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<UserDefinedClassifierSpec> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.DiscoveryEngine.V1Beta.AnswerGenerationSpec.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserDefinedClassifierSpec() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserDefinedClassifierSpec(UserDefinedClassifierSpec other) : this() {
+          enableUserDefinedClassifier_ = other.enableUserDefinedClassifier_;
+          preamble_ = other.preamble_;
+          modelId_ = other.modelId_;
+          taskMarker_ = other.taskMarker_;
+          topP_ = other.topP_;
+          topK_ = other.topK_;
+          temperature_ = other.temperature_;
+          seed_ = other.seed_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UserDefinedClassifierSpec Clone() {
+          return new UserDefinedClassifierSpec(this);
+        }
+
+        /// <summary>Field number for the "enable_user_defined_classifier" field.</summary>
+        public const int EnableUserDefinedClassifierFieldNumber = 1;
+        private bool enableUserDefinedClassifier_;
+        /// <summary>
+        /// Optional. Whether or not to enable and include user defined classifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool EnableUserDefinedClassifier {
+          get { return enableUserDefinedClassifier_; }
+          set {
+            enableUserDefinedClassifier_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "preamble" field.</summary>
+        public const int PreambleFieldNumber = 2;
+        private string preamble_ = "";
+        /// <summary>
+        /// Optional. The preamble to be used for the user defined classifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Preamble {
+          get { return preamble_; }
+          set {
+            preamble_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "model_id" field.</summary>
+        public const int ModelIdFieldNumber = 3;
+        private string modelId_ = "";
+        /// <summary>
+        /// Optional. The model id to be used for the user defined classifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ModelId {
+          get { return modelId_; }
+          set {
+            modelId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "task_marker" field.</summary>
+        public const int TaskMarkerFieldNumber = 4;
+        private string taskMarker_ = "";
+        /// <summary>
+        /// Optional. The task marker to be used for the user defined classifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TaskMarker {
+          get { return taskMarker_; }
+          set {
+            taskMarker_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "top_p" field.</summary>
+        public const int TopPFieldNumber = 5;
+        private double topP_;
+        /// <summary>
+        /// Optional. The top-p value to be used for the user defined classifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double TopP {
+          get { return topP_; }
+          set {
+            topP_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "top_k" field.</summary>
+        public const int TopKFieldNumber = 6;
+        private long topK_;
+        /// <summary>
+        /// Optional. The top-k value to be used for the user defined classifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long TopK {
+          get { return topK_; }
+          set {
+            topK_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "temperature" field.</summary>
+        public const int TemperatureFieldNumber = 7;
+        private double temperature_;
+        /// <summary>
+        /// Optional. The temperature value to be used for the user defined
+        /// classifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Temperature {
+          get { return temperature_; }
+          set {
+            temperature_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "seed" field.</summary>
+        public const int SeedFieldNumber = 8;
+        private int seed_;
+        /// <summary>
+        /// Optional. The seed value to be used for the user defined classifier.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int Seed {
+          get { return seed_; }
+          set {
+            seed_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as UserDefinedClassifierSpec);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(UserDefinedClassifierSpec other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (EnableUserDefinedClassifier != other.EnableUserDefinedClassifier) return false;
+          if (Preamble != other.Preamble) return false;
+          if (ModelId != other.ModelId) return false;
+          if (TaskMarker != other.TaskMarker) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TopP, other.TopP)) return false;
+          if (TopK != other.TopK) return false;
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Temperature, other.Temperature)) return false;
+          if (Seed != other.Seed) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (EnableUserDefinedClassifier != false) hash ^= EnableUserDefinedClassifier.GetHashCode();
+          if (Preamble.Length != 0) hash ^= Preamble.GetHashCode();
+          if (ModelId.Length != 0) hash ^= ModelId.GetHashCode();
+          if (TaskMarker.Length != 0) hash ^= TaskMarker.GetHashCode();
+          if (TopP != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TopP);
+          if (TopK != 0L) hash ^= TopK.GetHashCode();
+          if (Temperature != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Temperature);
+          if (Seed != 0) hash ^= Seed.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (EnableUserDefinedClassifier != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableUserDefinedClassifier);
+          }
+          if (Preamble.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Preamble);
+          }
+          if (ModelId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ModelId);
+          }
+          if (TaskMarker.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(TaskMarker);
+          }
+          if (TopP != 0D) {
+            output.WriteRawTag(41);
+            output.WriteDouble(TopP);
+          }
+          if (TopK != 0L) {
+            output.WriteRawTag(48);
+            output.WriteInt64(TopK);
+          }
+          if (Temperature != 0D) {
+            output.WriteRawTag(57);
+            output.WriteDouble(Temperature);
+          }
+          if (Seed != 0) {
+            output.WriteRawTag(64);
+            output.WriteInt32(Seed);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (EnableUserDefinedClassifier != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(EnableUserDefinedClassifier);
+          }
+          if (Preamble.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Preamble);
+          }
+          if (ModelId.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ModelId);
+          }
+          if (TaskMarker.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(TaskMarker);
+          }
+          if (TopP != 0D) {
+            output.WriteRawTag(41);
+            output.WriteDouble(TopP);
+          }
+          if (TopK != 0L) {
+            output.WriteRawTag(48);
+            output.WriteInt64(TopK);
+          }
+          if (Temperature != 0D) {
+            output.WriteRawTag(57);
+            output.WriteDouble(Temperature);
+          }
+          if (Seed != 0) {
+            output.WriteRawTag(64);
+            output.WriteInt32(Seed);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (EnableUserDefinedClassifier != false) {
+            size += 1 + 1;
+          }
+          if (Preamble.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Preamble);
+          }
+          if (ModelId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelId);
+          }
+          if (TaskMarker.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TaskMarker);
+          }
+          if (TopP != 0D) {
+            size += 1 + 8;
+          }
+          if (TopK != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(TopK);
+          }
+          if (Temperature != 0D) {
+            size += 1 + 8;
+          }
+          if (Seed != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(Seed);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(UserDefinedClassifierSpec other) {
+          if (other == null) {
+            return;
+          }
+          if (other.EnableUserDefinedClassifier != false) {
+            EnableUserDefinedClassifier = other.EnableUserDefinedClassifier;
+          }
+          if (other.Preamble.Length != 0) {
+            Preamble = other.Preamble;
+          }
+          if (other.ModelId.Length != 0) {
+            ModelId = other.ModelId;
+          }
+          if (other.TaskMarker.Length != 0) {
+            TaskMarker = other.TaskMarker;
+          }
+          if (other.TopP != 0D) {
+            TopP = other.TopP;
+          }
+          if (other.TopK != 0L) {
+            TopK = other.TopK;
+          }
+          if (other.Temperature != 0D) {
+            Temperature = other.Temperature;
+          }
+          if (other.Seed != 0) {
+            Seed = other.Seed;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                EnableUserDefinedClassifier = input.ReadBool();
+                break;
+              }
+              case 18: {
+                Preamble = input.ReadString();
+                break;
+              }
+              case 26: {
+                ModelId = input.ReadString();
+                break;
+              }
+              case 34: {
+                TaskMarker = input.ReadString();
+                break;
+              }
+              case 41: {
+                TopP = input.ReadDouble();
+                break;
+              }
+              case 48: {
+                TopK = input.ReadInt64();
+                break;
+              }
+              case 57: {
+                Temperature = input.ReadDouble();
+                break;
+              }
+              case 64: {
+                Seed = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                EnableUserDefinedClassifier = input.ReadBool();
+                break;
+              }
+              case 18: {
+                Preamble = input.ReadString();
+                break;
+              }
+              case 26: {
+                ModelId = input.ReadString();
+                break;
+              }
+              case 34: {
+                TaskMarker = input.ReadString();
+                break;
+              }
+              case 41: {
+                TopP = input.ReadDouble();
+                break;
+              }
+              case 48: {
+                TopK = input.ReadInt64();
+                break;
+              }
+              case 57: {
+                Temperature = input.ReadDouble();
+                break;
+              }
+              case 64: {
+                Seed = input.ReadInt32();
                 break;
               }
             }

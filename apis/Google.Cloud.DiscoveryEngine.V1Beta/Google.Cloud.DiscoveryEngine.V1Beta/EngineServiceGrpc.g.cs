@@ -3,7 +3,7 @@
 //     source: google/cloud/discoveryengine/v1beta/engine_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -86,6 +86,12 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest> __Marshaller_google_cloud_discoveryengine_v1beta_ResumeEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest> __Marshaller_google_cloud_discoveryengine_v1beta_TuneEngineRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.CreateEngineRequest, global::Google.LongRunning.Operation> __Method_CreateEngine = new grpc::Method<global::Google.Cloud.DiscoveryEngine.V1Beta.CreateEngineRequest, global::Google.LongRunning.Operation>(
@@ -151,6 +157,22 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         __Marshaller_google_cloud_discoveryengine_v1beta_TuneEngineRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_GetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetIamPolicy",
+        __Marshaller_google_iam_v1_GetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetIamPolicy",
+        __Marshaller_google_iam_v1_SetIamPolicyRequest,
+        __Marshaller_google_iam_v1_Policy);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -162,7 +184,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
     public abstract partial class EngineServiceBase
     {
       /// <summary>
-      /// Creates a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Creates an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -174,7 +196,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
 
       /// <summary>
-      /// Deletes a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Deletes an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -198,7 +220,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
 
       /// <summary>
-      /// Gets a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Gets an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -223,7 +245,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
 
       /// <summary>
-      /// Pauses the training of an existing engine. Only applicable if
+      /// Pauses the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -237,7 +260,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
 
       /// <summary>
-      /// Resumes the training of an existing engine. Only applicable if
+      /// Resumes the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -251,7 +275,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
 
       /// <summary>
-      /// Tunes an existing engine. Only applicable if
+      /// Tunes an existing [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -260,6 +285,45 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> TuneEngine(global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist. An empty policy is returned if
+      /// the resource exists but does not have a policy set on it.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Sets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist.
+      ///
+      /// **Important:** When setting a policy directly on an Engine resource,
+      /// the only recommended roles in the bindings are:
+      /// `roles/discoveryengine.admin`,
+      /// `roles/discoveryengine.agentspaceAdmin`,
+      /// `roles/discoveryengine.user`,
+      /// `roles/discoveryengine.agentspaceUser`,
+      /// `roles/discoveryengine.viewer`,
+      /// `roles/discoveryengine.agentspaceViewer`.
+      /// Attempting to grant any other role will result in a warning in logging.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -294,7 +358,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       }
 
       /// <summary>
-      /// Creates a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Creates an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -307,7 +371,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CreateEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Creates an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -318,7 +382,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_CreateEngine, null, options, request);
       }
       /// <summary>
-      /// Creates a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Creates an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -331,7 +395,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CreateEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Creates an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -342,7 +406,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_CreateEngine, null, options, request);
       }
       /// <summary>
-      /// Deletes a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Deletes an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -355,7 +419,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return DeleteEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Deletes an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -366,7 +430,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteEngine, null, options, request);
       }
       /// <summary>
-      /// Deletes a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Deletes an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -379,7 +443,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return DeleteEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Deletes an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -438,7 +502,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateEngine, null, options, request);
       }
       /// <summary>
-      /// Gets a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Gets an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -451,7 +515,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return GetEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Gets an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -462,7 +526,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_GetEngine, null, options, request);
       }
       /// <summary>
-      /// Gets a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Gets an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -475,7 +539,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return GetEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Gets a [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Gets an [Engine][google.cloud.discoveryengine.v1beta.Engine].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -538,7 +602,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ListEngines, null, options, request);
       }
       /// <summary>
-      /// Pauses the training of an existing engine. Only applicable if
+      /// Pauses the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -553,7 +618,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return PauseEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Pauses the training of an existing engine. Only applicable if
+      /// Pauses the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -566,7 +632,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_PauseEngine, null, options, request);
       }
       /// <summary>
-      /// Pauses the training of an existing engine. Only applicable if
+      /// Pauses the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -581,7 +648,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return PauseEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Pauses the training of an existing engine. Only applicable if
+      /// Pauses the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -594,7 +662,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_PauseEngine, null, options, request);
       }
       /// <summary>
-      /// Resumes the training of an existing engine. Only applicable if
+      /// Resumes the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -609,7 +678,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return ResumeEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Resumes the training of an existing engine. Only applicable if
+      /// Resumes the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -622,7 +692,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_ResumeEngine, null, options, request);
       }
       /// <summary>
-      /// Resumes the training of an existing engine. Only applicable if
+      /// Resumes the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -637,7 +708,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return ResumeEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Resumes the training of an existing engine. Only applicable if
+      /// Resumes the training of an existing
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -650,7 +722,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.AsyncUnaryCall(__Method_ResumeEngine, null, options, request);
       }
       /// <summary>
-      /// Tunes an existing engine. Only applicable if
+      /// Tunes an existing [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -665,7 +738,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return TuneEngine(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Tunes an existing engine. Only applicable if
+      /// Tunes an existing [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -678,7 +752,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return CallInvoker.BlockingUnaryCall(__Method_TuneEngine, null, options, request);
       }
       /// <summary>
-      /// Tunes an existing engine. Only applicable if
+      /// Tunes an existing [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -693,7 +768,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         return TuneEngineAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Tunes an existing engine. Only applicable if
+      /// Tunes an existing [Engine][google.cloud.discoveryengine.v1beta.Engine].
+      /// Only applicable if
       /// [SolutionType][google.cloud.discoveryengine.v1beta.SolutionType] is
       /// [SOLUTION_TYPE_RECOMMENDATION][google.cloud.discoveryengine.v1beta.SolutionType.SOLUTION_TYPE_RECOMMENDATION].
       /// </summary>
@@ -704,6 +780,162 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> TuneEngineAsync(global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_TuneEngine, null, options, request);
+      }
+      /// <summary>
+      /// Gets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist. An empty policy is returned if
+      /// the resource exists but does not have a policy set on it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist. An empty policy is returned if
+      /// the resource exists but does not have a policy set on it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.Policy GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist. An empty policy is returned if
+      /// the resource exists but does not have a policy set on it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist. An empty policy is returned if
+      /// the resource exists but does not have a policy set on it.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Sets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist.
+      ///
+      /// **Important:** When setting a policy directly on an Engine resource,
+      /// the only recommended roles in the bindings are:
+      /// `roles/discoveryengine.admin`,
+      /// `roles/discoveryengine.agentspaceAdmin`,
+      /// `roles/discoveryengine.user`,
+      /// `roles/discoveryengine.agentspaceUser`,
+      /// `roles/discoveryengine.viewer`,
+      /// `roles/discoveryengine.agentspaceViewer`.
+      /// Attempting to grant any other role will result in a warning in logging.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetIamPolicy(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist.
+      ///
+      /// **Important:** When setting a policy directly on an Engine resource,
+      /// the only recommended roles in the bindings are:
+      /// `roles/discoveryengine.admin`,
+      /// `roles/discoveryengine.agentspaceAdmin`,
+      /// `roles/discoveryengine.user`,
+      /// `roles/discoveryengine.agentspaceUser`,
+      /// `roles/discoveryengine.viewer`,
+      /// `roles/discoveryengine.agentspaceViewer`.
+      /// Attempting to grant any other role will result in a warning in logging.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Iam.V1.Policy SetIamPolicy(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Sets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist.
+      ///
+      /// **Important:** When setting a policy directly on an Engine resource,
+      /// the only recommended roles in the bindings are:
+      /// `roles/discoveryengine.admin`,
+      /// `roles/discoveryengine.agentspaceAdmin`,
+      /// `roles/discoveryengine.user`,
+      /// `roles/discoveryengine.agentspaceUser`,
+      /// `roles/discoveryengine.viewer`,
+      /// `roles/discoveryengine.agentspaceViewer`.
+      /// Attempting to grant any other role will result in a warning in logging.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetIamPolicyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Sets the IAM access control policy for an
+      /// [Engine][google.cloud.discoveryengine.v1beta.Engine]. A `NOT_FOUND` error
+      /// is returned if the resource does not exist.
+      ///
+      /// **Important:** When setting a policy directly on an Engine resource,
+      /// the only recommended roles in the bindings are:
+      /// `roles/discoveryengine.admin`,
+      /// `roles/discoveryengine.agentspaceAdmin`,
+      /// `roles/discoveryengine.user`,
+      /// `roles/discoveryengine.agentspaceUser`,
+      /// `roles/discoveryengine.viewer`,
+      /// `roles/discoveryengine.agentspaceViewer`.
+      /// Attempting to grant any other role will result in a warning in logging.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> SetIamPolicyAsync(global::Google.Cloud.Iam.V1.SetIamPolicyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetIamPolicy, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -726,7 +958,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
           .AddMethod(__Method_ListEngines, serviceImpl.ListEngines)
           .AddMethod(__Method_PauseEngine, serviceImpl.PauseEngine)
           .AddMethod(__Method_ResumeEngine, serviceImpl.ResumeEngine)
-          .AddMethod(__Method_TuneEngine, serviceImpl.TuneEngine).Build();
+          .AddMethod(__Method_TuneEngine, serviceImpl.TuneEngine)
+          .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
+          .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -744,6 +978,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
       serviceBinder.AddMethod(__Method_PauseEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.PauseEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine>(serviceImpl.PauseEngine));
       serviceBinder.AddMethod(__Method_ResumeEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.ResumeEngineRequest, global::Google.Cloud.DiscoveryEngine.V1Beta.Engine>(serviceImpl.ResumeEngine));
       serviceBinder.AddMethod(__Method_TuneEngine, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DiscoveryEngine.V1Beta.TuneEngineRequest, global::Google.LongRunning.Operation>(serviceImpl.TuneEngine));
+      serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
+      serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
     }
 
   }

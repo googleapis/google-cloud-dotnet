@@ -70,12 +70,24 @@ namespace GoogleCSharpSnippets
                 },
                 LanguageCode = "",
                 RegionCode = "",
+                DisplaySpec = new SearchRequest.Types.DisplaySpec(),
+                CrowdingSpecs =
+                {
+                    new SearchRequest.Types.CrowdingSpec(),
+                },
                 SessionAsSessionName = SessionName.FromProjectLocationDataStoreSession("[PROJECT]", "[LOCATION]", "[DATA_STORE]", "[SESSION]"),
                 SessionSpec = new SearchRequest.Types.SessionSpec(),
                 RelevanceThreshold = SearchRequest.Types.RelevanceThreshold.Unspecified,
                 PersonalizationSpec = new SearchRequest.Types.PersonalizationSpec(),
                 OneBoxPageSize = 0,
+                RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
+                SearchAddonSpec = new SearchRequest.Types.SearchAddonSpec(),
+                PageCategories = { "", },
+                CustomRankingParams = new SearchRequest.Types.CustomRankingParams(),
+                NumResultsPerDataStore = 0,
+                Entity = "",
+                RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);

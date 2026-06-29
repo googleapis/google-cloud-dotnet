@@ -223,11 +223,17 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// The default EvaluationService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.assist.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.serving.readwrite</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/discoveryengine.assist.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.serving.readwrite",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -863,9 +869,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Required. The evaluation resource name, such as
         /// `projects/{project}/locations/{location}/evaluations/{evaluation}`.
         /// 
-        /// If the caller does not have permission to list [EvaluationResult][]
-        /// under this evaluation, regardless of whether or not this evaluation
-        /// set exists, a `PERMISSION_DENIED` error is returned.
+        /// If the caller does not have permission to list
+        /// [ListEvaluationResultsResponse.EvaluationResult][google.cloud.discoveryengine.v1beta.ListEvaluationResultsResponse.EvaluationResult]
+        /// under this evaluation, regardless of whether or not this evaluation set
+        /// exists, a `PERMISSION_DENIED` error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -904,9 +911,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Required. The evaluation resource name, such as
         /// `projects/{project}/locations/{location}/evaluations/{evaluation}`.
         /// 
-        /// If the caller does not have permission to list [EvaluationResult][]
-        /// under this evaluation, regardless of whether or not this evaluation
-        /// set exists, a `PERMISSION_DENIED` error is returned.
+        /// If the caller does not have permission to list
+        /// [ListEvaluationResultsResponse.EvaluationResult][google.cloud.discoveryengine.v1beta.ListEvaluationResultsResponse.EvaluationResult]
+        /// under this evaluation, regardless of whether or not this evaluation set
+        /// exists, a `PERMISSION_DENIED` error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -946,9 +954,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Required. The evaluation resource name, such as
         /// `projects/{project}/locations/{location}/evaluations/{evaluation}`.
         /// 
-        /// If the caller does not have permission to list [EvaluationResult][]
-        /// under this evaluation, regardless of whether or not this evaluation
-        /// set exists, a `PERMISSION_DENIED` error is returned.
+        /// If the caller does not have permission to list
+        /// [ListEvaluationResultsResponse.EvaluationResult][google.cloud.discoveryengine.v1beta.ListEvaluationResultsResponse.EvaluationResult]
+        /// under this evaluation, regardless of whether or not this evaluation set
+        /// exists, a `PERMISSION_DENIED` error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -987,9 +996,10 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// Required. The evaluation resource name, such as
         /// `projects/{project}/locations/{location}/evaluations/{evaluation}`.
         /// 
-        /// If the caller does not have permission to list [EvaluationResult][]
-        /// under this evaluation, regardless of whether or not this evaluation
-        /// set exists, a `PERMISSION_DENIED` error is returned.
+        /// If the caller does not have permission to list
+        /// [ListEvaluationResultsResponse.EvaluationResult][google.cloud.discoveryengine.v1beta.ListEvaluationResultsResponse.EvaluationResult]
+        /// under this evaluation, regardless of whether or not this evaluation set
+        /// exists, a `PERMISSION_DENIED` error is returned.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

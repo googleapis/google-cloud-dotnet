@@ -56,6 +56,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             ImportCompletionSuggestionsOperationsSettings = existing.ImportCompletionSuggestionsOperationsSettings.Clone();
             PurgeCompletionSuggestionsSettings = existing.PurgeCompletionSuggestionsSettings;
             PurgeCompletionSuggestionsOperationsSettings = existing.PurgeCompletionSuggestionsOperationsSettings.Clone();
+            RemoveSuggestionSettings = existing.RemoveSuggestionSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -248,6 +249,24 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CompletionServiceClient.RemoveSuggestion</c> and <c>CompletionServiceClient.RemoveSuggestionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 5000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 5 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RemoveSuggestionSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(5000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(5000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -326,11 +345,19 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// The default CompletionService scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/cloud_search.query</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.assist.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.readwrite</description></item>
+        /// <item><description>https://www.googleapis.com/auth/discoveryengine.serving.readwrite</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/cloud_search.query",
+            "https://www.googleapis.com/auth/discoveryengine.assist.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.readwrite",
+            "https://www.googleapis.com/auth/discoveryengine.serving.readwrite",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -689,6 +716,45 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata>> PollOncePurgeCompletionSuggestionsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PurgeCompletionSuggestionsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Removes the search history suggestion in an engine for a user. This will
+        /// remove the suggestion from being returned in the
+        /// [AdvancedCompleteQueryResponse.recent_search_suggestions][google.cloud.discoveryengine.v1beta.AdvancedCompleteQueryResponse.recent_search_suggestions]
+        /// for this user. If the user searches the same suggestion again, the new
+        /// history will override and suggest this suggestion again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RemoveSuggestionResponse RemoveSuggestion(RemoveSuggestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes the search history suggestion in an engine for a user. This will
+        /// remove the suggestion from being returned in the
+        /// [AdvancedCompleteQueryResponse.recent_search_suggestions][google.cloud.discoveryengine.v1beta.AdvancedCompleteQueryResponse.recent_search_suggestions]
+        /// for this user. If the user searches the same suggestion again, the new
+        /// history will override and suggest this suggestion again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveSuggestionResponse> RemoveSuggestionAsync(RemoveSuggestionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Removes the search history suggestion in an engine for a user. This will
+        /// remove the suggestion from being returned in the
+        /// [AdvancedCompleteQueryResponse.recent_search_suggestions][google.cloud.discoveryengine.v1beta.AdvancedCompleteQueryResponse.recent_search_suggestions]
+        /// for this user. If the user searches the same suggestion again, the new
+        /// history will override and suggest this suggestion again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RemoveSuggestionResponse> RemoveSuggestionAsync(RemoveSuggestionRequest request, st::CancellationToken cancellationToken) =>
+            RemoveSuggestionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CompletionService client wrapper implementation, for convenient use.</summary>
@@ -708,6 +774,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         private readonly gaxgrpc::ApiCall<ImportCompletionSuggestionsRequest, lro::Operation> _callImportCompletionSuggestions;
 
         private readonly gaxgrpc::ApiCall<PurgeCompletionSuggestionsRequest, lro::Operation> _callPurgeCompletionSuggestions;
+
+        private readonly gaxgrpc::ApiCall<RemoveSuggestionRequest, RemoveSuggestionResponse> _callRemoveSuggestion;
 
         /// <summary>
         /// Constructs a client wrapper for the CompletionService service, with the specified gRPC client and settings.
@@ -747,6 +815,9 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
             _callPurgeCompletionSuggestions = clientHelper.BuildApiCall<PurgeCompletionSuggestionsRequest, lro::Operation>("PurgeCompletionSuggestions", grpcClient.PurgeCompletionSuggestionsAsync, grpcClient.PurgeCompletionSuggestions, effectiveSettings.PurgeCompletionSuggestionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callPurgeCompletionSuggestions);
             Modify_PurgeCompletionSuggestionsApiCall(ref _callPurgeCompletionSuggestions);
+            _callRemoveSuggestion = clientHelper.BuildApiCall<RemoveSuggestionRequest, RemoveSuggestionResponse>("RemoveSuggestion", grpcClient.RemoveSuggestionAsync, grpcClient.RemoveSuggestion, effectiveSettings.RemoveSuggestionSettings).WithGoogleRequestParam("completion_config", request => request.CompletionConfig);
+            Modify_ApiCall(ref _callRemoveSuggestion);
+            Modify_RemoveSuggestionApiCall(ref _callRemoveSuggestion);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -763,6 +834,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         partial void Modify_ImportCompletionSuggestionsApiCall(ref gaxgrpc::ApiCall<ImportCompletionSuggestionsRequest, lro::Operation> call);
 
         partial void Modify_PurgeCompletionSuggestionsApiCall(ref gaxgrpc::ApiCall<PurgeCompletionSuggestionsRequest, lro::Operation> call);
+
+        partial void Modify_RemoveSuggestionApiCall(ref gaxgrpc::ApiCall<RemoveSuggestionRequest, RemoveSuggestionResponse> call);
 
         partial void OnConstruction(CompletionService.CompletionServiceClient grpcClient, CompletionServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -783,6 +856,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         partial void Modify_ImportCompletionSuggestionsRequest(ref ImportCompletionSuggestionsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PurgeCompletionSuggestionsRequest(ref PurgeCompletionSuggestionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RemoveSuggestionRequest(ref RemoveSuggestionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Completes the specified user input with keyword suggestions.
@@ -954,6 +1029,38 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta
         {
             Modify_PurgeCompletionSuggestionsRequest(ref request, ref callSettings);
             return new lro::Operation<PurgeCompletionSuggestionsResponse, PurgeCompletionSuggestionsMetadata>(await _callPurgeCompletionSuggestions.Async(request, callSettings).ConfigureAwait(false), PurgeCompletionSuggestionsOperationsClient);
+        }
+
+        /// <summary>
+        /// Removes the search history suggestion in an engine for a user. This will
+        /// remove the suggestion from being returned in the
+        /// [AdvancedCompleteQueryResponse.recent_search_suggestions][google.cloud.discoveryengine.v1beta.AdvancedCompleteQueryResponse.recent_search_suggestions]
+        /// for this user. If the user searches the same suggestion again, the new
+        /// history will override and suggest this suggestion again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RemoveSuggestionResponse RemoveSuggestion(RemoveSuggestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveSuggestionRequest(ref request, ref callSettings);
+            return _callRemoveSuggestion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Removes the search history suggestion in an engine for a user. This will
+        /// remove the suggestion from being returned in the
+        /// [AdvancedCompleteQueryResponse.recent_search_suggestions][google.cloud.discoveryengine.v1beta.AdvancedCompleteQueryResponse.recent_search_suggestions]
+        /// for this user. If the user searches the same suggestion again, the new
+        /// history will override and suggest this suggestion again.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RemoveSuggestionResponse> RemoveSuggestionAsync(RemoveSuggestionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RemoveSuggestionRequest(ref request, ref callSettings);
+            return _callRemoveSuggestion.Async(request, callSettings);
         }
     }
 

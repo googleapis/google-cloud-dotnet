@@ -45,8 +45,8 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             "dmVyeWVuZ2luZS52MWJldGEuU2VhcmNoUmVxdWVzdEID4EECSAASaAoOcXVl",
             "cnlfc2V0X3NwZWMYASABKAsySy5nb29nbGUuY2xvdWQuZGlzY292ZXJ5ZW5n",
             "aW5lLnYxYmV0YS5FdmFsdWF0aW9uLkV2YWx1YXRpb25TcGVjLlF1ZXJ5U2V0",
-            "U3BlY0ID4EECGl8KDFF1ZXJ5U2V0U3BlYxJPChBzYW1wbGVfcXVlcnlfc2V0",
-            "GAEgASgJQjXgQQL6QS8KLWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNv",
+            "U3BlY0ID4EEBGl8KDFF1ZXJ5U2V0U3BlYxJPChBzYW1wbGVfcXVlcnlfc2V0",
+            "GAEgASgJQjXgQQH6QS8KLWRpc2NvdmVyeWVuZ2luZS5nb29nbGVhcGlzLmNv",
             "bS9TYW1wbGVRdWVyeVNldEINCgtzZWFyY2hfc3BlYyJTCgVTdGF0ZRIVChFT",
             "VEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARILCgdSVU5OSU5HEAIS",
             "DQoJU1VDQ0VFREVEEAMSCgoGRkFJTEVEEAQ6cOpBbQopZGlzY292ZXJ5ZW5n",
@@ -728,7 +728,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
         public const int QuerySetSpecFieldNumber = 1;
         private global::Google.Cloud.DiscoveryEngine.V1Beta.Evaluation.Types.EvaluationSpec.Types.QuerySetSpec querySetSpec_;
         /// <summary>
-        /// Required. The specification of the query set.
+        /// Optional. The specification of the query set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1006,7 +1006,7 @@ namespace Google.Cloud.DiscoveryEngine.V1Beta {
             public const int SampleQuerySetFieldNumber = 1;
             private string sampleQuerySet_ = "";
             /// <summary>
-            /// Required. The full resource name of the
+            /// Optional. The full resource name of the
             /// [SampleQuerySet][google.cloud.discoveryengine.v1beta.SampleQuerySet]
             /// used for the evaluation, in the format of
             /// `projects/{project}/locations/{location}/sampleQuerySets/{sampleQuerySet}`.
