@@ -41,6 +41,7 @@ namespace GoogleCSharpSnippets
                 Transaction = ByteString.Empty,
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RollbackResponse response = await datastoreClient.RollbackAsync(request);

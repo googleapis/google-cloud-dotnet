@@ -42,6 +42,7 @@ namespace GoogleCSharpSnippets
                 PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             LookupResponse response = await datastoreClient.LookupAsync(request);
