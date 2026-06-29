@@ -35,7 +35,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "YXRpb24SEgoKY29uZmlkZW5jZRgEIAEoAiJ7Cg1CYXJnZUluQ29uZmlnEjcK",
             "FG5vX2JhcmdlX2luX2R1cmF0aW9uGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVm",
             "LkR1cmF0aW9uEjEKDnRvdGFsX2R1cmF0aW9uGAIgASgLMhkuZ29vZ2xlLnBy",
-            "b3RvYnVmLkR1cmF0aW9uIswFChBJbnB1dEF1ZGlvQ29uZmlnEksKDmF1ZGlv",
+            "b3RvYnVmLkR1cmF0aW9uIvcFChBJbnB1dEF1ZGlvQ29uZmlnEksKDmF1ZGlv",
             "X2VuY29kaW5nGAEgASgOMi4uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJi",
             "ZXRhMS5BdWRpb0VuY29kaW5nQgPgQQISHgoRc2FtcGxlX3JhdGVfaGVydHoY",
             "AiABKAVCA+BBAhIaCg1sYW5ndWFnZV9jb2RlGAMgASgJQgPgQQISGAoQZW5h",
@@ -44,84 +44,85 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "b2dmbG93LnYyYmV0YTEuU3BlZWNoQ29udGV4dBINCgVtb2RlbBgHIAEoCRJK",
             "Cg1tb2RlbF92YXJpYW50GAogASgOMjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
             "b3cudjJiZXRhMS5TcGVlY2hNb2RlbFZhcmlhbnQSGAoQc2luZ2xlX3V0dGVy",
-            "YW5jZRgIIAEoCBIqCiJkaXNhYmxlX25vX3NwZWVjaF9yZWNvZ25pemVkX2V2",
-            "ZW50GA4gASgIEkcKD2JhcmdlX2luX2NvbmZpZxgPIAEoCzIuLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuQmFyZ2VJbkNvbmZpZxIkChxlbmFi",
-            "bGVfYXV0b21hdGljX3B1bmN0dWF0aW9uGBEgASgIEjwKGWRlZmF1bHRfbm9f",
-            "c3BlZWNoX3RpbWVvdXQYEiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRp",
-            "b24SOQoLcGhyYXNlX3NldHMYFCADKAlCJPpBIQofc3BlZWNoLmdvb2dsZWFw",
-            "aXMuY29tL1BocmFzZVNldBIpCiFvcHRfb3V0X2NvbmZvcm1lcl9tb2RlbF9t",
-            "aWdyYXRpb24YGiABKAgidQoUVm9pY2VTZWxlY3Rpb25QYXJhbXMSEQoEbmFt",
-            "ZRgBIAEoCUID4EEBEkoKC3NzbWxfZ2VuZGVyGAIgASgOMjAuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5Tc21sVm9pY2VHZW5kZXJCA+BBASKl",
-            "AgoWU3ludGhlc2l6ZVNwZWVjaENvbmZpZxIaCg1zcGVha2luZ19yYXRlGAEg",
-            "ASgBQgPgQQESEgoFcGl0Y2gYAiABKAFCA+BBARIbCg52b2x1bWVfZ2Fpbl9k",
-            "YhgDIAEoAUID4EEBEh8KEmVmZmVjdHNfcHJvZmlsZV9pZBgFIAMoCUID4EEB",
-            "EkkKBXZvaWNlGAQgASgLMjUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJi",
-            "ZXRhMS5Wb2ljZVNlbGVjdGlvblBhcmFtc0ID4EEBElIKDnByb251bmNpYXRp",
-            "b25zGAYgAygLMjouZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5D",
-            "dXN0b21Qcm9udW5jaWF0aW9uUGFyYW1zIpsCChlDdXN0b21Qcm9udW5jaWF0",
-            "aW9uUGFyYW1zEg4KBnBocmFzZRgBIAEoCRJmChFwaG9uZXRpY19lbmNvZGlu",
-            "ZxgCIAEoDjJLLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuQ3Vz",
-            "dG9tUHJvbnVuY2lhdGlvblBhcmFtcy5QaG9uZXRpY0VuY29kaW5nEhUKDXBy",
-            "b251bmNpYXRpb24YAyABKAkibwoQUGhvbmV0aWNFbmNvZGluZxIhCh1QSE9O",
-            "RVRJQ19FTkNPRElOR19VTlNQRUNJRklFRBAAEhkKFVBIT05FVElDX0VOQ09E",
-            "SU5HX0lQQRABEh0KGVBIT05FVElDX0VOQ09ESU5HX1hfU0FNUEEQAiLcAQoR",
-            "T3V0cHV0QXVkaW9Db25maWcSUQoOYXVkaW9fZW5jb2RpbmcYASABKA4yNC5n",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLk91dHB1dEF1ZGlvRW5j",
-            "b2RpbmdCA+BBAhIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRJZChhzeW50",
-            "aGVzaXplX3NwZWVjaF9jb25maWcYAyABKAsyNy5nb29nbGUuY2xvdWQuZGlh",
-            "bG9nZmxvdy52MmJldGExLlN5bnRoZXNpemVTcGVlY2hDb25maWciWgoTVGVs",
-            "ZXBob255RHRtZkV2ZW50cxJDCgtkdG1mX2V2ZW50cxgBIAMoDjIuLmdvb2ds",
-            "ZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuVGVsZXBob255RHRtZiLsAgoS",
-            "U3BlZWNoVG9UZXh0Q29uZmlnElEKFHNwZWVjaF9tb2RlbF92YXJpYW50GAEg",
-            "ASgOMjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5TcGVlY2hN",
-            "b2RlbFZhcmlhbnQSDQoFbW9kZWwYAiABKAkSOQoLcGhyYXNlX3NldHMYBCAD",
-            "KAlCJPpBIQofc3BlZWNoLmdvb2dsZWFwaXMuY29tL1BocmFzZVNldBJGCg5h",
-            "dWRpb19lbmNvZGluZxgGIAEoDjIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyYmV0YTEuQXVkaW9FbmNvZGluZxIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgH",
-            "IAEoBRIVCg1sYW5ndWFnZV9jb2RlGAggASgJEhgKEGVuYWJsZV93b3JkX2lu",
-            "Zm8YCSABKAgSJQoddXNlX3RpbWVvdXRfYmFzZWRfZW5kcG9pbnRpbmcYCyAB",
-            "KAgqlAIKDVRlbGVwaG9ueUR0bWYSHgoaVEVMRVBIT05ZX0RUTUZfVU5TUEVD",
-            "SUZJRUQQABIMCghEVE1GX09ORRABEgwKCERUTUZfVFdPEAISDgoKRFRNRl9U",
-            "SFJFRRADEg0KCURUTUZfRk9VUhAEEg0KCURUTUZfRklWRRAFEgwKCERUTUZf",
-            "U0lYEAYSDgoKRFRNRl9TRVZFThAHEg4KCkRUTUZfRUlHSFQQCBINCglEVE1G",
-            "X05JTkUQCRINCglEVE1GX1pFUk8QChIKCgZEVE1GX0EQCxIKCgZEVE1GX0IQ",
-            "DBIKCgZEVE1GX0MQDRIKCgZEVE1GX0QQDhINCglEVE1GX1NUQVIQDxIOCgpE",
-            "VE1GX1BPVU5EEBAqlAIKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJ",
-            "TkdfVU5TUEVDSUZJRUQQABIcChhBVURJT19FTkNPRElOR19MSU5FQVJfMTYQ",
-            "ARIXChNBVURJT19FTkNPRElOR19GTEFDEAISGAoUQVVESU9fRU5DT0RJTkdf",
-            "TVVMQVcQAxIWChJBVURJT19FTkNPRElOR19BTVIQBBIZChVBVURJT19FTkNP",
-            "RElOR19BTVJfV0IQBRIbChdBVURJT19FTkNPRElOR19PR0dfT1BVUxAGEikK",
-            "JUFVRElPX0VOQ09ESU5HX1NQRUVYX1dJVEhfSEVBREVSX0JZVEUQBxIXChNB",
-            "VURJT19FTkNPRElOR19BTEFXEAgqdgoSU3BlZWNoTW9kZWxWYXJpYW50EiQK",
-            "IFNQRUVDSF9NT0RFTF9WQVJJQU5UX1VOU1BFQ0lGSUVEEAASFgoSVVNFX0JF",
-            "U1RfQVZBSUxBQkxFEAESEAoMVVNFX1NUQU5EQVJEEAISEAoMVVNFX0VOSEFO",
-            "Q0VEEAMqjQEKD1NzbWxWb2ljZUdlbmRlchIhCh1TU01MX1ZPSUNFX0dFTkRF",
-            "Ul9VTlNQRUNJRklFRBAAEhoKFlNTTUxfVk9JQ0VfR0VOREVSX01BTEUQARIc",
-            "ChhTU01MX1ZPSUNFX0dFTkRFUl9GRU1BTEUQAhIdChlTU01MX1ZPSUNFX0dF",
-            "TkRFUl9ORVVUUkFMEAMqkAIKE091dHB1dEF1ZGlvRW5jb2RpbmcSJQohT1VU",
-            "UFVUX0FVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVEEAASIwofT1VUUFVUX0FV",
-            "RElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEiEKGU9VVFBVVF9BVURJT19FTkNP",
-            "RElOR19NUDMQAhoCCAESJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX01QM182",
-            "NF9LQlBTEAQSIgoeT1VUUFVUX0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAMS",
-            "HwobT1VUUFVUX0FVRElPX0VOQ09ESU5HX01VTEFXEAUSHgoaT1VUUFVUX0FV",
-            "RElPX0VOQ09ESU5HX0FMQVcQBkLiAgojY29tLmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyYmV0YTFCEEF1ZGlvQ29uZmlnUHJvdG9QAVpDY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9kaWFsb2dmbG93L2FwaXYyYmV0YTEvZGlhbG9nZmxvd3Bi",
-            "O2RpYWxvZ2Zsb3dwYqICAkRGqgIfR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cu",
-            "VjJCZXRhMepBVQobYXV0b21sLmdvb2dsZWFwaXMuY29tL01vZGVsEjZwcm9q",
-            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbW9kZWxzL3tt",
-            "b2RlbH3qQWIKH3NwZWVjaC5nb29nbGVhcGlzLmNvbS9QaHJhc2VTZXQSP3By",
-            "b2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9waHJhc2VT",
-            "ZXRzL3twaHJhc2Vfc2V0fWIGcHJvdG8z"));
+            "YW5jZRgIIAEoCBIpChxlbmFibGVfdm9pY2VfYWN0aXZpdHlfZXZlbnRzGBsg",
+            "ASgIQgPgQQESKgoiZGlzYWJsZV9ub19zcGVlY2hfcmVjb2duaXplZF9ldmVu",
+            "dBgOIAEoCBJHCg9iYXJnZV9pbl9jb25maWcYDyABKAsyLi5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy52MmJldGExLkJhcmdlSW5Db25maWcSJAocZW5hYmxl",
+            "X2F1dG9tYXRpY19wdW5jdHVhdGlvbhgRIAEoCBI8ChlkZWZhdWx0X25vX3Nw",
+            "ZWVjaF90aW1lb3V0GBIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9u",
+            "EjkKC3BocmFzZV9zZXRzGBQgAygJQiT6QSEKH3NwZWVjaC5nb29nbGVhcGlz",
+            "LmNvbS9QaHJhc2VTZXQSKQohb3B0X291dF9jb25mb3JtZXJfbW9kZWxfbWln",
+            "cmF0aW9uGBogASgIInUKFFZvaWNlU2VsZWN0aW9uUGFyYW1zEhEKBG5hbWUY",
+            "ASABKAlCA+BBARJKCgtzc21sX2dlbmRlchgCIAEoDjIwLmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyYmV0YTEuU3NtbFZvaWNlR2VuZGVyQgPgQQEipQIK",
+            "FlN5bnRoZXNpemVTcGVlY2hDb25maWcSGgoNc3BlYWtpbmdfcmF0ZRgBIAEo",
+            "AUID4EEBEhIKBXBpdGNoGAIgASgBQgPgQQESGwoOdm9sdW1lX2dhaW5fZGIY",
+            "AyABKAFCA+BBARIfChJlZmZlY3RzX3Byb2ZpbGVfaWQYBSADKAlCA+BBARJJ",
+            "CgV2b2ljZRgEIAEoCzI1Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0",
+            "YTEuVm9pY2VTZWxlY3Rpb25QYXJhbXNCA+BBARJSCg5wcm9udW5jaWF0aW9u",
+            "cxgGIAMoCzI6Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuQ3Vz",
+            "dG9tUHJvbnVuY2lhdGlvblBhcmFtcyKbAgoZQ3VzdG9tUHJvbnVuY2lhdGlv",
+            "blBhcmFtcxIOCgZwaHJhc2UYASABKAkSZgoRcGhvbmV0aWNfZW5jb2RpbmcY",
+            "AiABKA4ySy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkN1c3Rv",
+            "bVByb251bmNpYXRpb25QYXJhbXMuUGhvbmV0aWNFbmNvZGluZxIVCg1wcm9u",
+            "dW5jaWF0aW9uGAMgASgJIm8KEFBob25ldGljRW5jb2RpbmcSIQodUEhPTkVU",
+            "SUNfRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIZChVQSE9ORVRJQ19FTkNPRElO",
+            "R19JUEEQARIdChlQSE9ORVRJQ19FTkNPRElOR19YX1NBTVBBEAIi3AEKEU91",
+            "dHB1dEF1ZGlvQ29uZmlnElEKDmF1ZGlvX2VuY29kaW5nGAEgASgOMjQuZ29v",
+            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5PdXRwdXRBdWRpb0VuY29k",
+            "aW5nQgPgQQISGQoRc2FtcGxlX3JhdGVfaGVydHoYAiABKAUSWQoYc3ludGhl",
+            "c2l6ZV9zcGVlY2hfY29uZmlnGAMgASgLMjcuZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cudjJiZXRhMS5TeW50aGVzaXplU3BlZWNoQ29uZmlnIloKE1RlbGVw",
+            "aG9ueUR0bWZFdmVudHMSQwoLZHRtZl9ldmVudHMYASADKA4yLi5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlRlbGVwaG9ueUR0bWYi7AIKElNw",
+            "ZWVjaFRvVGV4dENvbmZpZxJRChRzcGVlY2hfbW9kZWxfdmFyaWFudBgBIAEo",
+            "DjIzLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU3BlZWNoTW9k",
+            "ZWxWYXJpYW50Eg0KBW1vZGVsGAIgASgJEjkKC3BocmFzZV9zZXRzGAQgAygJ",
+            "QiT6QSEKH3NwZWVjaC5nb29nbGVhcGlzLmNvbS9QaHJhc2VTZXQSRgoOYXVk",
+            "aW9fZW5jb2RpbmcYBiABKA4yLi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52",
+            "MmJldGExLkF1ZGlvRW5jb2RpbmcSGQoRc2FtcGxlX3JhdGVfaGVydHoYByAB",
+            "KAUSFQoNbGFuZ3VhZ2VfY29kZRgIIAEoCRIYChBlbmFibGVfd29yZF9pbmZv",
+            "GAkgASgIEiUKHXVzZV90aW1lb3V0X2Jhc2VkX2VuZHBvaW50aW5nGAsgASgI",
+            "KpQCCg1UZWxlcGhvbnlEdG1mEh4KGlRFTEVQSE9OWV9EVE1GX1VOU1BFQ0lG",
+            "SUVEEAASDAoIRFRNRl9PTkUQARIMCghEVE1GX1RXTxACEg4KCkRUTUZfVEhS",
+            "RUUQAxINCglEVE1GX0ZPVVIQBBINCglEVE1GX0ZJVkUQBRIMCghEVE1GX1NJ",
+            "WBAGEg4KCkRUTUZfU0VWRU4QBxIOCgpEVE1GX0VJR0hUEAgSDQoJRFRNRl9O",
+            "SU5FEAkSDQoJRFRNRl9aRVJPEAoSCgoGRFRNRl9BEAsSCgoGRFRNRl9CEAwS",
+            "CgoGRFRNRl9DEA0SCgoGRFRNRl9EEA4SDQoJRFRNRl9TVEFSEA8SDgoKRFRN",
+            "Rl9QT1VORBAQKpQCCg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VOQ09ESU5H",
+            "X1VOU1BFQ0lGSUVEEAASHAoYQVVESU9fRU5DT0RJTkdfTElORUFSXzE2EAES",
+            "FwoTQVVESU9fRU5DT0RJTkdfRkxBQxACEhgKFEFVRElPX0VOQ09ESU5HX01V",
+            "TEFXEAMSFgoSQVVESU9fRU5DT0RJTkdfQU1SEAQSGQoVQVVESU9fRU5DT0RJ",
+            "TkdfQU1SX1dCEAUSGwoXQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQBhIpCiVB",
+            "VURJT19FTkNPRElOR19TUEVFWF9XSVRIX0hFQURFUl9CWVRFEAcSFwoTQVVE",
+            "SU9fRU5DT0RJTkdfQUxBVxAIKnYKElNwZWVjaE1vZGVsVmFyaWFudBIkCiBT",
+            "UEVFQ0hfTU9ERUxfVkFSSUFOVF9VTlNQRUNJRklFRBAAEhYKElVTRV9CRVNU",
+            "X0FWQUlMQUJMRRABEhAKDFVTRV9TVEFOREFSRBACEhAKDFVTRV9FTkhBTkNF",
+            "RBADKo0BCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJf",
+            "VU5TUEVDSUZJRUQQABIaChZTU01MX1ZPSUNFX0dFTkRFUl9NQUxFEAESHAoY",
+            "U1NNTF9WT0lDRV9HRU5ERVJfRkVNQUxFEAISHQoZU1NNTF9WT0lDRV9HRU5E",
+            "RVJfTkVVVFJBTBADKpACChNPdXRwdXRBdWRpb0VuY29kaW5nEiUKIU9VVFBV",
+            "VF9BVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEiMKH09VVFBVVF9BVURJ",
+            "T19FTkNPRElOR19MSU5FQVJfMTYQARIhChlPVVRQVVRfQVVESU9fRU5DT0RJ",
+            "TkdfTVAzEAIaAggBEiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19NUDNfNjRf",
+            "S0JQUxAEEiIKHk9VVFBVVF9BVURJT19FTkNPRElOR19PR0dfT1BVUxADEh8K",
+            "G09VVFBVVF9BVURJT19FTkNPRElOR19NVUxBVxAFEh4KGk9VVFBVVF9BVURJ",
+            "T19FTkNPRElOR19BTEFXEAZC4gIKI2NvbS5nb29nbGUuY2xvdWQuZGlhbG9n",
+            "Zmxvdy52MmJldGExQhBBdWRpb0NvbmZpZ1Byb3RvUAFaQ2Nsb3VkLmdvb2ds",
+            "ZS5jb20vZ28vZGlhbG9nZmxvdy9hcGl2MmJldGExL2RpYWxvZ2Zsb3dwYjtk",
+            "aWFsb2dmbG93cGKiAgJERqoCH0dvb2dsZS5DbG91ZC5EaWFsb2dmbG93LlYy",
+            "QmV0YTHqQVUKG2F1dG9tbC5nb29nbGVhcGlzLmNvbS9Nb2RlbBI2cHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L21vZGVscy97bW9k",
+            "ZWx96kFiCh9zcGVlY2guZ29vZ2xlYXBpcy5jb20vUGhyYXNlU2V0Ej9wcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcGhyYXNlU2V0",
+            "cy97cGhyYXNlX3NldH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2Beta1.TelephonyDtmf), typeof(global::Google.Cloud.Dialogflow.V2Beta1.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2Beta1.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechContext), global::Google.Cloud.Dialogflow.V2Beta1.SpeechContext.Parser, new[]{ "Phrases", "Boost" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SpeechWordInfo), global::Google.Cloud.Dialogflow.V2Beta1.SpeechWordInfo.Parser, new[]{ "Word", "StartOffset", "EndOffset", "Confidence" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.BargeInConfig), global::Google.Cloud.Dialogflow.V2Beta1.BargeInConfig.Parser, new[]{ "NoBargeInDuration", "TotalDuration" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.InputAudioConfig), global::Google.Cloud.Dialogflow.V2Beta1.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance", "DisableNoSpeechRecognizedEvent", "BargeInConfig", "EnableAutomaticPunctuation", "DefaultNoSpeechTimeout", "PhraseSets", "OptOutConformerModelMigration" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.InputAudioConfig), global::Google.Cloud.Dialogflow.V2Beta1.InputAudioConfig.Parser, new[]{ "AudioEncoding", "SampleRateHertz", "LanguageCode", "EnableWordInfo", "PhraseHints", "SpeechContexts", "Model", "ModelVariant", "SingleUtterance", "EnableVoiceActivityEvents", "DisableNoSpeechRecognizedEvent", "BargeInConfig", "EnableAutomaticPunctuation", "DefaultNoSpeechTimeout", "PhraseSets", "OptOutConformerModelMigration" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.VoiceSelectionParams), global::Google.Cloud.Dialogflow.V2Beta1.VoiceSelectionParams.Parser, new[]{ "Name", "SsmlGender" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SynthesizeSpeechConfig), global::Google.Cloud.Dialogflow.V2Beta1.SynthesizeSpeechConfig.Parser, new[]{ "SpeakingRate", "Pitch", "VolumeGainDb", "EffectsProfileId", "Voice", "Pronunciations" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.CustomPronunciationParams), global::Google.Cloud.Dialogflow.V2Beta1.CustomPronunciationParams.Parser, new[]{ "Phrase", "PhoneticEncoding", "Pronunciation" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.CustomPronunciationParams.Types.PhoneticEncoding) }, null, null),
@@ -1341,6 +1342,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       model_ = other.model_;
       modelVariant_ = other.modelVariant_;
       singleUtterance_ = other.singleUtterance_;
+      enableVoiceActivityEvents_ = other.enableVoiceActivityEvents_;
       disableNoSpeechRecognizedEvent_ = other.disableNoSpeechRecognizedEvent_;
       bargeInConfig_ = other.bargeInConfig_ != null ? other.bargeInConfig_.Clone() : null;
       enableAutomaticPunctuation_ = other.enableAutomaticPunctuation_;
@@ -1529,6 +1531,23 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
     }
 
+    /// <summary>Field number for the "enable_voice_activity_events" field.</summary>
+    public const int EnableVoiceActivityEventsFieldNumber = 27;
+    private bool enableVoiceActivityEvents_;
+    /// <summary>
+    /// Optional. If `true`, responses with voice activity speech events will be
+    /// returned as they are detected.
+    /// Note: This setting is relevant only for streaming methods.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableVoiceActivityEvents {
+      get { return enableVoiceActivityEvents_; }
+      set {
+        enableVoiceActivityEvents_ = value;
+      }
+    }
+
     /// <summary>Field number for the "disable_no_speech_recognized_event" field.</summary>
     public const int DisableNoSpeechRecognizedEventFieldNumber = 14;
     private bool disableNoSpeechRecognizedEvent_;
@@ -1651,6 +1670,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (Model != other.Model) return false;
       if (ModelVariant != other.ModelVariant) return false;
       if (SingleUtterance != other.SingleUtterance) return false;
+      if (EnableVoiceActivityEvents != other.EnableVoiceActivityEvents) return false;
       if (DisableNoSpeechRecognizedEvent != other.DisableNoSpeechRecognizedEvent) return false;
       if (!object.Equals(BargeInConfig, other.BargeInConfig)) return false;
       if (EnableAutomaticPunctuation != other.EnableAutomaticPunctuation) return false;
@@ -1673,6 +1693,7 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if (Model.Length != 0) hash ^= Model.GetHashCode();
       if (ModelVariant != global::Google.Cloud.Dialogflow.V2Beta1.SpeechModelVariant.Unspecified) hash ^= ModelVariant.GetHashCode();
       if (SingleUtterance != false) hash ^= SingleUtterance.GetHashCode();
+      if (EnableVoiceActivityEvents != false) hash ^= EnableVoiceActivityEvents.GetHashCode();
       if (DisableNoSpeechRecognizedEvent != false) hash ^= DisableNoSpeechRecognizedEvent.GetHashCode();
       if (bargeInConfig_ != null) hash ^= BargeInConfig.GetHashCode();
       if (EnableAutomaticPunctuation != false) hash ^= EnableAutomaticPunctuation.GetHashCode();
@@ -1748,6 +1769,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(208, 1);
         output.WriteBool(OptOutConformerModelMigration);
       }
+      if (EnableVoiceActivityEvents != false) {
+        output.WriteRawTag(216, 1);
+        output.WriteBool(EnableVoiceActivityEvents);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1809,6 +1834,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(208, 1);
         output.WriteBool(OptOutConformerModelMigration);
       }
+      if (EnableVoiceActivityEvents != false) {
+        output.WriteRawTag(216, 1);
+        output.WriteBool(EnableVoiceActivityEvents);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1841,6 +1870,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
       if (SingleUtterance != false) {
         size += 1 + 1;
+      }
+      if (EnableVoiceActivityEvents != false) {
+        size += 2 + 1;
       }
       if (DisableNoSpeechRecognizedEvent != false) {
         size += 1 + 1;
@@ -1892,6 +1924,9 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
       if (other.SingleUtterance != false) {
         SingleUtterance = other.SingleUtterance;
+      }
+      if (other.EnableVoiceActivityEvents != false) {
+        EnableVoiceActivityEvents = other.EnableVoiceActivityEvents;
       }
       if (other.DisableNoSpeechRecognizedEvent != false) {
         DisableNoSpeechRecognizedEvent = other.DisableNoSpeechRecognizedEvent;
@@ -2000,6 +2035,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             OptOutConformerModelMigration = input.ReadBool();
             break;
           }
+          case 216: {
+            EnableVoiceActivityEvents = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2083,6 +2122,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           }
           case 208: {
             OptOutConformerModelMigration = input.ReadBool();
+            break;
+          }
+          case 216: {
+            EnableVoiceActivityEvents = input.ReadBool();
             break;
           }
         }
