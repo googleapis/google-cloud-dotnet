@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2026-06-29
+
+### Bug fixes
+
+- Existing value `TYPE_APP_CREATED_OR_ALREADY_EXISTS = 5` is changed to `TYPE_APP_CREATED_OR_ALREADY_EXISTS = 6` in enum `Type`
+- Existing value `TYPE_APP_COMPONENTS_REGISTERED = 6` is changed to `TYPE_APP_COMPONENTS_REGISTERED = 7` in enum `Type`
+
 ## Version 1.0.0-beta05, released 2026-06-08
 
 ### New features
