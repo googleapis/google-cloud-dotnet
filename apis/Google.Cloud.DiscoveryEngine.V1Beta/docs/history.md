@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta24, released 2026-06-29
+
+### New features
+
+- Regenerate v1beta proto snapshot for feature parity with v1
+
 ## Version 1.0.0-beta23, released 2026-04-13
 
 ### New features
