@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.19.0, released 2026-06-29
+
+### New features
+
+- Add E2_STANDARD_2 machine type to Cloud Build API
+
 ## Version 2.18.0, released 2025-12-03
 
 ### New features
