@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-06-29
+
+### New features
+
+- Add Developer Connect integration for Git repository authentication
+- Add effective default branch field for repositories
+
+### Documentation improvements
+
+- Clarify field usage guidelines and default values in API reference documentation
+
 ## Version 1.0.0-beta03, released 2026-03-30
 
 ### New features
