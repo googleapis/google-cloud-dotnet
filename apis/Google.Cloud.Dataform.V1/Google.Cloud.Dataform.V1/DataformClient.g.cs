@@ -1901,7 +1901,7 @@ namespace Google.Cloud.Dataform.V1
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="teamFolder">
-        /// Required. Name of the team_folder whose contents to list.
+        /// Required. Resource name of the TeamFolder to list contents for.
         /// Format: `projects/*/locations/*/teamFolders/*`.
         /// </param>
         /// <param name="pageToken">
@@ -1938,7 +1938,7 @@ namespace Google.Cloud.Dataform.V1
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="teamFolder">
-        /// Required. Name of the team_folder whose contents to list.
+        /// Required. Resource name of the TeamFolder to list contents for.
         /// Format: `projects/*/locations/*/teamFolders/*`.
         /// </param>
         /// <param name="pageToken">
@@ -1975,7 +1975,7 @@ namespace Google.Cloud.Dataform.V1
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="teamFolder">
-        /// Required. Name of the team_folder whose contents to list.
+        /// Required. Resource name of the TeamFolder to list contents for.
         /// Format: `projects/*/locations/*/teamFolders/*`.
         /// </param>
         /// <param name="pageToken">
@@ -2012,7 +2012,7 @@ namespace Google.Cloud.Dataform.V1
         /// Returns the contents of a given TeamFolder.
         /// </summary>
         /// <param name="teamFolder">
-        /// Required. Name of the team_folder whose contents to list.
+        /// Required. Resource name of the TeamFolder to list contents for.
         /// Format: `projects/*/locations/*/teamFolders/*`.
         /// </param>
         /// <param name="pageToken">
@@ -2730,7 +2730,7 @@ namespace Google.Cloud.Dataform.V1
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="folder">
-        /// Required. Name of the folder whose contents to list.
+        /// Required. Resource name of the Folder to list contents for.
         /// Format: projects/*/locations/*/folders/*
         /// </param>
         /// <param name="pageToken">
@@ -2766,7 +2766,7 @@ namespace Google.Cloud.Dataform.V1
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="folder">
-        /// Required. Name of the folder whose contents to list.
+        /// Required. Resource name of the Folder to list contents for.
         /// Format: projects/*/locations/*/folders/*
         /// </param>
         /// <param name="pageToken">
@@ -2803,7 +2803,7 @@ namespace Google.Cloud.Dataform.V1
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="folder">
-        /// Required. Name of the folder whose contents to list.
+        /// Required. Resource name of the Folder to list contents for.
         /// Format: projects/*/locations/*/folders/*
         /// </param>
         /// <param name="pageToken">
@@ -2839,7 +2839,7 @@ namespace Google.Cloud.Dataform.V1
         /// Returns the contents of a given Folder.
         /// </summary>
         /// <param name="folder">
-        /// Required. Name of the folder whose contents to list.
+        /// Required. Resource name of the Folder to list contents for.
         /// Format: projects/*/locations/*/folders/*
         /// </param>
         /// <param name="pageToken">
@@ -2905,7 +2905,7 @@ namespace Google.Cloud.Dataform.V1
         /// contained in any other folder.
         /// </summary>
         /// <param name="location">
-        /// Required. Location of the user root folder whose contents to list.
+        /// Required. Location of the user root folder to list contents for.
         /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
@@ -2943,7 +2943,7 @@ namespace Google.Cloud.Dataform.V1
         /// contained in any other folder.
         /// </summary>
         /// <param name="location">
-        /// Required. Location of the user root folder whose contents to list.
+        /// Required. Location of the user root folder to list contents for.
         /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
@@ -2982,7 +2982,7 @@ namespace Google.Cloud.Dataform.V1
         /// contained in any other folder.
         /// </summary>
         /// <param name="location">
-        /// Required. Location of the user root folder whose contents to list.
+        /// Required. Location of the user root folder to list contents for.
         /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
@@ -3020,7 +3020,7 @@ namespace Google.Cloud.Dataform.V1
         /// contained in any other folder.
         /// </summary>
         /// <param name="location">
-        /// Required. Location of the user root folder whose contents to list.
+        /// Required. Location of the user root folder to list contents for.
         /// Format: projects/*/locations/*
         /// </param>
         /// <param name="pageToken">
