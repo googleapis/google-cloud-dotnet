@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 DatabaseId = "",
                 ExplainOptions = new ExplainOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RunAggregationQueryResponse response = await datastoreClient.RunAggregationQueryAsync(request);

@@ -4595,8 +4595,8 @@ namespace Google.Cloud.Datastore.V1 {
     /// affect the meaning of the distance threshold. Since DOT_PRODUCT distances
     /// increase when the vectors are more similar, the comparison is inverted.
     ///
-    /// For EUCLIDEAN, COSINE: WHERE distance &lt;= distance_threshold
-    /// For DOT_PRODUCT:       WHERE distance >= distance_threshold
+    /// * For EUCLIDEAN, COSINE: WHERE distance &lt;= distance_threshold
+    /// * For DOT_PRODUCT:       WHERE distance >= distance_threshold
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

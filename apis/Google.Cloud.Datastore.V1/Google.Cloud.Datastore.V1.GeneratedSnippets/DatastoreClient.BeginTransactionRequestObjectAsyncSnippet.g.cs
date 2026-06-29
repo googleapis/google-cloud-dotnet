@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 DatabaseId = "",
                 TransactionOptions = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(request);

@@ -38,6 +38,7 @@ namespace GoogleCSharpSnippets
                 PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             LookupResponse response = datastoreClient.Lookup(request);
@@ -59,6 +60,7 @@ namespace GoogleCSharpSnippets
                 PropertyMask = new PropertyMask(),
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             LookupResponse response = await datastoreClient.LookupAsync(request);
@@ -112,6 +114,7 @@ namespace GoogleCSharpSnippets
                 DatabaseId = "",
                 PropertyMask = new PropertyMask(),
                 ExplainOptions = new ExplainOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RunQueryResponse response = datastoreClient.RunQuery(request);
@@ -135,6 +138,7 @@ namespace GoogleCSharpSnippets
                 DatabaseId = "",
                 PropertyMask = new PropertyMask(),
                 ExplainOptions = new ExplainOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
@@ -156,6 +160,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 DatabaseId = "",
                 ExplainOptions = new ExplainOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RunAggregationQueryResponse response = datastoreClient.RunAggregationQuery(request);
@@ -178,6 +183,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 DatabaseId = "",
                 ExplainOptions = new ExplainOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RunAggregationQueryResponse response = await datastoreClient.RunAggregationQueryAsync(request);
@@ -196,6 +202,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 DatabaseId = "",
                 TransactionOptions = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BeginTransactionResponse response = datastoreClient.BeginTransaction(request);
@@ -215,6 +222,7 @@ namespace GoogleCSharpSnippets
                 ProjectId = "",
                 DatabaseId = "",
                 TransactionOptions = new TransactionOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             BeginTransactionResponse response = await datastoreClient.BeginTransactionAsync(request);
@@ -262,6 +270,7 @@ namespace GoogleCSharpSnippets
                 Mutations = { new Mutation(), },
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             CommitResponse response = datastoreClient.Commit(request);
@@ -283,6 +292,7 @@ namespace GoogleCSharpSnippets
                 Mutations = { new Mutation(), },
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             CommitResponse response = await datastoreClient.CommitAsync(request);
@@ -365,6 +375,7 @@ namespace GoogleCSharpSnippets
                 Transaction = ByteString.Empty,
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RollbackResponse response = datastoreClient.Rollback(request);
@@ -384,6 +395,7 @@ namespace GoogleCSharpSnippets
                 Transaction = ByteString.Empty,
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RollbackResponse response = await datastoreClient.RollbackAsync(request);
@@ -431,6 +443,7 @@ namespace GoogleCSharpSnippets
                 Keys = { new Key(), },
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             AllocateIdsResponse response = datastoreClient.AllocateIds(request);
@@ -450,6 +463,7 @@ namespace GoogleCSharpSnippets
                 Keys = { new Key(), },
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);
@@ -497,6 +511,7 @@ namespace GoogleCSharpSnippets
                 Keys = { new Key(), },
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             ReserveIdsResponse response = datastoreClient.ReserveIds(request);
@@ -516,6 +531,7 @@ namespace GoogleCSharpSnippets
                 Keys = { new Key(), },
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             ReserveIdsResponse response = await datastoreClient.ReserveIdsAsync(request);

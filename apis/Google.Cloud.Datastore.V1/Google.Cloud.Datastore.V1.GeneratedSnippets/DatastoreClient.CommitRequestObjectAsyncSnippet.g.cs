@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 Mutations = { new Mutation(), },
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             CommitResponse response = await datastoreClient.CommitAsync(request);

@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 Keys = { new Key(), },
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             AllocateIdsResponse response = await datastoreClient.AllocateIdsAsync(request);

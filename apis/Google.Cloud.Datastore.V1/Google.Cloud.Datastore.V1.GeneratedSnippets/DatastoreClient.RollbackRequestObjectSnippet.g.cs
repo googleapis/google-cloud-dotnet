@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 Transaction = ByteString.Empty,
                 ProjectId = "",
                 DatabaseId = "",
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RollbackResponse response = datastoreClient.Rollback(request);

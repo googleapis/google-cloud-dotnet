@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 DatabaseId = "",
                 PropertyMask = new PropertyMask(),
                 ExplainOptions = new ExplainOptions(),
+                RequestOptions = new RequestOptions(),
             };
             // Make the request
             RunQueryResponse response = await datastoreClient.RunQueryAsync(request);
