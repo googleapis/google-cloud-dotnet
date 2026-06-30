@@ -3229,7 +3229,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-18T14:16:54.639087584Z",
-            "lastGeneratedCommit": "3aa565f453bae9dcef06685a6f84b6e48ccdf335",
+            "lastGeneratedCommit": "2bb679d17fb023ba977c50e7dc26a93ba29ce79b",
             "lastReleasedCommit": "3aa565f453bae9dcef06685a6f84b6e48ccdf335",
             "apiPaths": [
                 "google/cloud/support/v2"
