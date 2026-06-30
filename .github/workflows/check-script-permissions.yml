@@ -1,8 +1,5 @@
 name: Check that all pre and post-generation scripts are executable
 
-permissions:
-  contents: read
-
 on: [pull_request, push]
 
 jobs:
@@ -11,9 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
-      with:
-        persist-credentials: false
+    - uses: actions/checkout@v7
         
     - name: Validate script permissions
       run: '! stat -c "%a %n" generator-input/tweaks/*/p*.sh | grep -v 755'
