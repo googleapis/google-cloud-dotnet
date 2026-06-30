@@ -42,6 +42,8 @@ namespace Google.Cloud.Support.V2Beta
             yield return EscalationReflection.Descriptor;
             yield return FeedItemReflection.Descriptor;
             yield return FeedServiceReflection.Descriptor;
+            yield return SupportEventSubscriptionReflection.Descriptor;
+            yield return SupportEventSubscriptionServiceReflection.Descriptor;
         }
     }
 }
