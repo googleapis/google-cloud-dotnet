@@ -2,6 +2,9 @@ name: Check that all pre and post-generation scripts are executable
 
 on: [pull_request, push]
 
+permissions:
+  contents: read
+
 jobs:
 
   build:

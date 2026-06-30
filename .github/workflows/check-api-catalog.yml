@@ -2,6 +2,9 @@ name: Check that apis.json is valid JSON
 
 on: [pull_request, push]
 
+permissions:
+  contents: read
+
 jobs:
 
   build:

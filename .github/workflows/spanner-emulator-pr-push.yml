@@ -10,6 +10,9 @@ on:
     paths:
     - '**[Ss]panner**'
 
+permissions:
+  contents: read
+
 jobs:
   test:
     runs-on: ubuntu-latest

@@ -21,6 +21,9 @@ on:
     paths:
     - '**[Bb]ig[Tt]able**'
 name: bigtable-conformance
+permissions:
+  contents: read
+
 jobs:
   conformance:
     runs-on: ubuntu-latest
