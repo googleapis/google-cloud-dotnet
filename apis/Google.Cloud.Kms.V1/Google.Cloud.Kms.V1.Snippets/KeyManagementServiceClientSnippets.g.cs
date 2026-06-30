@@ -1788,6 +1788,7 @@ namespace GoogleCSharpSnippets
             GetImportJobRequest request = new GetImportJobRequest
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                PublicKeyFormat = PublicKey.Types.PublicKeyFormat.Unspecified,
             };
             // Make the request
             ImportJob response = keyManagementServiceClient.GetImportJob(request);
@@ -1805,6 +1806,7 @@ namespace GoogleCSharpSnippets
             GetImportJobRequest request = new GetImportJobRequest
             {
                 ImportJobName = ImportJobName.FromProjectLocationKeyRingImportJob("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[IMPORT_JOB]"),
+                PublicKeyFormat = PublicKey.Types.PublicKeyFormat.Unspecified,
             };
             // Make the request
             ImportJob response = await keyManagementServiceClient.GetImportJobAsync(request);
