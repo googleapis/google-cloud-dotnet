@@ -83,6 +83,7 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
                 Value.Descriptor.File.ToProto(),
                 Person.Descriptor.File.ToProto(),
                 Character.Descriptor.File.ToProto(),
+                ColorReflection.Descriptor.ToProto(),
             }
         };
 
@@ -93,6 +94,7 @@ public sealed class SpannerTestDatabase : SpannerTestDatabaseBase
             $", {Rectangle.Descriptor.FullName}" +
             $", {Duration.Descriptor.FullName}" +
             $", {Person.Descriptor.FullName}" +
+            $", {ColorReflection.Descriptor.EnumTypes.Single().FullName}" +
             $", {Character.Descriptor.FullName}" +
             $", {Character.Descriptor.EnumTypes.Single(t => t.ClrType == typeof(Character.Types.CharacterClass)).FullName}" +
             $", {ValueWrapper.Descriptor.FullName}" +

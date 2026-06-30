@@ -13,7 +13,7 @@ namespace Fantasy {
 
   /// <summary>Holder for reflection information generated from fantasy.proto</summary>
   public static partial class FantasyReflection {
-    
+
 
     #region Descriptor
     /// <summary>File descriptor for fantasy.proto</summary>

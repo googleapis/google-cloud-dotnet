@@ -20,8 +20,10 @@ namespace Google.Cloud.Spanner.Data.CommonTesting;
 public static class EnumFullyQualifiedName
 {
     /// <summary>
-    /// The string representing the FQN of the CharacterClass enum in the `fantasy` package
+    /// The string representing the FQN of enums used for tests
     /// This is not readily available from the C# compiled proto class
     /// </summary>
-    public const string CharacterClassFQN = "fantasy.Character.CharacterClass";
+    // public const string CharacterClassFQN = "fantasy.Character.CharacterClass";
+    public const string PetSpeciesEnum = "google.cloud.spanner.data.common_testing.Pet.Species";
+    public const string ColorEnum = "google.cloud.spanner.data.common_testing.Color";
 }

@@ -53,7 +53,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufPersonValue,
                  ProtobufValueWrapperValue,
                  UuidValue,
-                 EnumValue,
+                 TopLevelEnumValue,
                  BoolArrayValue,
                  Int64ArrayValue,
                  Float32ArrayValue,
@@ -70,7 +70,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufRectangleArrayValue,
                  ProtobufPersonArrayValue,
                  UuidArrayValue,
-                 EnumArrayValue,
+                 TopLevelEnumArrayValue,
                  ProtobufValueWrapperArrayValue) VALUES(
                  @K,
                  @BoolValue,
@@ -89,7 +89,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufPersonValue,
                  @ProtobufValueWrapperValue,
                  @UuidValue,
-                 @EnumValue,
+                 @TopLevelEnumValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
                  @Float32ArrayValue,
@@ -106,7 +106,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufRectangleArrayValue,
                  @ProtobufPersonArrayValue,
                  @UuidArrayValue,
-                 @EnumArrayValue,
+                 @TopLevelEnumArrayValue,
                  @ProtobufValueWrapperArrayValue
                )";
 
@@ -129,7 +129,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufPersonValue                 {Person.Descriptor.FullName},
                             ProtobufValueWrapperValue           {ValueWrapper.Descriptor.FullName},
                             UuidValue                           UUID,
-                            EnumValue                           {EnumFullyQualifiedName.CharacterClassFQN},
+                            TopLevelEnumValue                   {EnumFullyQualifiedName.ColorEnum},
                             BoolArrayValue                      ARRAY<BOOL>,
                             Int64ArrayValue                     ARRAY<INT64>,
                             Float32ArrayValue                   ARRAY<FLOAT32>,
@@ -146,7 +146,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufRectangleArrayValue         ARRAY<{Rectangle.Descriptor.FullName}>,
                             ProtobufPersonArrayValue            ARRAY<{Person.Descriptor.FullName}>,
                             UuidArrayValue                      ARRAY<UUID>,
-                            EnumArrayValue                      ARRAY<{EnumFullyQualifiedName.CharacterClassFQN}>,
+                            TopLevelEnumArrayValue              ARRAY<{EnumFullyQualifiedName.ColorEnum}>,
                             ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>
                           ) PRIMARY KEY(K)");
 
