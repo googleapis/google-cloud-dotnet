@@ -38,6 +38,8 @@ namespace Google.Cloud.Support.V2
             yield return CommentReflection.Descriptor;
             yield return CommentServiceReflection.Descriptor;
             yield return EscalationReflection.Descriptor;
+            yield return SupportEventSubscriptionReflection.Descriptor;
+            yield return SupportEventSubscriptionServiceReflection.Descriptor;
         }
     }
 }

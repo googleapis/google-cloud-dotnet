@@ -3235,6 +3235,1499 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_CreateSupportEventSubscription_sync",
+      "title": "CreateSupportEventSubscriptionRequestObject",
+      "description": "Snippet for CreateSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.CreateSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.CreateSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.CreateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_CreateSupportEventSubscription_async",
+      "title": "CreateSupportEventSubscriptionRequestObjectAsync",
+      "description": "Snippet for CreateSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.CreateSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.CreateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_CreateSupportEventSubscription_sync_flattened",
+      "title": "CreateSupportEventSubscription",
+      "description": "Snippet for CreateSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.CreateSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscription",
+            "name": "supportEventSubscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.CreateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_CreateSupportEventSubscription_async_flattened",
+      "title": "CreateSupportEventSubscriptionAsync",
+      "description": "Snippet for CreateSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscription",
+            "name": "supportEventSubscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.CreateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_CreateSupportEventSubscription_sync_flattened_resourceNames",
+      "title": "CreateSupportEventSubscriptionResourceNames",
+      "description": "Snippet for CreateSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.CreateSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscription",
+            "name": "supportEventSubscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.CreateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_CreateSupportEventSubscription_async_flattened_resourceNames",
+      "title": "CreateSupportEventSubscriptionResourceNamesAsync",
+      "description": "Snippet for CreateSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.CreateSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscription",
+            "name": "supportEventSubscription"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "CreateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.CreateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_GetSupportEventSubscription_sync",
+      "title": "GetSupportEventSubscriptionRequestObject",
+      "description": "Snippet for GetSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.GetSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.GetSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.GetSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_GetSupportEventSubscription_async",
+      "title": "GetSupportEventSubscriptionRequestObjectAsync",
+      "description": "Snippet for GetSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.GetSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.GetSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_GetSupportEventSubscription_sync_flattened",
+      "title": "GetSupportEventSubscription",
+      "description": "Snippet for GetSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.GetSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.GetSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_GetSupportEventSubscription_async_flattened",
+      "title": "GetSupportEventSubscriptionAsync",
+      "description": "Snippet for GetSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.GetSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_GetSupportEventSubscription_sync_flattened_resourceNames",
+      "title": "GetSupportEventSubscriptionResourceNames",
+      "description": "Snippet for GetSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.GetSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.GetSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_GetSupportEventSubscription_async_flattened_resourceNames",
+      "title": "GetSupportEventSubscriptionResourceNamesAsync",
+      "description": "Snippet for GetSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.GetSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "GetSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.GetSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_ListSupportEventSubscriptions_sync",
+      "title": "ListSupportEventSubscriptionsRequestObject",
+      "description": "Snippet for ListSupportEventSubscriptions",
+      "file": "SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSupportEventSubscriptions",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.ListSupportEventSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.ListSupportEventSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2.ListSupportEventSubscriptionsResponse, Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSupportEventSubscriptions",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.ListSupportEventSubscriptions",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_ListSupportEventSubscriptions_async",
+      "title": "ListSupportEventSubscriptionsRequestObjectAsync",
+      "description": "Snippet for ListSupportEventSubscriptionsAsync",
+      "file": "SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSupportEventSubscriptionsAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.ListSupportEventSubscriptionsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2.ListSupportEventSubscriptionsResponse, Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSupportEventSubscriptions",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.ListSupportEventSubscriptions",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 82,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 80,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_ListSupportEventSubscriptions_sync_flattened",
+      "title": "ListSupportEventSubscriptions",
+      "description": "Snippet for ListSupportEventSubscriptions",
+      "file": "SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSupportEventSubscriptions",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.ListSupportEventSubscriptions",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2.ListSupportEventSubscriptionsResponse, Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSupportEventSubscriptions",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.ListSupportEventSubscriptions",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_ListSupportEventSubscriptions_async_flattened",
+      "title": "ListSupportEventSubscriptionsAsync",
+      "description": "Snippet for ListSupportEventSubscriptionsAsync",
+      "file": "SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSupportEventSubscriptionsAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2.ListSupportEventSubscriptionsResponse, Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSupportEventSubscriptions",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.ListSupportEventSubscriptions",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_ListSupportEventSubscriptions_sync_flattened_resourceNames",
+      "title": "ListSupportEventSubscriptionsResourceNames",
+      "description": "Snippet for ListSupportEventSubscriptions",
+      "file": "SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSupportEventSubscriptions",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.ListSupportEventSubscriptions",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Support.V2.ListSupportEventSubscriptionsResponse, Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSupportEventSubscriptions",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.ListSupportEventSubscriptions",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_ListSupportEventSubscriptions_async_flattened_resourceNames",
+      "title": "ListSupportEventSubscriptionsResourceNamesAsync",
+      "description": "Snippet for ListSupportEventSubscriptionsAsync",
+      "file": "SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListSupportEventSubscriptionsAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.ListSupportEventSubscriptionsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.OrganizationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Support.V2.ListSupportEventSubscriptionsResponse, Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "ListSupportEventSubscriptions",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.ListSupportEventSubscriptions",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 77,
+          "type": "FULL"
+        },
+        {
+          "start": 38,
+          "end": 75,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_UpdateSupportEventSubscription_sync",
+      "title": "UpdateSupportEventSubscriptionRequestObject",
+      "description": "Snippet for UpdateSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.UpdateSupportEventSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.UpdateSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.UpdateSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.UpdateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_UpdateSupportEventSubscription_async",
+      "title": "UpdateSupportEventSubscriptionRequestObjectAsync",
+      "description": "Snippet for UpdateSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.UpdateSupportEventSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.UpdateSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.UpdateSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.UpdateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_UpdateSupportEventSubscription_sync_flattened",
+      "title": "UpdateSupportEventSubscription",
+      "description": "Snippet for UpdateSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.UpdateSupportEventSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.UpdateSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscription",
+            "name": "supportEventSubscription"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.UpdateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_UpdateSupportEventSubscription_async_flattened",
+      "title": "UpdateSupportEventSubscriptionAsync",
+      "description": "Snippet for UpdateSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.UpdateSupportEventSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.UpdateSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscription",
+            "name": "supportEventSubscription"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.UpdateSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_DeleteSupportEventSubscription_sync",
+      "title": "DeleteSupportEventSubscriptionRequestObject",
+      "description": "Snippet for DeleteSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.DeleteSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.DeleteSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.DeleteSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_DeleteSupportEventSubscription_async",
+      "title": "DeleteSupportEventSubscriptionRequestObjectAsync",
+      "description": "Snippet for DeleteSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.DeleteSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.DeleteSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_DeleteSupportEventSubscription_sync_flattened",
+      "title": "DeleteSupportEventSubscription",
+      "description": "Snippet for DeleteSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.DeleteSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.DeleteSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_DeleteSupportEventSubscription_async_flattened",
+      "title": "DeleteSupportEventSubscriptionAsync",
+      "description": "Snippet for DeleteSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.DeleteSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_DeleteSupportEventSubscription_sync_flattened_resourceNames",
+      "title": "DeleteSupportEventSubscriptionResourceNames",
+      "description": "Snippet for DeleteSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.DeleteSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.DeleteSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_DeleteSupportEventSubscription_async_flattened_resourceNames",
+      "title": "DeleteSupportEventSubscriptionResourceNamesAsync",
+      "description": "Snippet for DeleteSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.DeleteSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.SupportEventSubscriptionName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "DeleteSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.DeleteSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_UndeleteSupportEventSubscription_sync",
+      "title": "UndeleteSupportEventSubscriptionRequestObject",
+      "description": "Snippet for UndeleteSupportEventSubscription",
+      "file": "SupportEventSubscriptionServiceClient.UndeleteSupportEventSubscriptionRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteSupportEventSubscription",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.UndeleteSupportEventSubscription",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.UndeleteSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Support.V2.SupportEventSubscription",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UndeleteSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.UndeleteSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudsupport_v2_generated_SupportEventSubscriptionService_UndeleteSupportEventSubscription_async",
+      "title": "UndeleteSupportEventSubscriptionRequestObjectAsync",
+      "description": "Snippet for UndeleteSupportEventSubscriptionAsync",
+      "file": "SupportEventSubscriptionServiceClient.UndeleteSupportEventSubscriptionRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UndeleteSupportEventSubscriptionAsync",
+        "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient.UndeleteSupportEventSubscriptionAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Support.V2.UndeleteSupportEventSubscriptionRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Support.V2.SupportEventSubscription>",
+        "client": {
+          "shortName": "SupportEventSubscriptionServiceClient",
+          "fullName": "Google.Cloud.Support.V2.SupportEventSubscriptionServiceClient"
+        },
+        "method": {
+          "shortName": "UndeleteSupportEventSubscription",
+          "fullName": "google.cloud.support.v2.SupportEventSubscriptionService.UndeleteSupportEventSubscription",
+          "service": {
+            "shortName": "SupportEventSubscriptionService",
+            "fullName": "google.cloud.support.v2.SupportEventSubscriptionService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }
