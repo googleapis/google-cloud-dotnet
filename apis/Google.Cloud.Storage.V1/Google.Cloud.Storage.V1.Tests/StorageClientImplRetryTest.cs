@@ -491,5 +491,33 @@ namespace Google.Cloud.Storage.V1.Tests
                 header.Split(' ').ToDictionary(piece => piece.Split('/')[0], piece => piece.Split('/')[1]);
         }
         #endregion
+
+        #region Idempotency Header test case
+        [Fact]
+        public void IdempotencyHeaderIsSet()
+        {
+            var replayingMessageHandler = new ReplayingMessageHandler(RetryHandler.IdempotencyTokenHeader);
+            var service = new FakeStorageService(replayingMessageHandler);
+
+            var request = service.Buckets.Get("bucket");
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            service.ExpectRequest(request, HttpStatusCode.BadGateway);
+            service.ExpectRequest(request, new Bucket());
+
+            var client = new StorageClientImpl(service);
+            client.GetBucket("bucket");
+            service.Verify();
+
+            var actualHeaders = replayingMessageHandler.CapturedHeaders;
+
+            Assert.Equal(3, actualHeaders.Count);
+            Assert.All(actualHeaders, token => Assert.False(string.IsNullOrEmpty(token)));
+
+            var firstToken = actualHeaders.First();
+            // Just validate that it's a real GUID...
+            Guid.Parse(firstToken);
+            Assert.All(actualHeaders, token => Assert.Equal(firstToken, token));
+        }
+        #endregion
     }
 }
