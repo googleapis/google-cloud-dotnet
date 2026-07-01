@@ -190,6 +190,9 @@ namespace Google.Cloud.Spanner.Data
         private SpannerDbType(string protobufTypeName)
             : this(TypeCode.Proto) => ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
 
+        private SpannerDbType(TypeCode typeCode, string protobufTypeName)
+            : this(typeCode) => ProtobufTypeName = GaxPreconditions.CheckNotNullOrEmpty(protobufTypeName, nameof(protobufTypeName));
+
         /// <summary>
         /// The corresponding <see cref="DbType"/> for this Cloud Spanner type.
         /// </summary>
@@ -315,6 +318,8 @@ namespace Google.Cloud.Spanner.Data
                     return new SpannerDbType(type.StructType.Fields.Select(f => new StructField(f.Name, FromProtobufType(f.Type))).ToList());
                 case TypeCode.Proto:
                     return new SpannerDbType(type.ProtoTypeFqn);
+                case TypeCode.Enum:
+                    return new SpannerDbType(TypeCode.Enum, type.ProtoTypeFqn);
                 default:
                     return FromType(type);
             }
@@ -341,6 +346,7 @@ namespace Google.Cloud.Spanner.Data
                             }
                     };
                 case TypeCode.Proto:
+                case TypeCode.Enum:
                     return new V1.Type
                     {
                         Code = TypeCode,
@@ -426,6 +432,10 @@ namespace Google.Cloud.Spanner.Data
             if (ProtobufCache.GetProtobufMessageDescriptor(type) is MessageDescriptor descriptor)
             {
                 return new SpannerDbType(descriptor.FullName);
+            }
+            if (type.IsEnum && ProtobufEnumCache.GetEnumDescriptor(type) is EnumDescriptor enumDescriptor)
+            {
+                return new SpannerDbType(TypeCode.Enum, enumDescriptor.FullName);
             }
             if (type == typeof(Interval))
             {

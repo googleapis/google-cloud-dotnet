@@ -39,6 +39,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  K,
                  BoolValue,
                  Int64Value,
+                 Int64BackedEnumValue,
                  Float32Value,
                  Float64Value,
                  StringValue,
@@ -53,6 +54,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufPersonValue,
                  ProtobufValueWrapperValue,
                  UuidValue,
+                 TopLevelEnumValue,
                  BoolArrayValue,
                  Int64ArrayValue,
                  Float32ArrayValue,
@@ -69,10 +71,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  ProtobufRectangleArrayValue,
                  ProtobufPersonArrayValue,
                  UuidArrayValue,
+                 TopLevelEnumArrayValue,
                  ProtobufValueWrapperArrayValue) VALUES(
                  @K,
                  @BoolValue,
                  @Int64Value,
+                 @Int64BackedEnumValue,
                  @Float32Value,
                  @Float64Value,
                  @StringValue,
@@ -87,6 +91,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufPersonValue,
                  @ProtobufValueWrapperValue,
                  @UuidValue,
+                 @TopLevelEnumValue,
                  @BoolArrayValue,
                  @Int64ArrayValue,
                  @Float32ArrayValue,
@@ -103,6 +108,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                  @ProtobufRectangleArrayValue,
                  @ProtobufPersonArrayValue,
                  @UuidArrayValue,
+                 @TopLevelEnumArrayValue,
                  @ProtobufValueWrapperArrayValue
                )";
 
@@ -111,6 +117,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             K                                   STRING(MAX) NOT NULL,
                             BoolValue                           BOOL,
                             Int64Value                          INT64,
+                            Int64BackedEnumValue                     INT64,
                             Float32Value                        FLOAT32,
                             Float64Value                        FLOAT64,
                             StringValue                         STRING(MAX),
@@ -125,6 +132,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufPersonValue                 {Person.Descriptor.FullName},
                             ProtobufValueWrapperValue           {ValueWrapper.Descriptor.FullName},
                             UuidValue                           UUID,
+                            TopLevelEnumValue                   {EnumFullyQualifiedName.ColorEnum},
                             BoolArrayValue                      ARRAY<BOOL>,
                             Int64ArrayValue                     ARRAY<INT64>,
                             Float32ArrayValue                   ARRAY<FLOAT32>,
@@ -141,7 +149,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                             ProtobufRectangleArrayValue         ARRAY<{Rectangle.Descriptor.FullName}>,
                             ProtobufPersonArrayValue            ARRAY<{Person.Descriptor.FullName}>,
                             UuidArrayValue                      ARRAY<UUID>,
-                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>,
+                            TopLevelEnumArrayValue              ARRAY<{EnumFullyQualifiedName.ColorEnum}>,
+                            ProtobufValueWrapperArrayValue      ARRAY<{ValueWrapper.Descriptor.FullName}>
                           ) PRIMARY KEY(K)");
 
         private string MaybeEmptyOnProduction(string text, bool skip) => skip && !RunningOnEmulator ? "" : text;

@@ -250,6 +250,14 @@ namespace Google.Cloud.Spanner.Data
         /// <returns>The value converted to a <see cref="SpannerDate"/>.</returns>
         public SpannerDate GetSpannerDate(int i) => GetFieldValue<SpannerDate>(i);
 
+        /// <summary>
+        /// Gets the value of the specified column as a System.Enum.
+        /// </summary>
+        /// <typeparam name="T">Enum type</typeparam>
+        /// <param name="i">The index of the column to retrieve.</param>
+        /// <returns>The value converted to an enum, if defined.</returns>
+        public T GetEnum<T>(int i) where T : System.Enum => GetFieldValue<T>(i);
+
         /// <inheritdoc />
         public override object GetValue(int i) => this[i];
 
