@@ -5109,6 +5109,18 @@
             "sourcePaths": [
                 "apis/Google.Cloud.AgentRegistry.V1/Google.Cloud.AgentRegistry.V1"
             ]
+        },
+        {
+            "id": "Google.Maps.Isochrones.V1",
+            "nextVersion": "1.0.0-beta01",
+            "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "apiPaths": [
+                "google/maps/isochrones/v1"
+            ],
+            "sourcePaths": [
+                "apis/Google.Maps.Isochrones.V1/Google.Maps.Isochrones.V1"
+            ]
         }
     ],
     "ignoredApiPaths": [

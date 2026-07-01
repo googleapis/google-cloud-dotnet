@@ -7018,6 +7018,23 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Maps.Isochrones.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Isochrones",
+      "productUrl": "https://developers.google.com/maps/documentation/isochrones/overview",
+      "description": "isochrones.googleapis.com API.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/maps/isochrones/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "isochrones",
+      "serviceConfigFile": "isochrones_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Maps.MapManagement.V2Beta",
       "version": "1.0.0-beta01",
       "type": "grpc",
