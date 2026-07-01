@@ -1,0 +1,111 @@
+{
+  "clientLibrary": {
+    "name": "Google.Maps.Isochrones.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.maps.isochrones.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "isochrones_v1_generated_IsochroneService_GenerateIsochrone_sync",
+      "title": "GenerateIsochroneRequestObject",
+      "description": "Snippet for GenerateIsochrone",
+      "file": "IsochroneServiceClient.GenerateIsochroneRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateIsochrone",
+        "fullName": "Google.Maps.Isochrones.V1.IsochroneServiceClient.GenerateIsochrone",
+        "parameters": [
+          {
+            "type": "Google.Maps.Isochrones.V1.GenerateIsochroneRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Maps.Isochrones.V1.GenerateIsochroneResponse",
+        "client": {
+          "shortName": "IsochroneServiceClient",
+          "fullName": "Google.Maps.Isochrones.V1.IsochroneServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateIsochrone",
+          "fullName": "google.maps.isochrones.v1.IsochroneService.GenerateIsochrone",
+          "service": {
+            "shortName": "IsochroneService",
+            "fullName": "google.maps.isochrones.v1.IsochroneService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 52,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 50,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "isochrones_v1_generated_IsochroneService_GenerateIsochrone_async",
+      "title": "GenerateIsochroneRequestObjectAsync",
+      "description": "Snippet for GenerateIsochroneAsync",
+      "file": "IsochroneServiceClient.GenerateIsochroneRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GenerateIsochroneAsync",
+        "fullName": "Google.Maps.Isochrones.V1.IsochroneServiceClient.GenerateIsochroneAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Maps.Isochrones.V1.GenerateIsochroneRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Maps.Isochrones.V1.GenerateIsochroneResponse>",
+        "client": {
+          "shortName": "IsochroneServiceClient",
+          "fullName": "Google.Maps.Isochrones.V1.IsochroneServiceClient"
+        },
+        "method": {
+          "shortName": "GenerateIsochrone",
+          "fullName": "google.maps.isochrones.v1.IsochroneService.GenerateIsochrone",
+          "service": {
+            "shortName": "IsochroneService",
+            "fullName": "google.maps.isochrones.v1.IsochroneService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 53,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 51,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}
