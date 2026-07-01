@@ -17,6 +17,7 @@ using Google.Cloud.Spanner.V1;
 using Google.Protobuf.WellKnownTypes;
 using System;
 using System.Collections.Generic;
+using static System.Globalization.CultureInfo;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -232,6 +233,9 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
 
         [Fact]
         public Task BindInt64() => TestBindNonNull(SpannerDbType.Int64, 1, r => r.GetInt64(0));
+
+        [Fact]
+        public Task BindInt64BackedEnumValue() => TestBindNonNull(SpannerDbType.Int64, DayOfWeek.Monday, r => r.GetFieldValue<DayOfWeek>(0));
 
         [Fact]
         public Task BindInt64Array() => TestBindNonNull(

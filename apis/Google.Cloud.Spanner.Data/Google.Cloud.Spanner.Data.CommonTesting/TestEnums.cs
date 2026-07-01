@@ -14,15 +14,17 @@
 
 namespace Google.Cloud.Spanner.Data.CommonTesting;
 
-/// <summary>
-/// This class defines the string representation of an Enum with FQN for testing
-/// </summary>
-public static class EnumFullyQualifiedName
+internal static class TestEnums
 {
-    /// <summary>
-    /// The string representing the FQN of enums used for tests
-    /// This is not readily available from the C# compiled proto class and is included for testing convenience
-    /// </summary>
-    public const string PetSpeciesEnum = "google.cloud.spanner.data.common_testing.Pet.Species";
-    public const string ColorEnum = "google.cloud.spanner.data.common_testing.Color";
+    public enum DayOfWeek
+    {
+        Unspecified = 0,
+        Monday = 1,
+        Tuesday = 2,
+        Wednesday = 3,
+        Thursday = 4,
+        Friday = 5,
+        Saturday = 6,
+        Sunday = 7
+    }
 }

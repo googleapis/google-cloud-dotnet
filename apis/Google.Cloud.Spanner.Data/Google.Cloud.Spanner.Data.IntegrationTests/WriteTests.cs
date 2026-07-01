@@ -82,6 +82,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "BoolValue", SpannerDbType.Bool, null },
                 { "Float32Value", SpannerDbType.Float32, null },
                 { "Int64Value", SpannerDbType.Int64, null },
+                { "Int64BackedEnumValue", SpannerDbType.Int64, null },
                 { "Float64Value", SpannerDbType.Float64, null },
                 { "StringValue", SpannerDbType.String, null },
                 { "BytesValue", SpannerDbType.Bytes, null },
@@ -127,6 +128,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             {
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64BackedEnumValue")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float32Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64Value")));
                 Assert.True(reader.IsDBNull(reader.GetOrdinal("StringValue")));
@@ -219,12 +221,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             Guid?[] testUuidArray = { Guid.NewGuid(), null, Guid.NewGuid() };
 
             var testTopLevelEnum = Color.Red;
-            Color?[] testTopLevelEnumArray = { Color.Blue, null, Color.Unspecified };
+            Color?[] testTopLevelEnumArray = [Color.Blue, null, Color.Unspecified];
 
             var parameters = new SpannerParameterCollection
             {
                 { "BoolValue", SpannerDbType.Bool, true },
                 { "Int64Value", SpannerDbType.Int64, 1 },
+                { "Int64BackedEnumValue", SpannerDbType.Int64, TestEnums.DayOfWeek.Monday },
                 { "Float32Value", SpannerDbType.Float32, 2.718f },
                 { "Float64Value", SpannerDbType.Float64, 3.14 },
                 { "StringValue", SpannerDbType.String, "abc" },

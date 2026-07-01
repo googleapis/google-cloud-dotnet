@@ -1427,7 +1427,6 @@ namespace Google.Cloud.Spanner.Data.Tests
                     new Value { BoolValue = true },
                     new Value { StringValue = "P1Y2M3D" },
                     new Value { StringValue = "8f8c4746-17b1-4d9f-a634-58e11942095f"},
-                    new Value { StringValue = "2"},
                 } } } })),
                 Arg.Any<CallSettings>());
         }

@@ -64,7 +64,6 @@ namespace Google.Cloud.Spanner.Data.Tests
                     Value.ForString("test"),
                     Value.ForString("2021-09-10T09:37:10Z"),
                     Value.ForString("8f8c4746-17b1-4d9f-a634-58e11942095f"),
-                    Value.ForString("1")
                 }
             };
             Assert.Equal(expected, actual);
