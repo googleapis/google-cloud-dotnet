@@ -5114,7 +5114,7 @@
             "id": "Google.Maps.Isochrones.V1",
             "nextVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseAutomationLevel": "AUTOMATION_LEVEL_BLOCKED",
+            "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "lastGeneratedCommit": "7a80a00f164b5ee08d09c1201bf170ba0393ccb2",
             "apiPaths": [
                 "google/maps/isochrones/v1"
