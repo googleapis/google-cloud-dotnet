@@ -1,4 +1,4 @@
-﻿// Copyright 2017 Google Inc. All Rights Reserved.
+// Copyright 2017 Google Inc. All Rights Reserved.
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -21,6 +21,7 @@ namespace Google.Cloud.Storage.V1.Tests
     public class UploadValidationExceptionTest
     {
         [Fact]
+        [Obsolete]
         public void Construction_NoAdditionalFailure()
         {
             var ex = new UploadValidationException("hash", new Object(), null);
@@ -28,6 +29,7 @@ namespace Google.Cloud.Storage.V1.Tests
         }
 
         [Fact]
+        [Obsolete]
         public void Construction_WithAdditionalFailure()
         {
             var additional = new Exception();
@@ -36,6 +38,7 @@ namespace Google.Cloud.Storage.V1.Tests
         }
 
         [Fact]
+        [Obsolete]
         public void Construction_WithAdditionalFailure_Empty()
         {
             Assert.Throws<ArgumentException>(() => new UploadValidationException("hash", new Object(), new AggregateException("No inner exceptions")));
