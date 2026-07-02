@@ -4904,6 +4904,23 @@
       "restNumericEnums": true
     },
     {
+      "id": "Google.Cloud.ProductRegistry.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Product Registry",
+      "productUrl": "https://docs.cloud.google.com/product-registry",
+      "description": "cloudproductregistry.googleapis.com API.",
+      "tags": [],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/productregistry/v1",
+      "includeCommonResourcesProto": true,
+      "shortName": "cloudproductregistry",
+      "serviceConfigFile": "cloudproductregistry_v1.yaml",
+      "transport": "grpc+rest",
+      "restNumericEnums": true
+    },
+    {
       "id": "Google.Cloud.Profiler.V2",
       "version": "2.7.0",
       "type": "grpc",
