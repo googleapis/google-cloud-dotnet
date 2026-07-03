@@ -1,0 +1,1485 @@
+{
+  "clientLibrary": {
+    "name": "Google.Cloud.ProductRegistry.V1",
+    "language": "C_SHARP",
+    "apis": [
+      {
+        "id": "google.cloud.productregistry.v1",
+        "version": "v1"
+      }
+    ]
+  },
+  "snippets": [
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetProductSuite_sync",
+      "title": "GetProductSuiteRequestObject",
+      "description": "Snippet for GetProductSuite",
+      "file": "CloudProductRegistryReadServiceClient.GetProductSuiteRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductSuite",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetProductSuite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.GetProductSuiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.ProductSuite",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductSuite",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetProductSuite",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetProductSuite_async",
+      "title": "GetProductSuiteRequestObjectAsync",
+      "description": "Snippet for GetProductSuiteAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetProductSuiteRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductSuiteAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetProductSuiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.GetProductSuiteRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.ProductSuite>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductSuite",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetProductSuite",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetProductSuite_sync_flattened",
+      "title": "GetProductSuite",
+      "description": "Snippet for GetProductSuite",
+      "file": "CloudProductRegistryReadServiceClient.GetProductSuiteSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductSuite",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetProductSuite",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.ProductSuite",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductSuite",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetProductSuite",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetProductSuite_async_flattened",
+      "title": "GetProductSuiteAsync",
+      "description": "Snippet for GetProductSuiteAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetProductSuiteAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductSuiteAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetProductSuiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.ProductSuite>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductSuite",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetProductSuite",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetProductSuite_sync_flattened_resourceNames",
+      "title": "GetProductSuiteResourceNames",
+      "description": "Snippet for GetProductSuite",
+      "file": "CloudProductRegistryReadServiceClient.GetProductSuiteResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductSuite",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetProductSuite",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.ProductSuiteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.ProductSuite",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductSuite",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetProductSuite",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetProductSuite_async_flattened_resourceNames",
+      "title": "GetProductSuiteResourceNamesAsync",
+      "description": "Snippet for GetProductSuiteAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetProductSuiteResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetProductSuiteAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetProductSuiteAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.ProductSuiteName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.ProductSuite>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetProductSuite",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetProductSuite",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListProductSuites_sync",
+      "title": "ListProductSuitesRequestObject",
+      "description": "Snippet for ListProductSuites",
+      "file": "CloudProductRegistryReadServiceClient.ListProductSuitesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductSuites",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListProductSuites",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.ListProductSuitesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ProductRegistry.V1.ListProductSuitesResponse, Google.Cloud.ProductRegistry.V1.ProductSuite>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListProductSuites",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListProductSuites",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListProductSuites_async",
+      "title": "ListProductSuitesRequestObjectAsync",
+      "description": "Snippet for ListProductSuitesAsync",
+      "file": "CloudProductRegistryReadServiceClient.ListProductSuitesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListProductSuitesAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListProductSuitesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.ListProductSuitesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ProductRegistry.V1.ListProductSuitesResponse, Google.Cloud.ProductRegistry.V1.ProductSuite>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListProductSuites",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListProductSuites",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProduct_sync",
+      "title": "GetLogicalProductRequestObject",
+      "description": "Snippet for GetLogicalProduct",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProduct",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.GetLogicalProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.LogicalProduct",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProduct",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProduct",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProduct_async",
+      "title": "GetLogicalProductRequestObjectAsync",
+      "description": "Snippet for GetLogicalProductAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.GetLogicalProductRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.LogicalProduct>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProduct",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProduct",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProduct_sync_flattened",
+      "title": "GetLogicalProduct",
+      "description": "Snippet for GetLogicalProduct",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProduct",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProduct",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.LogicalProduct",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProduct",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProduct",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProduct_async_flattened",
+      "title": "GetLogicalProductAsync",
+      "description": "Snippet for GetLogicalProductAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.LogicalProduct>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProduct",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProduct",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProduct_sync_flattened_resourceNames",
+      "title": "GetLogicalProductResourceNames",
+      "description": "Snippet for GetLogicalProduct",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProduct",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProduct",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.LogicalProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.LogicalProduct",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProduct",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProduct",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProduct_async_flattened_resourceNames",
+      "title": "GetLogicalProductResourceNamesAsync",
+      "description": "Snippet for GetLogicalProductAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.LogicalProductName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.LogicalProduct>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProduct",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProduct",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListLogicalProducts_sync",
+      "title": "ListLogicalProductsRequestObject",
+      "description": "Snippet for ListLogicalProducts",
+      "file": "CloudProductRegistryReadServiceClient.ListLogicalProductsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalProducts",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListLogicalProducts",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.ListLogicalProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ProductRegistry.V1.ListLogicalProductsResponse, Google.Cloud.ProductRegistry.V1.LogicalProduct>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogicalProducts",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListLogicalProducts",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListLogicalProducts_async",
+      "title": "ListLogicalProductsRequestObjectAsync",
+      "description": "Snippet for ListLogicalProductsAsync",
+      "file": "CloudProductRegistryReadServiceClient.ListLogicalProductsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalProductsAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListLogicalProductsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.ListLogicalProductsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ProductRegistry.V1.ListLogicalProductsResponse, Google.Cloud.ProductRegistry.V1.LogicalProduct>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogicalProducts",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListLogicalProducts",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProductVariant_sync",
+      "title": "GetLogicalProductVariantRequestObject",
+      "description": "Snippet for GetLogicalProductVariant",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductVariantRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductVariant",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductVariant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.GetLogicalProductVariantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.LogicalProductVariant",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProductVariant",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProductVariant",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProductVariant_async",
+      "title": "GetLogicalProductVariantRequestObjectAsync",
+      "description": "Snippet for GetLogicalProductVariantAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductVariantRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductVariantAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductVariantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.GetLogicalProductVariantRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProductVariant",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProductVariant",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProductVariant_sync_flattened",
+      "title": "GetLogicalProductVariant",
+      "description": "Snippet for GetLogicalProductVariant",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductVariantSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductVariant",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductVariant",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.LogicalProductVariant",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProductVariant",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProductVariant",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProductVariant_async_flattened",
+      "title": "GetLogicalProductVariantAsync",
+      "description": "Snippet for GetLogicalProductVariantAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductVariantAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductVariantAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductVariantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProductVariant",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProductVariant",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProductVariant_sync_flattened_resourceNames",
+      "title": "GetLogicalProductVariantResourceNames",
+      "description": "Snippet for GetLogicalProductVariant",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductVariantResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductVariant",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductVariant",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.LogicalProductVariantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.LogicalProductVariant",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProductVariant",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProductVariant",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_GetLogicalProductVariant_async_flattened_resourceNames",
+      "title": "GetLogicalProductVariantResourceNamesAsync",
+      "description": "Snippet for GetLogicalProductVariantAsync",
+      "file": "CloudProductRegistryReadServiceClient.GetLogicalProductVariantResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetLogicalProductVariantAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.GetLogicalProductVariantAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.LogicalProductVariantName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "GetLogicalProductVariant",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.GetLogicalProductVariant",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListLogicalProductVariants_sync",
+      "title": "ListLogicalProductVariantsRequestObject",
+      "description": "Snippet for ListLogicalProductVariants",
+      "file": "CloudProductRegistryReadServiceClient.ListLogicalProductVariantsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalProductVariants",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListLogicalProductVariants",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.ListLogicalProductVariantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ProductRegistry.V1.ListLogicalProductVariantsResponse, Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogicalProductVariants",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListLogicalProductVariants",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListLogicalProductVariants_async",
+      "title": "ListLogicalProductVariantsRequestObjectAsync",
+      "description": "Snippet for ListLogicalProductVariantsAsync",
+      "file": "CloudProductRegistryReadServiceClient.ListLogicalProductVariantsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalProductVariantsAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListLogicalProductVariantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.ListLogicalProductVariantsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ProductRegistry.V1.ListLogicalProductVariantsResponse, Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogicalProductVariants",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListLogicalProductVariants",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListLogicalProductVariants_sync_flattened",
+      "title": "ListLogicalProductVariants",
+      "description": "Snippet for ListLogicalProductVariants",
+      "file": "CloudProductRegistryReadServiceClient.ListLogicalProductVariantsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalProductVariants",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListLogicalProductVariants",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ProductRegistry.V1.ListLogicalProductVariantsResponse, Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogicalProductVariants",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListLogicalProductVariants",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListLogicalProductVariants_async_flattened",
+      "title": "ListLogicalProductVariantsAsync",
+      "description": "Snippet for ListLogicalProductVariantsAsync",
+      "file": "CloudProductRegistryReadServiceClient.ListLogicalProductVariantsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalProductVariantsAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListLogicalProductVariantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ProductRegistry.V1.ListLogicalProductVariantsResponse, Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogicalProductVariants",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListLogicalProductVariants",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListLogicalProductVariants_sync_flattened_resourceNames",
+      "title": "ListLogicalProductVariantsResourceNames",
+      "description": "Snippet for ListLogicalProductVariants",
+      "file": "CloudProductRegistryReadServiceClient.ListLogicalProductVariantsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalProductVariants",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListLogicalProductVariants",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.LogicalProductName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.ProductRegistry.V1.ListLogicalProductVariantsResponse, Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogicalProductVariants",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListLogicalProductVariants",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_ListLogicalProductVariants_async_flattened_resourceNames",
+      "title": "ListLogicalProductVariantsResourceNamesAsync",
+      "description": "Snippet for ListLogicalProductVariantsAsync",
+      "file": "CloudProductRegistryReadServiceClient.ListLogicalProductVariantsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListLogicalProductVariantsAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.ListLogicalProductVariantsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.LogicalProductName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.ProductRegistry.V1.ListLogicalProductVariantsResponse, Google.Cloud.ProductRegistry.V1.LogicalProductVariant>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "ListLogicalProductVariants",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.ListLogicalProductVariants",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_LookupEntity_sync",
+      "title": "LookupEntityRequestObject",
+      "description": "Snippet for LookupEntity",
+      "file": "CloudProductRegistryReadServiceClient.LookupEntityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupEntity",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.LookupEntity",
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.LookupEntityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.ProductRegistry.V1.LookupEntityResponse",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "LookupEntity",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.LookupEntity",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "cloudproductregistry_v1_generated_CloudProductRegistryReadService_LookupEntity_async",
+      "title": "LookupEntityRequestObjectAsync",
+      "description": "Snippet for LookupEntityAsync",
+      "file": "CloudProductRegistryReadServiceClient.LookupEntityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "LookupEntityAsync",
+        "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient.LookupEntityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.ProductRegistry.V1.LookupEntityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.ProductRegistry.V1.LookupEntityResponse>",
+        "client": {
+          "shortName": "CloudProductRegistryReadServiceClient",
+          "fullName": "Google.Cloud.ProductRegistry.V1.CloudProductRegistryReadServiceClient"
+        },
+        "method": {
+          "shortName": "LookupEntity",
+          "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService.LookupEntity",
+          "service": {
+            "shortName": "CloudProductRegistryReadService",
+            "fullName": "google.cloud.productregistry.v1.CloudProductRegistryReadService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.productregistry.v1",
+  "libraryPackage": "Google.Cloud.ProductRegistry.V1",
+  "services": {
+    "CloudProductRegistryReadService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CloudProductRegistryReadServiceClient",
+          "rpcs": {
+            "GetLogicalProduct": {
+              "methods": [
+                "GetLogicalProduct",
+                "GetLogicalProductAsync"
+              ]
+            },
+            "GetLogicalProductVariant": {
+              "methods": [
+                "GetLogicalProductVariant",
+                "GetLogicalProductVariantAsync"
+              ]
+            },
+            "GetProductSuite": {
+              "methods": [
+                "GetProductSuite",
+                "GetProductSuiteAsync"
+              ]
+            },
+            "ListLogicalProductVariants": {
+              "methods": [
+                "ListLogicalProductVariants",
+                "ListLogicalProductVariantsAsync"
+              ]
+            },
+            "ListLogicalProducts": {
+              "methods": [
+                "ListLogicalProducts",
+                "ListLogicalProductsAsync"
+              ]
+            },
+            "ListProductSuites": {
+              "methods": [
+                "ListProductSuites",
+                "ListProductSuitesAsync"
+              ]
+            },
+            "LookupEntity": {
+              "methods": [
+                "LookupEntity",
+                "LookupEntityAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
