@@ -11418,6 +11418,2495 @@
       ]
     },
     {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinement_sync",
+      "title": "GetFindingsRefinementRequestObject",
+      "description": "Snippet for GetFindingsRefinement",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinement",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetFindingsRefinementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinement_async",
+      "title": "GetFindingsRefinementRequestObjectAsync",
+      "description": "Snippet for GetFindingsRefinementAsync",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetFindingsRefinementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinement_sync_flattened",
+      "title": "GetFindingsRefinement",
+      "description": "Snippet for GetFindingsRefinement",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinement",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinement",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinement_async_flattened",
+      "title": "GetFindingsRefinementAsync",
+      "description": "Snippet for GetFindingsRefinementAsync",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinement_sync_flattened_resourceNames",
+      "title": "GetFindingsRefinementResourceNames",
+      "description": "Snippet for GetFindingsRefinement",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinement",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinement_async_flattened_resourceNames",
+      "title": "GetFindingsRefinementResourceNamesAsync",
+      "description": "Snippet for GetFindingsRefinementAsync",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListFindingsRefinements_sync",
+      "title": "ListFindingsRefinementsRequestObject",
+      "description": "Snippet for ListFindingsRefinements",
+      "file": "FindingsRefinementServiceClient.ListFindingsRefinementsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingsRefinements",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListFindingsRefinements",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListFindingsRefinementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFindingsRefinementsResponse, Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListFindingsRefinements",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListFindingsRefinements",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 78,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 76,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListFindingsRefinements_async",
+      "title": "ListFindingsRefinementsRequestObjectAsync",
+      "description": "Snippet for ListFindingsRefinementsAsync",
+      "file": "FindingsRefinementServiceClient.ListFindingsRefinementsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingsRefinementsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListFindingsRefinementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListFindingsRefinementsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFindingsRefinementsResponse, Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListFindingsRefinements",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListFindingsRefinements",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListFindingsRefinements_sync_flattened",
+      "title": "ListFindingsRefinements",
+      "description": "Snippet for ListFindingsRefinements",
+      "file": "FindingsRefinementServiceClient.ListFindingsRefinementsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingsRefinements",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListFindingsRefinements",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFindingsRefinementsResponse, Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListFindingsRefinements",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListFindingsRefinements",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListFindingsRefinements_async_flattened",
+      "title": "ListFindingsRefinementsAsync",
+      "description": "Snippet for ListFindingsRefinementsAsync",
+      "file": "FindingsRefinementServiceClient.ListFindingsRefinementsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingsRefinementsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListFindingsRefinementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFindingsRefinementsResponse, Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListFindingsRefinements",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListFindingsRefinements",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListFindingsRefinements_sync_flattened_resourceNames",
+      "title": "ListFindingsRefinementsResourceNames",
+      "description": "Snippet for ListFindingsRefinements",
+      "file": "FindingsRefinementServiceClient.ListFindingsRefinementsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingsRefinements",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListFindingsRefinements",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListFindingsRefinementsResponse, Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListFindingsRefinements",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListFindingsRefinements",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListFindingsRefinements_async_flattened_resourceNames",
+      "title": "ListFindingsRefinementsResourceNamesAsync",
+      "description": "Snippet for ListFindingsRefinementsAsync",
+      "file": "FindingsRefinementServiceClient.ListFindingsRefinementsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListFindingsRefinementsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListFindingsRefinementsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListFindingsRefinementsResponse, Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListFindingsRefinements",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListFindingsRefinements",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_CreateFindingsRefinement_sync",
+      "title": "CreateFindingsRefinementRequestObject",
+      "description": "Snippet for CreateFindingsRefinement",
+      "file": "FindingsRefinementServiceClient.CreateFindingsRefinementRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFindingsRefinement",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.CreateFindingsRefinement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.CreateFindingsRefinementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.CreateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_CreateFindingsRefinement_async",
+      "title": "CreateFindingsRefinementRequestObjectAsync",
+      "description": "Snippet for CreateFindingsRefinementAsync",
+      "file": "FindingsRefinementServiceClient.CreateFindingsRefinementRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFindingsRefinementAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.CreateFindingsRefinementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.CreateFindingsRefinementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.CreateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_CreateFindingsRefinement_sync_flattened",
+      "title": "CreateFindingsRefinement",
+      "description": "Snippet for CreateFindingsRefinement",
+      "file": "FindingsRefinementServiceClient.CreateFindingsRefinementSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFindingsRefinement",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.CreateFindingsRefinement",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+            "name": "findingsRefinement"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.CreateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_CreateFindingsRefinement_async_flattened",
+      "title": "CreateFindingsRefinementAsync",
+      "description": "Snippet for CreateFindingsRefinementAsync",
+      "file": "FindingsRefinementServiceClient.CreateFindingsRefinementAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFindingsRefinementAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.CreateFindingsRefinementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+            "name": "findingsRefinement"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.CreateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_CreateFindingsRefinement_sync_flattened_resourceNames",
+      "title": "CreateFindingsRefinementResourceNames",
+      "description": "Snippet for CreateFindingsRefinement",
+      "file": "FindingsRefinementServiceClient.CreateFindingsRefinementResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFindingsRefinement",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.CreateFindingsRefinement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+            "name": "findingsRefinement"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.CreateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_CreateFindingsRefinement_async_flattened_resourceNames",
+      "title": "CreateFindingsRefinementResourceNamesAsync",
+      "description": "Snippet for CreateFindingsRefinementAsync",
+      "file": "FindingsRefinementServiceClient.CreateFindingsRefinementResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "CreateFindingsRefinementAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.CreateFindingsRefinementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+            "name": "findingsRefinement"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "CreateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.CreateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_UpdateFindingsRefinement_sync",
+      "title": "UpdateFindingsRefinementRequestObject",
+      "description": "Snippet for UpdateFindingsRefinement",
+      "file": "FindingsRefinementServiceClient.UpdateFindingsRefinementRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFindingsRefinement",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.UpdateFindingsRefinement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateFindingsRefinementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.UpdateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_UpdateFindingsRefinement_async",
+      "title": "UpdateFindingsRefinementRequestObjectAsync",
+      "description": "Snippet for UpdateFindingsRefinementAsync",
+      "file": "FindingsRefinementServiceClient.UpdateFindingsRefinementRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFindingsRefinementAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.UpdateFindingsRefinementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateFindingsRefinementRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.UpdateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_UpdateFindingsRefinement_sync_flattened",
+      "title": "UpdateFindingsRefinement",
+      "description": "Snippet for UpdateFindingsRefinement",
+      "file": "FindingsRefinementServiceClient.UpdateFindingsRefinementSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFindingsRefinement",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.UpdateFindingsRefinement",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+            "name": "findingsRefinement"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.UpdateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_UpdateFindingsRefinement_async_flattened",
+      "title": "UpdateFindingsRefinementAsync",
+      "description": "Snippet for UpdateFindingsRefinementAsync",
+      "file": "FindingsRefinementServiceClient.UpdateFindingsRefinementAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFindingsRefinementAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.UpdateFindingsRefinementAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinement",
+            "name": "findingsRefinement"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinement>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFindingsRefinement",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.UpdateFindingsRefinement",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinementDeployment_sync",
+      "title": "GetFindingsRefinementDeploymentRequestObject",
+      "description": "Snippet for GetFindingsRefinementDeployment",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementDeployment",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetFindingsRefinementDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinementDeployment",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinementDeployment_async",
+      "title": "GetFindingsRefinementDeploymentRequestObjectAsync",
+      "description": "Snippet for GetFindingsRefinementDeploymentAsync",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementDeploymentAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.GetFindingsRefinementDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinementDeployment_sync_flattened",
+      "title": "GetFindingsRefinementDeployment",
+      "description": "Snippet for GetFindingsRefinementDeployment",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementDeployment",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementDeployment",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinementDeployment",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinementDeployment_async_flattened",
+      "title": "GetFindingsRefinementDeploymentAsync",
+      "description": "Snippet for GetFindingsRefinementDeploymentAsync",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementDeploymentAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinementDeployment_sync_flattened_resourceNames",
+      "title": "GetFindingsRefinementDeploymentResourceNames",
+      "description": "Snippet for GetFindingsRefinementDeployment",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementDeploymentResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementDeployment",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinementDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinementDeployment",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_GetFindingsRefinementDeployment_async_flattened_resourceNames",
+      "title": "GetFindingsRefinementDeploymentResourceNamesAsync",
+      "description": "Snippet for GetFindingsRefinementDeploymentAsync",
+      "file": "FindingsRefinementServiceClient.GetFindingsRefinementDeploymentResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetFindingsRefinementDeploymentAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.GetFindingsRefinementDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinementDeploymentName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "GetFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.GetFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_UpdateFindingsRefinementDeployment_sync",
+      "title": "UpdateFindingsRefinementDeploymentRequestObject",
+      "description": "Snippet for UpdateFindingsRefinementDeployment",
+      "file": "FindingsRefinementServiceClient.UpdateFindingsRefinementDeploymentRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFindingsRefinementDeployment",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.UpdateFindingsRefinementDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateFindingsRefinementDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinementDeployment",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.UpdateFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_UpdateFindingsRefinementDeployment_async",
+      "title": "UpdateFindingsRefinementDeploymentRequestObjectAsync",
+      "description": "Snippet for UpdateFindingsRefinementDeploymentAsync",
+      "file": "FindingsRefinementServiceClient.UpdateFindingsRefinementDeploymentRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFindingsRefinementDeploymentAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.UpdateFindingsRefinementDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.UpdateFindingsRefinementDeploymentRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.UpdateFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_UpdateFindingsRefinementDeployment_sync_flattened",
+      "title": "UpdateFindingsRefinementDeployment",
+      "description": "Snippet for UpdateFindingsRefinementDeployment",
+      "file": "FindingsRefinementServiceClient.UpdateFindingsRefinementDeploymentSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFindingsRefinementDeployment",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.UpdateFindingsRefinementDeployment",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinementDeployment",
+            "name": "findingsRefinementDeployment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.FindingsRefinementDeployment",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.UpdateFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_UpdateFindingsRefinementDeployment_async_flattened",
+      "title": "UpdateFindingsRefinementDeploymentAsync",
+      "description": "Snippet for UpdateFindingsRefinementDeploymentAsync",
+      "file": "FindingsRefinementServiceClient.UpdateFindingsRefinementDeploymentAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateFindingsRefinementDeploymentAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.UpdateFindingsRefinementDeploymentAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinementDeployment",
+            "name": "findingsRefinementDeployment"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateFindingsRefinementDeployment",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.UpdateFindingsRefinementDeployment",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListAllFindingsRefinementDeployments_sync",
+      "title": "ListAllFindingsRefinementDeploymentsRequestObject",
+      "description": "Snippet for ListAllFindingsRefinementDeployments",
+      "file": "FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAllFindingsRefinementDeployments",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListAllFindingsRefinementDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListAllFindingsRefinementDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListAllFindingsRefinementDeploymentsResponse, Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListAllFindingsRefinementDeployments",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListAllFindingsRefinementDeployments",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 79,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 77,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListAllFindingsRefinementDeployments_async",
+      "title": "ListAllFindingsRefinementDeploymentsRequestObjectAsync",
+      "description": "Snippet for ListAllFindingsRefinementDeploymentsAsync",
+      "file": "FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAllFindingsRefinementDeploymentsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ListAllFindingsRefinementDeploymentsRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListAllFindingsRefinementDeploymentsResponse, Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListAllFindingsRefinementDeployments",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListAllFindingsRefinementDeployments",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListAllFindingsRefinementDeployments_sync_flattened",
+      "title": "ListAllFindingsRefinementDeployments",
+      "description": "Snippet for ListAllFindingsRefinementDeployments",
+      "file": "FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAllFindingsRefinementDeployments",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListAllFindingsRefinementDeployments",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListAllFindingsRefinementDeploymentsResponse, Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListAllFindingsRefinementDeployments",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListAllFindingsRefinementDeployments",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListAllFindingsRefinementDeployments_async_flattened",
+      "title": "ListAllFindingsRefinementDeploymentsAsync",
+      "description": "Snippet for ListAllFindingsRefinementDeploymentsAsync",
+      "file": "FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAllFindingsRefinementDeploymentsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListAllFindingsRefinementDeploymentsResponse, Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListAllFindingsRefinementDeployments",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListAllFindingsRefinementDeployments",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListAllFindingsRefinementDeployments_sync_flattened_resourceNames",
+      "title": "ListAllFindingsRefinementDeploymentsResourceNames",
+      "description": "Snippet for ListAllFindingsRefinementDeployments",
+      "file": "FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAllFindingsRefinementDeployments",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListAllFindingsRefinementDeployments",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Chronicle.V1.ListAllFindingsRefinementDeploymentsResponse, Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListAllFindingsRefinementDeployments",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListAllFindingsRefinementDeployments",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ListAllFindingsRefinementDeployments_async_flattened_resourceNames",
+      "title": "ListAllFindingsRefinementDeploymentsResourceNamesAsync",
+      "description": "Snippet for ListAllFindingsRefinementDeploymentsAsync",
+      "file": "FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAllFindingsRefinementDeploymentsAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ListAllFindingsRefinementDeploymentsAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Chronicle.V1.ListAllFindingsRefinementDeploymentsResponse, Google.Cloud.Chronicle.V1.FindingsRefinementDeployment>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ListAllFindingsRefinementDeployments",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ListAllFindingsRefinementDeployments",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeFindingsRefinementActivity_sync",
+      "title": "ComputeFindingsRefinementActivityRequestObject",
+      "description": "Snippet for ComputeFindingsRefinementActivity",
+      "file": "FindingsRefinementServiceClient.ComputeFindingsRefinementActivityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeFindingsRefinementActivity",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeFindingsRefinementActivity",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ComputeFindingsRefinementActivityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.ComputeFindingsRefinementActivityResponse",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeFindingsRefinementActivity",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeFindingsRefinementActivity",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeFindingsRefinementActivity_async",
+      "title": "ComputeFindingsRefinementActivityRequestObjectAsync",
+      "description": "Snippet for ComputeFindingsRefinementActivityAsync",
+      "file": "FindingsRefinementServiceClient.ComputeFindingsRefinementActivityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeFindingsRefinementActivityAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeFindingsRefinementActivityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ComputeFindingsRefinementActivityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.ComputeFindingsRefinementActivityResponse>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeFindingsRefinementActivity",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeFindingsRefinementActivity",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeFindingsRefinementActivity_sync_flattened",
+      "title": "ComputeFindingsRefinementActivity",
+      "description": "Snippet for ComputeFindingsRefinementActivity",
+      "file": "FindingsRefinementServiceClient.ComputeFindingsRefinementActivitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeFindingsRefinementActivity",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeFindingsRefinementActivity",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.ComputeFindingsRefinementActivityResponse",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeFindingsRefinementActivity",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeFindingsRefinementActivity",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeFindingsRefinementActivity_async_flattened",
+      "title": "ComputeFindingsRefinementActivityAsync",
+      "description": "Snippet for ComputeFindingsRefinementActivityAsync",
+      "file": "FindingsRefinementServiceClient.ComputeFindingsRefinementActivityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeFindingsRefinementActivityAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeFindingsRefinementActivityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.ComputeFindingsRefinementActivityResponse>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeFindingsRefinementActivity",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeFindingsRefinementActivity",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeFindingsRefinementActivity_sync_flattened_resourceNames",
+      "title": "ComputeFindingsRefinementActivityResourceNames",
+      "description": "Snippet for ComputeFindingsRefinementActivity",
+      "file": "FindingsRefinementServiceClient.ComputeFindingsRefinementActivityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeFindingsRefinementActivity",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeFindingsRefinementActivity",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.ComputeFindingsRefinementActivityResponse",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeFindingsRefinementActivity",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeFindingsRefinementActivity",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeFindingsRefinementActivity_async_flattened_resourceNames",
+      "title": "ComputeFindingsRefinementActivityResourceNamesAsync",
+      "description": "Snippet for ComputeFindingsRefinementActivityAsync",
+      "file": "FindingsRefinementServiceClient.ComputeFindingsRefinementActivityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeFindingsRefinementActivityAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeFindingsRefinementActivityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.FindingsRefinementName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.ComputeFindingsRefinementActivityResponse>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeFindingsRefinementActivity",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeFindingsRefinementActivity",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeAllFindingsRefinementActivities_sync",
+      "title": "ComputeAllFindingsRefinementActivitiesRequestObject",
+      "description": "Snippet for ComputeAllFindingsRefinementActivities",
+      "file": "FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeAllFindingsRefinementActivities",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ComputeAllFindingsRefinementActivitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.ComputeAllFindingsRefinementActivitiesResponse",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeAllFindingsRefinementActivities",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeAllFindingsRefinementActivities",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeAllFindingsRefinementActivities_async",
+      "title": "ComputeAllFindingsRefinementActivitiesRequestObjectAsync",
+      "description": "Snippet for ComputeAllFindingsRefinementActivitiesAsync",
+      "file": "FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeAllFindingsRefinementActivitiesAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.ComputeAllFindingsRefinementActivitiesRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.ComputeAllFindingsRefinementActivitiesResponse>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeAllFindingsRefinementActivities",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeAllFindingsRefinementActivities",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeAllFindingsRefinementActivities_sync_flattened",
+      "title": "ComputeAllFindingsRefinementActivities",
+      "description": "Snippet for ComputeAllFindingsRefinementActivities",
+      "file": "FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeAllFindingsRefinementActivities",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivities",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.ComputeAllFindingsRefinementActivitiesResponse",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeAllFindingsRefinementActivities",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeAllFindingsRefinementActivities",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeAllFindingsRefinementActivities_async_flattened",
+      "title": "ComputeAllFindingsRefinementActivitiesAsync",
+      "description": "Snippet for ComputeAllFindingsRefinementActivitiesAsync",
+      "file": "FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeAllFindingsRefinementActivitiesAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.ComputeAllFindingsRefinementActivitiesResponse>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeAllFindingsRefinementActivities",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeAllFindingsRefinementActivities",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeAllFindingsRefinementActivities_sync_flattened_resourceNames",
+      "title": "ComputeAllFindingsRefinementActivitiesResourceNames",
+      "description": "Snippet for ComputeAllFindingsRefinementActivities",
+      "file": "FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeAllFindingsRefinementActivities",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivities",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Chronicle.V1.ComputeAllFindingsRefinementActivitiesResponse",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeAllFindingsRefinementActivities",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeAllFindingsRefinementActivities",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chronicle_v1_generated_FindingsRefinementService_ComputeAllFindingsRefinementActivities_async_flattened_resourceNames",
+      "title": "ComputeAllFindingsRefinementActivitiesResourceNamesAsync",
+      "description": "Snippet for ComputeAllFindingsRefinementActivitiesAsync",
+      "file": "FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ComputeAllFindingsRefinementActivitiesAsync",
+        "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient.ComputeAllFindingsRefinementActivitiesAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Chronicle.V1.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Chronicle.V1.ComputeAllFindingsRefinementActivitiesResponse>",
+        "client": {
+          "shortName": "FindingsRefinementServiceClient",
+          "fullName": "Google.Cloud.Chronicle.V1.FindingsRefinementServiceClient"
+        },
+        "method": {
+          "shortName": "ComputeAllFindingsRefinementActivities",
+          "fullName": "google.cloud.chronicle.v1.FindingsRefinementService.ComputeAllFindingsRefinementActivities",
+          "service": {
+            "shortName": "FindingsRefinementService",
+            "fullName": "google.cloud.chronicle.v1.FindingsRefinementService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chronicle_v1_generated_InstanceService_GetInstance_sync",
       "title": "GetInstanceRequestObject",
       "description": "Snippet for GetInstance",

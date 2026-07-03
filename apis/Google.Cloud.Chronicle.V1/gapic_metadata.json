@@ -308,6 +308,69 @@
         }
       }
     },
+    "FindingsRefinementService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FindingsRefinementServiceClient",
+          "rpcs": {
+            "ComputeAllFindingsRefinementActivities": {
+              "methods": [
+                "ComputeAllFindingsRefinementActivities",
+                "ComputeAllFindingsRefinementActivitiesAsync"
+              ]
+            },
+            "ComputeFindingsRefinementActivity": {
+              "methods": [
+                "ComputeFindingsRefinementActivity",
+                "ComputeFindingsRefinementActivityAsync"
+              ]
+            },
+            "CreateFindingsRefinement": {
+              "methods": [
+                "CreateFindingsRefinement",
+                "CreateFindingsRefinementAsync"
+              ]
+            },
+            "GetFindingsRefinement": {
+              "methods": [
+                "GetFindingsRefinement",
+                "GetFindingsRefinementAsync"
+              ]
+            },
+            "GetFindingsRefinementDeployment": {
+              "methods": [
+                "GetFindingsRefinementDeployment",
+                "GetFindingsRefinementDeploymentAsync"
+              ]
+            },
+            "ListAllFindingsRefinementDeployments": {
+              "methods": [
+                "ListAllFindingsRefinementDeployments",
+                "ListAllFindingsRefinementDeploymentsAsync"
+              ]
+            },
+            "ListFindingsRefinements": {
+              "methods": [
+                "ListFindingsRefinements",
+                "ListFindingsRefinementsAsync"
+              ]
+            },
+            "UpdateFindingsRefinement": {
+              "methods": [
+                "UpdateFindingsRefinement",
+                "UpdateFindingsRefinementAsync"
+              ]
+            },
+            "UpdateFindingsRefinementDeployment": {
+              "methods": [
+                "UpdateFindingsRefinementDeployment",
+                "UpdateFindingsRefinementDeploymentAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "InstanceService": {
       "clients": {
         "grpc": {
