@@ -20,11 +20,11 @@
   ],
   "packageRules": [
     {
-      "matchPackagePrefixes": [
-        "Microsoft.Extensions.",
-        "mcr.microsoft.com/dotnet/"
-      ],
-      "allowedVersions": "<9.0.0"
+      "allowedVersions": "<9.0.0",
+      "matchPackageNames": [
+        "Microsoft.Extensions.*",
+        "mcr.microsoft.com/dotnet/**"
+      ]
     },
     {
       "matchPackageNames": [
@@ -38,19 +38,19 @@
       "matchFileNames": [
         "apis/Google.Cloud.Diagnostics.AspNetCore3/**"
       ],
-      "matchPackagePrefixes": [
-        "Microsoft.AspNetCore."
-      ],
-      "allowedVersions": "<3.2.0"
+      "allowedVersions": "<3.2.0",
+      "matchPackageNames": [
+        "Microsoft.AspNetCore.*"
+      ]
     },
     {
       "matchFileNames": [
         "apis/Google.Cloud.Dialogflow.V2/**"
       ],
-      "matchPackagePrefixes": [
-        "Microsoft.AspNetCore."
-      ],
-      "allowedVersions": "<2.2.0"
+      "allowedVersions": "<2.2.0",
+      "matchPackageNames": [
+        "Microsoft.AspNetCore.*"
+      ]
     },
     {
       "matchPackageNames": [

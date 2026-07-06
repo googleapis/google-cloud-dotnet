@@ -371,7 +371,7 @@
       "allowedVersions": "<9.0.0",
       "matchPackageNames": [
         "Microsoft.Extensions.*",
-        "mcr.microsoft.com/dotnet/{/,}**"
+        "mcr.microsoft.com/dotnet/**"
       ]
     },
     {
