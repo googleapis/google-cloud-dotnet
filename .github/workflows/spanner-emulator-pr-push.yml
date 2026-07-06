@@ -19,7 +19,7 @@ jobs:
       DOTNET_NOLOGO: true
     services:
       emulator:
-        image: gcr.io/cloud-spanner-emulator/emulator:1.5.55
+        image: gcr.io/cloud-spanner-emulator/emulator:1.5.55@sha256:ad54472fe7b161b9214f7f816f304b649a4779e348229c375ac067f5ed5a6422
         ports:
           - 9010:9010
           - 9020:9020
