@@ -4158,7 +4158,7 @@
     },
     {
       "id": "Google.Cloud.ModelArmor.V1",
-      "version": "1.0.0-beta06",
+      "version": "1.0.0-beta07",
       "type": "grpc",
       "productName": "Model Armor",
       "productUrl": "https://cloud.google.com/security-command-center/docs/model-armor-overview",
