@@ -4872,12 +4872,12 @@
         },
         {
             "id": "Google.Cloud.Ces.V1",
-            "currentVersion": "1.0.0-beta02",
+            "currentVersion": "1.0.0-beta03",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-03-30T14:52:47.264261180Z",
+            "releaseTimestamp": "2026-07-06T19:16:28.844416064Z",
             "lastGeneratedCommit": "1ce337a4b7615e32e37a7b5a584736520490f670",
-            "lastReleasedCommit": "ffe6fc5c48419866f525b463f20400d65c0e6312",
+            "lastReleasedCommit": "1ce337a4b7615e32e37a7b5a584736520490f670",
             "apiPaths": [
                 "google/cloud/ces/v1"
             ],

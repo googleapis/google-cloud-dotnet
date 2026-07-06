@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta03, released 2026-07-06
+
+### Bug fixes
+
+- Add routing annotations to BidiRunSession in v1 and v1beta
+
 ## Version 1.0.0-beta02, released 2026-03-30
 
 ### New features
