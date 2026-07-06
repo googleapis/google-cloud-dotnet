@@ -1,5 +1,15 @@
 # Version history
 
+## Version 5.28.0, released 2026-07-06
+
+### New features
+
+- Add `DiskConfig` to instance selection to support disk config overrides for flexible VMs
+
+### Documentation improvements
+
+- Update comments for disk configs and related fields
+
 ## Version 5.27.0, released 2026-06-22
 
 ### New features
