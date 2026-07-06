@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.7.0, released 2026-07-06
+
+### New features
+
+- A new service `SupportEventSubscription` is added
+
+### Documentation improvements
+
+- A comment for field `query` in message `.google.cloud.support.v2.SearchCasesRequest` is changed
+
 ## Version 1.6.0, released 2026-05-18
 
 ### New features
