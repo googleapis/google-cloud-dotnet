@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2026-07-06
+
+### New features
+
+- GA FindingsRefinementService Client libraries
+
 ## Version 1.0.0-beta06, released 2026-06-22
 
 ### New features
