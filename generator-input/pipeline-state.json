@@ -5112,10 +5112,12 @@
         },
         {
             "id": "Google.Maps.Isochrones.V1",
-            "nextVersion": "1.0.0-beta01",
+            "currentVersion": "1.0.0-beta01",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
+            "releaseTimestamp": "2026-07-06T19:18:42.192189642Z",
             "lastGeneratedCommit": "31285055e5dd6ae79f7a9e624952a74695be567e",
+            "lastReleasedCommit": "31285055e5dd6ae79f7a9e624952a74695be567e",
             "apiPaths": [
                 "google/maps/isochrones/v1"
             ],
