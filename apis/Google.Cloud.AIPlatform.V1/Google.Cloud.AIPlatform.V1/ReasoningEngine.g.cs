@@ -31,7 +31,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cGVjLnByb3RvGihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFy",
             "LnByb3RvGjNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zZXJ2aWNlX25l",
             "dHdvcmtpbmcucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i9BIKE1JlYXNvbmlu",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8iphQKE1JlYXNvbmlu",
             "Z0VuZ2luZVNwZWMSWgoQc291cmNlX2NvZGVfc3BlYxgLIAEoCzI+Lmdvb2ds",
             "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJlYXNvbmluZ0VuZ2luZVNwZWMuU291",
             "cmNlQ29kZVNwZWNIABJXCg5jb250YWluZXJfc3BlYxgPIAEoCzI9Lmdvb2ds",
@@ -42,7 +42,9 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ElwKD2RlcGxveW1lbnRfc3BlYxgEIAEoCzI+Lmdvb2dsZS5jbG91ZC5haXBs",
             "YXRmb3JtLnYxLlJlYXNvbmluZ0VuZ2luZVNwZWMuRGVwbG95bWVudFNwZWNC",
             "A+BBARIzCg1jbGFzc19tZXRob2RzGAMgAygLMhcuZ29vZ2xlLnByb3RvYnVm",
-            "LlN0cnVjdEID4EEBEhwKD2FnZW50X2ZyYW1ld29yaxgFIAEoCUID4EEBGpgB",
+            "LlN0cnVjdEID4EEBEhwKD2FnZW50X2ZyYW1ld29yaxgFIAEoCUID4EEBElgK",
+            "DWlkZW50aXR5X3R5cGUYDCABKA4yPC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5SZWFzb25pbmdFbmdpbmVTcGVjLklkZW50aXR5VHlwZUID4EEBGpgB",
             "CgtQYWNrYWdlU3BlYxIiChVwaWNrbGVfb2JqZWN0X2djc191cmkYASABKAlC",
             "A+BBARIlChhkZXBlbmRlbmN5X2ZpbGVzX2djc191cmkYAiABKAlCA+BBARIh",
             "ChRyZXF1aXJlbWVudHNfZ2NzX3VyaRgDIAEoCUID4EEBEhsKDnB5dGhvbl92",
@@ -84,35 +86,37 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Eh4KEWVudHJ5cG9pbnRfbW9kdWxlGAIgASgJQgPgQQESHgoRZW50cnlwb2lu",
             "dF9vYmplY3QYAyABKAlCA+BBARIeChFyZXF1aXJlbWVudHNfZmlsZRgEIAEo",
             "CUID4EEBQggKBnNvdXJjZUIPCg1sYW5ndWFnZV9zcGVjGicKDUNvbnRhaW5l",
-            "clNwZWMSFgoJaW1hZ2VfdXJpGAEgASgJQgPgQQJCEwoRZGVwbG95bWVudF9z",
-            "b3VyY2VCEgoQX3NlcnZpY2VfYWNjb3VudCL7BAoPUmVhc29uaW5nRW5naW5l",
-            "EhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BB",
-            "AhIYCgtkZXNjcmlwdGlvbhgHIAEoCUID4EEBEkIKBHNwZWMYAyABKAsyLy5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5SZWFzb25pbmdFbmdpbmVTcGVj",
-            "QgPgQQESNAoLY3JlYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBSABKAsyGi5nb29nbGUu",
-            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoEZXRhZxgGIAEoCUID4EEBEkMK",
-            "D2VuY3J5cHRpb25fc3BlYxgLIAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRm",
-            "b3JtLnYxLkVuY3J5cHRpb25TcGVjEkcKBmxhYmVscxgRIAMoCzI3Lmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlJlYXNvbmluZ0VuZ2luZS5MYWJlbHNF",
-            "bnRyeRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiAB",
-            "KAk6AjgBOp8B6kGbAQopYWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9SZWFz",
-            "b25pbmdFbmdpbmUSS3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9yZWFzb25pbmdFbmdpbmVzL3tyZWFzb25pbmdfZW5naW5lfSoQ",
-            "cmVhc29uaW5nRW5naW5lczIPcmVhc29uaW5nRW5naW5lQvQCCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCFFJlYXNvbmluZ0VuZ2luZVByb3Rv",
-            "UAFaPmNsb3VkLmdvb2dsZS5jb20vZ28vYWlwbGF0Zm9ybS9hcGl2MS9haXBs",
-            "YXRmb3JtcGI7YWlwbGF0Zm9ybXBiqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZv",
-            "cm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6",
-            "Q2xvdWQ6OkFJUGxhdGZvcm06OlYx6kGeAQoxZGV2ZWxvcGVyY29ubmVjdC5n",
-            "b29nbGVhcGlzLmNvbS9HaXRSZXBvc2l0b3J5TGluaxJpcHJvamVjdHMve3By",
-            "b2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Nvbm5lY3Rpb25zL3tjb25u",
-            "ZWN0aW9ufS9naXRSZXBvc2l0b3J5TGlua3Mve2dpdF9yZXBvc2l0b3J5X2xp",
-            "bmt9YgZwcm90bzM="));
+            "clNwZWMSFgoJaW1hZ2VfdXJpGAEgASgJQgPgQQIiVgoMSWRlbnRpdHlUeXBl",
+            "Eh0KGUlERU5USVRZX1RZUEVfVU5TUEVDSUZJRUQQABITCg9TRVJWSUNFX0FD",
+            "Q09VTlQQAhISCg5BR0VOVF9JREVOVElUWRADQhMKEWRlcGxveW1lbnRfc291",
+            "cmNlQhIKEF9zZXJ2aWNlX2FjY291bnQi+wQKD1JlYXNvbmluZ0VuZ2luZRIR",
+            "CgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQIS",
+            "GAoLZGVzY3JpcHRpb24YByABKAlCA+BBARJCCgRzcGVjGAMgASgLMi8uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUmVhc29uaW5nRW5naW5lU3BlY0ID",
+            "4EEBEjQKC2NyZWF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
+            "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDEhEKBGV0YWcYBiABKAlCA+BBARJDCg9l",
+            "bmNyeXB0aW9uX3NwZWMYCyABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5FbmNyeXB0aW9uU3BlYxJHCgZsYWJlbHMYESADKAsyNy5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5SZWFzb25pbmdFbmdpbmUuTGFiZWxzRW50",
+            "cnkaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJ",
+            "OgI4ATqfAepBmwEKKWFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vUmVhc29u",
+            "aW5nRW5naW5lEktwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vcmVhc29uaW5nRW5naW5lcy97cmVhc29uaW5nX2VuZ2luZX0qEHJl",
+            "YXNvbmluZ0VuZ2luZXMyD3JlYXNvbmluZ0VuZ2luZUL0AgoeY29tLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxQhRSZWFzb25pbmdFbmdpbmVQcm90b1AB",
+            "Wj5jbG91ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0",
+            "Zm9ybXBiO2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3Jt",
+            "LlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNs",
+            "b3VkOjpBSVBsYXRmb3JtOjpWMepBngEKMWRldmVsb3BlcmNvbm5lY3QuZ29v",
+            "Z2xlYXBpcy5jb20vR2l0UmVwb3NpdG9yeUxpbmsSaXByb2plY3RzL3twcm9q",
+            "ZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9jb25uZWN0aW9ucy97Y29ubmVj",
+            "dGlvbn0vZ2l0UmVwb3NpdG9yeUxpbmtzL3tnaXRfcmVwb3NpdG9yeV9saW5r",
+            "fWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ServiceNetworkingReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Parser, new[]{ "SourceCodeSpec", "ContainerSpec", "ServiceAccount", "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework" }, new[]{ "DeploymentSource", "ServiceAccount" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Parser, new[]{ "SourceCodeSpec", "ContainerSpec", "ServiceAccount", "PackageSpec", "DeploymentSpec", "ClassMethods", "AgentFramework", "IdentityType" }, new[]{ "DeploymentSource", "ServiceAccount" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.PackageSpec.Parser, new[]{ "PickleObjectGcsUri", "DependencyFilesGcsUri", "RequirementsGcsUri", "PythonVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.DeploymentSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.DeploymentSpec.Parser, new[]{ "Env", "SecretEnv", "PscInterfaceConfig", "MinInstances", "MaxInstances", "ResourceLimits", "ContainerConcurrency" }, new[]{ "MinInstances", "MaxInstances", "ContainerConcurrency" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.SourceCodeSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.SourceCodeSpec.Parser, new[]{ "InlineSource", "DeveloperConnectSource", "PythonSpec", "ImageSpec" }, new[]{ "Source", "LanguageSpec" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.InlineSource.Parser, new[]{ "SourceArchive" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.ImageSpec), global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.SourceCodeSpec.Types.ImageSpec.Parser, new[]{ "BuildArgs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -170,6 +174,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       deploymentSpec_ = other.deploymentSpec_ != null ? other.deploymentSpec_.Clone() : null;
       classMethods_ = other.classMethods_.Clone();
       agentFramework_ = other.agentFramework_;
+      identityType_ = other.identityType_;
       switch (other.DeploymentSourceCase) {
         case DeploymentSourceOneofCase.SourceCodeSpec:
           SourceCodeSpec = other.SourceCodeSpec.Clone();
@@ -318,6 +323,24 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "identity_type" field.</summary>
+    public const int IdentityTypeFieldNumber = 12;
+    private global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType identityType_ = global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType.Unspecified;
+    /// <summary>
+    /// Optional. The identity type to use for the Reasoning Engine. If not
+    /// specified, the `service_account` field will be used if set, otherwise the
+    /// default Vertex AI Reasoning Engine Service Agent in the project will be
+    /// used.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType IdentityType {
+      get { return identityType_; }
+      set {
+        identityType_ = value;
+      }
+    }
+
     private object deploymentSource_;
     /// <summary>Enum of possible cases for the "deployment_source" oneof.</summary>
     public enum DeploymentSourceOneofCase {
@@ -361,6 +384,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(DeploymentSpec, other.DeploymentSpec)) return false;
       if(!classMethods_.Equals(other.classMethods_)) return false;
       if (AgentFramework != other.AgentFramework) return false;
+      if (IdentityType != other.IdentityType) return false;
       if (DeploymentSourceCase != other.DeploymentSourceCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -376,6 +400,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (deploymentSpec_ != null) hash ^= DeploymentSpec.GetHashCode();
       hash ^= classMethods_.GetHashCode();
       if (AgentFramework.Length != 0) hash ^= AgentFramework.GetHashCode();
+      if (IdentityType != global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType.Unspecified) hash ^= IdentityType.GetHashCode();
       hash ^= (int) deploymentSourceCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -416,6 +441,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(SourceCodeSpec);
       }
+      if (IdentityType != global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) IdentityType);
+      }
       if (deploymentSourceCase_ == DeploymentSourceOneofCase.ContainerSpec) {
         output.WriteRawTag(122);
         output.WriteMessage(ContainerSpec);
@@ -451,6 +480,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(SourceCodeSpec);
       }
+      if (IdentityType != global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) IdentityType);
+      }
       if (deploymentSourceCase_ == DeploymentSourceOneofCase.ContainerSpec) {
         output.WriteRawTag(122);
         output.WriteMessage(ContainerSpec);
@@ -484,6 +517,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (AgentFramework.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(AgentFramework);
       }
+      if (IdentityType != global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IdentityType);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -514,6 +550,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       classMethods_.Add(other.classMethods_);
       if (other.AgentFramework.Length != 0) {
         AgentFramework = other.AgentFramework;
+      }
+      if (other.IdentityType != global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType.Unspecified) {
+        IdentityType = other.IdentityType;
       }
       switch (other.DeploymentSourceCase) {
         case DeploymentSourceOneofCase.SourceCodeSpec:
@@ -584,6 +623,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             SourceCodeSpec = subBuilder;
             break;
           }
+          case 96: {
+            IdentityType = (global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType) input.ReadEnum();
+            break;
+          }
           case 122: {
             global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.ContainerSpec subBuilder = new global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.ContainerSpec();
             if (deploymentSourceCase_ == DeploymentSourceOneofCase.ContainerSpec) {
@@ -647,6 +690,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             SourceCodeSpec = subBuilder;
             break;
           }
+          case 96: {
+            IdentityType = (global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.IdentityType) input.ReadEnum();
+            break;
+          }
           case 122: {
             global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.ContainerSpec subBuilder = new global::Google.Cloud.AIPlatform.V1.ReasoningEngineSpec.Types.ContainerSpec();
             if (deploymentSourceCase_ == DeploymentSourceOneofCase.ContainerSpec) {
@@ -666,6 +713,28 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
+      /// <summary>
+      /// The identity type to use for the Reasoning Engine.
+      /// </summary>
+      public enum IdentityType {
+        /// <summary>
+        /// Default value. Use a custom service account if the `service_account`
+        /// field is set, otherwise use the default Vertex AI Reasoning Engine
+        /// Service Agent in the project. Same behavior as SERVICE_ACCOUNT.
+        /// </summary>
+        [pbr::OriginalName("IDENTITY_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Use a custom service account if the `service_account` field is set,
+        /// otherwise use the default Vertex AI Reasoning Engine Service Agent in the
+        /// project.
+        /// </summary>
+        [pbr::OriginalName("SERVICE_ACCOUNT")] ServiceAccount = 2,
+        /// <summary>
+        /// Use Agent Identity. The `service_account` field must not be set.
+        /// </summary>
+        [pbr::OriginalName("AGENT_IDENTITY")] AgentIdentity = 3,
+      }
+
       /// <summary>
       /// User-provided package specification, containing pickled object and package
       /// requirements.
