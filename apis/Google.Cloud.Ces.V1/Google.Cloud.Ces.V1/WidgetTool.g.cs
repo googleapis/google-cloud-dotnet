@@ -28,36 +28,44 @@ namespace Google.Cloud.Ces.V1 {
             "bGUuY2xvdWQuY2VzLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
             "b3RvGilnb29nbGUvY2xvdWQvY2VzL3YxL3B5dGhvbl9mdW5jdGlvbi5wcm90",
             "bxogZ29vZ2xlL2Nsb3VkL2Nlcy92MS9zY2hlbWEucHJvdG8aHGdvb2dsZS9w",
-            "cm90b2J1Zi9zdHJ1Y3QucHJvdG8ikQgKCldpZGdldFRvb2wSNgoKcGFyYW1l",
+            "cm90b2J1Zi9zdHJ1Y3QucHJvdG8i1AoKCldpZGdldFRvb2wSNgoKcGFyYW1l",
             "dGVycxgEIAEoCzIbLmdvb2dsZS5jbG91ZC5jZXMudjEuU2NoZW1hQgPgQQFI",
             "ABIRCgRuYW1lGAEgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YAiABKAlCA+BB",
             "ARJECgt3aWRnZXRfdHlwZRgDIAEoDjIqLmdvb2dsZS5jbG91ZC5jZXMudjEu",
             "V2lkZ2V0VG9vbC5XaWRnZXRUeXBlQgPgQQESLwoJdWlfY29uZmlnGAUgASgL",
             "MhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEBEkYKDGRhdGFfbWFwcGlu",
             "ZxgGIAEoCzIrLmdvb2dsZS5jbG91ZC5jZXMudjEuV2lkZ2V0VG9vbC5EYXRh",
-            "TWFwcGluZ0ID4EEBGqYDCgtEYXRhTWFwcGluZxIdChBzb3VyY2VfdG9vbF9u",
-            "YW1lGAEgASgJQgPgQQESWwoOZmllbGRfbWFwcGluZ3MYAiADKAsyPi5nb29n",
-            "bGUuY2xvdWQuY2VzLnYxLldpZGdldFRvb2wuRGF0YU1hcHBpbmcuRmllbGRN",
-            "YXBwaW5nc0VudHJ5QgPgQQESQQoPcHl0aG9uX2Z1bmN0aW9uGAUgASgLMiMu",
-            "Z29vZ2xlLmNsb3VkLmNlcy52MS5QeXRob25GdW5jdGlvbkID4EEBEkMKBG1v",
-            "ZGUYBCABKA4yMC5nb29nbGUuY2xvdWQuY2VzLnYxLldpZGdldFRvb2wuRGF0",
-            "YU1hcHBpbmcuTW9kZUID4EEBEhkKDXB5dGhvbl9zY3JpcHQYAyABKAlCAhgB",
-            "GjQKEkZpZWxkTWFwcGluZ3NFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
-            "AiABKAk6AjgBIkIKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEhEKDUZJ",
-            "RUxEX01BUFBJTkcQARIRCg1QWVRIT05fU0NSSVBUEAIirAIKCldpZGdldFR5",
-            "cGUSGwoXV0lER0VUX1RZUEVfVU5TUEVDSUZJRUQQABIKCgZDVVNUT00QARIU",
-            "ChBQUk9EVUNUX0NBUk9VU0VMEAISEwoPUFJPRFVDVF9ERVRBSUxTEAMSEQoN",
-            "UVVJQ0tfQUNUSU9OUxAEEhYKElBST0RVQ1RfQ09NUEFSSVNPThAFEhwKGEFE",
-            "VkFOQ0VEX1BST0RVQ1RfREVUQUlMUxAGEg4KClNIT1JUX0ZPUk0QBxIYChRP",
-            "VkVSQUxMX1NBVElTRkFDVElPThAIEhEKDU9SREVSX1NVTU1BUlkQCRIXChNB",
-            "UFBPSU5UTUVOVF9ERVRBSUxTEAoSGQoVQVBQT0lOVE1FTlRfU0NIRURVTEVS",
-            "EAsSEAoMQ09OVEFDVF9GT1JNEAxCBwoFaW5wdXRCVwoXY29tLmdvb2dsZS5j",
-            "bG91ZC5jZXMudjFCD1dpZGdldFRvb2xQcm90b1ABWiljbG91ZC5nb29nbGUu",
-            "Y29tL2dvL2Nlcy9hcGl2MS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
+            "TWFwcGluZ0ID4EEBElUKFHRleHRfcmVzcG9uc2VfY29uZmlnGAcgASgLMjIu",
+            "Z29vZ2xlLmNsb3VkLmNlcy52MS5XaWRnZXRUb29sLlRleHRSZXNwb25zZUNv",
+            "bmZpZ0ID4EEBGukBChJUZXh0UmVzcG9uc2VDb25maWcSSgoEdHlwZRgBIAEo",
+            "DjI3Lmdvb2dsZS5jbG91ZC5jZXMudjEuV2lkZ2V0VG9vbC5UZXh0UmVzcG9u",
+            "c2VDb25maWcuVHlwZUID4EEBEhgKC3N0YXRpY190ZXh0GAIgASgJQgPgQQES",
+            "JgoZdGV4dF9yZXNwb25zZV9pbnN0cnVjdGlvbhgDIAEoCUID4EEBIkUKBFR5",
+            "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEggKBE5PTkUQARIRCg1MTE1fR0VO",
+            "RVJBVEVEEAISCgoGU1RBVElDEAMapgMKC0RhdGFNYXBwaW5nEh0KEHNvdXJj",
+            "ZV90b29sX25hbWUYASABKAlCA+BBARJbCg5maWVsZF9tYXBwaW5ncxgCIAMo",
+            "CzI+Lmdvb2dsZS5jbG91ZC5jZXMudjEuV2lkZ2V0VG9vbC5EYXRhTWFwcGlu",
+            "Zy5GaWVsZE1hcHBpbmdzRW50cnlCA+BBARJBCg9weXRob25fZnVuY3Rpb24Y",
+            "BSABKAsyIy5nb29nbGUuY2xvdWQuY2VzLnYxLlB5dGhvbkZ1bmN0aW9uQgPg",
+            "QQESQwoEbW9kZRgEIAEoDjIwLmdvb2dsZS5jbG91ZC5jZXMudjEuV2lkZ2V0",
+            "VG9vbC5EYXRhTWFwcGluZy5Nb2RlQgPgQQESGQoNcHl0aG9uX3NjcmlwdBgD",
+            "IAEoCUICGAEaNAoSRmllbGRNYXBwaW5nc0VudHJ5EgsKA2tleRgBIAEoCRIN",
+            "CgV2YWx1ZRgCIAEoCToCOAEiQgoETW9kZRIUChBNT0RFX1VOU1BFQ0lGSUVE",
+            "EAASEQoNRklFTERfTUFQUElORxABEhEKDVBZVEhPTl9TQ1JJUFQQAiKsAgoK",
+            "V2lkZ2V0VHlwZRIbChdXSURHRVRfVFlQRV9VTlNQRUNJRklFRBAAEgoKBkNV",
+            "U1RPTRABEhQKEFBST0RVQ1RfQ0FST1VTRUwQAhITCg9QUk9EVUNUX0RFVEFJ",
+            "TFMQAxIRCg1RVUlDS19BQ1RJT05TEAQSFgoSUFJPRFVDVF9DT01QQVJJU09O",
+            "EAUSHAoYQURWQU5DRURfUFJPRFVDVF9ERVRBSUxTEAYSDgoKU0hPUlRfRk9S",
+            "TRAHEhgKFE9WRVJBTExfU0FUSVNGQUNUSU9OEAgSEQoNT1JERVJfU1VNTUFS",
+            "WRAJEhcKE0FQUE9JTlRNRU5UX0RFVEFJTFMQChIZChVBUFBPSU5UTUVOVF9T",
+            "Q0hFRFVMRVIQCxIQCgxDT05UQUNUX0ZPUk0QDEIHCgVpbnB1dEJXChdjb20u",
+            "Z29vZ2xlLmNsb3VkLmNlcy52MUIPV2lkZ2V0VG9vbFByb3RvUAFaKWNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vY2VzL2FwaXYxL2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Ces.V1.PythonFunctionReflection.Descriptor, global::Google.Cloud.Ces.V1.SchemaReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.WidgetTool), global::Google.Cloud.Ces.V1.WidgetTool.Parser, new[]{ "Parameters", "Name", "Description", "WidgetType", "UiConfig", "DataMapping" }, new[]{ "Input" }, new[]{ typeof(global::Google.Cloud.Ces.V1.WidgetTool.Types.WidgetType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.WidgetTool.Types.DataMapping), global::Google.Cloud.Ces.V1.WidgetTool.Types.DataMapping.Parser, new[]{ "SourceToolName", "FieldMappings", "PythonFunction", "Mode", "PythonScript" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1.WidgetTool.Types.DataMapping.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { null, })})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.WidgetTool), global::Google.Cloud.Ces.V1.WidgetTool.Parser, new[]{ "Parameters", "Name", "Description", "WidgetType", "UiConfig", "DataMapping", "TextResponseConfig" }, new[]{ "Input" }, new[]{ typeof(global::Google.Cloud.Ces.V1.WidgetTool.Types.WidgetType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig), global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Parser, new[]{ "Type", "StaticText", "TextResponseInstruction" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.WidgetTool.Types.DataMapping), global::Google.Cloud.Ces.V1.WidgetTool.Types.DataMapping.Parser, new[]{ "SourceToolName", "FieldMappings", "PythonFunction", "Mode", "PythonScript" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1.WidgetTool.Types.DataMapping.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { null, })})
           }));
     }
     #endregion
@@ -110,6 +118,7 @@ namespace Google.Cloud.Ces.V1 {
       widgetType_ = other.widgetType_;
       uiConfig_ = other.uiConfig_ != null ? other.uiConfig_.Clone() : null;
       dataMapping_ = other.dataMapping_ != null ? other.dataMapping_.Clone() : null;
+      textResponseConfig_ = other.textResponseConfig_ != null ? other.textResponseConfig_.Clone() : null;
       switch (other.InputCase) {
         case InputOneofCase.Parameters:
           Parameters = other.Parameters.Clone();
@@ -217,6 +226,21 @@ namespace Google.Cloud.Ces.V1 {
       }
     }
 
+    /// <summary>Field number for the "text_response_config" field.</summary>
+    public const int TextResponseConfigFieldNumber = 7;
+    private global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig textResponseConfig_;
+    /// <summary>
+    /// Optional. Configuration for always-included text responses.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig TextResponseConfig {
+      get { return textResponseConfig_; }
+      set {
+        textResponseConfig_ = value;
+      }
+    }
+
     private object input_;
     /// <summary>Enum of possible cases for the "input" oneof.</summary>
     public enum InputOneofCase {
@@ -258,6 +282,7 @@ namespace Google.Cloud.Ces.V1 {
       if (WidgetType != other.WidgetType) return false;
       if (!object.Equals(UiConfig, other.UiConfig)) return false;
       if (!object.Equals(DataMapping, other.DataMapping)) return false;
+      if (!object.Equals(TextResponseConfig, other.TextResponseConfig)) return false;
       if (InputCase != other.InputCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -272,6 +297,7 @@ namespace Google.Cloud.Ces.V1 {
       if (WidgetType != global::Google.Cloud.Ces.V1.WidgetTool.Types.WidgetType.Unspecified) hash ^= WidgetType.GetHashCode();
       if (uiConfig_ != null) hash ^= UiConfig.GetHashCode();
       if (dataMapping_ != null) hash ^= DataMapping.GetHashCode();
+      if (textResponseConfig_ != null) hash ^= TextResponseConfig.GetHashCode();
       hash ^= (int) inputCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -315,6 +341,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(DataMapping);
       }
+      if (textResponseConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TextResponseConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -349,6 +379,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(DataMapping);
       }
+      if (textResponseConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(TextResponseConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -376,6 +410,9 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (dataMapping_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataMapping);
+      }
+      if (textResponseConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TextResponseConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -409,6 +446,12 @@ namespace Google.Cloud.Ces.V1 {
           DataMapping = new global::Google.Cloud.Ces.V1.WidgetTool.Types.DataMapping();
         }
         DataMapping.MergeFrom(other.DataMapping);
+      }
+      if (other.textResponseConfig_ != null) {
+        if (textResponseConfig_ == null) {
+          TextResponseConfig = new global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig();
+        }
+        TextResponseConfig.MergeFrom(other.TextResponseConfig);
       }
       switch (other.InputCase) {
         case InputOneofCase.Parameters:
@@ -473,6 +516,13 @@ namespace Google.Cloud.Ces.V1 {
             input.ReadMessage(DataMapping);
             break;
           }
+          case 58: {
+            if (textResponseConfig_ == null) {
+              TextResponseConfig = new global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig();
+            }
+            input.ReadMessage(TextResponseConfig);
+            break;
+          }
         }
       }
     #endif
@@ -525,6 +575,13 @@ namespace Google.Cloud.Ces.V1 {
               DataMapping = new global::Google.Cloud.Ces.V1.WidgetTool.Types.DataMapping();
             }
             input.ReadMessage(DataMapping);
+            break;
+          }
+          case 58: {
+            if (textResponseConfig_ == null) {
+              TextResponseConfig = new global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig();
+            }
+            input.ReadMessage(TextResponseConfig);
             break;
           }
         }
@@ -597,6 +654,323 @@ namespace Google.Cloud.Ces.V1 {
       }
 
       /// <summary>
+      /// Configuration for the text response returned with the widget.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class TextResponseConfig : pb::IMessage<TextResponseConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<TextResponseConfig> _parser = new pb::MessageParser<TextResponseConfig>(() => new TextResponseConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<TextResponseConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Ces.V1.WidgetTool.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextResponseConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextResponseConfig(TextResponseConfig other) : this() {
+          type_ = other.type_;
+          staticText_ = other.staticText_;
+          textResponseInstruction_ = other.textResponseInstruction_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public TextResponseConfig Clone() {
+          return new TextResponseConfig(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type type_ = global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type.Unspecified;
+        /// <summary>
+        /// Optional. The strategy for providing the text response.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "static_text" field.</summary>
+        public const int StaticTextFieldNumber = 2;
+        private string staticText_ = "";
+        /// <summary>
+        /// Optional. The static text response to return when type is STATIC.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string StaticText {
+          get { return staticText_; }
+          set {
+            staticText_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "text_response_instruction" field.</summary>
+        public const int TextResponseInstructionFieldNumber = 3;
+        private string textResponseInstruction_ = "";
+        /// <summary>
+        /// Optional. Instruction for the LLM on how to generate the text response.
+        /// Used as the description for the text response parameter if type is
+        /// LLM_GENERATED.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string TextResponseInstruction {
+          get { return textResponseInstruction_; }
+          set {
+            textResponseInstruction_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as TextResponseConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(TextResponseConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          if (StaticText != other.StaticText) return false;
+          if (TextResponseInstruction != other.TextResponseInstruction) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type.Unspecified) hash ^= Type.GetHashCode();
+          if (StaticText.Length != 0) hash ^= StaticText.GetHashCode();
+          if (TextResponseInstruction.Length != 0) hash ^= TextResponseInstruction.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (StaticText.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(StaticText);
+          }
+          if (TextResponseInstruction.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(TextResponseInstruction);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (StaticText.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(StaticText);
+          }
+          if (TextResponseInstruction.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(TextResponseInstruction);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (StaticText.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(StaticText);
+          }
+          if (TextResponseInstruction.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(TextResponseInstruction);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(TextResponseConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type.Unspecified) {
+            Type = other.Type;
+          }
+          if (other.StaticText.Length != 0) {
+            StaticText = other.StaticText;
+          }
+          if (other.TextResponseInstruction.Length != 0) {
+            TextResponseInstruction = other.TextResponseInstruction;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                StaticText = input.ReadString();
+                break;
+              }
+              case 26: {
+                TextResponseInstruction = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Cloud.Ces.V1.WidgetTool.Types.TextResponseConfig.Types.Type) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                StaticText = input.ReadString();
+                break;
+              }
+              case 26: {
+                TextResponseInstruction = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the TextResponseConfig message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Defines how the text response is produced.
+          /// </summary>
+          public enum Type {
+            /// <summary>
+            /// Unspecified type.
+            /// </summary>
+            [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The LLM dynamically decides whether to generate a text response
+            /// alongside the widget based on the conversation context.
+            /// </summary>
+            [pbr::OriginalName("NONE")] None = 1,
+            /// <summary>
+            /// The LLM is explicitly required to generate a text response.
+            /// </summary>
+            [pbr::OriginalName("LLM_GENERATED")] LlmGenerated = 2,
+            /// <summary>
+            /// A pre-defined static text response is always used.
+            /// </summary>
+            [pbr::OriginalName("STATIC")] Static = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
       /// Configuration for mapping data from a source tool to the widget's input
       /// parameters.
       /// </summary>
@@ -615,7 +989,7 @@ namespace Google.Cloud.Ces.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Ces.V1.WidgetTool.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.Ces.V1.WidgetTool.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -36,6 +36,7 @@ namespace GoogleCSharpSnippets
                 Args = new Struct(),
                 ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
                 Variables = new Struct(),
+                MockConfig = new MockConfig(),
             };
             // Make the request
             ExecuteToolResponse response = toolServiceClient.ExecuteTool(request);
@@ -56,6 +57,7 @@ namespace GoogleCSharpSnippets
                 Args = new Struct(),
                 ParentAsAppName = AppName.FromProjectLocationApp("[PROJECT]", "[LOCATION]", "[APP]"),
                 Variables = new Struct(),
+                MockConfig = new MockConfig(),
             };
             // Make the request
             ExecuteToolResponse response = await toolServiceClient.ExecuteToolAsync(request);
@@ -108,6 +110,7 @@ namespace GoogleCSharpSnippets
             {
                 ToolsetAsToolsetName = ToolsetName.FromProjectLocationAppToolset("[PROJECT]", "[LOCATION]", "[APP]", "[TOOLSET]"),
                 ToolIds = { "", },
+                BypassPersistenceConfig = false,
             };
             // Make the request
             RetrieveToolsResponse response = toolServiceClient.RetrieveTools(request);
@@ -126,6 +129,7 @@ namespace GoogleCSharpSnippets
             {
                 ToolsetAsToolsetName = ToolsetName.FromProjectLocationAppToolset("[PROJECT]", "[LOCATION]", "[APP]", "[TOOLSET]"),
                 ToolIds = { "", },
+                BypassPersistenceConfig = false,
             };
             // Make the request
             RetrieveToolsResponse response = await toolServiceClient.RetrieveToolsAsync(request);

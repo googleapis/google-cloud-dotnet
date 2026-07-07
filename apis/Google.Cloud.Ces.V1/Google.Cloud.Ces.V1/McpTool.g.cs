@@ -28,25 +28,28 @@ namespace Google.Cloud.Ces.V1 {
             "Y2xvdWQuY2VzLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
             "Gh5nb29nbGUvY2xvdWQvY2VzL3YxL2F1dGgucHJvdG8aIGdvb2dsZS9jbG91",
             "ZC9jZXMvdjEvY29tbW9uLnByb3RvGiBnb29nbGUvY2xvdWQvY2VzL3YxL3Nj",
-            "aGVtYS5wcm90byKeBAoHTWNwVG9vbBIRCgRuYW1lGAEgASgJQgPgQQISGAoL",
-            "ZGVzY3JpcHRpb24YAiABKAlCA+BBARI2CgxpbnB1dF9zY2hlbWEYAyABKAsy",
-            "Gy5nb29nbGUuY2xvdWQuY2VzLnYxLlNjaGVtYUID4EEBEjcKDW91dHB1dF9z",
-            "Y2hlbWEYBCABKAsyGy5nb29nbGUuY2xvdWQuY2VzLnYxLlNjaGVtYUID4EEB",
-            "EhsKDnNlcnZlcl9hZGRyZXNzGAUgASgJQgPgQQISRwoSYXBpX2F1dGhlbnRp",
-            "Y2F0aW9uGAYgASgLMiYuZ29vZ2xlLmNsb3VkLmNlcy52MS5BcGlBdXRoZW50",
-            "aWNhdGlvbkID4EEBEjcKCnRsc19jb25maWcYByABKAsyHi5nb29nbGUuY2xv",
-            "dWQuY2VzLnYxLlRsc0NvbmZpZ0ID4EEBElIKGHNlcnZpY2VfZGlyZWN0b3J5",
-            "X2NvbmZpZxgIIAEoCzIrLmdvb2dsZS5jbG91ZC5jZXMudjEuU2VydmljZURp",
-            "cmVjdG9yeUNvbmZpZ0ID4EEBEkwKDmN1c3RvbV9oZWFkZXJzGAkgAygLMi8u",
-            "Z29vZ2xlLmNsb3VkLmNlcy52MS5NY3BUb29sLkN1c3RvbUhlYWRlcnNFbnRy",
-            "eUID4EEBGjQKEkN1c3RvbUhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoF",
-            "dmFsdWUYAiABKAk6AjgBQlQKF2NvbS5nb29nbGUuY2xvdWQuY2VzLnYxQgxN",
-            "Y3BUb29sUHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjEv",
-            "Y2VzcGI7Y2VzcGJiBnByb3RvMw=="));
+            "aGVtYS5wcm90byK3BQoHTWNwVG9vbBIRCgRuYW1lGAEgASgJQgPgQQISGgoN",
+            "bmFtZV9vdmVycmlkZRgNIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAIgASgJ",
+            "QgPgQQESNgoMaW5wdXRfc2NoZW1hGAMgASgLMhsuZ29vZ2xlLmNsb3VkLmNl",
+            "cy52MS5TY2hlbWFCA+BBARI3Cg1vdXRwdXRfc2NoZW1hGAQgASgLMhsuZ29v",
+            "Z2xlLmNsb3VkLmNlcy52MS5TY2hlbWFCA+BBARIbCg5zZXJ2ZXJfYWRkcmVz",
+            "cxgFIAEoCUID4EECEkcKEmFwaV9hdXRoZW50aWNhdGlvbhgGIAEoCzImLmdv",
+            "b2dsZS5jbG91ZC5jZXMudjEuQXBpQXV0aGVudGljYXRpb25CA+BBARI3Cgp0",
+            "bHNfY29uZmlnGAcgASgLMh4uZ29vZ2xlLmNsb3VkLmNlcy52MS5UbHNDb25m",
+            "aWdCA+BBARJSChhzZXJ2aWNlX2RpcmVjdG9yeV9jb25maWcYCCABKAsyKy5n",
+            "b29nbGUuY2xvdWQuY2VzLnYxLlNlcnZpY2VEaXJlY3RvcnlDb25maWdCA+BB",
+            "ARJMCg5jdXN0b21faGVhZGVycxgJIAMoCzIvLmdvb2dsZS5jbG91ZC5jZXMu",
+            "djEuTWNwVG9vbC5DdXN0b21IZWFkZXJzRW50cnlCA+BBARI2CgVzdGF0ZRgM",
+            "IAEoDjIiLmdvb2dsZS5jbG91ZC5jZXMudjEuTWNwVG9vbC5TdGF0ZUID4EED",
+            "GjQKEkN1c3RvbUhlYWRlcnNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBIkMKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoG",
+            "QUNUSVZFEAESDAoISU5BQ1RJVkUQAhIJCgVTVEFMRRADQlQKF2NvbS5nb29n",
+            "bGUuY2xvdWQuY2VzLnYxQgxNY3BUb29sUHJvdG9QAVopY2xvdWQuZ29vZ2xl",
+            "LmNvbS9nby9jZXMvYXBpdjEvY2VzcGI7Y2VzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.Ces.V1.AuthReflection.Descriptor, global::Google.Cloud.Ces.V1.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1.SchemaReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.McpTool), global::Google.Cloud.Ces.V1.McpTool.Parser, new[]{ "Name", "Description", "InputSchema", "OutputSchema", "ServerAddress", "ApiAuthentication", "TlsConfig", "ServiceDirectoryConfig", "CustomHeaders" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.McpTool), global::Google.Cloud.Ces.V1.McpTool.Parser, new[]{ "Name", "NameOverride", "Description", "InputSchema", "OutputSchema", "ServerAddress", "ApiAuthentication", "TlsConfig", "ServiceDirectoryConfig", "CustomHeaders", "State" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1.McpTool.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -94,6 +97,7 @@ namespace Google.Cloud.Ces.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public McpTool(McpTool other) : this() {
       name_ = other.name_;
+      nameOverride_ = other.nameOverride_;
       description_ = other.description_;
       inputSchema_ = other.inputSchema_ != null ? other.inputSchema_.Clone() : null;
       outputSchema_ = other.outputSchema_ != null ? other.outputSchema_.Clone() : null;
@@ -102,6 +106,7 @@ namespace Google.Cloud.Ces.V1 {
       tlsConfig_ = other.tlsConfig_ != null ? other.tlsConfig_.Clone() : null;
       serviceDirectoryConfig_ = other.serviceDirectoryConfig_ != null ? other.serviceDirectoryConfig_.Clone() : null;
       customHeaders_ = other.customHeaders_.Clone();
+      state_ = other.state_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -123,6 +128,22 @@ namespace Google.Cloud.Ces.V1 {
       get { return name_; }
       set {
         name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "name_override" field.</summary>
+    public const int NameOverrideFieldNumber = 13;
+    private string nameOverride_ = "";
+    /// <summary>
+    /// Optional. The name override of the MCP tool.
+    /// This is populated if the name was overridden by a Toolset override.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string NameOverride {
+      get { return nameOverride_; }
+      set {
+        nameOverride_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
       }
     }
 
@@ -260,6 +281,22 @@ namespace Google.Cloud.Ces.V1 {
       get { return customHeaders_; }
     }
 
+    /// <summary>Field number for the "state" field.</summary>
+    public const int StateFieldNumber = 12;
+    private global::Google.Cloud.Ces.V1.McpTool.Types.State state_ = global::Google.Cloud.Ces.V1.McpTool.Types.State.Unspecified;
+    /// <summary>
+    /// Output only. The dynamic availability state of the tool on the external
+    /// server.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1.McpTool.Types.State State {
+      get { return state_; }
+      set {
+        state_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -276,6 +313,7 @@ namespace Google.Cloud.Ces.V1 {
         return true;
       }
       if (Name != other.Name) return false;
+      if (NameOverride != other.NameOverride) return false;
       if (Description != other.Description) return false;
       if (!object.Equals(InputSchema, other.InputSchema)) return false;
       if (!object.Equals(OutputSchema, other.OutputSchema)) return false;
@@ -284,6 +322,7 @@ namespace Google.Cloud.Ces.V1 {
       if (!object.Equals(TlsConfig, other.TlsConfig)) return false;
       if (!object.Equals(ServiceDirectoryConfig, other.ServiceDirectoryConfig)) return false;
       if (!CustomHeaders.Equals(other.CustomHeaders)) return false;
+      if (State != other.State) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -292,6 +331,7 @@ namespace Google.Cloud.Ces.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (NameOverride.Length != 0) hash ^= NameOverride.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (inputSchema_ != null) hash ^= InputSchema.GetHashCode();
       if (outputSchema_ != null) hash ^= OutputSchema.GetHashCode();
@@ -300,6 +340,7 @@ namespace Google.Cloud.Ces.V1 {
       if (tlsConfig_ != null) hash ^= TlsConfig.GetHashCode();
       if (serviceDirectoryConfig_ != null) hash ^= ServiceDirectoryConfig.GetHashCode();
       hash ^= CustomHeaders.GetHashCode();
+      if (State != global::Google.Cloud.Ces.V1.McpTool.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -351,6 +392,14 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteMessage(ServiceDirectoryConfig);
       }
       customHeaders_.WriteTo(output, _map_customHeaders_codec);
+      if (State != global::Google.Cloud.Ces.V1.McpTool.Types.State.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) State);
+      }
+      if (NameOverride.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(NameOverride);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -394,6 +443,14 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteMessage(ServiceDirectoryConfig);
       }
       customHeaders_.WriteTo(ref output, _map_customHeaders_codec);
+      if (State != global::Google.Cloud.Ces.V1.McpTool.Types.State.Unspecified) {
+        output.WriteRawTag(96);
+        output.WriteEnum((int) State);
+      }
+      if (NameOverride.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(NameOverride);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -406,6 +463,9 @@ namespace Google.Cloud.Ces.V1 {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (NameOverride.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(NameOverride);
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
@@ -429,6 +489,9 @@ namespace Google.Cloud.Ces.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ServiceDirectoryConfig);
       }
       size += customHeaders_.CalculateSize(_map_customHeaders_codec);
+      if (State != global::Google.Cloud.Ces.V1.McpTool.Types.State.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -443,6 +506,9 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.NameOverride.Length != 0) {
+        NameOverride = other.NameOverride;
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
@@ -481,6 +547,9 @@ namespace Google.Cloud.Ces.V1 {
         ServiceDirectoryConfig.MergeFrom(other.ServiceDirectoryConfig);
       }
       customHeaders_.MergeFrom(other.customHeaders_);
+      if (other.State != global::Google.Cloud.Ces.V1.McpTool.Types.State.Unspecified) {
+        State = other.State;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -549,6 +618,14 @@ namespace Google.Cloud.Ces.V1 {
           }
           case 74: {
             customHeaders_.AddEntriesFrom(input, _map_customHeaders_codec);
+            break;
+          }
+          case 96: {
+            State = (global::Google.Cloud.Ces.V1.McpTool.Types.State) input.ReadEnum();
+            break;
+          }
+          case 106: {
+            NameOverride = input.ReadString();
             break;
           }
         }
@@ -621,10 +698,50 @@ namespace Google.Cloud.Ces.V1 {
             customHeaders_.AddEntriesFrom(ref input, _map_customHeaders_codec);
             break;
           }
+          case 96: {
+            State = (global::Google.Cloud.Ces.V1.McpTool.Types.State) input.ReadEnum();
+            break;
+          }
+          case 106: {
+            NameOverride = input.ReadString();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the McpTool message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Represents the dynamic availability state of the tool.
+      /// </summary>
+      public enum State {
+        /// <summary>
+        /// Default state.
+        /// </summary>
+        [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// The tool is available and actively offered by the server.
+        /// </summary>
+        [pbr::OriginalName("ACTIVE")] Active = 1,
+        /// <summary>
+        /// The tool is configured or pinned, but currently not offered by the
+        /// server.
+        /// </summary>
+        [pbr::OriginalName("INACTIVE")] Inactive = 2,
+        /// <summary>
+        /// The tool exists on the server, but does not match the version on the
+        /// server.
+        /// </summary>
+        [pbr::OriginalName("STALE")] Stale = 3,
+      }
+
+    }
+    #endregion
 
   }
 

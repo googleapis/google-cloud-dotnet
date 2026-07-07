@@ -28,7 +28,7 @@ namespace Google.Cloud.Ces.V1 {
             "Z2xlLmNsb3VkLmNlcy52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
             "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29vZ2xlL2Nsb3Vk",
             "L2Nlcy92MS9jb21tb24ucHJvdG8aIWdvb2dsZS9jbG91ZC9jZXMvdjEvZXhh",
-            "bXBsZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKA",
+            "bXBsZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKm",
             "CgoMQ29udmVyc2F0aW9uEhEKBG5hbWUYASABKAlCA+BBCBIzCgpzdGFydF90",
             "aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEK",
             "CGVuZF90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
@@ -48,18 +48,19 @@ namespace Google.Cloud.Ces.V1 {
             "Y2xvdWQuY2VzLnYxLk1lc3NhZ2VCA+BBARIxCglyb290X3NwYW4YAiABKAsy",
             "GS5nb29nbGUuY2xvdWQuY2VzLnYxLlNwYW5CA+BBASJQCgtDaGFubmVsVHlw",
             "ZRIcChhDSEFOTkVMX1RZUEVfVU5TUEVDSUZJRUQQABIICgRURVhUEAESCQoF",
-            "QVVESU8QAhIOCgpNVUxUSU1PREFMEAMiQwoGU291cmNlEhYKElNPVVJDRV9V",
+            "QVVESU8QAhIOCgpNVUxUSU1PREFMEAMiUwoGU291cmNlEhYKElNPVVJDRV9V",
             "TlNQRUNJRklFRBAAEggKBExJVkUQARINCglTSU1VTEFUT1IQAhIICgRFVkFM",
-            "EAMitQEKCUlucHV0VHlwZRIaChZJTlBVVF9UWVBFX1VOU1BFQ0lGSUVEEAAS",
-            "EwoPSU5QVVRfVFlQRV9URVhUEAESFAoQSU5QVVRfVFlQRV9BVURJTxACEhQK",
-            "EElOUFVUX1RZUEVfSU1BR0UQAxITCg9JTlBVVF9UWVBFX0JMT0IQBBIcChhJ",
-            "TlBVVF9UWVBFX1RPT0xfUkVTUE9OU0UQBRIYChRJTlBVVF9UWVBFX1ZBUklB",
-            "QkxFUxAGOpMB6kGPAQofY2VzLmdvb2dsZWFwaXMuY29tL0NvbnZlcnNhdGlv",
-            "bhJPcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2Fw",
-            "cHMve2FwcH0vY29udmVyc2F0aW9ucy97Y29udmVyc2F0aW9ufSoNY29udmVy",
-            "c2F0aW9uczIMY29udmVyc2F0aW9uQlkKF2NvbS5nb29nbGUuY2xvdWQuY2Vz",
-            "LnYxQhFDb252ZXJzYXRpb25Qcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dv",
-            "L2Nlcy9hcGl2MS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
+            "EAMSDgoKQUdFTlRfVE9PTBAEIssBCglJbnB1dFR5cGUSGgoWSU5QVVRfVFlQ",
+            "RV9VTlNQRUNJRklFRBAAEhMKD0lOUFVUX1RZUEVfVEVYVBABEhQKEElOUFVU",
+            "X1RZUEVfRVZFTlQQBxIUChBJTlBVVF9UWVBFX0FVRElPEAISFAoQSU5QVVRf",
+            "VFlQRV9JTUFHRRADEhMKD0lOUFVUX1RZUEVfQkxPQhAEEhwKGElOUFVUX1RZ",
+            "UEVfVE9PTF9SRVNQT05TRRAFEhgKFElOUFVUX1RZUEVfVkFSSUFCTEVTEAY6",
+            "kwHqQY8BCh9jZXMuZ29vZ2xlYXBpcy5jb20vQ29udmVyc2F0aW9uEk9wcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vYXBwcy97YXBw",
+            "fS9jb252ZXJzYXRpb25zL3tjb252ZXJzYXRpb259Kg1jb252ZXJzYXRpb25z",
+            "Mgxjb252ZXJzYXRpb25CWQoXY29tLmdvb2dsZS5jbG91ZC5jZXMudjFCEUNv",
+            "bnZlcnNhdGlvblByb3RvUAFaKWNsb3VkLmdvb2dsZS5jb20vZ28vY2VzL2Fw",
+            "aXYxL2Nlc3BiO2Nlc3BiYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1.ExampleReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -800,6 +801,11 @@ namespace Google.Cloud.Ces.V1 {
         /// The conversation is from the evaluation.
         /// </summary>
         [pbr::OriginalName("EVAL")] Eval = 3,
+        /// <summary>
+        /// The conversation is from an agent tool. Agent tool runs the agent in a
+        /// separate session, which is persisted for testing and debugging purposes.
+        /// </summary>
+        [pbr::OriginalName("AGENT_TOOL")] AgentTool = 4,
       }
 
       /// <summary>
@@ -811,27 +817,31 @@ namespace Google.Cloud.Ces.V1 {
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// The input message is text.
+        /// Text input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_TEXT")] Text = 1,
         /// <summary>
-        /// The input message is audio.
+        /// Event input.
+        /// </summary>
+        [pbr::OriginalName("INPUT_TYPE_EVENT")] Event = 7,
+        /// <summary>
+        /// Audio input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_AUDIO")] Audio = 2,
         /// <summary>
-        /// The input message is image.
+        /// Image input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_IMAGE")] Image = 3,
         /// <summary>
-        /// The input message is blob file.
+        /// Blob input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_BLOB")] Blob = 4,
         /// <summary>
-        /// The input message is client function tool response.
+        /// Client function tool response input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_TOOL_RESPONSE")] ToolResponse = 5,
         /// <summary>
-        /// The input message are variables.
+        /// Variables input.
         /// </summary>
         [pbr::OriginalName("INPUT_TYPE_VARIABLES")] Variables = 6,
       }

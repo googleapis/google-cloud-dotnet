@@ -882,7 +882,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T21:34:29.641260019Z",
-            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastGeneratedCommit": "73a8001701e1d3a668dbfb72e9ab66c97d107ff6",
             "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/binaryauthorization/v1"
@@ -897,7 +897,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-05T08:54:27.446742309Z",
-            "lastGeneratedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastGeneratedCommit": "2b625c91510a2e8320a778bc88af8b65bc4a19a2",
             "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
             "apiPaths": [
                 "google/cloud/binaryauthorization/v1beta1"
@@ -4876,7 +4876,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-06T19:16:28.844416064Z",
-            "lastGeneratedCommit": "1ce337a4b7615e32e37a7b5a584736520490f670",
+            "lastGeneratedCommit": "54d07548f6994a797fed79bbfd256c94e0afa143",
             "lastReleasedCommit": "1ce337a4b7615e32e37a7b5a584736520490f670",
             "apiPaths": [
                 "google/cloud/ces/v1"

@@ -67,6 +67,7 @@ namespace Google.Cloud.Ces.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AgentReflection.Descriptor;
+            yield return AgentCardReflection.Descriptor;
             yield return AgentServiceReflection.Descriptor;
             yield return AgentToolReflection.Descriptor;
             yield return AgentTransfersReflection.Descriptor;
@@ -90,6 +91,7 @@ namespace Google.Cloud.Ces.V1
             yield return GuardrailReflection.Descriptor;
             yield return McpToolReflection.Descriptor;
             yield return McpToolsetReflection.Descriptor;
+            yield return MocksReflection.Descriptor;
             yield return OmnichannelReflection.Descriptor;
             yield return OmnichannelServiceReflection.Descriptor;
             yield return OpenApiToolReflection.Descriptor;

@@ -28,62 +28,69 @@ namespace Google.Cloud.Ces.V1 {
             "Z2xlLmNsb3VkLmNlcy52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
             "bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aIGdv",
-            "b2dsZS9jbG91ZC9jZXMvdjEvc2NoZW1hLnByb3RvGh5nb29nbGUvY2xvdWQv",
-            "Y2VzL3YxL3Rvb2wucHJvdG8aJmdvb2dsZS9jbG91ZC9jZXMvdjEvdG9vbHNl",
-            "dF90b29sLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvIvEC",
-            "ChJFeGVjdXRlVG9vbFJlcXVlc3QSLwoEdG9vbBgBIAEoCUIf4EEB+kEZChdj",
-            "ZXMuZ29vZ2xlYXBpcy5jb20vVG9vbEgAEj0KDHRvb2xzZXRfdG9vbBgDIAEo",
-            "CzIgLmdvb2dsZS5jbG91ZC5jZXMudjEuVG9vbHNldFRvb2xCA+BBAUgAEjEK",
-            "CXZhcmlhYmxlcxgFIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RCA+BB",
-            "AUgBEi8KB2NvbnRleHQYBiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0",
-            "QgPgQQFIARIuCgZwYXJlbnQYBCABKAlCHuBBAvpBGAoWY2VzLmdvb2dsZWFw",
-            "aXMuY29tL0FwcBIqCgRhcmdzGAIgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0",
-            "cnVjdEID4EEBQhEKD3Rvb2xfaWRlbnRpZmllckIYChZ0b29sX2V4ZWN1dGlv",
-            "bl9jb250ZXh0IucBChNFeGVjdXRlVG9vbFJlc3BvbnNlEiwKBHRvb2wYASAB",
-            "KAlCHPpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xIABI4Cgx0b29sc2V0",
-            "X3Rvb2wYAyABKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYxLlRvb2xzZXRUb29s",
-            "SAASKQoIcmVzcG9uc2UYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0",
-            "EioKCXZhcmlhYmxlcxgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
-            "EQoPdG9vbF9pZGVudGlmaWVyIs4BChlSZXRyaWV2ZVRvb2xTY2hlbWFSZXF1",
-            "ZXN0Ei8KBHRvb2wYASABKAlCH+BBAfpBGQoXY2VzLmdvb2dsZWFwaXMuY29t",
-            "L1Rvb2xIABI9Cgx0b29sc2V0X3Rvb2wYAiABKAsyIC5nb29nbGUuY2xvdWQu",
-            "Y2VzLnYxLlRvb2xzZXRUb29sQgPgQQFIABIuCgZwYXJlbnQYAyABKAlCHuBB",
-            "AvpBGAoWY2VzLmdvb2dsZWFwaXMuY29tL0FwcEIRCg90b29sX2lkZW50aWZp",
-            "ZXIi/gEKGlJldHJpZXZlVG9vbFNjaGVtYVJlc3BvbnNlEiwKBHRvb2wYASAB",
-            "KAlCHPpBGQoXY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xIABI4Cgx0b29sc2V0",
-            "X3Rvb2wYAiABKAsyIC5nb29nbGUuY2xvdWQuY2VzLnYxLlRvb2xzZXRUb29s",
-            "SAASMQoMaW5wdXRfc2NoZW1hGAMgASgLMhsuZ29vZ2xlLmNsb3VkLmNlcy52",
-            "MS5TY2hlbWESMgoNb3V0cHV0X3NjaGVtYRgEIAEoCzIbLmdvb2dsZS5jbG91",
-            "ZC5jZXMudjEuU2NoZW1hQhEKD3Rvb2xfaWRlbnRpZmllciJiChRSZXRyaWV2",
-            "ZVRvb2xzUmVxdWVzdBIzCgd0b29sc2V0GAEgASgJQiLgQQL6QRwKGmNlcy5n",
-            "b29nbGVhcGlzLmNvbS9Ub29sc2V0EhUKCHRvb2xfaWRzGAMgAygJQgPgQQEi",
-            "QQoVUmV0cmlldmVUb29sc1Jlc3BvbnNlEigKBXRvb2xzGAEgAygLMhkuZ29v",
-            "Z2xlLmNsb3VkLmNlcy52MS5Ub29sMpsFCgtUb29sU2VydmljZRKjAQoLRXhl",
-            "Y3V0ZVRvb2wSJy5nb29nbGUuY2xvdWQuY2VzLnYxLkV4ZWN1dGVUb29sUmVx",
-            "dWVzdBooLmdvb2dsZS5jbG91ZC5jZXMudjEuRXhlY3V0ZVRvb2xSZXNwb25z",
-            "ZSJBgtPkkwI7IjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8q",
-            "L2FwcHMvKn06ZXhlY3V0ZVRvb2w6ASoSvwEKElJldHJpZXZlVG9vbFNjaGVt",
-            "YRIuLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29sU2NoZW1hUmVx",
-            "dWVzdBovLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29sU2NoZW1h",
-            "UmVzcG9uc2UiSILT5JMCQiI9L3YxL3twYXJlbnQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9hcHBzLyp9OnJldHJpZXZlVG9vbFNjaGVtYToBKhK3AQoNUmV0",
-            "cmlldmVUb29scxIpLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29s",
-            "c1JlcXVlc3QaKi5nb29nbGUuY2xvdWQuY2VzLnYxLlJldHJpZXZlVG9vbHNS",
-            "ZXNwb25zZSJPgtPkkwJJIkQvdjEve3Rvb2xzZXQ9cHJvamVjdHMvKi9sb2Nh",
-            "dGlvbnMvKi9hcHBzLyovdG9vbHNldHMvKn06cmV0cmlldmVUb29sczoBKhpq",
-            "ykESY2VzLmdvb2dsZWFwaXMuY29t0kFSaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jZXMsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybUJYChdjb20uZ29vZ2xlLmNsb3VkLmNlcy52MUIQ",
-            "VG9vbFNlcnZpY2VQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9h",
-            "cGl2MS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
+            "b2dsZS9jbG91ZC9jZXMvdjEvc2NoZW1hLnByb3RvGixnb29nbGUvY2xvdWQv",
+            "Y2VzL3YxL3NlYXJjaF9zdWdnZXN0aW9ucy5wcm90bxopZ29vZ2xlL2Nsb3Vk",
+            "L2Nlcy92MS9zZXNzaW9uX3NlcnZpY2UucHJvdG8aHmdvb2dsZS9jbG91ZC9j",
+            "ZXMvdjEvdG9vbC5wcm90bxomZ29vZ2xlL2Nsb3VkL2Nlcy92MS90b29sc2V0",
+            "X3Rvb2wucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8irAMK",
+            "EkV4ZWN1dGVUb29sUmVxdWVzdBIvCgR0b29sGAEgASgJQh/gQQH6QRkKF2Nl",
+            "cy5nb29nbGVhcGlzLmNvbS9Ub29sSAASPQoMdG9vbHNldF90b29sGAMgASgL",
+            "MiAuZ29vZ2xlLmNsb3VkLmNlcy52MS5Ub29sc2V0VG9vbEID4EEBSAASMQoJ",
+            "dmFyaWFibGVzGAUgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEID4EEB",
+            "SAESLwoHY29udGV4dBgGIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
+            "A+BBAUgBEi4KBnBhcmVudBgEIAEoCUIe4EEC+kEYChZjZXMuZ29vZ2xlYXBp",
+            "cy5jb20vQXBwEioKBGFyZ3MYAiABKAsyFy5nb29nbGUucHJvdG9idWYuU3Ry",
+            "dWN0QgPgQQESOQoLbW9ja19jb25maWcYByABKAsyHy5nb29nbGUuY2xvdWQu",
+            "Y2VzLnYxLk1vY2tDb25maWdCA+BBAUIRCg90b29sX2lkZW50aWZpZXJCGAoW",
+            "dG9vbF9leGVjdXRpb25fY29udGV4dCLrAgoTRXhlY3V0ZVRvb2xSZXNwb25z",
+            "ZRIsCgR0b29sGAEgASgJQhz6QRkKF2Nlcy5nb29nbGVhcGlzLmNvbS9Ub29s",
+            "SAASOAoMdG9vbHNldF90b29sGAMgASgLMiAuZ29vZ2xlLmNsb3VkLmNlcy52",
+            "MS5Ub29sc2V0VG9vbEgAEikKCHJlc3BvbnNlGAIgASgLMhcuZ29vZ2xlLnBy",
+            "b3RvYnVmLlN0cnVjdBIqCgl2YXJpYWJsZXMYBCABKAsyFy5nb29nbGUucHJv",
+            "dG9idWYuU3RydWN0EjEKCWNpdGF0aW9ucxgFIAEoCzIeLmdvb2dsZS5jbG91",
+            "ZC5jZXMudjEuQ2l0YXRpb25zEk8KGWdvb2dsZV9zZWFyY2hfc3VnZ2VzdGlv",
+            "bnMYBiABKAsyLC5nb29nbGUuY2xvdWQuY2VzLnYxLkdvb2dsZVNlYXJjaFN1",
+            "Z2dlc3Rpb25zQhEKD3Rvb2xfaWRlbnRpZmllciLOAQoZUmV0cmlldmVUb29s",
+            "U2NoZW1hUmVxdWVzdBIvCgR0b29sGAEgASgJQh/gQQH6QRkKF2Nlcy5nb29n",
+            "bGVhcGlzLmNvbS9Ub29sSAASPQoMdG9vbHNldF90b29sGAIgASgLMiAuZ29v",
+            "Z2xlLmNsb3VkLmNlcy52MS5Ub29sc2V0VG9vbEID4EEBSAASLgoGcGFyZW50",
+            "GAMgASgJQh7gQQL6QRgKFmNlcy5nb29nbGVhcGlzLmNvbS9BcHBCEQoPdG9v",
+            "bF9pZGVudGlmaWVyIv4BChpSZXRyaWV2ZVRvb2xTY2hlbWFSZXNwb25zZRIs",
+            "CgR0b29sGAEgASgJQhz6QRkKF2Nlcy5nb29nbGVhcGlzLmNvbS9Ub29sSAAS",
+            "OAoMdG9vbHNldF90b29sGAIgASgLMiAuZ29vZ2xlLmNsb3VkLmNlcy52MS5U",
+            "b29sc2V0VG9vbEgAEjEKDGlucHV0X3NjaGVtYRgDIAEoCzIbLmdvb2dsZS5j",
+            "bG91ZC5jZXMudjEuU2NoZW1hEjIKDW91dHB1dF9zY2hlbWEYBCABKAsyGy5n",
+            "b29nbGUuY2xvdWQuY2VzLnYxLlNjaGVtYUIRCg90b29sX2lkZW50aWZpZXIi",
+            "igEKFFJldHJpZXZlVG9vbHNSZXF1ZXN0EjMKB3Rvb2xzZXQYASABKAlCIuBB",
+            "AvpBHAoaY2VzLmdvb2dsZWFwaXMuY29tL1Rvb2xzZXQSFQoIdG9vbF9pZHMY",
+            "AyADKAlCA+BBARImChlieXBhc3NfcGVyc2lzdGVuY2VfY29uZmlnGAQgASgI",
+            "QgPgQQEiQQoVUmV0cmlldmVUb29sc1Jlc3BvbnNlEigKBXRvb2xzGAEgAygL",
+            "MhkuZ29vZ2xlLmNsb3VkLmNlcy52MS5Ub29sMpsFCgtUb29sU2VydmljZRKj",
+            "AQoLRXhlY3V0ZVRvb2wSJy5nb29nbGUuY2xvdWQuY2VzLnYxLkV4ZWN1dGVU",
+            "b29sUmVxdWVzdBooLmdvb2dsZS5jbG91ZC5jZXMudjEuRXhlY3V0ZVRvb2xS",
+            "ZXNwb25zZSJBgtPkkwI7IjYvdjEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0",
+            "aW9ucy8qL2FwcHMvKn06ZXhlY3V0ZVRvb2w6ASoSvwEKElJldHJpZXZlVG9v",
+            "bFNjaGVtYRIuLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29sU2No",
+            "ZW1hUmVxdWVzdBovLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmlldmVUb29s",
+            "U2NoZW1hUmVzcG9uc2UiSILT5JMCQiI9L3YxL3twYXJlbnQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9hcHBzLyp9OnJldHJpZXZlVG9vbFNjaGVtYToBKhK3",
+            "AQoNUmV0cmlldmVUb29scxIpLmdvb2dsZS5jbG91ZC5jZXMudjEuUmV0cmll",
+            "dmVUb29sc1JlcXVlc3QaKi5nb29nbGUuY2xvdWQuY2VzLnYxLlJldHJpZXZl",
+            "VG9vbHNSZXNwb25zZSJPgtPkkwJJIkQvdjEve3Rvb2xzZXQ9cHJvamVjdHMv",
+            "Ki9sb2NhdGlvbnMvKi9hcHBzLyovdG9vbHNldHMvKn06cmV0cmlldmVUb29s",
+            "czoBKhpqykESY2VzLmdvb2dsZWFwaXMuY29t0kFSaHR0cHM6Ly93d3cuZ29v",
+            "Z2xlYXBpcy5jb20vYXV0aC9jZXMsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5j",
+            "b20vYXV0aC9jbG91ZC1wbGF0Zm9ybUJYChdjb20uZ29vZ2xlLmNsb3VkLmNl",
+            "cy52MUIQVG9vbFNlcnZpY2VQcm90b1ABWiljbG91ZC5nb29nbGUuY29tL2dv",
+            "L2Nlcy9hcGl2MS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1.SchemaReflection.Descriptor, global::Google.Cloud.Ces.V1.ToolReflection.Descriptor, global::Google.Cloud.Ces.V1.ToolsetToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1.SchemaReflection.Descriptor, global::Google.Cloud.Ces.V1.SearchSuggestionsReflection.Descriptor, global::Google.Cloud.Ces.V1.SessionServiceReflection.Descriptor, global::Google.Cloud.Ces.V1.ToolReflection.Descriptor, global::Google.Cloud.Ces.V1.ToolsetToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ExecuteToolRequest), global::Google.Cloud.Ces.V1.ExecuteToolRequest.Parser, new[]{ "Tool", "ToolsetTool", "Variables", "Context", "Parent", "Args" }, new[]{ "ToolIdentifier", "ToolExecutionContext" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ExecuteToolResponse), global::Google.Cloud.Ces.V1.ExecuteToolResponse.Parser, new[]{ "Tool", "ToolsetTool", "Response", "Variables" }, new[]{ "ToolIdentifier" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ExecuteToolRequest), global::Google.Cloud.Ces.V1.ExecuteToolRequest.Parser, new[]{ "Tool", "ToolsetTool", "Variables", "Context", "Parent", "Args", "MockConfig" }, new[]{ "ToolIdentifier", "ToolExecutionContext" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.ExecuteToolResponse), global::Google.Cloud.Ces.V1.ExecuteToolResponse.Parser, new[]{ "Tool", "ToolsetTool", "Response", "Variables", "Citations", "GoogleSearchSuggestions" }, new[]{ "ToolIdentifier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.RetrieveToolSchemaRequest), global::Google.Cloud.Ces.V1.RetrieveToolSchemaRequest.Parser, new[]{ "Tool", "ToolsetTool", "Parent" }, new[]{ "ToolIdentifier" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.RetrieveToolSchemaResponse), global::Google.Cloud.Ces.V1.RetrieveToolSchemaResponse.Parser, new[]{ "Tool", "ToolsetTool", "InputSchema", "OutputSchema" }, new[]{ "ToolIdentifier" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.RetrieveToolsRequest), global::Google.Cloud.Ces.V1.RetrieveToolsRequest.Parser, new[]{ "Toolset", "ToolIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.RetrieveToolsRequest), global::Google.Cloud.Ces.V1.RetrieveToolsRequest.Parser, new[]{ "Toolset", "ToolIds", "BypassPersistenceConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.RetrieveToolsResponse), global::Google.Cloud.Ces.V1.RetrieveToolsResponse.Parser, new[]{ "Tools" }, null, null, null, null)
           }));
     }
@@ -132,6 +139,7 @@ namespace Google.Cloud.Ces.V1 {
     public ExecuteToolRequest(ExecuteToolRequest other) : this() {
       parent_ = other.parent_;
       args_ = other.args_ != null ? other.args_.Clone() : null;
+      mockConfig_ = other.mockConfig_ != null ? other.mockConfig_.Clone() : null;
       switch (other.ToolIdentifierCase) {
         case ToolIdentifierOneofCase.Tool:
           Tool = other.Tool;
@@ -270,6 +278,23 @@ namespace Google.Cloud.Ces.V1 {
       }
     }
 
+    /// <summary>Field number for the "mock_config" field.</summary>
+    public const int MockConfigFieldNumber = 7;
+    private global::Google.Cloud.Ces.V1.MockConfig mockConfig_;
+    /// <summary>
+    /// Optional. Mock configuration for the tool execution.
+    /// If this field is set, tools that call other tools will be
+    /// mocked based on the provided patterns and responses.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1.MockConfig MockConfig {
+      get { return mockConfig_; }
+      set {
+        mockConfig_ = value;
+      }
+    }
+
     private object toolIdentifier_;
     /// <summary>Enum of possible cases for the "tool_identifier" oneof.</summary>
     public enum ToolIdentifierOneofCase {
@@ -333,6 +358,7 @@ namespace Google.Cloud.Ces.V1 {
       if (!object.Equals(Context, other.Context)) return false;
       if (Parent != other.Parent) return false;
       if (!object.Equals(Args, other.Args)) return false;
+      if (!object.Equals(MockConfig, other.MockConfig)) return false;
       if (ToolIdentifierCase != other.ToolIdentifierCase) return false;
       if (ToolExecutionContextCase != other.ToolExecutionContextCase) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -348,6 +374,7 @@ namespace Google.Cloud.Ces.V1 {
       if (toolExecutionContextCase_ == ToolExecutionContextOneofCase.Context) hash ^= Context.GetHashCode();
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
       if (args_ != null) hash ^= Args.GetHashCode();
+      if (mockConfig_ != null) hash ^= MockConfig.GetHashCode();
       hash ^= (int) toolIdentifierCase_;
       hash ^= (int) toolExecutionContextCase_;
       if (_unknownFields != null) {
@@ -392,6 +419,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Context);
       }
+      if (mockConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MockConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -426,6 +457,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(50);
         output.WriteMessage(Context);
       }
+      if (mockConfig_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(MockConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -454,6 +489,9 @@ namespace Google.Cloud.Ces.V1 {
       if (args_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Args);
       }
+      if (mockConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(MockConfig);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -474,6 +512,12 @@ namespace Google.Cloud.Ces.V1 {
           Args = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Args.MergeFrom(other.Args);
+      }
+      if (other.mockConfig_ != null) {
+        if (mockConfig_ == null) {
+          MockConfig = new global::Google.Cloud.Ces.V1.MockConfig();
+        }
+        MockConfig.MergeFrom(other.MockConfig);
       }
       switch (other.ToolIdentifierCase) {
         case ToolIdentifierOneofCase.Tool:
@@ -563,6 +607,13 @@ namespace Google.Cloud.Ces.V1 {
             Context = subBuilder;
             break;
           }
+          case 58: {
+            if (mockConfig_ == null) {
+              MockConfig = new global::Google.Cloud.Ces.V1.MockConfig();
+            }
+            input.ReadMessage(MockConfig);
+            break;
+          }
         }
       }
     #endif
@@ -624,6 +675,13 @@ namespace Google.Cloud.Ces.V1 {
             Context = subBuilder;
             break;
           }
+          case 58: {
+            if (mockConfig_ == null) {
+              MockConfig = new global::Google.Cloud.Ces.V1.MockConfig();
+            }
+            input.ReadMessage(MockConfig);
+            break;
+          }
         }
       }
     }
@@ -672,6 +730,8 @@ namespace Google.Cloud.Ces.V1 {
     public ExecuteToolResponse(ExecuteToolResponse other) : this() {
       response_ = other.response_ != null ? other.response_.Clone() : null;
       variables_ = other.variables_ != null ? other.variables_.Clone() : null;
+      citations_ = other.citations_ != null ? other.citations_.Clone() : null;
+      googleSearchSuggestions_ = other.googleSearchSuggestions_ != null ? other.googleSearchSuggestions_.Clone() : null;
       switch (other.ToolIdentifierCase) {
         case ToolIdentifierOneofCase.Tool:
           Tool = other.Tool;
@@ -768,6 +828,37 @@ namespace Google.Cloud.Ces.V1 {
       }
     }
 
+    /// <summary>Field number for the "citations" field.</summary>
+    public const int CitationsFieldNumber = 5;
+    private global::Google.Cloud.Ces.V1.Citations citations_;
+    /// <summary>
+    /// Citations that provide the source information for the tool's execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1.Citations Citations {
+      get { return citations_; }
+      set {
+        citations_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "google_search_suggestions" field.</summary>
+    public const int GoogleSearchSuggestionsFieldNumber = 6;
+    private global::Google.Cloud.Ces.V1.GoogleSearchSuggestions googleSearchSuggestions_;
+    /// <summary>
+    /// The suggestions returned from Google Search as a result of invoking the
+    /// Google Search Tool during the tool execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1.GoogleSearchSuggestions GoogleSearchSuggestions {
+      get { return googleSearchSuggestions_; }
+      set {
+        googleSearchSuggestions_ = value;
+      }
+    }
+
     private object toolIdentifier_;
     /// <summary>Enum of possible cases for the "tool_identifier" oneof.</summary>
     public enum ToolIdentifierOneofCase {
@@ -808,6 +899,8 @@ namespace Google.Cloud.Ces.V1 {
       if (!object.Equals(ToolsetTool, other.ToolsetTool)) return false;
       if (!object.Equals(Response, other.Response)) return false;
       if (!object.Equals(Variables, other.Variables)) return false;
+      if (!object.Equals(Citations, other.Citations)) return false;
+      if (!object.Equals(GoogleSearchSuggestions, other.GoogleSearchSuggestions)) return false;
       if (ToolIdentifierCase != other.ToolIdentifierCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -820,6 +913,8 @@ namespace Google.Cloud.Ces.V1 {
       if (toolIdentifierCase_ == ToolIdentifierOneofCase.ToolsetTool) hash ^= ToolsetTool.GetHashCode();
       if (response_ != null) hash ^= Response.GetHashCode();
       if (variables_ != null) hash ^= Variables.GetHashCode();
+      if (citations_ != null) hash ^= Citations.GetHashCode();
+      if (googleSearchSuggestions_ != null) hash ^= GoogleSearchSuggestions.GetHashCode();
       hash ^= (int) toolIdentifierCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -855,6 +950,14 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Variables);
       }
+      if (citations_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Citations);
+      }
+      if (googleSearchSuggestions_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GoogleSearchSuggestions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -881,6 +984,14 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(34);
         output.WriteMessage(Variables);
       }
+      if (citations_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(Citations);
+      }
+      if (googleSearchSuggestions_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(GoogleSearchSuggestions);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -902,6 +1013,12 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (variables_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Variables);
+      }
+      if (citations_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Citations);
+      }
+      if (googleSearchSuggestions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(GoogleSearchSuggestions);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -926,6 +1043,18 @@ namespace Google.Cloud.Ces.V1 {
           Variables = new global::Google.Protobuf.WellKnownTypes.Struct();
         }
         Variables.MergeFrom(other.Variables);
+      }
+      if (other.citations_ != null) {
+        if (citations_ == null) {
+          Citations = new global::Google.Cloud.Ces.V1.Citations();
+        }
+        Citations.MergeFrom(other.Citations);
+      }
+      if (other.googleSearchSuggestions_ != null) {
+        if (googleSearchSuggestions_ == null) {
+          GoogleSearchSuggestions = new global::Google.Cloud.Ces.V1.GoogleSearchSuggestions();
+        }
+        GoogleSearchSuggestions.MergeFrom(other.GoogleSearchSuggestions);
       }
       switch (other.ToolIdentifierCase) {
         case ToolIdentifierOneofCase.Tool:
@@ -985,6 +1114,20 @@ namespace Google.Cloud.Ces.V1 {
             input.ReadMessage(Variables);
             break;
           }
+          case 42: {
+            if (citations_ == null) {
+              Citations = new global::Google.Cloud.Ces.V1.Citations();
+            }
+            input.ReadMessage(Citations);
+            break;
+          }
+          case 50: {
+            if (googleSearchSuggestions_ == null) {
+              GoogleSearchSuggestions = new global::Google.Cloud.Ces.V1.GoogleSearchSuggestions();
+            }
+            input.ReadMessage(GoogleSearchSuggestions);
+            break;
+          }
         }
       }
     #endif
@@ -1029,6 +1172,20 @@ namespace Google.Cloud.Ces.V1 {
               Variables = new global::Google.Protobuf.WellKnownTypes.Struct();
             }
             input.ReadMessage(Variables);
+            break;
+          }
+          case 42: {
+            if (citations_ == null) {
+              Citations = new global::Google.Cloud.Ces.V1.Citations();
+            }
+            input.ReadMessage(Citations);
+            break;
+          }
+          case 50: {
+            if (googleSearchSuggestions_ == null) {
+              GoogleSearchSuggestions = new global::Google.Cloud.Ces.V1.GoogleSearchSuggestions();
+            }
+            input.ReadMessage(GoogleSearchSuggestions);
             break;
           }
         }
@@ -1833,6 +1990,7 @@ namespace Google.Cloud.Ces.V1 {
     public RetrieveToolsRequest(RetrieveToolsRequest other) : this() {
       toolset_ = other.toolset_;
       toolIds_ = other.toolIds_.Clone();
+      bypassPersistenceConfig_ = other.bypassPersistenceConfig_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1874,6 +2032,23 @@ namespace Google.Cloud.Ces.V1 {
       get { return toolIds_; }
     }
 
+    /// <summary>Field number for the "bypass_persistence_config" field.</summary>
+    public const int BypassPersistenceConfigFieldNumber = 4;
+    private bool bypassPersistenceConfig_;
+    /// <summary>
+    /// Optional. If true, the returned tools will contain raw descriptions and
+    /// schemas directly from the server, bypassing any stored persistence
+    /// configurations (overrides/snapshots).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BypassPersistenceConfig {
+      get { return bypassPersistenceConfig_; }
+      set {
+        bypassPersistenceConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1891,6 +2066,7 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (Toolset != other.Toolset) return false;
       if(!toolIds_.Equals(other.toolIds_)) return false;
+      if (BypassPersistenceConfig != other.BypassPersistenceConfig) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1900,6 +2076,7 @@ namespace Google.Cloud.Ces.V1 {
       int hash = 1;
       if (Toolset.Length != 0) hash ^= Toolset.GetHashCode();
       hash ^= toolIds_.GetHashCode();
+      if (BypassPersistenceConfig != false) hash ^= BypassPersistenceConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1923,6 +2100,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteString(Toolset);
       }
       toolIds_.WriteTo(output, _repeated_toolIds_codec);
+      if (BypassPersistenceConfig != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(BypassPersistenceConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1938,6 +2119,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteString(Toolset);
       }
       toolIds_.WriteTo(ref output, _repeated_toolIds_codec);
+      if (BypassPersistenceConfig != false) {
+        output.WriteRawTag(32);
+        output.WriteBool(BypassPersistenceConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1952,6 +2137,9 @@ namespace Google.Cloud.Ces.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Toolset);
       }
       size += toolIds_.CalculateSize(_repeated_toolIds_codec);
+      if (BypassPersistenceConfig != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1968,6 +2156,9 @@ namespace Google.Cloud.Ces.V1 {
         Toolset = other.Toolset;
       }
       toolIds_.Add(other.toolIds_);
+      if (other.BypassPersistenceConfig != false) {
+        BypassPersistenceConfig = other.BypassPersistenceConfig;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1995,6 +2186,10 @@ namespace Google.Cloud.Ces.V1 {
             toolIds_.AddEntriesFrom(input, _repeated_toolIds_codec);
             break;
           }
+          case 32: {
+            BypassPersistenceConfig = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2020,6 +2215,10 @@ namespace Google.Cloud.Ces.V1 {
           }
           case 26: {
             toolIds_.AddEntriesFrom(ref input, _repeated_toolIds_codec);
+            break;
+          }
+          case 32: {
+            BypassPersistenceConfig = input.ReadBool();
             break;
           }
         }

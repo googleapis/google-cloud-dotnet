@@ -30,29 +30,31 @@ namespace Google.Cloud.Ces.V1 {
             "djEvY29tbW9uLnByb3RvGitnb29nbGUvY2xvdWQvY2VzL3YxL2Nvbm5lY3Rv",
             "cl90b29sc2V0LnByb3RvGh9nb29nbGUvY2xvdWQvY2VzL3YxL2Zha2VzLnBy",
             "b3RvGiVnb29nbGUvY2xvdWQvY2VzL3YxL21jcF90b29sc2V0LnByb3RvGipn",
-            "b29nbGUvY2xvdWQvY2VzL3YxL29wZW5fYXBpX3Rvb2xzZXQucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipwUKB1Rvb2xzZXQSOwoL",
-            "bWNwX3Rvb2xzZXQYBiABKAsyHy5nb29nbGUuY2xvdWQuY2VzLnYxLk1jcFRv",
-            "b2xzZXRCA+BBAUgAEkQKEG9wZW5fYXBpX3Rvb2xzZXQYByABKAsyIy5nb29n",
-            "bGUuY2xvdWQuY2VzLnYxLk9wZW5BcGlUb29sc2V0QgPgQQFIABJHChFjb25u",
-            "ZWN0b3JfdG9vbHNldBgIIAEoCzIlLmdvb2dsZS5jbG91ZC5jZXMudjEuQ29u",
-            "bmVjdG9yVG9vbHNldEID4EEBSAASEQoEbmFtZRgBIAEoCUID4EEIEhkKDGRp",
-            "c3BsYXlfbmFtZRgCIAEoCUID4EEBEhgKC2Rlc2NyaXB0aW9uGAogASgJQgPg",
-            "QQESNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQMSDAoEZXRhZxgFIAEoCRI/Cg5leGVjdXRp",
-            "b25fdHlwZRgJIAEoDjIiLmdvb2dsZS5jbG91ZC5jZXMudjEuRXhlY3V0aW9u",
-            "VHlwZUID4EEBEkIKEHRvb2xfZmFrZV9jb25maWcYCyABKAsyIy5nb29nbGUu",
-            "Y2xvdWQuY2VzLnYxLlRvb2xGYWtlQ29uZmlnQgPgQQE6eepBdgoaY2VzLmdv",
-            "b2dsZWFwaXMuY29tL1Rvb2xzZXQSRXByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS9hcHBzL3thcHB9L3Rvb2xzZXRzL3t0b29sc2V0",
-            "fSoIdG9vbHNldHMyB3Rvb2xzZXRCDgoMdG9vbHNldF90eXBlQlQKF2NvbS5n",
-            "b29nbGUuY2xvdWQuY2VzLnYxQgxUb29sc2V0UHJvdG9QAVopY2xvdWQuZ29v",
-            "Z2xlLmNvbS9nby9jZXMvYXBpdjEvY2VzcGI7Y2VzcGJiBnByb3RvMw=="));
+            "b29nbGUvY2xvdWQvY2VzL3YxL29wZW5fYXBpX3Rvb2xzZXQucHJvdG8aHmdv",
+            "b2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90byLYBQoHVG9vbHNldBI7CgttY3BfdG9vbHNldBgG",
+            "IAEoCzIfLmdvb2dsZS5jbG91ZC5jZXMudjEuTWNwVG9vbHNldEID4EEBSAAS",
+            "RAoQb3Blbl9hcGlfdG9vbHNldBgHIAEoCzIjLmdvb2dsZS5jbG91ZC5jZXMu",
+            "djEuT3BlbkFwaVRvb2xzZXRCA+BBAUgAEkcKEWNvbm5lY3Rvcl90b29sc2V0",
+            "GAggASgLMiUuZ29vZ2xlLmNsb3VkLmNlcy52MS5Db25uZWN0b3JUb29sc2V0",
+            "QgPgQQFIABIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1lGAIg",
+            "ASgJQgPgQQESGAoLZGVzY3JpcHRpb24YCiABKAlCA+BBARIvCgd0aW1lb3V0",
+            "GAwgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQESNAoLY3Jl",
+            "YXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMSDAoEZXRhZxgFIAEoCRI/Cg5leGVjdXRpb25fdHlwZRgJ",
+            "IAEoDjIiLmdvb2dsZS5jbG91ZC5jZXMudjEuRXhlY3V0aW9uVHlwZUID4EEB",
+            "EkIKEHRvb2xfZmFrZV9jb25maWcYCyABKAsyIy5nb29nbGUuY2xvdWQuY2Vz",
+            "LnYxLlRvb2xGYWtlQ29uZmlnQgPgQQE6eepBdgoaY2VzLmdvb2dsZWFwaXMu",
+            "Y29tL1Rvb2xzZXQSRXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
+            "Y2F0aW9ufS9hcHBzL3thcHB9L3Rvb2xzZXRzL3t0b29sc2V0fSoIdG9vbHNl",
+            "dHMyB3Rvb2xzZXRCDgoMdG9vbHNldF90eXBlQlQKF2NvbS5nb29nbGUuY2xv",
+            "dWQuY2VzLnYxQgxUb29sc2V0UHJvdG9QAVopY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9jZXMvYXBpdjEvY2VzcGI7Y2VzcGJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1.ConnectorToolsetReflection.Descriptor, global::Google.Cloud.Ces.V1.FakesReflection.Descriptor, global::Google.Cloud.Ces.V1.McpToolsetReflection.Descriptor, global::Google.Cloud.Ces.V1.OpenApiToolsetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1.ConnectorToolsetReflection.Descriptor, global::Google.Cloud.Ces.V1.FakesReflection.Descriptor, global::Google.Cloud.Ces.V1.McpToolsetReflection.Descriptor, global::Google.Cloud.Ces.V1.OpenApiToolsetReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.Toolset), global::Google.Cloud.Ces.V1.Toolset.Parser, new[]{ "McpToolset", "OpenApiToolset", "ConnectorToolset", "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "Etag", "ExecutionType", "ToolFakeConfig" }, new[]{ "ToolsetType" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1.Toolset), global::Google.Cloud.Ces.V1.Toolset.Parser, new[]{ "McpToolset", "OpenApiToolset", "ConnectorToolset", "Name", "DisplayName", "Description", "Timeout", "CreateTime", "UpdateTime", "Etag", "ExecutionType", "ToolFakeConfig" }, new[]{ "ToolsetType" }, null, null, null)
           }));
     }
     #endregion
@@ -101,6 +103,7 @@ namespace Google.Cloud.Ces.V1 {
       name_ = other.name_;
       displayName_ = other.displayName_;
       description_ = other.description_;
+      timeout_ = other.timeout_ != null ? other.timeout_.Clone() : null;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
@@ -220,6 +223,23 @@ namespace Google.Cloud.Ces.V1 {
       get { return description_; }
       set {
         description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "timeout" field.</summary>
+    public const int TimeoutFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Duration timeout_;
+    /// <summary>
+    /// Optional. The timeout for the toolset execution. If not set, the default
+    /// timeout is 30 seconds for `SYNCHRONOUS` toolsets and 60 seconds for
+    /// `ASYNCHRONOUS` toolsets.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Timeout {
+      get { return timeout_; }
+      set {
+        timeout_ = value;
       }
     }
 
@@ -343,6 +363,7 @@ namespace Google.Cloud.Ces.V1 {
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
       if (Description != other.Description) return false;
+      if (!object.Equals(Timeout, other.Timeout)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
@@ -362,6 +383,7 @@ namespace Google.Cloud.Ces.V1 {
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (Description.Length != 0) hash ^= Description.GetHashCode();
+      if (timeout_ != null) hash ^= Timeout.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
@@ -430,6 +452,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(ToolFakeConfig);
       }
+      if (timeout_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Timeout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -484,6 +510,10 @@ namespace Google.Cloud.Ces.V1 {
         output.WriteRawTag(90);
         output.WriteMessage(ToolFakeConfig);
       }
+      if (timeout_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(Timeout);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -511,6 +541,9 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (Description.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
+      if (timeout_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Timeout);
       }
       if (createTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CreateTime);
@@ -547,6 +580,12 @@ namespace Google.Cloud.Ces.V1 {
       }
       if (other.Description.Length != 0) {
         Description = other.Description;
+      }
+      if (other.timeout_ != null) {
+        if (timeout_ == null) {
+          Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Timeout.MergeFrom(other.Timeout);
       }
       if (other.createTime_ != null) {
         if (createTime_ == null) {
@@ -680,6 +719,13 @@ namespace Google.Cloud.Ces.V1 {
             input.ReadMessage(ToolFakeConfig);
             break;
           }
+          case 98: {
+            if (timeout_ == null) {
+              Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Timeout);
+            break;
+          }
         }
       }
     #endif
@@ -765,6 +811,13 @@ namespace Google.Cloud.Ces.V1 {
               ToolFakeConfig = new global::Google.Cloud.Ces.V1.ToolFakeConfig();
             }
             input.ReadMessage(ToolFakeConfig);
+            break;
+          }
+          case 98: {
+            if (timeout_ == null) {
+              Timeout = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Timeout);
             break;
           }
         }
