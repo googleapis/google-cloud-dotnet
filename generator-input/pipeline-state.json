@@ -5116,7 +5116,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-06T19:18:42.192189642Z",
-            "lastGeneratedCommit": "31285055e5dd6ae79f7a9e624952a74695be567e",
+            "lastGeneratedCommit": "1a91fbee8fd1c7f9bdc3d585ff8032b1619a2051",
             "lastReleasedCommit": "31285055e5dd6ae79f7a9e624952a74695be567e",
             "apiPaths": [
                 "google/maps/isochrones/v1"
