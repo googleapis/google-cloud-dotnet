@@ -55,6 +55,7 @@ namespace GoogleCSharpSnippets
                 ScheduledEvaluationRunAsScheduledEvaluationRunName = ScheduledEvaluationRunName.FromProjectLocationAppScheduledEvaluationRun("[PROJECT]", "[LOCATION]", "[APP]", "[SCHEDULED_EVALUATION_RUN]"),
                 GoldenRunMethod = GoldenRunMethod.Unspecified,
                 GenerateLatencyReport = false,
+                EvaluationRunCachingSettings = new EvaluationRunCachingSettings(),
             };
             // Make the request
             Operation<RunEvaluationResponse, RunEvaluationOperationMetadata> response = evaluationServiceClient.RunEvaluation(request);

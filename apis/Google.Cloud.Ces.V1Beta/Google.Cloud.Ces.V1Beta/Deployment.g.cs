@@ -39,8 +39,8 @@ namespace Google.Cloud.Ces.V1Beta {
             "A+BBARIfChJ0cmFmZmljX3BlcmNlbnRhZ2UYAiABKAVCA+BBARI6CgthcHBf",
             "dmVyc2lvbhgDIAEoCUIl4EEB+kEfCh1jZXMuZ29vZ2xlYXBpcy5jb20vQXBw",
             "VmVyc2lvbiJPCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB1BF",
-            "TkRJTkcQARILCgdSVU5OSU5HEAISCAoERE9ORRADEgsKB0VYUElSRUQQBCKT",
-            "BAoKRGVwbG95bWVudBIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9u",
+            "TkRJTkcQARILCgdSVU5OSU5HEAISCAoERE9ORRADEgsKB0VYUElSRUQQBCK9",
+            "BQoKRGVwbG95bWVudBIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9u",
             "YW1lGAggASgJQgPgQQISOgoLYXBwX3ZlcnNpb24YAiABKAlCJeBBAfpBHwod",
             "Y2VzLmdvb2dsZWFwaXMuY29tL0FwcFZlcnNpb24SRQoPY2hhbm5lbF9wcm9m",
             "aWxlGAMgASgLMicuZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQ2hhbm5lbFBy",
@@ -48,18 +48,30 @@ namespace Google.Cloud.Ces.V1Beta {
             "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgFIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRldGFnGAcgASgJQgPg",
             "QQMSSQoRZXhwZXJpbWVudF9jb25maWcYCSABKAsyKS5nb29nbGUuY2xvdWQu",
-            "Y2VzLnYxYmV0YS5FeHBlcmltZW50Q29uZmlnQgPgQQE6iQHqQYUBCh1jZXMu",
-            "Z29vZ2xlYXBpcy5jb20vRGVwbG95bWVudBJLcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L2FwcHMve2FwcH0vZGVwbG95bWVudHMv",
-            "e2RlcGxveW1lbnR9KgtkZXBsb3ltZW50czIKZGVwbG95bWVudEJjChtjb20u",
-            "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGFCE0NoYW5uZWxQcm9maWxlUHJvdG9Q",
-            "AVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFiZXRhL2Nlc3BiO2Nl",
-            "c3BiYgZwcm90bzM="));
+            "Y2VzLnYxYmV0YS5FeHBlcmltZW50Q29uZmlnQgPgQQESUgoUd2hhdHNhcHBf",
+            "Y3JlZGVudGlhbHMYCiABKAsyLC5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5X",
+            "aGF0c0FwcENyZWRlbnRpYWxzQgbgQQHgQQQSVAoVaW5zdGFncmFtX2NyZWRl",
+            "bnRpYWxzGAsgASgLMi0uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuSW5zdGFn",
+            "cmFtQ3JlZGVudGlhbHNCBuBBAeBBBDqJAepBhQEKHWNlcy5nb29nbGVhcGlz",
+            "LmNvbS9EZXBsb3ltZW50Ektwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vYXBwcy97YXBwfS9kZXBsb3ltZW50cy97ZGVwbG95bWVu",
+            "dH0qC2RlcGxveW1lbnRzMgpkZXBsb3ltZW50IrgBChNXaGF0c0FwcENyZWRl",
+            "bnRpYWxzEhYKCWF1dGhfY29kZRgBIAEoCUID4EECEhAKA3BpbhgCIAEoCUID",
+            "4EECEhkKDHBob25lX251bWJlchgDIAEoCUID4EECEiAKE2J1c2luZXNzX2Fj",
+            "Y291bnRfaWQYBCABKAlCA+BBAhIUCgd3YWJhX2lkGAUgASgJQgPgQQISJAoX",
+            "Y29udmVyc2F0aW9uX3Byb2ZpbGVfaWQYBiABKAlCA+BBAiJUChRJbnN0YWdy",
+            "YW1DcmVkZW50aWFscxIWCglhdXRoX2NvZGUYASABKAlCA+BBAhIkChdjb252",
+            "ZXJzYXRpb25fcHJvZmlsZV9pZBgCIAEoCUID4EECQmMKG2NvbS5nb29nbGUu",
+            "Y2xvdWQuY2VzLnYxYmV0YUITQ2hhbm5lbFByb2ZpbGVQcm90b1ABWi1jbG91",
+            "ZC5nb29nbGUuY29tL2dvL2Nlcy9hcGl2MWJldGEvY2VzcGI7Y2VzcGJiBnBy",
+            "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ExperimentConfig), global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Parser, new[]{ "VersionRelease" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.VersionRelease), global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.VersionRelease.Parser, new[]{ "State", "TrafficAllocations" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.VersionRelease.Types.TrafficAllocation), global::Google.Cloud.Ces.V1Beta.ExperimentConfig.Types.VersionRelease.Types.TrafficAllocation.Parser, new[]{ "Id", "TrafficPercentage", "AppVersion" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Deployment), global::Google.Cloud.Ces.V1Beta.Deployment.Parser, new[]{ "Name", "DisplayName", "AppVersion", "ChannelProfile", "CreateTime", "UpdateTime", "Etag", "ExperimentConfig" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Deployment), global::Google.Cloud.Ces.V1Beta.Deployment.Parser, new[]{ "Name", "DisplayName", "AppVersion", "ChannelProfile", "CreateTime", "UpdateTime", "Etag", "ExperimentConfig", "WhatsappCredentials", "InstagramCredentials" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials), global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials.Parser, new[]{ "AuthCode", "Pin", "PhoneNumber", "BusinessAccountId", "WabaId", "ConversationProfileId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.InstagramCredentials), global::Google.Cloud.Ces.V1Beta.InstagramCredentials.Parser, new[]{ "AuthCode", "ConversationProfileId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -291,7 +303,7 @@ namespace Google.Cloud.Ces.V1Beta {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Pending state. Experiment is pending and not valid.
+        /// Deprecated: This state is no longer used.
         /// </summary>
         [pbr::OriginalName("PENDING")] Pending = 1,
         /// <summary>
@@ -299,11 +311,11 @@ namespace Google.Cloud.Ces.V1Beta {
         /// </summary>
         [pbr::OriginalName("RUNNING")] Running = 2,
         /// <summary>
-        /// Done state. Experiment is done and no longer valid.
+        /// Deprecated: This state is no longer used.
         /// </summary>
         [pbr::OriginalName("DONE")] Done = 3,
         /// <summary>
-        /// Expired state. Experiment is expired and no longer valid.
+        /// Deprecated: This state is no longer used.
         /// </summary>
         [pbr::OriginalName("EXPIRED")] Expired = 4,
       }
@@ -889,6 +901,8 @@ namespace Google.Cloud.Ces.V1Beta {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       etag_ = other.etag_;
       experimentConfig_ = other.experimentConfig_ != null ? other.experimentConfig_.Clone() : null;
+      whatsappCredentials_ = other.whatsappCredentials_ != null ? other.whatsappCredentials_.Clone() : null;
+      instagramCredentials_ = other.instagramCredentials_ != null ? other.instagramCredentials_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1026,6 +1040,38 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "whatsapp_credentials" field.</summary>
+    public const int WhatsappCredentialsFieldNumber = 10;
+    private global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials whatsappCredentials_;
+    /// <summary>
+    /// Optional. Input only. Ephemeral WhatsApp credentials required when
+    /// configuring a WhatsApp channel profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials WhatsappCredentials {
+      get { return whatsappCredentials_; }
+      set {
+        whatsappCredentials_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "instagram_credentials" field.</summary>
+    public const int InstagramCredentialsFieldNumber = 11;
+    private global::Google.Cloud.Ces.V1Beta.InstagramCredentials instagramCredentials_;
+    /// <summary>
+    /// Optional. Input only. Ephemeral Instagram credentials required when
+    /// configuring a Instagram channel profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.InstagramCredentials InstagramCredentials {
+      get { return instagramCredentials_; }
+      set {
+        instagramCredentials_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1049,6 +1095,8 @@ namespace Google.Cloud.Ces.V1Beta {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (Etag != other.Etag) return false;
       if (!object.Equals(ExperimentConfig, other.ExperimentConfig)) return false;
+      if (!object.Equals(WhatsappCredentials, other.WhatsappCredentials)) return false;
+      if (!object.Equals(InstagramCredentials, other.InstagramCredentials)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1064,6 +1112,8 @@ namespace Google.Cloud.Ces.V1Beta {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (experimentConfig_ != null) hash ^= ExperimentConfig.GetHashCode();
+      if (whatsappCredentials_ != null) hash ^= WhatsappCredentials.GetHashCode();
+      if (instagramCredentials_ != null) hash ^= InstagramCredentials.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1114,6 +1164,14 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(74);
         output.WriteMessage(ExperimentConfig);
       }
+      if (whatsappCredentials_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(WhatsappCredentials);
+      }
+      if (instagramCredentials_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(InstagramCredentials);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1156,6 +1214,14 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(74);
         output.WriteMessage(ExperimentConfig);
       }
+      if (whatsappCredentials_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(WhatsappCredentials);
+      }
+      if (instagramCredentials_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(InstagramCredentials);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1189,6 +1255,12 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (experimentConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ExperimentConfig);
+      }
+      if (whatsappCredentials_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WhatsappCredentials);
+      }
+      if (instagramCredentials_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstagramCredentials);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1237,6 +1309,18 @@ namespace Google.Cloud.Ces.V1Beta {
           ExperimentConfig = new global::Google.Cloud.Ces.V1Beta.ExperimentConfig();
         }
         ExperimentConfig.MergeFrom(other.ExperimentConfig);
+      }
+      if (other.whatsappCredentials_ != null) {
+        if (whatsappCredentials_ == null) {
+          WhatsappCredentials = new global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials();
+        }
+        WhatsappCredentials.MergeFrom(other.WhatsappCredentials);
+      }
+      if (other.instagramCredentials_ != null) {
+        if (instagramCredentials_ == null) {
+          InstagramCredentials = new global::Google.Cloud.Ces.V1Beta.InstagramCredentials();
+        }
+        InstagramCredentials.MergeFrom(other.InstagramCredentials);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1301,6 +1385,20 @@ namespace Google.Cloud.Ces.V1Beta {
             input.ReadMessage(ExperimentConfig);
             break;
           }
+          case 82: {
+            if (whatsappCredentials_ == null) {
+              WhatsappCredentials = new global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials();
+            }
+            input.ReadMessage(WhatsappCredentials);
+            break;
+          }
+          case 90: {
+            if (instagramCredentials_ == null) {
+              InstagramCredentials = new global::Google.Cloud.Ces.V1Beta.InstagramCredentials();
+            }
+            input.ReadMessage(InstagramCredentials);
+            break;
+          }
         }
       }
     #endif
@@ -1362,6 +1460,668 @@ namespace Google.Cloud.Ces.V1Beta {
               ExperimentConfig = new global::Google.Cloud.Ces.V1Beta.ExperimentConfig();
             }
             input.ReadMessage(ExperimentConfig);
+            break;
+          }
+          case 82: {
+            if (whatsappCredentials_ == null) {
+              WhatsappCredentials = new global::Google.Cloud.Ces.V1Beta.WhatsAppCredentials();
+            }
+            input.ReadMessage(WhatsappCredentials);
+            break;
+          }
+          case 90: {
+            if (instagramCredentials_ == null) {
+              InstagramCredentials = new global::Google.Cloud.Ces.V1Beta.InstagramCredentials();
+            }
+            input.ReadMessage(InstagramCredentials);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Ephemeral Meta credentials for WhatsApp native integration.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class WhatsAppCredentials : pb::IMessage<WhatsAppCredentials>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<WhatsAppCredentials> _parser = new pb::MessageParser<WhatsAppCredentials>(() => new WhatsAppCredentials());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<WhatsAppCredentials> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Ces.V1Beta.DeploymentReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WhatsAppCredentials() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WhatsAppCredentials(WhatsAppCredentials other) : this() {
+      authCode_ = other.authCode_;
+      pin_ = other.pin_;
+      phoneNumber_ = other.phoneNumber_;
+      businessAccountId_ = other.businessAccountId_;
+      wabaId_ = other.wabaId_;
+      conversationProfileId_ = other.conversationProfileId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public WhatsAppCredentials Clone() {
+      return new WhatsAppCredentials(this);
+    }
+
+    /// <summary>Field number for the "auth_code" field.</summary>
+    public const int AuthCodeFieldNumber = 1;
+    private string authCode_ = "";
+    /// <summary>
+    /// Required. The Meta auth code provided by the embedded signup flow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuthCode {
+      get { return authCode_; }
+      set {
+        authCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "pin" field.</summary>
+    public const int PinFieldNumber = 2;
+    private string pin_ = "";
+    /// <summary>
+    /// Required. The 6-digit PIN created by the user for two-step verification.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Pin {
+      get { return pin_; }
+      set {
+        pin_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "phone_number" field.</summary>
+    public const int PhoneNumberFieldNumber = 3;
+    private string phoneNumber_ = "";
+    /// <summary>
+    /// Required. The phone number to register with WhatsApp.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PhoneNumber {
+      get { return phoneNumber_; }
+      set {
+        phoneNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "business_account_id" field.</summary>
+    public const int BusinessAccountIdFieldNumber = 4;
+    private string businessAccountId_ = "";
+    /// <summary>
+    /// Required. The Business Account ID to use for the phone number.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BusinessAccountId {
+      get { return businessAccountId_; }
+      set {
+        businessAccountId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "waba_id" field.</summary>
+    public const int WabaIdFieldNumber = 5;
+    private string wabaId_ = "";
+    /// <summary>
+    /// Required. The WhatsApp Business Account ID.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string WabaId {
+      get { return wabaId_; }
+      set {
+        wabaId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "conversation_profile_id" field.</summary>
+    public const int ConversationProfileIdFieldNumber = 6;
+    private string conversationProfileId_ = "";
+    /// <summary>
+    /// Required. The Conversation Profile ID to use for the deployment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConversationProfileId {
+      get { return conversationProfileId_; }
+      set {
+        conversationProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as WhatsAppCredentials);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(WhatsAppCredentials other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AuthCode != other.AuthCode) return false;
+      if (Pin != other.Pin) return false;
+      if (PhoneNumber != other.PhoneNumber) return false;
+      if (BusinessAccountId != other.BusinessAccountId) return false;
+      if (WabaId != other.WabaId) return false;
+      if (ConversationProfileId != other.ConversationProfileId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AuthCode.Length != 0) hash ^= AuthCode.GetHashCode();
+      if (Pin.Length != 0) hash ^= Pin.GetHashCode();
+      if (PhoneNumber.Length != 0) hash ^= PhoneNumber.GetHashCode();
+      if (BusinessAccountId.Length != 0) hash ^= BusinessAccountId.GetHashCode();
+      if (WabaId.Length != 0) hash ^= WabaId.GetHashCode();
+      if (ConversationProfileId.Length != 0) hash ^= ConversationProfileId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AuthCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AuthCode);
+      }
+      if (Pin.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Pin);
+      }
+      if (PhoneNumber.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PhoneNumber);
+      }
+      if (BusinessAccountId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(BusinessAccountId);
+      }
+      if (WabaId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(WabaId);
+      }
+      if (ConversationProfileId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ConversationProfileId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AuthCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AuthCode);
+      }
+      if (Pin.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Pin);
+      }
+      if (PhoneNumber.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(PhoneNumber);
+      }
+      if (BusinessAccountId.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(BusinessAccountId);
+      }
+      if (WabaId.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(WabaId);
+      }
+      if (ConversationProfileId.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(ConversationProfileId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AuthCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthCode);
+      }
+      if (Pin.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Pin);
+      }
+      if (PhoneNumber.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
+      }
+      if (BusinessAccountId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BusinessAccountId);
+      }
+      if (WabaId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(WabaId);
+      }
+      if (ConversationProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ConversationProfileId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(WhatsAppCredentials other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AuthCode.Length != 0) {
+        AuthCode = other.AuthCode;
+      }
+      if (other.Pin.Length != 0) {
+        Pin = other.Pin;
+      }
+      if (other.PhoneNumber.Length != 0) {
+        PhoneNumber = other.PhoneNumber;
+      }
+      if (other.BusinessAccountId.Length != 0) {
+        BusinessAccountId = other.BusinessAccountId;
+      }
+      if (other.WabaId.Length != 0) {
+        WabaId = other.WabaId;
+      }
+      if (other.ConversationProfileId.Length != 0) {
+        ConversationProfileId = other.ConversationProfileId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AuthCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            Pin = input.ReadString();
+            break;
+          }
+          case 26: {
+            PhoneNumber = input.ReadString();
+            break;
+          }
+          case 34: {
+            BusinessAccountId = input.ReadString();
+            break;
+          }
+          case 42: {
+            WabaId = input.ReadString();
+            break;
+          }
+          case 50: {
+            ConversationProfileId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AuthCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            Pin = input.ReadString();
+            break;
+          }
+          case 26: {
+            PhoneNumber = input.ReadString();
+            break;
+          }
+          case 34: {
+            BusinessAccountId = input.ReadString();
+            break;
+          }
+          case 42: {
+            WabaId = input.ReadString();
+            break;
+          }
+          case 50: {
+            ConversationProfileId = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Ephemeral Meta credentials for Instagram native integration.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class InstagramCredentials : pb::IMessage<InstagramCredentials>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<InstagramCredentials> _parser = new pb::MessageParser<InstagramCredentials>(() => new InstagramCredentials());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<InstagramCredentials> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Ces.V1Beta.DeploymentReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstagramCredentials() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstagramCredentials(InstagramCredentials other) : this() {
+      authCode_ = other.authCode_;
+      conversationProfileId_ = other.conversationProfileId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public InstagramCredentials Clone() {
+      return new InstagramCredentials(this);
+    }
+
+    /// <summary>Field number for the "auth_code" field.</summary>
+    public const int AuthCodeFieldNumber = 1;
+    private string authCode_ = "";
+    /// <summary>
+    /// Required. The Meta auth code provided by the embedded signup flow.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string AuthCode {
+      get { return authCode_; }
+      set {
+        authCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "conversation_profile_id" field.</summary>
+    public const int ConversationProfileIdFieldNumber = 2;
+    private string conversationProfileId_ = "";
+    /// <summary>
+    /// Required. The Conversation Profile ID to use for the deployment.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConversationProfileId {
+      get { return conversationProfileId_; }
+      set {
+        conversationProfileId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as InstagramCredentials);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(InstagramCredentials other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AuthCode != other.AuthCode) return false;
+      if (ConversationProfileId != other.ConversationProfileId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (AuthCode.Length != 0) hash ^= AuthCode.GetHashCode();
+      if (ConversationProfileId.Length != 0) hash ^= ConversationProfileId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (AuthCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AuthCode);
+      }
+      if (ConversationProfileId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ConversationProfileId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (AuthCode.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(AuthCode);
+      }
+      if (ConversationProfileId.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ConversationProfileId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (AuthCode.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(AuthCode);
+      }
+      if (ConversationProfileId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ConversationProfileId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(InstagramCredentials other) {
+      if (other == null) {
+        return;
+      }
+      if (other.AuthCode.Length != 0) {
+        AuthCode = other.AuthCode;
+      }
+      if (other.ConversationProfileId.Length != 0) {
+        ConversationProfileId = other.ConversationProfileId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            AuthCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            ConversationProfileId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            AuthCode = input.ReadString();
+            break;
+          }
+          case 18: {
+            ConversationProfileId = input.ReadString();
             break;
           }
         }

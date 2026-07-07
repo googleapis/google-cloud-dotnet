@@ -55,6 +55,7 @@ namespace GoogleCSharpSnippets
                 ScheduledEvaluationRunAsScheduledEvaluationRunName = ScheduledEvaluationRunName.FromProjectLocationAppScheduledEvaluationRun("[PROJECT]", "[LOCATION]", "[APP]", "[SCHEDULED_EVALUATION_RUN]"),
                 GoldenRunMethod = GoldenRunMethod.Unspecified,
                 GenerateLatencyReport = false,
+                EvaluationRunCachingSettings = new EvaluationRunCachingSettings(),
             };
             // Make the request
             Operation<RunEvaluationResponse, RunEvaluationOperationMetadata> response = evaluationServiceClient.RunEvaluation(request);
@@ -105,6 +106,7 @@ namespace GoogleCSharpSnippets
                 ScheduledEvaluationRunAsScheduledEvaluationRunName = ScheduledEvaluationRunName.FromProjectLocationAppScheduledEvaluationRun("[PROJECT]", "[LOCATION]", "[APP]", "[SCHEDULED_EVALUATION_RUN]"),
                 GoldenRunMethod = GoldenRunMethod.Unspecified,
                 GenerateLatencyReport = false,
+                EvaluationRunCachingSettings = new EvaluationRunCachingSettings(),
             };
             // Make the request
             Operation<RunEvaluationResponse, RunEvaluationOperationMetadata> response = await evaluationServiceClient.RunEvaluationAsync(request);
@@ -507,6 +509,7 @@ namespace GoogleCSharpSnippets
             GenerateEvaluationRequest request = new GenerateEvaluationRequest
             {
                 ConversationAsConversationName = ConversationName.FromProjectLocationAppConversation("[PROJECT]", "[LOCATION]", "[APP]", "[CONVERSATION]"),
+                EvaluationType = GenerateEvaluationRequest.Types.EvaluationType.Unspecified,
             };
             // Make the request
             Operation<Evaluation, GenerateEvaluationOperationMetadata> response = evaluationServiceClient.GenerateEvaluation(request);
@@ -540,6 +543,7 @@ namespace GoogleCSharpSnippets
             GenerateEvaluationRequest request = new GenerateEvaluationRequest
             {
                 ConversationAsConversationName = ConversationName.FromProjectLocationAppConversation("[PROJECT]", "[LOCATION]", "[APP]", "[CONVERSATION]"),
+                EvaluationType = GenerateEvaluationRequest.Types.EvaluationType.Unspecified,
             };
             // Make the request
             Operation<Evaluation, GenerateEvaluationOperationMetadata> response = await evaluationServiceClient.GenerateEvaluationAsync(request);

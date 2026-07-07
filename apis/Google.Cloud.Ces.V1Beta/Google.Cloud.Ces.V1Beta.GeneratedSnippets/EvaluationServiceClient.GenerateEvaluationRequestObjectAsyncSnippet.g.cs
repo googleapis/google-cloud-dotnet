@@ -39,6 +39,7 @@ namespace GoogleCSharpSnippets
             GenerateEvaluationRequest request = new GenerateEvaluationRequest
             {
                 ConversationAsConversationName = ConversationName.FromProjectLocationAppConversation("[PROJECT]", "[LOCATION]", "[APP]", "[CONVERSATION]"),
+                EvaluationType = GenerateEvaluationRequest.Types.EvaluationType.Unspecified,
             };
             // Make the request
             Operation<Evaluation, GenerateEvaluationOperationMetadata> response = await evaluationServiceClient.GenerateEvaluationAsync(request);

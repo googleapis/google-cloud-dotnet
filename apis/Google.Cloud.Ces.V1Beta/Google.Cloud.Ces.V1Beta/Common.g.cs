@@ -51,7 +51,7 @@ namespace Google.Cloud.Ces.V1Beta {
             "Aho2CgZDYUNlcnQSGQoMZGlzcGxheV9uYW1lGAEgASgJQgPgQQISEQoEY2Vy",
             "dBgCIAEoDEID4EECIloKFlNlcnZpY2VEaXJlY3RvcnlDb25maWcSQAoHc2Vy",
             "dmljZRgBIAEoCUIv4EEC+kEpCidzZXJ2aWNlZGlyZWN0b3J5Lmdvb2dsZWFw",
-            "aXMuY29tL1NlcnZpY2Ui3woKDkNoYW5uZWxQcm9maWxlEhcKCnByb2ZpbGVf",
+            "aXMuY29tL1NlcnZpY2Uiiw8KDkNoYW5uZWxQcm9maWxlEhcKCnByb2ZpbGVf",
             "aWQYASABKAlCA+BBARJOCgxjaGFubmVsX3R5cGUYAyABKA4yMy5nb29nbGUu",
             "Y2xvdWQuY2VzLnYxYmV0YS5DaGFubmVsUHJvZmlsZS5DaGFubmVsVHlwZUID",
             "4EEBElYKEHBlcnNvbmFfcHJvcGVydHkYAiABKAsyNy5nb29nbGUuY2xvdWQu",
@@ -60,42 +60,60 @@ namespace Google.Cloud.Ces.V1Beta {
             "X2luX2NvbnRyb2wYBSABKAhCA+BBARJXChF3ZWJfd2lkZ2V0X2NvbmZpZxgH",
             "IAEoCzI3Lmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkNoYW5uZWxQcm9maWxl",
             "LldlYldpZGdldENvbmZpZ0ID4EEBEiQKF25vaXNlX3N1cHByZXNzaW9uX2xl",
-            "dmVsGAggASgJQgPgQQEamQEKD1BlcnNvbmFQcm9wZXJ0eRJVCgdwZXJzb25h",
-            "GAEgASgOMj8uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQ2hhbm5lbFByb2Zp",
-            "bGUuUGVyc29uYVByb3BlcnR5LlBlcnNvbmFCA+BBASIvCgdQZXJzb25hEgsK",
-            "B1VOS05PV04QABILCgdDT05DSVNFEAESCgoGQ0hBVFRZEAIahQUKD1dlYldp",
-            "ZGdldENvbmZpZxJXCghtb2RhbGl0eRgBIAEoDjJALmdvb2dsZS5jbG91ZC5j",
-            "ZXMudjFiZXRhLkNoYW5uZWxQcm9maWxlLldlYldpZGdldENvbmZpZy5Nb2Rh",
-            "bGl0eUID4EEBElEKBXRoZW1lGAIgASgOMj0uZ29vZ2xlLmNsb3VkLmNlcy52",
-            "MWJldGEuQ2hhbm5lbFByb2ZpbGUuV2ViV2lkZ2V0Q29uZmlnLlRoZW1lQgPg",
-            "QQESHQoQd2ViX3dpZGdldF90aXRsZRgDIAEoCUID4EEBEmgKEXNlY3VyaXR5",
-            "X3NldHRpbmdzGAQgASgLMkguZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQ2hh",
-            "bm5lbFByb2ZpbGUuV2ViV2lkZ2V0Q29uZmlnLlNlY3VyaXR5U2V0dGluZ3NC",
-            "A+BBARqUAQoQU2VjdXJpdHlTZXR0aW5ncxIhChRlbmFibGVfcHVibGljX2Fj",
-            "Y2VzcxgBIAEoCEID4EEBEiAKE2VuYWJsZV9vcmlnaW5fY2hlY2sYBCABKAhC",
-            "A+BBARIcCg9hbGxvd2VkX29yaWdpbnMYAiADKAlCA+BBARIdChBlbmFibGVf",
-            "cmVjYXB0Y2hhGAMgASgIQgPgQQEicQoITW9kYWxpdHkSGAoUTU9EQUxJVFlf",
-            "VU5TUEVDSUZJRUQQABISCg5DSEFUX0FORF9WT0lDRRABEg4KClZPSUNFX09O",
-            "TFkQAhINCglDSEFUX09OTFkQAxIYChRDSEFUX1ZPSUNFX0FORF9WSURFTxAE",
-            "IjMKBVRoZW1lEhUKEVRIRU1FX1VOU1BFQ0lGSUVEEAASCQoFTElHSFQQARII",
-            "CgREQVJLEAIipgEKC0NoYW5uZWxUeXBlEgsKB1VOS05PV04QABIKCgZXRUJf",
-            "VUkQAhIHCgNBUEkQAxIKCgZUV0lMSU8QBBIdChlHT09HTEVfVEVMRVBIT05Z",
-            "X1BMQVRGT1JNEAUSHwobQ09OVEFDVF9DRU5URVJfQVNfQV9TRVJWSUNFEAYS",
-            "CQoFRklWRTkQBxIeChpDT05UQUNUX0NFTlRFUl9JTlRFR1JBVElPThAIIp4C",
-            "CgRTcGFuEhEKBG5hbWUYASABKAlCA+BBAxIzCgpzdGFydF90aW1lGAIgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjEKCGVuZF90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjAKCGR1",
-            "cmF0aW9uGAYgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQMS",
-            "MAoKYXR0cmlidXRlcxgEIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5TdHJ1Y3RC",
-            "A+BBAxI3CgtjaGlsZF9zcGFucxgFIAMoCzIdLmdvb2dsZS5jbG91ZC5jZXMu",
-            "djFiZXRhLlNwYW5CA+BBAypSCg1FeGVjdXRpb25UeXBlEh4KGkVYRUNVVElP",
-            "Tl9UWVBFX1VOU1BFQ0lGSUVEEAASDwoLU1lOQ0hST05PVVMQARIQCgxBU1lO",
-            "Q0hST05PVVMQAkLaAQobY29tLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhQgtD",
-            "b21tb25Qcm90b1ABWi1jbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9hcGl2MWJl",
-            "dGEvY2VzcGI7Y2VzcGLqQXwKJ3NlcnZpY2VkaXJlY3RvcnkuZ29vZ2xlYXBp",
-            "cy5jb20vU2VydmljZRJRcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97",
-            "bG9jYXRpb259L25hbWVzcGFjZXMve25hbWVzcGFjZX0vc2VydmljZXMve3Nl",
-            "cnZpY2V9YgZwcm90bzM="));
+            "dmVsGAggASgJQgPgQQESVAoPd2hhdHNhcHBfY29uZmlnGAkgASgLMjYuZ29v",
+            "Z2xlLmNsb3VkLmNlcy52MWJldGEuQ2hhbm5lbFByb2ZpbGUuV2hhdHNBcHBD",
+            "b25maWdCA+BBARJWChBpbnN0YWdyYW1fY29uZmlnGAogASgLMjcuZ29vZ2xl",
+            "LmNsb3VkLmNlcy52MWJldGEuQ2hhbm5lbFByb2ZpbGUuSW5zdGFncmFtQ29u",
+            "ZmlnQgPgQQEamQEKD1BlcnNvbmFQcm9wZXJ0eRJVCgdwZXJzb25hGAEgASgO",
+            "Mj8uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQ2hhbm5lbFByb2ZpbGUuUGVy",
+            "c29uYVByb3BlcnR5LlBlcnNvbmFCA+BBASIvCgdQZXJzb25hEgsKB1VOS05P",
+            "V04QABILCgdDT05DSVNFEAESCgoGQ0hBVFRZEAIahQUKD1dlYldpZGdldENv",
+            "bmZpZxJXCghtb2RhbGl0eRgBIAEoDjJALmdvb2dsZS5jbG91ZC5jZXMudjFi",
+            "ZXRhLkNoYW5uZWxQcm9maWxlLldlYldpZGdldENvbmZpZy5Nb2RhbGl0eUID",
+            "4EEBElEKBXRoZW1lGAIgASgOMj0uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEu",
+            "Q2hhbm5lbFByb2ZpbGUuV2ViV2lkZ2V0Q29uZmlnLlRoZW1lQgPgQQESHQoQ",
+            "d2ViX3dpZGdldF90aXRsZRgDIAEoCUID4EEBEmgKEXNlY3VyaXR5X3NldHRp",
+            "bmdzGAQgASgLMkguZ29vZ2xlLmNsb3VkLmNlcy52MWJldGEuQ2hhbm5lbFBy",
+            "b2ZpbGUuV2ViV2lkZ2V0Q29uZmlnLlNlY3VyaXR5U2V0dGluZ3NCA+BBARqU",
+            "AQoQU2VjdXJpdHlTZXR0aW5ncxIhChRlbmFibGVfcHVibGljX2FjY2VzcxgB",
+            "IAEoCEID4EEBEiAKE2VuYWJsZV9vcmlnaW5fY2hlY2sYBCABKAhCA+BBARIc",
+            "Cg9hbGxvd2VkX29yaWdpbnMYAiADKAlCA+BBARIdChBlbmFibGVfcmVjYXB0",
+            "Y2hhGAMgASgIQgPgQQEicQoITW9kYWxpdHkSGAoUTU9EQUxJVFlfVU5TUEVD",
+            "SUZJRUQQABISCg5DSEFUX0FORF9WT0lDRRABEg4KClZPSUNFX09OTFkQAhIN",
+            "CglDSEFUX09OTFkQAxIYChRDSEFUX1ZPSUNFX0FORF9WSURFTxAEIjMKBVRo",
+            "ZW1lEhUKEVRIRU1FX1VOU1BFQ0lGSUVEEAASCQoFTElHSFQQARIICgREQVJL",
+            "EAIasAEKDldoYXRzQXBwQ29uZmlnEhQKB3dhYmFfaWQYASABKAlCA+BBAhIc",
+            "Cg9waG9uZV9udW1iZXJfaWQYAiABKAlCA+BBAhIZCgxwaG9uZV9udW1iZXIY",
+            "AyABKAlCA+BBARIZCgxkaXNwbGF5X25hbWUYBCABKAlCA+BBAxIaCg10aHVt",
+            "Ym5haWxfdXJsGAUgASgJQgPgQQMSGAoLZGVzY3JpcHRpb24YBiABKAlCA+BB",
+            "AxqFAQoPSW5zdGFncmFtQ29uZmlnEiEKFGluc3RhZ3JhbV9hY2NvdW50X2lk",
+            "GAEgASgJQgPgQQISGQoMZGlzcGxheV9uYW1lGAIgASgJQgPgQQMSGgoNdGh1",
+            "bWJuYWlsX3VybBgDIAEoCUID4EEDEhgKC2Rlc2NyaXB0aW9uGAQgASgJQgPg",
+            "QQMi6QEKC0NoYW5uZWxUeXBlEgsKB1VOS05PV04QABIKCgZXRUJfVUkQAhIH",
+            "CgNBUEkQAxIKCgZUV0lMSU8QBBIdChlHT09HTEVfVEVMRVBIT05ZX1BMQVRG",
+            "T1JNEAUSHwobQ09OVEFDVF9DRU5URVJfQVNfQV9TRVJWSUNFEAYSJAogQ09O",
+            "VEFDVF9DRU5URVJfQVNfQV9TRVJWSUNFX0NIQVQQCxIJCgVGSVZFORAHEh4K",
+            "GkNPTlRBQ1RfQ0VOVEVSX0lOVEVHUkFUSU9OEAgSDAoIV0hBVFNBUFAQCRIN",
+            "CglJTlNUQUdSQU0QCiKeAgoEU3BhbhIRCgRuYW1lGAEgASgJQgPgQQMSMwoK",
+            "c3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBC",
+            "A+BBAxIxCghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCA+BBAxIwCghkdXJhdGlvbhgGIAEoCzIZLmdvb2dsZS5wcm90b2J1",
+            "Zi5EdXJhdGlvbkID4EEDEjAKCmF0dHJpYnV0ZXMYBCABKAsyFy5nb29nbGUu",
+            "cHJvdG9idWYuU3RydWN0QgPgQQMSNwoLY2hpbGRfc3BhbnMYBSADKAsyHS5n",
+            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YS5TcGFuQgPgQQMi/AEKHEV2YWx1YXRp",
+            "b25SdW5DYWNoaW5nU2V0dGluZ3MSbQoQcnVuX2NhY2hpbmdfbW9kZRgBIAEo",
+            "DjJOLmdvb2dsZS5jbG91ZC5jZXMudjFiZXRhLkV2YWx1YXRpb25SdW5DYWNo",
+            "aW5nU2V0dGluZ3MuRXZhbHVhdGlvblJ1bkNhY2hpbmdNb2RlQgPgQQEibQoY",
+            "RXZhbHVhdGlvblJ1bkNhY2hpbmdNb2RlEisKJ0VWQUxVQVRJT05fUlVOX0NB",
+            "Q0hJTkdfTU9ERV9VTlNQRUNJRklFRBAAEg0KCUZPUkNFX1JVThABEhUKEVNL",
+            "SVBfSUZfVU5DSEFOR0VEEAIqUgoNRXhlY3V0aW9uVHlwZRIeChpFWEVDVVRJ",
+            "T05fVFlQRV9VTlNQRUNJRklFRBAAEg8KC1NZTkNIUk9OT1VTEAESEAoMQVNZ",
+            "TkNIUk9OT1VTEAJC2gEKG2NvbS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YUIL",
+            "Q29tbW9uUHJvdG9QAVotY2xvdWQuZ29vZ2xlLmNvbS9nby9jZXMvYXBpdjFi",
+            "ZXRhL2Nlc3BiO2Nlc3Bi6kF8CidzZXJ2aWNlZGlyZWN0b3J5Lmdvb2dsZWFw",
+            "aXMuY29tL1NlcnZpY2USUXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMv",
+            "e2xvY2F0aW9ufS9uYW1lc3BhY2VzL3tuYW1lc3BhY2V9L3NlcnZpY2VzL3tz",
+            "ZXJ2aWNlfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Ces.V1Beta.ExecutionType), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -107,9 +125,12 @@ namespace Google.Cloud.Ces.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.TriggerAction.Types.TransferAgent), global::Google.Cloud.Ces.V1Beta.TriggerAction.Types.TransferAgent.Parser, new[]{ "Agent" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.TlsConfig), global::Google.Cloud.Ces.V1Beta.TlsConfig.Parser, new[]{ "CaCerts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.TlsConfig.Types.CaCert), global::Google.Cloud.Ces.V1Beta.TlsConfig.Types.CaCert.Parser, new[]{ "DisplayName", "Cert" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ServiceDirectoryConfig), global::Google.Cloud.Ces.V1Beta.ServiceDirectoryConfig.Parser, new[]{ "Service" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Parser, new[]{ "ProfileId", "ChannelType", "PersonaProperty", "DisableDtmf", "DisableBargeInControl", "WebWidgetConfig", "NoiseSuppressionLevel" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.ChannelType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.PersonaProperty), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.PersonaProperty.Parser, new[]{ "Persona" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.PersonaProperty.Types.Persona) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Parser, new[]{ "Modality", "Theme", "WebWidgetTitle", "SecuritySettings" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Types.Modality), typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Types.Theme) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Types.SecuritySettings), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Types.SecuritySettings.Parser, new[]{ "EnablePublicAccess", "EnableOriginCheck", "AllowedOrigins", "EnableRecaptcha" }, null, null, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Span), global::Google.Cloud.Ces.V1Beta.Span.Parser, new[]{ "Name", "StartTime", "EndTime", "Duration", "Attributes", "ChildSpans" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Parser, new[]{ "ProfileId", "ChannelType", "PersonaProperty", "DisableDtmf", "DisableBargeInControl", "WebWidgetConfig", "NoiseSuppressionLevel", "WhatsappConfig", "InstagramConfig" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.ChannelType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.PersonaProperty), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.PersonaProperty.Parser, new[]{ "Persona" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.PersonaProperty.Types.Persona) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Parser, new[]{ "Modality", "Theme", "WebWidgetTitle", "SecuritySettings" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Types.Modality), typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Types.Theme) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Types.SecuritySettings), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WebWidgetConfig.Types.SecuritySettings.Parser, new[]{ "EnablePublicAccess", "EnableOriginCheck", "AllowedOrigins", "EnableRecaptcha" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WhatsAppConfig), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WhatsAppConfig.Parser, new[]{ "WabaId", "PhoneNumberId", "PhoneNumber", "DisplayName", "ThumbnailUrl", "Description" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.InstagramConfig), global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.InstagramConfig.Parser, new[]{ "InstagramAccountId", "DisplayName", "ThumbnailUrl", "Description" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.Span), global::Google.Cloud.Ces.V1Beta.Span.Parser, new[]{ "Name", "StartTime", "EndTime", "Duration", "Attributes", "ChildSpans" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings), global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Parser, new[]{ "RunCachingMode" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode) }, null, null)
           }));
     }
     #endregion
@@ -2710,6 +2731,8 @@ namespace Google.Cloud.Ces.V1Beta {
       disableBargeInControl_ = other.disableBargeInControl_;
       webWidgetConfig_ = other.webWidgetConfig_ != null ? other.webWidgetConfig_.Clone() : null;
       noiseSuppressionLevel_ = other.noiseSuppressionLevel_;
+      whatsappConfig_ = other.whatsappConfig_ != null ? other.whatsappConfig_.Clone() : null;
+      instagramConfig_ = other.instagramConfig_ != null ? other.instagramConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2828,6 +2851,36 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "whatsapp_config" field.</summary>
+    public const int WhatsappConfigFieldNumber = 9;
+    private global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WhatsAppConfig whatsappConfig_;
+    /// <summary>
+    /// Optional. Configuration specific to WhatsApp deployments.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WhatsAppConfig WhatsappConfig {
+      get { return whatsappConfig_; }
+      set {
+        whatsappConfig_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "instagram_config" field.</summary>
+    public const int InstagramConfigFieldNumber = 10;
+    private global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.InstagramConfig instagramConfig_;
+    /// <summary>
+    /// Optional. Configuration specific to Instagram deployments.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.InstagramConfig InstagramConfig {
+      get { return instagramConfig_; }
+      set {
+        instagramConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2850,6 +2903,8 @@ namespace Google.Cloud.Ces.V1Beta {
       if (DisableBargeInControl != other.DisableBargeInControl) return false;
       if (!object.Equals(WebWidgetConfig, other.WebWidgetConfig)) return false;
       if (NoiseSuppressionLevel != other.NoiseSuppressionLevel) return false;
+      if (!object.Equals(WhatsappConfig, other.WhatsappConfig)) return false;
+      if (!object.Equals(InstagramConfig, other.InstagramConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2864,6 +2919,8 @@ namespace Google.Cloud.Ces.V1Beta {
       if (DisableBargeInControl != false) hash ^= DisableBargeInControl.GetHashCode();
       if (webWidgetConfig_ != null) hash ^= WebWidgetConfig.GetHashCode();
       if (NoiseSuppressionLevel.Length != 0) hash ^= NoiseSuppressionLevel.GetHashCode();
+      if (whatsappConfig_ != null) hash ^= WhatsappConfig.GetHashCode();
+      if (instagramConfig_ != null) hash ^= InstagramConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2910,6 +2967,14 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(66);
         output.WriteString(NoiseSuppressionLevel);
       }
+      if (whatsappConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(WhatsappConfig);
+      }
+      if (instagramConfig_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(InstagramConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2948,6 +3013,14 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(66);
         output.WriteString(NoiseSuppressionLevel);
       }
+      if (whatsappConfig_ != null) {
+        output.WriteRawTag(74);
+        output.WriteMessage(WhatsappConfig);
+      }
+      if (instagramConfig_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(InstagramConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2978,6 +3051,12 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (NoiseSuppressionLevel.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(NoiseSuppressionLevel);
+      }
+      if (whatsappConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(WhatsappConfig);
+      }
+      if (instagramConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InstagramConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3017,6 +3096,18 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (other.NoiseSuppressionLevel.Length != 0) {
         NoiseSuppressionLevel = other.NoiseSuppressionLevel;
+      }
+      if (other.whatsappConfig_ != null) {
+        if (whatsappConfig_ == null) {
+          WhatsappConfig = new global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WhatsAppConfig();
+        }
+        WhatsappConfig.MergeFrom(other.WhatsappConfig);
+      }
+      if (other.instagramConfig_ != null) {
+        if (instagramConfig_ == null) {
+          InstagramConfig = new global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.InstagramConfig();
+        }
+        InstagramConfig.MergeFrom(other.InstagramConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3069,6 +3160,20 @@ namespace Google.Cloud.Ces.V1Beta {
           }
           case 66: {
             NoiseSuppressionLevel = input.ReadString();
+            break;
+          }
+          case 74: {
+            if (whatsappConfig_ == null) {
+              WhatsappConfig = new global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WhatsAppConfig();
+            }
+            input.ReadMessage(WhatsappConfig);
+            break;
+          }
+          case 82: {
+            if (instagramConfig_ == null) {
+              InstagramConfig = new global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.InstagramConfig();
+            }
+            input.ReadMessage(InstagramConfig);
             break;
           }
         }
@@ -3124,6 +3229,20 @@ namespace Google.Cloud.Ces.V1Beta {
             NoiseSuppressionLevel = input.ReadString();
             break;
           }
+          case 74: {
+            if (whatsappConfig_ == null) {
+              WhatsappConfig = new global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.WhatsAppConfig();
+            }
+            input.ReadMessage(WhatsappConfig);
+            break;
+          }
+          case 82: {
+            if (instagramConfig_ == null) {
+              InstagramConfig = new global::Google.Cloud.Ces.V1Beta.ChannelProfile.Types.InstagramConfig();
+            }
+            input.ReadMessage(InstagramConfig);
+            break;
+          }
         }
       }
     }
@@ -3163,6 +3282,10 @@ namespace Google.Cloud.Ces.V1Beta {
         /// </summary>
         [pbr::OriginalName("CONTACT_CENTER_AS_A_SERVICE")] ContactCenterAsAService = 6,
         /// <summary>
+        /// Contact Center as a Service (CCaaS Chat) channel.
+        /// </summary>
+        [pbr::OriginalName("CONTACT_CENTER_AS_A_SERVICE_CHAT")] ContactCenterAsAServiceChat = 11,
+        /// <summary>
         /// Five9 channel.
         /// </summary>
         [pbr::OriginalName("FIVE9")] Five9 = 7,
@@ -3170,6 +3293,14 @@ namespace Google.Cloud.Ces.V1Beta {
         /// Third party contact center integration channel.
         /// </summary>
         [pbr::OriginalName("CONTACT_CENTER_INTEGRATION")] ContactCenterIntegration = 8,
+        /// <summary>
+        /// WhatsApp channel.
+        /// </summary>
+        [pbr::OriginalName("WHATSAPP")] Whatsapp = 9,
+        /// <summary>
+        /// Instagram channel.
+        /// </summary>
+        [pbr::OriginalName("INSTAGRAM")] Instagram = 10,
       }
 
       /// <summary>
@@ -4110,6 +4241,734 @@ namespace Google.Cloud.Ces.V1Beta {
 
       }
 
+      /// <summary>
+      /// Configuration specific to WhatsApp deployments.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class WhatsAppConfig : pb::IMessage<WhatsAppConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<WhatsAppConfig> _parser = new pb::MessageParser<WhatsAppConfig>(() => new WhatsAppConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<WhatsAppConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Ces.V1Beta.ChannelProfile.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WhatsAppConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WhatsAppConfig(WhatsAppConfig other) : this() {
+          wabaId_ = other.wabaId_;
+          phoneNumberId_ = other.phoneNumberId_;
+          phoneNumber_ = other.phoneNumber_;
+          displayName_ = other.displayName_;
+          thumbnailUrl_ = other.thumbnailUrl_;
+          description_ = other.description_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public WhatsAppConfig Clone() {
+          return new WhatsAppConfig(this);
+        }
+
+        /// <summary>Field number for the "waba_id" field.</summary>
+        public const int WabaIdFieldNumber = 1;
+        private string wabaId_ = "";
+        /// <summary>
+        /// Required. The WhatsApp Business Account ID.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string WabaId {
+          get { return wabaId_; }
+          set {
+            wabaId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "phone_number_id" field.</summary>
+        public const int PhoneNumberIdFieldNumber = 2;
+        private string phoneNumberId_ = "";
+        /// <summary>
+        /// Required. The Meta phone number ID.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PhoneNumberId {
+          get { return phoneNumberId_; }
+          set {
+            phoneNumberId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "phone_number" field.</summary>
+        public const int PhoneNumberFieldNumber = 3;
+        private string phoneNumber_ = "";
+        /// <summary>
+        /// Optional. The phone number in E.164 format.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PhoneNumber {
+          get { return phoneNumber_; }
+          set {
+            phoneNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "display_name" field.</summary>
+        public const int DisplayNameFieldNumber = 4;
+        private string displayName_ = "";
+        /// <summary>
+        /// Output only. The fetched Meta business page name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DisplayName {
+          get { return displayName_; }
+          set {
+            displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "thumbnail_url" field.</summary>
+        public const int ThumbnailUrlFieldNumber = 5;
+        private string thumbnailUrl_ = "";
+        /// <summary>
+        /// Output only. The fetched Meta business profile thumbnail URL.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ThumbnailUrl {
+          get { return thumbnailUrl_; }
+          set {
+            thumbnailUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "description" field.</summary>
+        public const int DescriptionFieldNumber = 6;
+        private string description_ = "";
+        /// <summary>
+        /// Output only. The description of the Meta business page or profile.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Description {
+          get { return description_; }
+          set {
+            description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as WhatsAppConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(WhatsAppConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (WabaId != other.WabaId) return false;
+          if (PhoneNumberId != other.PhoneNumberId) return false;
+          if (PhoneNumber != other.PhoneNumber) return false;
+          if (DisplayName != other.DisplayName) return false;
+          if (ThumbnailUrl != other.ThumbnailUrl) return false;
+          if (Description != other.Description) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (WabaId.Length != 0) hash ^= WabaId.GetHashCode();
+          if (PhoneNumberId.Length != 0) hash ^= PhoneNumberId.GetHashCode();
+          if (PhoneNumber.Length != 0) hash ^= PhoneNumber.GetHashCode();
+          if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+          if (ThumbnailUrl.Length != 0) hash ^= ThumbnailUrl.GetHashCode();
+          if (Description.Length != 0) hash ^= Description.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (WabaId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(WabaId);
+          }
+          if (PhoneNumberId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(PhoneNumberId);
+          }
+          if (PhoneNumber.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(PhoneNumber);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(DisplayName);
+          }
+          if (ThumbnailUrl.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(ThumbnailUrl);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(Description);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (WabaId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(WabaId);
+          }
+          if (PhoneNumberId.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(PhoneNumberId);
+          }
+          if (PhoneNumber.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(PhoneNumber);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(DisplayName);
+          }
+          if (ThumbnailUrl.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(ThumbnailUrl);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(50);
+            output.WriteString(Description);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (WabaId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(WabaId);
+          }
+          if (PhoneNumberId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumberId);
+          }
+          if (PhoneNumber.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PhoneNumber);
+          }
+          if (DisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+          }
+          if (ThumbnailUrl.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ThumbnailUrl);
+          }
+          if (Description.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(WhatsAppConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.WabaId.Length != 0) {
+            WabaId = other.WabaId;
+          }
+          if (other.PhoneNumberId.Length != 0) {
+            PhoneNumberId = other.PhoneNumberId;
+          }
+          if (other.PhoneNumber.Length != 0) {
+            PhoneNumber = other.PhoneNumber;
+          }
+          if (other.DisplayName.Length != 0) {
+            DisplayName = other.DisplayName;
+          }
+          if (other.ThumbnailUrl.Length != 0) {
+            ThumbnailUrl = other.ThumbnailUrl;
+          }
+          if (other.Description.Length != 0) {
+            Description = other.Description;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                WabaId = input.ReadString();
+                break;
+              }
+              case 18: {
+                PhoneNumberId = input.ReadString();
+                break;
+              }
+              case 26: {
+                PhoneNumber = input.ReadString();
+                break;
+              }
+              case 34: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 42: {
+                ThumbnailUrl = input.ReadString();
+                break;
+              }
+              case 50: {
+                Description = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                WabaId = input.ReadString();
+                break;
+              }
+              case 18: {
+                PhoneNumberId = input.ReadString();
+                break;
+              }
+              case 26: {
+                PhoneNumber = input.ReadString();
+                break;
+              }
+              case 34: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 42: {
+                ThumbnailUrl = input.ReadString();
+                break;
+              }
+              case 50: {
+                Description = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Configuration specific to Instagram deployments.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class InstagramConfig : pb::IMessage<InstagramConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<InstagramConfig> _parser = new pb::MessageParser<InstagramConfig>(() => new InstagramConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<InstagramConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Ces.V1Beta.ChannelProfile.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstagramConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstagramConfig(InstagramConfig other) : this() {
+          instagramAccountId_ = other.instagramAccountId_;
+          displayName_ = other.displayName_;
+          thumbnailUrl_ = other.thumbnailUrl_;
+          description_ = other.description_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public InstagramConfig Clone() {
+          return new InstagramConfig(this);
+        }
+
+        /// <summary>Field number for the "instagram_account_id" field.</summary>
+        public const int InstagramAccountIdFieldNumber = 1;
+        private string instagramAccountId_ = "";
+        /// <summary>
+        /// Required. The Instagram Account ID.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string InstagramAccountId {
+          get { return instagramAccountId_; }
+          set {
+            instagramAccountId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "display_name" field.</summary>
+        public const int DisplayNameFieldNumber = 2;
+        private string displayName_ = "";
+        /// <summary>
+        /// Output only. The fetched Meta business page name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string DisplayName {
+          get { return displayName_; }
+          set {
+            displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "thumbnail_url" field.</summary>
+        public const int ThumbnailUrlFieldNumber = 3;
+        private string thumbnailUrl_ = "";
+        /// <summary>
+        /// Output only. The fetched Meta business profile thumbnail URL.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ThumbnailUrl {
+          get { return thumbnailUrl_; }
+          set {
+            thumbnailUrl_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "description" field.</summary>
+        public const int DescriptionFieldNumber = 4;
+        private string description_ = "";
+        /// <summary>
+        /// Output only. The description of the Meta business page or profile.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Description {
+          get { return description_; }
+          set {
+            description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as InstagramConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(InstagramConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (InstagramAccountId != other.InstagramAccountId) return false;
+          if (DisplayName != other.DisplayName) return false;
+          if (ThumbnailUrl != other.ThumbnailUrl) return false;
+          if (Description != other.Description) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (InstagramAccountId.Length != 0) hash ^= InstagramAccountId.GetHashCode();
+          if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+          if (ThumbnailUrl.Length != 0) hash ^= ThumbnailUrl.GetHashCode();
+          if (Description.Length != 0) hash ^= Description.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (InstagramAccountId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(InstagramAccountId);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayName);
+          }
+          if (ThumbnailUrl.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ThumbnailUrl);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Description);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (InstagramAccountId.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(InstagramAccountId);
+          }
+          if (DisplayName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(DisplayName);
+          }
+          if (ThumbnailUrl.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(ThumbnailUrl);
+          }
+          if (Description.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Description);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (InstagramAccountId.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(InstagramAccountId);
+          }
+          if (DisplayName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+          }
+          if (ThumbnailUrl.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ThumbnailUrl);
+          }
+          if (Description.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(InstagramConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.InstagramAccountId.Length != 0) {
+            InstagramAccountId = other.InstagramAccountId;
+          }
+          if (other.DisplayName.Length != 0) {
+            DisplayName = other.DisplayName;
+          }
+          if (other.ThumbnailUrl.Length != 0) {
+            ThumbnailUrl = other.ThumbnailUrl;
+          }
+          if (other.Description.Length != 0) {
+            Description = other.Description;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                InstagramAccountId = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 26: {
+                ThumbnailUrl = input.ReadString();
+                break;
+              }
+              case 34: {
+                Description = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                InstagramAccountId = input.ReadString();
+                break;
+              }
+              case 18: {
+                DisplayName = input.ReadString();
+                break;
+              }
+              case 26: {
+                ThumbnailUrl = input.ReadString();
+                break;
+              }
+              case 34: {
+                Description = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
     }
     #endregion
 
@@ -4541,6 +5400,240 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// Settings for evaluation run caching.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class EvaluationRunCachingSettings : pb::IMessage<EvaluationRunCachingSettings>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<EvaluationRunCachingSettings> _parser = new pb::MessageParser<EvaluationRunCachingSettings>(() => new EvaluationRunCachingSettings());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<EvaluationRunCachingSettings> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluationRunCachingSettings() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluationRunCachingSettings(EvaluationRunCachingSettings other) : this() {
+      runCachingMode_ = other.runCachingMode_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public EvaluationRunCachingSettings Clone() {
+      return new EvaluationRunCachingSettings(this);
+    }
+
+    /// <summary>Field number for the "run_caching_mode" field.</summary>
+    public const int RunCachingModeFieldNumber = 1;
+    private global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode runCachingMode_ = global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode.Unspecified;
+    /// <summary>
+    /// Optional. The caching mode to use for the evaluation run. If not set,
+    /// default to FORCE_RUN.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode RunCachingMode {
+      get { return runCachingMode_; }
+      set {
+        runCachingMode_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as EvaluationRunCachingSettings);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(EvaluationRunCachingSettings other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (RunCachingMode != other.RunCachingMode) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (RunCachingMode != global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode.Unspecified) hash ^= RunCachingMode.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (RunCachingMode != global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RunCachingMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (RunCachingMode != global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode.Unspecified) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) RunCachingMode);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (RunCachingMode != global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RunCachingMode);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(EvaluationRunCachingSettings other) {
+      if (other == null) {
+        return;
+      }
+      if (other.RunCachingMode != global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode.Unspecified) {
+        RunCachingMode = other.RunCachingMode;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            RunCachingMode = (global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            RunCachingMode = (global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings.Types.EvaluationRunCachingMode) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the EvaluationRunCachingSettings message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The evaluation result caching behavior. Controls whether to return the last
+      /// completed evaluation result (if existing) or to execute a new evaluation.
+      /// </summary>
+      public enum EvaluationRunCachingMode {
+        /// <summary>
+        /// The run caching mode is unspecified.
+        /// </summary>
+        [pbr::OriginalName("EVALUATION_RUN_CACHING_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Always execute a full live simulation regardless of whether changelogs
+        /// exist.
+        /// </summary>
+        [pbr::OriginalName("FORCE_RUN")] ForceRun = 1,
+        /// <summary>
+        /// Skip execution and copy previous verified results if no dependencies have
+        /// mutated, the evaluation channel/run method are the same.
+        /// </summary>
+        [pbr::OriginalName("SKIP_IF_UNCHANGED")] SkipIfUnchanged = 2,
+      }
+
+    }
+    #endregion
 
   }
 

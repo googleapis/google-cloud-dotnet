@@ -459,7 +459,7 @@ namespace Google.Cloud.Ces.V1Beta {
             "VElNRV9GQUlMVVJFEAESIgoeQ09OVkVSU0FUSU9OX1JFVFJJRVZBTF9GQUlM",
             "VVJFEAISHgoaTUVUUklDX0NBTENVTEFUSU9OX0ZBSUxVUkUQAxIdChlFVkFM",
             "VUFUSU9OX1VQREFURV9GQUlMVVJFEAQSEwoPUVVPVEFfRVhIQVVTVEVEEAUS",
-            "GwoXVVNFUl9TSU1VTEFUSU9OX0ZBSUxVUkUQBiLsBQoUUnVuRXZhbHVhdGlv",
+            "GwoXVVNFUl9TSU1VTEFUSU9OX0ZBSUxVUkUQBiLRBgoUUnVuRXZhbHVhdGlv",
             "blJlcXVlc3QSKwoDYXBwGAEgASgJQh7gQQL6QRgKFmNlcy5nb29nbGVhcGlz",
             "LmNvbS9BcHASOgoLZXZhbHVhdGlvbnMYAiADKAlCJeBBAfpBHwodY2VzLmdv",
             "b2dsZWFwaXMuY29tL0V2YWx1YXRpb24SSAoSZXZhbHVhdGlvbl9kYXRhc2V0",
@@ -476,45 +476,47 @@ namespace Google.Cloud.Ces.V1Beta {
             "L1NjaGVkdWxlZEV2YWx1YXRpb25SdW4SSAoRZ29sZGVuX3J1bl9tZXRob2QY",
             "DSABKA4yKC5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5Hb2xkZW5SdW5NZXRo",
             "b2RCA+BBARIkChdnZW5lcmF0ZV9sYXRlbmN5X3JlcG9ydBgOIAEoCEID4EEB",
-            "QgwKCl9ydW5fY291bnQi6QgKFlNjaGVkdWxlZEV2YWx1YXRpb25SdW4SEQoE",
-            "bmFtZRgBIAEoCUID4EEIEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEkMK",
-            "B3JlcXVlc3QYAyABKAsyLS5nb29nbGUuY2xvdWQuY2VzLnYxYmV0YS5SdW5F",
-            "dmFsdWF0aW9uUmVxdWVzdEID4EECEhgKC2Rlc2NyaXB0aW9uGAQgASgJQgPg",
-            "QQESYAoRc2NoZWR1bGluZ19jb25maWcYBSABKAsyQC5nb29nbGUuY2xvdWQu",
-            "Y2VzLnYxYmV0YS5TY2hlZHVsZWRFdmFsdWF0aW9uUnVuLlNjaGVkdWxpbmdD",
-            "b25maWdCA+BBAhITCgZhY3RpdmUYBiABKAhCA+BBARJEChJsYXN0X2NvbXBs",
-            "ZXRlZF9ydW4YByABKAlCKOBBA/pBIgogY2VzLmdvb2dsZWFwaXMuY29tL0V2",
-            "YWx1YXRpb25SdW4SHQoQdG90YWxfZXhlY3V0aW9ucxgIIAEoBUID4EEDEkYK",
-            "HW5leHRfc2NoZWR1bGVkX2V4ZWN1dGlvbl90aW1lGAkgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC2NyZWF0ZV90aW1lGAogASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhcKCmNyZWF0ZWRf",
-            "YnkYCyABKAlCA+BBAxI0Cgt1cGRhdGVfdGltZRgMIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIcCg9sYXN0X3VwZGF0ZWRfYnkYDSAB",
-            "KAlCA+BBAxIRCgRldGFnGA4gASgJQgPgQQManQIKEFNjaGVkdWxpbmdDb25m",
-            "aWcSYgoJZnJlcXVlbmN5GAEgASgOMkouZ29vZ2xlLmNsb3VkLmNlcy52MWJl",
-            "dGEuU2NoZWR1bGVkRXZhbHVhdGlvblJ1bi5TY2hlZHVsaW5nQ29uZmlnLkZy",
-            "ZXF1ZW5jeUID4EECEjMKCnN0YXJ0X3RpbWUYAiABKAsyGi5nb29nbGUucHJv",
-            "dG9idWYuVGltZXN0YW1wQgPgQQISGQoMZGF5c19vZl93ZWVrGAMgAygFQgPg",
-            "QQEiVQoJRnJlcXVlbmN5EhkKFUZSRVFVRU5DWV9VTlNQRUNJRklFRBAAEggK",
-            "BE5PTkUQARIJCgVEQUlMWRACEgoKBldFRUtMWRADEgwKCEJJV0VFS0xZEAQ6",
-            "xwHqQcMBCiljZXMuZ29vZ2xlYXBpcy5jb20vU2NoZWR1bGVkRXZhbHVhdGlv",
-            "blJ1bhJlcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L2FwcHMve2FwcH0vc2NoZWR1bGVkRXZhbHVhdGlvblJ1bnMve3NjaGVkdWxl",
-            "ZF9ldmFsdWF0aW9uX3J1bn0qF3NjaGVkdWxlZEV2YWx1YXRpb25SdW5zMhZz",
-            "Y2hlZHVsZWRFdmFsdWF0aW9uUnVuIkEKEFBlcnNvbmFSdW5Db25maWcSFAoH",
-            "cGVyc29uYRgBIAEoCUID4EEBEhcKCnRhc2tfY291bnQYAiABKAVCA+BBASKb",
-            "AwoST3B0aW1pemF0aW9uQ29uZmlnEiEKFGdlbmVyYXRlX2xvc3NfcmVwb3J0",
-            "GAEgASgIQgPgQQESHgoRYXNzaXN0YW50X3Nlc3Npb24YAiABKAlCA+BBAxIb",
-            "Cg5yZXBvcnRfc3VtbWFyeRgDIAEoCUID4EEDEh8KEnNob3VsZF9zdWdnZXN0",
-            "X2ZpeBgFIAEoCEID4EEDElMKBnN0YXR1cxgEIAEoDjI+Lmdvb2dsZS5jbG91",
-            "ZC5jZXMudjFiZXRhLk9wdGltaXphdGlvbkNvbmZpZy5PcHRpbWl6YXRpb25T",
-            "dGF0dXNCA+BBAxIaCg1lcnJvcl9tZXNzYWdlGAYgASgJQgPgQQMSMQoLbG9z",
-            "c19yZXBvcnQYByABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0QgPgQQMi",
-            "YAoST3B0aW1pemF0aW9uU3RhdHVzEiMKH09QVElNSVpBVElPTl9TVEFUVVNf",
-            "VU5TUEVDSUZJRUQQABILCgdSVU5OSU5HEAESDQoJQ09NUExFVEVEEAISCQoF",
-            "RVJST1IQA0JfChtjb20uZ29vZ2xlLmNsb3VkLmNlcy52MWJldGFCD0V2YWx1",
-            "YXRpb25Qcm90b1ABWi1jbG91ZC5nb29nbGUuY29tL2dvL2Nlcy9hcGl2MWJl",
-            "dGEvY2VzcGI7Y2VzcGJiBnByb3RvMw=="));
+            "EmMKH2V2YWx1YXRpb25fcnVuX2NhY2hpbmdfc2V0dGluZ3MYDyABKAsyNS5n",
+            "b29nbGUuY2xvdWQuY2VzLnYxYmV0YS5FdmFsdWF0aW9uUnVuQ2FjaGluZ1Nl",
+            "dHRpbmdzQgPgQQFCDAoKX3J1bl9jb3VudCLpCAoWU2NoZWR1bGVkRXZhbHVh",
+            "dGlvblJ1bhIRCgRuYW1lGAEgASgJQgPgQQgSGQoMZGlzcGxheV9uYW1lGAIg",
+            "ASgJQgPgQQISQwoHcmVxdWVzdBgDIAEoCzItLmdvb2dsZS5jbG91ZC5jZXMu",
+            "djFiZXRhLlJ1bkV2YWx1YXRpb25SZXF1ZXN0QgPgQQISGAoLZGVzY3JpcHRp",
+            "b24YBCABKAlCA+BBARJgChFzY2hlZHVsaW5nX2NvbmZpZxgFIAEoCzJALmdv",
+            "b2dsZS5jbG91ZC5jZXMudjFiZXRhLlNjaGVkdWxlZEV2YWx1YXRpb25SdW4u",
+            "U2NoZWR1bGluZ0NvbmZpZ0ID4EECEhMKBmFjdGl2ZRgGIAEoCEID4EEBEkQK",
+            "Emxhc3RfY29tcGxldGVkX3J1bhgHIAEoCUIo4EED+kEiCiBjZXMuZ29vZ2xl",
+            "YXBpcy5jb20vRXZhbHVhdGlvblJ1bhIdChB0b3RhbF9leGVjdXRpb25zGAgg",
+            "ASgFQgPgQQMSRgodbmV4dF9zY2hlZHVsZWRfZXhlY3V0aW9uX3RpbWUYCSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLY3JlYXRl",
+            "X3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
+            "FwoKY3JlYXRlZF9ieRgLIAEoCUID4EEDEjQKC3VwZGF0ZV90aW1lGAwgASgL",
+            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhwKD2xhc3RfdXBk",
+            "YXRlZF9ieRgNIAEoCUID4EEDEhEKBGV0YWcYDiABKAlCA+BBAxqdAgoQU2No",
+            "ZWR1bGluZ0NvbmZpZxJiCglmcmVxdWVuY3kYASABKA4ySi5nb29nbGUuY2xv",
+            "dWQuY2VzLnYxYmV0YS5TY2hlZHVsZWRFdmFsdWF0aW9uUnVuLlNjaGVkdWxp",
+            "bmdDb25maWcuRnJlcXVlbmN5QgPgQQISMwoKc3RhcnRfdGltZRgCIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAhIZCgxkYXlzX29mX3dl",
+            "ZWsYAyADKAVCA+BBASJVCglGcmVxdWVuY3kSGQoVRlJFUVVFTkNZX1VOU1BF",
+            "Q0lGSUVEEAASCAoETk9ORRABEgkKBURBSUxZEAISCgoGV0VFS0xZEAMSDAoI",
+            "QklXRUVLTFkQBDrHAepBwwEKKWNlcy5nb29nbGVhcGlzLmNvbS9TY2hlZHVs",
+            "ZWRFdmFsdWF0aW9uUnVuEmVwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vYXBwcy97YXBwfS9zY2hlZHVsZWRFdmFsdWF0aW9uUnVu",
+            "cy97c2NoZWR1bGVkX2V2YWx1YXRpb25fcnVufSoXc2NoZWR1bGVkRXZhbHVh",
+            "dGlvblJ1bnMyFnNjaGVkdWxlZEV2YWx1YXRpb25SdW4iQQoQUGVyc29uYVJ1",
+            "bkNvbmZpZxIUCgdwZXJzb25hGAEgASgJQgPgQQESFwoKdGFza19jb3VudBgC",
+            "IAEoBUID4EEBIpsDChJPcHRpbWl6YXRpb25Db25maWcSIQoUZ2VuZXJhdGVf",
+            "bG9zc19yZXBvcnQYASABKAhCA+BBARIeChFhc3Npc3RhbnRfc2Vzc2lvbhgC",
+            "IAEoCUID4EEDEhsKDnJlcG9ydF9zdW1tYXJ5GAMgASgJQgPgQQMSHwoSc2hv",
+            "dWxkX3N1Z2dlc3RfZml4GAUgASgIQgPgQQMSUwoGc3RhdHVzGAQgASgOMj4u",
+            "Z29vZ2xlLmNsb3VkLmNlcy52MWJldGEuT3B0aW1pemF0aW9uQ29uZmlnLk9w",
+            "dGltaXphdGlvblN0YXR1c0ID4EEDEhoKDWVycm9yX21lc3NhZ2UYBiABKAlC",
+            "A+BBAxIxCgtsb3NzX3JlcG9ydBgHIAEoCzIXLmdvb2dsZS5wcm90b2J1Zi5T",
+            "dHJ1Y3RCA+BBAyJgChJPcHRpbWl6YXRpb25TdGF0dXMSIwofT1BUSU1JWkFU",
+            "SU9OX1NUQVRVU19VTlNQRUNJRklFRBAAEgsKB1JVTk5JTkcQARINCglDT01Q",
+            "TEVURUQQAhIJCgVFUlJPUhADQl8KG2NvbS5nb29nbGUuY2xvdWQuY2VzLnYx",
+            "YmV0YUIPRXZhbHVhdGlvblByb3RvUAFaLWNsb3VkLmdvb2dsZS5jb20vZ28v",
+            "Y2VzL2FwaXYxYmV0YS9jZXNwYjtjZXNwYmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.AppReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.CommonReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.EvaluationMetricsConfigReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ExampleReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.FakesReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.GoldenRunReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.SessionServiceReflection.Descriptor, global::Google.Cloud.Ces.V1Beta.ToolsetToolReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -556,7 +558,7 @@ namespace Google.Cloud.Ces.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.EvaluationExpectation), global::Google.Cloud.Ces.V1Beta.EvaluationExpectation.Parser, new[]{ "LlmCriteria", "Name", "DisplayName", "Tags", "CreateTime", "UpdateTime", "Etag" }, new[]{ "Criteria" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.EvaluationExpectation.Types.LlmCriteria), global::Google.Cloud.Ces.V1Beta.EvaluationExpectation.Types.LlmCriteria.Parser, new[]{ "Prompt" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.EvaluationConfig), global::Google.Cloud.Ces.V1Beta.EvaluationConfig.Parser, new[]{ "InputAudioConfig", "OutputAudioConfig", "EvaluationChannel", "ToolCallBehaviour" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.EvaluationConfig.Types.EvaluationChannel) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.EvaluationErrorInfo), global::Google.Cloud.Ces.V1Beta.EvaluationErrorInfo.Parser, new[]{ "ErrorType", "ErrorMessage", "SessionId", "UserFacingErrorMessage" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.EvaluationErrorInfo.Types.ErrorType) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.RunEvaluationRequest), global::Google.Cloud.Ces.V1Beta.RunEvaluationRequest.Parser, new[]{ "App", "Evaluations", "EvaluationDataset", "DisplayName", "AppVersion", "Config", "RunCount", "PersonaRunConfigs", "OptimizationConfig", "ScheduledEvaluationRun", "GoldenRunMethod", "GenerateLatencyReport" }, new[]{ "RunCount" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.RunEvaluationRequest), global::Google.Cloud.Ces.V1Beta.RunEvaluationRequest.Parser, new[]{ "App", "Evaluations", "EvaluationDataset", "DisplayName", "AppVersion", "Config", "RunCount", "PersonaRunConfigs", "OptimizationConfig", "ScheduledEvaluationRun", "GoldenRunMethod", "GenerateLatencyReport", "EvaluationRunCachingSettings" }, new[]{ "RunCount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ScheduledEvaluationRun), global::Google.Cloud.Ces.V1Beta.ScheduledEvaluationRun.Parser, new[]{ "Name", "DisplayName", "Request", "Description", "SchedulingConfig", "Active", "LastCompletedRun", "TotalExecutions", "NextScheduledExecutionTime", "CreateTime", "CreatedBy", "UpdateTime", "LastUpdatedBy", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.ScheduledEvaluationRun.Types.SchedulingConfig), global::Google.Cloud.Ces.V1Beta.ScheduledEvaluationRun.Types.SchedulingConfig.Parser, new[]{ "Frequency", "StartTime", "DaysOfWeek" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.ScheduledEvaluationRun.Types.SchedulingConfig.Types.Frequency) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.PersonaRunConfig), global::Google.Cloud.Ces.V1Beta.PersonaRunConfig.Parser, new[]{ "Persona", "TaskCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Ces.V1Beta.OptimizationConfig), global::Google.Cloud.Ces.V1Beta.OptimizationConfig.Parser, new[]{ "GenerateLossReport", "AssistantSession", "ReportSummary", "ShouldSuggestFix", "Status", "ErrorMessage", "LossReport" }, null, new[]{ typeof(global::Google.Cloud.Ces.V1Beta.OptimizationConfig.Types.OptimizationStatus) }, null, null)
@@ -20357,6 +20359,7 @@ namespace Google.Cloud.Ces.V1Beta {
       scheduledEvaluationRun_ = other.scheduledEvaluationRun_;
       goldenRunMethod_ = other.goldenRunMethod_;
       generateLatencyReport_ = other.generateLatencyReport_;
+      evaluationRunCachingSettings_ = other.evaluationRunCachingSettings_ != null ? other.evaluationRunCachingSettings_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -20576,6 +20579,21 @@ namespace Google.Cloud.Ces.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "evaluation_run_caching_settings" field.</summary>
+    public const int EvaluationRunCachingSettingsFieldNumber = 15;
+    private global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings evaluationRunCachingSettings_;
+    /// <summary>
+    /// Optional. The caching settings to use for the evaluation run.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings EvaluationRunCachingSettings {
+      get { return evaluationRunCachingSettings_; }
+      set {
+        evaluationRunCachingSettings_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -20603,6 +20621,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (ScheduledEvaluationRun != other.ScheduledEvaluationRun) return false;
       if (GoldenRunMethod != other.GoldenRunMethod) return false;
       if (GenerateLatencyReport != other.GenerateLatencyReport) return false;
+      if (!object.Equals(EvaluationRunCachingSettings, other.EvaluationRunCachingSettings)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -20622,6 +20641,7 @@ namespace Google.Cloud.Ces.V1Beta {
       if (ScheduledEvaluationRun.Length != 0) hash ^= ScheduledEvaluationRun.GetHashCode();
       if (GoldenRunMethod != global::Google.Cloud.Ces.V1Beta.GoldenRunMethod.Unspecified) hash ^= GoldenRunMethod.GetHashCode();
       if (GenerateLatencyReport != false) hash ^= GenerateLatencyReport.GetHashCode();
+      if (evaluationRunCachingSettings_ != null) hash ^= EvaluationRunCachingSettings.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -20682,6 +20702,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(112);
         output.WriteBool(GenerateLatencyReport);
       }
+      if (evaluationRunCachingSettings_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EvaluationRunCachingSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -20734,6 +20758,10 @@ namespace Google.Cloud.Ces.V1Beta {
         output.WriteRawTag(112);
         output.WriteBool(GenerateLatencyReport);
       }
+      if (evaluationRunCachingSettings_ != null) {
+        output.WriteRawTag(122);
+        output.WriteMessage(EvaluationRunCachingSettings);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -20775,6 +20803,9 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (GenerateLatencyReport != false) {
         size += 1 + 1;
+      }
+      if (evaluationRunCachingSettings_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(EvaluationRunCachingSettings);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -20825,6 +20856,12 @@ namespace Google.Cloud.Ces.V1Beta {
       }
       if (other.GenerateLatencyReport != false) {
         GenerateLatencyReport = other.GenerateLatencyReport;
+      }
+      if (other.evaluationRunCachingSettings_ != null) {
+        if (evaluationRunCachingSettings_ == null) {
+          EvaluationRunCachingSettings = new global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings();
+        }
+        EvaluationRunCachingSettings.MergeFrom(other.EvaluationRunCachingSettings);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -20899,6 +20936,13 @@ namespace Google.Cloud.Ces.V1Beta {
             GenerateLatencyReport = input.ReadBool();
             break;
           }
+          case 122: {
+            if (evaluationRunCachingSettings_ == null) {
+              EvaluationRunCachingSettings = new global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings();
+            }
+            input.ReadMessage(EvaluationRunCachingSettings);
+            break;
+          }
         }
       }
     #endif
@@ -20970,6 +21014,13 @@ namespace Google.Cloud.Ces.V1Beta {
           }
           case 112: {
             GenerateLatencyReport = input.ReadBool();
+            break;
+          }
+          case 122: {
+            if (evaluationRunCachingSettings_ == null) {
+              EvaluationRunCachingSettings = new global::Google.Cloud.Ces.V1Beta.EvaluationRunCachingSettings();
+            }
+            input.ReadMessage(EvaluationRunCachingSettings);
             break;
           }
         }
