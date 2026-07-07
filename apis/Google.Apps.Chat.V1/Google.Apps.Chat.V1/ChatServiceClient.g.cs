@@ -78,6 +78,11 @@ namespace Google.Apps.Chat.V1
             GetSpaceReadStateSettings = existing.GetSpaceReadStateSettings;
             UpdateSpaceReadStateSettings = existing.UpdateSpaceReadStateSettings;
             GetThreadReadStateSettings = existing.GetThreadReadStateSettings;
+            GetAvailabilitySettings = existing.GetAvailabilitySettings;
+            MarkAsActiveSettings = existing.MarkAsActiveSettings;
+            MarkAsAwaySettings = existing.MarkAsAwaySettings;
+            MarkAsDoNotDisturbSettings = existing.MarkAsDoNotDisturbSettings;
+            UpdateAvailabilitySettings = existing.UpdateAvailabilitySettings;
             GetSpaceEventSettings = existing.GetSpaceEventSettings;
             ListSpaceEventsSettings = existing.ListSpaceEventsSettings;
             GetSpaceNotificationSettingSettings = existing.GetSpaceNotificationSettingSettings;
@@ -672,6 +677,96 @@ namespace Google.Apps.Chat.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.GetAvailability</c> and <c>ChatServiceClient.GetAvailabilityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAvailabilitySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.MarkAsActive</c> and <c>ChatServiceClient.MarkAsActiveAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MarkAsActiveSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.MarkAsAway</c> and <c>ChatServiceClient.MarkAsAwayAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MarkAsAwaySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.MarkAsDoNotDisturb</c> and <c>ChatServiceClient.MarkAsDoNotDisturbAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MarkAsDoNotDisturbSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ChatServiceClient.UpdateAvailability</c> and <c>ChatServiceClient.UpdateAvailabilityAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 30 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateAvailabilitySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>ChatServiceClient.GetSpaceEvent</c> and <c>ChatServiceClient.GetSpaceEventAsync</c>.
         /// </summary>
         /// <remarks>
@@ -972,6 +1067,8 @@ namespace Google.Apps.Chat.V1
         /// <item><description>https://www.googleapis.com/auth/chat.spaces</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.spaces.create</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.spaces.readonly</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.users.availability</description></item>
+        /// <item><description>https://www.googleapis.com/auth/chat.users.availability.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.users.readstate</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.users.readstate.readonly</description></item>
         /// <item><description>https://www.googleapis.com/auth/chat.users.sections</description></item>
@@ -1010,6 +1107,8 @@ namespace Google.Apps.Chat.V1
             "https://www.googleapis.com/auth/chat.spaces",
             "https://www.googleapis.com/auth/chat.spaces.create",
             "https://www.googleapis.com/auth/chat.spaces.readonly",
+            "https://www.googleapis.com/auth/chat.users.availability",
+            "https://www.googleapis.com/auth/chat.users.availability.readonly",
             "https://www.googleapis.com/auth/chat.users.readstate",
             "https://www.googleapis.com/auth/chat.users.readstate.readonly",
             "https://www.googleapis.com/auth/chat.users.sections",
@@ -10120,6 +10219,605 @@ namespace Google.Apps.Chat.V1
             GetThreadReadStateAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Availability GetAvailability(GetAvailabilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> GetAvailabilityAsync(GetAvailabilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> GetAvailabilityAsync(GetAvailabilityRequest request, st::CancellationToken cancellationToken) =>
+            GetAvailabilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the availability to retrieve.
+        /// 
+        /// Format: users/{user}/availability
+        /// 
+        /// `{user}` is the id for the Person in the People API or Admin SDK directory
+        /// API. For example, `users/123456789`.
+        /// 
+        /// The user's email address or `me` can also be used as an alias to refer to
+        /// the caller.  For example, `users/user@example.com` or `users/me`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Availability GetAvailability(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAvailability(new GetAvailabilityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the availability to retrieve.
+        /// 
+        /// Format: users/{user}/availability
+        /// 
+        /// `{user}` is the id for the Person in the People API or Admin SDK directory
+        /// API. For example, `users/123456789`.
+        /// 
+        /// The user's email address or `me` can also be used as an alias to refer to
+        /// the caller.  For example, `users/user@example.com` or `users/me`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> GetAvailabilityAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAvailabilityAsync(new GetAvailabilityRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the availability to retrieve.
+        /// 
+        /// Format: users/{user}/availability
+        /// 
+        /// `{user}` is the id for the Person in the People API or Admin SDK directory
+        /// API. For example, `users/123456789`.
+        /// 
+        /// The user's email address or `me` can also be used as an alias to refer to
+        /// the caller.  For example, `users/user@example.com` or `users/me`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> GetAvailabilityAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAvailabilityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the availability to retrieve.
+        /// 
+        /// Format: users/{user}/availability
+        /// 
+        /// `{user}` is the id for the Person in the People API or Admin SDK directory
+        /// API. For example, `users/123456789`.
+        /// 
+        /// The user's email address or `me` can also be used as an alias to refer to
+        /// the caller.  For example, `users/user@example.com` or `users/me`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Availability GetAvailability(AvailabilityName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAvailability(new GetAvailabilityRequest
+            {
+                AvailabilityName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the availability to retrieve.
+        /// 
+        /// Format: users/{user}/availability
+        /// 
+        /// `{user}` is the id for the Person in the People API or Admin SDK directory
+        /// API. For example, `users/123456789`.
+        /// 
+        /// The user's email address or `me` can also be used as an alias to refer to
+        /// the caller.  For example, `users/user@example.com` or `users/me`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> GetAvailabilityAsync(AvailabilityName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAvailabilityAsync(new GetAvailabilityRequest
+            {
+                AvailabilityName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the availability to retrieve.
+        /// 
+        /// Format: users/{user}/availability
+        /// 
+        /// `{user}` is the id for the Person in the People API or Admin SDK directory
+        /// API. For example, `users/123456789`.
+        /// 
+        /// The user's email address or `me` can also be used as an alias to refer to
+        /// the caller.  For example, `users/user@example.com` or `users/me`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> GetAvailabilityAsync(AvailabilityName name, st::CancellationToken cancellationToken) =>
+            GetAvailabilityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks user as `ACTIVE` in Google Chat.
+        /// 
+        /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+        /// lasts until the specified expiration, at which point the user's state
+        /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+        /// state duration may extend beyond the provided expiration.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Availability MarkAsActive(MarkAsActiveRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks user as `ACTIVE` in Google Chat.
+        /// 
+        /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+        /// lasts until the specified expiration, at which point the user's state
+        /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+        /// state duration may extend beyond the provided expiration.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> MarkAsActiveAsync(MarkAsActiveRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks user as `ACTIVE` in Google Chat.
+        /// 
+        /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+        /// lasts until the specified expiration, at which point the user's state
+        /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+        /// state duration may extend beyond the provided expiration.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> MarkAsActiveAsync(MarkAsActiveRequest request, st::CancellationToken cancellationToken) =>
+            MarkAsActiveAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks user as `AWAY` in Google Chat.
+        /// 
+        /// Sets the user's state to away and is not affected by the user's
+        /// activity.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Availability MarkAsAway(MarkAsAwayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks user as `AWAY` in Google Chat.
+        /// 
+        /// Sets the user's state to away and is not affected by the user's
+        /// activity.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> MarkAsAwayAsync(MarkAsAwayRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks user as `AWAY` in Google Chat.
+        /// 
+        /// Sets the user's state to away and is not affected by the user's
+        /// activity.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> MarkAsAwayAsync(MarkAsAwayRequest request, st::CancellationToken cancellationToken) =>
+            MarkAsAwayAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+        /// 
+        /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+        /// expiration time.
+        /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Availability MarkAsDoNotDisturb(MarkAsDoNotDisturbRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+        /// 
+        /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+        /// expiration time.
+        /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> MarkAsDoNotDisturbAsync(MarkAsDoNotDisturbRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+        /// 
+        /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+        /// expiration time.
+        /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> MarkAsDoNotDisturbAsync(MarkAsDoNotDisturbRequest request, st::CancellationToken cancellationToken) =>
+            MarkAsDoNotDisturbAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates availability information for a human user. Only the `custom_status`
+        /// field can be updated through this method.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Availability UpdateAvailability(UpdateAvailabilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates availability information for a human user. Only the `custom_status`
+        /// field can be updated through this method.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> UpdateAvailabilityAsync(UpdateAvailabilityRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates availability information for a human user. Only the `custom_status`
+        /// field can be updated through this method.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> UpdateAvailabilityAsync(UpdateAvailabilityRequest request, st::CancellationToken cancellationToken) =>
+            UpdateAvailabilityAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates availability information for a human user. Only the `custom_status`
+        /// field can be updated through this method.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="availability">
+        /// Required. The availability to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// The only field that can be updated is `custom_status`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Availability UpdateAvailability(Availability availability, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAvailability(new UpdateAvailabilityRequest
+            {
+                Availability = gax::GaxPreconditions.CheckNotNull(availability, nameof(availability)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates availability information for a human user. Only the `custom_status`
+        /// field can be updated through this method.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="availability">
+        /// Required. The availability to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// The only field that can be updated is `custom_status`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> UpdateAvailabilityAsync(Availability availability, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateAvailabilityAsync(new UpdateAvailabilityRequest
+            {
+                Availability = gax::GaxPreconditions.CheckNotNull(availability, nameof(availability)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates availability information for a human user. Only the `custom_status`
+        /// field can be updated through this method.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="availability">
+        /// Required. The availability to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The list of fields to update.
+        /// The only field that can be updated is `custom_status`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Availability> UpdateAvailabilityAsync(Availability availability, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateAvailabilityAsync(availability, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Returns an event from a Google Chat space. The [event
         /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
         /// contains the most recent version of the resource that changed. For example,
@@ -13111,6 +13809,16 @@ namespace Google.Apps.Chat.V1
 
         private readonly gaxgrpc::ApiCall<GetThreadReadStateRequest, ThreadReadState> _callGetThreadReadState;
 
+        private readonly gaxgrpc::ApiCall<GetAvailabilityRequest, Availability> _callGetAvailability;
+
+        private readonly gaxgrpc::ApiCall<MarkAsActiveRequest, Availability> _callMarkAsActive;
+
+        private readonly gaxgrpc::ApiCall<MarkAsAwayRequest, Availability> _callMarkAsAway;
+
+        private readonly gaxgrpc::ApiCall<MarkAsDoNotDisturbRequest, Availability> _callMarkAsDoNotDisturb;
+
+        private readonly gaxgrpc::ApiCall<UpdateAvailabilityRequest, Availability> _callUpdateAvailability;
+
         private readonly gaxgrpc::ApiCall<GetSpaceEventRequest, SpaceEvent> _callGetSpaceEvent;
 
         private readonly gaxgrpc::ApiCall<ListSpaceEventsRequest, ListSpaceEventsResponse> _callListSpaceEvents;
@@ -13244,6 +13952,21 @@ namespace Google.Apps.Chat.V1
             _callGetThreadReadState = clientHelper.BuildApiCall<GetThreadReadStateRequest, ThreadReadState>("GetThreadReadState", grpcClient.GetThreadReadStateAsync, grpcClient.GetThreadReadState, effectiveSettings.GetThreadReadStateSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetThreadReadState);
             Modify_GetThreadReadStateApiCall(ref _callGetThreadReadState);
+            _callGetAvailability = clientHelper.BuildApiCall<GetAvailabilityRequest, Availability>("GetAvailability", grpcClient.GetAvailabilityAsync, grpcClient.GetAvailability, effectiveSettings.GetAvailabilitySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAvailability);
+            Modify_GetAvailabilityApiCall(ref _callGetAvailability);
+            _callMarkAsActive = clientHelper.BuildApiCall<MarkAsActiveRequest, Availability>("MarkAsActive", grpcClient.MarkAsActiveAsync, grpcClient.MarkAsActive, effectiveSettings.MarkAsActiveSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMarkAsActive);
+            Modify_MarkAsActiveApiCall(ref _callMarkAsActive);
+            _callMarkAsAway = clientHelper.BuildApiCall<MarkAsAwayRequest, Availability>("MarkAsAway", grpcClient.MarkAsAwayAsync, grpcClient.MarkAsAway, effectiveSettings.MarkAsAwaySettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMarkAsAway);
+            Modify_MarkAsAwayApiCall(ref _callMarkAsAway);
+            _callMarkAsDoNotDisturb = clientHelper.BuildApiCall<MarkAsDoNotDisturbRequest, Availability>("MarkAsDoNotDisturb", grpcClient.MarkAsDoNotDisturbAsync, grpcClient.MarkAsDoNotDisturb, effectiveSettings.MarkAsDoNotDisturbSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callMarkAsDoNotDisturb);
+            Modify_MarkAsDoNotDisturbApiCall(ref _callMarkAsDoNotDisturb);
+            _callUpdateAvailability = clientHelper.BuildApiCall<UpdateAvailabilityRequest, Availability>("UpdateAvailability", grpcClient.UpdateAvailabilityAsync, grpcClient.UpdateAvailability, effectiveSettings.UpdateAvailabilitySettings).WithGoogleRequestParam("availability.name", request => request.Availability?.Name);
+            Modify_ApiCall(ref _callUpdateAvailability);
+            Modify_UpdateAvailabilityApiCall(ref _callUpdateAvailability);
             _callGetSpaceEvent = clientHelper.BuildApiCall<GetSpaceEventRequest, SpaceEvent>("GetSpaceEvent", grpcClient.GetSpaceEventAsync, grpcClient.GetSpaceEvent, effectiveSettings.GetSpaceEventSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSpaceEvent);
             Modify_GetSpaceEventApiCall(ref _callGetSpaceEvent);
@@ -13346,6 +14069,16 @@ namespace Google.Apps.Chat.V1
 
         partial void Modify_GetThreadReadStateApiCall(ref gaxgrpc::ApiCall<GetThreadReadStateRequest, ThreadReadState> call);
 
+        partial void Modify_GetAvailabilityApiCall(ref gaxgrpc::ApiCall<GetAvailabilityRequest, Availability> call);
+
+        partial void Modify_MarkAsActiveApiCall(ref gaxgrpc::ApiCall<MarkAsActiveRequest, Availability> call);
+
+        partial void Modify_MarkAsAwayApiCall(ref gaxgrpc::ApiCall<MarkAsAwayRequest, Availability> call);
+
+        partial void Modify_MarkAsDoNotDisturbApiCall(ref gaxgrpc::ApiCall<MarkAsDoNotDisturbRequest, Availability> call);
+
+        partial void Modify_UpdateAvailabilityApiCall(ref gaxgrpc::ApiCall<UpdateAvailabilityRequest, Availability> call);
+
         partial void Modify_GetSpaceEventApiCall(ref gaxgrpc::ApiCall<GetSpaceEventRequest, SpaceEvent> call);
 
         partial void Modify_ListSpaceEventsApiCall(ref gaxgrpc::ApiCall<ListSpaceEventsRequest, ListSpaceEventsResponse> call);
@@ -13436,6 +14169,16 @@ namespace Google.Apps.Chat.V1
         partial void Modify_UpdateSpaceReadStateRequest(ref UpdateSpaceReadStateRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetThreadReadStateRequest(ref GetThreadReadStateRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAvailabilityRequest(ref GetAvailabilityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MarkAsActiveRequest(ref MarkAsActiveRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MarkAsAwayRequest(ref MarkAsAwayRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MarkAsDoNotDisturbRequest(ref MarkAsDoNotDisturbRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateAvailabilityRequest(ref UpdateAvailabilityRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetSpaceEventRequest(ref GetSpaceEventRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -15685,6 +16428,248 @@ namespace Google.Apps.Chat.V1
         {
             Modify_GetThreadReadStateRequest(ref request, ref callSettings);
             return _callGetThreadReadState.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Availability GetAvailability(GetAvailabilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAvailabilityRequest(ref request, ref callSettings);
+            return _callGetAvailability.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns availability information for a human user in Google Chat. For
+        /// example, this can be used to check if a user is online or away, or to
+        /// retrieve their custom status message.
+        /// 
+        /// This method only retrieves the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Availability> GetAvailabilityAsync(GetAvailabilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAvailabilityRequest(ref request, ref callSettings);
+            return _callGetAvailability.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks user as `ACTIVE` in Google Chat.
+        /// 
+        /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+        /// lasts until the specified expiration, at which point the user's state
+        /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+        /// state duration may extend beyond the provided expiration.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Availability MarkAsActive(MarkAsActiveRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkAsActiveRequest(ref request, ref callSettings);
+            return _callMarkAsActive.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks user as `ACTIVE` in Google Chat.
+        /// 
+        /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+        /// lasts until the specified expiration, at which point the user's state
+        /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+        /// state duration may extend beyond the provided expiration.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Availability> MarkAsActiveAsync(MarkAsActiveRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkAsActiveRequest(ref request, ref callSettings);
+            return _callMarkAsActive.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks user as `AWAY` in Google Chat.
+        /// 
+        /// Sets the user's state to away and is not affected by the user's
+        /// activity.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Availability MarkAsAway(MarkAsAwayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkAsAwayRequest(ref request, ref callSettings);
+            return _callMarkAsAway.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks user as `AWAY` in Google Chat.
+        /// 
+        /// Sets the user's state to away and is not affected by the user's
+        /// activity.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Availability> MarkAsAwayAsync(MarkAsAwayRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkAsAwayRequest(ref request, ref callSettings);
+            return _callMarkAsAway.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+        /// 
+        /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+        /// expiration time.
+        /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Availability MarkAsDoNotDisturb(MarkAsDoNotDisturbRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkAsDoNotDisturbRequest(ref request, ref callSettings);
+            return _callMarkAsDoNotDisturb.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+        /// 
+        /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+        /// expiration time.
+        /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with [authorization
+        /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Availability> MarkAsDoNotDisturbAsync(MarkAsDoNotDisturbRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MarkAsDoNotDisturbRequest(ref request, ref callSettings);
+            return _callMarkAsDoNotDisturb.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates availability information for a human user. Only the `custom_status`
+        /// field can be updated through this method.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Availability UpdateAvailability(UpdateAvailabilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAvailabilityRequest(ref request, ref callSettings);
+            return _callUpdateAvailability.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates availability information for a human user. Only the `custom_status`
+        /// field can be updated through this method.
+        /// 
+        /// This method only updates the authenticated user's availability.
+        /// 
+        /// Requires [user
+        /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+        /// with one of the following [authorization
+        /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+        /// 
+        /// - `https://www.googleapis.com/auth/chat.users.availability`
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Availability> UpdateAvailabilityAsync(UpdateAvailabilityRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateAvailabilityRequest(ref request, ref callSettings);
+            return _callUpdateAvailability.Async(request, callSettings);
         }
 
         /// <summary>

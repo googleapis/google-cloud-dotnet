@@ -165,6 +165,18 @@ namespace Google.Apps.Chat.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.ThreadReadState> __Marshaller_google_chat_v1_ThreadReadState = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.ThreadReadState.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetAvailabilityRequest> __Marshaller_google_chat_v1_GetAvailabilityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetAvailabilityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.Availability> __Marshaller_google_chat_v1_Availability = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.Availability.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.MarkAsActiveRequest> __Marshaller_google_chat_v1_MarkAsActiveRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.MarkAsActiveRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.MarkAsAwayRequest> __Marshaller_google_chat_v1_MarkAsAwayRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.MarkAsAwayRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest> __Marshaller_google_chat_v1_MarkAsDoNotDisturbRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.UpdateAvailabilityRequest> __Marshaller_google_chat_v1_UpdateAvailabilityRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.UpdateAvailabilityRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.GetSpaceEventRequest> __Marshaller_google_chat_v1_GetSpaceEventRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.GetSpaceEventRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Apps.Chat.V1.SpaceEvent> __Marshaller_google_chat_v1_SpaceEvent = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Apps.Chat.V1.SpaceEvent.Parser));
@@ -458,6 +470,46 @@ namespace Google.Apps.Chat.V1 {
         "GetThreadReadState",
         __Marshaller_google_chat_v1_GetThreadReadStateRequest,
         __Marshaller_google_chat_v1_ThreadReadState);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.GetAvailabilityRequest, global::Google.Apps.Chat.V1.Availability> __Method_GetAvailability = new grpc::Method<global::Google.Apps.Chat.V1.GetAvailabilityRequest, global::Google.Apps.Chat.V1.Availability>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAvailability",
+        __Marshaller_google_chat_v1_GetAvailabilityRequest,
+        __Marshaller_google_chat_v1_Availability);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.MarkAsActiveRequest, global::Google.Apps.Chat.V1.Availability> __Method_MarkAsActive = new grpc::Method<global::Google.Apps.Chat.V1.MarkAsActiveRequest, global::Google.Apps.Chat.V1.Availability>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MarkAsActive",
+        __Marshaller_google_chat_v1_MarkAsActiveRequest,
+        __Marshaller_google_chat_v1_Availability);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.MarkAsAwayRequest, global::Google.Apps.Chat.V1.Availability> __Method_MarkAsAway = new grpc::Method<global::Google.Apps.Chat.V1.MarkAsAwayRequest, global::Google.Apps.Chat.V1.Availability>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MarkAsAway",
+        __Marshaller_google_chat_v1_MarkAsAwayRequest,
+        __Marshaller_google_chat_v1_Availability);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest, global::Google.Apps.Chat.V1.Availability> __Method_MarkAsDoNotDisturb = new grpc::Method<global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest, global::Google.Apps.Chat.V1.Availability>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MarkAsDoNotDisturb",
+        __Marshaller_google_chat_v1_MarkAsDoNotDisturbRequest,
+        __Marshaller_google_chat_v1_Availability);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Apps.Chat.V1.UpdateAvailabilityRequest, global::Google.Apps.Chat.V1.Availability> __Method_UpdateAvailability = new grpc::Method<global::Google.Apps.Chat.V1.UpdateAvailabilityRequest, global::Google.Apps.Chat.V1.Availability>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateAvailability",
+        __Marshaller_google_chat_v1_UpdateAvailabilityRequest,
+        __Marshaller_google_chat_v1_Availability);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Apps.Chat.V1.GetSpaceEventRequest, global::Google.Apps.Chat.V1.SpaceEvent> __Method_GetSpaceEvent = new grpc::Method<global::Google.Apps.Chat.V1.GetSpaceEventRequest, global::Google.Apps.Chat.V1.SpaceEvent>(
@@ -1667,6 +1719,127 @@ namespace Google.Apps.Chat.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.ThreadReadState> GetThreadReadState(global::Google.Apps.Chat.V1.GetThreadReadStateRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Returns availability information for a human user in Google Chat. For
+      /// example, this can be used to check if a user is online or away, or to
+      /// retrieve their custom status message.
+      ///
+      /// This method only retrieves the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.Availability> GetAvailability(global::Google.Apps.Chat.V1.GetAvailabilityRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Marks user as `ACTIVE` in Google Chat.
+      ///
+      /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+      /// lasts until the specified expiration, at which point the user's state
+      /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+      /// state duration may extend beyond the provided expiration.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.Availability> MarkAsActive(global::Google.Apps.Chat.V1.MarkAsActiveRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Marks user as `AWAY` in Google Chat.
+      ///
+      /// Sets the user's state to away and is not affected by the user's
+      /// activity.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.Availability> MarkAsAway(global::Google.Apps.Chat.V1.MarkAsAwayRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+      ///
+      /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+      /// expiration time.
+      /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.Availability> MarkAsDoNotDisturb(global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates availability information for a human user. Only the `custom_status`
+      /// field can be updated through this method.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Apps.Chat.V1.Availability> UpdateAvailability(global::Google.Apps.Chat.V1.UpdateAvailabilityRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -6465,6 +6638,490 @@ namespace Google.Apps.Chat.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetThreadReadState, null, options, request);
       }
       /// <summary>
+      /// Returns availability information for a human user in Google Chat. For
+      /// example, this can be used to check if a user is online or away, or to
+      /// retrieve their custom status message.
+      ///
+      /// This method only retrieves the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability GetAvailability(global::Google.Apps.Chat.V1.GetAvailabilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAvailability(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns availability information for a human user in Google Chat. For
+      /// example, this can be used to check if a user is online or away, or to
+      /// retrieve their custom status message.
+      ///
+      /// This method only retrieves the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability GetAvailability(global::Google.Apps.Chat.V1.GetAvailabilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAvailability, null, options, request);
+      }
+      /// <summary>
+      /// Returns availability information for a human user in Google Chat. For
+      /// example, this can be used to check if a user is online or away, or to
+      /// retrieve their custom status message.
+      ///
+      /// This method only retrieves the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> GetAvailabilityAsync(global::Google.Apps.Chat.V1.GetAvailabilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAvailabilityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Returns availability information for a human user in Google Chat. For
+      /// example, this can be used to check if a user is online or away, or to
+      /// retrieve their custom status message.
+      ///
+      /// This method only retrieves the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability.readonly`
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> GetAvailabilityAsync(global::Google.Apps.Chat.V1.GetAvailabilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAvailability, null, options, request);
+      }
+      /// <summary>
+      /// Marks user as `ACTIVE` in Google Chat.
+      ///
+      /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+      /// lasts until the specified expiration, at which point the user's state
+      /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+      /// state duration may extend beyond the provided expiration.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability MarkAsActive(global::Google.Apps.Chat.V1.MarkAsActiveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkAsActive(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks user as `ACTIVE` in Google Chat.
+      ///
+      /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+      /// lasts until the specified expiration, at which point the user's state
+      /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+      /// state duration may extend beyond the provided expiration.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability MarkAsActive(global::Google.Apps.Chat.V1.MarkAsActiveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MarkAsActive, null, options, request);
+      }
+      /// <summary>
+      /// Marks user as `ACTIVE` in Google Chat.
+      ///
+      /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+      /// lasts until the specified expiration, at which point the user's state
+      /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+      /// state duration may extend beyond the provided expiration.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> MarkAsActiveAsync(global::Google.Apps.Chat.V1.MarkAsActiveRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkAsActiveAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks user as `ACTIVE` in Google Chat.
+      ///
+      /// Sets the user's availability state to `ACTIVE`. The `ACTIVE` state
+      /// lasts until the specified expiration, at which point the user's state
+      /// becomes `AWAY`. Note that if the user is actively using Chat, the `ACTIVE`
+      /// state duration may extend beyond the provided expiration.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> MarkAsActiveAsync(global::Google.Apps.Chat.V1.MarkAsActiveRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MarkAsActive, null, options, request);
+      }
+      /// <summary>
+      /// Marks user as `AWAY` in Google Chat.
+      ///
+      /// Sets the user's state to away and is not affected by the user's
+      /// activity.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability MarkAsAway(global::Google.Apps.Chat.V1.MarkAsAwayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkAsAway(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks user as `AWAY` in Google Chat.
+      ///
+      /// Sets the user's state to away and is not affected by the user's
+      /// activity.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability MarkAsAway(global::Google.Apps.Chat.V1.MarkAsAwayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MarkAsAway, null, options, request);
+      }
+      /// <summary>
+      /// Marks user as `AWAY` in Google Chat.
+      ///
+      /// Sets the user's state to away and is not affected by the user's
+      /// activity.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> MarkAsAwayAsync(global::Google.Apps.Chat.V1.MarkAsAwayRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkAsAwayAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks user as `AWAY` in Google Chat.
+      ///
+      /// Sets the user's state to away and is not affected by the user's
+      /// activity.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> MarkAsAwayAsync(global::Google.Apps.Chat.V1.MarkAsAwayRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MarkAsAway, null, options, request);
+      }
+      /// <summary>
+      /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+      ///
+      /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+      /// expiration time.
+      /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability MarkAsDoNotDisturb(global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkAsDoNotDisturb(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+      ///
+      /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+      /// expiration time.
+      /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability MarkAsDoNotDisturb(global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MarkAsDoNotDisturb, null, options, request);
+      }
+      /// <summary>
+      /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+      ///
+      /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+      /// expiration time.
+      /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> MarkAsDoNotDisturbAsync(global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MarkAsDoNotDisturbAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks user as `DO_NOT_DISTURB` in Google Chat.
+      ///
+      /// Sets a user's availability state to `DO_NOT_DISTURB` until a specified
+      /// expiration time.
+      /// When in `DO_NOT_DISTURB`, users typically won't receive notifications.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with [authorization
+      /// scope](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> MarkAsDoNotDisturbAsync(global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MarkAsDoNotDisturb, null, options, request);
+      }
+      /// <summary>
+      /// Updates availability information for a human user. Only the `custom_status`
+      /// field can be updated through this method.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability UpdateAvailability(global::Google.Apps.Chat.V1.UpdateAvailabilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAvailability(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates availability information for a human user. Only the `custom_status`
+      /// field can be updated through this method.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Apps.Chat.V1.Availability UpdateAvailability(global::Google.Apps.Chat.V1.UpdateAvailabilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateAvailability, null, options, request);
+      }
+      /// <summary>
+      /// Updates availability information for a human user. Only the `custom_status`
+      /// field can be updated through this method.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> UpdateAvailabilityAsync(global::Google.Apps.Chat.V1.UpdateAvailabilityRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateAvailabilityAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates availability information for a human user. Only the `custom_status`
+      /// field can be updated through this method.
+      ///
+      /// This method only updates the authenticated user's availability.
+      ///
+      /// Requires [user
+      /// authentication](https://developers.google.com/workspace/chat/authenticate-authorize-chat-user)
+      /// with one of the following [authorization
+      /// scopes](https://developers.google.com/workspace/chat/authenticate-authorize#chat-api-scopes):
+      ///
+      ///   - `https://www.googleapis.com/auth/chat.users.availability`
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Apps.Chat.V1.Availability> UpdateAvailabilityAsync(global::Google.Apps.Chat.V1.UpdateAvailabilityRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateAvailability, null, options, request);
+      }
+      /// <summary>
       /// Returns an event from a Google Chat space. The [event
       /// payload](https://developers.google.com/workspace/chat/api/reference/rest/v1/spaces.spaceEvents#SpaceEvent.FIELDS.oneof_payload)
       /// contains the most recent version of the resource that changed. For example,
@@ -7742,6 +8399,11 @@ namespace Google.Apps.Chat.V1 {
           .AddMethod(__Method_GetSpaceReadState, serviceImpl.GetSpaceReadState)
           .AddMethod(__Method_UpdateSpaceReadState, serviceImpl.UpdateSpaceReadState)
           .AddMethod(__Method_GetThreadReadState, serviceImpl.GetThreadReadState)
+          .AddMethod(__Method_GetAvailability, serviceImpl.GetAvailability)
+          .AddMethod(__Method_MarkAsActive, serviceImpl.MarkAsActive)
+          .AddMethod(__Method_MarkAsAway, serviceImpl.MarkAsAway)
+          .AddMethod(__Method_MarkAsDoNotDisturb, serviceImpl.MarkAsDoNotDisturb)
+          .AddMethod(__Method_UpdateAvailability, serviceImpl.UpdateAvailability)
           .AddMethod(__Method_GetSpaceEvent, serviceImpl.GetSpaceEvent)
           .AddMethod(__Method_ListSpaceEvents, serviceImpl.ListSpaceEvents)
           .AddMethod(__Method_GetSpaceNotificationSetting, serviceImpl.GetSpaceNotificationSetting)
@@ -7794,6 +8456,11 @@ namespace Google.Apps.Chat.V1 {
       serviceBinder.AddMethod(__Method_GetSpaceReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(serviceImpl.GetSpaceReadState));
       serviceBinder.AddMethod(__Method_UpdateSpaceReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateSpaceReadStateRequest, global::Google.Apps.Chat.V1.SpaceReadState>(serviceImpl.UpdateSpaceReadState));
       serviceBinder.AddMethod(__Method_GetThreadReadState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetThreadReadStateRequest, global::Google.Apps.Chat.V1.ThreadReadState>(serviceImpl.GetThreadReadState));
+      serviceBinder.AddMethod(__Method_GetAvailability, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetAvailabilityRequest, global::Google.Apps.Chat.V1.Availability>(serviceImpl.GetAvailability));
+      serviceBinder.AddMethod(__Method_MarkAsActive, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.MarkAsActiveRequest, global::Google.Apps.Chat.V1.Availability>(serviceImpl.MarkAsActive));
+      serviceBinder.AddMethod(__Method_MarkAsAway, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.MarkAsAwayRequest, global::Google.Apps.Chat.V1.Availability>(serviceImpl.MarkAsAway));
+      serviceBinder.AddMethod(__Method_MarkAsDoNotDisturb, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest, global::Google.Apps.Chat.V1.Availability>(serviceImpl.MarkAsDoNotDisturb));
+      serviceBinder.AddMethod(__Method_UpdateAvailability, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.UpdateAvailabilityRequest, global::Google.Apps.Chat.V1.Availability>(serviceImpl.UpdateAvailability));
       serviceBinder.AddMethod(__Method_GetSpaceEvent, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceEventRequest, global::Google.Apps.Chat.V1.SpaceEvent>(serviceImpl.GetSpaceEvent));
       serviceBinder.AddMethod(__Method_ListSpaceEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.ListSpaceEventsRequest, global::Google.Apps.Chat.V1.ListSpaceEventsResponse>(serviceImpl.ListSpaceEvents));
       serviceBinder.AddMethod(__Method_GetSpaceNotificationSetting, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Apps.Chat.V1.GetSpaceNotificationSettingRequest, global::Google.Apps.Chat.V1.SpaceNotificationSetting>(serviceImpl.GetSpaceNotificationSetting));

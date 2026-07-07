@@ -3368,6 +3368,260 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for GetAvailability</summary>
+        public void GetAvailabilityRequestObject()
+        {
+            // Snippet: GetAvailability(GetAvailabilityRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            GetAvailabilityRequest request = new GetAvailabilityRequest
+            {
+                AvailabilityName = AvailabilityName.FromUser("[USER]"),
+            };
+            // Make the request
+            Availability response = chatServiceClient.GetAvailability(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAvailabilityAsync</summary>
+        public async Task GetAvailabilityRequestObjectAsync()
+        {
+            // Snippet: GetAvailabilityAsync(GetAvailabilityRequest, CallSettings)
+            // Additional: GetAvailabilityAsync(GetAvailabilityRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            GetAvailabilityRequest request = new GetAvailabilityRequest
+            {
+                AvailabilityName = AvailabilityName.FromUser("[USER]"),
+            };
+            // Make the request
+            Availability response = await chatServiceClient.GetAvailabilityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAvailability</summary>
+        public void GetAvailability()
+        {
+            // Snippet: GetAvailability(string, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "users/[USER]/availability";
+            // Make the request
+            Availability response = chatServiceClient.GetAvailability(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAvailabilityAsync</summary>
+        public async Task GetAvailabilityAsync()
+        {
+            // Snippet: GetAvailabilityAsync(string, CallSettings)
+            // Additional: GetAvailabilityAsync(string, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "users/[USER]/availability";
+            // Make the request
+            Availability response = await chatServiceClient.GetAvailabilityAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAvailability</summary>
+        public void GetAvailabilityResourceNames()
+        {
+            // Snippet: GetAvailability(AvailabilityName, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            AvailabilityName name = AvailabilityName.FromUser("[USER]");
+            // Make the request
+            Availability response = chatServiceClient.GetAvailability(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetAvailabilityAsync</summary>
+        public async Task GetAvailabilityResourceNamesAsync()
+        {
+            // Snippet: GetAvailabilityAsync(AvailabilityName, CallSettings)
+            // Additional: GetAvailabilityAsync(AvailabilityName, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            AvailabilityName name = AvailabilityName.FromUser("[USER]");
+            // Make the request
+            Availability response = await chatServiceClient.GetAvailabilityAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkAsActive</summary>
+        public void MarkAsActiveRequestObject()
+        {
+            // Snippet: MarkAsActive(MarkAsActiveRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            MarkAsActiveRequest request = new MarkAsActiveRequest
+            {
+                AvailabilityName = AvailabilityName.FromUser("[USER]"),
+                ExpireTime = new Timestamp(),
+            };
+            // Make the request
+            Availability response = chatServiceClient.MarkAsActive(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkAsActiveAsync</summary>
+        public async Task MarkAsActiveRequestObjectAsync()
+        {
+            // Snippet: MarkAsActiveAsync(MarkAsActiveRequest, CallSettings)
+            // Additional: MarkAsActiveAsync(MarkAsActiveRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MarkAsActiveRequest request = new MarkAsActiveRequest
+            {
+                AvailabilityName = AvailabilityName.FromUser("[USER]"),
+                ExpireTime = new Timestamp(),
+            };
+            // Make the request
+            Availability response = await chatServiceClient.MarkAsActiveAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkAsAway</summary>
+        public void MarkAsAwayRequestObject()
+        {
+            // Snippet: MarkAsAway(MarkAsAwayRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            MarkAsAwayRequest request = new MarkAsAwayRequest
+            {
+                AvailabilityName = AvailabilityName.FromUser("[USER]"),
+            };
+            // Make the request
+            Availability response = chatServiceClient.MarkAsAway(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkAsAwayAsync</summary>
+        public async Task MarkAsAwayRequestObjectAsync()
+        {
+            // Snippet: MarkAsAwayAsync(MarkAsAwayRequest, CallSettings)
+            // Additional: MarkAsAwayAsync(MarkAsAwayRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MarkAsAwayRequest request = new MarkAsAwayRequest
+            {
+                AvailabilityName = AvailabilityName.FromUser("[USER]"),
+            };
+            // Make the request
+            Availability response = await chatServiceClient.MarkAsAwayAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkAsDoNotDisturb</summary>
+        public void MarkAsDoNotDisturbRequestObject()
+        {
+            // Snippet: MarkAsDoNotDisturb(MarkAsDoNotDisturbRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            MarkAsDoNotDisturbRequest request = new MarkAsDoNotDisturbRequest
+            {
+                AvailabilityName = AvailabilityName.FromUser("[USER]"),
+                ExpireTime = new Timestamp(),
+            };
+            // Make the request
+            Availability response = chatServiceClient.MarkAsDoNotDisturb(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for MarkAsDoNotDisturbAsync</summary>
+        public async Task MarkAsDoNotDisturbRequestObjectAsync()
+        {
+            // Snippet: MarkAsDoNotDisturbAsync(MarkAsDoNotDisturbRequest, CallSettings)
+            // Additional: MarkAsDoNotDisturbAsync(MarkAsDoNotDisturbRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MarkAsDoNotDisturbRequest request = new MarkAsDoNotDisturbRequest
+            {
+                AvailabilityName = AvailabilityName.FromUser("[USER]"),
+                ExpireTime = new Timestamp(),
+            };
+            // Make the request
+            Availability response = await chatServiceClient.MarkAsDoNotDisturbAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAvailability</summary>
+        public void UpdateAvailabilityRequestObject()
+        {
+            // Snippet: UpdateAvailability(UpdateAvailabilityRequest, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            UpdateAvailabilityRequest request = new UpdateAvailabilityRequest
+            {
+                Availability = new Availability(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Availability response = chatServiceClient.UpdateAvailability(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAvailabilityAsync</summary>
+        public async Task UpdateAvailabilityRequestObjectAsync()
+        {
+            // Snippet: UpdateAvailabilityAsync(UpdateAvailabilityRequest, CallSettings)
+            // Additional: UpdateAvailabilityAsync(UpdateAvailabilityRequest, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateAvailabilityRequest request = new UpdateAvailabilityRequest
+            {
+                Availability = new Availability(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Availability response = await chatServiceClient.UpdateAvailabilityAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAvailability</summary>
+        public void UpdateAvailability()
+        {
+            // Snippet: UpdateAvailability(Availability, FieldMask, CallSettings)
+            // Create client
+            ChatServiceClient chatServiceClient = ChatServiceClient.Create();
+            // Initialize request argument(s)
+            Availability availability = new Availability();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Availability response = chatServiceClient.UpdateAvailability(availability, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateAvailabilityAsync</summary>
+        public async Task UpdateAvailabilityAsync()
+        {
+            // Snippet: UpdateAvailabilityAsync(Availability, FieldMask, CallSettings)
+            // Additional: UpdateAvailabilityAsync(Availability, FieldMask, CancellationToken)
+            // Create client
+            ChatServiceClient chatServiceClient = await ChatServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            Availability availability = new Availability();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Availability response = await chatServiceClient.UpdateAvailabilityAsync(availability, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for GetSpaceEvent</summary>
         public void GetSpaceEventRequestObject()
         {

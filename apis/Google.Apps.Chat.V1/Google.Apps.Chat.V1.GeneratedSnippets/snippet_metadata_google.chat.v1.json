@@ -7594,6 +7594,784 @@
       ]
     },
     {
+      "regionTag": "chat_v1_generated_ChatService_GetAvailability_sync",
+      "title": "GetAvailabilityRequestObject",
+      "description": "Snippet for GetAvailability",
+      "file": "ChatServiceClient.GetAvailabilityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAvailability",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetAvailability",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetAvailabilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Availability",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetAvailability",
+          "fullName": "google.chat.v1.ChatService.GetAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetAvailability_async",
+      "title": "GetAvailabilityRequestObjectAsync",
+      "description": "Snippet for GetAvailabilityAsync",
+      "file": "ChatServiceClient.GetAvailabilityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAvailabilityAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetAvailabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.GetAvailabilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Availability>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetAvailability",
+          "fullName": "google.chat.v1.ChatService.GetAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetAvailability_sync_flattened",
+      "title": "GetAvailability",
+      "description": "Snippet for GetAvailability",
+      "file": "ChatServiceClient.GetAvailabilitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAvailability",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetAvailability",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Availability",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetAvailability",
+          "fullName": "google.chat.v1.ChatService.GetAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetAvailability_async_flattened",
+      "title": "GetAvailabilityAsync",
+      "description": "Snippet for GetAvailabilityAsync",
+      "file": "ChatServiceClient.GetAvailabilityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAvailabilityAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetAvailabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Availability>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetAvailability",
+          "fullName": "google.chat.v1.ChatService.GetAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetAvailability_sync_flattened_resourceNames",
+      "title": "GetAvailabilityResourceNames",
+      "description": "Snippet for GetAvailability",
+      "file": "ChatServiceClient.GetAvailabilityResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAvailability",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetAvailability",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.AvailabilityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Availability",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetAvailability",
+          "fullName": "google.chat.v1.ChatService.GetAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_GetAvailability_async_flattened_resourceNames",
+      "title": "GetAvailabilityResourceNamesAsync",
+      "description": "Snippet for GetAvailabilityAsync",
+      "file": "ChatServiceClient.GetAvailabilityResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAvailabilityAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.GetAvailabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.AvailabilityName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Availability>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "GetAvailability",
+          "fullName": "google.chat.v1.ChatService.GetAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MarkAsActive_sync",
+      "title": "MarkAsActiveRequestObject",
+      "description": "Snippet for MarkAsActive",
+      "file": "ChatServiceClient.MarkAsActiveRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MarkAsActive",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MarkAsActive",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.MarkAsActiveRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Availability",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MarkAsActive",
+          "fullName": "google.chat.v1.ChatService.MarkAsActive",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MarkAsActive_async",
+      "title": "MarkAsActiveRequestObjectAsync",
+      "description": "Snippet for MarkAsActiveAsync",
+      "file": "ChatServiceClient.MarkAsActiveRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MarkAsActiveAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MarkAsActiveAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.MarkAsActiveRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Availability>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MarkAsActive",
+          "fullName": "google.chat.v1.ChatService.MarkAsActive",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MarkAsAway_sync",
+      "title": "MarkAsAwayRequestObject",
+      "description": "Snippet for MarkAsAway",
+      "file": "ChatServiceClient.MarkAsAwayRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MarkAsAway",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MarkAsAway",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.MarkAsAwayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Availability",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MarkAsAway",
+          "fullName": "google.chat.v1.ChatService.MarkAsAway",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MarkAsAway_async",
+      "title": "MarkAsAwayRequestObjectAsync",
+      "description": "Snippet for MarkAsAwayAsync",
+      "file": "ChatServiceClient.MarkAsAwayRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MarkAsAwayAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MarkAsAwayAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.MarkAsAwayRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Availability>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MarkAsAway",
+          "fullName": "google.chat.v1.ChatService.MarkAsAway",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MarkAsDoNotDisturb_sync",
+      "title": "MarkAsDoNotDisturbRequestObject",
+      "description": "Snippet for MarkAsDoNotDisturb",
+      "file": "ChatServiceClient.MarkAsDoNotDisturbRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MarkAsDoNotDisturb",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MarkAsDoNotDisturb",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Availability",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MarkAsDoNotDisturb",
+          "fullName": "google.chat.v1.ChatService.MarkAsDoNotDisturb",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_MarkAsDoNotDisturb_async",
+      "title": "MarkAsDoNotDisturbRequestObjectAsync",
+      "description": "Snippet for MarkAsDoNotDisturbAsync",
+      "file": "ChatServiceClient.MarkAsDoNotDisturbRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "MarkAsDoNotDisturbAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.MarkAsDoNotDisturbAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.MarkAsDoNotDisturbRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Availability>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "MarkAsDoNotDisturb",
+          "fullName": "google.chat.v1.ChatService.MarkAsDoNotDisturb",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateAvailability_sync",
+      "title": "UpdateAvailabilityRequestObject",
+      "description": "Snippet for UpdateAvailability",
+      "file": "ChatServiceClient.UpdateAvailabilityRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAvailability",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateAvailability",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateAvailabilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Availability",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAvailability",
+          "fullName": "google.chat.v1.ChatService.UpdateAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateAvailability_async",
+      "title": "UpdateAvailabilityRequestObjectAsync",
+      "description": "Snippet for UpdateAvailabilityAsync",
+      "file": "ChatServiceClient.UpdateAvailabilityRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAvailabilityAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateAvailabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.UpdateAvailabilityRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Availability>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAvailability",
+          "fullName": "google.chat.v1.ChatService.UpdateAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateAvailability_sync_flattened",
+      "title": "UpdateAvailability",
+      "description": "Snippet for UpdateAvailability",
+      "file": "ChatServiceClient.UpdateAvailabilitySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAvailability",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateAvailability",
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.Availability",
+            "name": "availability"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Apps.Chat.V1.Availability",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAvailability",
+          "fullName": "google.chat.v1.ChatService.UpdateAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "chat_v1_generated_ChatService_UpdateAvailability_async_flattened",
+      "title": "UpdateAvailabilityAsync",
+      "description": "Snippet for UpdateAvailabilityAsync",
+      "file": "ChatServiceClient.UpdateAvailabilityAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "UpdateAvailabilityAsync",
+        "fullName": "Google.Apps.Chat.V1.ChatServiceClient.UpdateAvailabilityAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Apps.Chat.V1.Availability",
+            "name": "availability"
+          },
+          {
+            "type": "Google.Protobuf.WellKnownTypes.FieldMask",
+            "name": "updateMask"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Apps.Chat.V1.Availability>",
+        "client": {
+          "shortName": "ChatServiceClient",
+          "fullName": "Google.Apps.Chat.V1.ChatServiceClient"
+        },
+        "method": {
+          "shortName": "UpdateAvailability",
+          "fullName": "google.chat.v1.ChatService.UpdateAvailability",
+          "service": {
+            "shortName": "ChatService",
+            "fullName": "google.chat.v1.ChatService"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "chat_v1_generated_ChatService_GetSpaceEvent_sync",
       "title": "GetSpaceEventRequestObject",
       "description": "Snippet for GetSpaceEvent",
