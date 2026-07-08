@@ -4197,6 +4197,406 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_StartMigration_sync",
+      "title": "StartMigrationRequestObject",
+      "description": "Snippet for StartMigration",
+      "file": "MemorystoreClient.StartMigrationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartMigration",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.StartMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.StartMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "StartMigration",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.StartMigration",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_StartMigration_async",
+      "title": "StartMigrationRequestObjectAsync",
+      "description": "Snippet for StartMigrationAsync",
+      "file": "MemorystoreClient.StartMigrationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "StartMigrationAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.StartMigrationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.StartMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "StartMigration",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.StartMigration",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_FinishMigration_sync",
+      "title": "FinishMigrationRequestObject",
+      "description": "Snippet for FinishMigration",
+      "file": "MemorystoreClient.FinishMigrationRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishMigration",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.FinishMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.FinishMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "FinishMigration",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.FinishMigration",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_FinishMigration_async",
+      "title": "FinishMigrationRequestObjectAsync",
+      "description": "Snippet for FinishMigrationAsync",
+      "file": "MemorystoreClient.FinishMigrationRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishMigrationAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.FinishMigrationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.FinishMigrationRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "FinishMigration",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.FinishMigration",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_FinishMigration_sync_flattened",
+      "title": "FinishMigration",
+      "description": "Snippet for FinishMigration",
+      "file": "MemorystoreClient.FinishMigrationSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishMigration",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.FinishMigration",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "FinishMigration",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.FinishMigration",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_FinishMigration_async_flattened",
+      "title": "FinishMigrationAsync",
+      "description": "Snippet for FinishMigrationAsync",
+      "file": "MemorystoreClient.FinishMigrationAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishMigrationAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.FinishMigrationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "FinishMigration",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.FinishMigration",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_FinishMigration_sync_flattened_resourceNames",
+      "title": "FinishMigrationResourceNames",
+      "description": "Snippet for FinishMigration",
+      "file": "MemorystoreClient.FinishMigrationResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishMigration",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.FinishMigration",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "FinishMigration",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.FinishMigration",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_FinishMigration_async_flattened_resourceNames",
+      "title": "FinishMigrationResourceNamesAsync",
+      "description": "Snippet for FinishMigrationAsync",
+      "file": "MemorystoreClient.FinishMigrationResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "FinishMigrationAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.FinishMigrationAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "name"
+          },
+          {
+            "type": "System.Boolean",
+            "name": "force"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "FinishMigration",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.FinishMigration",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

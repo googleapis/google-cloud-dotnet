@@ -2439,5 +2439,261 @@ namespace GoogleCSharpSnippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for StartMigration</summary>
+        public void StartMigrationRequestObject()
+        {
+            // Snippet: StartMigration(StartMigrationRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            StartMigrationRequest request = new StartMigrationRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SelfManagedSource = new SelfManagedSource(),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = memorystoreClient.StartMigration(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceStartMigration(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for StartMigrationAsync</summary>
+        public async Task StartMigrationRequestObjectAsync()
+        {
+            // Snippet: StartMigrationAsync(StartMigrationRequest, CallSettings)
+            // Additional: StartMigrationAsync(StartMigrationRequest, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            StartMigrationRequest request = new StartMigrationRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                SelfManagedSource = new SelfManagedSource(),
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await memorystoreClient.StartMigrationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceStartMigrationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishMigration</summary>
+        public void FinishMigrationRequestObject()
+        {
+            // Snippet: FinishMigration(FinishMigrationRequest, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            FinishMigrationRequest request = new FinishMigrationRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                Force = false,
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = memorystoreClient.FinishMigration(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceFinishMigration(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishMigrationAsync</summary>
+        public async Task FinishMigrationRequestObjectAsync()
+        {
+            // Snippet: FinishMigrationAsync(FinishMigrationRequest, CallSettings)
+            // Additional: FinishMigrationAsync(FinishMigrationRequest, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            FinishMigrationRequest request = new FinishMigrationRequest
+            {
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
+                Force = false,
+            };
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await memorystoreClient.FinishMigrationAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceFinishMigrationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishMigration</summary>
+        public void FinishMigration()
+        {
+            // Snippet: FinishMigration(string, bool, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            bool force = false;
+            // Make the request
+            Operation<Instance, OperationMetadata> response = memorystoreClient.FinishMigration(name, force);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceFinishMigration(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishMigrationAsync</summary>
+        public async Task FinishMigrationAsync()
+        {
+            // Snippet: FinishMigrationAsync(string, bool, CallSettings)
+            // Additional: FinishMigrationAsync(string, bool, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/instances/[INSTANCE]";
+            bool force = false;
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await memorystoreClient.FinishMigrationAsync(name, force);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceFinishMigrationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishMigration</summary>
+        public void FinishMigrationResourceNames()
+        {
+            // Snippet: FinishMigration(InstanceName, bool, CallSettings)
+            // Create client
+            MemorystoreClient memorystoreClient = MemorystoreClient.Create();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            bool force = false;
+            // Make the request
+            Operation<Instance, OperationMetadata> response = memorystoreClient.FinishMigration(name, force);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = memorystoreClient.PollOnceFinishMigration(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for FinishMigrationAsync</summary>
+        public async Task FinishMigrationResourceNamesAsync()
+        {
+            // Snippet: FinishMigrationAsync(InstanceName, bool, CallSettings)
+            // Additional: FinishMigrationAsync(InstanceName, bool, CancellationToken)
+            // Create client
+            MemorystoreClient memorystoreClient = await MemorystoreClient.CreateAsync();
+            // Initialize request argument(s)
+            InstanceName name = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]");
+            bool force = false;
+            // Make the request
+            Operation<Instance, OperationMetadata> response = await memorystoreClient.FinishMigrationAsync(name, force);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Instance, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Instance result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Instance, OperationMetadata> retrievedResponse = await memorystoreClient.PollOnceFinishMigrationAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Instance retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

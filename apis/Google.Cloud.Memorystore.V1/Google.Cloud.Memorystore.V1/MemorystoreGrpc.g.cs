@@ -111,6 +111,10 @@ namespace Google.Cloud.Memorystore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ExportBackupRequest> __Marshaller_google_cloud_memorystore_v1_ExportBackupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ExportBackupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.BackupInstanceRequest> __Marshaller_google_cloud_memorystore_v1_BackupInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.BackupInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.StartMigrationRequest> __Marshaller_google_cloud_memorystore_v1_StartMigrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.StartMigrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.FinishMigrationRequest> __Marshaller_google_cloud_memorystore_v1_FinishMigrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.FinishMigrationRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.ListInstancesRequest, global::Google.Cloud.Memorystore.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Memorystore.V1.ListInstancesRequest, global::Google.Cloud.Memorystore.V1.ListInstancesResponse>(
@@ -230,6 +234,22 @@ namespace Google.Cloud.Memorystore.V1 {
         __ServiceName,
         "BackupInstance",
         __Marshaller_google_cloud_memorystore_v1_BackupInstanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.StartMigrationRequest, global::Google.LongRunning.Operation> __Method_StartMigration = new grpc::Method<global::Google.Cloud.Memorystore.V1.StartMigrationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StartMigration",
+        __Marshaller_google_cloud_memorystore_v1_StartMigrationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.FinishMigrationRequest, global::Google.LongRunning.Operation> __Method_FinishMigration = new grpc::Method<global::Google.Cloud.Memorystore.V1.FinishMigrationRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "FinishMigration",
+        __Marshaller_google_cloud_memorystore_v1_FinishMigrationRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -434,6 +454,42 @@ namespace Google.Cloud.Memorystore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BackupInstance(global::Google.Cloud.Memorystore.V1.BackupInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Initiates the migration of a source instance to the target Memorystore
+      /// instance.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Set up replication with the source instance and replicate any writes to
+      /// the source instance.
+      /// 2. Only allow reads.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> StartMigration(global::Google.Cloud.Memorystore.V1.StartMigrationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Finalizes the migration process.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Stop replicating from the source instance.
+      /// 2. Allow both reads and writes.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> FinishMigration(global::Google.Cloud.Memorystore.V1.FinishMigrationRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1251,6 +1307,150 @@ namespace Google.Cloud.Memorystore.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BackupInstance, null, options, request);
       }
+      /// <summary>
+      /// Initiates the migration of a source instance to the target Memorystore
+      /// instance.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Set up replication with the source instance and replicate any writes to
+      /// the source instance.
+      /// 2. Only allow reads.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StartMigration(global::Google.Cloud.Memorystore.V1.StartMigrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartMigration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initiates the migration of a source instance to the target Memorystore
+      /// instance.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Set up replication with the source instance and replicate any writes to
+      /// the source instance.
+      /// 2. Only allow reads.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation StartMigration(global::Google.Cloud.Memorystore.V1.StartMigrationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StartMigration, null, options, request);
+      }
+      /// <summary>
+      /// Initiates the migration of a source instance to the target Memorystore
+      /// instance.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Set up replication with the source instance and replicate any writes to
+      /// the source instance.
+      /// 2. Only allow reads.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartMigrationAsync(global::Google.Cloud.Memorystore.V1.StartMigrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StartMigrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Initiates the migration of a source instance to the target Memorystore
+      /// instance.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Set up replication with the source instance and replicate any writes to
+      /// the source instance.
+      /// 2. Only allow reads.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> StartMigrationAsync(global::Google.Cloud.Memorystore.V1.StartMigrationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StartMigration, null, options, request);
+      }
+      /// <summary>
+      /// Finalizes the migration process.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Stop replicating from the source instance.
+      /// 2. Allow both reads and writes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation FinishMigration(global::Google.Cloud.Memorystore.V1.FinishMigrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FinishMigration(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finalizes the migration process.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Stop replicating from the source instance.
+      /// 2. Allow both reads and writes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation FinishMigration(global::Google.Cloud.Memorystore.V1.FinishMigrationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_FinishMigration, null, options, request);
+      }
+      /// <summary>
+      /// Finalizes the migration process.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Stop replicating from the source instance.
+      /// 2. Allow both reads and writes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> FinishMigrationAsync(global::Google.Cloud.Memorystore.V1.FinishMigrationRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return FinishMigrationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Finalizes the migration process.
+      ///
+      /// After the successful completion of this operation, the target instance
+      /// will:
+      /// 1. Stop replicating from the source instance.
+      /// 2. Allow both reads and writes.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> FinishMigrationAsync(global::Google.Cloud.Memorystore.V1.FinishMigrationRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_FinishMigration, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override MemorystoreClient NewInstance(ClientBaseConfiguration configuration)
@@ -1279,7 +1479,9 @@ namespace Google.Cloud.Memorystore.V1 {
           .AddMethod(__Method_GetBackup, serviceImpl.GetBackup)
           .AddMethod(__Method_DeleteBackup, serviceImpl.DeleteBackup)
           .AddMethod(__Method_ExportBackup, serviceImpl.ExportBackup)
-          .AddMethod(__Method_BackupInstance, serviceImpl.BackupInstance).Build();
+          .AddMethod(__Method_BackupInstance, serviceImpl.BackupInstance)
+          .AddMethod(__Method_StartMigration, serviceImpl.StartMigration)
+          .AddMethod(__Method_FinishMigration, serviceImpl.FinishMigration).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1304,6 +1506,8 @@ namespace Google.Cloud.Memorystore.V1 {
       serviceBinder.AddMethod(__Method_DeleteBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.DeleteBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteBackup));
       serviceBinder.AddMethod(__Method_ExportBackup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.ExportBackupRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportBackup));
       serviceBinder.AddMethod(__Method_BackupInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.BackupInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.BackupInstance));
+      serviceBinder.AddMethod(__Method_StartMigration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.StartMigrationRequest, global::Google.LongRunning.Operation>(serviceImpl.StartMigration));
+      serviceBinder.AddMethod(__Method_FinishMigration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.FinishMigrationRequest, global::Google.LongRunning.Operation>(serviceImpl.FinishMigration));
     }
 
   }

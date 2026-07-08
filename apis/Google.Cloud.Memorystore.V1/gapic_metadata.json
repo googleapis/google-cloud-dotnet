@@ -40,6 +40,12 @@
                 "ExportBackupAsync"
               ]
             },
+            "FinishMigration": {
+              "methods": [
+                "FinishMigration",
+                "FinishMigrationAsync"
+              ]
+            },
             "GetBackup": {
               "methods": [
                 "GetBackup",
@@ -92,6 +98,12 @@
               "methods": [
                 "RescheduleMaintenance",
                 "RescheduleMaintenanceAsync"
+              ]
+            },
+            "StartMigration": {
+              "methods": [
+                "StartMigration",
+                "StartMigrationAsync"
               ]
             },
             "UpdateInstance": {

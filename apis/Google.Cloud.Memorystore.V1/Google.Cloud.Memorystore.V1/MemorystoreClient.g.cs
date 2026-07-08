@@ -71,6 +71,10 @@ namespace Google.Cloud.Memorystore.V1
             ExportBackupOperationsSettings = existing.ExportBackupOperationsSettings.Clone();
             BackupInstanceSettings = existing.BackupInstanceSettings;
             BackupInstanceOperationsSettings = existing.BackupInstanceOperationsSettings.Clone();
+            StartMigrationSettings = existing.StartMigrationSettings;
+            StartMigrationOperationsSettings = existing.StartMigrationOperationsSettings.Clone();
+            FinishMigrationSettings = existing.FinishMigrationSettings;
+            FinishMigrationOperationsSettings = existing.FinishMigrationOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -403,6 +407,66 @@ namespace Google.Cloud.Memorystore.V1
         };
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.StartMigration</c> and <c>MemorystoreClient.StartMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartMigrationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.StartMigration</c> and
+        /// <c>MemorystoreClient.StartMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartMigrationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.FinishMigration</c> and <c>MemorystoreClient.FinishMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FinishMigrationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.FinishMigration</c> and
+        /// <c>MemorystoreClient.FinishMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings FinishMigrationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -480,11 +544,15 @@ namespace Google.Cloud.Memorystore.V1
         /// The default Memorystore scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/memorystore.read-only</description></item>
+        /// <item><description>https://www.googleapis.com/auth/memorystore.read-write</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/memorystore.read-only",
+            "https://www.googleapis.com/auth/memorystore.read-write",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -2729,6 +2797,296 @@ namespace Google.Cloud.Memorystore.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> BackupInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             BackupInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> StartMigration(StartMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> StartMigrationAsync(StartMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> StartMigrationAsync(StartMigrationRequest request, st::CancellationToken cancellationToken) =>
+            StartMigrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartMigration</c>.</summary>
+        public virtual lro::OperationsClient StartMigrationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StartMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceStartMigration(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceStartMigrationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> FinishMigration(FinishMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(FinishMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(FinishMigrationRequest request, st::CancellationToken cancellationToken) =>
+            FinishMigrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>FinishMigration</c>.</summary>
+        public virtual lro::OperationsClient FinishMigrationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>FinishMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceFinishMigration(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), FinishMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>FinishMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceFinishMigrationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), FinishMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> FinishMigration(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            FinishMigration(new FinishMigrationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            FinishMigrationAsync(new FinishMigrationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(string name, bool force, st::CancellationToken cancellationToken) =>
+            FinishMigrationAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> FinishMigration(InstanceName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            FinishMigration(new FinishMigrationRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(InstanceName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            FinishMigrationAsync(new FinishMigrationRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(InstanceName name, bool force, st::CancellationToken cancellationToken) =>
+            FinishMigrationAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Memorystore client wrapper implementation, for convenient use.</summary>
@@ -2767,6 +3125,10 @@ namespace Google.Cloud.Memorystore.V1
 
         private readonly gaxgrpc::ApiCall<BackupInstanceRequest, lro::Operation> _callBackupInstance;
 
+        private readonly gaxgrpc::ApiCall<StartMigrationRequest, lro::Operation> _callStartMigration;
+
+        private readonly gaxgrpc::ApiCall<FinishMigrationRequest, lro::Operation> _callFinishMigration;
+
         /// <summary>
         /// Constructs a client wrapper for the Memorystore service, with the specified gRPC client and settings.
         /// </summary>
@@ -2789,6 +3151,8 @@ namespace Google.Cloud.Memorystore.V1
             DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
             ExportBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportBackupOperationsSettings, logger);
             BackupInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BackupInstanceOperationsSettings, logger);
+            StartMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartMigrationOperationsSettings, logger);
+            FinishMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FinishMigrationOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
@@ -2835,6 +3199,12 @@ namespace Google.Cloud.Memorystore.V1
             _callBackupInstance = clientHelper.BuildApiCall<BackupInstanceRequest, lro::Operation>("BackupInstance", grpcClient.BackupInstanceAsync, grpcClient.BackupInstance, effectiveSettings.BackupInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callBackupInstance);
             Modify_BackupInstanceApiCall(ref _callBackupInstance);
+            _callStartMigration = clientHelper.BuildApiCall<StartMigrationRequest, lro::Operation>("StartMigration", grpcClient.StartMigrationAsync, grpcClient.StartMigration, effectiveSettings.StartMigrationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStartMigration);
+            Modify_StartMigrationApiCall(ref _callStartMigration);
+            _callFinishMigration = clientHelper.BuildApiCall<FinishMigrationRequest, lro::Operation>("FinishMigration", grpcClient.FinishMigrationAsync, grpcClient.FinishMigration, effectiveSettings.FinishMigrationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFinishMigration);
+            Modify_FinishMigrationApiCall(ref _callFinishMigration);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2869,6 +3239,10 @@ namespace Google.Cloud.Memorystore.V1
         partial void Modify_ExportBackupApiCall(ref gaxgrpc::ApiCall<ExportBackupRequest, lro::Operation> call);
 
         partial void Modify_BackupInstanceApiCall(ref gaxgrpc::ApiCall<BackupInstanceRequest, lro::Operation> call);
+
+        partial void Modify_StartMigrationApiCall(ref gaxgrpc::ApiCall<StartMigrationRequest, lro::Operation> call);
+
+        partial void Modify_FinishMigrationApiCall(ref gaxgrpc::ApiCall<FinishMigrationRequest, lro::Operation> call);
 
         partial void OnConstruction(Memorystore.MemorystoreClient grpcClient, MemorystoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2907,6 +3281,10 @@ namespace Google.Cloud.Memorystore.V1
         partial void Modify_ExportBackupRequest(ref ExportBackupRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BackupInstanceRequest(ref BackupInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StartMigrationRequest(ref StartMigrationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FinishMigrationRequest(ref FinishMigrationRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Instances in a given project and location.
@@ -3319,6 +3697,84 @@ namespace Google.Cloud.Memorystore.V1
         {
             Modify_BackupInstanceRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, OperationMetadata>(await _callBackupInstance.Async(request, callSettings).ConfigureAwait(false), BackupInstanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StartMigration</c>.</summary>
+        public override lro::OperationsClient StartMigrationOperationsClient { get; }
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> StartMigration(StartMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callStartMigration.Sync(request, callSettings), StartMigrationOperationsClient);
+        }
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> StartMigrationAsync(StartMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callStartMigration.Async(request, callSettings).ConfigureAwait(false), StartMigrationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>FinishMigration</c>.</summary>
+        public override lro::OperationsClient FinishMigrationOperationsClient { get; }
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> FinishMigration(FinishMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FinishMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callFinishMigration.Sync(request, callSettings), FinishMigrationOperationsClient);
+        }
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(FinishMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FinishMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callFinishMigration.Async(request, callSettings).ConfigureAwait(false), FinishMigrationOperationsClient);
         }
     }
 
