@@ -1457,6 +1457,7 @@
         "kubernetes"
       ],
       "dependencies": {
+        "Google.Cloud.Iam.V1": "3.5.0",
         "Grafeas.V1": "3.11.0"
       },
       "generator": "micro",
@@ -1481,7 +1482,9 @@
         "control",
         "kubernetes"
       ],
-      "dependencies": {},
+      "dependencies": {
+        "Google.Cloud.Iam.V1": "3.5.0"
+      },
       "generator": "micro",
       "protoPath": "google/cloud/binaryauthorization/v1beta1",
       "shortName": "binaryauthorization",
