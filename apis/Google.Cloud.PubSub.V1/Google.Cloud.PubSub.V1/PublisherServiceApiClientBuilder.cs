@@ -15,6 +15,7 @@
 using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Grpc.Core;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -61,10 +62,54 @@ namespace Google.Cloud.PubSub.V1
             ChannelOptions = extraChannelOptions;
         }
 
-        partial void InterceptBuild(ref PublisherServiceApiClient client) => client = MaybeCreateEmulatorClientBuilder()?.Build();
+        partial void InterceptBuild(ref PublisherServiceApiClient client)
+        {
+            // Warm up the Application Default Credentials (ADC) if no explicit credentials
+            // have been configured. This prevents thread pool starvation during high-load startup
+            // scenarios (e.g., rapid scaling on Cloud Run), resolving issue #11092.
+            if (Credential is null && ChannelCredentials is null)
+            {
+                try
+                {
+                    Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefault();
+                }
+                catch (System.Exception)
+                {
+                    // Silence exceptions to let the standard initialization flow or
+                    // emulator detection handle any credential validation errors.
+                }
+            }
 
-        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<PublisherServiceApiClient> task) =>
-            task = MaybeCreateEmulatorClientBuilder()?.BuildAsync(cancellationToken);
+            client = MaybeCreateEmulatorClientBuilder()?.Build();
+        }
+
+        partial void InterceptBuildAsync(CancellationToken cancellationToken, ref Task<PublisherServiceApiClient> task)
+        {
+            // Ensure credentials are warm and cached before initiating asynchronous channel build,
+            // avoiding potential sync-over-async blocking patterns down the line.
+            if (Credential is null && ChannelCredentials is null)
+            {
+                try
+                {
+                    // Pre-populates the static credentials cache synchronously but safely
+                    // to avoid thread pool deadlocks inside the generated async pipeline initialization.
+                    Google.Apis.Auth.OAuth2.GoogleCredential.GetApplicationDefault();
+                }
+                catch (System.Exception)
+                {
+                    // Fallback to standard pipeline error handling
+                }
+            }
+
+            // Let the original emulator logic handle the task assignment if applicable.
+            // If the emulator is not needed, letting 'task' remain unmodified allows the
+            // concrete generated asynchronous BuildAsync flow to execute normally.
+            var emulatorBuilder = MaybeCreateEmulatorClientBuilder();
+            if (emulatorBuilder is not null)
+            {
+                task = emulatorBuilder.BuildAsync(cancellationToken);
+            }
+        }
 
         private PublisherServiceApiClientBuilder MaybeCreateEmulatorClientBuilder()
         {
