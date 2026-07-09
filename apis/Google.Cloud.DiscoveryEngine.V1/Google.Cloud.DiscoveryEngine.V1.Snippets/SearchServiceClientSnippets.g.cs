@@ -75,6 +75,7 @@ namespace GoogleCSharpSnippets
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
                 PageCategories = { "", },
+                RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.Search(request);
@@ -163,6 +164,7 @@ namespace GoogleCSharpSnippets
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
                 PageCategories = { "", },
+                RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchAsync(request);
@@ -251,6 +253,7 @@ namespace GoogleCSharpSnippets
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
                 PageCategories = { "", },
+                RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
             PagedEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchLite(request);
@@ -339,6 +342,7 @@ namespace GoogleCSharpSnippets
                 RelevanceScoreSpec = new SearchRequest.Types.RelevanceScoreSpec(),
                 RankingExpressionBackend = SearchRequest.Types.RankingExpressionBackend.Unspecified,
                 PageCategories = { "", },
+                RelevanceFilterSpec = new SearchRequest.Types.RelevanceFilterSpec(),
             };
             // Make the request
             PagedAsyncEnumerable<SearchResponse, SearchResponse.Types.SearchResult> response = searchServiceClient.SearchLiteAsync(request);
