@@ -33,6 +33,7 @@ namespace Google.Apps.Chat.V1
             yield return ActionStatusReflection.Descriptor;
             yield return AnnotationReflection.Descriptor;
             yield return AttachmentReflection.Descriptor;
+            yield return AudienceReflection.Descriptor;
             yield return AvailabilityReflection.Descriptor;
             yield return ChatServiceReflection.Descriptor;
             yield return ContextualAddonReflection.Descriptor;

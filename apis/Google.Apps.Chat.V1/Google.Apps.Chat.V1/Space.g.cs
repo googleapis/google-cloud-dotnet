@@ -26,114 +26,128 @@ namespace Google.Apps.Chat.V1 {
           string.Concat(
             "Chpnb29nbGUvY2hhdC92MS9zcGFjZS5wcm90bxIOZ29vZ2xlLmNoYXQudjEa",
             "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkv",
-            "cmVzb3VyY2UucHJvdG8aImdvb2dsZS9jaGF0L3YxL2hpc3Rvcnlfc3RhdGUu",
-            "cHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIs0WCgVTcGFjZRIRCgRuYW1l",
-            "GAEgASgJQgPgQQgSLwoEdHlwZRgCIAEoDjIaLmdvb2dsZS5jaGF0LnYxLlNw",
-            "YWNlLlR5cGVCBRgB4EEDEjgKCnNwYWNlX3R5cGUYCiABKA4yHy5nb29nbGUu",
-            "Y2hhdC52MS5TcGFjZS5TcGFjZVR5cGVCA+BBARIfChJzaW5nbGVfdXNlcl9i",
-            "b3RfZG0YBCABKAhCA+BBARIXCgh0aHJlYWRlZBgFIAEoCEIFGAHgQQMSGQoM",
-            "ZGlzcGxheV9uYW1lGAMgASgJQgPgQQESJQoVZXh0ZXJuYWxfdXNlcl9hbGxv",
-            "d2VkGAggASgIQgbgQQXgQQESTQoVc3BhY2VfdGhyZWFkaW5nX3N0YXRlGAkg",
-            "ASgOMikuZ29vZ2xlLmNoYXQudjEuU3BhY2UuU3BhY2VUaHJlYWRpbmdTdGF0",
-            "ZUID4EEDEj4KDXNwYWNlX2RldGFpbHMYCyABKAsyIi5nb29nbGUuY2hhdC52",
-            "MS5TcGFjZS5TcGFjZURldGFpbHNCA+BBARI+ChNzcGFjZV9oaXN0b3J5X3N0",
-            "YXRlGA0gASgOMhwuZ29vZ2xlLmNoYXQudjEuSGlzdG9yeVN0YXRlQgPgQQES",
-            "GAoLaW1wb3J0X21vZGUYECABKAhCA+BBARI3CgtjcmVhdGVfdGltZRgRIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCBuBBBeBBARI5ChBsYXN0",
-            "X2FjdGl2ZV90aW1lGBIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEhwKD2FkbWluX2luc3RhbGxlZBgTIAEoCEID4EEDEkQKEG1lbWJl",
-            "cnNoaXBfY291bnQYFCABKAsyJS5nb29nbGUuY2hhdC52MS5TcGFjZS5NZW1i",
-            "ZXJzaGlwQ291bnRCA+BBAxJCCg9hY2Nlc3Nfc2V0dGluZ3MYFyABKAsyJC5n",
-            "b29nbGUuY2hhdC52MS5TcGFjZS5BY2Nlc3NTZXR0aW5nc0ID4EEBEh0KCGN1",
-            "c3RvbWVyGBggASgJQgbgQQXgQQFIAYgBARIWCglzcGFjZV91cmkYGSABKAlC",
-            "A+BBAxJkCh5wcmVkZWZpbmVkX3Blcm1pc3Npb25fc2V0dGluZ3MYGiABKA4y",
-            "Mi5nb29nbGUuY2hhdC52MS5TcGFjZS5QcmVkZWZpbmVkUGVybWlzc2lvblNl",
-            "dHRpbmdzQgbgQQTgQQFIABJMChNwZXJtaXNzaW9uX3NldHRpbmdzGBsgASgL",
-            "MiguZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lvblNldHRpbmdzQgPg",
-            "QQFIABJAChdpbXBvcnRfbW9kZV9leHBpcmVfdGltZRgcIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxpBCgxTcGFjZURldGFpbHMSGAoL",
-            "ZGVzY3JpcHRpb24YASABKAlCA+BBARIXCgpndWlkZWxpbmVzGAIgASgJQgPg",
-            "QQEaXwoPTWVtYmVyc2hpcENvdW50EisKHmpvaW5lZF9kaXJlY3RfaHVtYW5f",
-            "dXNlcl9jb3VudBgEIAEoBUID4EEDEh8KEmpvaW5lZF9ncm91cF9jb3VudBgF",
-            "IAEoBUID4EEDGsABCg5BY2Nlc3NTZXR0aW5ncxJLCgxhY2Nlc3Nfc3RhdGUY",
-            "ASABKA4yMC5nb29nbGUuY2hhdC52MS5TcGFjZS5BY2Nlc3NTZXR0aW5ncy5B",
-            "Y2Nlc3NTdGF0ZUID4EEDEhUKCGF1ZGllbmNlGAMgASgJQgPgQQEiSgoLQWNj",
-            "ZXNzU3RhdGUSHAoYQUNDRVNTX1NUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUFJJ",
-            "VkFURRABEhAKDERJU0NPVkVSQUJMRRACGqgGChJQZXJtaXNzaW9uU2V0dGlu",
-            "Z3MSVAoZbWFuYWdlX21lbWJlcnNfYW5kX2dyb3VwcxgBIAEoCzInLmdvb2ds",
-            "ZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQFIAIgBARJP",
-            "ChRtb2RpZnlfc3BhY2VfZGV0YWlscxgCIAEoCzInLmdvb2dsZS5jaGF0LnYx",
-            "LlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQFIAYgBARJJCg50b2dnbGVf",
-            "aGlzdG9yeRgDIAEoCzInLmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Np",
-            "b25TZXR0aW5nQgPgQQFIAogBARJNChJ1c2VfYXRfbWVudGlvbl9hbGwYBCAB",
-            "KAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID",
-            "4EEBSAOIAQESRgoLbWFuYWdlX2FwcHMYBSABKAsyJy5nb29nbGUuY2hhdC52",
-            "MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID4EEBSASIAQESSgoPbWFuYWdl",
-            "X3dlYmhvb2tzGAYgASgLMicuZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlz",
-            "c2lvblNldHRpbmdCA+BBAUgFiAEBEkgKDXBvc3RfbWVzc2FnZXMYByABKAsy",
-            "Jy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID4EED",
-            "SAaIAQESSQoOcmVwbHlfbWVzc2FnZXMYCCABKAsyJy5nb29nbGUuY2hhdC52",
-            "MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID4EEBSAeIAQFCHAoaX21hbmFn",
-            "ZV9tZW1iZXJzX2FuZF9ncm91cHNCFwoVX21vZGlmeV9zcGFjZV9kZXRhaWxz",
-            "QhEKD190b2dnbGVfaGlzdG9yeUIVChNfdXNlX2F0X21lbnRpb25fYWxsQg4K",
-            "DF9tYW5hZ2VfYXBwc0ISChBfbWFuYWdlX3dlYmhvb2tzQhAKDl9wb3N0X21l",
-            "c3NhZ2VzQhEKD19yZXBseV9tZXNzYWdlcxqdAQoRUGVybWlzc2lvblNldHRp",
-            "bmcSHQoQbWFuYWdlcnNfYWxsb3dlZBgBIAEoCEID4EEBEiwKGmFzc2lzdGFu",
-            "dF9tYW5hZ2Vyc19hbGxvd2VkGAMgASgIQgPgQQFIAIgBARIcCg9tZW1iZXJz",
-            "X2FsbG93ZWQYAiABKAhCA+BBAUIdChtfYXNzaXN0YW50X21hbmFnZXJzX2Fs",
-            "bG93ZWQiLgoEVHlwZRIUChBUWVBFX1VOU1BFQ0lGSUVEEAASCAoEUk9PTRAB",
-            "EgYKAkRNEAIiVgoJU3BhY2VUeXBlEhoKFlNQQUNFX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIJCgVTUEFDRRABEg4KCkdST1VQX0NIQVQQAhISCg5ESVJFQ1RfTUVT",
-            "U0FHRRADIoIBChNTcGFjZVRocmVhZGluZ1N0YXRlEiUKIVNQQUNFX1RIUkVB",
-            "RElOR19TVEFURV9VTlNQRUNJRklFRBAAEhUKEVRIUkVBREVEX01FU1NBR0VT",
-            "EAISFAoQR1JPVVBFRF9NRVNTQUdFUxADEhcKE1VOVEhSRUFERURfTUVTU0FH",
-            "RVMQBCJ/ChxQcmVkZWZpbmVkUGVybWlzc2lvblNldHRpbmdzEi4KKlBSRURF",
-            "RklORURfUEVSTUlTU0lPTl9TRVRUSU5HU19VTlNQRUNJRklFRBAAEhcKE0NP",
-            "TExBQk9SQVRJT05fU1BBQ0UQARIWChJBTk5PVU5DRU1FTlRfU1BBQ0UQAjou",
-            "6kErChljaGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNlEg5zcGFjZXMve3NwYWNl",
-            "fUIbChlzcGFjZV9wZXJtaXNzaW9uX3NldHRpbmdzQgsKCV9jdXN0b21lciJY",
-            "ChJDcmVhdGVTcGFjZVJlcXVlc3QSKQoFc3BhY2UYASABKAsyFS5nb29nbGUu",
-            "Y2hhdC52MS5TcGFjZUID4EECEhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBASJZ",
-            "ChFMaXN0U3BhY2VzUmVxdWVzdBIWCglwYWdlX3NpemUYASABKAVCA+BBARIX",
-            "CgpwYWdlX3Rva2VuGAIgASgJQgPgQQESEwoGZmlsdGVyGAMgASgJQgPgQQEi",
-            "VAoSTGlzdFNwYWNlc1Jlc3BvbnNlEiUKBnNwYWNlcxgBIAMoCzIVLmdvb2ds",
-            "ZS5jaGF0LnYxLlNwYWNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJhCg9H",
-            "ZXRTcGFjZVJlcXVlc3QSLwoEbmFtZRgBIAEoCUIh4EEC+kEbChljaGF0Lmdv",
-            "b2dsZWFwaXMuY29tL1NwYWNlEh0KEHVzZV9hZG1pbl9hY2Nlc3MYAiABKAhC",
-            "A+BBASItChhGaW5kRGlyZWN0TWVzc2FnZVJlcXVlc3QSEQoEbmFtZRgBIAEo",
-            "CUID4EECIosBChVGaW5kR3JvdXBDaGF0c1JlcXVlc3QSEgoFdXNlcnMYBSAD",
-            "KAlCA+BBARIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdlX3Rva2Vu",
-            "GAMgASgJQgPgQQESLQoKc3BhY2VfdmlldxgEIAEoDjIZLmdvb2dsZS5jaGF0",
-            "LnYxLlNwYWNlVmlldyJYChZGaW5kR3JvdXBDaGF0c1Jlc3BvbnNlEiUKBnNw",
-            "YWNlcxgBIAMoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlEhcKD25leHRfcGFn",
-            "ZV90b2tlbhgCIAEoCSKUAQoSVXBkYXRlU3BhY2VSZXF1ZXN0EikKBXNwYWNl",
-            "GAEgASgLMhUuZ29vZ2xlLmNoYXQudjEuU3BhY2VCA+BBAhI0Cgt1cGRhdGVf",
-            "bWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhId",
-            "ChB1c2VfYWRtaW5fYWNjZXNzGAMgASgIQgPgQQEigQEKE1NlYXJjaFNwYWNl",
-            "c1JlcXVlc3QSGAoQdXNlX2FkbWluX2FjY2VzcxgBIAEoCBIRCglwYWdlX3Np",
-            "emUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRISCgVxdWVyeRgEIAEoCUID",
-            "4EECEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEiagoUU2VhcmNoU3BhY2VzUmVz",
-            "cG9uc2USJQoGc3BhY2VzGAEgAygLMhUuZ29vZ2xlLmNoYXQudjEuU3BhY2US",
-            "FwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJEhIKCnRvdGFsX3NpemUYAyABKAUi",
-            "ZAoSRGVsZXRlU3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpBGwoZ",
-            "Y2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZRIdChB1c2VfYWRtaW5fYWNjZXNz",
-            "GAIgASgIQgPgQQEiTQoaQ29tcGxldGVJbXBvcnRTcGFjZVJlcXVlc3QSLwoE",
-            "bmFtZRgBIAEoCUIh4EEC+kEbChljaGF0Lmdvb2dsZWFwaXMuY29tL1NwYWNl",
-            "IkMKG0NvbXBsZXRlSW1wb3J0U3BhY2VSZXNwb25zZRIkCgVzcGFjZRgBIAEo",
-            "CzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlKmMKCVNwYWNlVmlldxIaChZTUEFD",
-            "RV9WSUVXX1VOU1BFQ0lGSUVEEAASIQodU1BBQ0VfVklFV19SRVNPVVJDRV9O",
-            "QU1FX09OTFkQAxIXChNTUEFDRV9WSUVXX0VYUEFOREVEEARCowEKEmNvbS5n",
-            "b29nbGUuY2hhdC52MUIKU3BhY2VQcm90b1ABWixjbG91ZC5nb29nbGUuY29t",
-            "L2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQSVByb3RvqgIT",
-            "R29vZ2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENoYXRcVjHqAhZH",
-            "b29nbGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
+            "cmVzb3VyY2UucHJvdG8aHWdvb2dsZS9jaGF0L3YxL2F1ZGllbmNlLnByb3Rv",
+            "GiJnb29nbGUvY2hhdC92MS9oaXN0b3J5X3N0YXRlLnByb3RvGiBnb29nbGUv",
+            "cHJvdG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
+            "bWVzdGFtcC5wcm90byKMGgoFU3BhY2USEQoEbmFtZRgBIAEoCUID4EEIEi8K",
+            "BHR5cGUYAiABKA4yGi5nb29nbGUuY2hhdC52MS5TcGFjZS5UeXBlQgUYAeBB",
+            "AxI4CgpzcGFjZV90eXBlGAogASgOMh8uZ29vZ2xlLmNoYXQudjEuU3BhY2Uu",
+            "U3BhY2VUeXBlQgPgQQESHwoSc2luZ2xlX3VzZXJfYm90X2RtGAQgASgIQgPg",
+            "QQESFwoIdGhyZWFkZWQYBSABKAhCBRgB4EEDEhkKDGRpc3BsYXlfbmFtZRgD",
+            "IAEoCUID4EEBEiUKFWV4dGVybmFsX3VzZXJfYWxsb3dlZBgIIAEoCEIG4EEF",
+            "4EEBEk0KFXNwYWNlX3RocmVhZGluZ19zdGF0ZRgJIAEoDjIpLmdvb2dsZS5j",
+            "aGF0LnYxLlNwYWNlLlNwYWNlVGhyZWFkaW5nU3RhdGVCA+BBAxI+Cg1zcGFj",
+            "ZV9kZXRhaWxzGAsgASgLMiIuZ29vZ2xlLmNoYXQudjEuU3BhY2UuU3BhY2VE",
+            "ZXRhaWxzQgPgQQESPgoTc3BhY2VfaGlzdG9yeV9zdGF0ZRgNIAEoDjIcLmdv",
+            "b2dsZS5jaGF0LnYxLkhpc3RvcnlTdGF0ZUID4EEBEhgKC2ltcG9ydF9tb2Rl",
+            "GBAgASgIQgPgQQESNwoLY3JlYXRlX3RpbWUYESABKAsyGi5nb29nbGUucHJv",
+            "dG9idWYuVGltZXN0YW1wQgbgQQXgQQESOQoQbGFzdF9hY3RpdmVfdGltZRgS",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIcCg9hZG1p",
+            "bl9pbnN0YWxsZWQYEyABKAhCA+BBAxJEChBtZW1iZXJzaGlwX2NvdW50GBQg",
+            "ASgLMiUuZ29vZ2xlLmNoYXQudjEuU3BhY2UuTWVtYmVyc2hpcENvdW50QgPg",
+            "QQMSQgoPYWNjZXNzX3NldHRpbmdzGBcgASgLMiQuZ29vZ2xlLmNoYXQudjEu",
+            "U3BhY2UuQWNjZXNzU2V0dGluZ3NCA+BBARIdCghjdXN0b21lchgYIAEoCUIG",
+            "4EEF4EEBSAGIAQESFgoJc3BhY2VfdXJpGBkgASgJQgPgQQMSZAoecHJlZGVm",
+            "aW5lZF9wZXJtaXNzaW9uX3NldHRpbmdzGBogASgOMjIuZ29vZ2xlLmNoYXQu",
+            "djEuU3BhY2UuUHJlZGVmaW5lZFBlcm1pc3Npb25TZXR0aW5nc0IG4EEE4EEB",
+            "SAASTAoTcGVybWlzc2lvbl9zZXR0aW5ncxgbIAEoCzIoLmdvb2dsZS5jaGF0",
+            "LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nc0ID4EEBSAASQAoXaW1wb3J0",
+            "X21vZGVfZXhwaXJlX3RpbWUYHCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
+            "ZXN0YW1wQgPgQQMaQQoMU3BhY2VEZXRhaWxzEhgKC2Rlc2NyaXB0aW9uGAEg",
+            "ASgJQgPgQQESFwoKZ3VpZGVsaW5lcxgCIAEoCUID4EEBGl8KD01lbWJlcnNo",
+            "aXBDb3VudBIrCh5qb2luZWRfZGlyZWN0X2h1bWFuX3VzZXJfY291bnQYBCAB",
+            "KAVCA+BBAxIfChJqb2luZWRfZ3JvdXBfY291bnQYBSABKAVCA+BBAxqZAgoO",
+            "QWNjZXNzU2V0dGluZ3MSSwoMYWNjZXNzX3N0YXRlGAEgASgOMjAuZ29vZ2xl",
+            "LmNoYXQudjEuU3BhY2UuQWNjZXNzU2V0dGluZ3MuQWNjZXNzU3RhdGVCA+BB",
+            "AxIVCghhdWRpZW5jZRgDIAEoCUID4EEBElcKGmFjY2Vzc19wZXJtaXNzaW9u",
+            "X3NldHRpbmdzGAUgASgLMi4uZ29vZ2xlLmNoYXQudjEuU3BhY2UuQWNjZXNz",
+            "UGVybWlzc2lvblNldHRpbmdzQgPgQQEiSgoLQWNjZXNzU3RhdGUSHAoYQUND",
+            "RVNTX1NUQVRFX1VOU1BFQ0lGSUVEEAASCwoHUFJJVkFURRABEhAKDERJU0NP",
+            "VkVSQUJMRRACGr4BChhBY2Nlc3NQZXJtaXNzaW9uU2V0dGluZ3MSUgoWZGlz",
+            "Y292ZXJfc3BhY2Vfc2V0dGluZxgBIAEoCzItLmdvb2dsZS5jaGF0LnYxLlNw",
+            "YWNlLkFjY2Vzc1Blcm1pc3Npb25TZXR0aW5nQgPgQQESTgoSam9pbl9zcGFj",
+            "ZV9zZXR0aW5nGAIgASgLMi0uZ29vZ2xlLmNoYXQudjEuU3BhY2UuQWNjZXNz",
+            "UGVybWlzc2lvblNldHRpbmdCA+BBARpWChdBY2Nlc3NQZXJtaXNzaW9uU2V0",
+            "dGluZxI7CgpwcmluY2lwYWxzGAEgAygLMh8uZ29vZ2xlLmNoYXQudjEuU3Bh",
+            "Y2UuUHJpbmNpcGFsQgbgQQHgQQYaSwoJUHJpbmNpcGFsEiwKCGF1ZGllbmNl",
+            "GAEgASgLMhguZ29vZ2xlLmNoYXQudjEuQXVkaWVuY2VIAEIQCg5wcmluY2lw",
+            "YWxfdHlwZRqoBgoSUGVybWlzc2lvblNldHRpbmdzElQKGW1hbmFnZV9tZW1i",
+            "ZXJzX2FuZF9ncm91cHMYASABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5Q",
+            "ZXJtaXNzaW9uU2V0dGluZ0ID4EEBSACIAQESTwoUbW9kaWZ5X3NwYWNlX2Rl",
+            "dGFpbHMYAiABKAsyJy5nb29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9u",
+            "U2V0dGluZ0ID4EEBSAGIAQESSQoOdG9nZ2xlX2hpc3RvcnkYAyABKAsyJy5n",
+            "b29nbGUuY2hhdC52MS5TcGFjZS5QZXJtaXNzaW9uU2V0dGluZ0ID4EEBSAKI",
+            "AQESTQoSdXNlX2F0X21lbnRpb25fYWxsGAQgASgLMicuZ29vZ2xlLmNoYXQu",
+            "djEuU3BhY2UuUGVybWlzc2lvblNldHRpbmdCA+BBAUgDiAEBEkYKC21hbmFn",
+            "ZV9hcHBzGAUgASgLMicuZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lv",
+            "blNldHRpbmdCA+BBAUgEiAEBEkoKD21hbmFnZV93ZWJob29rcxgGIAEoCzIn",
+            "Lmdvb2dsZS5jaGF0LnYxLlNwYWNlLlBlcm1pc3Npb25TZXR0aW5nQgPgQQFI",
+            "BYgBARJICg1wb3N0X21lc3NhZ2VzGAcgASgLMicuZ29vZ2xlLmNoYXQudjEu",
+            "U3BhY2UuUGVybWlzc2lvblNldHRpbmdCA+BBA0gGiAEBEkkKDnJlcGx5X21l",
+            "c3NhZ2VzGAggASgLMicuZ29vZ2xlLmNoYXQudjEuU3BhY2UuUGVybWlzc2lv",
+            "blNldHRpbmdCA+BBAUgHiAEBQhwKGl9tYW5hZ2VfbWVtYmVyc19hbmRfZ3Jv",
+            "dXBzQhcKFV9tb2RpZnlfc3BhY2VfZGV0YWlsc0IRCg9fdG9nZ2xlX2hpc3Rv",
+            "cnlCFQoTX3VzZV9hdF9tZW50aW9uX2FsbEIOCgxfbWFuYWdlX2FwcHNCEgoQ",
+            "X21hbmFnZV93ZWJob29rc0IQCg5fcG9zdF9tZXNzYWdlc0IRCg9fcmVwbHlf",
+            "bWVzc2FnZXManQEKEVBlcm1pc3Npb25TZXR0aW5nEh0KEG1hbmFnZXJzX2Fs",
+            "bG93ZWQYASABKAhCA+BBARIsChphc3Npc3RhbnRfbWFuYWdlcnNfYWxsb3dl",
+            "ZBgDIAEoCEID4EEBSACIAQESHAoPbWVtYmVyc19hbGxvd2VkGAIgASgIQgPg",
+            "QQFCHQobX2Fzc2lzdGFudF9tYW5hZ2Vyc19hbGxvd2VkIi4KBFR5cGUSFAoQ",
+            "VFlQRV9VTlNQRUNJRklFRBAAEggKBFJPT00QARIGCgJETRACIlYKCVNwYWNl",
+            "VHlwZRIaChZTUEFDRV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFU1BBQ0UQARIO",
+            "CgpHUk9VUF9DSEFUEAISEgoORElSRUNUX01FU1NBR0UQAyKCAQoTU3BhY2VU",
+            "aHJlYWRpbmdTdGF0ZRIlCiFTUEFDRV9USFJFQURJTkdfU1RBVEVfVU5TUEVD",
+            "SUZJRUQQABIVChFUSFJFQURFRF9NRVNTQUdFUxACEhQKEEdST1VQRURfTUVT",
+            "U0FHRVMQAxIXChNVTlRIUkVBREVEX01FU1NBR0VTEAQifwocUHJlZGVmaW5l",
+            "ZFBlcm1pc3Npb25TZXR0aW5ncxIuCipQUkVERUZJTkVEX1BFUk1JU1NJT05f",
+            "U0VUVElOR1NfVU5TUEVDSUZJRUQQABIXChNDT0xMQUJPUkFUSU9OX1NQQUNF",
+            "EAESFgoSQU5OT1VOQ0VNRU5UX1NQQUNFEAI6LupBKwoZY2hhdC5nb29nbGVh",
+            "cGlzLmNvbS9TcGFjZRIOc3BhY2VzL3tzcGFjZX1CGwoZc3BhY2VfcGVybWlz",
+            "c2lvbl9zZXR0aW5nc0ILCglfY3VzdG9tZXIiWAoSQ3JlYXRlU3BhY2VSZXF1",
+            "ZXN0EikKBXNwYWNlGAEgASgLMhUuZ29vZ2xlLmNoYXQudjEuU3BhY2VCA+BB",
+            "AhIXCgpyZXF1ZXN0X2lkGAIgASgJQgPgQQEiWQoRTGlzdFNwYWNlc1JlcXVl",
+            "c3QSFgoJcGFnZV9zaXplGAEgASgFQgPgQQESFwoKcGFnZV90b2tlbhgCIAEo",
+            "CUID4EEBEhMKBmZpbHRlchgDIAEoCUID4EEBIlQKEkxpc3RTcGFjZXNSZXNw",
+            "b25zZRIlCgZzcGFjZXMYASADKAsyFS5nb29nbGUuY2hhdC52MS5TcGFjZRIX",
+            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiYQoPR2V0U3BhY2VSZXF1ZXN0Ei8K",
+            "BG5hbWUYASABKAlCIeBBAvpBGwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFj",
+            "ZRIdChB1c2VfYWRtaW5fYWNjZXNzGAIgASgIQgPgQQEiLQoYRmluZERpcmVj",
+            "dE1lc3NhZ2VSZXF1ZXN0EhEKBG5hbWUYASABKAlCA+BBAiKLAQoVRmluZEdy",
+            "b3VwQ2hhdHNSZXF1ZXN0EhIKBXVzZXJzGAUgAygJQgPgQQESFgoJcGFnZV9z",
+            "aXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEi0KCnNw",
+            "YWNlX3ZpZXcYBCABKA4yGS5nb29nbGUuY2hhdC52MS5TcGFjZVZpZXciWAoW",
+            "RmluZEdyb3VwQ2hhdHNSZXNwb25zZRIlCgZzcGFjZXMYASADKAsyFS5nb29n",
+            "bGUuY2hhdC52MS5TcGFjZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkilAEK",
+            "ElVwZGF0ZVNwYWNlUmVxdWVzdBIpCgVzcGFjZRgBIAEoCzIVLmdvb2dsZS5j",
+            "aGF0LnYxLlNwYWNlQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISHQoQdXNlX2FkbWluX2FjY2Vz",
+            "cxgDIAEoCEID4EEBIoEBChNTZWFyY2hTcGFjZXNSZXF1ZXN0EhgKEHVzZV9h",
+            "ZG1pbl9hY2Nlc3MYASABKAgSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2Vf",
+            "dG9rZW4YAyABKAkSEgoFcXVlcnkYBCABKAlCA+BBAhIVCghvcmRlcl9ieRgF",
+            "IAEoCUID4EEBImoKFFNlYXJjaFNwYWNlc1Jlc3BvbnNlEiUKBnNwYWNlcxgB",
+            "IAMoCzIVLmdvb2dsZS5jaGF0LnYxLlNwYWNlEhcKD25leHRfcGFnZV90b2tl",
+            "bhgCIAEoCRISCgp0b3RhbF9zaXplGAMgASgFImQKEkRlbGV0ZVNwYWNlUmVx",
+            "dWVzdBIvCgRuYW1lGAEgASgJQiHgQQL6QRsKGWNoYXQuZ29vZ2xlYXBpcy5j",
+            "b20vU3BhY2USHQoQdXNlX2FkbWluX2FjY2VzcxgCIAEoCEID4EEBIk0KGkNv",
+            "bXBsZXRlSW1wb3J0U3BhY2VSZXF1ZXN0Ei8KBG5hbWUYASABKAlCIeBBAvpB",
+            "GwoZY2hhdC5nb29nbGVhcGlzLmNvbS9TcGFjZSJDChtDb21wbGV0ZUltcG9y",
+            "dFNwYWNlUmVzcG9uc2USJAoFc3BhY2UYASABKAsyFS5nb29nbGUuY2hhdC52",
+            "MS5TcGFjZSpjCglTcGFjZVZpZXcSGgoWU1BBQ0VfVklFV19VTlNQRUNJRklF",
+            "RBAAEiEKHVNQQUNFX1ZJRVdfUkVTT1VSQ0VfTkFNRV9PTkxZEAMSFwoTU1BB",
+            "Q0VfVklFV19FWFBBTkRFRBAEQqMBChJjb20uZ29vZ2xlLmNoYXQudjFCClNw",
+            "YWNlUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2FwaXYxL2No",
+            "YXRwYjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dvb2dsZS5BcHBzLkNoYXQu",
+            "VjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBzOjpDaGF0",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.HistoryStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.AudienceReflection.Descriptor, global::Google.Apps.Chat.V1.HistoryStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Apps.Chat.V1.SpaceView), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space), global::Google.Apps.Chat.V1.Space.Parser, new[]{ "Name", "Type", "SpaceType", "SingleUserBotDm", "Threaded", "DisplayName", "ExternalUserAllowed", "SpaceThreadingState", "SpaceDetails", "SpaceHistoryState", "ImportMode", "CreateTime", "LastActiveTime", "AdminInstalled", "MembershipCount", "AccessSettings", "Customer", "SpaceUri", "PredefinedPermissionSettings", "PermissionSettings", "ImportModeExpireTime" }, new[]{ "SpacePermissionSettings", "Customer" }, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.Type), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceType), typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceThreadingState), typeof(global::Google.Apps.Chat.V1.Space.Types.PredefinedPermissionSettings) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.SpaceDetails), global::Google.Apps.Chat.V1.Space.Types.SpaceDetails.Parser, new[]{ "Description", "Guidelines" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.MembershipCount), global::Google.Apps.Chat.V1.Space.Types.MembershipCount.Parser, new[]{ "JoinedDirectHumanUserCount", "JoinedGroupCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings), global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Parser, new[]{ "AccessState", "Audience" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings), global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Parser, new[]{ "AccessState", "Audience", "AccessPermissionSettings" }, null, new[]{ typeof(global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSettings), global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSettings.Parser, new[]{ "DiscoverSpaceSetting", "JoinSpaceSetting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting), global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting.Parser, new[]{ "Principals" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.Principal), global::Google.Apps.Chat.V1.Space.Types.Principal.Parser, new[]{ "Audience" }, new[]{ "PrincipalType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.PermissionSettings), global::Google.Apps.Chat.V1.Space.Types.PermissionSettings.Parser, new[]{ "ManageMembersAndGroups", "ModifySpaceDetails", "ToggleHistory", "UseAtMentionAll", "ManageApps", "ManageWebhooks", "PostMessages", "ReplyMessages" }, new[]{ "ManageMembersAndGroups", "ModifySpaceDetails", "ToggleHistory", "UseAtMentionAll", "ManageApps", "ManageWebhooks", "PostMessages", "ReplyMessages" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Space.Types.PermissionSetting), global::Google.Apps.Chat.V1.Space.Types.PermissionSetting.Parser, new[]{ "ManagersAllowed", "AssistantManagersAllowed", "MembersAllowed" }, new[]{ "AssistantManagersAllowed" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateSpaceRequest), global::Google.Apps.Chat.V1.CreateSpaceRequest.Parser, new[]{ "Space", "RequestId" }, null, null, null, null),
@@ -2050,6 +2064,7 @@ namespace Google.Apps.Chat.V1 {
         public AccessSettings(AccessSettings other) : this() {
           accessState_ = other.accessState_;
           audience_ = other.audience_;
+          accessPermissionSettings_ = other.accessPermissionSettings_ != null ? other.accessPermissionSettings_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -2117,6 +2132,24 @@ namespace Google.Apps.Chat.V1 {
           }
         }
 
+        /// <summary>Field number for the "access_permission_settings" field.</summary>
+        public const int AccessPermissionSettingsFieldNumber = 5;
+        private global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSettings accessPermissionSettings_;
+        /// <summary>
+        /// Optional. Access permission settings for the space.
+        ///
+        /// To set the target audience when creating a space, specify the
+        /// `accessSettings.audience` field in your request.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSettings AccessPermissionSettings {
+          get { return accessPermissionSettings_; }
+          set {
+            accessPermissionSettings_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -2134,6 +2167,7 @@ namespace Google.Apps.Chat.V1 {
           }
           if (AccessState != other.AccessState) return false;
           if (Audience != other.Audience) return false;
+          if (!object.Equals(AccessPermissionSettings, other.AccessPermissionSettings)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -2143,6 +2177,7 @@ namespace Google.Apps.Chat.V1 {
           int hash = 1;
           if (AccessState != global::Google.Apps.Chat.V1.Space.Types.AccessSettings.Types.AccessState.Unspecified) hash ^= AccessState.GetHashCode();
           if (Audience.Length != 0) hash ^= Audience.GetHashCode();
+          if (accessPermissionSettings_ != null) hash ^= AccessPermissionSettings.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -2169,6 +2204,10 @@ namespace Google.Apps.Chat.V1 {
             output.WriteRawTag(26);
             output.WriteString(Audience);
           }
+          if (accessPermissionSettings_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(AccessPermissionSettings);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -2187,6 +2226,10 @@ namespace Google.Apps.Chat.V1 {
             output.WriteRawTag(26);
             output.WriteString(Audience);
           }
+          if (accessPermissionSettings_ != null) {
+            output.WriteRawTag(42);
+            output.WriteMessage(AccessPermissionSettings);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -2202,6 +2245,9 @@ namespace Google.Apps.Chat.V1 {
           }
           if (Audience.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Audience);
+          }
+          if (accessPermissionSettings_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AccessPermissionSettings);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -2220,6 +2266,12 @@ namespace Google.Apps.Chat.V1 {
           }
           if (other.Audience.Length != 0) {
             Audience = other.Audience;
+          }
+          if (other.accessPermissionSettings_ != null) {
+            if (accessPermissionSettings_ == null) {
+              AccessPermissionSettings = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSettings();
+            }
+            AccessPermissionSettings.MergeFrom(other.AccessPermissionSettings);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -2248,6 +2300,13 @@ namespace Google.Apps.Chat.V1 {
                 Audience = input.ReadString();
                 break;
               }
+              case 42: {
+                if (accessPermissionSettings_ == null) {
+                  AccessPermissionSettings = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSettings();
+                }
+                input.ReadMessage(AccessPermissionSettings);
+                break;
+              }
             }
           }
         #endif
@@ -2273,6 +2332,13 @@ namespace Google.Apps.Chat.V1 {
               }
               case 26: {
                 Audience = input.ReadString();
+                break;
+              }
+              case 42: {
+                if (accessPermissionSettings_ == null) {
+                  AccessPermissionSettings = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSettings();
+                }
+                input.ReadMessage(AccessPermissionSettings);
                 break;
               }
             }
@@ -2318,6 +2384,708 @@ namespace Google.Apps.Chat.V1 {
       }
 
       /// <summary>
+      /// Access permission settings for a space.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AccessPermissionSettings : pb::IMessage<AccessPermissionSettings>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AccessPermissionSettings> _parser = new pb::MessageParser<AccessPermissionSettings>(() => new AccessPermissionSettings());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AccessPermissionSettings> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessPermissionSettings() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessPermissionSettings(AccessPermissionSettings other) : this() {
+          discoverSpaceSetting_ = other.discoverSpaceSetting_ != null ? other.discoverSpaceSetting_.Clone() : null;
+          joinSpaceSetting_ = other.joinSpaceSetting_ != null ? other.joinSpaceSetting_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessPermissionSettings Clone() {
+          return new AccessPermissionSettings(this);
+        }
+
+        /// <summary>Field number for the "discover_space_setting" field.</summary>
+        public const int DiscoverSpaceSettingFieldNumber = 1;
+        private global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting discoverSpaceSetting_;
+        /// <summary>
+        /// Optional. Access permission setting for discovering the space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting DiscoverSpaceSetting {
+          get { return discoverSpaceSetting_; }
+          set {
+            discoverSpaceSetting_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "join_space_setting" field.</summary>
+        public const int JoinSpaceSettingFieldNumber = 2;
+        private global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting joinSpaceSetting_;
+        /// <summary>
+        /// Optional. Access permission setting for joining the space.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting JoinSpaceSetting {
+          get { return joinSpaceSetting_; }
+          set {
+            joinSpaceSetting_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AccessPermissionSettings);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AccessPermissionSettings other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(DiscoverSpaceSetting, other.DiscoverSpaceSetting)) return false;
+          if (!object.Equals(JoinSpaceSetting, other.JoinSpaceSetting)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (discoverSpaceSetting_ != null) hash ^= DiscoverSpaceSetting.GetHashCode();
+          if (joinSpaceSetting_ != null) hash ^= JoinSpaceSetting.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (discoverSpaceSetting_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(DiscoverSpaceSetting);
+          }
+          if (joinSpaceSetting_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(JoinSpaceSetting);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (discoverSpaceSetting_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(DiscoverSpaceSetting);
+          }
+          if (joinSpaceSetting_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(JoinSpaceSetting);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (discoverSpaceSetting_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(DiscoverSpaceSetting);
+          }
+          if (joinSpaceSetting_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(JoinSpaceSetting);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AccessPermissionSettings other) {
+          if (other == null) {
+            return;
+          }
+          if (other.discoverSpaceSetting_ != null) {
+            if (discoverSpaceSetting_ == null) {
+              DiscoverSpaceSetting = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting();
+            }
+            DiscoverSpaceSetting.MergeFrom(other.DiscoverSpaceSetting);
+          }
+          if (other.joinSpaceSetting_ != null) {
+            if (joinSpaceSetting_ == null) {
+              JoinSpaceSetting = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting();
+            }
+            JoinSpaceSetting.MergeFrom(other.JoinSpaceSetting);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (discoverSpaceSetting_ == null) {
+                  DiscoverSpaceSetting = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting();
+                }
+                input.ReadMessage(DiscoverSpaceSetting);
+                break;
+              }
+              case 18: {
+                if (joinSpaceSetting_ == null) {
+                  JoinSpaceSetting = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting();
+                }
+                input.ReadMessage(JoinSpaceSetting);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (discoverSpaceSetting_ == null) {
+                  DiscoverSpaceSetting = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting();
+                }
+                input.ReadMessage(DiscoverSpaceSetting);
+                break;
+              }
+              case 18: {
+                if (joinSpaceSetting_ == null) {
+                  JoinSpaceSetting = new global::Google.Apps.Chat.V1.Space.Types.AccessPermissionSetting();
+                }
+                input.ReadMessage(JoinSpaceSetting);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// An access permission setting.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class AccessPermissionSetting : pb::IMessage<AccessPermissionSetting>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<AccessPermissionSetting> _parser = new pb::MessageParser<AccessPermissionSetting>(() => new AccessPermissionSetting());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<AccessPermissionSetting> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessPermissionSetting() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessPermissionSetting(AccessPermissionSetting other) : this() {
+          principals_ = other.principals_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public AccessPermissionSetting Clone() {
+          return new AccessPermissionSetting(this);
+        }
+
+        /// <summary>Field number for the "principals" field.</summary>
+        public const int PrincipalsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Apps.Chat.V1.Space.Types.Principal> _repeated_principals_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Apps.Chat.V1.Space.Types.Principal.Parser);
+        private readonly pbc::RepeatedField<global::Google.Apps.Chat.V1.Space.Types.Principal> principals_ = new pbc::RepeatedField<global::Google.Apps.Chat.V1.Space.Types.Principal>();
+        /// <summary>
+        /// Optional. Unordered list. Allowed principals for this permission.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Apps.Chat.V1.Space.Types.Principal> Principals {
+          get { return principals_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as AccessPermissionSetting);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(AccessPermissionSetting other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!principals_.Equals(other.principals_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= principals_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          principals_.WriteTo(output, _repeated_principals_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          principals_.WriteTo(ref output, _repeated_principals_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += principals_.CalculateSize(_repeated_principals_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(AccessPermissionSetting other) {
+          if (other == null) {
+            return;
+          }
+          principals_.Add(other.principals_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                principals_.AddEntriesFrom(input, _repeated_principals_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                principals_.AddEntriesFrom(ref input, _repeated_principals_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// A principal representing an entity granted access.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Principal : pb::IMessage<Principal>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Principal> _parser = new pb::MessageParser<Principal>(() => new Principal());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Principal> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Principal() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Principal(Principal other) : this() {
+          switch (other.PrincipalTypeCase) {
+            case PrincipalTypeOneofCase.Audience:
+              Audience = other.Audience.Clone();
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Principal Clone() {
+          return new Principal(this);
+        }
+
+        /// <summary>Field number for the "audience" field.</summary>
+        public const int AudienceFieldNumber = 1;
+        /// <summary>
+        /// An audience.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Apps.Chat.V1.Audience Audience {
+          get { return principalTypeCase_ == PrincipalTypeOneofCase.Audience ? (global::Google.Apps.Chat.V1.Audience) principalType_ : null; }
+          set {
+            principalType_ = value;
+            principalTypeCase_ = value == null ? PrincipalTypeOneofCase.None : PrincipalTypeOneofCase.Audience;
+          }
+        }
+
+        private object principalType_;
+        /// <summary>Enum of possible cases for the "principal_type" oneof.</summary>
+        public enum PrincipalTypeOneofCase {
+          None = 0,
+          Audience = 1,
+        }
+        private PrincipalTypeOneofCase principalTypeCase_ = PrincipalTypeOneofCase.None;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PrincipalTypeOneofCase PrincipalTypeCase {
+          get { return principalTypeCase_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearPrincipalType() {
+          principalTypeCase_ = PrincipalTypeOneofCase.None;
+          principalType_ = null;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Principal);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Principal other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(Audience, other.Audience)) return false;
+          if (PrincipalTypeCase != other.PrincipalTypeCase) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (principalTypeCase_ == PrincipalTypeOneofCase.Audience) hash ^= Audience.GetHashCode();
+          hash ^= (int) principalTypeCase_;
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (principalTypeCase_ == PrincipalTypeOneofCase.Audience) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Audience);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (principalTypeCase_ == PrincipalTypeOneofCase.Audience) {
+            output.WriteRawTag(10);
+            output.WriteMessage(Audience);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (principalTypeCase_ == PrincipalTypeOneofCase.Audience) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Audience);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Principal other) {
+          if (other == null) {
+            return;
+          }
+          switch (other.PrincipalTypeCase) {
+            case PrincipalTypeOneofCase.Audience:
+              if (Audience == null) {
+                Audience = new global::Google.Apps.Chat.V1.Audience();
+              }
+              Audience.MergeFrom(other.Audience);
+              break;
+          }
+
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                global::Google.Apps.Chat.V1.Audience subBuilder = new global::Google.Apps.Chat.V1.Audience();
+                if (principalTypeCase_ == PrincipalTypeOneofCase.Audience) {
+                  subBuilder.MergeFrom(Audience);
+                }
+                input.ReadMessage(subBuilder);
+                Audience = subBuilder;
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                global::Google.Apps.Chat.V1.Audience subBuilder = new global::Google.Apps.Chat.V1.Audience();
+                if (principalTypeCase_ == PrincipalTypeOneofCase.Audience) {
+                  subBuilder.MergeFrom(Audience);
+                }
+                input.ReadMessage(subBuilder);
+                Audience = subBuilder;
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// [Permission settings](https://support.google.com/chat/answer/13340792)
       /// that you can specify when updating an existing named space.
       ///
@@ -2339,7 +3107,7 @@ namespace Google.Apps.Chat.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[3]; }
+          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2897,7 +3665,7 @@ namespace Google.Apps.Chat.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[4]; }
+          get { return global::Google.Apps.Chat.V1.Space.Descriptor.NestedTypes[7]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5175,6 +5943,24 @@ namespace Google.Apps.Chat.V1 {
     /// To learn more, see [Make a space discoverable to specific
     /// users](https://developers.google.com/workspace/chat/space-target-audience).
     /// `access_settings.audience` is not supported with `useAdminAccess`.
+    ///
+    /// `access_settings.access_permission_settings`: Updates the [access
+    /// permission
+    /// settings](https://support.google.com/chat/answer/11971020) of who can
+    /// discover and join the space where `spaceType` field is `SPACE`. Principals
+    /// allowed to join the space must also be allowed to discover it. To update
+    /// access permission settings for a space, the authenticating user must be a
+    /// space manager or assistant manager and omit all other field masks in the
+    /// request. You can't update this field if the space is in [import
+    /// mode](https://developers.google.com/workspace/chat/import-data-overview).
+    /// To learn more, see [Make a space discoverable to specific
+    /// users](https://developers.google.com/workspace/chat/space-target-audience).
+    /// `access_settings.access_permission_settings` is not supported with
+    /// `useAdminAccess`.
+    /// The supported field masks include:
+    ///
+    /// - `access_settings.access_permission_settings.discoverSpaceSetting`
+    /// - `access_settings.access_permission_settings.joinSpaceSetting`
     ///
     /// `permission_settings`: Supports changing the
     /// [permission settings](https://support.google.com/chat/answer/13340792)
