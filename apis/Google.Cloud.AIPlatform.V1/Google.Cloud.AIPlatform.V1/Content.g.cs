@@ -239,46 +239,47 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZV9pZEIMCgpjaHVua190eXBlIpUBChBHcm91bmRpbmdTdXBwb3J0EjkKB3Nl",
             "Z21lbnQYASABKAsyIy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TZWdt",
             "ZW50SACIAQESHwoXZ3JvdW5kaW5nX2NodW5rX2luZGljZXMYAiADKAUSGQoR",
-            "Y29uZmlkZW5jZV9zY29yZXMYAyADKAJCCgoIX3NlZ21lbnQioAUKEUdyb3Vu",
+            "Y29uZmlkZW5jZV9zY29yZXMYAyADKAJCCgoIX3NlZ21lbnQiwAUKEUdyb3Vu",
             "ZGluZ01ldGFkYXRhEh8KEndlYl9zZWFyY2hfcXVlcmllcxgBIAMoCUID4EEB",
             "ElIKEnNlYXJjaF9lbnRyeV9wb2ludBgEIAEoCzIsLmdvb2dsZS5jbG91ZC5h",
-            "aXBsYXRmb3JtLnYxLlNlYXJjaEVudHJ5UG9pbnRCA+BBAUgAiAEBEkQKEGdy",
-            "b3VuZGluZ19jaHVua3MYBSADKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5Hcm91bmRpbmdDaHVuaxJNChJncm91bmRpbmdfc3VwcG9ydHMYBiAD",
-            "KAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Hcm91bmRpbmdTdXBw",
-            "b3J0QgPgQQESVgoScmV0cmlldmFsX21ldGFkYXRhGAcgASgLMi0uZ29vZ2xl",
-            "LmNsb3VkLmFpcGxhdGZvcm0udjEuUmV0cmlldmFsTWV0YWRhdGFCBuBBAeBB",
-            "A0gBiAEBEjUKIGdvb2dsZV9tYXBzX3dpZGdldF9jb250ZXh0X3Rva2VuGAgg",
-            "ASgJQgbgQQHgQQNIAogBARJdChRzb3VyY2VfZmxhZ2dpbmdfdXJpcxgJIAMo",
-            "CzI/Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ01ldGFk",
-            "YXRhLlNvdXJjZUZsYWdnaW5nVXJpGkAKEVNvdXJjZUZsYWdnaW5nVXJpEhEK",
-            "CXNvdXJjZV9pZBgBIAEoCRIYChBmbGFnX2NvbnRlbnRfdXJpGAIgASgJQhUK",
-            "E19zZWFyY2hfZW50cnlfcG9pbnRCFQoTX3JldHJpZXZhbF9tZXRhZGF0YUIj",
-            "CiFfZ29vZ2xlX21hcHNfd2lkZ2V0X2NvbnRleHRfdG9rZW4iSAoQU2VhcmNo",
-            "RW50cnlQb2ludBIdChByZW5kZXJlZF9jb250ZW50GAEgASgJQgPgQQESFQoI",
-            "c2RrX2Jsb2IYAiABKAxCA+BBASJHChFSZXRyaWV2YWxNZXRhZGF0YRIyCiVn",
-            "b29nbGVfc2VhcmNoX2R5bmFtaWNfcmV0cmlldmFsX3Njb3JlGAIgASgCQgPg",
-            "QQEiqAEKEE1vZGVsQXJtb3JDb25maWcSSAoUcHJvbXB0X3RlbXBsYXRlX25h",
-            "bWUYASABKAlCKuBBAfpBJAoibW9kZWxhcm1vci5nb29nbGVhcGlzLmNvbS9U",
-            "ZW1wbGF0ZRJKChZyZXNwb25zZV90ZW1wbGF0ZV9uYW1lGAIgASgJQirgQQH6",
-            "QSQKIm1vZGVsYXJtb3IuZ29vZ2xlYXBpcy5jb20vVGVtcGxhdGUiYQoSTW9k",
-            "YWxpdHlUb2tlbkNvdW50EjYKCG1vZGFsaXR5GAEgASgOMiQuZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjEuTW9kYWxpdHkSEwoLdG9rZW5fY291bnQYAiAB",
-            "KAUq+AEKDEhhcm1DYXRlZ29yeRIdChlIQVJNX0NBVEVHT1JZX1VOU1BFQ0lG",
-            "SUVEEAASHQoZSEFSTV9DQVRFR09SWV9IQVRFX1NQRUVDSBABEiMKH0hBUk1f",
-            "Q0FURUdPUllfREFOR0VST1VTX0NPTlRFTlQQAhIcChhIQVJNX0NBVEVHT1JZ",
-            "X0hBUkFTU01FTlQQAxIjCh9IQVJNX0NBVEVHT1JZX1NFWFVBTExZX0VYUExJ",
-            "Q0lUEAQSJQodSEFSTV9DQVRFR09SWV9DSVZJQ19JTlRFR1JJVFkQBRoCCAES",
-            "GwoXSEFSTV9DQVRFR09SWV9KQUlMQlJFQUsQBipdCghNb2RhbGl0eRIYChRN",
-            "T0RBTElUWV9VTlNQRUNJRklFRBAAEggKBFRFWFQQARIJCgVJTUFHRRACEgkK",
-            "BVZJREVPEAMSCQoFQVVESU8QBBIMCghET0NVTUVOVBAFQq8CCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjFCDENvbnRlbnRQcm90b1ABWj5jbG91",
-            "ZC5nb29nbGUuY29tL2dvL2FpcGxhdGZvcm0vYXBpdjEvYWlwbGF0Zm9ybXBi",
-            "O2FpcGxhdGZvcm1wYqoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYxygIa",
-            "R29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpB",
-            "SVBsYXRmb3JtOjpWMepBYgoibW9kZWxhcm1vci5nb29nbGVhcGlzLmNvbS9U",
-            "ZW1wbGF0ZRI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L3RlbXBsYXRlcy97dGVtcGxhdGV9YgZwcm90bzM="));
+            "aXBsYXRmb3JtLnYxLlNlYXJjaEVudHJ5UG9pbnRCA+BBAUgAiAEBEh4KEXJl",
+            "dHJpZXZhbF9xdWVyaWVzGAMgAygJQgPgQQESRAoQZ3JvdW5kaW5nX2NodW5r",
+            "cxgFIAMoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGlu",
+            "Z0NodW5rEk0KEmdyb3VuZGluZ19zdXBwb3J0cxgGIAMoCzIsLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkdyb3VuZGluZ1N1cHBvcnRCA+BBARJWChJy",
+            "ZXRyaWV2YWxfbWV0YWRhdGEYByABKAsyLS5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5SZXRyaWV2YWxNZXRhZGF0YUIG4EEB4EEDSAGIAQESNQogZ29v",
+            "Z2xlX21hcHNfd2lkZ2V0X2NvbnRleHRfdG9rZW4YCCABKAlCBuBBAeBBA0gC",
+            "iAEBEl0KFHNvdXJjZV9mbGFnZ2luZ191cmlzGAkgAygLMj8uZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuR3JvdW5kaW5nTWV0YWRhdGEuU291cmNlRmxh",
+            "Z2dpbmdVcmkaQAoRU291cmNlRmxhZ2dpbmdVcmkSEQoJc291cmNlX2lkGAEg",
+            "ASgJEhgKEGZsYWdfY29udGVudF91cmkYAiABKAlCFQoTX3NlYXJjaF9lbnRy",
+            "eV9wb2ludEIVChNfcmV0cmlldmFsX21ldGFkYXRhQiMKIV9nb29nbGVfbWFw",
+            "c193aWRnZXRfY29udGV4dF90b2tlbiJIChBTZWFyY2hFbnRyeVBvaW50Eh0K",
+            "EHJlbmRlcmVkX2NvbnRlbnQYASABKAlCA+BBARIVCghzZGtfYmxvYhgCIAEo",
+            "DEID4EEBIkcKEVJldHJpZXZhbE1ldGFkYXRhEjIKJWdvb2dsZV9zZWFyY2hf",
+            "ZHluYW1pY19yZXRyaWV2YWxfc2NvcmUYAiABKAJCA+BBASKoAQoQTW9kZWxB",
+            "cm1vckNvbmZpZxJIChRwcm9tcHRfdGVtcGxhdGVfbmFtZRgBIAEoCUIq4EEB",
+            "+kEkCiJtb2RlbGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBsYXRlEkoKFnJl",
+            "c3BvbnNlX3RlbXBsYXRlX25hbWUYAiABKAlCKuBBAfpBJAoibW9kZWxhcm1v",
+            "ci5nb29nbGVhcGlzLmNvbS9UZW1wbGF0ZSJhChJNb2RhbGl0eVRva2VuQ291",
+            "bnQSNgoIbW9kYWxpdHkYASABKA4yJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5Nb2RhbGl0eRITCgt0b2tlbl9jb3VudBgCIAEoBSr4AQoMSGFybUNh",
+            "dGVnb3J5Eh0KGUhBUk1fQ0FURUdPUllfVU5TUEVDSUZJRUQQABIdChlIQVJN",
+            "X0NBVEVHT1JZX0hBVEVfU1BFRUNIEAESIwofSEFSTV9DQVRFR09SWV9EQU5H",
+            "RVJPVVNfQ09OVEVOVBACEhwKGEhBUk1fQ0FURUdPUllfSEFSQVNTTUVOVBAD",
+            "EiMKH0hBUk1fQ0FURUdPUllfU0VYVUFMTFlfRVhQTElDSVQQBBIlCh1IQVJN",
+            "X0NBVEVHT1JZX0NJVklDX0lOVEVHUklUWRAFGgIIARIbChdIQVJNX0NBVEVH",
+            "T1JZX0pBSUxCUkVBSxAGKl0KCE1vZGFsaXR5EhgKFE1PREFMSVRZX1VOU1BF",
+            "Q0lGSUVEEAASCAoEVEVYVBABEgkKBUlNQUdFEAISCQoFVklERU8QAxIJCgVB",
+            "VURJTxAEEgwKCERPQ1VNRU5UEAVCrwIKHmNvbS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MUIMQ29udGVudFByb3RvUAFaPmNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vYWlwbGF0Zm9ybS9hcGl2MS9haXBsYXRmb3JtcGI7YWlwbGF0Zm9ybXBi",
+            "qgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRc",
+            "QUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYx",
+            "6kFiCiJtb2RlbGFybW9yLmdvb2dsZWFwaXMuY29tL1RlbXBsYXRlEjxwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdGVtcGxhdGVz",
+            "L3t0ZW1wbGF0ZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OpenapiReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ToolReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.VertexRagDataReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Type.DateReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.HarmCategory), typeof(global::Google.Cloud.AIPlatform.V1.Modality), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -311,7 +312,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.RetrievedContext), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.RetrievedContext.Parser, new[]{ "RagChunk", "Uri", "Title", "Text", "DocumentName" }, new[]{ "ContextDetails", "Uri", "Title", "Text", "DocumentName" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps.Parser, new[]{ "Uri", "Title", "Text", "PlaceId", "PlaceAnswerSources" }, new[]{ "Uri", "Title", "Text", "PlaceId" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Parser, new[]{ "ReviewSnippets" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet), global::Google.Cloud.AIPlatform.V1.GroundingChunk.Types.Maps.Types.PlaceAnswerSources.Types.ReviewSnippet.Parser, new[]{ "ReviewId", "GoogleMapsUri", "Title" }, null, null, null, null)})})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingSupport), global::Google.Cloud.AIPlatform.V1.GroundingSupport.Parser, new[]{ "Segment", "GroundingChunkIndices", "ConfidenceScores" }, new[]{ "Segment" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingMetadata), global::Google.Cloud.AIPlatform.V1.GroundingMetadata.Parser, new[]{ "WebSearchQueries", "SearchEntryPoint", "GroundingChunks", "GroundingSupports", "RetrievalMetadata", "GoogleMapsWidgetContextToken", "SourceFlaggingUris" }, new[]{ "SearchEntryPoint", "RetrievalMetadata", "GoogleMapsWidgetContextToken" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingMetadata.Types.SourceFlaggingUri), global::Google.Cloud.AIPlatform.V1.GroundingMetadata.Types.SourceFlaggingUri.Parser, new[]{ "SourceId", "FlagContentUri" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingMetadata), global::Google.Cloud.AIPlatform.V1.GroundingMetadata.Parser, new[]{ "WebSearchQueries", "SearchEntryPoint", "RetrievalQueries", "GroundingChunks", "GroundingSupports", "RetrievalMetadata", "GoogleMapsWidgetContextToken", "SourceFlaggingUris" }, new[]{ "SearchEntryPoint", "RetrievalMetadata", "GoogleMapsWidgetContextToken" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GroundingMetadata.Types.SourceFlaggingUri), global::Google.Cloud.AIPlatform.V1.GroundingMetadata.Types.SourceFlaggingUri.Parser, new[]{ "SourceId", "FlagContentUri" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchEntryPoint), global::Google.Cloud.AIPlatform.V1.SearchEntryPoint.Parser, new[]{ "RenderedContent", "SdkBlob" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RetrievalMetadata), global::Google.Cloud.AIPlatform.V1.RetrievalMetadata.Parser, new[]{ "GoogleSearchDynamicRetrievalScore" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelArmorConfig), global::Google.Cloud.AIPlatform.V1.ModelArmorConfig.Parser, new[]{ "PromptTemplateName", "ResponseTemplateName" }, null, null, null, null),
@@ -13246,6 +13247,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public GroundingMetadata(GroundingMetadata other) : this() {
       webSearchQueries_ = other.webSearchQueries_.Clone();
       searchEntryPoint_ = other.searchEntryPoint_ != null ? other.searchEntryPoint_.Clone() : null;
+      retrievalQueries_ = other.retrievalQueries_.Clone();
       groundingChunks_ = other.groundingChunks_.Clone();
       groundingSupports_ = other.groundingSupports_.Clone();
       retrievalMetadata_ = other.retrievalMetadata_ != null ? other.retrievalMetadata_.Clone() : null;
@@ -13287,6 +13289,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       set {
         searchEntryPoint_ = value;
       }
+    }
+
+    /// <summary>Field number for the "retrieval_queries" field.</summary>
+    public const int RetrievalQueriesFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _repeated_retrievalQueries_codec
+        = pb::FieldCodec.ForString(26);
+    private readonly pbc::RepeatedField<string> retrievalQueries_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. The queries that were executed by the retrieval tools.
+    /// This field is populated only when the grounding source is a retrieval tool,
+    /// such as Vertex AI Search.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> RetrievalQueries {
+      get { return retrievalQueries_; }
     }
 
     /// <summary>Field number for the "grounding_chunks" field.</summary>
@@ -13395,6 +13413,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if(!webSearchQueries_.Equals(other.webSearchQueries_)) return false;
       if (!object.Equals(SearchEntryPoint, other.SearchEntryPoint)) return false;
+      if(!retrievalQueries_.Equals(other.retrievalQueries_)) return false;
       if(!groundingChunks_.Equals(other.groundingChunks_)) return false;
       if(!groundingSupports_.Equals(other.groundingSupports_)) return false;
       if (!object.Equals(RetrievalMetadata, other.RetrievalMetadata)) return false;
@@ -13409,6 +13428,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       hash ^= webSearchQueries_.GetHashCode();
       if (searchEntryPoint_ != null) hash ^= SearchEntryPoint.GetHashCode();
+      hash ^= retrievalQueries_.GetHashCode();
       hash ^= groundingChunks_.GetHashCode();
       hash ^= groundingSupports_.GetHashCode();
       if (retrievalMetadata_ != null) hash ^= RetrievalMetadata.GetHashCode();
@@ -13433,6 +13453,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       output.WriteRawMessage(this);
     #else
       webSearchQueries_.WriteTo(output, _repeated_webSearchQueries_codec);
+      retrievalQueries_.WriteTo(output, _repeated_retrievalQueries_codec);
       if (searchEntryPoint_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(SearchEntryPoint);
@@ -13459,6 +13480,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       webSearchQueries_.WriteTo(ref output, _repeated_webSearchQueries_codec);
+      retrievalQueries_.WriteTo(ref output, _repeated_retrievalQueries_codec);
       if (searchEntryPoint_ != null) {
         output.WriteRawTag(34);
         output.WriteMessage(SearchEntryPoint);
@@ -13488,6 +13510,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (searchEntryPoint_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SearchEntryPoint);
       }
+      size += retrievalQueries_.CalculateSize(_repeated_retrievalQueries_codec);
       size += groundingChunks_.CalculateSize(_repeated_groundingChunks_codec);
       size += groundingSupports_.CalculateSize(_repeated_groundingSupports_codec);
       if (retrievalMetadata_ != null) {
@@ -13516,6 +13539,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         SearchEntryPoint.MergeFrom(other.SearchEntryPoint);
       }
+      retrievalQueries_.Add(other.retrievalQueries_);
       groundingChunks_.Add(other.groundingChunks_);
       groundingSupports_.Add(other.groundingSupports_);
       if (other.retrievalMetadata_ != null) {
@@ -13549,6 +13573,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             break;
           case 10: {
             webSearchQueries_.AddEntriesFrom(input, _repeated_webSearchQueries_codec);
+            break;
+          }
+          case 26: {
+            retrievalQueries_.AddEntriesFrom(input, _repeated_retrievalQueries_codec);
             break;
           }
           case 34: {
@@ -13602,6 +13630,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             break;
           case 10: {
             webSearchQueries_.AddEntriesFrom(ref input, _repeated_webSearchQueries_codec);
+            break;
+          }
+          case 26: {
+            retrievalQueries_.AddEntriesFrom(ref input, _repeated_retrievalQueries_codec);
             break;
           }
           case 34: {
