@@ -28,7 +28,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "c291cmNlcy5wcm90bxIoZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRp",
             "b24udjFiZXRhMRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZ",
             "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3Rp",
-            "bWVzdGFtcC5wcm90byKxDQoGUG9saWN5EhEKBG5hbWUYASABKAlCA+BBAxIY",
+            "bWVzdGFtcC5wcm90byLEDQoGUG9saWN5EhEKBG5hbWUYASABKAlCA+BBAxIY",
             "CgtkZXNjcmlwdGlvbhgGIAEoCUID4EEBEncKHWdsb2JhbF9wb2xpY3lfZXZh",
             "bHVhdGlvbl9tb2RlGAcgASgOMksuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhv",
             "cml6YXRpb24udjFiZXRhMS5Qb2xpY3kuR2xvYmFsUG9saWN5RXZhbHVhdGlv",
@@ -50,78 +50,81 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "XAoWZGVmYXVsdF9hZG1pc3Npb25fcnVsZRgEIAEoCzI3Lmdvb2dsZS5jbG91",
             "ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQWRtaXNzaW9uUnVsZUID",
             "4EECEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDGnUKGkNsdXN0ZXJBZG1pc3Npb25SdWxlc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRJGCgV2YWx1ZRgCIAEoCzI3Lmdvb2dsZS5jbG91ZC5iaW5h",
-            "cnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQWRtaXNzaW9uUnVsZToCOAEagQEK",
-            "Jkt1YmVybmV0ZXNOYW1lc3BhY2VBZG1pc3Npb25SdWxlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRJGCgV2YWx1ZRgCIAEoCzI3Lmdvb2dsZS5jbG91ZC5iaW5hcnlh",
-            "dXRob3JpemF0aW9uLnYxYmV0YTEuQWRtaXNzaW9uUnVsZToCOAEahgEKK0t1",
-            "YmVybmV0ZXNTZXJ2aWNlQWNjb3VudEFkbWlzc2lvblJ1bGVzRW50cnkSCwoD",
-            "a2V5GAEgASgJEkYKBXZhbHVlGAIgASgLMjcuZ29vZ2xlLmNsb3VkLmJpbmFy",
-            "eWF1dGhvcml6YXRpb24udjFiZXRhMS5BZG1pc3Npb25SdWxlOgI4ARqCAQon",
-            "SXN0aW9TZXJ2aWNlSWRlbnRpdHlBZG1pc3Npb25SdWxlc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRJGCgV2YWx1ZRgCIAEoCzI3Lmdvb2dsZS5jbG91ZC5iaW5hcnlh",
-            "dXRob3JpemF0aW9uLnYxYmV0YTEuQWRtaXNzaW9uUnVsZToCOAEiZAoaR2xv",
-            "YmFsUG9saWN5RXZhbHVhdGlvbk1vZGUSLQopR0xPQkFMX1BPTElDWV9FVkFM",
-            "VUFUSU9OX01PREVfVU5TUEVDSUZJRUQQABIKCgZFTkFCTEUQARILCgdESVNB",
-            "QkxFEAI6ZupBYwopYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNv",
-            "bS9Qb2xpY3kSGXByb2plY3RzL3twcm9qZWN0fS9wb2xpY3kSG2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3BvbGljeSIxChlBZG1pc3Npb25XaGl0ZWxpc3RQYXR0",
-            "ZXJuEhQKDG5hbWVfcGF0dGVybhgBIAEoCSLkAwoNQWRtaXNzaW9uUnVsZRJk",
-            "Cg9ldmFsdWF0aW9uX21vZGUYASABKA4yRi5nb29nbGUuY2xvdWQuYmluYXJ5",
-            "YXV0aG9yaXphdGlvbi52MWJldGExLkFkbWlzc2lvblJ1bGUuRXZhbHVhdGlv",
-            "bk1vZGVCA+BBAhIkChdyZXF1aXJlX2F0dGVzdGF0aW9uc19ieRgCIAMoCUID",
-            "4EEBEmYKEGVuZm9yY2VtZW50X21vZGUYAyABKA4yRy5nb29nbGUuY2xvdWQu",
-            "YmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkFkbWlzc2lvblJ1bGUuRW5m",
-            "b3JjZW1lbnRNb2RlQgPgQQIibQoORXZhbHVhdGlvbk1vZGUSHwobRVZBTFVB",
-            "VElPTl9NT0RFX1VOU1BFQ0lGSUVEEAASEAoMQUxXQVlTX0FMTE9XEAESFwoT",
-            "UkVRVUlSRV9BVFRFU1RBVElPThACEg8KC0FMV0FZU19ERU5ZEAMicAoPRW5m",
-            "b3JjZW1lbnRNb2RlEiAKHEVORk9SQ0VNRU5UX01PREVfVU5TUEVDSUZJRUQQ",
-            "ABIgChxFTkZPUkNFRF9CTE9DS19BTkRfQVVESVRfTE9HEAESGQoVRFJZUlVO",
-            "X0FVRElUX0xPR19PTkxZEAIivAIKCEF0dGVzdG9yEhEKBG5hbWUYASABKAlC",
-            "A+BBAhIYCgtkZXNjcmlwdGlvbhgGIAEoCUID4EEBEmEKF3VzZXJfb3duZWRf",
-            "ZHJ5ZG9ja19ub3RlGAMgASgLMj4uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhv",
-            "cml6YXRpb24udjFiZXRhMS5Vc2VyT3duZWREcnlkb2NrTm90ZUgAEjQKC3Vw",
-            "ZGF0ZV90aW1lGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEDOlnqQVYKK2JpbmFyeWF1dGhvcml6YXRpb24uZ29vZ2xlYXBpcy5jb20v",
-            "QXR0ZXN0b3ISJ3Byb2plY3RzL3twcm9qZWN0fS9hdHRlc3RvcnMve2F0dGVz",
-            "dG9yfUIPCg1hdHRlc3Rvcl90eXBlIrkBChRVc2VyT3duZWREcnlkb2NrTm90",
-            "ZRIbCg5ub3RlX3JlZmVyZW5jZRgBIAEoCUID4EECElUKC3B1YmxpY19rZXlz",
-            "GAIgAygLMjsuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFi",
-            "ZXRhMS5BdHRlc3RvclB1YmxpY0tleUID4EEBEi0KIGRlbGVnYXRpb25fc2Vy",
-            "dmljZV9hY2NvdW50X2VtYWlsGAMgASgJQgPgQQMixAQKDVBraXhQdWJsaWNL",
-            "ZXkSFgoOcHVibGljX2tleV9wZW0YASABKAkSZwoTc2lnbmF0dXJlX2FsZ29y",
-            "aXRobRgCIAEoDjJKLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9u",
-            "LnYxYmV0YTEuUGtpeFB1YmxpY0tleS5TaWduYXR1cmVBbGdvcml0aG0isQMK",
-            "ElNpZ25hdHVyZUFsZ29yaXRobRIjCh9TSUdOQVRVUkVfQUxHT1JJVEhNX1VO",
-            "U1BFQ0lGSUVEEAASFwoTUlNBX1BTU18yMDQ4X1NIQTI1NhABEhcKE1JTQV9Q",
-            "U1NfMzA3Ml9TSEEyNTYQAhIXChNSU0FfUFNTXzQwOTZfU0hBMjU2EAMSFwoT",
-            "UlNBX1BTU180MDk2X1NIQTUxMhAEEh4KGlJTQV9TSUdOX1BLQ1MxXzIwNDhf",
-            "U0hBMjU2EAUSHgoaUlNBX1NJR05fUEtDUzFfMzA3Ml9TSEEyNTYQBhIeChpS",
-            "U0FfU0lHTl9QS0NTMV80MDk2X1NIQTI1NhAHEh4KGlJTQV9TSUdOX1BLQ1Mx",
-            "XzQwOTZfU0hBNTEyEAgSFQoRRUNEU0FfUDI1Nl9TSEEyNTYQCRIXChNFQ19T",
-            "SUdOX1AyNTZfU0hBMjU2EAkSFQoRRUNEU0FfUDM4NF9TSEEzODQQChIXChNF",
-            "Q19TSUdOX1AzODRfU0hBMzg0EAoSFQoRRUNEU0FfUDUyMV9TSEE1MTIQCxIX",
-            "ChNFQ19TSUdOX1A1MjFfU0hBNTEyEAsaAhABIr8BChFBdHRlc3RvclB1Ymxp",
-            "Y0tleRIUCgdjb21tZW50GAEgASgJQgPgQQESCgoCaWQYAiABKAkSJgocYXNj",
-            "aWlfYXJtb3JlZF9wZ3BfcHVibGljX2tleRgDIAEoCUgAElIKD3BraXhfcHVi",
-            "bGljX2tleRgFIAEoCzI3Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0",
-            "aW9uLnYxYmV0YTEuUGtpeFB1YmxpY0tleUgAQgwKCnB1YmxpY19rZXlCugIK",
-            "LGNvbS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGEx",
-            "QiFCaW5hcnlBdXRob3JpemF0aW9uUmVzb3VyY2VzUHJvdG9QAVpeY2xvdWQu",
-            "Z29vZ2xlLmNvbS9nby9iaW5hcnlhdXRob3JpemF0aW9uL2FwaXYxYmV0YTEv",
-            "YmluYXJ5YXV0aG9yaXphdGlvbnBiO2JpbmFyeWF1dGhvcml6YXRpb25wYvgB",
-            "AaoCKEdvb2dsZS5DbG91ZC5CaW5hcnlBdXRob3JpemF0aW9uLlYxQmV0YTHK",
-            "AihHb29nbGVcQ2xvdWRcQmluYXJ5QXV0aG9yaXphdGlvblxWMWJldGEx6gIr",
-            "R29vZ2xlOjpDbG91ZDo6QmluYXJ5QXV0aG9yaXphdGlvbjo6VjFiZXRhMWIG",
-            "cHJvdG8z"));
+            "bWVzdGFtcEID4EEDEhEKBGV0YWcYCyABKAlCA+BBARp1ChpDbHVzdGVyQWRt",
+            "aXNzaW9uUnVsZXNFbnRyeRILCgNrZXkYASABKAkSRgoFdmFsdWUYAiABKAsy",
+            "Ny5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkFk",
+            "bWlzc2lvblJ1bGU6AjgBGoEBCiZLdWJlcm5ldGVzTmFtZXNwYWNlQWRtaXNz",
+            "aW9uUnVsZXNFbnRyeRILCgNrZXkYASABKAkSRgoFdmFsdWUYAiABKAsyNy5n",
+            "b29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkFkbWlz",
+            "c2lvblJ1bGU6AjgBGoYBCitLdWJlcm5ldGVzU2VydmljZUFjY291bnRBZG1p",
+            "c3Npb25SdWxlc0VudHJ5EgsKA2tleRgBIAEoCRJGCgV2YWx1ZRgCIAEoCzI3",
+            "Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQWRt",
+            "aXNzaW9uUnVsZToCOAEaggEKJ0lzdGlvU2VydmljZUlkZW50aXR5QWRtaXNz",
+            "aW9uUnVsZXNFbnRyeRILCgNrZXkYASABKAkSRgoFdmFsdWUYAiABKAsyNy5n",
+            "b29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkFkbWlz",
+            "c2lvblJ1bGU6AjgBImQKGkdsb2JhbFBvbGljeUV2YWx1YXRpb25Nb2RlEi0K",
+            "KUdMT0JBTF9QT0xJQ1lfRVZBTFVBVElPTl9NT0RFX1VOU1BFQ0lGSUVEEAAS",
+            "CgoGRU5BQkxFEAESCwoHRElTQUJMRRACOmbqQWMKKWJpbmFyeWF1dGhvcml6",
+            "YXRpb24uZ29vZ2xlYXBpcy5jb20vUG9saWN5Ehlwcm9qZWN0cy97cHJvamVj",
+            "dH0vcG9saWN5Ehtsb2NhdGlvbnMve2xvY2F0aW9ufS9wb2xpY3kiMQoZQWRt",
+            "aXNzaW9uV2hpdGVsaXN0UGF0dGVybhIUCgxuYW1lX3BhdHRlcm4YASABKAki",
+            "5AMKDUFkbWlzc2lvblJ1bGUSZAoPZXZhbHVhdGlvbl9tb2RlGAEgASgOMkYu",
+            "Z29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BZG1p",
+            "c3Npb25SdWxlLkV2YWx1YXRpb25Nb2RlQgPgQQISJAoXcmVxdWlyZV9hdHRl",
+            "c3RhdGlvbnNfYnkYAiADKAlCA+BBARJmChBlbmZvcmNlbWVudF9tb2RlGAMg",
+            "ASgOMkcuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRh",
+            "MS5BZG1pc3Npb25SdWxlLkVuZm9yY2VtZW50TW9kZUID4EECIm0KDkV2YWx1",
+            "YXRpb25Nb2RlEh8KG0VWQUxVQVRJT05fTU9ERV9VTlNQRUNJRklFRBAAEhAK",
+            "DEFMV0FZU19BTExPVxABEhcKE1JFUVVJUkVfQVRURVNUQVRJT04QAhIPCgtB",
+            "TFdBWVNfREVOWRADInAKD0VuZm9yY2VtZW50TW9kZRIgChxFTkZPUkNFTUVO",
+            "VF9NT0RFX1VOU1BFQ0lGSUVEEAASIAocRU5GT1JDRURfQkxPQ0tfQU5EX0FV",
+            "RElUX0xPRxABEhkKFURSWVJVTl9BVURJVF9MT0dfT05MWRACIs8CCghBdHRl",
+            "c3RvchIRCgRuYW1lGAEgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YBiABKAlC",
+            "A+BBARJhChd1c2VyX293bmVkX2RyeWRvY2tfbm90ZRgDIAEoCzI+Lmdvb2ds",
+            "ZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuVXNlck93bmVk",
+            "RHJ5ZG9ja05vdGVIABI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIRCgRldGFnGAcgASgJQgPgQQE6WepB",
+            "VgorYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbS9BdHRlc3Rv",
+            "chIncHJvamVjdHMve3Byb2plY3R9L2F0dGVzdG9ycy97YXR0ZXN0b3J9Qg8K",
+            "DWF0dGVzdG9yX3R5cGUiuQEKFFVzZXJPd25lZERyeWRvY2tOb3RlEhsKDm5v",
+            "dGVfcmVmZXJlbmNlGAEgASgJQgPgQQISVQoLcHVibGljX2tleXMYAiADKAsy",
+            "Oy5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkF0",
+            "dGVzdG9yUHVibGljS2V5QgPgQQESLQogZGVsZWdhdGlvbl9zZXJ2aWNlX2Fj",
+            "Y291bnRfZW1haWwYAyABKAlCA+BBAyLLBQoNUGtpeFB1YmxpY0tleRIWCg5w",
+            "dWJsaWNfa2V5X3BlbRgBIAEoCRJnChNzaWduYXR1cmVfYWxnb3JpdGhtGAIg",
+            "ASgOMkouZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRh",
+            "MS5Qa2l4UHVibGljS2V5LlNpZ25hdHVyZUFsZ29yaXRobSK4BAoSU2lnbmF0",
+            "dXJlQWxnb3JpdGhtEiMKH1NJR05BVFVSRV9BTEdPUklUSE1fVU5TUEVDSUZJ",
+            "RUQQABIXChNSU0FfUFNTXzIwNDhfU0hBMjU2EAESHAoYUlNBX1NJR05fUFNT",
+            "XzIwNDhfU0hBMjU2EAESFwoTUlNBX1BTU18zMDcyX1NIQTI1NhACEhwKGFJT",
+            "QV9TSUdOX1BTU18zMDcyX1NIQTI1NhACEhcKE1JTQV9QU1NfNDA5Nl9TSEEy",
+            "NTYQAxIcChhSU0FfU0lHTl9QU1NfNDA5Nl9TSEEyNTYQAxIXChNSU0FfUFNT",
+            "XzQwOTZfU0hBNTEyEAQSHAoYUlNBX1NJR05fUFNTXzQwOTZfU0hBNTEyEAQS",
+            "HgoaUlNBX1NJR05fUEtDUzFfMjA0OF9TSEEyNTYQBRIeChpSU0FfU0lHTl9Q",
+            "S0NTMV8zMDcyX1NIQTI1NhAGEh4KGlJTQV9TSUdOX1BLQ1MxXzQwOTZfU0hB",
+            "MjU2EAcSHgoaUlNBX1NJR05fUEtDUzFfNDA5Nl9TSEE1MTIQCBIVChFFQ0RT",
+            "QV9QMjU2X1NIQTI1NhAJEhcKE0VDX1NJR05fUDI1Nl9TSEEyNTYQCRIVChFF",
+            "Q0RTQV9QMzg0X1NIQTM4NBAKEhcKE0VDX1NJR05fUDM4NF9TSEEzODQQChIV",
+            "ChFFQ0RTQV9QNTIxX1NIQTUxMhALEhcKE0VDX1NJR05fUDUyMV9TSEE1MTIQ",
+            "CxINCglNTF9EU0FfNjUQDRoCEAEivwEKEUF0dGVzdG9yUHVibGljS2V5EhQK",
+            "B2NvbW1lbnQYASABKAlCA+BBARIKCgJpZBgCIAEoCRImChxhc2NpaV9hcm1v",
+            "cmVkX3BncF9wdWJsaWNfa2V5GAMgASgJSAASUgoPcGtpeF9wdWJsaWNfa2V5",
+            "GAUgASgLMjcuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFi",
+            "ZXRhMS5Qa2l4UHVibGljS2V5SABCDAoKcHVibGljX2tleUK3AgosY29tLmdv",
+            "b2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTFCIUJpbmFy",
+            "eUF1dGhvcml6YXRpb25SZXNvdXJjZXNQcm90b1ABWl5jbG91ZC5nb29nbGUu",
+            "Y29tL2dvL2JpbmFyeWF1dGhvcml6YXRpb24vYXBpdjFiZXRhMS9iaW5hcnlh",
+            "dXRob3JpemF0aW9ucGI7YmluYXJ5YXV0aG9yaXphdGlvbnBiqgIoR29vZ2xl",
+            "LkNsb3VkLkJpbmFyeUF1dGhvcml6YXRpb24uVjFCZXRhMcoCKEdvb2dsZVxD",
+            "bG91ZFxCaW5hcnlBdXRob3JpemF0aW9uXFYxYmV0YTHqAitHb29nbGU6OkNs",
+            "b3VkOjpCaW5hcnlBdXRob3JpemF0aW9uOjpWMWJldGExYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy), global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy.Parser, new[]{ "Name", "Description", "GlobalPolicyEvaluationMode", "AdmissionWhitelistPatterns", "ClusterAdmissionRules", "KubernetesNamespaceAdmissionRules", "KubernetesServiceAccountAdmissionRules", "IstioServiceIdentityAdmissionRules", "DefaultAdmissionRule", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy.Types.GlobalPolicyEvaluationMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy), global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy.Parser, new[]{ "Name", "Description", "GlobalPolicyEvaluationMode", "AdmissionWhitelistPatterns", "ClusterAdmissionRules", "KubernetesNamespaceAdmissionRules", "KubernetesServiceAccountAdmissionRules", "IstioServiceIdentityAdmissionRules", "DefaultAdmissionRule", "UpdateTime", "Etag" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy.Types.GlobalPolicyEvaluationMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionWhitelistPattern), global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionWhitelistPattern.Parser, new[]{ "NamePattern" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule), global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule.Parser, new[]{ "EvaluationMode", "RequireAttestationsBy", "EnforcementMode" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule.Types.EvaluationMode), typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule.Types.EnforcementMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor), global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor.Parser, new[]{ "Name", "Description", "UserOwnedDrydockNote", "UpdateTime" }, new[]{ "AttestorType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor), global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor.Parser, new[]{ "Name", "Description", "UserOwnedDrydockNote", "UpdateTime", "Etag" }, new[]{ "AttestorType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.UserOwnedDrydockNote), global::Google.Cloud.BinaryAuthorization.V1Beta1.UserOwnedDrydockNote.Parser, new[]{ "NoteReference", "PublicKeys", "DelegationServiceAccountEmail" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.PkixPublicKey), global::Google.Cloud.BinaryAuthorization.V1Beta1.PkixPublicKey.Parser, new[]{ "PublicKeyPem", "SignatureAlgorithm" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.PkixPublicKey.Types.SignatureAlgorithm) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.AttestorPublicKey), global::Google.Cloud.BinaryAuthorization.V1Beta1.AttestorPublicKey.Parser, new[]{ "Comment", "Id", "AsciiArmoredPgpPublicKey", "PkixPublicKey" }, new[]{ "PublicKey" }, null, null, null)
@@ -132,7 +135,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
   #region Messages
   /// <summary>
-  /// A [policy][google.cloud.binaryauthorization.v1beta1.Policy] for Binary Authorization.
+  /// A [policy][google.cloud.binaryauthorization.v1beta1.Policy] for Binary
+  /// Authorization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Policy : pb::IMessage<Policy>
@@ -179,6 +183,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       istioServiceIdentityAdmissionRules_ = other.istioServiceIdentityAdmissionRules_.Clone();
       defaultAdmissionRule_ = other.defaultAdmissionRule_ != null ? other.defaultAdmissionRule_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -279,7 +284,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         = new pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule.Parser), 82);
     private readonly pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule> kubernetesNamespaceAdmissionRules_ = new pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1Beta1.AdmissionRule>();
     /// <summary>
-    /// Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format:
+    /// Optional. Per-kubernetes-namespace admission rules. K8s namespace spec
+    /// format:
     ///   `[a-z.-]+`, e.g. `some-namespace`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -352,6 +358,23 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 11;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. A checksum, returned by the server, that can be sent on update
+    /// requests to ensure the policy has an up-to-date value before attempting to
+    /// update it. See https://google.aip.dev/154.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -377,6 +400,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       if (!IstioServiceIdentityAdmissionRules.Equals(other.IstioServiceIdentityAdmissionRules)) return false;
       if (!object.Equals(DefaultAdmissionRule, other.DefaultAdmissionRule)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -394,6 +418,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       hash ^= IstioServiceIdentityAdmissionRules.GetHashCode();
       if (defaultAdmissionRule_ != null) hash ^= DefaultAdmissionRule.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -437,6 +462,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       kubernetesServiceAccountAdmissionRules_.WriteTo(output, _map_kubernetesServiceAccountAdmissionRules_codec);
       istioServiceIdentityAdmissionRules_.WriteTo(output, _map_istioServiceIdentityAdmissionRules_codec);
       kubernetesNamespaceAdmissionRules_.WriteTo(output, _map_kubernetesNamespaceAdmissionRules_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -472,6 +501,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       kubernetesServiceAccountAdmissionRules_.WriteTo(ref output, _map_kubernetesServiceAccountAdmissionRules_codec);
       istioServiceIdentityAdmissionRules_.WriteTo(ref output, _map_istioServiceIdentityAdmissionRules_codec);
       kubernetesNamespaceAdmissionRules_.WriteTo(ref output, _map_kubernetesNamespaceAdmissionRules_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -501,6 +534,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -539,6 +575,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -603,6 +642,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           }
           case 82: {
             kubernetesNamespaceAdmissionRules_.AddEntriesFrom(input, _map_kubernetesNamespaceAdmissionRules_codec);
+            break;
+          }
+          case 90: {
+            Etag = input.ReadString();
             break;
           }
         }
@@ -670,6 +713,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             kubernetesNamespaceAdmissionRules_.AddEntriesFrom(ref input, _map_kubernetesNamespaceAdmissionRules_codec);
             break;
           }
+          case 90: {
+            Etag = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -701,8 +748,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [admission allowlist pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern] exempts images
-  /// from checks by [admission rules][google.cloud.binaryauthorization.v1beta1.AdmissionRule].
+  /// An [admission allowlist
+  /// pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern]
+  /// exempts images from checks by [admission
+  /// rules][google.cloud.binaryauthorization.v1beta1.AdmissionRule].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdmissionWhitelistPattern : pb::IMessage<AdmissionWhitelistPattern>
@@ -912,12 +961,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [admission rule][google.cloud.binaryauthorization.v1beta1.AdmissionRule] specifies either that all container images
-  /// used in a pod creation request must be attested to by one or more
-  /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor], that all pod creations will be allowed, or that all
-  /// pod creations will be denied.
+  /// An [admission rule][google.cloud.binaryauthorization.v1beta1.AdmissionRule]
+  /// specifies either that all container images used in a pod creation request
+  /// must be attested to by one or more
+  /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor], that all pod
+  /// creations will be allowed, or that all pod creations will be denied.
   ///
-  /// Images matching an [admission allowlist pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern]
+  /// Images matching an [admission allowlist
+  /// pattern][google.cloud.binaryauthorization.v1beta1.AdmissionWhitelistPattern]
   /// are exempted from admission rules and will never block a pod creation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -987,16 +1038,6 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     private static readonly pb::FieldCodec<string> _repeated_requireAttestationsBy_codec
         = pb::FieldCodec.ForString(18);
     private readonly pbc::RepeatedField<string> requireAttestationsBy_ = new pbc::RepeatedField<string>();
-    /// <summary>
-    /// Optional. The resource names of the attestors that must attest to
-    /// a container image, in the format `projects/*/attestors/*`. Each
-    /// attestor must exist before a policy can reference it.  To add an attestor
-    /// to a policy the principal issuing the policy change request must be able
-    /// to read the attestor resource.
-    ///
-    /// Note: this field must be non-empty when the evaluation_mode field specifies
-    /// REQUIRE_ATTESTATION, otherwise it must be empty.
-    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> RequireAttestationsBy {
@@ -1222,6 +1263,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       }
 
       /// <summary>
+      /// TODO(wietse) re-word this text to 'per-image' instead of 'per-pod' and to
+      /// allow for three-way evaluation (allow, deny, delegate).
       /// Defines the possible actions when a pod creation is denied by an admission
       /// rule.
       /// </summary>
@@ -1247,9 +1290,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] that attests to container image
-  /// artifacts. An existing attestor cannot be modified except where
-  /// indicated.
+  /// An [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] that attests
+  /// to container image artifacts. An existing attestor cannot be modified except
+  /// where indicated.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Attestor : pb::IMessage<Attestor>
@@ -1289,6 +1332,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       name_ = other.name_;
       description_ = other.description_;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      etag_ = other.etag_;
       switch (other.AttestorTypeCase) {
         case AttestorTypeOneofCase.UserOwnedDrydockNote:
           UserOwnedDrydockNote = other.UserOwnedDrydockNote.Clone();
@@ -1366,6 +1410,23 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       }
     }
 
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 7;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. A checksum, returned by the server, that can be sent on update
+    /// requests to ensure the attestor has an up-to-date value before attempting
+    /// to update it. See https://google.aip.dev/154.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object attestorType_;
     /// <summary>Enum of possible cases for the "attestor_type" oneof.</summary>
     public enum AttestorTypeOneofCase {
@@ -1405,6 +1466,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       if (Description != other.Description) return false;
       if (!object.Equals(UserOwnedDrydockNote, other.UserOwnedDrydockNote)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Etag != other.Etag) return false;
       if (AttestorTypeCase != other.AttestorTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1417,6 +1479,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (attestorTypeCase_ == AttestorTypeOneofCase.UserOwnedDrydockNote) hash ^= UserOwnedDrydockNote.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= (int) attestorTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1452,6 +1515,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         output.WriteRawTag(50);
         output.WriteString(Description);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1478,6 +1545,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         output.WriteRawTag(50);
         output.WriteString(Description);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1499,6 +1570,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1523,6 +1597,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
       }
       switch (other.AttestorTypeCase) {
         case AttestorTypeOneofCase.UserOwnedDrydockNote:
@@ -1576,6 +1653,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             Description = input.ReadString();
             break;
           }
+          case 58: {
+            Etag = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1619,6 +1700,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             Description = input.ReadString();
             break;
           }
+          case 58: {
+            Etag = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1627,8 +1712,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [user owned drydock note][google.cloud.binaryauthorization.v1beta1.UserOwnedDrydockNote] references a Drydock
-  /// ATTESTATION_AUTHORITY Note created by the user.
+  /// An [user owned drydock
+  /// note][google.cloud.binaryauthorization.v1beta1.UserOwnedDrydockNote]
+  /// references a Drydock ATTESTATION_AUTHORITY Note created by the user.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserOwnedDrydockNote : pb::IMessage<UserOwnedDrydockNote>
@@ -2195,17 +2281,33 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("RSA_PSS_2048_SHA256")] RsaPss2048Sha256 = 1,
         /// <summary>
+        /// RSASSA-PSS 2048 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_2048_SHA256", PreferredAlias = false)] RsaSignPss2048Sha256 = 1,
+        /// <summary>
         /// RSASSA-PSS 3072 bit key with a SHA256 digest.
         /// </summary>
         [pbr::OriginalName("RSA_PSS_3072_SHA256")] RsaPss3072Sha256 = 2,
+        /// <summary>
+        /// RSASSA-PSS 3072 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_3072_SHA256", PreferredAlias = false)] RsaSignPss3072Sha256 = 2,
         /// <summary>
         /// RSASSA-PSS 4096 bit key with a SHA256 digest.
         /// </summary>
         [pbr::OriginalName("RSA_PSS_4096_SHA256")] RsaPss4096Sha256 = 3,
         /// <summary>
+        /// RSASSA-PSS 4096 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_4096_SHA256", PreferredAlias = false)] RsaSignPss4096Sha256 = 3,
+        /// <summary>
         /// RSASSA-PSS 4096 bit key with a SHA512 digest.
         /// </summary>
         [pbr::OriginalName("RSA_PSS_4096_SHA512")] RsaPss4096Sha512 = 4,
+        /// <summary>
+        /// RSASSA-PSS 4096 bit key with a SHA512 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_4096_SHA512", PreferredAlias = false)] RsaSignPss4096Sha512 = 4,
         /// <summary>
         /// RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.
         /// </summary>
@@ -2246,6 +2348,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// ECDSA on the NIST P-521 curve with a SHA512 digest.
         /// </summary>
         [pbr::OriginalName("EC_SIGN_P521_SHA512", PreferredAlias = false)] EcSignP521Sha512 = 11,
+        /// <summary>
+        /// ML-DSA-65 Post-Quantum Cryptography signature algorithm.
+        /// </summary>
+        [pbr::OriginalName("ML_DSA_65")] MlDsa65 = 13,
       }
 
     }
@@ -2254,8 +2360,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
   }
 
   /// <summary>
-  /// An [attestor public key][google.cloud.binaryauthorization.v1beta1.AttestorPublicKey] that will be used to verify
-  /// attestations signed by this attestor.
+  /// An [attestor public
+  /// key][google.cloud.binaryauthorization.v1beta1.AttestorPublicKey] that will be
+  /// used to verify attestations signed by this attestor.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttestorPublicKey : pb::IMessage<AttestorPublicKey>
