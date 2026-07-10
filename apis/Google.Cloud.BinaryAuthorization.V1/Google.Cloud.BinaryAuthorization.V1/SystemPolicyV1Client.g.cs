@@ -17,6 +17,7 @@
 #pragma warning disable CS8981
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
@@ -45,6 +46,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetSystemPolicySettings = existing.GetSystemPolicySettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -61,6 +63,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSystemPolicySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SystemPolicyV1Settings"/> object.</returns>
@@ -203,6 +210,9 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// <summary>The underlying gRPC SystemPolicyV1 client</summary>
         public virtual SystemPolicyV1.SystemPolicyV1Client GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
         /// Gets the current system policy in the specified location.
         /// </summary>
@@ -338,6 +348,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callGetSystemPolicy = clientHelper.BuildApiCall<GetSystemPolicyRequest, Policy>("GetSystemPolicy", grpcClient.GetSystemPolicyAsync, grpcClient.GetSystemPolicy, effectiveSettings.GetSystemPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSystemPolicy);
             Modify_GetSystemPolicyApiCall(ref _callGetSystemPolicy);
@@ -352,6 +363,9 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>The underlying gRPC SystemPolicyV1 client</summary>
         public override SystemPolicyV1.SystemPolicyV1Client GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_GetSystemPolicyRequest(ref GetSystemPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -377,6 +391,22 @@ namespace Google.Cloud.BinaryAuthorization.V1
         {
             Modify_GetSystemPolicyRequest(ref request, ref callSettings);
             return _callGetSystemPolicy.Async(request, callSettings);
+        }
+    }
+
+    public static partial class SystemPolicyV1
+    {
+        public partial class SystemPolicyV1Client
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
         }
     }
 }

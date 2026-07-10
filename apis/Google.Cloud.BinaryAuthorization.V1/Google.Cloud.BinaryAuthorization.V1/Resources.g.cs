@@ -28,7 +28,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
             "ZXMucHJvdG8SI2dvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYx",
             "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
             "L3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvIvgMCgZQb2xpY3kSEQoEbmFtZRgBIAEoCUID4EEDEhgKC2Rlc2NyaXB0",
+            "b3RvIosNCgZQb2xpY3kSEQoEbmFtZRgBIAEoCUID4EEDEhgKC2Rlc2NyaXB0",
             "aW9uGAYgASgJQgPgQQEScgodZ2xvYmFsX3BvbGljeV9ldmFsdWF0aW9uX21v",
             "ZGUYByABKA4yRi5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52",
             "MS5Qb2xpY3kuR2xvYmFsUG9saWN5RXZhbHVhdGlvbk1vZGVCA+BBARJpChxh",
@@ -49,77 +49,82 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
             "A+BBARJXChZkZWZhdWx0X2FkbWlzc2lvbl9ydWxlGAQgASgLMjIuZ29vZ2xl",
             "LmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjEuQWRtaXNzaW9uUnVsZUID",
             "4EECEjQKC3VwZGF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
-            "bWVzdGFtcEID4EEDGnAKGkNsdXN0ZXJBZG1pc3Npb25SdWxlc0VudHJ5EgsK",
-            "A2tleRgBIAEoCRJBCgV2YWx1ZRgCIAEoCzIyLmdvb2dsZS5jbG91ZC5iaW5h",
-            "cnlhdXRob3JpemF0aW9uLnYxLkFkbWlzc2lvblJ1bGU6AjgBGnwKJkt1YmVy",
-            "bmV0ZXNOYW1lc3BhY2VBZG1pc3Npb25SdWxlc0VudHJ5EgsKA2tleRgBIAEo",
-            "CRJBCgV2YWx1ZRgCIAEoCzIyLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3Jp",
-            "emF0aW9uLnYxLkFkbWlzc2lvblJ1bGU6AjgBGoEBCitLdWJlcm5ldGVzU2Vy",
-            "dmljZUFjY291bnRBZG1pc3Npb25SdWxlc0VudHJ5EgsKA2tleRgBIAEoCRJB",
-            "CgV2YWx1ZRgCIAEoCzIyLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0",
-            "aW9uLnYxLkFkbWlzc2lvblJ1bGU6AjgBGn0KJ0lzdGlvU2VydmljZUlkZW50",
-            "aXR5QWRtaXNzaW9uUnVsZXNFbnRyeRILCgNrZXkYASABKAkSQQoFdmFsdWUY",
-            "AiABKAsyMi5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MS5B",
-            "ZG1pc3Npb25SdWxlOgI4ASJkChpHbG9iYWxQb2xpY3lFdmFsdWF0aW9uTW9k",
-            "ZRItCilHTE9CQUxfUE9MSUNZX0VWQUxVQVRJT05fTU9ERV9VTlNQRUNJRklF",
-            "RBAAEgoKBkVOQUJMRRABEgsKB0RJU0FCTEUQAjpm6kFjCiliaW5hcnlhdXRo",
-            "b3JpemF0aW9uLmdvb2dsZWFwaXMuY29tL1BvbGljeRIZcHJvamVjdHMve3By",
-            "b2plY3R9L3BvbGljeRIbbG9jYXRpb25zL3tsb2NhdGlvbn0vcG9saWN5IjEK",
-            "GUFkbWlzc2lvbldoaXRlbGlzdFBhdHRlcm4SFAoMbmFtZV9wYXR0ZXJuGAEg",
-            "ASgJItoDCg1BZG1pc3Npb25SdWxlEl8KD2V2YWx1YXRpb25fbW9kZRgBIAEo",
-            "DjJBLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxLkFkbWlz",
-            "c2lvblJ1bGUuRXZhbHVhdGlvbk1vZGVCA+BBAhIkChdyZXF1aXJlX2F0dGVz",
-            "dGF0aW9uc19ieRgCIAMoCUID4EEBEmEKEGVuZm9yY2VtZW50X21vZGUYAyAB",
-            "KA4yQi5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MS5BZG1p",
-            "c3Npb25SdWxlLkVuZm9yY2VtZW50TW9kZUID4EECIm0KDkV2YWx1YXRpb25N",
-            "b2RlEh8KG0VWQUxVQVRJT05fTU9ERV9VTlNQRUNJRklFRBAAEhAKDEFMV0FZ",
-            "U19BTExPVxABEhcKE1JFUVVJUkVfQVRURVNUQVRJT04QAhIPCgtBTFdBWVNf",
-            "REVOWRADInAKD0VuZm9yY2VtZW50TW9kZRIgChxFTkZPUkNFTUVOVF9NT0RF",
-            "X1VOU1BFQ0lGSUVEEAASIAocRU5GT1JDRURfQkxPQ0tfQU5EX0FVRElUX0xP",
-            "RxABEhkKFURSWVJVTl9BVURJVF9MT0dfT05MWRACIrcCCghBdHRlc3RvchIR",
-            "CgRuYW1lGAEgASgJQgPgQQISGAoLZGVzY3JpcHRpb24YBiABKAlCA+BBARJc",
-            "Chd1c2VyX293bmVkX2dyYWZlYXNfbm90ZRgDIAEoCzI5Lmdvb2dsZS5jbG91",
-            "ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxLlVzZXJPd25lZEdyYWZlYXNOb3Rl",
-            "SAASNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGlt",
-            "ZXN0YW1wQgPgQQM6WepBVgorYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVh",
-            "cGlzLmNvbS9BdHRlc3RvchIncHJvamVjdHMve3Byb2plY3R9L2F0dGVzdG9y",
-            "cy97YXR0ZXN0b3J9Qg8KDWF0dGVzdG9yX3R5cGUitAEKFFVzZXJPd25lZEdy",
-            "YWZlYXNOb3RlEhsKDm5vdGVfcmVmZXJlbmNlGAEgASgJQgPgQQISUAoLcHVi",
-            "bGljX2tleXMYAiADKAsyNi5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXph",
-            "dGlvbi52MS5BdHRlc3RvclB1YmxpY0tleUID4EEBEi0KIGRlbGVnYXRpb25f",
-            "c2VydmljZV9hY2NvdW50X2VtYWlsGAMgASgJQgPgQQMivwQKDVBraXhQdWJs",
-            "aWNLZXkSFgoOcHVibGljX2tleV9wZW0YASABKAkSYgoTc2lnbmF0dXJlX2Fs",
-            "Z29yaXRobRgCIAEoDjJFLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0",
-            "aW9uLnYxLlBraXhQdWJsaWNLZXkuU2lnbmF0dXJlQWxnb3JpdGhtIrEDChJT",
-            "aWduYXR1cmVBbGdvcml0aG0SIwofU0lHTkFUVVJFX0FMR09SSVRITV9VTlNQ",
-            "RUNJRklFRBAAEhcKE1JTQV9QU1NfMjA0OF9TSEEyNTYQARIXChNSU0FfUFNT",
-            "XzMwNzJfU0hBMjU2EAISFwoTUlNBX1BTU180MDk2X1NIQTI1NhADEhcKE1JT",
-            "QV9QU1NfNDA5Nl9TSEE1MTIQBBIeChpSU0FfU0lHTl9QS0NTMV8yMDQ4X1NI",
-            "QTI1NhAFEh4KGlJTQV9TSUdOX1BLQ1MxXzMwNzJfU0hBMjU2EAYSHgoaUlNB",
-            "X1NJR05fUEtDUzFfNDA5Nl9TSEEyNTYQBxIeChpSU0FfU0lHTl9QS0NTMV80",
-            "MDk2X1NIQTUxMhAIEhUKEUVDRFNBX1AyNTZfU0hBMjU2EAkSFwoTRUNfU0lH",
-            "Tl9QMjU2X1NIQTI1NhAJEhUKEUVDRFNBX1AzODRfU0hBMzg0EAoSFwoTRUNf",
-            "U0lHTl9QMzg0X1NIQTM4NBAKEhUKEUVDRFNBX1A1MjFfU0hBNTEyEAsSFwoT",
-            "RUNfU0lHTl9QNTIxX1NIQTUxMhALGgIQASK6AQoRQXR0ZXN0b3JQdWJsaWNL",
-            "ZXkSFAoHY29tbWVudBgBIAEoCUID4EEBEgoKAmlkGAIgASgJEiYKHGFzY2lp",
-            "X2FybW9yZWRfcGdwX3B1YmxpY19rZXkYAyABKAlIABJNCg9wa2l4X3B1Ymxp",
-            "Y19rZXkYBSABKAsyMi5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlv",
-            "bi52MS5Qa2l4UHVibGljS2V5SABCDAoKcHVibGljX2tleUKMAgo1Y29tLmdv",
-            "b2dsZS5wcm90b3MuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24u",
-            "djFQAFpZY2xvdWQuZ29vZ2xlLmNvbS9nby9iaW5hcnlhdXRob3JpemF0aW9u",
-            "L2FwaXYxL2JpbmFyeWF1dGhvcml6YXRpb25wYjtiaW5hcnlhdXRob3JpemF0",
-            "aW9ucGL4AQGqAiNHb29nbGUuQ2xvdWQuQmluYXJ5QXV0aG9yaXphdGlvbi5W",
-            "McoCI0dvb2dsZVxDbG91ZFxCaW5hcnlBdXRob3JpemF0aW9uXFYx6gImR29v",
-            "Z2xlOjpDbG91ZDo6QmluYXJ5QXV0aG9yaXphdGlvbjo6VjFiBnByb3RvMw=="));
+            "bWVzdGFtcEID4EEDEhEKBGV0YWcYCyABKAlCA+BBARpwChpDbHVzdGVyQWRt",
+            "aXNzaW9uUnVsZXNFbnRyeRILCgNrZXkYASABKAkSQQoFdmFsdWUYAiABKAsy",
+            "Mi5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MS5BZG1pc3Np",
+            "b25SdWxlOgI4ARp8CiZLdWJlcm5ldGVzTmFtZXNwYWNlQWRtaXNzaW9uUnVs",
+            "ZXNFbnRyeRILCgNrZXkYASABKAkSQQoFdmFsdWUYAiABKAsyMi5nb29nbGUu",
+            "Y2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MS5BZG1pc3Npb25SdWxlOgI4",
+            "ARqBAQorS3ViZXJuZXRlc1NlcnZpY2VBY2NvdW50QWRtaXNzaW9uUnVsZXNF",
+            "bnRyeRILCgNrZXkYASABKAkSQQoFdmFsdWUYAiABKAsyMi5nb29nbGUuY2xv",
+            "dWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MS5BZG1pc3Npb25SdWxlOgI4ARp9",
+            "CidJc3Rpb1NlcnZpY2VJZGVudGl0eUFkbWlzc2lvblJ1bGVzRW50cnkSCwoD",
+            "a2V5GAEgASgJEkEKBXZhbHVlGAIgASgLMjIuZ29vZ2xlLmNsb3VkLmJpbmFy",
+            "eWF1dGhvcml6YXRpb24udjEuQWRtaXNzaW9uUnVsZToCOAEiZAoaR2xvYmFs",
+            "UG9saWN5RXZhbHVhdGlvbk1vZGUSLQopR0xPQkFMX1BPTElDWV9FVkFMVUFU",
+            "SU9OX01PREVfVU5TUEVDSUZJRUQQABIKCgZFTkFCTEUQARILCgdESVNBQkxF",
+            "EAI6ZupBYwopYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbS9Q",
+            "b2xpY3kSGXByb2plY3RzL3twcm9qZWN0fS9wb2xpY3kSG2xvY2F0aW9ucy97",
+            "bG9jYXRpb259L3BvbGljeSIxChlBZG1pc3Npb25XaGl0ZWxpc3RQYXR0ZXJu",
+            "EhQKDG5hbWVfcGF0dGVybhgBIAEoCSLaAwoNQWRtaXNzaW9uUnVsZRJfCg9l",
+            "dmFsdWF0aW9uX21vZGUYASABKA4yQS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0",
+            "aG9yaXphdGlvbi52MS5BZG1pc3Npb25SdWxlLkV2YWx1YXRpb25Nb2RlQgPg",
+            "QQISJAoXcmVxdWlyZV9hdHRlc3RhdGlvbnNfYnkYAiADKAlCA+BBARJhChBl",
+            "bmZvcmNlbWVudF9tb2RlGAMgASgOMkIuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1",
+            "dGhvcml6YXRpb24udjEuQWRtaXNzaW9uUnVsZS5FbmZvcmNlbWVudE1vZGVC",
+            "A+BBAiJtCg5FdmFsdWF0aW9uTW9kZRIfChtFVkFMVUFUSU9OX01PREVfVU5T",
+            "UEVDSUZJRUQQABIQCgxBTFdBWVNfQUxMT1cQARIXChNSRVFVSVJFX0FUVEVT",
+            "VEFUSU9OEAISDwoLQUxXQVlTX0RFTlkQAyJwCg9FbmZvcmNlbWVudE1vZGUS",
+            "IAocRU5GT1JDRU1FTlRfTU9ERV9VTlNQRUNJRklFRBAAEiAKHEVORk9SQ0VE",
+            "X0JMT0NLX0FORF9BVURJVF9MT0cQARIZChVEUllSVU5fQVVESVRfTE9HX09O",
+            "TFkQAiLKAgoIQXR0ZXN0b3ISEQoEbmFtZRgBIAEoCUID4EECEhgKC2Rlc2Ny",
+            "aXB0aW9uGAYgASgJQgPgQQESXAoXdXNlcl9vd25lZF9ncmFmZWFzX25vdGUY",
+            "AyABKAsyOS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MS5V",
+            "c2VyT3duZWRHcmFmZWFzTm90ZUgAEjQKC3VwZGF0ZV90aW1lGAQgASgLMhou",
+            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEhEKBGV0YWcYByABKAlC",
+            "A+BBATpZ6kFWCitiaW5hcnlhdXRob3JpemF0aW9uLmdvb2dsZWFwaXMuY29t",
+            "L0F0dGVzdG9yEidwcm9qZWN0cy97cHJvamVjdH0vYXR0ZXN0b3JzL3thdHRl",
+            "c3Rvcn1CDwoNYXR0ZXN0b3JfdHlwZSK0AQoUVXNlck93bmVkR3JhZmVhc05v",
+            "dGUSGwoObm90ZV9yZWZlcmVuY2UYASABKAlCA+BBAhJQCgtwdWJsaWNfa2V5",
+            "cxgCIAMoCzI2Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYx",
+            "LkF0dGVzdG9yUHVibGljS2V5QgPgQQESLQogZGVsZWdhdGlvbl9zZXJ2aWNl",
+            "X2FjY291bnRfZW1haWwYAyABKAlCA+BBAyLbBQoNUGtpeFB1YmxpY0tleRIW",
+            "Cg5wdWJsaWNfa2V5X3BlbRgBIAEoCRJiChNzaWduYXR1cmVfYWxnb3JpdGht",
+            "GAIgASgOMkUuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjEu",
+            "UGtpeFB1YmxpY0tleS5TaWduYXR1cmVBbGdvcml0aG0SEwoGa2V5X2lkGAMg",
+            "ASgJQgPgQQEiuAQKElNpZ25hdHVyZUFsZ29yaXRobRIjCh9TSUdOQVRVUkVf",
+            "QUxHT1JJVEhNX1VOU1BFQ0lGSUVEEAASFwoTUlNBX1BTU18yMDQ4X1NIQTI1",
+            "NhABEhwKGFJTQV9TSUdOX1BTU18yMDQ4X1NIQTI1NhABEhcKE1JTQV9QU1Nf",
+            "MzA3Ml9TSEEyNTYQAhIcChhSU0FfU0lHTl9QU1NfMzA3Ml9TSEEyNTYQAhIX",
+            "ChNSU0FfUFNTXzQwOTZfU0hBMjU2EAMSHAoYUlNBX1NJR05fUFNTXzQwOTZf",
+            "U0hBMjU2EAMSFwoTUlNBX1BTU180MDk2X1NIQTUxMhAEEhwKGFJTQV9TSUdO",
+            "X1BTU180MDk2X1NIQTUxMhAEEh4KGlJTQV9TSUdOX1BLQ1MxXzIwNDhfU0hB",
+            "MjU2EAUSHgoaUlNBX1NJR05fUEtDUzFfMzA3Ml9TSEEyNTYQBhIeChpSU0Ff",
+            "U0lHTl9QS0NTMV80MDk2X1NIQTI1NhAHEh4KGlJTQV9TSUdOX1BLQ1MxXzQw",
+            "OTZfU0hBNTEyEAgSFQoRRUNEU0FfUDI1Nl9TSEEyNTYQCRIXChNFQ19TSUdO",
+            "X1AyNTZfU0hBMjU2EAkSFQoRRUNEU0FfUDM4NF9TSEEzODQQChIXChNFQ19T",
+            "SUdOX1AzODRfU0hBMzg0EAoSFQoRRUNEU0FfUDUyMV9TSEE1MTIQCxIXChNF",
+            "Q19TSUdOX1A1MjFfU0hBNTEyEAsSDQoJTUxfRFNBXzY1EA0aAhABIroBChFB",
+            "dHRlc3RvclB1YmxpY0tleRIUCgdjb21tZW50GAEgASgJQgPgQQESCgoCaWQY",
+            "AiABKAkSJgocYXNjaWlfYXJtb3JlZF9wZ3BfcHVibGljX2tleRgDIAEoCUgA",
+            "Ek0KD3BraXhfcHVibGljX2tleRgFIAEoCzIyLmdvb2dsZS5jbG91ZC5iaW5h",
+            "cnlhdXRob3JpemF0aW9uLnYxLlBraXhQdWJsaWNLZXlIAEIMCgpwdWJsaWNf",
+            "a2V5QokCCjVjb20uZ29vZ2xlLnByb3Rvcy5nb29nbGUuY2xvdWQuYmluYXJ5",
+            "YXV0aG9yaXphdGlvbi52MVAAWlljbG91ZC5nb29nbGUuY29tL2dvL2JpbmFy",
+            "eWF1dGhvcml6YXRpb24vYXBpdjEvYmluYXJ5YXV0aG9yaXphdGlvbnBiO2Jp",
+            "bmFyeWF1dGhvcml6YXRpb25wYqoCI0dvb2dsZS5DbG91ZC5CaW5hcnlBdXRo",
+            "b3JpemF0aW9uLlYxygIjR29vZ2xlXENsb3VkXEJpbmFyeUF1dGhvcml6YXRp",
+            "b25cVjHqAiZHb29nbGU6OkNsb3VkOjpCaW5hcnlBdXRob3JpemF0aW9uOjpW",
+            "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.Policy), global::Google.Cloud.BinaryAuthorization.V1.Policy.Parser, new[]{ "Name", "Description", "GlobalPolicyEvaluationMode", "AdmissionWhitelistPatterns", "ClusterAdmissionRules", "KubernetesNamespaceAdmissionRules", "KubernetesServiceAccountAdmissionRules", "IstioServiceIdentityAdmissionRules", "DefaultAdmissionRule", "UpdateTime" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1.Policy.Types.GlobalPolicyEvaluationMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.Policy), global::Google.Cloud.BinaryAuthorization.V1.Policy.Parser, new[]{ "Name", "Description", "GlobalPolicyEvaluationMode", "AdmissionWhitelistPatterns", "ClusterAdmissionRules", "KubernetesNamespaceAdmissionRules", "KubernetesServiceAccountAdmissionRules", "IstioServiceIdentityAdmissionRules", "DefaultAdmissionRule", "UpdateTime", "Etag" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1.Policy.Types.GlobalPolicyEvaluationMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.AdmissionWhitelistPattern), global::Google.Cloud.BinaryAuthorization.V1.AdmissionWhitelistPattern.Parser, new[]{ "NamePattern" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule), global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule.Parser, new[]{ "EvaluationMode", "RequireAttestationsBy", "EnforcementMode" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule.Types.EvaluationMode), typeof(global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule.Types.EnforcementMode) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.Attestor), global::Google.Cloud.BinaryAuthorization.V1.Attestor.Parser, new[]{ "Name", "Description", "UserOwnedGrafeasNote", "UpdateTime" }, new[]{ "AttestorType" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.Attestor), global::Google.Cloud.BinaryAuthorization.V1.Attestor.Parser, new[]{ "Name", "Description", "UserOwnedGrafeasNote", "UpdateTime", "Etag" }, new[]{ "AttestorType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.UserOwnedGrafeasNote), global::Google.Cloud.BinaryAuthorization.V1.UserOwnedGrafeasNote.Parser, new[]{ "NoteReference", "PublicKeys", "DelegationServiceAccountEmail" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey), global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Parser, new[]{ "PublicKeyPem", "SignatureAlgorithm" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Types.SignatureAlgorithm) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey), global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Parser, new[]{ "PublicKeyPem", "SignatureAlgorithm", "KeyId" }, null, new[]{ typeof(global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Types.SignatureAlgorithm) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1.AttestorPublicKey), global::Google.Cloud.BinaryAuthorization.V1.AttestorPublicKey.Parser, new[]{ "Comment", "Id", "AsciiArmoredPgpPublicKey", "PkixPublicKey" }, new[]{ "PublicKey" }, null, null, null)
           }));
     }
@@ -128,7 +133,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
   #region Messages
   /// <summary>
-  /// A [policy][google.cloud.binaryauthorization.v1.Policy] for container image binary authorization.
+  /// A [policy][google.cloud.binaryauthorization.v1.Policy] for container image
+  /// binary authorization.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Policy : pb::IMessage<Policy>
@@ -175,6 +181,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       istioServiceIdentityAdmissionRules_ = other.istioServiceIdentityAdmissionRules_.Clone();
       defaultAdmissionRule_ = other.defaultAdmissionRule_ != null ? other.defaultAdmissionRule_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -255,7 +262,12 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         = new pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule.Parser), 26);
     private readonly pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule> clusterAdmissionRules_ = new pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule>();
     /// <summary>
-    /// Optional. Per-cluster admission rules. Cluster spec format:
+    /// Optional. A valid policy has only one of the following rule maps non-empty,
+    /// i.e. only one of `cluster_admission_rules`,
+    /// `kubernetes_namespace_admission_rules`,
+    /// `kubernetes_service_account_admission_rules`,
+    /// or `istio_service_identity_admission_rules` can be non-empty.
+    /// Per-cluster admission rules. Cluster spec format:
     /// `location.clusterId`. There can be at most one admission rule per cluster
     /// spec.
     /// A `location` is either a compute zone (e.g. us-central1-a) or a region
@@ -275,8 +287,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         = new pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule.Parser), 82);
     private readonly pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule> kubernetesNamespaceAdmissionRules_ = new pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule>();
     /// <summary>
-    /// Optional. Per-kubernetes-namespace admission rules. K8s namespace spec format:
-    /// [a-z.-]+, e.g. 'some-namespace'
+    /// Optional. Per-kubernetes-namespace admission rules. K8s namespace spec
+    /// format:
+    /// `[a-z.-]+`, e.g. `some-namespace`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -291,7 +304,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     private readonly pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule> kubernetesServiceAccountAdmissionRules_ = new pbc::MapField<string, global::Google.Cloud.BinaryAuthorization.V1.AdmissionRule>();
     /// <summary>
     /// Optional. Per-kubernetes-service-account admission rules. Service account
-    /// spec format: `namespace:serviceaccount`. e.g. 'test-ns:default'
+    /// spec format: `namespace:serviceaccount`. e.g. `test-ns:default`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -307,9 +320,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     /// <summary>
     /// Optional. Per-istio-service-identity admission rules. Istio service
     /// identity spec format:
-    /// spiffe://&lt;domain>/ns/&lt;namespace>/sa/&lt;serviceaccount> or
-    /// &lt;domain>/ns/&lt;namespace>/sa/&lt;serviceaccount>
-    /// e.g. spiffe://example.com/ns/test-ns/sa/default
+    /// `spiffe://&lt;domain>/ns/&lt;namespace>/sa/&lt;serviceaccount>` or
+    /// `&lt;domain>/ns/&lt;namespace>/sa/&lt;serviceaccount>`
+    /// e.g. `spiffe://example.com/ns/test-ns/sa/default`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -348,6 +361,23 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       }
     }
 
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 11;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. A checksum, returned by the server, that can be sent on update
+    /// requests to ensure the policy has an up-to-date value before attempting to
+    /// update it. See https://google.aip.dev/154.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -373,6 +403,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       if (!IstioServiceIdentityAdmissionRules.Equals(other.IstioServiceIdentityAdmissionRules)) return false;
       if (!object.Equals(DefaultAdmissionRule, other.DefaultAdmissionRule)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -390,6 +421,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       hash ^= IstioServiceIdentityAdmissionRules.GetHashCode();
       if (defaultAdmissionRule_ != null) hash ^= DefaultAdmissionRule.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -433,6 +465,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       kubernetesServiceAccountAdmissionRules_.WriteTo(output, _map_kubernetesServiceAccountAdmissionRules_codec);
       istioServiceIdentityAdmissionRules_.WriteTo(output, _map_istioServiceIdentityAdmissionRules_codec);
       kubernetesNamespaceAdmissionRules_.WriteTo(output, _map_kubernetesNamespaceAdmissionRules_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -468,6 +504,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       kubernetesServiceAccountAdmissionRules_.WriteTo(ref output, _map_kubernetesServiceAccountAdmissionRules_codec);
       istioServiceIdentityAdmissionRules_.WriteTo(ref output, _map_istioServiceIdentityAdmissionRules_codec);
       kubernetesNamespaceAdmissionRules_.WriteTo(ref output, _map_kubernetesNamespaceAdmissionRules_codec);
+      if (Etag.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -497,6 +537,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -535,6 +578,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -599,6 +645,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
           }
           case 82: {
             kubernetesNamespaceAdmissionRules_.AddEntriesFrom(input, _map_kubernetesNamespaceAdmissionRules_codec);
+            break;
+          }
+          case 90: {
+            Etag = input.ReadString();
             break;
           }
         }
@@ -666,6 +716,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
             kubernetesNamespaceAdmissionRules_.AddEntriesFrom(ref input, _map_kubernetesNamespaceAdmissionRules_codec);
             break;
           }
+          case 90: {
+            Etag = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -678,7 +732,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public static partial class Types {
       public enum GlobalPolicyEvaluationMode {
         /// <summary>
-        /// Not specified: DISABLE is assumed.
+        /// Not specified: `DISABLE` is assumed.
         /// </summary>
         [pbr::OriginalName("GLOBAL_POLICY_EVALUATION_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -697,8 +751,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// An [admission allowlist pattern][google.cloud.binaryauthorization.v1.AdmissionWhitelistPattern] exempts images
-  /// from checks by [admission rules][google.cloud.binaryauthorization.v1.AdmissionRule].
+  /// An [admission allowlist
+  /// pattern][google.cloud.binaryauthorization.v1.AdmissionWhitelistPattern]
+  /// exempts images from checks by [admission
+  /// rules][google.cloud.binaryauthorization.v1.AdmissionRule].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdmissionWhitelistPattern : pb::IMessage<AdmissionWhitelistPattern>
@@ -905,13 +961,15 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// An [admission rule][google.cloud.binaryauthorization.v1.AdmissionRule] specifies either that all container images
-  /// used in a pod creation request must be attested to by one or more
-  /// [attestors][google.cloud.binaryauthorization.v1.Attestor], that all pod creations will be allowed, or that all
-  /// pod creations will be denied.
+  /// An [admission rule][google.cloud.binaryauthorization.v1.AdmissionRule]
+  /// specifies either that all container images used in a pod creation request
+  /// must be attested to by one or more
+  /// [attestors][google.cloud.binaryauthorization.v1.Attestor], that all pod
+  /// creations will be allowed, or that all pod creations will be denied.
   ///
-  /// Images matching an [admission allowlist pattern][google.cloud.binaryauthorization.v1.AdmissionWhitelistPattern]
-  /// are exempted from admission rules and will never block a pod creation.
+  /// Images matching an [admission allowlist
+  /// pattern][google.cloud.binaryauthorization.v1.AdmissionWhitelistPattern] are
+  /// exempted from admission rules and will never block a pod creation.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AdmissionRule : pb::IMessage<AdmissionRule>
@@ -987,8 +1045,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     /// to a policy the principal issuing the policy change request must be able
     /// to read the attestor resource.
     ///
-    /// Note: this field must be non-empty when the evaluation_mode field specifies
-    /// REQUIRE_ATTESTATION, otherwise it must be empty.
+    /// Note: this field must be non-empty when the `evaluation_mode` field
+    /// specifies `REQUIRE_ATTESTATION`, otherwise it must be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1199,12 +1257,12 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         /// </summary>
         [pbr::OriginalName("EVALUATION_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// This rule allows all all pod creations.
+        /// This rule allows all pod creations.
         /// </summary>
         [pbr::OriginalName("ALWAYS_ALLOW")] AlwaysAllow = 1,
         /// <summary>
         /// This rule allows a pod creation if all the attestors listed in
-        /// 'require_attestations_by' have valid attestations for all of the
+        /// `require_attestations_by` have valid attestations for all of the
         /// images in the pod spec.
         /// </summary>
         [pbr::OriginalName("REQUIRE_ATTESTATION")] RequireAttestation = 2,
@@ -1240,9 +1298,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// An [attestor][google.cloud.binaryauthorization.v1.Attestor] that attests to container image
-  /// artifacts. An existing attestor cannot be modified except where
-  /// indicated.
+  /// An [attestor][google.cloud.binaryauthorization.v1.Attestor] that attests to
+  /// container image artifacts. An existing attestor cannot be modified except
+  /// where indicated.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class Attestor : pb::IMessage<Attestor>
@@ -1282,6 +1340,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       name_ = other.name_;
       description_ = other.description_;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      etag_ = other.etag_;
       switch (other.AttestorTypeCase) {
         case AttestorTypeOneofCase.UserOwnedGrafeasNote:
           UserOwnedGrafeasNote = other.UserOwnedGrafeasNote.Clone();
@@ -1360,6 +1419,23 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       }
     }
 
+    /// <summary>Field number for the "etag" field.</summary>
+    public const int EtagFieldNumber = 7;
+    private string etag_ = "";
+    /// <summary>
+    /// Optional. A checksum, returned by the server, that can be sent on update
+    /// requests to ensure the attestor has an up-to-date value before attempting
+    /// to update it. See https://google.aip.dev/154.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Etag {
+      get { return etag_; }
+      set {
+        etag_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object attestorType_;
     /// <summary>Enum of possible cases for the "attestor_type" oneof.</summary>
     public enum AttestorTypeOneofCase {
@@ -1399,6 +1475,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       if (Description != other.Description) return false;
       if (!object.Equals(UserOwnedGrafeasNote, other.UserOwnedGrafeasNote)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if (Etag != other.Etag) return false;
       if (AttestorTypeCase != other.AttestorTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1411,6 +1488,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       if (Description.Length != 0) hash ^= Description.GetHashCode();
       if (attestorTypeCase_ == AttestorTypeOneofCase.UserOwnedGrafeasNote) hash ^= UserOwnedGrafeasNote.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= (int) attestorTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1446,6 +1524,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         output.WriteRawTag(50);
         output.WriteString(Description);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1472,6 +1554,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         output.WriteRawTag(50);
         output.WriteString(Description);
       }
+      if (Etag.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Etag);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1493,6 +1579,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       }
       if (updateTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      if (Etag.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1517,6 +1606,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.Etag.Length != 0) {
+        Etag = other.Etag;
       }
       switch (other.AttestorTypeCase) {
         case AttestorTypeOneofCase.UserOwnedGrafeasNote:
@@ -1570,6 +1662,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
             Description = input.ReadString();
             break;
           }
+          case 58: {
+            Etag = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1613,6 +1709,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
             Description = input.ReadString();
             break;
           }
+          case 58: {
+            Etag = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -1621,8 +1721,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// An [user owned Grafeas note][google.cloud.binaryauthorization.v1.UserOwnedGrafeasNote] references a Grafeas
-  /// Attestation.Authority Note created by the user.
+  /// An [user owned Grafeas
+  /// note][google.cloud.binaryauthorization.v1.UserOwnedGrafeasNote] references a
+  /// Grafeas Attestation.Authority Note created by the user.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UserOwnedGrafeasNote : pb::IMessage<UserOwnedGrafeasNote>
@@ -1676,8 +1777,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     private string noteReference_ = "";
     /// <summary>
     /// Required. The Grafeas resource name of a Attestation.Authority Note,
-    /// created by the user, in the format: `projects/*/notes/*`. This field may
-    /// not be updated.
+    /// created by the user, in the format: `projects/[PROJECT_ID]/notes/*`. This
+    /// field may not be updated. A project ID must be used, not a project number.
     ///
     /// An attestation by this attestor is stored as a Grafeas
     /// Attestation.Authority Occurrence that names a container image and that
@@ -1719,12 +1820,13 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     private string delegationServiceAccountEmail_ = "";
     /// <summary>
     /// Output only. This field will contain the service account email address
-    /// that this Attestor will use as the principal when querying Container
+    /// that this attestor will use as the principal when querying Container
     /// Analysis. Attestor administrators must grant this service account the
-    /// IAM role needed to read attestations from the [note_reference][Note] in
-    /// Container Analysis (`containeranalysis.notes.occurrences.viewer`).
+    /// IAM role needed to read attestations from the
+    /// [note_reference][google.cloud.binaryauthorization.v1.UserOwnedGrafeasNote.note_reference]
+    /// in Container Analysis (`containeranalysis.notes.occurrences.viewer`).
     ///
-    /// This email address is fixed for the lifetime of the Attestor, but callers
+    /// This email address is fixed for the lifetime of the attestor, but callers
     /// should not make any other assumptions about the service account email;
     /// future versions may use an email based on a different naming pattern.
     /// </summary>
@@ -1917,10 +2019,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// A public key in the PkixPublicKey format (see
-  /// https://tools.ietf.org/html/rfc5280#section-4.1.2.7 for details).
-  /// Public keys of this type are typically textually encoded using the PEM
-  /// format.
+  /// A public key in the PkixPublicKey
+  /// [format](https://tools.ietf.org/html/rfc5280#section-4.1.2.7). Public keys of
+  /// this type are typically textually encoded using the PEM format.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class PkixPublicKey : pb::IMessage<PkixPublicKey>
@@ -1959,6 +2060,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public PkixPublicKey(PkixPublicKey other) : this() {
       publicKeyPem_ = other.publicKeyPem_;
       signatureAlgorithm_ = other.signatureAlgorithm_;
+      keyId_ = other.keyId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2003,6 +2105,34 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       }
     }
 
+    /// <summary>Field number for the "key_id" field.</summary>
+    public const int KeyIdFieldNumber = 3;
+    private string keyId_ = "";
+    /// <summary>
+    /// Optional. The ID of this public key.
+    /// Signatures verified by Binary Authorization must include the ID of the
+    /// public key that can be used to verify them. The ID must match exactly
+    /// contents of the `key_id` field exactly.
+    ///
+    /// The ID may be explicitly provided by the caller, but it MUST be a valid
+    /// RFC3986 URI. If `key_id` is left blank and this `PkixPublicKey` is not used
+    /// in the context of a wrapper (see next paragraph), a default key ID will be
+    /// computed based on the digest of the DER encoding of the public key.
+    ///
+    /// If this `PkixPublicKey` is used in the context of a wrapper that has its
+    /// own notion of key ID (e.g. `AttestorPublicKey`), then this field can
+    /// either match that value exactly, or be left blank, in which case it behaves
+    /// exactly as though it is equal to that wrapper value.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string KeyId {
+      get { return keyId_; }
+      set {
+        keyId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2020,6 +2150,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       }
       if (PublicKeyPem != other.PublicKeyPem) return false;
       if (SignatureAlgorithm != other.SignatureAlgorithm) return false;
+      if (KeyId != other.KeyId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2029,6 +2160,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       int hash = 1;
       if (PublicKeyPem.Length != 0) hash ^= PublicKeyPem.GetHashCode();
       if (SignatureAlgorithm != global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Types.SignatureAlgorithm.Unspecified) hash ^= SignatureAlgorithm.GetHashCode();
+      if (KeyId.Length != 0) hash ^= KeyId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2055,6 +2187,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) SignatureAlgorithm);
       }
+      if (KeyId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(KeyId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2073,6 +2209,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         output.WriteRawTag(16);
         output.WriteEnum((int) SignatureAlgorithm);
       }
+      if (KeyId.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(KeyId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2088,6 +2228,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       }
       if (SignatureAlgorithm != global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Types.SignatureAlgorithm.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SignatureAlgorithm);
+      }
+      if (KeyId.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(KeyId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2106,6 +2249,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       }
       if (other.SignatureAlgorithm != global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Types.SignatureAlgorithm.Unspecified) {
         SignatureAlgorithm = other.SignatureAlgorithm;
+      }
+      if (other.KeyId.Length != 0) {
+        KeyId = other.KeyId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2132,6 +2278,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
           }
           case 16: {
             SignatureAlgorithm = (global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Types.SignatureAlgorithm) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            KeyId = input.ReadString();
             break;
           }
         }
@@ -2161,6 +2311,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
             SignatureAlgorithm = (global::Google.Cloud.BinaryAuthorization.V1.PkixPublicKey.Types.SignatureAlgorithm) input.ReadEnum();
             break;
           }
+          case 26: {
+            KeyId = input.ReadString();
+            break;
+          }
         }
       }
     }
@@ -2175,9 +2329,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
       /// Represents a signature algorithm and other information necessary to verify
       /// signatures with a given public key.
       /// This is based primarily on the public key types supported by Tink's
-      /// PemKeyType, which is in turn based on KMS's supported signing algorithms.
-      /// See https://cloud.google.com/kms/docs/algorithms. In the future, BinAuthz
-      /// might support additional public key types independently of Tink and/or KMS.
+      /// PemKeyType, which is in turn based on KMS's supported signing
+      /// [algorithms](https://cloud.google.com/kms/docs/algorithms). In the future,
+      /// Binary Authorization might support additional public key types
+      /// independently of Tink and/or KMS.
       /// </summary>
       public enum SignatureAlgorithm {
         /// <summary>
@@ -2189,17 +2344,33 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         /// </summary>
         [pbr::OriginalName("RSA_PSS_2048_SHA256")] RsaPss2048Sha256 = 1,
         /// <summary>
+        /// RSASSA-PSS 2048 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_2048_SHA256", PreferredAlias = false)] RsaSignPss2048Sha256 = 1,
+        /// <summary>
         /// RSASSA-PSS 3072 bit key with a SHA256 digest.
         /// </summary>
         [pbr::OriginalName("RSA_PSS_3072_SHA256")] RsaPss3072Sha256 = 2,
+        /// <summary>
+        /// RSASSA-PSS 3072 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_3072_SHA256", PreferredAlias = false)] RsaSignPss3072Sha256 = 2,
         /// <summary>
         /// RSASSA-PSS 4096 bit key with a SHA256 digest.
         /// </summary>
         [pbr::OriginalName("RSA_PSS_4096_SHA256")] RsaPss4096Sha256 = 3,
         /// <summary>
+        /// RSASSA-PSS 4096 bit key with a SHA256 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_4096_SHA256", PreferredAlias = false)] RsaSignPss4096Sha256 = 3,
+        /// <summary>
         /// RSASSA-PSS 4096 bit key with a SHA512 digest.
         /// </summary>
         [pbr::OriginalName("RSA_PSS_4096_SHA512")] RsaPss4096Sha512 = 4,
+        /// <summary>
+        /// RSASSA-PSS 4096 bit key with a SHA512 digest.
+        /// </summary>
+        [pbr::OriginalName("RSA_SIGN_PSS_4096_SHA512", PreferredAlias = false)] RsaSignPss4096Sha512 = 4,
         /// <summary>
         /// RSASSA-PKCS1-v1_5 with a 2048 bit key and a SHA256 digest.
         /// </summary>
@@ -2240,6 +2411,10 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
         /// ECDSA on the NIST P-521 curve with a SHA512 digest.
         /// </summary>
         [pbr::OriginalName("EC_SIGN_P521_SHA512", PreferredAlias = false)] EcSignP521Sha512 = 11,
+        /// <summary>
+        /// ML-DSA-65 Post-Quantum Cryptography signature algorithm.
+        /// </summary>
+        [pbr::OriginalName("ML_DSA_65")] MlDsa65 = 13,
       }
 
     }
@@ -2248,8 +2423,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// An [attestor public key][google.cloud.binaryauthorization.v1.AttestorPublicKey] that will be used to verify
-  /// attestations signed by this attestor.
+  /// An [attestor public
+  /// key][google.cloud.binaryauthorization.v1.AttestorPublicKey] that will be used
+  /// to verify attestations signed by this attestor.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class AttestorPublicKey : pb::IMessage<AttestorPublicKey>
@@ -2326,12 +2502,11 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     private string id_ = "";
     /// <summary>
     /// The ID of this public key.
-    /// Signatures verified by BinAuthz must include the ID of the public key that
-    /// can be used to verify them, and that ID must match the contents of this
-    /// field exactly.
-    /// Additional restrictions on this field can be imposed based on which public
-    /// key type is encapsulated. See the documentation on `public_key` cases below
-    /// for details.
+    /// Signatures verified by Binary Authorization must include the ID of the
+    /// public key that can be used to verify them, and that ID must match the
+    /// contents of this field exactly. Additional restrictions on this field can
+    /// be imposed based on which public key type is encapsulated. See the
+    /// documentation on `public_key` cases below for details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2348,11 +2523,11 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     /// ASCII-armored representation of a PGP public key, as the entire output by
     /// the command `gpg --export --armor foo@example.com` (either LF or CRLF
     /// line endings).
-    /// When using this field, `id` should be left blank.  The BinAuthz API
-    /// handlers will calculate the ID and fill it in automatically.  BinAuthz
-    /// computes this ID as the OpenPGP RFC4880 V4 fingerprint, represented as
-    /// upper-case hex.  If `id` is provided by the caller, it will be
-    /// overwritten by the API-calculated ID.
+    /// When using this field, `id` should be left blank.  The Binary
+    /// Authorization API handlers will calculate the ID and fill it in
+    /// automatically.  Binary Authorization computes this ID as the OpenPGP
+    /// RFC4880 V4 fingerprint, represented as upper-case hex.  If `id` is
+    /// provided by the caller, it will be overwritten by the API-calculated ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

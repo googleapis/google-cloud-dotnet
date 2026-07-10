@@ -17,7 +17,9 @@
 #pragma warning disable CS8981
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gcbv = Google.Cloud.BinaryAuthorization.V1;
+using gciv = Google.Cloud.Iam.V1;
 using gpr = Google.Protobuf.Reflection;
+using proto = Google.Protobuf;
 using scg = System.Collections.Generic;
 using sys = System;
 

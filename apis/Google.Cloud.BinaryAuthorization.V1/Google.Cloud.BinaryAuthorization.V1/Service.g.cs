@@ -107,13 +107,13 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
             "ZSJOgtPkkwJIIkMvdjEve2F0dGVzdG9yPXByb2plY3RzLyovYXR0ZXN0b3Jz",
             "Lyp9OnZhbGlkYXRlQXR0ZXN0YXRpb25PY2N1cnJlbmNlOgEqGlbKQSJiaW5h",
             "cnlhdXRob3JpemF0aW9uLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKMAgo1Y29tLmdv",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKJAgo1Y29tLmdv",
             "b2dsZS5wcm90b3MuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24u",
             "djFQAFpZY2xvdWQuZ29vZ2xlLmNvbS9nby9iaW5hcnlhdXRob3JpemF0aW9u",
             "L2FwaXYxL2JpbmFyeWF1dGhvcml6YXRpb25wYjtiaW5hcnlhdXRob3JpemF0",
-            "aW9ucGL4AQGqAiNHb29nbGUuQ2xvdWQuQmluYXJ5QXV0aG9yaXphdGlvbi5W",
-            "McoCI0dvb2dsZVxDbG91ZFxCaW5hcnlBdXRob3JpemF0aW9uXFYx6gImR29v",
-            "Z2xlOjpDbG91ZDo6QmluYXJ5QXV0aG9yaXphdGlvbjo6VjFiBnByb3RvMw=="));
+            "aW9ucGKqAiNHb29nbGUuQ2xvdWQuQmluYXJ5QXV0aG9yaXphdGlvbi5WMcoC",
+            "I0dvb2dsZVxDbG91ZFxCaW5hcnlBdXRob3JpemF0aW9uXFYx6gImR29vZ2xl",
+            "OjpDbG91ZDo6QmluYXJ5QXV0aG9yaXphdGlvbjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BinaryAuthorization.V1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Grafeas.V1.AttestationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -135,7 +135,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [BinauthzManagementService.GetPolicy][].
+  /// Request message for
+  /// [BinauthzManagementServiceV1.GetPolicy][google.cloud.binaryauthorization.v1.BinauthzManagementServiceV1.GetPolicy].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetPolicyRequest : pb::IMessage<GetPolicyRequest>
@@ -186,8 +187,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve,
-    /// in the format `projects/*/policy`.
+    /// Required. The resource name of the
+    /// [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve, in the
+    /// format `projects/*/policy`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -340,7 +342,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// Request message for [BinauthzManagementService.UpdatePolicy][].
+  /// Request message for
+  /// [BinauthzManagementServiceV1.UpdatePolicy][google.cloud.binaryauthorization.v1.BinauthzManagementServiceV1.UpdatePolicy].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdatePolicyRequest : pb::IMessage<UpdatePolicyRequest>
@@ -391,9 +394,11 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public const int PolicyFieldNumber = 1;
     private global::Google.Cloud.BinaryAuthorization.V1.Policy policy_;
     /// <summary>
-    /// Required. A new or updated [policy][google.cloud.binaryauthorization.v1.Policy] value. The service will
-    /// overwrite the [policy name][google.cloud.binaryauthorization.v1.Policy.name] field with the resource name in
-    /// the request URL, in the format `projects/*/policy`.
+    /// Required. A new or updated
+    /// [policy][google.cloud.binaryauthorization.v1.Policy] value. The service
+    /// will overwrite the [policy
+    /// name][google.cloud.binaryauthorization.v1.Policy.name] field with the
+    /// resource name in the request URL, in the format `projects/*/policy`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -555,7 +560,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// Request message for [BinauthzManagementService.CreateAttestor][].
+  /// Request message for
+  /// [BinauthzManagementServiceV1.CreateAttestor][google.cloud.binaryauthorization.v1.BinauthzManagementServiceV1.CreateAttestor].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateAttestorRequest : pb::IMessage<CreateAttestorRequest>
@@ -608,7 +614,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1.Attestor].
+    /// Required. The parent of this
+    /// [attestor][google.cloud.binaryauthorization.v1.Attestor].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -638,9 +645,11 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public const int AttestorFieldNumber = 3;
     private global::Google.Cloud.BinaryAuthorization.V1.Attestor attestor_;
     /// <summary>
-    /// Required. The initial [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-    /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name,
-    /// in the format `projects/*/attestors/*`.
+    /// Required. The initial
+    /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+    /// will overwrite the [attestor
+    /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+    /// resource name, in the format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -850,7 +859,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// Request message for [BinauthzManagementService.GetAttestor][].
+  /// Request message for
+  /// [BinauthzManagementServiceV1.GetAttestor][google.cloud.binaryauthorization.v1.BinauthzManagementServiceV1.GetAttestor].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class GetAttestorRequest : pb::IMessage<GetAttestorRequest>
@@ -901,8 +911,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in the format
-    /// `projects/*/attestors/*`.
+    /// Required. The name of the
+    /// [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in
+    /// the format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1055,7 +1066,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// Request message for [BinauthzManagementService.UpdateAttestor][].
+  /// Request message for
+  /// [BinauthzManagementServiceV1.UpdateAttestor][google.cloud.binaryauthorization.v1.BinauthzManagementServiceV1.UpdateAttestor].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class UpdateAttestorRequest : pb::IMessage<UpdateAttestorRequest>
@@ -1106,9 +1118,11 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public const int AttestorFieldNumber = 1;
     private global::Google.Cloud.BinaryAuthorization.V1.Attestor attestor_;
     /// <summary>
-    /// Required. The updated [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-    /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name
-    /// in the request URL, in the format `projects/*/attestors/*`.
+    /// Required. The updated
+    /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+    /// will overwrite the [attestor
+    /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+    /// resource name in the request URL, in the format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1270,7 +1284,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// Request message for [BinauthzManagementService.ListAttestors][].
+  /// Request message for
+  /// [BinauthzManagementServiceV1.ListAttestors][google.cloud.binaryauthorization.v1.BinauthzManagementServiceV1.ListAttestors].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAttestorsRequest : pb::IMessage<ListAttestorsRequest>
@@ -1324,7 +1339,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the project associated with the
-    /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format `projects/*`.
+    /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format
+    /// `projects/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1356,8 +1372,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     private string pageToken_ = "";
     /// <summary>
     /// A token identifying a page of results the server should return. Typically,
-    /// this is the value of [ListAttestorsResponse.next_page_token][google.cloud.binaryauthorization.v1.ListAttestorsResponse.next_page_token] returned
-    /// from the previous call to the `ListAttestors` method.
+    /// this is the value of
+    /// [ListAttestorsResponse.next_page_token][google.cloud.binaryauthorization.v1.ListAttestorsResponse.next_page_token]
+    /// returned from the previous call to the `ListAttestors` method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1558,7 +1575,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// Response message for [BinauthzManagementService.ListAttestors][].
+  /// Response message for
+  /// [BinauthzManagementServiceV1.ListAttestors][google.cloud.binaryauthorization.v1.BinauthzManagementServiceV1.ListAttestors].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class ListAttestorsResponse : pb::IMessage<ListAttestorsResponse>
@@ -1625,8 +1643,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results. Pass this value in the
-    /// [ListAttestorsRequest.page_token][google.cloud.binaryauthorization.v1.ListAttestorsRequest.page_token] field in the subsequent call to the
-    /// `ListAttestors` method to retrieve the next page of results.
+    /// [ListAttestorsRequest.page_token][google.cloud.binaryauthorization.v1.ListAttestorsRequest.page_token]
+    /// field in the subsequent call to the `ListAttestors` method to retrieve the
+    /// next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1793,7 +1812,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
   }
 
   /// <summary>
-  /// Request message for [BinauthzManagementService.DeleteAttestor][].
+  /// Request message for
+  /// [BinauthzManagementServiceV1.DeleteAttestor][google.cloud.binaryauthorization.v1.BinauthzManagementServiceV1.DeleteAttestor].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class DeleteAttestorRequest : pb::IMessage<DeleteAttestorRequest>
@@ -1844,8 +1864,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the format
-    /// `projects/*/attestors/*`.
+    /// Required. The name of the
+    /// [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the
+    /// format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2258,7 +2279,8 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     public const int AttestorFieldNumber = 1;
     private string attestor_ = "";
     /// <summary>
-    /// Required. The resource name of the [Attestor][google.cloud.binaryauthorization.v1.Attestor] of the
+    /// Required. The resource name of the
+    /// [Attestor][google.cloud.binaryauthorization.v1.Attestor] of the
     /// [occurrence][grafeas.v1.Occurrence], in the format
     /// `projects/*/attestors/*`.
     /// </summary>
@@ -2276,9 +2298,9 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     private global::Grafeas.V1.AttestationOccurrence attestation_;
     /// <summary>
     /// Required. An [AttestationOccurrence][grafeas.v1.AttestationOccurrence] to
-    /// be checked that it can be verified by the Attestor. It does not have to be
-    /// an existing entity in Container Analysis. It must otherwise be a valid
-    /// AttestationOccurrence.
+    /// be checked that it can be verified by the `Attestor`. It does not have to
+    /// be an existing entity in Container Analysis. It must otherwise be a valid
+    /// `AttestationOccurrence`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2792,7 +2814,7 @@ namespace Google.Cloud.BinaryAuthorization.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// The enum returned in the "result" field.
+      /// The enum returned in the `result` field.
       /// </summary>
       public enum Result {
         /// <summary>

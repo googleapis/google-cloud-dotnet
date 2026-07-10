@@ -18,6 +18,7 @@
 using gagr = Google.Api.Gax.ResourceNames;
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using mel = Microsoft.Extensions.Logging;
@@ -56,6 +57,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
             UpdateAttestorSettings = existing.UpdateAttestorSettings;
             ListAttestorsSettings = existing.ListAttestorsSettings;
             DeleteAttestorSettings = existing.DeleteAttestorSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -205,6 +207,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeleteAttestorSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="BinauthzManagementServiceV1Settings"/> object.</returns>
@@ -356,14 +363,20 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// <summary>The underlying gRPC BinauthzManagementServiceV1 client</summary>
         public virtual BinauthzManagementServiceV1.BinauthzManagementServiceV1Client GrpcClient => throw new sys::NotImplementedException();
 
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -372,13 +385,16 @@ namespace Google.Cloud.BinaryAuthorization.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -387,13 +403,16 @@ namespace Google.Cloud.BinaryAuthorization.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -402,17 +421,21 @@ namespace Google.Cloud.BinaryAuthorization.V1
             GetPolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve,
-        /// in the format `projects/*/policy`.
+        /// Required. The resource name of the
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve, in the
+        /// format `projects/*/policy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -423,17 +446,21 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve,
-        /// in the format `projects/*/policy`.
+        /// Required. The resource name of the
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve, in the
+        /// format `projects/*/policy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -444,17 +471,21 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve,
-        /// in the format `projects/*/policy`.
+        /// Required. The resource name of the
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve, in the
+        /// format `projects/*/policy`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -462,17 +493,21 @@ namespace Google.Cloud.BinaryAuthorization.V1
             GetPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve,
-        /// in the format `projects/*/policy`.
+        /// Required. The resource name of the
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve, in the
+        /// format `projects/*/policy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -483,17 +518,21 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve,
-        /// in the format `projects/*/policy`.
+        /// Required. The resource name of the
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve, in the
+        /// format `projects/*/policy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -504,17 +543,21 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="name">
-        /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve,
-        /// in the format `projects/*/policy`.
+        /// Required. The resource name of the
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] to retrieve, in the
+        /// format `projects/*/policy`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -522,11 +565,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
             GetPolicyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates or updates a project's [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of the
-        /// new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is always updated as a whole, to avoid race
-        /// conditions with concurrent policy enforcement (or management!)
-        /// requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT
-        /// if the request is malformed.
+        /// Creates or updates a project's
+        /// [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of
+        /// the new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is
+        /// always updated as a whole, to avoid race conditions with concurrent policy
+        /// enforcement (or management!) requests. Returns `NOT_FOUND` if the project
+        /// does not exist, `INVALID_ARGUMENT` if the request is malformed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -535,11 +579,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates or updates a project's [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of the
-        /// new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is always updated as a whole, to avoid race
-        /// conditions with concurrent policy enforcement (or management!)
-        /// requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT
-        /// if the request is malformed.
+        /// Creates or updates a project's
+        /// [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of
+        /// the new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is
+        /// always updated as a whole, to avoid race conditions with concurrent policy
+        /// enforcement (or management!) requests. Returns `NOT_FOUND` if the project
+        /// does not exist, `INVALID_ARGUMENT` if the request is malformed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -548,11 +593,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates or updates a project's [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of the
-        /// new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is always updated as a whole, to avoid race
-        /// conditions with concurrent policy enforcement (or management!)
-        /// requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT
-        /// if the request is malformed.
+        /// Creates or updates a project's
+        /// [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of
+        /// the new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is
+        /// always updated as a whole, to avoid race conditions with concurrent policy
+        /// enforcement (or management!) requests. Returns `NOT_FOUND` if the project
+        /// does not exist, `INVALID_ARGUMENT` if the request is malformed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -561,16 +607,19 @@ namespace Google.Cloud.BinaryAuthorization.V1
             UpdatePolicyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates or updates a project's [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of the
-        /// new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is always updated as a whole, to avoid race
-        /// conditions with concurrent policy enforcement (or management!)
-        /// requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT
-        /// if the request is malformed.
+        /// Creates or updates a project's
+        /// [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of
+        /// the new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is
+        /// always updated as a whole, to avoid race conditions with concurrent policy
+        /// enforcement (or management!) requests. Returns `NOT_FOUND` if the project
+        /// does not exist, `INVALID_ARGUMENT` if the request is malformed.
         /// </summary>
         /// <param name="policy">
-        /// Required. A new or updated [policy][google.cloud.binaryauthorization.v1.Policy] value. The service will
-        /// overwrite the [policy name][google.cloud.binaryauthorization.v1.Policy.name] field with the resource name in
-        /// the request URL, in the format `projects/*/policy`.
+        /// Required. A new or updated
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] value. The service
+        /// will overwrite the [policy
+        /// name][google.cloud.binaryauthorization.v1.Policy.name] field with the
+        /// resource name in the request URL, in the format `projects/*/policy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -581,16 +630,19 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates or updates a project's [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of the
-        /// new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is always updated as a whole, to avoid race
-        /// conditions with concurrent policy enforcement (or management!)
-        /// requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT
-        /// if the request is malformed.
+        /// Creates or updates a project's
+        /// [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of
+        /// the new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is
+        /// always updated as a whole, to avoid race conditions with concurrent policy
+        /// enforcement (or management!) requests. Returns `NOT_FOUND` if the project
+        /// does not exist, `INVALID_ARGUMENT` if the request is malformed.
         /// </summary>
         /// <param name="policy">
-        /// Required. A new or updated [policy][google.cloud.binaryauthorization.v1.Policy] value. The service will
-        /// overwrite the [policy name][google.cloud.binaryauthorization.v1.Policy.name] field with the resource name in
-        /// the request URL, in the format `projects/*/policy`.
+        /// Required. A new or updated
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] value. The service
+        /// will overwrite the [policy
+        /// name][google.cloud.binaryauthorization.v1.Policy.name] field with the
+        /// resource name in the request URL, in the format `projects/*/policy`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -601,16 +653,19 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates or updates a project's [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of the
-        /// new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is always updated as a whole, to avoid race
-        /// conditions with concurrent policy enforcement (or management!)
-        /// requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT
-        /// if the request is malformed.
+        /// Creates or updates a project's
+        /// [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of
+        /// the new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is
+        /// always updated as a whole, to avoid race conditions with concurrent policy
+        /// enforcement (or management!) requests. Returns `NOT_FOUND` if the project
+        /// does not exist, `INVALID_ARGUMENT` if the request is malformed.
         /// </summary>
         /// <param name="policy">
-        /// Required. A new or updated [policy][google.cloud.binaryauthorization.v1.Policy] value. The service will
-        /// overwrite the [policy name][google.cloud.binaryauthorization.v1.Policy.name] field with the resource name in
-        /// the request URL, in the format `projects/*/policy`.
+        /// Required. A new or updated
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] value. The service
+        /// will overwrite the [policy
+        /// name][google.cloud.binaryauthorization.v1.Policy.name] field with the
+        /// resource name in the request URL, in the format `projects/*/policy`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -618,9 +673,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
             UpdatePolicyAsync(policy, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -630,9 +687,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -642,9 +701,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -654,21 +715,26 @@ namespace Google.Cloud.BinaryAuthorization.V1
             CreateAttestorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Required. The parent of this
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor].
         /// </param>
         /// <param name="attestorId">
         /// Required. The [attestors][google.cloud.binaryauthorization.v1.Attestor] ID.
         /// </param>
         /// <param name="attestor">
-        /// Required. The initial [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name,
-        /// in the format `projects/*/attestors/*`.
+        /// Required. The initial
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -681,21 +747,26 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Required. The parent of this
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor].
         /// </param>
         /// <param name="attestorId">
         /// Required. The [attestors][google.cloud.binaryauthorization.v1.Attestor] ID.
         /// </param>
         /// <param name="attestor">
-        /// Required. The initial [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name,
-        /// in the format `projects/*/attestors/*`.
+        /// Required. The initial
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -708,21 +779,26 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Required. The parent of this
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor].
         /// </param>
         /// <param name="attestorId">
         /// Required. The [attestors][google.cloud.binaryauthorization.v1.Attestor] ID.
         /// </param>
         /// <param name="attestor">
-        /// Required. The initial [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name,
-        /// in the format `projects/*/attestors/*`.
+        /// Required. The initial
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -730,21 +806,26 @@ namespace Google.Cloud.BinaryAuthorization.V1
             CreateAttestorAsync(parent, attestorId, attestor, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Required. The parent of this
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor].
         /// </param>
         /// <param name="attestorId">
         /// Required. The [attestors][google.cloud.binaryauthorization.v1.Attestor] ID.
         /// </param>
         /// <param name="attestor">
-        /// Required. The initial [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name,
-        /// in the format `projects/*/attestors/*`.
+        /// Required. The initial
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -757,21 +838,26 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Required. The parent of this
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor].
         /// </param>
         /// <param name="attestorId">
         /// Required. The [attestors][google.cloud.binaryauthorization.v1.Attestor] ID.
         /// </param>
         /// <param name="attestor">
-        /// Required. The initial [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name,
-        /// in the format `projects/*/attestors/*`.
+        /// Required. The initial
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -784,21 +870,26 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Required. The parent of this
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor].
         /// </param>
         /// <param name="attestorId">
         /// Required. The [attestors][google.cloud.binaryauthorization.v1.Attestor] ID.
         /// </param>
         /// <param name="attestor">
-        /// Required. The initial [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name,
-        /// in the format `projects/*/attestors/*`.
+        /// Required. The initial
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -807,7 +898,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -817,7 +909,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -827,7 +920,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -837,11 +931,13 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in
+        /// the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -853,11 +949,13 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in
+        /// the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -869,11 +967,13 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in
+        /// the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -882,11 +982,13 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in
+        /// the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -898,11 +1000,13 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in
+        /// the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -914,11 +1018,13 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] to retrieve, in
+        /// the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -927,7 +1033,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Updates an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -937,7 +1044,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Updates an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -947,7 +1055,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Updates an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -957,12 +1066,15 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Updates an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="attestor">
-        /// Required. The updated [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name
-        /// in the request URL, in the format `projects/*/attestors/*`.
+        /// Required. The updated
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name in the request URL, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -974,12 +1086,15 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Updates an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="attestor">
-        /// Required. The updated [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name
-        /// in the request URL, in the format `projects/*/attestors/*`.
+        /// Required. The updated
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name in the request URL, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -991,12 +1106,15 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Updates an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="attestor">
-        /// Required. The updated [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service will
-        /// overwrite the [attestor name][google.cloud.binaryauthorization.v1.Attestor.name] field with the resource name
-        /// in the request URL, in the format `projects/*/attestors/*`.
+        /// Required. The updated
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] value. The service
+        /// will overwrite the [attestor
+        /// name][google.cloud.binaryauthorization.v1.Attestor.name] field with the
+        /// resource name in the request URL, in the format `projects/*/attestors/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1005,7 +1123,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns INVALID_ARGUMENT if the project does not exist.
+        /// Returns `INVALID_ARGUMENT` if the project does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1015,7 +1133,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns INVALID_ARGUMENT if the project does not exist.
+        /// Returns `INVALID_ARGUMENT` if the project does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1025,11 +1143,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns INVALID_ARGUMENT if the project does not exist.
+        /// Returns `INVALID_ARGUMENT` if the project does not exist.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project associated with the
-        /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format `projects/*`.
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format
+        /// `projects/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1060,11 +1179,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns INVALID_ARGUMENT if the project does not exist.
+        /// Returns `INVALID_ARGUMENT` if the project does not exist.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project associated with the
-        /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format `projects/*`.
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format
+        /// `projects/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1095,11 +1215,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns INVALID_ARGUMENT if the project does not exist.
+        /// Returns `INVALID_ARGUMENT` if the project does not exist.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project associated with the
-        /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format `projects/*`.
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format
+        /// `projects/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1130,11 +1251,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns INVALID_ARGUMENT if the project does not exist.
+        /// Returns `INVALID_ARGUMENT` if the project does not exist.
         /// </summary>
         /// <param name="parent">
         /// Required. The resource name of the project associated with the
-        /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format `projects/*`.
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor], in the format
+        /// `projects/*`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1164,7 +1286,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
         }
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1174,7 +1297,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1184,7 +1308,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1194,12 +1319,14 @@ namespace Google.Cloud.BinaryAuthorization.V1
             DeleteAttestorAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the
+        /// format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1210,12 +1337,14 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the
+        /// format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1226,12 +1355,14 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the
+        /// format `projects/*/attestors/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1239,12 +1370,14 @@ namespace Google.Cloud.BinaryAuthorization.V1
             DeleteAttestorAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the
+        /// format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1255,12 +1388,14 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the
+        /// format `projects/*/attestors/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1271,12 +1406,14 @@ namespace Google.Cloud.BinaryAuthorization.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the format
-        /// `projects/*/attestors/*`.
+        /// Required. The name of the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] to delete, in the
+        /// format `projects/*/attestors/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1328,6 +1465,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings, logger);
             _callGetPolicy = clientHelper.BuildApiCall<GetPolicyRequest, Policy>("GetPolicy", grpcClient.GetPolicyAsync, grpcClient.GetPolicy, effectiveSettings.GetPolicySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetPolicy);
             Modify_GetPolicyApiCall(ref _callGetPolicy);
@@ -1373,6 +1511,9 @@ namespace Google.Cloud.BinaryAuthorization.V1
         /// <summary>The underlying gRPC BinauthzManagementServiceV1 client</summary>
         public override BinauthzManagementServiceV1.BinauthzManagementServiceV1Client GrpcClient { get; }
 
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
+
         partial void Modify_GetPolicyRequest(ref GetPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdatePolicyRequest(ref UpdatePolicyRequest request, ref gaxgrpc::CallSettings settings);
@@ -1388,13 +1529,16 @@ namespace Google.Cloud.BinaryAuthorization.V1
         partial void Modify_DeleteAttestorRequest(ref DeleteAttestorRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1406,13 +1550,16 @@ namespace Google.Cloud.BinaryAuthorization.V1
         }
 
         /// <summary>
-        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest to
-        /// a container image, before the project is allowed to deploy that
-        /// image. There is at most one policy per project. All image admission
-        /// requests are permitted if a project has no policy.
+        /// A [policy][google.cloud.binaryauthorization.v1.Policy] specifies the
+        /// [attestors][google.cloud.binaryauthorization.v1.Attestor] that must attest
+        /// to a container image, before the project is allowed to deploy that image.
+        /// There is at most one policy per project. All image admission requests are
+        /// permitted if a project has no policy.
         /// 
-        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this project. Returns a default
-        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does not have one.
+        /// Gets the [policy][google.cloud.binaryauthorization.v1.Policy] for this
+        /// project. Returns a default
+        /// [policy][google.cloud.binaryauthorization.v1.Policy] if the project does
+        /// not have one.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1424,11 +1571,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
         }
 
         /// <summary>
-        /// Creates or updates a project's [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of the
-        /// new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is always updated as a whole, to avoid race
-        /// conditions with concurrent policy enforcement (or management!)
-        /// requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT
-        /// if the request is malformed.
+        /// Creates or updates a project's
+        /// [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of
+        /// the new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is
+        /// always updated as a whole, to avoid race conditions with concurrent policy
+        /// enforcement (or management!) requests. Returns `NOT_FOUND` if the project
+        /// does not exist, `INVALID_ARGUMENT` if the request is malformed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1440,11 +1588,12 @@ namespace Google.Cloud.BinaryAuthorization.V1
         }
 
         /// <summary>
-        /// Creates or updates a project's [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of the
-        /// new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is always updated as a whole, to avoid race
-        /// conditions with concurrent policy enforcement (or management!)
-        /// requests. Returns NOT_FOUND if the project does not exist, INVALID_ARGUMENT
-        /// if the request is malformed.
+        /// Creates or updates a project's
+        /// [policy][google.cloud.binaryauthorization.v1.Policy], and returns a copy of
+        /// the new [policy][google.cloud.binaryauthorization.v1.Policy]. A policy is
+        /// always updated as a whole, to avoid race conditions with concurrent policy
+        /// enforcement (or management!) requests. Returns `NOT_FOUND` if the project
+        /// does not exist, `INVALID_ARGUMENT` if the request is malformed.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1456,9 +1605,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
         }
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1471,9 +1622,11 @@ namespace Google.Cloud.BinaryAuthorization.V1
         }
 
         /// <summary>
-        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and returns a copy of the new
-        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the project does not exist,
-        /// INVALID_ARGUMENT if the request is malformed, ALREADY_EXISTS if the
+        /// Creates an [attestor][google.cloud.binaryauthorization.v1.Attestor], and
+        /// returns a copy of the new
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns
+        /// `NOT_FOUND` if the project does not exist, `INVALID_ARGUMENT` if the
+        /// request is malformed, `ALREADY_EXISTS` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] already exists.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1487,7 +1640,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1500,7 +1654,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Gets an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1513,7 +1668,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Updates an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1526,7 +1682,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Updates an [attestor][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns NOT_FOUND if the [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
+        /// Returns `NOT_FOUND` if the
+        /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1539,7 +1696,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns INVALID_ARGUMENT if the project does not exist.
+        /// Returns `INVALID_ARGUMENT` if the project does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1552,7 +1709,7 @@ namespace Google.Cloud.BinaryAuthorization.V1
 
         /// <summary>
         /// Lists [attestors][google.cloud.binaryauthorization.v1.Attestor].
-        /// Returns INVALID_ARGUMENT if the project does not exist.
+        /// Returns `INVALID_ARGUMENT` if the project does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1564,7 +1721,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
         }
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1577,7 +1735,8 @@ namespace Google.Cloud.BinaryAuthorization.V1
         }
 
         /// <summary>
-        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor]. Returns NOT_FOUND if the
+        /// Deletes an [attestor][google.cloud.binaryauthorization.v1.Attestor].
+        /// Returns `NOT_FOUND` if the
         /// [attestor][google.cloud.binaryauthorization.v1.Attestor] does not exist.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1600,5 +1759,21 @@ namespace Google.Cloud.BinaryAuthorization.V1
         public scg::IEnumerator<Attestor> GetEnumerator() => Attestors.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class BinauthzManagementServiceV1
+    {
+        public partial class BinauthzManagementServiceV1Client
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
+        }
     }
 }
