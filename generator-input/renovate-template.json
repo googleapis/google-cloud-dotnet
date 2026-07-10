@@ -69,6 +69,15 @@
         "BenchmarkDotNet"
       ],
       "allowedVersions": "<0.14.0"
+    },
+    {
+      "matchFileNames": [
+        "Dockerfile.generator"
+      ],
+      "matchPackageNames": [
+        "marketplace.gcr.io/google/debian*"
+      ],
+      "enabled": false
     }
   ],
   "schedule": [
