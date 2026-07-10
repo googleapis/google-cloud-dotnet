@@ -97,7 +97,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             "U3RhdGUSRAoObmV3X3Rhc2tfc3RhdGUYAyABKA4yLC5nb29nbGUuY2xvdWQu",
             "YmF0Y2gudjFhbHBoYS5UYXNrU3RhdHVzLlN0YXRlIksKBFR5cGUSFAoQVFlQ",
             "RV9VTlNQRUNJRklFRBAAEhUKEUpPQl9TVEFURV9DSEFOR0VEEAESFgoSVEFT",
-            "S19TVEFURV9DSEFOR0VEEAIiohIKEEFsbG9jYXRpb25Qb2xpY3kSTQoIbG9j",
+            "S19TVEFURV9DSEFOR0VEEAIi2RMKEEFsbG9jYXRpb25Qb2xpY3kSTQoIbG9j",
             "YXRpb24YASABKAsyOy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxv",
             "Y2F0aW9uUG9saWN5LkxvY2F0aW9uUG9saWN5ElEKCGluc3RhbmNlGAIgASgL",
             "MjsuZ29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGlj",
@@ -139,42 +139,46 @@ namespace Google.Cloud.Batch.V1Alpha {
             "ZVBvbGljeUgAEhsKEWluc3RhbmNlX3RlbXBsYXRlGAIgASgJSAASGwoTaW5z",
             "dGFsbF9ncHVfZHJpdmVycxgDIAEoCBIeChFpbnN0YWxsX29wc19hZ2VudBgE",
             "IAEoCEID4EEBEiMKFmJsb2NrX3Byb2plY3Rfc3NoX2tleXMYBSABKAhCA+BB",
-            "AUIRCg9wb2xpY3lfdGVtcGxhdGUaVwoQTmV0d29ya0ludGVyZmFjZRIPCgdu",
-            "ZXR3b3JrGAEgASgJEhIKCnN1Ym5ldHdvcmsYAiABKAkSHgoWbm9fZXh0ZXJu",
-            "YWxfaXBfYWRkcmVzcxgDIAEoCBpqCg1OZXR3b3JrUG9saWN5ElkKEm5ldHdv",
-            "cmtfaW50ZXJmYWNlcxgBIAMoCzI9Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFs",
-            "cGhhLkFsbG9jYXRpb25Qb2xpY3kuTmV0d29ya0ludGVyZmFjZRo8Cg9QbGFj",
-            "ZW1lbnRQb2xpY3kSEwoLY29sbG9jYXRpb24YASABKAkSFAoMbWF4X2Rpc3Rh",
-            "bmNlGAIgASgDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAEiiwEKEVByb3Zpc2lvbmluZ01vZGVsEiIKHlBST1ZJU0lP",
-            "TklOR19NT0RFTF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAESCAoEU1BP",
-            "VBACEhMKC1BSRUVNUFRJQkxFEAMaAggBEhUKEVJFU0VSVkFUSU9OX0JPVU5E",
-            "EAQSDgoKRkxFWF9TVEFSVBAFIt8GCglUYXNrR3JvdXASEQoEbmFtZRgBIAEo",
-            "CUID4EEDEjwKCXRhc2tfc3BlYxgDIAEoCzIkLmdvb2dsZS5jbG91ZC5iYXRj",
-            "aC52MWFscGhhLlRhc2tTcGVjQgPgQQISEgoKdGFza19jb3VudBgEIAEoAxIT",
-            "CgtwYXJhbGxlbGlzbRgFIAEoAxJRChFzY2hlZHVsaW5nX3BvbGljeRgGIAEo",
-            "DjI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tHcm91cC5TY2hl",
-            "ZHVsaW5nUG9saWN5EkcKEWFsbG9jYXRpb25fcG9saWN5GAcgASgLMiwuZ29v",
-            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeRJBCgZs",
-            "YWJlbHMYCCADKAsyMS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5UYXNr",
-            "R3JvdXAuTGFiZWxzRW50cnkSQgoRdGFza19lbnZpcm9ubWVudHMYCSADKAsy",
-            "Jy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVudBIbChN0",
-            "YXNrX2NvdW50X3Blcl9ub2RlGAogASgDEhoKEnJlcXVpcmVfaG9zdHNfZmls",
-            "ZRgLIAEoCBIWCg5wZXJtaXNzaXZlX3NzaBgMIAEoCBIcCg9ydW5fYXNfbm9u",
-            "X3Jvb3QYDiABKAhCA+BBARJICg9zZXJ2aWNlX2FjY291bnQYDyABKAsyKi5n",
-            "b29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5TZXJ2aWNlQWNjb3VudEID4EEB",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEiXAoQU2NoZWR1bGluZ1BvbGljeRIhCh1TQ0hFRFVMSU5HX1BPTElDWV9V",
-            "TlNQRUNJRklFRBAAEhcKE0FTX1NPT05fQVNfUE9TU0lCTEUQARIMCghJTl9P",
-            "UkRFUhACOm/qQWwKHmJhdGNoLmdvb2dsZWFwaXMuY29tL1Rhc2tHcm91cBJK",
-            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMv",
-            "e2pvYn0vdGFza0dyb3Vwcy97dGFza19ncm91cH0iLwoOU2VydmljZUFjY291",
-            "bnQSDQoFZW1haWwYASABKAkSDgoGc2NvcGVzGAIgAygJQsIBCh5jb20uZ29v",
-            "Z2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFCCEpvYlByb3RvUAFaNGNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vYmF0Y2gvYXBpdjFhbHBoYS9iYXRjaHBiO2JhdGNocGKi",
-            "AgNHQ0KqAhpHb29nbGUuQ2xvdWQuQmF0Y2guVjFBbHBoYcoCGkdvb2dsZVxD",
-            "bG91ZFxCYXRjaFxWMWFscGhh6gIdR29vZ2xlOjpDbG91ZDo6QmF0Y2g6OlYx",
-            "YWxwaGFiBnByb3RvMw=="));
+            "AUIRCg9wb2xpY3lfdGVtcGxhdGUajQIKEE5ldHdvcmtJbnRlcmZhY2USDwoH",
+            "bmV0d29yaxgBIAEoCRISCgpzdWJuZXR3b3JrGAIgASgJEh4KFm5vX2V4dGVy",
+            "bmFsX2lwX2FkZHJlc3MYAyABKAgSYQoIbmljX3R5cGUYByABKA4yRS5nb29n",
+            "bGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5BbGxvY2F0aW9uUG9saWN5Lk5ldHdv",
+            "cmtJbnRlcmZhY2UuTmljVHlwZUID4EEBSACIAQEiRAoHTmljVHlwZRIYChRO",
+            "SUNfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUdWTklDEAESCQoFSVJETUEQAhIJ",
+            "CgVNUkRNQRADQgsKCV9uaWNfdHlwZRpqCg1OZXR3b3JrUG9saWN5ElkKEm5l",
+            "dHdvcmtfaW50ZXJmYWNlcxgBIAMoCzI9Lmdvb2dsZS5jbG91ZC5iYXRjaC52",
+            "MWFscGhhLkFsbG9jYXRpb25Qb2xpY3kuTmV0d29ya0ludGVyZmFjZRo8Cg9Q",
+            "bGFjZW1lbnRQb2xpY3kSEwoLY29sbG9jYXRpb24YASABKAkSFAoMbWF4X2Rp",
+            "c3RhbmNlGAIgASgDGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
+            "YWx1ZRgCIAEoCToCOAEiiwEKEVByb3Zpc2lvbmluZ01vZGVsEiIKHlBST1ZJ",
+            "U0lPTklOR19NT0RFTF9VTlNQRUNJRklFRBAAEgwKCFNUQU5EQVJEEAESCAoE",
+            "U1BPVBACEhMKC1BSRUVNUFRJQkxFEAMaAggBEhUKEVJFU0VSVkFUSU9OX0JP",
+            "VU5EEAQSDgoKRkxFWF9TVEFSVBAFIt8GCglUYXNrR3JvdXASEQoEbmFtZRgB",
+            "IAEoCUID4EEDEjwKCXRhc2tfc3BlYxgDIAEoCzIkLmdvb2dsZS5jbG91ZC5i",
+            "YXRjaC52MWFscGhhLlRhc2tTcGVjQgPgQQISEgoKdGFza19jb3VudBgEIAEo",
+            "AxITCgtwYXJhbGxlbGlzbRgFIAEoAxJRChFzY2hlZHVsaW5nX3BvbGljeRgG",
+            "IAEoDjI2Lmdvb2dsZS5jbG91ZC5iYXRjaC52MWFscGhhLlRhc2tHcm91cC5T",
+            "Y2hlZHVsaW5nUG9saWN5EkcKEWFsbG9jYXRpb25fcG9saWN5GAcgASgLMiwu",
+            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGEuQWxsb2NhdGlvblBvbGljeRJB",
+            "CgZsYWJlbHMYCCADKAsyMS5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5U",
+            "YXNrR3JvdXAuTGFiZWxzRW50cnkSQgoRdGFza19lbnZpcm9ubWVudHMYCSAD",
+            "KAsyJy5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5FbnZpcm9ubWVudBIb",
+            "ChN0YXNrX2NvdW50X3Blcl9ub2RlGAogASgDEhoKEnJlcXVpcmVfaG9zdHNf",
+            "ZmlsZRgLIAEoCBIWCg5wZXJtaXNzaXZlX3NzaBgMIAEoCBIcCg9ydW5fYXNf",
+            "bm9uX3Jvb3QYDiABKAhCA+BBARJICg9zZXJ2aWNlX2FjY291bnQYDyABKAsy",
+            "Ki5nb29nbGUuY2xvdWQuYmF0Y2gudjFhbHBoYS5TZXJ2aWNlQWNjb3VudEID",
+            "4EEBGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAEiXAoQU2NoZWR1bGluZ1BvbGljeRIhCh1TQ0hFRFVMSU5HX1BPTElD",
+            "WV9VTlNQRUNJRklFRBAAEhcKE0FTX1NPT05fQVNfUE9TU0lCTEUQARIMCghJ",
+            "Tl9PUkRFUhACOm/qQWwKHmJhdGNoLmdvb2dsZWFwaXMuY29tL1Rhc2tHcm91",
+            "cBJKcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2pv",
+            "YnMve2pvYn0vdGFza0dyb3Vwcy97dGFza19ncm91cH0iLwoOU2VydmljZUFj",
+            "Y291bnQSDQoFZW1haWwYASABKAkSDgoGc2NvcGVzGAIgAygJQsIBCh5jb20u",
+            "Z29vZ2xlLmNsb3VkLmJhdGNoLnYxYWxwaGFCCEpvYlByb3RvUAFaNGNsb3Vk",
+            "Lmdvb2dsZS5jb20vZ28vYmF0Y2gvYXBpdjFhbHBoYS9iYXRjaHBiO2JhdGNo",
+            "cGKiAgNHQ0KqAhpHb29nbGUuQ2xvdWQuQmF0Y2guVjFBbHBoYcoCGkdvb2ds",
+            "ZVxDbG91ZFxCYXRjaFxWMWFscGhh6gIdR29vZ2xlOjpDbG91ZDo6QmF0Y2g6",
+            "OlYxYWxwaGFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Batch.V1Alpha.TaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -192,7 +196,7 @@ namespace Google.Cloud.Batch.V1Alpha {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.Accelerator.Parser, new[]{ "Type", "Count", "InstallGpuDrivers", "DriverVersion" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicy.Parser, new[]{ "AllowedMachineTypes", "MachineType", "MinCpuPlatform", "ProvisioningModel", "Accelerators", "BootDisk", "Disks", "Reservation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.InstancePolicyOrTemplate.Parser, new[]{ "Policy", "InstanceTemplate", "InstallGpuDrivers", "InstallOpsAgent", "BlockProjectSshKeys" }, new[]{ "PolicyTemplate" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "NoExternalIpAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Parser, new[]{ "Network", "Subnetwork", "NoExternalIpAddress", "NicType" }, new[]{ "NicType" }, new[]{ typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Types.NicType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkPolicy.Parser, new[]{ "NetworkInterfaces" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.PlacementPolicy), global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.PlacementPolicy.Parser, new[]{ "Collocation", "MaxDistance" }, null, null, null, null),
             null, }),
@@ -6506,6 +6510,7 @@ namespace Google.Cloud.Batch.V1Alpha {
       {
         private static readonly pb::MessageParser<NetworkInterface> _parser = new pb::MessageParser<NetworkInterface>(() => new NetworkInterface());
         private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<NetworkInterface> Parser { get { return _parser; } }
@@ -6533,9 +6538,11 @@ namespace Google.Cloud.Batch.V1Alpha {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public NetworkInterface(NetworkInterface other) : this() {
+          _hasBits0 = other._hasBits0;
           network_ = other.network_;
           subnetwork_ = other.subnetwork_;
           noExternalIpAddress_ = other.noExternalIpAddress_;
+          nicType_ = other.nicType_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -6610,6 +6617,36 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
         }
 
+        /// <summary>Field number for the "nic_type" field.</summary>
+        public const int NicTypeFieldNumber = 7;
+        private readonly static global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Types.NicType NicTypeDefaultValue = global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Types.NicType.Unspecified;
+
+        private global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Types.NicType nicType_;
+        /// <summary>
+        /// Optional. The NIC type of the network interface.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Types.NicType NicType {
+          get { if ((_hasBits0 & 1) != 0) { return nicType_; } else { return NicTypeDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            nicType_ = value;
+          }
+        }
+        /// <summary>Gets whether the "nic_type" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasNicType {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "nic_type" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearNicType() {
+          _hasBits0 &= ~1;
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -6628,6 +6665,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (Network != other.Network) return false;
           if (Subnetwork != other.Subnetwork) return false;
           if (NoExternalIpAddress != other.NoExternalIpAddress) return false;
+          if (NicType != other.NicType) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -6638,6 +6676,7 @@ namespace Google.Cloud.Batch.V1Alpha {
           if (Network.Length != 0) hash ^= Network.GetHashCode();
           if (Subnetwork.Length != 0) hash ^= Subnetwork.GetHashCode();
           if (NoExternalIpAddress != false) hash ^= NoExternalIpAddress.GetHashCode();
+          if (HasNicType) hash ^= NicType.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -6668,6 +6707,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(24);
             output.WriteBool(NoExternalIpAddress);
           }
+          if (HasNicType) {
+            output.WriteRawTag(56);
+            output.WriteEnum((int) NicType);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -6690,6 +6733,10 @@ namespace Google.Cloud.Batch.V1Alpha {
             output.WriteRawTag(24);
             output.WriteBool(NoExternalIpAddress);
           }
+          if (HasNicType) {
+            output.WriteRawTag(56);
+            output.WriteEnum((int) NicType);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -6708,6 +6755,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (NoExternalIpAddress != false) {
             size += 1 + 1;
+          }
+          if (HasNicType) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) NicType);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -6729,6 +6779,9 @@ namespace Google.Cloud.Batch.V1Alpha {
           }
           if (other.NoExternalIpAddress != false) {
             NoExternalIpAddress = other.NoExternalIpAddress;
+          }
+          if (other.HasNicType) {
+            NicType = other.NicType;
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -6759,6 +6812,10 @@ namespace Google.Cloud.Batch.V1Alpha {
               }
               case 24: {
                 NoExternalIpAddress = input.ReadBool();
+                break;
+              }
+              case 56: {
+                NicType = (global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Types.NicType) input.ReadEnum();
                 break;
               }
             }
@@ -6792,10 +6849,44 @@ namespace Google.Cloud.Batch.V1Alpha {
                 NoExternalIpAddress = input.ReadBool();
                 break;
               }
+              case 56: {
+                NicType = (global::Google.Cloud.Batch.V1Alpha.AllocationPolicy.Types.NetworkInterface.Types.NicType) input.ReadEnum();
+                break;
+              }
             }
           }
         }
         #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the NetworkInterface message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Compute Engine VM instance NIC type.
+          /// </summary>
+          public enum NicType {
+            /// <summary>
+            /// No type specified.
+            /// </summary>
+            [pbr::OriginalName("NIC_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// GVNIC
+            /// </summary>
+            [pbr::OriginalName("GVNIC")] Gvnic = 1,
+            /// <summary>
+            /// IRDMA
+            /// </summary>
+            [pbr::OriginalName("IRDMA")] Irdma = 2,
+            /// <summary>
+            /// MRDMA
+            /// </summary>
+            [pbr::OriginalName("MRDMA")] Mrdma = 3,
+          }
+
+        }
+        #endregion
 
       }
 
