@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-alpha34, released 2026-07-13
+
+### New features
+
+- Added new NicType field to job
+
 ## Version 1.0.0-alpha33, released 2025-11-03
 
 ### New features
