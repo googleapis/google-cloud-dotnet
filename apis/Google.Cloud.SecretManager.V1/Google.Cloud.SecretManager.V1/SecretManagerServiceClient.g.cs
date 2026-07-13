@@ -64,6 +64,8 @@ namespace Google.Cloud.SecretManager.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            EnableManagedRotationSettings = existing.EnableManagedRotationSettings;
+            RotateSecretSettings = existing.RotateSecretSettings;
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -266,6 +268,31 @@ namespace Google.Cloud.SecretManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecretManagerServiceClient.EnableManagedRotation</c> and
+        /// <c>SecretManagerServiceClient.EnableManagedRotationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EnableManagedRotationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecretManagerServiceClient.RotateSecret</c> and <c>SecretManagerServiceClient.RotateSecretAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RotateSecretSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
@@ -2578,6 +2605,328 @@ namespace Google.Cloud.SecretManager.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecretVersion EnableManagedRotation(EnableManagedRotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(EnableManagedRotationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(EnableManagedRotationRequest request, st::CancellationToken cancellationToken) =>
+            EnableManagedRotationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="cloudSqlSingleUserCredentials">
+        /// Credentials required for Cloud SQL DB for Single user Managed Rotation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecretVersion EnableManagedRotation(string parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
+            EnableManagedRotation(new EnableManagedRotationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CloudSqlSingleUserCredentials = cloudSqlSingleUserCredentials,
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="cloudSqlSingleUserCredentials">
+        /// Credentials required for Cloud SQL DB for Single user Managed Rotation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(string parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
+            EnableManagedRotationAsync(new EnableManagedRotationRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CloudSqlSingleUserCredentials = cloudSqlSingleUserCredentials,
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="cloudSqlSingleUserCredentials">
+        /// Credentials required for Cloud SQL DB for Single user Managed Rotation.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(string parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, st::CancellationToken cancellationToken) =>
+            EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="cloudSqlSingleUserCredentials">
+        /// Credentials required for Cloud SQL DB for Single user Managed Rotation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecretVersion EnableManagedRotation(SecretName parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
+            EnableManagedRotation(new EnableManagedRotationRequest
+            {
+                ParentAsSecretName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CloudSqlSingleUserCredentials = cloudSqlSingleUserCredentials,
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="cloudSqlSingleUserCredentials">
+        /// Credentials required for Cloud SQL DB for Single user Managed Rotation.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(SecretName parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, gaxgrpc::CallSettings callSettings = null) =>
+            EnableManagedRotationAsync(new EnableManagedRotationRequest
+            {
+                ParentAsSecretName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CloudSqlSingleUserCredentials = cloudSqlSingleUserCredentials,
+            }, callSettings);
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="cloudSqlSingleUserCredentials">
+        /// Credentials required for Cloud SQL DB for Single user Managed Rotation.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> EnableManagedRotationAsync(SecretName parent, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials, st::CancellationToken cancellationToken) =>
+            EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecretVersion RotateSecret(RotateSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> RotateSecretAsync(RotateSecretRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> RotateSecretAsync(RotateSecretRequest request, st::CancellationToken cancellationToken) =>
+            RotateSecretAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecretVersion RotateSecret(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            RotateSecret(new RotateSecretRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> RotateSecretAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            RotateSecretAsync(new RotateSecretRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> RotateSecretAsync(string parent, st::CancellationToken cancellationToken) =>
+            RotateSecretAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SecretVersion RotateSecret(SecretName parent, gaxgrpc::CallSettings callSettings = null) =>
+            RotateSecret(new RotateSecretRequest
+            {
+                ParentAsSecretName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> RotateSecretAsync(SecretName parent, gaxgrpc::CallSettings callSettings = null) =>
+            RotateSecretAsync(new RotateSecretRequest
+            {
+                ParentAsSecretName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the
+        /// [Secret][google.cloud.secretmanager.v1.Secret] to associate with the
+        /// [SecretVersion][google.cloud.secretmanager.v1.SecretVersion] in the format
+        /// `projects/*/secrets/*` or `projects/*/locations/*/secrets/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SecretVersion> RotateSecretAsync(SecretName parent, st::CancellationToken cancellationToken) =>
+            RotateSecretAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>SecretManagerService client wrapper implementation, for convenient use.</summary>
@@ -2621,6 +2970,10 @@ namespace Google.Cloud.SecretManager.V1
         private readonly gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> _callGetIamPolicy;
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
+
+        private readonly gaxgrpc::ApiCall<EnableManagedRotationRequest, SecretVersion> _callEnableManagedRotation;
+
+        private readonly gaxgrpc::ApiCall<RotateSecretRequest, SecretVersion> _callRotateSecret;
 
         /// <summary>
         /// Constructs a client wrapper for the SecretManagerService service, with the specified gRPC client and
@@ -2684,6 +3037,12 @@ namespace Google.Cloud.SecretManager.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>("TestIamPermissions", grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callEnableManagedRotation = clientHelper.BuildApiCall<EnableManagedRotationRequest, SecretVersion>("EnableManagedRotation", grpcClient.EnableManagedRotationAsync, grpcClient.EnableManagedRotation, effectiveSettings.EnableManagedRotationSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callEnableManagedRotation);
+            Modify_EnableManagedRotationApiCall(ref _callEnableManagedRotation);
+            _callRotateSecret = clientHelper.BuildApiCall<RotateSecretRequest, SecretVersion>("RotateSecret", grpcClient.RotateSecretAsync, grpcClient.RotateSecret, effectiveSettings.RotateSecretSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callRotateSecret);
+            Modify_RotateSecretApiCall(ref _callRotateSecret);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2718,6 +3077,10 @@ namespace Google.Cloud.SecretManager.V1
         partial void Modify_GetIamPolicyApiCall(ref gaxgrpc::ApiCall<gciv::GetIamPolicyRequest, gciv::Policy> call);
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
+
+        partial void Modify_EnableManagedRotationApiCall(ref gaxgrpc::ApiCall<EnableManagedRotationRequest, SecretVersion> call);
+
+        partial void Modify_RotateSecretApiCall(ref gaxgrpc::ApiCall<RotateSecretRequest, SecretVersion> call);
 
         partial void OnConstruction(SecretManagerService.SecretManagerServiceClient grpcClient, SecretManagerServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2756,6 +3119,10 @@ namespace Google.Cloud.SecretManager.V1
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_EnableManagedRotationRequest(ref EnableManagedRotationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RotateSecretRequest(ref RotateSecretRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists [Secrets][google.cloud.secretmanager.v1.Secret].
@@ -3193,6 +3560,66 @@ namespace Google.Cloud.SecretManager.V1
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecretVersion EnableManagedRotation(EnableManagedRotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableManagedRotationRequest(ref request, ref callSettings);
+            return _callEnableManagedRotation.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Enables the managed rotation feature for a
+        /// [Secret][google.cloud.secretmanager.v1.Secret]. This method can only be
+        /// triggered once for a secret. In order to do further rotations, RotateSecret
+        /// should be used. This method will add a secret version and update the
+        /// password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecretVersion> EnableManagedRotationAsync(EnableManagedRotationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnableManagedRotationRequest(ref request, ref callSettings);
+            return _callEnableManagedRotation.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SecretVersion RotateSecret(RotateSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RotateSecretRequest(ref request, ref callSettings);
+            return _callRotateSecret.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Do a managed rotation for a [Secret][google.cloud.secretmanager.v1.Secret].
+        /// This can only be triggered after Managed rotation has been enabled.
+        /// This method will add a secret version and update the password in Cloud SQL.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SecretVersion> RotateSecretAsync(RotateSecretRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RotateSecretRequest(ref request, ref callSettings);
+            return _callRotateSecret.Async(request, callSettings);
         }
     }
 

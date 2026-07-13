@@ -2857,7 +2857,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T09:37:54.978321785Z",
-            "lastGeneratedCommit": "02838cfff3c0aacdeb5142271bc60a82b6936b59",
+            "lastGeneratedCommit": "fc645e542596b58c68b1663bed726eeb7aab7bff",
             "lastReleasedCommit": "02838cfff3c0aacdeb5142271bc60a82b6936b59",
             "apiPaths": [
                 "google/cloud/secretmanager/v1"

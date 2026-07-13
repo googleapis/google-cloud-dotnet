@@ -1683,5 +1683,185 @@ namespace GoogleCSharpSnippets
             TestIamPermissionsResponse response = await secretManagerServiceClient.TestIamPermissionsAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for EnableManagedRotation</summary>
+        public void EnableManagedRotationRequestObject()
+        {
+            // Snippet: EnableManagedRotation(EnableManagedRotationRequest, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            // Initialize request argument(s)
+            EnableManagedRotationRequest request = new EnableManagedRotationRequest
+            {
+                ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                CloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials(),
+            };
+            // Make the request
+            SecretVersion response = secretManagerServiceClient.EnableManagedRotation(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableManagedRotationAsync</summary>
+        public async Task EnableManagedRotationRequestObjectAsync()
+        {
+            // Snippet: EnableManagedRotationAsync(EnableManagedRotationRequest, CallSettings)
+            // Additional: EnableManagedRotationAsync(EnableManagedRotationRequest, CancellationToken)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EnableManagedRotationRequest request = new EnableManagedRotationRequest
+            {
+                ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+                CloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials(),
+            };
+            // Make the request
+            SecretVersion response = await secretManagerServiceClient.EnableManagedRotationAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableManagedRotation</summary>
+        public void EnableManagedRotation()
+        {
+            // Snippet: EnableManagedRotation(string, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/secrets/[SECRET]";
+            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            // Make the request
+            SecretVersion response = secretManagerServiceClient.EnableManagedRotation(parent, cloudSqlSingleUserCredentials);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableManagedRotationAsync</summary>
+        public async Task EnableManagedRotationAsync()
+        {
+            // Snippet: EnableManagedRotationAsync(string, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CallSettings)
+            // Additional: EnableManagedRotationAsync(string, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CancellationToken)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/secrets/[SECRET]";
+            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            // Make the request
+            SecretVersion response = await secretManagerServiceClient.EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableManagedRotation</summary>
+        public void EnableManagedRotationResourceNames()
+        {
+            // Snippet: EnableManagedRotation(SecretName, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            // Initialize request argument(s)
+            SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
+            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            // Make the request
+            SecretVersion response = secretManagerServiceClient.EnableManagedRotation(parent, cloudSqlSingleUserCredentials);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnableManagedRotationAsync</summary>
+        public async Task EnableManagedRotationResourceNamesAsync()
+        {
+            // Snippet: EnableManagedRotationAsync(SecretName, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CallSettings)
+            // Additional: EnableManagedRotationAsync(SecretName, EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials, CancellationToken)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
+            EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials cloudSqlSingleUserCredentials = new EnableManagedRotationRequest.Types.CloudSQLSingleUserCredentials();
+            // Make the request
+            SecretVersion response = await secretManagerServiceClient.EnableManagedRotationAsync(parent, cloudSqlSingleUserCredentials);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RotateSecret</summary>
+        public void RotateSecretRequestObject()
+        {
+            // Snippet: RotateSecret(RotateSecretRequest, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            // Initialize request argument(s)
+            RotateSecretRequest request = new RotateSecretRequest
+            {
+                ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+            };
+            // Make the request
+            SecretVersion response = secretManagerServiceClient.RotateSecret(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RotateSecretAsync</summary>
+        public async Task RotateSecretRequestObjectAsync()
+        {
+            // Snippet: RotateSecretAsync(RotateSecretRequest, CallSettings)
+            // Additional: RotateSecretAsync(RotateSecretRequest, CancellationToken)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            RotateSecretRequest request = new RotateSecretRequest
+            {
+                ParentAsSecretName = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]"),
+            };
+            // Make the request
+            SecretVersion response = await secretManagerServiceClient.RotateSecretAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RotateSecret</summary>
+        public void RotateSecret()
+        {
+            // Snippet: RotateSecret(string, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/secrets/[SECRET]";
+            // Make the request
+            SecretVersion response = secretManagerServiceClient.RotateSecret(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RotateSecretAsync</summary>
+        public async Task RotateSecretAsync()
+        {
+            // Snippet: RotateSecretAsync(string, CallSettings)
+            // Additional: RotateSecretAsync(string, CancellationToken)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/secrets/[SECRET]";
+            // Make the request
+            SecretVersion response = await secretManagerServiceClient.RotateSecretAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RotateSecret</summary>
+        public void RotateSecretResourceNames()
+        {
+            // Snippet: RotateSecret(SecretName, CallSettings)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = SecretManagerServiceClient.Create();
+            // Initialize request argument(s)
+            SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
+            // Make the request
+            SecretVersion response = secretManagerServiceClient.RotateSecret(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for RotateSecretAsync</summary>
+        public async Task RotateSecretResourceNamesAsync()
+        {
+            // Snippet: RotateSecretAsync(SecretName, CallSettings)
+            // Additional: RotateSecretAsync(SecretName, CancellationToken)
+            // Create client
+            SecretManagerServiceClient secretManagerServiceClient = await SecretManagerServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            SecretName parent = SecretName.FromProjectSecret("[PROJECT]", "[SECRET]");
+            // Make the request
+            SecretVersion response = await secretManagerServiceClient.RotateSecretAsync(parent);
+            // End snippet
+        }
     }
 }

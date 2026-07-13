@@ -46,6 +46,12 @@
                 "DisableSecretVersionAsync"
               ]
             },
+            "EnableManagedRotation": {
+              "methods": [
+                "EnableManagedRotation",
+                "EnableManagedRotationAsync"
+              ]
+            },
             "EnableSecretVersion": {
               "methods": [
                 "EnableSecretVersion",
@@ -80,6 +86,12 @@
               "methods": [
                 "ListSecrets",
                 "ListSecretsAsync"
+              ]
+            },
+            "RotateSecret": {
+              "methods": [
+                "RotateSecret",
+                "RotateSecretAsync"
               ]
             },
             "SetIamPolicy": {

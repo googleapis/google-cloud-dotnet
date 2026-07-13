@@ -121,6 +121,26 @@ namespace Google.Cloud.SecretManager.V1
         }
     }
 
+    public partial class EnableManagedRotationRequest
+    {
+        /// <summary><see cref="SecretName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SecretName ParentAsSecretName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SecretName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RotateSecretRequest
+    {
+        /// <summary><see cref="SecretName"/>-typed view over the <see cref="Parent"/> resource name property.</summary>
+        public SecretName ParentAsSecretName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : SecretName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class GetSecretRequest
     {
         /// <summary>

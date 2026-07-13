@@ -27,99 +27,114 @@ namespace Google.Cloud.SecretManager.V1 {
             "Ci1nb29nbGUvY2xvdWQvc2VjcmV0bWFuYWdlci92MS9yZXNvdXJjZXMucHJv",
             "dG8SHWdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i2QkKBlNlY3JldBIRCgRuYW1lGAEg",
-            "ASgJQgPgQQMSRwoLcmVwbGljYXRpb24YAiABKAsyKi5nb29nbGUuY2xvdWQu",
-            "c2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvbkIG4EEF4EEBEjQKC2NyZWF0",
-            "ZV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EED",
-            "EkEKBmxhYmVscxgEIAMoCzIxLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2Vy",
-            "LnYxLlNlY3JldC5MYWJlbHNFbnRyeRI5CgZ0b3BpY3MYBSADKAsyJC5nb29n",
-            "bGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5Ub3BpY0ID4EEBEjYKC2V4cGly",
-            "ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEB",
-            "SAASLQoDdHRsGAcgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPg",
-            "QQRIABIRCgRldGFnGAggASgJQgPgQQESPgoIcm90YXRpb24YCSABKAsyJy5n",
-            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5Sb3RhdGlvbkID4EEBElcK",
-            "D3ZlcnNpb25fYWxpYXNlcxgLIAMoCzI5Lmdvb2dsZS5jbG91ZC5zZWNyZXRt",
-            "YW5hZ2VyLnYxLlNlY3JldC5WZXJzaW9uQWxpYXNlc0VudHJ5QgPgQQESUAoL",
-            "YW5ub3RhdGlvbnMYDSADKAsyNi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdl",
-            "ci52MS5TZWNyZXQuQW5ub3RhdGlvbnNFbnRyeUID4EEBEjsKE3ZlcnNpb25f",
-            "ZGVzdHJveV90dGwYDiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25C",
-            "A+BBARJiChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24YDyABKAsyOC5n",
-            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRF",
-            "bmNyeXB0aW9uQgPgQQESSAoEdGFncxgQIAMoCzIvLmdvb2dsZS5jbG91ZC5z",
-            "ZWNyZXRtYW5hZ2VyLnYxLlNlY3JldC5UYWdzRW50cnlCCeBBBOBBBeBBARot",
-            "CgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgB",
-            "GjUKE1ZlcnNpb25BbGlhc2VzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgDOgI4ARoyChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAEaKwoJVGFnc0VudHJ5EgsKA2tleRgBIAEoCRIN",
-            "CgV2YWx1ZRgCIAEoCToCOAE6mQHqQZUBCiNzZWNyZXRtYW5hZ2VyLmdvb2ds",
-            "ZWFwaXMuY29tL1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMv",
-            "e3NlY3JldH0SOHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0",
-            "aW9ufS9zZWNyZXRzL3tzZWNyZXR9KgdzZWNyZXRzMgZzZWNyZXRCDAoKZXhw",
-            "aXJhdGlvbiLCBgoNU2VjcmV0VmVyc2lvbhIRCgRuYW1lGAEgASgJQgPgQQMS",
-            "NAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wQgPgQQMSNQoMZGVzdHJveV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
-            "YnVmLlRpbWVzdGFtcEID4EEDEkYKBXN0YXRlGAQgASgOMjIuZ29vZ2xlLmNs",
-            "b3VkLnNlY3JldG1hbmFnZXIudjEuU2VjcmV0VmVyc2lvbi5TdGF0ZUID4EED",
-            "EkwKEnJlcGxpY2F0aW9uX3N0YXR1cxgFIAEoCzIwLmdvb2dsZS5jbG91ZC5z",
-            "ZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uU3RhdHVzEhEKBGV0YWcYBiAB",
-            "KAlCA+BBAxIuCiFjbGllbnRfc3BlY2lmaWVkX3BheWxvYWRfY2hlY2tzdW0Y",
-            "ByABKAhCA+BBAxI/ChZzY2hlZHVsZWRfZGVzdHJveV90aW1lGAggASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEmgKG2N1c3RvbWVyX21h",
-            "bmFnZWRfZW5jcnlwdGlvbhgJIAEoCzI+Lmdvb2dsZS5jbG91ZC5zZWNyZXRt",
-            "YW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25TdGF0dXNCA+BB",
-            "AyJICgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQ",
-            "ARIMCghESVNBQkxFRBACEg0KCURFU1RST1lFRBADOuIB6kHeAQoqc2VjcmV0",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uEj1wcm9qZWN0",
-            "cy97cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97c2VjcmV0",
-            "X3ZlcnNpb259ElJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97c2VjcmV0X3ZlcnNp",
-            "b259Kg5zZWNyZXRWZXJzaW9uczINc2VjcmV0VmVyc2lvbiKQBAoLUmVwbGlj",
-            "YXRpb24SSQoJYXV0b21hdGljGAEgASgLMjQuZ29vZ2xlLmNsb3VkLnNlY3Jl",
-            "dG1hbmFnZXIudjEuUmVwbGljYXRpb24uQXV0b21hdGljSAASTgoMdXNlcl9t",
-            "YW5hZ2VkGAIgASgLMjYuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEu",
-            "UmVwbGljYXRpb24uVXNlck1hbmFnZWRIABpvCglBdXRvbWF0aWMSYgobY3Vz",
-            "dG9tZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAEgASgLMjguZ29vZ2xlLmNsb3Vk",
-            "LnNlY3JldG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvbkID",
-            "4EEBGuUBCgtVc2VyTWFuYWdlZBJVCghyZXBsaWNhcxgBIAMoCzI+Lmdvb2ds",
-            "ZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uLlVzZXJNYW5h",
-            "Z2VkLlJlcGxpY2FCA+BBAhp/CgdSZXBsaWNhEhAKCGxvY2F0aW9uGAEgASgJ",
-            "EmIKG2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgCIAEoCzI4Lmdvb2ds",
-            "ZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5",
-            "cHRpb25CA+BBAUINCgtyZXBsaWNhdGlvbiI2ChlDdXN0b21lck1hbmFnZWRF",
-            "bmNyeXB0aW9uEhkKDGttc19rZXlfbmFtZRgBIAEoCUID4EECIusEChFSZXBs",
-            "aWNhdGlvblN0YXR1cxJVCglhdXRvbWF0aWMYASABKAsyQC5nb29nbGUuY2xv",
-            "dWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvblN0YXR1cy5BdXRvbWF0",
-            "aWNTdGF0dXNIABJaCgx1c2VyX21hbmFnZWQYAiABKAsyQi5nb29nbGUuY2xv",
-            "dWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvblN0YXR1cy5Vc2VyTWFu",
-            "YWdlZFN0YXR1c0gAGnsKD0F1dG9tYXRpY1N0YXR1cxJoChtjdXN0b21lcl9t",
-            "YW5hZ2VkX2VuY3J5cHRpb24YASABKAsyPi5nb29nbGUuY2xvdWQuc2VjcmV0",
-            "bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRFbmNyeXB0aW9uU3RhdHVzQgPg",
-            "QQMajwIKEVVzZXJNYW5hZ2VkU3RhdHVzEmcKCHJlcGxpY2FzGAEgAygLMlAu",
-            "Z29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0",
-            "dXMuVXNlck1hbmFnZWRTdGF0dXMuUmVwbGljYVN0YXR1c0ID4EEDGpABCg1S",
-            "ZXBsaWNhU3RhdHVzEhUKCGxvY2F0aW9uGAEgASgJQgPgQQMSaAobY3VzdG9t",
-            "ZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAIgASgLMj4uZ29vZ2xlLmNsb3VkLnNl",
-            "Y3JldG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1",
-            "c0ID4EEDQhQKEnJlcGxpY2F0aW9uX3N0YXR1cyJECh9DdXN0b21lck1hbmFn",
-            "ZWRFbmNyeXB0aW9uU3RhdHVzEiEKFGttc19rZXlfdmVyc2lvbl9uYW1lGAEg",
-            "ASgJQgPgQQIiXwoFVG9waWMSEQoEbmFtZRgBIAEoCUID4EEIOkPqQUAKG3B1",
-            "YnN1Yi5nb29nbGVhcGlzLmNvbS9Ub3BpYxIhcHJvamVjdHMve3Byb2plY3R9",
-            "L3RvcGljcy97dG9waWN9IoABCghSb3RhdGlvbhI7ChJuZXh0X3JvdGF0aW9u",
-            "X3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQES",
-            "NwoPcm90YXRpb25fcGVyaW9kGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
-            "cmF0aW9uQgPgQQQiTAoNU2VjcmV0UGF5bG9hZBIMCgRkYXRhGAEgASgMEh0K",
-            "C2RhdGFfY3JjMzJjGAIgASgDQgPgQQFIAIgBAUIOCgxfZGF0YV9jcmMzMmNC",
-            "5wEKIWNvbS5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MUIOUmVzb3Vy",
-            "Y2VzUHJvdG9QAVpHY2xvdWQuZ29vZ2xlLmNvbS9nby9zZWNyZXRtYW5hZ2Vy",
-            "L2FwaXYxL3NlY3JldG1hbmFnZXJwYjtzZWNyZXRtYW5hZ2VycGKiAgNHU02q",
-            "Ah1Hb29nbGUuQ2xvdWQuU2VjcmV0TWFuYWdlci5WMcoCHUdvb2dsZVxDbG91",
-            "ZFxTZWNyZXRNYW5hZ2VyXFYx6gIgR29vZ2xlOjpDbG91ZDo6U2VjcmV0TWFu",
-            "YWdlcjo6VjFiBnByb3RvMw=="));
+            "b3RvGipnb29nbGUvaWFtL3YxL3Jlc291cmNlX3BvbGljeV9tZW1iZXIucHJv",
+            "dG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxofZ29vZ2xlL3By",
+            "b3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJv",
+            "dG8i+QsKBlNlY3JldBIRCgRuYW1lGAEgASgJQgPgQQMSRwoLcmVwbGljYXRp",
+            "b24YAiABKAsyKi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBs",
+            "aWNhdGlvbkIG4EEF4EEBEjQKC2NyZWF0ZV90aW1lGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkEKBmxhYmVscxgEIAMoCzIxLmdv",
+            "b2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlNlY3JldC5MYWJlbHNFbnRy",
+            "eRI5CgZ0b3BpY3MYBSADKAsyJC5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdl",
+            "ci52MS5Ub3BpY0ID4EEBEjYKC2V4cGlyZV90aW1lGAYgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEBSAASLQoDdHRsGAcgASgLMhkuZ29v",
+            "Z2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQRIABIRCgRldGFnGAggASgJQgPg",
+            "QQESPgoIcm90YXRpb24YCSABKAsyJy5nb29nbGUuY2xvdWQuc2VjcmV0bWFu",
+            "YWdlci52MS5Sb3RhdGlvbkID4EEBElcKD3ZlcnNpb25fYWxpYXNlcxgLIAMo",
+            "CzI5Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlNlY3JldC5WZXJz",
+            "aW9uQWxpYXNlc0VudHJ5QgPgQQESUAoLYW5ub3RhdGlvbnMYDSADKAsyNi5n",
+            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5TZWNyZXQuQW5ub3RhdGlv",
+            "bnNFbnRyeUID4EEBEjsKE3ZlcnNpb25fZGVzdHJveV90dGwYDiABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CA+BBARJiChtjdXN0b21lcl9tYW5h",
+            "Z2VkX2VuY3J5cHRpb24YDyABKAsyOC5nb29nbGUuY2xvdWQuc2VjcmV0bWFu",
+            "YWdlci52MS5DdXN0b21lck1hbmFnZWRFbmNyeXB0aW9uQgPgQQESSAoEdGFn",
+            "cxgQIAMoCzIvLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlNlY3Jl",
+            "dC5UYWdzRW50cnlCCeBBBOBBBeBBARJNCgtzZWNyZXRfdHlwZRgRIAEoDjIw",
+            "Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlNlY3JldC5TZWNyZXRU",
+            "eXBlQgbgQQXgQQESPwoNcG9saWN5X21lbWJlchgSIAEoCzIjLmdvb2dsZS5p",
+            "YW0udjEuUmVzb3VyY2VQb2xpY3lNZW1iZXJCA+BBAxotCgtMYWJlbHNFbnRy",
+            "eRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBGjUKE1ZlcnNpb25B",
+            "bGlhc2VzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgDOgI4ARoy",
+            "ChBBbm5vdGF0aW9uc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAEaKwoJVGFnc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
+            "CToCOAEijQEKClNlY3JldFR5cGUSGwoXU0VDUkVUX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIcChhDTE9VRF9TUUxfREJfQ1JFREVOVElBTFMQARIOCgpBQ0NFU1Nf",
+            "S0VZEAISDwoLQ0VSVElGSUNBVEUQAxIYChRPVEhFUl9EQl9DUkVERU5USUFM",
+            "UxAEEgkKBU9USEVSEDI6mQHqQZUBCiNzZWNyZXRtYW5hZ2VyLmdvb2dsZWFw",
+            "aXMuY29tL1NlY3JldBIjcHJvamVjdHMve3Byb2plY3R9L3NlY3JldHMve3Nl",
+            "Y3JldH0SOHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9zZWNyZXRzL3tzZWNyZXR9KgdzZWNyZXRzMgZzZWNyZXRCDAoKZXhwaXJh",
+            "dGlvbiLCBgoNU2VjcmV0VmVyc2lvbhIRCgRuYW1lGAEgASgJQgPgQQMSNAoL",
+            "Y3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSNQoMZGVzdHJveV90aW1lGAMgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDEkYKBXN0YXRlGAQgASgOMjIuZ29vZ2xlLmNsb3Vk",
+            "LnNlY3JldG1hbmFnZXIudjEuU2VjcmV0VmVyc2lvbi5TdGF0ZUID4EEDEkwK",
+            "EnJlcGxpY2F0aW9uX3N0YXR1cxgFIAEoCzIwLmdvb2dsZS5jbG91ZC5zZWNy",
+            "ZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uU3RhdHVzEhEKBGV0YWcYBiABKAlC",
+            "A+BBAxIuCiFjbGllbnRfc3BlY2lmaWVkX3BheWxvYWRfY2hlY2tzdW0YByAB",
+            "KAhCA+BBAxI/ChZzY2hlZHVsZWRfZGVzdHJveV90aW1lGAggASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEmgKG2N1c3RvbWVyX21hbmFn",
+            "ZWRfZW5jcnlwdGlvbhgJIAEoCzI+Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5h",
+            "Z2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25TdGF0dXNCA+BBAyJI",
+            "CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgsKB0VOQUJMRUQQARIM",
+            "CghESVNBQkxFRBACEg0KCURFU1RST1lFRBADOuIB6kHeAQoqc2VjcmV0bWFu",
+            "YWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXRWZXJzaW9uEj1wcm9qZWN0cy97",
+            "cHJvamVjdH0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97c2VjcmV0X3Zl",
+            "cnNpb259ElJwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vc2VjcmV0cy97c2VjcmV0fS92ZXJzaW9ucy97c2VjcmV0X3ZlcnNpb259",
+            "Kg5zZWNyZXRWZXJzaW9uczINc2VjcmV0VmVyc2lvbiKQBAoLUmVwbGljYXRp",
+            "b24SSQoJYXV0b21hdGljGAEgASgLMjQuZ29vZ2xlLmNsb3VkLnNlY3JldG1h",
+            "bmFnZXIudjEuUmVwbGljYXRpb24uQXV0b21hdGljSAASTgoMdXNlcl9tYW5h",
+            "Z2VkGAIgASgLMjYuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVw",
+            "bGljYXRpb24uVXNlck1hbmFnZWRIABpvCglBdXRvbWF0aWMSYgobY3VzdG9t",
+            "ZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAEgASgLMjguZ29vZ2xlLmNsb3VkLnNl",
+            "Y3JldG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvbkID4EEB",
+            "GuUBCgtVc2VyTWFuYWdlZBJVCghyZXBsaWNhcxgBIAMoCzI+Lmdvb2dsZS5j",
+            "bG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uLlVzZXJNYW5hZ2Vk",
+            "LlJlcGxpY2FCA+BBAhp/CgdSZXBsaWNhEhAKCGxvY2F0aW9uGAEgASgJEmIK",
+            "G2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgCIAEoCzI4Lmdvb2dsZS5j",
+            "bG91ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRp",
+            "b25CA+BBAUINCgtyZXBsaWNhdGlvbiI2ChlDdXN0b21lck1hbmFnZWRFbmNy",
+            "eXB0aW9uEhkKDGttc19rZXlfbmFtZRgBIAEoCUID4EECIusEChFSZXBsaWNh",
+            "dGlvblN0YXR1cxJVCglhdXRvbWF0aWMYASABKAsyQC5nb29nbGUuY2xvdWQu",
+            "c2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvblN0YXR1cy5BdXRvbWF0aWNT",
+            "dGF0dXNIABJaCgx1c2VyX21hbmFnZWQYAiABKAsyQi5nb29nbGUuY2xvdWQu",
+            "c2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvblN0YXR1cy5Vc2VyTWFuYWdl",
+            "ZFN0YXR1c0gAGnsKD0F1dG9tYXRpY1N0YXR1cxJoChtjdXN0b21lcl9tYW5h",
+            "Z2VkX2VuY3J5cHRpb24YASABKAsyPi5nb29nbGUuY2xvdWQuc2VjcmV0bWFu",
+            "YWdlci52MS5DdXN0b21lck1hbmFnZWRFbmNyeXB0aW9uU3RhdHVzQgPgQQMa",
+            "jwIKEVVzZXJNYW5hZ2VkU3RhdHVzEmcKCHJlcGxpY2FzGAEgAygLMlAuZ29v",
+            "Z2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMu",
+            "VXNlck1hbmFnZWRTdGF0dXMuUmVwbGljYVN0YXR1c0ID4EEDGpABCg1SZXBs",
+            "aWNhU3RhdHVzEhUKCGxvY2F0aW9uGAEgASgJQgPgQQMSaAobY3VzdG9tZXJf",
+            "bWFuYWdlZF9lbmNyeXB0aW9uGAIgASgLMj4uZ29vZ2xlLmNsb3VkLnNlY3Jl",
+            "dG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1c0ID",
+            "4EEDQhQKEnJlcGxpY2F0aW9uX3N0YXR1cyJECh9DdXN0b21lck1hbmFnZWRF",
+            "bmNyeXB0aW9uU3RhdHVzEiEKFGttc19rZXlfdmVyc2lvbl9uYW1lGAEgASgJ",
+            "QgPgQQIiXwoFVG9waWMSEQoEbmFtZRgBIAEoCUID4EEIOkPqQUAKG3B1YnN1",
+            "Yi5nb29nbGVhcGlzLmNvbS9Ub3BpYxIhcHJvamVjdHMve3Byb2plY3R9L3Rv",
+            "cGljcy97dG9waWN9IroDCghSb3RhdGlvbhI7ChJuZXh0X3JvdGF0aW9uX3Rp",
+            "bWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQESNwoP",
+            "cm90YXRpb25fcGVyaW9kGAIgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0",
+            "aW9uQgPgQQQSYwoXbWFuYWdlZF9yb3RhdGlvbl9zdGF0dXMYAyABKAsyPS5n",
+            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5Sb3RhdGlvbi5NYW5hZ2Vk",
+            "Um90YXRpb25TdGF0dXNCA+BBAxrSAQoVTWFuYWdlZFJvdGF0aW9uU3RhdHVz",
+            "ElcKBXN0YXRlGAEgASgOMkMuZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIu",
+            "djEuUm90YXRpb24uTWFuYWdlZFJvdGF0aW9uU3RhdHVzLlN0YXRlQgPgQQMS",
+            "JgoFZXJyb3IYAiABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDIjgKBVN0",
+            "YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDAoISU5B",
+            "Q1RJVkUQAiJMCg1TZWNyZXRQYXlsb2FkEgwKBGRhdGEYASABKAwSHQoLZGF0",
+            "YV9jcmMzMmMYAiABKANCA+BBAUgAiAEBQg4KDF9kYXRhX2NyYzMyY0LnAQoh",
+            "Y29tLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxQg5SZXNvdXJjZXNQ",
+            "cm90b1ABWkdjbG91ZC5nb29nbGUuY29tL2dvL3NlY3JldG1hbmFnZXIvYXBp",
+            "djEvc2VjcmV0bWFuYWdlcnBiO3NlY3JldG1hbmFnZXJwYqICA0dTTaoCHUdv",
+            "b2dsZS5DbG91ZC5TZWNyZXRNYW5hZ2VyLlYxygIdR29vZ2xlXENsb3VkXFNl",
+            "Y3JldE1hbmFnZXJcVjHqAiBHb29nbGU6OkNsb3VkOjpTZWNyZXRNYW5hZ2Vy",
+            "OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Iam.V1.ResourcePolicyMemberReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "Topics", "ExpireTime", "Ttl", "Etag", "Rotation", "VersionAliases", "Annotations", "VersionDestroyTtl", "CustomerManagedEncryption", "Tags" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "Topics", "ExpireTime", "Ttl", "Etag", "Rotation", "VersionAliases", "Annotations", "VersionDestroyTtl", "CustomerManagedEncryption", "Tags", "SecretType", "PolicyMember" }, new[]{ "Expiration" }, new[]{ typeof(global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State", "ReplicationStatus", "Etag", "ClientSpecifiedPayloadChecksum", "ScheduledDestroyTime", "CustomerManagedEncryption" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication), global::Google.Cloud.SecretManager.V1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic.Parser, new[]{ "CustomerManagedEncryption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
@@ -128,7 +143,7 @@ namespace Google.Cloud.SecretManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus), global::Google.Cloud.SecretManager.V1.ReplicationStatus.Types.UserManagedStatus.Types.ReplicaStatus.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus), global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus.Parser, new[]{ "KmsKeyVersionName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Topic), global::Google.Cloud.SecretManager.V1.Topic.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Rotation), global::Google.Cloud.SecretManager.V1.Rotation.Parser, new[]{ "NextRotationTime", "RotationPeriod" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Rotation), global::Google.Cloud.SecretManager.V1.Rotation.Parser, new[]{ "NextRotationTime", "RotationPeriod", "ManagedRotationStatus" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus), global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Parser, new[]{ "State", "Error" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretPayload), global::Google.Cloud.SecretManager.V1.SecretPayload.Parser, new[]{ "Data", "DataCrc32C" }, new[]{ "DataCrc32C" }, null, null, null)
           }));
     }
@@ -191,6 +206,8 @@ namespace Google.Cloud.SecretManager.V1 {
       versionDestroyTtl_ = other.versionDestroyTtl_ != null ? other.versionDestroyTtl_.Clone() : null;
       customerManagedEncryption_ = other.customerManagedEncryption_ != null ? other.customerManagedEncryption_.Clone() : null;
       tags_ = other.tags_.Clone();
+      secretType_ = other.secretType_;
+      policyMember_ = other.policyMember_ != null ? other.policyMember_.Clone() : null;
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           ExpireTime = other.ExpireTime.Clone();
@@ -478,6 +495,41 @@ namespace Google.Cloud.SecretManager.V1 {
       get { return tags_; }
     }
 
+    /// <summary>Field number for the "secret_type" field.</summary>
+    public const int SecretTypeFieldNumber = 17;
+    private global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType secretType_ = global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType.Unspecified;
+    /// <summary>
+    /// Optional. Immutable. This defines the type of the secret.
+    /// Enforces certain structural requirements on the
+    /// [SecretVersions][google.cloud.secretmanager.v1.SecretVersion].
+    /// For secret of type UNSPECIFIED, the SecretVersions can be of any type.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType SecretType {
+      get { return secretType_; }
+      set {
+        secretType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "policy_member" field.</summary>
+    public const int PolicyMemberFieldNumber = 18;
+    private global::Google.Cloud.Iam.V1.ResourcePolicyMember policyMember_;
+    /// <summary>
+    /// Output only. Defines the policy member for the secret.
+    /// This will be used to check if the caller has the permission to perform
+    /// certain operations on the typed secret.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Iam.V1.ResourcePolicyMember PolicyMember {
+      get { return policyMember_; }
+      set {
+        policyMember_ = value;
+      }
+    }
+
     private object expiration_;
     /// <summary>Enum of possible cases for the "expiration" oneof.</summary>
     public enum ExpirationOneofCase {
@@ -528,6 +580,8 @@ namespace Google.Cloud.SecretManager.V1 {
       if (!object.Equals(VersionDestroyTtl, other.VersionDestroyTtl)) return false;
       if (!object.Equals(CustomerManagedEncryption, other.CustomerManagedEncryption)) return false;
       if (!Tags.Equals(other.Tags)) return false;
+      if (SecretType != other.SecretType) return false;
+      if (!object.Equals(PolicyMember, other.PolicyMember)) return false;
       if (ExpirationCase != other.ExpirationCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -550,6 +604,8 @@ namespace Google.Cloud.SecretManager.V1 {
       if (versionDestroyTtl_ != null) hash ^= VersionDestroyTtl.GetHashCode();
       if (customerManagedEncryption_ != null) hash ^= CustomerManagedEncryption.GetHashCode();
       hash ^= Tags.GetHashCode();
+      if (SecretType != global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType.Unspecified) hash ^= SecretType.GetHashCode();
+      if (policyMember_ != null) hash ^= PolicyMember.GetHashCode();
       hash ^= (int) expirationCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -610,6 +666,14 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteMessage(CustomerManagedEncryption);
       }
       tags_.WriteTo(output, _map_tags_codec);
+      if (SecretType != global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) SecretType);
+      }
+      if (policyMember_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(PolicyMember);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -661,6 +725,14 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteMessage(CustomerManagedEncryption);
       }
       tags_.WriteTo(ref output, _map_tags_codec);
+      if (SecretType != global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) SecretType);
+      }
+      if (policyMember_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(PolicyMember);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -703,6 +775,12 @@ namespace Google.Cloud.SecretManager.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomerManagedEncryption);
       }
       size += tags_.CalculateSize(_map_tags_codec);
+      if (SecretType != global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SecretType);
+      }
+      if (policyMember_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PolicyMember);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -756,6 +834,15 @@ namespace Google.Cloud.SecretManager.V1 {
         CustomerManagedEncryption.MergeFrom(other.CustomerManagedEncryption);
       }
       tags_.MergeFrom(other.tags_);
+      if (other.SecretType != global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType.Unspecified) {
+        SecretType = other.SecretType;
+      }
+      if (other.policyMember_ != null) {
+        if (policyMember_ == null) {
+          PolicyMember = new global::Google.Cloud.Iam.V1.ResourcePolicyMember();
+        }
+        PolicyMember.MergeFrom(other.PolicyMember);
+      }
       switch (other.ExpirationCase) {
         case ExpirationOneofCase.ExpireTime:
           if (ExpireTime == null) {
@@ -871,6 +958,17 @@ namespace Google.Cloud.SecretManager.V1 {
             tags_.AddEntriesFrom(input, _map_tags_codec);
             break;
           }
+          case 136: {
+            SecretType = (global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            if (policyMember_ == null) {
+              PolicyMember = new global::Google.Cloud.Iam.V1.ResourcePolicyMember();
+            }
+            input.ReadMessage(PolicyMember);
+            break;
+          }
         }
       }
     #endif
@@ -971,10 +1069,62 @@ namespace Google.Cloud.SecretManager.V1 {
             tags_.AddEntriesFrom(ref input, _map_tags_codec);
             break;
           }
+          case 136: {
+            SecretType = (global::Google.Cloud.SecretManager.V1.Secret.Types.SecretType) input.ReadEnum();
+            break;
+          }
+          case 146: {
+            if (policyMember_ == null) {
+              PolicyMember = new global::Google.Cloud.Iam.V1.ResourcePolicyMember();
+            }
+            input.ReadMessage(PolicyMember);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Secret message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// This defines the various values of the type of secret can be.
+      /// </summary>
+      public enum SecretType {
+        /// <summary>
+        /// Applicable to all secrets which do not have any restriction on the
+        /// SecretVersions.
+        /// </summary>
+        [pbr::OriginalName("SECRET_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Applicable to secrets which are used for the managed rotation feature
+        /// for Cloud SQL Single User.
+        /// </summary>
+        [pbr::OriginalName("CLOUD_SQL_DB_CREDENTIALS")] CloudSqlDbCredentials = 1,
+        /// <summary>
+        /// Applicable to secrets where the payload contains an access key.
+        /// </summary>
+        [pbr::OriginalName("ACCESS_KEY")] AccessKey = 2,
+        /// <summary>
+        /// Applicable to secrets where the payload contains a certificate.
+        /// </summary>
+        [pbr::OriginalName("CERTIFICATE")] Certificate = 3,
+        /// <summary>
+        /// Applicable to secrets where the payload contains database credentials.
+        /// </summary>
+        [pbr::OriginalName("OTHER_DB_CREDENTIALS")] OtherDbCredentials = 4,
+        /// <summary>
+        /// Applicable to secrets whose type doesn't belong to any of the above
+        /// defined types.
+        /// </summary>
+        [pbr::OriginalName("OTHER")] Other = 50,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -4302,6 +4452,7 @@ namespace Google.Cloud.SecretManager.V1 {
     public Rotation(Rotation other) : this() {
       nextRotationTime_ = other.nextRotationTime_ != null ? other.nextRotationTime_.Clone() : null;
       rotationPeriod_ = other.rotationPeriod_ != null ? other.rotationPeriod_.Clone() : null;
+      managedRotationStatus_ = other.managedRotationStatus_ != null ? other.managedRotationStatus_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4359,6 +4510,23 @@ namespace Google.Cloud.SecretManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "managed_rotation_status" field.</summary>
+    public const int ManagedRotationStatusFieldNumber = 3;
+    private global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus managedRotationStatus_;
+    /// <summary>
+    /// Output only. The current status of the managed rotation.
+    /// This field is only applicable to Typed Secrets.
+    /// This field is set by the service and cannot be set by the user.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus ManagedRotationStatus {
+      get { return managedRotationStatus_; }
+      set {
+        managedRotationStatus_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4376,6 +4544,7 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (!object.Equals(NextRotationTime, other.NextRotationTime)) return false;
       if (!object.Equals(RotationPeriod, other.RotationPeriod)) return false;
+      if (!object.Equals(ManagedRotationStatus, other.ManagedRotationStatus)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4385,6 +4554,7 @@ namespace Google.Cloud.SecretManager.V1 {
       int hash = 1;
       if (nextRotationTime_ != null) hash ^= NextRotationTime.GetHashCode();
       if (rotationPeriod_ != null) hash ^= RotationPeriod.GetHashCode();
+      if (managedRotationStatus_ != null) hash ^= ManagedRotationStatus.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4411,6 +4581,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(RotationPeriod);
       }
+      if (managedRotationStatus_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ManagedRotationStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4429,6 +4603,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(RotationPeriod);
       }
+      if (managedRotationStatus_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(ManagedRotationStatus);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4444,6 +4622,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (rotationPeriod_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(RotationPeriod);
+      }
+      if (managedRotationStatus_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ManagedRotationStatus);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4468,6 +4649,12 @@ namespace Google.Cloud.SecretManager.V1 {
           RotationPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
         }
         RotationPeriod.MergeFrom(other.RotationPeriod);
+      }
+      if (other.managedRotationStatus_ != null) {
+        if (managedRotationStatus_ == null) {
+          ManagedRotationStatus = new global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus();
+        }
+        ManagedRotationStatus.MergeFrom(other.ManagedRotationStatus);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4500,6 +4687,13 @@ namespace Google.Cloud.SecretManager.V1 {
               RotationPeriod = new global::Google.Protobuf.WellKnownTypes.Duration();
             }
             input.ReadMessage(RotationPeriod);
+            break;
+          }
+          case 26: {
+            if (managedRotationStatus_ == null) {
+              ManagedRotationStatus = new global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus();
+            }
+            input.ReadMessage(ManagedRotationStatus);
             break;
           }
         }
@@ -4535,10 +4729,310 @@ namespace Google.Cloud.SecretManager.V1 {
             input.ReadMessage(RotationPeriod);
             break;
           }
+          case 26: {
+            if (managedRotationStatus_ == null) {
+              ManagedRotationStatus = new global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus();
+            }
+            input.ReadMessage(ManagedRotationStatus);
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the Rotation message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Represents the status of a managed rotation.
+      ///
+      /// This is applicable only to Typed Secrets. It indicates whether the
+      /// rotation is active and any errors that may have occurred during the
+      /// asynchronous managed rotation.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ManagedRotationStatus : pb::IMessage<ManagedRotationStatus>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ManagedRotationStatus> _parser = new pb::MessageParser<ManagedRotationStatus>(() => new ManagedRotationStatus());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ManagedRotationStatus> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.SecretManager.V1.Rotation.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ManagedRotationStatus() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ManagedRotationStatus(ManagedRotationStatus other) : this() {
+          state_ = other.state_;
+          error_ = other.error_ != null ? other.error_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ManagedRotationStatus Clone() {
+          return new ManagedRotationStatus(this);
+        }
+
+        /// <summary>Field number for the "state" field.</summary>
+        public const int StateFieldNumber = 1;
+        private global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State state_ = global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State.Unspecified;
+        /// <summary>
+        /// Output only. Indicates whether the Managed Rotation is active or not.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State State {
+          get { return state_; }
+          set {
+            state_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "error" field.</summary>
+        public const int ErrorFieldNumber = 2;
+        private global::Google.Rpc.Status error_;
+        /// <summary>
+        /// Output only. Displays customer-facing issues that occurred during an
+        /// asynchronous managed rotation. For example, if there are some permission
+        /// errors.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Rpc.Status Error {
+          get { return error_; }
+          set {
+            error_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ManagedRotationStatus);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ManagedRotationStatus other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (State != other.State) return false;
+          if (!object.Equals(Error, other.Error)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (State != global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State.Unspecified) hash ^= State.GetHashCode();
+          if (error_ != null) hash ^= Error.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (State != global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) State);
+          }
+          if (error_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Error);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (State != global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) State);
+          }
+          if (error_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Error);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (State != global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) State);
+          }
+          if (error_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Error);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ManagedRotationStatus other) {
+          if (other == null) {
+            return;
+          }
+          if (other.State != global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State.Unspecified) {
+            State = other.State;
+          }
+          if (other.error_ != null) {
+            if (error_ == null) {
+              Error = new global::Google.Rpc.Status();
+            }
+            Error.MergeFrom(other.Error);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                State = (global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (error_ == null) {
+                  Error = new global::Google.Rpc.Status();
+                }
+                input.ReadMessage(Error);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                State = (global::Google.Cloud.SecretManager.V1.Rotation.Types.ManagedRotationStatus.Types.State) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (error_ == null) {
+                  Error = new global::Google.Rpc.Status();
+                }
+                input.ReadMessage(Error);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ManagedRotationStatus message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// This defines the various states in which the managed rotation can be.
+          /// </summary>
+          public enum State {
+            /// <summary>
+            /// Not specified. This value is unused and invalid.
+            /// </summary>
+            [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Indicates that the Managed rotation is ACTIVE.
+            /// </summary>
+            [pbr::OriginalName("ACTIVE")] Active = 1,
+            /// <summary>
+            /// Indicates that the Managed rotation is INACTIVE.
+            /// </summary>
+            [pbr::OriginalName("INACTIVE")] Inactive = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 
