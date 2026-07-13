@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.8.0, released 2026-07-13
+
+### New features
+
+- Add support for Managed Rotation
+
 ## Version 2.7.0, released 2025-11-06
 
 ### New features
