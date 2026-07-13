@@ -1,5 +1,16 @@
 # Version history
 
+## Version 1.0.0-beta26, released 2026-07-13
+
+### New features
+
+- Add access permission settings to Space resource for configuring space discovery and join permissions
+- Add Availability Api's
+
+### Documentation improvements
+
+- Update Space reference documentation for access permission setting update masks
+
 ## Version 1.0.0-beta25, released 2026-06-22
 
 ### New features
