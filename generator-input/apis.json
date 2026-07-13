@@ -4908,7 +4908,7 @@
     },
     {
       "id": "Google.Cloud.ProductRegistry.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "Cloud Product Registry",
       "productUrl": "https://docs.cloud.google.com/product-registry",
