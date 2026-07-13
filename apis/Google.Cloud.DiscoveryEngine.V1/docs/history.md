@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.14.0, released 2026-07-13
+
+### New features
+
+- Add RelevanceFilterSpec to SearchRequest in v1
+
 ## Version 1.13.0, released 2026-02-16
 
 ### New features
