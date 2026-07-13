@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta80, released 2026-07-13
+
+### New features
+
+- Add identity_type to Reasoning Engine public protos
+
 ## Version 1.0.0-beta79, released 2026-06-22
 
 ### New features
