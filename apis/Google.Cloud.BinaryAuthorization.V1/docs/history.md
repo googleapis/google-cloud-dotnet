@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.7.0, released 2026-07-13
+
+### New features
+
+- Add support for new signature algorithm in PkixPublicKey SignatureAlgorithm
+
+### Documentation improvements
+
+- Update documentation comments across Binary Authorization v1 messages
+
 ## Version 2.6.0, released 2025-11-05
 
 ### New features

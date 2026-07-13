@@ -878,12 +878,12 @@
         },
         {
             "id": "Google.Cloud.BinaryAuthorization.V1",
-            "currentVersion": "2.6.0",
+            "currentVersion": "2.7.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2025-11-05T21:34:29.641260019Z",
+            "releaseTimestamp": "2026-07-13T19:14:27.230514111Z",
             "lastGeneratedCommit": "73a8001701e1d3a668dbfb72e9ab66c97d107ff6",
-            "lastReleasedCommit": "3021374c68bbc640c1f75bfffcadbd5c279811ee",
+            "lastReleasedCommit": "73a8001701e1d3a668dbfb72e9ab66c97d107ff6",
             "apiPaths": [
                 "google/cloud/binaryauthorization/v1"
             ],
