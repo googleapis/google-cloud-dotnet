@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2026-07-13
+
+### New features
+
+- Update public libraries for CES v1beta
+- Add WhatsApp, Instagram, and CCaaS Chat deployment channels
+- Add evaluation run caching settings
+- Add evaluation type (GOLDEN, SCENARIO) to evaluation service
+- Add context messages for external supervision guardrails
+- Add timeout configuration for toolsets
+
+### Documentation improvements
+
+- A comment for field `disable_barge_in` in message `.google.cloud.ces.v1beta.BargeInConfig` is changed
+- A comment for enum value `PENDING` in enum `State` is changed
+- A comment for enum value `DONE` in enum `State` is changed
+- A comment for enum value `EXPIRED` in enum `State` is changed
+
 ## Version 1.0.0-beta08, released 2026-07-06
 
 ### Bug fixes
