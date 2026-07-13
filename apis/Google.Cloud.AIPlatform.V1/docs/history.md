@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.73.0, released 2026-07-13
+
+### New features
+
+- Expose retrieval_queries in GroundingMetadata for the v1 API
+- Add identity_type to Reasoning Engine public protos
+
 ## Version 3.72.0, released 2026-05-11
 
 ### New features
