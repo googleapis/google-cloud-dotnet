@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta04, released 2026-07-13
+
+### New features
+
+- Update public libraries for CES v1
+
+### Documentation improvements
+
+- A comment for field `disable_barge_in` in message `.google.cloud.ces.v1.BargeInConfig` is changed
+- A comment for field `audio_recording_config` in message `.google.cloud.ces.v1.LoggingSettings` is changed
+- A comment for field `bigquery_export_settings` in message `.google.cloud.ces.v1.LoggingSettings` is changed
+- A comment for enum value `INPUT_TYPE_TEXT` in enum `InputType` is changed
+- A comment for enum value `INPUT_TYPE_AUDIO` in enum `InputType` is changed
+- A comment for enum value `INPUT_TYPE_IMAGE` in enum `InputType` is changed
+- A comment for enum value `INPUT_TYPE_BLOB` in enum `InputType` is changed
+- A comment for enum value `INPUT_TYPE_TOOL_RESPONSE` in enum `InputType` is changed
+- A comment for enum value `INPUT_TYPE_VARIABLES` in enum `InputType` is changed
+
 ## Version 1.0.0-beta03, released 2026-07-06
 
 ### Bug fixes
