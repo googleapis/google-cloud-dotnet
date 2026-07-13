@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2026-07-13
+
+### New features
+
+- Add support for self managed migrations feature to Memorystore for Valkey
+
 ## Version 1.0.0-beta07, released 2026-05-04
 
 ### New features
