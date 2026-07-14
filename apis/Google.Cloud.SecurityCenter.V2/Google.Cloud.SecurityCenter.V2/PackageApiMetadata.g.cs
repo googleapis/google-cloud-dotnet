@@ -57,6 +57,9 @@ namespace Google.Cloud.SecurityCenter.V2
         {
             yield return AccessReflection.Descriptor;
             yield return AffectedResourcesReflection.Descriptor;
+            yield return AgentReflection.Descriptor;
+            yield return AgentAnomalyReflection.Descriptor;
+            yield return AgentSessionReflection.Descriptor;
             yield return AiModelReflection.Descriptor;
             yield return ApplicationReflection.Descriptor;
             yield return AttackExposureReflection.Descriptor;
