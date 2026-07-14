@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta32, released 2026-07-14
+
+### New features
+
+- Add tool calls and tool responses to AnalyzeContent and BidiStreaming APIs
+- Introduce CompanionSuggestion
+- Add support for external private CAs in the SIP TRUNK UI.
+
 ## Version 1.0.0-beta31, released 2026-06-29
 
 ### New features
