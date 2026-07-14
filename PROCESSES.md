@@ -134,6 +134,9 @@ corresponding library is:
   to indicate the deprecation. This should also be indicated in the
   release notes. See [this PR as an
   example](https://github.com/googleapis/google-cloud-dotnet/pull/12996).
+- Make your change noticeable by librarian. Check the API's entry in
+  `generator-input/pipeline-state.json`. Make a trivial change to a file
+  under the path listed in `sourcePaths` with a `feat` commit.
 - Mark all published versions as deprecated and delisted in NuGet.
   The deprecation step can easily be done manually as the NuGet web
   site allows marking all versions as deprecated in one go. For
@@ -158,5 +161,5 @@ a reasonable timeframe.
    1. Update `global.json` to specify the .NET release version required.
    1. Update `Dockerfile.generator` to specify the .NET release version required.
    1. For new *major* SDK versions, update GitHub actions
-1. Merge the above PR. 
+1. Merge the above PR.
 1. Ensure the new Docker image is used.
