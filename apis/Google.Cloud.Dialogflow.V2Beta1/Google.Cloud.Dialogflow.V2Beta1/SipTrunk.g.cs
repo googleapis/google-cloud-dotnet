@@ -28,82 +28,116 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             "cm90bxIfZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMRocZ29vZ2xl",
             "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJv",
             "dG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9h",
-            "cGkvcmVzb3VyY2UucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9lbXB0eS5wcm90",
-            "bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8ilgEKFUNyZWF0ZVNpcFRydW5rUmVx",
-            "dWVzdBI6CgZwYXJlbnQYASABKAlCKuBBAvpBJBIiZGlhbG9nZmxvdy5nb29n",
-            "bGVhcGlzLmNvbS9TaXBUcnVuaxJBCglzaXBfdHJ1bmsYAiABKAsyKS5nb29n",
-            "bGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlNpcFRydW5rQgPgQQIiUQoV",
-            "RGVsZXRlU2lwVHJ1bmtSZXF1ZXN0EjgKBG5hbWUYASABKAlCKuBBAvpBJAoi",
-            "ZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9TaXBUcnVuayKDAQoUTGlzdFNp",
-            "cFRydW5rc1JlcXVlc3QSOgoGcGFyZW50GAEgASgJQirgQQL6QSQSImRpYWxv",
-            "Z2Zsb3cuZ29vZ2xlYXBpcy5jb20vU2lwVHJ1bmsSFgoJcGFnZV9zaXplGAIg",
-            "ASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBIm8KFUxpc3RTaXBU",
-            "cnVua3NSZXNwb25zZRI9CgpzaXBfdHJ1bmtzGAEgAygLMikuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5TaXBUcnVuaxIXCg9uZXh0X3BhZ2Vf",
-            "dG9rZW4YAiABKAkiTgoSR2V0U2lwVHJ1bmtSZXF1ZXN0EjgKBG5hbWUYASAB",
-            "KAlCKuBBAvpBJAoiZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9TaXBUcnVu",
-            "ayKQAQoVVXBkYXRlU2lwVHJ1bmtSZXF1ZXN0EkEKCXNpcF90cnVuaxgBIAEo",
-            "CzIpLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU2lwVHJ1bmtC",
-            "A+BBAhI0Cgt1cGRhdGVfbWFzaxgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5G",
-            "aWVsZE1hc2tCA+BBASKbAgoIU2lwVHJ1bmsSEQoEbmFtZRgBIAEoCUID4EEI",
-            "Eh4KEWV4cGVjdGVkX2hvc3RuYW1lGAIgAygJQgPgQQISRQoLY29ubmVjdGlv",
-            "bnMYAyADKAsyKy5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkNv",
-            "bm5lY3Rpb25CA+BBAxIZCgxkaXNwbGF5X25hbWUYBCABKAlCA+BBATp66kF3",
-            "CiJkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1NpcFRydW5rEjxwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2lwVHJ1bmtzL3tz",
-            "aXB0cnVua30qCXNpcFRydW5rczIIc2lwVHJ1bmsigAcKCkNvbm5lY3Rpb24S",
-            "GgoNY29ubmVjdGlvbl9pZBgBIAEoCUID4EEDEkUKBXN0YXRlGAIgASgOMjEu",
-            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5Db25uZWN0aW9uLlN0",
-            "YXRlQgPgQQMSOQoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuVGltZXN0YW1wQgPgQQNIAIgBARJZCg1lcnJvcl9kZXRhaWxzGAQgASgL",
-            "MjguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5Db25uZWN0aW9u",
-            "LkVycm9yRGV0YWlsc0ID4EEDSAGIAQEatQEKDEVycm9yRGV0YWlscxJhChFj",
-            "ZXJ0aWZpY2F0ZV9zdGF0ZRgBIAEoDjI8Lmdvb2dsZS5jbG91ZC5kaWFsb2dm",
-            "bG93LnYyYmV0YTEuQ29ubmVjdGlvbi5DZXJ0aWZpY2F0ZVN0YXRlQgPgQQNI",
-            "AIgBARIaCg1lcnJvcl9tZXNzYWdlGAIgASgJSAGIAQFCFAoSX2NlcnRpZmlj",
-            "YXRlX3N0YXRlQhAKDl9lcnJvcl9tZXNzYWdlImkKBVN0YXRlEhUKEVNUQVRF",
-            "X1VOU1BFQ0lGSUVEEAASDQoJQ09OTkVDVEVEEAESEAoMRElTQ09OTkVDVEVE",
-            "EAISGQoVQVVUSEVOVElDQVRJT05fRkFJTEVEEAMSDQoJS0VFUEFMSVZFEAQi",
-            "swIKEENlcnRpZmljYXRlU3RhdGUSIQodQ0VSVElGSUNBVEVfU1RBVEVfVU5T",
-            "UEVDSUZJRUQQABIVChFDRVJUSUZJQ0FURV9WQUxJRBABEhcKE0NFUlRJRklD",
-            "QVRFX0lOVkFMSUQQAhIXChNDRVJUSUZJQ0FURV9FWFBJUkVEEAMSIgoeQ0VS",
-            "VElGSUNBVEVfSE9TVE5BTUVfTk9UX0ZPVU5EEAQSHwobQ0VSVElGSUNBVEVf",
-            "VU5BVVRIRU5USUNBVEVEEAUSJQohQ0VSVElGSUNBVEVfVFJVU1RfU1RPUkVf",
-            "Tk9UX0ZPVU5EEAYSJwojQ0VSVElGSUNBVEVfSE9TVE5BTUVfSU5WQUxJRF9G",
-            "T1JNQVQQBxIeChpDRVJUSUZJQ0FURV9RVU9UQV9FWENFRURFRBAIQg4KDF91",
-            "cGRhdGVfdGltZUIQCg5fZXJyb3JfZGV0YWlsczLTCAoJU2lwVHJ1bmtzEs0B",
-            "Cg5DcmVhdGVTaXBUcnVuaxI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
-            "YmV0YTEuQ3JlYXRlU2lwVHJ1bmtSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjJiZXRhMS5TaXBUcnVuayJY2kEQcGFyZW50LHNpcF90cnVu",
-            "a4LT5JMCPyIyL3YyYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qfS9zaXBUcnVua3M6CXNpcF90cnVuaxKjAQoORGVsZXRlU2lwVHJ1bmsS",
-            "Ni5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkRlbGV0ZVNpcFRy",
-            "dW5rUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSJB2kEEbmFtZYLT",
-            "5JMCNCoyL3YyYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9z",
-            "aXBUcnVua3MvKn0SwwEKDUxpc3RTaXBUcnVua3MSNS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52MmJldGExLkxpc3RTaXBUcnVua3NSZXF1ZXN0GjYuZ29v",
-            "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5MaXN0U2lwVHJ1bmtzUmVz",
-            "cG9uc2UiQ9pBBnBhcmVudILT5JMCNBIyL3YyYmV0YTEve3BhcmVudD1wcm9q",
-            "ZWN0cy8qL2xvY2F0aW9ucy8qfS9zaXBUcnVua3MSsAEKC0dldFNpcFRydW5r",
-            "EjMuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5HZXRTaXBUcnVu",
-            "a1JlcXVlc3QaKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlNp",
-            "cFRydW5rIkHaQQRuYW1lgtPkkwI0EjIvdjJiZXRhMS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL3NpcFRydW5rcy8qfRLcAQoOVXBkYXRlU2lwVHJ1",
-            "bmsSNi5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlVwZGF0ZVNp",
-            "cFRydW5rUmVxdWVzdBopLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0",
-            "YTEuU2lwVHJ1bmsiZ9pBFXNpcF90cnVuayx1cGRhdGVfbWFza4LT5JMCSTI8",
-            "L3YyYmV0YTEve3NpcF90cnVuay5uYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "Lyovc2lwVHJ1bmtzLyp9OglzaXBfdHJ1bmsaeMpBGWRpYWxvZ2Zsb3cuZ29v",
-            "Z2xlYXBpcy5jb23SQVlodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRo",
-            "L2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1",
-            "dGgvZGlhbG9nZmxvd0KiAQojY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyYmV0YTFCDVNpcFRydW5rUHJvdG9QAVpDY2xvdWQuZ29vZ2xlLmNvbS9n",
-            "by9kaWFsb2dmbG93L2FwaXYyYmV0YTEvZGlhbG9nZmxvd3BiO2RpYWxvZ2Zs",
-            "b3dwYqICAkRGqgIfR29vZ2xlLkNsb3VkLkRpYWxvZ2Zsb3cuVjJCZXRhMWIG",
-            "cHJvdG8z"));
+            "cGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlvbi5w",
+            "cm90bxobZ29vZ2xlL3Byb3RvYnVmL2VtcHR5LnByb3RvGiBnb29nbGUvcHJv",
+            "dG9idWYvZmllbGRfbWFzay5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVz",
+            "dGFtcC5wcm90byKWAQoVQ3JlYXRlU2lwVHJ1bmtSZXF1ZXN0EjoKBnBhcmVu",
+            "dBgBIAEoCUIq4EEC+kEkEiJkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1Np",
+            "cFRydW5rEkEKCXNpcF90cnVuaxgCIAEoCzIpLmdvb2dsZS5jbG91ZC5kaWFs",
+            "b2dmbG93LnYyYmV0YTEuU2lwVHJ1bmtCA+BBAiJRChVEZWxldGVTaXBUcnVu",
+            "a1JlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC+kEkCiJkaWFsb2dmbG93Lmdv",
+            "b2dsZWFwaXMuY29tL1NpcFRydW5rIoMBChRMaXN0U2lwVHJ1bmtzUmVxdWVz",
+            "dBI6CgZwYXJlbnQYASABKAlCKuBBAvpBJBIiZGlhbG9nZmxvdy5nb29nbGVh",
+            "cGlzLmNvbS9TaXBUcnVuaxIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpw",
+            "YWdlX3Rva2VuGAMgASgJQgPgQQEibwoVTGlzdFNpcFRydW5rc1Jlc3BvbnNl",
+            "Ej0KCnNpcF90cnVua3MYASADKAsyKS5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52MmJldGExLlNpcFRydW5rEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJO",
+            "ChJHZXRTaXBUcnVua1JlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC+kEkCiJk",
+            "aWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1NpcFRydW5rIpABChVVcGRhdGVT",
+            "aXBUcnVua1JlcXVlc3QSQQoJc2lwX3RydW5rGAEgASgLMikuZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5TaXBUcnVua0ID4EECEjQKC3VwZGF0",
+            "ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEB",
+            "IpIECghTaXBUcnVuaxIRCgRuYW1lGAEgASgJQgPgQQgSHgoRZXhwZWN0ZWRf",
+            "aG9zdG5hbWUYAiADKAlCA+BBAhJFCgtjb25uZWN0aW9ucxgDIAMoCzIrLmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuQ29ubmVjdGlvbkID4EED",
+            "EhkKDGRpc3BsYXlfbmFtZRgEIAEoCUID4EEBEkkKDnBlZXJfaG9zdG5hbWVz",
+            "GAggAygLMiwuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5TaXBI",
+            "b3N0bmFtZUID4EECEmAKFWdvb2dsZV9yb290X2NlcnRfZmlsZRgJIAEoDjI8",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU2lwVHJ1bmsuR29v",
+            "Z2xlUm9vdENlcnRGaWxlQgPgQQEiSAoSR29vZ2xlUm9vdENlcnRGaWxlEhkK",
+            "FUNFUlRfRklMRV9VTlNQRUNJRklFRBAAEhcKE0VYVEVSTkFMX1BSSVZBVEVf",
+            "Q0EQBTp66kF3CiJkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL1NpcFRydW5r",
+            "Ejxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc2lw",
+            "VHJ1bmtzL3tzaXB0cnVua30qCXNpcFRydW5rczIIc2lwVHJ1bmsigAcKCkNv",
+            "bm5lY3Rpb24SGgoNY29ubmVjdGlvbl9pZBgBIAEoCUID4EEDEkUKBXN0YXRl",
+            "GAIgASgOMjEuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5Db25u",
+            "ZWN0aW9uLlN0YXRlQgPgQQMSOQoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNIAIgBARJZCg1lcnJvcl9kZXRh",
+            "aWxzGAQgASgLMjguZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRhMS5D",
+            "b25uZWN0aW9uLkVycm9yRGV0YWlsc0ID4EEDSAGIAQEatQEKDEVycm9yRGV0",
+            "YWlscxJhChFjZXJ0aWZpY2F0ZV9zdGF0ZRgBIAEoDjI8Lmdvb2dsZS5jbG91",
+            "ZC5kaWFsb2dmbG93LnYyYmV0YTEuQ29ubmVjdGlvbi5DZXJ0aWZpY2F0ZVN0",
+            "YXRlQgPgQQNIAIgBARIaCg1lcnJvcl9tZXNzYWdlGAIgASgJSAGIAQFCFAoS",
+            "X2NlcnRpZmljYXRlX3N0YXRlQhAKDl9lcnJvcl9tZXNzYWdlImkKBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDQoJQ09OTkVDVEVEEAESEAoMRElT",
+            "Q09OTkVDVEVEEAISGQoVQVVUSEVOVElDQVRJT05fRkFJTEVEEAMSDQoJS0VF",
+            "UEFMSVZFEAQiswIKEENlcnRpZmljYXRlU3RhdGUSIQodQ0VSVElGSUNBVEVf",
+            "U1RBVEVfVU5TUEVDSUZJRUQQABIVChFDRVJUSUZJQ0FURV9WQUxJRBABEhcK",
+            "E0NFUlRJRklDQVRFX0lOVkFMSUQQAhIXChNDRVJUSUZJQ0FURV9FWFBJUkVE",
+            "EAMSIgoeQ0VSVElGSUNBVEVfSE9TVE5BTUVfTk9UX0ZPVU5EEAQSHwobQ0VS",
+            "VElGSUNBVEVfVU5BVVRIRU5USUNBVEVEEAUSJQohQ0VSVElGSUNBVEVfVFJV",
+            "U1RfU1RPUkVfTk9UX0ZPVU5EEAYSJwojQ0VSVElGSUNBVEVfSE9TVE5BTUVf",
+            "SU5WQUxJRF9GT1JNQVQQBxIeChpDRVJUSUZJQ0FURV9RVU9UQV9FWENFRURF",
+            "RBAIQg4KDF91cGRhdGVfdGltZUIQCg5fZXJyb3JfZGV0YWlscyKrBwoLU2lw",
+            "SG9zdG5hbWUSGgoNcGVlcl9ob3N0bmFtZRgBIAEoCUID4EECEh0KEGVuYWJs",
+            "ZWRfc2lwX3BpbmcYAiABKAhCA+BBAxI1Cg1waW5nX2ludGVydmFsGAMgASgL",
+            "MhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgPgQQMSIAoTcGVlcl9zb2Nr",
+            "ZXRfYWRkcmVzcxgEIAEoCUID4EEDEkkKDXByb2JlX2RldGFpbHMYBSABKAsy",
+            "LS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLlByb2JlRGV0YWls",
+            "c0ID4EEDElsKEGNvbm5lY3Rpb25fc3RhdGUYBiABKA4yPC5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy52MmJldGExLlNpcEhvc3RuYW1lLkNvbm5lY3Rpb25T",
+            "dGF0ZUID4EEDEl0KDWVycm9yX2RldGFpbHMYByABKAsyQS5nb29nbGUuY2xv",
+            "dWQuZGlhbG9nZmxvdy52MmJldGExLlNpcEhvc3RuYW1lLkhvc3RuYW1lRXJy",
+            "b3JEZXRhaWxzQgPgQQMamQEKFEhvc3RuYW1lRXJyb3JEZXRhaWxzEmUKEWNl",
+            "cnRpZmljYXRlX3N0YXRlGAEgASgOMkUuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
+            "b3cudjJiZXRhMS5TaXBIb3N0bmFtZS5Ib3N0bmFtZUNlcnRpZmljYXRlU3Rh",
+            "dGVCA+BBAxIaCg1lcnJvcl9tZXNzYWdlGAIgASgJQgPgQQMifgoPQ29ubmVj",
+            "dGlvblN0YXRlEiAKHENPTk5FQ1RJT05fU1RBVEVfVU5TUEVDSUZJRUQQABIN",
+            "CglDT05ORUNURUQQARIQCgxESVNDT05ORUNURUQQAhIZChVBVVRIRU5USUNB",
+            "VElPTl9GQUlMRUQQAxINCglLRUVQQUxJVkUQBCLkAQoYSG9zdG5hbWVDZXJ0",
+            "aWZpY2F0ZVN0YXRlEioKJkhPU1ROQU1FX0NFUlRJRklDQVRFX1NUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASCQoFVkFMSUQQARILCgdJTlZBTElEEAISCwoHRVhQSVJF",
+            "RBADEhYKEkhPU1ROQU1FX05PVF9GT1VORBAEEhMKD1VOQVVUSEVOVElDQVRF",
+            "RBAFEhkKFVRSVVNUX1NUT1JFX05PVF9GT1VORBAGEhsKF0hPU1ROQU1FX0lO",
+            "VkFMSURfRk9STUFUEAcSEgoOUVVPVEFfRVhDRUVERUQQCCKxAgoMUHJvYmVE",
+            "ZXRhaWxzEjcKD29wdGlvbnNfbGF0ZW5jeRgBIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkID4EEDElQKDHByb2JlX3N0YXR1cxgCIAEoDjI5Lmdv",
+            "b2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuUHJvYmVEZXRhaWxzLlBy",
+            "b2JlU3RhdHVzQgPgQQMSMgoJaW5pdF90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLlRpbWVzdGFtcEID4EEDIl4KC1Byb2JlU3RhdHVzEhwKGFBST0JF",
+            "X1NUQVRVU19VTlNQRUNJRklFRBAAEhgKFFBST0JFX1NUQVRVU19TVUNDRVNT",
+            "EAESFwoTUFJPQkVfU1RBVFVTX0ZBSUxFRBACMtMICglTaXBUcnVua3MSzQEK",
+            "DkNyZWF0ZVNpcFRydW5rEjYuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJi",
+            "ZXRhMS5DcmVhdGVTaXBUcnVua1JlcXVlc3QaKS5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy52MmJldGExLlNpcFRydW5rIljaQRBwYXJlbnQsc2lwX3RydW5r",
+            "gtPkkwI/IjIvdjJiZXRhMS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25z",
+            "Lyp9L3NpcFRydW5rczoJc2lwX3RydW5rEqMBCg5EZWxldGVTaXBUcnVuaxI2",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuRGVsZXRlU2lwVHJ1",
+            "bmtSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkHaQQRuYW1lgtPk",
+            "kwI0KjIvdjJiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Np",
+            "cFRydW5rcy8qfRLDAQoNTGlzdFNpcFRydW5rcxI1Lmdvb2dsZS5jbG91ZC5k",
+            "aWFsb2dmbG93LnYyYmV0YTEuTGlzdFNpcFRydW5rc1JlcXVlc3QaNi5nb29n",
+            "bGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkxpc3RTaXBUcnVua3NSZXNw",
+            "b25zZSJD2kEGcGFyZW50gtPkkwI0EjIvdjJiZXRhMS97cGFyZW50PXByb2pl",
+            "Y3RzLyovbG9jYXRpb25zLyp9L3NpcFRydW5rcxKwAQoLR2V0U2lwVHJ1bmsS",
+            "My5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MmJldGExLkdldFNpcFRydW5r",
+            "UmVxdWVzdBopLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuU2lw",
+            "VHJ1bmsiQdpBBG5hbWWC0+STAjQSMi92MmJldGExL3tuYW1lPXByb2plY3Rz",
+            "LyovbG9jYXRpb25zLyovc2lwVHJ1bmtzLyp9EtwBCg5VcGRhdGVTaXBUcnVu",
+            "axI2Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyYmV0YTEuVXBkYXRlU2lw",
+            "VHJ1bmtSZXF1ZXN0GikuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjJiZXRh",
+            "MS5TaXBUcnVuayJn2kEVc2lwX3RydW5rLHVwZGF0ZV9tYXNrgtPkkwJJMjwv",
+            "djJiZXRhMS97c2lwX3RydW5rLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMv",
+            "Ki9zaXBUcnVua3MvKn06CXNpcF90cnVuaxp4ykEZZGlhbG9nZmxvdy5nb29n",
+            "bGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgv",
+            "Y2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9kaWFsb2dmbG93QqIBCiNjb20uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djJiZXRhMUINU2lwVHJ1bmtQcm90b1ABWkNjbG91ZC5nb29nbGUuY29tL2dv",
+            "L2RpYWxvZ2Zsb3cvYXBpdjJiZXRhMS9kaWFsb2dmbG93cGI7ZGlhbG9nZmxv",
+            "d3BiogICREaqAh9Hb29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMkJldGExYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.CreateSipTrunkRequest), global::Google.Cloud.Dialogflow.V2Beta1.CreateSipTrunkRequest.Parser, new[]{ "Parent", "SipTrunk" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.DeleteSipTrunkRequest), global::Google.Cloud.Dialogflow.V2Beta1.DeleteSipTrunkRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -111,8 +145,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksResponse), global::Google.Cloud.Dialogflow.V2Beta1.ListSipTrunksResponse.Parser, new[]{ "SipTrunks", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.GetSipTrunkRequest), global::Google.Cloud.Dialogflow.V2Beta1.GetSipTrunkRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.UpdateSipTrunkRequest), global::Google.Cloud.Dialogflow.V2Beta1.UpdateSipTrunkRequest.Parser, new[]{ "SipTrunk", "UpdateMask" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk), global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Parser, new[]{ "Name", "ExpectedHostname", "Connections", "DisplayName" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.Connection), global::Google.Cloud.Dialogflow.V2Beta1.Connection.Parser, new[]{ "ConnectionId", "State", "UpdateTime", "ErrorDetails" }, new[]{ "UpdateTime", "ErrorDetails" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.Connection.Types.State), typeof(global::Google.Cloud.Dialogflow.V2Beta1.Connection.Types.CertificateState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.Connection.Types.ErrorDetails), global::Google.Cloud.Dialogflow.V2Beta1.Connection.Types.ErrorDetails.Parser, new[]{ "CertificateState", "ErrorMessage" }, new[]{ "CertificateState", "ErrorMessage" }, null, null, null)})
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk), global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Parser, new[]{ "Name", "ExpectedHostname", "Connections", "DisplayName", "PeerHostnames", "GoogleRootCertFile" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.Connection), global::Google.Cloud.Dialogflow.V2Beta1.Connection.Parser, new[]{ "ConnectionId", "State", "UpdateTime", "ErrorDetails" }, new[]{ "UpdateTime", "ErrorDetails" }, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.Connection.Types.State), typeof(global::Google.Cloud.Dialogflow.V2Beta1.Connection.Types.CertificateState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.Connection.Types.ErrorDetails), global::Google.Cloud.Dialogflow.V2Beta1.Connection.Types.ErrorDetails.Parser, new[]{ "CertificateState", "ErrorMessage" }, new[]{ "CertificateState", "ErrorMessage" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SipHostname), global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Parser, new[]{ "PeerHostname", "EnabledSipPing", "PingInterval", "PeerSocketAddress", "ProbeDetails", "ConnectionState", "ErrorDetails" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState), typeof(global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameErrorDetails), global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameErrorDetails.Parser, new[]{ "CertificateState", "ErrorMessage" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails), global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Parser, new[]{ "OptionsLatency", "ProbeStatus", "InitTime" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus) }, null, null)
           }));
     }
     #endregion
@@ -1617,6 +1653,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       expectedHostname_ = other.expectedHostname_.Clone();
       connections_ = other.connections_.Clone();
       displayName_ = other.displayName_;
+      peerHostnames_ = other.peerHostnames_.Clone();
+      googleRootCertFile_ = other.googleRootCertFile_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1687,6 +1725,35 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       }
     }
 
+    /// <summary>Field number for the "peer_hostnames" field.</summary>
+    public const int PeerHostnamesFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Dialogflow.V2Beta1.SipHostname> _repeated_peerHostnames_codec
+        = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SipHostname> peerHostnames_ = new pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SipHostname>();
+    /// <summary>
+    /// Required. Peer hostnames of the SIP trunk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2Beta1.SipHostname> PeerHostnames {
+      get { return peerHostnames_; }
+    }
+
+    /// <summary>Field number for the "google_root_cert_file" field.</summary>
+    public const int GoogleRootCertFileFieldNumber = 9;
+    private global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile googleRootCertFile_ = global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile.CertFileUnspecified;
+    /// <summary>
+    /// Optional. The root certificate file to use for this SIP trunk.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile GoogleRootCertFile {
+      get { return googleRootCertFile_; }
+      set {
+        googleRootCertFile_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1706,6 +1773,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       if(!expectedHostname_.Equals(other.expectedHostname_)) return false;
       if(!connections_.Equals(other.connections_)) return false;
       if (DisplayName != other.DisplayName) return false;
+      if(!peerHostnames_.Equals(other.peerHostnames_)) return false;
+      if (GoogleRootCertFile != other.GoogleRootCertFile) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1717,6 +1786,8 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       hash ^= expectedHostname_.GetHashCode();
       hash ^= connections_.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      hash ^= peerHostnames_.GetHashCode();
+      if (GoogleRootCertFile != global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile.CertFileUnspecified) hash ^= GoogleRootCertFile.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1745,6 +1816,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
+      peerHostnames_.WriteTo(output, _repeated_peerHostnames_codec);
+      if (GoogleRootCertFile != global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile.CertFileUnspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) GoogleRootCertFile);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1765,6 +1841,11 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         output.WriteRawTag(34);
         output.WriteString(DisplayName);
       }
+      peerHostnames_.WriteTo(ref output, _repeated_peerHostnames_codec);
+      if (GoogleRootCertFile != global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile.CertFileUnspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) GoogleRootCertFile);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1782,6 +1863,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       size += connections_.CalculateSize(_repeated_connections_codec);
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      size += peerHostnames_.CalculateSize(_repeated_peerHostnames_codec);
+      if (GoogleRootCertFile != global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile.CertFileUnspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) GoogleRootCertFile);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1802,6 +1887,10 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
       connections_.Add(other.connections_);
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
+      }
+      peerHostnames_.Add(other.peerHostnames_);
+      if (other.GoogleRootCertFile != global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile.CertFileUnspecified) {
+        GoogleRootCertFile = other.GoogleRootCertFile;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1836,6 +1925,14 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
           }
           case 34: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 66: {
+            peerHostnames_.AddEntriesFrom(input, _repeated_peerHostnames_codec);
+            break;
+          }
+          case 72: {
+            GoogleRootCertFile = (global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile) input.ReadEnum();
             break;
           }
         }
@@ -1873,10 +1970,40 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 66: {
+            peerHostnames_.AddEntriesFrom(ref input, _repeated_peerHostnames_codec);
+            break;
+          }
+          case 72: {
+            GoogleRootCertFile = (global::Google.Cloud.Dialogflow.V2Beta1.SipTrunk.Types.GoogleRootCertFile) input.ReadEnum();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SipTrunk message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The type of Google root certificate file used for mTLS.
+      /// </summary>
+      public enum GoogleRootCertFile {
+        /// <summary>
+        /// Unspecified root certificate file.
+        /// </summary>
+        [pbr::OriginalName("CERT_FILE_UNSPECIFIED")] CertFileUnspecified = 0,
+        /// <summary>
+        /// Use external private CA.
+        /// </summary>
+        [pbr::OriginalName("EXTERNAL_PRIVATE_CA")] ExternalPrivateCa = 5,
+      }
+
+    }
+    #endregion
 
   }
 
@@ -2567,6 +2694,1126 @@ namespace Google.Cloud.Dialogflow.V2Beta1 {
         }
         #endif
 
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// Represents a peer hostname for SIP Trunk.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class SipHostname : pb::IMessage<SipHostname>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<SipHostname> _parser = new pb::MessageParser<SipHostname>(() => new SipHostname());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<SipHostname> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2Beta1.SipTrunkReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipHostname() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipHostname(SipHostname other) : this() {
+      peerHostname_ = other.peerHostname_;
+      enabledSipPing_ = other.enabledSipPing_;
+      pingInterval_ = other.pingInterval_ != null ? other.pingInterval_.Clone() : null;
+      peerSocketAddress_ = other.peerSocketAddress_;
+      probeDetails_ = other.probeDetails_ != null ? other.probeDetails_.Clone() : null;
+      connectionState_ = other.connectionState_;
+      errorDetails_ = other.errorDetails_ != null ? other.errorDetails_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public SipHostname Clone() {
+      return new SipHostname(this);
+    }
+
+    /// <summary>Field number for the "peer_hostname" field.</summary>
+    public const int PeerHostnameFieldNumber = 1;
+    private string peerHostname_ = "";
+    /// <summary>
+    /// Required. Peer hostname name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerHostname {
+      get { return peerHostname_; }
+      set {
+        peerHostname_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enabled_sip_ping" field.</summary>
+    public const int EnabledSipPingFieldNumber = 2;
+    private bool enabledSipPing_;
+    /// <summary>
+    /// Output only. Peer hostname enabled for SIP ping.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnabledSipPing {
+      get { return enabledSipPing_; }
+      set {
+        enabledSipPing_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "ping_interval" field.</summary>
+    public const int PingIntervalFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Duration pingInterval_;
+    /// <summary>
+    /// Output only. How often the sip ping should occur.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration PingInterval {
+      get { return pingInterval_; }
+      set {
+        pingInterval_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "peer_socket_address" field.</summary>
+    public const int PeerSocketAddressFieldNumber = 4;
+    private string peerSocketAddress_ = "";
+    /// <summary>
+    /// Output only. The peer_socket address of the partner SBC pinged.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PeerSocketAddress {
+      get { return peerSocketAddress_; }
+      set {
+        peerSocketAddress_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "probe_details" field.</summary>
+    public const int ProbeDetailsFieldNumber = 5;
+    private global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails probeDetails_;
+    /// <summary>
+    /// Output only. The details from the options probe.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails ProbeDetails {
+      get { return probeDetails_; }
+      set {
+        probeDetails_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "connection_state" field.</summary>
+    public const int ConnectionStateFieldNumber = 6;
+    private global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState connectionState_ = global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState.Unspecified;
+    /// <summary>
+    /// Output only. State of the connection.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState ConnectionState {
+      get { return connectionState_; }
+      set {
+        connectionState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "error_details" field.</summary>
+    public const int ErrorDetailsFieldNumber = 7;
+    private global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameErrorDetails errorDetails_;
+    /// <summary>
+    /// Output only. The error details for the connection. Only populated when
+    /// authentication errors occur.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameErrorDetails ErrorDetails {
+      get { return errorDetails_; }
+      set {
+        errorDetails_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as SipHostname);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(SipHostname other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PeerHostname != other.PeerHostname) return false;
+      if (EnabledSipPing != other.EnabledSipPing) return false;
+      if (!object.Equals(PingInterval, other.PingInterval)) return false;
+      if (PeerSocketAddress != other.PeerSocketAddress) return false;
+      if (!object.Equals(ProbeDetails, other.ProbeDetails)) return false;
+      if (ConnectionState != other.ConnectionState) return false;
+      if (!object.Equals(ErrorDetails, other.ErrorDetails)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PeerHostname.Length != 0) hash ^= PeerHostname.GetHashCode();
+      if (EnabledSipPing != false) hash ^= EnabledSipPing.GetHashCode();
+      if (pingInterval_ != null) hash ^= PingInterval.GetHashCode();
+      if (PeerSocketAddress.Length != 0) hash ^= PeerSocketAddress.GetHashCode();
+      if (probeDetails_ != null) hash ^= ProbeDetails.GetHashCode();
+      if (ConnectionState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState.Unspecified) hash ^= ConnectionState.GetHashCode();
+      if (errorDetails_ != null) hash ^= ErrorDetails.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PeerHostname.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PeerHostname);
+      }
+      if (EnabledSipPing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnabledSipPing);
+      }
+      if (pingInterval_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PingInterval);
+      }
+      if (PeerSocketAddress.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PeerSocketAddress);
+      }
+      if (probeDetails_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ProbeDetails);
+      }
+      if (ConnectionState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) ConnectionState);
+      }
+      if (errorDetails_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ErrorDetails);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PeerHostname.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PeerHostname);
+      }
+      if (EnabledSipPing != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnabledSipPing);
+      }
+      if (pingInterval_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(PingInterval);
+      }
+      if (PeerSocketAddress.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(PeerSocketAddress);
+      }
+      if (probeDetails_ != null) {
+        output.WriteRawTag(42);
+        output.WriteMessage(ProbeDetails);
+      }
+      if (ConnectionState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState.Unspecified) {
+        output.WriteRawTag(48);
+        output.WriteEnum((int) ConnectionState);
+      }
+      if (errorDetails_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ErrorDetails);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (PeerHostname.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerHostname);
+      }
+      if (EnabledSipPing != false) {
+        size += 1 + 1;
+      }
+      if (pingInterval_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PingInterval);
+      }
+      if (PeerSocketAddress.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PeerSocketAddress);
+      }
+      if (probeDetails_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ProbeDetails);
+      }
+      if (ConnectionState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ConnectionState);
+      }
+      if (errorDetails_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ErrorDetails);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(SipHostname other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PeerHostname.Length != 0) {
+        PeerHostname = other.PeerHostname;
+      }
+      if (other.EnabledSipPing != false) {
+        EnabledSipPing = other.EnabledSipPing;
+      }
+      if (other.pingInterval_ != null) {
+        if (pingInterval_ == null) {
+          PingInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        PingInterval.MergeFrom(other.PingInterval);
+      }
+      if (other.PeerSocketAddress.Length != 0) {
+        PeerSocketAddress = other.PeerSocketAddress;
+      }
+      if (other.probeDetails_ != null) {
+        if (probeDetails_ == null) {
+          ProbeDetails = new global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails();
+        }
+        ProbeDetails.MergeFrom(other.ProbeDetails);
+      }
+      if (other.ConnectionState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState.Unspecified) {
+        ConnectionState = other.ConnectionState;
+      }
+      if (other.errorDetails_ != null) {
+        if (errorDetails_ == null) {
+          ErrorDetails = new global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameErrorDetails();
+        }
+        ErrorDetails.MergeFrom(other.ErrorDetails);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PeerHostname = input.ReadString();
+            break;
+          }
+          case 16: {
+            EnabledSipPing = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (pingInterval_ == null) {
+              PingInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(PingInterval);
+            break;
+          }
+          case 34: {
+            PeerSocketAddress = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (probeDetails_ == null) {
+              ProbeDetails = new global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails();
+            }
+            input.ReadMessage(ProbeDetails);
+            break;
+          }
+          case 48: {
+            ConnectionState = (global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (errorDetails_ == null) {
+              ErrorDetails = new global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameErrorDetails();
+            }
+            input.ReadMessage(ErrorDetails);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PeerHostname = input.ReadString();
+            break;
+          }
+          case 16: {
+            EnabledSipPing = input.ReadBool();
+            break;
+          }
+          case 26: {
+            if (pingInterval_ == null) {
+              PingInterval = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(PingInterval);
+            break;
+          }
+          case 34: {
+            PeerSocketAddress = input.ReadString();
+            break;
+          }
+          case 42: {
+            if (probeDetails_ == null) {
+              ProbeDetails = new global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails();
+            }
+            input.ReadMessage(ProbeDetails);
+            break;
+          }
+          case 48: {
+            ConnectionState = (global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.ConnectionState) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (errorDetails_ == null) {
+              ErrorDetails = new global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameErrorDetails();
+            }
+            input.ReadMessage(ErrorDetails);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the SipHostname message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The state of SBC hostname connection.
+      /// </summary>
+      public enum ConnectionState {
+        /// <summary>
+        /// SBC hostname connection state is Not specified.
+        /// </summary>
+        [pbr::OriginalName("CONNECTION_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// SBC hostname connection is connected.
+        /// </summary>
+        [pbr::OriginalName("CONNECTED")] Connected = 1,
+        /// <summary>
+        /// SBC hostname connection is disconnected.
+        /// </summary>
+        [pbr::OriginalName("DISCONNECTED")] Disconnected = 2,
+        /// <summary>
+        /// SBC hostname connection has authentication error.
+        /// </summary>
+        [pbr::OriginalName("AUTHENTICATION_FAILED")] AuthenticationFailed = 3,
+        /// <summary>
+        /// SBC hostname connection is keepalive.
+        /// </summary>
+        [pbr::OriginalName("KEEPALIVE")] Keepalive = 4,
+      }
+
+      /// <summary>
+      /// The state of Sip Trunk certificate authentication.
+      /// </summary>
+      public enum HostnameCertificateState {
+        /// <summary>
+        /// Certificate state is not specified.
+        /// </summary>
+        [pbr::OriginalName("HOSTNAME_CERTIFICATE_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Certificate is valid.
+        /// </summary>
+        [pbr::OriginalName("VALID")] Valid = 1,
+        /// <summary>
+        /// Catch all for any error not specified.
+        /// </summary>
+        [pbr::OriginalName("INVALID")] Invalid = 2,
+        /// <summary>
+        /// Certificate leaf node has expired.
+        /// </summary>
+        [pbr::OriginalName("EXPIRED")] Expired = 3,
+        /// <summary>
+        /// There is no hostname defined to authenticate in SipTrunkingServer.
+        /// </summary>
+        [pbr::OriginalName("HOSTNAME_NOT_FOUND")] HostnameNotFound = 4,
+        /// <summary>
+        /// No path found from the leaf certificate to any root.
+        /// </summary>
+        [pbr::OriginalName("UNAUTHENTICATED")] Unauthenticated = 5,
+        /// <summary>
+        /// Trust store does not exist.
+        /// </summary>
+        [pbr::OriginalName("TRUST_STORE_NOT_FOUND")] TrustStoreNotFound = 6,
+        /// <summary>
+        /// Hostname has invalid format.
+        /// </summary>
+        [pbr::OriginalName("HOSTNAME_INVALID_FORMAT")] HostnameInvalidFormat = 7,
+        /// <summary>
+        /// Certificate has exhausted its quota.
+        /// </summary>
+        [pbr::OriginalName("QUOTA_EXCEEDED")] QuotaExceeded = 8,
+      }
+
+      /// <summary>
+      /// The error details of Sip Trunk hostnameconnection authentication.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class HostnameErrorDetails : pb::IMessage<HostnameErrorDetails>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<HostnameErrorDetails> _parser = new pb::MessageParser<HostnameErrorDetails>(() => new HostnameErrorDetails());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<HostnameErrorDetails> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HostnameErrorDetails() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HostnameErrorDetails(HostnameErrorDetails other) : this() {
+          certificateState_ = other.certificateState_;
+          errorMessage_ = other.errorMessage_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public HostnameErrorDetails Clone() {
+          return new HostnameErrorDetails(this);
+        }
+
+        /// <summary>Field number for the "certificate_state" field.</summary>
+        public const int CertificateStateFieldNumber = 1;
+        private global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState certificateState_ = global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState.Unspecified;
+        /// <summary>
+        /// Output only. The status of the certificate authentication.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState CertificateState {
+          get { return certificateState_; }
+          set {
+            certificateState_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "error_message" field.</summary>
+        public const int ErrorMessageFieldNumber = 2;
+        private string errorMessage_ = "";
+        /// <summary>
+        /// Output only. The error message provided from SIP trunking auth service
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string ErrorMessage {
+          get { return errorMessage_; }
+          set {
+            errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as HostnameErrorDetails);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(HostnameErrorDetails other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (CertificateState != other.CertificateState) return false;
+          if (ErrorMessage != other.ErrorMessage) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (CertificateState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState.Unspecified) hash ^= CertificateState.GetHashCode();
+          if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (CertificateState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) CertificateState);
+          }
+          if (ErrorMessage.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ErrorMessage);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (CertificateState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) CertificateState);
+          }
+          if (ErrorMessage.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(ErrorMessage);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (CertificateState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CertificateState);
+          }
+          if (ErrorMessage.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(HostnameErrorDetails other) {
+          if (other == null) {
+            return;
+          }
+          if (other.CertificateState != global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState.Unspecified) {
+            CertificateState = other.CertificateState;
+          }
+          if (other.ErrorMessage.Length != 0) {
+            ErrorMessage = other.ErrorMessage;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                CertificateState = (global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                ErrorMessage = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                CertificateState = (global::Google.Cloud.Dialogflow.V2Beta1.SipHostname.Types.HostnameCertificateState) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                ErrorMessage = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+    }
+    #endregion
+
+  }
+
+  /// <summary>
+  /// The probe details of Sip Trunk peer hostname.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProbeDetails : pb::IMessage<ProbeDetails>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProbeDetails> _parser = new pb::MessageParser<ProbeDetails>(() => new ProbeDetails());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProbeDetails> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Dialogflow.V2Beta1.SipTrunkReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProbeDetails() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProbeDetails(ProbeDetails other) : this() {
+      optionsLatency_ = other.optionsLatency_ != null ? other.optionsLatency_.Clone() : null;
+      probeStatus_ = other.probeStatus_;
+      initTime_ = other.initTime_ != null ? other.initTime_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProbeDetails Clone() {
+      return new ProbeDetails(this);
+    }
+
+    /// <summary>Field number for the "options_latency" field.</summary>
+    public const int OptionsLatencyFieldNumber = 1;
+    private global::Google.Protobuf.WellKnownTypes.Duration optionsLatency_;
+    /// <summary>
+    /// Output only. Duration between OPTIONS send and OPTIONS 200 received.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration OptionsLatency {
+      get { return optionsLatency_; }
+      set {
+        optionsLatency_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "probe_status" field.</summary>
+    public const int ProbeStatusFieldNumber = 2;
+    private global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus probeStatus_ = global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus.Unspecified;
+    /// <summary>
+    /// Output only. Result of the probe.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus ProbeStatus {
+      get { return probeStatus_; }
+      set {
+        probeStatus_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "init_time" field.</summary>
+    public const int InitTimeFieldNumber = 3;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp initTime_;
+    /// <summary>
+    /// Output only. When the options probe was started.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp InitTime {
+      get { return initTime_; }
+      set {
+        initTime_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProbeDetails);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProbeDetails other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(OptionsLatency, other.OptionsLatency)) return false;
+      if (ProbeStatus != other.ProbeStatus) return false;
+      if (!object.Equals(InitTime, other.InitTime)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (optionsLatency_ != null) hash ^= OptionsLatency.GetHashCode();
+      if (ProbeStatus != global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus.Unspecified) hash ^= ProbeStatus.GetHashCode();
+      if (initTime_ != null) hash ^= InitTime.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (optionsLatency_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OptionsLatency);
+      }
+      if (ProbeStatus != global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ProbeStatus);
+      }
+      if (initTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InitTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (optionsLatency_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(OptionsLatency);
+      }
+      if (ProbeStatus != global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) ProbeStatus);
+      }
+      if (initTime_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(InitTime);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (optionsLatency_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(OptionsLatency);
+      }
+      if (ProbeStatus != global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProbeStatus);
+      }
+      if (initTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(InitTime);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProbeDetails other) {
+      if (other == null) {
+        return;
+      }
+      if (other.optionsLatency_ != null) {
+        if (optionsLatency_ == null) {
+          OptionsLatency = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        OptionsLatency.MergeFrom(other.OptionsLatency);
+      }
+      if (other.ProbeStatus != global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus.Unspecified) {
+        ProbeStatus = other.ProbeStatus;
+      }
+      if (other.initTime_ != null) {
+        if (initTime_ == null) {
+          InitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        InitTime.MergeFrom(other.InitTime);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (optionsLatency_ == null) {
+              OptionsLatency = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(OptionsLatency);
+            break;
+          }
+          case 16: {
+            ProbeStatus = (global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (initTime_ == null) {
+              InitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InitTime);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (optionsLatency_ == null) {
+              OptionsLatency = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(OptionsLatency);
+            break;
+          }
+          case 16: {
+            ProbeStatus = (global::Google.Cloud.Dialogflow.V2Beta1.ProbeDetails.Types.ProbeStatus) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            if (initTime_ == null) {
+              InitTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(InitTime);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ProbeDetails message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The status of InitiateSipOptionsPing to peer hostname.
+      /// </summary>
+      public enum ProbeStatus {
+        /// <summary>
+        /// Peer hostname ping state is not specified.
+        /// </summary>
+        [pbr::OriginalName("PROBE_STATUS_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Peer hostname ping succeeded.
+        /// </summary>
+        [pbr::OriginalName("PROBE_STATUS_SUCCESS")] Success = 1,
+        /// <summary>
+        /// Peer hostname ping failed.
+        /// </summary>
+        [pbr::OriginalName("PROBE_STATUS_FAILED")] Failed = 2,
       }
 
     }
