@@ -29,203 +29,371 @@ namespace Google.Shopping.Merchant.Products.V1 {
             "ZHVjdHMudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aH2dv",
             "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aIGdvb2dsZS9zaG9wcGlu",
             "Zy90eXBlL3R5cGVzLnByb3RvGhpnb29nbGUvdHlwZS9pbnRlcnZhbC5wcm90",
-            "byKMRQoRUHJvZHVjdEF0dHJpYnV0ZXMSHgoRaWRlbnRpZmllcl9leGlzdHMY",
-            "BCABKAhIAIgBARIWCglpc19idW5kbGUYBSABKAhIAYgBARISCgV0aXRsZRgG",
-            "IAEoCUgCiAEBEhgKC2Rlc2NyaXB0aW9uGAcgASgJSAOIAQESEQoEbGluaxgI",
-            "IAEoCUgEiAEBEhgKC21vYmlsZV9saW5rGAkgASgJSAWIAQESGwoOY2Fub25p",
-            "Y2FsX2xpbmsYCiABKAlIBogBARIXCgppbWFnZV9saW5rGAsgASgJSAeIAQES",
-            "HgoWYWRkaXRpb25hbF9pbWFnZV9saW5rcxgMIAMoCRIzCg9leHBpcmF0aW9u",
-            "X2RhdGUYECABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEjMKD2Rp",
-            "c2Nsb3N1cmVfZGF0ZRhPIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASEgoFYWR1bHQYESABKAhICIgBARJGCglhZ2VfZ3JvdXAYEiABKA4yLi5n",
-            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuQWdlR3JvdXBI",
-            "CYgBARJNCgxhdmFpbGFiaWxpdHkYEyABKA4yMi5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQucHJvZHVjdHMudjEuQXZhaWxhYmlsaXR5SAqIAQESNQoRYXZh",
-            "aWxhYmlsaXR5X2RhdGUYFCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
-            "YW1wEhIKBWJyYW5kGBUgASgJSAuIAQESEgoFY29sb3IYFiABKAlIDIgBARJH",
-            "Cgljb25kaXRpb24YFyABKA4yLy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "cHJvZHVjdHMudjEuQ29uZGl0aW9uSA2IAQESQQoGZ2VuZGVyGBggASgOMiwu",
-            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkdlbmRlckgO",
-            "iAEBEiQKF2dvb2dsZV9wcm9kdWN0X2NhdGVnb3J5GBkgASgJSA+IAQESDgoF",
-            "Z3RpbnMYjAEgAygJEhoKDWl0ZW1fZ3JvdXBfaWQYGyABKAlIEIgBARIVCght",
-            "YXRlcmlhbBgcIAEoCUgRiAEBEhAKA21wbhgdIAEoCUgSiAEBEhQKB3BhdHRl",
-            "cm4YHiABKAlIE4gBARIqCgVwcmljZRgfIAEoCzIbLmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlLlByaWNlEjoKFG1heGltdW1fcmV0YWlsX3ByaWNlGIsBIAEoCzIb",
-            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEk0KC2luc3RhbGxtZW50GCAg",
-            "ASgLMjguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlBy",
-            "b2R1Y3RJbnN0YWxsbWVudBJRChFzdWJzY3JpcHRpb25fY29zdBghIAEoCzI2",
-            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TdWJzY3Jp",
-            "cHRpb25Db3N0EksKDmxveWFsdHlfcG9pbnRzGCIgASgLMjMuZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkxveWFsdHlQb2ludHMSTwoQ",
-            "bG95YWx0eV9wcm9ncmFtcxiIASADKAsyNC5nb29nbGUuc2hvcHBpbmcubWVy",
-            "Y2hhbnQucHJvZHVjdHMudjEuTG95YWx0eVByb2dyYW0SFQoNcHJvZHVjdF90",
-            "eXBlcxgjIAMoCRIvCgpzYWxlX3ByaWNlGCQgASgLMhsuZ29vZ2xlLnNob3Bw",
-            "aW5nLnR5cGUuUHJpY2USOAoZc2FsZV9wcmljZV9lZmZlY3RpdmVfZGF0ZRgl",
-            "IAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFsEiQKF3NlbGxfb25fZ29vZ2xl",
-            "X3F1YW50aXR5GCYgASgDSBSIAQESTgoOcHJvZHVjdF9oZWlnaHQYdyABKAsy",
-            "Ni5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVj",
-            "dERpbWVuc2lvbhJOCg5wcm9kdWN0X2xlbmd0aBh4IAEoCzI2Lmdvb2dsZS5z",
-            "aG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0RGltZW5zaW9u",
-            "Ek0KDXByb2R1Y3Rfd2lkdGgYeSABKAsyNi5nb29nbGUuc2hvcHBpbmcubWVy",
-            "Y2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdERpbWVuc2lvbhJLCg5wcm9kdWN0",
-            "X3dlaWdodBh6IAEoCzIzLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9k",
-            "dWN0cy52MS5Qcm9kdWN0V2VpZ2h0EkAKCHNoaXBwaW5nGCcgAygLMi4uZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlNoaXBwaW5nEmIK",
-            "EGNhcnJpZXJfc2hpcHBpbmcYjgEgAygLMkcuZ29vZ2xlLnNob3BwaW5nLm1l",
-            "cmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1dGVzLkNhcnJpZXJT",
-            "aGlwcGluZxJdChdmcmVlX3NoaXBwaW5nX3RocmVzaG9sZBiHASADKAsyOy5n",
-            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuRnJlZVNoaXBw",
-            "aW5nVGhyZXNob2xkEk0KD3NoaXBwaW5nX3dlaWdodBgoIAEoCzI0Lmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TaGlwcGluZ1dlaWdo",
-            "dBJQCg9zaGlwcGluZ19sZW5ndGgYKSABKAsyNy5nb29nbGUuc2hvcHBpbmcu",
-            "bWVyY2hhbnQucHJvZHVjdHMudjEuU2hpcHBpbmdEaW1lbnNpb24STwoOc2hp",
-            "cHBpbmdfd2lkdGgYKiABKAsyNy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "cHJvZHVjdHMudjEuU2hpcHBpbmdEaW1lbnNpb24SUAoPc2hpcHBpbmdfaGVp",
-            "Z2h0GCsgASgLMjcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3Rz",
-            "LnYxLlNoaXBwaW5nRGltZW5zaW9uEh4KEW1heF9oYW5kbGluZ190aW1lGCwg",
-            "ASgDSBWIAQESHgoRbWluX2hhbmRsaW5nX3RpbWUYLSABKANIFogBARJ8Ch9z",
-            "aGlwcGluZ19oYW5kbGluZ19idXNpbmVzc19kYXlzGI8BIAMoCzJSLmdvb2ds",
+            "byKTgAEKEVByb2R1Y3RBdHRyaWJ1dGVzEh4KEWlkZW50aWZpZXJfZXhpc3Rz",
+            "GAQgASgISACIAQESFgoJaXNfYnVuZGxlGAUgASgISAGIAQESEgoFdGl0bGUY",
+            "BiABKAlIAogBARIYCgtkZXNjcmlwdGlvbhgHIAEoCUgDiAEBEhEKBGxpbmsY",
+            "CCABKAlIBIgBARIYCgttb2JpbGVfbGluaxgJIAEoCUgFiAEBEhsKDmNhbm9u",
+            "aWNhbF9saW5rGAogASgJSAaIAQESFwoKaW1hZ2VfbGluaxgLIAEoCUgHiAEB",
+            "Eh4KFmFkZGl0aW9uYWxfaW1hZ2VfbGlua3MYDCADKAkSMwoPZXhwaXJhdGlv",
+            "bl9kYXRlGBAgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIzCg9k",
+            "aXNjbG9zdXJlX2RhdGUYTyABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0",
+            "YW1wEhIKBWFkdWx0GBEgASgISAiIAQESRgoJYWdlX2dyb3VwGBIgASgOMi4u",
+            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkFnZUdyb3Vw",
+            "SAmIAQESTQoMYXZhaWxhYmlsaXR5GBMgASgOMjIuZ29vZ2xlLnNob3BwaW5n",
+            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLkF2YWlsYWJpbGl0eUgKiAEBEjUKEWF2",
+            "YWlsYWJpbGl0eV9kYXRlGBQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBISCgVicmFuZBgVIAEoCUgLiAEBEhIKBWNvbG9yGBYgASgJSAyIAQES",
+            "RwoJY29uZGl0aW9uGBcgASgOMi8uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LnByb2R1Y3RzLnYxLkNvbmRpdGlvbkgNiAEBEkEKBmdlbmRlchgYIAEoDjIs",
+            "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5HZW5kZXJI",
+            "DogBARIkChdnb29nbGVfcHJvZHVjdF9jYXRlZ29yeRgZIAEoCUgPiAEBEg4K",
+            "BWd0aW5zGIwBIAMoCRIaCg1pdGVtX2dyb3VwX2lkGBsgASgJSBCIAQESFQoI",
+            "bWF0ZXJpYWwYHCABKAlIEYgBARIQCgNtcG4YHSABKAlIEogBARIUCgdwYXR0",
+            "ZXJuGB4gASgJSBOIAQESKgoFcHJpY2UYHyABKAsyGy5nb29nbGUuc2hvcHBp",
+            "bmcudHlwZS5QcmljZRI6ChRtYXhpbXVtX3JldGFpbF9wcmljZRiLASABKAsy",
+            "Gy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRJNCgtpbnN0YWxsbWVudBgg",
+            "IAEoCzI4Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Q",
+            "cm9kdWN0SW5zdGFsbG1lbnQSUQoRc3Vic2NyaXB0aW9uX2Nvc3QYISABKAsy",
+            "Ni5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuU3Vic2Ny",
+            "aXB0aW9uQ29zdBJLCg5sb3lhbHR5X3BvaW50cxgiIAEoCzIzLmdvb2dsZS5z",
+            "aG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Mb3lhbHR5UG9pbnRzEk8K",
+            "EGxveWFsdHlfcHJvZ3JhbXMYiAEgAygLMjQuZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LnByb2R1Y3RzLnYxLkxveWFsdHlQcm9ncmFtEhUKDXByb2R1Y3Rf",
+            "dHlwZXMYIyADKAkSLwoKc2FsZV9wcmljZRgkIAEoCzIbLmdvb2dsZS5zaG9w",
+            "cGluZy50eXBlLlByaWNlEjgKGXNhbGVfcHJpY2VfZWZmZWN0aXZlX2RhdGUY",
+            "JSABKAsyFS5nb29nbGUudHlwZS5JbnRlcnZhbBIkChdzZWxsX29uX2dvb2ds",
+            "ZV9xdWFudGl0eRgmIAEoA0gUiAEBEk4KDnByb2R1Y3RfaGVpZ2h0GHcgASgL",
+            "MjYuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1",
+            "Y3REaW1lbnNpb24STgoOcHJvZHVjdF9sZW5ndGgYeCABKAsyNi5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdERpbWVuc2lv",
+            "bhJNCg1wcm9kdWN0X3dpZHRoGHkgASgLMjYuZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3REaW1lbnNpb24SSwoOcHJvZHVj",
+            "dF93ZWlnaHQYeiABKAsyMy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJv",
+            "ZHVjdHMudjEuUHJvZHVjdFdlaWdodBJACghzaGlwcGluZxgnIAMoCzIuLmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TaGlwcGluZxJi",
+            "ChBjYXJyaWVyX3NoaXBwaW5nGI4BIAMoCzJHLmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmlidXRlcy5DYXJyaWVy",
+            "U2hpcHBpbmcSXQoXZnJlZV9zaGlwcGluZ190aHJlc2hvbGQYhwEgAygLMjsu",
+            "Z29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkZyZWVTaGlw",
+            "cGluZ1RocmVzaG9sZBJNCg9zaGlwcGluZ193ZWlnaHQYKCABKAsyNC5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuU2hpcHBpbmdXZWln",
+            "aHQSUAoPc2hpcHBpbmdfbGVuZ3RoGCkgASgLMjcuZ29vZ2xlLnNob3BwaW5n",
+            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLlNoaXBwaW5nRGltZW5zaW9uEk8KDnNo",
+            "aXBwaW5nX3dpZHRoGCogASgLMjcuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LnByb2R1Y3RzLnYxLlNoaXBwaW5nRGltZW5zaW9uElAKD3NoaXBwaW5nX2hl",
+            "aWdodBgrIAEoCzI3Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0",
+            "cy52MS5TaGlwcGluZ0RpbWVuc2lvbhIeChFtYXhfaGFuZGxpbmdfdGltZRgs",
+            "IAEoA0gViAEBEh4KEW1pbl9oYW5kbGluZ190aW1lGC0gASgDSBaIAQESfAof",
+            "c2hpcHBpbmdfaGFuZGxpbmdfYnVzaW5lc3NfZGF5cxiPASADKAsyUi5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJp",
+            "YnV0ZXMuU2hpcHBpbmdCdXNpbmVzc0RheXNDb25maWcSewoec2hpcHBpbmdf",
+            "dHJhbnNpdF9idXNpbmVzc19kYXlzGJABIAMoCzJSLmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmlidXRlcy5TaGlw",
+            "cGluZ0J1c2luZXNzRGF5c0NvbmZpZxJYChVoYW5kbGluZ19jdXRvZmZfdGlt",
+            "ZXMYjQEgAygLMjguZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3Rz",
+            "LnYxLkhhbmRsaW5nQ3V0b2ZmVGltZRIbCg5zaGlwcGluZ19sYWJlbBguIAEo",
+            "CUgXiAEBEiEKE3JldHVybl9wb2xpY3lfbGFiZWwYqgEgASgJSBiIAQESHwoS",
+            "dHJhbnNpdF90aW1lX2xhYmVsGC8gASgJSBmIAQESEQoEc2l6ZRgwIAEoCUga",
+            "iAEBEkoKC3NpemVfc3lzdGVtGDEgASgOMjAuZ29vZ2xlLnNob3BwaW5nLm1l",
+            "cmNoYW50LnByb2R1Y3RzLnYxLlNpemVTeXN0ZW1IG4gBARJCCgpzaXplX3R5",
+            "cGVzGDIgAygOMi4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3Rz",
+            "LnYxLlNpemVUeXBlEmEKF2VuZXJneV9lZmZpY2llbmN5X2NsYXNzGDUgASgO",
+            "MjsuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkVuZXJn",
+            "eUVmZmljaWVuY3lDbGFzc0gciAEBEmUKG21pbl9lbmVyZ3lfZWZmaWNpZW5j",
+            "eV9jbGFzcxg2IAEoDjI7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9k",
+            "dWN0cy52MS5FbmVyZ3lFZmZpY2llbmN5Q2xhc3NIHYgBARJlChttYXhfZW5l",
+            "cmd5X2VmZmljaWVuY3lfY2xhc3MYNyABKA4yOy5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQucHJvZHVjdHMudjEuRW5lcmd5RWZmaWNpZW5jeUNsYXNzSB6I",
+            "AQESVgoUdW5pdF9wcmljaW5nX21lYXN1cmUYOCABKAsyOC5nb29nbGUuc2hv",
+            "cHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuVW5pdFByaWNpbmdNZWFzdXJl",
+            "El8KGXVuaXRfcHJpY2luZ19iYXNlX21lYXN1cmUYOSABKAsyPC5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuVW5pdFByaWNpbmdCYXNl",
+            "TWVhc3VyZRIWCgltdWx0aXBhY2sYOiABKANIH4gBARIZCgxhZHNfZ3JvdXBp",
+            "bmcYOyABKAlIIIgBARISCgphZHNfbGFiZWxzGDwgAygJEhkKDGFkc19yZWRp",
+            "cmVjdBg9IAEoCUghiAEBEjcKEmNvc3Rfb2ZfZ29vZHNfc29sZBg+IAEoCzIb",
+            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEkwKD3Byb2R1Y3RfZGV0YWls",
+            "cxg/IAMoCzIzLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
+            "MS5Qcm9kdWN0RGV0YWlsEhoKEnByb2R1Y3RfaGlnaGxpZ2h0cxhAIAMoCRIb",
+            "Cg5kaXNwbGF5X2Fkc19pZBhBIAEoCUgiiAEBEh8KF2Rpc3BsYXlfYWRzX3Np",
+            "bWlsYXJfaWRzGEIgAygJEh4KEWRpc3BsYXlfYWRzX3RpdGxlGEMgASgJSCOI",
+            "AQESHQoQZGlzcGxheV9hZHNfbGluaxhEIAEoCUgkiAEBEh4KEWRpc3BsYXlf",
+            "YWRzX3ZhbHVlGEUgASgBSCWIAQESFQoNcHJvbW90aW9uX2lkcxhGIAMoCRJO",
+            "Cg1waWNrdXBfbWV0aG9kGFAgASgOMjIuZ29vZ2xlLnNob3BwaW5nLm1lcmNo",
+            "YW50LnByb2R1Y3RzLnYxLlBpY2t1cE1ldGhvZEgmiAEBEkgKCnBpY2t1cF9z",
+            "bGEYUSABKA4yLy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMu",
+            "djEuUGlja3VwU2xhSCeIAQESUAoLcGlja3VwX2Nvc3QYrAEgASgLMjAuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlBpY2t1cENvc3RC",
+            "A+BBAUgoiAEBEhoKDWxpbmtfdGVtcGxhdGUYUiABKAlIKYgBARIhChRtb2Jp",
+            "bGVfbGlua190ZW1wbGF0ZRhTIAEoCUgqiAEBEhsKDmN1c3RvbV9sYWJlbF8w",
+            "GEcgASgJSCuIAQESGwoOY3VzdG9tX2xhYmVsXzEYSCABKAlILIgBARIbCg5j",
+            "dXN0b21fbGFiZWxfMhhJIAEoCUgtiAEBEhsKDmN1c3RvbV9sYWJlbF8zGEog",
+            "ASgJSC6IAQESGwoOY3VzdG9tX2xhYmVsXzQYSyABKAlIL4gBARJQChVpbmNs",
+            "dWRlZF9kZXN0aW5hdGlvbnMYTCADKA4yMS5nb29nbGUuc2hvcHBpbmcudHlw",
+            "ZS5EZXN0aW5hdGlvbi5EZXN0aW5hdGlvbkVudW0SUAoVZXhjbHVkZWRfZGVz",
+            "dGluYXRpb25zGE0gAygOMjEuZ29vZ2xlLnNob3BwaW5nLnR5cGUuRGVzdGlu",
+            "YXRpb24uRGVzdGluYXRpb25FbnVtEicKH3Nob3BwaW5nX2Fkc19leGNsdWRl",
+            "ZF9jb3VudHJpZXMYTiADKAkSHwoSZXh0ZXJuYWxfc2VsbGVyX2lkGAEgASgJ",
+            "SDCIAQESPwoFcGF1c2UYDSABKA4yKy5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQucHJvZHVjdHMudjEuUGF1c2VIMYgBARIdChVsaWZlc3R5bGVfaW1hZ2Vf",
+            "bGlua3MYDiADKAkScQoiY2xvdWRfZXhwb3J0X2FkZGl0aW9uYWxfcHJvcGVy",
+            "dGllcxhUIAMoCzJFLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0",
+            "cy52MS5DbG91ZEV4cG9ydEFkZGl0aW9uYWxQcm9wZXJ0aWVzEiAKEnZpcnR1",
+            "YWxfbW9kZWxfbGluaxiCASABKAlIMogBARJSCg5jZXJ0aWZpY2F0aW9ucxh7",
+            "IAMoCzI6Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Q",
+            "cm9kdWN0Q2VydGlmaWNhdGlvbhJVChBzdHJ1Y3R1cmVkX3RpdGxlGIQBIAEo",
+            "CzI1Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TdHJ1",
+            "Y3R1cmVkVGl0bGVIM4gBARJhChZzdHJ1Y3R1cmVkX2Rlc2NyaXB0aW9uGIUB",
+            "IAEoCzI7Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5T",
+            "dHJ1Y3R1cmVkRGVzY3JpcHRpb25INIgBARI7ChZhdXRvX3ByaWNpbmdfbWlu",
+            "X3ByaWNlGHwgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2USaAoZ",
+            "c3VzdGFpbmFiaWxpdHlfaW5jZW50aXZlcxiKASADKAsyRC5nb29nbGUuc2hv",
+            "cHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdFN1c3RhaW5hYmls",
+            "aXR5SW5jZW50aXZlEhkKC3ZpZGVvX2xpbmtzGKkBIAMoCUID4EEBEl0KFG1p",
+            "bmltdW1fb3JkZXJfdmFsdWVzGJIBIAMoCzI+Lmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0TWluaW11bU9yZGVyVmFsdWUS",
+            "DAoDdmluGJMBIAEoCRIOCgVtb2RlbBiUASABKAkSDQoEdHJpbRiVASABKAkS",
+            "XQoKYm9keV9zdHlsZRiWASABKA4ySC5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuVmVoaWNsZUJvZHlT",
+            "dHlsZRINCgR5ZWFyGJcBIAEoAxJRCgdtaWxlYWdlGJgBIAEoCzI/Lmdvb2ds",
             "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmli",
-            "dXRlcy5TaGlwcGluZ0J1c2luZXNzRGF5c0NvbmZpZxJ7Ch5zaGlwcGluZ190",
-            "cmFuc2l0X2J1c2luZXNzX2RheXMYkAEgAygLMlIuZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1dGVzLlNoaXBw",
-            "aW5nQnVzaW5lc3NEYXlzQ29uZmlnElgKFWhhbmRsaW5nX2N1dG9mZl90aW1l",
-            "cxiNASADKAsyOC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMu",
-            "djEuSGFuZGxpbmdDdXRvZmZUaW1lEhsKDnNoaXBwaW5nX2xhYmVsGC4gASgJ",
-            "SBeIAQESIQoTcmV0dXJuX3BvbGljeV9sYWJlbBiqASABKAlIGIgBARIfChJ0",
-            "cmFuc2l0X3RpbWVfbGFiZWwYLyABKAlIGYgBARIRCgRzaXplGDAgASgJSBqI",
-            "AQESSgoLc2l6ZV9zeXN0ZW0YMSABKA4yMC5nb29nbGUuc2hvcHBpbmcubWVy",
-            "Y2hhbnQucHJvZHVjdHMudjEuU2l6ZVN5c3RlbUgbiAEBEkIKCnNpemVfdHlw",
-            "ZXMYMiADKA4yLi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMu",
-            "djEuU2l6ZVR5cGUSYQoXZW5lcmd5X2VmZmljaWVuY3lfY2xhc3MYNSABKA4y",
-            "Oy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuRW5lcmd5",
-            "RWZmaWNpZW5jeUNsYXNzSByIAQESZQobbWluX2VuZXJneV9lZmZpY2llbmN5",
-            "X2NsYXNzGDYgASgOMjsuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1",
-            "Y3RzLnYxLkVuZXJneUVmZmljaWVuY3lDbGFzc0gdiAEBEmUKG21heF9lbmVy",
-            "Z3lfZWZmaWNpZW5jeV9jbGFzcxg3IAEoDjI7Lmdvb2dsZS5zaG9wcGluZy5t",
-            "ZXJjaGFudC5wcm9kdWN0cy52MS5FbmVyZ3lFZmZpY2llbmN5Q2xhc3NIHogB",
-            "ARJWChR1bml0X3ByaWNpbmdfbWVhc3VyZRg4IAEoCzI4Lmdvb2dsZS5zaG9w",
-            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Vbml0UHJpY2luZ01lYXN1cmUS",
-            "XwoZdW5pdF9wcmljaW5nX2Jhc2VfbWVhc3VyZRg5IAEoCzI8Lmdvb2dsZS5z",
-            "aG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Vbml0UHJpY2luZ0Jhc2VN",
-            "ZWFzdXJlEhYKCW11bHRpcGFjaxg6IAEoA0gfiAEBEhkKDGFkc19ncm91cGlu",
-            "Zxg7IAEoCUggiAEBEhIKCmFkc19sYWJlbHMYPCADKAkSGQoMYWRzX3JlZGly",
-            "ZWN0GD0gASgJSCGIAQESNwoSY29zdF9vZl9nb29kc19zb2xkGD4gASgLMhsu",
-            "Z29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2USTAoPcHJvZHVjdF9kZXRhaWxz",
-            "GD8gAygLMjMuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYx",
-            "LlByb2R1Y3REZXRhaWwSGgoScHJvZHVjdF9oaWdobGlnaHRzGEAgAygJEhsK",
-            "DmRpc3BsYXlfYWRzX2lkGEEgASgJSCKIAQESHwoXZGlzcGxheV9hZHNfc2lt",
-            "aWxhcl9pZHMYQiADKAkSHgoRZGlzcGxheV9hZHNfdGl0bGUYQyABKAlII4gB",
-            "ARIdChBkaXNwbGF5X2Fkc19saW5rGEQgASgJSCSIAQESHgoRZGlzcGxheV9h",
-            "ZHNfdmFsdWUYRSABKAFIJYgBARIVCg1wcm9tb3Rpb25faWRzGEYgAygJEk4K",
-            "DXBpY2t1cF9tZXRob2QYUCABKA4yMi5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQucHJvZHVjdHMudjEuUGlja3VwTWV0aG9kSCaIAQESSAoKcGlja3VwX3Ns",
-            "YRhRIAEoDjIvLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
-            "MS5QaWNrdXBTbGFIJ4gBARIaCg1saW5rX3RlbXBsYXRlGFIgASgJSCiIAQES",
-            "IQoUbW9iaWxlX2xpbmtfdGVtcGxhdGUYUyABKAlIKYgBARIbCg5jdXN0b21f",
-            "bGFiZWxfMBhHIAEoCUgqiAEBEhsKDmN1c3RvbV9sYWJlbF8xGEggASgJSCuI",
-            "AQESGwoOY3VzdG9tX2xhYmVsXzIYSSABKAlILIgBARIbCg5jdXN0b21fbGFi",
-            "ZWxfMxhKIAEoCUgtiAEBEhsKDmN1c3RvbV9sYWJlbF80GEsgASgJSC6IAQES",
-            "UAoVaW5jbHVkZWRfZGVzdGluYXRpb25zGEwgAygOMjEuZ29vZ2xlLnNob3Bw",
-            "aW5nLnR5cGUuRGVzdGluYXRpb24uRGVzdGluYXRpb25FbnVtElAKFWV4Y2x1",
-            "ZGVkX2Rlc3RpbmF0aW9ucxhNIAMoDjIxLmdvb2dsZS5zaG9wcGluZy50eXBl",
-            "LkRlc3RpbmF0aW9uLkRlc3RpbmF0aW9uRW51bRInCh9zaG9wcGluZ19hZHNf",
-            "ZXhjbHVkZWRfY291bnRyaWVzGE4gAygJEh8KEmV4dGVybmFsX3NlbGxlcl9p",
-            "ZBgBIAEoCUgviAEBEj8KBXBhdXNlGA0gASgOMisuZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLlBhdXNlSDCIAQESHQoVbGlmZXN0eWxl",
-            "X2ltYWdlX2xpbmtzGA4gAygJEnEKImNsb3VkX2V4cG9ydF9hZGRpdGlvbmFs",
-            "X3Byb3BlcnRpZXMYVCADKAsyRS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "cHJvZHVjdHMudjEuQ2xvdWRFeHBvcnRBZGRpdGlvbmFsUHJvcGVydGllcxIg",
-            "ChJ2aXJ0dWFsX21vZGVsX2xpbmsYggEgASgJSDGIAQESUgoOY2VydGlmaWNh",
-            "dGlvbnMYeyADKAsyOi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVj",
-            "dHMudjEuUHJvZHVjdENlcnRpZmljYXRpb24SVQoQc3RydWN0dXJlZF90aXRs",
-            "ZRiEASABKAsyNS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMu",
-            "djEuU3RydWN0dXJlZFRpdGxlSDKIAQESYQoWc3RydWN0dXJlZF9kZXNjcmlw",
-            "dGlvbhiFASABKAsyOy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVj",
-            "dHMudjEuU3RydWN0dXJlZERlc2NyaXB0aW9uSDOIAQESOwoWYXV0b19wcmlj",
-            "aW5nX21pbl9wcmljZRh8IAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlBy",
-            "aWNlEmgKGXN1c3RhaW5hYmlsaXR5X2luY2VudGl2ZXMYigEgAygLMkQuZ29v",
-            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RTdXN0",
-            "YWluYWJpbGl0eUluY2VudGl2ZRIZCgt2aWRlb19saW5rcxipASADKAlCA+BB",
-            "ARpsChpTaGlwcGluZ0J1c2luZXNzRGF5c0NvbmZpZxIUCgdjb3VudHJ5GAEg",
-            "ASgJSACIAQESGgoNYnVzaW5lc3NfZGF5cxgCIAEoCUgBiAEBQgoKCF9jb3Vu",
-            "dHJ5QhAKDl9idXNpbmVzc19kYXlzGqEHCg9DYXJyaWVyU2hpcHBpbmcSFAoH",
-            "Y291bnRyeRgBIAEoCUgAiAEBEhMKBnJlZ2lvbhgCIAEoCUgBiAEBEhgKC3Bv",
-            "c3RhbF9jb2RlGAMgASgJSAKIAQESHwoSb3JpZ2luX3Bvc3RhbF9jb2RlGAQg",
-            "ASgJSAOIAQESNAoKZmxhdF9wcmljZRgFIAEoCzIbLmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlLlByaWNlSASIAQESZgoNY2Fycmllcl9wcmljZRgGIAEoDjJKLmdv",
-            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0",
-            "cmlidXRlcy5DYXJyaWVyUHJpY2VPcHRpb25IBYgBARJHCh1jYXJyaWVyX3By",
-            "aWNlX2ZsYXRfYWRqdXN0bWVudBgHIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50",
-            "eXBlLlByaWNlSAaIAQESMAojY2Fycmllcl9wcmljZV9wZXJjZW50YWdlX2Fk",
-            "anVzdG1lbnQYCCABKAFIB4gBARIeChFtaW5faGFuZGxpbmdfdGltZRgJIAEo",
-            "A0gIiAEBEh4KEW1heF9oYW5kbGluZ190aW1lGAogASgDSAmIAQESIwoWZml4",
-            "ZWRfbWluX3RyYW5zaXRfdGltZRgLIAEoA0gKiAEBEiMKFmZpeGVkX21heF90",
-            "cmFuc2l0X3RpbWUYDCABKANIC4gBARJhChRjYXJyaWVyX3RyYW5zaXRfdGlt",
-            "ZRgNIAEoDjI+Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52",
-            "MS5DYXJyaWVyVHJhbnNpdFRpbWVPcHRpb25IDIgBAUIKCghfY291bnRyeUIJ",
-            "CgdfcmVnaW9uQg4KDF9wb3N0YWxfY29kZUIVChNfb3JpZ2luX3Bvc3RhbF9j",
-            "b2RlQg0KC19mbGF0X3ByaWNlQhAKDl9jYXJyaWVyX3ByaWNlQiAKHl9jYXJy",
-            "aWVyX3ByaWNlX2ZsYXRfYWRqdXN0bWVudEImCiRfY2Fycmllcl9wcmljZV9w",
-            "ZXJjZW50YWdlX2FkanVzdG1lbnRCFAoSX21pbl9oYW5kbGluZ190aW1lQhQK",
-            "El9tYXhfaGFuZGxpbmdfdGltZUIZChdfZml4ZWRfbWluX3RyYW5zaXRfdGlt",
-            "ZUIZChdfZml4ZWRfbWF4X3RyYW5zaXRfdGltZUIXChVfY2Fycmllcl90cmFu",
-            "c2l0X3RpbWUiiAwKEkNhcnJpZXJQcmljZU9wdGlvbhIkCiBDQVJSSUVSX1BS",
-            "SUNFX09QVElPTl9VTlNQRUNJRklFRBAAEhoKFkFVU1RSQUxJQV9QT1NUX1JF",
-            "R1VMQVIQARIaChZBVVNUUkFMSUFfUE9TVF9FWFBSRVNTEAISHAoYQVVTVFJB",
-            "TElBX1BPU1RfUkVHVUxBUl9TEAMSHAoYQVVTVFJBTElBX1BPU1RfUkVHVUxB",
-            "Ul9NEAQSHAoYQVVTVFJBTElBX1BPU1RfUkVHVUxBUl9MEAUSHQoZQVVTVFJB",
-            "TElBX1BPU1RfUkVHVUxBUl9YTBAGEhwKGEFVU1RSQUxJQV9QT1NUX0VYUFJF",
-            "U1NfUxAHEhwKGEFVU1RSQUxJQV9QT1NUX0VYUFJFU1NfTRAIEhwKGEFVU1RS",
-            "QUxJQV9QT1NUX0VYUFJFU1NfTBAJEh0KGUFVU1RSQUxJQV9QT1NUX0VYUFJF",
-            "U1NfWEwQChIUChBUTlRfUk9BRF9FWFBSRVNTEAsSGQoVVE5UX09WRVJOSUdI",
-            "VF9FWFBSRVNTEAwSFgoSVE9MTF9ST0FEX0RFTElWRVJZEA0SGwoXVE9MTF9P",
-            "VkVSTklHSFRfUFJJT1JJVFkQDhINCglESExfUEFLRVQQDxIQCgxESExfUEFD",
-            "S0NIRU4QEBISCg5EUERfRVhQUkVTU18xMhAREg8KC0RQRF9FWFBSRVNTEBIS",
-            "FgoSRFBEX0NMQVNTSUNfUEFSQ0VMEBMSEwoPSEVSTUVTX1BBQ0tDSEVOEBQS",
-            "GAoUSEVSTUVTX1BBS0VUS0xBU1NFX1MQFRIYChRIRVJNRVNfUEFLRVRLTEFT",
-            "U0VfTRAWEhgKFEhFUk1FU19QQUtFVEtMQVNTRV9MEBcSDwoLVVBTX0VYUFJF",
-            "U1MQGBIVChFVUFNfRVhQUkVTU19TQVZFUhAZEhgKFFVQU19FWFBSRVNTX1NU",
-            "QU5EQVJEEBoSDwoLREhMX0VYUFJFU1MQGxISCg5ESExfRVhQUkVTU18xMhAc",
-            "EhAKDERQRF9ORVhUX0RBWRAdEhkKFURQRF9TVEFOREFSRF9ORVhUX0RBWRAe",
-            "EhgKFERQRF9TVEFOREFSRF9UV09fREFZEB8SFwoTUk1HXzFTVF9DTEFTU19T",
-            "TUFMTBAgEhgKFFJNR18xU1RfQ0xBU1NfTUVESVVNECESFwoTUk1HXzJORF9D",
-            "TEFTU19TTUFMTBAiEhgKFFJNR18yTkRfQ0xBU1NfTUVESVVNECMSDwoLVE5U",
-            "X0VYUFJFU1MQJBISCg5UTlRfRVhQUkVTU18xMBAlEhIKDlROVF9FWFBSRVNT",
-            "XzEyECYSEgoOWU9ERUxfQjJDXzQ4SFIQJxISCg5ZT0RFTF9CMkNfNzJIUhAo",
-            "EhQKEFlPREVMX0IyQ19QQUNLRVQQKRIQCgxGRURFWF9HUk9VTkQQKhIXChNG",
-            "RURFWF9IT01FX0RFTElWRVJZECsSFwoTRkVERVhfRVhQUkVTU19TQVZFUhAs",
-            "EhkKFUZFREVYX0ZJUlNUX09WRVJOSUdIVBAtEhwKGEZFREVYX1BSSU9SSVRZ",
-            "X09WRVJOSUdIVBAuEhwKGEZFREVYX1NUQU5EQVJEX09WRVJOSUdIVBAvEg4K",
-            "CkZFREVYXzJEQVkQMBIQCgxVUFNfU1RBTkRBUkQQMRITCg9VUFNfMk5EX0RB",
-            "WV9BSVIQMhISCg5VUFNfMk5EX0RBWV9BTRAzEhQKEFVQU18zX0RBWV9TRUxF",
-            "Q1QQNBIOCgpVUFNfR1JPVU5EEDUSFAoQVVBTX05FWFRfREFZX0FJUhA2Eh0K",
-            "GVVQU19ORVhUX0RBWV9BSVJfRUFSTFlfQU0QNxIaChZVUFNfTkVYVF9EQVlf",
-            "QUlSX1NBVkVSEDgSHgoaVVNQU19QUklPUklUWV9NQUlMX0VYUFJFU1MQORIT",
-            "Cg9VU1BTX01FRElBX01BSUwQOhIgChxVU1BTX0dST1VORF9BRFZBTlRBR0Vf",
-            "UkVUQUlMEDsSFgoSVVNQU19QUklPUklUWV9NQUlMEDwSJAogVVNQU19HUk9V",
-            "TkRfQURWQU5UQUdFX0NPTU1FUkNJQUwQPUIUChJfaWRlbnRpZmllcl9leGlz",
-            "dHNCDAoKX2lzX2J1bmRsZUIICgZfdGl0bGVCDgoMX2Rlc2NyaXB0aW9uQgcK",
-            "BV9saW5rQg4KDF9tb2JpbGVfbGlua0IRCg9fY2Fub25pY2FsX2xpbmtCDQoL",
-            "X2ltYWdlX2xpbmtCCAoGX2FkdWx0QgwKCl9hZ2VfZ3JvdXBCDwoNX2F2YWls",
-            "YWJpbGl0eUIICgZfYnJhbmRCCAoGX2NvbG9yQgwKCl9jb25kaXRpb25CCQoH",
-            "X2dlbmRlckIaChhfZ29vZ2xlX3Byb2R1Y3RfY2F0ZWdvcnlCEAoOX2l0ZW1f",
-            "Z3JvdXBfaWRCCwoJX21hdGVyaWFsQgYKBF9tcG5CCgoIX3BhdHRlcm5CGgoY",
-            "X3NlbGxfb25fZ29vZ2xlX3F1YW50aXR5QhQKEl9tYXhfaGFuZGxpbmdfdGlt",
-            "ZUIUChJfbWluX2hhbmRsaW5nX3RpbWVCEQoPX3NoaXBwaW5nX2xhYmVsQhYK",
-            "FF9yZXR1cm5fcG9saWN5X2xhYmVsQhUKE190cmFuc2l0X3RpbWVfbGFiZWxC",
-            "BwoFX3NpemVCDgoMX3NpemVfc3lzdGVtQhoKGF9lbmVyZ3lfZWZmaWNpZW5j",
-            "eV9jbGFzc0IeChxfbWluX2VuZXJneV9lZmZpY2llbmN5X2NsYXNzQh4KHF9t",
-            "YXhfZW5lcmd5X2VmZmljaWVuY3lfY2xhc3NCDAoKX211bHRpcGFja0IPCg1f",
-            "YWRzX2dyb3VwaW5nQg8KDV9hZHNfcmVkaXJlY3RCEQoPX2Rpc3BsYXlfYWRz",
-            "X2lkQhQKEl9kaXNwbGF5X2Fkc190aXRsZUITChFfZGlzcGxheV9hZHNfbGlu",
-            "a0IUChJfZGlzcGxheV9hZHNfdmFsdWVCEAoOX3BpY2t1cF9tZXRob2RCDQoL",
-            "X3BpY2t1cF9zbGFCEAoOX2xpbmtfdGVtcGxhdGVCFwoVX21vYmlsZV9saW5r",
-            "X3RlbXBsYXRlQhEKD19jdXN0b21fbGFiZWxfMEIRCg9fY3VzdG9tX2xhYmVs",
-            "XzFCEQoPX2N1c3RvbV9sYWJlbF8yQhEKD19jdXN0b21fbGFiZWxfM0IRCg9f",
-            "Y3VzdG9tX2xhYmVsXzRCFQoTX2V4dGVybmFsX3NlbGxlcl9pZEIICgZfcGF1",
-            "c2VCFQoTX3ZpcnR1YWxfbW9kZWxfbGlua0ITChFfc3RydWN0dXJlZF90aXRs",
-            "ZUIZChdfc3RydWN0dXJlZF9kZXNjcmlwdGlvbiItCg5TaGlwcGluZ1dlaWdo",
+            "dXRlcy5NaWxlYWdlElgKDmVsZWN0cmljX3JhbmdlGJkBIAEoCzI/Lmdvb2ds",
+            "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmli",
+            "dXRlcy5NaWxlYWdlEmIKEGZ1ZWxfY29uc3VtcHRpb24YmgEgASgLMkcuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRy",
+            "aWJ1dGVzLkZ1ZWxDb25zdW1wdGlvbhJ1CiNmdWVsX2NvbnN1bXB0aW9uX2Rp",
+            "c2NoYXJnZWRfYmF0dGVyeRibASABKAsyRy5nb29nbGUuc2hvcHBpbmcubWVy",
+            "Y2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuRnVlbENvbnN1",
+            "bXB0aW9uEmYKEmVuZXJneV9jb25zdW1wdGlvbhicASABKAsySS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0",
+            "ZXMuRW5lcmd5Q29uc3VtcHRpb24SXAoNY28yX2VtaXNzaW9ucxidASABKAsy",
+            "RC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVj",
+            "dEF0dHJpYnV0ZXMuQ28yRW1pc3Npb25zEh4KFWRhdGVfZmlyc3RfcmVnaXN0",
+            "ZXJlZBieASABKAkSUwoGZW5naW5lGJ8BIAEoDjJCLmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmlidXRlcy5Fbmdp",
+            "bmVUeXBlEmYKEmVtaXNzaW9uc19zdGFuZGFyZBigASABKA4ySS5nb29nbGUu",
+            "c2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0",
+            "ZXMuRW1pc3Npb25zU3RhbmRhcmQSHAoTY2VydGlmaWVkX3ByZV9vd25lZBih",
+            "ASABKAgSMgoMdmVoaWNsZV9tc3JwGKIBIAEoCzIbLmdvb2dsZS5zaG9wcGlu",
+            "Zy50eXBlLlByaWNlEjoKFHZlaGljbGVfYWxsX2luX3ByaWNlGKMBIAEoCzIb",
+            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEmUKEnZlaGljbGVfcHJpY2Vf",
+            "dHlwZRikASABKA4ySC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVj",
+            "dHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuVmVoaWNsZVByaWNlVHlwZRIuCiV2",
+            "ZWhpY2xlX21hbmRhdG9yeV9pbnNwZWN0aW9uX2luY2x1ZGVkGKYBIAEoCBI2",
+            "ChB2ZWhpY2xlX2V4cGVuc2VzGKcBIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50",
+            "eXBlLlByaWNlElMKCHdhcnJhbnR5GKgBIAEoCzJALmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmlidXRlcy5XYXJy",
+            "YW50eRJgCg9kaXNwbGF5X2FkZHJlc3MYswEgASgLMkYuZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1dGVzLkRp",
+            "c3BsYXlBZGRyZXNzEhYKCGxhdGl0dWRlGLQBIAEoAUg1iAEBEhcKCWxvbmdp",
+            "dHVkZRi1ASABKAFINogBARIVCgxuZWlnaGJvcmhvb2QYtgEgASgJElQKCXVu",
+            "aXRfYXJlYRi3ASABKAsyQC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJv",
+            "ZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuVW5pdEFyZWESHQoPbnVtYmVy",
+            "X29mX3VuaXRzGLgBIAEoA0g3iAEBEhYKDXByb3BlcnR5X25hbWUYuQEgASgJ",
+            "EiAKEm51bWJlcl9vZl9iZWRyb29tcxi6ASABKAFIOIgBARIhChNudW1iZXJf",
+            "b2ZfYmF0aHJvb21zGLsBIAEoAUg5iAEBElwKDXByb3BlcnR5X3R5cGUYvAEg",
+            "ASgOMkQuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlBy",
+            "b2R1Y3RBdHRyaWJ1dGVzLlByb3BlcnR5VHlwZRJgCg9hbWVuaXR5X2ZlYXR1",
+            "cmUYvQEgAygOMkYuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3Rz",
+            "LnYxLlByb2R1Y3RBdHRyaWJ1dGVzLkFtZW5pdHlGZWF0dXJlEmYKEnV0aWxp",
+            "dGllc19pbmNsdWRlZBi+ASADKA4ySS5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuVXRpbGl0aWVzSW5j",
+            "bHVkZWQSVgoKcGV0X3BvbGljeRi/ASABKAsyQS5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuUGV0UG9s",
+            "aWN5Em0KFnNwZWNpYWx0eV9ob3VzaW5nX3R5cGUYwAEgASgOMkwuZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1",
+            "dGVzLlNwZWNpYWx0eUhvdXNpbmdUeXBlElgKC3Byb2R1Y3RfZmVlGMEBIAMo",
+            "CzJCLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9k",
+            "dWN0QXR0cmlidXRlcy5Qcm9kdWN0RmVlEhkKC3Nob3J0X3RpdGxlGMIBIAEo",
+            "CUg6iAEBEm4KFXF1ZXN0aW9uc19hbmRfYW5zd2VycxitASADKAsySS5nb29n",
+            "bGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJp",
+            "YnV0ZXMuUXVlc3Rpb25BbmRBbnN3ZXJCA+BBARIdCg9wb3B1bGFyaXR5X3Jh",
+            "bmsYrgEgASgCQgPgQQESHgoQaXRlbV9ncm91cF90aXRsZRivASABKAlCA+BB",
+            "ARIcCg5kb2N1bWVudF9saW5rcxiwASADKAlCA+BBARJkCg92YXJpYW50X29w",
+            "dGlvbnMYsQEgAygLMkUuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1",
+            "Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1dGVzLlZhcmlhbnRPcHRpb25CA+BBARJm",
+            "ChByZWxhdGVkX3Byb2R1Y3RzGLIBIAMoCzJGLmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmlidXRlcy5SZWxhdGVk",
+            "UHJvZHVjdEID4EEBGmwKGlNoaXBwaW5nQnVzaW5lc3NEYXlzQ29uZmlnEhQK",
+            "B2NvdW50cnkYASABKAlIAIgBARIaCg1idXNpbmVzc19kYXlzGAIgASgJSAGI",
+            "AQFCCgoIX2NvdW50cnlCEAoOX2J1c2luZXNzX2RheXMaoQcKD0NhcnJpZXJT",
+            "aGlwcGluZxIUCgdjb3VudHJ5GAEgASgJSACIAQESEwoGcmVnaW9uGAIgASgJ",
+            "SAGIAQESGAoLcG9zdGFsX2NvZGUYAyABKAlIAogBARIfChJvcmlnaW5fcG9z",
+            "dGFsX2NvZGUYBCABKAlIA4gBARI0CgpmbGF0X3ByaWNlGAUgASgLMhsuZ29v",
+            "Z2xlLnNob3BwaW5nLnR5cGUuUHJpY2VIBIgBARJmCg1jYXJyaWVyX3ByaWNl",
+            "GAYgASgOMkouZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYx",
+            "LlByb2R1Y3RBdHRyaWJ1dGVzLkNhcnJpZXJQcmljZU9wdGlvbkgFiAEBEkcK",
+            "HWNhcnJpZXJfcHJpY2VfZmxhdF9hZGp1c3RtZW50GAcgASgLMhsuZ29vZ2xl",
+            "LnNob3BwaW5nLnR5cGUuUHJpY2VIBogBARIwCiNjYXJyaWVyX3ByaWNlX3Bl",
+            "cmNlbnRhZ2VfYWRqdXN0bWVudBgIIAEoAUgHiAEBEh4KEW1pbl9oYW5kbGlu",
+            "Z190aW1lGAkgASgDSAiIAQESHgoRbWF4X2hhbmRsaW5nX3RpbWUYCiABKANI",
+            "CYgBARIjChZmaXhlZF9taW5fdHJhbnNpdF90aW1lGAsgASgDSAqIAQESIwoW",
+            "Zml4ZWRfbWF4X3RyYW5zaXRfdGltZRgMIAEoA0gLiAEBEmEKFGNhcnJpZXJf",
+            "dHJhbnNpdF90aW1lGA0gASgOMj4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
+            "LnByb2R1Y3RzLnYxLkNhcnJpZXJUcmFuc2l0VGltZU9wdGlvbkgMiAEBQgoK",
+            "CF9jb3VudHJ5QgkKB19yZWdpb25CDgoMX3Bvc3RhbF9jb2RlQhUKE19vcmln",
+            "aW5fcG9zdGFsX2NvZGVCDQoLX2ZsYXRfcHJpY2VCEAoOX2NhcnJpZXJfcHJp",
+            "Y2VCIAoeX2NhcnJpZXJfcHJpY2VfZmxhdF9hZGp1c3RtZW50QiYKJF9jYXJy",
+            "aWVyX3ByaWNlX3BlcmNlbnRhZ2VfYWRqdXN0bWVudEIUChJfbWluX2hhbmRs",
+            "aW5nX3RpbWVCFAoSX21heF9oYW5kbGluZ190aW1lQhkKF19maXhlZF9taW5f",
+            "dHJhbnNpdF90aW1lQhkKF19maXhlZF9tYXhfdHJhbnNpdF90aW1lQhcKFV9j",
+            "YXJyaWVyX3RyYW5zaXRfdGltZRqsAQoHTWlsZWFnZRISCgV2YWx1ZRgBIAEo",
+            "A0gAiAEBElIKBHVuaXQYAiABKA4yRC5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuTWlsZWFnZS5Vbml0",
+            "Ii8KBFVuaXQSFAoQVU5JVF9VTlNQRUNJRklFRBAAEgkKBU1JTEVTEAESBgoC",
+            "S00QAkIICgZfdmFsdWUayAEKD0Z1ZWxDb25zdW1wdGlvbhISCgV2YWx1ZRgB",
+            "IAEoAUgAiAEBEloKBHVuaXQYAiABKA4yTC5nb29nbGUuc2hvcHBpbmcubWVy",
+            "Y2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuRnVlbENvbnN1",
+            "bXB0aW9uLlVuaXQiOwoEVW5pdBIUChBVTklUX1VOU1BFQ0lGSUVEEAASDQoJ",
+            "TFBFUjEwMEtNEAESDgoKS0dQRVIxMDBLTRACQggKBl92YWx1ZRq+AQoRRW5l",
+            "cmd5Q29uc3VtcHRpb24SEgoFdmFsdWUYASABKAFIAIgBARJcCgR1bml0GAIg",
+            "ASgOMk4uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlBy",
+            "b2R1Y3RBdHRyaWJ1dGVzLkVuZXJneUNvbnN1bXB0aW9uLlVuaXQiLQoEVW5p",
+            "dBIUChBVTklUX1VOU1BFQ0lGSUVEEAASDwoLS1dIUEVSMTAwS00QAUIICgZf",
+            "dmFsdWUarwEKDENvMkVtaXNzaW9ucxISCgV2YWx1ZRgBIAEoA0gAiAEBElcK",
+            "BHVuaXQYAiABKA4ySS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVj",
+            "dHMudjEuUHJvZHVjdEF0dHJpYnV0ZXMuQ28yRW1pc3Npb25zLlVuaXQiKAoE",
+            "VW5pdBIUChBVTklUX1VOU1BFQ0lGSUVEEAASCgoGR1BFUktNEAFCCAoGX3Zh",
+            "bHVlGm4KCFdhcnJhbnR5EhAKCGR1cmF0aW9uGAEgASgDElAKB21pbGVhZ2UY",
+            "AiABKAsyPy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEu",
+            "UHJvZHVjdEF0dHJpYnV0ZXMuTWlsZWFnZRryAQoKUHJvZHVjdEZlZRJYCgR0",
+            "eXBlGAEgASgOMkouZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3Rz",
+            "LnYxLlByb2R1Y3RBdHRyaWJ1dGVzLlByb2R1Y3RGZWUuRmVlVHlwZRIrCgZh",
+            "bW91bnQYAiABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZSJdCgdG",
+            "ZWVUeXBlEhgKFEZFRV9UWVBFX1VOU1BFQ0lGSUVEEAASDQoJQURNSU5fRkVF",
+            "EAESEwoPQVBQTElDQVRJT05fRkVFEAISFAoQU0VDVVJJVFlfREVQT1NJVBAD",
+            "Gm8KDkRpc3BsYXlBZGRyZXNzEhUKDXN0cmVldF9udW1iZXIYASABKAkSEwoL",
+            "c3RyZWV0X25hbWUYAiABKAkSDAoEY2l0eRgDIAEoCRIOCgZyZWdpb24YBCAB",
+            "KAkSEwoLcG9zdGFsX2NvZGUYBSABKAkargEKCFVuaXRBcmVhEhIKBXZhbHVl",
+            "GAEgASgBSACIAQESUwoEdW5pdBgCIAEoDjJFLmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0QXR0cmlidXRlcy5Vbml0QXJl",
+            "YS5Vbml0Ii8KBFVuaXQSFAoQVU5JVF9VTlNQRUNJRklFRBAAEgcKA1NRTRAB",
+            "EggKBFNRRlQQAkIICgZfdmFsdWUazgEKCVBldFBvbGljeRIUCgxwZXRzX2Fs",
+            "bG93ZWQYASABKAgSXAoJcGV0X3R5cGVzGAIgAygOMkkuZ29vZ2xlLnNob3Bw",
+            "aW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1dGVzLlBl",
+            "dFBvbGljeS5QZXRUeXBlIk0KB1BldFR5cGUSGAoUUEVUX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIICgRDQVRTEAESDgoKTEFSR0VfRE9HUxACEg4KClNNQUxMX0RP",
+            "R1MQAxo/ChFRdWVzdGlvbkFuZEFuc3dlchIVCghxdWVzdGlvbhgBIAEoCUID",
+            "4EECEhMKBmFuc3dlchgCIAEoCUID4EECGjYKDVZhcmlhbnRPcHRpb24SEQoE",
+            "bmFtZRgBIAEoCUID4EECEhIKBXZhbHVlGAIgASgJQgPgQQIa2wMKDlJlbGF0",
+            "ZWRQcm9kdWN0EncKEXJlbGF0aW9uc2hpcF90eXBlGAEgASgOMlcuZ29vZ2xl",
+            "LnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1",
+            "dGVzLlJlbGF0ZWRQcm9kdWN0LlJlbGF0aW9uc2hpcFR5cGVCA+BBAhJjCgdp",
+            "ZF90eXBlGAIgASgOMk0uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1",
+            "Y3RzLnYxLlByb2R1Y3RBdHRyaWJ1dGVzLlJlbGF0ZWRQcm9kdWN0LklkVHlw",
+            "ZUID4EECEg8KAmlkGAMgASgJQgPgQQIipAEKEFJlbGF0aW9uc2hpcFR5cGUS",
+            "IQodUkVMQVRJT05TSElQX1RZUEVfVU5TUEVDSUZJRUQQABIPCgtQQVJUX09G",
+            "X1NFVBABEhEKDVJFUVVJUkVEX1BBUlQQAhIVChFPRlRFTl9CT1VHSFRfV0lU",
+            "SBADEg4KClNVQlNUSVRVVEUQBBITCg9ESUZGRVJFTlRfQlJBTkQQBRINCglB",
+            "Q0NFU1NPUlkQBiIzCgZJZFR5cGUSFwoTSURfVFlQRV9VTlNQRUNJRklFRBAA",
+            "EggKBEdUSU4QARIGCgJJRBACIogMChJDYXJyaWVyUHJpY2VPcHRpb24SJAog",
+            "Q0FSUklFUl9QUklDRV9PUFRJT05fVU5TUEVDSUZJRUQQABIaChZBVVNUUkFM",
+            "SUFfUE9TVF9SRUdVTEFSEAESGgoWQVVTVFJBTElBX1BPU1RfRVhQUkVTUxAC",
+            "EhwKGEFVU1RSQUxJQV9QT1NUX1JFR1VMQVJfUxADEhwKGEFVU1RSQUxJQV9Q",
+            "T1NUX1JFR1VMQVJfTRAEEhwKGEFVU1RSQUxJQV9QT1NUX1JFR1VMQVJfTBAF",
+            "Eh0KGUFVU1RSQUxJQV9QT1NUX1JFR1VMQVJfWEwQBhIcChhBVVNUUkFMSUFf",
+            "UE9TVF9FWFBSRVNTX1MQBxIcChhBVVNUUkFMSUFfUE9TVF9FWFBSRVNTX00Q",
+            "CBIcChhBVVNUUkFMSUFfUE9TVF9FWFBSRVNTX0wQCRIdChlBVVNUUkFMSUFf",
+            "UE9TVF9FWFBSRVNTX1hMEAoSFAoQVE5UX1JPQURfRVhQUkVTUxALEhkKFVRO",
+            "VF9PVkVSTklHSFRfRVhQUkVTUxAMEhYKElRPTExfUk9BRF9ERUxJVkVSWRAN",
+            "EhsKF1RPTExfT1ZFUk5JR0hUX1BSSU9SSVRZEA4SDQoJREhMX1BBS0VUEA8S",
+            "EAoMREhMX1BBQ0tDSEVOEBASEgoORFBEX0VYUFJFU1NfMTIQERIPCgtEUERf",
+            "RVhQUkVTUxASEhYKEkRQRF9DTEFTU0lDX1BBUkNFTBATEhMKD0hFUk1FU19Q",
+            "QUNLQ0hFThAUEhgKFEhFUk1FU19QQUtFVEtMQVNTRV9TEBUSGAoUSEVSTUVT",
+            "X1BBS0VUS0xBU1NFX00QFhIYChRIRVJNRVNfUEFLRVRLTEFTU0VfTBAXEg8K",
+            "C1VQU19FWFBSRVNTEBgSFQoRVVBTX0VYUFJFU1NfU0FWRVIQGRIYChRVUFNf",
+            "RVhQUkVTU19TVEFOREFSRBAaEg8KC0RITF9FWFBSRVNTEBsSEgoOREhMX0VY",
+            "UFJFU1NfMTIQHBIQCgxEUERfTkVYVF9EQVkQHRIZChVEUERfU1RBTkRBUkRf",
+            "TkVYVF9EQVkQHhIYChREUERfU1RBTkRBUkRfVFdPX0RBWRAfEhcKE1JNR18x",
+            "U1RfQ0xBU1NfU01BTEwQIBIYChRSTUdfMVNUX0NMQVNTX01FRElVTRAhEhcK",
+            "E1JNR18yTkRfQ0xBU1NfU01BTEwQIhIYChRSTUdfMk5EX0NMQVNTX01FRElV",
+            "TRAjEg8KC1ROVF9FWFBSRVNTECQSEgoOVE5UX0VYUFJFU1NfMTAQJRISCg5U",
+            "TlRfRVhQUkVTU18xMhAmEhIKDllPREVMX0IyQ180OEhSECcSEgoOWU9ERUxf",
+            "QjJDXzcySFIQKBIUChBZT0RFTF9CMkNfUEFDS0VUECkSEAoMRkVERVhfR1JP",
+            "VU5EECoSFwoTRkVERVhfSE9NRV9ERUxJVkVSWRArEhcKE0ZFREVYX0VYUFJF",
+            "U1NfU0FWRVIQLBIZChVGRURFWF9GSVJTVF9PVkVSTklHSFQQLRIcChhGRURF",
+            "WF9QUklPUklUWV9PVkVSTklHSFQQLhIcChhGRURFWF9TVEFOREFSRF9PVkVS",
+            "TklHSFQQLxIOCgpGRURFWF8yREFZEDASEAoMVVBTX1NUQU5EQVJEEDESEwoP",
+            "VVBTXzJORF9EQVlfQUlSEDISEgoOVVBTXzJORF9EQVlfQU0QMxIUChBVUFNf",
+            "M19EQVlfU0VMRUNUEDQSDgoKVVBTX0dST1VORBA1EhQKEFVQU19ORVhUX0RB",
+            "WV9BSVIQNhIdChlVUFNfTkVYVF9EQVlfQUlSX0VBUkxZX0FNEDcSGgoWVVBT",
+            "X05FWFRfREFZX0FJUl9TQVZFUhA4Eh4KGlVTUFNfUFJJT1JJVFlfTUFJTF9F",
+            "WFBSRVNTEDkSEwoPVVNQU19NRURJQV9NQUlMEDoSIAocVVNQU19HUk9VTkRf",
+            "QURWQU5UQUdFX1JFVEFJTBA7EhYKElVTUFNfUFJJT1JJVFlfTUFJTBA8EiQK",
+            "IFVTUFNfR1JPVU5EX0FEVkFOVEFHRV9DT01NRVJDSUFMED0itgQKEFZlaGlj",
+            "bGVCb2R5U3R5bGUSIgoeVkVISUNMRV9CT0RZX1NUWUxFX1VOU1BFQ0lGSUVE",
+            "EAASDQoJQVRWX1NQT1JUEAESDwoLQVRWX1RPVVJJTkcQAhIPCgtBVFZfVVRJ",
+            "TElUWRADEg0KCUFUVl9ZT1VUSBAEEgwKCENJVFlfQ0FSEAUSFQoRQ0xBU1Nf",
+            "QV9NT1RPUkhPTUUQBhIVChFDTEFTU19CX01PVE9SSE9NRRAHEhUKEUNMQVNT",
+            "X0NfTU9UT1JIT01FEAgSDwoLQ09NUEFDVF9TVVYQCRIPCgtDT05WRVJUSUJM",
+            "RRAKEgkKBUNPVVBFEAsSDQoJQ1JPU1NPVkVSEAwSDwoLRklGVEhfV0hFRUwQ",
+            "DRIRCg1GVUxMX1NJWkVfVkFOEA4SDQoJSEFUQ0hCQUNLEA8SDQoJTElNT1VT",
+            "SU5FEBASCwoHTUlOSVZBThAREg0KCU5PVENIQkFDSxASEhEKDVBPUF9VUF9D",
+            "QU1QRVIQExIJCgVTRURBThAUEhAKDFNJREVfQllfU0lERRAVEhEKDVNUQVRJ",
+            "T05fV0FHT04QFhIHCgNTVVYQFxISCg5UUkFWRUxfVFJBSUxFUhAYEgkKBVRS",
+            "VUNLEBkSEAoMVFJVQ0tfQ0FNUEVSEBoSBwoDVVRFEBsSHAoYVVRWX1JFQ1JF",
+            "QVRJT05BTF9VVElMSVRZEBwSDQoJVVRWX1NQT1JUEB0SDwoLVVRWX1VUSUxJ",
+            "VFkQHhINCglVVFZfWU9VVEgQHyKjAQoKRW5naW5lVHlwZRIbChdFTkdJTkVf",
+            "VFlQRV9VTlNQRUNJRklFRBAAEgwKCEdBU09MSU5FEAESCgoGRElFU0VMEAIS",
+            "DAoIRUxFQ1RSSUMQAxIKCgZIWUJSSUQQBBISCg5QTFVHX0lOX0hZQlJJRBAF",
+            "Eg8KC05BVFVSQUxfR0FTEAYSBwoDTFBHEAcSCwoHTUVUSEFORRAIEgkKBU9U",
+            "SEVSEAkizgEKEUVtaXNzaW9uc1N0YW5kYXJkEiIKHkVNSVNTSU9OU19TVEFO",
+            "REFSRF9VTlNQRUNJRklFRBAAEhIKDlpFUk9fRU1JU1NJT05TEAESCQoFRVVS",
+            "TzEQAhIJCgVFVVJPMhADEgkKBUVVUk8zEAQSCQoFRVVSTzQQBRIJCgVFVVJP",
+            "NRAGEgoKBkVVUk81QhAHEgkKBUVVUk82EAgSCgoGRVVSTzZDEAkSCgoGRVVS",
+            "TzZEEAoSDwoLRVVSTzZEX1RFTVAQCxIKCgZFVVJPNkUQDCK+AQoQVmVoaWNs",
+            "ZVByaWNlVHlwZRIiCh5WRUhJQ0xFX1BSSUNFX1RZUEVfVU5TUEVDSUZJRUQQ",
+            "ABIQCgxBTExfSU5fUFJJQ0UQARIUChBEUklWRV9BV0FZX1BSSUNFEAISHgoa",
+            "RVNUSU1BVEVEX0RSSVZFX0FXQVlfUFJJQ0UQAxImCiJFWENMVURJTkdfR09W",
+            "RVJOTUVOVF9DSEFSR0VTX1BSSUNFEAQSFgoSVkVISUNMRV9CQVNFX1BSSUNF",
+            "EAUitAEKDFByb3BlcnR5VHlwZRIdChlQUk9QRVJUWV9UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASDQoJQVBBUlRNRU5UEAESCQoFQ09ORE8QAhIICgRMT0ZUEAMSFQoR",
+            "TVVMVElfRkFNSUxZX0hPTUUQBBINCglQRU5USE9VU0UQBRIICgRST09NEAYS",
+            "FgoSU0lOR0xFX0ZBTUlMWV9IT01FEAcSCgoGU1RVRElPEAgSDQoJVE9XTkhP",
+            "VVNFEAkikAUKDkFtZW5pdHlGZWF0dXJlEh8KG0FNRU5JVFlfRkVBVFVSRV9V",
+            "TlNQRUNJRklFRBAAEgsKB0JBTENPTlkQARIMCghCQVNFTUVOVBACEhQKEEJB",
+            "U0tFVEJBTExfQ09VUlQQAxIQCgxCSUtFX1NUT1JBR0UQBBIOCgpDRU5UUkFM",
+            "X0FDEAUSDgoKRElTSFdBU0hFUhAGEgwKCERPR19QQVJLEAcSDAoIRUxFVkFU",
+            "T1IQCBIPCgtFVl9DSEFSR0lORxAJEg4KCkZFTkNFRF9MT1QQChINCglGSVJF",
+            "UExBQ0UQCxISCg5GSVRORVNTX0NFTlRFUhAMEhYKEkZPUkNFRF9BSVJfSEVB",
+            "VElORxANEhMKD0ZVTExZX0ZVUk5JU0hFRBAOEgoKBkdBUkFHRRAPEhMKD0dB",
+            "VEVEX0NPTU1VTklUWRAQEhMKD0hBUkRXT09EX0ZMT09SUxAREhcKE0hJR0hf",
+            "U1BFRURfSU5URVJORVQQEhIMCghJTlRFUkNPTRATEhgKFElOX1VOSVRfV0FT",
+            "SEVSX0RSWUVSEBQSCwoHS0lUQ0hFThAVEhEKDUxBUkdFX0NMT1NFVFMQFhIU",
+            "ChBNVUxUSVNQT1JUX0NPVVJUEBcSEgoOT05TSVRFX0xBVU5EUlkQGBISCg5P",
+            "VVRET09SX0xPVU5HRRAZEgsKB1BBUktJTkcQGhIJCgVQQVRJTxAbEhQKEFBJ",
+            "Q0tMRUJBTExfQ09VUlQQHBIICgRQT09MEB0SEAoMUkVGUklHRVJBVE9SEB4S",
+            "EAoMU09DQ0VSX0ZJRUxEEB8SEAoMVEVOTklTX0NPVVJUECASEwoPV0FMS19J",
+            "Tl9DTE9TRVRTECESFQoRV0hFRUxDSEFJUl9BQ0NFU1MQIiJ1ChFVdGlsaXRp",
+            "ZXNJbmNsdWRlZBIiCh5VVElMSVRJRVNfSU5DTFVERURfVU5TUEVDSUZJRUQQ",
+            "ABIPCgtFTEVDVFJJQ0lUWRABEgcKA0dBUxACEgwKCElOVEVSTkVUEAMSCQoF",
+            "VFJBU0gQBBIJCgVXQVRFUhAFIpQBChRTcGVjaWFsdHlIb3VzaW5nVHlwZRIm",
+            "CiJTUEVDSUFMVFlfSE9VU0lOR19UWVBFX1VOU1BFQ0lGSUVEEAASDQoJQ09S",
+            "UE9SQVRFEAESDgoKTE9XX0lOQ09NRRACEgwKCE1JTElUQVJZEAMSCgoGU0VO",
+            "SU9SEAQSDgoKU0hPUlRfVEVSTRAFEgsKB1NUVURFTlQQBkIUChJfaWRlbnRp",
+            "Zmllcl9leGlzdHNCDAoKX2lzX2J1bmRsZUIICgZfdGl0bGVCDgoMX2Rlc2Ny",
+            "aXB0aW9uQgcKBV9saW5rQg4KDF9tb2JpbGVfbGlua0IRCg9fY2Fub25pY2Fs",
+            "X2xpbmtCDQoLX2ltYWdlX2xpbmtCCAoGX2FkdWx0QgwKCl9hZ2VfZ3JvdXBC",
+            "DwoNX2F2YWlsYWJpbGl0eUIICgZfYnJhbmRCCAoGX2NvbG9yQgwKCl9jb25k",
+            "aXRpb25CCQoHX2dlbmRlckIaChhfZ29vZ2xlX3Byb2R1Y3RfY2F0ZWdvcnlC",
+            "EAoOX2l0ZW1fZ3JvdXBfaWRCCwoJX21hdGVyaWFsQgYKBF9tcG5CCgoIX3Bh",
+            "dHRlcm5CGgoYX3NlbGxfb25fZ29vZ2xlX3F1YW50aXR5QhQKEl9tYXhfaGFu",
+            "ZGxpbmdfdGltZUIUChJfbWluX2hhbmRsaW5nX3RpbWVCEQoPX3NoaXBwaW5n",
+            "X2xhYmVsQhYKFF9yZXR1cm5fcG9saWN5X2xhYmVsQhUKE190cmFuc2l0X3Rp",
+            "bWVfbGFiZWxCBwoFX3NpemVCDgoMX3NpemVfc3lzdGVtQhoKGF9lbmVyZ3lf",
+            "ZWZmaWNpZW5jeV9jbGFzc0IeChxfbWluX2VuZXJneV9lZmZpY2llbmN5X2Ns",
+            "YXNzQh4KHF9tYXhfZW5lcmd5X2VmZmljaWVuY3lfY2xhc3NCDAoKX211bHRp",
+            "cGFja0IPCg1fYWRzX2dyb3VwaW5nQg8KDV9hZHNfcmVkaXJlY3RCEQoPX2Rp",
+            "c3BsYXlfYWRzX2lkQhQKEl9kaXNwbGF5X2Fkc190aXRsZUITChFfZGlzcGxh",
+            "eV9hZHNfbGlua0IUChJfZGlzcGxheV9hZHNfdmFsdWVCEAoOX3BpY2t1cF9t",
+            "ZXRob2RCDQoLX3BpY2t1cF9zbGFCDgoMX3BpY2t1cF9jb3N0QhAKDl9saW5r",
+            "X3RlbXBsYXRlQhcKFV9tb2JpbGVfbGlua190ZW1wbGF0ZUIRCg9fY3VzdG9t",
+            "X2xhYmVsXzBCEQoPX2N1c3RvbV9sYWJlbF8xQhEKD19jdXN0b21fbGFiZWxf",
+            "MkIRCg9fY3VzdG9tX2xhYmVsXzNCEQoPX2N1c3RvbV9sYWJlbF80QhUKE19l",
+            "eHRlcm5hbF9zZWxsZXJfaWRCCAoGX3BhdXNlQhUKE192aXJ0dWFsX21vZGVs",
+            "X2xpbmtCEwoRX3N0cnVjdHVyZWRfdGl0bGVCGQoXX3N0cnVjdHVyZWRfZGVz",
+            "Y3JpcHRpb25CCwoJX2xhdGl0dWRlQgwKCl9sb25naXR1ZGVCEgoQX251bWJl",
+            "cl9vZl91bml0c0IVChNfbnVtYmVyX29mX2JlZHJvb21zQhYKFF9udW1iZXJf",
+            "b2ZfYmF0aHJvb21zQg4KDF9zaG9ydF90aXRsZSItCg5TaGlwcGluZ1dlaWdo",
             "dBINCgV2YWx1ZRgBIAEoARIMCgR1bml0GAIgASgJIjAKEVNoaXBwaW5nRGlt",
             "ZW5zaW9uEg0KBXZhbHVlGAEgASgBEgwKBHVuaXQYAiABKAkiNQoWVW5pdFBy",
             "aWNpbmdCYXNlTWVhc3VyZRINCgV2YWx1ZRgBIAEoAxIMCgR1bml0GAIgASgJ",
@@ -233,184 +401,211 @@ namespace Google.Shopping.Merchant.Products.V1 {
             "GAIgASgJIqABChBTdWJzY3JpcHRpb25Db3N0EkgKBnBlcmlvZBgBIAEoDjI4",
             "Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5TdWJzY3Jp",
             "cHRpb25QZXJpb2QSFQoNcGVyaW9kX2xlbmd0aBgCIAEoAxIrCgZhbW91bnQY",
-            "AyABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZSK5AgoSUHJvZHVj",
+            "AyABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZSKHAwoSUHJvZHVj",
             "dEluc3RhbGxtZW50Eg4KBm1vbnRocxgBIAEoAxIrCgZhbW91bnQYAiABKAsy",
             "Gy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRI1Cgtkb3ducGF5bWVudBgD",
             "IAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSACIAQESSgoLY3Jl",
             "ZGl0X3R5cGUYBCABKA4yMC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJv",
             "ZHVjdHMudjEuQ3JlZGl0VHlwZUgBiAEBEigKFmFubnVhbF9wZXJjZW50YWdl",
-            "X3JhdGUYBSABKAFCA+BBAUgCiAEBQg4KDF9kb3ducGF5bWVudEIOCgxfY3Jl",
-            "ZGl0X3R5cGVCGQoXX2FubnVhbF9wZXJjZW50YWdlX3JhdGUiQgoNTG95YWx0",
-            "eVBvaW50cxIMCgRuYW1lGAEgASgJEhQKDHBvaW50c192YWx1ZRgCIAEoAxIN",
-            "CgVyYXRpbxgDIAEoASLBAwoOTG95YWx0eVByb2dyYW0SGgoNcHJvZ3JhbV9s",
-            "YWJlbBgBIAEoCUgAiAEBEhcKCnRpZXJfbGFiZWwYAiABKAlIAYgBARIvCgVw",
-            "cmljZRgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAKIAQES",
-            "QQoXY2FzaGJhY2tfZm9yX2Z1dHVyZV91c2UYBCABKAsyGy5nb29nbGUuc2hv",
-            "cHBpbmcudHlwZS5QcmljZUgDiAEBEhsKDmxveWFsdHlfcG9pbnRzGAUgASgD",
-            "SASIAQESPwobbWVtYmVyX3ByaWNlX2VmZmVjdGl2ZV9kYXRlGAYgASgLMhUu",
-            "Z29vZ2xlLnR5cGUuSW50ZXJ2YWxIBYgBARIbCg5zaGlwcGluZ19sYWJlbBgH",
-            "IAEoCUgGiAEBQhAKDl9wcm9ncmFtX2xhYmVsQg0KC190aWVyX2xhYmVsQggK",
-            "Bl9wcmljZUIaChhfY2FzaGJhY2tfZm9yX2Z1dHVyZV91c2VCEQoPX2xveWFs",
-            "dHlfcG9pbnRzQh4KHF9tZW1iZXJfcHJpY2VfZWZmZWN0aXZlX2RhdGVCEQoP",
-            "X3NoaXBwaW5nX2xhYmVsIoMECghTaGlwcGluZxIqCgVwcmljZRgBIAEoCzIb",
-            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEg8KB2NvdW50cnkYAiABKAkS",
-            "DgoGcmVnaW9uGAMgASgJEg8KB3NlcnZpY2UYBCABKAkSEwoLbG9jYXRpb25f",
-            "aWQYBSABKAMSGwoTbG9jYXRpb25fZ3JvdXBfbmFtZRgGIAEoCRITCgtwb3N0",
-            "YWxfY29kZRgHIAEoCRIeChFtaW5faGFuZGxpbmdfdGltZRgIIAEoA0gAiAEB",
-            "Eh4KEW1heF9oYW5kbGluZ190aW1lGAkgASgDSAGIAQESHQoQbWluX3RyYW5z",
-            "aXRfdGltZRgKIAEoA0gCiAEBEh0KEG1heF90cmFuc2l0X3RpbWUYCyABKANI",
-            "A4gBARIhChRoYW5kbGluZ19jdXRvZmZfdGltZRgMIAEoCUgEiAEBEiUKGGhh",
-            "bmRsaW5nX2N1dG9mZl90aW1lem9uZRgNIAEoCUgFiAEBQhQKEl9taW5faGFu",
-            "ZGxpbmdfdGltZUIUChJfbWF4X2hhbmRsaW5nX3RpbWVCEwoRX21pbl90cmFu",
-            "c2l0X3RpbWVCEwoRX21heF90cmFuc2l0X3RpbWVCFwoVX2hhbmRsaW5nX2N1",
-            "dG9mZl90aW1lQhsKGV9oYW5kbGluZ19jdXRvZmZfdGltZXpvbmUiiAEKFUZy",
-            "ZWVTaGlwcGluZ1RocmVzaG9sZBIUCgdjb3VudHJ5GAEgASgJSACIAQESOQoP",
-            "cHJpY2VfdGhyZXNob2xkGAIgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUu",
-            "UHJpY2VIAYgBAUIKCghfY291bnRyeUISChBfcHJpY2VfdGhyZXNob2xkIlYK",
-            "DVByb2R1Y3REZXRhaWwSFAoMc2VjdGlvbl9uYW1lGAEgASgJEhYKDmF0dHJp",
-            "YnV0ZV9uYW1lGAIgASgJEhcKD2F0dHJpYnV0ZV92YWx1ZRgDIAEoCSL5AgoU",
-            "UHJvZHVjdENlcnRpZmljYXRpb24SYgoXY2VydGlmaWNhdGlvbl9hdXRob3Jp",
-            "dHkYASABKA4yPC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMu",
-            "djEuQ2VydGlmaWNhdGlvbkF1dGhvcml0eUgAiAEBElgKEmNlcnRpZmljYXRp",
-            "b25fbmFtZRgCIAEoDjI3Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9k",
-            "dWN0cy52MS5DZXJ0aWZpY2F0aW9uTmFtZUgBiAEBEh8KEmNlcnRpZmljYXRp",
-            "b25fY29kZRgDIAEoCUgCiAEBEiAKE2NlcnRpZmljYXRpb25fdmFsdWUYBCAB",
-            "KAlIA4gBAUIaChhfY2VydGlmaWNhdGlvbl9hdXRob3JpdHlCFQoTX2NlcnRp",
-            "ZmljYXRpb25fbmFtZUIVChNfY2VydGlmaWNhdGlvbl9jb2RlQhYKFF9jZXJ0",
-            "aWZpY2F0aW9uX3ZhbHVlIqYBCg9TdHJ1Y3R1cmVkVGl0bGUSWQoTZGlnaXRh",
-            "bF9zb3VyY2VfdHlwZRgBIAEoDjI3Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFu",
-            "dC5wcm9kdWN0cy52MS5EaWdpdGFsU291cmNlVHlwZUgAiAEBEhQKB2NvbnRl",
-            "bnQYAiABKAlIAYgBAUIWChRfZGlnaXRhbF9zb3VyY2VfdHlwZUIKCghfY29u",
-            "dGVudCKsAQoVU3RydWN0dXJlZERlc2NyaXB0aW9uElkKE2RpZ2l0YWxfc291",
-            "cmNlX3R5cGUYASABKA4yNy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJv",
-            "ZHVjdHMudjEuRGlnaXRhbFNvdXJjZVR5cGVIAIgBARIUCgdjb250ZW50GAIg",
-            "ASgJSAGIAQFCFgoUX2RpZ2l0YWxfc291cmNlX3R5cGVCCgoIX2NvbnRlbnQi",
-            "OQoQUHJvZHVjdERpbWVuc2lvbhISCgV2YWx1ZRgBIAEoAUID4EECEhEKBHVu",
-            "aXQYAiABKAlCA+BBAiI2Cg1Qcm9kdWN0V2VpZ2h0EhIKBXZhbHVlGAEgASgB",
-            "QgPgQQISEQoEdW5pdBgCIAEoCUID4EECIusHCg1Qcm9kdWN0U3RhdHVzEmMK",
-            "FGRlc3RpbmF0aW9uX3N0YXR1c2VzGAMgAygLMkUuZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RTdGF0dXMuRGVzdGluYXRp",
-            "b25TdGF0dXMSXQoRaXRlbV9sZXZlbF9pc3N1ZXMYBCADKAsyQi5nb29nbGUu",
-            "c2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdFN0YXR1cy5J",
-            "dGVtTGV2ZWxJc3N1ZRIxCg1jcmVhdGlvbl9kYXRlGAUgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0ZV9kYXRlGAYgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI6ChZnb29nbGVfZXhwaXJh",
-            "dGlvbl9kYXRlGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBrB",
-            "AQoRRGVzdGluYXRpb25TdGF0dXMSVgoRcmVwb3J0aW5nX2NvbnRleHQYASAB",
-            "KA4yOy5nb29nbGUuc2hvcHBpbmcudHlwZS5SZXBvcnRpbmdDb250ZXh0LlJl",
-            "cG9ydGluZ0NvbnRleHRFbnVtEhoKEmFwcHJvdmVkX2NvdW50cmllcxgCIAMo",
-            "CRIZChFwZW5kaW5nX2NvdW50cmllcxgDIAMoCRIdChVkaXNhcHByb3ZlZF9j",
-            "b3VudHJpZXMYBCADKAkarAMKDkl0ZW1MZXZlbElzc3VlEgwKBGNvZGUYASAB",
-            "KAkSXQoIc2V2ZXJpdHkYAiABKA4ySy5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
-            "bnQucHJvZHVjdHMudjEuUHJvZHVjdFN0YXR1cy5JdGVtTGV2ZWxJc3N1ZS5T",
-            "ZXZlcml0eRISCgpyZXNvbHV0aW9uGAMgASgJEhEKCWF0dHJpYnV0ZRgEIAEo",
-            "CRJWChFyZXBvcnRpbmdfY29udGV4dBgFIAEoDjI7Lmdvb2dsZS5zaG9wcGlu",
-            "Zy50eXBlLlJlcG9ydGluZ0NvbnRleHQuUmVwb3J0aW5nQ29udGV4dEVudW0S",
-            "EwoLZGVzY3JpcHRpb24YBiABKAkSDgoGZGV0YWlsGAcgASgJEhUKDWRvY3Vt",
-            "ZW50YXRpb24YCCABKAkSHAoUYXBwbGljYWJsZV9jb3VudHJpZXMYCSADKAki",
-            "VAoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIQCgxOT1Rf",
-            "SU1QQUNURUQQARILCgdERU1PVEVEEAISDwoLRElTQVBQUk9WRUQQAyKlAgof",
-            "Q2xvdWRFeHBvcnRBZGRpdGlvbmFsUHJvcGVydGllcxIaCg1wcm9wZXJ0eV9u",
-            "YW1lGAEgASgJSACIAQESEgoKdGV4dF92YWx1ZRgCIAMoCRIXCgpib29sX3Zh",
-            "bHVlGAMgASgISAGIAQESEQoJaW50X3ZhbHVlGAQgAygDEhMKC2Zsb2F0X3Zh",
-            "bHVlGAUgAygCEhYKCW1pbl92YWx1ZRgGIAEoAkgCiAEBEhYKCW1heF92YWx1",
-            "ZRgHIAEoAkgDiAEBEhYKCXVuaXRfY29kZRgIIAEoCUgEiAEBQhAKDl9wcm9w",
-            "ZXJ0eV9uYW1lQg0KC19ib29sX3ZhbHVlQgwKCl9taW5fdmFsdWVCDAoKX21h",
-            "eF92YWx1ZUIMCgpfdW5pdF9jb2RlIp0CCh5Qcm9kdWN0U3VzdGFpbmFiaWxp",
-            "dHlJbmNlbnRpdmUSLQoGYW1vdW50GAIgASgLMhsuZ29vZ2xlLnNob3BwaW5n",
-            "LnR5cGUuUHJpY2VIABIUCgpwZXJjZW50YWdlGAMgASgBSAASXAoEdHlwZRgB",
-            "IAEoDjJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Q",
-            "cm9kdWN0U3VzdGFpbmFiaWxpdHlJbmNlbnRpdmUuVHlwZUgBiAEBIkYKBFR5",
-            "cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEhEKDUVWX1RBWF9DUkVESVQQARIV",
-            "ChFFVl9QUklDRV9ESVNDT1VOVBACQgcKBXZhbHVlQgcKBV90eXBlIrQBChJB",
-            "dXRvbWF0ZWREaXNjb3VudHMSMAoLcHJpb3JfcHJpY2UYASABKAsyGy5nb29n",
-            "bGUuc2hvcHBpbmcudHlwZS5QcmljZRI8Chdwcmlvcl9wcmljZV9wcm9ncmVz",
-            "c2l2ZRgCIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlEi4KCWdh",
-            "ZF9wcmljZRgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlIuAB",
-            "ChJIYW5kbGluZ0N1dG9mZlRpbWUSFAoHY291bnRyeRgBIAEoCUgAiAEBEhgK",
-            "C2N1dG9mZl90aW1lGAIgASgJSAGIAQESHAoPY3V0b2ZmX3RpbWV6b25lGAMg",
-            "ASgJSAKIAQESKgodZGlzYWJsZV9kZWxpdmVyeV9hZnRlcl9jdXRvZmYYBCAB",
-            "KAhIA4gBAUIKCghfY291bnRyeUIOCgxfY3V0b2ZmX3RpbWVCEgoQX2N1dG9m",
-            "Zl90aW1lem9uZUIgCh5fZGlzYWJsZV9kZWxpdmVyeV9hZnRlcl9jdXRvZmYq",
-            "WAoSU3Vic2NyaXB0aW9uUGVyaW9kEiMKH1NVQlNDUklQVElPTl9QRVJJT0Rf",
-            "VU5TUEVDSUZJRUQQABIJCgVNT05USBABEggKBFlFQVIQAhIICgRXRUVLEAMq",
-            "YAoIQWdlR3JvdXASGQoVQUdFX0dST1VQX1VOU1BFQ0lGSUVEEAASCQoFQURV",
-            "TFQQARIICgRLSURTEAISCwoHVE9ERExFUhADEgoKBklORkFOVBAEEgsKB05F",
-            "V0JPUk4QBSqDAQoMQXZhaWxhYmlsaXR5EhwKGEFWQUlMQUJJTElUWV9VTlNQ",
-            "RUNJRklFRBAAEgwKCElOX1NUT0NLEAESEAoMT1VUX09GX1NUT0NLEAISDAoI",
-            "UFJFT1JERVIQAxIYChRMSU1JVEVEX0FWQUlMQUJJTElUWRAEEg0KCUJBQ0tP",
-            "UkRFUhAFKkoKCUNvbmRpdGlvbhIZChVDT05ESVRJT05fVU5TUEVDSUZJRUQQ",
-            "ABIHCgNORVcQARIICgRVU0VEEAISDwoLUkVGVVJCSVNIRUQQAypCCgZHZW5k",
-            "ZXISFgoSR0VOREVSX1VOU1BFQ0lGSUVEEAASCAoETUFMRRABEgoKBkZFTUFM",
-            "RRACEgoKBlVOSVNFWBADKkEKCkNyZWRpdFR5cGUSGwoXQ1JFRElUX1RZUEVf",
-            "VU5TUEVDSUZJRUQQABILCgdGSU5BTkNFEAESCQoFTEVBU0UQAiqCAQoKU2l6",
-            "ZVN5c3RlbRIbChdTSVpFX1NZU1RFTV9VTlNQRUNJRklFRBAAEgYKAkFVEAES",
-            "BgoCQlIQAhIGCgJDThADEgYKAkRFEAQSBgoCRVUQBRIGCgJGUhAGEgYKAklU",
-            "EAcSBgoCSlAQCBIHCgNNRVgQCRIGCgJVSxAKEgYKAlVTEAsqagoIU2l6ZVR5",
-            "cGUSGQoVU0laRV9UWVBFX1VOU1BFQ0lGSUVEEAASCwoHUkVHVUxBUhABEgoK",
-            "BlBFVElURRACEg0KCU1BVEVSTklUWRADEgcKA0JJRxAEEggKBFRBTEwQBRII",
-            "CgRQTFVTEAYqjAEKFUVuZXJneUVmZmljaWVuY3lDbGFzcxInCiNFTkVSR1lf",
-            "RUZGSUNJRU5DWV9DTEFTU19VTlNQRUNJRklFRBAAEggKBEFQUFAQARIHCgNB",
-            "UFAQAhIGCgJBUBADEgUKAUEQBBIFCgFCEAUSBQoBQxAGEgUKAUQQBxIFCgFF",
-            "EAgSBQoBRhAJEgUKAUcQCippCgxQaWNrdXBNZXRob2QSHQoZUElDS1VQX01F",
-            "VEhPRF9VTlNQRUNJRklFRBAAEhEKDU5PVF9TVVBQT1JURUQQARIHCgNCVVkQ",
-            "AhILCgdSRVNFUlZFEAMSEQoNU0hJUF9UT19TVE9SRRAEKpgBCglQaWNrdXBT",
-            "bGESGgoWUElDS1VQX1NMQV9VTlNQRUNJRklFRBAAEgwKCFNBTUVfREFZEAES",
-            "DAoITkVYVF9EQVkQAhILCgdUV09fREFZEAMSDQoJVEhSRUVfREFZEAQSDAoI",
-            "Rk9VUl9EQVkQBRIMCghGSVZFX0RBWRAGEgsKB1NJWF9EQVkQBxIOCgpNVUxU",
-            "SV9XRUVLEAgqMAoFUGF1c2USFQoRUEFVU0VfVU5TUEVDSUZJRUQQABIHCgNB",
-            "RFMQARIHCgNBTEwQAipnChZDZXJ0aWZpY2F0aW9uQXV0aG9yaXR5EicKI0NF",
-            "UlRJRklDQVRJT05fQVVUSE9SSVRZX1VOU1BFQ0lGSUVEEAASCQoFQURFTUUQ",
-            "ARIICgRCTVdLEAISBwoDRVBBEAMSBgoCRUMQBCrVAQoRQ2VydGlmaWNhdGlv",
-            "bk5hbWUSIgoeQ0VSVElGSUNBVElPTl9OQU1FX1VOU1BFQ0lGSUVEEAASDwoL",
-            "RU5FUkdZX1NUQVIQARIeChpFTkVSR1lfU1RBUl9NT1NUX0VGRklDSUVOVBAC",
-            "EgkKBUVQUkVMEAMSDwoLRVVfRUNPTEFCRUwQBBIdChlWRUhJQ0xFX0VORVJH",
-            "WV9FRkZJQ0lFTkNZEAUSMAosVkVISUNMRV9FTkVSR1lfRUZGSUNJRU5DWV9E",
-            "SVNDSEFSR0VEX0JBVFRFUlkQBipkChFEaWdpdGFsU291cmNlVHlwZRIjCh9E",
-            "SUdJVEFMX1NPVVJDRV9UWVBFX1VOU1BFQ0lGSUVEEAASHQoZVFJBSU5FRF9B",
-            "TEdPUklUSE1JQ19NRURJQRABEgsKB0RFRkFVTFQQAirIBwoYQ2FycmllclRy",
-            "YW5zaXRUaW1lT3B0aW9uEisKJ0NBUlJJRVJfVFJBTlNJVF9USU1FX09QVElP",
-            "Tl9VTlNQRUNJRklFRBAAEg0KCURITF9QQUtFVBABEhAKDERITF9QQUNLQ0hF",
-            "ThACEhMKD0RITF9FWFBSRVNTRUFTWRADEg8KC0RQRF9FWFBSRVNTEAQSFgoS",
-            "RFBEX0NMQVNTSUNfUEFSQ0VMEAUSEgoOSEVSTUVTX0hBVVNUVVIQBhIUChBI",
-            "RVJNRVNfUEFLRVRTSE9QEAcSEAoMR0xTX0JVU0lORVNTEAgSDwoLR0xTX0VY",
-            "UFJFU1MQCRIPCgtHTFNfUFJJVkFURRAKEhYKEkNPTElTU0lNT19ET01JQ0lM",
-            "RRALEhQKEERITF9FWFBSRVNTXzEyQU0QDBITCg9ESExfRVhQUkVTU185QU0Q",
-            "DRISCg5HRU9ESVNfRVhQUkVTUxAOEhIKDkdFT0RJU19QQUNLXzMwEA8SEwoP",
-            "R0VPRElTX1NBTUVfREFZEBASEQoNR0VPRElTX1RPUF8yNBAREhUKEVROVF9F",
-            "U1NFTlRJRUxfMjRIEBISHQoZVE5UX0VTU0VOVElFTF9GTEVYSUJJTElURRAT",
-            "EhAKDEZFREVYX0dST1VORBAUEhcKE0ZFREVYX0hPTUVfREVMSVZFUlkQFRIX",
-            "ChNGRURFWF9FWFBSRVNTX1NBVkVSEBYSGQoVRkVERVhfRklSU1RfT1ZFUk5J",
-            "R0hUEBcSHAoYRkVERVhfUFJJT1JJVFlfT1ZFUk5JR0hUEBgSHAoYRkVERVhf",
-            "U1RBTkRBUkRfT1ZFUk5JR0hUEBkSDgoKRkVERVhfMkRBWRAaEhMKD1VQU18y",
-            "TkRfREFZX0FJUhAbEhIKDlVQU18yTkRfREFZX0FNEBwSFAoQVVBTXzNfREFZ",
-            "X1NFTEVDVBAdEg4KClVQU19HUk9VTkQQHhIUChBVUFNfTkVYVF9EQVlfQUlS",
-            "EB8SHQoZVVBTX05FWFRfREFZX0FJUl9FQVJMWV9BTRAgEhoKFlVQU19ORVhU",
-            "X0RBWV9BSVJfU0FWRVIQIRIeChpVU1BTX1BSSU9SSVRZX01BSUxfRVhQUkVT",
-            "UxAiEhMKD1VTUFNfTUVESUFfTUFJTBAjEiAKHFVTUFNfR1JPVU5EX0FEVkFO",
-            "VEFHRV9SRVRBSUwQJBIWChJVU1BTX1BSSU9SSVRZX01BSUwQJRIkCiBVU1BT",
-            "X0dST1VORF9BRFZBTlRBR0VfQ09NTUVSQ0lBTBAmEhkKFVVTUFNfRklSU1Rf",
-            "Q0xBU1NfTUFJTBAnQoYCCihjb20uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
-            "LnByb2R1Y3RzLnYxQhNQcm9kdWN0c0NvbW1vblByb3RvUAFaSmNsb3VkLmdv",
-            "b2dsZS5jb20vZ28vc2hvcHBpbmcvbWVyY2hhbnQvcHJvZHVjdHMvYXBpdjEv",
-            "cHJvZHVjdHNwYjtwcm9kdWN0c3BiqgIkR29vZ2xlLlNob3BwaW5nLk1lcmNo",
-            "YW50LlByb2R1Y3RzLlYxygIkR29vZ2xlXFNob3BwaW5nXE1lcmNoYW50XFBy",
-            "b2R1Y3RzXFYx6gIoR29vZ2xlOjpTaG9wcGluZzo6TWVyY2hhbnQ6OlByb2R1",
-            "Y3RzOjpWMWIGcHJvdG8z"));
+            "X3JhdGUYBSABKAFCA+BBAUgCiAEBEjsKDHRvdGFsX2Ftb3VudBgGIAEoCzIb",
+            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlQgPgQQFIA4gBAUIOCgxfZG93",
+            "bnBheW1lbnRCDgoMX2NyZWRpdF90eXBlQhkKF19hbm51YWxfcGVyY2VudGFn",
+            "ZV9yYXRlQg8KDV90b3RhbF9hbW91bnQiQgoNTG95YWx0eVBvaW50cxIMCgRu",
+            "YW1lGAEgASgJEhQKDHBvaW50c192YWx1ZRgCIAEoAxINCgVyYXRpbxgDIAEo",
+            "ASLBAwoOTG95YWx0eVByb2dyYW0SGgoNcHJvZ3JhbV9sYWJlbBgBIAEoCUgA",
+            "iAEBEhcKCnRpZXJfbGFiZWwYAiABKAlIAYgBARIvCgVwcmljZRgDIAEoCzIb",
+            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlSAKIAQESQQoXY2FzaGJhY2tf",
+            "Zm9yX2Z1dHVyZV91c2UYBCABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5Q",
+            "cmljZUgDiAEBEhsKDmxveWFsdHlfcG9pbnRzGAUgASgDSASIAQESPwobbWVt",
+            "YmVyX3ByaWNlX2VmZmVjdGl2ZV9kYXRlGAYgASgLMhUuZ29vZ2xlLnR5cGUu",
+            "SW50ZXJ2YWxIBYgBARIbCg5zaGlwcGluZ19sYWJlbBgHIAEoCUgGiAEBQhAK",
+            "Dl9wcm9ncmFtX2xhYmVsQg0KC190aWVyX2xhYmVsQggKBl9wcmljZUIaChhf",
+            "Y2FzaGJhY2tfZm9yX2Z1dHVyZV91c2VCEQoPX2xveWFsdHlfcG9pbnRzQh4K",
+            "HF9tZW1iZXJfcHJpY2VfZWZmZWN0aXZlX2RhdGVCEQoPX3NoaXBwaW5nX2xh",
+            "YmVsIsgECghTaGlwcGluZxIqCgVwcmljZRgBIAEoCzIbLmdvb2dsZS5zaG9w",
+            "cGluZy50eXBlLlByaWNlEg8KB2NvdW50cnkYAiABKAkSDgoGcmVnaW9uGAMg",
+            "ASgJEg8KB3NlcnZpY2UYBCABKAkSEwoLbG9jYXRpb25faWQYBSABKAMSGwoT",
+            "bG9jYXRpb25fZ3JvdXBfbmFtZRgGIAEoCRITCgtwb3N0YWxfY29kZRgHIAEo",
+            "CRIeChFtaW5faGFuZGxpbmdfdGltZRgIIAEoA0gAiAEBEh4KEW1heF9oYW5k",
+            "bGluZ190aW1lGAkgASgDSAGIAQESHQoQbWluX3RyYW5zaXRfdGltZRgKIAEo",
+            "A0gCiAEBEh0KEG1heF90cmFuc2l0X3RpbWUYCyABKANIA4gBARIhChRoYW5k",
+            "bGluZ19jdXRvZmZfdGltZRgMIAEoCUgEiAEBEiUKGGhhbmRsaW5nX2N1dG9m",
+            "Zl90aW1lem9uZRgNIAEoCUgFiAEBEiIKFWxveWFsdHlfcHJvZ3JhbV9sYWJl",
+            "bBgOIAEoCUID4EEBEh8KEmxveWFsdHlfdGllcl9sYWJlbBgPIAEoCUID4EEB",
+            "QhQKEl9taW5faGFuZGxpbmdfdGltZUIUChJfbWF4X2hhbmRsaW5nX3RpbWVC",
+            "EwoRX21pbl90cmFuc2l0X3RpbWVCEwoRX21heF90cmFuc2l0X3RpbWVCFwoV",
+            "X2hhbmRsaW5nX2N1dG9mZl90aW1lQhsKGV9oYW5kbGluZ19jdXRvZmZfdGlt",
+            "ZXpvbmUiiAEKFUZyZWVTaGlwcGluZ1RocmVzaG9sZBIUCgdjb3VudHJ5GAEg",
+            "ASgJSACIAQESOQoPcHJpY2VfdGhyZXNob2xkGAIgASgLMhsuZ29vZ2xlLnNo",
+            "b3BwaW5nLnR5cGUuUHJpY2VIAYgBAUIKCghfY291bnRyeUISChBfcHJpY2Vf",
+            "dGhyZXNob2xkIlYKDVByb2R1Y3REZXRhaWwSFAoMc2VjdGlvbl9uYW1lGAEg",
+            "ASgJEhYKDmF0dHJpYnV0ZV9uYW1lGAIgASgJEhcKD2F0dHJpYnV0ZV92YWx1",
+            "ZRgDIAEoCSL5AgoUUHJvZHVjdENlcnRpZmljYXRpb24SYgoXY2VydGlmaWNh",
+            "dGlvbl9hdXRob3JpdHkYASABKA4yPC5nb29nbGUuc2hvcHBpbmcubWVyY2hh",
+            "bnQucHJvZHVjdHMudjEuQ2VydGlmaWNhdGlvbkF1dGhvcml0eUgAiAEBElgK",
+            "EmNlcnRpZmljYXRpb25fbmFtZRgCIAEoDjI3Lmdvb2dsZS5zaG9wcGluZy5t",
+            "ZXJjaGFudC5wcm9kdWN0cy52MS5DZXJ0aWZpY2F0aW9uTmFtZUgBiAEBEh8K",
+            "EmNlcnRpZmljYXRpb25fY29kZRgDIAEoCUgCiAEBEiAKE2NlcnRpZmljYXRp",
+            "b25fdmFsdWUYBCABKAlIA4gBAUIaChhfY2VydGlmaWNhdGlvbl9hdXRob3Jp",
+            "dHlCFQoTX2NlcnRpZmljYXRpb25fbmFtZUIVChNfY2VydGlmaWNhdGlvbl9j",
+            "b2RlQhYKFF9jZXJ0aWZpY2F0aW9uX3ZhbHVlIqYBCg9TdHJ1Y3R1cmVkVGl0",
+            "bGUSWQoTZGlnaXRhbF9zb3VyY2VfdHlwZRgBIAEoDjI3Lmdvb2dsZS5zaG9w",
+            "cGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5EaWdpdGFsU291cmNlVHlwZUgA",
+            "iAEBEhQKB2NvbnRlbnQYAiABKAlIAYgBAUIWChRfZGlnaXRhbF9zb3VyY2Vf",
+            "dHlwZUIKCghfY29udGVudCKsAQoVU3RydWN0dXJlZERlc2NyaXB0aW9uElkK",
+            "E2RpZ2l0YWxfc291cmNlX3R5cGUYASABKA4yNy5nb29nbGUuc2hvcHBpbmcu",
+            "bWVyY2hhbnQucHJvZHVjdHMudjEuRGlnaXRhbFNvdXJjZVR5cGVIAIgBARIU",
+            "Cgdjb250ZW50GAIgASgJSAGIAQFCFgoUX2RpZ2l0YWxfc291cmNlX3R5cGVC",
+            "CgoIX2NvbnRlbnQiOQoQUHJvZHVjdERpbWVuc2lvbhISCgV2YWx1ZRgBIAEo",
+            "AUID4EECEhEKBHVuaXQYAiABKAlCA+BBAiI2Cg1Qcm9kdWN0V2VpZ2h0EhIK",
+            "BXZhbHVlGAEgASgBQgPgQQISEQoEdW5pdBgCIAEoCUID4EECIusHCg1Qcm9k",
+            "dWN0U3RhdHVzEmMKFGRlc3RpbmF0aW9uX3N0YXR1c2VzGAMgAygLMkUuZ29v",
+            "Z2xlLnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RTdGF0",
+            "dXMuRGVzdGluYXRpb25TdGF0dXMSXQoRaXRlbV9sZXZlbF9pc3N1ZXMYBCAD",
+            "KAsyQi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJv",
+            "ZHVjdFN0YXR1cy5JdGVtTGV2ZWxJc3N1ZRIxCg1jcmVhdGlvbl9kYXRlGAUg",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI0ChBsYXN0X3VwZGF0",
+            "ZV9kYXRlGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI6ChZn",
+            "b29nbGVfZXhwaXJhdGlvbl9kYXRlGAcgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcBrBAQoRRGVzdGluYXRpb25TdGF0dXMSVgoRcmVwb3J0aW5n",
+            "X2NvbnRleHQYASABKA4yOy5nb29nbGUuc2hvcHBpbmcudHlwZS5SZXBvcnRp",
+            "bmdDb250ZXh0LlJlcG9ydGluZ0NvbnRleHRFbnVtEhoKEmFwcHJvdmVkX2Nv",
+            "dW50cmllcxgCIAMoCRIZChFwZW5kaW5nX2NvdW50cmllcxgDIAMoCRIdChVk",
+            "aXNhcHByb3ZlZF9jb3VudHJpZXMYBCADKAkarAMKDkl0ZW1MZXZlbElzc3Vl",
+            "EgwKBGNvZGUYASABKAkSXQoIc2V2ZXJpdHkYAiABKA4ySy5nb29nbGUuc2hv",
+            "cHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuUHJvZHVjdFN0YXR1cy5JdGVt",
+            "TGV2ZWxJc3N1ZS5TZXZlcml0eRISCgpyZXNvbHV0aW9uGAMgASgJEhEKCWF0",
+            "dHJpYnV0ZRgEIAEoCRJWChFyZXBvcnRpbmdfY29udGV4dBgFIAEoDjI7Lmdv",
+            "b2dsZS5zaG9wcGluZy50eXBlLlJlcG9ydGluZ0NvbnRleHQuUmVwb3J0aW5n",
+            "Q29udGV4dEVudW0SEwoLZGVzY3JpcHRpb24YBiABKAkSDgoGZGV0YWlsGAcg",
+            "ASgJEhUKDWRvY3VtZW50YXRpb24YCCABKAkSHAoUYXBwbGljYWJsZV9jb3Vu",
+            "dHJpZXMYCSADKAkiVAoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJ",
+            "RUQQABIQCgxOT1RfSU1QQUNURUQQARILCgdERU1PVEVEEAISDwoLRElTQVBQ",
+            "Uk9WRUQQAyKlAgofQ2xvdWRFeHBvcnRBZGRpdGlvbmFsUHJvcGVydGllcxIa",
+            "Cg1wcm9wZXJ0eV9uYW1lGAEgASgJSACIAQESEgoKdGV4dF92YWx1ZRgCIAMo",
+            "CRIXCgpib29sX3ZhbHVlGAMgASgISAGIAQESEQoJaW50X3ZhbHVlGAQgAygD",
+            "EhMKC2Zsb2F0X3ZhbHVlGAUgAygCEhYKCW1pbl92YWx1ZRgGIAEoAkgCiAEB",
+            "EhYKCW1heF92YWx1ZRgHIAEoAkgDiAEBEhYKCXVuaXRfY29kZRgIIAEoCUgE",
+            "iAEBQhAKDl9wcm9wZXJ0eV9uYW1lQg0KC19ib29sX3ZhbHVlQgwKCl9taW5f",
+            "dmFsdWVCDAoKX21heF92YWx1ZUIMCgpfdW5pdF9jb2RlIp0CCh5Qcm9kdWN0",
+            "U3VzdGFpbmFiaWxpdHlJbmNlbnRpdmUSLQoGYW1vdW50GAIgASgLMhsuZ29v",
+            "Z2xlLnNob3BwaW5nLnR5cGUuUHJpY2VIABIUCgpwZXJjZW50YWdlGAMgASgB",
+            "SAASXAoEdHlwZRgBIAEoDjJJLmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5w",
+            "cm9kdWN0cy52MS5Qcm9kdWN0U3VzdGFpbmFiaWxpdHlJbmNlbnRpdmUuVHlw",
+            "ZUgBiAEBIkYKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEhEKDUVWX1RB",
+            "WF9DUkVESVQQARIVChFFVl9QUklDRV9ESVNDT1VOVBACQgcKBXZhbHVlQgcK",
+            "BV90eXBlIrQBChJBdXRvbWF0ZWREaXNjb3VudHMSMAoLcHJpb3JfcHJpY2UY",
+            "ASABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZRI8Chdwcmlvcl9w",
+            "cmljZV9wcm9ncmVzc2l2ZRgCIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBl",
+            "LlByaWNlEi4KCWdhZF9wcmljZRgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50",
+            "eXBlLlByaWNlIqYBCgpQaWNrdXBDb3N0EjgKCWZsYXRfcmF0ZRgBIAEoCzIb",
+            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlQgPgQQJIAIgBARI9Cg5mcmVl",
+            "X3RocmVzaG9sZBgCIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNl",
+            "QgPgQQFIAYgBAUIMCgpfZmxhdF9yYXRlQhEKD19mcmVlX3RocmVzaG9sZCLg",
+            "AQoSSGFuZGxpbmdDdXRvZmZUaW1lEhQKB2NvdW50cnkYASABKAlIAIgBARIY",
+            "CgtjdXRvZmZfdGltZRgCIAEoCUgBiAEBEhwKD2N1dG9mZl90aW1lem9uZRgD",
+            "IAEoCUgCiAEBEioKHWRpc2FibGVfZGVsaXZlcnlfYWZ0ZXJfY3V0b2ZmGAQg",
+            "ASgISAOIAQFCCgoIX2NvdW50cnlCDgoMX2N1dG9mZl90aW1lQhIKEF9jdXRv",
+            "ZmZfdGltZXpvbmVCIAoeX2Rpc2FibGVfZGVsaXZlcnlfYWZ0ZXJfY3V0b2Zm",
+            "ItoCChhQcm9kdWN0TWluaW11bU9yZGVyVmFsdWUSGQoHY291bnRyeRgBIAEo",
+            "CUID4EECSACIAQESFAoHc2VydmljZRgCIAEoCUgBiAEBElwKB3N1cmZhY2UY",
+            "AyABKA4yRi5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEu",
+            "UHJvZHVjdE1pbmltdW1PcmRlclZhbHVlLlN1cmZhY2VIAogBARI0CgVwcmlj",
+            "ZRgEIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlQgPgQQJIA4gB",
+            "ASJLCgdTdXJmYWNlEhcKE1NVUkZBQ0VfVU5TUEVDSUZJRUQQABIKCgZPTkxJ",
+            "TkUQARIJCgVMT0NBTBACEhAKDE9OTElORV9MT0NBTBADQgoKCF9jb3VudHJ5",
+            "QgoKCF9zZXJ2aWNlQgoKCF9zdXJmYWNlQggKBl9wcmljZSpYChJTdWJzY3Jp",
+            "cHRpb25QZXJpb2QSIwofU1VCU0NSSVBUSU9OX1BFUklPRF9VTlNQRUNJRklF",
+            "RBAAEgkKBU1PTlRIEAESCAoEWUVBUhACEggKBFdFRUsQAypgCghBZ2VHcm91",
+            "cBIZChVBR0VfR1JPVVBfVU5TUEVDSUZJRUQQABIJCgVBRFVMVBABEggKBEtJ",
+            "RFMQAhILCgdUT0RETEVSEAMSCgoGSU5GQU5UEAQSCwoHTkVXQk9SThAFKoMB",
+            "CgxBdmFpbGFiaWxpdHkSHAoYQVZBSUxBQklMSVRZX1VOU1BFQ0lGSUVEEAAS",
+            "DAoISU5fU1RPQ0sQARIQCgxPVVRfT0ZfU1RPQ0sQAhIMCghQUkVPUkRFUhAD",
+            "EhgKFExJTUlURURfQVZBSUxBQklMSVRZEAQSDQoJQkFDS09SREVSEAUqSgoJ",
+            "Q29uZGl0aW9uEhkKFUNPTkRJVElPTl9VTlNQRUNJRklFRBAAEgcKA05FVxAB",
+            "EggKBFVTRUQQAhIPCgtSRUZVUkJJU0hFRBADKkIKBkdlbmRlchIWChJHRU5E",
+            "RVJfVU5TUEVDSUZJRUQQABIICgRNQUxFEAESCgoGRkVNQUxFEAISCgoGVU5J",
+            "U0VYEAMqQQoKQ3JlZGl0VHlwZRIbChdDUkVESVRfVFlQRV9VTlNQRUNJRklF",
+            "RBAAEgsKB0ZJTkFOQ0UQARIJCgVMRUFTRRACKoIBCgpTaXplU3lzdGVtEhsK",
+            "F1NJWkVfU1lTVEVNX1VOU1BFQ0lGSUVEEAASBgoCQVUQARIGCgJCUhACEgYK",
+            "AkNOEAMSBgoCREUQBBIGCgJFVRAFEgYKAkZSEAYSBgoCSVQQBxIGCgJKUBAI",
+            "EgcKA01FWBAJEgYKAlVLEAoSBgoCVVMQCypqCghTaXplVHlwZRIZChVTSVpF",
+            "X1RZUEVfVU5TUEVDSUZJRUQQABILCgdSRUdVTEFSEAESCgoGUEVUSVRFEAIS",
+            "DQoJTUFURVJOSVRZEAMSBwoDQklHEAQSCAoEVEFMTBAFEggKBFBMVVMQBiqM",
+            "AQoVRW5lcmd5RWZmaWNpZW5jeUNsYXNzEicKI0VORVJHWV9FRkZJQ0lFTkNZ",
+            "X0NMQVNTX1VOU1BFQ0lGSUVEEAASCAoEQVBQUBABEgcKA0FQUBACEgYKAkFQ",
+            "EAMSBQoBQRAEEgUKAUIQBRIFCgFDEAYSBQoBRBAHEgUKAUUQCBIFCgFGEAkS",
+            "BQoBRxAKKmkKDFBpY2t1cE1ldGhvZBIdChlQSUNLVVBfTUVUSE9EX1VOU1BF",
+            "Q0lGSUVEEAASEQoNTk9UX1NVUFBPUlRFRBABEgcKA0JVWRACEgsKB1JFU0VS",
+            "VkUQAxIRCg1TSElQX1RPX1NUT1JFEAQqmAEKCVBpY2t1cFNsYRIaChZQSUNL",
+            "VVBfU0xBX1VOU1BFQ0lGSUVEEAASDAoIU0FNRV9EQVkQARIMCghORVhUX0RB",
+            "WRACEgsKB1RXT19EQVkQAxINCglUSFJFRV9EQVkQBBIMCghGT1VSX0RBWRAF",
+            "EgwKCEZJVkVfREFZEAYSCwoHU0lYX0RBWRAHEg4KCk1VTFRJX1dFRUsQCCow",
+            "CgVQYXVzZRIVChFQQVVTRV9VTlNQRUNJRklFRBAAEgcKA0FEUxABEgcKA0FM",
+            "TBACKmcKFkNlcnRpZmljYXRpb25BdXRob3JpdHkSJwojQ0VSVElGSUNBVElP",
+            "Tl9BVVRIT1JJVFlfVU5TUEVDSUZJRUQQABIJCgVBREVNRRABEggKBEJNV0sQ",
+            "AhIHCgNFUEEQAxIGCgJFQxAEKtUBChFDZXJ0aWZpY2F0aW9uTmFtZRIiCh5D",
+            "RVJUSUZJQ0FUSU9OX05BTUVfVU5TUEVDSUZJRUQQABIPCgtFTkVSR1lfU1RB",
+            "UhABEh4KGkVORVJHWV9TVEFSX01PU1RfRUZGSUNJRU5UEAISCQoFRVBSRUwQ",
+            "AxIPCgtFVV9FQ09MQUJFTBAEEh0KGVZFSElDTEVfRU5FUkdZX0VGRklDSUVO",
+            "Q1kQBRIwCixWRUhJQ0xFX0VORVJHWV9FRkZJQ0lFTkNZX0RJU0NIQVJHRURf",
+            "QkFUVEVSWRAGKmQKEURpZ2l0YWxTb3VyY2VUeXBlEiMKH0RJR0lUQUxfU09V",
+            "UkNFX1RZUEVfVU5TUEVDSUZJRUQQABIdChlUUkFJTkVEX0FMR09SSVRITUlD",
+            "X01FRElBEAESCwoHREVGQVVMVBACKsgHChhDYXJyaWVyVHJhbnNpdFRpbWVP",
+            "cHRpb24SKwonQ0FSUklFUl9UUkFOU0lUX1RJTUVfT1BUSU9OX1VOU1BFQ0lG",
+            "SUVEEAASDQoJREhMX1BBS0VUEAESEAoMREhMX1BBQ0tDSEVOEAISEwoPREhM",
+            "X0VYUFJFU1NFQVNZEAMSDwoLRFBEX0VYUFJFU1MQBBIWChJEUERfQ0xBU1NJ",
+            "Q19QQVJDRUwQBRISCg5IRVJNRVNfSEFVU1RVUhAGEhQKEEhFUk1FU19QQUtF",
+            "VFNIT1AQBxIQCgxHTFNfQlVTSU5FU1MQCBIPCgtHTFNfRVhQUkVTUxAJEg8K",
+            "C0dMU19QUklWQVRFEAoSFgoSQ09MSVNTSU1PX0RPTUlDSUxFEAsSFAoQREhM",
+            "X0VYUFJFU1NfMTJBTRAMEhMKD0RITF9FWFBSRVNTXzlBTRANEhIKDkdFT0RJ",
+            "U19FWFBSRVNTEA4SEgoOR0VPRElTX1BBQ0tfMzAQDxITCg9HRU9ESVNfU0FN",
+            "RV9EQVkQEBIRCg1HRU9ESVNfVE9QXzI0EBESFQoRVE5UX0VTU0VOVElFTF8y",
+            "NEgQEhIdChlUTlRfRVNTRU5USUVMX0ZMRVhJQklMSVRFEBMSEAoMRkVERVhf",
+            "R1JPVU5EEBQSFwoTRkVERVhfSE9NRV9ERUxJVkVSWRAVEhcKE0ZFREVYX0VY",
+            "UFJFU1NfU0FWRVIQFhIZChVGRURFWF9GSVJTVF9PVkVSTklHSFQQFxIcChhG",
+            "RURFWF9QUklPUklUWV9PVkVSTklHSFQQGBIcChhGRURFWF9TVEFOREFSRF9P",
+            "VkVSTklHSFQQGRIOCgpGRURFWF8yREFZEBoSEwoPVVBTXzJORF9EQVlfQUlS",
+            "EBsSEgoOVVBTXzJORF9EQVlfQU0QHBIUChBVUFNfM19EQVlfU0VMRUNUEB0S",
+            "DgoKVVBTX0dST1VORBAeEhQKEFVQU19ORVhUX0RBWV9BSVIQHxIdChlVUFNf",
+            "TkVYVF9EQVlfQUlSX0VBUkxZX0FNECASGgoWVVBTX05FWFRfREFZX0FJUl9T",
+            "QVZFUhAhEh4KGlVTUFNfUFJJT1JJVFlfTUFJTF9FWFBSRVNTECISEwoPVVNQ",
+            "U19NRURJQV9NQUlMECMSIAocVVNQU19HUk9VTkRfQURWQU5UQUdFX1JFVEFJ",
+            "TBAkEhYKElVTUFNfUFJJT1JJVFlfTUFJTBAlEiQKIFVTUFNfR1JPVU5EX0FE",
+            "VkFOVEFHRV9DT01NRVJDSUFMECYSGQoVVVNQU19GSVJTVF9DTEFTU19NQUlM",
+            "ECdChgIKKGNvbS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMu",
+            "djFCE1Byb2R1Y3RzQ29tbW9uUHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9n",
+            "by9zaG9wcGluZy9tZXJjaGFudC9wcm9kdWN0cy9hcGl2MS9wcm9kdWN0c3Bi",
+            "O3Byb2R1Y3RzcGKqAiRHb29nbGUuU2hvcHBpbmcuTWVyY2hhbnQuUHJvZHVj",
+            "dHMuVjHKAiRHb29nbGVcU2hvcHBpbmdcTWVyY2hhbnRcUHJvZHVjdHNcVjHq",
+            "AihHb29nbGU6OlNob3BwaW5nOjpNZXJjaGFudDo6UHJvZHVjdHM6OlYxYgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Shopping.Merchant.Products.V1.SubscriptionPeriod), typeof(global::Google.Shopping.Merchant.Products.V1.AgeGroup), typeof(global::Google.Shopping.Merchant.Products.V1.Availability), typeof(global::Google.Shopping.Merchant.Products.V1.Condition), typeof(global::Google.Shopping.Merchant.Products.V1.Gender), typeof(global::Google.Shopping.Merchant.Products.V1.CreditType), typeof(global::Google.Shopping.Merchant.Products.V1.SizeSystem), typeof(global::Google.Shopping.Merchant.Products.V1.SizeType), typeof(global::Google.Shopping.Merchant.Products.V1.EnergyEfficiencyClass), typeof(global::Google.Shopping.Merchant.Products.V1.PickupMethod), typeof(global::Google.Shopping.Merchant.Products.V1.PickupSla), typeof(global::Google.Shopping.Merchant.Products.V1.Pause), typeof(global::Google.Shopping.Merchant.Products.V1.CertificationAuthority), typeof(global::Google.Shopping.Merchant.Products.V1.CertificationName), typeof(global::Google.Shopping.Merchant.Products.V1.DigitalSourceType), typeof(global::Google.Shopping.Merchant.Products.V1.CarrierTransitTimeOption), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Parser, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "AdditionalImageLinks", "ExpirationDate", "DisclosureDate", "Adult", "AgeGroup", "Availability", "AvailabilityDate", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "Gtins", "ItemGroupId", "Material", "Mpn", "Pattern", "Price", "MaximumRetailPrice", "Installment", "SubscriptionCost", "LoyaltyPoints", "LoyaltyPrograms", "ProductTypes", "SalePrice", "SalePriceEffectiveDate", "SellOnGoogleQuantity", "ProductHeight", "ProductLength", "ProductWidth", "ProductWeight", "Shipping", "CarrierShipping", "FreeShippingThreshold", "ShippingWeight", "ShippingLength", "ShippingWidth", "ShippingHeight", "MaxHandlingTime", "MinHandlingTime", "ShippingHandlingBusinessDays", "ShippingTransitBusinessDays", "HandlingCutoffTimes", "ShippingLabel", "ReturnPolicyLabel", "TransitTimeLabel", "Size", "SizeSystem", "SizeTypes", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "UnitPricingMeasure", "UnitPricingBaseMeasure", "Multipack", "AdsGrouping", "AdsLabels", "AdsRedirect", "CostOfGoodsSold", "ProductDetails", "ProductHighlights", "DisplayAdsId", "DisplayAdsSimilarIds", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PromotionIds", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "IncludedDestinations", "ExcludedDestinations", "ShoppingAdsExcludedCountries", "ExternalSellerId", "Pause", "LifestyleImageLinks", "CloudExportAdditionalProperties", "VirtualModelLink", "Certifications", "StructuredTitle", "StructuredDescription", "AutoPricingMinPrice", "SustainabilityIncentives", "VideoLinks" }, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "Adult", "AgeGroup", "Availability", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "ItemGroupId", "Material", "Mpn", "Pattern", "SellOnGoogleQuantity", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "ReturnPolicyLabel", "TransitTimeLabel", "Size", "SizeSystem", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "Multipack", "AdsGrouping", "AdsRedirect", "DisplayAdsId", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PickupMethod", "PickupSla", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "ExternalSellerId", "Pause", "VirtualModelLink", "StructuredTitle", "StructuredDescription" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ShippingBusinessDaysConfig), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ShippingBusinessDaysConfig.Parser, new[]{ "Country", "BusinessDays" }, new[]{ "Country", "BusinessDays" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping.Parser, new[]{ "Country", "Region", "PostalCode", "OriginPostalCode", "FlatPrice", "CarrierPrice", "CarrierPriceFlatAdjustment", "CarrierPricePercentageAdjustment", "MinHandlingTime", "MaxHandlingTime", "FixedMinTransitTime", "FixedMaxTransitTime", "CarrierTransitTime" }, new[]{ "Country", "Region", "PostalCode", "OriginPostalCode", "FlatPrice", "CarrierPrice", "CarrierPriceFlatAdjustment", "CarrierPricePercentageAdjustment", "MinHandlingTime", "MaxHandlingTime", "FixedMinTransitTime", "FixedMaxTransitTime", "CarrierTransitTime" }, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Parser, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "AdditionalImageLinks", "ExpirationDate", "DisclosureDate", "Adult", "AgeGroup", "Availability", "AvailabilityDate", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "Gtins", "ItemGroupId", "Material", "Mpn", "Pattern", "Price", "MaximumRetailPrice", "Installment", "SubscriptionCost", "LoyaltyPoints", "LoyaltyPrograms", "ProductTypes", "SalePrice", "SalePriceEffectiveDate", "SellOnGoogleQuantity", "ProductHeight", "ProductLength", "ProductWidth", "ProductWeight", "Shipping", "CarrierShipping", "FreeShippingThreshold", "ShippingWeight", "ShippingLength", "ShippingWidth", "ShippingHeight", "MaxHandlingTime", "MinHandlingTime", "ShippingHandlingBusinessDays", "ShippingTransitBusinessDays", "HandlingCutoffTimes", "ShippingLabel", "ReturnPolicyLabel", "TransitTimeLabel", "Size", "SizeSystem", "SizeTypes", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "UnitPricingMeasure", "UnitPricingBaseMeasure", "Multipack", "AdsGrouping", "AdsLabels", "AdsRedirect", "CostOfGoodsSold", "ProductDetails", "ProductHighlights", "DisplayAdsId", "DisplayAdsSimilarIds", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PromotionIds", "PickupMethod", "PickupSla", "PickupCost", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "IncludedDestinations", "ExcludedDestinations", "ShoppingAdsExcludedCountries", "ExternalSellerId", "Pause", "LifestyleImageLinks", "CloudExportAdditionalProperties", "VirtualModelLink", "Certifications", "StructuredTitle", "StructuredDescription", "AutoPricingMinPrice", "SustainabilityIncentives", "VideoLinks", "MinimumOrderValues", "Vin", "Model", "Trim", "BodyStyle", "Year", "Mileage", "ElectricRange", "FuelConsumption", "FuelConsumptionDischargedBattery", "EnergyConsumption", "Co2Emissions", "DateFirstRegistered", "Engine", "EmissionsStandard", "CertifiedPreOwned", "VehicleMsrp", "VehicleAllInPrice", "VehiclePriceType", "VehicleMandatoryInspectionIncluded", "VehicleExpenses", "Warranty", "DisplayAddress", "Latitude", "Longitude", "Neighborhood", "UnitArea", "NumberOfUnits", "PropertyName", "NumberOfBedrooms", "NumberOfBathrooms", "PropertyType", "AmenityFeature", "UtilitiesIncluded", "PetPolicy", "SpecialtyHousingType", "ProductFee", "ShortTitle", "QuestionsAndAnswers", "PopularityRank", "ItemGroupTitle", "DocumentLinks", "VariantOptions", "RelatedProducts" }, new[]{ "IdentifierExists", "IsBundle", "Title", "Description", "Link", "MobileLink", "CanonicalLink", "ImageLink", "Adult", "AgeGroup", "Availability", "Brand", "Color", "Condition", "Gender", "GoogleProductCategory", "ItemGroupId", "Material", "Mpn", "Pattern", "SellOnGoogleQuantity", "MaxHandlingTime", "MinHandlingTime", "ShippingLabel", "ReturnPolicyLabel", "TransitTimeLabel", "Size", "SizeSystem", "EnergyEfficiencyClass", "MinEnergyEfficiencyClass", "MaxEnergyEfficiencyClass", "Multipack", "AdsGrouping", "AdsRedirect", "DisplayAdsId", "DisplayAdsTitle", "DisplayAdsLink", "DisplayAdsValue", "PickupMethod", "PickupSla", "PickupCost", "LinkTemplate", "MobileLinkTemplate", "CustomLabel0", "CustomLabel1", "CustomLabel2", "CustomLabel3", "CustomLabel4", "ExternalSellerId", "Pause", "VirtualModelLink", "StructuredTitle", "StructuredDescription", "Latitude", "Longitude", "NumberOfUnits", "NumberOfBedrooms", "NumberOfBathrooms", "ShortTitle" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierPriceOption), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.AmenityFeature), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UtilitiesIncluded), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ShippingBusinessDaysConfig), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ShippingBusinessDaysConfig.Parser, new[]{ "Country", "BusinessDays" }, new[]{ "Country", "BusinessDays" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.CarrierShipping.Parser, new[]{ "Country", "Region", "PostalCode", "OriginPostalCode", "FlatPrice", "CarrierPrice", "CarrierPriceFlatAdjustment", "CarrierPricePercentageAdjustment", "MinHandlingTime", "MaxHandlingTime", "FixedMinTransitTime", "FixedMaxTransitTime", "CarrierTransitTime" }, new[]{ "Country", "Region", "PostalCode", "OriginPostalCode", "FlatPrice", "CarrierPrice", "CarrierPriceFlatAdjustment", "CarrierPricePercentageAdjustment", "MinHandlingTime", "MaxHandlingTime", "FixedMinTransitTime", "FixedMaxTransitTime", "CarrierTransitTime" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Parser, new[]{ "Value", "Unit" }, new[]{ "Value" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Parser, new[]{ "Value", "Unit" }, new[]{ "Value" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Parser, new[]{ "Value", "Unit" }, new[]{ "Value" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Parser, new[]{ "Value", "Unit" }, new[]{ "Value" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Warranty), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Warranty.Parser, new[]{ "Duration", "Mileage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Parser, new[]{ "Type", "Amount" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.DisplayAddress), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.DisplayAddress.Parser, new[]{ "StreetNumber", "StreetName", "City", "Region", "PostalCode" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Parser, new[]{ "Value", "Unit" }, new[]{ "Value" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy.Parser, new[]{ "PetsAllowed", "PetTypes" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy.Types.PetType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.QuestionAndAnswer), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.QuestionAndAnswer.Parser, new[]{ "Question", "Answer" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VariantOption), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VariantOption.Parser, new[]{ "Name", "Value" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct), global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Parser, new[]{ "RelationshipType", "IdType", "Id" }, null, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType), typeof(global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType) }, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ShippingWeight), global::Google.Shopping.Merchant.Products.V1.ShippingWeight.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ShippingDimension), global::Google.Shopping.Merchant.Products.V1.ShippingDimension.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.UnitPricingBaseMeasure), global::Google.Shopping.Merchant.Products.V1.UnitPricingBaseMeasure.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.UnitPricingMeasure), global::Google.Shopping.Merchant.Products.V1.UnitPricingMeasure.Parser, new[]{ "Value", "Unit" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.SubscriptionCost), global::Google.Shopping.Merchant.Products.V1.SubscriptionCost.Parser, new[]{ "Period", "PeriodLength", "Amount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductInstallment), global::Google.Shopping.Merchant.Products.V1.ProductInstallment.Parser, new[]{ "Months", "Amount", "Downpayment", "CreditType", "AnnualPercentageRate" }, new[]{ "Downpayment", "CreditType", "AnnualPercentageRate" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductInstallment), global::Google.Shopping.Merchant.Products.V1.ProductInstallment.Parser, new[]{ "Months", "Amount", "Downpayment", "CreditType", "AnnualPercentageRate", "TotalAmount" }, new[]{ "Downpayment", "CreditType", "AnnualPercentageRate", "TotalAmount" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.LoyaltyPoints), global::Google.Shopping.Merchant.Products.V1.LoyaltyPoints.Parser, new[]{ "Name", "PointsValue", "Ratio" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.LoyaltyProgram), global::Google.Shopping.Merchant.Products.V1.LoyaltyProgram.Parser, new[]{ "ProgramLabel", "TierLabel", "Price", "CashbackForFutureUse", "LoyaltyPoints", "MemberPriceEffectiveDate", "ShippingLabel" }, new[]{ "ProgramLabel", "TierLabel", "Price", "CashbackForFutureUse", "LoyaltyPoints", "MemberPriceEffectiveDate", "ShippingLabel" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.Shipping), global::Google.Shopping.Merchant.Products.V1.Shipping.Parser, new[]{ "Price", "Country", "Region", "Service", "LocationId", "LocationGroupName", "PostalCode", "MinHandlingTime", "MaxHandlingTime", "MinTransitTime", "MaxTransitTime", "HandlingCutoffTime", "HandlingCutoffTimezone" }, new[]{ "MinHandlingTime", "MaxHandlingTime", "MinTransitTime", "MaxTransitTime", "HandlingCutoffTime", "HandlingCutoffTimezone" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.Shipping), global::Google.Shopping.Merchant.Products.V1.Shipping.Parser, new[]{ "Price", "Country", "Region", "Service", "LocationId", "LocationGroupName", "PostalCode", "MinHandlingTime", "MaxHandlingTime", "MinTransitTime", "MaxTransitTime", "HandlingCutoffTime", "HandlingCutoffTimezone", "LoyaltyProgramLabel", "LoyaltyTierLabel" }, new[]{ "MinHandlingTime", "MaxHandlingTime", "MinTransitTime", "MaxTransitTime", "HandlingCutoffTime", "HandlingCutoffTimezone" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.FreeShippingThreshold), global::Google.Shopping.Merchant.Products.V1.FreeShippingThreshold.Parser, new[]{ "Country", "PriceThreshold" }, new[]{ "Country", "PriceThreshold" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductDetail), global::Google.Shopping.Merchant.Products.V1.ProductDetail.Parser, new[]{ "SectionName", "AttributeName", "AttributeValue" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductCertification), global::Google.Shopping.Merchant.Products.V1.ProductCertification.Parser, new[]{ "CertificationAuthority", "CertificationName", "CertificationCode", "CertificationValue" }, new[]{ "CertificationAuthority", "CertificationName", "CertificationCode", "CertificationValue" }, null, null, null),
@@ -423,7 +618,9 @@ namespace Google.Shopping.Merchant.Products.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.CloudExportAdditionalProperties), global::Google.Shopping.Merchant.Products.V1.CloudExportAdditionalProperties.Parser, new[]{ "PropertyName", "TextValue", "BoolValue", "IntValue", "FloatValue", "MinValue", "MaxValue", "UnitCode" }, new[]{ "PropertyName", "BoolValue", "MinValue", "MaxValue", "UnitCode" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductSustainabilityIncentive), global::Google.Shopping.Merchant.Products.V1.ProductSustainabilityIncentive.Parser, new[]{ "Amount", "Percentage", "Type" }, new[]{ "Value", "Type" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductSustainabilityIncentive.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.AutomatedDiscounts), global::Google.Shopping.Merchant.Products.V1.AutomatedDiscounts.Parser, new[]{ "PriorPrice", "PriorPriceProgressive", "GadPrice" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.HandlingCutoffTime), global::Google.Shopping.Merchant.Products.V1.HandlingCutoffTime.Parser, new[]{ "Country", "CutoffTime", "CutoffTimezone", "DisableDeliveryAfterCutoff" }, new[]{ "Country", "CutoffTime", "CutoffTimezone", "DisableDeliveryAfterCutoff" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.PickupCost), global::Google.Shopping.Merchant.Products.V1.PickupCost.Parser, new[]{ "FlatRate", "FreeThreshold" }, new[]{ "FlatRate", "FreeThreshold" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.HandlingCutoffTime), global::Google.Shopping.Merchant.Products.V1.HandlingCutoffTime.Parser, new[]{ "Country", "CutoffTime", "CutoffTimezone", "DisableDeliveryAfterCutoff" }, new[]{ "Country", "CutoffTime", "CutoffTimezone", "DisableDeliveryAfterCutoff" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue), global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Parser, new[]{ "Country", "Service", "Surface", "Price" }, new[]{ "Country", "Service", "Surface", "Price" }, new[]{ typeof(global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Types.Surface) }, null, null)
           }));
     }
     #endregion
@@ -1192,6 +1389,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       promotionIds_ = other.promotionIds_.Clone();
       pickupMethod_ = other.pickupMethod_;
       pickupSla_ = other.pickupSla_;
+      pickupCost_ = other.pickupCost_ != null ? other.pickupCost_.Clone() : null;
       linkTemplate_ = other.linkTemplate_;
       mobileLinkTemplate_ = other.mobileLinkTemplate_;
       customLabel0_ = other.customLabel0_;
@@ -1213,6 +1411,50 @@ namespace Google.Shopping.Merchant.Products.V1 {
       autoPricingMinPrice_ = other.autoPricingMinPrice_ != null ? other.autoPricingMinPrice_.Clone() : null;
       sustainabilityIncentives_ = other.sustainabilityIncentives_.Clone();
       videoLinks_ = other.videoLinks_.Clone();
+      minimumOrderValues_ = other.minimumOrderValues_.Clone();
+      vin_ = other.vin_;
+      model_ = other.model_;
+      trim_ = other.trim_;
+      bodyStyle_ = other.bodyStyle_;
+      year_ = other.year_;
+      mileage_ = other.mileage_ != null ? other.mileage_.Clone() : null;
+      electricRange_ = other.electricRange_ != null ? other.electricRange_.Clone() : null;
+      fuelConsumption_ = other.fuelConsumption_ != null ? other.fuelConsumption_.Clone() : null;
+      fuelConsumptionDischargedBattery_ = other.fuelConsumptionDischargedBattery_ != null ? other.fuelConsumptionDischargedBattery_.Clone() : null;
+      energyConsumption_ = other.energyConsumption_ != null ? other.energyConsumption_.Clone() : null;
+      co2Emissions_ = other.co2Emissions_ != null ? other.co2Emissions_.Clone() : null;
+      dateFirstRegistered_ = other.dateFirstRegistered_;
+      engine_ = other.engine_;
+      emissionsStandard_ = other.emissionsStandard_;
+      certifiedPreOwned_ = other.certifiedPreOwned_;
+      vehicleMsrp_ = other.vehicleMsrp_ != null ? other.vehicleMsrp_.Clone() : null;
+      vehicleAllInPrice_ = other.vehicleAllInPrice_ != null ? other.vehicleAllInPrice_.Clone() : null;
+      vehiclePriceType_ = other.vehiclePriceType_;
+      vehicleMandatoryInspectionIncluded_ = other.vehicleMandatoryInspectionIncluded_;
+      vehicleExpenses_ = other.vehicleExpenses_ != null ? other.vehicleExpenses_.Clone() : null;
+      warranty_ = other.warranty_ != null ? other.warranty_.Clone() : null;
+      displayAddress_ = other.displayAddress_ != null ? other.displayAddress_.Clone() : null;
+      latitude_ = other.latitude_;
+      longitude_ = other.longitude_;
+      neighborhood_ = other.neighborhood_;
+      unitArea_ = other.unitArea_ != null ? other.unitArea_.Clone() : null;
+      numberOfUnits_ = other.numberOfUnits_;
+      propertyName_ = other.propertyName_;
+      numberOfBedrooms_ = other.numberOfBedrooms_;
+      numberOfBathrooms_ = other.numberOfBathrooms_;
+      propertyType_ = other.propertyType_;
+      amenityFeature_ = other.amenityFeature_.Clone();
+      utilitiesIncluded_ = other.utilitiesIncluded_.Clone();
+      petPolicy_ = other.petPolicy_ != null ? other.petPolicy_.Clone() : null;
+      specialtyHousingType_ = other.specialtyHousingType_;
+      productFee_ = other.productFee_.Clone();
+      shortTitle_ = other.shortTitle_;
+      questionsAndAnswers_ = other.questionsAndAnswers_.Clone();
+      popularityRank_ = other.popularityRank_;
+      itemGroupTitle_ = other.itemGroupTitle_;
+      documentLinks_ = other.documentLinks_.Clone();
+      variantOptions_ = other.variantOptions_.Clone();
+      relatedProducts_ = other.relatedProducts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3013,6 +3255,23 @@ namespace Google.Shopping.Merchant.Products.V1 {
       _hasBits0 &= ~262144;
     }
 
+    /// <summary>Field number for the "pickup_cost" field.</summary>
+    public const int PickupCostFieldNumber = 172;
+    private global::Google.Shopping.Merchant.Products.V1.PickupCost pickupCost_;
+    /// <summary>
+    /// Optional. The [pickup
+    /// cost](https://support.google.com/merchants/answer/16988704) for an item
+    /// when a customer buys it online and picks it up at a store.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.PickupCost PickupCost {
+      get { return pickupCost_; }
+      set {
+        pickupCost_ = value;
+      }
+    }
+
     /// <summary>Field number for the "link_template" field.</summary>
     public const int LinkTemplateFieldNumber = 82;
     private readonly static string LinkTemplateDefaultValue = "";
@@ -3509,6 +3768,819 @@ namespace Google.Shopping.Merchant.Products.V1 {
       get { return videoLinks_; }
     }
 
+    /// <summary>Field number for the "minimum_order_values" field.</summary>
+    public const int MinimumOrderValuesFieldNumber = 146;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue> _repeated_minimumOrderValues_codec
+        = pb::FieldCodec.ForMessage(1170, global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue> minimumOrderValues_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue>();
+    /// <summary>
+    /// The [minimum value](https://support.google.com/merchants/answer/16989009)
+    /// in the cart before a customer can initiate checkout. Supports multiple
+    /// minimum order values. Different minimum order values can be specified per
+    /// country, service and surface. Maximum entries: 100.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue> MinimumOrderValues {
+      get { return minimumOrderValues_; }
+    }
+
+    /// <summary>Field number for the "vin" field.</summary>
+    public const int VinFieldNumber = 147;
+    private string vin_ = "";
+    /// <summary>
+    /// The [Vehicle Identification Number
+    /// (VIN)](https://support.google.com/google-ads/answer/14154510) of the
+    /// vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Vin {
+      get { return vin_; }
+      set {
+        vin_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 148;
+    private string model_ = "";
+    /// <summary>
+    /// The [Model](https://support.google.com/google-ads/answer/14154511) of the
+    /// vehicle, such as `LX`, `EX`, and others.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "trim" field.</summary>
+    public const int TrimFieldNumber = 149;
+    private string trim_ = "";
+    /// <summary>
+    /// The [Trim](https://support.google.com/google-ads/answer/14154176) of the
+    /// vehicle model, such as `S`, `SV`, `SL` and others.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Trim {
+      get { return trim_; }
+      set {
+        trim_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "body_style" field.</summary>
+    public const int BodyStyleFieldNumber = 150;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle bodyStyle_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle.Unspecified;
+    /// <summary>
+    /// The [body style](https://support.google.com/google-ads/answer/14157085) of
+    /// the vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle BodyStyle {
+      get { return bodyStyle_; }
+      set {
+        bodyStyle_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "year" field.</summary>
+    public const int YearFieldNumber = 151;
+    private long year_;
+    /// <summary>
+    /// The [Year](https://support.google.com/google-ads/answer/14152816) of the
+    /// vehicle model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long Year {
+      get { return year_; }
+      set {
+        year_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mileage" field.</summary>
+    public const int MileageFieldNumber = 152;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage mileage_;
+    /// <summary>
+    /// The number of miles/kms on the vehicle. See the
+    /// [Mileage](https://support.google.com/google-ads/answer/14156166) for more
+    /// information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage Mileage {
+      get { return mileage_; }
+      set {
+        mileage_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "electric_range" field.</summary>
+    public const int ElectricRangeFieldNumber = 153;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage electricRange_;
+    /// <summary>
+    /// The [electric range](https://support.google.com/google-ads/answer/15162232)
+    /// of the vehicle in miles/kms.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage ElectricRange {
+      get { return electricRange_; }
+      set {
+        electricRange_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fuel_consumption" field.</summary>
+    public const int FuelConsumptionFieldNumber = 154;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption fuelConsumption_;
+    /// <summary>
+    /// The [fuel
+    /// consumption](https://support.google.com/google-ads/answer/14543580) of the
+    /// vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption FuelConsumption {
+      get { return fuelConsumption_; }
+      set {
+        fuelConsumption_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "fuel_consumption_discharged_battery" field.</summary>
+    public const int FuelConsumptionDischargedBatteryFieldNumber = 155;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption fuelConsumptionDischargedBattery_;
+    /// <summary>
+    /// The fuel consumption of the vehicle when the hybrid battery is discharged.
+    /// See the [Help Center
+    /// article](https://support.google.com/google-ads/answer/15162033) for more
+    /// information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption FuelConsumptionDischargedBattery {
+      get { return fuelConsumptionDischargedBattery_; }
+      set {
+        fuelConsumptionDischargedBattery_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "energy_consumption" field.</summary>
+    public const int EnergyConsumptionFieldNumber = 156;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption energyConsumption_;
+    /// <summary>
+    /// The [energy
+    /// consumption](https://support.google.com/google-ads/answer/14546149) of the
+    /// vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption EnergyConsumption {
+      get { return energyConsumption_; }
+      set {
+        energyConsumption_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "co2_emissions" field.</summary>
+    public const int Co2EmissionsFieldNumber = 157;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions co2Emissions_;
+    /// <summary>
+    /// The [co2 emission](https://support.google.com/google-ads/answer/14546146)
+    /// of the vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions Co2Emissions {
+      get { return co2Emissions_; }
+      set {
+        co2Emissions_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "date_first_registered" field.</summary>
+    public const int DateFirstRegisteredFieldNumber = 158;
+    private string dateFirstRegistered_ = "";
+    /// <summary>
+    /// The date the vehicle was first registered. Format: `YYYY-MM`. See the
+    /// [Date first
+    /// registered](https://support.google.com/google-ads/answer/14546138) for more
+    /// information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DateFirstRegistered {
+      get { return dateFirstRegistered_; }
+      set {
+        dateFirstRegistered_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "engine" field.</summary>
+    public const int EngineFieldNumber = 159;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType engine_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType.Unspecified;
+    /// <summary>
+    /// The [engine](https://support.google.com/google-ads/answer/14156068) type of
+    /// the vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType Engine {
+      get { return engine_; }
+      set {
+        engine_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "emissions_standard" field.</summary>
+    public const int EmissionsStandardFieldNumber = 160;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard emissionsStandard_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard.Unspecified;
+    /// <summary>
+    /// The [emission
+    /// standard](https://support.google.com/google-ads/answer/14869021) of the
+    /// vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard EmissionsStandard {
+      get { return emissionsStandard_; }
+      set {
+        emissionsStandard_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "certified_pre_owned" field.</summary>
+    public const int CertifiedPreOwnedFieldNumber = 161;
+    private bool certifiedPreOwned_;
+    /// <summary>
+    /// Whether the vehicle is OEM [certified
+    /// pre-owned](https://support.google.com/google-ads/answer/14156475).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool CertifiedPreOwned {
+      get { return certifiedPreOwned_; }
+      set {
+        certifiedPreOwned_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vehicle_msrp" field.</summary>
+    public const int VehicleMsrpFieldNumber = 162;
+    private global::Google.Shopping.Type.Price vehicleMsrp_;
+    /// <summary>
+    /// The MSRP (Manufacturer Suggested Retail Price) for the vehicle in its
+    /// current configuration. See the [Vehicle
+    /// MSRP](https://support.google.com/google-ads/answer/14154171) for more
+    /// information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price VehicleMsrp {
+      get { return vehicleMsrp_; }
+      set {
+        vehicleMsrp_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vehicle_all_in_price" field.</summary>
+    public const int VehicleAllInPriceFieldNumber = 163;
+    private global::Google.Shopping.Type.Price vehicleAllInPrice_;
+    /// <summary>
+    /// The all-in advertised price for a vehicle, which includes costs for the
+    /// following – any accessories attached to the vehicle, environmental levies,
+    /// extra warranty, fuel, freight, pre-delivery inspection (PDI), dealer fees
+    /// for handling licensing, provincial regulatory fees, miscellaneous dealer
+    /// charges for security etching and nitrogen tire fill, and
+    /// factory-to-customer or dealer-to-customer discounts or incentives. See the
+    /// [Vehicle all-in
+    /// price](https://support.google.com/google-ads/answer/14156981) for more
+    /// information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price VehicleAllInPrice {
+      get { return vehicleAllInPrice_; }
+      set {
+        vehicleAllInPrice_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vehicle_price_type" field.</summary>
+    public const int VehiclePriceTypeFieldNumber = 164;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType vehiclePriceType_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType.Unspecified;
+    /// <summary>
+    /// The [price type](https://support.google.com/google-ads/answer/14592783) of
+    /// the vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType VehiclePriceType {
+      get { return vehiclePriceType_; }
+      set {
+        vehiclePriceType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vehicle_mandatory_inspection_included" field.</summary>
+    public const int VehicleMandatoryInspectionIncludedFieldNumber = 166;
+    private bool vehicleMandatoryInspectionIncluded_;
+    /// <summary>
+    /// Whether the vehicle is sold with mandatory inspection and maintenance
+    /// performed before delivery. See the [Vehicle mandatory inspection
+    /// included](https://support.google.com/google-ads/answer/15956630) for more
+    /// information.`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool VehicleMandatoryInspectionIncluded {
+      get { return vehicleMandatoryInspectionIncluded_; }
+      set {
+        vehicleMandatoryInspectionIncluded_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "vehicle_expenses" field.</summary>
+    public const int VehicleExpensesFieldNumber = 167;
+    private global::Google.Shopping.Type.Price vehicleExpenses_;
+    /// <summary>
+    /// The miscellaneous expenses like insurance and registration fees of the
+    /// vehicle. See the [Vehicle
+    /// expenses](https://support.google.com/google-ads/answer/15957154) for more
+    /// information.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price VehicleExpenses {
+      get { return vehicleExpenses_; }
+      set {
+        vehicleExpenses_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "warranty" field.</summary>
+    public const int WarrantyFieldNumber = 168;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Warranty warranty_;
+    /// <summary>
+    /// The [warranty](https://support.google.com/google-ads/answer/15957626) of
+    /// the vehicle.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Warranty Warranty {
+      get { return warranty_; }
+      set {
+        warranty_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "display_address" field.</summary>
+    public const int DisplayAddressFieldNumber = 179;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.DisplayAddress displayAddress_;
+    /// <summary>
+    /// The display address of the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.DisplayAddress DisplayAddress {
+      get { return displayAddress_; }
+      set {
+        displayAddress_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "latitude" field.</summary>
+    public const int LatitudeFieldNumber = 180;
+    private readonly static double LatitudeDefaultValue = 0D;
+
+    private double latitude_;
+    /// <summary>
+    /// The latitude of the property. The value must be between -90 (inclusive) and
+    /// 90 (inclusive), up to 6 decimal places.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Latitude {
+      get { if ((_hasBits0 & 524288) != 0) { return latitude_; } else { return LatitudeDefaultValue; } }
+      set {
+        _hasBits0 |= 524288;
+        latitude_ = value;
+      }
+    }
+    /// <summary>Gets whether the "latitude" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLatitude {
+      get { return (_hasBits0 & 524288) != 0; }
+    }
+    /// <summary>Clears the value of the "latitude" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLatitude() {
+      _hasBits0 &= ~524288;
+    }
+
+    /// <summary>Field number for the "longitude" field.</summary>
+    public const int LongitudeFieldNumber = 181;
+    private readonly static double LongitudeDefaultValue = 0D;
+
+    private double longitude_;
+    /// <summary>
+    /// The longitude of the property. The value must be between -180 (inclusive)
+    /// and 180 (inclusive), up to 6 decimal places.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double Longitude {
+      get { if ((_hasBits0 & 1048576) != 0) { return longitude_; } else { return LongitudeDefaultValue; } }
+      set {
+        _hasBits0 |= 1048576;
+        longitude_ = value;
+      }
+    }
+    /// <summary>Gets whether the "longitude" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLongitude {
+      get { return (_hasBits0 & 1048576) != 0; }
+    }
+    /// <summary>Clears the value of the "longitude" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLongitude() {
+      _hasBits0 &= ~1048576;
+    }
+
+    /// <summary>Field number for the "neighborhood" field.</summary>
+    public const int NeighborhoodFieldNumber = 182;
+    private string neighborhood_ = "";
+    /// <summary>
+    /// The neighborhood (locality) of the property, such as `Wallingford`,
+    /// `Greenwood`, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Neighborhood {
+      get { return neighborhood_; }
+      set {
+        neighborhood_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "unit_area" field.</summary>
+    public const int UnitAreaFieldNumber = 183;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea unitArea_;
+    /// <summary>
+    /// The unit area of the property, such as `1000 sqft`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea UnitArea {
+      get { return unitArea_; }
+      set {
+        unitArea_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "number_of_units" field.</summary>
+    public const int NumberOfUnitsFieldNumber = 184;
+    private readonly static long NumberOfUnitsDefaultValue = 0L;
+
+    private long numberOfUnits_;
+    /// <summary>
+    /// The number of units available for a specific floor plan of the property.
+    /// The value must be greater than 0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long NumberOfUnits {
+      get { if ((_hasBits0 & 2097152) != 0) { return numberOfUnits_; } else { return NumberOfUnitsDefaultValue; } }
+      set {
+        _hasBits0 |= 2097152;
+        numberOfUnits_ = value;
+      }
+    }
+    /// <summary>Gets whether the "number_of_units" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNumberOfUnits {
+      get { return (_hasBits0 & 2097152) != 0; }
+    }
+    /// <summary>Clears the value of the "number_of_units" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNumberOfUnits() {
+      _hasBits0 &= ~2097152;
+    }
+
+    /// <summary>Field number for the "property_name" field.</summary>
+    public const int PropertyNameFieldNumber = 185;
+    private string propertyName_ = "";
+    /// <summary>
+    /// The name of the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string PropertyName {
+      get { return propertyName_; }
+      set {
+        propertyName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "number_of_bedrooms" field.</summary>
+    public const int NumberOfBedroomsFieldNumber = 186;
+    private readonly static double NumberOfBedroomsDefaultValue = 0D;
+
+    private double numberOfBedrooms_;
+    /// <summary>
+    /// The number of bedrooms in the property. The value must be greater than or
+    /// equal to 0 and a multiple of 1.0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double NumberOfBedrooms {
+      get { if ((_hasBits0 & 4194304) != 0) { return numberOfBedrooms_; } else { return NumberOfBedroomsDefaultValue; } }
+      set {
+        _hasBits0 |= 4194304;
+        numberOfBedrooms_ = value;
+      }
+    }
+    /// <summary>Gets whether the "number_of_bedrooms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNumberOfBedrooms {
+      get { return (_hasBits0 & 4194304) != 0; }
+    }
+    /// <summary>Clears the value of the "number_of_bedrooms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNumberOfBedrooms() {
+      _hasBits0 &= ~4194304;
+    }
+
+    /// <summary>Field number for the "number_of_bathrooms" field.</summary>
+    public const int NumberOfBathroomsFieldNumber = 187;
+    private readonly static double NumberOfBathroomsDefaultValue = 0D;
+
+    private double numberOfBathrooms_;
+    /// <summary>
+    /// The number of bathrooms in the property. The value must be greater than 0
+    /// and a multiple of 0.5.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double NumberOfBathrooms {
+      get { if ((_hasBits0 & 8388608) != 0) { return numberOfBathrooms_; } else { return NumberOfBathroomsDefaultValue; } }
+      set {
+        _hasBits0 |= 8388608;
+        numberOfBathrooms_ = value;
+      }
+    }
+    /// <summary>Gets whether the "number_of_bathrooms" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNumberOfBathrooms {
+      get { return (_hasBits0 & 8388608) != 0; }
+    }
+    /// <summary>Clears the value of the "number_of_bathrooms" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNumberOfBathrooms() {
+      _hasBits0 &= ~8388608;
+    }
+
+    /// <summary>Field number for the "property_type" field.</summary>
+    public const int PropertyTypeFieldNumber = 188;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType propertyType_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType.Unspecified;
+    /// <summary>
+    /// The type of property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType PropertyType {
+      get { return propertyType_; }
+      set {
+        propertyType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "amenity_feature" field.</summary>
+    public const int AmenityFeatureFieldNumber = 189;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.AmenityFeature> _repeated_amenityFeature_codec
+        = pb::FieldCodec.ForEnum(1514, x => (int) x, x => (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.AmenityFeature) x);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.AmenityFeature> amenityFeature_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.AmenityFeature>();
+    /// <summary>
+    /// The amenity features for the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.AmenityFeature> AmenityFeature {
+      get { return amenityFeature_; }
+    }
+
+    /// <summary>Field number for the "utilities_included" field.</summary>
+    public const int UtilitiesIncludedFieldNumber = 190;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UtilitiesIncluded> _repeated_utilitiesIncluded_codec
+        = pb::FieldCodec.ForEnum(1522, x => (int) x, x => (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UtilitiesIncluded) x);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UtilitiesIncluded> utilitiesIncluded_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UtilitiesIncluded>();
+    /// <summary>
+    /// The utilities included for the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UtilitiesIncluded> UtilitiesIncluded {
+      get { return utilitiesIncluded_; }
+    }
+
+    /// <summary>Field number for the "pet_policy" field.</summary>
+    public const int PetPolicyFieldNumber = 191;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy petPolicy_;
+    /// <summary>
+    /// The pet policy for the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy PetPolicy {
+      get { return petPolicy_; }
+      set {
+        petPolicy_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "specialty_housing_type" field.</summary>
+    public const int SpecialtyHousingTypeFieldNumber = 192;
+    private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType specialtyHousingType_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType.Unspecified;
+    /// <summary>
+    /// The specialty housing type for the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType SpecialtyHousingType {
+      get { return specialtyHousingType_; }
+      set {
+        specialtyHousingType_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "product_fee" field.</summary>
+    public const int ProductFeeFieldNumber = 193;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee> _repeated_productFee_codec
+        = pb::FieldCodec.ForMessage(1546, global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee> productFee_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee>();
+    /// <summary>
+    /// The product fee for the property.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee> ProductFee {
+      get { return productFee_; }
+    }
+
+    /// <summary>Field number for the "short_title" field.</summary>
+    public const int ShortTitleFieldNumber = 194;
+    private readonly static string ShortTitleDefaultValue = "";
+
+    private string shortTitle_;
+    /// <summary>
+    /// The short title of the item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ShortTitle {
+      get { return shortTitle_ ?? ShortTitleDefaultValue; }
+      set {
+        shortTitle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "short_title" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasShortTitle {
+      get { return shortTitle_ != null; }
+    }
+    /// <summary>Clears the value of the "short_title" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearShortTitle() {
+      shortTitle_ = null;
+    }
+
+    /// <summary>Field number for the "questions_and_answers" field.</summary>
+    public const int QuestionsAndAnswersFieldNumber = 173;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.QuestionAndAnswer> _repeated_questionsAndAnswers_codec
+        = pb::FieldCodec.ForMessage(1386, global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.QuestionAndAnswer.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.QuestionAndAnswer> questionsAndAnswers_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.QuestionAndAnswer>();
+    /// <summary>
+    /// Optional. Contains user-, merchant-, and manufacturer-authored [questions
+    /// and answers](https://support.google.com/merchants/answer/17085211) about
+    /// the product. Max 30 question and answer pairs. Max 10000 characters total.
+    /// Each question can have max 1000 characters. Each answer can have max 1000
+    /// characters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.QuestionAndAnswer> QuestionsAndAnswers {
+      get { return questionsAndAnswers_; }
+    }
+
+    /// <summary>Field number for the "popularity_rank" field.</summary>
+    public const int PopularityRankFieldNumber = 174;
+    private float popularityRank_;
+    /// <summary>
+    /// Optional. Indicates the
+    /// [popularity](https://support.google.com/merchants/answer/17085297) of the
+    /// product in a merchant's inventory. Using a scale of 0.0 (lowest) to 100.0
+    /// (highest).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float PopularityRank {
+      get { return popularityRank_; }
+      set {
+        popularityRank_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "item_group_title" field.</summary>
+    public const int ItemGroupTitleFieldNumber = 175;
+    private string itemGroupTitle_ = "";
+    /// <summary>
+    /// Optional. Represents the [title of the product
+    /// group](https://support.google.com/merchants/answer/17085146) to which
+    /// this variant product belongs. This can be used along with the [item group
+    /// id](https://support.google.com/merchants/answer/6324507) attribute.
+    /// It lets you perform better grouping of variant products, and helps
+    /// identifying common product characteristics more efficiently.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ItemGroupTitle {
+      get { return itemGroupTitle_; }
+      set {
+        itemGroupTitle_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "document_links" field.</summary>
+    public const int DocumentLinksFieldNumber = 176;
+    private static readonly pb::FieldCodec<string> _repeated_documentLinks_codec
+        = pb::FieldCodec.ForString(1410);
+    private readonly pbc::RepeatedField<string> documentLinks_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Optional. Contains a list of PDF [document
+    /// URLs](https://support.google.com/merchants/answer/17084656) for the
+    /// product. Examples are training manuals, user guides, assembly instructions,
+    /// package inserts, etc. Must start with "http://" or "https://"), ASCII
+    /// characters only, and RFC 3986 compliant.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> DocumentLinks {
+      get { return documentLinks_; }
+    }
+
+    /// <summary>Field number for the "variant_options" field.</summary>
+    public const int VariantOptionsFieldNumber = 177;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VariantOption> _repeated_variantOptions_codec
+        = pb::FieldCodec.ForMessage(1418, global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VariantOption.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VariantOption> variantOptions_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VariantOption>();
+    /// <summary>
+    /// Optional. Contains the [list of all variant-identifying
+    /// options](https://support.google.com/merchants/answer/17085214) of this
+    /// product.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VariantOption> VariantOptions {
+      get { return variantOptions_; }
+    }
+
+    /// <summary>Field number for the "related_products" field.</summary>
+    public const int RelatedProductsFieldNumber = 178;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct> _repeated_relatedProducts_codec
+        = pb::FieldCodec.ForMessage(1426, global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct> relatedProducts_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct>();
+    /// <summary>
+    /// Optional. Specifies how other [products are
+    /// related](https://support.google.com/merchants/answer/17085213) to this
+    /// product.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct> RelatedProducts {
+      get { return relatedProducts_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3601,6 +4673,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if(!promotionIds_.Equals(other.promotionIds_)) return false;
       if (PickupMethod != other.PickupMethod) return false;
       if (PickupSla != other.PickupSla) return false;
+      if (!object.Equals(PickupCost, other.PickupCost)) return false;
       if (LinkTemplate != other.LinkTemplate) return false;
       if (MobileLinkTemplate != other.MobileLinkTemplate) return false;
       if (CustomLabel0 != other.CustomLabel0) return false;
@@ -3622,6 +4695,50 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (!object.Equals(AutoPricingMinPrice, other.AutoPricingMinPrice)) return false;
       if(!sustainabilityIncentives_.Equals(other.sustainabilityIncentives_)) return false;
       if(!videoLinks_.Equals(other.videoLinks_)) return false;
+      if(!minimumOrderValues_.Equals(other.minimumOrderValues_)) return false;
+      if (Vin != other.Vin) return false;
+      if (Model != other.Model) return false;
+      if (Trim != other.Trim) return false;
+      if (BodyStyle != other.BodyStyle) return false;
+      if (Year != other.Year) return false;
+      if (!object.Equals(Mileage, other.Mileage)) return false;
+      if (!object.Equals(ElectricRange, other.ElectricRange)) return false;
+      if (!object.Equals(FuelConsumption, other.FuelConsumption)) return false;
+      if (!object.Equals(FuelConsumptionDischargedBattery, other.FuelConsumptionDischargedBattery)) return false;
+      if (!object.Equals(EnergyConsumption, other.EnergyConsumption)) return false;
+      if (!object.Equals(Co2Emissions, other.Co2Emissions)) return false;
+      if (DateFirstRegistered != other.DateFirstRegistered) return false;
+      if (Engine != other.Engine) return false;
+      if (EmissionsStandard != other.EmissionsStandard) return false;
+      if (CertifiedPreOwned != other.CertifiedPreOwned) return false;
+      if (!object.Equals(VehicleMsrp, other.VehicleMsrp)) return false;
+      if (!object.Equals(VehicleAllInPrice, other.VehicleAllInPrice)) return false;
+      if (VehiclePriceType != other.VehiclePriceType) return false;
+      if (VehicleMandatoryInspectionIncluded != other.VehicleMandatoryInspectionIncluded) return false;
+      if (!object.Equals(VehicleExpenses, other.VehicleExpenses)) return false;
+      if (!object.Equals(Warranty, other.Warranty)) return false;
+      if (!object.Equals(DisplayAddress, other.DisplayAddress)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Latitude, other.Latitude)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Longitude, other.Longitude)) return false;
+      if (Neighborhood != other.Neighborhood) return false;
+      if (!object.Equals(UnitArea, other.UnitArea)) return false;
+      if (NumberOfUnits != other.NumberOfUnits) return false;
+      if (PropertyName != other.PropertyName) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(NumberOfBedrooms, other.NumberOfBedrooms)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(NumberOfBathrooms, other.NumberOfBathrooms)) return false;
+      if (PropertyType != other.PropertyType) return false;
+      if(!amenityFeature_.Equals(other.amenityFeature_)) return false;
+      if(!utilitiesIncluded_.Equals(other.utilitiesIncluded_)) return false;
+      if (!object.Equals(PetPolicy, other.PetPolicy)) return false;
+      if (SpecialtyHousingType != other.SpecialtyHousingType) return false;
+      if(!productFee_.Equals(other.productFee_)) return false;
+      if (ShortTitle != other.ShortTitle) return false;
+      if(!questionsAndAnswers_.Equals(other.questionsAndAnswers_)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(PopularityRank, other.PopularityRank)) return false;
+      if (ItemGroupTitle != other.ItemGroupTitle) return false;
+      if(!documentLinks_.Equals(other.documentLinks_)) return false;
+      if(!variantOptions_.Equals(other.variantOptions_)) return false;
+      if(!relatedProducts_.Equals(other.relatedProducts_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3706,6 +4823,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       hash ^= promotionIds_.GetHashCode();
       if (HasPickupMethod) hash ^= PickupMethod.GetHashCode();
       if (HasPickupSla) hash ^= PickupSla.GetHashCode();
+      if (pickupCost_ != null) hash ^= PickupCost.GetHashCode();
       if (HasLinkTemplate) hash ^= LinkTemplate.GetHashCode();
       if (HasMobileLinkTemplate) hash ^= MobileLinkTemplate.GetHashCode();
       if (HasCustomLabel0) hash ^= CustomLabel0.GetHashCode();
@@ -3727,6 +4845,50 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (autoPricingMinPrice_ != null) hash ^= AutoPricingMinPrice.GetHashCode();
       hash ^= sustainabilityIncentives_.GetHashCode();
       hash ^= videoLinks_.GetHashCode();
+      hash ^= minimumOrderValues_.GetHashCode();
+      if (Vin.Length != 0) hash ^= Vin.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (Trim.Length != 0) hash ^= Trim.GetHashCode();
+      if (BodyStyle != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle.Unspecified) hash ^= BodyStyle.GetHashCode();
+      if (Year != 0L) hash ^= Year.GetHashCode();
+      if (mileage_ != null) hash ^= Mileage.GetHashCode();
+      if (electricRange_ != null) hash ^= ElectricRange.GetHashCode();
+      if (fuelConsumption_ != null) hash ^= FuelConsumption.GetHashCode();
+      if (fuelConsumptionDischargedBattery_ != null) hash ^= FuelConsumptionDischargedBattery.GetHashCode();
+      if (energyConsumption_ != null) hash ^= EnergyConsumption.GetHashCode();
+      if (co2Emissions_ != null) hash ^= Co2Emissions.GetHashCode();
+      if (DateFirstRegistered.Length != 0) hash ^= DateFirstRegistered.GetHashCode();
+      if (Engine != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType.Unspecified) hash ^= Engine.GetHashCode();
+      if (EmissionsStandard != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard.Unspecified) hash ^= EmissionsStandard.GetHashCode();
+      if (CertifiedPreOwned != false) hash ^= CertifiedPreOwned.GetHashCode();
+      if (vehicleMsrp_ != null) hash ^= VehicleMsrp.GetHashCode();
+      if (vehicleAllInPrice_ != null) hash ^= VehicleAllInPrice.GetHashCode();
+      if (VehiclePriceType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType.Unspecified) hash ^= VehiclePriceType.GetHashCode();
+      if (VehicleMandatoryInspectionIncluded != false) hash ^= VehicleMandatoryInspectionIncluded.GetHashCode();
+      if (vehicleExpenses_ != null) hash ^= VehicleExpenses.GetHashCode();
+      if (warranty_ != null) hash ^= Warranty.GetHashCode();
+      if (displayAddress_ != null) hash ^= DisplayAddress.GetHashCode();
+      if (HasLatitude) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Latitude);
+      if (HasLongitude) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Longitude);
+      if (Neighborhood.Length != 0) hash ^= Neighborhood.GetHashCode();
+      if (unitArea_ != null) hash ^= UnitArea.GetHashCode();
+      if (HasNumberOfUnits) hash ^= NumberOfUnits.GetHashCode();
+      if (PropertyName.Length != 0) hash ^= PropertyName.GetHashCode();
+      if (HasNumberOfBedrooms) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(NumberOfBedrooms);
+      if (HasNumberOfBathrooms) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(NumberOfBathrooms);
+      if (PropertyType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType.Unspecified) hash ^= PropertyType.GetHashCode();
+      hash ^= amenityFeature_.GetHashCode();
+      hash ^= utilitiesIncluded_.GetHashCode();
+      if (petPolicy_ != null) hash ^= PetPolicy.GetHashCode();
+      if (SpecialtyHousingType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType.Unspecified) hash ^= SpecialtyHousingType.GetHashCode();
+      hash ^= productFee_.GetHashCode();
+      if (HasShortTitle) hash ^= ShortTitle.GetHashCode();
+      hash ^= questionsAndAnswers_.GetHashCode();
+      if (PopularityRank != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(PopularityRank);
+      if (ItemGroupTitle.Length != 0) hash ^= ItemGroupTitle.GetHashCode();
+      hash ^= documentLinks_.GetHashCode();
+      hash ^= variantOptions_.GetHashCode();
+      hash ^= relatedProducts_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4060,10 +5222,166 @@ namespace Google.Shopping.Merchant.Products.V1 {
       carrierShipping_.WriteTo(output, _repeated_carrierShipping_codec);
       shippingHandlingBusinessDays_.WriteTo(output, _repeated_shippingHandlingBusinessDays_codec);
       shippingTransitBusinessDays_.WriteTo(output, _repeated_shippingTransitBusinessDays_codec);
+      minimumOrderValues_.WriteTo(output, _repeated_minimumOrderValues_codec);
+      if (Vin.Length != 0) {
+        output.WriteRawTag(154, 9);
+        output.WriteString(Vin);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(162, 9);
+        output.WriteString(Model);
+      }
+      if (Trim.Length != 0) {
+        output.WriteRawTag(170, 9);
+        output.WriteString(Trim);
+      }
+      if (BodyStyle != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle.Unspecified) {
+        output.WriteRawTag(176, 9);
+        output.WriteEnum((int) BodyStyle);
+      }
+      if (Year != 0L) {
+        output.WriteRawTag(184, 9);
+        output.WriteInt64(Year);
+      }
+      if (mileage_ != null) {
+        output.WriteRawTag(194, 9);
+        output.WriteMessage(Mileage);
+      }
+      if (electricRange_ != null) {
+        output.WriteRawTag(202, 9);
+        output.WriteMessage(ElectricRange);
+      }
+      if (fuelConsumption_ != null) {
+        output.WriteRawTag(210, 9);
+        output.WriteMessage(FuelConsumption);
+      }
+      if (fuelConsumptionDischargedBattery_ != null) {
+        output.WriteRawTag(218, 9);
+        output.WriteMessage(FuelConsumptionDischargedBattery);
+      }
+      if (energyConsumption_ != null) {
+        output.WriteRawTag(226, 9);
+        output.WriteMessage(EnergyConsumption);
+      }
+      if (co2Emissions_ != null) {
+        output.WriteRawTag(234, 9);
+        output.WriteMessage(Co2Emissions);
+      }
+      if (DateFirstRegistered.Length != 0) {
+        output.WriteRawTag(242, 9);
+        output.WriteString(DateFirstRegistered);
+      }
+      if (Engine != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType.Unspecified) {
+        output.WriteRawTag(248, 9);
+        output.WriteEnum((int) Engine);
+      }
+      if (EmissionsStandard != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard.Unspecified) {
+        output.WriteRawTag(128, 10);
+        output.WriteEnum((int) EmissionsStandard);
+      }
+      if (CertifiedPreOwned != false) {
+        output.WriteRawTag(136, 10);
+        output.WriteBool(CertifiedPreOwned);
+      }
+      if (vehicleMsrp_ != null) {
+        output.WriteRawTag(146, 10);
+        output.WriteMessage(VehicleMsrp);
+      }
+      if (vehicleAllInPrice_ != null) {
+        output.WriteRawTag(154, 10);
+        output.WriteMessage(VehicleAllInPrice);
+      }
+      if (VehiclePriceType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType.Unspecified) {
+        output.WriteRawTag(160, 10);
+        output.WriteEnum((int) VehiclePriceType);
+      }
+      if (VehicleMandatoryInspectionIncluded != false) {
+        output.WriteRawTag(176, 10);
+        output.WriteBool(VehicleMandatoryInspectionIncluded);
+      }
+      if (vehicleExpenses_ != null) {
+        output.WriteRawTag(186, 10);
+        output.WriteMessage(VehicleExpenses);
+      }
+      if (warranty_ != null) {
+        output.WriteRawTag(194, 10);
+        output.WriteMessage(Warranty);
+      }
       videoLinks_.WriteTo(output, _repeated_videoLinks_codec);
       if (HasReturnPolicyLabel) {
         output.WriteRawTag(210, 10);
         output.WriteString(ReturnPolicyLabel);
+      }
+      if (pickupCost_ != null) {
+        output.WriteRawTag(226, 10);
+        output.WriteMessage(PickupCost);
+      }
+      questionsAndAnswers_.WriteTo(output, _repeated_questionsAndAnswers_codec);
+      if (PopularityRank != 0F) {
+        output.WriteRawTag(245, 10);
+        output.WriteFloat(PopularityRank);
+      }
+      if (ItemGroupTitle.Length != 0) {
+        output.WriteRawTag(250, 10);
+        output.WriteString(ItemGroupTitle);
+      }
+      documentLinks_.WriteTo(output, _repeated_documentLinks_codec);
+      variantOptions_.WriteTo(output, _repeated_variantOptions_codec);
+      relatedProducts_.WriteTo(output, _repeated_relatedProducts_codec);
+      if (displayAddress_ != null) {
+        output.WriteRawTag(154, 11);
+        output.WriteMessage(DisplayAddress);
+      }
+      if (HasLatitude) {
+        output.WriteRawTag(161, 11);
+        output.WriteDouble(Latitude);
+      }
+      if (HasLongitude) {
+        output.WriteRawTag(169, 11);
+        output.WriteDouble(Longitude);
+      }
+      if (Neighborhood.Length != 0) {
+        output.WriteRawTag(178, 11);
+        output.WriteString(Neighborhood);
+      }
+      if (unitArea_ != null) {
+        output.WriteRawTag(186, 11);
+        output.WriteMessage(UnitArea);
+      }
+      if (HasNumberOfUnits) {
+        output.WriteRawTag(192, 11);
+        output.WriteInt64(NumberOfUnits);
+      }
+      if (PropertyName.Length != 0) {
+        output.WriteRawTag(202, 11);
+        output.WriteString(PropertyName);
+      }
+      if (HasNumberOfBedrooms) {
+        output.WriteRawTag(209, 11);
+        output.WriteDouble(NumberOfBedrooms);
+      }
+      if (HasNumberOfBathrooms) {
+        output.WriteRawTag(217, 11);
+        output.WriteDouble(NumberOfBathrooms);
+      }
+      if (PropertyType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType.Unspecified) {
+        output.WriteRawTag(224, 11);
+        output.WriteEnum((int) PropertyType);
+      }
+      amenityFeature_.WriteTo(output, _repeated_amenityFeature_codec);
+      utilitiesIncluded_.WriteTo(output, _repeated_utilitiesIncluded_codec);
+      if (petPolicy_ != null) {
+        output.WriteRawTag(250, 11);
+        output.WriteMessage(PetPolicy);
+      }
+      if (SpecialtyHousingType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType.Unspecified) {
+        output.WriteRawTag(128, 12);
+        output.WriteEnum((int) SpecialtyHousingType);
+      }
+      productFee_.WriteTo(output, _repeated_productFee_codec);
+      if (HasShortTitle) {
+        output.WriteRawTag(146, 12);
+        output.WriteString(ShortTitle);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -4390,10 +5708,166 @@ namespace Google.Shopping.Merchant.Products.V1 {
       carrierShipping_.WriteTo(ref output, _repeated_carrierShipping_codec);
       shippingHandlingBusinessDays_.WriteTo(ref output, _repeated_shippingHandlingBusinessDays_codec);
       shippingTransitBusinessDays_.WriteTo(ref output, _repeated_shippingTransitBusinessDays_codec);
+      minimumOrderValues_.WriteTo(ref output, _repeated_minimumOrderValues_codec);
+      if (Vin.Length != 0) {
+        output.WriteRawTag(154, 9);
+        output.WriteString(Vin);
+      }
+      if (Model.Length != 0) {
+        output.WriteRawTag(162, 9);
+        output.WriteString(Model);
+      }
+      if (Trim.Length != 0) {
+        output.WriteRawTag(170, 9);
+        output.WriteString(Trim);
+      }
+      if (BodyStyle != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle.Unspecified) {
+        output.WriteRawTag(176, 9);
+        output.WriteEnum((int) BodyStyle);
+      }
+      if (Year != 0L) {
+        output.WriteRawTag(184, 9);
+        output.WriteInt64(Year);
+      }
+      if (mileage_ != null) {
+        output.WriteRawTag(194, 9);
+        output.WriteMessage(Mileage);
+      }
+      if (electricRange_ != null) {
+        output.WriteRawTag(202, 9);
+        output.WriteMessage(ElectricRange);
+      }
+      if (fuelConsumption_ != null) {
+        output.WriteRawTag(210, 9);
+        output.WriteMessage(FuelConsumption);
+      }
+      if (fuelConsumptionDischargedBattery_ != null) {
+        output.WriteRawTag(218, 9);
+        output.WriteMessage(FuelConsumptionDischargedBattery);
+      }
+      if (energyConsumption_ != null) {
+        output.WriteRawTag(226, 9);
+        output.WriteMessage(EnergyConsumption);
+      }
+      if (co2Emissions_ != null) {
+        output.WriteRawTag(234, 9);
+        output.WriteMessage(Co2Emissions);
+      }
+      if (DateFirstRegistered.Length != 0) {
+        output.WriteRawTag(242, 9);
+        output.WriteString(DateFirstRegistered);
+      }
+      if (Engine != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType.Unspecified) {
+        output.WriteRawTag(248, 9);
+        output.WriteEnum((int) Engine);
+      }
+      if (EmissionsStandard != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard.Unspecified) {
+        output.WriteRawTag(128, 10);
+        output.WriteEnum((int) EmissionsStandard);
+      }
+      if (CertifiedPreOwned != false) {
+        output.WriteRawTag(136, 10);
+        output.WriteBool(CertifiedPreOwned);
+      }
+      if (vehicleMsrp_ != null) {
+        output.WriteRawTag(146, 10);
+        output.WriteMessage(VehicleMsrp);
+      }
+      if (vehicleAllInPrice_ != null) {
+        output.WriteRawTag(154, 10);
+        output.WriteMessage(VehicleAllInPrice);
+      }
+      if (VehiclePriceType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType.Unspecified) {
+        output.WriteRawTag(160, 10);
+        output.WriteEnum((int) VehiclePriceType);
+      }
+      if (VehicleMandatoryInspectionIncluded != false) {
+        output.WriteRawTag(176, 10);
+        output.WriteBool(VehicleMandatoryInspectionIncluded);
+      }
+      if (vehicleExpenses_ != null) {
+        output.WriteRawTag(186, 10);
+        output.WriteMessage(VehicleExpenses);
+      }
+      if (warranty_ != null) {
+        output.WriteRawTag(194, 10);
+        output.WriteMessage(Warranty);
+      }
       videoLinks_.WriteTo(ref output, _repeated_videoLinks_codec);
       if (HasReturnPolicyLabel) {
         output.WriteRawTag(210, 10);
         output.WriteString(ReturnPolicyLabel);
+      }
+      if (pickupCost_ != null) {
+        output.WriteRawTag(226, 10);
+        output.WriteMessage(PickupCost);
+      }
+      questionsAndAnswers_.WriteTo(ref output, _repeated_questionsAndAnswers_codec);
+      if (PopularityRank != 0F) {
+        output.WriteRawTag(245, 10);
+        output.WriteFloat(PopularityRank);
+      }
+      if (ItemGroupTitle.Length != 0) {
+        output.WriteRawTag(250, 10);
+        output.WriteString(ItemGroupTitle);
+      }
+      documentLinks_.WriteTo(ref output, _repeated_documentLinks_codec);
+      variantOptions_.WriteTo(ref output, _repeated_variantOptions_codec);
+      relatedProducts_.WriteTo(ref output, _repeated_relatedProducts_codec);
+      if (displayAddress_ != null) {
+        output.WriteRawTag(154, 11);
+        output.WriteMessage(DisplayAddress);
+      }
+      if (HasLatitude) {
+        output.WriteRawTag(161, 11);
+        output.WriteDouble(Latitude);
+      }
+      if (HasLongitude) {
+        output.WriteRawTag(169, 11);
+        output.WriteDouble(Longitude);
+      }
+      if (Neighborhood.Length != 0) {
+        output.WriteRawTag(178, 11);
+        output.WriteString(Neighborhood);
+      }
+      if (unitArea_ != null) {
+        output.WriteRawTag(186, 11);
+        output.WriteMessage(UnitArea);
+      }
+      if (HasNumberOfUnits) {
+        output.WriteRawTag(192, 11);
+        output.WriteInt64(NumberOfUnits);
+      }
+      if (PropertyName.Length != 0) {
+        output.WriteRawTag(202, 11);
+        output.WriteString(PropertyName);
+      }
+      if (HasNumberOfBedrooms) {
+        output.WriteRawTag(209, 11);
+        output.WriteDouble(NumberOfBedrooms);
+      }
+      if (HasNumberOfBathrooms) {
+        output.WriteRawTag(217, 11);
+        output.WriteDouble(NumberOfBathrooms);
+      }
+      if (PropertyType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType.Unspecified) {
+        output.WriteRawTag(224, 11);
+        output.WriteEnum((int) PropertyType);
+      }
+      amenityFeature_.WriteTo(ref output, _repeated_amenityFeature_codec);
+      utilitiesIncluded_.WriteTo(ref output, _repeated_utilitiesIncluded_codec);
+      if (petPolicy_ != null) {
+        output.WriteRawTag(250, 11);
+        output.WriteMessage(PetPolicy);
+      }
+      if (SpecialtyHousingType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType.Unspecified) {
+        output.WriteRawTag(128, 12);
+        output.WriteEnum((int) SpecialtyHousingType);
+      }
+      productFee_.WriteTo(ref output, _repeated_productFee_codec);
+      if (HasShortTitle) {
+        output.WriteRawTag(146, 12);
+        output.WriteString(ShortTitle);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -4604,6 +6078,9 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (HasPickupSla) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PickupSla);
       }
+      if (pickupCost_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PickupCost);
+      }
       if (HasLinkTemplate) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(LinkTemplate);
       }
@@ -4651,6 +6128,122 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       size += sustainabilityIncentives_.CalculateSize(_repeated_sustainabilityIncentives_codec);
       size += videoLinks_.CalculateSize(_repeated_videoLinks_codec);
+      size += minimumOrderValues_.CalculateSize(_repeated_minimumOrderValues_codec);
+      if (Vin.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Vin);
+      }
+      if (Model.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (Trim.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Trim);
+      }
+      if (BodyStyle != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) BodyStyle);
+      }
+      if (Year != 0L) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(Year);
+      }
+      if (mileage_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Mileage);
+      }
+      if (electricRange_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(ElectricRange);
+      }
+      if (fuelConsumption_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FuelConsumption);
+      }
+      if (fuelConsumptionDischargedBattery_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(FuelConsumptionDischargedBattery);
+      }
+      if (energyConsumption_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(EnergyConsumption);
+      }
+      if (co2Emissions_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Co2Emissions);
+      }
+      if (DateFirstRegistered.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(DateFirstRegistered);
+      }
+      if (Engine != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) Engine);
+      }
+      if (EmissionsStandard != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) EmissionsStandard);
+      }
+      if (CertifiedPreOwned != false) {
+        size += 2 + 1;
+      }
+      if (vehicleMsrp_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VehicleMsrp);
+      }
+      if (vehicleAllInPrice_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VehicleAllInPrice);
+      }
+      if (VehiclePriceType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) VehiclePriceType);
+      }
+      if (VehicleMandatoryInspectionIncluded != false) {
+        size += 2 + 1;
+      }
+      if (vehicleExpenses_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(VehicleExpenses);
+      }
+      if (warranty_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Warranty);
+      }
+      if (displayAddress_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DisplayAddress);
+      }
+      if (HasLatitude) {
+        size += 2 + 8;
+      }
+      if (HasLongitude) {
+        size += 2 + 8;
+      }
+      if (Neighborhood.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Neighborhood);
+      }
+      if (unitArea_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(UnitArea);
+      }
+      if (HasNumberOfUnits) {
+        size += 2 + pb::CodedOutputStream.ComputeInt64Size(NumberOfUnits);
+      }
+      if (PropertyName.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(PropertyName);
+      }
+      if (HasNumberOfBedrooms) {
+        size += 2 + 8;
+      }
+      if (HasNumberOfBathrooms) {
+        size += 2 + 8;
+      }
+      if (PropertyType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) PropertyType);
+      }
+      size += amenityFeature_.CalculateSize(_repeated_amenityFeature_codec);
+      size += utilitiesIncluded_.CalculateSize(_repeated_utilitiesIncluded_codec);
+      if (petPolicy_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(PetPolicy);
+      }
+      if (SpecialtyHousingType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) SpecialtyHousingType);
+      }
+      size += productFee_.CalculateSize(_repeated_productFee_codec);
+      if (HasShortTitle) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ShortTitle);
+      }
+      size += questionsAndAnswers_.CalculateSize(_repeated_questionsAndAnswers_codec);
+      if (PopularityRank != 0F) {
+        size += 2 + 4;
+      }
+      if (ItemGroupTitle.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ItemGroupTitle);
+      }
+      size += documentLinks_.CalculateSize(_repeated_documentLinks_codec);
+      size += variantOptions_.CalculateSize(_repeated_variantOptions_codec);
+      size += relatedProducts_.CalculateSize(_repeated_relatedProducts_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -4925,6 +6518,12 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (other.HasPickupSla) {
         PickupSla = other.PickupSla;
       }
+      if (other.pickupCost_ != null) {
+        if (pickupCost_ == null) {
+          PickupCost = new global::Google.Shopping.Merchant.Products.V1.PickupCost();
+        }
+        PickupCost.MergeFrom(other.PickupCost);
+      }
       if (other.HasLinkTemplate) {
         LinkTemplate = other.LinkTemplate;
       }
@@ -4981,6 +6580,161 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       sustainabilityIncentives_.Add(other.sustainabilityIncentives_);
       videoLinks_.Add(other.videoLinks_);
+      minimumOrderValues_.Add(other.minimumOrderValues_);
+      if (other.Vin.Length != 0) {
+        Vin = other.Vin;
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      if (other.Trim.Length != 0) {
+        Trim = other.Trim;
+      }
+      if (other.BodyStyle != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle.Unspecified) {
+        BodyStyle = other.BodyStyle;
+      }
+      if (other.Year != 0L) {
+        Year = other.Year;
+      }
+      if (other.mileage_ != null) {
+        if (mileage_ == null) {
+          Mileage = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+        }
+        Mileage.MergeFrom(other.Mileage);
+      }
+      if (other.electricRange_ != null) {
+        if (electricRange_ == null) {
+          ElectricRange = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+        }
+        ElectricRange.MergeFrom(other.ElectricRange);
+      }
+      if (other.fuelConsumption_ != null) {
+        if (fuelConsumption_ == null) {
+          FuelConsumption = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption();
+        }
+        FuelConsumption.MergeFrom(other.FuelConsumption);
+      }
+      if (other.fuelConsumptionDischargedBattery_ != null) {
+        if (fuelConsumptionDischargedBattery_ == null) {
+          FuelConsumptionDischargedBattery = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption();
+        }
+        FuelConsumptionDischargedBattery.MergeFrom(other.FuelConsumptionDischargedBattery);
+      }
+      if (other.energyConsumption_ != null) {
+        if (energyConsumption_ == null) {
+          EnergyConsumption = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption();
+        }
+        EnergyConsumption.MergeFrom(other.EnergyConsumption);
+      }
+      if (other.co2Emissions_ != null) {
+        if (co2Emissions_ == null) {
+          Co2Emissions = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions();
+        }
+        Co2Emissions.MergeFrom(other.Co2Emissions);
+      }
+      if (other.DateFirstRegistered.Length != 0) {
+        DateFirstRegistered = other.DateFirstRegistered;
+      }
+      if (other.Engine != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType.Unspecified) {
+        Engine = other.Engine;
+      }
+      if (other.EmissionsStandard != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard.Unspecified) {
+        EmissionsStandard = other.EmissionsStandard;
+      }
+      if (other.CertifiedPreOwned != false) {
+        CertifiedPreOwned = other.CertifiedPreOwned;
+      }
+      if (other.vehicleMsrp_ != null) {
+        if (vehicleMsrp_ == null) {
+          VehicleMsrp = new global::Google.Shopping.Type.Price();
+        }
+        VehicleMsrp.MergeFrom(other.VehicleMsrp);
+      }
+      if (other.vehicleAllInPrice_ != null) {
+        if (vehicleAllInPrice_ == null) {
+          VehicleAllInPrice = new global::Google.Shopping.Type.Price();
+        }
+        VehicleAllInPrice.MergeFrom(other.VehicleAllInPrice);
+      }
+      if (other.VehiclePriceType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType.Unspecified) {
+        VehiclePriceType = other.VehiclePriceType;
+      }
+      if (other.VehicleMandatoryInspectionIncluded != false) {
+        VehicleMandatoryInspectionIncluded = other.VehicleMandatoryInspectionIncluded;
+      }
+      if (other.vehicleExpenses_ != null) {
+        if (vehicleExpenses_ == null) {
+          VehicleExpenses = new global::Google.Shopping.Type.Price();
+        }
+        VehicleExpenses.MergeFrom(other.VehicleExpenses);
+      }
+      if (other.warranty_ != null) {
+        if (warranty_ == null) {
+          Warranty = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Warranty();
+        }
+        Warranty.MergeFrom(other.Warranty);
+      }
+      if (other.displayAddress_ != null) {
+        if (displayAddress_ == null) {
+          DisplayAddress = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.DisplayAddress();
+        }
+        DisplayAddress.MergeFrom(other.DisplayAddress);
+      }
+      if (other.HasLatitude) {
+        Latitude = other.Latitude;
+      }
+      if (other.HasLongitude) {
+        Longitude = other.Longitude;
+      }
+      if (other.Neighborhood.Length != 0) {
+        Neighborhood = other.Neighborhood;
+      }
+      if (other.unitArea_ != null) {
+        if (unitArea_ == null) {
+          UnitArea = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea();
+        }
+        UnitArea.MergeFrom(other.UnitArea);
+      }
+      if (other.HasNumberOfUnits) {
+        NumberOfUnits = other.NumberOfUnits;
+      }
+      if (other.PropertyName.Length != 0) {
+        PropertyName = other.PropertyName;
+      }
+      if (other.HasNumberOfBedrooms) {
+        NumberOfBedrooms = other.NumberOfBedrooms;
+      }
+      if (other.HasNumberOfBathrooms) {
+        NumberOfBathrooms = other.NumberOfBathrooms;
+      }
+      if (other.PropertyType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType.Unspecified) {
+        PropertyType = other.PropertyType;
+      }
+      amenityFeature_.Add(other.amenityFeature_);
+      utilitiesIncluded_.Add(other.utilitiesIncluded_);
+      if (other.petPolicy_ != null) {
+        if (petPolicy_ == null) {
+          PetPolicy = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy();
+        }
+        PetPolicy.MergeFrom(other.PetPolicy);
+      }
+      if (other.SpecialtyHousingType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType.Unspecified) {
+        SpecialtyHousingType = other.SpecialtyHousingType;
+      }
+      productFee_.Add(other.productFee_);
+      if (other.HasShortTitle) {
+        ShortTitle = other.ShortTitle;
+      }
+      questionsAndAnswers_.Add(other.questionsAndAnswers_);
+      if (other.PopularityRank != 0F) {
+        PopularityRank = other.PopularityRank;
+      }
+      if (other.ItemGroupTitle.Length != 0) {
+        ItemGroupTitle = other.ItemGroupTitle;
+      }
+      documentLinks_.Add(other.documentLinks_);
+      variantOptions_.Add(other.variantOptions_);
+      relatedProducts_.Add(other.relatedProducts_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -5459,12 +7213,236 @@ namespace Google.Shopping.Merchant.Products.V1 {
             shippingTransitBusinessDays_.AddEntriesFrom(input, _repeated_shippingTransitBusinessDays_codec);
             break;
           }
+          case 1170: {
+            minimumOrderValues_.AddEntriesFrom(input, _repeated_minimumOrderValues_codec);
+            break;
+          }
+          case 1178: {
+            Vin = input.ReadString();
+            break;
+          }
+          case 1186: {
+            Model = input.ReadString();
+            break;
+          }
+          case 1194: {
+            Trim = input.ReadString();
+            break;
+          }
+          case 1200: {
+            BodyStyle = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle) input.ReadEnum();
+            break;
+          }
+          case 1208: {
+            Year = input.ReadInt64();
+            break;
+          }
+          case 1218: {
+            if (mileage_ == null) {
+              Mileage = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+            }
+            input.ReadMessage(Mileage);
+            break;
+          }
+          case 1226: {
+            if (electricRange_ == null) {
+              ElectricRange = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+            }
+            input.ReadMessage(ElectricRange);
+            break;
+          }
+          case 1234: {
+            if (fuelConsumption_ == null) {
+              FuelConsumption = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption();
+            }
+            input.ReadMessage(FuelConsumption);
+            break;
+          }
+          case 1242: {
+            if (fuelConsumptionDischargedBattery_ == null) {
+              FuelConsumptionDischargedBattery = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption();
+            }
+            input.ReadMessage(FuelConsumptionDischargedBattery);
+            break;
+          }
+          case 1250: {
+            if (energyConsumption_ == null) {
+              EnergyConsumption = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption();
+            }
+            input.ReadMessage(EnergyConsumption);
+            break;
+          }
+          case 1258: {
+            if (co2Emissions_ == null) {
+              Co2Emissions = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions();
+            }
+            input.ReadMessage(Co2Emissions);
+            break;
+          }
+          case 1266: {
+            DateFirstRegistered = input.ReadString();
+            break;
+          }
+          case 1272: {
+            Engine = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType) input.ReadEnum();
+            break;
+          }
+          case 1280: {
+            EmissionsStandard = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard) input.ReadEnum();
+            break;
+          }
+          case 1288: {
+            CertifiedPreOwned = input.ReadBool();
+            break;
+          }
+          case 1298: {
+            if (vehicleMsrp_ == null) {
+              VehicleMsrp = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(VehicleMsrp);
+            break;
+          }
+          case 1306: {
+            if (vehicleAllInPrice_ == null) {
+              VehicleAllInPrice = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(VehicleAllInPrice);
+            break;
+          }
+          case 1312: {
+            VehiclePriceType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType) input.ReadEnum();
+            break;
+          }
+          case 1328: {
+            VehicleMandatoryInspectionIncluded = input.ReadBool();
+            break;
+          }
+          case 1338: {
+            if (vehicleExpenses_ == null) {
+              VehicleExpenses = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(VehicleExpenses);
+            break;
+          }
+          case 1346: {
+            if (warranty_ == null) {
+              Warranty = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Warranty();
+            }
+            input.ReadMessage(Warranty);
+            break;
+          }
           case 1354: {
             videoLinks_.AddEntriesFrom(input, _repeated_videoLinks_codec);
             break;
           }
           case 1362: {
             ReturnPolicyLabel = input.ReadString();
+            break;
+          }
+          case 1378: {
+            if (pickupCost_ == null) {
+              PickupCost = new global::Google.Shopping.Merchant.Products.V1.PickupCost();
+            }
+            input.ReadMessage(PickupCost);
+            break;
+          }
+          case 1386: {
+            questionsAndAnswers_.AddEntriesFrom(input, _repeated_questionsAndAnswers_codec);
+            break;
+          }
+          case 1397: {
+            PopularityRank = input.ReadFloat();
+            break;
+          }
+          case 1402: {
+            ItemGroupTitle = input.ReadString();
+            break;
+          }
+          case 1410: {
+            documentLinks_.AddEntriesFrom(input, _repeated_documentLinks_codec);
+            break;
+          }
+          case 1418: {
+            variantOptions_.AddEntriesFrom(input, _repeated_variantOptions_codec);
+            break;
+          }
+          case 1426: {
+            relatedProducts_.AddEntriesFrom(input, _repeated_relatedProducts_codec);
+            break;
+          }
+          case 1434: {
+            if (displayAddress_ == null) {
+              DisplayAddress = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.DisplayAddress();
+            }
+            input.ReadMessage(DisplayAddress);
+            break;
+          }
+          case 1441: {
+            Latitude = input.ReadDouble();
+            break;
+          }
+          case 1449: {
+            Longitude = input.ReadDouble();
+            break;
+          }
+          case 1458: {
+            Neighborhood = input.ReadString();
+            break;
+          }
+          case 1466: {
+            if (unitArea_ == null) {
+              UnitArea = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea();
+            }
+            input.ReadMessage(UnitArea);
+            break;
+          }
+          case 1472: {
+            NumberOfUnits = input.ReadInt64();
+            break;
+          }
+          case 1482: {
+            PropertyName = input.ReadString();
+            break;
+          }
+          case 1489: {
+            NumberOfBedrooms = input.ReadDouble();
+            break;
+          }
+          case 1497: {
+            NumberOfBathrooms = input.ReadDouble();
+            break;
+          }
+          case 1504: {
+            PropertyType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType) input.ReadEnum();
+            break;
+          }
+          case 1514:
+          case 1512: {
+            amenityFeature_.AddEntriesFrom(input, _repeated_amenityFeature_codec);
+            break;
+          }
+          case 1522:
+          case 1520: {
+            utilitiesIncluded_.AddEntriesFrom(input, _repeated_utilitiesIncluded_codec);
+            break;
+          }
+          case 1530: {
+            if (petPolicy_ == null) {
+              PetPolicy = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy();
+            }
+            input.ReadMessage(PetPolicy);
+            break;
+          }
+          case 1536: {
+            SpecialtyHousingType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType) input.ReadEnum();
+            break;
+          }
+          case 1546: {
+            productFee_.AddEntriesFrom(input, _repeated_productFee_codec);
+            break;
+          }
+          case 1554: {
+            ShortTitle = input.ReadString();
             break;
           }
         }
@@ -5945,12 +7923,236 @@ namespace Google.Shopping.Merchant.Products.V1 {
             shippingTransitBusinessDays_.AddEntriesFrom(ref input, _repeated_shippingTransitBusinessDays_codec);
             break;
           }
+          case 1170: {
+            minimumOrderValues_.AddEntriesFrom(ref input, _repeated_minimumOrderValues_codec);
+            break;
+          }
+          case 1178: {
+            Vin = input.ReadString();
+            break;
+          }
+          case 1186: {
+            Model = input.ReadString();
+            break;
+          }
+          case 1194: {
+            Trim = input.ReadString();
+            break;
+          }
+          case 1200: {
+            BodyStyle = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehicleBodyStyle) input.ReadEnum();
+            break;
+          }
+          case 1208: {
+            Year = input.ReadInt64();
+            break;
+          }
+          case 1218: {
+            if (mileage_ == null) {
+              Mileage = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+            }
+            input.ReadMessage(Mileage);
+            break;
+          }
+          case 1226: {
+            if (electricRange_ == null) {
+              ElectricRange = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+            }
+            input.ReadMessage(ElectricRange);
+            break;
+          }
+          case 1234: {
+            if (fuelConsumption_ == null) {
+              FuelConsumption = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption();
+            }
+            input.ReadMessage(FuelConsumption);
+            break;
+          }
+          case 1242: {
+            if (fuelConsumptionDischargedBattery_ == null) {
+              FuelConsumptionDischargedBattery = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption();
+            }
+            input.ReadMessage(FuelConsumptionDischargedBattery);
+            break;
+          }
+          case 1250: {
+            if (energyConsumption_ == null) {
+              EnergyConsumption = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption();
+            }
+            input.ReadMessage(EnergyConsumption);
+            break;
+          }
+          case 1258: {
+            if (co2Emissions_ == null) {
+              Co2Emissions = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions();
+            }
+            input.ReadMessage(Co2Emissions);
+            break;
+          }
+          case 1266: {
+            DateFirstRegistered = input.ReadString();
+            break;
+          }
+          case 1272: {
+            Engine = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EngineType) input.ReadEnum();
+            break;
+          }
+          case 1280: {
+            EmissionsStandard = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EmissionsStandard) input.ReadEnum();
+            break;
+          }
+          case 1288: {
+            CertifiedPreOwned = input.ReadBool();
+            break;
+          }
+          case 1298: {
+            if (vehicleMsrp_ == null) {
+              VehicleMsrp = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(VehicleMsrp);
+            break;
+          }
+          case 1306: {
+            if (vehicleAllInPrice_ == null) {
+              VehicleAllInPrice = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(VehicleAllInPrice);
+            break;
+          }
+          case 1312: {
+            VehiclePriceType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.VehiclePriceType) input.ReadEnum();
+            break;
+          }
+          case 1328: {
+            VehicleMandatoryInspectionIncluded = input.ReadBool();
+            break;
+          }
+          case 1338: {
+            if (vehicleExpenses_ == null) {
+              VehicleExpenses = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(VehicleExpenses);
+            break;
+          }
+          case 1346: {
+            if (warranty_ == null) {
+              Warranty = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Warranty();
+            }
+            input.ReadMessage(Warranty);
+            break;
+          }
           case 1354: {
             videoLinks_.AddEntriesFrom(ref input, _repeated_videoLinks_codec);
             break;
           }
           case 1362: {
             ReturnPolicyLabel = input.ReadString();
+            break;
+          }
+          case 1378: {
+            if (pickupCost_ == null) {
+              PickupCost = new global::Google.Shopping.Merchant.Products.V1.PickupCost();
+            }
+            input.ReadMessage(PickupCost);
+            break;
+          }
+          case 1386: {
+            questionsAndAnswers_.AddEntriesFrom(ref input, _repeated_questionsAndAnswers_codec);
+            break;
+          }
+          case 1397: {
+            PopularityRank = input.ReadFloat();
+            break;
+          }
+          case 1402: {
+            ItemGroupTitle = input.ReadString();
+            break;
+          }
+          case 1410: {
+            documentLinks_.AddEntriesFrom(ref input, _repeated_documentLinks_codec);
+            break;
+          }
+          case 1418: {
+            variantOptions_.AddEntriesFrom(ref input, _repeated_variantOptions_codec);
+            break;
+          }
+          case 1426: {
+            relatedProducts_.AddEntriesFrom(ref input, _repeated_relatedProducts_codec);
+            break;
+          }
+          case 1434: {
+            if (displayAddress_ == null) {
+              DisplayAddress = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.DisplayAddress();
+            }
+            input.ReadMessage(DisplayAddress);
+            break;
+          }
+          case 1441: {
+            Latitude = input.ReadDouble();
+            break;
+          }
+          case 1449: {
+            Longitude = input.ReadDouble();
+            break;
+          }
+          case 1458: {
+            Neighborhood = input.ReadString();
+            break;
+          }
+          case 1466: {
+            if (unitArea_ == null) {
+              UnitArea = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea();
+            }
+            input.ReadMessage(UnitArea);
+            break;
+          }
+          case 1472: {
+            NumberOfUnits = input.ReadInt64();
+            break;
+          }
+          case 1482: {
+            PropertyName = input.ReadString();
+            break;
+          }
+          case 1489: {
+            NumberOfBedrooms = input.ReadDouble();
+            break;
+          }
+          case 1497: {
+            NumberOfBathrooms = input.ReadDouble();
+            break;
+          }
+          case 1504: {
+            PropertyType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PropertyType) input.ReadEnum();
+            break;
+          }
+          case 1514:
+          case 1512: {
+            amenityFeature_.AddEntriesFrom(ref input, _repeated_amenityFeature_codec);
+            break;
+          }
+          case 1522:
+          case 1520: {
+            utilitiesIncluded_.AddEntriesFrom(ref input, _repeated_utilitiesIncluded_codec);
+            break;
+          }
+          case 1530: {
+            if (petPolicy_ == null) {
+              PetPolicy = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy();
+            }
+            input.ReadMessage(PetPolicy);
+            break;
+          }
+          case 1536: {
+            SpecialtyHousingType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.SpecialtyHousingType) input.ReadEnum();
+            break;
+          }
+          case 1546: {
+            productFee_.AddEntriesFrom(ref input, _repeated_productFee_codec);
+            break;
+          }
+          case 1554: {
+            ShortTitle = input.ReadString();
             break;
           }
         }
@@ -6215,6 +8417,532 @@ namespace Google.Shopping.Merchant.Products.V1 {
         /// USPS Ground Advantage Commercial shipping service.
         /// </summary>
         [pbr::OriginalName("USPS_GROUND_ADVANTAGE_COMMERCIAL")] UspsGroundAdvantageCommercial = 61,
+      }
+
+      /// <summary>
+      /// The vehicle body style. See the [Body
+      /// style](https://support.google.com/google-ads/answer/14157085) for more
+      /// information.
+      /// </summary>
+      public enum VehicleBodyStyle {
+        /// <summary>
+        /// Unspecified vehicle body style.
+        /// </summary>
+        [pbr::OriginalName("VEHICLE_BODY_STYLE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// ATV Sport.
+        /// </summary>
+        [pbr::OriginalName("ATV_SPORT")] AtvSport = 1,
+        /// <summary>
+        /// ATV Touring.
+        /// </summary>
+        [pbr::OriginalName("ATV_TOURING")] AtvTouring = 2,
+        /// <summary>
+        /// ATV Utility.
+        /// </summary>
+        [pbr::OriginalName("ATV_UTILITY")] AtvUtility = 3,
+        /// <summary>
+        /// ATV Youth.
+        /// </summary>
+        [pbr::OriginalName("ATV_YOUTH")] AtvYouth = 4,
+        /// <summary>
+        /// City car.
+        /// </summary>
+        [pbr::OriginalName("CITY_CAR")] CityCar = 5,
+        /// <summary>
+        /// Class A motorhome.
+        /// </summary>
+        [pbr::OriginalName("CLASS_A_MOTORHOME")] ClassAMotorhome = 6,
+        /// <summary>
+        /// Class B motorhome.
+        /// </summary>
+        [pbr::OriginalName("CLASS_B_MOTORHOME")] ClassBMotorhome = 7,
+        /// <summary>
+        /// Class C motorhome.
+        /// </summary>
+        [pbr::OriginalName("CLASS_C_MOTORHOME")] ClassCMotorhome = 8,
+        /// <summary>
+        /// Compact SUV.
+        /// </summary>
+        [pbr::OriginalName("COMPACT_SUV")] CompactSuv = 9,
+        /// <summary>
+        /// Convertible.
+        /// </summary>
+        [pbr::OriginalName("CONVERTIBLE")] Convertible = 10,
+        /// <summary>
+        /// Coupe.
+        /// </summary>
+        [pbr::OriginalName("COUPE")] Coupe = 11,
+        /// <summary>
+        /// Crossover.
+        /// </summary>
+        [pbr::OriginalName("CROSSOVER")] Crossover = 12,
+        /// <summary>
+        /// Fifth wheel.
+        /// </summary>
+        [pbr::OriginalName("FIFTH_WHEEL")] FifthWheel = 13,
+        /// <summary>
+        /// Full size van.
+        /// </summary>
+        [pbr::OriginalName("FULL_SIZE_VAN")] FullSizeVan = 14,
+        /// <summary>
+        /// Hatchback.
+        /// </summary>
+        [pbr::OriginalName("HATCHBACK")] Hatchback = 15,
+        /// <summary>
+        /// Limousine.
+        /// </summary>
+        [pbr::OriginalName("LIMOUSINE")] Limousine = 16,
+        /// <summary>
+        /// Minivan.
+        /// </summary>
+        [pbr::OriginalName("MINIVAN")] Minivan = 17,
+        /// <summary>
+        /// Notchback.
+        /// </summary>
+        [pbr::OriginalName("NOTCHBACK")] Notchback = 18,
+        /// <summary>
+        /// Pop up camper.
+        /// </summary>
+        [pbr::OriginalName("POP_UP_CAMPER")] PopUpCamper = 19,
+        /// <summary>
+        /// Sedan.
+        /// </summary>
+        [pbr::OriginalName("SEDAN")] Sedan = 20,
+        /// <summary>
+        /// Side by side.
+        /// </summary>
+        [pbr::OriginalName("SIDE_BY_SIDE")] SideBySide = 21,
+        /// <summary>
+        /// Station wagon.
+        /// </summary>
+        [pbr::OriginalName("STATION_WAGON")] StationWagon = 22,
+        /// <summary>
+        /// SUV.
+        /// </summary>
+        [pbr::OriginalName("SUV")] Suv = 23,
+        /// <summary>
+        /// Travel trailer.
+        /// </summary>
+        [pbr::OriginalName("TRAVEL_TRAILER")] TravelTrailer = 24,
+        /// <summary>
+        /// Truck.
+        /// </summary>
+        [pbr::OriginalName("TRUCK")] Truck = 25,
+        /// <summary>
+        /// Truck camper.
+        /// </summary>
+        [pbr::OriginalName("TRUCK_CAMPER")] TruckCamper = 26,
+        /// <summary>
+        /// Ute.
+        /// </summary>
+        [pbr::OriginalName("UTE")] Ute = 27,
+        /// <summary>
+        /// UTV Recreational utility.
+        /// </summary>
+        [pbr::OriginalName("UTV_RECREATIONAL_UTILITY")] UtvRecreationalUtility = 28,
+        /// <summary>
+        /// UTV Sport.
+        /// </summary>
+        [pbr::OriginalName("UTV_SPORT")] UtvSport = 29,
+        /// <summary>
+        /// UTV Utility.
+        /// </summary>
+        [pbr::OriginalName("UTV_UTILITY")] UtvUtility = 30,
+        /// <summary>
+        /// UTV Youth.
+        /// </summary>
+        [pbr::OriginalName("UTV_YOUTH")] UtvYouth = 31,
+      }
+
+      /// <summary>
+      /// The engine type of the vehicle.
+      /// </summary>
+      public enum EngineType {
+        /// <summary>
+        /// Unspecified engine type.
+        /// </summary>
+        [pbr::OriginalName("ENGINE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Gasoline.
+        /// </summary>
+        [pbr::OriginalName("GASOLINE")] Gasoline = 1,
+        /// <summary>
+        /// Diesel.
+        /// </summary>
+        [pbr::OriginalName("DIESEL")] Diesel = 2,
+        /// <summary>
+        /// Electric.
+        /// </summary>
+        [pbr::OriginalName("ELECTRIC")] Electric = 3,
+        /// <summary>
+        /// Hybrid.
+        /// </summary>
+        [pbr::OriginalName("HYBRID")] Hybrid = 4,
+        /// <summary>
+        /// Plug-in hybrid.
+        /// </summary>
+        [pbr::OriginalName("PLUG_IN_HYBRID")] PlugInHybrid = 5,
+        /// <summary>
+        /// Natural gas.
+        /// </summary>
+        [pbr::OriginalName("NATURAL_GAS")] NaturalGas = 6,
+        /// <summary>
+        /// LPG.
+        /// </summary>
+        [pbr::OriginalName("LPG")] Lpg = 7,
+        /// <summary>
+        /// Methane.
+        /// </summary>
+        [pbr::OriginalName("METHANE")] Methane = 8,
+        /// <summary>
+        /// Other.
+        /// </summary>
+        [pbr::OriginalName("OTHER")] Other = 9,
+      }
+
+      /// <summary>
+      /// The emission standard of the vehicle.
+      /// </summary>
+      public enum EmissionsStandard {
+        /// <summary>
+        /// Unspecified emission standard.
+        /// </summary>
+        [pbr::OriginalName("EMISSIONS_STANDARD_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Zero emissions.
+        /// </summary>
+        [pbr::OriginalName("ZERO_EMISSIONS")] ZeroEmissions = 1,
+        /// <summary>
+        /// Euro 1.
+        /// </summary>
+        [pbr::OriginalName("EURO1")] Euro1 = 2,
+        /// <summary>
+        /// Euro 2.
+        /// </summary>
+        [pbr::OriginalName("EURO2")] Euro2 = 3,
+        /// <summary>
+        /// Euro 3.
+        /// </summary>
+        [pbr::OriginalName("EURO3")] Euro3 = 4,
+        /// <summary>
+        /// Euro 4.
+        /// </summary>
+        [pbr::OriginalName("EURO4")] Euro4 = 5,
+        /// <summary>
+        /// Euro 5.
+        /// </summary>
+        [pbr::OriginalName("EURO5")] Euro5 = 6,
+        /// <summary>
+        /// Euro 5b.
+        /// </summary>
+        [pbr::OriginalName("EURO5B")] Euro5B = 7,
+        /// <summary>
+        /// Euro 6.
+        /// </summary>
+        [pbr::OriginalName("EURO6")] Euro6 = 8,
+        /// <summary>
+        /// Euro 6c.
+        /// </summary>
+        [pbr::OriginalName("EURO6C")] Euro6C = 9,
+        /// <summary>
+        /// Euro 6d.
+        /// </summary>
+        [pbr::OriginalName("EURO6D")] Euro6D = 10,
+        /// <summary>
+        /// Euro 6d-TEMP.
+        /// </summary>
+        [pbr::OriginalName("EURO6D_TEMP")] Euro6DTemp = 11,
+        /// <summary>
+        /// Euro 6e.
+        /// </summary>
+        [pbr::OriginalName("EURO6E")] Euro6E = 12,
+      }
+
+      /// <summary>
+      /// The vehicle price type.
+      /// </summary>
+      public enum VehiclePriceType {
+        /// <summary>
+        /// Unspecified vehicle price type.
+        /// </summary>
+        [pbr::OriginalName("VEHICLE_PRICE_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// All in price.
+        /// </summary>
+        [pbr::OriginalName("ALL_IN_PRICE")] AllInPrice = 1,
+        /// <summary>
+        /// Drive away price.
+        /// </summary>
+        [pbr::OriginalName("DRIVE_AWAY_PRICE")] DriveAwayPrice = 2,
+        /// <summary>
+        /// Estimated drive away price.
+        /// </summary>
+        [pbr::OriginalName("ESTIMATED_DRIVE_AWAY_PRICE")] EstimatedDriveAwayPrice = 3,
+        /// <summary>
+        /// Excluding government charges price.
+        /// </summary>
+        [pbr::OriginalName("EXCLUDING_GOVERNMENT_CHARGES_PRICE")] ExcludingGovernmentChargesPrice = 4,
+        /// <summary>
+        /// Vehicle base price.
+        /// </summary>
+        [pbr::OriginalName("VEHICLE_BASE_PRICE")] VehicleBasePrice = 5,
+      }
+
+      /// <summary>
+      /// The property type.
+      /// </summary>
+      public enum PropertyType {
+        /// <summary>
+        /// Unspecified property type.
+        /// </summary>
+        [pbr::OriginalName("PROPERTY_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Apartment.
+        /// </summary>
+        [pbr::OriginalName("APARTMENT")] Apartment = 1,
+        /// <summary>
+        /// Condo.
+        /// </summary>
+        [pbr::OriginalName("CONDO")] Condo = 2,
+        /// <summary>
+        /// Loft.
+        /// </summary>
+        [pbr::OriginalName("LOFT")] Loft = 3,
+        /// <summary>
+        /// Multi-family home.
+        /// </summary>
+        [pbr::OriginalName("MULTI_FAMILY_HOME")] MultiFamilyHome = 4,
+        /// <summary>
+        /// Penthouse.
+        /// </summary>
+        [pbr::OriginalName("PENTHOUSE")] Penthouse = 5,
+        /// <summary>
+        /// Room.
+        /// </summary>
+        [pbr::OriginalName("ROOM")] Room = 6,
+        /// <summary>
+        /// Single-family home.
+        /// </summary>
+        [pbr::OriginalName("SINGLE_FAMILY_HOME")] SingleFamilyHome = 7,
+        /// <summary>
+        /// Studio.
+        /// </summary>
+        [pbr::OriginalName("STUDIO")] Studio = 8,
+        /// <summary>
+        /// Townhouse.
+        /// </summary>
+        [pbr::OriginalName("TOWNHOUSE")] Townhouse = 9,
+      }
+
+      /// <summary>
+      /// The amenity features for the property.
+      /// </summary>
+      public enum AmenityFeature {
+        /// <summary>
+        /// Unspecified amenity feature.
+        /// </summary>
+        [pbr::OriginalName("AMENITY_FEATURE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Balcony.
+        /// </summary>
+        [pbr::OriginalName("BALCONY")] Balcony = 1,
+        /// <summary>
+        /// Basement.
+        /// </summary>
+        [pbr::OriginalName("BASEMENT")] Basement = 2,
+        /// <summary>
+        /// Basketball court.
+        /// </summary>
+        [pbr::OriginalName("BASKETBALL_COURT")] BasketballCourt = 3,
+        /// <summary>
+        /// Bike storage.
+        /// </summary>
+        [pbr::OriginalName("BIKE_STORAGE")] BikeStorage = 4,
+        /// <summary>
+        /// Central air conditioning.
+        /// </summary>
+        [pbr::OriginalName("CENTRAL_AC")] CentralAc = 5,
+        /// <summary>
+        /// Dishwasher.
+        /// </summary>
+        [pbr::OriginalName("DISHWASHER")] Dishwasher = 6,
+        /// <summary>
+        /// Dog park.
+        /// </summary>
+        [pbr::OriginalName("DOG_PARK")] DogPark = 7,
+        /// <summary>
+        /// Elevator.
+        /// </summary>
+        [pbr::OriginalName("ELEVATOR")] Elevator = 8,
+        /// <summary>
+        /// EV charging.
+        /// </summary>
+        [pbr::OriginalName("EV_CHARGING")] EvCharging = 9,
+        /// <summary>
+        /// Fenced lot.
+        /// </summary>
+        [pbr::OriginalName("FENCED_LOT")] FencedLot = 10,
+        /// <summary>
+        /// Fireplace.
+        /// </summary>
+        [pbr::OriginalName("FIREPLACE")] Fireplace = 11,
+        /// <summary>
+        /// Fitness center.
+        /// </summary>
+        [pbr::OriginalName("FITNESS_CENTER")] FitnessCenter = 12,
+        /// <summary>
+        /// Forced air heating.
+        /// </summary>
+        [pbr::OriginalName("FORCED_AIR_HEATING")] ForcedAirHeating = 13,
+        /// <summary>
+        /// Fully furnished.
+        /// </summary>
+        [pbr::OriginalName("FULLY_FURNISHED")] FullyFurnished = 14,
+        /// <summary>
+        /// Garage.
+        /// </summary>
+        [pbr::OriginalName("GARAGE")] Garage = 15,
+        /// <summary>
+        /// Gated community.
+        /// </summary>
+        [pbr::OriginalName("GATED_COMMUNITY")] GatedCommunity = 16,
+        /// <summary>
+        /// Hardwood floors.
+        /// </summary>
+        [pbr::OriginalName("HARDWOOD_FLOORS")] HardwoodFloors = 17,
+        /// <summary>
+        /// High speed internet.
+        /// </summary>
+        [pbr::OriginalName("HIGH_SPEED_INTERNET")] HighSpeedInternet = 18,
+        /// <summary>
+        /// Intercom.
+        /// </summary>
+        [pbr::OriginalName("INTERCOM")] Intercom = 19,
+        /// <summary>
+        /// In-unit washer and dryer.
+        /// </summary>
+        [pbr::OriginalName("IN_UNIT_WASHER_DRYER")] InUnitWasherDryer = 20,
+        /// <summary>
+        /// Kitchen.
+        /// </summary>
+        [pbr::OriginalName("KITCHEN")] Kitchen = 21,
+        /// <summary>
+        /// Large closets.
+        /// </summary>
+        [pbr::OriginalName("LARGE_CLOSETS")] LargeClosets = 22,
+        /// <summary>
+        /// Multisport court.
+        /// </summary>
+        [pbr::OriginalName("MULTISPORT_COURT")] MultisportCourt = 23,
+        /// <summary>
+        /// Onsite laundry.
+        /// </summary>
+        [pbr::OriginalName("ONSITE_LAUNDRY")] OnsiteLaundry = 24,
+        /// <summary>
+        /// Outdoor lounge.
+        /// </summary>
+        [pbr::OriginalName("OUTDOOR_LOUNGE")] OutdoorLounge = 25,
+        /// <summary>
+        /// Parking.
+        /// </summary>
+        [pbr::OriginalName("PARKING")] Parking = 26,
+        /// <summary>
+        /// Patio.
+        /// </summary>
+        [pbr::OriginalName("PATIO")] Patio = 27,
+        /// <summary>
+        /// Pickleball court.
+        /// </summary>
+        [pbr::OriginalName("PICKLEBALL_COURT")] PickleballCourt = 28,
+        /// <summary>
+        /// Pool.
+        /// </summary>
+        [pbr::OriginalName("POOL")] Pool = 29,
+        /// <summary>
+        /// Refrigerator.
+        /// </summary>
+        [pbr::OriginalName("REFRIGERATOR")] Refrigerator = 30,
+        /// <summary>
+        /// Soccer field.
+        /// </summary>
+        [pbr::OriginalName("SOCCER_FIELD")] SoccerField = 31,
+        /// <summary>
+        /// Tennis court.
+        /// </summary>
+        [pbr::OriginalName("TENNIS_COURT")] TennisCourt = 32,
+        /// <summary>
+        /// Walk-in closets.
+        /// </summary>
+        [pbr::OriginalName("WALK_IN_CLOSETS")] WalkInClosets = 33,
+        /// <summary>
+        /// Wheelchair accessibility.
+        /// </summary>
+        [pbr::OriginalName("WHEELCHAIR_ACCESS")] WheelchairAccess = 34,
+      }
+
+      /// <summary>
+      /// The utilities included for the property.
+      /// </summary>
+      public enum UtilitiesIncluded {
+        /// <summary>
+        /// Unspecified utilities included.
+        /// </summary>
+        [pbr::OriginalName("UTILITIES_INCLUDED_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Electricity.
+        /// </summary>
+        [pbr::OriginalName("ELECTRICITY")] Electricity = 1,
+        /// <summary>
+        /// Gas.
+        /// </summary>
+        [pbr::OriginalName("GAS")] Gas = 2,
+        /// <summary>
+        /// Internet.
+        /// </summary>
+        [pbr::OriginalName("INTERNET")] Internet = 3,
+        /// <summary>
+        /// Trash.
+        /// </summary>
+        [pbr::OriginalName("TRASH")] Trash = 4,
+        /// <summary>
+        /// Water.
+        /// </summary>
+        [pbr::OriginalName("WATER")] Water = 5,
+      }
+
+      /// <summary>
+      /// The specialty housing type for the property.
+      /// </summary>
+      public enum SpecialtyHousingType {
+        /// <summary>
+        /// Unspecified specialty housing type.
+        /// </summary>
+        [pbr::OriginalName("SPECIALTY_HOUSING_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Corporate housing.
+        /// </summary>
+        [pbr::OriginalName("CORPORATE")] Corporate = 1,
+        /// <summary>
+        /// Low income housing.
+        /// </summary>
+        [pbr::OriginalName("LOW_INCOME")] LowIncome = 2,
+        /// <summary>
+        /// Military housing.
+        /// </summary>
+        [pbr::OriginalName("MILITARY")] Military = 3,
+        /// <summary>
+        /// Senior housing.
+        /// </summary>
+        [pbr::OriginalName("SENIOR")] Senior = 4,
+        /// <summary>
+        /// Short term housing.
+        /// </summary>
+        [pbr::OriginalName("SHORT_TERM")] ShortTerm = 5,
+        /// <summary>
+        /// Student housing.
+        /// </summary>
+        [pbr::OriginalName("STUDENT")] Student = 6,
       }
 
       /// <summary>
@@ -7432,6 +10160,3441 @@ namespace Google.Shopping.Merchant.Products.V1 {
           }
         }
         #endif
+
+      }
+
+      /// <summary>
+      /// The mileage of the vehicle.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Mileage : pb::IMessage<Mileage>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Mileage> _parser = new pb::MessageParser<Mileage>(() => new Mileage());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Mileage> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[2]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Mileage() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Mileage(Mileage other) : this() {
+          _hasBits0 = other._hasBits0;
+          value_ = other.value_;
+          unit_ = other.unit_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Mileage Clone() {
+          return new Mileage(this);
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 1;
+        private readonly static long ValueDefaultValue = 0L;
+
+        private long value_;
+        /// <summary>
+        /// The distance value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long Value {
+          get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            value_ = value;
+          }
+        }
+        /// <summary>Gets whether the "value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValue {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "value" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "unit" field.</summary>
+        public const int UnitFieldNumber = 2;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit unit_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit.Unspecified;
+        /// <summary>
+        /// The unit of the mileage.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit Unit {
+          get { return unit_; }
+          set {
+            unit_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Mileage);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Mileage other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Value != other.Value) return false;
+          if (Unit != other.Unit) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValue) hash ^= Value.GetHashCode();
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit.Unspecified) hash ^= Unit.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasValue) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasValue) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValue) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Mileage other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasValue) {
+            Value = other.Value;
+          }
+          if (other.Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit.Unspecified) {
+            Unit = other.Unit;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Value = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Value = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Mileage message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The unit of the mileage.
+          /// </summary>
+          public enum Unit {
+            /// <summary>
+            /// Unspecified unit.
+            /// </summary>
+            [pbr::OriginalName("UNIT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Miles.
+            /// </summary>
+            [pbr::OriginalName("MILES")] Miles = 1,
+            /// <summary>
+            /// Kilometers.
+            /// </summary>
+            [pbr::OriginalName("KM")] Km = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The fuel consumption of the vehicle.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class FuelConsumption : pb::IMessage<FuelConsumption>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<FuelConsumption> _parser = new pb::MessageParser<FuelConsumption>(() => new FuelConsumption());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<FuelConsumption> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[3]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FuelConsumption() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FuelConsumption(FuelConsumption other) : this() {
+          _hasBits0 = other._hasBits0;
+          value_ = other.value_;
+          unit_ = other.unit_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public FuelConsumption Clone() {
+          return new FuelConsumption(this);
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 1;
+        private readonly static double ValueDefaultValue = 0D;
+
+        private double value_;
+        /// <summary>
+        /// The fuel consumption value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Value {
+          get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            value_ = value;
+          }
+        }
+        /// <summary>Gets whether the "value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValue {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "value" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "unit" field.</summary>
+        public const int UnitFieldNumber = 2;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit unit_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit.Unspecified;
+        /// <summary>
+        /// The unit of the fuel consumption.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit Unit {
+          get { return unit_; }
+          set {
+            unit_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as FuelConsumption);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(FuelConsumption other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Value, other.Value)) return false;
+          if (Unit != other.Unit) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit.Unspecified) hash ^= Unit.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValue) {
+            size += 1 + 8;
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(FuelConsumption other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasValue) {
+            Value = other.Value;
+          }
+          if (other.Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit.Unspecified) {
+            Unit = other.Unit;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.FuelConsumption.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the FuelConsumption message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The unit of the fuel consumption.
+          /// </summary>
+          public enum Unit {
+            /// <summary>
+            /// Unspecified unit.
+            /// </summary>
+            [pbr::OriginalName("UNIT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Liter per 100 kilometers.
+            /// </summary>
+            [pbr::OriginalName("LPER100KM")] Lper100Km = 1,
+            /// <summary>
+            /// Kilograms per 100 kilometers.
+            /// </summary>
+            [pbr::OriginalName("KGPER100KM")] Kgper100Km = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The energy consumption of the vehicle.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class EnergyConsumption : pb::IMessage<EnergyConsumption>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<EnergyConsumption> _parser = new pb::MessageParser<EnergyConsumption>(() => new EnergyConsumption());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<EnergyConsumption> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[4]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EnergyConsumption() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EnergyConsumption(EnergyConsumption other) : this() {
+          _hasBits0 = other._hasBits0;
+          value_ = other.value_;
+          unit_ = other.unit_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public EnergyConsumption Clone() {
+          return new EnergyConsumption(this);
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 1;
+        private readonly static double ValueDefaultValue = 0D;
+
+        private double value_;
+        /// <summary>
+        /// The energy consumption value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Value {
+          get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            value_ = value;
+          }
+        }
+        /// <summary>Gets whether the "value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValue {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "value" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "unit" field.</summary>
+        public const int UnitFieldNumber = 2;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit unit_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit.Unspecified;
+        /// <summary>
+        /// The unit of the energy consumption.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit Unit {
+          get { return unit_; }
+          set {
+            unit_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as EnergyConsumption);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(EnergyConsumption other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Value, other.Value)) return false;
+          if (Unit != other.Unit) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit.Unspecified) hash ^= Unit.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValue) {
+            size += 1 + 8;
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(EnergyConsumption other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasValue) {
+            Value = other.Value;
+          }
+          if (other.Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit.Unspecified) {
+            Unit = other.Unit;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.EnergyConsumption.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the EnergyConsumption message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The unit of the energy consumption.
+          /// </summary>
+          public enum Unit {
+            /// <summary>
+            /// Unspecified unit.
+            /// </summary>
+            [pbr::OriginalName("UNIT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Kilowatt hours per 100 kilometers.
+            /// </summary>
+            [pbr::OriginalName("KWHPER100KM")] Kwhper100Km = 1,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The co2 emission of the vehicle.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Co2Emissions : pb::IMessage<Co2Emissions>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Co2Emissions> _parser = new pb::MessageParser<Co2Emissions>(() => new Co2Emissions());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Co2Emissions> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Co2Emissions() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Co2Emissions(Co2Emissions other) : this() {
+          _hasBits0 = other._hasBits0;
+          value_ = other.value_;
+          unit_ = other.unit_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Co2Emissions Clone() {
+          return new Co2Emissions(this);
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 1;
+        private readonly static long ValueDefaultValue = 0L;
+
+        private long value_;
+        /// <summary>
+        /// The co2 emission value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long Value {
+          get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            value_ = value;
+          }
+        }
+        /// <summary>Gets whether the "value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValue {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "value" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "unit" field.</summary>
+        public const int UnitFieldNumber = 2;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit unit_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit.Unspecified;
+        /// <summary>
+        /// The unit of the co2 emission.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit Unit {
+          get { return unit_; }
+          set {
+            unit_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Co2Emissions);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Co2Emissions other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Value != other.Value) return false;
+          if (Unit != other.Unit) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValue) hash ^= Value.GetHashCode();
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit.Unspecified) hash ^= Unit.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasValue) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasValue) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValue) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Co2Emissions other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasValue) {
+            Value = other.Value;
+          }
+          if (other.Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit.Unspecified) {
+            Unit = other.Unit;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Value = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Value = input.ReadInt64();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Co2Emissions.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the Co2Emissions message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The unit of the co2 emission.
+          /// </summary>
+          public enum Unit {
+            /// <summary>
+            /// Unspecified unit.
+            /// </summary>
+            [pbr::OriginalName("UNIT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Grams per kilometer.
+            /// </summary>
+            [pbr::OriginalName("GPERKM")] Gperkm = 1,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The warranty of the vehicle.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class Warranty : pb::IMessage<Warranty>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<Warranty> _parser = new pb::MessageParser<Warranty>(() => new Warranty());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<Warranty> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[6]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Warranty() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Warranty(Warranty other) : this() {
+          duration_ = other.duration_;
+          mileage_ = other.mileage_ != null ? other.mileage_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public Warranty Clone() {
+          return new Warranty(this);
+        }
+
+        /// <summary>Field number for the "duration" field.</summary>
+        public const int DurationFieldNumber = 1;
+        private long duration_;
+        /// <summary>
+        /// The warranty duration in months.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public long Duration {
+          get { return duration_; }
+          set {
+            duration_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "mileage" field.</summary>
+        public const int MileageFieldNumber = 2;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage mileage_;
+        /// <summary>
+        /// The warranty mileage.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage Mileage {
+          get { return mileage_; }
+          set {
+            mileage_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as Warranty);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(Warranty other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Duration != other.Duration) return false;
+          if (!object.Equals(Mileage, other.Mileage)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Duration != 0L) hash ^= Duration.GetHashCode();
+          if (mileage_ != null) hash ^= Mileage.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Duration != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Duration);
+          }
+          if (mileage_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Mileage);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Duration != 0L) {
+            output.WriteRawTag(8);
+            output.WriteInt64(Duration);
+          }
+          if (mileage_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Mileage);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Duration != 0L) {
+            size += 1 + pb::CodedOutputStream.ComputeInt64Size(Duration);
+          }
+          if (mileage_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Mileage);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(Warranty other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Duration != 0L) {
+            Duration = other.Duration;
+          }
+          if (other.mileage_ != null) {
+            if (mileage_ == null) {
+              Mileage = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+            }
+            Mileage.MergeFrom(other.Mileage);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Duration = input.ReadInt64();
+                break;
+              }
+              case 18: {
+                if (mileage_ == null) {
+                  Mileage = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+                }
+                input.ReadMessage(Mileage);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Duration = input.ReadInt64();
+                break;
+              }
+              case 18: {
+                if (mileage_ == null) {
+                  Mileage = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.Mileage();
+                }
+                input.ReadMessage(Mileage);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The product fee attribute containing type and amount.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class ProductFee : pb::IMessage<ProductFee>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ProductFee> _parser = new pb::MessageParser<ProductFee>(() => new ProductFee());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ProductFee> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProductFee() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProductFee(ProductFee other) : this() {
+          type_ = other.type_;
+          amount_ = other.amount_ != null ? other.amount_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ProductFee Clone() {
+          return new ProductFee(this);
+        }
+
+        /// <summary>Field number for the "type" field.</summary>
+        public const int TypeFieldNumber = 1;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType type_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType.Unspecified;
+        /// <summary>
+        /// The type of product fee.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType Type {
+          get { return type_; }
+          set {
+            type_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "amount" field.</summary>
+        public const int AmountFieldNumber = 2;
+        private global::Google.Shopping.Type.Price amount_;
+        /// <summary>
+        /// The amount of product fee.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Type.Price Amount {
+          get { return amount_; }
+          set {
+            amount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ProductFee);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ProductFee other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Type != other.Type) return false;
+          if (!object.Equals(Amount, other.Amount)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Type != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType.Unspecified) hash ^= Type.GetHashCode();
+          if (amount_ != null) hash ^= Amount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Type != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (amount_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Amount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Type != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) Type);
+          }
+          if (amount_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(Amount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Type != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Type);
+          }
+          if (amount_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Amount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ProductFee other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Type != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType.Unspecified) {
+            Type = other.Type;
+          }
+          if (other.amount_ != null) {
+            if (amount_ == null) {
+              Amount = new global::Google.Shopping.Type.Price();
+            }
+            Amount.MergeFrom(other.Amount);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                Type = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (amount_ == null) {
+                  Amount = new global::Google.Shopping.Type.Price();
+                }
+                input.ReadMessage(Amount);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                Type = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.ProductFee.Types.FeeType) input.ReadEnum();
+                break;
+              }
+              case 18: {
+                if (amount_ == null) {
+                  Amount = new global::Google.Shopping.Type.Price();
+                }
+                input.ReadMessage(Amount);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the ProductFee message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The type of product fee.
+          /// </summary>
+          public enum FeeType {
+            /// <summary>
+            /// Unspecified fee type.
+            /// </summary>
+            [pbr::OriginalName("FEE_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Admin fee.
+            /// </summary>
+            [pbr::OriginalName("ADMIN_FEE")] AdminFee = 1,
+            /// <summary>
+            /// Application fee.
+            /// </summary>
+            [pbr::OriginalName("APPLICATION_FEE")] ApplicationFee = 2,
+            /// <summary>
+            /// Security deposit.
+            /// </summary>
+            [pbr::OriginalName("SECURITY_DEPOSIT")] SecurityDeposit = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The display address of the property.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class DisplayAddress : pb::IMessage<DisplayAddress>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<DisplayAddress> _parser = new pb::MessageParser<DisplayAddress>(() => new DisplayAddress());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<DisplayAddress> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[8]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DisplayAddress() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DisplayAddress(DisplayAddress other) : this() {
+          streetNumber_ = other.streetNumber_;
+          streetName_ = other.streetName_;
+          city_ = other.city_;
+          region_ = other.region_;
+          postalCode_ = other.postalCode_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public DisplayAddress Clone() {
+          return new DisplayAddress(this);
+        }
+
+        /// <summary>Field number for the "street_number" field.</summary>
+        public const int StreetNumberFieldNumber = 1;
+        private string streetNumber_ = "";
+        /// <summary>
+        /// The street number.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string StreetNumber {
+          get { return streetNumber_; }
+          set {
+            streetNumber_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "street_name" field.</summary>
+        public const int StreetNameFieldNumber = 2;
+        private string streetName_ = "";
+        /// <summary>
+        /// The street name.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string StreetName {
+          get { return streetName_; }
+          set {
+            streetName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "city" field.</summary>
+        public const int CityFieldNumber = 3;
+        private string city_ = "";
+        /// <summary>
+        /// The city such as Seattle, New York, etc.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string City {
+          get { return city_; }
+          set {
+            city_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "region" field.</summary>
+        public const int RegionFieldNumber = 4;
+        private string region_ = "";
+        /// <summary>
+        /// The region(state), such as WA, OH, etc.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Region {
+          get { return region_; }
+          set {
+            region_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "postal_code" field.</summary>
+        public const int PostalCodeFieldNumber = 5;
+        private string postalCode_ = "";
+        /// <summary>
+        /// The postal code, such as 94043.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string PostalCode {
+          get { return postalCode_; }
+          set {
+            postalCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as DisplayAddress);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(DisplayAddress other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (StreetNumber != other.StreetNumber) return false;
+          if (StreetName != other.StreetName) return false;
+          if (City != other.City) return false;
+          if (Region != other.Region) return false;
+          if (PostalCode != other.PostalCode) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (StreetNumber.Length != 0) hash ^= StreetNumber.GetHashCode();
+          if (StreetName.Length != 0) hash ^= StreetName.GetHashCode();
+          if (City.Length != 0) hash ^= City.GetHashCode();
+          if (Region.Length != 0) hash ^= Region.GetHashCode();
+          if (PostalCode.Length != 0) hash ^= PostalCode.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (StreetNumber.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(StreetNumber);
+          }
+          if (StreetName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(StreetName);
+          }
+          if (City.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(City);
+          }
+          if (Region.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Region);
+          }
+          if (PostalCode.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(PostalCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (StreetNumber.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(StreetNumber);
+          }
+          if (StreetName.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(StreetName);
+          }
+          if (City.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(City);
+          }
+          if (Region.Length != 0) {
+            output.WriteRawTag(34);
+            output.WriteString(Region);
+          }
+          if (PostalCode.Length != 0) {
+            output.WriteRawTag(42);
+            output.WriteString(PostalCode);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (StreetNumber.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(StreetNumber);
+          }
+          if (StreetName.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(StreetName);
+          }
+          if (City.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(City);
+          }
+          if (Region.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Region);
+          }
+          if (PostalCode.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(PostalCode);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(DisplayAddress other) {
+          if (other == null) {
+            return;
+          }
+          if (other.StreetNumber.Length != 0) {
+            StreetNumber = other.StreetNumber;
+          }
+          if (other.StreetName.Length != 0) {
+            StreetName = other.StreetName;
+          }
+          if (other.City.Length != 0) {
+            City = other.City;
+          }
+          if (other.Region.Length != 0) {
+            Region = other.Region;
+          }
+          if (other.PostalCode.Length != 0) {
+            PostalCode = other.PostalCode;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                StreetNumber = input.ReadString();
+                break;
+              }
+              case 18: {
+                StreetName = input.ReadString();
+                break;
+              }
+              case 26: {
+                City = input.ReadString();
+                break;
+              }
+              case 34: {
+                Region = input.ReadString();
+                break;
+              }
+              case 42: {
+                PostalCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                StreetNumber = input.ReadString();
+                break;
+              }
+              case 18: {
+                StreetName = input.ReadString();
+                break;
+              }
+              case 26: {
+                City = input.ReadString();
+                break;
+              }
+              case 34: {
+                Region = input.ReadString();
+                break;
+              }
+              case 42: {
+                PostalCode = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// The unit area of the property.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class UnitArea : pb::IMessage<UnitArea>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<UnitArea> _parser = new pb::MessageParser<UnitArea>(() => new UnitArea());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<UnitArea> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[9]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UnitArea() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UnitArea(UnitArea other) : this() {
+          _hasBits0 = other._hasBits0;
+          value_ = other.value_;
+          unit_ = other.unit_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public UnitArea Clone() {
+          return new UnitArea(this);
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 1;
+        private readonly static double ValueDefaultValue = 0D;
+
+        private double value_;
+        /// <summary>
+        /// The area value.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public double Value {
+          get { if ((_hasBits0 & 1) != 0) { return value_; } else { return ValueDefaultValue; } }
+          set {
+            _hasBits0 |= 1;
+            value_ = value;
+          }
+        }
+        /// <summary>Gets whether the "value" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasValue {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "value" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearValue() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "unit" field.</summary>
+        public const int UnitFieldNumber = 2;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit unit_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit.Unspecified;
+        /// <summary>
+        /// The unit of area.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit Unit {
+          get { return unit_; }
+          set {
+            unit_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as UnitArea);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(UnitArea other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(Value, other.Value)) return false;
+          if (Unit != other.Unit) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit.Unspecified) hash ^= Unit.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasValue) {
+            output.WriteRawTag(9);
+            output.WriteDouble(Value);
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) Unit);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasValue) {
+            size += 1 + 8;
+          }
+          if (Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Unit);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(UnitArea other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasValue) {
+            Value = other.Value;
+          }
+          if (other.Unit != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit.Unspecified) {
+            Unit = other.Unit;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 9: {
+                Value = input.ReadDouble();
+                break;
+              }
+              case 16: {
+                Unit = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.UnitArea.Types.Unit) input.ReadEnum();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the UnitArea message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The unit of area.
+          /// </summary>
+          public enum Unit {
+            /// <summary>
+            /// Unspecified unit.
+            /// </summary>
+            [pbr::OriginalName("UNIT_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Square meters.
+            /// </summary>
+            [pbr::OriginalName("SQM")] Sqm = 1,
+            /// <summary>
+            /// Square feet.
+            /// </summary>
+            [pbr::OriginalName("SQFT")] Sqft = 2,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The pet policy of the property.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class PetPolicy : pb::IMessage<PetPolicy>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<PetPolicy> _parser = new pb::MessageParser<PetPolicy>(() => new PetPolicy());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<PetPolicy> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[10]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PetPolicy() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PetPolicy(PetPolicy other) : this() {
+          petsAllowed_ = other.petsAllowed_;
+          petTypes_ = other.petTypes_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public PetPolicy Clone() {
+          return new PetPolicy(this);
+        }
+
+        /// <summary>Field number for the "pets_allowed" field.</summary>
+        public const int PetsAllowedFieldNumber = 1;
+        private bool petsAllowed_;
+        /// <summary>
+        /// Whether pets are allowed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool PetsAllowed {
+          get { return petsAllowed_; }
+          set {
+            petsAllowed_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "pet_types" field.</summary>
+        public const int PetTypesFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy.Types.PetType> _repeated_petTypes_codec
+            = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy.Types.PetType) x);
+        private readonly pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy.Types.PetType> petTypes_ = new pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy.Types.PetType>();
+        /// <summary>
+        /// The pet types allowed.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.PetPolicy.Types.PetType> PetTypes {
+          get { return petTypes_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as PetPolicy);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(PetPolicy other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (PetsAllowed != other.PetsAllowed) return false;
+          if(!petTypes_.Equals(other.petTypes_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (PetsAllowed != false) hash ^= PetsAllowed.GetHashCode();
+          hash ^= petTypes_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (PetsAllowed != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(PetsAllowed);
+          }
+          petTypes_.WriteTo(output, _repeated_petTypes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (PetsAllowed != false) {
+            output.WriteRawTag(8);
+            output.WriteBool(PetsAllowed);
+          }
+          petTypes_.WriteTo(ref output, _repeated_petTypes_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (PetsAllowed != false) {
+            size += 1 + 1;
+          }
+          size += petTypes_.CalculateSize(_repeated_petTypes_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(PetPolicy other) {
+          if (other == null) {
+            return;
+          }
+          if (other.PetsAllowed != false) {
+            PetsAllowed = other.PetsAllowed;
+          }
+          petTypes_.Add(other.petTypes_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                PetsAllowed = input.ReadBool();
+                break;
+              }
+              case 18:
+              case 16: {
+                petTypes_.AddEntriesFrom(input, _repeated_petTypes_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                PetsAllowed = input.ReadBool();
+                break;
+              }
+              case 18:
+              case 16: {
+                petTypes_.AddEntriesFrom(ref input, _repeated_petTypes_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the PetPolicy message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The pet types.
+          /// </summary>
+          public enum PetType {
+            /// <summary>
+            /// Unspecified pet type.
+            /// </summary>
+            [pbr::OriginalName("PET_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Cats.
+            /// </summary>
+            [pbr::OriginalName("CATS")] Cats = 1,
+            /// <summary>
+            /// Large dogs.
+            /// </summary>
+            [pbr::OriginalName("LARGE_DOGS")] LargeDogs = 2,
+            /// <summary>
+            /// Small dogs.
+            /// </summary>
+            [pbr::OriginalName("SMALL_DOGS")] SmallDogs = 3,
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// The question and answer for the product.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class QuestionAndAnswer : pb::IMessage<QuestionAndAnswer>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<QuestionAndAnswer> _parser = new pb::MessageParser<QuestionAndAnswer>(() => new QuestionAndAnswer());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<QuestionAndAnswer> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[11]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public QuestionAndAnswer() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public QuestionAndAnswer(QuestionAndAnswer other) : this() {
+          question_ = other.question_;
+          answer_ = other.answer_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public QuestionAndAnswer Clone() {
+          return new QuestionAndAnswer(this);
+        }
+
+        /// <summary>Field number for the "question" field.</summary>
+        public const int QuestionFieldNumber = 1;
+        private string question_ = "";
+        /// <summary>
+        /// Required. The question text.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Question {
+          get { return question_; }
+          set {
+            question_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "answer" field.</summary>
+        public const int AnswerFieldNumber = 2;
+        private string answer_ = "";
+        /// <summary>
+        /// Required. The answer text.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Answer {
+          get { return answer_; }
+          set {
+            answer_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as QuestionAndAnswer);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(QuestionAndAnswer other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Question != other.Question) return false;
+          if (Answer != other.Answer) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Question.Length != 0) hash ^= Question.GetHashCode();
+          if (Answer.Length != 0) hash ^= Answer.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Question.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Question);
+          }
+          if (Answer.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Answer);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Question.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Question);
+          }
+          if (Answer.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Answer);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Question.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Question);
+          }
+          if (Answer.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Answer);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(QuestionAndAnswer other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Question.Length != 0) {
+            Question = other.Question;
+          }
+          if (other.Answer.Length != 0) {
+            Answer = other.Answer;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Question = input.ReadString();
+                break;
+              }
+              case 18: {
+                Answer = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Question = input.ReadString();
+                break;
+              }
+              case 18: {
+                Answer = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Additional product variants for the product.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class VariantOption : pb::IMessage<VariantOption>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<VariantOption> _parser = new pb::MessageParser<VariantOption>(() => new VariantOption());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<VariantOption> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[12]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VariantOption() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VariantOption(VariantOption other) : this() {
+          name_ = other.name_;
+          value_ = other.value_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public VariantOption Clone() {
+          return new VariantOption(this);
+        }
+
+        /// <summary>Field number for the "name" field.</summary>
+        public const int NameFieldNumber = 1;
+        private string name_ = "";
+        /// <summary>
+        /// Required. The name of the variant. For example, "Color", "Memory",
+        /// "Size", "Length"
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Name {
+          get { return name_; }
+          set {
+            name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "value" field.</summary>
+        public const int ValueFieldNumber = 2;
+        private string value_ = "";
+        /// <summary>
+        /// Required. The value of the variant. For example, "Red", "128GB", "XL",
+        /// "100cm"
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Value {
+          get { return value_; }
+          set {
+            value_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as VariantOption);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(VariantOption other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Name != other.Name) return false;
+          if (Value != other.Value) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Name.Length != 0) hash ^= Name.GetHashCode();
+          if (Value.Length != 0) hash ^= Value.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Name.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Name);
+          }
+          if (Value.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Value);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Name.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+          }
+          if (Value.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(VariantOption other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Name.Length != 0) {
+            Name = other.Name;
+          }
+          if (other.Value.Length != 0) {
+            Value = other.Value;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Name = input.ReadString();
+                break;
+              }
+              case 18: {
+                Value = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Specifies how other products are related to this product.
+      /// </summary>
+      [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+      public sealed partial class RelatedProduct : pb::IMessage<RelatedProduct>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<RelatedProduct> _parser = new pb::MessageParser<RelatedProduct>(() => new RelatedProduct());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<RelatedProduct> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Descriptor.NestedTypes[13]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RelatedProduct() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RelatedProduct(RelatedProduct other) : this() {
+          relationshipType_ = other.relationshipType_;
+          idType_ = other.idType_;
+          id_ = other.id_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public RelatedProduct Clone() {
+          return new RelatedProduct(this);
+        }
+
+        /// <summary>Field number for the "relationship_type" field.</summary>
+        public const int RelationshipTypeFieldNumber = 1;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType relationshipType_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType.Unspecified;
+        /// <summary>
+        /// Required. The type of the relationship between this product and the
+        /// related product.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType RelationshipType {
+          get { return relationshipType_; }
+          set {
+            relationshipType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "id_type" field.</summary>
+        public const int IdTypeFieldNumber = 2;
+        private global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType idType_ = global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType.Unspecified;
+        /// <summary>
+        /// Required. The type of the identifier of the related product.
+        /// For example, [GTIN](https://support.google.com/merchants/answer/6219078)
+        /// or [product ID](https://support.google.com/merchants/answer/6324405).
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType IdType {
+          get { return idType_; }
+          set {
+            idType_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "id" field.</summary>
+        public const int IdFieldNumber = 3;
+        private string id_ = "";
+        /// <summary>
+        /// Required. The identifier of the related product.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Id {
+          get { return id_; }
+          set {
+            id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as RelatedProduct);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(RelatedProduct other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RelationshipType != other.RelationshipType) return false;
+          if (IdType != other.IdType) return false;
+          if (Id != other.Id) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RelationshipType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType.Unspecified) hash ^= RelationshipType.GetHashCode();
+          if (IdType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType.Unspecified) hash ^= IdType.GetHashCode();
+          if (Id.Length != 0) hash ^= Id.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RelationshipType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) RelationshipType);
+          }
+          if (IdType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) IdType);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Id);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RelationshipType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType.Unspecified) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) RelationshipType);
+          }
+          if (IdType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType.Unspecified) {
+            output.WriteRawTag(16);
+            output.WriteEnum((int) IdType);
+          }
+          if (Id.Length != 0) {
+            output.WriteRawTag(26);
+            output.WriteString(Id);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RelationshipType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) RelationshipType);
+          }
+          if (IdType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType.Unspecified) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) IdType);
+          }
+          if (Id.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(RelatedProduct other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RelationshipType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType.Unspecified) {
+            RelationshipType = other.RelationshipType;
+          }
+          if (other.IdType != global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType.Unspecified) {
+            IdType = other.IdType;
+          }
+          if (other.Id.Length != 0) {
+            Id = other.Id;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                RelationshipType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                IdType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Id = input.ReadString();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+          if ((tag & 7) == 4) {
+            // Abort on any end group tag.
+            return;
+          }
+          switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                RelationshipType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.RelationshipType) input.ReadEnum();
+                break;
+              }
+              case 16: {
+                IdType = (global::Google.Shopping.Merchant.Products.V1.ProductAttributes.Types.RelatedProduct.Types.IdType) input.ReadEnum();
+                break;
+              }
+              case 26: {
+                Id = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the RelatedProduct message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// The various types of the relationships between this product and the
+          /// related product.
+          /// </summary>
+          public enum RelationshipType {
+            /// <summary>
+            /// The relationship type is unspecified.
+            /// </summary>
+            [pbr::OriginalName("RELATIONSHIP_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Part of a set of products that are often purchased together.
+            /// </summary>
+            [pbr::OriginalName("PART_OF_SET")] PartOfSet = 1,
+            /// <summary>
+            /// Part that is necessary for the product to function, for example a
+            /// battery for a battery-operated lamp.
+            /// </summary>
+            [pbr::OriginalName("REQUIRED_PART")] RequiredPart = 2,
+            /// <summary>
+            /// A product that this product is often purchased together with, for
+            /// example a phone case with a phone.
+            /// </summary>
+            [pbr::OriginalName("OFTEN_BOUGHT_WITH")] OftenBoughtWith = 3,
+            /// <summary>
+            /// Product that this product can be substituted for. For example a printer
+            /// comparable in function to another printer.
+            /// </summary>
+            [pbr::OriginalName("SUBSTITUTE")] Substitute = 4,
+            /// <summary>
+            /// An identical product sold under a different brand, for example a
+            /// cheaper house brand.
+            /// </summary>
+            [pbr::OriginalName("DIFFERENT_BRAND")] DifferentBrand = 5,
+            /// <summary>
+            /// An accessory to this product, for example a side table that matches the
+            /// style of a couch.
+            /// </summary>
+            [pbr::OriginalName("ACCESSORY")] Accessory = 6,
+          }
+
+          /// <summary>
+          /// The type of the identifier of the related product.
+          /// </summary>
+          public enum IdType {
+            /// <summary>
+            /// The identifier type is unspecified.
+            /// </summary>
+            [pbr::OriginalName("ID_TYPE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// The identifier is a GTIN.
+            /// </summary>
+            [pbr::OriginalName("GTIN")] Gtin = 1,
+            /// <summary>
+            /// The identifier is a product ID in the feed.
+            /// </summary>
+            [pbr::OriginalName("ID")] Id = 2,
+          }
+
+        }
+        #endregion
 
       }
 
@@ -8760,6 +14923,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       downpayment_ = other.downpayment_ != null ? other.downpayment_.Clone() : null;
       creditType_ = other.creditType_;
       annualPercentageRate_ = other.annualPercentageRate_;
+      totalAmount_ = other.totalAmount_ != null ? other.totalAmount_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -8874,6 +15038,21 @@ namespace Google.Shopping.Merchant.Products.V1 {
       _hasBits0 &= ~2;
     }
 
+    /// <summary>Field number for the "total_amount" field.</summary>
+    public const int TotalAmountFieldNumber = 6;
+    private global::Google.Shopping.Type.Price totalAmount_;
+    /// <summary>
+    /// Optional. Total amount the buyer has to pay, including interest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price TotalAmount {
+      get { return totalAmount_; }
+      set {
+        totalAmount_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -8894,6 +15073,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (!object.Equals(Downpayment, other.Downpayment)) return false;
       if (CreditType != other.CreditType) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(AnnualPercentageRate, other.AnnualPercentageRate)) return false;
+      if (!object.Equals(TotalAmount, other.TotalAmount)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -8906,6 +15086,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (downpayment_ != null) hash ^= Downpayment.GetHashCode();
       if (HasCreditType) hash ^= CreditType.GetHashCode();
       if (HasAnnualPercentageRate) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(AnnualPercentageRate);
+      if (totalAmount_ != null) hash ^= TotalAmount.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -8944,6 +15125,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteRawTag(41);
         output.WriteDouble(AnnualPercentageRate);
       }
+      if (totalAmount_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TotalAmount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -8974,6 +15159,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteRawTag(41);
         output.WriteDouble(AnnualPercentageRate);
       }
+      if (totalAmount_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(TotalAmount);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -8998,6 +15187,9 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       if (HasAnnualPercentageRate) {
         size += 1 + 8;
+      }
+      if (totalAmount_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(TotalAmount);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -9031,6 +15223,12 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       if (other.HasAnnualPercentageRate) {
         AnnualPercentageRate = other.AnnualPercentageRate;
+      }
+      if (other.totalAmount_ != null) {
+        if (totalAmount_ == null) {
+          TotalAmount = new global::Google.Shopping.Type.Price();
+        }
+        TotalAmount.MergeFrom(other.TotalAmount);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -9077,6 +15275,13 @@ namespace Google.Shopping.Merchant.Products.V1 {
             AnnualPercentageRate = input.ReadDouble();
             break;
           }
+          case 50: {
+            if (totalAmount_ == null) {
+              TotalAmount = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(TotalAmount);
+            break;
+          }
         }
       }
     #endif
@@ -9120,6 +15325,13 @@ namespace Google.Shopping.Merchant.Products.V1 {
           }
           case 41: {
             AnnualPercentageRate = input.ReadDouble();
+            break;
+          }
+          case 50: {
+            if (totalAmount_ == null) {
+              TotalAmount = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(TotalAmount);
             break;
           }
         }
@@ -10010,6 +16222,8 @@ namespace Google.Shopping.Merchant.Products.V1 {
       maxTransitTime_ = other.maxTransitTime_;
       handlingCutoffTime_ = other.handlingCutoffTime_;
       handlingCutoffTimezone_ = other.handlingCutoffTimezone_;
+      loyaltyProgramLabel_ = other.loyaltyProgramLabel_;
+      loyaltyTierLabel_ = other.loyaltyTierLabel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -10355,6 +16569,50 @@ namespace Google.Shopping.Merchant.Products.V1 {
       handlingCutoffTimezone_ = null;
     }
 
+    /// <summary>Field number for the "loyalty_program_label" field.</summary>
+    public const int LoyaltyProgramLabelFieldNumber = 14;
+    private string loyaltyProgramLabel_ = "";
+    /// <summary>
+    /// Optional. The label of the [loyalty
+    /// program](https://support.google.com/merchants/answer/6324484).
+    /// Must match one of the program labels set in
+    /// [loyalty_programs][google.shopping.merchant.products.v1.LoyaltyProgram].
+    /// When set (in combination with
+    /// [loyalty_tier_label](https://support.google.com/merchants/answer/6324484)),
+    /// this shipping option is only applicable to loyalty program members of the
+    /// specified tier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LoyaltyProgramLabel {
+      get { return loyaltyProgramLabel_; }
+      set {
+        loyaltyProgramLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "loyalty_tier_label" field.</summary>
+    public const int LoyaltyTierLabelFieldNumber = 15;
+    private string loyaltyTierLabel_ = "";
+    /// <summary>
+    /// Optional. The label of the [loyalty
+    /// tier](https://support.google.com/merchants/answer/6324484) within the
+    /// loyalty program. Must match one of the tiers set in the
+    /// [loyalty_programs][google.shopping.merchant.products.v1.LoyaltyProgram].
+    /// When set (in combination with
+    /// [loyalty_program_label](https://support.google.com/merchants/answer/6324484)),
+    /// this shipping option is only applicable to loyalty program members of the
+    /// specified tier.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LoyaltyTierLabel {
+      get { return loyaltyTierLabel_; }
+      set {
+        loyaltyTierLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -10383,6 +16641,8 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (MaxTransitTime != other.MaxTransitTime) return false;
       if (HandlingCutoffTime != other.HandlingCutoffTime) return false;
       if (HandlingCutoffTimezone != other.HandlingCutoffTimezone) return false;
+      if (LoyaltyProgramLabel != other.LoyaltyProgramLabel) return false;
+      if (LoyaltyTierLabel != other.LoyaltyTierLabel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -10403,6 +16663,8 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if (HasMaxTransitTime) hash ^= MaxTransitTime.GetHashCode();
       if (HasHandlingCutoffTime) hash ^= HandlingCutoffTime.GetHashCode();
       if (HasHandlingCutoffTimezone) hash ^= HandlingCutoffTimezone.GetHashCode();
+      if (LoyaltyProgramLabel.Length != 0) hash ^= LoyaltyProgramLabel.GetHashCode();
+      if (LoyaltyTierLabel.Length != 0) hash ^= LoyaltyTierLabel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -10473,6 +16735,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteRawTag(106);
         output.WriteString(HandlingCutoffTimezone);
       }
+      if (LoyaltyProgramLabel.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(LoyaltyProgramLabel);
+      }
+      if (LoyaltyTierLabel.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(LoyaltyTierLabel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -10535,6 +16805,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteRawTag(106);
         output.WriteString(HandlingCutoffTimezone);
       }
+      if (LoyaltyProgramLabel.Length != 0) {
+        output.WriteRawTag(114);
+        output.WriteString(LoyaltyProgramLabel);
+      }
+      if (LoyaltyTierLabel.Length != 0) {
+        output.WriteRawTag(122);
+        output.WriteString(LoyaltyTierLabel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -10583,6 +16861,12 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       if (HasHandlingCutoffTimezone) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HandlingCutoffTimezone);
+      }
+      if (LoyaltyProgramLabel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LoyaltyProgramLabel);
+      }
+      if (LoyaltyTierLabel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LoyaltyTierLabel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -10637,6 +16921,12 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       if (other.HasHandlingCutoffTimezone) {
         HandlingCutoffTimezone = other.HandlingCutoffTimezone;
+      }
+      if (other.LoyaltyProgramLabel.Length != 0) {
+        LoyaltyProgramLabel = other.LoyaltyProgramLabel;
+      }
+      if (other.LoyaltyTierLabel.Length != 0) {
+        LoyaltyTierLabel = other.LoyaltyTierLabel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -10712,6 +17002,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
             HandlingCutoffTimezone = input.ReadString();
             break;
           }
+          case 114: {
+            LoyaltyProgramLabel = input.ReadString();
+            break;
+          }
+          case 122: {
+            LoyaltyTierLabel = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -10784,6 +17082,14 @@ namespace Google.Shopping.Merchant.Products.V1 {
           }
           case 106: {
             HandlingCutoffTimezone = input.ReadString();
+            break;
+          }
+          case 114: {
+            LoyaltyProgramLabel = input.ReadString();
+            break;
+          }
+          case 122: {
+            LoyaltyTierLabel = input.ReadString();
             break;
           }
         }
@@ -15268,6 +21574,268 @@ namespace Google.Shopping.Merchant.Products.V1 {
   }
 
   /// <summary>
+  /// The pickup cost of the item.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class PickupCost : pb::IMessage<PickupCost>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PickupCost> _parser = new pb::MessageParser<PickupCost>(() => new PickupCost());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<PickupCost> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Products.V1.ProductsCommonReflection.Descriptor.MessageTypes[21]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PickupCost() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PickupCost(PickupCost other) : this() {
+      flatRate_ = other.flatRate_ != null ? other.flatRate_.Clone() : null;
+      freeThreshold_ = other.freeThreshold_ != null ? other.freeThreshold_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public PickupCost Clone() {
+      return new PickupCost(this);
+    }
+
+    /// <summary>Field number for the "flat_rate" field.</summary>
+    public const int FlatRateFieldNumber = 1;
+    private global::Google.Shopping.Type.Price flatRate_;
+    /// <summary>
+    /// Required. The flat rate pickup cost of the item.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price FlatRate {
+      get { return flatRate_; }
+      set {
+        flatRate_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "free_threshold" field.</summary>
+    public const int FreeThresholdFieldNumber = 2;
+    private global::Google.Shopping.Type.Price freeThreshold_;
+    /// <summary>
+    /// Optional. The price threshold above which pickup is free of charge.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price FreeThreshold {
+      get { return freeThreshold_; }
+      set {
+        freeThreshold_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as PickupCost);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(PickupCost other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(FlatRate, other.FlatRate)) return false;
+      if (!object.Equals(FreeThreshold, other.FreeThreshold)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (flatRate_ != null) hash ^= FlatRate.GetHashCode();
+      if (freeThreshold_ != null) hash ^= FreeThreshold.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (flatRate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(FlatRate);
+      }
+      if (freeThreshold_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FreeThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (flatRate_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(FlatRate);
+      }
+      if (freeThreshold_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(FreeThreshold);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (flatRate_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FlatRate);
+      }
+      if (freeThreshold_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(FreeThreshold);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(PickupCost other) {
+      if (other == null) {
+        return;
+      }
+      if (other.flatRate_ != null) {
+        if (flatRate_ == null) {
+          FlatRate = new global::Google.Shopping.Type.Price();
+        }
+        FlatRate.MergeFrom(other.FlatRate);
+      }
+      if (other.freeThreshold_ != null) {
+        if (freeThreshold_ == null) {
+          FreeThreshold = new global::Google.Shopping.Type.Price();
+        }
+        FreeThreshold.MergeFrom(other.FreeThreshold);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (flatRate_ == null) {
+              FlatRate = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(FlatRate);
+            break;
+          }
+          case 18: {
+            if (freeThreshold_ == null) {
+              FreeThreshold = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(FreeThreshold);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (flatRate_ == null) {
+              FlatRate = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(FlatRate);
+            break;
+          }
+          case 18: {
+            if (freeThreshold_ == null) {
+              FreeThreshold = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(FreeThreshold);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Configuration for offer or offer-country level shipping handling cutoff time.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -15286,7 +21854,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Shopping.Merchant.Products.V1.ProductsCommonReflection.Descriptor.MessageTypes[21]; }
+      get { return global::Google.Shopping.Merchant.Products.V1.ProductsCommonReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -15658,6 +22226,420 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
     }
     #endif
+
+  }
+
+  /// <summary>
+  /// The minimum order value in the cart before the checkout is permitted.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ProductMinimumOrderValue : pb::IMessage<ProductMinimumOrderValue>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ProductMinimumOrderValue> _parser = new pb::MessageParser<ProductMinimumOrderValue>(() => new ProductMinimumOrderValue());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ProductMinimumOrderValue> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Shopping.Merchant.Products.V1.ProductsCommonReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductMinimumOrderValue() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductMinimumOrderValue(ProductMinimumOrderValue other) : this() {
+      _hasBits0 = other._hasBits0;
+      country_ = other.country_;
+      service_ = other.service_;
+      surface_ = other.surface_;
+      price_ = other.price_ != null ? other.price_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ProductMinimumOrderValue Clone() {
+      return new ProductMinimumOrderValue(this);
+    }
+
+    /// <summary>Field number for the "country" field.</summary>
+    public const int CountryFieldNumber = 1;
+    private readonly static string CountryDefaultValue = "";
+
+    private string country_;
+    /// <summary>
+    /// Required. The [CLDR territory
+    /// code](http://www.unicode.org/repos/cldr/tags/latest/common/main/en.xml)
+    /// of the country to which an item will ship.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Country {
+      get { return country_ ?? CountryDefaultValue; }
+      set {
+        country_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "country" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCountry {
+      get { return country_ != null; }
+    }
+    /// <summary>Clears the value of the "country" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCountry() {
+      country_ = null;
+    }
+
+    /// <summary>Field number for the "service" field.</summary>
+    public const int ServiceFieldNumber = 2;
+    private readonly static string ServiceDefaultValue = "";
+
+    private string service_;
+    /// <summary>
+    /// A free-form description of the service class or delivery speed.
+    /// This should match the service value set for the Shipping attribute.
+    /// See [service][google.shopping.merchant.products.v1.Shipping.service].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Service {
+      get { return service_ ?? ServiceDefaultValue; }
+      set {
+        service_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "service" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasService {
+      get { return service_ != null; }
+    }
+    /// <summary>Clears the value of the "service" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearService() {
+      service_ = null;
+    }
+
+    /// <summary>Field number for the "surface" field.</summary>
+    public const int SurfaceFieldNumber = 3;
+    private readonly static global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Types.Surface SurfaceDefaultValue = global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Types.Surface.Unspecified;
+
+    private global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Types.Surface surface_;
+    /// <summary>
+    /// The surface to which the minimum order value applies.
+    /// Defaults to `ONLINE_LOCAL` if not configured.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Types.Surface Surface {
+      get { if ((_hasBits0 & 1) != 0) { return surface_; } else { return SurfaceDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        surface_ = value;
+      }
+    }
+    /// <summary>Gets whether the "surface" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasSurface {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "surface" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearSurface() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "price" field.</summary>
+    public const int PriceFieldNumber = 4;
+    private global::Google.Shopping.Type.Price price_;
+    /// <summary>
+    /// Required. The minimum cart or basket value before the checkout is
+    /// permitted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Shopping.Type.Price Price {
+      get { return price_; }
+      set {
+        price_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ProductMinimumOrderValue);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ProductMinimumOrderValue other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Country != other.Country) return false;
+      if (Service != other.Service) return false;
+      if (Surface != other.Surface) return false;
+      if (!object.Equals(Price, other.Price)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasCountry) hash ^= Country.GetHashCode();
+      if (HasService) hash ^= Service.GetHashCode();
+      if (HasSurface) hash ^= Surface.GetHashCode();
+      if (price_ != null) hash ^= Price.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasCountry) {
+        output.WriteRawTag(10);
+        output.WriteString(Country);
+      }
+      if (HasService) {
+        output.WriteRawTag(18);
+        output.WriteString(Service);
+      }
+      if (HasSurface) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Surface);
+      }
+      if (price_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Price);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasCountry) {
+        output.WriteRawTag(10);
+        output.WriteString(Country);
+      }
+      if (HasService) {
+        output.WriteRawTag(18);
+        output.WriteString(Service);
+      }
+      if (HasSurface) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Surface);
+      }
+      if (price_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(Price);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasCountry) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Country);
+      }
+      if (HasService) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Service);
+      }
+      if (HasSurface) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Surface);
+      }
+      if (price_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Price);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ProductMinimumOrderValue other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasCountry) {
+        Country = other.Country;
+      }
+      if (other.HasService) {
+        Service = other.Service;
+      }
+      if (other.HasSurface) {
+        Surface = other.Surface;
+      }
+      if (other.price_ != null) {
+        if (price_ == null) {
+          Price = new global::Google.Shopping.Type.Price();
+        }
+        Price.MergeFrom(other.Price);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Country = input.ReadString();
+            break;
+          }
+          case 18: {
+            Service = input.ReadString();
+            break;
+          }
+          case 24: {
+            Surface = (global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Types.Surface) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (price_ == null) {
+              Price = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(Price);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Country = input.ReadString();
+            break;
+          }
+          case 18: {
+            Service = input.ReadString();
+            break;
+          }
+          case 24: {
+            Surface = (global::Google.Shopping.Merchant.Products.V1.ProductMinimumOrderValue.Types.Surface) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            if (price_ == null) {
+              Price = new global::Google.Shopping.Type.Price();
+            }
+            input.ReadMessage(Price);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ProductMinimumOrderValue message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The surface values to which the minimum order value applies.
+      /// </summary>
+      public enum Surface {
+        /// <summary>
+        /// Surface is unspecified.
+        /// </summary>
+        [pbr::OriginalName("SURFACE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Surface value to indicate online purchases.
+        /// </summary>
+        [pbr::OriginalName("ONLINE")] Online = 1,
+        /// <summary>
+        /// Surface value to indicate local purchases.
+        /// </summary>
+        [pbr::OriginalName("LOCAL")] Local = 2,
+        /// <summary>
+        /// Surface value to indicate online and local purchases.
+        /// </summary>
+        [pbr::OriginalName("ONLINE_LOCAL")] OnlineLocal = 3,
+      }
+
+    }
+    #endregion
 
   }
 

@@ -30,7 +30,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
             "bGllbnQucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
             "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aOmdvb2dsZS9zaG9wcGluZy9t",
             "ZXJjaGFudC9wcm9kdWN0cy92MS9wcm9kdWN0c19jb21tb24ucHJvdG8aIGdv",
-            "b2dsZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvIpEFCgdQcm9kdWN0EgwK",
+            "b2dsZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvIqgFCgdQcm9kdWN0EgwK",
             "BG5hbWUYASABKAkSIAoTYmFzZTY0X2VuY29kZWRfbmFtZRgPIAEoCUID4EED",
             "EhkKDGxlZ2FjeV9sb2NhbBgLIAEoCEID4EEDEhUKCG9mZmVyX2lkGAMgASgJ",
             "QgPgQQMSHQoQY29udGVudF9sYW5ndWFnZRgEIAEoCUID4EEDEhcKCmZlZWRf",
@@ -43,37 +43,38 @@ namespace Google.Shopping.Merchant.Products.V1 {
             "LnNob3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3RTdGF0dXNC",
             "A+BBAxJaChNhdXRvbWF0ZWRfZGlzY291bnRzGAwgASgLMjguZ29vZ2xlLnNo",
             "b3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLkF1dG9tYXRlZERpc2NvdW50",
-            "c0ID4EEDOk7qQUsKIm1lcmNoYW50YXBpLmdvb2dsZWFwaXMuY29tL1Byb2R1",
-            "Y3QSJWFjY291bnRzL3thY2NvdW50fS9wcm9kdWN0cy97cHJvZHVjdH1CEQoP",
-            "X3ZlcnNpb25fbnVtYmVyIk0KEUdldFByb2R1Y3RSZXF1ZXN0EjgKBG5hbWUY",
-            "ASABKAlCKuBBAvpBJAoibWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vUHJv",
-            "ZHVjdCJ4ChNMaXN0UHJvZHVjdHNSZXF1ZXN0EjoKBnBhcmVudBgBIAEoCUIq",
-            "4EEC+kEkEiJtZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbS9Qcm9kdWN0EhEK",
-            "CXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJInAKFExpc3RQ",
-            "cm9kdWN0c1Jlc3BvbnNlEj8KCHByb2R1Y3RzGAEgAygLMi0uZ29vZ2xlLnNo",
-            "b3BwaW5nLm1lcmNoYW50LnByb2R1Y3RzLnYxLlByb2R1Y3QSFwoPbmV4dF9w",
-            "YWdlX3Rva2VuGAIgASgJMs8DCg9Qcm9kdWN0c1NlcnZpY2USrgEKCkdldFBy",
-            "b2R1Y3QSNy5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEu",
-            "R2V0UHJvZHVjdFJlcXVlc3QaLS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQu",
-            "cHJvZHVjdHMudjEuUHJvZHVjdCI42kEEbmFtZYLT5JMCKxIpL3Byb2R1Y3Rz",
-            "L3YxL3tuYW1lPWFjY291bnRzLyovcHJvZHVjdHMvKn0SwQEKDExpc3RQcm9k",
-            "dWN0cxI5Lmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5M",
-            "aXN0UHJvZHVjdHNSZXF1ZXN0GjouZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50",
-            "LnByb2R1Y3RzLnYxLkxpc3RQcm9kdWN0c1Jlc3BvbnNlIjraQQZwYXJlbnSC",
-            "0+STAisSKS9wcm9kdWN0cy92MS97cGFyZW50PWFjY291bnRzLyp9L3Byb2R1",
-            "Y3RzGkfKQRptZXJjaGFudGFwaS5nb29nbGVhcGlzLmNvbdJBJ2h0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29udGVudEK7AgooY29tLmdvb2ds",
-            "ZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MUINUHJvZHVjdHNQcm90",
-            "b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50L3By",
-            "b2R1Y3RzL2FwaXYxL3Byb2R1Y3RzcGI7cHJvZHVjdHNwYqoCJEdvb2dsZS5T",
-            "aG9wcGluZy5NZXJjaGFudC5Qcm9kdWN0cy5WMcoCJEdvb2dsZVxTaG9wcGlu",
-            "Z1xNZXJjaGFudFxQcm9kdWN0c1xWMeoCKEdvb2dsZTo6U2hvcHBpbmc6Ok1l",
-            "cmNoYW50OjpQcm9kdWN0czo6VjHqQTgKIm1lcmNoYW50YXBpLmdvb2dsZWFw",
-            "aXMuY29tL0FjY291bnQSEmFjY291bnRzL3thY2NvdW50fWIGcHJvdG8z"));
+            "c0ID4EEDEhUKCGFyY2hpdmVkGA4gASgIQgPgQQM6TupBSwoibWVyY2hhbnRh",
+            "cGkuZ29vZ2xlYXBpcy5jb20vUHJvZHVjdBIlYWNjb3VudHMve2FjY291bnR9",
+            "L3Byb2R1Y3RzL3twcm9kdWN0fUIRCg9fdmVyc2lvbl9udW1iZXIiTQoRR2V0",
+            "UHJvZHVjdFJlcXVlc3QSOAoEbmFtZRgBIAEoCUIq4EEC+kEkCiJtZXJjaGFu",
+            "dGFwaS5nb29nbGVhcGlzLmNvbS9Qcm9kdWN0IngKE0xpc3RQcm9kdWN0c1Jl",
+            "cXVlc3QSOgoGcGFyZW50GAEgASgJQirgQQL6QSQSIm1lcmNoYW50YXBpLmdv",
+            "b2dsZWFwaXMuY29tL1Byb2R1Y3QSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBh",
+            "Z2VfdG9rZW4YAyABKAkicAoUTGlzdFByb2R1Y3RzUmVzcG9uc2USPwoIcHJv",
+            "ZHVjdHMYASADKAsyLS5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVj",
+            "dHMudjEuUHJvZHVjdBIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkyzwMKD1By",
+            "b2R1Y3RzU2VydmljZRKuAQoKR2V0UHJvZHVjdBI3Lmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5wcm9kdWN0cy52MS5HZXRQcm9kdWN0UmVxdWVzdBotLmdv",
+            "b2dsZS5zaG9wcGluZy5tZXJjaGFudC5wcm9kdWN0cy52MS5Qcm9kdWN0Ijja",
+            "QQRuYW1lgtPkkwIrEikvcHJvZHVjdHMvdjEve25hbWU9YWNjb3VudHMvKi9w",
+            "cm9kdWN0cy8qfRLBAQoMTGlzdFByb2R1Y3RzEjkuZ29vZ2xlLnNob3BwaW5n",
+            "Lm1lcmNoYW50LnByb2R1Y3RzLnYxLkxpc3RQcm9kdWN0c1JlcXVlc3QaOi5n",
+            "b29nbGUuc2hvcHBpbmcubWVyY2hhbnQucHJvZHVjdHMudjEuTGlzdFByb2R1",
+            "Y3RzUmVzcG9uc2UiOtpBBnBhcmVudILT5JMCKxIpL3Byb2R1Y3RzL3YxL3tw",
+            "YXJlbnQ9YWNjb3VudHMvKn0vcHJvZHVjdHMaR8pBGm1lcmNoYW50YXBpLmdv",
+            "b2dsZWFwaXMuY29t0kEnaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
+            "aC9jb250ZW50QrsCCihjb20uZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LnBy",
+            "b2R1Y3RzLnYxQg1Qcm9kdWN0c1Byb3RvUAFaSmNsb3VkLmdvb2dsZS5jb20v",
+            "Z28vc2hvcHBpbmcvbWVyY2hhbnQvcHJvZHVjdHMvYXBpdjEvcHJvZHVjdHNw",
+            "Yjtwcm9kdWN0c3BiqgIkR29vZ2xlLlNob3BwaW5nLk1lcmNoYW50LlByb2R1",
+            "Y3RzLlYxygIkR29vZ2xlXFNob3BwaW5nXE1lcmNoYW50XFByb2R1Y3RzXFYx",
+            "6gIoR29vZ2xlOjpTaG9wcGluZzo6TWVyY2hhbnQ6OlByb2R1Y3RzOjpWMepB",
+            "OAoibWVyY2hhbnRhcGkuZ29vZ2xlYXBpcy5jb20vQWNjb3VudBISYWNjb3Vu",
+            "dHMve2FjY291bnR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Shopping.Merchant.Products.V1.ProductsCommonReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.Product), global::Google.Shopping.Merchant.Products.V1.Product.Parser, new[]{ "Name", "Base64EncodedName", "LegacyLocal", "OfferId", "ContentLanguage", "FeedLabel", "DataSource", "VersionNumber", "ProductAttributes", "CustomAttributes", "ProductStatus", "AutomatedDiscounts" }, new[]{ "VersionNumber" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.Product), global::Google.Shopping.Merchant.Products.V1.Product.Parser, new[]{ "Name", "Base64EncodedName", "LegacyLocal", "OfferId", "ContentLanguage", "FeedLabel", "DataSource", "VersionNumber", "ProductAttributes", "CustomAttributes", "ProductStatus", "AutomatedDiscounts", "Archived" }, new[]{ "VersionNumber" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.GetProductRequest), global::Google.Shopping.Merchant.Products.V1.GetProductRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ListProductsRequest), global::Google.Shopping.Merchant.Products.V1.ListProductsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Products.V1.ListProductsResponse), global::Google.Shopping.Merchant.Products.V1.ListProductsResponse.Parser, new[]{ "Products", "NextPageToken" }, null, null, null, null)
@@ -147,6 +148,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       customAttributes_ = other.customAttributes_.Clone();
       productStatus_ = other.productStatus_ != null ? other.productStatus_.Clone() : null;
       automatedDiscounts_ = other.automatedDiscounts_ != null ? other.automatedDiscounts_.Clone() : null;
+      archived_ = other.archived_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -400,6 +402,26 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
     }
 
+    /// <summary>Field number for the "archived" field.</summary>
+    public const int ArchivedFieldNumber = 14;
+    private bool archived_;
+    /// <summary>
+    /// Output only. Determines whether the product is
+    /// [archived](https://support.google.com/merchants/answer/11909930).
+    ///
+    /// To archive or restore your product, visit Merchant Center products page.
+    /// Learn also more about [offer
+    /// visibility](https://support.google.com/merchants/answer/12488713).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Archived {
+      get { return archived_; }
+      set {
+        archived_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -427,6 +449,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       if(!customAttributes_.Equals(other.customAttributes_)) return false;
       if (!object.Equals(ProductStatus, other.ProductStatus)) return false;
       if (!object.Equals(AutomatedDiscounts, other.AutomatedDiscounts)) return false;
+      if (Archived != other.Archived) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -446,6 +469,7 @@ namespace Google.Shopping.Merchant.Products.V1 {
       hash ^= customAttributes_.GetHashCode();
       if (productStatus_ != null) hash ^= ProductStatus.GetHashCode();
       if (automatedDiscounts_ != null) hash ^= AutomatedDiscounts.GetHashCode();
+      if (Archived != false) hash ^= Archived.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -505,6 +529,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(ProductAttributes);
       }
+      if (Archived != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(Archived);
+      }
       if (Base64EncodedName.Length != 0) {
         output.WriteRawTag(122);
         output.WriteString(Base64EncodedName);
@@ -560,6 +588,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(ProductAttributes);
       }
+      if (Archived != false) {
+        output.WriteRawTag(112);
+        output.WriteBool(Archived);
+      }
       if (Base64EncodedName.Length != 0) {
         output.WriteRawTag(122);
         output.WriteString(Base64EncodedName);
@@ -607,6 +639,9 @@ namespace Google.Shopping.Merchant.Products.V1 {
       }
       if (automatedDiscounts_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutomatedDiscounts);
+      }
+      if (Archived != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -662,6 +697,9 @@ namespace Google.Shopping.Merchant.Products.V1 {
           AutomatedDiscounts = new global::Google.Shopping.Merchant.Products.V1.AutomatedDiscounts();
         }
         AutomatedDiscounts.MergeFrom(other.AutomatedDiscounts);
+      }
+      if (other.Archived != false) {
+        Archived = other.Archived;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -733,6 +771,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
               ProductAttributes = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes();
             }
             input.ReadMessage(ProductAttributes);
+            break;
+          }
+          case 112: {
+            Archived = input.ReadBool();
             break;
           }
           case 122: {
@@ -809,6 +851,10 @@ namespace Google.Shopping.Merchant.Products.V1 {
               ProductAttributes = new global::Google.Shopping.Merchant.Products.V1.ProductAttributes();
             }
             input.ReadMessage(ProductAttributes);
+            break;
+          }
+          case 112: {
+            Archived = input.ReadBool();
             break;
           }
           case 122: {
