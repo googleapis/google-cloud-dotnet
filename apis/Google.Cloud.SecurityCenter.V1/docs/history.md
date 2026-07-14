@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.27.0, released 2026-07-14
+
+### New features
+
+- Add agent, agent_sessions, and agent_anomaly fields to Finding
+
 ## Version 3.26.0, released 2026-03-23
 
 ### New features
