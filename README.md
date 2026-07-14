@@ -42,7 +42,6 @@ Each package name links to the documentation for that package.
 | [Google.Cloud.ApiRegistry.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ApiRegistry.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.ApiRegistry.V1)](https://nuget.org/packages/Google.Cloud.ApiRegistry.V1) | [Cloud API Registry (V1 API)](https://docs.cloud.google.com/api-registry/docs/overview) |
 | [Google.Cloud.ApiRegistry.V1Beta](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ApiRegistry.V1Beta/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.ApiRegistry.V1Beta)](https://nuget.org/packages/Google.Cloud.ApiRegistry.V1Beta) | [Cloud API Registry (V1Beta API)](https://docs.cloud.google.com/api-registry/docs/overview) |
 | [Google.Cloud.ApigeeConnect.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ApigeeConnect.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.ApigeeConnect.V1)](https://nuget.org/packages/Google.Cloud.ApigeeConnect.V1) | [Apigee Connect](https://cloud.google.com/apigee/docs/hybrid/v1.4/apigee-connect) |
-| [Google.Cloud.ApigeeRegistry.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.ApigeeRegistry.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.ApigeeRegistry.V1)](https://nuget.org/packages/Google.Cloud.ApigeeRegistry.V1) | Apigee Registry |
 | [Google.Cloud.AppEngine.Logging.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AppEngine.Logging.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.AppEngine.Logging.V1)](https://nuget.org/packages/Google.Cloud.AppEngine.Logging.V1) | [App Engine Logging Data](https://cloud.google.com/appengine) |
 | [Google.Cloud.AppEngine.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AppEngine.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.AppEngine.V1)](https://nuget.org/packages/Google.Cloud.AppEngine.V1) | [App Engine](https://cloud.google.com/appengine) |
 | [Google.Cloud.AppHub.V1](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.AppHub.V1/latest) | [![NuGet](https://img.shields.io/nuget/v/Google.Cloud.AppHub.V1)](https://nuget.org/packages/Google.Cloud.AppHub.V1) | [App Hub](https://cloud.google.com/app-hub/docs/overview) |
@@ -368,7 +367,7 @@ If you need support for other Google APIs, check out the
 ## Example Applications
 
 * [getting-started-dotnet](https://github.com/GoogleCloudPlatform/getting-started-dotnet/) -
-  A [quickstart and tutorial](https://cloud.google.com/dotnet/) that demonstrates how to build a complete web 
+  A [quickstart and tutorial](https://cloud.google.com/dotnet/) that demonstrates how to build a complete web
   application using Cloud Datastore, Cloud Storage, and Cloud Pub/Sub and deploy it to Google Compute Engine.
 
 ## Specifying a Project ID
@@ -396,7 +395,7 @@ Next, choose a method for authenticating API requests from within your project:
 
       ```
       set GOOGLE_APPLICATION_CREDENTIALS=/path/to/my/key.json
-      ``` 
+      ```
     * If running locally for development/testing, you can authenticate using the [Google Cloud SDK](https://cloud.google.com/sdk/).
       Download the SDK if you haven't already, then login by running the following in the command line:
 
