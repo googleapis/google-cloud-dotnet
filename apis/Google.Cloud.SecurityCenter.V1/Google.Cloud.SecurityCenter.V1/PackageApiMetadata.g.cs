@@ -56,6 +56,9 @@ namespace Google.Cloud.SecurityCenter.V1
         private static scg::IEnumerable<gpr::FileDescriptor> GetFileDescriptors()
         {
             yield return AccessReflection.Descriptor;
+            yield return AgentReflection.Descriptor;
+            yield return AgentAnomalyReflection.Descriptor;
+            yield return AgentSessionReflection.Descriptor;
             yield return ApplicationReflection.Descriptor;
             yield return AssetReflection.Descriptor;
             yield return AttackExposureReflection.Descriptor;
