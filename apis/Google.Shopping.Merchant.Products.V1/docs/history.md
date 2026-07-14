@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.7.0, released 2026-07-14
+
+### New features
+
+- Add various new attributes to Product including vehicles, properties, and Q&A
+- Add loyalty program fields to Shipping options
+- Add PickupCost and ProductMinimumOrderValue messages
+
 ## Version 1.6.0, released 2026-05-04
 
 ### New features
