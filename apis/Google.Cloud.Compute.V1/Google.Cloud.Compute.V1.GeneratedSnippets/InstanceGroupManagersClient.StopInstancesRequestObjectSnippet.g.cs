@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 InstanceGroupManagersStopInstancesRequestResource = new InstanceGroupManagersStopInstancesRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.StopInstances(request);

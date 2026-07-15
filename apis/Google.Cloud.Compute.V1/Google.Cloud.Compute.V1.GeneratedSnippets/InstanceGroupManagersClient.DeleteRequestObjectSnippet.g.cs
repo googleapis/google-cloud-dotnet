@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Delete(request);

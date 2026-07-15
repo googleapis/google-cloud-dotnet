@@ -367,7 +367,7 @@ If you need support for other Google APIs, check out the
 ## Example Applications
 
 * [getting-started-dotnet](https://github.com/GoogleCloudPlatform/getting-started-dotnet/) -
-  A [quickstart and tutorial](https://cloud.google.com/dotnet/) that demonstrates how to build a complete web
+  A [quickstart and tutorial](https://cloud.google.com/dotnet/) that demonstrates how to build a complete web 
   application using Cloud Datastore, Cloud Storage, and Cloud Pub/Sub and deploy it to Google Compute Engine.
 
 ## Specifying a Project ID
@@ -395,7 +395,7 @@ Next, choose a method for authenticating API requests from within your project:
 
       ```
       set GOOGLE_APPLICATION_CREDENTIALS=/path/to/my/key.json
-      ```
+      ``` 
     * If running locally for development/testing, you can authenticate using the [Google Cloud SDK](https://cloud.google.com/sdk/).
       Download the SDK if you haven't already, then login by running the following in the command line:
 

@@ -49,9 +49,12 @@ namespace Google.Cloud.Compute.V1
             AggregatedListSettings = existing.AggregatedListSettings;
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
+            DeleteNamedSetSettings = existing.DeleteNamedSetSettings;
+            DeleteNamedSetOperationsSettings = existing.DeleteNamedSetOperationsSettings.Clone();
             DeleteRoutePolicySettings = existing.DeleteRoutePolicySettings;
             DeleteRoutePolicyOperationsSettings = existing.DeleteRoutePolicyOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
+            GetNamedSetSettings = existing.GetNamedSetSettings;
             GetNatIpInfoSettings = existing.GetNatIpInfoSettings;
             GetNatMappingInfoSettings = existing.GetNatMappingInfoSettings;
             GetRoutePolicySettings = existing.GetRoutePolicySettings;
@@ -60,14 +63,19 @@ namespace Google.Cloud.Compute.V1
             InsertOperationsSettings = existing.InsertOperationsSettings.Clone();
             ListSettings = existing.ListSettings;
             ListBgpRoutesSettings = existing.ListBgpRoutesSettings;
+            ListNamedSetsSettings = existing.ListNamedSetsSettings;
             ListRoutePoliciesSettings = existing.ListRoutePoliciesSettings;
             PatchSettings = existing.PatchSettings;
             PatchOperationsSettings = existing.PatchOperationsSettings.Clone();
+            PatchNamedSetSettings = existing.PatchNamedSetSettings;
+            PatchNamedSetOperationsSettings = existing.PatchNamedSetOperationsSettings.Clone();
             PatchRoutePolicySettings = existing.PatchRoutePolicySettings;
             PatchRoutePolicyOperationsSettings = existing.PatchRoutePolicyOperationsSettings.Clone();
             PreviewSettings = existing.PreviewSettings;
             UpdateSettings = existing.UpdateSettings;
             UpdateOperationsSettings = existing.UpdateOperationsSettings.Clone();
+            UpdateNamedSetSettings = existing.UpdateNamedSetSettings;
+            UpdateNamedSetOperationsSettings = existing.UpdateNamedSetOperationsSettings.Clone();
             UpdateRoutePolicySettings = existing.UpdateRoutePolicySettings;
             UpdateRoutePolicyOperationsSettings = existing.UpdateRoutePolicyOperationsSettings.Clone();
             OnCopy(existing);
@@ -128,6 +136,36 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RoutersClient.DeleteNamedSet</c> and <c>RoutersClient.DeleteNamedSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteNamedSetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RoutersClient.DeleteNamedSet</c> and
+        /// <c>RoutersClient.DeleteNamedSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteNamedSetOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>RoutersClient.DeleteRoutePolicy</c> and <c>RoutersClient.DeleteRoutePolicyAsync</c>.
         /// </summary>
         /// <remarks>
@@ -176,6 +214,27 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RoutersClient.GetNamedSet</c>
+        ///  and <c>RoutersClient.GetNamedSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetNamedSetSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RoutersClient.GetNatIpInfo</c>
@@ -334,6 +393,27 @@ namespace Google.Cloud.Compute.V1
         public gaxgrpc::CallSettings ListBgpRoutesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RoutersClient.ListNamedSets</c>
+        ///  and <c>RoutersClient.ListNamedSetsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.DeadlineExceeded"/>,
+        /// <see cref="grpccore::StatusCode.Unavailable"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListNamedSetsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
         /// <c>RoutersClient.ListRoutePolicies</c> and <c>RoutersClient.ListRoutePoliciesAsync</c>.
         /// </summary>
@@ -379,6 +459,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings PatchOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RoutersClient.PatchNamedSet</c>
+        ///  and <c>RoutersClient.PatchNamedSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PatchNamedSetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RoutersClient.PatchNamedSet</c> and
+        /// <c>RoutersClient.PatchNamedSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PatchNamedSetOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -451,6 +561,36 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RoutersClient.UpdateNamedSet</c> and <c>RoutersClient.UpdateNamedSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateNamedSetSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RoutersClient.UpdateNamedSet</c> and
+        /// <c>RoutersClient.UpdateNamedSetAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateNamedSetOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -841,6 +981,120 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, region, router, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Deletes Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> DeleteNamedSet(DeleteNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteNamedSetAsync(DeleteNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteNamedSetAsync(DeleteNamedSetRouterRequest request, st::CancellationToken cancellationToken) =>
+            DeleteNamedSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteNamedSet</c>.</summary>
+        public virtual lro::OperationsClient DeleteNamedSetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteNamedSet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceDeleteNamedSet(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNamedSetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteNamedSet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceDeleteNamedSetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteNamedSetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> DeleteNamedSet(string project, string region, string router, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNamedSet(new DeleteNamedSetRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteNamedSetAsync(string project, string region, string router, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteNamedSetAsync(new DeleteNamedSetRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> DeleteNamedSetAsync(string project, string region, string router, st::CancellationToken cancellationToken) =>
+            DeleteNamedSetAsync(project, region, router, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Deletes Route Policy
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1042,6 +1296,97 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Router> GetAsync(string project, string region, string router, st::CancellationToken cancellationToken) =>
             GetAsync(project, region, router, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns specified Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RoutersGetNamedSetResponse GetNamedSet(GetNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns specified Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RoutersGetNamedSetResponse> GetNamedSetAsync(GetNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Returns specified Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RoutersGetNamedSetResponse> GetNamedSetAsync(GetNamedSetRouterRequest request, st::CancellationToken cancellationToken) =>
+            GetNamedSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Returns specified Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource to query for the named set. The name should
+        /// conform to RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual RoutersGetNamedSetResponse GetNamedSet(string project, string region, string router, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamedSet(new GetNamedSetRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns specified Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource to query for the named set. The name should
+        /// conform to RFC1035.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RoutersGetNamedSetResponse> GetNamedSetAsync(string project, string region, string router, gaxgrpc::CallSettings callSettings = null) =>
+            GetNamedSetAsync(new GetNamedSetRouterRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Returns specified Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource to query for the named set. The name should
+        /// conform to RFC1035.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<RoutersGetNamedSetResponse> GetNamedSetAsync(string project, string region, string router, st::CancellationToken cancellationToken) =>
+            GetNamedSetAsync(project, region, router, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Retrieves runtime NAT IP information.
@@ -1730,6 +2075,112 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Retrieves a list of router named set subresources available to the
+        /// specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NamedSet"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RoutersListNamedSets, NamedSet> ListNamedSets(ListNamedSetsRoutersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of router named set subresources available to the
+        /// specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NamedSet"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RoutersListNamedSets, NamedSet> ListNamedSetsAsync(ListNamedSetsRoutersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves a list of router named set subresources available to the
+        /// specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name or id of the resource for this request.
+        /// Name should conform to RFC1035.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NamedSet"/> resources.</returns>
+        public virtual gax::PagedEnumerable<RoutersListNamedSets, NamedSet> ListNamedSets(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNamedSetsRoutersRequest request = new ListNamedSetsRoutersRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNamedSets(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of router named set subresources available to the
+        /// specified project.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name or id of the resource for this request.
+        /// Name should conform to RFC1035.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NamedSet"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<RoutersListNamedSets, NamedSet> ListNamedSetsAsync(string project, string region, string router, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListNamedSetsRoutersRequest request = new ListNamedSetsRoutersRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListNamedSetsAsync(request, callSettings);
+        }
+
+        /// <summary>
         /// Retrieves a list of router route policy subresources available to the
         /// specified project.
         /// </summary>
@@ -1977,6 +2428,131 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> PatchAsync(string project, string region, string router, Router routerResource, st::CancellationToken cancellationToken) =>
             PatchAsync(project, region, router, routerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Patches Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchNamedSet(PatchNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchNamedSetAsync(PatchNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Patches Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchNamedSetAsync(PatchNamedSetRouterRequest request, st::CancellationToken cancellationToken) =>
+            PatchNamedSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PatchNamedSet</c>.</summary>
+        public virtual lro::OperationsClient PatchNamedSetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PatchNamedSet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePatchNamedSet(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchNamedSetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PatchNamedSet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePatchNamedSetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchNamedSetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Patches Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="namedSetResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> PatchNamedSet(string project, string region, string router, NamedSet namedSetResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchNamedSet(new PatchNamedSetRouterRequest
+            {
+                NamedSetResource = gax::GaxPreconditions.CheckNotNull(namedSetResource, nameof(namedSetResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="namedSetResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchNamedSetAsync(string project, string region, string router, NamedSet namedSetResource, gaxgrpc::CallSettings callSettings = null) =>
+            PatchNamedSetAsync(new PatchNamedSetRouterRequest
+            {
+                NamedSetResource = gax::GaxPreconditions.CheckNotNull(namedSetResource, nameof(namedSetResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Patches Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="namedSetResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PatchNamedSetAsync(string project, string region, string router, NamedSet namedSetResource, st::CancellationToken cancellationToken) =>
+            PatchNamedSetAsync(project, region, router, namedSetResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Patches Route Policy
@@ -2352,6 +2928,131 @@ namespace Google.Cloud.Compute.V1
             UpdateAsync(project, region, router, routerResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates or creates new Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> UpdateNamedSet(UpdateNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates or creates new Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateNamedSetAsync(UpdateNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates or creates new Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateNamedSetAsync(UpdateNamedSetRouterRequest request, st::CancellationToken cancellationToken) =>
+            UpdateNamedSetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateNamedSet</c>.</summary>
+        public virtual lro::OperationsClient UpdateNamedSetOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateNamedSet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceUpdateNamedSet(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateNamedSetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateNamedSet</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceUpdateNamedSetAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateNamedSetOperationsClient, callSettings);
+
+        /// <summary>
+        /// Updates or creates new Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="namedSetResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> UpdateNamedSet(string project, string region, string router, NamedSet namedSetResource, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNamedSet(new UpdateNamedSetRouterRequest
+            {
+                NamedSetResource = gax::GaxPreconditions.CheckNotNull(namedSetResource, nameof(namedSetResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates or creates new Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="namedSetResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateNamedSetAsync(string project, string region, string router, NamedSet namedSetResource, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateNamedSetAsync(new UpdateNamedSetRouterRequest
+            {
+                NamedSetResource = gax::GaxPreconditions.CheckNotNull(namedSetResource, nameof(namedSetResource)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Region = gax::GaxPreconditions.CheckNotNullOrEmpty(region, nameof(region)),
+                Router = gax::GaxPreconditions.CheckNotNullOrEmpty(router, nameof(router)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates or creates new Named Set
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="region">
+        /// Name of the region for this request.
+        /// </param>
+        /// <param name="router">
+        /// Name of the Router resource where Named Set is defined.
+        /// </param>
+        /// <param name="namedSetResource">
+        /// The body resource for this request
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> UpdateNamedSetAsync(string project, string region, string router, NamedSet namedSetResource, st::CancellationToken cancellationToken) =>
+            UpdateNamedSetAsync(project, region, router, namedSetResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates or creates new Route Policy
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2488,9 +3189,13 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<DeleteRouterRequest, Operation> _callDelete;
 
+        private readonly gaxgrpc::ApiCall<DeleteNamedSetRouterRequest, Operation> _callDeleteNamedSet;
+
         private readonly gaxgrpc::ApiCall<DeleteRoutePolicyRouterRequest, Operation> _callDeleteRoutePolicy;
 
         private readonly gaxgrpc::ApiCall<GetRouterRequest, Router> _callGet;
+
+        private readonly gaxgrpc::ApiCall<GetNamedSetRouterRequest, RoutersGetNamedSetResponse> _callGetNamedSet;
 
         private readonly gaxgrpc::ApiCall<GetNatIpInfoRouterRequest, NatIpInfoResponse> _callGetNatIpInfo;
 
@@ -2506,15 +3211,21 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ListBgpRoutesRoutersRequest, RoutersListBgpRoutes> _callListBgpRoutes;
 
+        private readonly gaxgrpc::ApiCall<ListNamedSetsRoutersRequest, RoutersListNamedSets> _callListNamedSets;
+
         private readonly gaxgrpc::ApiCall<ListRoutePoliciesRoutersRequest, RoutersListRoutePolicies> _callListRoutePolicies;
 
         private readonly gaxgrpc::ApiCall<PatchRouterRequest, Operation> _callPatch;
+
+        private readonly gaxgrpc::ApiCall<PatchNamedSetRouterRequest, Operation> _callPatchNamedSet;
 
         private readonly gaxgrpc::ApiCall<PatchRoutePolicyRouterRequest, Operation> _callPatchRoutePolicy;
 
         private readonly gaxgrpc::ApiCall<PreviewRouterRequest, RoutersPreviewResponse> _callPreview;
 
         private readonly gaxgrpc::ApiCall<UpdateRouterRequest, Operation> _callUpdate;
+
+        private readonly gaxgrpc::ApiCall<UpdateNamedSetRouterRequest, Operation> _callUpdateNamedSet;
 
         private readonly gaxgrpc::ApiCall<UpdateRoutePolicyRouterRequest, Operation> _callUpdateRoutePolicy;
 
@@ -2534,11 +3245,14 @@ namespace Google.Cloud.Compute.V1
                 Logger = logger,
             });
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            DeleteNamedSetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteNamedSetOperationsSettings, logger);
             DeleteRoutePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.DeleteRoutePolicyOperationsSettings, logger);
             InsertOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.InsertOperationsSettings, logger);
             PatchOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchOperationsSettings, logger);
+            PatchNamedSetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchNamedSetOperationsSettings, logger);
             PatchRoutePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.PatchRoutePolicyOperationsSettings, logger);
             UpdateOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdateOperationsSettings, logger);
+            UpdateNamedSetOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdateNamedSetOperationsSettings, logger);
             UpdateRoutePolicyOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForRegionOperations(), effectiveSettings.UpdateRoutePolicyOperationsSettings, logger);
             _callAggregatedList = clientHelper.BuildApiCall<AggregatedListRoutersRequest, RouterAggregatedList>("AggregatedList", grpcClient.AggregatedListAsync, grpcClient.AggregatedList, effectiveSettings.AggregatedListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callAggregatedList);
@@ -2546,12 +3260,18 @@ namespace Google.Cloud.Compute.V1
             _callDelete = clientHelper.BuildApiCall<DeleteRouterRequest, Operation>("Delete", grpcClient.DeleteAsync, grpcClient.Delete, effectiveSettings.DeleteSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callDelete);
             Modify_DeleteApiCall(ref _callDelete);
+            _callDeleteNamedSet = clientHelper.BuildApiCall<DeleteNamedSetRouterRequest, Operation>("DeleteNamedSet", grpcClient.DeleteNamedSetAsync, grpcClient.DeleteNamedSet, effectiveSettings.DeleteNamedSetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callDeleteNamedSet);
+            Modify_DeleteNamedSetApiCall(ref _callDeleteNamedSet);
             _callDeleteRoutePolicy = clientHelper.BuildApiCall<DeleteRoutePolicyRouterRequest, Operation>("DeleteRoutePolicy", grpcClient.DeleteRoutePolicyAsync, grpcClient.DeleteRoutePolicy, effectiveSettings.DeleteRoutePolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callDeleteRoutePolicy);
             Modify_DeleteRoutePolicyApiCall(ref _callDeleteRoutePolicy);
             _callGet = clientHelper.BuildApiCall<GetRouterRequest, Router>("Get", grpcClient.GetAsync, grpcClient.Get, effectiveSettings.GetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callGet);
             Modify_GetApiCall(ref _callGet);
+            _callGetNamedSet = clientHelper.BuildApiCall<GetNamedSetRouterRequest, RoutersGetNamedSetResponse>("GetNamedSet", grpcClient.GetNamedSetAsync, grpcClient.GetNamedSet, effectiveSettings.GetNamedSetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callGetNamedSet);
+            Modify_GetNamedSetApiCall(ref _callGetNamedSet);
             _callGetNatIpInfo = clientHelper.BuildApiCall<GetNatIpInfoRouterRequest, NatIpInfoResponse>("GetNatIpInfo", grpcClient.GetNatIpInfoAsync, grpcClient.GetNatIpInfo, effectiveSettings.GetNatIpInfoSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callGetNatIpInfo);
             Modify_GetNatIpInfoApiCall(ref _callGetNatIpInfo);
@@ -2573,12 +3293,18 @@ namespace Google.Cloud.Compute.V1
             _callListBgpRoutes = clientHelper.BuildApiCall<ListBgpRoutesRoutersRequest, RoutersListBgpRoutes>("ListBgpRoutes", grpcClient.ListBgpRoutesAsync, grpcClient.ListBgpRoutes, effectiveSettings.ListBgpRoutesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callListBgpRoutes);
             Modify_ListBgpRoutesApiCall(ref _callListBgpRoutes);
+            _callListNamedSets = clientHelper.BuildApiCall<ListNamedSetsRoutersRequest, RoutersListNamedSets>("ListNamedSets", grpcClient.ListNamedSetsAsync, grpcClient.ListNamedSets, effectiveSettings.ListNamedSetsSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callListNamedSets);
+            Modify_ListNamedSetsApiCall(ref _callListNamedSets);
             _callListRoutePolicies = clientHelper.BuildApiCall<ListRoutePoliciesRoutersRequest, RoutersListRoutePolicies>("ListRoutePolicies", grpcClient.ListRoutePoliciesAsync, grpcClient.ListRoutePolicies, effectiveSettings.ListRoutePoliciesSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callListRoutePolicies);
             Modify_ListRoutePoliciesApiCall(ref _callListRoutePolicies);
             _callPatch = clientHelper.BuildApiCall<PatchRouterRequest, Operation>("Patch", grpcClient.PatchAsync, grpcClient.Patch, effectiveSettings.PatchSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callPatch);
             Modify_PatchApiCall(ref _callPatch);
+            _callPatchNamedSet = clientHelper.BuildApiCall<PatchNamedSetRouterRequest, Operation>("PatchNamedSet", grpcClient.PatchNamedSetAsync, grpcClient.PatchNamedSet, effectiveSettings.PatchNamedSetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callPatchNamedSet);
+            Modify_PatchNamedSetApiCall(ref _callPatchNamedSet);
             _callPatchRoutePolicy = clientHelper.BuildApiCall<PatchRoutePolicyRouterRequest, Operation>("PatchRoutePolicy", grpcClient.PatchRoutePolicyAsync, grpcClient.PatchRoutePolicy, effectiveSettings.PatchRoutePolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callPatchRoutePolicy);
             Modify_PatchRoutePolicyApiCall(ref _callPatchRoutePolicy);
@@ -2588,6 +3314,9 @@ namespace Google.Cloud.Compute.V1
             _callUpdate = clientHelper.BuildApiCall<UpdateRouterRequest, Operation>("Update", grpcClient.UpdateAsync, grpcClient.Update, effectiveSettings.UpdateSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callUpdate);
             Modify_UpdateApiCall(ref _callUpdate);
+            _callUpdateNamedSet = clientHelper.BuildApiCall<UpdateNamedSetRouterRequest, Operation>("UpdateNamedSet", grpcClient.UpdateNamedSetAsync, grpcClient.UpdateNamedSet, effectiveSettings.UpdateNamedSetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
+            Modify_ApiCall(ref _callUpdateNamedSet);
+            Modify_UpdateNamedSetApiCall(ref _callUpdateNamedSet);
             _callUpdateRoutePolicy = clientHelper.BuildApiCall<UpdateRoutePolicyRouterRequest, Operation>("UpdateRoutePolicy", grpcClient.UpdateRoutePolicyAsync, grpcClient.UpdateRoutePolicy, effectiveSettings.UpdateRoutePolicySettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("region", request => request.Region).WithGoogleRequestParam("router", request => request.Router);
             Modify_ApiCall(ref _callUpdateRoutePolicy);
             Modify_UpdateRoutePolicyApiCall(ref _callUpdateRoutePolicy);
@@ -2600,9 +3329,13 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_DeleteApiCall(ref gaxgrpc::ApiCall<DeleteRouterRequest, Operation> call);
 
+        partial void Modify_DeleteNamedSetApiCall(ref gaxgrpc::ApiCall<DeleteNamedSetRouterRequest, Operation> call);
+
         partial void Modify_DeleteRoutePolicyApiCall(ref gaxgrpc::ApiCall<DeleteRoutePolicyRouterRequest, Operation> call);
 
         partial void Modify_GetApiCall(ref gaxgrpc::ApiCall<GetRouterRequest, Router> call);
+
+        partial void Modify_GetNamedSetApiCall(ref gaxgrpc::ApiCall<GetNamedSetRouterRequest, RoutersGetNamedSetResponse> call);
 
         partial void Modify_GetNatIpInfoApiCall(ref gaxgrpc::ApiCall<GetNatIpInfoRouterRequest, NatIpInfoResponse> call);
 
@@ -2618,15 +3351,21 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListBgpRoutesApiCall(ref gaxgrpc::ApiCall<ListBgpRoutesRoutersRequest, RoutersListBgpRoutes> call);
 
+        partial void Modify_ListNamedSetsApiCall(ref gaxgrpc::ApiCall<ListNamedSetsRoutersRequest, RoutersListNamedSets> call);
+
         partial void Modify_ListRoutePoliciesApiCall(ref gaxgrpc::ApiCall<ListRoutePoliciesRoutersRequest, RoutersListRoutePolicies> call);
 
         partial void Modify_PatchApiCall(ref gaxgrpc::ApiCall<PatchRouterRequest, Operation> call);
+
+        partial void Modify_PatchNamedSetApiCall(ref gaxgrpc::ApiCall<PatchNamedSetRouterRequest, Operation> call);
 
         partial void Modify_PatchRoutePolicyApiCall(ref gaxgrpc::ApiCall<PatchRoutePolicyRouterRequest, Operation> call);
 
         partial void Modify_PreviewApiCall(ref gaxgrpc::ApiCall<PreviewRouterRequest, RoutersPreviewResponse> call);
 
         partial void Modify_UpdateApiCall(ref gaxgrpc::ApiCall<UpdateRouterRequest, Operation> call);
+
+        partial void Modify_UpdateNamedSetApiCall(ref gaxgrpc::ApiCall<UpdateNamedSetRouterRequest, Operation> call);
 
         partial void Modify_UpdateRoutePolicyApiCall(ref gaxgrpc::ApiCall<UpdateRoutePolicyRouterRequest, Operation> call);
 
@@ -2639,9 +3378,13 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_DeleteRouterRequest(ref DeleteRouterRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_DeleteNamedSetRouterRequest(ref DeleteNamedSetRouterRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteRoutePolicyRouterRequest(ref DeleteRoutePolicyRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRouterRequest(ref GetRouterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetNamedSetRouterRequest(ref GetNamedSetRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetNatIpInfoRouterRequest(ref GetNatIpInfoRouterRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2657,15 +3400,21 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListBgpRoutesRoutersRequest(ref ListBgpRoutesRoutersRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_ListNamedSetsRoutersRequest(ref ListNamedSetsRoutersRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_ListRoutePoliciesRoutersRequest(ref ListRoutePoliciesRoutersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchRouterRequest(ref PatchRouterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PatchNamedSetRouterRequest(ref PatchNamedSetRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PatchRoutePolicyRouterRequest(ref PatchRoutePolicyRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_PreviewRouterRequest(ref PreviewRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateRouterRequest(ref UpdateRouterRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateNamedSetRouterRequest(ref UpdateNamedSetRouterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateRoutePolicyRouterRequest(ref UpdateRoutePolicyRouterRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2734,6 +3483,39 @@ namespace Google.Cloud.Compute.V1
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>DeleteNamedSet</c>.</summary>
+        public override lro::OperationsClient DeleteNamedSetOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> DeleteNamedSet(DeleteNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNamedSetRouterRequest(ref request, ref callSettings);
+            Operation response = _callDeleteNamedSet.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteNamedSetOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> DeleteNamedSetAsync(DeleteNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteNamedSetRouterRequest(ref request, ref callSettings);
+            Operation response = await _callDeleteNamedSet.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), DeleteNamedSetOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>DeleteRoutePolicy</c>.</summary>
         public override lro::OperationsClient DeleteRoutePolicyOperationsClient { get; }
 
@@ -2789,6 +3571,30 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_GetRouterRequest(ref request, ref callSettings);
             return _callGet.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns specified Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override RoutersGetNamedSetResponse GetNamedSet(GetNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNamedSetRouterRequest(ref request, ref callSettings);
+            return _callGetNamedSet.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Returns specified Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<RoutersGetNamedSetResponse> GetNamedSetAsync(GetNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetNamedSetRouterRequest(ref request, ref callSettings);
+            return _callGetNamedSet.Async(request, callSettings);
         }
 
         /// <summary>
@@ -2971,6 +3777,32 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
+        /// Retrieves a list of router named set subresources available to the
+        /// specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="NamedSet"/> resources.</returns>
+        public override gax::PagedEnumerable<RoutersListNamedSets, NamedSet> ListNamedSets(ListNamedSetsRoutersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNamedSetsRoutersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListNamedSetsRoutersRequest, RoutersListNamedSets, NamedSet>(_callListNamedSets, request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves a list of router named set subresources available to the
+        /// specified project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="NamedSet"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<RoutersListNamedSets, NamedSet> ListNamedSetsAsync(ListNamedSetsRoutersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListNamedSetsRoutersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListNamedSetsRoutersRequest, RoutersListNamedSets, NamedSet>(_callListNamedSets, request, callSettings);
+        }
+
+        /// <summary>
         /// Retrieves a list of router route policy subresources available to the
         /// specified project.
         /// </summary>
@@ -3033,6 +3865,39 @@ namespace Google.Cloud.Compute.V1
             GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PatchNamedSet</c>.</summary>
+        public override lro::OperationsClient PatchNamedSetOperationsClient { get; }
+
+        /// <summary>
+        /// Patches Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> PatchNamedSet(PatchNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchNamedSetRouterRequest(ref request, ref callSettings);
+            Operation response = _callPatchNamedSet.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchNamedSetOperationsClient);
+        }
+
+        /// <summary>
+        /// Patches Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PatchNamedSetAsync(PatchNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PatchNamedSetRouterRequest(ref request, ref callSettings);
+            Operation response = await _callPatchNamedSet.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PatchNamedSetOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>PatchRoutePolicy</c>.</summary>
@@ -3133,6 +3998,39 @@ namespace Google.Cloud.Compute.V1
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateOperationsClient);
         }
 
+        /// <summary>The long-running operations client for <c>UpdateNamedSet</c>.</summary>
+        public override lro::OperationsClient UpdateNamedSetOperationsClient { get; }
+
+        /// <summary>
+        /// Updates or creates new Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> UpdateNamedSet(UpdateNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNamedSetRouterRequest(ref request, ref callSettings);
+            Operation response = _callUpdateNamedSet.Sync(request, callSettings);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateNamedSetOperationsClient);
+        }
+
+        /// <summary>
+        /// Updates or creates new Named Set
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> UpdateNamedSetAsync(UpdateNamedSetRouterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateNamedSetRouterRequest(ref request, ref callSettings);
+            Operation response = await _callUpdateNamedSet.Async(request, callSettings).ConfigureAwait(false);
+            GetRegionOperationRequest pollRequest = GetRegionOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), UpdateNamedSetOperationsClient);
+        }
+
         /// <summary>The long-running operations client for <c>UpdateRoutePolicy</c>.</summary>
         public override lro::OperationsClient UpdateRoutePolicyOperationsClient { get; }
 
@@ -3207,6 +4105,16 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class ListNamedSetsRoutersRequest : gaxgrpc::IPageRequest
+    {
+        /// <inheritdoc/>
+        public int PageSize
+        {
+            get => checked((int)MaxResults);
+            set => MaxResults = checked((uint)value);
+        }
+    }
+
     public partial class ListRoutePoliciesRoutersRequest : gaxgrpc::IPageRequest
     {
         /// <inheritdoc/>
@@ -3245,6 +4153,14 @@ namespace Google.Cloud.Compute.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<BgpRoute> GetEnumerator() => Result.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class RoutersListNamedSets : gaxgrpc::IPageResponse<NamedSet>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<NamedSet> GetEnumerator() => Result.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

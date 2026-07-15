@@ -46,16 +46,52 @@ namespace Google.Cloud.Compute.V1
         private RolloutsSettings(RolloutsSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            AdvanceSettings = existing.AdvanceSettings;
+            AdvanceOperationsSettings = existing.AdvanceOperationsSettings.Clone();
             CancelSettings = existing.CancelSettings;
             CancelOperationsSettings = existing.CancelOperationsSettings.Clone();
             DeleteSettings = existing.DeleteSettings;
             DeleteOperationsSettings = existing.DeleteOperationsSettings.Clone();
             GetSettings = existing.GetSettings;
             ListSettings = existing.ListSettings;
+            PauseSettings = existing.PauseSettings;
+            PauseOperationsSettings = existing.PauseOperationsSettings.Clone();
+            ResumeSettings = existing.ResumeSettings;
+            ResumeOperationsSettings = existing.ResumeOperationsSettings.Clone();
             OnCopy(existing);
         }
 
         partial void OnCopy(RolloutsSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RolloutsClient.Advance</c>
+        /// and <c>RolloutsClient.AdvanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AdvanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RolloutsClient.Advance</c> and
+        /// <c>RolloutsClient.AdvanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AdvanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RolloutsClient.Cancel</c>
@@ -158,6 +194,66 @@ namespace Google.Cloud.Compute.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RolloutsClient.Pause</c>
+        /// and <c>RolloutsClient.PauseAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PauseSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RolloutsClient.Pause</c> and <c>RolloutsClient.PauseAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PauseOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>RolloutsClient.Resume</c>
+        /// and <c>RolloutsClient.ResumeAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResumeSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>RolloutsClient.Resume</c> and <c>RolloutsClient.ResumeAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ResumeOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RolloutsSettings"/> object.</returns>
@@ -300,6 +396,109 @@ namespace Google.Cloud.Compute.V1
 
         /// <summary>The underlying gRPC Rollouts client</summary>
         public virtual Rollouts.RolloutsClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Advances a Rollout to the next wave, or completes it if no waves remain.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Advance(AdvanceRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Advances a Rollout to the next wave, or completes it if no waves remain.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AdvanceAsync(AdvanceRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Advances a Rollout to the next wave, or completes it if no waves remain.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AdvanceAsync(AdvanceRolloutRequest request, st::CancellationToken cancellationToken) =>
+            AdvanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Advance</c>.</summary>
+        public virtual lro::OperationsClient AdvanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Advance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceAdvance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AdvanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>Advance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceAdvanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AdvanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Advances a Rollout to the next wave, or completes it if no waves remain.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to advance.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Advance(string project, string rollout, gaxgrpc::CallSettings callSettings = null) =>
+            Advance(new AdvanceRolloutRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+            }, callSettings);
+
+        /// <summary>
+        /// Advances a Rollout to the next wave, or completes it if no waves remain.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to advance.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AdvanceAsync(string project, string rollout, gaxgrpc::CallSettings callSettings = null) =>
+            AdvanceAsync(new AdvanceRolloutRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+            }, callSettings);
+
+        /// <summary>
+        /// Advances a Rollout to the next wave, or completes it if no waves remain.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to advance.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> AdvanceAsync(string project, string rollout, st::CancellationToken cancellationToken) =>
+            AdvanceAsync(project, rollout, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Cancels a Rollout.
@@ -667,6 +866,212 @@ namespace Google.Cloud.Compute.V1
             }
             return ListAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Pauses a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Pause(PauseRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Pauses a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PauseAsync(PauseRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Pauses a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PauseAsync(PauseRolloutRequest request, st::CancellationToken cancellationToken) =>
+            PauseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Pause</c>.</summary>
+        public virtual lro::OperationsClient PauseOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Pause</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOncePause(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PauseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Pause</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOncePauseAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PauseOperationsClient, callSettings);
+
+        /// <summary>
+        /// Pauses a Rollout.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to pause.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Pause(string project, string rollout, gaxgrpc::CallSettings callSettings = null) =>
+            Pause(new PauseRolloutRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses a Rollout.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to pause.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PauseAsync(string project, string rollout, gaxgrpc::CallSettings callSettings = null) =>
+            PauseAsync(new PauseRolloutRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+            }, callSettings);
+
+        /// <summary>
+        /// Pauses a Rollout.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to pause.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PauseAsync(string project, string rollout, st::CancellationToken cancellationToken) =>
+            PauseAsync(project, rollout, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Resumes a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Resume(ResumeRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(ResumeRolloutRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Resumes a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(ResumeRolloutRequest request, st::CancellationToken cancellationToken) =>
+            ResumeAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>Resume</c>.</summary>
+        public virtual lro::OperationsClient ResumeOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Resume</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Operation, Operation> PollOnceResume(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResumeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of <c>Resume</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> PollOnceResumeAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ResumeOperationsClient, callSettings);
+
+        /// <summary>
+        /// Resumes a Rollout.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to resume.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Operation, Operation> Resume(string project, string rollout, gaxgrpc::CallSettings callSettings = null) =>
+            Resume(new ResumeRolloutRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a Rollout.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to resume.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(string project, string rollout, gaxgrpc::CallSettings callSettings = null) =>
+            ResumeAsync(new ResumeRolloutRequest
+            {
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Rollout = gax::GaxPreconditions.CheckNotNullOrEmpty(rollout, nameof(rollout)),
+            }, callSettings);
+
+        /// <summary>
+        /// Resumes a Rollout.
+        /// </summary>
+        /// <param name="project">
+        /// Required. Project ID for this request.
+        /// </param>
+        /// <param name="rollout">
+        /// Required. Name of the Rollout resource to resume.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(string project, string rollout, st::CancellationToken cancellationToken) =>
+            ResumeAsync(project, rollout, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Rollouts client wrapper implementation, for convenient use.</summary>
@@ -675,6 +1080,8 @@ namespace Google.Cloud.Compute.V1
     /// </remarks>
     public sealed partial class RolloutsClientImpl : RolloutsClient
     {
+        private readonly gaxgrpc::ApiCall<AdvanceRolloutRequest, Operation> _callAdvance;
+
         private readonly gaxgrpc::ApiCall<CancelRolloutRequest, Operation> _callCancel;
 
         private readonly gaxgrpc::ApiCall<DeleteRolloutRequest, Operation> _callDelete;
@@ -682,6 +1089,10 @@ namespace Google.Cloud.Compute.V1
         private readonly gaxgrpc::ApiCall<GetRolloutRequest, Rollout> _callGet;
 
         private readonly gaxgrpc::ApiCall<ListRolloutsRequest, RolloutsListResponse> _callList;
+
+        private readonly gaxgrpc::ApiCall<PauseRolloutRequest, Operation> _callPause;
+
+        private readonly gaxgrpc::ApiCall<ResumeRolloutRequest, Operation> _callResume;
 
         /// <summary>
         /// Constructs a client wrapper for the Rollouts service, with the specified gRPC client and settings.
@@ -698,8 +1109,14 @@ namespace Google.Cloud.Compute.V1
                 Settings = effectiveSettings,
                 Logger = logger,
             });
+            AdvanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.AdvanceOperationsSettings, logger);
             CancelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.CancelOperationsSettings, logger);
             DeleteOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.DeleteOperationsSettings, logger);
+            PauseOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.PauseOperationsSettings, logger);
+            ResumeOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClientForGlobalOperations(), effectiveSettings.ResumeOperationsSettings, logger);
+            _callAdvance = clientHelper.BuildApiCall<AdvanceRolloutRequest, Operation>("Advance", grpcClient.AdvanceAsync, grpcClient.Advance, effectiveSettings.AdvanceSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("rollout", request => request.Rollout);
+            Modify_ApiCall(ref _callAdvance);
+            Modify_AdvanceApiCall(ref _callAdvance);
             _callCancel = clientHelper.BuildApiCall<CancelRolloutRequest, Operation>("Cancel", grpcClient.CancelAsync, grpcClient.Cancel, effectiveSettings.CancelSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("rollout", request => request.Rollout);
             Modify_ApiCall(ref _callCancel);
             Modify_CancelApiCall(ref _callCancel);
@@ -712,10 +1129,18 @@ namespace Google.Cloud.Compute.V1
             _callList = clientHelper.BuildApiCall<ListRolloutsRequest, RolloutsListResponse>("List", grpcClient.ListAsync, grpcClient.List, effectiveSettings.ListSettings).WithGoogleRequestParam("project", request => request.Project);
             Modify_ApiCall(ref _callList);
             Modify_ListApiCall(ref _callList);
+            _callPause = clientHelper.BuildApiCall<PauseRolloutRequest, Operation>("Pause", grpcClient.PauseAsync, grpcClient.Pause, effectiveSettings.PauseSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("rollout", request => request.Rollout);
+            Modify_ApiCall(ref _callPause);
+            Modify_PauseApiCall(ref _callPause);
+            _callResume = clientHelper.BuildApiCall<ResumeRolloutRequest, Operation>("Resume", grpcClient.ResumeAsync, grpcClient.Resume, effectiveSettings.ResumeSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("rollout", request => request.Rollout);
+            Modify_ApiCall(ref _callResume);
+            Modify_ResumeApiCall(ref _callResume);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_AdvanceApiCall(ref gaxgrpc::ApiCall<AdvanceRolloutRequest, Operation> call);
 
         partial void Modify_CancelApiCall(ref gaxgrpc::ApiCall<CancelRolloutRequest, Operation> call);
 
@@ -725,10 +1150,16 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ListApiCall(ref gaxgrpc::ApiCall<ListRolloutsRequest, RolloutsListResponse> call);
 
+        partial void Modify_PauseApiCall(ref gaxgrpc::ApiCall<PauseRolloutRequest, Operation> call);
+
+        partial void Modify_ResumeApiCall(ref gaxgrpc::ApiCall<ResumeRolloutRequest, Operation> call);
+
         partial void OnConstruction(Rollouts.RolloutsClient grpcClient, RolloutsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Rollouts client</summary>
         public override Rollouts.RolloutsClient GrpcClient { get; }
+
+        partial void Modify_AdvanceRolloutRequest(ref AdvanceRolloutRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CancelRolloutRequest(ref CancelRolloutRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -737,6 +1168,43 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_GetRolloutRequest(ref GetRolloutRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRolloutsRequest(ref ListRolloutsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PauseRolloutRequest(ref PauseRolloutRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ResumeRolloutRequest(ref ResumeRolloutRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>The long-running operations client for <c>Advance</c>.</summary>
+        public override lro::OperationsClient AdvanceOperationsClient { get; }
+
+        /// <summary>
+        /// Advances a Rollout to the next wave, or completes it if no waves remain.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Advance(AdvanceRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AdvanceRolloutRequest(ref request, ref callSettings);
+            Operation response = _callAdvance.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AdvanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Advances a Rollout to the next wave, or completes it if no waves remain.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> AdvanceAsync(AdvanceRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AdvanceRolloutRequest(ref request, ref callSettings);
+            Operation response = await _callAdvance.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), AdvanceOperationsClient);
+        }
 
         /// <summary>The long-running operations client for <c>Cancel</c>.</summary>
         public override lro::OperationsClient CancelOperationsClient { get; }
@@ -850,6 +1318,72 @@ namespace Google.Cloud.Compute.V1
         {
             Modify_ListRolloutsRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRolloutsRequest, RolloutsListResponse, Rollout>(_callList, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>Pause</c>.</summary>
+        public override lro::OperationsClient PauseOperationsClient { get; }
+
+        /// <summary>
+        /// Pauses a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Pause(PauseRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PauseRolloutRequest(ref request, ref callSettings);
+            Operation response = _callPause.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PauseOperationsClient);
+        }
+
+        /// <summary>
+        /// Pauses a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> PauseAsync(PauseRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PauseRolloutRequest(ref request, ref callSettings);
+            Operation response = await _callPause.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), PauseOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>Resume</c>.</summary>
+        public override lro::OperationsClient ResumeOperationsClient { get; }
+
+        /// <summary>
+        /// Resumes a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Operation, Operation> Resume(ResumeRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeRolloutRequest(ref request, ref callSettings);
+            Operation response = _callResume.Sync(request, callSettings);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResumeOperationsClient);
+        }
+
+        /// <summary>
+        /// Resumes a Rollout.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Operation, Operation>> ResumeAsync(ResumeRolloutRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumeRolloutRequest(ref request, ref callSettings);
+            Operation response = await _callResume.Async(request, callSettings).ConfigureAwait(false);
+            GetGlobalOperationRequest pollRequest = GetGlobalOperationRequest.FromInitialResponse(response);
+            request.PopulatePollRequestFields(pollRequest);
+            return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResumeOperationsClient);
         }
     }
 

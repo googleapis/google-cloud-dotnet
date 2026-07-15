@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 InstanceGroupManagersDeleteInstancesRequestResource = new InstanceGroupManagersDeleteInstancesRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.DeleteInstances(request);

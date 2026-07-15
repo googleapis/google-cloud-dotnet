@@ -36,6 +36,7 @@ namespace GoogleCSharpSnippets
             // Initialize request argument(s)
             GetGlobalForwardingRuleRequest request = new GetGlobalForwardingRuleRequest
             {
+                View = "",
                 Project = "",
                 ForwardingRule = "",
             };

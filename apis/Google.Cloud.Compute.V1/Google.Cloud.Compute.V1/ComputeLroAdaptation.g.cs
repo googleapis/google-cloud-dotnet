@@ -3105,6 +3105,11 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
+    public partial class AdvanceRolloutRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class CancelRolloutRequest
     {
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
@@ -3115,7 +3120,26 @@ namespace Google.Cloud.Compute.V1
         internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
     }
 
+    public partial class PauseRolloutRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
+    public partial class ResumeRolloutRequest
+    {
+        internal void PopulatePollRequestFields(GetGlobalOperationRequest pollRequest) => pollRequest.Project = Project;
+    }
+
     public partial class DeleteRouterRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class DeleteNamedSetRouterRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {
@@ -3151,6 +3175,15 @@ namespace Google.Cloud.Compute.V1
         }
     }
 
+    public partial class PatchNamedSetRouterRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
     public partial class PatchRoutePolicyRouterRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
@@ -3161,6 +3194,15 @@ namespace Google.Cloud.Compute.V1
     }
 
     public partial class UpdateRouterRequest
+    {
+        internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
+        {
+            pollRequest.Region = Region;
+            pollRequest.Project = Project;
+        }
+    }
+
+    public partial class UpdateNamedSetRouterRequest
     {
         internal void PopulatePollRequestFields(GetRegionOperationRequest pollRequest)
         {

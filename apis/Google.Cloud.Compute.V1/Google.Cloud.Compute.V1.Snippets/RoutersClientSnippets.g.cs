@@ -358,6 +358,142 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for DeleteNamedSet</summary>
+        public void DeleteNamedSetRequestObject()
+        {
+            // Snippet: DeleteNamedSet(DeleteNamedSetRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            DeleteNamedSetRouterRequest request = new DeleteNamedSetRouterRequest
+            {
+                RequestId = "",
+                Region = "",
+                Router = "",
+                NamedSet = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.DeleteNamedSet(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOnceDeleteNamedSet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNamedSetAsync</summary>
+        public async Task DeleteNamedSetRequestObjectAsync()
+        {
+            // Snippet: DeleteNamedSetAsync(DeleteNamedSetRouterRequest, CallSettings)
+            // Additional: DeleteNamedSetAsync(DeleteNamedSetRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteNamedSetRouterRequest request = new DeleteNamedSetRouterRequest
+            {
+                RequestId = "",
+                Region = "",
+                Router = "",
+                NamedSet = "",
+                Project = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.DeleteNamedSetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceDeleteNamedSetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNamedSet</summary>
+        public void DeleteNamedSet()
+        {
+            // Snippet: DeleteNamedSet(string, string, string, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.DeleteNamedSet(project, region, router);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOnceDeleteNamedSet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteNamedSetAsync</summary>
+        public async Task DeleteNamedSetAsync()
+        {
+            // Snippet: DeleteNamedSetAsync(string, string, string, CallSettings)
+            // Additional: DeleteNamedSetAsync(string, string, string, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.DeleteNamedSetAsync(project, region, router);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceDeleteNamedSetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteRoutePolicy</summary>
         public void DeleteRoutePolicyRequestObject()
         {
@@ -559,6 +695,76 @@ namespace GoogleCSharpSnippets
             string router = "";
             // Make the request
             Router response = await routersClient.GetAsync(project, region, router);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamedSet</summary>
+        public void GetNamedSetRequestObject()
+        {
+            // Snippet: GetNamedSet(GetNamedSetRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            GetNamedSetRouterRequest request = new GetNamedSetRouterRequest
+            {
+                Region = "",
+                Router = "",
+                NamedSet = "",
+                Project = "",
+            };
+            // Make the request
+            RoutersGetNamedSetResponse response = routersClient.GetNamedSet(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamedSetAsync</summary>
+        public async Task GetNamedSetRequestObjectAsync()
+        {
+            // Snippet: GetNamedSetAsync(GetNamedSetRouterRequest, CallSettings)
+            // Additional: GetNamedSetAsync(GetNamedSetRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            GetNamedSetRouterRequest request = new GetNamedSetRouterRequest
+            {
+                Region = "",
+                Router = "",
+                NamedSet = "",
+                Project = "",
+            };
+            // Make the request
+            RoutersGetNamedSetResponse response = await routersClient.GetNamedSetAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamedSet</summary>
+        public void GetNamedSet()
+        {
+            // Snippet: GetNamedSet(string, string, string, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            RoutersGetNamedSetResponse response = routersClient.GetNamedSet(project, region, router);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetNamedSetAsync</summary>
+        public async Task GetNamedSetAsync()
+        {
+            // Snippet: GetNamedSetAsync(string, string, string, CallSettings)
+            // Additional: GetNamedSetAsync(string, string, string, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            RoutersGetNamedSetResponse response = await routersClient.GetNamedSetAsync(project, region, router);
             // End snippet
         }
 
@@ -1512,6 +1718,206 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ListNamedSets</summary>
+        public void ListNamedSetsRequestObject()
+        {
+            // Snippet: ListNamedSets(ListNamedSetsRoutersRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            ListNamedSetsRoutersRequest request = new ListNamedSetsRoutersRequest
+            {
+                Region = "",
+                Router = "",
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedEnumerable<RoutersListNamedSets, NamedSet> response = routersClient.ListNamedSets(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NamedSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RoutersListNamedSets page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NamedSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NamedSet> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NamedSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNamedSetsAsync</summary>
+        public async Task ListNamedSetsRequestObjectAsync()
+        {
+            // Snippet: ListNamedSetsAsync(ListNamedSetsRoutersRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            ListNamedSetsRoutersRequest request = new ListNamedSetsRoutersRequest
+            {
+                Region = "",
+                Router = "",
+                OrderBy = "",
+                Project = "",
+                Filter = "",
+                ReturnPartialSuccess = false,
+            };
+            // Make the request
+            PagedAsyncEnumerable<RoutersListNamedSets, NamedSet> response = routersClient.ListNamedSetsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (NamedSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (RoutersListNamedSets page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NamedSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NamedSet> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NamedSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNamedSets</summary>
+        public void ListNamedSets()
+        {
+            // Snippet: ListNamedSets(string, string, string, string, int?, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            PagedEnumerable<RoutersListNamedSets, NamedSet> response = routersClient.ListNamedSets(project, region, router);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (NamedSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (RoutersListNamedSets page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NamedSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NamedSet> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NamedSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListNamedSetsAsync</summary>
+        public async Task ListNamedSetsAsync()
+        {
+            // Snippet: ListNamedSetsAsync(string, string, string, string, int?, CallSettings)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            // Make the request
+            PagedAsyncEnumerable<RoutersListNamedSets, NamedSet> response = routersClient.ListNamedSetsAsync(project, region, router);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await foreach (NamedSet item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await foreach (RoutersListNamedSets page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (NamedSet item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<NamedSet> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (NamedSet item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
         /// <summary>Snippet for ListRoutePolicies</summary>
         public void ListRoutePoliciesRequestObject()
         {
@@ -1841,6 +2247,144 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOncePatchAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchNamedSet</summary>
+        public void PatchNamedSetRequestObject()
+        {
+            // Snippet: PatchNamedSet(PatchNamedSetRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            PatchNamedSetRouterRequest request = new PatchNamedSetRouterRequest
+            {
+                RequestId = "",
+                Region = "",
+                Router = "",
+                Project = "",
+                NamedSetResource = new NamedSet(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.PatchNamedSet(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOncePatchNamedSet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchNamedSetAsync</summary>
+        public async Task PatchNamedSetRequestObjectAsync()
+        {
+            // Snippet: PatchNamedSetAsync(PatchNamedSetRouterRequest, CallSettings)
+            // Additional: PatchNamedSetAsync(PatchNamedSetRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchNamedSetRouterRequest request = new PatchNamedSetRouterRequest
+            {
+                RequestId = "",
+                Region = "",
+                Router = "",
+                Project = "",
+                NamedSetResource = new NamedSet(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.PatchNamedSetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOncePatchNamedSetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchNamedSet</summary>
+        public void PatchNamedSet()
+        {
+            // Snippet: PatchNamedSet(string, string, string, NamedSet, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            NamedSet namedSetResource = new NamedSet();
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.PatchNamedSet(project, region, router, namedSetResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOncePatchNamedSet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PatchNamedSetAsync</summary>
+        public async Task PatchNamedSetAsync()
+        {
+            // Snippet: PatchNamedSetAsync(string, string, string, NamedSet, CallSettings)
+            // Additional: PatchNamedSetAsync(string, string, string, NamedSet, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            NamedSet namedSetResource = new NamedSet();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.PatchNamedSetAsync(project, region, router, namedSetResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOncePatchNamedSetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
@@ -2189,6 +2733,144 @@ namespace GoogleCSharpSnippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceUpdateAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNamedSet</summary>
+        public void UpdateNamedSetRequestObject()
+        {
+            // Snippet: UpdateNamedSet(UpdateNamedSetRouterRequest, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            UpdateNamedSetRouterRequest request = new UpdateNamedSetRouterRequest
+            {
+                RequestId = "",
+                Region = "",
+                Router = "",
+                Project = "",
+                NamedSetResource = new NamedSet(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.UpdateNamedSet(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOnceUpdateNamedSet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNamedSetAsync</summary>
+        public async Task UpdateNamedSetRequestObjectAsync()
+        {
+            // Snippet: UpdateNamedSetAsync(UpdateNamedSetRouterRequest, CallSettings)
+            // Additional: UpdateNamedSetAsync(UpdateNamedSetRouterRequest, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateNamedSetRouterRequest request = new UpdateNamedSetRouterRequest
+            {
+                RequestId = "",
+                Region = "",
+                Router = "",
+                Project = "",
+                NamedSetResource = new NamedSet(),
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.UpdateNamedSetAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceUpdateNamedSetAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNamedSet</summary>
+        public void UpdateNamedSet()
+        {
+            // Snippet: UpdateNamedSet(string, string, string, NamedSet, CallSettings)
+            // Create client
+            RoutersClient routersClient = RoutersClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            NamedSet namedSetResource = new NamedSet();
+            // Make the request
+            lro::Operation<Operation, Operation> response = routersClient.UpdateNamedSet(project, region, router, namedSetResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = routersClient.PollOnceUpdateNamedSet(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateNamedSetAsync</summary>
+        public async Task UpdateNamedSetAsync()
+        {
+            // Snippet: UpdateNamedSetAsync(string, string, string, NamedSet, CallSettings)
+            // Additional: UpdateNamedSetAsync(string, string, string, NamedSet, CancellationToken)
+            // Create client
+            RoutersClient routersClient = await RoutersClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string region = "";
+            string router = "";
+            NamedSet namedSetResource = new NamedSet();
+            // Make the request
+            lro::Operation<Operation, Operation> response = await routersClient.UpdateNamedSetAsync(project, region, router, namedSetResource);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await routersClient.PollOnceUpdateNamedSetAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {

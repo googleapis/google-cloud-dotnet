@@ -44,6 +44,7 @@ namespace GoogleCSharpSnippets
                 RegionInstanceGroupManagersRecreateRequestResource = new RegionInstanceGroupManagersRecreateRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.RecreateInstances(request);

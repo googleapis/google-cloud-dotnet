@@ -27,6 +27,138 @@ namespace GoogleCSharpSnippets
     /// <summary>Generated snippets.</summary>
     public sealed class AllGeneratedRolloutsClientSnippets
     {
+        /// <summary>Snippet for Advance</summary>
+        public void AdvanceRequestObject()
+        {
+            // Snippet: Advance(AdvanceRolloutRequest, CallSettings)
+            // Create client
+            RolloutsClient rolloutsClient = RolloutsClient.Create();
+            // Initialize request argument(s)
+            AdvanceRolloutRequest request = new AdvanceRolloutRequest
+            {
+                RequestId = "",
+                CurrentWaveNumber = 0L,
+                Project = "",
+                Rollout = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = rolloutsClient.Advance(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = rolloutsClient.PollOnceAdvance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdvanceAsync</summary>
+        public async Task AdvanceRequestObjectAsync()
+        {
+            // Snippet: AdvanceAsync(AdvanceRolloutRequest, CallSettings)
+            // Additional: AdvanceAsync(AdvanceRolloutRequest, CancellationToken)
+            // Create client
+            RolloutsClient rolloutsClient = await RolloutsClient.CreateAsync();
+            // Initialize request argument(s)
+            AdvanceRolloutRequest request = new AdvanceRolloutRequest
+            {
+                RequestId = "",
+                CurrentWaveNumber = 0L,
+                Project = "",
+                Rollout = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await rolloutsClient.AdvanceAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await rolloutsClient.PollOnceAdvanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Advance</summary>
+        public void Advance()
+        {
+            // Snippet: Advance(string, string, CallSettings)
+            // Create client
+            RolloutsClient rolloutsClient = RolloutsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string rollout = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = rolloutsClient.Advance(project, rollout);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = rolloutsClient.PollOnceAdvance(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for AdvanceAsync</summary>
+        public async Task AdvanceAsync()
+        {
+            // Snippet: AdvanceAsync(string, string, CallSettings)
+            // Additional: AdvanceAsync(string, string, CancellationToken)
+            // Create client
+            RolloutsClient rolloutsClient = await RolloutsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string rollout = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await rolloutsClient.AdvanceAsync(project, rollout);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await rolloutsClient.PollOnceAdvanceAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for Cancel</summary>
         public void CancelRequestObject()
         {
@@ -542,6 +674,270 @@ namespace GoogleCSharpSnippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for Pause</summary>
+        public void PauseRequestObject()
+        {
+            // Snippet: Pause(PauseRolloutRequest, CallSettings)
+            // Create client
+            RolloutsClient rolloutsClient = RolloutsClient.Create();
+            // Initialize request argument(s)
+            PauseRolloutRequest request = new PauseRolloutRequest
+            {
+                Etag = "",
+                RequestId = "",
+                Project = "",
+                Rollout = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = rolloutsClient.Pause(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = rolloutsClient.PollOncePause(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseAsync</summary>
+        public async Task PauseRequestObjectAsync()
+        {
+            // Snippet: PauseAsync(PauseRolloutRequest, CallSettings)
+            // Additional: PauseAsync(PauseRolloutRequest, CancellationToken)
+            // Create client
+            RolloutsClient rolloutsClient = await RolloutsClient.CreateAsync();
+            // Initialize request argument(s)
+            PauseRolloutRequest request = new PauseRolloutRequest
+            {
+                Etag = "",
+                RequestId = "",
+                Project = "",
+                Rollout = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await rolloutsClient.PauseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await rolloutsClient.PollOncePauseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Pause</summary>
+        public void Pause()
+        {
+            // Snippet: Pause(string, string, CallSettings)
+            // Create client
+            RolloutsClient rolloutsClient = RolloutsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string rollout = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = rolloutsClient.Pause(project, rollout);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = rolloutsClient.PollOncePause(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for PauseAsync</summary>
+        public async Task PauseAsync()
+        {
+            // Snippet: PauseAsync(string, string, CallSettings)
+            // Additional: PauseAsync(string, string, CancellationToken)
+            // Create client
+            RolloutsClient rolloutsClient = await RolloutsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string rollout = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await rolloutsClient.PauseAsync(project, rollout);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await rolloutsClient.PollOncePauseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Resume</summary>
+        public void ResumeRequestObject()
+        {
+            // Snippet: Resume(ResumeRolloutRequest, CallSettings)
+            // Create client
+            RolloutsClient rolloutsClient = RolloutsClient.Create();
+            // Initialize request argument(s)
+            ResumeRolloutRequest request = new ResumeRolloutRequest
+            {
+                Etag = "",
+                RequestId = "",
+                Project = "",
+                Rollout = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = rolloutsClient.Resume(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = rolloutsClient.PollOnceResume(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeAsync</summary>
+        public async Task ResumeRequestObjectAsync()
+        {
+            // Snippet: ResumeAsync(ResumeRolloutRequest, CallSettings)
+            // Additional: ResumeAsync(ResumeRolloutRequest, CancellationToken)
+            // Create client
+            RolloutsClient rolloutsClient = await RolloutsClient.CreateAsync();
+            // Initialize request argument(s)
+            ResumeRolloutRequest request = new ResumeRolloutRequest
+            {
+                Etag = "",
+                RequestId = "",
+                Project = "",
+                Rollout = "",
+            };
+            // Make the request
+            lro::Operation<Operation, Operation> response = await rolloutsClient.ResumeAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await rolloutsClient.PollOnceResumeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for Resume</summary>
+        public void Resume()
+        {
+            // Snippet: Resume(string, string, CallSettings)
+            // Create client
+            RolloutsClient rolloutsClient = RolloutsClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string rollout = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = rolloutsClient.Resume(project, rollout);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = rolloutsClient.PollOnceResume(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumeAsync</summary>
+        public async Task ResumeAsync()
+        {
+            // Snippet: ResumeAsync(string, string, CallSettings)
+            // Additional: ResumeAsync(string, string, CancellationToken)
+            // Create client
+            RolloutsClient rolloutsClient = await RolloutsClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string rollout = "";
+            // Make the request
+            lro::Operation<Operation, Operation> response = await rolloutsClient.ResumeAsync(project, rollout);
+
+            // Poll until the returned long-running operation is complete
+            lro::Operation<Operation, Operation> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Operation result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            lro::Operation<Operation, Operation> retrievedResponse = await rolloutsClient.PollOnceResumeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Operation retrievedResult = retrievedResponse.Result;
+            }
             // End snippet
         }
     }

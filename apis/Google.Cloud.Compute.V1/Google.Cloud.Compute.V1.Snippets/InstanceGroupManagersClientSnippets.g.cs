@@ -649,6 +649,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.Delete(request);
@@ -685,6 +686,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeleteAsync(request);
@@ -784,6 +786,7 @@ namespace GoogleCSharpSnippets
                 InstanceGroupManagersDeleteInstancesRequestResource = new InstanceGroupManagersDeleteInstancesRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.DeleteInstances(request);
@@ -821,6 +824,7 @@ namespace GoogleCSharpSnippets
                 InstanceGroupManagersDeleteInstancesRequestResource = new InstanceGroupManagersDeleteInstancesRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.DeleteInstancesAsync(request);
@@ -2332,6 +2336,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.RecreateInstances(request);
@@ -2369,6 +2374,7 @@ namespace GoogleCSharpSnippets
                 RequestId = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.RecreateInstancesAsync(request);
@@ -3160,6 +3166,7 @@ namespace GoogleCSharpSnippets
                 InstanceGroupManagersStopInstancesRequestResource = new InstanceGroupManagersStopInstancesRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = instanceGroupManagersClient.StopInstances(request);
@@ -3197,6 +3204,7 @@ namespace GoogleCSharpSnippets
                 InstanceGroupManagersStopInstancesRequestResource = new InstanceGroupManagersStopInstancesRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await instanceGroupManagersClient.StopInstancesAsync(request);

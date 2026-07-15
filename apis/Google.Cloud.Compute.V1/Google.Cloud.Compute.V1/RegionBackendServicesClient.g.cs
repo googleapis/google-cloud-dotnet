@@ -1108,8 +1108,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of all usable backend services in the specified project in
-        /// the given region.
+        /// Retrieves a list of all usable backend services for Application Load
+        /// Balancers and Proxy Network Load Balancers in the specified project in the
+        /// given region. Backend services for external and internal passthrough
+        /// Network Load Balancers are not included in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1118,8 +1120,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of all usable backend services in the specified project in
-        /// the given region.
+        /// Retrieves a list of all usable backend services for Application Load
+        /// Balancers and Proxy Network Load Balancers in the specified project in the
+        /// given region. Backend services for external and internal passthrough
+        /// Network Load Balancers are not included in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1128,8 +1132,10 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a list of all usable backend services in the specified project in
-        /// the given region.
+        /// Retrieves a list of all usable backend services for Application Load
+        /// Balancers and Proxy Network Load Balancers in the specified project in the
+        /// given region. Backend services for external and internal passthrough
+        /// Network Load Balancers are not included in the response.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1167,8 +1173,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of all usable backend services in the specified project in
-        /// the given region.
+        /// Retrieves a list of all usable backend services for Application Load
+        /// Balancers and Proxy Network Load Balancers in the specified project in the
+        /// given region. Backend services for external and internal passthrough
+        /// Network Load Balancers are not included in the response.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -2161,8 +2169,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of all usable backend services in the specified project in
-        /// the given region.
+        /// Retrieves a list of all usable backend services for Application Load
+        /// Balancers and Proxy Network Load Balancers in the specified project in the
+        /// given region. Backend services for external and internal passthrough
+        /// Network Load Balancers are not included in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2174,8 +2184,10 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves a list of all usable backend services in the specified project in
-        /// the given region.
+        /// Retrieves a list of all usable backend services for Application Load
+        /// Balancers and Proxy Network Load Balancers in the specified project in the
+        /// given region. Backend services for external and internal passthrough
+        /// Network Load Balancers are not included in the response.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

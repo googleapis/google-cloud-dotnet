@@ -452,6 +452,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.Delete(request);
@@ -488,6 +489,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.DeleteAsync(request);
@@ -586,6 +588,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
                 RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest(),
             };
             // Make the request
@@ -623,6 +626,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
                 RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest(),
             };
             // Make the request
@@ -2135,6 +2139,7 @@ namespace GoogleCSharpSnippets
                 RegionInstanceGroupManagersRecreateRequestResource = new RegionInstanceGroupManagersRecreateRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.RecreateInstances(request);
@@ -2172,6 +2177,7 @@ namespace GoogleCSharpSnippets
                 RegionInstanceGroupManagersRecreateRequestResource = new RegionInstanceGroupManagersRecreateRequest(),
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.RecreateInstancesAsync(request);
@@ -2963,6 +2969,7 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 RegionInstanceGroupManagersStopInstancesRequestResource = new RegionInstanceGroupManagersStopInstancesRequest(),
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = regionInstanceGroupManagersClient.StopInstances(request);
@@ -3000,6 +3007,7 @@ namespace GoogleCSharpSnippets
                 Project = "",
                 InstanceGroupManager = "",
                 RegionInstanceGroupManagersStopInstancesRequestResource = new RegionInstanceGroupManagersStopInstancesRequest(),
+                NoGracefulShutdown = false,
             };
             // Make the request
             lro::Operation<Operation, Operation> response = await regionInstanceGroupManagersClient.StopInstancesAsync(request);

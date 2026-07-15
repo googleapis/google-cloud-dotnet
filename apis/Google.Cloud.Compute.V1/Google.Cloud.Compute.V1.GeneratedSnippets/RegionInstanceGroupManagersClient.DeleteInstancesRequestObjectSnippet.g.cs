@@ -43,6 +43,7 @@ namespace GoogleCSharpSnippets
                 Region = "",
                 Project = "",
                 InstanceGroupManager = "",
+                NoGracefulShutdown = false,
                 RegionInstanceGroupManagersDeleteInstancesRequestResource = new RegionInstanceGroupManagersDeleteInstancesRequest(),
             };
             // Make the request
