@@ -235,6 +235,28 @@ namespace Google.Cloud.Kms.V1
         }
     }
 
+    public partial class ExportTrustedKeyWrappedCryptoKeyVersionRequest
+    {
+        /// <summary>
+        /// <see cref="gckv::CryptoKeyVersionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gckv::CryptoKeyVersionName CryptoKeyVersionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyVersionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="gckv::CryptoKeyVersionName"/>-typed view over the <see cref="WrappingKey"/> resource name
+        /// property.
+        /// </summary>
+        public gckv::CryptoKeyVersionName WrappingKeyAsCryptoKeyVersionName
+        {
+            get => string.IsNullOrEmpty(WrappingKey) ? null : gckv::CryptoKeyVersionName.Parse(WrappingKey, allowUnparsed: true);
+            set => WrappingKey = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CreateImportJobRequest
     {
         /// <summary>

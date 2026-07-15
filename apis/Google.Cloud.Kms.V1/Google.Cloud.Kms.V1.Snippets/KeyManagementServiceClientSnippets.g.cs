@@ -2066,6 +2066,7 @@ namespace GoogleCSharpSnippets
                 CryptoKeyId = "",
                 CryptoKey = new CryptoKey(),
                 SkipInitialVersionCreation = false,
+                TrustedWrappingEnabled = false,
             };
             // Make the request
             CryptoKey response = keyManagementServiceClient.CreateCryptoKey(request);
@@ -2086,6 +2087,7 @@ namespace GoogleCSharpSnippets
                 CryptoKeyId = "",
                 CryptoKey = new CryptoKey(),
                 SkipInitialVersionCreation = false,
+                TrustedWrappingEnabled = false,
             };
             // Make the request
             CryptoKey response = await keyManagementServiceClient.CreateCryptoKeyAsync(request);
@@ -2628,6 +2630,7 @@ namespace GoogleCSharpSnippets
                 RsaAesWrappedKey = ByteString.Empty,
                 CryptoKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 WrappedKey = ByteString.Empty,
+                TrustedWrappingEnabled = false,
             };
             // Make the request
             CryptoKeyVersion response = keyManagementServiceClient.ImportCryptoKeyVersion(request);
@@ -2650,9 +2653,86 @@ namespace GoogleCSharpSnippets
                 RsaAesWrappedKey = ByteString.Empty,
                 CryptoKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
                 WrappedKey = ByteString.Empty,
+                TrustedWrappingEnabled = false,
             };
             // Make the request
             CryptoKeyVersion response = await keyManagementServiceClient.ImportCryptoKeyVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportTrustedKeyWrappedCryptoKeyVersion</summary>
+        public void ImportTrustedKeyWrappedCryptoKeyVersionRequestObject()
+        {
+            // Snippet: ImportTrustedKeyWrappedCryptoKeyVersion(ImportTrustedKeyWrappedCryptoKeyVersionRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            ImportTrustedKeyWrappedCryptoKeyVersionRequest request = new ImportTrustedKeyWrappedCryptoKeyVersionRequest
+            {
+                Parent = "",
+                ImportingKey = "",
+                CryptoKeyVersion = "",
+                WrappedKey = ByteString.Empty,
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified,
+            };
+            // Make the request
+            CryptoKeyVersion response = keyManagementServiceClient.ImportTrustedKeyWrappedCryptoKeyVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportTrustedKeyWrappedCryptoKeyVersionAsync</summary>
+        public async Task ImportTrustedKeyWrappedCryptoKeyVersionRequestObjectAsync()
+        {
+            // Snippet: ImportTrustedKeyWrappedCryptoKeyVersionAsync(ImportTrustedKeyWrappedCryptoKeyVersionRequest, CallSettings)
+            // Additional: ImportTrustedKeyWrappedCryptoKeyVersionAsync(ImportTrustedKeyWrappedCryptoKeyVersionRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportTrustedKeyWrappedCryptoKeyVersionRequest request = new ImportTrustedKeyWrappedCryptoKeyVersionRequest
+            {
+                Parent = "",
+                ImportingKey = "",
+                CryptoKeyVersion = "",
+                WrappedKey = ByteString.Empty,
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified,
+            };
+            // Make the request
+            CryptoKeyVersion response = await keyManagementServiceClient.ImportTrustedKeyWrappedCryptoKeyVersionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportTrustedKeyWrappedCryptoKeyVersion</summary>
+        public void ExportTrustedKeyWrappedCryptoKeyVersionRequestObject()
+        {
+            // Snippet: ExportTrustedKeyWrappedCryptoKeyVersion(ExportTrustedKeyWrappedCryptoKeyVersionRequest, CallSettings)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
+            // Initialize request argument(s)
+            ExportTrustedKeyWrappedCryptoKeyVersionRequest request = new ExportTrustedKeyWrappedCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                WrappingKeyAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            ExportTrustedKeyWrappedCryptoKeyVersionResponse response = keyManagementServiceClient.ExportTrustedKeyWrappedCryptoKeyVersion(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportTrustedKeyWrappedCryptoKeyVersionAsync</summary>
+        public async Task ExportTrustedKeyWrappedCryptoKeyVersionRequestObjectAsync()
+        {
+            // Snippet: ExportTrustedKeyWrappedCryptoKeyVersionAsync(ExportTrustedKeyWrappedCryptoKeyVersionRequest, CallSettings)
+            // Additional: ExportTrustedKeyWrappedCryptoKeyVersionAsync(ExportTrustedKeyWrappedCryptoKeyVersionRequest, CancellationToken)
+            // Create client
+            KeyManagementServiceClient keyManagementServiceClient = await KeyManagementServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportTrustedKeyWrappedCryptoKeyVersionRequest request = new ExportTrustedKeyWrappedCryptoKeyVersionRequest
+            {
+                CryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                WrappingKeyAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+            };
+            // Make the request
+            ExportTrustedKeyWrappedCryptoKeyVersionResponse response = await keyManagementServiceClient.ExportTrustedKeyWrappedCryptoKeyVersionAsync(request);
             // End snippet
         }
 

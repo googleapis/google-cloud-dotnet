@@ -69,6 +69,8 @@ namespace Google.Cloud.Kms.V1
             DeleteCryptoKeyVersionSettings = existing.DeleteCryptoKeyVersionSettings;
             DeleteCryptoKeyVersionOperationsSettings = existing.DeleteCryptoKeyVersionOperationsSettings.Clone();
             ImportCryptoKeyVersionSettings = existing.ImportCryptoKeyVersionSettings;
+            ImportTrustedKeyWrappedCryptoKeyVersionSettings = existing.ImportTrustedKeyWrappedCryptoKeyVersionSettings;
+            ExportTrustedKeyWrappedCryptoKeyVersionSettings = existing.ExportTrustedKeyWrappedCryptoKeyVersionSettings;
             CreateImportJobSettings = existing.CreateImportJobSettings;
             UpdateCryptoKeySettings = existing.UpdateCryptoKeySettings;
             UpdateCryptoKeyVersionSettings = existing.UpdateCryptoKeyVersionSettings;
@@ -475,6 +477,32 @@ namespace Google.Cloud.Kms.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ImportCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.ImportTrustedKeyWrappedCryptoKeyVersion</c> and
+        /// <c>KeyManagementServiceClient.ImportTrustedKeyWrappedCryptoKeyVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportTrustedKeyWrappedCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>KeyManagementServiceClient.ExportTrustedKeyWrappedCryptoKeyVersion</c> and
+        /// <c>KeyManagementServiceClient.ExportTrustedKeyWrappedCryptoKeyVersionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportTrustedKeyWrappedCryptoKeyVersionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3559,6 +3587,123 @@ namespace Google.Cloud.Kms.V1
             ImportCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Import wrapped key material into a
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+        /// key.
+        /// 
+        /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+        /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+        /// specified in the request, key material will be reimported into that
+        /// version. Otherwise, a new version will be created, and will be assigned the
+        /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+        /// trusted_wrapping_enabled set to true.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CryptoKeyVersion ImportTrustedKeyWrappedCryptoKeyVersion(ImportTrustedKeyWrappedCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Import wrapped key material into a
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+        /// key.
+        /// 
+        /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+        /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+        /// specified in the request, key material will be reimported into that
+        /// version. Otherwise, a new version will be created, and will be assigned the
+        /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+        /// trusted_wrapping_enabled set to true.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> ImportTrustedKeyWrappedCryptoKeyVersionAsync(ImportTrustedKeyWrappedCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Import wrapped key material into a
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+        /// key.
+        /// 
+        /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+        /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+        /// specified in the request, key material will be reimported into that
+        /// version. Otherwise, a new version will be created, and will be assigned the
+        /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+        /// trusted_wrapping_enabled set to true.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CryptoKeyVersion> ImportTrustedKeyWrappedCryptoKeyVersionAsync(ImportTrustedKeyWrappedCryptoKeyVersionRequest request, st::CancellationToken cancellationToken) =>
+            ImportTrustedKeyWrappedCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+        /// trusted key.
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+        /// trusted_wrapping_enabled set to true. The
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+        /// [wrapping_key] must have the
+        /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+        /// purpose. The [wrapping_key] must have the
+        /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+        /// algorithm.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExportTrustedKeyWrappedCryptoKeyVersionResponse ExportTrustedKeyWrappedCryptoKeyVersion(ExportTrustedKeyWrappedCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+        /// trusted key.
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+        /// trusted_wrapping_enabled set to true. The
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+        /// [wrapping_key] must have the
+        /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+        /// purpose. The [wrapping_key] must have the
+        /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+        /// algorithm.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExportTrustedKeyWrappedCryptoKeyVersionResponse> ExportTrustedKeyWrappedCryptoKeyVersionAsync(ExportTrustedKeyWrappedCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+        /// trusted key.
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+        /// trusted_wrapping_enabled set to true. The
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+        /// [wrapping_key] must have the
+        /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+        /// purpose. The [wrapping_key] must have the
+        /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+        /// algorithm.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExportTrustedKeyWrappedCryptoKeyVersionResponse> ExportTrustedKeyWrappedCryptoKeyVersionAsync(ExportTrustedKeyWrappedCryptoKeyVersionRequest request, st::CancellationToken cancellationToken) =>
+            ExportTrustedKeyWrappedCryptoKeyVersionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Create a new [ImportJob][google.cloud.kms.v1.ImportJob] within a
         /// [KeyRing][google.cloud.kms.v1.KeyRing].
         /// 
@@ -6109,6 +6254,10 @@ namespace Google.Cloud.Kms.V1
 
         private readonly gaxgrpc::ApiCall<ImportCryptoKeyVersionRequest, CryptoKeyVersion> _callImportCryptoKeyVersion;
 
+        private readonly gaxgrpc::ApiCall<ImportTrustedKeyWrappedCryptoKeyVersionRequest, CryptoKeyVersion> _callImportTrustedKeyWrappedCryptoKeyVersion;
+
+        private readonly gaxgrpc::ApiCall<ExportTrustedKeyWrappedCryptoKeyVersionRequest, ExportTrustedKeyWrappedCryptoKeyVersionResponse> _callExportTrustedKeyWrappedCryptoKeyVersion;
+
         private readonly gaxgrpc::ApiCall<CreateImportJobRequest, ImportJob> _callCreateImportJob;
 
         private readonly gaxgrpc::ApiCall<UpdateCryptoKeyRequest, CryptoKey> _callUpdateCryptoKey;
@@ -6212,6 +6361,12 @@ namespace Google.Cloud.Kms.V1
             _callImportCryptoKeyVersion = clientHelper.BuildApiCall<ImportCryptoKeyVersionRequest, CryptoKeyVersion>("ImportCryptoKeyVersion", grpcClient.ImportCryptoKeyVersionAsync, grpcClient.ImportCryptoKeyVersion, effectiveSettings.ImportCryptoKeyVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callImportCryptoKeyVersion);
             Modify_ImportCryptoKeyVersionApiCall(ref _callImportCryptoKeyVersion);
+            _callImportTrustedKeyWrappedCryptoKeyVersion = clientHelper.BuildApiCall<ImportTrustedKeyWrappedCryptoKeyVersionRequest, CryptoKeyVersion>("ImportTrustedKeyWrappedCryptoKeyVersion", grpcClient.ImportTrustedKeyWrappedCryptoKeyVersionAsync, grpcClient.ImportTrustedKeyWrappedCryptoKeyVersion, effectiveSettings.ImportTrustedKeyWrappedCryptoKeyVersionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportTrustedKeyWrappedCryptoKeyVersion);
+            Modify_ImportTrustedKeyWrappedCryptoKeyVersionApiCall(ref _callImportTrustedKeyWrappedCryptoKeyVersion);
+            _callExportTrustedKeyWrappedCryptoKeyVersion = clientHelper.BuildApiCall<ExportTrustedKeyWrappedCryptoKeyVersionRequest, ExportTrustedKeyWrappedCryptoKeyVersionResponse>("ExportTrustedKeyWrappedCryptoKeyVersion", grpcClient.ExportTrustedKeyWrappedCryptoKeyVersionAsync, grpcClient.ExportTrustedKeyWrappedCryptoKeyVersion, effectiveSettings.ExportTrustedKeyWrappedCryptoKeyVersionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportTrustedKeyWrappedCryptoKeyVersion);
+            Modify_ExportTrustedKeyWrappedCryptoKeyVersionApiCall(ref _callExportTrustedKeyWrappedCryptoKeyVersion);
             _callCreateImportJob = clientHelper.BuildApiCall<CreateImportJobRequest, ImportJob>("CreateImportJob", grpcClient.CreateImportJobAsync, grpcClient.CreateImportJob, effectiveSettings.CreateImportJobSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateImportJob);
             Modify_CreateImportJobApiCall(ref _callCreateImportJob);
@@ -6299,6 +6454,10 @@ namespace Google.Cloud.Kms.V1
 
         partial void Modify_ImportCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<ImportCryptoKeyVersionRequest, CryptoKeyVersion> call);
 
+        partial void Modify_ImportTrustedKeyWrappedCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<ImportTrustedKeyWrappedCryptoKeyVersionRequest, CryptoKeyVersion> call);
+
+        partial void Modify_ExportTrustedKeyWrappedCryptoKeyVersionApiCall(ref gaxgrpc::ApiCall<ExportTrustedKeyWrappedCryptoKeyVersionRequest, ExportTrustedKeyWrappedCryptoKeyVersionResponse> call);
+
         partial void Modify_CreateImportJobApiCall(ref gaxgrpc::ApiCall<CreateImportJobRequest, ImportJob> call);
 
         partial void Modify_UpdateCryptoKeyApiCall(ref gaxgrpc::ApiCall<UpdateCryptoKeyRequest, CryptoKey> call);
@@ -6375,6 +6534,10 @@ namespace Google.Cloud.Kms.V1
         partial void Modify_DeleteCryptoKeyVersionRequest(ref DeleteCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ImportCryptoKeyVersionRequest(ref ImportCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportTrustedKeyWrappedCryptoKeyVersionRequest(ref ImportTrustedKeyWrappedCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportTrustedKeyWrappedCryptoKeyVersionRequest(ref ExportTrustedKeyWrappedCryptoKeyVersionRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateImportJobRequest(ref CreateImportJobRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6910,6 +7073,96 @@ namespace Google.Cloud.Kms.V1
         {
             Modify_ImportCryptoKeyVersionRequest(ref request, ref callSettings);
             return _callImportCryptoKeyVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Import wrapped key material into a
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+        /// key.
+        /// 
+        /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+        /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+        /// specified in the request, key material will be reimported into that
+        /// version. Otherwise, a new version will be created, and will be assigned the
+        /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+        /// trusted_wrapping_enabled set to true.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CryptoKeyVersion ImportTrustedKeyWrappedCryptoKeyVersion(ImportTrustedKeyWrappedCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportTrustedKeyWrappedCryptoKeyVersionRequest(ref request, ref callSettings);
+            return _callImportTrustedKeyWrappedCryptoKeyVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Import wrapped key material into a
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+        /// key.
+        /// 
+        /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+        /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+        /// specified in the request, key material will be reimported into that
+        /// version. Otherwise, a new version will be created, and will be assigned the
+        /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+        /// trusted_wrapping_enabled set to true.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CryptoKeyVersion> ImportTrustedKeyWrappedCryptoKeyVersionAsync(ImportTrustedKeyWrappedCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportTrustedKeyWrappedCryptoKeyVersionRequest(ref request, ref callSettings);
+            return _callImportTrustedKeyWrappedCryptoKeyVersion.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+        /// trusted key.
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+        /// trusted_wrapping_enabled set to true. The
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+        /// [wrapping_key] must have the
+        /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+        /// purpose. The [wrapping_key] must have the
+        /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+        /// algorithm.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExportTrustedKeyWrappedCryptoKeyVersionResponse ExportTrustedKeyWrappedCryptoKeyVersion(ExportTrustedKeyWrappedCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportTrustedKeyWrappedCryptoKeyVersionRequest(ref request, ref callSettings);
+            return _callExportTrustedKeyWrappedCryptoKeyVersion.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+        /// trusted key.
+        /// 
+        /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+        /// trusted_wrapping_enabled set to true. The
+        /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+        /// [wrapping_key] must have the
+        /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+        /// purpose. The [wrapping_key] must have the
+        /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+        /// algorithm.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExportTrustedKeyWrappedCryptoKeyVersionResponse> ExportTrustedKeyWrappedCryptoKeyVersionAsync(ExportTrustedKeyWrappedCryptoKeyVersionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportTrustedKeyWrappedCryptoKeyVersionRequest(ref request, ref callSettings);
+            return _callExportTrustedKeyWrappedCryptoKeyVersion.Async(request, callSettings);
         }
 
         /// <summary>

@@ -133,6 +133,12 @@ namespace Google.Cloud.Kms.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_ImportCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_ImportTrustedKeyWrappedCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest> __Marshaller_google_cloud_kms_v1_ExportTrustedKeyWrappedCryptoKeyVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse> __Marshaller_google_cloud_kms_v1_ExportTrustedKeyWrappedCryptoKeyVersionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.CreateImportJobRequest> __Marshaller_google_cloud_kms_v1_CreateImportJobRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.CreateImportJobRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest> __Marshaller_google_cloud_kms_v1_UpdateCryptoKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest.Parser));
@@ -320,6 +326,22 @@ namespace Google.Cloud.Kms.V1 {
         "ImportCryptoKeyVersion",
         __Marshaller_google_cloud_kms_v1_ImportCryptoKeyVersionRequest,
         __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion> __Method_ImportTrustedKeyWrappedCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportTrustedKeyWrappedCryptoKeyVersion",
+        __Marshaller_google_cloud_kms_v1_ImportTrustedKeyWrappedCryptoKeyVersionRequest,
+        __Marshaller_google_cloud_kms_v1_CryptoKeyVersion);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse> __Method_ExportTrustedKeyWrappedCryptoKeyVersion = new grpc::Method<global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportTrustedKeyWrappedCryptoKeyVersion",
+        __Marshaller_google_cloud_kms_v1_ExportTrustedKeyWrappedCryptoKeyVersionRequest,
+        __Marshaller_google_cloud_kms_v1_ExportTrustedKeyWrappedCryptoKeyVersionResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob> __Method_CreateImportJob = new grpc::Method<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(
@@ -704,6 +726,51 @@ namespace Google.Cloud.Kms.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> ImportCryptoKeyVersion(global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Import wrapped key material into a
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+      /// key.
+      ///
+      /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+      /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+      /// specified in the request, key material will be reimported into that
+      /// version. Otherwise, a new version will be created, and will be assigned the
+      /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+      /// trusted_wrapping_enabled set to true.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.CryptoKeyVersion> ImportTrustedKeyWrappedCryptoKeyVersion(global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+      /// trusted key.
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+      /// trusted_wrapping_enabled set to true. The
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+      /// [wrapping_key] must have the
+      /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+      /// purpose. The [wrapping_key] must have the
+      /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+      /// algorithm.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse> ExportTrustedKeyWrappedCryptoKeyVersion(global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2006,6 +2073,186 @@ namespace Google.Cloud.Kms.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ImportCryptoKeyVersion, null, options, request);
       }
       /// <summary>
+      /// Import wrapped key material into a
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+      /// key.
+      ///
+      /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+      /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+      /// specified in the request, key material will be reimported into that
+      /// version. Otherwise, a new version will be created, and will be assigned the
+      /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+      /// trusted_wrapping_enabled set to true.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion ImportTrustedKeyWrappedCryptoKeyVersion(global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportTrustedKeyWrappedCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Import wrapped key material into a
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+      /// key.
+      ///
+      /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+      /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+      /// specified in the request, key material will be reimported into that
+      /// version. Otherwise, a new version will be created, and will be assigned the
+      /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+      /// trusted_wrapping_enabled set to true.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.CryptoKeyVersion ImportTrustedKeyWrappedCryptoKeyVersion(global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportTrustedKeyWrappedCryptoKeyVersion, null, options, request);
+      }
+      /// <summary>
+      /// Import wrapped key material into a
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+      /// key.
+      ///
+      /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+      /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+      /// specified in the request, key material will be reimported into that
+      /// version. Otherwise, a new version will be created, and will be assigned the
+      /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+      /// trusted_wrapping_enabled set to true.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> ImportTrustedKeyWrappedCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportTrustedKeyWrappedCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Import wrapped key material into a
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a trusted
+      /// key.
+      ///
+      /// All requests must specify a [CryptoKey][google.cloud.kms.v1.CryptoKey]. If
+      /// a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] is additionally
+      /// specified in the request, key material will be reimported into that
+      /// version. Otherwise, a new version will be created, and will be assigned the
+      /// next sequential id within the [CryptoKey][google.cloud.kms.v1.CryptoKey].
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] will have
+      /// trusted_wrapping_enabled set to true.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.CryptoKeyVersion> ImportTrustedKeyWrappedCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportTrustedKeyWrappedCryptoKeyVersion, null, options, request);
+      }
+      /// <summary>
+      /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+      /// trusted key.
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+      /// trusted_wrapping_enabled set to true. The
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+      /// [wrapping_key] must have the
+      /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+      /// purpose. The [wrapping_key] must have the
+      /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+      /// algorithm.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse ExportTrustedKeyWrappedCryptoKeyVersion(global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportTrustedKeyWrappedCryptoKeyVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+      /// trusted key.
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+      /// trusted_wrapping_enabled set to true. The
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+      /// [wrapping_key] must have the
+      /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+      /// purpose. The [wrapping_key] must have the
+      /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+      /// algorithm.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse ExportTrustedKeyWrappedCryptoKeyVersion(global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportTrustedKeyWrappedCryptoKeyVersion, null, options, request);
+      }
+      /// <summary>
+      /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+      /// trusted key.
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+      /// trusted_wrapping_enabled set to true. The
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+      /// [wrapping_key] must have the
+      /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+      /// purpose. The [wrapping_key] must have the
+      /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+      /// algorithm.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse> ExportTrustedKeyWrappedCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportTrustedKeyWrappedCryptoKeyVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports a [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with a
+      /// trusted key.
+      ///
+      /// The [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must have
+      /// trusted_wrapping_enabled set to true. The
+      /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] of the
+      /// [wrapping_key] must have the
+      /// [AES_WRAPPING][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.AES_WRAPPING]
+      /// purpose. The [wrapping_key] must have the
+      /// [AES_256_KWP][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm.AES_256_KWP]
+      /// algorithm.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse> ExportTrustedKeyWrappedCryptoKeyVersionAsync(global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportTrustedKeyWrappedCryptoKeyVersion, null, options, request);
+      }
+      /// <summary>
       /// Create a new [ImportJob][google.cloud.kms.v1.ImportJob] within a
       /// [KeyRing][google.cloud.kms.v1.KeyRing].
       ///
@@ -3124,6 +3371,8 @@ namespace Google.Cloud.Kms.V1 {
           .AddMethod(__Method_DeleteCryptoKey, serviceImpl.DeleteCryptoKey)
           .AddMethod(__Method_DeleteCryptoKeyVersion, serviceImpl.DeleteCryptoKeyVersion)
           .AddMethod(__Method_ImportCryptoKeyVersion, serviceImpl.ImportCryptoKeyVersion)
+          .AddMethod(__Method_ImportTrustedKeyWrappedCryptoKeyVersion, serviceImpl.ImportTrustedKeyWrappedCryptoKeyVersion)
+          .AddMethod(__Method_ExportTrustedKeyWrappedCryptoKeyVersion, serviceImpl.ExportTrustedKeyWrappedCryptoKeyVersion)
           .AddMethod(__Method_CreateImportJob, serviceImpl.CreateImportJob)
           .AddMethod(__Method_UpdateCryptoKey, serviceImpl.UpdateCryptoKey)
           .AddMethod(__Method_UpdateCryptoKeyVersion, serviceImpl.UpdateCryptoKeyVersion)
@@ -3166,6 +3415,8 @@ namespace Google.Cloud.Kms.V1 {
       serviceBinder.AddMethod(__Method_DeleteCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.DeleteCryptoKeyRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCryptoKey));
       serviceBinder.AddMethod(__Method_DeleteCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.DeleteCryptoKeyVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteCryptoKeyVersion));
       serviceBinder.AddMethod(__Method_ImportCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ImportCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.ImportCryptoKeyVersion));
+      serviceBinder.AddMethod(__Method_ImportTrustedKeyWrappedCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ImportTrustedKeyWrappedCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.ImportTrustedKeyWrappedCryptoKeyVersion));
+      serviceBinder.AddMethod(__Method_ExportTrustedKeyWrappedCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.ExportTrustedKeyWrappedCryptoKeyVersionResponse>(serviceImpl.ExportTrustedKeyWrappedCryptoKeyVersion));
       serviceBinder.AddMethod(__Method_CreateImportJob, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.CreateImportJobRequest, global::Google.Cloud.Kms.V1.ImportJob>(serviceImpl.CreateImportJob));
       serviceBinder.AddMethod(__Method_UpdateCryptoKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateCryptoKeyRequest, global::Google.Cloud.Kms.V1.CryptoKey>(serviceImpl.UpdateCryptoKey));
       serviceBinder.AddMethod(__Method_UpdateCryptoKeyVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Kms.V1.UpdateCryptoKeyVersionRequest, global::Google.Cloud.Kms.V1.CryptoKeyVersion>(serviceImpl.UpdateCryptoKeyVersion));

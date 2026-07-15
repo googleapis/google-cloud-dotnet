@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START cloudkms_v1_generated_KeyManagementService_ImportCryptoKeyVersion_sync]
+    // [START cloudkms_v1_generated_KeyManagementService_ImportTrustedKeyWrappedCryptoKeyVersion_sync]
     using Google.Cloud.Kms.V1;
     using Google.Protobuf;
 
     public sealed partial class GeneratedKeyManagementServiceClientSnippets
     {
-        /// <summary>Snippet for ImportCryptoKeyVersion</summary>
+        /// <summary>Snippet for ImportTrustedKeyWrappedCryptoKeyVersion</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,24 +30,22 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public void ImportCryptoKeyVersionRequestObject()
+        public void ImportTrustedKeyWrappedCryptoKeyVersionRequestObject()
         {
             // Create client
             KeyManagementServiceClient keyManagementServiceClient = KeyManagementServiceClient.Create();
             // Initialize request argument(s)
-            ImportCryptoKeyVersionRequest request = new ImportCryptoKeyVersionRequest
+            ImportTrustedKeyWrappedCryptoKeyVersionRequest request = new ImportTrustedKeyWrappedCryptoKeyVersionRequest
             {
-                ParentAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
-                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified,
-                ImportJob = "",
-                RsaAesWrappedKey = ByteString.Empty,
-                CryptoKeyVersionAsCryptoKeyVersionName = CryptoKeyVersionName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
+                Parent = "",
+                ImportingKey = "",
+                CryptoKeyVersion = "",
                 WrappedKey = ByteString.Empty,
-                TrustedWrappingEnabled = false,
+                Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified,
             };
             // Make the request
-            CryptoKeyVersion response = keyManagementServiceClient.ImportCryptoKeyVersion(request);
+            CryptoKeyVersion response = keyManagementServiceClient.ImportTrustedKeyWrappedCryptoKeyVersion(request);
         }
     }
-    // [END cloudkms_v1_generated_KeyManagementService_ImportCryptoKeyVersion_sync]
+    // [END cloudkms_v1_generated_KeyManagementService_ImportTrustedKeyWrappedCryptoKeyVersion_sync]
 }

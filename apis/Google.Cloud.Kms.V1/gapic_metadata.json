@@ -250,6 +250,12 @@
                 "EncryptAsync"
               ]
             },
+            "ExportTrustedKeyWrappedCryptoKeyVersion": {
+              "methods": [
+                "ExportTrustedKeyWrappedCryptoKeyVersion",
+                "ExportTrustedKeyWrappedCryptoKeyVersionAsync"
+              ]
+            },
             "GenerateRandomBytes": {
               "methods": [
                 "GenerateRandomBytes",
@@ -296,6 +302,12 @@
               "methods": [
                 "ImportCryptoKeyVersion",
                 "ImportCryptoKeyVersionAsync"
+              ]
+            },
+            "ImportTrustedKeyWrappedCryptoKeyVersion": {
+              "methods": [
+                "ImportTrustedKeyWrappedCryptoKeyVersion",
+                "ImportTrustedKeyWrappedCryptoKeyVersionAsync"
               ]
             },
             "ListCryptoKeyVersions": {

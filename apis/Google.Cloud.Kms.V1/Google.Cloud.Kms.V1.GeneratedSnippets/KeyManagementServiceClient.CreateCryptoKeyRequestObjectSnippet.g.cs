@@ -40,6 +40,7 @@ namespace GoogleCSharpSnippets
                 CryptoKeyId = "",
                 CryptoKey = new CryptoKey(),
                 SkipInitialVersionCreation = false,
+                TrustedWrappingEnabled = false,
             };
             // Make the request
             CryptoKey response = keyManagementServiceClient.CreateCryptoKey(request);
