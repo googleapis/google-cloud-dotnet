@@ -15,9 +15,8 @@ should be used for Cloud Spanner instance administration, such as creating or de
 ## Getting started
 
 Operations generally follow ADO.NET conventions.
-However Cloud Spanner does not support DML (eg. "INSERT INTO ..."). Therefore you should
-use the corresponding API on SpannerConnection to create ADO command objects instead
-of setting CommandText manually.
+There may be some incompatibilities between the ADO.NET surface and Spanner capabilities,
+in which case you should use the relevant SpannerConnection methods.
 
 ## Credentials
 
