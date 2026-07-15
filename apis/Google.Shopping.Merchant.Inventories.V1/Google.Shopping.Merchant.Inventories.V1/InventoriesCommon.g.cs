@@ -28,7 +28,7 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             "ZW50b3JpZXNfY29tbW9uLnByb3RvEidnb29nbGUuc2hvcHBpbmcubWVyY2hh",
             "bnQuaW52ZW50b3JpZXMudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
             "cHJvdG8aIGdvb2dsZS9zaG9wcGluZy90eXBlL3R5cGVzLnByb3RvGhpnb29n",
-            "bGUvdHlwZS9pbnRlcnZhbC5wcm90byKzCQoYTG9jYWxJbnZlbnRvcnlBdHRy",
+            "bGUvdHlwZS9pbnRlcnZhbC5wcm90byK7CgoYTG9jYWxJbnZlbnRvcnlBdHRy",
             "aWJ1dGVzEi8KBXByaWNlGAEgASgLMhsuZ29vZ2xlLnNob3BwaW5nLnR5cGUu",
             "UHJpY2VCA+BBARI0CgpzYWxlX3ByaWNlGAIgASgLMhsuZ29vZ2xlLnNob3Bw",
             "aW5nLnR5cGUuUHJpY2VCA+BBARI9ChlzYWxlX3ByaWNlX2VmZmVjdGl2ZV9k",
@@ -41,53 +41,56 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             "ZXRob2RCA+BBAUgCiAEBEmkKCnBpY2t1cF9zbGEYByABKA4ySy5nb29nbGUu",
             "c2hvcHBpbmcubWVyY2hhbnQuaW52ZW50b3JpZXMudjEuTG9jYWxJbnZlbnRv",
             "cnlBdHRyaWJ1dGVzLlBpY2t1cFNsYUID4EEBSAOIAQESKgoYaW5zdG9yZV9w",
-            "cm9kdWN0X2xvY2F0aW9uGAggASgJQgPgQQFIBIgBARJfChBsb3lhbHR5X3By",
-            "b2dyYW1zGAogAygLMkAuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVu",
-            "dG9yaWVzLnYxLkludmVudG9yeUxveWFsdHlQcm9ncmFtQgPgQQEijwEKDEF2",
-            "YWlsYWJpbGl0eRIsCihMT0NBTF9JTlZFTlRPUllfQVZBSUxBQklMSVRZX1VO",
-            "U1BFQ0lGSUVEEAASDAoISU5fU1RPQ0sQARIYChRMSU1JVEVEX0FWQUlMQUJJ",
-            "TElUWRACEhcKE09OX0RJU1BMQVlfVE9fT1JERVIQAxIQCgxPVVRfT0ZfU1RP",
-            "Q0sQBCJpCgxQaWNrdXBNZXRob2QSHQoZUElDS1VQX01FVEhPRF9VTlNQRUNJ",
-            "RklFRBAAEgcKA0JVWRABEgsKB1JFU0VSVkUQAhIRCg1TSElQX1RPX1NUT1JF",
-            "EAMSEQoNTk9UX1NVUFBPUlRFRBAEIqcBCglQaWNrdXBTbGESGgoWUElDS1VQ",
-            "X1NMQV9VTlNQRUNJRklFRBAAEgwKCFNBTUVfREFZEAESDAoITkVYVF9EQVkQ",
-            "AhILCgdUV09fREFZEAMSDQoJVEhSRUVfREFZEAQSDAoIRk9VUl9EQVkQBRIM",
-            "CghGSVZFX0RBWRAGEgsKB1NJWF9EQVkQBxINCglTRVZFTl9EQVkQCBIOCgpN",
-            "VUxUSV9XRUVLEAlCDwoNX2F2YWlsYWJpbGl0eUILCglfcXVhbnRpdHlCEAoO",
-            "X3BpY2t1cF9tZXRob2RCDQoLX3BpY2t1cF9zbGFCGwoZX2luc3RvcmVfcHJv",
-            "ZHVjdF9sb2NhdGlvbiLSAwoXSW52ZW50b3J5TG95YWx0eVByb2dyYW0SGgoN",
-            "cHJvZ3JhbV9sYWJlbBgBIAEoCUgAiAEBEhcKCnRpZXJfbGFiZWwYAiABKAlI",
-            "AYgBARIvCgVwcmljZRgDIAEoCzIbLmdvb2dsZS5zaG9wcGluZy50eXBlLlBy",
-            "aWNlSAKIAQESQQoXY2FzaGJhY2tfZm9yX2Z1dHVyZV91c2UYBCABKAsyGy5n",
-            "b29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUgDiAEBEhsKDmxveWFsdHlfcG9p",
-            "bnRzGAUgASgDSASIAQESQwofbWVtYmVyX3ByaWNlX2VmZmVjdGl2ZV9pbnRl",
-            "cnZhbBgGIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFsSAWIAQESGwoOc2hp",
-            "cHBpbmdfbGFiZWwYByABKAlIBogBAUIQCg5fcHJvZ3JhbV9sYWJlbEINCgtf",
-            "dGllcl9sYWJlbEIICgZfcHJpY2VCGgoYX2Nhc2hiYWNrX2Zvcl9mdXR1cmVf",
-            "dXNlQhEKD19sb3lhbHR5X3BvaW50c0IiCiBfbWVtYmVyX3ByaWNlX2VmZmVj",
-            "dGl2ZV9pbnRlcnZhbEIRCg9fc2hpcHBpbmdfbGFiZWwiiQQKG1JlZ2lvbmFs",
-            "SW52ZW50b3J5QXR0cmlidXRlcxIvCgVwcmljZRgBIAEoCzIbLmdvb2dsZS5z",
-            "aG9wcGluZy50eXBlLlByaWNlQgPgQQESNAoKc2FsZV9wcmljZRgCIAEoCzIb",
-            "Lmdvb2dsZS5zaG9wcGluZy50eXBlLlByaWNlQgPgQQESPQoZc2FsZV9wcmlj",
-            "ZV9lZmZlY3RpdmVfZGF0ZRgDIAEoCzIVLmdvb2dsZS50eXBlLkludGVydmFs",
-            "QgPgQQEScQoMYXZhaWxhYmlsaXR5GAQgASgOMlEuZ29vZ2xlLnNob3BwaW5n",
-            "Lm1lcmNoYW50LmludmVudG9yaWVzLnYxLlJlZ2lvbmFsSW52ZW50b3J5QXR0",
-            "cmlidXRlcy5BdmFpbGFiaWxpdHlCA+BBAUgAiAEBEl8KEGxveWFsdHlfcHJv",
-            "Z3JhbXMYBSADKAsyQC5nb29nbGUuc2hvcHBpbmcubWVyY2hhbnQuaW52ZW50",
-            "b3JpZXMudjEuSW52ZW50b3J5TG95YWx0eVByb2dyYW1CA+BBASJfCgxBdmFp",
-            "bGFiaWxpdHkSLworUkVHSU9OQUxfSU5WRU5UT1JZX0FWQUlMQUJJTElUWV9V",
-            "TlNQRUNJRklFRBAAEgwKCElOX1NUT0NLEAESEAoMT1VUX09GX1NUT0NLEAJC",
-            "DwoNX2F2YWlsYWJpbGl0eUKeAgorY29tLmdvb2dsZS5zaG9wcGluZy5tZXJj",
-            "aGFudC5pbnZlbnRvcmllcy52MUIWSW52ZW50b3JpZXNDb21tb25Qcm90b1AB",
-            "WlNjbG91ZC5nb29nbGUuY29tL2dvL3Nob3BwaW5nL21lcmNoYW50L2ludmVu",
-            "dG9yaWVzL2FwaXYxL2ludmVudG9yaWVzcGI7aW52ZW50b3JpZXNwYqoCJ0dv",
-            "b2dsZS5TaG9wcGluZy5NZXJjaGFudC5JbnZlbnRvcmllcy5WMcoCJ0dvb2ds",
-            "ZVxTaG9wcGluZ1xNZXJjaGFudFxJbnZlbnRvcmllc1xWMeoCK0dvb2dsZTo6",
-            "U2hvcHBpbmc6Ok1lcmNoYW50OjpJbnZlbnRvcmllczo6VjFiBnByb3RvMw=="));
+            "cm9kdWN0X2xvY2F0aW9uGAggASgJQgPgQQFIBIgBARImChRsb2NhbF9zaGlw",
+            "cGluZ19sYWJlbBgJIAEoCUID4EEBSAWIAQESXwoQbG95YWx0eV9wcm9ncmFt",
+            "cxgKIAMoCzJALmdvb2dsZS5zaG9wcGluZy5tZXJjaGFudC5pbnZlbnRvcmll",
+            "cy52MS5JbnZlbnRvcnlMb3lhbHR5UHJvZ3JhbUID4EEBEkUKEWN1c3RvbV9h",
+            "dHRyaWJ1dGVzGAsgAygLMiUuZ29vZ2xlLnNob3BwaW5nLnR5cGUuQ3VzdG9t",
+            "QXR0cmlidXRlQgPgQQEijwEKDEF2YWlsYWJpbGl0eRIsCihMT0NBTF9JTlZF",
+            "TlRPUllfQVZBSUxBQklMSVRZX1VOU1BFQ0lGSUVEEAASDAoISU5fU1RPQ0sQ",
+            "ARIYChRMSU1JVEVEX0FWQUlMQUJJTElUWRACEhcKE09OX0RJU1BMQVlfVE9f",
+            "T1JERVIQAxIQCgxPVVRfT0ZfU1RPQ0sQBCJpCgxQaWNrdXBNZXRob2QSHQoZ",
+            "UElDS1VQX01FVEhPRF9VTlNQRUNJRklFRBAAEgcKA0JVWRABEgsKB1JFU0VS",
+            "VkUQAhIRCg1TSElQX1RPX1NUT1JFEAMSEQoNTk9UX1NVUFBPUlRFRBAEIqcB",
+            "CglQaWNrdXBTbGESGgoWUElDS1VQX1NMQV9VTlNQRUNJRklFRBAAEgwKCFNB",
+            "TUVfREFZEAESDAoITkVYVF9EQVkQAhILCgdUV09fREFZEAMSDQoJVEhSRUVf",
+            "REFZEAQSDAoIRk9VUl9EQVkQBRIMCghGSVZFX0RBWRAGEgsKB1NJWF9EQVkQ",
+            "BxINCglTRVZFTl9EQVkQCBIOCgpNVUxUSV9XRUVLEAlCDwoNX2F2YWlsYWJp",
+            "bGl0eUILCglfcXVhbnRpdHlCEAoOX3BpY2t1cF9tZXRob2RCDQoLX3BpY2t1",
+            "cF9zbGFCGwoZX2luc3RvcmVfcHJvZHVjdF9sb2NhdGlvbkIXChVfbG9jYWxf",
+            "c2hpcHBpbmdfbGFiZWwi0gMKF0ludmVudG9yeUxveWFsdHlQcm9ncmFtEhoK",
+            "DXByb2dyYW1fbGFiZWwYASABKAlIAIgBARIXCgp0aWVyX2xhYmVsGAIgASgJ",
+            "SAGIAQESLwoFcHJpY2UYAyABKAsyGy5nb29nbGUuc2hvcHBpbmcudHlwZS5Q",
+            "cmljZUgCiAEBEkEKF2Nhc2hiYWNrX2Zvcl9mdXR1cmVfdXNlGAQgASgLMhsu",
+            "Z29vZ2xlLnNob3BwaW5nLnR5cGUuUHJpY2VIA4gBARIbCg5sb3lhbHR5X3Bv",
+            "aW50cxgFIAEoA0gEiAEBEkMKH21lbWJlcl9wcmljZV9lZmZlY3RpdmVfaW50",
+            "ZXJ2YWwYBiABKAsyFS5nb29nbGUudHlwZS5JbnRlcnZhbEgFiAEBEhsKDnNo",
+            "aXBwaW5nX2xhYmVsGAcgASgJSAaIAQFCEAoOX3Byb2dyYW1fbGFiZWxCDQoL",
+            "X3RpZXJfbGFiZWxCCAoGX3ByaWNlQhoKGF9jYXNoYmFja19mb3JfZnV0dXJl",
+            "X3VzZUIRCg9fbG95YWx0eV9wb2ludHNCIgogX21lbWJlcl9wcmljZV9lZmZl",
+            "Y3RpdmVfaW50ZXJ2YWxCEQoPX3NoaXBwaW5nX2xhYmVsIokEChtSZWdpb25h",
+            "bEludmVudG9yeUF0dHJpYnV0ZXMSLwoFcHJpY2UYASABKAsyGy5nb29nbGUu",
+            "c2hvcHBpbmcudHlwZS5QcmljZUID4EEBEjQKCnNhbGVfcHJpY2UYAiABKAsy",
+            "Gy5nb29nbGUuc2hvcHBpbmcudHlwZS5QcmljZUID4EEBEj0KGXNhbGVfcHJp",
+            "Y2VfZWZmZWN0aXZlX2RhdGUYAyABKAsyFS5nb29nbGUudHlwZS5JbnRlcnZh",
+            "bEID4EEBEnEKDGF2YWlsYWJpbGl0eRgEIAEoDjJRLmdvb2dsZS5zaG9wcGlu",
+            "Zy5tZXJjaGFudC5pbnZlbnRvcmllcy52MS5SZWdpb25hbEludmVudG9yeUF0",
+            "dHJpYnV0ZXMuQXZhaWxhYmlsaXR5QgPgQQFIAIgBARJfChBsb3lhbHR5X3By",
+            "b2dyYW1zGAUgAygLMkAuZ29vZ2xlLnNob3BwaW5nLm1lcmNoYW50LmludmVu",
+            "dG9yaWVzLnYxLkludmVudG9yeUxveWFsdHlQcm9ncmFtQgPgQQEiXwoMQXZh",
+            "aWxhYmlsaXR5Ei8KK1JFR0lPTkFMX0lOVkVOVE9SWV9BVkFJTEFCSUxJVFlf",
+            "VU5TUEVDSUZJRUQQABIMCghJTl9TVE9DSxABEhAKDE9VVF9PRl9TVE9DSxAC",
+            "Qg8KDV9hdmFpbGFiaWxpdHlCngIKK2NvbS5nb29nbGUuc2hvcHBpbmcubWVy",
+            "Y2hhbnQuaW52ZW50b3JpZXMudjFCFkludmVudG9yaWVzQ29tbW9uUHJvdG9Q",
+            "AVpTY2xvdWQuZ29vZ2xlLmNvbS9nby9zaG9wcGluZy9tZXJjaGFudC9pbnZl",
+            "bnRvcmllcy9hcGl2MS9pbnZlbnRvcmllc3BiO2ludmVudG9yaWVzcGKqAidH",
+            "b29nbGUuU2hvcHBpbmcuTWVyY2hhbnQuSW52ZW50b3JpZXMuVjHKAidHb29n",
+            "bGVcU2hvcHBpbmdcTWVyY2hhbnRcSW52ZW50b3JpZXNcVjHqAitHb29nbGU6",
+            "OlNob3BwaW5nOjpNZXJjaGFudDo6SW52ZW50b3JpZXM6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Shopping.Type.TypesReflection.Descriptor, global::Google.Type.IntervalReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes), global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Parser, new[]{ "Price", "SalePrice", "SalePriceEffectiveDate", "Availability", "Quantity", "PickupMethod", "PickupSla", "InstoreProductLocation", "LoyaltyPrograms" }, new[]{ "Availability", "Quantity", "PickupMethod", "PickupSla", "InstoreProductLocation" }, new[]{ typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.Availability), typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.PickupMethod), typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.PickupSla) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes), global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Parser, new[]{ "Price", "SalePrice", "SalePriceEffectiveDate", "Availability", "Quantity", "PickupMethod", "PickupSla", "InstoreProductLocation", "LocalShippingLabel", "LoyaltyPrograms", "CustomAttributes" }, new[]{ "Availability", "Quantity", "PickupMethod", "PickupSla", "InstoreProductLocation", "LocalShippingLabel" }, new[]{ typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.Availability), typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.PickupMethod), typeof(global::Google.Shopping.Merchant.Inventories.V1.LocalInventoryAttributes.Types.PickupSla) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram), global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram.Parser, new[]{ "ProgramLabel", "TierLabel", "Price", "CashbackForFutureUse", "LoyaltyPoints", "MemberPriceEffectiveInterval", "ShippingLabel" }, new[]{ "ProgramLabel", "TierLabel", "Price", "CashbackForFutureUse", "LoyaltyPoints", "MemberPriceEffectiveInterval", "ShippingLabel" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes), global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes.Parser, new[]{ "Price", "SalePrice", "SalePriceEffectiveDate", "Availability", "LoyaltyPrograms" }, new[]{ "Availability" }, new[]{ typeof(global::Google.Shopping.Merchant.Inventories.V1.RegionalInventoryAttributes.Types.Availability) }, null, null)
           }));
@@ -144,7 +147,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       pickupMethod_ = other.pickupMethod_;
       pickupSla_ = other.pickupSla_;
       instoreProductLocation_ = other.instoreProductLocation_;
+      localShippingLabel_ = other.localShippingLabel_;
       loyaltyPrograms_ = other.loyaltyPrograms_.Clone();
+      customAttributes_ = other.customAttributes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -360,6 +365,38 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       instoreProductLocation_ = null;
     }
 
+    /// <summary>Field number for the "local_shipping_label" field.</summary>
+    public const int LocalShippingLabelFieldNumber = 9;
+    private readonly static string LocalShippingLabelDefaultValue = "";
+
+    private string localShippingLabel_;
+    /// <summary>
+    /// Optional. Specifies a label associated with the shipping for the
+    /// `LocalInventory` resource. Can be used to group local shipping services to
+    /// this particular inventory item. For accepted field format, see the [Local
+    /// delivery](https://support.google.com/merchants/answer/14819809#localdelivery)
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LocalShippingLabel {
+      get { return localShippingLabel_ ?? LocalShippingLabelDefaultValue; }
+      set {
+        localShippingLabel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "local_shipping_label" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasLocalShippingLabel {
+      get { return localShippingLabel_ != null; }
+    }
+    /// <summary>Clears the value of the "local_shipping_label" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearLocalShippingLabel() {
+      localShippingLabel_ = null;
+    }
+
     /// <summary>Field number for the "loyalty_programs" field.</summary>
     public const int LoyaltyProgramsFieldNumber = 10;
     private static readonly pb::FieldCodec<global::Google.Shopping.Merchant.Inventories.V1.InventoryLoyaltyProgram> _repeated_loyaltyPrograms_codec
@@ -388,6 +425,27 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       get { return loyaltyPrograms_; }
     }
 
+    /// <summary>Field number for the "custom_attributes" field.</summary>
+    public const int CustomAttributesFieldNumber = 11;
+    private static readonly pb::FieldCodec<global::Google.Shopping.Type.CustomAttribute> _repeated_customAttributes_codec
+        = pb::FieldCodec.ForMessage(90, global::Google.Shopping.Type.CustomAttribute.Parser);
+    private readonly pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute> customAttributes_ = new pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute>();
+    /// <summary>
+    /// Optional. A list of custom (merchant-provided) attributes. It can also be
+    /// used for submitting any attribute of the data specification in its generic
+    /// form (for example, `{ "name": "size type", "value": "regular" }`). This is
+    /// useful for submitting attributes not explicitly exposed by the API. Maximum
+    /// allowed number of characters for each custom attribute is 10240 (represents
+    /// sum of characters for name and value). Maximum 2500 custom attributes can
+    /// be set, with total size of 102.4kB. Underscores in custom
+    /// attribute names are replaced by spaces upon insertion.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Shopping.Type.CustomAttribute> CustomAttributes {
+      get { return customAttributes_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -411,7 +469,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (PickupMethod != other.PickupMethod) return false;
       if (PickupSla != other.PickupSla) return false;
       if (InstoreProductLocation != other.InstoreProductLocation) return false;
+      if (LocalShippingLabel != other.LocalShippingLabel) return false;
       if(!loyaltyPrograms_.Equals(other.loyaltyPrograms_)) return false;
+      if(!customAttributes_.Equals(other.customAttributes_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -427,7 +487,9 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (HasPickupMethod) hash ^= PickupMethod.GetHashCode();
       if (HasPickupSla) hash ^= PickupSla.GetHashCode();
       if (HasInstoreProductLocation) hash ^= InstoreProductLocation.GetHashCode();
+      if (HasLocalShippingLabel) hash ^= LocalShippingLabel.GetHashCode();
       hash ^= loyaltyPrograms_.GetHashCode();
+      hash ^= customAttributes_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -478,7 +540,12 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(66);
         output.WriteString(InstoreProductLocation);
       }
+      if (HasLocalShippingLabel) {
+        output.WriteRawTag(74);
+        output.WriteString(LocalShippingLabel);
+      }
       loyaltyPrograms_.WriteTo(output, _repeated_loyaltyPrograms_codec);
+      customAttributes_.WriteTo(output, _repeated_customAttributes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -521,7 +588,12 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
         output.WriteRawTag(66);
         output.WriteString(InstoreProductLocation);
       }
+      if (HasLocalShippingLabel) {
+        output.WriteRawTag(74);
+        output.WriteString(LocalShippingLabel);
+      }
       loyaltyPrograms_.WriteTo(ref output, _repeated_loyaltyPrograms_codec);
+      customAttributes_.WriteTo(ref output, _repeated_customAttributes_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -556,7 +628,11 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (HasInstoreProductLocation) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(InstoreProductLocation);
       }
+      if (HasLocalShippingLabel) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LocalShippingLabel);
+      }
       size += loyaltyPrograms_.CalculateSize(_repeated_loyaltyPrograms_codec);
+      size += customAttributes_.CalculateSize(_repeated_customAttributes_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -602,7 +678,11 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
       if (other.HasInstoreProductLocation) {
         InstoreProductLocation = other.InstoreProductLocation;
       }
+      if (other.HasLocalShippingLabel) {
+        LocalShippingLabel = other.LocalShippingLabel;
+      }
       loyaltyPrograms_.Add(other.loyaltyPrograms_);
+      customAttributes_.Add(other.customAttributes_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -663,8 +743,16 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             InstoreProductLocation = input.ReadString();
             break;
           }
+          case 74: {
+            LocalShippingLabel = input.ReadString();
+            break;
+          }
           case 82: {
             loyaltyPrograms_.AddEntriesFrom(input, _repeated_loyaltyPrograms_codec);
+            break;
+          }
+          case 90: {
+            customAttributes_.AddEntriesFrom(input, _repeated_customAttributes_codec);
             break;
           }
         }
@@ -727,8 +815,16 @@ namespace Google.Shopping.Merchant.Inventories.V1 {
             InstoreProductLocation = input.ReadString();
             break;
           }
+          case 74: {
+            LocalShippingLabel = input.ReadString();
+            break;
+          }
           case 82: {
             loyaltyPrograms_.AddEntriesFrom(ref input, _repeated_loyaltyPrograms_codec);
+            break;
+          }
+          case 90: {
+            customAttributes_.AddEntriesFrom(ref input, _repeated_customAttributes_codec);
             break;
           }
         }
