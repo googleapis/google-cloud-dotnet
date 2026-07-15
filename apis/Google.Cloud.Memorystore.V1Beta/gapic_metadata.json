@@ -10,16 +10,82 @@
         "grpc": {
           "libraryClient": "MemorystoreClient",
           "rpcs": {
+            "AddAuthToken": {
+              "methods": [
+                "AddAuthToken",
+                "AddAuthTokenAsync"
+              ]
+            },
+            "AddTokenAuthUser": {
+              "methods": [
+                "AddTokenAuthUser",
+                "AddTokenAuthUserAsync"
+              ]
+            },
+            "BackupInstance": {
+              "methods": [
+                "BackupInstance",
+                "BackupInstanceAsync"
+              ]
+            },
             "CreateInstance": {
               "methods": [
                 "CreateInstance",
                 "CreateInstanceAsync"
               ]
             },
+            "DeleteAuthToken": {
+              "methods": [
+                "DeleteAuthToken",
+                "DeleteAuthTokenAsync"
+              ]
+            },
+            "DeleteBackup": {
+              "methods": [
+                "DeleteBackup",
+                "DeleteBackupAsync"
+              ]
+            },
             "DeleteInstance": {
               "methods": [
                 "DeleteInstance",
                 "DeleteInstanceAsync"
+              ]
+            },
+            "DeleteTokenAuthUser": {
+              "methods": [
+                "DeleteTokenAuthUser",
+                "DeleteTokenAuthUserAsync"
+              ]
+            },
+            "ExportBackup": {
+              "methods": [
+                "ExportBackup",
+                "ExportBackupAsync"
+              ]
+            },
+            "FinishMigration": {
+              "methods": [
+                "FinishMigration",
+                "FinishMigrationAsync"
+              ]
+            },
+            "GetAuthToken": {
+              "methods": [
+                "GetAuthToken",
+                "GetAuthTokenAsync"
+              ]
+            },
+            "GetBackup": {
+              "methods": [
+                "GetBackup",
+                "GetBackupAsync"
+              ]
+            },
+            "GetBackupCollection": {
+              "methods": [
+                "GetBackupCollection",
+                "GetBackupCollectionAsync"
               ]
             },
             "GetCertificateAuthority": {
@@ -40,10 +106,52 @@
                 "GetSharedRegionalCertificateAuthorityAsync"
               ]
             },
+            "GetTokenAuthUser": {
+              "methods": [
+                "GetTokenAuthUser",
+                "GetTokenAuthUserAsync"
+              ]
+            },
+            "ListAuthTokens": {
+              "methods": [
+                "ListAuthTokens",
+                "ListAuthTokensAsync"
+              ]
+            },
+            "ListBackupCollections": {
+              "methods": [
+                "ListBackupCollections",
+                "ListBackupCollectionsAsync"
+              ]
+            },
+            "ListBackups": {
+              "methods": [
+                "ListBackups",
+                "ListBackupsAsync"
+              ]
+            },
             "ListInstances": {
               "methods": [
                 "ListInstances",
                 "ListInstancesAsync"
+              ]
+            },
+            "ListTokenAuthUsers": {
+              "methods": [
+                "ListTokenAuthUsers",
+                "ListTokenAuthUsersAsync"
+              ]
+            },
+            "RescheduleMaintenance": {
+              "methods": [
+                "RescheduleMaintenance",
+                "RescheduleMaintenanceAsync"
+              ]
+            },
+            "StartMigration": {
+              "methods": [
+                "StartMigration",
+                "StartMigrationAsync"
               ]
             },
             "UpdateInstance": {

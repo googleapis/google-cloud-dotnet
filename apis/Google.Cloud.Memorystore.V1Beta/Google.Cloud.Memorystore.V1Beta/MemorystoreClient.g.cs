@@ -59,6 +59,34 @@ namespace Google.Cloud.Memorystore.V1Beta
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
             GetCertificateAuthoritySettings = existing.GetCertificateAuthoritySettings;
             GetSharedRegionalCertificateAuthoritySettings = existing.GetSharedRegionalCertificateAuthoritySettings;
+            RescheduleMaintenanceSettings = existing.RescheduleMaintenanceSettings;
+            RescheduleMaintenanceOperationsSettings = existing.RescheduleMaintenanceOperationsSettings.Clone();
+            ListBackupCollectionsSettings = existing.ListBackupCollectionsSettings;
+            GetBackupCollectionSettings = existing.GetBackupCollectionSettings;
+            ListBackupsSettings = existing.ListBackupsSettings;
+            GetBackupSettings = existing.GetBackupSettings;
+            DeleteBackupSettings = existing.DeleteBackupSettings;
+            DeleteBackupOperationsSettings = existing.DeleteBackupOperationsSettings.Clone();
+            ExportBackupSettings = existing.ExportBackupSettings;
+            ExportBackupOperationsSettings = existing.ExportBackupOperationsSettings.Clone();
+            BackupInstanceSettings = existing.BackupInstanceSettings;
+            BackupInstanceOperationsSettings = existing.BackupInstanceOperationsSettings.Clone();
+            StartMigrationSettings = existing.StartMigrationSettings;
+            StartMigrationOperationsSettings = existing.StartMigrationOperationsSettings.Clone();
+            FinishMigrationSettings = existing.FinishMigrationSettings;
+            FinishMigrationOperationsSettings = existing.FinishMigrationOperationsSettings.Clone();
+            ListTokenAuthUsersSettings = existing.ListTokenAuthUsersSettings;
+            GetTokenAuthUserSettings = existing.GetTokenAuthUserSettings;
+            ListAuthTokensSettings = existing.ListAuthTokensSettings;
+            GetAuthTokenSettings = existing.GetAuthTokenSettings;
+            AddTokenAuthUserSettings = existing.AddTokenAuthUserSettings;
+            AddTokenAuthUserOperationsSettings = existing.AddTokenAuthUserOperationsSettings.Clone();
+            DeleteTokenAuthUserSettings = existing.DeleteTokenAuthUserSettings;
+            DeleteTokenAuthUserOperationsSettings = existing.DeleteTokenAuthUserOperationsSettings.Clone();
+            AddAuthTokenSettings = existing.AddAuthTokenSettings;
+            AddAuthTokenOperationsSettings = existing.AddAuthTokenOperationsSettings.Clone();
+            DeleteAuthTokenSettings = existing.DeleteAuthTokenSettings;
+            DeleteAuthTokenOperationsSettings = existing.DeleteAuthTokenOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -223,6 +251,402 @@ namespace Google.Cloud.Memorystore.V1Beta
         public gaxgrpc::CallSettings GetSharedRegionalCertificateAuthoritySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.RescheduleMaintenance</c> and <c>MemorystoreClient.RescheduleMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RescheduleMaintenanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.RescheduleMaintenance</c> and
+        /// <c>MemorystoreClient.RescheduleMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RescheduleMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ListBackupCollections</c> and <c>MemorystoreClient.ListBackupCollectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupCollectionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.GetBackupCollection</c> and <c>MemorystoreClient.GetBackupCollectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupCollectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ListBackups</c> and <c>MemorystoreClient.ListBackupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListBackupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>MemorystoreClient.GetBackup</c>
+        ///  and <c>MemorystoreClient.GetBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.DeleteBackup</c> and <c>MemorystoreClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.DeleteBackup</c> and
+        /// <c>MemorystoreClient.DeleteBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ExportBackup</c> and <c>MemorystoreClient.ExportBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ExportBackupSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.ExportBackup</c> and
+        /// <c>MemorystoreClient.ExportBackupAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ExportBackupOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.BackupInstance</c> and <c>MemorystoreClient.BackupInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BackupInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.BackupInstance</c> and
+        /// <c>MemorystoreClient.BackupInstanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings BackupInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.StartMigration</c> and <c>MemorystoreClient.StartMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings StartMigrationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.StartMigration</c> and
+        /// <c>MemorystoreClient.StartMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings StartMigrationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.FinishMigration</c> and <c>MemorystoreClient.FinishMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings FinishMigrationSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.FinishMigration</c> and
+        /// <c>MemorystoreClient.FinishMigrationAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings FinishMigrationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ListTokenAuthUsers</c> and <c>MemorystoreClient.ListTokenAuthUsersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListTokenAuthUsersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.GetTokenAuthUser</c> and <c>MemorystoreClient.GetTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetTokenAuthUserSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ListAuthTokens</c> and <c>MemorystoreClient.ListAuthTokensAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAuthTokensSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.GetAuthToken</c> and <c>MemorystoreClient.GetAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAuthTokenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.AddTokenAuthUser</c> and <c>MemorystoreClient.AddTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddTokenAuthUserSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.AddTokenAuthUser</c> and
+        /// <c>MemorystoreClient.AddTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddTokenAuthUserOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.DeleteTokenAuthUser</c> and <c>MemorystoreClient.DeleteTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTokenAuthUserSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.DeleteTokenAuthUser</c> and
+        /// <c>MemorystoreClient.DeleteTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteTokenAuthUserOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.AddAuthToken</c> and <c>MemorystoreClient.AddAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddAuthTokenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.AddAuthToken</c> and
+        /// <c>MemorystoreClient.AddAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddAuthTokenOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.DeleteAuthToken</c> and <c>MemorystoreClient.DeleteAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAuthTokenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.DeleteAuthToken</c> and
+        /// <c>MemorystoreClient.DeleteAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAuthTokenOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
         /// The settings to use for the <see cref="gcl::LocationsClient"/> associated with the client.
         /// </summary>
         public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
@@ -300,11 +724,15 @@ namespace Google.Cloud.Memorystore.V1Beta
         /// The default Memorystore scopes are:
         /// <list type="bullet">
         /// <item><description>https://www.googleapis.com/auth/cloud-platform</description></item>
+        /// <item><description>https://www.googleapis.com/auth/memorystore.read-only</description></item>
+        /// <item><description>https://www.googleapis.com/auth/memorystore.read-write</description></item>
         /// </list>
         /// </remarks>
         public static scg::IReadOnlyList<string> DefaultScopes { get; } = new sco::ReadOnlyCollection<string>(new string[]
         {
             "https://www.googleapis.com/auth/cloud-platform",
+            "https://www.googleapis.com/auth/memorystore.read-only",
+            "https://www.googleapis.com/auth/memorystore.read-write",
         });
 
         /// <summary>The service metadata associated with this client type.</summary>
@@ -1355,6 +1783,2641 @@ namespace Google.Cloud.Memorystore.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SharedRegionalCertificateAuthority> GetSharedRegionalCertificateAuthorityAsync(SharedRegionalCertificateAuthorityName name, st::CancellationToken cancellationToken) =>
             GetSharedRegionalCertificateAuthorityAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RescheduleMaintenance</c>.</summary>
+        public virtual lro::OperationsClient RescheduleMaintenanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RescheduleMaintenance</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceRescheduleMaintenance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RescheduleMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceRescheduleMaintenanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the instance to reschedule maintenance for:
+        /// `projects/{project}/locations/{location_id}/instances/{instance}`
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, schedule_time must be set.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format.
+        /// Example: `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(string name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenance(new RescheduleMaintenanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the instance to reschedule maintenance for:
+        /// `projects/{project}/locations/{location_id}/instances/{instance}`
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, schedule_time must be set.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format.
+        /// Example: `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(string name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenanceAsync(new RescheduleMaintenanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the instance to reschedule maintenance for:
+        /// `projects/{project}/locations/{location_id}/instances/{instance}`
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, schedule_time must be set.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format.
+        /// Example: `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(string name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(name, rescheduleType, scheduleTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the instance to reschedule maintenance for:
+        /// `projects/{project}/locations/{location_id}/instances/{instance}`
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, schedule_time must be set.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format.
+        /// Example: `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(InstanceName name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenance(new RescheduleMaintenanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the instance to reschedule maintenance for:
+        /// `projects/{project}/locations/{location_id}/instances/{instance}`
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, schedule_time must be set.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format.
+        /// Example: `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(InstanceName name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenanceAsync(new RescheduleMaintenanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Name of the instance to reschedule maintenance for:
+        /// `projects/{project}/locations/{location_id}/instances/{instance}`
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, schedule_time must be set.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format.
+        /// Example: `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(InstanceName name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(name, rescheduleType, scheduleTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollections(ListBackupCollectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollectionsAsync(ListBackupCollectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection location using the
+        /// form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupCollectionsRequest request = new ListBackupCollectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupCollections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection location using the
+        /// form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupCollectionsRequest request = new ListBackupCollectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupCollectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection location using the
+        /// form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupCollectionsRequest request = new ListBackupCollectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupCollections(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection location using the
+        /// form:
+        /// `projects/{project_id}/locations/{location_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupCollection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupCollectionsRequest request = new ListBackupCollectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupCollectionsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupCollection GetBackupCollection(GetBackupCollectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(GetBackupCollectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(GetBackupCollectionRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupCollectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupCollection GetBackupCollection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupCollection(new GetBackupCollectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupCollectionAsync(new GetBackupCollectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupCollectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BackupCollection GetBackupCollection(BackupCollectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupCollection(new GetBackupCollectionRequest
+            {
+                BackupCollectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(BackupCollectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupCollectionAsync(new GetBackupCollectionRequest
+            {
+                BackupCollectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backupCollection resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BackupCollection> GetBackupCollectionAsync(BackupCollectionName name, st::CancellationToken cancellationToken) =>
+            GetBackupCollectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(BackupCollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsBackupCollectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackups(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the backupCollection using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}`
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(BackupCollectionName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListBackupsRequest request = new ListBackupsRequest
+            {
+                ParentAsBackupCollectionName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListBackupsAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(GetBackupRequest request, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Backup GetBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackup(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetBackupAsync(new GetBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Backup> GetBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            GetBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteBackup</c>.</summary>
+        public virtual lro::OperationsClient DeleteBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackup(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(BackupName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteBackupAsync(new DeleteBackupRequest
+            {
+                BackupName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance backup resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/backupCollections/{backup_collection_id}/backups/{backup_id}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(BackupName name, st::CancellationToken cancellationToken) =>
+            DeleteBackupAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> ExportBackup(ExportBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> ExportBackupAsync(ExportBackupRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> ExportBackupAsync(ExportBackupRequest request, st::CancellationToken cancellationToken) =>
+            ExportBackupAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ExportBackup</c>.</summary>
+        public virtual lro::OperationsClient ExportBackupOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ExportBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Backup, OperationMetadata> PollOnceExportBackup(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ExportBackup</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Backup, OperationMetadata>> PollOnceExportBackupAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Backup, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ExportBackupOperationsClient, callSettings);
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> BackupInstance(BackupInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> BackupInstanceAsync(BackupInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> BackupInstanceAsync(BackupInstanceRequest request, st::CancellationToken cancellationToken) =>
+            BackupInstanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>BackupInstance</c>.</summary>
+        public virtual lro::OperationsClient BackupInstanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>BackupInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceBackupInstance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BackupInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>BackupInstance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceBackupInstanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BackupInstanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> BackupInstance(string name, gaxgrpc::CallSettings callSettings = null) =>
+            BackupInstance(new BackupInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> BackupInstanceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            BackupInstanceAsync(new BackupInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> BackupInstanceAsync(string name, st::CancellationToken cancellationToken) =>
+            BackupInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> BackupInstance(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            BackupInstance(new BackupInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> BackupInstanceAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            BackupInstanceAsync(new BackupInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a Google Cloud region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> BackupInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+            BackupInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> StartMigration(StartMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> StartMigrationAsync(StartMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> StartMigrationAsync(StartMigrationRequest request, st::CancellationToken cancellationToken) =>
+            StartMigrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>StartMigration</c>.</summary>
+        public virtual lro::OperationsClient StartMigrationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>StartMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceStartMigration(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>StartMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceStartMigrationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), StartMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> FinishMigration(FinishMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(FinishMigrationRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(FinishMigrationRequest request, st::CancellationToken cancellationToken) =>
+            FinishMigrationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>FinishMigration</c>.</summary>
+        public virtual lro::OperationsClient FinishMigrationOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>FinishMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceFinishMigration(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), FinishMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>FinishMigration</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceFinishMigrationAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), FinishMigrationOperationsClient, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> FinishMigration(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            FinishMigration(new FinishMigrationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(string name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            FinishMigrationAsync(new FinishMigrationRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(string name, bool force, st::CancellationToken cancellationToken) =>
+            FinishMigrationAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> FinishMigration(InstanceName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            FinishMigration(new FinishMigrationRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(InstanceName name, bool force, gaxgrpc::CallSettings callSettings = null) =>
+            FinishMigrationAsync(new FinishMigrationRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                Force = force,
+            }, callSettings);
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the instance to finalize migration on.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="force">
+        /// Optional. By default, the `FinishMigration` operation ensures the target
+        /// replication offset to catch up to the source offset as of the time of the
+        /// call. Set this field to `true` to bypass this offset verification check.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(InstanceName name, bool force, st::CancellationToken cancellationToken) =>
+            FinishMigrationAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsers(ListTokenAuthUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsersAsync(ListTokenAuthUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list token auth users from.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTokenAuthUsersRequest request = new ListTokenAuthUsersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTokenAuthUsers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list token auth users from.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTokenAuthUsersRequest request = new ListTokenAuthUsersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTokenAuthUsersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list token auth users from.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsers(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTokenAuthUsersRequest request = new ListTokenAuthUsersRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTokenAuthUsers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list token auth users from.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsersAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTokenAuthUsersRequest request = new ListTokenAuthUsersRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTokenAuthUsersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TokenAuthUser GetTokenAuthUser(GetTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(GetTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(GetTokenAuthUserRequest request, st::CancellationToken cancellationToken) =>
+            GetTokenAuthUserAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TokenAuthUser GetTokenAuthUser(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTokenAuthUser(new GetTokenAuthUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTokenAuthUserAsync(new GetTokenAuthUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(string name, st::CancellationToken cancellationToken) =>
+            GetTokenAuthUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TokenAuthUser GetTokenAuthUser(TokenAuthUserName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTokenAuthUser(new GetTokenAuthUserRequest
+            {
+                TokenAuthUserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(TokenAuthUserName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTokenAuthUserAsync(new GetTokenAuthUserRequest
+            {
+                TokenAuthUserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(TokenAuthUserName name, st::CancellationToken cancellationToken) =>
+            GetTokenAuthUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokens(ListAuthTokensRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokensAsync(ListAuthTokensRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list auth tokens from.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokens(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthTokensRequest request = new ListAuthTokensRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthTokens(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list auth tokens from.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokensAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthTokensRequest request = new ListAuthTokensRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthTokensAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list auth tokens from.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokens(TokenAuthUserName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthTokensRequest request = new ListAuthTokensRequest
+            {
+                ParentAsTokenAuthUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthTokens(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list auth tokens from.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokensAsync(TokenAuthUserName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthTokensRequest request = new ListAuthTokensRequest
+            {
+                ParentAsTokenAuthUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthTokensAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthToken GetAuthToken(GetAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(GetAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(GetAuthTokenRequest request, st::CancellationToken cancellationToken) =>
+            GetAuthTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthToken GetAuthToken(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthToken(new GetAuthTokenRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthTokenAsync(new GetAuthTokenRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAuthTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthToken GetAuthToken(AuthTokenName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthToken(new GetAuthTokenRequest
+            {
+                AuthTokenName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(AuthTokenName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthTokenAsync(new GetAuthTokenRequest
+            {
+                AuthTokenName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(AuthTokenName name, st::CancellationToken cancellationToken) =>
+            GetAuthTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> AddTokenAuthUser(AddTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(AddTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(AddTokenAuthUserRequest request, st::CancellationToken cancellationToken) =>
+            AddTokenAuthUserAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddTokenAuthUser</c>.</summary>
+        public virtual lro::OperationsClient AddTokenAuthUserOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddTokenAuthUser</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceAddTokenAuthUser(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddTokenAuthUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddTokenAuthUser</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceAddTokenAuthUserAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddTokenAuthUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> AddTokenAuthUser(string instance, string tokenAuthUser, gaxgrpc::CallSettings callSettings = null) =>
+            AddTokenAuthUser(new AddTokenAuthUserRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(string instance, string tokenAuthUser, gaxgrpc::CallSettings callSettings = null) =>
+            AddTokenAuthUserAsync(new AddTokenAuthUserRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(string instance, string tokenAuthUser, st::CancellationToken cancellationToken) =>
+            AddTokenAuthUserAsync(instance, tokenAuthUser, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> AddTokenAuthUser(InstanceName instance, string tokenAuthUser, gaxgrpc::CallSettings callSettings = null) =>
+            AddTokenAuthUser(new AddTokenAuthUserRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(InstanceName instance, string tokenAuthUser, gaxgrpc::CallSettings callSettings = null) =>
+            AddTokenAuthUserAsync(new AddTokenAuthUserRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(InstanceName instance, string tokenAuthUser, st::CancellationToken cancellationToken) =>
+            AddTokenAuthUserAsync(instance, tokenAuthUser, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTokenAuthUser(DeleteTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(DeleteTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(DeleteTokenAuthUserRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTokenAuthUserAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteTokenAuthUser</c>.</summary>
+        public virtual lro::OperationsClient DeleteTokenAuthUserOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteTokenAuthUser</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteTokenAuthUser(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteTokenAuthUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteTokenAuthUser</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteTokenAuthUserAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteTokenAuthUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTokenAuthUser(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTokenAuthUser(new DeleteTokenAuthUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTokenAuthUserAsync(new DeleteTokenAuthUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTokenAuthUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTokenAuthUser(TokenAuthUserName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTokenAuthUser(new DeleteTokenAuthUserRequest
+            {
+                TokenAuthUserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(TokenAuthUserName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTokenAuthUserAsync(new DeleteTokenAuthUserRequest
+            {
+                TokenAuthUserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(TokenAuthUserName name, st::CancellationToken cancellationToken) =>
+            DeleteTokenAuthUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TokenAuthUser, OperationMetadata> AddAuthToken(AddAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(AddAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(AddAuthTokenRequest request, st::CancellationToken cancellationToken) =>
+            AddAuthTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddAuthToken</c>.</summary>
+        public virtual lro::OperationsClient AddAuthTokenOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddAuthToken</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TokenAuthUser, OperationMetadata> PollOnceAddAuthToken(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TokenAuthUser, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddAuthTokenOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddAuthToken</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> PollOnceAddAuthTokenAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TokenAuthUser, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddAuthTokenOperationsClient, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TokenAuthUser, OperationMetadata> AddAuthToken(string tokenAuthUser, AuthToken authToken, gaxgrpc::CallSettings callSettings = null) =>
+            AddAuthToken(new AddAuthTokenRequest
+            {
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+                AuthToken = gax::GaxPreconditions.CheckNotNull(authToken, nameof(authToken)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(string tokenAuthUser, AuthToken authToken, gaxgrpc::CallSettings callSettings = null) =>
+            AddAuthTokenAsync(new AddAuthTokenRequest
+            {
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+                AuthToken = gax::GaxPreconditions.CheckNotNull(authToken, nameof(authToken)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(string tokenAuthUser, AuthToken authToken, st::CancellationToken cancellationToken) =>
+            AddAuthTokenAsync(tokenAuthUser, authToken, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TokenAuthUser, OperationMetadata> AddAuthToken(TokenAuthUserName tokenAuthUser, AuthToken authToken, gaxgrpc::CallSettings callSettings = null) =>
+            AddAuthToken(new AddAuthTokenRequest
+            {
+                TokenAuthUserAsTokenAuthUserName = gax::GaxPreconditions.CheckNotNull(tokenAuthUser, nameof(tokenAuthUser)),
+                AuthToken = gax::GaxPreconditions.CheckNotNull(authToken, nameof(authToken)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(TokenAuthUserName tokenAuthUser, AuthToken authToken, gaxgrpc::CallSettings callSettings = null) =>
+            AddAuthTokenAsync(new AddAuthTokenRequest
+            {
+                TokenAuthUserAsTokenAuthUserName = gax::GaxPreconditions.CheckNotNull(tokenAuthUser, nameof(tokenAuthUser)),
+                AuthToken = gax::GaxPreconditions.CheckNotNull(authToken, nameof(authToken)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(TokenAuthUserName tokenAuthUser, AuthToken authToken, st::CancellationToken cancellationToken) =>
+            AddAuthTokenAsync(tokenAuthUser, authToken, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthToken(DeleteAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(DeleteAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(DeleteAuthTokenRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAuthTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAuthToken</c>.</summary>
+        public virtual lro::OperationsClient DeleteAuthTokenOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAuthToken</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAuthToken(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAuthTokenOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAuthToken</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAuthTokenAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAuthTokenOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthToken(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthToken(new DeleteAuthTokenRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthTokenAsync(new DeleteAuthTokenRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAuthTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthToken(AuthTokenName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthToken(new DeleteAuthTokenRequest
+            {
+                AuthTokenName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(AuthTokenName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthTokenAsync(new DeleteAuthTokenRequest
+            {
+                AuthTokenName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(AuthTokenName name, st::CancellationToken cancellationToken) =>
+            DeleteAuthTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Memorystore client wrapper implementation, for convenient use.</summary>
@@ -1377,6 +4440,42 @@ namespace Google.Cloud.Memorystore.V1Beta
 
         private readonly gaxgrpc::ApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority> _callGetSharedRegionalCertificateAuthority;
 
+        private readonly gaxgrpc::ApiCall<RescheduleMaintenanceRequest, lro::Operation> _callRescheduleMaintenance;
+
+        private readonly gaxgrpc::ApiCall<ListBackupCollectionsRequest, ListBackupCollectionsResponse> _callListBackupCollections;
+
+        private readonly gaxgrpc::ApiCall<GetBackupCollectionRequest, BackupCollection> _callGetBackupCollection;
+
+        private readonly gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> _callListBackups;
+
+        private readonly gaxgrpc::ApiCall<GetBackupRequest, Backup> _callGetBackup;
+
+        private readonly gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> _callDeleteBackup;
+
+        private readonly gaxgrpc::ApiCall<ExportBackupRequest, lro::Operation> _callExportBackup;
+
+        private readonly gaxgrpc::ApiCall<BackupInstanceRequest, lro::Operation> _callBackupInstance;
+
+        private readonly gaxgrpc::ApiCall<StartMigrationRequest, lro::Operation> _callStartMigration;
+
+        private readonly gaxgrpc::ApiCall<FinishMigrationRequest, lro::Operation> _callFinishMigration;
+
+        private readonly gaxgrpc::ApiCall<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse> _callListTokenAuthUsers;
+
+        private readonly gaxgrpc::ApiCall<GetTokenAuthUserRequest, TokenAuthUser> _callGetTokenAuthUser;
+
+        private readonly gaxgrpc::ApiCall<ListAuthTokensRequest, ListAuthTokensResponse> _callListAuthTokens;
+
+        private readonly gaxgrpc::ApiCall<GetAuthTokenRequest, AuthToken> _callGetAuthToken;
+
+        private readonly gaxgrpc::ApiCall<AddTokenAuthUserRequest, lro::Operation> _callAddTokenAuthUser;
+
+        private readonly gaxgrpc::ApiCall<DeleteTokenAuthUserRequest, lro::Operation> _callDeleteTokenAuthUser;
+
+        private readonly gaxgrpc::ApiCall<AddAuthTokenRequest, lro::Operation> _callAddAuthToken;
+
+        private readonly gaxgrpc::ApiCall<DeleteAuthTokenRequest, lro::Operation> _callDeleteAuthToken;
+
         /// <summary>
         /// Constructs a client wrapper for the Memorystore service, with the specified gRPC client and settings.
         /// </summary>
@@ -1395,6 +4494,16 @@ namespace Google.Cloud.Memorystore.V1Beta
             CreateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateInstanceOperationsSettings, logger);
             UpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateInstanceOperationsSettings, logger);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings, logger);
+            RescheduleMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RescheduleMaintenanceOperationsSettings, logger);
+            DeleteBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteBackupOperationsSettings, logger);
+            ExportBackupOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportBackupOperationsSettings, logger);
+            BackupInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BackupInstanceOperationsSettings, logger);
+            StartMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartMigrationOperationsSettings, logger);
+            FinishMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FinishMigrationOperationsSettings, logger);
+            AddTokenAuthUserOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddTokenAuthUserOperationsSettings, logger);
+            DeleteTokenAuthUserOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTokenAuthUserOperationsSettings, logger);
+            AddAuthTokenOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddAuthTokenOperationsSettings, logger);
+            DeleteAuthTokenOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthTokenOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
@@ -1417,6 +4526,60 @@ namespace Google.Cloud.Memorystore.V1Beta
             _callGetSharedRegionalCertificateAuthority = clientHelper.BuildApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority>("GetSharedRegionalCertificateAuthority", grpcClient.GetSharedRegionalCertificateAuthorityAsync, grpcClient.GetSharedRegionalCertificateAuthority, effectiveSettings.GetSharedRegionalCertificateAuthoritySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetSharedRegionalCertificateAuthority);
             Modify_GetSharedRegionalCertificateAuthorityApiCall(ref _callGetSharedRegionalCertificateAuthority);
+            _callRescheduleMaintenance = clientHelper.BuildApiCall<RescheduleMaintenanceRequest, lro::Operation>("RescheduleMaintenance", grpcClient.RescheduleMaintenanceAsync, grpcClient.RescheduleMaintenance, effectiveSettings.RescheduleMaintenanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRescheduleMaintenance);
+            Modify_RescheduleMaintenanceApiCall(ref _callRescheduleMaintenance);
+            _callListBackupCollections = clientHelper.BuildApiCall<ListBackupCollectionsRequest, ListBackupCollectionsResponse>("ListBackupCollections", grpcClient.ListBackupCollectionsAsync, grpcClient.ListBackupCollections, effectiveSettings.ListBackupCollectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackupCollections);
+            Modify_ListBackupCollectionsApiCall(ref _callListBackupCollections);
+            _callGetBackupCollection = clientHelper.BuildApiCall<GetBackupCollectionRequest, BackupCollection>("GetBackupCollection", grpcClient.GetBackupCollectionAsync, grpcClient.GetBackupCollection, effectiveSettings.GetBackupCollectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackupCollection);
+            Modify_GetBackupCollectionApiCall(ref _callGetBackupCollection);
+            _callListBackups = clientHelper.BuildApiCall<ListBackupsRequest, ListBackupsResponse>("ListBackups", grpcClient.ListBackupsAsync, grpcClient.ListBackups, effectiveSettings.ListBackupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListBackups);
+            Modify_ListBackupsApiCall(ref _callListBackups);
+            _callGetBackup = clientHelper.BuildApiCall<GetBackupRequest, Backup>("GetBackup", grpcClient.GetBackupAsync, grpcClient.GetBackup, effectiveSettings.GetBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetBackup);
+            Modify_GetBackupApiCall(ref _callGetBackup);
+            _callDeleteBackup = clientHelper.BuildApiCall<DeleteBackupRequest, lro::Operation>("DeleteBackup", grpcClient.DeleteBackupAsync, grpcClient.DeleteBackup, effectiveSettings.DeleteBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteBackup);
+            Modify_DeleteBackupApiCall(ref _callDeleteBackup);
+            _callExportBackup = clientHelper.BuildApiCall<ExportBackupRequest, lro::Operation>("ExportBackup", grpcClient.ExportBackupAsync, grpcClient.ExportBackup, effectiveSettings.ExportBackupSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callExportBackup);
+            Modify_ExportBackupApiCall(ref _callExportBackup);
+            _callBackupInstance = clientHelper.BuildApiCall<BackupInstanceRequest, lro::Operation>("BackupInstance", grpcClient.BackupInstanceAsync, grpcClient.BackupInstance, effectiveSettings.BackupInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callBackupInstance);
+            Modify_BackupInstanceApiCall(ref _callBackupInstance);
+            _callStartMigration = clientHelper.BuildApiCall<StartMigrationRequest, lro::Operation>("StartMigration", grpcClient.StartMigrationAsync, grpcClient.StartMigration, effectiveSettings.StartMigrationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callStartMigration);
+            Modify_StartMigrationApiCall(ref _callStartMigration);
+            _callFinishMigration = clientHelper.BuildApiCall<FinishMigrationRequest, lro::Operation>("FinishMigration", grpcClient.FinishMigrationAsync, grpcClient.FinishMigration, effectiveSettings.FinishMigrationSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callFinishMigration);
+            Modify_FinishMigrationApiCall(ref _callFinishMigration);
+            _callListTokenAuthUsers = clientHelper.BuildApiCall<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse>("ListTokenAuthUsers", grpcClient.ListTokenAuthUsersAsync, grpcClient.ListTokenAuthUsers, effectiveSettings.ListTokenAuthUsersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListTokenAuthUsers);
+            Modify_ListTokenAuthUsersApiCall(ref _callListTokenAuthUsers);
+            _callGetTokenAuthUser = clientHelper.BuildApiCall<GetTokenAuthUserRequest, TokenAuthUser>("GetTokenAuthUser", grpcClient.GetTokenAuthUserAsync, grpcClient.GetTokenAuthUser, effectiveSettings.GetTokenAuthUserSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetTokenAuthUser);
+            Modify_GetTokenAuthUserApiCall(ref _callGetTokenAuthUser);
+            _callListAuthTokens = clientHelper.BuildApiCall<ListAuthTokensRequest, ListAuthTokensResponse>("ListAuthTokens", grpcClient.ListAuthTokensAsync, grpcClient.ListAuthTokens, effectiveSettings.ListAuthTokensSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAuthTokens);
+            Modify_ListAuthTokensApiCall(ref _callListAuthTokens);
+            _callGetAuthToken = clientHelper.BuildApiCall<GetAuthTokenRequest, AuthToken>("GetAuthToken", grpcClient.GetAuthTokenAsync, grpcClient.GetAuthToken, effectiveSettings.GetAuthTokenSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAuthToken);
+            Modify_GetAuthTokenApiCall(ref _callGetAuthToken);
+            _callAddTokenAuthUser = clientHelper.BuildApiCall<AddTokenAuthUserRequest, lro::Operation>("AddTokenAuthUser", grpcClient.AddTokenAuthUserAsync, grpcClient.AddTokenAuthUser, effectiveSettings.AddTokenAuthUserSettings).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callAddTokenAuthUser);
+            Modify_AddTokenAuthUserApiCall(ref _callAddTokenAuthUser);
+            _callDeleteTokenAuthUser = clientHelper.BuildApiCall<DeleteTokenAuthUserRequest, lro::Operation>("DeleteTokenAuthUser", grpcClient.DeleteTokenAuthUserAsync, grpcClient.DeleteTokenAuthUser, effectiveSettings.DeleteTokenAuthUserSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteTokenAuthUser);
+            Modify_DeleteTokenAuthUserApiCall(ref _callDeleteTokenAuthUser);
+            _callAddAuthToken = clientHelper.BuildApiCall<AddAuthTokenRequest, lro::Operation>("AddAuthToken", grpcClient.AddAuthTokenAsync, grpcClient.AddAuthToken, effectiveSettings.AddAuthTokenSettings).WithGoogleRequestParam("token_auth_user", request => request.TokenAuthUser);
+            Modify_ApiCall(ref _callAddAuthToken);
+            Modify_AddAuthTokenApiCall(ref _callAddAuthToken);
+            _callDeleteAuthToken = clientHelper.BuildApiCall<DeleteAuthTokenRequest, lro::Operation>("DeleteAuthToken", grpcClient.DeleteAuthTokenAsync, grpcClient.DeleteAuthToken, effectiveSettings.DeleteAuthTokenSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAuthToken);
+            Modify_DeleteAuthTokenApiCall(ref _callDeleteAuthToken);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1435,6 +4598,42 @@ namespace Google.Cloud.Memorystore.V1Beta
         partial void Modify_GetCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<GetCertificateAuthorityRequest, CertificateAuthority> call);
 
         partial void Modify_GetSharedRegionalCertificateAuthorityApiCall(ref gaxgrpc::ApiCall<GetSharedRegionalCertificateAuthorityRequest, SharedRegionalCertificateAuthority> call);
+
+        partial void Modify_RescheduleMaintenanceApiCall(ref gaxgrpc::ApiCall<RescheduleMaintenanceRequest, lro::Operation> call);
+
+        partial void Modify_ListBackupCollectionsApiCall(ref gaxgrpc::ApiCall<ListBackupCollectionsRequest, ListBackupCollectionsResponse> call);
+
+        partial void Modify_GetBackupCollectionApiCall(ref gaxgrpc::ApiCall<GetBackupCollectionRequest, BackupCollection> call);
+
+        partial void Modify_ListBackupsApiCall(ref gaxgrpc::ApiCall<ListBackupsRequest, ListBackupsResponse> call);
+
+        partial void Modify_GetBackupApiCall(ref gaxgrpc::ApiCall<GetBackupRequest, Backup> call);
+
+        partial void Modify_DeleteBackupApiCall(ref gaxgrpc::ApiCall<DeleteBackupRequest, lro::Operation> call);
+
+        partial void Modify_ExportBackupApiCall(ref gaxgrpc::ApiCall<ExportBackupRequest, lro::Operation> call);
+
+        partial void Modify_BackupInstanceApiCall(ref gaxgrpc::ApiCall<BackupInstanceRequest, lro::Operation> call);
+
+        partial void Modify_StartMigrationApiCall(ref gaxgrpc::ApiCall<StartMigrationRequest, lro::Operation> call);
+
+        partial void Modify_FinishMigrationApiCall(ref gaxgrpc::ApiCall<FinishMigrationRequest, lro::Operation> call);
+
+        partial void Modify_ListTokenAuthUsersApiCall(ref gaxgrpc::ApiCall<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse> call);
+
+        partial void Modify_GetTokenAuthUserApiCall(ref gaxgrpc::ApiCall<GetTokenAuthUserRequest, TokenAuthUser> call);
+
+        partial void Modify_ListAuthTokensApiCall(ref gaxgrpc::ApiCall<ListAuthTokensRequest, ListAuthTokensResponse> call);
+
+        partial void Modify_GetAuthTokenApiCall(ref gaxgrpc::ApiCall<GetAuthTokenRequest, AuthToken> call);
+
+        partial void Modify_AddTokenAuthUserApiCall(ref gaxgrpc::ApiCall<AddTokenAuthUserRequest, lro::Operation> call);
+
+        partial void Modify_DeleteTokenAuthUserApiCall(ref gaxgrpc::ApiCall<DeleteTokenAuthUserRequest, lro::Operation> call);
+
+        partial void Modify_AddAuthTokenApiCall(ref gaxgrpc::ApiCall<AddAuthTokenRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAuthTokenApiCall(ref gaxgrpc::ApiCall<DeleteAuthTokenRequest, lro::Operation> call);
 
         partial void OnConstruction(Memorystore.MemorystoreClient grpcClient, MemorystoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1457,6 +4656,42 @@ namespace Google.Cloud.Memorystore.V1Beta
         partial void Modify_GetCertificateAuthorityRequest(ref GetCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetSharedRegionalCertificateAuthorityRequest(ref GetSharedRegionalCertificateAuthorityRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RescheduleMaintenanceRequest(ref RescheduleMaintenanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupCollectionsRequest(ref ListBackupCollectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupCollectionRequest(ref GetBackupCollectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListBackupsRequest(ref ListBackupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetBackupRequest(ref GetBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteBackupRequest(ref DeleteBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ExportBackupRequest(ref ExportBackupRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BackupInstanceRequest(ref BackupInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_StartMigrationRequest(ref StartMigrationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_FinishMigrationRequest(ref FinishMigrationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListTokenAuthUsersRequest(ref ListTokenAuthUsersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetTokenAuthUserRequest(ref GetTokenAuthUserRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAuthTokensRequest(ref ListAuthTokensRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAuthTokenRequest(ref GetAuthTokenRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddTokenAuthUserRequest(ref AddTokenAuthUserRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteTokenAuthUserRequest(ref DeleteTokenAuthUserRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddAuthTokenRequest(ref AddAuthTokenRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAuthTokenRequest(ref DeleteAuthTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Instances in a given project and location.
@@ -1636,9 +4871,541 @@ namespace Google.Cloud.Memorystore.V1Beta
             Modify_GetSharedRegionalCertificateAuthorityRequest(ref request, ref callSettings);
             return _callGetSharedRegionalCertificateAuthority.Async(request, callSettings);
         }
+
+        /// <summary>The long-running operations client for <c>RescheduleMaintenance</c>.</summary>
+        public override lro::OperationsClient RescheduleMaintenanceOperationsClient { get; }
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> RescheduleMaintenance(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callRescheduleMaintenance.Sync(request, callSettings), RescheduleMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Reschedules upcoming maintenance event.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callRescheduleMaintenance.Async(request, callSettings).ConfigureAwait(false), RescheduleMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="BackupCollection"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollections(ListBackupCollectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupCollectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupCollectionsRequest, ListBackupCollectionsResponse, BackupCollection>(_callListBackupCollections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backup collections owned by a consumer project in either the
+        /// specified location (region) or all locations.
+        /// 
+        /// If `location_id` is specified as `-` (wildcard), then all regions
+        /// available to the project are queried, and the results are aggregated.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="BackupCollection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupCollectionsResponse, BackupCollection> ListBackupCollectionsAsync(ListBackupCollectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupCollectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupCollectionsRequest, ListBackupCollectionsResponse, BackupCollection>(_callListBackupCollections, request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BackupCollection GetBackupCollection(GetBackupCollectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupCollectionRequest(ref request, ref callSettings);
+            return _callGetBackupCollection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BackupCollection> GetBackupCollectionAsync(GetBackupCollectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupCollectionRequest(ref request, ref callSettings);
+            return _callGetBackupCollection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListBackupsResponse, Backup> ListBackups(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all backups owned by a backup collection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Backup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListBackupsResponse, Backup> ListBackupsAsync(ListBackupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListBackupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListBackupsRequest, ListBackupsResponse, Backup>(_callListBackups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Backup GetBackup(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the details of a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Backup> GetBackupAsync(GetBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetBackupRequest(ref request, ref callSettings);
+            return _callGetBackup.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteBackup</c>.</summary>
+        public override lro::OperationsClient DeleteBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteBackup(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteBackup.Sync(request, callSettings), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a specific backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteBackupAsync(DeleteBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteBackup.Async(request, callSettings).ConfigureAwait(false), DeleteBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ExportBackup</c>.</summary>
+        public override lro::OperationsClient ExportBackupOperationsClient { get; }
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Backup, OperationMetadata> ExportBackup(ExportBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, OperationMetadata>(_callExportBackup.Sync(request, callSettings), ExportBackupOperationsClient);
+        }
+
+        /// <summary>
+        /// Exports a specific backup to a customer target Cloud Storage URI.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Backup, OperationMetadata>> ExportBackupAsync(ExportBackupRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ExportBackupRequest(ref request, ref callSettings);
+            return new lro::Operation<Backup, OperationMetadata>(await _callExportBackup.Async(request, callSettings).ConfigureAwait(false), ExportBackupOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>BackupInstance</c>.</summary>
+        public override lro::OperationsClient BackupInstanceOperationsClient { get; }
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> BackupInstance(BackupInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BackupInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callBackupInstance.Sync(request, callSettings), BackupInstanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Backup Instance.
+        /// If this is the first time a backup is being created, a backup collection
+        /// will be created at the backend, and this backup belongs to this collection.
+        /// Both collection and backup will have a resource name. Backup will be
+        /// executed for each shard. A replica (primary if nonHA) will be selected to
+        /// perform the execution. Backup call will be rejected if there is an ongoing
+        /// backup or update operation. Be aware that during preview, if the instance's
+        /// internal software version is too old, critical update will be performed
+        /// before actual backup. Once the internal software version is updated to the
+        /// minimum version required by the backup feature, subsequent backups will not
+        /// require critical update. After preview, there will be no critical update
+        /// needed for backup.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> BackupInstanceAsync(BackupInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BackupInstanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callBackupInstance.Async(request, callSettings).ConfigureAwait(false), BackupInstanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>StartMigration</c>.</summary>
+        public override lro::OperationsClient StartMigrationOperationsClient { get; }
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> StartMigration(StartMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callStartMigration.Sync(request, callSettings), StartMigrationOperationsClient);
+        }
+
+        /// <summary>
+        /// Initiates the migration of a source instance to the target Memorystore
+        /// instance.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Set up replication with the source instance and replicate any writes to
+        /// the source instance.
+        /// 2. Only allow reads.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> StartMigrationAsync(StartMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_StartMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callStartMigration.Async(request, callSettings).ConfigureAwait(false), StartMigrationOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>FinishMigration</c>.</summary>
+        public override lro::OperationsClient FinishMigrationOperationsClient { get; }
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> FinishMigration(FinishMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FinishMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callFinishMigration.Sync(request, callSettings), FinishMigrationOperationsClient);
+        }
+
+        /// <summary>
+        /// Finalizes the migration process.
+        /// 
+        /// After the successful completion of this operation, the target instance
+        /// will:
+        /// 1. Stop replicating from the source instance.
+        /// 2. Allow both reads and writes.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(FinishMigrationRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_FinishMigrationRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callFinishMigration.Async(request, callSettings).ConfigureAwait(false), FinishMigrationOperationsClient);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public override gax::PagedEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsers(ListTokenAuthUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTokenAuthUsersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse, TokenAuthUser>(_callListTokenAuthUsers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsersAsync(ListTokenAuthUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTokenAuthUsersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse, TokenAuthUser>(_callListTokenAuthUsers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TokenAuthUser GetTokenAuthUser(GetTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTokenAuthUserRequest(ref request, ref callSettings);
+            return _callGetTokenAuthUser.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TokenAuthUser> GetTokenAuthUserAsync(GetTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTokenAuthUserRequest(ref request, ref callSettings);
+            return _callGetTokenAuthUser.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthToken"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokens(ListAuthTokensRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthTokensRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAuthTokensRequest, ListAuthTokensResponse, AuthToken>(_callListAuthTokens, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthToken"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokensAsync(ListAuthTokensRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthTokensRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAuthTokensRequest, ListAuthTokensResponse, AuthToken>(_callListAuthTokens, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AuthToken GetAuthToken(GetAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthTokenRequest(ref request, ref callSettings);
+            return _callGetAuthToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AuthToken> GetAuthTokenAsync(GetAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthTokenRequest(ref request, ref callSettings);
+            return _callGetAuthToken.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>AddTokenAuthUser</c>.</summary>
+        public override lro::OperationsClient AddTokenAuthUserOperationsClient { get; }
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> AddTokenAuthUser(AddTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddTokenAuthUserRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callAddTokenAuthUser.Sync(request, callSettings), AddTokenAuthUserOperationsClient);
+        }
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(AddTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddTokenAuthUserRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callAddTokenAuthUser.Async(request, callSettings).ConfigureAwait(false), AddTokenAuthUserOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteTokenAuthUser</c>.</summary>
+        public override lro::OperationsClient DeleteTokenAuthUserOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteTokenAuthUser(DeleteTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTokenAuthUserRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteTokenAuthUser.Sync(request, callSettings), DeleteTokenAuthUserOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(DeleteTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTokenAuthUserRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteTokenAuthUser.Async(request, callSettings).ConfigureAwait(false), DeleteTokenAuthUserOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>AddAuthToken</c>.</summary>
+        public override lro::OperationsClient AddAuthTokenOperationsClient { get; }
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TokenAuthUser, OperationMetadata> AddAuthToken(AddAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddAuthTokenRequest(ref request, ref callSettings);
+            return new lro::Operation<TokenAuthUser, OperationMetadata>(_callAddAuthToken.Sync(request, callSettings), AddAuthTokenOperationsClient);
+        }
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(AddAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddAuthTokenRequest(ref request, ref callSettings);
+            return new lro::Operation<TokenAuthUser, OperationMetadata>(await _callAddAuthToken.Async(request, callSettings).ConfigureAwait(false), AddAuthTokenOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAuthToken</c>.</summary>
+        public override lro::OperationsClient DeleteAuthTokenOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthToken(DeleteAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthTokenRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAuthToken.Sync(request, callSettings), DeleteAuthTokenOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(DeleteAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthTokenRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAuthToken.Async(request, callSettings).ConfigureAwait(false), DeleteAuthTokenOperationsClient);
+        }
     }
 
     public partial class ListInstancesRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupCollectionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListBackupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListTokenAuthUsersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAuthTokensRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1646,6 +5413,38 @@ namespace Google.Cloud.Memorystore.V1Beta
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Instance> GetEnumerator() => Instances.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupCollectionsResponse : gaxgrpc::IPageResponse<BackupCollection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<BackupCollection> GetEnumerator() => BackupCollections.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListBackupsResponse : gaxgrpc::IPageResponse<Backup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Backup> GetEnumerator() => Backups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListTokenAuthUsersResponse : gaxgrpc::IPageResponse<TokenAuthUser>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<TokenAuthUser> GetEnumerator() => TokenAuthUsers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAuthTokensResponse : gaxgrpc::IPageResponse<AuthToken>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AuthToken> GetEnumerator() => AuthTokens.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
