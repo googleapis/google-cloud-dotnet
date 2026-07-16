@@ -27,6 +27,7 @@ using sco = System.Collections.ObjectModel;
 using st = System.Threading;
 using stt = System.Threading.Tasks;
 using sys = System;
+using wkt = Google.Protobuf.WellKnownTypes;
 
 namespace Google.Ads.AdManager.V1
 {
@@ -49,6 +50,12 @@ namespace Google.Ads.AdManager.V1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             GetCustomTargetingValueSettings = existing.GetCustomTargetingValueSettings;
             ListCustomTargetingValuesSettings = existing.ListCustomTargetingValuesSettings;
+            CreateCustomTargetingValueSettings = existing.CreateCustomTargetingValueSettings;
+            BatchCreateCustomTargetingValuesSettings = existing.BatchCreateCustomTargetingValuesSettings;
+            UpdateCustomTargetingValueSettings = existing.UpdateCustomTargetingValueSettings;
+            BatchUpdateCustomTargetingValuesSettings = existing.BatchUpdateCustomTargetingValuesSettings;
+            BatchActivateCustomTargetingValuesSettings = existing.BatchActivateCustomTargetingValuesSettings;
+            BatchDeactivateCustomTargetingValuesSettings = existing.BatchDeactivateCustomTargetingValuesSettings;
             OnCopy(existing);
         }
 
@@ -79,6 +86,84 @@ namespace Google.Ads.AdManager.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ListCustomTargetingValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingValueServiceClient.CreateCustomTargetingValue</c> and
+        /// <c>CustomTargetingValueServiceClient.CreateCustomTargetingValueAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateCustomTargetingValueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingValueServiceClient.BatchCreateCustomTargetingValues</c> and
+        /// <c>CustomTargetingValueServiceClient.BatchCreateCustomTargetingValuesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchCreateCustomTargetingValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingValueServiceClient.UpdateCustomTargetingValue</c> and
+        /// <c>CustomTargetingValueServiceClient.UpdateCustomTargetingValueAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateCustomTargetingValueSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingValueServiceClient.BatchUpdateCustomTargetingValues</c> and
+        /// <c>CustomTargetingValueServiceClient.BatchUpdateCustomTargetingValuesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchUpdateCustomTargetingValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingValueServiceClient.BatchActivateCustomTargetingValues</c> and
+        /// <c>CustomTargetingValueServiceClient.BatchActivateCustomTargetingValuesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchActivateCustomTargetingValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CustomTargetingValueServiceClient.BatchDeactivateCustomTargetingValues</c> and
+        /// <c>CustomTargetingValueServiceClient.BatchDeactivateCustomTargetingValuesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings BatchDeactivateCustomTargetingValuesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CustomTargetingValueServiceSettings"/> object.</returns>
@@ -227,7 +312,7 @@ namespace Google.Ads.AdManager.V1
         public virtual CustomTargetingValueService.CustomTargetingValueServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -236,7 +321,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -245,7 +330,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -254,7 +339,7 @@ namespace Google.Ads.AdManager.V1
             GetCustomTargetingValueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
@@ -270,7 +355,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
@@ -286,7 +371,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
@@ -299,7 +384,7 @@ namespace Google.Ads.AdManager.V1
             GetCustomTargetingValueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
@@ -315,7 +400,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
@@ -331,7 +416,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomTargetingValue.
@@ -344,7 +429,7 @@ namespace Google.Ads.AdManager.V1
             GetCustomTargetingValueAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `CustomTargetingValue` objects.
+        /// Lists `CustomTargetingValue` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -353,7 +438,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `CustomTargetingValue` objects.
+        /// Lists `CustomTargetingValue` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -362,7 +447,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `CustomTargetingValue` objects.
+        /// Lists `CustomTargetingValue` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomTargetingValues.
@@ -397,7 +482,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomTargetingValue` objects.
+        /// Lists `CustomTargetingValue` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomTargetingValues.
@@ -432,7 +517,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomTargetingValue` objects.
+        /// Lists `CustomTargetingValue` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomTargetingValues.
@@ -467,7 +552,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomTargetingValue` objects.
+        /// Lists `CustomTargetingValue` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomTargetingValues.
@@ -500,6 +585,853 @@ namespace Google.Ads.AdManager.V1
             }
             return ListCustomTargetingValuesAsync(request, callSettings);
         }
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingValue CreateCustomTargetingValue(CreateCustomTargetingValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> CreateCustomTargetingValueAsync(CreateCustomTargetingValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> CreateCustomTargetingValueAsync(CreateCustomTargetingValueRequest request, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetingValueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingValue CreateCustomTargetingValue(string parent, CustomTargetingValue customTargetingValue, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetingValue(new CreateCustomTargetingValueRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomTargetingValue = gax::GaxPreconditions.CheckNotNull(customTargetingValue, nameof(customTargetingValue)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> CreateCustomTargetingValueAsync(string parent, CustomTargetingValue customTargetingValue, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetingValueAsync(new CreateCustomTargetingValueRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                CustomTargetingValue = gax::GaxPreconditions.CheckNotNull(customTargetingValue, nameof(customTargetingValue)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> CreateCustomTargetingValueAsync(string parent, CustomTargetingValue customTargetingValue, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetingValueAsync(parent, customTargetingValue, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingValue CreateCustomTargetingValue(NetworkName parent, CustomTargetingValue customTargetingValue, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetingValue(new CreateCustomTargetingValueRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetingValue = gax::GaxPreconditions.CheckNotNull(customTargetingValue, nameof(customTargetingValue)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> CreateCustomTargetingValueAsync(NetworkName parent, CustomTargetingValue customTargetingValue, gaxgrpc::CallSettings callSettings = null) =>
+            CreateCustomTargetingValueAsync(new CreateCustomTargetingValueRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                CustomTargetingValue = gax::GaxPreconditions.CheckNotNull(customTargetingValue, nameof(customTargetingValue)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> CreateCustomTargetingValueAsync(NetworkName parent, CustomTargetingValue customTargetingValue, st::CancellationToken cancellationToken) =>
+            CreateCustomTargetingValueAsync(parent, customTargetingValue, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCustomTargetingValuesResponse BatchCreateCustomTargetingValues(BatchCreateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(BatchCreateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(BatchCreateCustomTargetingValuesRequest request, st::CancellationToken cancellationToken) =>
+            BatchCreateCustomTargetingValuesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCustomTargetingValuesResponse BatchCreateCustomTargetingValues(string parent, scg::IEnumerable<CreateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCustomTargetingValues(new BatchCreateCustomTargetingValuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(string parent, scg::IEnumerable<CreateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCustomTargetingValuesAsync(new BatchCreateCustomTargetingValuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(string parent, scg::IEnumerable<CreateCustomTargetingValueRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateCustomTargetingValuesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchCreateCustomTargetingValuesResponse BatchCreateCustomTargetingValues(NetworkName parent, scg::IEnumerable<CreateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCustomTargetingValues(new BatchCreateCustomTargetingValuesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(NetworkName parent, scg::IEnumerable<CreateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchCreateCustomTargetingValuesAsync(new BatchCreateCustomTargetingValuesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to create.
+        /// A maximum of 100 objects can be created in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(NetworkName parent, scg::IEnumerable<CreateCustomTargetingValueRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchCreateCustomTargetingValuesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingValue UpdateCustomTargetingValue(UpdateCustomTargetingValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> UpdateCustomTargetingValueAsync(UpdateCustomTargetingValueRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> UpdateCustomTargetingValueAsync(UpdateCustomTargetingValueRequest request, st::CancellationToken cancellationToken) =>
+            UpdateCustomTargetingValueAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to update.
+        /// 
+        /// The `CustomTargetingValue`'s `name` is used to identify the
+        /// `CustomTargetingValue` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CustomTargetingValue UpdateCustomTargetingValue(CustomTargetingValue customTargetingValue, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomTargetingValue(new UpdateCustomTargetingValueRequest
+            {
+                CustomTargetingValue = gax::GaxPreconditions.CheckNotNull(customTargetingValue, nameof(customTargetingValue)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to update.
+        /// 
+        /// The `CustomTargetingValue`'s `name` is used to identify the
+        /// `CustomTargetingValue` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> UpdateCustomTargetingValueAsync(CustomTargetingValue customTargetingValue, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateCustomTargetingValueAsync(new UpdateCustomTargetingValueRequest
+            {
+                CustomTargetingValue = gax::GaxPreconditions.CheckNotNull(customTargetingValue, nameof(customTargetingValue)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="customTargetingValue">
+        /// Required. The `CustomTargetingValue` to update.
+        /// 
+        /// The `CustomTargetingValue`'s `name` is used to identify the
+        /// `CustomTargetingValue` to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. The list of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CustomTargetingValue> UpdateCustomTargetingValueAsync(CustomTargetingValue customTargetingValue, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateCustomTargetingValueAsync(customTargetingValue, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCustomTargetingValuesResponse BatchUpdateCustomTargetingValues(BatchUpdateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(BatchUpdateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(BatchUpdateCustomTargetingValuesRequest request, st::CancellationToken cancellationToken) =>
+            BatchUpdateCustomTargetingValuesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCustomTargetingValuesResponse BatchUpdateCustomTargetingValues(string parent, scg::IEnumerable<UpdateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCustomTargetingValues(new BatchUpdateCustomTargetingValuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(string parent, scg::IEnumerable<UpdateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCustomTargetingValuesAsync(new BatchUpdateCustomTargetingValuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(string parent, scg::IEnumerable<UpdateCustomTargetingValueRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateCustomTargetingValuesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchUpdateCustomTargetingValuesResponse BatchUpdateCustomTargetingValues(NetworkName parent, scg::IEnumerable<UpdateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCustomTargetingValues(new BatchUpdateCustomTargetingValuesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(NetworkName parent, scg::IEnumerable<UpdateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchUpdateCustomTargetingValuesAsync(new BatchUpdateCustomTargetingValuesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to update.
+        /// A maximum of 100 objects can be updated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(NetworkName parent, scg::IEnumerable<UpdateCustomTargetingValueRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchUpdateCustomTargetingValuesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCustomTargetingValuesResponse BatchActivateCustomTargetingValues(BatchActivateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(BatchActivateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(BatchActivateCustomTargetingValuesRequest request, st::CancellationToken cancellationToken) =>
+            BatchActivateCustomTargetingValuesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to activate.
+        /// A maximum of 100 objects can be activated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCustomTargetingValuesResponse BatchActivateCustomTargetingValues(string parent, scg::IEnumerable<ActivateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCustomTargetingValues(new BatchActivateCustomTargetingValuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to activate.
+        /// A maximum of 100 objects can be activated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(string parent, scg::IEnumerable<ActivateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCustomTargetingValuesAsync(new BatchActivateCustomTargetingValuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to activate.
+        /// A maximum of 100 objects can be activated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(string parent, scg::IEnumerable<ActivateCustomTargetingValueRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchActivateCustomTargetingValuesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to activate.
+        /// A maximum of 100 objects can be activated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchActivateCustomTargetingValuesResponse BatchActivateCustomTargetingValues(NetworkName parent, scg::IEnumerable<ActivateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCustomTargetingValues(new BatchActivateCustomTargetingValuesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to activate.
+        /// A maximum of 100 objects can be activated in a batch.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(NetworkName parent, scg::IEnumerable<ActivateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchActivateCustomTargetingValuesAsync(new BatchActivateCustomTargetingValuesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to activate.
+        /// A maximum of 100 objects can be activated in a batch.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(NetworkName parent, scg::IEnumerable<ActivateCustomTargetingValueRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchActivateCustomTargetingValuesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCustomTargetingValuesResponse BatchDeactivateCustomTargetingValues(BatchDeactivateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(BatchDeactivateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(BatchDeactivateCustomTargetingValuesRequest request, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCustomTargetingValuesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}/`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to deactivate.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCustomTargetingValuesResponse BatchDeactivateCustomTargetingValues(string parent, scg::IEnumerable<DeactivateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCustomTargetingValues(new BatchDeactivateCustomTargetingValuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}/`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to deactivate.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(string parent, scg::IEnumerable<DeactivateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCustomTargetingValuesAsync(new BatchDeactivateCustomTargetingValuesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}/`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to deactivate.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(string parent, scg::IEnumerable<DeactivateCustomTargetingValueRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCustomTargetingValuesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}/`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to deactivate.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual BatchDeactivateCustomTargetingValuesResponse BatchDeactivateCustomTargetingValues(NetworkName parent, scg::IEnumerable<DeactivateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCustomTargetingValues(new BatchDeactivateCustomTargetingValuesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}/`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to deactivate.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(NetworkName parent, scg::IEnumerable<DeactivateCustomTargetingValueRequest> requests, gaxgrpc::CallSettings callSettings = null) =>
+            BatchDeactivateCustomTargetingValuesAsync(new BatchDeactivateCustomTargetingValuesRequest
+            {
+                ParentAsNetworkName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Requests =
+                {
+                    gax::GaxPreconditions.CheckNotNull(requests, nameof(requests)),
+                },
+            }, callSettings);
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent, which owns this collection of CustomTargetingValues.
+        /// Format:
+        /// `networks/{network_code}/`
+        /// </param>
+        /// <param name="requests">
+        /// Required. The `CustomTargetingValue` objects to deactivate.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(NetworkName parent, scg::IEnumerable<DeactivateCustomTargetingValueRequest> requests, st::CancellationToken cancellationToken) =>
+            BatchDeactivateCustomTargetingValuesAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CustomTargetingValueService client wrapper implementation, for convenient use.</summary>
@@ -511,6 +1443,18 @@ namespace Google.Ads.AdManager.V1
         private readonly gaxgrpc::ApiCall<GetCustomTargetingValueRequest, CustomTargetingValue> _callGetCustomTargetingValue;
 
         private readonly gaxgrpc::ApiCall<ListCustomTargetingValuesRequest, ListCustomTargetingValuesResponse> _callListCustomTargetingValues;
+
+        private readonly gaxgrpc::ApiCall<CreateCustomTargetingValueRequest, CustomTargetingValue> _callCreateCustomTargetingValue;
+
+        private readonly gaxgrpc::ApiCall<BatchCreateCustomTargetingValuesRequest, BatchCreateCustomTargetingValuesResponse> _callBatchCreateCustomTargetingValues;
+
+        private readonly gaxgrpc::ApiCall<UpdateCustomTargetingValueRequest, CustomTargetingValue> _callUpdateCustomTargetingValue;
+
+        private readonly gaxgrpc::ApiCall<BatchUpdateCustomTargetingValuesRequest, BatchUpdateCustomTargetingValuesResponse> _callBatchUpdateCustomTargetingValues;
+
+        private readonly gaxgrpc::ApiCall<BatchActivateCustomTargetingValuesRequest, BatchActivateCustomTargetingValuesResponse> _callBatchActivateCustomTargetingValues;
+
+        private readonly gaxgrpc::ApiCall<BatchDeactivateCustomTargetingValuesRequest, BatchDeactivateCustomTargetingValuesResponse> _callBatchDeactivateCustomTargetingValues;
 
         /// <summary>
         /// Constructs a client wrapper for the CustomTargetingValueService service, with the specified gRPC client and
@@ -536,6 +1480,24 @@ namespace Google.Ads.AdManager.V1
             _callListCustomTargetingValues = clientHelper.BuildApiCall<ListCustomTargetingValuesRequest, ListCustomTargetingValuesResponse>("ListCustomTargetingValues", grpcClient.ListCustomTargetingValuesAsync, grpcClient.ListCustomTargetingValues, effectiveSettings.ListCustomTargetingValuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListCustomTargetingValues);
             Modify_ListCustomTargetingValuesApiCall(ref _callListCustomTargetingValues);
+            _callCreateCustomTargetingValue = clientHelper.BuildApiCall<CreateCustomTargetingValueRequest, CustomTargetingValue>("CreateCustomTargetingValue", grpcClient.CreateCustomTargetingValueAsync, grpcClient.CreateCustomTargetingValue, effectiveSettings.CreateCustomTargetingValueSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateCustomTargetingValue);
+            Modify_CreateCustomTargetingValueApiCall(ref _callCreateCustomTargetingValue);
+            _callBatchCreateCustomTargetingValues = clientHelper.BuildApiCall<BatchCreateCustomTargetingValuesRequest, BatchCreateCustomTargetingValuesResponse>("BatchCreateCustomTargetingValues", grpcClient.BatchCreateCustomTargetingValuesAsync, grpcClient.BatchCreateCustomTargetingValues, effectiveSettings.BatchCreateCustomTargetingValuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchCreateCustomTargetingValues);
+            Modify_BatchCreateCustomTargetingValuesApiCall(ref _callBatchCreateCustomTargetingValues);
+            _callUpdateCustomTargetingValue = clientHelper.BuildApiCall<UpdateCustomTargetingValueRequest, CustomTargetingValue>("UpdateCustomTargetingValue", grpcClient.UpdateCustomTargetingValueAsync, grpcClient.UpdateCustomTargetingValue, effectiveSettings.UpdateCustomTargetingValueSettings).WithGoogleRequestParam("custom_targeting_value.name", request => request.CustomTargetingValue?.Name);
+            Modify_ApiCall(ref _callUpdateCustomTargetingValue);
+            Modify_UpdateCustomTargetingValueApiCall(ref _callUpdateCustomTargetingValue);
+            _callBatchUpdateCustomTargetingValues = clientHelper.BuildApiCall<BatchUpdateCustomTargetingValuesRequest, BatchUpdateCustomTargetingValuesResponse>("BatchUpdateCustomTargetingValues", grpcClient.BatchUpdateCustomTargetingValuesAsync, grpcClient.BatchUpdateCustomTargetingValues, effectiveSettings.BatchUpdateCustomTargetingValuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchUpdateCustomTargetingValues);
+            Modify_BatchUpdateCustomTargetingValuesApiCall(ref _callBatchUpdateCustomTargetingValues);
+            _callBatchActivateCustomTargetingValues = clientHelper.BuildApiCall<BatchActivateCustomTargetingValuesRequest, BatchActivateCustomTargetingValuesResponse>("BatchActivateCustomTargetingValues", grpcClient.BatchActivateCustomTargetingValuesAsync, grpcClient.BatchActivateCustomTargetingValues, effectiveSettings.BatchActivateCustomTargetingValuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchActivateCustomTargetingValues);
+            Modify_BatchActivateCustomTargetingValuesApiCall(ref _callBatchActivateCustomTargetingValues);
+            _callBatchDeactivateCustomTargetingValues = clientHelper.BuildApiCall<BatchDeactivateCustomTargetingValuesRequest, BatchDeactivateCustomTargetingValuesResponse>("BatchDeactivateCustomTargetingValues", grpcClient.BatchDeactivateCustomTargetingValuesAsync, grpcClient.BatchDeactivateCustomTargetingValues, effectiveSettings.BatchDeactivateCustomTargetingValuesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callBatchDeactivateCustomTargetingValues);
+            Modify_BatchDeactivateCustomTargetingValuesApiCall(ref _callBatchDeactivateCustomTargetingValues);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -544,6 +1506,18 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_GetCustomTargetingValueApiCall(ref gaxgrpc::ApiCall<GetCustomTargetingValueRequest, CustomTargetingValue> call);
 
         partial void Modify_ListCustomTargetingValuesApiCall(ref gaxgrpc::ApiCall<ListCustomTargetingValuesRequest, ListCustomTargetingValuesResponse> call);
+
+        partial void Modify_CreateCustomTargetingValueApiCall(ref gaxgrpc::ApiCall<CreateCustomTargetingValueRequest, CustomTargetingValue> call);
+
+        partial void Modify_BatchCreateCustomTargetingValuesApiCall(ref gaxgrpc::ApiCall<BatchCreateCustomTargetingValuesRequest, BatchCreateCustomTargetingValuesResponse> call);
+
+        partial void Modify_UpdateCustomTargetingValueApiCall(ref gaxgrpc::ApiCall<UpdateCustomTargetingValueRequest, CustomTargetingValue> call);
+
+        partial void Modify_BatchUpdateCustomTargetingValuesApiCall(ref gaxgrpc::ApiCall<BatchUpdateCustomTargetingValuesRequest, BatchUpdateCustomTargetingValuesResponse> call);
+
+        partial void Modify_BatchActivateCustomTargetingValuesApiCall(ref gaxgrpc::ApiCall<BatchActivateCustomTargetingValuesRequest, BatchActivateCustomTargetingValuesResponse> call);
+
+        partial void Modify_BatchDeactivateCustomTargetingValuesApiCall(ref gaxgrpc::ApiCall<BatchDeactivateCustomTargetingValuesRequest, BatchDeactivateCustomTargetingValuesResponse> call);
 
         partial void OnConstruction(CustomTargetingValueService.CustomTargetingValueServiceClient grpcClient, CustomTargetingValueServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -554,8 +1528,20 @@ namespace Google.Ads.AdManager.V1
 
         partial void Modify_ListCustomTargetingValuesRequest(ref ListCustomTargetingValuesRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CreateCustomTargetingValueRequest(ref CreateCustomTargetingValueRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchCreateCustomTargetingValuesRequest(ref BatchCreateCustomTargetingValuesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateCustomTargetingValueRequest(ref UpdateCustomTargetingValueRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchUpdateCustomTargetingValuesRequest(ref BatchUpdateCustomTargetingValuesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchActivateCustomTargetingValuesRequest(ref BatchActivateCustomTargetingValuesRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_BatchDeactivateCustomTargetingValuesRequest(ref BatchDeactivateCustomTargetingValuesRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -567,7 +1553,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `CustomTargetingValue` object.
+        /// Retrieves a `CustomTargetingValue` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -579,7 +1565,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomTargetingValue` objects.
+        /// Lists `CustomTargetingValue` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -591,7 +1577,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomTargetingValue` objects.
+        /// Lists `CustomTargetingValue` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -600,6 +1586,150 @@ namespace Google.Ads.AdManager.V1
         {
             Modify_ListCustomTargetingValuesRequest(ref request, ref callSettings);
             return new gaxgrpc::GrpcPagedAsyncEnumerable<ListCustomTargetingValuesRequest, ListCustomTargetingValuesResponse, CustomTargetingValue>(_callListCustomTargetingValues, request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomTargetingValue CreateCustomTargetingValue(CreateCustomTargetingValueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomTargetingValueRequest(ref request, ref callSettings);
+            return _callCreateCustomTargetingValue.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomTargetingValue> CreateCustomTargetingValueAsync(CreateCustomTargetingValueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateCustomTargetingValueRequest(ref request, ref callSettings);
+            return _callCreateCustomTargetingValue.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchCreateCustomTargetingValuesResponse BatchCreateCustomTargetingValues(BatchCreateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateCustomTargetingValuesRequest(ref request, ref callSettings);
+            return _callBatchCreateCustomTargetingValues.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Creates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(BatchCreateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchCreateCustomTargetingValuesRequest(ref request, ref callSettings);
+            return _callBatchCreateCustomTargetingValues.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CustomTargetingValue UpdateCustomTargetingValue(UpdateCustomTargetingValueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomTargetingValueRequest(ref request, ref callSettings);
+            return _callUpdateCustomTargetingValue.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a `CustomTargetingValue` object.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CustomTargetingValue> UpdateCustomTargetingValueAsync(UpdateCustomTargetingValueRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateCustomTargetingValueRequest(ref request, ref callSettings);
+            return _callUpdateCustomTargetingValue.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchUpdateCustomTargetingValuesResponse BatchUpdateCustomTargetingValues(BatchUpdateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateCustomTargetingValuesRequest(ref request, ref callSettings);
+            return _callBatchUpdateCustomTargetingValues.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch updates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(BatchUpdateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchUpdateCustomTargetingValuesRequest(ref request, ref callSettings);
+            return _callBatchUpdateCustomTargetingValues.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchActivateCustomTargetingValuesResponse BatchActivateCustomTargetingValues(BatchActivateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateCustomTargetingValuesRequest(ref request, ref callSettings);
+            return _callBatchActivateCustomTargetingValues.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Batch activates `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(BatchActivateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchActivateCustomTargetingValuesRequest(ref request, ref callSettings);
+            return _callBatchActivateCustomTargetingValues.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override BatchDeactivateCustomTargetingValuesResponse BatchDeactivateCustomTargetingValues(BatchDeactivateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateCustomTargetingValuesRequest(ref request, ref callSettings);
+            return _callBatchDeactivateCustomTargetingValues.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Deactivates a list of `CustomTargetingValue` objects.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(BatchDeactivateCustomTargetingValuesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_BatchDeactivateCustomTargetingValuesRequest(ref request, ref callSettings);
+            return _callBatchDeactivateCustomTargetingValues.Async(request, callSettings);
         }
     }
 

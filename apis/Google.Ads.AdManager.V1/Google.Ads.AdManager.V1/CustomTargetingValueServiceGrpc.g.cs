@@ -71,6 +71,26 @@ namespace Google.Ads.AdManager.V1 {
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCustomTargetingValuesRequest> __Marshaller_google_ads_admanager_v1_ListCustomTargetingValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCustomTargetingValuesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse> __Marshaller_google_ads_admanager_v1_ListCustomTargetingValuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest> __Marshaller_google_ads_admanager_v1_CreateCustomTargetingValueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest> __Marshaller_google_ads_admanager_v1_BatchCreateCustomTargetingValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse> __Marshaller_google_ads_admanager_v1_BatchCreateCustomTargetingValuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest> __Marshaller_google_ads_admanager_v1_UpdateCustomTargetingValueRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest> __Marshaller_google_ads_admanager_v1_BatchUpdateCustomTargetingValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse> __Marshaller_google_ads_admanager_v1_BatchUpdateCustomTargetingValuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest> __Marshaller_google_ads_admanager_v1_BatchActivateCustomTargetingValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse> __Marshaller_google_ads_admanager_v1_BatchActivateCustomTargetingValuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest> __Marshaller_google_ads_admanager_v1_BatchDeactivateCustomTargetingValuesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse> __Marshaller_google_ads_admanager_v1_BatchDeactivateCustomTargetingValuesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Ads.AdManager.V1.GetCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue> __Method_GetCustomTargetingValue = new grpc::Method<global::Google.Ads.AdManager.V1.GetCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue>(
@@ -88,6 +108,54 @@ namespace Google.Ads.AdManager.V1 {
         __Marshaller_google_ads_admanager_v1_ListCustomTargetingValuesRequest,
         __Marshaller_google_ads_admanager_v1_ListCustomTargetingValuesResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue> __Method_CreateCustomTargetingValue = new grpc::Method<global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateCustomTargetingValue",
+        __Marshaller_google_ads_admanager_v1_CreateCustomTargetingValueRequest,
+        __Marshaller_google_ads_admanager_v1_CustomTargetingValue);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse> __Method_BatchCreateCustomTargetingValues = new grpc::Method<global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchCreateCustomTargetingValues",
+        __Marshaller_google_ads_admanager_v1_BatchCreateCustomTargetingValuesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchCreateCustomTargetingValuesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue> __Method_UpdateCustomTargetingValue = new grpc::Method<global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateCustomTargetingValue",
+        __Marshaller_google_ads_admanager_v1_UpdateCustomTargetingValueRequest,
+        __Marshaller_google_ads_admanager_v1_CustomTargetingValue);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse> __Method_BatchUpdateCustomTargetingValues = new grpc::Method<global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchUpdateCustomTargetingValues",
+        __Marshaller_google_ads_admanager_v1_BatchUpdateCustomTargetingValuesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchUpdateCustomTargetingValuesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse> __Method_BatchActivateCustomTargetingValues = new grpc::Method<global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchActivateCustomTargetingValues",
+        __Marshaller_google_ads_admanager_v1_BatchActivateCustomTargetingValuesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchActivateCustomTargetingValuesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse> __Method_BatchDeactivateCustomTargetingValues = new grpc::Method<global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BatchDeactivateCustomTargetingValues",
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateCustomTargetingValuesRequest,
+        __Marshaller_google_ads_admanager_v1_BatchDeactivateCustomTargetingValuesResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -99,7 +167,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class CustomTargetingValueServiceBase
     {
       /// <summary>
-      /// API to retrieve a `CustomTargetingValue` object.
+      /// Retrieves a `CustomTargetingValue` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -111,13 +179,85 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingValue` objects.
+      /// Lists `CustomTargetingValue` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse> ListCustomTargetingValues(global::Google.Ads.AdManager.V1.ListCustomTargetingValuesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.CustomTargetingValue> CreateCustomTargetingValue(global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.CustomTargetingValue> UpdateCustomTargetingValue(global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch updates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Batch activates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deactivates a list of `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -152,7 +292,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `CustomTargetingValue` object.
+      /// Retrieves a `CustomTargetingValue` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -165,7 +305,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCustomTargetingValue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `CustomTargetingValue` object.
+      /// Retrieves a `CustomTargetingValue` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -176,7 +316,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomTargetingValue, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `CustomTargetingValue` object.
+      /// Retrieves a `CustomTargetingValue` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -189,7 +329,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCustomTargetingValueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `CustomTargetingValue` object.
+      /// Retrieves a `CustomTargetingValue` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -200,7 +340,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomTargetingValue, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingValue` objects.
+      /// Lists `CustomTargetingValue` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +353,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCustomTargetingValues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingValue` objects.
+      /// Lists `CustomTargetingValue` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -224,7 +364,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCustomTargetingValues, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingValue` objects.
+      /// Lists `CustomTargetingValue` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +377,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCustomTargetingValuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingValue` objects.
+      /// Lists `CustomTargetingValue` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -246,6 +386,294 @@ namespace Google.Ads.AdManager.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse> ListCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.ListCustomTargetingValuesRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListCustomTargetingValues, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.CustomTargetingValue CreateCustomTargetingValue(global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomTargetingValue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.CustomTargetingValue CreateCustomTargetingValue(global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateCustomTargetingValue, null, options, request);
+      }
+      /// <summary>
+      /// Creates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.CustomTargetingValue> CreateCustomTargetingValueAsync(global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateCustomTargetingValueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.CustomTargetingValue> CreateCustomTargetingValueAsync(global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateCustomTargetingValue, null, options, request);
+      }
+      /// <summary>
+      /// Creates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse BatchCreateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateCustomTargetingValues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse BatchCreateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchCreateCustomTargetingValues, null, options, request);
+      }
+      /// <summary>
+      /// Creates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchCreateCustomTargetingValuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse> BatchCreateCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchCreateCustomTargetingValues, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.CustomTargetingValue UpdateCustomTargetingValue(global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomTargetingValue(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.CustomTargetingValue UpdateCustomTargetingValue(global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomTargetingValue, null, options, request);
+      }
+      /// <summary>
+      /// Updates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.CustomTargetingValue> UpdateCustomTargetingValueAsync(global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateCustomTargetingValueAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a `CustomTargetingValue` object.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.CustomTargetingValue> UpdateCustomTargetingValueAsync(global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomTargetingValue, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse BatchUpdateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateCustomTargetingValues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse BatchUpdateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateCustomTargetingValues, null, options, request);
+      }
+      /// <summary>
+      /// Batch updates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchUpdateCustomTargetingValuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch updates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse> BatchUpdateCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateCustomTargetingValues, null, options, request);
+      }
+      /// <summary>
+      /// Batch activates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse BatchActivateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateCustomTargetingValues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch activates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse BatchActivateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchActivateCustomTargetingValues, null, options, request);
+      }
+      /// <summary>
+      /// Batch activates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchActivateCustomTargetingValuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Batch activates `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse> BatchActivateCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchActivateCustomTargetingValues, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse BatchDeactivateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateCustomTargetingValues(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse BatchDeactivateCustomTargetingValues(global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BatchDeactivateCustomTargetingValues, null, options, request);
+      }
+      /// <summary>
+      /// Deactivates a list of `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BatchDeactivateCustomTargetingValuesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deactivates a list of `CustomTargetingValue` objects.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse> BatchDeactivateCustomTargetingValuesAsync(global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BatchDeactivateCustomTargetingValues, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -262,7 +690,13 @@ namespace Google.Ads.AdManager.V1 {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetCustomTargetingValue, serviceImpl.GetCustomTargetingValue)
-          .AddMethod(__Method_ListCustomTargetingValues, serviceImpl.ListCustomTargetingValues).Build();
+          .AddMethod(__Method_ListCustomTargetingValues, serviceImpl.ListCustomTargetingValues)
+          .AddMethod(__Method_CreateCustomTargetingValue, serviceImpl.CreateCustomTargetingValue)
+          .AddMethod(__Method_BatchCreateCustomTargetingValues, serviceImpl.BatchCreateCustomTargetingValues)
+          .AddMethod(__Method_UpdateCustomTargetingValue, serviceImpl.UpdateCustomTargetingValue)
+          .AddMethod(__Method_BatchUpdateCustomTargetingValues, serviceImpl.BatchUpdateCustomTargetingValues)
+          .AddMethod(__Method_BatchActivateCustomTargetingValues, serviceImpl.BatchActivateCustomTargetingValues)
+          .AddMethod(__Method_BatchDeactivateCustomTargetingValues, serviceImpl.BatchDeactivateCustomTargetingValues).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -274,6 +708,12 @@ namespace Google.Ads.AdManager.V1 {
     {
       serviceBinder.AddMethod(__Method_GetCustomTargetingValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.GetCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue>(serviceImpl.GetCustomTargetingValue));
       serviceBinder.AddMethod(__Method_ListCustomTargetingValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.ListCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse>(serviceImpl.ListCustomTargetingValues));
+      serviceBinder.AddMethod(__Method_CreateCustomTargetingValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue>(serviceImpl.CreateCustomTargetingValue));
+      serviceBinder.AddMethod(__Method_BatchCreateCustomTargetingValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse>(serviceImpl.BatchCreateCustomTargetingValues));
+      serviceBinder.AddMethod(__Method_UpdateCustomTargetingValue, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest, global::Google.Ads.AdManager.V1.CustomTargetingValue>(serviceImpl.UpdateCustomTargetingValue));
+      serviceBinder.AddMethod(__Method_BatchUpdateCustomTargetingValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse>(serviceImpl.BatchUpdateCustomTargetingValues));
+      serviceBinder.AddMethod(__Method_BatchActivateCustomTargetingValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse>(serviceImpl.BatchActivateCustomTargetingValues));
+      serviceBinder.AddMethod(__Method_BatchDeactivateCustomTargetingValues, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest, global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse>(serviceImpl.BatchDeactivateCustomTargetingValues));
     }
 
   }

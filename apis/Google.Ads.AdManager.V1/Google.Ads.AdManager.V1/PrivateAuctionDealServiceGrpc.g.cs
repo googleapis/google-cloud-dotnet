@@ -119,7 +119,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class PrivateAuctionDealServiceBase
     {
       /// <summary>
-      /// API to retrieve a `PrivateAuctionDeal` object.
+      /// Retrieves a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -131,7 +131,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `PrivateAuctionDeal` objects.
+      /// Lists `PrivateAuctionDeal` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -143,7 +143,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to create a `PrivateAuctionDeal` object.
+      /// Creates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -155,7 +155,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to update a `PrivateAuctionDeal` object.
+      /// Updates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -196,7 +196,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `PrivateAuctionDeal` object.
+      /// Retrieves a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -209,7 +209,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetPrivateAuctionDeal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `PrivateAuctionDeal` object.
+      /// Retrieves a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -220,7 +220,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetPrivateAuctionDeal, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `PrivateAuctionDeal` object.
+      /// Retrieves a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -233,7 +233,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetPrivateAuctionDealAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `PrivateAuctionDeal` object.
+      /// Retrieves a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -244,7 +244,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetPrivateAuctionDeal, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `PrivateAuctionDeal` objects.
+      /// Lists `PrivateAuctionDeal` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -257,7 +257,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListPrivateAuctionDeals(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `PrivateAuctionDeal` objects.
+      /// Lists `PrivateAuctionDeal` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -268,7 +268,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListPrivateAuctionDeals, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `PrivateAuctionDeal` objects.
+      /// Lists `PrivateAuctionDeal` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -281,7 +281,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListPrivateAuctionDealsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `PrivateAuctionDeal` objects.
+      /// Lists `PrivateAuctionDeal` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -292,7 +292,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListPrivateAuctionDeals, null, options, request);
       }
       /// <summary>
-      /// API to create a `PrivateAuctionDeal` object.
+      /// Creates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -305,7 +305,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreatePrivateAuctionDeal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `PrivateAuctionDeal` object.
+      /// Creates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -316,7 +316,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePrivateAuctionDeal, null, options, request);
       }
       /// <summary>
-      /// API to create a `PrivateAuctionDeal` object.
+      /// Creates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -329,7 +329,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreatePrivateAuctionDealAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `PrivateAuctionDeal` object.
+      /// Creates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePrivateAuctionDeal, null, options, request);
       }
       /// <summary>
-      /// API to update a `PrivateAuctionDeal` object.
+      /// Updates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdatePrivateAuctionDeal(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `PrivateAuctionDeal` object.
+      /// Updates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -364,7 +364,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdatePrivateAuctionDeal, null, options, request);
       }
       /// <summary>
-      /// API to update a `PrivateAuctionDeal` object.
+      /// Updates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdatePrivateAuctionDealAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `PrivateAuctionDeal` object.
+      /// Updates a `PrivateAuctionDeal` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

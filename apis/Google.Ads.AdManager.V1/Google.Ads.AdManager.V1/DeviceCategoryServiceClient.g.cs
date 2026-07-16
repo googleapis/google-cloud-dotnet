@@ -227,7 +227,7 @@ namespace Google.Ads.AdManager.V1
         public virtual DeviceCategoryService.DeviceCategoryServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -236,7 +236,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -245,7 +245,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -254,7 +254,7 @@ namespace Google.Ads.AdManager.V1
             GetDeviceCategoryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceCategory.
@@ -269,7 +269,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceCategory.
@@ -284,7 +284,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceCategory.
@@ -296,7 +296,7 @@ namespace Google.Ads.AdManager.V1
             GetDeviceCategoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceCategory.
@@ -311,7 +311,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceCategory.
@@ -326,7 +326,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceCategory.
@@ -338,7 +338,7 @@ namespace Google.Ads.AdManager.V1
             GetDeviceCategoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `DeviceCategory` objects.
+        /// Lists `DeviceCategory` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -347,7 +347,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `DeviceCategory` objects.
+        /// Lists `DeviceCategory` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -356,7 +356,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `DeviceCategory` objects.
+        /// Lists `DeviceCategory` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of DeviceCategories.
@@ -390,7 +390,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceCategory` objects.
+        /// Lists `DeviceCategory` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of DeviceCategories.
@@ -424,7 +424,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceCategory` objects.
+        /// Lists `DeviceCategory` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of DeviceCategories.
@@ -458,7 +458,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceCategory` objects.
+        /// Lists `DeviceCategory` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of DeviceCategories.
@@ -543,7 +543,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_ListDeviceCategoriesRequest(ref ListDeviceCategoriesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -555,7 +555,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `DeviceCategory` object.
+        /// Retrieves a `DeviceCategory` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -567,7 +567,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceCategory` objects.
+        /// Lists `DeviceCategory` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -579,7 +579,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceCategory` objects.
+        /// Lists `DeviceCategory` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

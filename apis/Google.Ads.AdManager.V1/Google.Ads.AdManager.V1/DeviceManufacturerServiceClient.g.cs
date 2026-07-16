@@ -227,7 +227,7 @@ namespace Google.Ads.AdManager.V1
         public virtual DeviceManufacturerService.DeviceManufacturerServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -236,7 +236,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -245,7 +245,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -254,7 +254,7 @@ namespace Google.Ads.AdManager.V1
             GetDeviceManufacturerAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceManufacturer.
@@ -270,7 +270,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceManufacturer.
@@ -286,7 +286,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceManufacturer.
@@ -299,7 +299,7 @@ namespace Google.Ads.AdManager.V1
             GetDeviceManufacturerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceManufacturer.
@@ -315,7 +315,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceManufacturer.
@@ -331,7 +331,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the DeviceManufacturer.
@@ -344,7 +344,7 @@ namespace Google.Ads.AdManager.V1
             GetDeviceManufacturerAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `DeviceManufacturer` objects.
+        /// Lists `DeviceManufacturer` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `DeviceManufacturer` objects.
+        /// Lists `DeviceManufacturer` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -362,7 +362,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `DeviceManufacturer` objects.
+        /// Lists `DeviceManufacturer` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of DeviceManufacturers.
@@ -396,7 +396,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceManufacturer` objects.
+        /// Lists `DeviceManufacturer` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of DeviceManufacturers.
@@ -430,7 +430,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceManufacturer` objects.
+        /// Lists `DeviceManufacturer` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of DeviceManufacturers.
@@ -464,7 +464,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceManufacturer` objects.
+        /// Lists `DeviceManufacturer` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of DeviceManufacturers.
@@ -551,7 +551,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_ListDeviceManufacturersRequest(ref ListDeviceManufacturersRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -563,7 +563,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `DeviceManufacturer` object.
+        /// Retrieves a `DeviceManufacturer` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -575,7 +575,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceManufacturer` objects.
+        /// Lists `DeviceManufacturer` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -587,7 +587,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `DeviceManufacturer` objects.
+        /// Lists `DeviceManufacturer` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

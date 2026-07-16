@@ -25,21 +25,65 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvYWRzL2FkbWFuYWdlci92MS9jb250ZW50X21lc3NhZ2VzLnBy",
-            "b3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byKx",
-            "AQoHQ29udGVudBIRCgRuYW1lGAEgASgJQgPgQQgSHgoMZGlzcGxheV9uYW1l",
-            "GAIgASgJQgPgQQNIAIgBATpi6kFfCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b20vQ29udGVudBIpbmV0d29ya3Mve25ldHdvcmtfY29kZX0vY29udGVudC97",
-            "Y29udGVudH0qB2NvbnRlbnQyB2NvbnRlbnRCDwoNX2Rpc3BsYXlfbmFtZULI",
-            "AQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhRDb250ZW50TWVzc2Fn",
+            "b3RvEhdnb29nbGUuYWRzLmFkbWFuYWdlci52MRorZ29vZ2xlL2Fkcy9hZG1h",
+            "bmFnZXIvdjEvY29udGVudF9lbnVtcy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
+            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoe",
+            "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9i",
+            "dWYvdGltZXN0YW1wLnByb3RvIo4LCgdDb250ZW50EhEKBG5hbWUYASABKAlC",
+            "A+BBCBIeCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBA0gAiAEBElIKBnN0YXR1",
+            "cxgDIAEoDjI4Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNvbnRlbnRTdGF0",
+            "dXNFbnVtLkNvbnRlbnRTdGF0dXNCA+BBA0gBiAEBEm0KFWNvbnRlbnRfc3Rh",
+            "dHVzX3NvdXJjZRgEIAEoDjJELmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNv",
+            "bnRlbnRTdGF0dXNTb3VyY2VFbnVtLkNvbnRlbnRTdGF0dXNTb3VyY2VCA+BB",
+            "A0gCiAEBEmEKEWhsc19pbmdlc3Rfc3RhdHVzGAUgASgOMjwuZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuRGFpSW5nZXN0U3RhdHVzRW51bS5EYWlJbmdlc3RT",
+            "dGF0dXNCA+BBA0gDiAEBEkcKEWhsc19pbmdlc3RfZXJyb3JzGAYgAygLMicu",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRGFpSW5nZXN0RXJyb3JCA+BBAxJC",
+            "ChRsYXN0X2hsc19pbmdlc3RfdGltZRgHIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBA0gEiAEBEmIKEmRhc2hfaW5nZXN0X3N0YXR1cxgI",
+            "IAEoDjI8Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRhaUluZ2VzdFN0YXR1",
+            "c0VudW0uRGFpSW5nZXN0U3RhdHVzQgPgQQNIBYgBARJIChJkYXNoX2luZ2Vz",
+            "dF9lcnJvcnMYCSADKAsyJy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5EYWlJ",
+            "bmdlc3RFcnJvckID4EEDEkMKFWxhc3RfZGFzaF9pbmdlc3RfdGltZRgKIAEo",
+            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA0gGiAEBEjkKC2lt",
+            "cG9ydF90aW1lGAsgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
+            "4EEDSAeIAQESOQoLdXBkYXRlX3RpbWUYDCABKAsyGi5nb29nbGUucHJvdG9i",
+            "dWYuVGltZXN0YW1wQgPgQQNICIgBARI9CgtjbXNfc291cmNlcxgNIAMoCzIj",
+            "Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNtc0NvbnRlbnRCA+BBAxJHCg9j",
+            "b250ZW50X2J1bmRsZXMYDiADKAlCLuBBA/pBKAomYWRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL0NvbnRlbnRCdW5kbGUSTgoTY21zX21ldGFkYXRhX3ZhbHVl",
+            "cxgPIAMoCUIx4EED+kErCilhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ21z",
+            "TWV0YWRhdGFWYWx1ZRI1CghkdXJhdGlvbhgQIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkID4EEDSAmIAQE6YupBXwogYWRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL0NvbnRlbnQSKW5ldHdvcmtzL3tuZXR3b3JrX2NvZGV9L2Nv",
+            "bnRlbnQve2NvbnRlbnR9Kgdjb250ZW50Mgdjb250ZW50Qg8KDV9kaXNwbGF5",
+            "X25hbWVCCQoHX3N0YXR1c0IYChZfY29udGVudF9zdGF0dXNfc291cmNlQhQK",
+            "El9obHNfaW5nZXN0X3N0YXR1c0IXChVfbGFzdF9obHNfaW5nZXN0X3RpbWVC",
+            "FQoTX2Rhc2hfaW5nZXN0X3N0YXR1c0IYChZfbGFzdF9kYXNoX2luZ2VzdF90",
+            "aW1lQg4KDF9pbXBvcnRfdGltZUIOCgxfdXBkYXRlX3RpbWVCCwoJX2R1cmF0",
+            "aW9uIp8BCg5EYWlJbmdlc3RFcnJvchJbCgZyZWFzb24YASABKA4yRi5nb29n",
+            "bGUuYWRzLmFkbWFuYWdlci52MS5EYWlJbmdlc3RFcnJvclJlYXNvbkVudW0u",
+            "RGFpSW5nZXN0RXJyb3JSZWFzb25IAIgBARIZCgd0cmlnZ2VyGAIgASgJQgPg",
+            "QQNIAYgBAUIJCgdfcmVhc29uQgoKCF90cmlnZ2VyIusBCgpDbXNDb250ZW50",
+            "EksKDmNvbnRlbnRfc291cmNlGAEgASgJQi7gQQP6QSgKJmFkbWFuYWdlci5n",
+            "b29nbGVhcGlzLmNvbS9Db250ZW50U291cmNlSACIAQESLQobY29udGVudF9z",
+            "b3VyY2VfZGlzcGxheV9uYW1lGAIgASgJQgPgQQNIAYgBARIbCg5jbXNfY29u",
+            "dGVudF9pZBgDIAEoCUgCiAEBQhEKD19jb250ZW50X3NvdXJjZUIeChxfY29u",
+            "dGVudF9zb3VyY2VfZGlzcGxheV9uYW1lQhEKD19jbXNfY29udGVudF9pZELM",
+            "AgobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxQhRDb250ZW50TWVzc2Fn",
             "ZXNQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
             "cGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIXR29vZ2xlLkFkcy5B",
             "ZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdlclxWMeoCGkdvb2ds",
-            "ZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "ZTo6QWRzOjpBZE1hbmFnZXI6OlYx6kGAAQomYWRtYW5hZ2VyLmdvb2dsZWFw",
+            "aXMuY29tL0NvbnRlbnRTb3VyY2USN25ldHdvcmtzL3tuZXR3b3JrX2NvZGV9",
+            "L2NvbnRlbnRTb3VyY2VzL3tjb250ZW50X3NvdXJjZX0qDmNvbnRlbnRTb3Vy",
+            "Y2VzMg1jb250ZW50U291cmNlYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ContentEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Content), global::Google.Ads.AdManager.V1.Content.Parser, new[]{ "Name", "DisplayName" }, new[]{ "DisplayName" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Content), global::Google.Ads.AdManager.V1.Content.Parser, new[]{ "Name", "DisplayName", "Status", "ContentStatusSource", "HlsIngestStatus", "HlsIngestErrors", "LastHlsIngestTime", "DashIngestStatus", "DashIngestErrors", "LastDashIngestTime", "ImportTime", "UpdateTime", "CmsSources", "ContentBundles", "CmsMetadataValues", "Duration" }, new[]{ "DisplayName", "Status", "ContentStatusSource", "HlsIngestStatus", "LastHlsIngestTime", "DashIngestStatus", "LastDashIngestTime", "ImportTime", "UpdateTime", "Duration" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DaiIngestError), global::Google.Ads.AdManager.V1.DaiIngestError.Parser, new[]{ "Reason", "Trigger" }, new[]{ "Reason", "Trigger" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CmsContent), global::Google.Ads.AdManager.V1.CmsContent.Parser, new[]{ "ContentSource", "ContentSourceDisplayName", "CmsContentId" }, new[]{ "ContentSource", "ContentSourceDisplayName", "CmsContentId" }, null, null, null)
           }));
     }
     #endregion
@@ -57,6 +101,7 @@ namespace Google.Ads.AdManager.V1 {
   {
     private static readonly pb::MessageParser<Content> _parser = new pb::MessageParser<Content>(() => new Content());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Content> Parser { get { return _parser; } }
@@ -84,8 +129,23 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Content(Content other) : this() {
+      _hasBits0 = other._hasBits0;
       name_ = other.name_;
       displayName_ = other.displayName_;
+      status_ = other.status_;
+      contentStatusSource_ = other.contentStatusSource_;
+      hlsIngestStatus_ = other.hlsIngestStatus_;
+      hlsIngestErrors_ = other.hlsIngestErrors_.Clone();
+      lastHlsIngestTime_ = other.lastHlsIngestTime_ != null ? other.lastHlsIngestTime_.Clone() : null;
+      dashIngestStatus_ = other.dashIngestStatus_;
+      dashIngestErrors_ = other.dashIngestErrors_.Clone();
+      lastDashIngestTime_ = other.lastDashIngestTime_ != null ? other.lastDashIngestTime_.Clone() : null;
+      importTime_ = other.importTime_ != null ? other.importTime_.Clone() : null;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      cmsSources_ = other.cmsSources_.Clone();
+      contentBundles_ = other.contentBundles_.Clone();
+      cmsMetadataValues_ = other.cmsMetadataValues_.Clone();
+      duration_ = other.duration_ != null ? other.duration_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -140,6 +200,300 @@ namespace Google.Ads.AdManager.V1 {
       displayName_ = null;
     }
 
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 3;
+    private readonly static global::Google.Ads.AdManager.V1.ContentStatusEnum.Types.ContentStatus StatusDefaultValue = global::Google.Ads.AdManager.V1.ContentStatusEnum.Types.ContentStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ContentStatusEnum.Types.ContentStatus status_;
+    /// <summary>
+    /// Output only. The status of this `Content`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ContentStatusEnum.Types.ContentStatus Status {
+      get { if ((_hasBits0 & 1) != 0) { return status_; } else { return StatusDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        status_ = value;
+      }
+    }
+    /// <summary>Gets whether the "status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasStatus {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearStatus() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "content_status_source" field.</summary>
+    public const int ContentStatusSourceFieldNumber = 4;
+    private readonly static global::Google.Ads.AdManager.V1.ContentStatusSourceEnum.Types.ContentStatusSource ContentStatusSourceDefaultValue = global::Google.Ads.AdManager.V1.ContentStatusSourceEnum.Types.ContentStatusSource.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.ContentStatusSourceEnum.Types.ContentStatusSource contentStatusSource_;
+    /// <summary>
+    /// Output only. Whether the content status was defined by the user, or by the
+    /// source CMS from which the `Content` was ingested.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ContentStatusSourceEnum.Types.ContentStatusSource ContentStatusSource {
+      get { if ((_hasBits0 & 2) != 0) { return contentStatusSource_; } else { return ContentStatusSourceDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        contentStatusSource_ = value;
+      }
+    }
+    /// <summary>Gets whether the "content_status_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContentStatusSource {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "content_status_source" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContentStatusSource() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "hls_ingest_status" field.</summary>
+    public const int HlsIngestStatusFieldNumber = 5;
+    private readonly static global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus HlsIngestStatusDefaultValue = global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus hlsIngestStatus_;
+    /// <summary>
+    /// Output only. The current DAI ingest status of the HLS media for the
+    /// `Content`. This attribute is unset if the `Content` is not eligible for
+    /// dynamic ad insertion or if the `Content` does not have HLS media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus HlsIngestStatus {
+      get { if ((_hasBits0 & 4) != 0) { return hlsIngestStatus_; } else { return HlsIngestStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        hlsIngestStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "hls_ingest_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasHlsIngestStatus {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "hls_ingest_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearHlsIngestStatus() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "hls_ingest_errors" field.</summary>
+    public const int HlsIngestErrorsFieldNumber = 6;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.DaiIngestError> _repeated_hlsIngestErrors_codec
+        = pb::FieldCodec.ForMessage(50, global::Google.Ads.AdManager.V1.DaiIngestError.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.DaiIngestError> hlsIngestErrors_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.DaiIngestError>();
+    /// <summary>
+    /// Output only. The list of any errors that occurred during the most recent
+    /// DAI ingestion process of the HLS media. This attribute will be empty if the
+    /// hlsIngestStatus is [DaiIngestStatus.SUCCESS][] or if the `Content` is
+    /// not eligible for dynamic ad insertion or if the `Content` does not have
+    /// HLS media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.DaiIngestError> HlsIngestErrors {
+      get { return hlsIngestErrors_; }
+    }
+
+    /// <summary>Field number for the "last_hls_ingest_time" field.</summary>
+    public const int LastHlsIngestTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp lastHlsIngestTime_;
+    /// <summary>
+    /// Output only. The timestamp at which this `Content`'s HLS media was last
+    /// ingested for DAI. This attribute will be unset if the `Content` is not
+    /// eligible for dynamic ad insertion or if the `Content` does not have HLS
+    /// media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LastHlsIngestTime {
+      get { return lastHlsIngestTime_; }
+      set {
+        lastHlsIngestTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "dash_ingest_status" field.</summary>
+    public const int DashIngestStatusFieldNumber = 8;
+    private readonly static global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus DashIngestStatusDefaultValue = global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus dashIngestStatus_;
+    /// <summary>
+    /// Output only. The current DAI ingest status of the DASH media for the
+    /// `Content`. This attribute is unset if the `Content` is not eligible for
+    /// dynamic ad insertion or if the `Content` does not have DASH media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus DashIngestStatus {
+      get { if ((_hasBits0 & 8) != 0) { return dashIngestStatus_; } else { return DashIngestStatusDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        dashIngestStatus_ = value;
+      }
+    }
+    /// <summary>Gets whether the "dash_ingest_status" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDashIngestStatus {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "dash_ingest_status" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDashIngestStatus() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "dash_ingest_errors" field.</summary>
+    public const int DashIngestErrorsFieldNumber = 9;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.DaiIngestError> _repeated_dashIngestErrors_codec
+        = pb::FieldCodec.ForMessage(74, global::Google.Ads.AdManager.V1.DaiIngestError.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.DaiIngestError> dashIngestErrors_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.DaiIngestError>();
+    /// <summary>
+    /// Output only. The list of any errors that occurred during the most recent
+    /// DAI ingestion process of the DASH media. This attribute will be empty if
+    /// the hlsIngestStatus is [DaiIngestStatus.SUCCESS][] or if the `Content` is
+    /// not eligible for dynamic ad insertion or if the `Content` does not have
+    /// DASH media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.DaiIngestError> DashIngestErrors {
+      get { return dashIngestErrors_; }
+    }
+
+    /// <summary>Field number for the "last_dash_ingest_time" field.</summary>
+    public const int LastDashIngestTimeFieldNumber = 10;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp lastDashIngestTime_;
+    /// <summary>
+    /// Output only. The timestamp at which this `Content`'s DASH media was last
+    /// ingested for DAI. This attribute will be unset if the `Content` is not
+    /// eligible for dynamic ad insertion or if the `Content` does not have DASH
+    /// media.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp LastDashIngestTime {
+      get { return lastDashIngestTime_; }
+      set {
+        lastDashIngestTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "import_time" field.</summary>
+    public const int ImportTimeFieldNumber = 11;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp importTime_;
+    /// <summary>
+    /// Output only. The timestamp at which this `Content` was published.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ImportTime {
+      get { return importTime_; }
+      set {
+        importTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 12;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The timestamp at which this `Content` was last modified.
+    /// The last modified date time will always be updated when a
+    /// [ContentBundle][google.ads.admanager.v1.ContentBundle]
+    /// association is changed, but will not always be updated when a
+    /// [CmsMetadataValue][google.ads.admanager.v1.CmsMetadataValue]
+    /// value is changed.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cms_sources" field.</summary>
+    public const int CmsSourcesFieldNumber = 13;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CmsContent> _repeated_cmsSources_codec
+        = pb::FieldCodec.ForMessage(106, global::Google.Ads.AdManager.V1.CmsContent.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CmsContent> cmsSources_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CmsContent>();
+    /// <summary>
+    /// Output only. Information about the `Content` from the CMS it was ingested
+    /// from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CmsContent> CmsSources {
+      get { return cmsSources_; }
+    }
+
+    /// <summary>Field number for the "content_bundles" field.</summary>
+    public const int ContentBundlesFieldNumber = 14;
+    private static readonly pb::FieldCodec<string> _repeated_contentBundles_codec
+        = pb::FieldCodec.ForString(114);
+    private readonly pbc::RepeatedField<string> contentBundles_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The resource names of the
+    /// [ContentBundles][google.ads.admanager.v1.ContentBundle] of
+    /// which this `Content` is a member.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> ContentBundles {
+      get { return contentBundles_; }
+    }
+
+    /// <summary>Field number for the "cms_metadata_values" field.</summary>
+    public const int CmsMetadataValuesFieldNumber = 15;
+    private static readonly pb::FieldCodec<string> _repeated_cmsMetadataValues_codec
+        = pb::FieldCodec.ForString(122);
+    private readonly pbc::RepeatedField<string> cmsMetadataValues_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// Output only. The resource names of the [CmsMetadataValues]
+    /// [google.ads.admanager.v1.CmsMetadataValue] that
+    /// are associated with this `Content`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<string> CmsMetadataValues {
+      get { return cmsMetadataValues_; }
+    }
+
+    /// <summary>Field number for the "duration" field.</summary>
+    public const int DurationFieldNumber = 16;
+    private global::Google.Protobuf.WellKnownTypes.Duration duration_;
+    /// <summary>
+    /// Output only. The duration of the `Content`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Duration Duration {
+      get { return duration_; }
+      set {
+        duration_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -157,6 +511,20 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (Status != other.Status) return false;
+      if (ContentStatusSource != other.ContentStatusSource) return false;
+      if (HlsIngestStatus != other.HlsIngestStatus) return false;
+      if(!hlsIngestErrors_.Equals(other.hlsIngestErrors_)) return false;
+      if (!object.Equals(LastHlsIngestTime, other.LastHlsIngestTime)) return false;
+      if (DashIngestStatus != other.DashIngestStatus) return false;
+      if(!dashIngestErrors_.Equals(other.dashIngestErrors_)) return false;
+      if (!object.Equals(LastDashIngestTime, other.LastDashIngestTime)) return false;
+      if (!object.Equals(ImportTime, other.ImportTime)) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
+      if(!cmsSources_.Equals(other.cmsSources_)) return false;
+      if(!contentBundles_.Equals(other.contentBundles_)) return false;
+      if(!cmsMetadataValues_.Equals(other.cmsMetadataValues_)) return false;
+      if (!object.Equals(Duration, other.Duration)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -166,6 +534,20 @@ namespace Google.Ads.AdManager.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (HasDisplayName) hash ^= DisplayName.GetHashCode();
+      if (HasStatus) hash ^= Status.GetHashCode();
+      if (HasContentStatusSource) hash ^= ContentStatusSource.GetHashCode();
+      if (HasHlsIngestStatus) hash ^= HlsIngestStatus.GetHashCode();
+      hash ^= hlsIngestErrors_.GetHashCode();
+      if (lastHlsIngestTime_ != null) hash ^= LastHlsIngestTime.GetHashCode();
+      if (HasDashIngestStatus) hash ^= DashIngestStatus.GetHashCode();
+      hash ^= dashIngestErrors_.GetHashCode();
+      if (lastDashIngestTime_ != null) hash ^= LastDashIngestTime.GetHashCode();
+      if (importTime_ != null) hash ^= ImportTime.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
+      hash ^= cmsSources_.GetHashCode();
+      hash ^= contentBundles_.GetHashCode();
+      hash ^= cmsMetadataValues_.GetHashCode();
+      if (duration_ != null) hash ^= Duration.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -192,6 +574,47 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
+      if (HasStatus) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Status);
+      }
+      if (HasContentStatusSource) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ContentStatusSource);
+      }
+      if (HasHlsIngestStatus) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) HlsIngestStatus);
+      }
+      hlsIngestErrors_.WriteTo(output, _repeated_hlsIngestErrors_codec);
+      if (lastHlsIngestTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(LastHlsIngestTime);
+      }
+      if (HasDashIngestStatus) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) DashIngestStatus);
+      }
+      dashIngestErrors_.WriteTo(output, _repeated_dashIngestErrors_codec);
+      if (lastDashIngestTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(LastDashIngestTime);
+      }
+      if (importTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ImportTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(UpdateTime);
+      }
+      cmsSources_.WriteTo(output, _repeated_cmsSources_codec);
+      contentBundles_.WriteTo(output, _repeated_contentBundles_codec);
+      cmsMetadataValues_.WriteTo(output, _repeated_cmsMetadataValues_codec);
+      if (duration_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(Duration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -210,6 +633,47 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(18);
         output.WriteString(DisplayName);
       }
+      if (HasStatus) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Status);
+      }
+      if (HasContentStatusSource) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) ContentStatusSource);
+      }
+      if (HasHlsIngestStatus) {
+        output.WriteRawTag(40);
+        output.WriteEnum((int) HlsIngestStatus);
+      }
+      hlsIngestErrors_.WriteTo(ref output, _repeated_hlsIngestErrors_codec);
+      if (lastHlsIngestTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(LastHlsIngestTime);
+      }
+      if (HasDashIngestStatus) {
+        output.WriteRawTag(64);
+        output.WriteEnum((int) DashIngestStatus);
+      }
+      dashIngestErrors_.WriteTo(ref output, _repeated_dashIngestErrors_codec);
+      if (lastDashIngestTime_ != null) {
+        output.WriteRawTag(82);
+        output.WriteMessage(LastDashIngestTime);
+      }
+      if (importTime_ != null) {
+        output.WriteRawTag(90);
+        output.WriteMessage(ImportTime);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(98);
+        output.WriteMessage(UpdateTime);
+      }
+      cmsSources_.WriteTo(ref output, _repeated_cmsSources_codec);
+      contentBundles_.WriteTo(ref output, _repeated_contentBundles_codec);
+      cmsMetadataValues_.WriteTo(ref output, _repeated_cmsMetadataValues_codec);
+      if (duration_ != null) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(Duration);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -225,6 +689,38 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (HasDisplayName) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (HasStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (HasContentStatusSource) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ContentStatusSource);
+      }
+      if (HasHlsIngestStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) HlsIngestStatus);
+      }
+      size += hlsIngestErrors_.CalculateSize(_repeated_hlsIngestErrors_codec);
+      if (lastHlsIngestTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastHlsIngestTime);
+      }
+      if (HasDashIngestStatus) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DashIngestStatus);
+      }
+      size += dashIngestErrors_.CalculateSize(_repeated_dashIngestErrors_codec);
+      if (lastDashIngestTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastDashIngestTime);
+      }
+      if (importTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ImportTime);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
+      }
+      size += cmsSources_.CalculateSize(_repeated_cmsSources_codec);
+      size += contentBundles_.CalculateSize(_repeated_contentBundles_codec);
+      size += cmsMetadataValues_.CalculateSize(_repeated_cmsMetadataValues_codec);
+      if (duration_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Duration);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -243,6 +739,53 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.HasDisplayName) {
         DisplayName = other.DisplayName;
+      }
+      if (other.HasStatus) {
+        Status = other.Status;
+      }
+      if (other.HasContentStatusSource) {
+        ContentStatusSource = other.ContentStatusSource;
+      }
+      if (other.HasHlsIngestStatus) {
+        HlsIngestStatus = other.HlsIngestStatus;
+      }
+      hlsIngestErrors_.Add(other.hlsIngestErrors_);
+      if (other.lastHlsIngestTime_ != null) {
+        if (lastHlsIngestTime_ == null) {
+          LastHlsIngestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LastHlsIngestTime.MergeFrom(other.LastHlsIngestTime);
+      }
+      if (other.HasDashIngestStatus) {
+        DashIngestStatus = other.DashIngestStatus;
+      }
+      dashIngestErrors_.Add(other.dashIngestErrors_);
+      if (other.lastDashIngestTime_ != null) {
+        if (lastDashIngestTime_ == null) {
+          LastDashIngestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        LastDashIngestTime.MergeFrom(other.LastDashIngestTime);
+      }
+      if (other.importTime_ != null) {
+        if (importTime_ == null) {
+          ImportTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ImportTime.MergeFrom(other.ImportTime);
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      cmsSources_.Add(other.cmsSources_);
+      contentBundles_.Add(other.contentBundles_);
+      cmsMetadataValues_.Add(other.cmsMetadataValues_);
+      if (other.duration_ != null) {
+        if (duration_ == null) {
+          Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+        }
+        Duration.MergeFrom(other.Duration);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -271,6 +814,77 @@ namespace Google.Ads.AdManager.V1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 24: {
+            Status = (global::Google.Ads.AdManager.V1.ContentStatusEnum.Types.ContentStatus) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            ContentStatusSource = (global::Google.Ads.AdManager.V1.ContentStatusSourceEnum.Types.ContentStatusSource) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            HlsIngestStatus = (global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            hlsIngestErrors_.AddEntriesFrom(input, _repeated_hlsIngestErrors_codec);
+            break;
+          }
+          case 58: {
+            if (lastHlsIngestTime_ == null) {
+              LastHlsIngestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastHlsIngestTime);
+            break;
+          }
+          case 64: {
+            DashIngestStatus = (global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            dashIngestErrors_.AddEntriesFrom(input, _repeated_dashIngestErrors_codec);
+            break;
+          }
+          case 82: {
+            if (lastDashIngestTime_ == null) {
+              LastDashIngestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastDashIngestTime);
+            break;
+          }
+          case 90: {
+            if (importTime_ == null) {
+              ImportTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ImportTime);
+            break;
+          }
+          case 98: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 106: {
+            cmsSources_.AddEntriesFrom(input, _repeated_cmsSources_codec);
+            break;
+          }
+          case 114: {
+            contentBundles_.AddEntriesFrom(input, _repeated_contentBundles_codec);
+            break;
+          }
+          case 122: {
+            cmsMetadataValues_.AddEntriesFrom(input, _repeated_cmsMetadataValues_codec);
+            break;
+          }
+          case 130: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
         }
       }
     #endif
@@ -296,6 +910,684 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 18: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 24: {
+            Status = (global::Google.Ads.AdManager.V1.ContentStatusEnum.Types.ContentStatus) input.ReadEnum();
+            break;
+          }
+          case 32: {
+            ContentStatusSource = (global::Google.Ads.AdManager.V1.ContentStatusSourceEnum.Types.ContentStatusSource) input.ReadEnum();
+            break;
+          }
+          case 40: {
+            HlsIngestStatus = (global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus) input.ReadEnum();
+            break;
+          }
+          case 50: {
+            hlsIngestErrors_.AddEntriesFrom(ref input, _repeated_hlsIngestErrors_codec);
+            break;
+          }
+          case 58: {
+            if (lastHlsIngestTime_ == null) {
+              LastHlsIngestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastHlsIngestTime);
+            break;
+          }
+          case 64: {
+            DashIngestStatus = (global::Google.Ads.AdManager.V1.DaiIngestStatusEnum.Types.DaiIngestStatus) input.ReadEnum();
+            break;
+          }
+          case 74: {
+            dashIngestErrors_.AddEntriesFrom(ref input, _repeated_dashIngestErrors_codec);
+            break;
+          }
+          case 82: {
+            if (lastDashIngestTime_ == null) {
+              LastDashIngestTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(LastDashIngestTime);
+            break;
+          }
+          case 90: {
+            if (importTime_ == null) {
+              ImportTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ImportTime);
+            break;
+          }
+          case 98: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
+          case 106: {
+            cmsSources_.AddEntriesFrom(ref input, _repeated_cmsSources_codec);
+            break;
+          }
+          case 114: {
+            contentBundles_.AddEntriesFrom(ref input, _repeated_contentBundles_codec);
+            break;
+          }
+          case 122: {
+            cmsMetadataValues_.AddEntriesFrom(ref input, _repeated_cmsMetadataValues_codec);
+            break;
+          }
+          case 130: {
+            if (duration_ == null) {
+              Duration = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            input.ReadMessage(Duration);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Represents an error associated with a Dynamic Ad Insertion (DAI) `Content`'s
+  /// status.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DaiIngestError : pb::IMessage<DaiIngestError>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DaiIngestError> _parser = new pb::MessageParser<DaiIngestError>(() => new DaiIngestError());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DaiIngestError> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.ContentMessagesReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DaiIngestError() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DaiIngestError(DaiIngestError other) : this() {
+      _hasBits0 = other._hasBits0;
+      reason_ = other.reason_;
+      trigger_ = other.trigger_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DaiIngestError Clone() {
+      return new DaiIngestError(this);
+    }
+
+    /// <summary>Field number for the "reason" field.</summary>
+    public const int ReasonFieldNumber = 1;
+    private readonly static global::Google.Ads.AdManager.V1.DaiIngestErrorReasonEnum.Types.DaiIngestErrorReason ReasonDefaultValue = global::Google.Ads.AdManager.V1.DaiIngestErrorReasonEnum.Types.DaiIngestErrorReason.Unspecified;
+
+    private global::Google.Ads.AdManager.V1.DaiIngestErrorReasonEnum.Types.DaiIngestErrorReason reason_;
+    /// <summary>
+    /// The error associated with the content.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.DaiIngestErrorReasonEnum.Types.DaiIngestErrorReason Reason {
+      get { if ((_hasBits0 & 1) != 0) { return reason_; } else { return ReasonDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        reason_ = value;
+      }
+    }
+    /// <summary>Gets whether the "reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasReason {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "reason" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearReason() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "trigger" field.</summary>
+    public const int TriggerFieldNumber = 2;
+    private readonly static string TriggerDefaultValue = "";
+
+    private string trigger_;
+    /// <summary>
+    /// Output only. The field, if any, that triggered the error.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Trigger {
+      get { return trigger_ ?? TriggerDefaultValue; }
+      set {
+        trigger_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "trigger" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTrigger {
+      get { return trigger_ != null; }
+    }
+    /// <summary>Clears the value of the "trigger" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTrigger() {
+      trigger_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DaiIngestError);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DaiIngestError other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Reason != other.Reason) return false;
+      if (Trigger != other.Trigger) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasReason) hash ^= Reason.GetHashCode();
+      if (HasTrigger) hash ^= Trigger.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasReason) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Reason);
+      }
+      if (HasTrigger) {
+        output.WriteRawTag(18);
+        output.WriteString(Trigger);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasReason) {
+        output.WriteRawTag(8);
+        output.WriteEnum((int) Reason);
+      }
+      if (HasTrigger) {
+        output.WriteRawTag(18);
+        output.WriteString(Trigger);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasReason) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Reason);
+      }
+      if (HasTrigger) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Trigger);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DaiIngestError other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasReason) {
+        Reason = other.Reason;
+      }
+      if (other.HasTrigger) {
+        Trigger = other.Trigger;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Reason = (global::Google.Ads.AdManager.V1.DaiIngestErrorReasonEnum.Types.DaiIngestErrorReason) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Trigger = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Reason = (global::Google.Ads.AdManager.V1.DaiIngestErrorReasonEnum.Types.DaiIngestErrorReason) input.ReadEnum();
+            break;
+          }
+          case 18: {
+            Trigger = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Contains information about the `Content` from the CMS it was ingested from.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CmsContent : pb::IMessage<CmsContent>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CmsContent> _parser = new pb::MessageParser<CmsContent>(() => new CmsContent());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CmsContent> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.ContentMessagesReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CmsContent() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CmsContent(CmsContent other) : this() {
+      contentSource_ = other.contentSource_;
+      contentSourceDisplayName_ = other.contentSourceDisplayName_;
+      cmsContentId_ = other.cmsContentId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CmsContent Clone() {
+      return new CmsContent(this);
+    }
+
+    /// <summary>Field number for the "content_source" field.</summary>
+    public const int ContentSourceFieldNumber = 1;
+    private readonly static string ContentSourceDefaultValue = "";
+
+    private string contentSource_;
+    /// <summary>
+    /// Output only. The resource name of the
+    /// [ContentSource][google.ads.admanager.v1.ContentSource] this
+    /// content was ingested from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ContentSource {
+      get { return contentSource_ ?? ContentSourceDefaultValue; }
+      set {
+        contentSource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "content_source" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContentSource {
+      get { return contentSource_ != null; }
+    }
+    /// <summary>Clears the value of the "content_source" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContentSource() {
+      contentSource_ = null;
+    }
+
+    /// <summary>Field number for the "content_source_display_name" field.</summary>
+    public const int ContentSourceDisplayNameFieldNumber = 2;
+    private readonly static string ContentSourceDisplayNameDefaultValue = "";
+
+    private string contentSourceDisplayName_;
+    /// <summary>
+    /// Output only. The display name of the
+    /// [ContentSource][google.ads.admanager.v1.ContentSource] this
+    /// content was ingested from.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ContentSourceDisplayName {
+      get { return contentSourceDisplayName_ ?? ContentSourceDisplayNameDefaultValue; }
+      set {
+        contentSourceDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "content_source_display_name" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasContentSourceDisplayName {
+      get { return contentSourceDisplayName_ != null; }
+    }
+    /// <summary>Clears the value of the "content_source_display_name" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearContentSourceDisplayName() {
+      contentSourceDisplayName_ = null;
+    }
+
+    /// <summary>Field number for the "cms_content_id" field.</summary>
+    public const int CmsContentIdFieldNumber = 3;
+    private readonly static string CmsContentIdDefaultValue = "";
+
+    private string cmsContentId_;
+    /// <summary>
+    /// The ID of the `Content` in the CMS. This ID will be a 3rd party ID,
+    /// usually the ID of the content in a CMS (Content Management System).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CmsContentId {
+      get { return cmsContentId_ ?? CmsContentIdDefaultValue; }
+      set {
+        cmsContentId_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "cms_content_id" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCmsContentId {
+      get { return cmsContentId_ != null; }
+    }
+    /// <summary>Clears the value of the "cms_content_id" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCmsContentId() {
+      cmsContentId_ = null;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CmsContent);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CmsContent other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ContentSource != other.ContentSource) return false;
+      if (ContentSourceDisplayName != other.ContentSourceDisplayName) return false;
+      if (CmsContentId != other.CmsContentId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasContentSource) hash ^= ContentSource.GetHashCode();
+      if (HasContentSourceDisplayName) hash ^= ContentSourceDisplayName.GetHashCode();
+      if (HasCmsContentId) hash ^= CmsContentId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasContentSource) {
+        output.WriteRawTag(10);
+        output.WriteString(ContentSource);
+      }
+      if (HasContentSourceDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(ContentSourceDisplayName);
+      }
+      if (HasCmsContentId) {
+        output.WriteRawTag(26);
+        output.WriteString(CmsContentId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasContentSource) {
+        output.WriteRawTag(10);
+        output.WriteString(ContentSource);
+      }
+      if (HasContentSourceDisplayName) {
+        output.WriteRawTag(18);
+        output.WriteString(ContentSourceDisplayName);
+      }
+      if (HasCmsContentId) {
+        output.WriteRawTag(26);
+        output.WriteString(CmsContentId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasContentSource) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContentSource);
+      }
+      if (HasContentSourceDisplayName) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ContentSourceDisplayName);
+      }
+      if (HasCmsContentId) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CmsContentId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CmsContent other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasContentSource) {
+        ContentSource = other.ContentSource;
+      }
+      if (other.HasContentSourceDisplayName) {
+        ContentSourceDisplayName = other.ContentSourceDisplayName;
+      }
+      if (other.HasCmsContentId) {
+        CmsContentId = other.CmsContentId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ContentSource = input.ReadString();
+            break;
+          }
+          case 18: {
+            ContentSourceDisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            CmsContentId = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ContentSource = input.ReadString();
+            break;
+          }
+          case 18: {
+            ContentSourceDisplayName = input.ReadString();
+            break;
+          }
+          case 26: {
+            CmsContentId = input.ReadString();
             break;
           }
         }

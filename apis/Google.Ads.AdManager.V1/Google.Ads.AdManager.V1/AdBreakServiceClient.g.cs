@@ -260,7 +260,7 @@ namespace Google.Ads.AdManager.V1
         public virtual AdBreakService.AdBreakServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -272,7 +272,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -284,7 +284,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -296,7 +296,7 @@ namespace Google.Ads.AdManager.V1
             GetAdBreakAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -318,7 +318,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -359,7 +359,7 @@ namespace Google.Ads.AdManager.V1
             GetAdBreakAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -381,7 +381,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -403,7 +403,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -422,7 +422,7 @@ namespace Google.Ads.AdManager.V1
             GetAdBreakAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `AdBreak` objects.
+        /// Lists `AdBreak` objects.
         /// 
         /// By default, when no `orderBy` query parameter is specified, ad breaks are
         /// ordered reverse chronologically. However, ad breaks with a 'breakState' of
@@ -435,7 +435,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `AdBreak` objects.
+        /// Lists `AdBreak` objects.
         /// 
         /// By default, when no `orderBy` query parameter is specified, ad breaks are
         /// ordered reverse chronologically. However, ad breaks with a 'breakState' of
@@ -448,7 +448,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `AdBreak` objects.
+        /// Lists `AdBreak` objects.
         /// 
         /// By default, when no `orderBy` query parameter is specified, ad breaks are
         /// ordered reverse chronologically. However, ad breaks with a 'breakState' of
@@ -489,7 +489,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `AdBreak` objects.
+        /// Lists `AdBreak` objects.
         /// 
         /// By default, when no `orderBy` query parameter is specified, ad breaks are
         /// ordered reverse chronologically. However, ad breaks with a 'breakState' of
@@ -530,7 +530,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `AdBreak` objects.
+        /// Lists `AdBreak` objects.
         /// 
         /// By default, when no `orderBy` query parameter is specified, ad breaks are
         /// ordered reverse chronologically. However, ad breaks with a 'breakState' of
@@ -571,7 +571,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `AdBreak` objects.
+        /// Lists `AdBreak` objects.
         /// 
         /// By default, when no `orderBy` query parameter is specified, ad breaks are
         /// ordered reverse chronologically. However, ad breaks with a 'breakState' of
@@ -612,7 +612,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -643,7 +643,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -674,7 +674,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -705,7 +705,7 @@ namespace Google.Ads.AdManager.V1
             CreateAdBreakAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -750,7 +750,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -795,7 +795,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -836,7 +836,7 @@ namespace Google.Ads.AdManager.V1
             CreateAdBreakAsync(parent, adBreak, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -881,7 +881,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -926,7 +926,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -967,7 +967,7 @@ namespace Google.Ads.AdManager.V1
             CreateAdBreakAsync(parent, adBreak, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update an `AdBreak` object.
+        /// Updates an `AdBreak` object.
         /// 
         /// Modify an ad break when its state is
         /// [`SCHEDULED`][google.ads.admanager.v1.AdBreakStateEnum.AdBreakState.SCHEDULED].
@@ -979,7 +979,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update an `AdBreak` object.
+        /// Updates an `AdBreak` object.
         /// 
         /// Modify an ad break when its state is
         /// [`SCHEDULED`][google.ads.admanager.v1.AdBreakStateEnum.AdBreakState.SCHEDULED].
@@ -991,7 +991,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update an `AdBreak` object.
+        /// Updates an `AdBreak` object.
         /// 
         /// Modify an ad break when its state is
         /// [`SCHEDULED`][google.ads.admanager.v1.AdBreakStateEnum.AdBreakState.SCHEDULED].
@@ -1003,7 +1003,7 @@ namespace Google.Ads.AdManager.V1
             UpdateAdBreakAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update an `AdBreak` object.
+        /// Updates an `AdBreak` object.
         /// 
         /// Modify an ad break when its state is
         /// [`SCHEDULED`][google.ads.admanager.v1.AdBreakStateEnum.AdBreakState.SCHEDULED].
@@ -1026,7 +1026,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update an `AdBreak` object.
+        /// Updates an `AdBreak` object.
         /// 
         /// Modify an ad break when its state is
         /// [`SCHEDULED`][google.ads.admanager.v1.AdBreakStateEnum.AdBreakState.SCHEDULED].
@@ -1049,7 +1049,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update an `AdBreak` object.
+        /// Updates an `AdBreak` object.
         /// 
         /// Modify an ad break when its state is
         /// [`SCHEDULED`][google.ads.admanager.v1.AdBreakStateEnum.AdBreakState.SCHEDULED].
@@ -1068,7 +1068,7 @@ namespace Google.Ads.AdManager.V1
             UpdateAdBreakAsync(adBreak, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1085,7 +1085,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1102,7 +1102,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1119,7 +1119,7 @@ namespace Google.Ads.AdManager.V1
             DeleteAdBreakAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1144,7 +1144,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1169,7 +1169,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1191,7 +1191,7 @@ namespace Google.Ads.AdManager.V1
             DeleteAdBreakAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1216,7 +1216,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1241,7 +1241,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1340,7 +1340,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_DeleteAdBreakRequest(ref DeleteAdBreakRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -1355,7 +1355,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve an `AdBreak` object.
+        /// Retrieves an `AdBreak` object.
         /// 
         /// Query an ad break by its resource name or custom asset key. Check the
         /// resource's `breakState` field to determine its state.
@@ -1370,7 +1370,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `AdBreak` objects.
+        /// Lists `AdBreak` objects.
         /// 
         /// By default, when no `orderBy` query parameter is specified, ad breaks are
         /// ordered reverse chronologically. However, ad breaks with a 'breakState' of
@@ -1386,7 +1386,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `AdBreak` objects.
+        /// Lists `AdBreak` objects.
         /// 
         /// By default, when no `orderBy` query parameter is specified, ad breaks are
         /// ordered reverse chronologically. However, ad breaks with a 'breakState' of
@@ -1402,7 +1402,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -1436,7 +1436,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `AdBreak` object.
+        /// Creates an `AdBreak` object.
         /// 
         /// Informs DAI of an upcoming ad break for a live stream event, with an
         /// optional expected start time. DAI will begin decisioning ads for the break
@@ -1470,7 +1470,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update an `AdBreak` object.
+        /// Updates an `AdBreak` object.
         /// 
         /// Modify an ad break when its state is
         /// [`SCHEDULED`][google.ads.admanager.v1.AdBreakStateEnum.AdBreakState.SCHEDULED].
@@ -1485,7 +1485,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update an `AdBreak` object.
+        /// Updates an `AdBreak` object.
         /// 
         /// Modify an ad break when its state is
         /// [`SCHEDULED`][google.ads.admanager.v1.AdBreakStateEnum.AdBreakState.SCHEDULED].
@@ -1500,7 +1500,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can
@@ -1520,7 +1520,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to delete an `AdBreak` object.
+        /// Deletes an `AdBreak` object.
         /// 
         /// Deletes and cancels an incomplete ad break, mitigating the need to wait
         /// for the current break to serve before recreating an ad break. You can

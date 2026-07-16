@@ -256,7 +256,7 @@ namespace Google.Ads.AdManager.V1
         public virtual PrivateAuctionService.PrivateAuctionServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -265,7 +265,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -274,7 +274,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -283,7 +283,7 @@ namespace Google.Ads.AdManager.V1
             GetPrivateAuctionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the PrivateAuction.
@@ -299,7 +299,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the PrivateAuction.
@@ -315,7 +315,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the PrivateAuction.
@@ -328,7 +328,7 @@ namespace Google.Ads.AdManager.V1
             GetPrivateAuctionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the PrivateAuction.
@@ -344,7 +344,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the PrivateAuction.
@@ -360,7 +360,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the PrivateAuction.
@@ -373,7 +373,7 @@ namespace Google.Ads.AdManager.V1
             GetPrivateAuctionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `PrivateAuction` objects.
+        /// Lists `PrivateAuction` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -382,7 +382,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `PrivateAuction` objects.
+        /// Lists `PrivateAuction` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -391,7 +391,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `PrivateAuction` objects.
+        /// Lists `PrivateAuction` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of PrivateAuctions.
@@ -425,7 +425,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `PrivateAuction` objects.
+        /// Lists `PrivateAuction` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of PrivateAuctions.
@@ -459,7 +459,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `PrivateAuction` objects.
+        /// Lists `PrivateAuction` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of PrivateAuctions.
@@ -493,7 +493,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `PrivateAuction` objects.
+        /// Lists `PrivateAuction` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of PrivateAuctions.
@@ -527,7 +527,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -536,7 +536,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -545,7 +545,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -554,7 +554,7 @@ namespace Google.Ads.AdManager.V1
             CreatePrivateAuctionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `PrivateAuction` will be
@@ -573,7 +573,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `PrivateAuction` will be
@@ -592,7 +592,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `PrivateAuction` will be
@@ -607,7 +607,7 @@ namespace Google.Ads.AdManager.V1
             CreatePrivateAuctionAsync(parent, privateAuction, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `PrivateAuction` will be
@@ -626,7 +626,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `PrivateAuction` will be
@@ -645,7 +645,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `PrivateAuction` will be
@@ -660,7 +660,7 @@ namespace Google.Ads.AdManager.V1
             CreatePrivateAuctionAsync(parent, privateAuction, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `PrivateAuction` object.
+        /// Updates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -669,7 +669,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `PrivateAuction` object.
+        /// Updates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -678,7 +678,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `PrivateAuction` object.
+        /// Updates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -687,7 +687,7 @@ namespace Google.Ads.AdManager.V1
             UpdatePrivateAuctionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `PrivateAuction` object.
+        /// Updates a `PrivateAuction` object.
         /// </summary>
         /// <param name="privateAuction">
         /// Required. The `PrivateAuction` to update.
@@ -708,7 +708,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `PrivateAuction` object.
+        /// Updates a `PrivateAuction` object.
         /// </summary>
         /// <param name="privateAuction">
         /// Required. The `PrivateAuction` to update.
@@ -729,7 +729,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `PrivateAuction` object.
+        /// Updates a `PrivateAuction` object.
         /// </summary>
         /// <param name="privateAuction">
         /// Required. The `PrivateAuction` to update.
@@ -815,7 +815,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_UpdatePrivateAuctionRequest(ref UpdatePrivateAuctionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -827,7 +827,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `PrivateAuction` object.
+        /// Retrieves a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -839,7 +839,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `PrivateAuction` objects.
+        /// Lists `PrivateAuction` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -851,7 +851,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `PrivateAuction` objects.
+        /// Lists `PrivateAuction` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -863,7 +863,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -875,7 +875,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `PrivateAuction` object.
+        /// Creates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -887,7 +887,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `PrivateAuction` object.
+        /// Updates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -899,7 +899,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `PrivateAuction` object.
+        /// Updates a `PrivateAuction` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

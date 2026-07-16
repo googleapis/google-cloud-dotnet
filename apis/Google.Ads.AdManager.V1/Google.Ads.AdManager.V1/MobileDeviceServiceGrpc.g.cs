@@ -99,7 +99,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class MobileDeviceServiceBase
     {
       /// <summary>
-      /// API to retrieve a `MobileDevice` object.
+      /// Retrieves a `MobileDevice` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -111,7 +111,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `MobileDevice` objects.
+      /// Lists `MobileDevice` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -152,7 +152,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `MobileDevice` object.
+      /// Retrieves a `MobileDevice` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -165,7 +165,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetMobileDevice(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `MobileDevice` object.
+      /// Retrieves a `MobileDevice` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -176,7 +176,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetMobileDevice, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `MobileDevice` object.
+      /// Retrieves a `MobileDevice` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -189,7 +189,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetMobileDeviceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `MobileDevice` object.
+      /// Retrieves a `MobileDevice` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -200,7 +200,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetMobileDevice, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `MobileDevice` objects.
+      /// Lists `MobileDevice` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +213,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListMobileDevices(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `MobileDevice` objects.
+      /// Lists `MobileDevice` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -224,7 +224,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListMobileDevices, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `MobileDevice` objects.
+      /// Lists `MobileDevice` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +237,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListMobileDevicesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `MobileDevice` objects.
+      /// Lists `MobileDevice` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

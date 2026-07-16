@@ -308,7 +308,7 @@ namespace Google.Ads.AdManager.V1
         public virtual ApplicationService.ApplicationServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -317,7 +317,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -326,7 +326,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -335,7 +335,7 @@ namespace Google.Ads.AdManager.V1
             GetApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Application.
@@ -350,7 +350,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Application.
@@ -365,7 +365,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Application.
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1
             GetApplicationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Application.
@@ -392,7 +392,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Application.
@@ -407,7 +407,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Application.
@@ -419,7 +419,7 @@ namespace Google.Ads.AdManager.V1
             GetApplicationAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `Application` objects.
+        /// Lists `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -428,7 +428,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Application` objects.
+        /// Lists `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -437,7 +437,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `Application` objects.
+        /// Lists `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Applications.
@@ -471,7 +471,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Application` objects.
+        /// Lists `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Applications.
@@ -505,7 +505,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Application` objects.
+        /// Lists `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Applications.
@@ -539,7 +539,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Application` objects.
+        /// Lists `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of Applications.
@@ -573,7 +573,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -582,7 +582,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -591,7 +591,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -600,7 +600,7 @@ namespace Google.Ads.AdManager.V1
             CreateApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Application` will be created.
@@ -619,7 +619,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Application` will be created.
@@ -638,7 +638,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Application` will be created.
@@ -653,7 +653,7 @@ namespace Google.Ads.AdManager.V1
             CreateApplicationAsync(parent, application, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Application` will be created.
@@ -672,7 +672,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Application` will be created.
@@ -691,7 +691,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `Application` will be created.
@@ -706,7 +706,7 @@ namespace Google.Ads.AdManager.V1
             CreateApplicationAsync(parent, application, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -715,7 +715,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -724,7 +724,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -733,7 +733,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateApplicationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be created.
@@ -757,7 +757,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be created.
@@ -781,7 +781,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be created.
@@ -798,7 +798,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateApplicationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be created.
@@ -822,7 +822,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be created.
@@ -846,7 +846,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be created.
@@ -863,7 +863,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateApplicationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `Application` object.
+        /// Updates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -872,7 +872,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `Application` object.
+        /// Updates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -881,7 +881,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `Application` object.
+        /// Updates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -890,7 +890,7 @@ namespace Google.Ads.AdManager.V1
             UpdateApplicationAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `Application` object.
+        /// Updates a `Application` object.
         /// </summary>
         /// <param name="application">
         /// Required. The `Application` to update.
@@ -910,7 +910,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `Application` object.
+        /// Updates a `Application` object.
         /// </summary>
         /// <param name="application">
         /// Required. The `Application` to update.
@@ -930,7 +930,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `Application` object.
+        /// Updates a `Application` object.
         /// </summary>
         /// <param name="application">
         /// Required. The `Application` to update.
@@ -946,7 +946,7 @@ namespace Google.Ads.AdManager.V1
             UpdateApplicationAsync(application, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -955,7 +955,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -964,7 +964,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -973,7 +973,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateApplicationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be updated.
@@ -997,7 +997,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be updated.
@@ -1021,7 +1021,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be updated.
@@ -1038,7 +1038,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateApplicationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be updated.
@@ -1062,7 +1062,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be updated.
@@ -1086,7 +1086,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `Applications` will be updated.
@@ -1103,7 +1103,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateApplicationsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1112,7 +1112,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1121,7 +1121,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1130,7 +1130,7 @@ namespace Google.Ads.AdManager.V1
             BatchArchiveApplicationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to archive.
@@ -1152,7 +1152,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to archive.
@@ -1174,7 +1174,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to archive.
@@ -1189,7 +1189,7 @@ namespace Google.Ads.AdManager.V1
             BatchArchiveApplicationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to archive.
@@ -1211,7 +1211,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to archive.
@@ -1233,7 +1233,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to archive.
@@ -1248,7 +1248,7 @@ namespace Google.Ads.AdManager.V1
             BatchArchiveApplicationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1257,7 +1257,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1266,7 +1266,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1275,7 +1275,7 @@ namespace Google.Ads.AdManager.V1
             BatchUnarchiveApplicationsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to Unarchive.
@@ -1297,7 +1297,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to Unarchive.
@@ -1319,7 +1319,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to Unarchive.
@@ -1334,7 +1334,7 @@ namespace Google.Ads.AdManager.V1
             BatchUnarchiveApplicationsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to Unarchive.
@@ -1356,7 +1356,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to Unarchive.
@@ -1378,7 +1378,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource shared by all `Applications` to Unarchive.
@@ -1497,7 +1497,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchUnarchiveApplicationsRequest(ref BatchUnarchiveApplicationsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1509,7 +1509,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `Application` object.
+        /// Retrieves a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1521,7 +1521,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Application` objects.
+        /// Lists `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1533,7 +1533,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `Application` objects.
+        /// Lists `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1545,7 +1545,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1557,7 +1557,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `Application` object.
+        /// Creates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1569,7 +1569,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1581,7 +1581,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `Application` objects.
+        /// Creates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1593,7 +1593,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `Application` object.
+        /// Updates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1605,7 +1605,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `Application` object.
+        /// Updates a `Application` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1617,7 +1617,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1629,7 +1629,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `Application` objects.
+        /// Batch updates `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1641,7 +1641,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1653,7 +1653,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// / API to batch archive `Application` objects.
+        /// Batch archives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1665,7 +1665,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1677,7 +1677,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// / API to batch unarchive `Application` objects.
+        /// Batch unarchives `Application` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

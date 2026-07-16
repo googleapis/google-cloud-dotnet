@@ -42,4 +42,88 @@ namespace Google.Ads.AdManager.V1
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateCustomTargetingValueRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchCreateCustomTargetingValuesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchUpdateCustomTargetingValuesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ActivateCustomTargetingValueRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::CustomTargetingValueName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::CustomTargetingValueName CustomTargetingValueName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::CustomTargetingValueName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchActivateCustomTargetingValuesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeactivateCustomTargetingValueRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::CustomTargetingValueName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::CustomTargetingValueName CustomTargetingValueName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::CustomTargetingValueName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class BatchDeactivateCustomTargetingValuesRequest
+    {
+        /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public NetworkName ParentAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : NetworkName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
 }

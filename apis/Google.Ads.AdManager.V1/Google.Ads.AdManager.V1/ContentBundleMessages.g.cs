@@ -25,22 +25,27 @@ namespace Google.Ads.AdManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjVnb29nbGUvYWRzL2FkbWFuYWdlci92MS9jb250ZW50X2J1bmRsZV9tZXNz",
-            "YWdlcy5wcm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaH2dvb2dsZS9h",
-            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8ixAEKDUNvbnRlbnRCdW5kbGUSEQoEbmFtZRgBIAEoCUID4EEIEhkK",
-            "DGRpc3BsYXlfbmFtZRgDIAEoCUID4EECOoQB6kGAAQomYWRtYW5hZ2VyLmdv",
-            "b2dsZWFwaXMuY29tL0NvbnRlbnRCdW5kbGUSN25ldHdvcmtzL3tuZXR3b3Jr",
-            "X2NvZGV9L2NvbnRlbnRCdW5kbGVzL3tjb250ZW50X2J1bmRsZX0qDmNvbnRl",
-            "bnRCdW5kbGVzMg1jb250ZW50QnVuZGxlQs4BChtjb20uZ29vZ2xlLmFkcy5h",
-            "ZG1hbmFnZXIudjFCGkNvbnRlbnRCdW5kbGVNZXNzYWdlc1Byb3RvUAFaQGdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFu",
-            "YWdlci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoC",
-            "F0dvb2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFu",
-            "YWdlcjo6VjFiBnByb3RvMw=="));
+            "YWdlcy5wcm90bxIXZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEaMmdvb2dsZS9h",
+            "ZHMvYWRtYW5hZ2VyL3YxL2NvbnRlbnRfYnVuZGxlX2VudW1zLnByb3RvGh9n",
+            "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jl",
+            "c291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
+            "ItUCCg1Db250ZW50QnVuZGxlEhEKBG5hbWUYASABKAlCA+BBCBIZCgxkaXNw",
+            "bGF5X25hbWUYAyABKAlCA+BBAhJZCgZzdGF0dXMYBCABKA4yRC5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5Db250ZW50QnVuZGxlU3RhdHVzRW51bS5Db250",
+            "ZW50QnVuZGxlU3RhdHVzQgPgQQMSNAoLdXBkYXRlX3RpbWUYByABKAsyGi5n",
+            "b29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQM6hAHqQYABCiZhZG1hbmFn",
+            "ZXIuZ29vZ2xlYXBpcy5jb20vQ29udGVudEJ1bmRsZRI3bmV0d29ya3Mve25l",
+            "dHdvcmtfY29kZX0vY29udGVudEJ1bmRsZXMve2NvbnRlbnRfYnVuZGxlfSoO",
+            "Y29udGVudEJ1bmRsZXMyDWNvbnRlbnRCdW5kbGVCzgEKG2NvbS5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MUIaQ29udGVudEJ1bmRsZU1lc3NhZ2VzUHJvdG9Q",
+            "AVpAZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9hZHMv",
+            "YWRtYW5hZ2VyL3YxO2FkbWFuYWdlcqoCF0dvb2dsZS5BZHMuQWRNYW5hZ2Vy",
+            "LlYxygIXR29vZ2xlXEFkc1xBZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6",
+            "QWRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.ContentBundleEnumsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ContentBundle), global::Google.Ads.AdManager.V1.ContentBundle.Parser, new[]{ "Name", "DisplayName" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ContentBundle), global::Google.Ads.AdManager.V1.ContentBundle.Parser, new[]{ "Name", "DisplayName", "Status", "UpdateTime" }, null, null, null, null)
           }));
     }
     #endregion
@@ -92,6 +97,8 @@ namespace Google.Ads.AdManager.V1 {
     public ContentBundle(ContentBundle other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
+      status_ = other.status_;
+      updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -135,6 +142,38 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "status" field.</summary>
+    public const int StatusFieldNumber = 4;
+    private global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus status_ = global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus.Unspecified;
+    /// <summary>
+    /// Output only. The ContentBundleStatus of the
+    /// [ContentBundle][google.ads.admanager.v1.ContentBundle]. This attribute is
+    /// read-only and defaults to [ContentBundleStatus.INACTIVE][].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus Status {
+      get { return status_; }
+      set {
+        status_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_time" field.</summary>
+    public const int UpdateTimeFieldNumber = 7;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp updateTime_;
+    /// <summary>
+    /// Output only. The time the `ContentBundle` was last modified.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
+      get { return updateTime_; }
+      set {
+        updateTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -152,6 +191,8 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (Name != other.Name) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (Status != other.Status) return false;
+      if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -161,6 +202,8 @@ namespace Google.Ads.AdManager.V1 {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Status != global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -187,6 +230,14 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
+      if (Status != global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Status);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -205,6 +256,14 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(26);
         output.WriteString(DisplayName);
       }
+      if (Status != global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) Status);
+      }
+      if (updateTime_ != null) {
+        output.WriteRawTag(58);
+        output.WriteMessage(UpdateTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -220,6 +279,12 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Status != global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (updateTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -238,6 +303,15 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
+      }
+      if (other.Status != global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus.Unspecified) {
+        Status = other.Status;
+      }
+      if (other.updateTime_ != null) {
+        if (updateTime_ == null) {
+          UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        UpdateTime.MergeFrom(other.UpdateTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -266,6 +340,17 @@ namespace Google.Ads.AdManager.V1 {
             DisplayName = input.ReadString();
             break;
           }
+          case 32: {
+            Status = (global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
+            break;
+          }
         }
       }
     #endif
@@ -291,6 +376,17 @@ namespace Google.Ads.AdManager.V1 {
           }
           case 26: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 32: {
+            Status = (global::Google.Ads.AdManager.V1.ContentBundleStatusEnum.Types.ContentBundleStatus) input.ReadEnum();
+            break;
+          }
+          case 58: {
+            if (updateTime_ == null) {
+              UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(UpdateTime);
             break;
           }
         }

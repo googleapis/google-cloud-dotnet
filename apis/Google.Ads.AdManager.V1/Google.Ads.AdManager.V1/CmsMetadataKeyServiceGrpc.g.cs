@@ -123,7 +123,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class CmsMetadataKeyServiceBase
     {
       /// <summary>
-      /// API to retrieve a `CmsMetadataKey` object.
+      /// Retrieves a `CmsMetadataKey` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -135,7 +135,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `CmsMetadataKey` objects.
+      /// Lists `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -147,7 +147,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to activate a list of `CmsMetadataKey` objects.
+      /// Activates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -159,7 +159,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// Deactivates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -200,7 +200,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `CmsMetadataKey` object.
+      /// Retrieves a `CmsMetadataKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +213,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCmsMetadataKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `CmsMetadataKey` object.
+      /// Retrieves a `CmsMetadataKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -224,7 +224,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCmsMetadataKey, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `CmsMetadataKey` object.
+      /// Retrieves a `CmsMetadataKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +237,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCmsMetadataKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `CmsMetadataKey` object.
+      /// Retrieves a `CmsMetadataKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -248,7 +248,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCmsMetadataKey, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `CmsMetadataKey` objects.
+      /// Lists `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -261,7 +261,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCmsMetadataKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `CmsMetadataKey` objects.
+      /// Lists `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -272,7 +272,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCmsMetadataKeys, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `CmsMetadataKey` objects.
+      /// Lists `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -285,7 +285,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCmsMetadataKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `CmsMetadataKey` objects.
+      /// Lists `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -296,7 +296,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListCmsMetadataKeys, null, options, request);
       }
       /// <summary>
-      /// API to activate a list of `CmsMetadataKey` objects.
+      /// Activates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -309,7 +309,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchActivateCmsMetadataKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to activate a list of `CmsMetadataKey` objects.
+      /// Activates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -320,7 +320,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchActivateCmsMetadataKeys, null, options, request);
       }
       /// <summary>
-      /// API to activate a list of `CmsMetadataKey` objects.
+      /// Activates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -333,7 +333,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchActivateCmsMetadataKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to activate a list of `CmsMetadataKey` objects.
+      /// Activates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -344,7 +344,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchActivateCmsMetadataKeys, null, options, request);
       }
       /// <summary>
-      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// Deactivates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -357,7 +357,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchDeactivateCmsMetadataKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// Deactivates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -368,7 +368,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchDeactivateCmsMetadataKeys, null, options, request);
       }
       /// <summary>
-      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// Deactivates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -381,7 +381,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchDeactivateCmsMetadataKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to deactivate a list of `CmsMetadataKey` objects.
+      /// Deactivates a list of `CmsMetadataKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

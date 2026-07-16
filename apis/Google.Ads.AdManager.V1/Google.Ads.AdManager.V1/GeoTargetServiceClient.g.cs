@@ -220,7 +220,7 @@ namespace Google.Ads.AdManager.V1
         public virtual GeoTargetService.GeoTargetServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -229,7 +229,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -238,7 +238,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -247,7 +247,7 @@ namespace Google.Ads.AdManager.V1
             GetGeoTargetAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the GeoTarget.
@@ -262,7 +262,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the GeoTarget.
@@ -277,7 +277,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the GeoTarget.
@@ -289,7 +289,7 @@ namespace Google.Ads.AdManager.V1
             GetGeoTargetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the GeoTarget.
@@ -304,7 +304,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the GeoTarget.
@@ -319,7 +319,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the GeoTarget.
@@ -331,7 +331,7 @@ namespace Google.Ads.AdManager.V1
             GetGeoTargetAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `GeoTarget` objects.
+        /// Lists `GeoTarget` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `GeoTarget` objects.
+        /// Lists `GeoTarget` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -349,7 +349,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `GeoTarget` objects.
+        /// Lists `GeoTarget` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of GeoTargets.
@@ -383,7 +383,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `GeoTarget` objects.
+        /// Lists `GeoTarget` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of GeoTargets.
@@ -417,7 +417,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `GeoTarget` objects.
+        /// Lists `GeoTarget` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of GeoTargets.
@@ -451,7 +451,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `GeoTarget` objects.
+        /// Lists `GeoTarget` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of GeoTargets.
@@ -535,7 +535,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_ListGeoTargetsRequest(ref ListGeoTargetsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -547,7 +547,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `GeoTarget` object.
+        /// Retrieves a `GeoTarget` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -559,7 +559,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `GeoTarget` objects.
+        /// Lists `GeoTarget` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -571,7 +571,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `GeoTarget` objects.
+        /// Lists `GeoTarget` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

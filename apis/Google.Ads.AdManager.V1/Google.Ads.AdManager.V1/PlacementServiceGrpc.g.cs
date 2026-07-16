@@ -179,7 +179,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class PlacementServiceBase
     {
       /// <summary>
-      /// API to retrieve a `Placement` object.
+      /// Retrieves a `Placement` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -191,7 +191,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `Placement` objects.
+      /// Lists `Placement` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -203,7 +203,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to create an `Placement` object.
+      /// Creates an `Placement` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -215,7 +215,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to update an `Placement` object.
+      /// Updates an `Placement` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -227,7 +227,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch create `Placement` objects.
+      /// Creates `Placement` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -239,7 +239,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch update `Placement` objects.
+      /// Batch updates `Placement` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -316,7 +316,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `Placement` object.
+      /// Retrieves a `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -329,7 +329,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetPlacement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `Placement` object.
+      /// Retrieves a `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetPlacement, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `Placement` object.
+      /// Retrieves a `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetPlacementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `Placement` object.
+      /// Retrieves a `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -364,7 +364,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetPlacement, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `Placement` objects.
+      /// Lists `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListPlacements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `Placement` objects.
+      /// Lists `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -388,7 +388,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListPlacements, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `Placement` objects.
+      /// Lists `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -401,7 +401,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListPlacementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `Placement` objects.
+      /// Lists `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -412,7 +412,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListPlacements, null, options, request);
       }
       /// <summary>
-      /// API to create an `Placement` object.
+      /// Creates an `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -425,7 +425,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreatePlacement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create an `Placement` object.
+      /// Creates an `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,7 +436,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreatePlacement, null, options, request);
       }
       /// <summary>
-      /// API to create an `Placement` object.
+      /// Creates an `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -449,7 +449,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreatePlacementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create an `Placement` object.
+      /// Creates an `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -460,7 +460,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreatePlacement, null, options, request);
       }
       /// <summary>
-      /// API to update an `Placement` object.
+      /// Updates an `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -473,7 +473,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdatePlacement(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update an `Placement` object.
+      /// Updates an `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -484,7 +484,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdatePlacement, null, options, request);
       }
       /// <summary>
-      /// API to update an `Placement` object.
+      /// Updates an `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -497,7 +497,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdatePlacementAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update an `Placement` object.
+      /// Updates an `Placement` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -508,7 +508,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdatePlacement, null, options, request);
       }
       /// <summary>
-      /// API to batch create `Placement` objects.
+      /// Creates `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -521,7 +521,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreatePlacements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `Placement` objects.
+      /// Creates `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -532,7 +532,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreatePlacements, null, options, request);
       }
       /// <summary>
-      /// API to batch create `Placement` objects.
+      /// Creates `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -545,7 +545,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreatePlacementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `Placement` objects.
+      /// Creates `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -556,7 +556,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreatePlacements, null, options, request);
       }
       /// <summary>
-      /// API to batch update `Placement` objects.
+      /// Batch updates `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -569,7 +569,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdatePlacements(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `Placement` objects.
+      /// Batch updates `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -580,7 +580,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUpdatePlacements, null, options, request);
       }
       /// <summary>
-      /// API to batch update `Placement` objects.
+      /// Batch updates `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -593,7 +593,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdatePlacementsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `Placement` objects.
+      /// Batch updates `Placement` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

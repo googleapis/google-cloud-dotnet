@@ -167,7 +167,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class ApplicationServiceBase
     {
       /// <summary>
-      /// API to retrieve a `Application` object.
+      /// Retrieves a `Application` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -179,7 +179,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `Application` objects.
+      /// Lists `Application` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -191,7 +191,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to create a `Application` object.
+      /// Creates a `Application` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -203,7 +203,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch create `Application` objects.
+      /// Creates `Application` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -215,7 +215,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to update a `Application` object.
+      /// Updates a `Application` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -227,7 +227,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch update `Application` objects.
+      /// Batch updates `Application` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -239,7 +239,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// / API to batch archive `Application` objects.
+      /// Batch archives `Application` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -251,7 +251,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// / API to batch unarchive `Application` objects.
+      /// Batch unarchives `Application` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -292,7 +292,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `Application` object.
+      /// Retrieves a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -305,7 +305,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetApplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `Application` object.
+      /// Retrieves a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -316,7 +316,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetApplication, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `Application` object.
+      /// Retrieves a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -329,7 +329,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetApplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `Application` object.
+      /// Retrieves a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetApplication, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `Application` objects.
+      /// Lists `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListApplications(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `Application` objects.
+      /// Lists `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -364,7 +364,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListApplications, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `Application` objects.
+      /// Lists `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListApplicationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `Application` objects.
+      /// Lists `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -388,7 +388,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListApplications, null, options, request);
       }
       /// <summary>
-      /// API to create a `Application` object.
+      /// Creates a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -401,7 +401,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateApplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `Application` object.
+      /// Creates a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -412,7 +412,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateApplication, null, options, request);
       }
       /// <summary>
-      /// API to create a `Application` object.
+      /// Creates a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -425,7 +425,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateApplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `Application` object.
+      /// Creates a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,7 +436,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateApplication, null, options, request);
       }
       /// <summary>
-      /// API to batch create `Application` objects.
+      /// Creates `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -449,7 +449,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreateApplications(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `Application` objects.
+      /// Creates `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -460,7 +460,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreateApplications, null, options, request);
       }
       /// <summary>
-      /// API to batch create `Application` objects.
+      /// Creates `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -473,7 +473,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreateApplicationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `Application` objects.
+      /// Creates `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -484,7 +484,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateApplications, null, options, request);
       }
       /// <summary>
-      /// API to update a `Application` object.
+      /// Updates a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -497,7 +497,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateApplication(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `Application` object.
+      /// Updates a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -508,7 +508,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateApplication, null, options, request);
       }
       /// <summary>
-      /// API to update a `Application` object.
+      /// Updates a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -521,7 +521,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateApplicationAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `Application` object.
+      /// Updates a `Application` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -532,7 +532,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateApplication, null, options, request);
       }
       /// <summary>
-      /// API to batch update `Application` objects.
+      /// Batch updates `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -545,7 +545,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdateApplications(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `Application` objects.
+      /// Batch updates `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -556,7 +556,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateApplications, null, options, request);
       }
       /// <summary>
-      /// API to batch update `Application` objects.
+      /// Batch updates `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -569,7 +569,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdateApplicationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `Application` objects.
+      /// Batch updates `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -580,7 +580,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateApplications, null, options, request);
       }
       /// <summary>
-      /// / API to batch archive `Application` objects.
+      /// Batch archives `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -593,7 +593,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchArchiveApplications(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// / API to batch archive `Application` objects.
+      /// Batch archives `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -604,7 +604,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchArchiveApplications, null, options, request);
       }
       /// <summary>
-      /// / API to batch archive `Application` objects.
+      /// Batch archives `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -617,7 +617,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchArchiveApplicationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// / API to batch archive `Application` objects.
+      /// Batch archives `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -628,7 +628,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchArchiveApplications, null, options, request);
       }
       /// <summary>
-      /// / API to batch unarchive `Application` objects.
+      /// Batch unarchives `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -641,7 +641,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUnarchiveApplications(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// / API to batch unarchive `Application` objects.
+      /// Batch unarchives `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -652,7 +652,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUnarchiveApplications, null, options, request);
       }
       /// <summary>
-      /// / API to batch unarchive `Application` objects.
+      /// Batch unarchives `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -665,7 +665,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUnarchiveApplicationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// / API to batch unarchive `Application` objects.
+      /// Batch unarchives `Application` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

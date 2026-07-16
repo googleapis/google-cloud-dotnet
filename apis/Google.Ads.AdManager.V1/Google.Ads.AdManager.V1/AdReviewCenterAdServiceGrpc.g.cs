@@ -109,7 +109,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class AdReviewCenterAdServiceBase
     {
       /// <summary>
-      /// API to search for AdReviewCenterAds.
+      /// Searches for AdReviewCenterAds.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -121,7 +121,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch allow AdReviewCenterAds.
+      /// Batch allows AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -136,7 +136,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch block AdReviewCenterAds.
+      /// Batch blocks AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -180,7 +180,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to search for AdReviewCenterAds.
+      /// Searches for AdReviewCenterAds.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -193,7 +193,7 @@ namespace Google.Ads.AdManager.V1 {
         return SearchAdReviewCenterAds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to search for AdReviewCenterAds.
+      /// Searches for AdReviewCenterAds.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -204,7 +204,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_SearchAdReviewCenterAds, null, options, request);
       }
       /// <summary>
-      /// API to search for AdReviewCenterAds.
+      /// Searches for AdReviewCenterAds.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -217,7 +217,7 @@ namespace Google.Ads.AdManager.V1 {
         return SearchAdReviewCenterAdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to search for AdReviewCenterAds.
+      /// Searches for AdReviewCenterAds.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -228,7 +228,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SearchAdReviewCenterAds, null, options, request);
       }
       /// <summary>
-      /// API to batch allow AdReviewCenterAds.
+      /// Batch allows AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -244,7 +244,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchAllowAdReviewCenterAds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch allow AdReviewCenterAds.
+      /// Batch allows AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -258,7 +258,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchAllowAdReviewCenterAds, null, options, request);
       }
       /// <summary>
-      /// API to batch allow AdReviewCenterAds.
+      /// Batch allows AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -274,7 +274,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchAllowAdReviewCenterAdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch allow AdReviewCenterAds.
+      /// Batch allows AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -288,7 +288,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchAllowAdReviewCenterAds, null, options, request);
       }
       /// <summary>
-      /// API to batch block AdReviewCenterAds.
+      /// Batch blocks AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -304,7 +304,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchBlockAdReviewCenterAds(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch block AdReviewCenterAds.
+      /// Batch blocks AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -318,7 +318,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchBlockAdReviewCenterAds, null, options, request);
       }
       /// <summary>
-      /// API to batch block AdReviewCenterAds.
+      /// Batch blocks AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.
@@ -334,7 +334,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchBlockAdReviewCenterAdsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch block AdReviewCenterAds.
+      /// Batch blocks AdReviewCenterAds.
       /// This method supports partial success. Some operations may succeed while
       /// others fail. Callers should check the failedRequests field in the response
       /// to determine which operations failed.

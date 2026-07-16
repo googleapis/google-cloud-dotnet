@@ -224,7 +224,7 @@ namespace Google.Ads.AdManager.V1
         public virtual MobileDeviceService.MobileDeviceServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -233,7 +233,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -242,7 +242,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -251,7 +251,7 @@ namespace Google.Ads.AdManager.V1
             GetMobileDeviceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the MobileDevice.
@@ -266,7 +266,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the MobileDevice.
@@ -281,7 +281,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the MobileDevice.
@@ -293,7 +293,7 @@ namespace Google.Ads.AdManager.V1
             GetMobileDeviceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the MobileDevice.
@@ -308,7 +308,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the MobileDevice.
@@ -323,7 +323,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the MobileDevice.
@@ -335,7 +335,7 @@ namespace Google.Ads.AdManager.V1
             GetMobileDeviceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `MobileDevice` objects.
+        /// Lists `MobileDevice` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -344,7 +344,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `MobileDevice` objects.
+        /// Lists `MobileDevice` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `MobileDevice` objects.
+        /// Lists `MobileDevice` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of MobileDevices.
@@ -387,7 +387,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `MobileDevice` objects.
+        /// Lists `MobileDevice` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of MobileDevices.
@@ -421,7 +421,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `MobileDevice` objects.
+        /// Lists `MobileDevice` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of MobileDevices.
@@ -455,7 +455,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `MobileDevice` objects.
+        /// Lists `MobileDevice` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of MobileDevices.
@@ -540,7 +540,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_ListMobileDevicesRequest(ref ListMobileDevicesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -552,7 +552,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `MobileDevice` object.
+        /// Retrieves a `MobileDevice` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -564,7 +564,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `MobileDevice` objects.
+        /// Lists `MobileDevice` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -576,7 +576,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `MobileDevice` objects.
+        /// Lists `MobileDevice` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

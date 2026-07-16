@@ -326,7 +326,7 @@ namespace Google.Ads.AdManager.V1
         public virtual AdUnitService.AdUnitServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -335,7 +335,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -344,7 +344,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1
             GetAdUnitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AdUnit.
@@ -368,7 +368,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AdUnit.
@@ -383,7 +383,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AdUnit.
@@ -395,7 +395,7 @@ namespace Google.Ads.AdManager.V1
             GetAdUnitAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AdUnit.
@@ -410,7 +410,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AdUnit.
@@ -425,7 +425,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the AdUnit.
@@ -437,7 +437,7 @@ namespace Google.Ads.AdManager.V1
             GetAdUnitAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of AdUnit objects.
+        /// Lists `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -446,7 +446,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of AdUnit objects.
+        /// Lists `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -455,7 +455,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of AdUnit objects.
+        /// Lists `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdUnits.
@@ -489,7 +489,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnit objects.
+        /// Lists `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdUnits.
@@ -523,7 +523,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnit objects.
+        /// Lists `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdUnits.
@@ -557,7 +557,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnit objects.
+        /// Lists `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdUnits.
@@ -591,7 +591,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnitSize objects.
+        /// Lists `AdUnitSize` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -600,7 +600,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of AdUnitSize objects.
+        /// Lists `AdUnitSize` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -609,7 +609,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of AdUnitSize objects.
+        /// Lists `AdUnitSize` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdUnitSizes.
@@ -643,7 +643,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnitSize objects.
+        /// Lists `AdUnitSize` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdUnitSizes.
@@ -677,7 +677,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnitSize objects.
+        /// Lists `AdUnitSize` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdUnitSizes.
@@ -711,7 +711,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnitSize objects.
+        /// Lists `AdUnitSize` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdUnitSizes.
@@ -745,7 +745,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -754,7 +754,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -763,7 +763,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -772,7 +772,7 @@ namespace Google.Ads.AdManager.V1
             CreateAdUnitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `AdUnit` will be created.
@@ -791,7 +791,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `AdUnit` will be created.
@@ -810,7 +810,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `AdUnit` will be created.
@@ -825,7 +825,7 @@ namespace Google.Ads.AdManager.V1
             CreateAdUnitAsync(parent, adUnit, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `AdUnit` will be created.
@@ -844,7 +844,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `AdUnit` will be created.
@@ -863,7 +863,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `AdUnit` will be created.
@@ -878,7 +878,7 @@ namespace Google.Ads.AdManager.V1
             CreateAdUnitAsync(parent, adUnit, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update an `AdUnit` object.
+        /// Updates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -887,7 +887,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update an `AdUnit` object.
+        /// Updates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -896,7 +896,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update an `AdUnit` object.
+        /// Updates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -905,7 +905,7 @@ namespace Google.Ads.AdManager.V1
             UpdateAdUnitAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update an `AdUnit` object.
+        /// Updates an `AdUnit` object.
         /// </summary>
         /// <param name="adUnit">
         /// Required. The `AdUnit` to update.
@@ -926,7 +926,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update an `AdUnit` object.
+        /// Updates an `AdUnit` object.
         /// </summary>
         /// <param name="adUnit">
         /// Required. The `AdUnit` to update.
@@ -947,7 +947,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update an `AdUnit` object.
+        /// Updates an `AdUnit` object.
         /// </summary>
         /// <param name="adUnit">
         /// Required. The `AdUnit` to update.
@@ -964,7 +964,7 @@ namespace Google.Ads.AdManager.V1
             UpdateAdUnitAsync(adUnit, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -973,7 +973,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -982,7 +982,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -991,7 +991,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateAdUnitsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be created.
@@ -1016,7 +1016,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be created.
@@ -1041,7 +1041,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be created.
@@ -1059,7 +1059,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateAdUnitsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be created.
@@ -1084,7 +1084,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be created.
@@ -1109,7 +1109,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be created.
@@ -1127,7 +1127,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateAdUnitsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1136,7 +1136,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1145,7 +1145,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1154,7 +1154,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateAdUnitsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be updated.
@@ -1179,7 +1179,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be updated.
@@ -1204,7 +1204,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be updated.
@@ -1222,7 +1222,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateAdUnitsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be updated.
@@ -1247,7 +1247,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be updated.
@@ -1272,7 +1272,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `AdUnits` will be updated.
@@ -1290,7 +1290,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateAdUnitsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1299,7 +1299,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1308,7 +1308,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1317,7 +1317,7 @@ namespace Google.Ads.AdManager.V1
             BatchActivateAdUnitsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
@@ -1339,7 +1339,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
@@ -1361,7 +1361,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
@@ -1376,7 +1376,7 @@ namespace Google.Ads.AdManager.V1
             BatchActivateAdUnitsAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
@@ -1398,7 +1398,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
@@ -1420,7 +1420,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. Format: `networks/{network_code}`
@@ -1847,7 +1847,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchArchiveAdUnitsRequest(ref BatchArchiveAdUnitsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1859,7 +1859,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve an AdUnit object.
+        /// Retrieves an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1871,7 +1871,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnit objects.
+        /// Lists `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1883,7 +1883,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnit objects.
+        /// Lists `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1895,7 +1895,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnitSize objects.
+        /// Lists `AdUnitSize` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1907,7 +1907,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of AdUnitSize objects.
+        /// Lists `AdUnitSize` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1919,7 +1919,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1931,7 +1931,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create an `AdUnit` object.
+        /// Creates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1943,7 +1943,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update an `AdUnit` object.
+        /// Updates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1955,7 +1955,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update an `AdUnit` object.
+        /// Updates an `AdUnit` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1967,7 +1967,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1979,7 +1979,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `AdUnit` objects.
+        /// Creates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1991,7 +1991,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2003,7 +2003,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `AdUnit` objects.
+        /// Batch updates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2015,7 +2015,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2027,7 +2027,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch activate `AdUnit` objects.
+        /// Batch activates `AdUnit` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

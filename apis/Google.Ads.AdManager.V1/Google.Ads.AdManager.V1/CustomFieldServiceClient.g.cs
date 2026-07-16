@@ -308,7 +308,7 @@ namespace Google.Ads.AdManager.V1
         public virtual CustomFieldService.CustomFieldServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -317,7 +317,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -326,7 +326,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -335,7 +335,7 @@ namespace Google.Ads.AdManager.V1
             GetCustomFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomField.
@@ -350,7 +350,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomField.
@@ -365,7 +365,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomField.
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1
             GetCustomFieldAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomField.
@@ -392,7 +392,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomField.
@@ -407,7 +407,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CustomField.
@@ -419,7 +419,7 @@ namespace Google.Ads.AdManager.V1
             GetCustomFieldAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `CustomField` objects.
+        /// Lists `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -428,7 +428,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `CustomField` objects.
+        /// Lists `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -437,7 +437,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `CustomField` objects.
+        /// Lists `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomFields.
@@ -471,7 +471,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomField` objects.
+        /// Lists `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomFields.
@@ -505,7 +505,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomField` objects.
+        /// Lists `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomFields.
@@ -539,7 +539,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomField` objects.
+        /// Lists `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CustomFields.
@@ -573,7 +573,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -582,7 +582,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -591,7 +591,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -600,7 +600,7 @@ namespace Google.Ads.AdManager.V1
             CreateCustomFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `CustomField` will be created.
@@ -619,7 +619,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `CustomField` will be created.
@@ -638,7 +638,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `CustomField` will be created.
@@ -653,7 +653,7 @@ namespace Google.Ads.AdManager.V1
             CreateCustomFieldAsync(parent, customField, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `CustomField` will be created.
@@ -672,7 +672,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `CustomField` will be created.
@@ -691,7 +691,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where this `CustomField` will be created.
@@ -706,7 +706,7 @@ namespace Google.Ads.AdManager.V1
             CreateCustomFieldAsync(parent, customField, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -715,7 +715,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -724,7 +724,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -733,7 +733,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateCustomFieldsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be created.
@@ -758,7 +758,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be created.
@@ -783,7 +783,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be created.
@@ -801,7 +801,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateCustomFieldsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be created.
@@ -826,7 +826,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be created.
@@ -851,7 +851,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be created.
@@ -869,7 +869,7 @@ namespace Google.Ads.AdManager.V1
             BatchCreateCustomFieldsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `CustomField` object.
+        /// Updates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -878,7 +878,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `CustomField` object.
+        /// Updates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -887,7 +887,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to update a `CustomField` object.
+        /// Updates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -896,7 +896,7 @@ namespace Google.Ads.AdManager.V1
             UpdateCustomFieldAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to update a `CustomField` object.
+        /// Updates a `CustomField` object.
         /// </summary>
         /// <param name="customField">
         /// Required. The `CustomField` to update.
@@ -916,7 +916,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `CustomField` object.
+        /// Updates a `CustomField` object.
         /// </summary>
         /// <param name="customField">
         /// Required. The `CustomField` to update.
@@ -936,7 +936,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to update a `CustomField` object.
+        /// Updates a `CustomField` object.
         /// </summary>
         /// <param name="customField">
         /// Required. The `CustomField` to update.
@@ -952,7 +952,7 @@ namespace Google.Ads.AdManager.V1
             UpdateCustomFieldAsync(customField, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -961,7 +961,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -970,7 +970,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -979,7 +979,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateCustomFieldsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be updated.
@@ -1004,7 +1004,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be updated.
@@ -1029,7 +1029,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be updated.
@@ -1047,7 +1047,7 @@ namespace Google.Ads.AdManager.V1
             BatchUpdateCustomFieldsAsync(parent, requests, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be updated.
@@ -1072,7 +1072,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be updated.
@@ -1097,7 +1097,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CustomFields` will be updated.
@@ -1509,7 +1509,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchDeactivateCustomFieldsRequest(ref BatchDeactivateCustomFieldsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1521,7 +1521,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `CustomField` object.
+        /// Retrieves a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1533,7 +1533,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomField` objects.
+        /// Lists `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1545,7 +1545,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CustomField` objects.
+        /// Lists `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1557,7 +1557,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1569,7 +1569,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to create a `CustomField` object.
+        /// Creates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1581,7 +1581,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1593,7 +1593,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch create `CustomField` objects.
+        /// Creates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1605,7 +1605,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `CustomField` object.
+        /// Updates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1617,7 +1617,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to update a `CustomField` object.
+        /// Updates a `CustomField` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1629,7 +1629,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1641,7 +1641,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch update `CustomField` objects.
+        /// Batch updates `CustomField` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

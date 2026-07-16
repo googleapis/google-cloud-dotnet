@@ -99,7 +99,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class BandwidthGroupServiceBase
     {
       /// <summary>
-      /// API to retrieve a `BandwidthGroup` object.
+      /// Retrieves a `BandwidthGroup` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -111,7 +111,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `BandwidthGroup` objects.
+      /// Lists `BandwidthGroup` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -152,7 +152,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `BandwidthGroup` object.
+      /// Retrieves a `BandwidthGroup` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -165,7 +165,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetBandwidthGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `BandwidthGroup` object.
+      /// Retrieves a `BandwidthGroup` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -176,7 +176,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetBandwidthGroup, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `BandwidthGroup` object.
+      /// Retrieves a `BandwidthGroup` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -189,7 +189,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetBandwidthGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `BandwidthGroup` object.
+      /// Retrieves a `BandwidthGroup` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -200,7 +200,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetBandwidthGroup, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `BandwidthGroup` objects.
+      /// Lists `BandwidthGroup` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -213,7 +213,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListBandwidthGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `BandwidthGroup` objects.
+      /// Lists `BandwidthGroup` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -224,7 +224,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListBandwidthGroups, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `BandwidthGroup` objects.
+      /// Lists `BandwidthGroup` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -237,7 +237,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListBandwidthGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `BandwidthGroup` objects.
+      /// Lists `BandwidthGroup` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

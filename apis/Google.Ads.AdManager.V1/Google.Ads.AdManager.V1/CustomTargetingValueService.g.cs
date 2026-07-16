@@ -29,31 +29,104 @@ namespace Google.Ads.AdManager.V1 {
             "b29nbGUvYWRzL2FkbWFuYWdlci92MS9jdXN0b21fdGFyZ2V0aW5nX3ZhbHVl",
             "X21lc3NhZ2VzLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
             "Ghdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9i",
-            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byJlCh5H",
-            "ZXRDdXN0b21UYXJnZXRpbmdWYWx1ZVJlcXVlc3QSQwoEbmFtZRgBIAEoCUI1",
-            "4EEC+kEvCi1hZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ3VzdG9tVGFyZ2V0",
-            "aW5nVmFsdWUizAEKIExpc3RDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0",
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxogZ29v",
+            "Z2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8iZQoeR2V0Q3VzdG9tVGFy",
+            "Z2V0aW5nVmFsdWVSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBBAvpBLwotYWRt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0N1c3RvbVRhcmdldGluZ1ZhbHVlIswB",
+            "CiBMaXN0Q3VzdG9tVGFyZ2V0aW5nVmFsdWVzUmVxdWVzdBI4CgZwYXJlbnQY",
+            "ASABKAlCKOBBAvpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL05ldHdv",
+            "cmsSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEo",
+            "CUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEBEhUKCG9yZGVyX2J5GAUgASgJ",
+            "QgPgQQESEQoEc2tpcBgGIAEoBUID4EEBIqABCiFMaXN0Q3VzdG9tVGFyZ2V0",
+            "aW5nVmFsdWVzUmVzcG9uc2USTgoXY3VzdG9tX3RhcmdldGluZ192YWx1ZXMY",
+            "ASADKAsyLS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21UYXJnZXRp",
+            "bmdWYWx1ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEgoKdG90YWxfc2l6",
+            "ZRgDIAEoBSKxAQohQ3JlYXRlQ3VzdG9tVGFyZ2V0aW5nVmFsdWVSZXF1ZXN0",
             "EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBp",
-            "cy5jb20vTmV0d29yaxIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
-            "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3Jk",
-            "ZXJfYnkYBSABKAlCA+BBARIRCgRza2lwGAYgASgFQgPgQQEioAEKIUxpc3RD",
-            "dXN0b21UYXJnZXRpbmdWYWx1ZXNSZXNwb25zZRJOChdjdXN0b21fdGFyZ2V0",
-            "aW5nX3ZhbHVlcxgBIAMoCzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1",
-            "c3RvbVRhcmdldGluZ1ZhbHVlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIS",
-            "Cgp0b3RhbF9zaXplGAMgASgFMsAFChtDdXN0b21UYXJnZXRpbmdWYWx1ZVNl",
-            "cnZpY2UShwIKF0dldEN1c3RvbVRhcmdldGluZ1ZhbHVlEjcuZ29vZ2xlLmFk",
-            "cy5hZG1hbmFnZXIudjEuR2V0Q3VzdG9tVGFyZ2V0aW5nVmFsdWVSZXF1ZXN0",
-            "Gi0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tVGFyZ2V0aW5nVmFs",
-            "dWUigwHaQQRuYW1lgtPkkwJ2Ei0vdjEve25hbWU9bmV0d29ya3MvKi9jdXN0",
-            "b21UYXJnZXRpbmdWYWx1ZXMvKn1aRRJDL3YxL3tuYW1lPW5ldHdvcmtzLyov",
-            "Y3VzdG9tVGFyZ2V0aW5nS2V5cy8qL2N1c3RvbVRhcmdldGluZ1ZhbHVlcy8q",
-            "fRKaAgoZTGlzdEN1c3RvbVRhcmdldGluZ1ZhbHVlcxI5Lmdvb2dsZS5hZHMu",
-            "YWRtYW5hZ2VyLnYxLkxpc3RDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0",
-            "GjouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuTGlzdEN1c3RvbVRhcmdldGlu",
-            "Z1ZhbHVlc1Jlc3BvbnNlIoUB2kEGcGFyZW50gtPkkwJ2Ei0vdjEve3BhcmVu",
-            "dD1uZXR3b3Jrcy8qfS9jdXN0b21UYXJnZXRpbmdWYWx1ZXNaRRJDL3YxL3tw",
-            "YXJlbnQ9bmV0d29ya3MvKi9jdXN0b21UYXJnZXRpbmdLZXlzLyp9L2N1c3Rv",
-            "bVRhcmdldGluZ1ZhbHVlcxp6ykEYYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "cy5jb20vTmV0d29yaxJSChZjdXN0b21fdGFyZ2V0aW5nX3ZhbHVlGAIgASgL",
+            "Mi0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tVGFyZ2V0aW5nVmFs",
+            "dWVCA+BBAiK2AQonQmF0Y2hDcmVhdGVDdXN0b21UYXJnZXRpbmdWYWx1ZXNS",
+            "ZXF1ZXN0EjgKBnBhcmVudBgBIAEoCUIo4EEC+kEiCiBhZG1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb20vTmV0d29yaxJRCghyZXF1ZXN0cxgCIAMoCzI6Lmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkNyZWF0ZUN1c3RvbVRhcmdldGluZ1ZhbHVl",
+            "UmVxdWVzdEID4EECInoKKEJhdGNoQ3JlYXRlQ3VzdG9tVGFyZ2V0aW5nVmFs",
+            "dWVzUmVzcG9uc2USTgoXY3VzdG9tX3RhcmdldGluZ192YWx1ZXMYASADKAsy",
+            "LS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0b21UYXJnZXRpbmdWYWx1",
+            "ZSKtAQohVXBkYXRlQ3VzdG9tVGFyZ2V0aW5nVmFsdWVSZXF1ZXN0ElIKFmN1",
+            "c3RvbV90YXJnZXRpbmdfdmFsdWUYASABKAsyLS5nb29nbGUuYWRzLmFkbWFu",
+            "YWdlci52MS5DdXN0b21UYXJnZXRpbmdWYWx1ZUID4EECEjQKC3VwZGF0ZV9t",
+            "YXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBIrYB",
+            "CidCYXRjaFVwZGF0ZUN1c3RvbVRhcmdldGluZ1ZhbHVlc1JlcXVlc3QSOAoG",
+            "cGFyZW50GAEgASgJQijgQQL6QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNv",
+            "bS9OZXR3b3JrElEKCHJlcXVlc3RzGAIgAygLMjouZ29vZ2xlLmFkcy5hZG1h",
+            "bmFnZXIudjEuVXBkYXRlQ3VzdG9tVGFyZ2V0aW5nVmFsdWVSZXF1ZXN0QgPg",
+            "QQIiegooQmF0Y2hVcGRhdGVDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXNwb25z",
+            "ZRJOChdjdXN0b21fdGFyZ2V0aW5nX3ZhbHVlcxgBIAMoCzItLmdvb2dsZS5h",
+            "ZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRhcmdldGluZ1ZhbHVlImoKI0FjdGl2",
+            "YXRlQ3VzdG9tVGFyZ2V0aW5nVmFsdWVSZXF1ZXN0EkMKBG5hbWUYASABKAlC",
+            "NeBBAvpBLwotYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0N1c3RvbVRhcmdl",
+            "dGluZ1ZhbHVlIroBCilCYXRjaEFjdGl2YXRlQ3VzdG9tVGFyZ2V0aW5nVmFs",
+            "dWVzUmVxdWVzdBI4CgZwYXJlbnQYASABKAlCKOBBAvpBIgogYWRtYW5hZ2Vy",
+            "Lmdvb2dsZWFwaXMuY29tL05ldHdvcmsSUwoIcmVxdWVzdHMYAiADKAsyPC5n",
+            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5BY3RpdmF0ZUN1c3RvbVRhcmdldGlu",
+            "Z1ZhbHVlUmVxdWVzdEID4EECIiwKKkJhdGNoQWN0aXZhdGVDdXN0b21UYXJn",
+            "ZXRpbmdWYWx1ZXNSZXNwb25zZSJsCiVEZWFjdGl2YXRlQ3VzdG9tVGFyZ2V0",
+            "aW5nVmFsdWVSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBBAvpBLwotYWRtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL0N1c3RvbVRhcmdldGluZ1ZhbHVlIr4BCitC",
+            "YXRjaERlYWN0aXZhdGVDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0EjgK",
+            "BnBhcmVudBgBIAEoCUIo4EEC+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vTmV0d29yaxJVCghyZXF1ZXN0cxgCIAMoCzI+Lmdvb2dsZS5hZHMuYWRt",
+            "YW5hZ2VyLnYxLkRlYWN0aXZhdGVDdXN0b21UYXJnZXRpbmdWYWx1ZVJlcXVl",
+            "c3RCA+BBAiIuCixCYXRjaERlYWN0aXZhdGVDdXN0b21UYXJnZXRpbmdWYWx1",
+            "ZXNSZXNwb25zZTLvEQobQ3VzdG9tVGFyZ2V0aW5nVmFsdWVTZXJ2aWNlEocC",
+            "ChdHZXRDdXN0b21UYXJnZXRpbmdWYWx1ZRI3Lmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLkdldEN1c3RvbVRhcmdldGluZ1ZhbHVlUmVxdWVzdBotLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRhcmdldGluZ1ZhbHVlIoMB2kEE",
+            "bmFtZYLT5JMCdhItL3YxL3tuYW1lPW5ldHdvcmtzLyovY3VzdG9tVGFyZ2V0",
+            "aW5nVmFsdWVzLyp9WkUSQy92MS97bmFtZT1uZXR3b3Jrcy8qL2N1c3RvbVRh",
+            "cmdldGluZ0tleXMvKi9jdXN0b21UYXJnZXRpbmdWYWx1ZXMvKn0SmgIKGUxp",
+            "c3RDdXN0b21UYXJnZXRpbmdWYWx1ZXMSOS5nb29nbGUuYWRzLmFkbWFuYWdl",
+            "ci52MS5MaXN0Q3VzdG9tVGFyZ2V0aW5nVmFsdWVzUmVxdWVzdBo6Lmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkxpc3RDdXN0b21UYXJnZXRpbmdWYWx1ZXNS",
+            "ZXNwb25zZSKFAdpBBnBhcmVudILT5JMCdhItL3YxL3twYXJlbnQ9bmV0d29y",
+            "a3MvKn0vY3VzdG9tVGFyZ2V0aW5nVmFsdWVzWkUSQy92MS97cGFyZW50PW5l",
+            "dHdvcmtzLyovY3VzdG9tVGFyZ2V0aW5nS2V5cy8qfS9jdXN0b21UYXJnZXRp",
+            "bmdWYWx1ZXMS9gEKGkNyZWF0ZUN1c3RvbVRhcmdldGluZ1ZhbHVlEjouZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQ3JlYXRlQ3VzdG9tVGFyZ2V0aW5nVmFs",
+            "dWVSZXF1ZXN0Gi0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQ3VzdG9tVGFy",
+            "Z2V0aW5nVmFsdWUibdpBHXBhcmVudCxjdXN0b21fdGFyZ2V0aW5nX3ZhbHVl",
+            "gtPkkwJHIi0vdjEve3BhcmVudD1uZXR3b3Jrcy8qfS9jdXN0b21UYXJnZXRp",
+            "bmdWYWx1ZXM6FmN1c3RvbV90YXJnZXRpbmdfdmFsdWUS/wEKIEJhdGNoQ3Jl",
+            "YXRlQ3VzdG9tVGFyZ2V0aW5nVmFsdWVzEkAuZ29vZ2xlLmFkcy5hZG1hbmFn",
+            "ZXIudjEuQmF0Y2hDcmVhdGVDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0",
+            "GkEuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQmF0Y2hDcmVhdGVDdXN0b21U",
+            "YXJnZXRpbmdWYWx1ZXNSZXNwb25zZSJW2kEPcGFyZW50LHJlcXVlc3RzgtPk",
+            "kwI+IjkvdjEve3BhcmVudD1uZXR3b3Jrcy8qfS9jdXN0b21UYXJnZXRpbmdW",
+            "YWx1ZXM6YmF0Y2hDcmVhdGU6ASoSkwIKGlVwZGF0ZUN1c3RvbVRhcmdldGlu",
+            "Z1ZhbHVlEjouZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVXBkYXRlQ3VzdG9t",
+            "VGFyZ2V0aW5nVmFsdWVSZXF1ZXN0Gi0uZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
+            "djEuQ3VzdG9tVGFyZ2V0aW5nVmFsdWUiiQHaQSJjdXN0b21fdGFyZ2V0aW5n",
+            "X3ZhbHVlLHVwZGF0ZV9tYXNrgtPkkwJeMkQvdjEve2N1c3RvbV90YXJnZXRp",
+            "bmdfdmFsdWUubmFtZT1uZXR3b3Jrcy8qL2N1c3RvbVRhcmdldGluZ1ZhbHVl",
+            "cy8qfToWY3VzdG9tX3RhcmdldGluZ192YWx1ZRL/AQogQmF0Y2hVcGRhdGVD",
+            "dXN0b21UYXJnZXRpbmdWYWx1ZXMSQC5nb29nbGUuYWRzLmFkbWFuYWdlci52",
+            "MS5CYXRjaFVwZGF0ZUN1c3RvbVRhcmdldGluZ1ZhbHVlc1JlcXVlc3QaQS5n",
+            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5CYXRjaFVwZGF0ZUN1c3RvbVRhcmdl",
+            "dGluZ1ZhbHVlc1Jlc3BvbnNlIlbaQQ9wYXJlbnQscmVxdWVzdHOC0+STAj4i",
+            "OS92MS97cGFyZW50PW5ldHdvcmtzLyp9L2N1c3RvbVRhcmdldGluZ1ZhbHVl",
+            "czpiYXRjaFVwZGF0ZToBKhKHAgoiQmF0Y2hBY3RpdmF0ZUN1c3RvbVRhcmdl",
+            "dGluZ1ZhbHVlcxJCLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJhdGNoQWN0",
+            "aXZhdGVDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0GkMuZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuQmF0Y2hBY3RpdmF0ZUN1c3RvbVRhcmdldGluZ1Zh",
+            "bHVlc1Jlc3BvbnNlIljaQQ9wYXJlbnQscmVxdWVzdHOC0+STAkAiOy92MS97",
+            "cGFyZW50PW5ldHdvcmtzLyp9L2N1c3RvbVRhcmdldGluZ1ZhbHVlczpiYXRj",
+            "aEFjdGl2YXRlOgEqEo8CCiRCYXRjaERlYWN0aXZhdGVDdXN0b21UYXJnZXRp",
+            "bmdWYWx1ZXMSRC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5CYXRjaERlYWN0",
+            "aXZhdGVDdXN0b21UYXJnZXRpbmdWYWx1ZXNSZXF1ZXN0GkUuZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuQmF0Y2hEZWFjdGl2YXRlQ3VzdG9tVGFyZ2V0aW5n",
+            "VmFsdWVzUmVzcG9uc2UiWtpBD3BhcmVudCxyZXF1ZXN0c4LT5JMCQiI9L3Yx",
+            "L3twYXJlbnQ9bmV0d29ya3MvKn0vY3VzdG9tVGFyZ2V0aW5nVmFsdWVzOmJh",
+            "dGNoRGVhY3RpdmF0ZToBKhp6ykEYYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
             "0kFcaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXIs",
             "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9hZG1hbmFnZXIucmVh",
             "ZG9ubHlC1AEKG2NvbS5nb29nbGUuYWRzLmFkbWFuYWdlci52MUIgQ3VzdG9t",
@@ -63,11 +136,23 @@ namespace Google.Ads.AdManager.V1 {
             "ZE1hbmFnZXJcVjHqAhpHb29nbGU6OkFkczo6QWRNYW5hZ2VyOjpWMWIGcHJv",
             "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomTargetingValueMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.CustomTargetingValueMessagesReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GetCustomTargetingValueRequest), global::Google.Ads.AdManager.V1.GetCustomTargetingValueRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListCustomTargetingValuesRequest), global::Google.Ads.AdManager.V1.ListCustomTargetingValuesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy", "Skip" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse), global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse.Parser, new[]{ "CustomTargetingValues", "NextPageToken", "TotalSize" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse), global::Google.Ads.AdManager.V1.ListCustomTargetingValuesResponse.Parser, new[]{ "CustomTargetingValues", "NextPageToken", "TotalSize" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest), global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest.Parser, new[]{ "Parent", "CustomTargetingValue" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest), global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse), global::Google.Ads.AdManager.V1.BatchCreateCustomTargetingValuesResponse.Parser, new[]{ "CustomTargetingValues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest), global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest.Parser, new[]{ "CustomTargetingValue", "UpdateMask" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest), global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse), global::Google.Ads.AdManager.V1.BatchUpdateCustomTargetingValuesResponse.Parser, new[]{ "CustomTargetingValues" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ActivateCustomTargetingValueRequest), global::Google.Ads.AdManager.V1.ActivateCustomTargetingValueRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest), global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse), global::Google.Ads.AdManager.V1.BatchActivateCustomTargetingValuesResponse.Parser, null, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DeactivateCustomTargetingValueRequest), global::Google.Ads.AdManager.V1.DeactivateCustomTargetingValueRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest), global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesRequest.Parser, new[]{ "Parent", "Requests" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse), global::Google.Ads.AdManager.V1.BatchDeactivateCustomTargetingValuesResponse.Parser, null, null, null, null, null)
           }));
     }
     #endregion
@@ -987,6 +1072,2595 @@ namespace Google.Ads.AdManager.V1 {
             TotalSize = input.ReadInt32();
             break;
           }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request object for `CreateCustomTargetingValue` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class CreateCustomTargetingValueRequest : pb::IMessage<CreateCustomTargetingValueRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<CreateCustomTargetingValueRequest> _parser = new pb::MessageParser<CreateCustomTargetingValueRequest>(() => new CreateCustomTargetingValueRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<CreateCustomTargetingValueRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateCustomTargetingValueRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateCustomTargetingValueRequest(CreateCustomTargetingValueRequest other) : this() {
+      parent_ = other.parent_;
+      customTargetingValue_ = other.customTargetingValue_ != null ? other.customTargetingValue_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public CreateCustomTargetingValueRequest Clone() {
+      return new CreateCustomTargetingValueRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent, which owns this collection of CustomTargetingValues.
+    /// Format:
+    /// `networks/{network_code}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "custom_targeting_value" field.</summary>
+    public const int CustomTargetingValueFieldNumber = 2;
+    private global::Google.Ads.AdManager.V1.CustomTargetingValue customTargetingValue_;
+    /// <summary>
+    /// Required. The `CustomTargetingValue` to create.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CustomTargetingValue CustomTargetingValue {
+      get { return customTargetingValue_; }
+      set {
+        customTargetingValue_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as CreateCustomTargetingValueRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(CreateCustomTargetingValueRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (!object.Equals(CustomTargetingValue, other.CustomTargetingValue)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (customTargetingValue_ != null) hash ^= CustomTargetingValue.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (customTargetingValue_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CustomTargetingValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (customTargetingValue_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(CustomTargetingValue);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (customTargetingValue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomTargetingValue);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(CreateCustomTargetingValueRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.customTargetingValue_ != null) {
+        if (customTargetingValue_ == null) {
+          CustomTargetingValue = new global::Google.Ads.AdManager.V1.CustomTargetingValue();
+        }
+        CustomTargetingValue.MergeFrom(other.CustomTargetingValue);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (customTargetingValue_ == null) {
+              CustomTargetingValue = new global::Google.Ads.AdManager.V1.CustomTargetingValue();
+            }
+            input.ReadMessage(CustomTargetingValue);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            if (customTargetingValue_ == null) {
+              CustomTargetingValue = new global::Google.Ads.AdManager.V1.CustomTargetingValue();
+            }
+            input.ReadMessage(CustomTargetingValue);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request object for `BatchCreateCustomTargetingValues` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateCustomTargetingValuesRequest : pb::IMessage<BatchCreateCustomTargetingValuesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateCustomTargetingValuesRequest> _parser = new pb::MessageParser<BatchCreateCustomTargetingValuesRequest>(() => new BatchCreateCustomTargetingValuesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateCustomTargetingValuesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateCustomTargetingValuesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateCustomTargetingValuesRequest(BatchCreateCustomTargetingValuesRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateCustomTargetingValuesRequest Clone() {
+      return new BatchCreateCustomTargetingValuesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent, which owns this collection of CustomTargetingValues.
+    /// Format:
+    /// `networks/{network_code}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest> requests_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest>();
+    /// <summary>
+    /// Required. The `CustomTargetingValue` objects to create.
+    /// A maximum of 100 objects can be created in a batch.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CreateCustomTargetingValueRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateCustomTargetingValuesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateCustomTargetingValuesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateCustomTargetingValuesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response object for `BatchCreateCustomTargetingValues` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchCreateCustomTargetingValuesResponse : pb::IMessage<BatchCreateCustomTargetingValuesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchCreateCustomTargetingValuesResponse> _parser = new pb::MessageParser<BatchCreateCustomTargetingValuesResponse>(() => new BatchCreateCustomTargetingValuesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchCreateCustomTargetingValuesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateCustomTargetingValuesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateCustomTargetingValuesResponse(BatchCreateCustomTargetingValuesResponse other) : this() {
+      customTargetingValues_ = other.customTargetingValues_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchCreateCustomTargetingValuesResponse Clone() {
+      return new BatchCreateCustomTargetingValuesResponse(this);
+    }
+
+    /// <summary>Field number for the "custom_targeting_values" field.</summary>
+    public const int CustomTargetingValuesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CustomTargetingValue> _repeated_customTargetingValues_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.AdManager.V1.CustomTargetingValue.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomTargetingValue> customTargetingValues_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomTargetingValue>();
+    /// <summary>
+    /// The `CustomTargetingValue` objects created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomTargetingValue> CustomTargetingValues {
+      get { return customTargetingValues_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchCreateCustomTargetingValuesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchCreateCustomTargetingValuesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!customTargetingValues_.Equals(other.customTargetingValues_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= customTargetingValues_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      customTargetingValues_.WriteTo(output, _repeated_customTargetingValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      customTargetingValues_.WriteTo(ref output, _repeated_customTargetingValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += customTargetingValues_.CalculateSize(_repeated_customTargetingValues_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchCreateCustomTargetingValuesResponse other) {
+      if (other == null) {
+        return;
+      }
+      customTargetingValues_.Add(other.customTargetingValues_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            customTargetingValues_.AddEntriesFrom(input, _repeated_customTargetingValues_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            customTargetingValues_.AddEntriesFrom(ref input, _repeated_customTargetingValues_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request object for `UpdateCustomTargetingValue` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class UpdateCustomTargetingValueRequest : pb::IMessage<UpdateCustomTargetingValueRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<UpdateCustomTargetingValueRequest> _parser = new pb::MessageParser<UpdateCustomTargetingValueRequest>(() => new UpdateCustomTargetingValueRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<UpdateCustomTargetingValueRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCustomTargetingValueRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCustomTargetingValueRequest(UpdateCustomTargetingValueRequest other) : this() {
+      customTargetingValue_ = other.customTargetingValue_ != null ? other.customTargetingValue_.Clone() : null;
+      updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public UpdateCustomTargetingValueRequest Clone() {
+      return new UpdateCustomTargetingValueRequest(this);
+    }
+
+    /// <summary>Field number for the "custom_targeting_value" field.</summary>
+    public const int CustomTargetingValueFieldNumber = 1;
+    private global::Google.Ads.AdManager.V1.CustomTargetingValue customTargetingValue_;
+    /// <summary>
+    /// Required. The `CustomTargetingValue` to update.
+    ///
+    /// The `CustomTargetingValue`'s `name` is used to identify the
+    /// `CustomTargetingValue` to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.CustomTargetingValue CustomTargetingValue {
+      get { return customTargetingValue_; }
+      set {
+        customTargetingValue_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "update_mask" field.</summary>
+    public const int UpdateMaskFieldNumber = 2;
+    private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
+    /// <summary>
+    /// Optional. The list of fields to update.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
+      get { return updateMask_; }
+      set {
+        updateMask_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as UpdateCustomTargetingValueRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(UpdateCustomTargetingValueRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(CustomTargetingValue, other.CustomTargetingValue)) return false;
+      if (!object.Equals(UpdateMask, other.UpdateMask)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (customTargetingValue_ != null) hash ^= CustomTargetingValue.GetHashCode();
+      if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (customTargetingValue_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CustomTargetingValue);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (customTargetingValue_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(CustomTargetingValue);
+      }
+      if (updateMask_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (customTargetingValue_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(CustomTargetingValue);
+      }
+      if (updateMask_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdateMask);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(UpdateCustomTargetingValueRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.customTargetingValue_ != null) {
+        if (customTargetingValue_ == null) {
+          CustomTargetingValue = new global::Google.Ads.AdManager.V1.CustomTargetingValue();
+        }
+        CustomTargetingValue.MergeFrom(other.CustomTargetingValue);
+      }
+      if (other.updateMask_ != null) {
+        if (updateMask_ == null) {
+          UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+        }
+        UpdateMask.MergeFrom(other.UpdateMask);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (customTargetingValue_ == null) {
+              CustomTargetingValue = new global::Google.Ads.AdManager.V1.CustomTargetingValue();
+            }
+            input.ReadMessage(CustomTargetingValue);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (customTargetingValue_ == null) {
+              CustomTargetingValue = new global::Google.Ads.AdManager.V1.CustomTargetingValue();
+            }
+            input.ReadMessage(CustomTargetingValue);
+            break;
+          }
+          case 18: {
+            if (updateMask_ == null) {
+              UpdateMask = new global::Google.Protobuf.WellKnownTypes.FieldMask();
+            }
+            input.ReadMessage(UpdateMask);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request object for `BatchUpdateCustomTargetingValues` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchUpdateCustomTargetingValuesRequest : pb::IMessage<BatchUpdateCustomTargetingValuesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchUpdateCustomTargetingValuesRequest> _parser = new pb::MessageParser<BatchUpdateCustomTargetingValuesRequest>(() => new BatchUpdateCustomTargetingValuesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchUpdateCustomTargetingValuesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[7]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateCustomTargetingValuesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateCustomTargetingValuesRequest(BatchUpdateCustomTargetingValuesRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateCustomTargetingValuesRequest Clone() {
+      return new BatchUpdateCustomTargetingValuesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent, which owns this collection of CustomTargetingValues.
+    /// Format:
+    /// `networks/{network_code}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest> requests_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest>();
+    /// <summary>
+    /// Required. The `CustomTargetingValue` objects to update.
+    /// A maximum of 100 objects can be updated in a batch.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.UpdateCustomTargetingValueRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchUpdateCustomTargetingValuesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchUpdateCustomTargetingValuesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchUpdateCustomTargetingValuesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response object for `BatchUpdateCustomTargetingValues` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchUpdateCustomTargetingValuesResponse : pb::IMessage<BatchUpdateCustomTargetingValuesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchUpdateCustomTargetingValuesResponse> _parser = new pb::MessageParser<BatchUpdateCustomTargetingValuesResponse>(() => new BatchUpdateCustomTargetingValuesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchUpdateCustomTargetingValuesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateCustomTargetingValuesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateCustomTargetingValuesResponse(BatchUpdateCustomTargetingValuesResponse other) : this() {
+      customTargetingValues_ = other.customTargetingValues_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchUpdateCustomTargetingValuesResponse Clone() {
+      return new BatchUpdateCustomTargetingValuesResponse(this);
+    }
+
+    /// <summary>Field number for the "custom_targeting_values" field.</summary>
+    public const int CustomTargetingValuesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.CustomTargetingValue> _repeated_customTargetingValues_codec
+        = pb::FieldCodec.ForMessage(10, global::Google.Ads.AdManager.V1.CustomTargetingValue.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomTargetingValue> customTargetingValues_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomTargetingValue>();
+    /// <summary>
+    /// The `CustomTargetingValue` objects updated.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.CustomTargetingValue> CustomTargetingValues {
+      get { return customTargetingValues_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchUpdateCustomTargetingValuesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchUpdateCustomTargetingValuesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!customTargetingValues_.Equals(other.customTargetingValues_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= customTargetingValues_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      customTargetingValues_.WriteTo(output, _repeated_customTargetingValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      customTargetingValues_.WriteTo(ref output, _repeated_customTargetingValues_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += customTargetingValues_.CalculateSize(_repeated_customTargetingValues_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchUpdateCustomTargetingValuesResponse other) {
+      if (other == null) {
+        return;
+      }
+      customTargetingValues_.Add(other.customTargetingValues_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            customTargetingValues_.AddEntriesFrom(input, _repeated_customTargetingValues_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            customTargetingValues_.AddEntriesFrom(ref input, _repeated_customTargetingValues_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message to activate a CustomTargetingValue.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ActivateCustomTargetingValueRequest : pb::IMessage<ActivateCustomTargetingValueRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ActivateCustomTargetingValueRequest> _parser = new pb::MessageParser<ActivateCustomTargetingValueRequest>(() => new ActivateCustomTargetingValueRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ActivateCustomTargetingValueRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActivateCustomTargetingValueRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActivateCustomTargetingValueRequest(ActivateCustomTargetingValueRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ActivateCustomTargetingValueRequest Clone() {
+      return new ActivateCustomTargetingValueRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the CustomTargetingValue.
+    /// Format:
+    /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ActivateCustomTargetingValueRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ActivateCustomTargetingValueRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ActivateCustomTargetingValueRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request object for `BatchActivateCustomTargetingValues` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchActivateCustomTargetingValuesRequest : pb::IMessage<BatchActivateCustomTargetingValuesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchActivateCustomTargetingValuesRequest> _parser = new pb::MessageParser<BatchActivateCustomTargetingValuesRequest>(() => new BatchActivateCustomTargetingValuesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchActivateCustomTargetingValuesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchActivateCustomTargetingValuesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchActivateCustomTargetingValuesRequest(BatchActivateCustomTargetingValuesRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchActivateCustomTargetingValuesRequest Clone() {
+      return new BatchActivateCustomTargetingValuesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent, which owns this collection of CustomTargetingValues.
+    /// Format:
+    /// `networks/{network_code}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.ActivateCustomTargetingValueRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.AdManager.V1.ActivateCustomTargetingValueRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.ActivateCustomTargetingValueRequest> requests_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.ActivateCustomTargetingValueRequest>();
+    /// <summary>
+    /// Required. The `CustomTargetingValue` objects to activate.
+    /// A maximum of 100 objects can be activated in a batch.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.ActivateCustomTargetingValueRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchActivateCustomTargetingValuesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchActivateCustomTargetingValuesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchActivateCustomTargetingValuesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response object for `BatchActivateCustomTargetingValues` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchActivateCustomTargetingValuesResponse : pb::IMessage<BatchActivateCustomTargetingValuesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchActivateCustomTargetingValuesResponse> _parser = new pb::MessageParser<BatchActivateCustomTargetingValuesResponse>(() => new BatchActivateCustomTargetingValuesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchActivateCustomTargetingValuesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[11]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchActivateCustomTargetingValuesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchActivateCustomTargetingValuesResponse(BatchActivateCustomTargetingValuesResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchActivateCustomTargetingValuesResponse Clone() {
+      return new BatchActivateCustomTargetingValuesResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchActivateCustomTargetingValuesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchActivateCustomTargetingValuesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchActivateCustomTargetingValuesResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message to deactivate a CustomTargetingValue.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeactivateCustomTargetingValueRequest : pb::IMessage<DeactivateCustomTargetingValueRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeactivateCustomTargetingValueRequest> _parser = new pb::MessageParser<DeactivateCustomTargetingValueRequest>(() => new DeactivateCustomTargetingValueRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeactivateCustomTargetingValueRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[12]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateCustomTargetingValueRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateCustomTargetingValueRequest(DeactivateCustomTargetingValueRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeactivateCustomTargetingValueRequest Clone() {
+      return new DeactivateCustomTargetingValueRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name of the CustomTargetingValue.
+    /// Format:
+    /// `networks/{network_code}/customTargetingValues/{custom_targeting_value_id}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeactivateCustomTargetingValueRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeactivateCustomTargetingValueRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeactivateCustomTargetingValueRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request message for `BatchDeactivateCustomTargetingValues` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchDeactivateCustomTargetingValuesRequest : pb::IMessage<BatchDeactivateCustomTargetingValuesRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDeactivateCustomTargetingValuesRequest> _parser = new pb::MessageParser<BatchDeactivateCustomTargetingValuesRequest>(() => new BatchDeactivateCustomTargetingValuesRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchDeactivateCustomTargetingValuesRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[13]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeactivateCustomTargetingValuesRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeactivateCustomTargetingValuesRequest(BatchDeactivateCustomTargetingValuesRequest other) : this() {
+      parent_ = other.parent_;
+      requests_ = other.requests_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeactivateCustomTargetingValuesRequest Clone() {
+      return new BatchDeactivateCustomTargetingValuesRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. The parent, which owns this collection of CustomTargetingValues.
+    /// Format:
+    /// `networks/{network_code}/`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "requests" field.</summary>
+    public const int RequestsFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Ads.AdManager.V1.DeactivateCustomTargetingValueRequest> _repeated_requests_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Ads.AdManager.V1.DeactivateCustomTargetingValueRequest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Ads.AdManager.V1.DeactivateCustomTargetingValueRequest> requests_ = new pbc::RepeatedField<global::Google.Ads.AdManager.V1.DeactivateCustomTargetingValueRequest>();
+    /// <summary>
+    /// Required. The `CustomTargetingValue` objects to deactivate.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Ads.AdManager.V1.DeactivateCustomTargetingValueRequest> Requests {
+      get { return requests_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDeactivateCustomTargetingValuesRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchDeactivateCustomTargetingValuesRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if(!requests_.Equals(other.requests_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      hash ^= requests_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      requests_.WriteTo(ref output, _repeated_requests_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      size += requests_.CalculateSize(_repeated_requests_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchDeactivateCustomTargetingValuesRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      requests_.Add(other.requests_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            requests_.AddEntriesFrom(ref input, _repeated_requests_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Response object for `BatchDeactivateCustomTargetingValues` method.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class BatchDeactivateCustomTargetingValuesResponse : pb::IMessage<BatchDeactivateCustomTargetingValuesResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BatchDeactivateCustomTargetingValuesResponse> _parser = new pb::MessageParser<BatchDeactivateCustomTargetingValuesResponse>(() => new BatchDeactivateCustomTargetingValuesResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BatchDeactivateCustomTargetingValuesResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.CustomTargetingValueServiceReflection.Descriptor.MessageTypes[14]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeactivateCustomTargetingValuesResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeactivateCustomTargetingValuesResponse(BatchDeactivateCustomTargetingValuesResponse other) : this() {
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BatchDeactivateCustomTargetingValuesResponse Clone() {
+      return new BatchDeactivateCustomTargetingValuesResponse(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BatchDeactivateCustomTargetingValuesResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BatchDeactivateCustomTargetingValuesResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BatchDeactivateCustomTargetingValuesResponse other) {
+      if (other == null) {
+        return;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
         }
       }
     }

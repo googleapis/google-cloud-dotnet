@@ -280,7 +280,7 @@ namespace Google.Ads.AdManager.V1
         public virtual AdReviewCenterAdService.AdReviewCenterAdServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to search for AdReviewCenterAds.
+        /// Searches for AdReviewCenterAds.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -289,7 +289,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to search for AdReviewCenterAds.
+        /// Searches for AdReviewCenterAds.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -298,7 +298,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to search for AdReviewCenterAds.
+        /// Searches for AdReviewCenterAds.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdReviewCenterAds.
@@ -344,7 +344,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to search for AdReviewCenterAds.
+        /// Searches for AdReviewCenterAds.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdReviewCenterAds.
@@ -390,7 +390,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to search for AdReviewCenterAds.
+        /// Searches for AdReviewCenterAds.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdReviewCenterAds.
@@ -436,7 +436,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to search for AdReviewCenterAds.
+        /// Searches for AdReviewCenterAds.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of AdReviewCenterAds.
@@ -482,7 +482,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -494,7 +494,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -506,7 +506,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -545,7 +545,7 @@ namespace Google.Ads.AdManager.V1
             lro::Operation<BatchAllowAdReviewCenterAdsResponse, BatchAdReviewCenterAdsOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchAllowAdReviewCenterAdsOperationsClient, callSettings);
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -575,7 +575,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -605,7 +605,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -632,7 +632,7 @@ namespace Google.Ads.AdManager.V1
             BatchAllowAdReviewCenterAdsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -662,7 +662,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -692,7 +692,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -719,7 +719,7 @@ namespace Google.Ads.AdManager.V1
             BatchAllowAdReviewCenterAdsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -731,7 +731,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -743,7 +743,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -782,7 +782,7 @@ namespace Google.Ads.AdManager.V1
             lro::Operation<BatchBlockAdReviewCenterAdsResponse, BatchAdReviewCenterAdsOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), BatchBlockAdReviewCenterAdsOperationsClient, callSettings);
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -812,7 +812,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -842,7 +842,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -869,7 +869,7 @@ namespace Google.Ads.AdManager.V1
             BatchBlockAdReviewCenterAdsAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -899,7 +899,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -929,7 +929,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -1020,7 +1020,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchBlockAdReviewCenterAdsRequest(ref BatchBlockAdReviewCenterAdsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to search for AdReviewCenterAds.
+        /// Searches for AdReviewCenterAds.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1032,7 +1032,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to search for AdReviewCenterAds.
+        /// Searches for AdReviewCenterAds.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1047,7 +1047,7 @@ namespace Google.Ads.AdManager.V1
         public override lro::OperationsClient BatchAllowAdReviewCenterAdsOperationsClient { get; }
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -1062,7 +1062,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch allow AdReviewCenterAds.
+        /// Batch allows AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -1080,7 +1080,7 @@ namespace Google.Ads.AdManager.V1
         public override lro::OperationsClient BatchBlockAdReviewCenterAdsOperationsClient { get; }
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.
@@ -1095,7 +1095,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to batch block AdReviewCenterAds.
+        /// Batch blocks AdReviewCenterAds.
         /// This method supports partial success. Some operations may succeed while
         /// others fail. Callers should check the failedRequests field in the response
         /// to determine which operations failed.

@@ -71,6 +71,114 @@
         }
       }
     },
+    "AdRuleService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AdRuleServiceClient",
+          "rpcs": {
+            "BatchActivateAdRules": {
+              "methods": [
+                "BatchActivateAdRules",
+                "BatchActivateAdRulesAsync"
+              ]
+            },
+            "BatchCreateAdRules": {
+              "methods": [
+                "BatchCreateAdRules",
+                "BatchCreateAdRulesAsync"
+              ]
+            },
+            "BatchDeactivateAdRules": {
+              "methods": [
+                "BatchDeactivateAdRules",
+                "BatchDeactivateAdRulesAsync"
+              ]
+            },
+            "BatchDeleteAdRules": {
+              "methods": [
+                "BatchDeleteAdRules",
+                "BatchDeleteAdRulesAsync"
+              ]
+            },
+            "BatchUpdateAdRules": {
+              "methods": [
+                "BatchUpdateAdRules",
+                "BatchUpdateAdRulesAsync"
+              ]
+            },
+            "CreateAdRule": {
+              "methods": [
+                "CreateAdRule",
+                "CreateAdRuleAsync"
+              ]
+            },
+            "GetAdRule": {
+              "methods": [
+                "GetAdRule",
+                "GetAdRuleAsync"
+              ]
+            },
+            "ListAdRules": {
+              "methods": [
+                "ListAdRules",
+                "ListAdRulesAsync"
+              ]
+            },
+            "UpdateAdRule": {
+              "methods": [
+                "UpdateAdRule",
+                "UpdateAdRuleAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "AdSpotService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "AdSpotServiceClient",
+          "rpcs": {
+            "BatchCreateAdSpots": {
+              "methods": [
+                "BatchCreateAdSpots",
+                "BatchCreateAdSpotsAsync"
+              ]
+            },
+            "BatchUpdateAdSpots": {
+              "methods": [
+                "BatchUpdateAdSpots",
+                "BatchUpdateAdSpotsAsync"
+              ]
+            },
+            "CreateAdSpot": {
+              "methods": [
+                "CreateAdSpot",
+                "CreateAdSpotAsync"
+              ]
+            },
+            "GetAdSpot": {
+              "methods": [
+                "GetAdSpot",
+                "GetAdSpotAsync"
+              ]
+            },
+            "ListAdSpots": {
+              "methods": [
+                "ListAdSpots",
+                "ListAdSpotsAsync"
+              ]
+            },
+            "UpdateAdSpot": {
+              "methods": [
+                "UpdateAdSpot",
+                "UpdateAdSpotAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "AdUnitService": {
       "clients": {
         "grpc": {
@@ -275,6 +383,63 @@
               "methods": [
                 "ListBrowsers",
                 "ListBrowsersAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CdnConfigService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CdnConfigServiceClient",
+          "rpcs": {
+            "BatchActivateCdnConfigs": {
+              "methods": [
+                "BatchActivateCdnConfigs",
+                "BatchActivateCdnConfigsAsync"
+              ]
+            },
+            "BatchArchiveCdnConfigs": {
+              "methods": [
+                "BatchArchiveCdnConfigs",
+                "BatchArchiveCdnConfigsAsync"
+              ]
+            },
+            "BatchCreateCdnConfigs": {
+              "methods": [
+                "BatchCreateCdnConfigs",
+                "BatchCreateCdnConfigsAsync"
+              ]
+            },
+            "BatchUpdateCdnConfigs": {
+              "methods": [
+                "BatchUpdateCdnConfigs",
+                "BatchUpdateCdnConfigsAsync"
+              ]
+            },
+            "CreateCdnConfig": {
+              "methods": [
+                "CreateCdnConfig",
+                "CreateCdnConfigAsync"
+              ]
+            },
+            "GetCdnConfig": {
+              "methods": [
+                "GetCdnConfig",
+                "GetCdnConfigAsync"
+              ]
+            },
+            "ListCdnConfigs": {
+              "methods": [
+                "ListCdnConfigs",
+                "ListCdnConfigsAsync"
+              ]
+            },
+            "UpdateCdnConfig": {
+              "methods": [
+                "UpdateCdnConfig",
+                "UpdateCdnConfigAsync"
               ]
             }
           }
@@ -616,6 +781,36 @@
         "grpc": {
           "libraryClient": "CustomTargetingValueServiceClient",
           "rpcs": {
+            "BatchActivateCustomTargetingValues": {
+              "methods": [
+                "BatchActivateCustomTargetingValues",
+                "BatchActivateCustomTargetingValuesAsync"
+              ]
+            },
+            "BatchCreateCustomTargetingValues": {
+              "methods": [
+                "BatchCreateCustomTargetingValues",
+                "BatchCreateCustomTargetingValuesAsync"
+              ]
+            },
+            "BatchDeactivateCustomTargetingValues": {
+              "methods": [
+                "BatchDeactivateCustomTargetingValues",
+                "BatchDeactivateCustomTargetingValuesAsync"
+              ]
+            },
+            "BatchUpdateCustomTargetingValues": {
+              "methods": [
+                "BatchUpdateCustomTargetingValues",
+                "BatchUpdateCustomTargetingValuesAsync"
+              ]
+            },
+            "CreateCustomTargetingValue": {
+              "methods": [
+                "CreateCustomTargetingValue",
+                "CreateCustomTargetingValueAsync"
+              ]
+            },
             "GetCustomTargetingValue": {
               "methods": [
                 "GetCustomTargetingValue",
@@ -626,6 +821,12 @@
               "methods": [
                 "ListCustomTargetingValues",
                 "ListCustomTargetingValuesAsync"
+              ]
+            },
+            "UpdateCustomTargetingValue": {
+              "methods": [
+                "UpdateCustomTargetingValue",
+                "UpdateCustomTargetingValueAsync"
               ]
             }
           }
@@ -854,6 +1055,81 @@
               "methods": [
                 "ListLinkedDevices",
                 "ListLinkedDevicesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "LiveStreamService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "LiveStreamServiceClient",
+          "rpcs": {
+            "BatchActivateLiveStreams": {
+              "methods": [
+                "BatchActivateLiveStreams",
+                "BatchActivateLiveStreamsAsync"
+              ]
+            },
+            "BatchArchiveLiveStreams": {
+              "methods": [
+                "BatchArchiveLiveStreams",
+                "BatchArchiveLiveStreamsAsync"
+              ]
+            },
+            "BatchCreateLiveStreams": {
+              "methods": [
+                "BatchCreateLiveStreams",
+                "BatchCreateLiveStreamsAsync"
+              ]
+            },
+            "BatchPauseAdsLiveStreams": {
+              "methods": [
+                "BatchPauseAdsLiveStreams",
+                "BatchPauseAdsLiveStreamsAsync"
+              ]
+            },
+            "BatchPauseLiveStreams": {
+              "methods": [
+                "BatchPauseLiveStreams",
+                "BatchPauseLiveStreamsAsync"
+              ]
+            },
+            "BatchRefreshMasterPlaylists": {
+              "methods": [
+                "BatchRefreshMasterPlaylists",
+                "BatchRefreshMasterPlaylistsAsync"
+              ]
+            },
+            "BatchUpdateLiveStreams": {
+              "methods": [
+                "BatchUpdateLiveStreams",
+                "BatchUpdateLiveStreamsAsync"
+              ]
+            },
+            "CreateLiveStream": {
+              "methods": [
+                "CreateLiveStream",
+                "CreateLiveStreamAsync"
+              ]
+            },
+            "GetLiveStream": {
+              "methods": [
+                "GetLiveStream",
+                "GetLiveStreamAsync"
+              ]
+            },
+            "ListLiveStreams": {
+              "methods": [
+                "ListLiveStreams",
+                "ListLiveStreamsAsync"
+              ]
+            },
+            "UpdateLiveStream": {
+              "methods": [
+                "UpdateLiveStream",
+                "UpdateLiveStreamAsync"
               ]
             }
           }
@@ -1316,6 +1592,72 @@
         }
       }
     },
+    "SuggestedAdUnitService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SuggestedAdUnitServiceClient",
+          "rpcs": {
+            "BatchApproveSuggestedAdUnits": {
+              "methods": [
+                "BatchApproveSuggestedAdUnits",
+                "BatchApproveSuggestedAdUnitsAsync"
+              ]
+            },
+            "GetSuggestedAdUnit": {
+              "methods": [
+                "GetSuggestedAdUnit",
+                "GetSuggestedAdUnitAsync"
+              ]
+            },
+            "ListSuggestedAdUnits": {
+              "methods": [
+                "ListSuggestedAdUnits",
+                "ListSuggestedAdUnitsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "TargetingPresetService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TargetingPresetServiceClient",
+          "rpcs": {
+            "BatchCreateTargetingPresets": {
+              "methods": [
+                "BatchCreateTargetingPresets",
+                "BatchCreateTargetingPresetsAsync"
+              ]
+            },
+            "BatchDeactivateTargetingPresets": {
+              "methods": [
+                "BatchDeactivateTargetingPresets",
+                "BatchDeactivateTargetingPresetsAsync"
+              ]
+            },
+            "CreateTargetingPreset": {
+              "methods": [
+                "CreateTargetingPreset",
+                "CreateTargetingPresetAsync"
+              ]
+            },
+            "GetTargetingPreset": {
+              "methods": [
+                "GetTargetingPreset",
+                "GetTargetingPresetAsync"
+              ]
+            },
+            "ListTargetingPresets": {
+              "methods": [
+                "ListTargetingPresets",
+                "ListTargetingPresetsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "TaxonomyCategoryService": {
       "clients": {
         "grpc": {
@@ -1388,6 +1730,27 @@
               "methods": [
                 "UpdateTeam",
                 "UpdateTeamAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ThirdPartyCompanyService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ThirdPartyCompanyServiceClient",
+          "rpcs": {
+            "GetThirdPartyCompany": {
+              "methods": [
+                "GetThirdPartyCompany",
+                "GetThirdPartyCompanyAsync"
+              ]
+            },
+            "ListThirdPartyCompanies": {
+              "methods": [
+                "ListThirdPartyCompanies",
+                "ListThirdPartyCompaniesAsync"
               ]
             }
           }

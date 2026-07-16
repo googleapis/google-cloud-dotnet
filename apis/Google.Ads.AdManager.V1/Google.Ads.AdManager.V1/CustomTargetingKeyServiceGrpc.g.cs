@@ -167,7 +167,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class CustomTargetingKeyServiceBase
     {
       /// <summary>
-      /// API to retrieve a `CustomTargetingKey` object.
+      /// Retrieves a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -179,7 +179,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingKey` objects.
+      /// Lists `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -191,7 +191,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to create a `CustomTargetingKey` object.
+      /// Creates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -203,7 +203,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch create `CustomTargetingKey` objects.
+      /// Creates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -215,7 +215,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to update a `CustomTargetingKey` object.
+      /// Updates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -227,7 +227,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch update `CustomTargetingKey` objects.
+      /// Batch updates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -239,7 +239,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch activate `CustomTargetingKey` objects.
+      /// Batch activates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -292,7 +292,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `CustomTargetingKey` object.
+      /// Retrieves a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -305,7 +305,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCustomTargetingKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `CustomTargetingKey` object.
+      /// Retrieves a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -316,7 +316,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomTargetingKey, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `CustomTargetingKey` object.
+      /// Retrieves a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -329,7 +329,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCustomTargetingKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `CustomTargetingKey` object.
+      /// Retrieves a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomTargetingKey, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingKey` objects.
+      /// Lists `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCustomTargetingKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingKey` objects.
+      /// Lists `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -364,7 +364,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCustomTargetingKeys, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingKey` objects.
+      /// Lists `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCustomTargetingKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `CustomTargetingKey` objects.
+      /// Lists `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -388,7 +388,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListCustomTargetingKeys, null, options, request);
       }
       /// <summary>
-      /// API to create a `CustomTargetingKey` object.
+      /// Creates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -401,7 +401,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateCustomTargetingKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `CustomTargetingKey` object.
+      /// Creates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -412,7 +412,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCustomTargetingKey, null, options, request);
       }
       /// <summary>
-      /// API to create a `CustomTargetingKey` object.
+      /// Creates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -425,7 +425,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateCustomTargetingKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `CustomTargetingKey` object.
+      /// Creates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,7 +436,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCustomTargetingKey, null, options, request);
       }
       /// <summary>
-      /// API to batch create `CustomTargetingKey` objects.
+      /// Creates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -449,7 +449,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreateCustomTargetingKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `CustomTargetingKey` objects.
+      /// Creates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -460,7 +460,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreateCustomTargetingKeys, null, options, request);
       }
       /// <summary>
-      /// API to batch create `CustomTargetingKey` objects.
+      /// Creates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -473,7 +473,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreateCustomTargetingKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `CustomTargetingKey` objects.
+      /// Creates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -484,7 +484,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateCustomTargetingKeys, null, options, request);
       }
       /// <summary>
-      /// API to update a `CustomTargetingKey` object.
+      /// Updates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -497,7 +497,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateCustomTargetingKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `CustomTargetingKey` object.
+      /// Updates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -508,7 +508,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomTargetingKey, null, options, request);
       }
       /// <summary>
-      /// API to update a `CustomTargetingKey` object.
+      /// Updates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -521,7 +521,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateCustomTargetingKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `CustomTargetingKey` object.
+      /// Updates a `CustomTargetingKey` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -532,7 +532,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomTargetingKey, null, options, request);
       }
       /// <summary>
-      /// API to batch update `CustomTargetingKey` objects.
+      /// Batch updates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -545,7 +545,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdateCustomTargetingKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `CustomTargetingKey` objects.
+      /// Batch updates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -556,7 +556,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateCustomTargetingKeys, null, options, request);
       }
       /// <summary>
-      /// API to batch update `CustomTargetingKey` objects.
+      /// Batch updates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -569,7 +569,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdateCustomTargetingKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `CustomTargetingKey` objects.
+      /// Batch updates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -580,7 +580,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchUpdateCustomTargetingKeys, null, options, request);
       }
       /// <summary>
-      /// API to batch activate `CustomTargetingKey` objects.
+      /// Batch activates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -593,7 +593,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchActivateCustomTargetingKeys(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch activate `CustomTargetingKey` objects.
+      /// Batch activates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -604,7 +604,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchActivateCustomTargetingKeys, null, options, request);
       }
       /// <summary>
-      /// API to batch activate `CustomTargetingKey` objects.
+      /// Batch activates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -617,7 +617,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchActivateCustomTargetingKeysAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch activate `CustomTargetingKey` objects.
+      /// Batch activates `CustomTargetingKey` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

@@ -255,7 +255,7 @@ namespace Google.Ads.AdManager.V1
         public virtual CmsMetadataKeyService.CmsMetadataKeyServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -264,7 +264,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -273,7 +273,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -282,7 +282,7 @@ namespace Google.Ads.AdManager.V1
             GetCmsMetadataKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CmsMetadataKey.
@@ -297,7 +297,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CmsMetadataKey.
@@ -312,7 +312,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CmsMetadataKey.
@@ -324,7 +324,7 @@ namespace Google.Ads.AdManager.V1
             GetCmsMetadataKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CmsMetadataKey.
@@ -339,7 +339,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CmsMetadataKey.
@@ -354,7 +354,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the CmsMetadataKey.
@@ -366,7 +366,7 @@ namespace Google.Ads.AdManager.V1
             GetCmsMetadataKeyAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to retrieve a list of `CmsMetadataKey` objects.
+        /// Lists `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -375,7 +375,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `CmsMetadataKey` objects.
+        /// Lists `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -384,7 +384,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to retrieve a list of `CmsMetadataKey` objects.
+        /// Lists `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CmsMetadataKeys.
@@ -418,7 +418,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CmsMetadataKey` objects.
+        /// Lists `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CmsMetadataKeys.
@@ -452,7 +452,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CmsMetadataKey` objects.
+        /// Lists `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CmsMetadataKeys.
@@ -486,7 +486,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CmsMetadataKey` objects.
+        /// Lists `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent, which owns this collection of CmsMetadataKeys.
@@ -520,7 +520,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -529,7 +529,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -538,7 +538,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -547,7 +547,7 @@ namespace Google.Ads.AdManager.V1
             BatchActivateCmsMetadataKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be activated.
@@ -570,7 +570,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be activated.
@@ -593,7 +593,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be activated.
@@ -609,7 +609,7 @@ namespace Google.Ads.AdManager.V1
             BatchActivateCmsMetadataKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be activated.
@@ -632,7 +632,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be activated.
@@ -655,7 +655,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be activated.
@@ -671,7 +671,7 @@ namespace Google.Ads.AdManager.V1
             BatchActivateCmsMetadataKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -680,7 +680,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -689,7 +689,7 @@ namespace Google.Ads.AdManager.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -698,7 +698,7 @@ namespace Google.Ads.AdManager.V1
             BatchDeactivateCmsMetadataKeysAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be
@@ -722,7 +722,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be
@@ -746,7 +746,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be
@@ -763,7 +763,7 @@ namespace Google.Ads.AdManager.V1
             BatchDeactivateCmsMetadataKeysAsync(parent, names, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be
@@ -787,7 +787,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be
@@ -811,7 +811,7 @@ namespace Google.Ads.AdManager.V1
             }, callSettings);
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="parent">
         /// Required. The parent resource where `CmsMetadataKeys` will be
@@ -897,7 +897,7 @@ namespace Google.Ads.AdManager.V1
         partial void Modify_BatchDeactivateCmsMetadataKeysRequest(ref BatchDeactivateCmsMetadataKeysRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -909,7 +909,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a `CmsMetadataKey` object.
+        /// Retrieves a `CmsMetadataKey` object.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -921,7 +921,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CmsMetadataKey` objects.
+        /// Lists `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -933,7 +933,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to retrieve a list of `CmsMetadataKey` objects.
+        /// Lists `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -945,7 +945,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -957,7 +957,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to activate a list of `CmsMetadataKey` objects.
+        /// Activates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -969,7 +969,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -981,7 +981,7 @@ namespace Google.Ads.AdManager.V1
         }
 
         /// <summary>
-        /// API to deactivate a list of `CmsMetadataKey` objects.
+        /// Deactivates a list of `CmsMetadataKey` objects.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -30,7 +30,7 @@ namespace Google.Ads.AdManager.V1 {
             "YW5hZ2VyL3YxL3RhcmdldGVkX3ZpZGVvX2J1bXBlcl90eXBlX2VudW0ucHJv",
             "dG8aMWdvb2dsZS9hZHMvYWRtYW5hZ2VyL3YxL3ZpZGVvX3Bvc2l0aW9uX2Vu",
             "dW0ucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
-            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ivAYKCVRhcmdldGluZxJBCg1nZW9f",
+            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8ilAcKCVRhcmdldGluZxJBCg1nZW9f",
             "dGFyZ2V0aW5nGAIgASgLMiUuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuR2Vv",
             "VGFyZ2V0aW5nQgPgQQESTwoUdGVjaG5vbG9neV90YXJnZXRpbmcYAyABKAsy",
             "LC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UZWNobm9sb2d5VGFyZ2V0aW5n",
@@ -45,147 +45,163 @@ namespace Google.Ads.AdManager.V1 {
             "DCABKAsyLy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5WaWRlb1Bvc2l0aW9u",
             "VGFyZ2V0aW5nQgPgQQESUgoWZGF0YV9zZWdtZW50X3RhcmdldGluZxgNIAEo",
             "CzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRhdGFTZWdtZW50VGFyZ2V0",
-            "aW5nQgPgQQESSQoRY29udGVudF90YXJnZXRpbmcYDyABKAsyKS5nb29nbGUu",
-            "YWRzLmFkbWFuYWdlci52MS5Db250ZW50VGFyZ2V0aW5nQgPgQQESXgocbW9i",
-            "aWxlX2FwcGxpY2F0aW9uX3RhcmdldGluZxgSIAEoCzIzLmdvb2dsZS5hZHMu",
-            "YWRtYW5hZ2VyLnYxLk1vYmlsZUFwcGxpY2F0aW9uVGFyZ2V0aW5nQgPgQQEi",
-            "lAEKDEdlb1RhcmdldGluZxJBCg10YXJnZXRlZF9nZW9zGAMgAygJQirgQQH6",
-            "QSQKImFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9HZW9UYXJnZXQSQQoNZXhj",
-            "bHVkZWRfZ2VvcxgEIAMoCUIq4EEB+kEkCiJhZG1hbmFnZXIuZ29vZ2xlYXBp",
-            "cy5jb20vR2VvVGFyZ2V0ItkFChNUZWNobm9sb2d5VGFyZ2V0aW5nEk0KE2Jh",
-            "bmR3aWR0aF90YXJnZXRpbmcYAyABKAsyKy5nb29nbGUuYWRzLmFkbWFuYWdl",
-            "ci52MS5CYW5kd2lkdGhUYXJnZXRpbmdCA+BBARJJChFicm93c2VyX3Rhcmdl",
-            "dGluZxgEIAEoCzIpLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJyb3dzZXJU",
-            "YXJnZXRpbmdCA+BBARJaChpicm93c2VyX2xhbmd1YWdlX3RhcmdldGluZxgF",
-            "IAEoCzIxLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkJyb3dzZXJMYW5ndWFn",
-            "ZVRhcmdldGluZ0ID4EEBElwKG2RldmljZV9jYXBhYmlsaXR5X3RhcmdldGlu",
-            "ZxgGIAEoCzIyLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRldmljZUNhcGFi",
-            "aWxpdHlUYXJnZXRpbmdCA+BBARJYChlkZXZpY2VfY2F0ZWdvcnlfdGFyZ2V0",
-            "aW5nGAEgASgLMjAuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuRGV2aWNlQ2F0",
-            "ZWdvcnlUYXJnZXRpbmdCA+BBARJgCh1kZXZpY2VfbWFudWZhY3R1cmVyX3Rh",
-            "cmdldGluZxgHIAEoCzI0Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRldmlj",
-            "ZU1hbnVmYWN0dXJlclRhcmdldGluZ0ID4EEBElYKGG1vYmlsZV9jYXJyaWVy",
-            "X3RhcmdldGluZxgIIAEoCzIvLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk1v",
-            "YmlsZUNhcnJpZXJUYXJnZXRpbmdCA+BBARJaChpvcGVyYXRpbmdfc3lzdGVt",
-            "X3RhcmdldGluZxgCIAEoCzIxLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLk9w",
-            "ZXJhdGluZ1N5c3RlbVRhcmdldGluZ0ID4EEBIrwBChJCYW5kd2lkdGhUYXJn",
-            "ZXRpbmcSUgoZdGFyZ2V0ZWRfYmFuZHdpZHRoX2dyb3VwcxgDIAMoCUIv4EEB",
-            "+kEpCidhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQmFuZHdpZHRoR3JvdXAS",
-            "UgoZZXhjbHVkZWRfYmFuZHdpZHRoX2dyb3VwcxgEIAMoCUIv4EEB+kEpCidh",
-            "ZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQmFuZHdpZHRoR3JvdXAinAEKEEJy",
-            "b3dzZXJUYXJnZXRpbmcSQwoRdGFyZ2V0ZWRfYnJvd3NlcnMYAyADKAlCKOBB",
-            "AfpBIgogYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Jyb3dzZXISQwoRZXhj",
-            "bHVkZWRfYnJvd3NlcnMYBCADKAlCKOBBAfpBIgogYWRtYW5hZ2VyLmdvb2ds",
-            "ZWFwaXMuY29tL0Jyb3dzZXIixgEKGEJyb3dzZXJMYW5ndWFnZVRhcmdldGlu",
-            "ZxJUChp0YXJnZXRlZF9icm93c2VyX2xhbmd1YWdlcxgDIAMoCUIw4EEB+kEq",
-            "CihhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQnJvd3Nlckxhbmd1YWdlElQK",
-            "GmV4Y2x1ZGVkX2Jyb3dzZXJfbGFuZ3VhZ2VzGAQgAygJQjDgQQH6QSoKKGFk",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Ccm93c2VyTGFuZ3VhZ2UitQEKF0Rl",
-            "dmljZUNhdGVnb3J5VGFyZ2V0aW5nEkwKE3RhcmdldGVkX2NhdGVnb3JpZXMY",
-            "AyADKAlCL+BBAfpBKQonYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Rldmlj",
-            "ZUNhdGVnb3J5EkwKE2V4Y2x1ZGVkX2NhdGVnb3JpZXMYBCADKAlCL+BBAfpB",
-            "KQonYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0RldmljZUNhdGVnb3J5Ir8B",
-            "ChlEZXZpY2VDYXBhYmlsaXR5VGFyZ2V0aW5nElAKFXRhcmdldGVkX2NhcGFi",
-            "aWxpdGllcxgDIAMoCUIx4EEB+kErCilhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b20vRGV2aWNlQ2FwYWJpbGl0eRJQChVleGNsdWRlZF9jYXBhYmlsaXRpZXMY",
-            "BCADKAlCMeBBAfpBKwopYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Rldmlj",
-            "ZUNhcGFiaWxpdHkitwQKG0RldmljZU1hbnVmYWN0dXJlclRhcmdldGluZxJa",
-            "Ch10YXJnZXRlZF9kZXZpY2VfbWFudWZhY3R1cmVycxgHIAMoCUIz4EEB+kEt",
+            "aW5nQgPgQQESVgoYcmVxdWVzdF9mb3JtYXRfdGFyZ2V0aW5nGA4gASgLMi8u",
+            "Z29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuUmVxdWVzdEZvcm1hdFRhcmdldGlu",
+            "Z0ID4EEBEkkKEWNvbnRlbnRfdGFyZ2V0aW5nGA8gASgLMikuZ29vZ2xlLmFk",
+            "cy5hZG1hbmFnZXIudjEuQ29udGVudFRhcmdldGluZ0ID4EEBEl4KHG1vYmls",
+            "ZV9hcHBsaWNhdGlvbl90YXJnZXRpbmcYEiABKAsyMy5nb29nbGUuYWRzLmFk",
+            "bWFuYWdlci52MS5Nb2JpbGVBcHBsaWNhdGlvblRhcmdldGluZ0ID4EEBIpQB",
+            "CgxHZW9UYXJnZXRpbmcSQQoNdGFyZ2V0ZWRfZ2VvcxgDIAMoCUIq4EEB+kEk",
+            "CiJhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vR2VvVGFyZ2V0EkEKDWV4Y2x1",
+            "ZGVkX2dlb3MYBCADKAlCKuBBAfpBJAoiYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
+            "Y29tL0dlb1RhcmdldCLZBQoTVGVjaG5vbG9neVRhcmdldGluZxJNChNiYW5k",
+            "d2lkdGhfdGFyZ2V0aW5nGAMgASgLMisuZ29vZ2xlLmFkcy5hZG1hbmFnZXIu",
+            "djEuQmFuZHdpZHRoVGFyZ2V0aW5nQgPgQQESSQoRYnJvd3Nlcl90YXJnZXRp",
+            "bmcYBCABKAsyKS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Ccm93c2VyVGFy",
+            "Z2V0aW5nQgPgQQESWgoaYnJvd3Nlcl9sYW5ndWFnZV90YXJnZXRpbmcYBSAB",
+            "KAsyMS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Ccm93c2VyTGFuZ3VhZ2VU",
+            "YXJnZXRpbmdCA+BBARJcChtkZXZpY2VfY2FwYWJpbGl0eV90YXJnZXRpbmcY",
+            "BiABKAsyMi5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5EZXZpY2VDYXBhYmls",
+            "aXR5VGFyZ2V0aW5nQgPgQQESWAoZZGV2aWNlX2NhdGVnb3J5X3RhcmdldGlu",
+            "ZxgBIAEoCzIwLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkRldmljZUNhdGVn",
+            "b3J5VGFyZ2V0aW5nQgPgQQESYAodZGV2aWNlX21hbnVmYWN0dXJlcl90YXJn",
+            "ZXRpbmcYByABKAsyNC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5EZXZpY2VN",
+            "YW51ZmFjdHVyZXJUYXJnZXRpbmdCA+BBARJWChhtb2JpbGVfY2Fycmllcl90",
+            "YXJnZXRpbmcYCCABKAsyLy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5Nb2Jp",
+            "bGVDYXJyaWVyVGFyZ2V0aW5nQgPgQQESWgoab3BlcmF0aW5nX3N5c3RlbV90",
+            "YXJnZXRpbmcYAiABKAsyMS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5PcGVy",
+            "YXRpbmdTeXN0ZW1UYXJnZXRpbmdCA+BBASK8AQoSQmFuZHdpZHRoVGFyZ2V0",
+            "aW5nElIKGXRhcmdldGVkX2JhbmR3aWR0aF9ncm91cHMYAyADKAlCL+BBAfpB",
+            "KQonYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0JhbmR3aWR0aEdyb3VwElIK",
+            "GWV4Y2x1ZGVkX2JhbmR3aWR0aF9ncm91cHMYBCADKAlCL+BBAfpBKQonYWRt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0JhbmR3aWR0aEdyb3VwIpwBChBCcm93",
+            "c2VyVGFyZ2V0aW5nEkMKEXRhcmdldGVkX2Jyb3dzZXJzGAMgAygJQijgQQH6",
+            "QSIKIGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9Ccm93c2VyEkMKEWV4Y2x1",
+            "ZGVkX2Jyb3dzZXJzGAQgAygJQijgQQH6QSIKIGFkbWFuYWdlci5nb29nbGVh",
+            "cGlzLmNvbS9Ccm93c2VyIsYBChhCcm93c2VyTGFuZ3VhZ2VUYXJnZXRpbmcS",
+            "VAoadGFyZ2V0ZWRfYnJvd3Nlcl9sYW5ndWFnZXMYAyADKAlCMOBBAfpBKgoo",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0Jyb3dzZXJMYW5ndWFnZRJUChpl",
+            "eGNsdWRlZF9icm93c2VyX2xhbmd1YWdlcxgEIAMoCUIw4EEB+kEqCihhZG1h",
+            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vQnJvd3Nlckxhbmd1YWdlIrUBChdEZXZp",
+            "Y2VDYXRlZ29yeVRhcmdldGluZxJMChN0YXJnZXRlZF9jYXRlZ29yaWVzGAMg",
+            "AygJQi/gQQH6QSkKJ2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9EZXZpY2VD",
+            "YXRlZ29yeRJMChNleGNsdWRlZF9jYXRlZ29yaWVzGAQgAygJQi/gQQH6QSkK",
+            "J2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9EZXZpY2VDYXRlZ29yeSK/AQoZ",
+            "RGV2aWNlQ2FwYWJpbGl0eVRhcmdldGluZxJQChV0YXJnZXRlZF9jYXBhYmls",
+            "aXRpZXMYAyADKAlCMeBBAfpBKwopYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L0RldmljZUNhcGFiaWxpdHkSUAoVZXhjbHVkZWRfY2FwYWJpbGl0aWVzGAQg",
+            "AygJQjHgQQH6QSsKKWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9EZXZpY2VD",
+            "YXBhYmlsaXR5IrcEChtEZXZpY2VNYW51ZmFjdHVyZXJUYXJnZXRpbmcSWgod",
+            "dGFyZ2V0ZWRfZGV2aWNlX21hbnVmYWN0dXJlcnMYByADKAlCM+BBAfpBLQor",
+            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0RldmljZU1hbnVmYWN0dXJlchJa",
+            "Ch1leGNsdWRlZF9kZXZpY2VfbWFudWZhY3R1cmVycxgIIAMoCUIz4EEB+kEt",
             "CithZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vRGV2aWNlTWFudWZhY3R1cmVy",
-            "EloKHWV4Y2x1ZGVkX2RldmljZV9tYW51ZmFjdHVyZXJzGAggAygJQjPgQQH6",
-            "QS0KK2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9EZXZpY2VNYW51ZmFjdHVy",
-            "ZXISTgoXdGFyZ2V0ZWRfbW9iaWxlX2RldmljZXMYCSADKAlCLeBBAfpBJwol",
-            "YWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL01vYmlsZURldmljZRJOChdleGNs",
-            "dWRlZF9tb2JpbGVfZGV2aWNlcxgKIAMoCUIt4EEB+kEnCiVhZG1hbmFnZXIu",
-            "Z29vZ2xlYXBpcy5jb20vTW9iaWxlRGV2aWNlEl8KIHRhcmdldGVkX21vYmls",
-            "ZV9kZXZpY2Vfc3VibW9kZWxzGAsgAygJQjXgQQH6QS8KLWFkbWFuYWdlci5n",
-            "b29nbGVhcGlzLmNvbS9Nb2JpbGVEZXZpY2VTdWJtb2RlbBJfCiBleGNsdWRl",
-            "ZF9tb2JpbGVfZGV2aWNlX3N1Ym1vZGVscxgMIAMoCUI14EEB+kEvCi1hZG1h",
-            "bmFnZXIuZ29vZ2xlYXBpcy5jb20vTW9iaWxlRGV2aWNlU3VibW9kZWwivAEK",
-            "Fk1vYmlsZUNhcnJpZXJUYXJnZXRpbmcSUAoYdGFyZ2V0ZWRfbW9iaWxlX2Nh",
-            "cnJpZXJzGAMgAygJQi7gQQH6QSgKJmFkbWFuYWdlci5nb29nbGVhcGlzLmNv",
-            "bS9Nb2JpbGVDYXJyaWVyElAKGGV4Y2x1ZGVkX21vYmlsZV9jYXJyaWVycxgE",
-            "IAMoCUIu4EEB+kEoCiZhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vTW9iaWxl",
-            "Q2FycmllciKQAwoYT3BlcmF0aW5nU3lzdGVtVGFyZ2V0aW5nElQKGnRhcmdl",
-            "dGVkX29wZXJhdGluZ19zeXN0ZW1zGAUgAygJQjDgQQH6QSoKKGFkbWFuYWdl",
-            "ci5nb29nbGVhcGlzLmNvbS9PcGVyYXRpbmdTeXN0ZW0SVAoaZXhjbHVkZWRf",
-            "b3BlcmF0aW5nX3N5c3RlbXMYBiADKAlCMOBBAfpBKgooYWRtYW5hZ2VyLmdv",
-            "b2dsZWFwaXMuY29tL09wZXJhdGluZ1N5c3RlbRJjCiJ0YXJnZXRlZF9vcGVy",
-            "YXRpbmdfc3lzdGVtX3ZlcnNpb25zGAcgAygJQjfgQQH6QTEKL2FkbWFuYWdl",
-            "ci5nb29nbGVhcGlzLmNvbS9PcGVyYXRpbmdTeXN0ZW1WZXJzaW9uEmMKImV4",
-            "Y2x1ZGVkX29wZXJhdGluZ19zeXN0ZW1fdmVyc2lvbnMYCCADKAlCN+BBAfpB",
-            "MQovYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL09wZXJhdGluZ1N5c3RlbVZl",
-            "cnNpb24i8QEKEkludmVudG9yeVRhcmdldGluZxJIChF0YXJnZXRlZF9hZF91",
-            "bml0cxgBIAMoCzIoLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkFkVW5pdFRh",
-            "cmdldGluZ0ID4EEBEkgKEWV4Y2x1ZGVkX2FkX3VuaXRzGAIgAygLMiguZ29v",
-            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuQWRVbml0VGFyZ2V0aW5nQgPgQQESRwoT",
-            "dGFyZ2V0ZWRfcGxhY2VtZW50cxgFIAMoCUIq4EEB+kEkCiJhZG1hbmFnZXIu",
-            "Z29vZ2xlYXBpcy5jb20vUGxhY2VtZW50IpYBCg9BZFVuaXRUYXJnZXRpbmcS",
-            "IAoTaW5jbHVkZV9kZXNjZW5kYW50cxgBIAEoCEgAiAEBEj0KB2FkX3VuaXQY",
-            "AyABKAlCJ+BBAfpBIQofYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0FkVW5p",
-            "dEgBiAEBQhYKFF9pbmNsdWRlX2Rlc2NlbmRhbnRzQgoKCF9hZF91bml0IngK",
-            "GFJlcXVlc3RQbGF0Zm9ybVRhcmdldGluZxJcChFyZXF1ZXN0X3BsYXRmb3Jt",
-            "cxgBIAMoDjI8Lmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlJlcXVlc3RQbGF0",
-            "Zm9ybUVudW0uUmVxdWVzdFBsYXRmb3JtQgPgQQEiaAoPQ3VzdG9tVGFyZ2V0",
-            "aW5nElUKGGN1c3RvbV90YXJnZXRpbmdfY2xhdXNlcxgBIAMoCzIuLmdvb2ds",
-            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkN1c3RvbVRhcmdldGluZ0NsYXVzZUID4EEB",
-            "IqICChVDdXN0b21UYXJnZXRpbmdDbGF1c2USVwoZY3VzdG9tX3RhcmdldGlu",
-            "Z19saXRlcmFscxgBIAMoCzIvLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkN1",
-            "c3RvbVRhcmdldGluZ0xpdGVyYWxCA+BBARJbChthdWRpZW5jZV9zZWdtZW50",
-            "X3RhcmdldGluZ3MYAiADKAsyMS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5B",
-            "dWRpZW5jZVNlZ21lbnRUYXJnZXRpbmdCA+BBARJTChdjbXNfbWV0YWRhdGFf",
-            "dGFyZ2V0aW5ncxgDIAMoCzItLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLkNt",
-            "c01ldGFkYXRhVGFyZ2V0aW5nQgPgQQEihQIKFkN1c3RvbVRhcmdldGluZ0xp",
-            "dGVyYWwSFQoIbmVnYXRpdmUYASABKAhIAIgBARJWChRjdXN0b21fdGFyZ2V0",
-            "aW5nX2tleRgEIAEoCUIz4EEB+kEtCithZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
-            "b20vQ3VzdG9tVGFyZ2V0aW5nS2V5SAGIAQESVgoXY3VzdG9tX3RhcmdldGlu",
-            "Z192YWx1ZXMYBSADKAlCNeBBAfpBLwotYWRtYW5hZ2VyLmdvb2dsZWFwaXMu",
-            "Y29tL0N1c3RvbVRhcmdldGluZ1ZhbHVlQgsKCV9uZWdhdGl2ZUIXChVfY3Vz",
-            "dG9tX3RhcmdldGluZ19rZXkiiwEKGEF1ZGllbmNlU2VnbWVudFRhcmdldGlu",
-            "ZxIVCghuZWdhdGl2ZRgBIAEoCEgAiAEBEksKEWF1ZGllbmNlX3NlZ21lbnRz",
-            "GAMgAygJQjDgQQH6QSoKKGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BdWRp",
-            "ZW5jZVNlZ21lbnRCCwoJX25lZ2F0aXZlIooBChRDbXNNZXRhZGF0YVRhcmdl",
-            "dGluZxIVCghuZWdhdGl2ZRgBIAEoCEgAiAEBEk4KE2Ntc19tZXRhZGF0YV92",
-            "YWx1ZXMYAyADKAlCMeBBAfpBKwopYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
-            "L0Ntc01ldGFkYXRhVmFsdWVCCwoJX25lZ2F0aXZlIl0KE1VzZXJEb21haW5U",
-            "YXJnZXRpbmcSIgoVdGFyZ2V0ZWRfdXNlcl9kb21haW5zGAEgAygJQgPgQQES",
-            "IgoVZXhjbHVkZWRfdXNlcl9kb21haW5zGAIgAygJQgPgQQEiXgoWVmlkZW9Q",
-            "b3NpdGlvblRhcmdldGluZxJECg92aWRlb19wb3NpdGlvbnMYASADKAsyJi5n",
-            "b29nbGUuYWRzLmFkbWFuYWdlci52MS5WaWRlb1Bvc2l0aW9uQgPgQQEioAMK",
-            "DVZpZGVvUG9zaXRpb24SHwoNbWlkcm9sbF9pbmRleBgBIAEoA0ID4EEBSACI",
-            "AQESJwoVcmV2ZXJzZV9taWRyb2xsX2luZGV4GAIgASgDQgPgQQFIAYgBARIe",
-            "Cgxwb2RfcG9zaXRpb24YAyABKANCA+BBAUgCiAEBElkKDXBvc2l0aW9uX3R5",
-            "cGUYBSABKA4yOC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5WaWRlb1Bvc2l0",
-            "aW9uRW51bS5WaWRlb1Bvc2l0aW9uQgPgQQFIA4gBARJrCgtidW1wZXJfdHlw",
-            "ZRgGIAEoDjJMLmdvb2dsZS5hZHMuYWRtYW5hZ2VyLnYxLlRhcmdldGVkVmlk",
-            "ZW9CdW1wZXJUeXBlRW51bS5UYXJnZXRlZFZpZGVvQnVtcGVyVHlwZUID4EEB",
-            "SASIAQFCEAoOX21pZHJvbGxfaW5kZXhCGAoWX3JldmVyc2VfbWlkcm9sbF9p",
-            "bmRleEIPCg1fcG9kX3Bvc2l0aW9uQhAKDl9wb3NpdGlvbl90eXBlQg4KDF9i",
-            "dW1wZXJfdHlwZSI/ChREYXRhU2VnbWVudFRhcmdldGluZxInChpoYXNfZGF0",
-            "YV9zZWdtZW50X3RhcmdldGluZxgCIAEoCEID4EEDIr4CChBDb250ZW50VGFy",
-            "Z2V0aW5nEkIKEHRhcmdldGVkX2NvbnRlbnQYBSADKAlCKOBBAfpBIgogYWRt",
-            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbnRlbnQSQgoQZXhjbHVkZWRfY29u",
-            "dGVudBgGIAMoCUIo4EEB+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
-            "Q29udGVudBJQChh0YXJnZXRlZF9jb250ZW50X2J1bmRsZXMYByADKAlCLuBB",
-            "AfpBKAomYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbnRlbnRCdW5kbGUS",
-            "UAoYZXhjbHVkZWRfY29udGVudF9idW5kbGVzGAggAygJQi7gQQH6QSgKJmFk",
-            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Db250ZW50QnVuZGxlIo4BChpNb2Jp",
-            "bGVBcHBsaWNhdGlvblRhcmdldGluZxJjChVmaXJzdF9wYXJ0eV90YXJnZXRp",
-            "bmcYASABKAsyPS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5GaXJzdFBhcnR5",
-            "TW9iaWxlQXBwbGljYXRpb25UYXJnZXRpbmdCA+BBAUgAQgsKCXRhcmdldGlu",
-            "ZyLAAQokRmlyc3RQYXJ0eU1vYmlsZUFwcGxpY2F0aW9uVGFyZ2V0aW5nEksK",
-            "FXRhcmdldGVkX2FwcGxpY2F0aW9ucxgDIAMoCUIs4EEB+kEmCiRhZG1hbmFn",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vQXBwbGljYXRpb24SSwoVZXhjbHVkZWRfYXBw",
-            "bGljYXRpb25zGAQgAygJQizgQQH6QSYKJGFkbWFuYWdlci5nb29nbGVhcGlz",
-            "LmNvbS9BcHBsaWNhdGlvbkLCAQobY29tLmdvb2dsZS5hZHMuYWRtYW5hZ2Vy",
-            "LnYxQg5UYXJnZXRpbmdQcm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5w",
-            "cm90by9nb29nbGVhcGlzL2Fkcy9hZG1hbmFnZXIvdjE7YWRtYW5hZ2VyqgIX",
-            "R29vZ2xlLkFkcy5BZE1hbmFnZXIuVjHKAhdHb29nbGVcQWRzXEFkTWFuYWdl",
-            "clxWMeoCGkdvb2dsZTo6QWRzOjpBZE1hbmFnZXI6OlYxYgZwcm90bzM="));
+            "Ek4KF3RhcmdldGVkX21vYmlsZV9kZXZpY2VzGAkgAygJQi3gQQH6QScKJWFk",
+            "bWFuYWdlci5nb29nbGVhcGlzLmNvbS9Nb2JpbGVEZXZpY2USTgoXZXhjbHVk",
+            "ZWRfbW9iaWxlX2RldmljZXMYCiADKAlCLeBBAfpBJwolYWRtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL01vYmlsZURldmljZRJfCiB0YXJnZXRlZF9tb2JpbGVf",
+            "ZGV2aWNlX3N1Ym1vZGVscxgLIAMoCUI14EEB+kEvCi1hZG1hbmFnZXIuZ29v",
+            "Z2xlYXBpcy5jb20vTW9iaWxlRGV2aWNlU3VibW9kZWwSXwogZXhjbHVkZWRf",
+            "bW9iaWxlX2RldmljZV9zdWJtb2RlbHMYDCADKAlCNeBBAfpBLwotYWRtYW5h",
+            "Z2VyLmdvb2dsZWFwaXMuY29tL01vYmlsZURldmljZVN1Ym1vZGVsIrwBChZN",
+            "b2JpbGVDYXJyaWVyVGFyZ2V0aW5nElAKGHRhcmdldGVkX21vYmlsZV9jYXJy",
+            "aWVycxgDIAMoCUIu4EEB+kEoCiZhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20v",
+            "TW9iaWxlQ2FycmllchJQChhleGNsdWRlZF9tb2JpbGVfY2FycmllcnMYBCAD",
+            "KAlCLuBBAfpBKAomYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL01vYmlsZUNh",
+            "cnJpZXIikAMKGE9wZXJhdGluZ1N5c3RlbVRhcmdldGluZxJUChp0YXJnZXRl",
+            "ZF9vcGVyYXRpbmdfc3lzdGVtcxgFIAMoCUIw4EEB+kEqCihhZG1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb20vT3BlcmF0aW5nU3lzdGVtElQKGmV4Y2x1ZGVkX29w",
+            "ZXJhdGluZ19zeXN0ZW1zGAYgAygJQjDgQQH6QSoKKGFkbWFuYWdlci5nb29n",
+            "bGVhcGlzLmNvbS9PcGVyYXRpbmdTeXN0ZW0SYwoidGFyZ2V0ZWRfb3BlcmF0",
+            "aW5nX3N5c3RlbV92ZXJzaW9ucxgHIAMoCUI34EEB+kExCi9hZG1hbmFnZXIu",
+            "Z29vZ2xlYXBpcy5jb20vT3BlcmF0aW5nU3lzdGVtVmVyc2lvbhJjCiJleGNs",
+            "dWRlZF9vcGVyYXRpbmdfc3lzdGVtX3ZlcnNpb25zGAggAygJQjfgQQH6QTEK",
+            "L2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9PcGVyYXRpbmdTeXN0ZW1WZXJz",
+            "aW9uIvEBChJJbnZlbnRvcnlUYXJnZXRpbmcSSAoRdGFyZ2V0ZWRfYWRfdW5p",
+            "dHMYASADKAsyKC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5BZFVuaXRUYXJn",
+            "ZXRpbmdCA+BBARJIChFleGNsdWRlZF9hZF91bml0cxgCIAMoCzIoLmdvb2ds",
+            "ZS5hZHMuYWRtYW5hZ2VyLnYxLkFkVW5pdFRhcmdldGluZ0ID4EEBEkcKE3Rh",
+            "cmdldGVkX3BsYWNlbWVudHMYBSADKAlCKuBBAfpBJAoiYWRtYW5hZ2VyLmdv",
+            "b2dsZWFwaXMuY29tL1BsYWNlbWVudCKWAQoPQWRVbml0VGFyZ2V0aW5nEiAK",
+            "E2luY2x1ZGVfZGVzY2VuZGFudHMYASABKAhIAIgBARI9CgdhZF91bml0GAMg",
+            "ASgJQifgQQH6QSEKH2FkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BZFVuaXRI",
+            "AYgBAUIWChRfaW5jbHVkZV9kZXNjZW5kYW50c0IKCghfYWRfdW5pdCJ4ChhS",
+            "ZXF1ZXN0UGxhdGZvcm1UYXJnZXRpbmcSXAoRcmVxdWVzdF9wbGF0Zm9ybXMY",
+            "ASADKA4yPC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5SZXF1ZXN0UGxhdGZv",
+            "cm1FbnVtLlJlcXVlc3RQbGF0Zm9ybUID4EEBImgKD0N1c3RvbVRhcmdldGlu",
+            "ZxJVChhjdXN0b21fdGFyZ2V0aW5nX2NsYXVzZXMYASADKAsyLi5nb29nbGUu",
+            "YWRzLmFkbWFuYWdlci52MS5DdXN0b21UYXJnZXRpbmdDbGF1c2VCA+BBASKi",
+            "AgoVQ3VzdG9tVGFyZ2V0aW5nQ2xhdXNlElcKGWN1c3RvbV90YXJnZXRpbmdf",
+            "bGl0ZXJhbHMYASADKAsyLy5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DdXN0",
+            "b21UYXJnZXRpbmdMaXRlcmFsQgPgQQESWwobYXVkaWVuY2Vfc2VnbWVudF90",
+            "YXJnZXRpbmdzGAIgAygLMjEuZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuQXVk",
+            "aWVuY2VTZWdtZW50VGFyZ2V0aW5nQgPgQQESUwoXY21zX21ldGFkYXRhX3Rh",
+            "cmdldGluZ3MYAyADKAsyLS5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5DbXNN",
+            "ZXRhZGF0YVRhcmdldGluZ0ID4EEBIoUCChZDdXN0b21UYXJnZXRpbmdMaXRl",
+            "cmFsEhUKCG5lZ2F0aXZlGAEgASgISACIAQESVgoUY3VzdG9tX3RhcmdldGlu",
+            "Z19rZXkYBCABKAlCM+BBAfpBLQorYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29t",
+            "L0N1c3RvbVRhcmdldGluZ0tleUgBiAEBElYKF2N1c3RvbV90YXJnZXRpbmdf",
+            "dmFsdWVzGAUgAygJQjXgQQH6QS8KLWFkbWFuYWdlci5nb29nbGVhcGlzLmNv",
+            "bS9DdXN0b21UYXJnZXRpbmdWYWx1ZUILCglfbmVnYXRpdmVCFwoVX2N1c3Rv",
+            "bV90YXJnZXRpbmdfa2V5IosBChhBdWRpZW5jZVNlZ21lbnRUYXJnZXRpbmcS",
+            "FQoIbmVnYXRpdmUYASABKAhIAIgBARJLChFhdWRpZW5jZV9zZWdtZW50cxgD",
+            "IAMoCUIw4EEB+kEqCihhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQXVkaWVu",
+            "Y2VTZWdtZW50QgsKCV9uZWdhdGl2ZSKKAQoUQ21zTWV0YWRhdGFUYXJnZXRp",
+            "bmcSFQoIbmVnYXRpdmUYASABKAhIAIgBARJOChNjbXNfbWV0YWRhdGFfdmFs",
+            "dWVzGAMgAygJQjHgQQH6QSsKKWFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9D",
+            "bXNNZXRhZGF0YVZhbHVlQgsKCV9uZWdhdGl2ZSJdChNVc2VyRG9tYWluVGFy",
+            "Z2V0aW5nEiIKFXRhcmdldGVkX3VzZXJfZG9tYWlucxgBIAMoCUID4EEBEiIK",
+            "FWV4Y2x1ZGVkX3VzZXJfZG9tYWlucxgCIAMoCUID4EEBIl4KFlZpZGVvUG9z",
+            "aXRpb25UYXJnZXRpbmcSRAoPdmlkZW9fcG9zaXRpb25zGAEgAygLMiYuZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjEuVmlkZW9Qb3NpdGlvbkID4EEBIqADCg1W",
+            "aWRlb1Bvc2l0aW9uEh8KDW1pZHJvbGxfaW5kZXgYASABKANCA+BBAUgAiAEB",
+            "EicKFXJldmVyc2VfbWlkcm9sbF9pbmRleBgCIAEoA0ID4EEBSAGIAQESHgoM",
+            "cG9kX3Bvc2l0aW9uGAMgASgDQgPgQQFIAogBARJZCg1wb3NpdGlvbl90eXBl",
+            "GAUgASgOMjguZ29vZ2xlLmFkcy5hZG1hbmFnZXIudjEuVmlkZW9Qb3NpdGlv",
+            "bkVudW0uVmlkZW9Qb3NpdGlvbkID4EEBSAOIAQESawoLYnVtcGVyX3R5cGUY",
+            "BiABKA4yTC5nb29nbGUuYWRzLmFkbWFuYWdlci52MS5UYXJnZXRlZFZpZGVv",
+            "QnVtcGVyVHlwZUVudW0uVGFyZ2V0ZWRWaWRlb0J1bXBlclR5cGVCA+BBAUgE",
+            "iAEBQhAKDl9taWRyb2xsX2luZGV4QhgKFl9yZXZlcnNlX21pZHJvbGxfaW5k",
+            "ZXhCDwoNX3BvZF9wb3NpdGlvbkIQCg5fcG9zaXRpb25fdHlwZUIOCgxfYnVt",
+            "cGVyX3R5cGUiPwoURGF0YVNlZ21lbnRUYXJnZXRpbmcSJwoaaGFzX2RhdGFf",
+            "c2VnbWVudF90YXJnZXRpbmcYAiABKAhCA+BBAyLZBAoWUmVxdWVzdEZvcm1h",
+            "dFRhcmdldGluZxIiChBhcHBfb3Blbl9lbmFibGVkGAEgASgIQgPgQQFIAIgB",
+            "ARIiChByZXdhcmRlZF9lbmFibGVkGAIgASgIQgPgQQFIAYgBARIvCh1yZXdh",
+            "cmRlZF9pbnRlcnN0aXRpYWxfZW5hYmxlZBgDIAEoCEID4EEBSAKIAQESJgoU",
+            "aW50ZXJzdGl0aWFsX2VuYWJsZWQYBCABKAhCA+BBAUgDiAEBEiAKDmFuY2hv",
+            "cl9lbmFibGVkGAUgASgIQgPgQQFIBIgBARIgCg5iYW5uZXJfZW5hYmxlZBgG",
+            "IAEoCEID4EEBSAWIAQESKAoWaW5zdHJlYW1fdmlkZW9fZW5hYmxlZBgHIAEo",
+            "CEID4EEBSAaIAQESKAoWaW5zdHJlYW1fYXVkaW9fZW5hYmxlZBgIIAEoCEID",
+            "4EEBSAeIAQESKQoXbmF0aXZlX2FkdmFuY2VkX2VuYWJsZWQYCSABKAhCA+BB",
+            "AUgIiAEBQhMKEV9hcHBfb3Blbl9lbmFibGVkQhMKEV9yZXdhcmRlZF9lbmFi",
+            "bGVkQiAKHl9yZXdhcmRlZF9pbnRlcnN0aXRpYWxfZW5hYmxlZEIXChVfaW50",
+            "ZXJzdGl0aWFsX2VuYWJsZWRCEQoPX2FuY2hvcl9lbmFibGVkQhEKD19iYW5u",
+            "ZXJfZW5hYmxlZEIZChdfaW5zdHJlYW1fdmlkZW9fZW5hYmxlZEIZChdfaW5z",
+            "dHJlYW1fYXVkaW9fZW5hYmxlZEIaChhfbmF0aXZlX2FkdmFuY2VkX2VuYWJs",
+            "ZWQivgIKEENvbnRlbnRUYXJnZXRpbmcSQgoQdGFyZ2V0ZWRfY29udGVudBgF",
+            "IAMoCUIo4EEB+kEiCiBhZG1hbmFnZXIuZ29vZ2xlYXBpcy5jb20vQ29udGVu",
+            "dBJCChBleGNsdWRlZF9jb250ZW50GAYgAygJQijgQQH6QSIKIGFkbWFuYWdl",
+            "ci5nb29nbGVhcGlzLmNvbS9Db250ZW50ElAKGHRhcmdldGVkX2NvbnRlbnRf",
+            "YnVuZGxlcxgHIAMoCUIu4EEB+kEoCiZhZG1hbmFnZXIuZ29vZ2xlYXBpcy5j",
+            "b20vQ29udGVudEJ1bmRsZRJQChhleGNsdWRlZF9jb250ZW50X2J1bmRsZXMY",
+            "CCADKAlCLuBBAfpBKAomYWRtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL0NvbnRl",
+            "bnRCdW5kbGUijgEKGk1vYmlsZUFwcGxpY2F0aW9uVGFyZ2V0aW5nEmMKFWZp",
+            "cnN0X3BhcnR5X3RhcmdldGluZxgBIAEoCzI9Lmdvb2dsZS5hZHMuYWRtYW5h",
+            "Z2VyLnYxLkZpcnN0UGFydHlNb2JpbGVBcHBsaWNhdGlvblRhcmdldGluZ0ID",
+            "4EEBSABCCwoJdGFyZ2V0aW5nIsABCiRGaXJzdFBhcnR5TW9iaWxlQXBwbGlj",
+            "YXRpb25UYXJnZXRpbmcSSwoVdGFyZ2V0ZWRfYXBwbGljYXRpb25zGAMgAygJ",
+            "QizgQQH6QSYKJGFkbWFuYWdlci5nb29nbGVhcGlzLmNvbS9BcHBsaWNhdGlv",
+            "bhJLChVleGNsdWRlZF9hcHBsaWNhdGlvbnMYBCADKAlCLOBBAfpBJgokYWRt",
+            "YW5hZ2VyLmdvb2dsZWFwaXMuY29tL0FwcGxpY2F0aW9uQsIBChtjb20uZ29v",
+            "Z2xlLmFkcy5hZG1hbmFnZXIudjFCDlRhcmdldGluZ1Byb3RvUAFaQGdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvYWRzL2FkbWFuYWdl",
+            "ci92MTthZG1hbmFnZXKqAhdHb29nbGUuQWRzLkFkTWFuYWdlci5WMcoCF0dv",
+            "b2dsZVxBZHNcQWRNYW5hZ2VyXFYx6gIaR29vZ2xlOjpBZHM6OkFkTWFuYWdl",
+            "cjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Ads.AdManager.V1.RequestPlatformEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.TargetedVideoBumperTypeEnumReflection.Descriptor, global::Google.Ads.AdManager.V1.VideoPositionEnumReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Targeting), global::Google.Ads.AdManager.V1.Targeting.Parser, new[]{ "GeoTargeting", "TechnologyTargeting", "InventoryTargeting", "RequestPlatformTargeting", "CustomTargeting", "UserDomainTargeting", "VideoPositionTargeting", "DataSegmentTargeting", "ContentTargeting", "MobileApplicationTargeting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.Targeting), global::Google.Ads.AdManager.V1.Targeting.Parser, new[]{ "GeoTargeting", "TechnologyTargeting", "InventoryTargeting", "RequestPlatformTargeting", "CustomTargeting", "UserDomainTargeting", "VideoPositionTargeting", "DataSegmentTargeting", "RequestFormatTargeting", "ContentTargeting", "MobileApplicationTargeting" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.GeoTargeting), global::Google.Ads.AdManager.V1.GeoTargeting.Parser, new[]{ "TargetedGeos", "ExcludedGeos" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.TechnologyTargeting), global::Google.Ads.AdManager.V1.TechnologyTargeting.Parser, new[]{ "BandwidthTargeting", "BrowserTargeting", "BrowserLanguageTargeting", "DeviceCapabilityTargeting", "DeviceCategoryTargeting", "DeviceManufacturerTargeting", "MobileCarrierTargeting", "OperatingSystemTargeting" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.BandwidthTargeting), global::Google.Ads.AdManager.V1.BandwidthTargeting.Parser, new[]{ "TargetedBandwidthGroups", "ExcludedBandwidthGroups" }, null, null, null, null),
@@ -208,6 +224,7 @@ namespace Google.Ads.AdManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoPositionTargeting), global::Google.Ads.AdManager.V1.VideoPositionTargeting.Parser, new[]{ "VideoPositions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.VideoPosition), global::Google.Ads.AdManager.V1.VideoPosition.Parser, new[]{ "MidrollIndex", "ReverseMidrollIndex", "PodPosition", "PositionType", "BumperType" }, new[]{ "MidrollIndex", "ReverseMidrollIndex", "PodPosition", "PositionType", "BumperType" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.DataSegmentTargeting), global::Google.Ads.AdManager.V1.DataSegmentTargeting.Parser, new[]{ "HasDataSegmentTargeting" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.RequestFormatTargeting), global::Google.Ads.AdManager.V1.RequestFormatTargeting.Parser, new[]{ "AppOpenEnabled", "RewardedEnabled", "RewardedInterstitialEnabled", "InterstitialEnabled", "AnchorEnabled", "BannerEnabled", "InstreamVideoEnabled", "InstreamAudioEnabled", "NativeAdvancedEnabled" }, new[]{ "AppOpenEnabled", "RewardedEnabled", "RewardedInterstitialEnabled", "InterstitialEnabled", "AnchorEnabled", "BannerEnabled", "InstreamVideoEnabled", "InstreamAudioEnabled", "NativeAdvancedEnabled" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.ContentTargeting), global::Google.Ads.AdManager.V1.ContentTargeting.Parser, new[]{ "TargetedContent", "ExcludedContent", "TargetedContentBundles", "ExcludedContentBundles" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.MobileApplicationTargeting), global::Google.Ads.AdManager.V1.MobileApplicationTargeting.Parser, new[]{ "FirstPartyTargeting" }, new[]{ "Targeting" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting), global::Google.Ads.AdManager.V1.FirstPartyMobileApplicationTargeting.Parser, new[]{ "TargetedApplications", "ExcludedApplications" }, null, null, null, null)
@@ -263,6 +280,7 @@ namespace Google.Ads.AdManager.V1 {
       userDomainTargeting_ = other.userDomainTargeting_ != null ? other.userDomainTargeting_.Clone() : null;
       videoPositionTargeting_ = other.videoPositionTargeting_ != null ? other.videoPositionTargeting_.Clone() : null;
       dataSegmentTargeting_ = other.dataSegmentTargeting_ != null ? other.dataSegmentTargeting_.Clone() : null;
+      requestFormatTargeting_ = other.requestFormatTargeting_ != null ? other.requestFormatTargeting_.Clone() : null;
       contentTargeting_ = other.contentTargeting_ != null ? other.contentTargeting_.Clone() : null;
       mobileApplicationTargeting_ = other.mobileApplicationTargeting_ != null ? other.mobileApplicationTargeting_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -395,6 +413,21 @@ namespace Google.Ads.AdManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "request_format_targeting" field.</summary>
+    public const int RequestFormatTargetingFieldNumber = 14;
+    private global::Google.Ads.AdManager.V1.RequestFormatTargeting requestFormatTargeting_;
+    /// <summary>
+    /// Optional. Used to target inventory formats.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Ads.AdManager.V1.RequestFormatTargeting RequestFormatTargeting {
+      get { return requestFormatTargeting_; }
+      set {
+        requestFormatTargeting_ = value;
+      }
+    }
+
     /// <summary>Field number for the "content_targeting" field.</summary>
     public const int ContentTargetingFieldNumber = 15;
     private global::Google.Ads.AdManager.V1.ContentTargeting contentTargeting_;
@@ -448,6 +481,7 @@ namespace Google.Ads.AdManager.V1 {
       if (!object.Equals(UserDomainTargeting, other.UserDomainTargeting)) return false;
       if (!object.Equals(VideoPositionTargeting, other.VideoPositionTargeting)) return false;
       if (!object.Equals(DataSegmentTargeting, other.DataSegmentTargeting)) return false;
+      if (!object.Equals(RequestFormatTargeting, other.RequestFormatTargeting)) return false;
       if (!object.Equals(ContentTargeting, other.ContentTargeting)) return false;
       if (!object.Equals(MobileApplicationTargeting, other.MobileApplicationTargeting)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -465,6 +499,7 @@ namespace Google.Ads.AdManager.V1 {
       if (userDomainTargeting_ != null) hash ^= UserDomainTargeting.GetHashCode();
       if (videoPositionTargeting_ != null) hash ^= VideoPositionTargeting.GetHashCode();
       if (dataSegmentTargeting_ != null) hash ^= DataSegmentTargeting.GetHashCode();
+      if (requestFormatTargeting_ != null) hash ^= RequestFormatTargeting.GetHashCode();
       if (contentTargeting_ != null) hash ^= ContentTargeting.GetHashCode();
       if (mobileApplicationTargeting_ != null) hash ^= MobileApplicationTargeting.GetHashCode();
       if (_unknownFields != null) {
@@ -517,6 +552,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(DataSegmentTargeting);
       }
+      if (requestFormatTargeting_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RequestFormatTargeting);
+      }
       if (contentTargeting_ != null) {
         output.WriteRawTag(122);
         output.WriteMessage(ContentTargeting);
@@ -567,6 +606,10 @@ namespace Google.Ads.AdManager.V1 {
         output.WriteRawTag(106);
         output.WriteMessage(DataSegmentTargeting);
       }
+      if (requestFormatTargeting_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(RequestFormatTargeting);
+      }
       if (contentTargeting_ != null) {
         output.WriteRawTag(122);
         output.WriteMessage(ContentTargeting);
@@ -608,6 +651,9 @@ namespace Google.Ads.AdManager.V1 {
       }
       if (dataSegmentTargeting_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DataSegmentTargeting);
+      }
+      if (requestFormatTargeting_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RequestFormatTargeting);
       }
       if (contentTargeting_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(ContentTargeting);
@@ -674,6 +720,12 @@ namespace Google.Ads.AdManager.V1 {
           DataSegmentTargeting = new global::Google.Ads.AdManager.V1.DataSegmentTargeting();
         }
         DataSegmentTargeting.MergeFrom(other.DataSegmentTargeting);
+      }
+      if (other.requestFormatTargeting_ != null) {
+        if (requestFormatTargeting_ == null) {
+          RequestFormatTargeting = new global::Google.Ads.AdManager.V1.RequestFormatTargeting();
+        }
+        RequestFormatTargeting.MergeFrom(other.RequestFormatTargeting);
       }
       if (other.contentTargeting_ != null) {
         if (contentTargeting_ == null) {
@@ -760,6 +812,13 @@ namespace Google.Ads.AdManager.V1 {
               DataSegmentTargeting = new global::Google.Ads.AdManager.V1.DataSegmentTargeting();
             }
             input.ReadMessage(DataSegmentTargeting);
+            break;
+          }
+          case 114: {
+            if (requestFormatTargeting_ == null) {
+              RequestFormatTargeting = new global::Google.Ads.AdManager.V1.RequestFormatTargeting();
+            }
+            input.ReadMessage(RequestFormatTargeting);
             break;
           }
           case 122: {
@@ -849,6 +908,13 @@ namespace Google.Ads.AdManager.V1 {
               DataSegmentTargeting = new global::Google.Ads.AdManager.V1.DataSegmentTargeting();
             }
             input.ReadMessage(DataSegmentTargeting);
+            break;
+          }
+          case 114: {
+            if (requestFormatTargeting_ == null) {
+              RequestFormatTargeting = new global::Google.Ads.AdManager.V1.RequestFormatTargeting();
+            }
+            input.ReadMessage(RequestFormatTargeting);
             break;
           }
           case 122: {
@@ -6706,6 +6772,684 @@ namespace Google.Ads.AdManager.V1 {
   }
 
   /// <summary>
+  /// Request Format Targeting
+  ///
+  /// This message specifies inclusion or exclusion of various request formats for
+  /// targeting. Each optional boolean field controls the targeting of a specific
+  /// request format:
+  ///
+  /// - If set to `true`, the corresponding format is **included** in targeting.
+  /// - If set to `false`, the corresponding format is **excluded** from targeting.
+  /// - If unset, the format is neither explicitly included nor excluded.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class RequestFormatTargeting : pb::IMessage<RequestFormatTargeting>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<RequestFormatTargeting> _parser = new pb::MessageParser<RequestFormatTargeting>(() => new RequestFormatTargeting());
+    private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<RequestFormatTargeting> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[23]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestFormatTargeting() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestFormatTargeting(RequestFormatTargeting other) : this() {
+      _hasBits0 = other._hasBits0;
+      appOpenEnabled_ = other.appOpenEnabled_;
+      rewardedEnabled_ = other.rewardedEnabled_;
+      rewardedInterstitialEnabled_ = other.rewardedInterstitialEnabled_;
+      interstitialEnabled_ = other.interstitialEnabled_;
+      anchorEnabled_ = other.anchorEnabled_;
+      bannerEnabled_ = other.bannerEnabled_;
+      instreamVideoEnabled_ = other.instreamVideoEnabled_;
+      instreamAudioEnabled_ = other.instreamAudioEnabled_;
+      nativeAdvancedEnabled_ = other.nativeAdvancedEnabled_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public RequestFormatTargeting Clone() {
+      return new RequestFormatTargeting(this);
+    }
+
+    /// <summary>Field number for the "app_open_enabled" field.</summary>
+    public const int AppOpenEnabledFieldNumber = 1;
+    private readonly static bool AppOpenEnabledDefaultValue = false;
+
+    private bool appOpenEnabled_;
+    /// <summary>
+    /// Optional. Controls app open format targeting. Set to `true` to include,
+    /// `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AppOpenEnabled {
+      get { if ((_hasBits0 & 1) != 0) { return appOpenEnabled_; } else { return AppOpenEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 1;
+        appOpenEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "app_open_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAppOpenEnabled {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "app_open_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAppOpenEnabled() {
+      _hasBits0 &= ~1;
+    }
+
+    /// <summary>Field number for the "rewarded_enabled" field.</summary>
+    public const int RewardedEnabledFieldNumber = 2;
+    private readonly static bool RewardedEnabledDefaultValue = false;
+
+    private bool rewardedEnabled_;
+    /// <summary>
+    /// Optional. Controls rewarded format targeting. Set to `true` to include,
+    /// `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RewardedEnabled {
+      get { if ((_hasBits0 & 2) != 0) { return rewardedEnabled_; } else { return RewardedEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 2;
+        rewardedEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "rewarded_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRewardedEnabled {
+      get { return (_hasBits0 & 2) != 0; }
+    }
+    /// <summary>Clears the value of the "rewarded_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRewardedEnabled() {
+      _hasBits0 &= ~2;
+    }
+
+    /// <summary>Field number for the "rewarded_interstitial_enabled" field.</summary>
+    public const int RewardedInterstitialEnabledFieldNumber = 3;
+    private readonly static bool RewardedInterstitialEnabledDefaultValue = false;
+
+    private bool rewardedInterstitialEnabled_;
+    /// <summary>
+    /// Optional. Controls rewarded interstitial format targeting. Set to `true` to
+    /// include, `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RewardedInterstitialEnabled {
+      get { if ((_hasBits0 & 4) != 0) { return rewardedInterstitialEnabled_; } else { return RewardedInterstitialEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 4;
+        rewardedInterstitialEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "rewarded_interstitial_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasRewardedInterstitialEnabled {
+      get { return (_hasBits0 & 4) != 0; }
+    }
+    /// <summary>Clears the value of the "rewarded_interstitial_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearRewardedInterstitialEnabled() {
+      _hasBits0 &= ~4;
+    }
+
+    /// <summary>Field number for the "interstitial_enabled" field.</summary>
+    public const int InterstitialEnabledFieldNumber = 4;
+    private readonly static bool InterstitialEnabledDefaultValue = false;
+
+    private bool interstitialEnabled_;
+    /// <summary>
+    /// Optional. Controls interstitial format targeting. Set to `true` to include,
+    /// `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool InterstitialEnabled {
+      get { if ((_hasBits0 & 8) != 0) { return interstitialEnabled_; } else { return InterstitialEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 8;
+        interstitialEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "interstitial_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInterstitialEnabled {
+      get { return (_hasBits0 & 8) != 0; }
+    }
+    /// <summary>Clears the value of the "interstitial_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInterstitialEnabled() {
+      _hasBits0 &= ~8;
+    }
+
+    /// <summary>Field number for the "anchor_enabled" field.</summary>
+    public const int AnchorEnabledFieldNumber = 5;
+    private readonly static bool AnchorEnabledDefaultValue = false;
+
+    private bool anchorEnabled_;
+    /// <summary>
+    /// Optional. Controls anchor format targeting. Set to `true` to include,
+    /// `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AnchorEnabled {
+      get { if ((_hasBits0 & 16) != 0) { return anchorEnabled_; } else { return AnchorEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 16;
+        anchorEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "anchor_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasAnchorEnabled {
+      get { return (_hasBits0 & 16) != 0; }
+    }
+    /// <summary>Clears the value of the "anchor_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearAnchorEnabled() {
+      _hasBits0 &= ~16;
+    }
+
+    /// <summary>Field number for the "banner_enabled" field.</summary>
+    public const int BannerEnabledFieldNumber = 6;
+    private readonly static bool BannerEnabledDefaultValue = false;
+
+    private bool bannerEnabled_;
+    /// <summary>
+    /// Optional. Controls banner format targeting. Set to `true` to include,
+    /// `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool BannerEnabled {
+      get { if ((_hasBits0 & 32) != 0) { return bannerEnabled_; } else { return BannerEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 32;
+        bannerEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "banner_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasBannerEnabled {
+      get { return (_hasBits0 & 32) != 0; }
+    }
+    /// <summary>Clears the value of the "banner_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearBannerEnabled() {
+      _hasBits0 &= ~32;
+    }
+
+    /// <summary>Field number for the "instream_video_enabled" field.</summary>
+    public const int InstreamVideoEnabledFieldNumber = 7;
+    private readonly static bool InstreamVideoEnabledDefaultValue = false;
+
+    private bool instreamVideoEnabled_;
+    /// <summary>
+    /// Optional. Controls instream video format targeting. Set to `true` to
+    /// include, `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool InstreamVideoEnabled {
+      get { if ((_hasBits0 & 64) != 0) { return instreamVideoEnabled_; } else { return InstreamVideoEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 64;
+        instreamVideoEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "instream_video_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInstreamVideoEnabled {
+      get { return (_hasBits0 & 64) != 0; }
+    }
+    /// <summary>Clears the value of the "instream_video_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInstreamVideoEnabled() {
+      _hasBits0 &= ~64;
+    }
+
+    /// <summary>Field number for the "instream_audio_enabled" field.</summary>
+    public const int InstreamAudioEnabledFieldNumber = 8;
+    private readonly static bool InstreamAudioEnabledDefaultValue = false;
+
+    private bool instreamAudioEnabled_;
+    /// <summary>
+    /// Optional. Controls instream audio format targeting. Set to `true` to
+    /// include, `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool InstreamAudioEnabled {
+      get { if ((_hasBits0 & 128) != 0) { return instreamAudioEnabled_; } else { return InstreamAudioEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 128;
+        instreamAudioEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "instream_audio_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasInstreamAudioEnabled {
+      get { return (_hasBits0 & 128) != 0; }
+    }
+    /// <summary>Clears the value of the "instream_audio_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearInstreamAudioEnabled() {
+      _hasBits0 &= ~128;
+    }
+
+    /// <summary>Field number for the "native_advanced_enabled" field.</summary>
+    public const int NativeAdvancedEnabledFieldNumber = 9;
+    private readonly static bool NativeAdvancedEnabledDefaultValue = false;
+
+    private bool nativeAdvancedEnabled_;
+    /// <summary>
+    /// Optional. Controls native advanced format targeting. Set to `true` to
+    /// include, `false` to exclude, or leave unset for neither.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool NativeAdvancedEnabled {
+      get { if ((_hasBits0 & 256) != 0) { return nativeAdvancedEnabled_; } else { return NativeAdvancedEnabledDefaultValue; } }
+      set {
+        _hasBits0 |= 256;
+        nativeAdvancedEnabled_ = value;
+      }
+    }
+    /// <summary>Gets whether the "native_advanced_enabled" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasNativeAdvancedEnabled {
+      get { return (_hasBits0 & 256) != 0; }
+    }
+    /// <summary>Clears the value of the "native_advanced_enabled" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearNativeAdvancedEnabled() {
+      _hasBits0 &= ~256;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as RequestFormatTargeting);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(RequestFormatTargeting other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (AppOpenEnabled != other.AppOpenEnabled) return false;
+      if (RewardedEnabled != other.RewardedEnabled) return false;
+      if (RewardedInterstitialEnabled != other.RewardedInterstitialEnabled) return false;
+      if (InterstitialEnabled != other.InterstitialEnabled) return false;
+      if (AnchorEnabled != other.AnchorEnabled) return false;
+      if (BannerEnabled != other.BannerEnabled) return false;
+      if (InstreamVideoEnabled != other.InstreamVideoEnabled) return false;
+      if (InstreamAudioEnabled != other.InstreamAudioEnabled) return false;
+      if (NativeAdvancedEnabled != other.NativeAdvancedEnabled) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (HasAppOpenEnabled) hash ^= AppOpenEnabled.GetHashCode();
+      if (HasRewardedEnabled) hash ^= RewardedEnabled.GetHashCode();
+      if (HasRewardedInterstitialEnabled) hash ^= RewardedInterstitialEnabled.GetHashCode();
+      if (HasInterstitialEnabled) hash ^= InterstitialEnabled.GetHashCode();
+      if (HasAnchorEnabled) hash ^= AnchorEnabled.GetHashCode();
+      if (HasBannerEnabled) hash ^= BannerEnabled.GetHashCode();
+      if (HasInstreamVideoEnabled) hash ^= InstreamVideoEnabled.GetHashCode();
+      if (HasInstreamAudioEnabled) hash ^= InstreamAudioEnabled.GetHashCode();
+      if (HasNativeAdvancedEnabled) hash ^= NativeAdvancedEnabled.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (HasAppOpenEnabled) {
+        output.WriteRawTag(8);
+        output.WriteBool(AppOpenEnabled);
+      }
+      if (HasRewardedEnabled) {
+        output.WriteRawTag(16);
+        output.WriteBool(RewardedEnabled);
+      }
+      if (HasRewardedInterstitialEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(RewardedInterstitialEnabled);
+      }
+      if (HasInterstitialEnabled) {
+        output.WriteRawTag(32);
+        output.WriteBool(InterstitialEnabled);
+      }
+      if (HasAnchorEnabled) {
+        output.WriteRawTag(40);
+        output.WriteBool(AnchorEnabled);
+      }
+      if (HasBannerEnabled) {
+        output.WriteRawTag(48);
+        output.WriteBool(BannerEnabled);
+      }
+      if (HasInstreamVideoEnabled) {
+        output.WriteRawTag(56);
+        output.WriteBool(InstreamVideoEnabled);
+      }
+      if (HasInstreamAudioEnabled) {
+        output.WriteRawTag(64);
+        output.WriteBool(InstreamAudioEnabled);
+      }
+      if (HasNativeAdvancedEnabled) {
+        output.WriteRawTag(72);
+        output.WriteBool(NativeAdvancedEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (HasAppOpenEnabled) {
+        output.WriteRawTag(8);
+        output.WriteBool(AppOpenEnabled);
+      }
+      if (HasRewardedEnabled) {
+        output.WriteRawTag(16);
+        output.WriteBool(RewardedEnabled);
+      }
+      if (HasRewardedInterstitialEnabled) {
+        output.WriteRawTag(24);
+        output.WriteBool(RewardedInterstitialEnabled);
+      }
+      if (HasInterstitialEnabled) {
+        output.WriteRawTag(32);
+        output.WriteBool(InterstitialEnabled);
+      }
+      if (HasAnchorEnabled) {
+        output.WriteRawTag(40);
+        output.WriteBool(AnchorEnabled);
+      }
+      if (HasBannerEnabled) {
+        output.WriteRawTag(48);
+        output.WriteBool(BannerEnabled);
+      }
+      if (HasInstreamVideoEnabled) {
+        output.WriteRawTag(56);
+        output.WriteBool(InstreamVideoEnabled);
+      }
+      if (HasInstreamAudioEnabled) {
+        output.WriteRawTag(64);
+        output.WriteBool(InstreamAudioEnabled);
+      }
+      if (HasNativeAdvancedEnabled) {
+        output.WriteRawTag(72);
+        output.WriteBool(NativeAdvancedEnabled);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (HasAppOpenEnabled) {
+        size += 1 + 1;
+      }
+      if (HasRewardedEnabled) {
+        size += 1 + 1;
+      }
+      if (HasRewardedInterstitialEnabled) {
+        size += 1 + 1;
+      }
+      if (HasInterstitialEnabled) {
+        size += 1 + 1;
+      }
+      if (HasAnchorEnabled) {
+        size += 1 + 1;
+      }
+      if (HasBannerEnabled) {
+        size += 1 + 1;
+      }
+      if (HasInstreamVideoEnabled) {
+        size += 1 + 1;
+      }
+      if (HasInstreamAudioEnabled) {
+        size += 1 + 1;
+      }
+      if (HasNativeAdvancedEnabled) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(RequestFormatTargeting other) {
+      if (other == null) {
+        return;
+      }
+      if (other.HasAppOpenEnabled) {
+        AppOpenEnabled = other.AppOpenEnabled;
+      }
+      if (other.HasRewardedEnabled) {
+        RewardedEnabled = other.RewardedEnabled;
+      }
+      if (other.HasRewardedInterstitialEnabled) {
+        RewardedInterstitialEnabled = other.RewardedInterstitialEnabled;
+      }
+      if (other.HasInterstitialEnabled) {
+        InterstitialEnabled = other.InterstitialEnabled;
+      }
+      if (other.HasAnchorEnabled) {
+        AnchorEnabled = other.AnchorEnabled;
+      }
+      if (other.HasBannerEnabled) {
+        BannerEnabled = other.BannerEnabled;
+      }
+      if (other.HasInstreamVideoEnabled) {
+        InstreamVideoEnabled = other.InstreamVideoEnabled;
+      }
+      if (other.HasInstreamAudioEnabled) {
+        InstreamAudioEnabled = other.InstreamAudioEnabled;
+      }
+      if (other.HasNativeAdvancedEnabled) {
+        NativeAdvancedEnabled = other.NativeAdvancedEnabled;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            AppOpenEnabled = input.ReadBool();
+            break;
+          }
+          case 16: {
+            RewardedEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            RewardedInterstitialEnabled = input.ReadBool();
+            break;
+          }
+          case 32: {
+            InterstitialEnabled = input.ReadBool();
+            break;
+          }
+          case 40: {
+            AnchorEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            BannerEnabled = input.ReadBool();
+            break;
+          }
+          case 56: {
+            InstreamVideoEnabled = input.ReadBool();
+            break;
+          }
+          case 64: {
+            InstreamAudioEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            NativeAdvancedEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            AppOpenEnabled = input.ReadBool();
+            break;
+          }
+          case 16: {
+            RewardedEnabled = input.ReadBool();
+            break;
+          }
+          case 24: {
+            RewardedInterstitialEnabled = input.ReadBool();
+            break;
+          }
+          case 32: {
+            InterstitialEnabled = input.ReadBool();
+            break;
+          }
+          case 40: {
+            AnchorEnabled = input.ReadBool();
+            break;
+          }
+          case 48: {
+            BannerEnabled = input.ReadBool();
+            break;
+          }
+          case 56: {
+            InstreamVideoEnabled = input.ReadBool();
+            break;
+          }
+          case 64: {
+            InstreamAudioEnabled = input.ReadBool();
+            break;
+          }
+          case 72: {
+            NativeAdvancedEnabled = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Content Targeting
   ///
   /// Targeted/excluded content entities and bundles.
@@ -6725,7 +7469,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[23]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7013,7 +7757,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[24]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7260,7 +8004,7 @@ namespace Google.Ads.AdManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[25]; }
+      get { return global::Google.Ads.AdManager.V1.TargetingReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

@@ -390,6 +390,8 @@ namespace Google.Ads.AdManager.V1 {
     /// &lt;ul style="list-style-type:none">
     ///   &lt;li>&lt;code>displayName&lt;/code>&lt;/li>
     ///   &lt;li>&lt;code>name&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>status&lt;/code>&lt;/li>
+    ///   &lt;li>&lt;code>updateTime&lt;/code>&lt;/li>
     /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

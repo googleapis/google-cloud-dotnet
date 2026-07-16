@@ -167,7 +167,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class CustomFieldServiceBase
     {
       /// <summary>
-      /// API to retrieve a `CustomField` object.
+      /// Retrieves a `CustomField` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -179,7 +179,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `CustomField` objects.
+      /// Lists `CustomField` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -191,7 +191,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to create a `CustomField` object.
+      /// Creates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -203,7 +203,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch create `CustomField` objects.
+      /// Creates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -215,7 +215,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to update a `CustomField` object.
+      /// Updates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -227,7 +227,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to batch update `CustomField` objects.
+      /// Batch updates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -292,7 +292,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a `CustomField` object.
+      /// Retrieves a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -305,7 +305,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCustomField(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `CustomField` object.
+      /// Retrieves a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -316,7 +316,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetCustomField, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a `CustomField` object.
+      /// Retrieves a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -329,7 +329,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetCustomFieldAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a `CustomField` object.
+      /// Retrieves a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -340,7 +340,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetCustomField, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `CustomField` objects.
+      /// Lists `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -353,7 +353,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCustomFields(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `CustomField` objects.
+      /// Lists `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -364,7 +364,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListCustomFields, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `CustomField` objects.
+      /// Lists `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -377,7 +377,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListCustomFieldsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `CustomField` objects.
+      /// Lists `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -388,7 +388,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListCustomFields, null, options, request);
       }
       /// <summary>
-      /// API to create a `CustomField` object.
+      /// Creates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -401,7 +401,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateCustomField(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `CustomField` object.
+      /// Creates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -412,7 +412,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateCustomField, null, options, request);
       }
       /// <summary>
-      /// API to create a `CustomField` object.
+      /// Creates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -425,7 +425,7 @@ namespace Google.Ads.AdManager.V1 {
         return CreateCustomFieldAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to create a `CustomField` object.
+      /// Creates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -436,7 +436,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateCustomField, null, options, request);
       }
       /// <summary>
-      /// API to batch create `CustomField` objects.
+      /// Creates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -449,7 +449,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreateCustomFields(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `CustomField` objects.
+      /// Creates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -460,7 +460,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchCreateCustomFields, null, options, request);
       }
       /// <summary>
-      /// API to batch create `CustomField` objects.
+      /// Creates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -473,7 +473,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchCreateCustomFieldsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch create `CustomField` objects.
+      /// Creates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -484,7 +484,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_BatchCreateCustomFields, null, options, request);
       }
       /// <summary>
-      /// API to update a `CustomField` object.
+      /// Updates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -497,7 +497,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateCustomField(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `CustomField` object.
+      /// Updates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -508,7 +508,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_UpdateCustomField, null, options, request);
       }
       /// <summary>
-      /// API to update a `CustomField` object.
+      /// Updates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -521,7 +521,7 @@ namespace Google.Ads.AdManager.V1 {
         return UpdateCustomFieldAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to update a `CustomField` object.
+      /// Updates a `CustomField` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -532,7 +532,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCustomField, null, options, request);
       }
       /// <summary>
-      /// API to batch update `CustomField` objects.
+      /// Batch updates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -545,7 +545,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdateCustomFields(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `CustomField` objects.
+      /// Batch updates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -556,7 +556,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_BatchUpdateCustomFields, null, options, request);
       }
       /// <summary>
-      /// API to batch update `CustomField` objects.
+      /// Batch updates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -569,7 +569,7 @@ namespace Google.Ads.AdManager.V1 {
         return BatchUpdateCustomFieldsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to batch update `CustomField` objects.
+      /// Batch updates `CustomField` objects.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

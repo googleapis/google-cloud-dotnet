@@ -99,7 +99,7 @@ namespace Google.Ads.AdManager.V1 {
     public abstract partial class OrderServiceBase
     {
       /// <summary>
-      /// API to retrieve an Order object.
+      /// Retrieves an `Order` object.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -111,7 +111,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve a list of `Order` objects.
+      /// Lists `Order` objects.
       ///
       /// Fields used for literal matching in filter string:
       /// * `order_id`
@@ -157,7 +157,7 @@ namespace Google.Ads.AdManager.V1 {
       }
 
       /// <summary>
-      /// API to retrieve an Order object.
+      /// Retrieves an `Order` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -170,7 +170,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetOrder(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve an Order object.
+      /// Retrieves an `Order` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -181,7 +181,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetOrder, null, options, request);
       }
       /// <summary>
-      /// API to retrieve an Order object.
+      /// Retrieves an `Order` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -194,7 +194,7 @@ namespace Google.Ads.AdManager.V1 {
         return GetOrderAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve an Order object.
+      /// Retrieves an `Order` object.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -205,7 +205,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetOrder, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `Order` objects.
+      /// Lists `Order` objects.
       ///
       /// Fields used for literal matching in filter string:
       /// * `order_id`
@@ -223,7 +223,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListOrders(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `Order` objects.
+      /// Lists `Order` objects.
       ///
       /// Fields used for literal matching in filter string:
       /// * `order_id`
@@ -239,7 +239,7 @@ namespace Google.Ads.AdManager.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListOrders, null, options, request);
       }
       /// <summary>
-      /// API to retrieve a list of `Order` objects.
+      /// Lists `Order` objects.
       ///
       /// Fields used for literal matching in filter string:
       /// * `order_id`
@@ -257,7 +257,7 @@ namespace Google.Ads.AdManager.V1 {
         return ListOrdersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// API to retrieve a list of `Order` objects.
+      /// Lists `Order` objects.
       ///
       /// Fields used for literal matching in filter string:
       /// * `order_id`
