@@ -29,7 +29,7 @@ namespace Google.Cloud.ServiceControl.V1 {
             "ZXJ2aWNlY29udHJvbC92MS9sb2dfZW50cnkucHJvdG8aL2dvb2dsZS9hcGkv",
             "c2VydmljZWNvbnRyb2wvdjEvbWV0cmljX3ZhbHVlLnByb3RvGhlnb29nbGUv",
             "cHJvdG9idWYvYW55LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIrkECglPcGVyYXRpb24SFAoMb3BlcmF0aW9uX2lkGAEgASgJEhYK",
+            "LnByb3RvIroFCglPcGVyYXRpb24SFAoMb3BlcmF0aW9uX2lkGAEgASgJEhYK",
             "Dm9wZXJhdGlvbl9uYW1lGAIgASgJEhMKC2NvbnN1bWVyX2lkGAMgASgJEi4K",
             "CnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
             "EiwKCGVuZF90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
@@ -39,19 +39,22 @@ namespace Google.Cloud.ServiceControl.V1 {
             "VmFsdWVTZXQSOwoLbG9nX2VudHJpZXMYCCADKAsyJi5nb29nbGUuYXBpLnNl",
             "cnZpY2Vjb250cm9sLnYxLkxvZ0VudHJ5EkYKCmltcG9ydGFuY2UYCyABKA4y",
             "Mi5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLk9wZXJhdGlvbi5JbXBv",
-            "cnRhbmNlEigKCmV4dGVuc2lvbnMYECADKAsyFC5nb29nbGUucHJvdG9idWYu",
-            "QW55Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEo",
-            "CToCOAEiHwoKSW1wb3J0YW5jZRIHCgNMT1cQABIICgRISUdIEAFC6QEKIGNv",
-            "bS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxQg5PcGVyYXRpb25Qcm90",
-            "b1ABWkpjbG91ZC5nb29nbGUuY29tL2dvL3NlcnZpY2Vjb250cm9sL2FwaXYx",
-            "L3NlcnZpY2Vjb250cm9scGI7c2VydmljZWNvbnRyb2xwYvgBAaoCHkdvb2ds",
-            "ZS5DbG91ZC5TZXJ2aWNlQ29udHJvbC5WMcoCHkdvb2dsZVxDbG91ZFxTZXJ2",
-            "aWNlQ29udHJvbFxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VDb250cm9s",
-            "OjpWMWIGcHJvdG8z"));
+            "cnRhbmNlEkwKC3VzZXJfbGFiZWxzGAwgAygLMjcuZ29vZ2xlLmFwaS5zZXJ2",
+            "aWNlY29udHJvbC52MS5PcGVyYXRpb24uVXNlckxhYmVsc0VudHJ5EigKCmV4",
+            "dGVuc2lvbnMYECADKAsyFC5nb29nbGUucHJvdG9idWYuQW55Gi0KC0xhYmVs",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEaMQoPVXNl",
+            "ckxhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi",
+            "HwoKSW1wb3J0YW5jZRIHCgNMT1cQABIICgRISUdIEAFC5gEKIGNvbS5nb29n",
+            "bGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxQg5PcGVyYXRpb25Qcm90b1ABWkpj",
+            "bG91ZC5nb29nbGUuY29tL2dvL3NlcnZpY2Vjb250cm9sL2FwaXYxL3NlcnZp",
+            "Y2Vjb250cm9scGI7c2VydmljZWNvbnRyb2xwYqoCHkdvb2dsZS5DbG91ZC5T",
+            "ZXJ2aWNlQ29udHJvbC5WMcoCHkdvb2dsZVxDbG91ZFxTZXJ2aWNlQ29udHJv",
+            "bFxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VDb250cm9sOjpWMWIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.ServiceControl.V1.LogEntryReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.MetricValueReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.Operation), global::Google.Cloud.ServiceControl.V1.Operation.Parser, new[]{ "OperationId", "OperationName", "ConsumerId", "StartTime", "EndTime", "Labels", "MetricValueSets", "LogEntries", "Importance", "Extensions" }, null, new[]{ typeof(global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.Operation), global::Google.Cloud.ServiceControl.V1.Operation.Parser, new[]{ "OperationId", "OperationName", "ConsumerId", "StartTime", "EndTime", "Labels", "MetricValueSets", "LogEntries", "Importance", "UserLabels", "Extensions" }, null, new[]{ typeof(global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -105,6 +108,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       metricValueSets_ = other.metricValueSets_.Clone();
       logEntries_ = other.logEntries_.Clone();
       importance_ = other.importance_;
+      userLabels_ = other.userLabels_.Clone();
       extensions_ = other.extensions_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -294,6 +298,23 @@ namespace Google.Cloud.ServiceControl.V1 {
       }
     }
 
+    /// <summary>Field number for the "user_labels" field.</summary>
+    public const int UserLabelsFieldNumber = 12;
+    private static readonly pbc::MapField<string, string>.Codec _map_userLabels_codec
+        = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 98);
+    private readonly pbc::MapField<string, string> userLabels_ = new pbc::MapField<string, string>();
+    /// <summary>
+    /// Private Preview. This feature is only available for approved services.
+    ///
+    /// User defined labels for the resource that this operation is associated
+    /// with.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::MapField<string, string> UserLabels {
+      get { return userLabels_; }
+    }
+
     /// <summary>Field number for the "extensions" field.</summary>
     public const int ExtensionsFieldNumber = 16;
     private static readonly pb::FieldCodec<global::Google.Protobuf.WellKnownTypes.Any> _repeated_extensions_codec
@@ -332,6 +353,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if(!metricValueSets_.Equals(other.metricValueSets_)) return false;
       if(!logEntries_.Equals(other.logEntries_)) return false;
       if (Importance != other.Importance) return false;
+      if (!UserLabels.Equals(other.UserLabels)) return false;
       if(!extensions_.Equals(other.extensions_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -349,6 +371,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       hash ^= metricValueSets_.GetHashCode();
       hash ^= logEntries_.GetHashCode();
       if (Importance != global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance.Low) hash ^= Importance.GetHashCode();
+      hash ^= UserLabels.GetHashCode();
       hash ^= extensions_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -395,6 +418,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         output.WriteRawTag(88);
         output.WriteEnum((int) Importance);
       }
+      userLabels_.WriteTo(output, _map_userLabels_codec);
       extensions_.WriteTo(output, _repeated_extensions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -433,6 +457,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         output.WriteRawTag(88);
         output.WriteEnum((int) Importance);
       }
+      userLabels_.WriteTo(ref output, _map_userLabels_codec);
       extensions_.WriteTo(ref output, _repeated_extensions_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -465,6 +490,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (Importance != global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance.Low) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Importance);
       }
+      size += userLabels_.CalculateSize(_map_userLabels_codec);
       size += extensions_.CalculateSize(_repeated_extensions_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -505,6 +531,7 @@ namespace Google.Cloud.ServiceControl.V1 {
       if (other.Importance != global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance.Low) {
         Importance = other.Importance;
       }
+      userLabels_.MergeFrom(other.userLabels_);
       extensions_.Add(other.extensions_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -565,6 +592,10 @@ namespace Google.Cloud.ServiceControl.V1 {
           }
           case 88: {
             Importance = (global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            userLabels_.AddEntriesFrom(input, _map_userLabels_codec);
             break;
           }
           case 130: {
@@ -630,6 +661,10 @@ namespace Google.Cloud.ServiceControl.V1 {
           }
           case 88: {
             Importance = (global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance) input.ReadEnum();
+            break;
+          }
+          case 98: {
+            userLabels_.AddEntriesFrom(ref input, _map_userLabels_codec);
             break;
           }
           case 130: {

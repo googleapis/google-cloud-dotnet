@@ -26,9 +26,9 @@ namespace Google.Cloud.ServiceControl.V1 {
           string.Concat(
             "CjNnb29nbGUvYXBpL3NlcnZpY2Vjb250cm9sL3YxL3F1b3RhX2NvbnRyb2xs",
             "ZXIucHJvdG8SHGdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEaHGdvb2ds",
-            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aL2dvb2dsZS9hcGkvc2VydmljZWNv",
-            "bnRyb2wvdjEvbWV0cmljX3ZhbHVlLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1",
-            "cy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8ikQEKFEFsbG9jYXRl",
+            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnBy",
+            "b3RvGi9nb29nbGUvYXBpL3NlcnZpY2Vjb250cm9sL3YxL21ldHJpY192YWx1",
+            "ZS5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8ikQEKFEFsbG9jYXRl",
             "UXVvdGFSZXF1ZXN0EhQKDHNlcnZpY2VfbmFtZRgBIAEoCRJIChJhbGxvY2F0",
             "ZV9vcGVyYXRpb24YAiABKAsyLC5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9s",
             "LnYxLlF1b3RhT3BlcmF0aW9uEhkKEXNlcnZpY2VfY29uZmlnX2lkGAQgASgJ",
@@ -60,15 +60,14 @@ namespace Google.Cloud.ServiceControl.V1 {
             "dmljZV9uYW1lfTphbGxvY2F0ZVF1b3RhOgEqGoABykEdc2VydmljZWNvbnRy",
             "b2wuZ29vZ2xlYXBpcy5jb23SQV1odHRwczovL3d3dy5nb29nbGVhcGlzLmNv",
             "bS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvc2VydmljZWNvbnRyb2xC7wEKIGNvbS5nb29nbGUuYXBpLnNl",
+            "Y29tL2F1dGgvc2VydmljZWNvbnRyb2xC7AEKIGNvbS5nb29nbGUuYXBpLnNl",
             "cnZpY2Vjb250cm9sLnYxQhRRdW90YUNvbnRyb2xsZXJQcm90b1ABWkpjbG91",
             "ZC5nb29nbGUuY29tL2dvL3NlcnZpY2Vjb250cm9sL2FwaXYxL3NlcnZpY2Vj",
-            "b250cm9scGI7c2VydmljZWNvbnRyb2xwYvgBAaoCHkdvb2dsZS5DbG91ZC5T",
-            "ZXJ2aWNlQ29udHJvbC5WMcoCHkdvb2dsZVxDbG91ZFxTZXJ2aWNlQ29udHJv",
-            "bFxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VDb250cm9sOjpWMWIGcHJv",
-            "dG8z"));
+            "b250cm9scGI7c2VydmljZWNvbnRyb2xwYqoCHkdvb2dsZS5DbG91ZC5TZXJ2",
+            "aWNlQ29udHJvbC5WMcoCHkdvb2dsZVxDbG91ZFxTZXJ2aWNlQ29udHJvbFxW",
+            "MeoCIUdvb2dsZTo6Q2xvdWQ6OlNlcnZpY2VDb250cm9sOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.MetricValueReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.ServiceControl.V1.MetricValueReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.AllocateQuotaRequest), global::Google.Cloud.ServiceControl.V1.AllocateQuotaRequest.Parser, new[]{ "ServiceName", "AllocateOperation", "ServiceConfigId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ServiceControl.V1.QuotaOperation), global::Google.Cloud.ServiceControl.V1.QuotaOperation.Parser, new[]{ "OperationId", "MethodName", "ConsumerId", "Labels", "QuotaMetrics", "QuotaMode" }, null, new[]{ typeof(global::Google.Cloud.ServiceControl.V1.QuotaOperation.Types.QuotaMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
@@ -137,7 +136,8 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Name of the service as specified in the service configuration. For example,
     /// `"pubsub.googleapis.com"`.
     ///
-    /// See [google.api.Service][google.api.Service] for the definition of a service name.
+    /// See [google.api.Service][google.api.Service] for the definition of a
+    /// service name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -435,9 +435,9 @@ namespace Google.Cloud.ServiceControl.V1 {
     public const int OperationIdFieldNumber = 1;
     private string operationId_ = "";
     /// <summary>
-    /// Identity of the operation. This is expected to be unique within the scope
-    /// of the service that generated the operation, and guarantees idempotency in
-    /// case of retries.
+    /// Identity of the operation. For Allocation Quota, this is expected to be
+    /// unique within the scope of the service that generated the operation, and
+    /// guarantees idempotency in case of retries.
     ///
     /// In order to ensure best performance and latency in the Quota backends,
     /// operation_ids are optimally associated with time, so that related
@@ -1166,7 +1166,8 @@ namespace Google.Cloud.ServiceControl.V1 {
   }
 
   /// <summary>
-  /// Represents error information for [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation].
+  /// Represents error information for
+  /// [QuotaOperation][google.api.servicecontrol.v1.QuotaOperation].
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class QuotaError : pb::IMessage<QuotaError>
@@ -1518,7 +1519,8 @@ namespace Google.Cloud.ServiceControl.V1 {
         [pbr::OriginalName("UNSPECIFIED")] Unspecified = 0,
         /// <summary>
         /// Quota allocation failed.
-        /// Same as [google.rpc.Code.RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED].
+        /// Same as
+        /// [google.rpc.Code.RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED].
         /// </summary>
         [pbr::OriginalName("RESOURCE_EXHAUSTED")] ResourceExhausted = 8,
         /// <summary>

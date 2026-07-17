@@ -41,13 +41,12 @@ namespace Google.Cloud.ServiceControl.V1 {
             "Q1JFREVOVElBTBB7EiEKHE5BTUVTUEFDRV9MT09LVVBfVU5BVkFJTEFCTEUQ",
             "rAISHwoaU0VSVklDRV9TVEFUVVNfVU5BVkFJTEFCTEUQrQISHwoaQklMTElO",
             "R19TVEFUVVNfVU5BVkFJTEFCTEUQrgISLwoqQ0xPVURfUkVTT1VSQ0VfTUFO",
-            "QUdFUl9CQUNLRU5EX1VOQVZBSUxBQkxFELECQuoBCiBjb20uZ29vZ2xlLmFw",
+            "QUdFUl9CQUNLRU5EX1VOQVZBSUxBQkxFELECQucBCiBjb20uZ29vZ2xlLmFw",
             "aS5zZXJ2aWNlY29udHJvbC52MUIPQ2hlY2tFcnJvclByb3RvUAFaSmNsb3Vk",
             "Lmdvb2dsZS5jb20vZ28vc2VydmljZWNvbnRyb2wvYXBpdjEvc2VydmljZWNv",
-            "bnRyb2xwYjtzZXJ2aWNlY29udHJvbHBi+AEBqgIeR29vZ2xlLkNsb3VkLlNl",
-            "cnZpY2VDb250cm9sLlYxygIeR29vZ2xlXENsb3VkXFNlcnZpY2VDb250cm9s",
-            "XFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VydmljZUNvbnRyb2w6OlYxYgZwcm90",
-            "bzM="));
+            "bnRyb2xwYjtzZXJ2aWNlY29udHJvbHBiqgIeR29vZ2xlLkNsb3VkLlNlcnZp",
+            "Y2VDb250cm9sLlYxygIeR29vZ2xlXENsb3VkXFNlcnZpY2VDb250cm9sXFYx",
+            "6gIhR29vZ2xlOjpDbG91ZDo6U2VydmljZUNvbnRyb2w6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -407,21 +406,25 @@ namespace Google.Cloud.ServiceControl.V1 {
       /// </summary>
       public enum Code {
         /// <summary>
-        /// This is never used in `CheckResponse`.
+        /// This is the default value if error code is not explicitly set.
+        /// It should not be used directly.
         /// </summary>
         [pbr::OriginalName("ERROR_CODE_UNSPECIFIED")] ErrorCodeUnspecified = 0,
         /// <summary>
         /// The consumer's project id, network container, or resource container was
-        /// not found. Same as [google.rpc.Code.NOT_FOUND][google.rpc.Code.NOT_FOUND].
+        /// not found. Same as
+        /// [google.rpc.Code.NOT_FOUND][google.rpc.Code.NOT_FOUND].
         /// </summary>
         [pbr::OriginalName("NOT_FOUND")] NotFound = 5,
         /// <summary>
         /// The consumer doesn't have access to the specified resource.
-        /// Same as [google.rpc.Code.PERMISSION_DENIED][google.rpc.Code.PERMISSION_DENIED].
+        /// Same as
+        /// [google.rpc.Code.PERMISSION_DENIED][google.rpc.Code.PERMISSION_DENIED].
         /// </summary>
         [pbr::OriginalName("PERMISSION_DENIED")] PermissionDenied = 7,
         /// <summary>
-        /// Quota check failed. Same as [google.rpc.Code.RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED].
+        /// Quota check failed. Same as
+        /// [google.rpc.Code.RESOURCE_EXHAUSTED][google.rpc.Code.RESOURCE_EXHAUSTED].
         /// </summary>
         [pbr::OriginalName("RESOURCE_EXHAUSTED")] ResourceExhausted = 8,
         /// <summary>

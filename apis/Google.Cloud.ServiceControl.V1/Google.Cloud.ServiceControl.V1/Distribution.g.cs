@@ -41,12 +41,12 @@ namespace Google.Cloud.ServiceControl.V1 {
             "Bm9mZnNldBgDIAEoARpWChJFeHBvbmVudGlhbEJ1Y2tldHMSGgoSbnVtX2Zp",
             "bml0ZV9idWNrZXRzGAEgASgFEhUKDWdyb3d0aF9mYWN0b3IYAiABKAESDQoF",
             "c2NhbGUYAyABKAEaIQoPRXhwbGljaXRCdWNrZXRzEg4KBmJvdW5kcxgBIAMo",
-            "AUIPCg1idWNrZXRfb3B0aW9uQuwBCiBjb20uZ29vZ2xlLmFwaS5zZXJ2aWNl",
+            "AUIPCg1idWNrZXRfb3B0aW9uQukBCiBjb20uZ29vZ2xlLmFwaS5zZXJ2aWNl",
             "Y29udHJvbC52MUIRRGlzdHJpYnV0aW9uUHJvdG9QAVpKY2xvdWQuZ29vZ2xl",
             "LmNvbS9nby9zZXJ2aWNlY29udHJvbC9hcGl2MS9zZXJ2aWNlY29udHJvbHBi",
-            "O3NlcnZpY2Vjb250cm9scGL4AQGqAh5Hb29nbGUuQ2xvdWQuU2VydmljZUNv",
-            "bnRyb2wuVjHKAh5Hb29nbGVcQ2xvdWRcU2VydmljZUNvbnRyb2xcVjHqAiFH",
-            "b29nbGU6OkNsb3VkOjpTZXJ2aWNlQ29udHJvbDo6VjFiBnByb3RvMw=="));
+            "O3NlcnZpY2Vjb250cm9scGKqAh5Hb29nbGUuQ2xvdWQuU2VydmljZUNvbnRy",
+            "b2wuVjHKAh5Hb29nbGVcQ2xvdWRcU2VydmljZUNvbnRyb2xcVjHqAiFHb29n",
+            "bGU6OkNsb3VkOjpTZXJ2aWNlQ29udHJvbDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.DistributionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -223,7 +223,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// The buckets are defined below in `bucket_option`. There are N buckets.
     /// `bucket_counts[0]` is the number of samples in the underflow bucket.
     /// `bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples
-    /// in each of the finite buckets. And `bucket_counts[N] is the number
+    /// in each of the finite buckets. And `bucket_counts[N]` is the number
     /// of samples in the overflow bucket. See the comments of `bucket_option`
     /// below for more details.
     ///

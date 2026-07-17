@@ -38,13 +38,13 @@ namespace Google.Cloud.ServiceControl.V1 {
             "RGlzdHJpYnV0aW9uSAAaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0K",
             "BXZhbHVlGAIgASgJOgI4AUIHCgV2YWx1ZSJnCg5NZXRyaWNWYWx1ZVNldBIT",
             "CgttZXRyaWNfbmFtZRgBIAEoCRJACg1tZXRyaWNfdmFsdWVzGAIgAygLMiku",
-            "Z29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5NZXRyaWNWYWx1ZULuAQog",
+            "Z29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5NZXRyaWNWYWx1ZULrAQog",
             "Y29tLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjFCE01ldHJpY1ZhbHVl",
             "U2V0UHJvdG9QAVpKY2xvdWQuZ29vZ2xlLmNvbS9nby9zZXJ2aWNlY29udHJv",
-            "bC9hcGl2MS9zZXJ2aWNlY29udHJvbHBiO3NlcnZpY2Vjb250cm9scGL4AQGq",
-            "Ah5Hb29nbGUuQ2xvdWQuU2VydmljZUNvbnRyb2wuVjHKAh5Hb29nbGVcQ2xv",
-            "dWRcU2VydmljZUNvbnRyb2xcVjHqAiFHb29nbGU6OkNsb3VkOjpTZXJ2aWNl",
-            "Q29udHJvbDo6VjFiBnByb3RvMw=="));
+            "bC9hcGl2MS9zZXJ2aWNlY29udHJvbHBiO3NlcnZpY2Vjb250cm9scGKqAh5H",
+            "b29nbGUuQ2xvdWQuU2VydmljZUNvbnRyb2wuVjHKAh5Hb29nbGVcQ2xvdWRc",
+            "U2VydmljZUNvbnRyb2xcVjHqAiFHb29nbGU6OkNsb3VkOjpTZXJ2aWNlQ29u",
+            "dHJvbDo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Cloud.ServiceControl.V1.DistributionReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -131,9 +131,10 @@ namespace Google.Cloud.ServiceControl.V1 {
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
     /// The labels describing the metric value.
-    /// See comments on [google.api.servicecontrol.v1.Operation.labels][google.api.servicecontrol.v1.Operation.labels] for
-    /// the overriding relationship.
-    /// Note that this map must not contain monitored resource labels.
+    /// See comments on
+    /// [google.api.servicecontrol.v1.Operation.labels][google.api.servicecontrol.v1.Operation.labels]
+    /// for the overriding relationship. Note that this map must not contain
+    /// monitored resource labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -149,7 +150,8 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// applies. The time period has different semantics for different metric
     /// types (cumulative, delta, and gauge). See the metric definition
     /// documentation in the service configuration for details. If not specified,
-    /// [google.api.servicecontrol.v1.Operation.start_time][google.api.servicecontrol.v1.Operation.start_time] will be used.
+    /// [google.api.servicecontrol.v1.Operation.start_time][google.api.servicecontrol.v1.Operation.start_time]
+    /// will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -166,7 +168,8 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// <summary>
     /// The end of the time period over which this metric value's measurement
     /// applies.  If not specified,
-    /// [google.api.servicecontrol.v1.Operation.end_time][google.api.servicecontrol.v1.Operation.end_time] will be used.
+    /// [google.api.servicecontrol.v1.Operation.end_time][google.api.servicecontrol.v1.Operation.end_time]
+    /// will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
