@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "DeveloperKnowledgeClient",
           "rpcs": {
+            "AnswerQuery": {
+              "methods": [
+                "AnswerQuery",
+                "AnswerQueryAsync"
+              ]
+            },
             "BatchGetDocuments": {
               "methods": [
                 "BatchGetDocuments",

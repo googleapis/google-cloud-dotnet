@@ -490,6 +490,103 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_AnswerQuery_sync",
+      "title": "AnswerQueryRequestObject",
+      "description": "Snippet for AnswerQuery",
+      "file": "DeveloperKnowledgeClient.AnswerQueryRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnswerQuery",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.AnswerQuery",
+        "parameters": [
+          {
+            "type": "Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "AnswerQuery",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.AnswerQuery",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "developerknowledge_v1_generated_DeveloperKnowledge_AnswerQuery_async",
+      "title": "AnswerQueryRequestObjectAsync",
+      "description": "Snippet for AnswerQueryAsync",
+      "file": "DeveloperKnowledgeClient.AnswerQueryRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AnswerQueryAsync",
+        "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient.AnswerQueryAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse>",
+        "client": {
+          "shortName": "DeveloperKnowledgeClient",
+          "fullName": "Google.Developers.DeveloperKnowledge.V1.DeveloperKnowledgeClient"
+        },
+        "method": {
+          "shortName": "AnswerQuery",
+          "fullName": "google.developers.knowledge.v1.DeveloperKnowledge.AnswerQuery",
+          "service": {
+            "shortName": "DeveloperKnowledge",
+            "fullName": "google.developers.knowledge.v1.DeveloperKnowledge"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

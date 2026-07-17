@@ -48,6 +48,7 @@ namespace Google.Developers.DeveloperKnowledge.V1
             SearchDocumentChunksSettings = existing.SearchDocumentChunksSettings;
             GetDocumentSettings = existing.GetDocumentSettings;
             BatchGetDocumentsSettings = existing.BatchGetDocumentsSettings;
+            AnswerQuerySettings = existing.AnswerQuerySettings;
             OnCopy(existing);
         }
 
@@ -102,6 +103,18 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings BatchGetDocumentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DeveloperKnowledgeClient.AnswerQuery</c> and <c>DeveloperKnowledgeClient.AnswerQueryAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AnswerQuerySettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DeveloperKnowledgeSettings"/> object.</returns>
@@ -445,6 +458,33 @@ namespace Google.Developers.DeveloperKnowledge.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<BatchGetDocumentsResponse> BatchGetDocumentsAsync(BatchGetDocumentsRequest request, st::CancellationToken cancellationToken) =>
             BatchGetDocumentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Answers a query using grounded generation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AnswerQueryResponse AnswerQuery(AnswerQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Answers a query using grounded generation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnswerQueryResponse> AnswerQueryAsync(AnswerQueryRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Answers a query using grounded generation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AnswerQueryResponse> AnswerQueryAsync(AnswerQueryRequest request, st::CancellationToken cancellationToken) =>
+            AnswerQueryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DeveloperKnowledge client wrapper implementation, for convenient use.</summary>
@@ -474,6 +514,8 @@ namespace Google.Developers.DeveloperKnowledge.V1
 
         private readonly gaxgrpc::ApiCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse> _callBatchGetDocuments;
 
+        private readonly gaxgrpc::ApiCall<AnswerQueryRequest, AnswerQueryResponse> _callAnswerQuery;
+
         /// <summary>
         /// Constructs a client wrapper for the DeveloperKnowledge service, with the specified gRPC client and settings.
         /// </summary>
@@ -498,6 +540,9 @@ namespace Google.Developers.DeveloperKnowledge.V1
             _callBatchGetDocuments = clientHelper.BuildApiCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse>("BatchGetDocuments", grpcClient.BatchGetDocumentsAsync, grpcClient.BatchGetDocuments, effectiveSettings.BatchGetDocumentsSettings);
             Modify_ApiCall(ref _callBatchGetDocuments);
             Modify_BatchGetDocumentsApiCall(ref _callBatchGetDocuments);
+            _callAnswerQuery = clientHelper.BuildApiCall<AnswerQueryRequest, AnswerQueryResponse>("AnswerQuery", grpcClient.AnswerQueryAsync, grpcClient.AnswerQuery, effectiveSettings.AnswerQuerySettings);
+            Modify_ApiCall(ref _callAnswerQuery);
+            Modify_AnswerQueryApiCall(ref _callAnswerQuery);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -509,6 +554,8 @@ namespace Google.Developers.DeveloperKnowledge.V1
 
         partial void Modify_BatchGetDocumentsApiCall(ref gaxgrpc::ApiCall<BatchGetDocumentsRequest, BatchGetDocumentsResponse> call);
 
+        partial void Modify_AnswerQueryApiCall(ref gaxgrpc::ApiCall<AnswerQueryRequest, AnswerQueryResponse> call);
+
         partial void OnConstruction(DeveloperKnowledge.DeveloperKnowledgeClient grpcClient, DeveloperKnowledgeSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC DeveloperKnowledge client</summary>
@@ -519,6 +566,8 @@ namespace Google.Developers.DeveloperKnowledge.V1
         partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_BatchGetDocumentsRequest(ref BatchGetDocumentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AnswerQueryRequest(ref AnswerQueryRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Searches for developer knowledge across Google's developer documentation.
@@ -612,6 +661,30 @@ namespace Google.Developers.DeveloperKnowledge.V1
         {
             Modify_BatchGetDocumentsRequest(ref request, ref callSettings);
             return _callBatchGetDocuments.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Answers a query using grounded generation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AnswerQueryResponse AnswerQuery(AnswerQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnswerQueryRequest(ref request, ref callSettings);
+            return _callAnswerQuery.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Answers a query using grounded generation.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AnswerQueryResponse> AnswerQueryAsync(AnswerQueryRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AnswerQueryRequest(ref request, ref callSettings);
+            return _callAnswerQuery.Async(request, callSettings);
         }
     }
 

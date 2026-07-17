@@ -251,5 +251,32 @@ namespace GoogleCSharpSnippets
             BatchGetDocumentsResponse response = await developerKnowledgeClient.BatchGetDocumentsAsync(request);
             // End snippet
         }
+
+        /// <summary>Snippet for AnswerQuery</summary>
+        public void AnswerQueryRequestObject()
+        {
+            // Snippet: AnswerQuery(AnswerQueryRequest, CallSettings)
+            // Create client
+            DeveloperKnowledgeClient developerKnowledgeClient = DeveloperKnowledgeClient.Create();
+            // Initialize request argument(s)
+            AnswerQueryRequest request = new AnswerQueryRequest { Query = "", };
+            // Make the request
+            AnswerQueryResponse response = developerKnowledgeClient.AnswerQuery(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for AnswerQueryAsync</summary>
+        public async Task AnswerQueryRequestObjectAsync()
+        {
+            // Snippet: AnswerQueryAsync(AnswerQueryRequest, CallSettings)
+            // Additional: AnswerQueryAsync(AnswerQueryRequest, CancellationToken)
+            // Create client
+            DeveloperKnowledgeClient developerKnowledgeClient = await DeveloperKnowledgeClient.CreateAsync();
+            // Initialize request argument(s)
+            AnswerQueryRequest request = new AnswerQueryRequest { Query = "", };
+            // Make the request
+            AnswerQueryResponse response = await developerKnowledgeClient.AnswerQueryAsync(request);
+            // End snippet
+        }
     }
 }

@@ -90,6 +90,10 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
     static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest> __Marshaller_google_developers_knowledge_v1_BatchGetDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse> __Marshaller_google_developers_knowledge_v1_BatchGetDocumentsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest> __Marshaller_google_developers_knowledge_v1_AnswerQueryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse> __Marshaller_google_developers_knowledge_v1_AnswerQueryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse> __Method_SearchDocumentChunks = new grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse>(
@@ -114,6 +118,14 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
         "BatchGetDocuments",
         __Marshaller_google_developers_knowledge_v1_BatchGetDocumentsRequest,
         __Marshaller_google_developers_knowledge_v1_BatchGetDocumentsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest, global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse> __Method_AnswerQuery = new grpc::Method<global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest, global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AnswerQuery",
+        __Marshaller_google_developers_knowledge_v1_AnswerQueryRequest,
+        __Marshaller_google_developers_knowledge_v1_AnswerQueryResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -168,6 +180,18 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse> BatchGetDocuments(global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Answers a query using grounded generation.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse> AnswerQuery(global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -389,6 +413,54 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_BatchGetDocuments, null, options, request);
       }
+      /// <summary>
+      /// Answers a query using grounded generation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse AnswerQuery(global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnswerQuery(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Answers a query using grounded generation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse AnswerQuery(global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AnswerQuery, null, options, request);
+      }
+      /// <summary>
+      /// Answers a query using grounded generation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse> AnswerQueryAsync(global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AnswerQueryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Answers a query using grounded generation.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse> AnswerQueryAsync(global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AnswerQuery, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DeveloperKnowledgeClient NewInstance(ClientBaseConfiguration configuration)
@@ -405,7 +477,8 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_SearchDocumentChunks, serviceImpl.SearchDocumentChunks)
           .AddMethod(__Method_GetDocument, serviceImpl.GetDocument)
-          .AddMethod(__Method_BatchGetDocuments, serviceImpl.BatchGetDocuments).Build();
+          .AddMethod(__Method_BatchGetDocuments, serviceImpl.BatchGetDocuments)
+          .AddMethod(__Method_AnswerQuery, serviceImpl.AnswerQuery).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -418,6 +491,7 @@ namespace Google.Developers.DeveloperKnowledge.V1 {
       serviceBinder.AddMethod(__Method_SearchDocumentChunks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksRequest, global::Google.Developers.DeveloperKnowledge.V1.SearchDocumentChunksResponse>(serviceImpl.SearchDocumentChunks));
       serviceBinder.AddMethod(__Method_GetDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.DeveloperKnowledge.V1.GetDocumentRequest, global::Google.Developers.DeveloperKnowledge.V1.Document>(serviceImpl.GetDocument));
       serviceBinder.AddMethod(__Method_BatchGetDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsRequest, global::Google.Developers.DeveloperKnowledge.V1.BatchGetDocumentsResponse>(serviceImpl.BatchGetDocuments));
+      serviceBinder.AddMethod(__Method_AnswerQuery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryRequest, global::Google.Developers.DeveloperKnowledge.V1.AnswerQueryResponse>(serviceImpl.AnswerQuery));
     }
 
   }
