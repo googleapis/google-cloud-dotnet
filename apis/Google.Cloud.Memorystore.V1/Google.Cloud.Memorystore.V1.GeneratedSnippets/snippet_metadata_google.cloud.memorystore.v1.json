@@ -4597,6 +4597,2398 @@
           "type": "SHORT"
         }
       ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListTokenAuthUsers_sync",
+      "title": "ListTokenAuthUsersRequestObject",
+      "description": "Snippet for ListTokenAuthUsers",
+      "file": "MemorystoreClient.ListTokenAuthUsersRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsers",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListTokenAuthUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse, Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListTokenAuthUsers",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListTokenAuthUsers_async",
+      "title": "ListTokenAuthUsersRequestObjectAsync",
+      "description": "Snippet for ListTokenAuthUsersAsync",
+      "file": "MemorystoreClient.ListTokenAuthUsersRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsersAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListTokenAuthUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse, Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListTokenAuthUsers",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListTokenAuthUsers_sync_flattened",
+      "title": "ListTokenAuthUsers",
+      "description": "Snippet for ListTokenAuthUsers",
+      "file": "MemorystoreClient.ListTokenAuthUsersSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsers",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListTokenAuthUsers",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse, Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListTokenAuthUsers",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListTokenAuthUsers_async_flattened",
+      "title": "ListTokenAuthUsersAsync",
+      "description": "Snippet for ListTokenAuthUsersAsync",
+      "file": "MemorystoreClient.ListTokenAuthUsersAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsersAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListTokenAuthUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse, Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListTokenAuthUsers",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListTokenAuthUsers_sync_flattened_resourceNames",
+      "title": "ListTokenAuthUsersResourceNames",
+      "description": "Snippet for ListTokenAuthUsers",
+      "file": "MemorystoreClient.ListTokenAuthUsersResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsers",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListTokenAuthUsers",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse, Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListTokenAuthUsers",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListTokenAuthUsers_async_flattened_resourceNames",
+      "title": "ListTokenAuthUsersResourceNamesAsync",
+      "description": "Snippet for ListTokenAuthUsersAsync",
+      "file": "MemorystoreClient.ListTokenAuthUsersResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListTokenAuthUsersAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListTokenAuthUsersAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse, Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListTokenAuthUsers",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListTokenAuthUsers",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetTokenAuthUser_sync",
+      "title": "GetTokenAuthUserRequestObject",
+      "description": "Snippet for GetTokenAuthUser",
+      "file": "MemorystoreClient.GetTokenAuthUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.TokenAuthUser",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetTokenAuthUser_async",
+      "title": "GetTokenAuthUserRequestObjectAsync",
+      "description": "Snippet for GetTokenAuthUserAsync",
+      "file": "MemorystoreClient.GetTokenAuthUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetTokenAuthUser_sync_flattened",
+      "title": "GetTokenAuthUser",
+      "description": "Snippet for GetTokenAuthUser",
+      "file": "MemorystoreClient.GetTokenAuthUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetTokenAuthUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.TokenAuthUser",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetTokenAuthUser_async_flattened",
+      "title": "GetTokenAuthUserAsync",
+      "description": "Snippet for GetTokenAuthUserAsync",
+      "file": "MemorystoreClient.GetTokenAuthUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetTokenAuthUser_sync_flattened_resourceNames",
+      "title": "GetTokenAuthUserResourceNames",
+      "description": "Snippet for GetTokenAuthUser",
+      "file": "MemorystoreClient.GetTokenAuthUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.TokenAuthUserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.TokenAuthUser",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetTokenAuthUser_async_flattened_resourceNames",
+      "title": "GetTokenAuthUserResourceNamesAsync",
+      "description": "Snippet for GetTokenAuthUserAsync",
+      "file": "MemorystoreClient.GetTokenAuthUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.TokenAuthUserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.TokenAuthUser>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListAuthTokens_sync",
+      "title": "ListAuthTokensRequestObject",
+      "description": "Snippet for ListAuthTokens",
+      "file": "MemorystoreClient.ListAuthTokensRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokens",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListAuthTokens",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ListAuthTokensRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListAuthTokensResponse, Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListAuthTokens",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 80,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 78,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListAuthTokens_async",
+      "title": "ListAuthTokensRequestObjectAsync",
+      "description": "Snippet for ListAuthTokensAsync",
+      "file": "MemorystoreClient.ListAuthTokensRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokensAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListAuthTokensAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.ListAuthTokensRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListAuthTokensResponse, Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListAuthTokens",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 81,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 79,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListAuthTokens_sync_flattened",
+      "title": "ListAuthTokens",
+      "description": "Snippet for ListAuthTokens",
+      "file": "MemorystoreClient.ListAuthTokensSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokens",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListAuthTokens",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListAuthTokensResponse, Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListAuthTokens",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListAuthTokens_async_flattened",
+      "title": "ListAuthTokensAsync",
+      "description": "Snippet for ListAuthTokensAsync",
+      "file": "MemorystoreClient.ListAuthTokensAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokensAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListAuthTokensAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListAuthTokensResponse, Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListAuthTokens",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListAuthTokens_sync_flattened_resourceNames",
+      "title": "ListAuthTokensResourceNames",
+      "description": "Snippet for ListAuthTokens",
+      "file": "MemorystoreClient.ListAuthTokensResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokens",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListAuthTokens",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.TokenAuthUserName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedEnumerable<Google.Cloud.Memorystore.V1.ListAuthTokensResponse, Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListAuthTokens",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 75,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 73,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_ListAuthTokens_async_flattened_resourceNames",
+      "title": "ListAuthTokensResourceNamesAsync",
+      "description": "Snippet for ListAuthTokensAsync",
+      "file": "MemorystoreClient.ListAuthTokensResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ListAuthTokensAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.ListAuthTokensAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.TokenAuthUserName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "pageToken"
+          },
+          {
+            "type": "System.Nullable[System.Int32]",
+            "name": "pageSize"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Api.Gax.PagedAsyncEnumerable<Google.Cloud.Memorystore.V1.ListAuthTokensResponse, Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "ListAuthTokens",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.ListAuthTokens",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 76,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 74,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetAuthToken_sync",
+      "title": "GetAuthTokenRequestObject",
+      "description": "Snippet for GetAuthToken",
+      "file": "MemorystoreClient.GetAuthTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.GetAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.AuthToken",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetAuthToken_async",
+      "title": "GetAuthTokenRequestObjectAsync",
+      "description": "Snippet for GetAuthTokenAsync",
+      "file": "MemorystoreClient.GetAuthTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.GetAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 45,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 43,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetAuthToken_sync_flattened",
+      "title": "GetAuthToken",
+      "description": "Snippet for GetAuthToken",
+      "file": "MemorystoreClient.GetAuthTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetAuthToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.AuthToken",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetAuthToken_async_flattened",
+      "title": "GetAuthTokenAsync",
+      "description": "Snippet for GetAuthTokenAsync",
+      "file": "MemorystoreClient.GetAuthTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetAuthToken_sync_flattened_resourceNames",
+      "title": "GetAuthTokenResourceNames",
+      "description": "Snippet for GetAuthToken",
+      "file": "MemorystoreClient.GetAuthTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.AuthTokenName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.Memorystore.V1.AuthToken",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 41,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 39,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_GetAuthToken_async_flattened_resourceNames",
+      "title": "GetAuthTokenResourceNamesAsync",
+      "description": "Snippet for GetAuthTokenAsync",
+      "file": "MemorystoreClient.GetAuthTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "GetAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.GetAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.AuthTokenName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.Memorystore.V1.AuthToken>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "GetAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.GetAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddTokenAuthUser_sync",
+      "title": "AddTokenAuthUserRequestObject",
+      "description": "Snippet for AddTokenAuthUser",
+      "file": "MemorystoreClient.AddTokenAuthUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddTokenAuthUser_async",
+      "title": "AddTokenAuthUserRequestObjectAsync",
+      "description": "Snippet for AddTokenAuthUserAsync",
+      "file": "MemorystoreClient.AddTokenAuthUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddTokenAuthUser_sync_flattened",
+      "title": "AddTokenAuthUser",
+      "description": "Snippet for AddTokenAuthUser",
+      "file": "MemorystoreClient.AddTokenAuthUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddTokenAuthUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddTokenAuthUser_async_flattened",
+      "title": "AddTokenAuthUserAsync",
+      "description": "Snippet for AddTokenAuthUserAsync",
+      "file": "MemorystoreClient.AddTokenAuthUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddTokenAuthUser_sync_flattened_resourceNames",
+      "title": "AddTokenAuthUserResourceNames",
+      "description": "Snippet for AddTokenAuthUser",
+      "file": "MemorystoreClient.AddTokenAuthUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddTokenAuthUser_async_flattened_resourceNames",
+      "title": "AddTokenAuthUserResourceNamesAsync",
+      "description": "Snippet for AddTokenAuthUserAsync",
+      "file": "MemorystoreClient.AddTokenAuthUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.InstanceName",
+            "name": "instance"
+          },
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.Instance, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteTokenAuthUser_sync",
+      "title": "DeleteTokenAuthUserRequestObject",
+      "description": "Snippet for DeleteTokenAuthUser",
+      "file": "MemorystoreClient.DeleteTokenAuthUserRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 64,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteTokenAuthUser_async",
+      "title": "DeleteTokenAuthUserRequestObjectAsync",
+      "description": "Snippet for DeleteTokenAuthUserAsync",
+      "file": "MemorystoreClient.DeleteTokenAuthUserRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 65,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 63,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteTokenAuthUser_sync_flattened",
+      "title": "DeleteTokenAuthUser",
+      "description": "Snippet for DeleteTokenAuthUser",
+      "file": "MemorystoreClient.DeleteTokenAuthUserSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteTokenAuthUser",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteTokenAuthUser_async_flattened",
+      "title": "DeleteTokenAuthUserAsync",
+      "description": "Snippet for DeleteTokenAuthUserAsync",
+      "file": "MemorystoreClient.DeleteTokenAuthUserAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteTokenAuthUser_sync_flattened_resourceNames",
+      "title": "DeleteTokenAuthUserResourceNames",
+      "description": "Snippet for DeleteTokenAuthUser",
+      "file": "MemorystoreClient.DeleteTokenAuthUserResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUser",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteTokenAuthUser",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.TokenAuthUserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteTokenAuthUser_async_flattened_resourceNames",
+      "title": "DeleteTokenAuthUserResourceNamesAsync",
+      "description": "Snippet for DeleteTokenAuthUserAsync",
+      "file": "MemorystoreClient.DeleteTokenAuthUserResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteTokenAuthUserAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteTokenAuthUserAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.TokenAuthUserName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteTokenAuthUser",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteTokenAuthUser",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddAuthToken_sync",
+      "title": "AddAuthTokenRequestObject",
+      "description": "Snippet for AddAuthToken",
+      "file": "MemorystoreClient.AddAuthTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.AddAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.TokenAuthUser, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddAuthToken_async",
+      "title": "AddAuthTokenRequestObjectAsync",
+      "description": "Snippet for AddAuthTokenAsync",
+      "file": "MemorystoreClient.AddAuthTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.AddAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.TokenAuthUser, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddAuthToken_sync_flattened",
+      "title": "AddAuthToken",
+      "description": "Snippet for AddAuthToken",
+      "file": "MemorystoreClient.AddAuthTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddAuthToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1.AuthToken",
+            "name": "authToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.TokenAuthUser, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddAuthToken_async_flattened",
+      "title": "AddAuthTokenAsync",
+      "description": "Snippet for AddAuthTokenAsync",
+      "file": "MemorystoreClient.AddAuthTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1.AuthToken",
+            "name": "authToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.TokenAuthUser, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddAuthToken_sync_flattened_resourceNames",
+      "title": "AddAuthTokenResourceNames",
+      "description": "Snippet for AddAuthToken",
+      "file": "MemorystoreClient.AddAuthTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.TokenAuthUserName",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1.AuthToken",
+            "name": "authToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.TokenAuthUser, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_AddAuthToken_async_flattened_resourceNames",
+      "title": "AddAuthTokenResourceNamesAsync",
+      "description": "Snippet for AddAuthTokenAsync",
+      "file": "MemorystoreClient.AddAuthTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "AddAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.AddAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.TokenAuthUserName",
+            "name": "tokenAuthUser"
+          },
+          {
+            "type": "Google.Cloud.Memorystore.V1.AuthToken",
+            "name": "authToken"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Cloud.Memorystore.V1.TokenAuthUser, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "AddAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.AddAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteAuthToken_sync",
+      "title": "DeleteAuthTokenRequestObject",
+      "description": "Snippet for DeleteAuthToken",
+      "file": "MemorystoreClient.DeleteAuthTokenRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 62,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 60,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteAuthToken_async",
+      "title": "DeleteAuthTokenRequestObjectAsync",
+      "description": "Snippet for DeleteAuthTokenAsync",
+      "file": "MemorystoreClient.DeleteAuthTokenRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 63,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteAuthToken_sync_flattened",
+      "title": "DeleteAuthToken",
+      "description": "Snippet for DeleteAuthToken",
+      "file": "MemorystoreClient.DeleteAuthTokenSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteAuthToken",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteAuthToken_async_flattened",
+      "title": "DeleteAuthTokenAsync",
+      "description": "Snippet for DeleteAuthTokenAsync",
+      "file": "MemorystoreClient.DeleteAuthTokenAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteAuthToken_sync_flattened_resourceNames",
+      "title": "DeleteAuthTokenResourceNames",
+      "description": "Snippet for DeleteAuthToken",
+      "file": "MemorystoreClient.DeleteAuthTokenResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthToken",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteAuthToken",
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.AuthTokenName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 59,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "memorystore_v1_generated_Memorystore_DeleteAuthToken_async_flattened_resourceNames",
+      "title": "DeleteAuthTokenResourceNamesAsync",
+      "description": "Snippet for DeleteAuthTokenAsync",
+      "file": "MemorystoreClient.DeleteAuthTokenResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "DeleteAuthTokenAsync",
+        "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient.DeleteAuthTokenAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.Memorystore.V1.AuthTokenName",
+            "name": "name"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.LongRunning.Operation<Google.Protobuf.WellKnownTypes.Empty, Google.Cloud.Memorystore.V1.OperationMetadata>>",
+        "client": {
+          "shortName": "MemorystoreClient",
+          "fullName": "Google.Cloud.Memorystore.V1.MemorystoreClient"
+        },
+        "method": {
+          "shortName": "DeleteAuthToken",
+          "fullName": "google.cloud.memorystore.v1.Memorystore.DeleteAuthToken",
+          "service": {
+            "shortName": "Memorystore",
+            "fullName": "google.cloud.memorystore.v1.Memorystore"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 60,
+          "type": "FULL"
+        },
+        {
+          "start": 37,
+          "end": 58,
+          "type": "SHORT"
+        }
+      ]
     }
   ]
 }

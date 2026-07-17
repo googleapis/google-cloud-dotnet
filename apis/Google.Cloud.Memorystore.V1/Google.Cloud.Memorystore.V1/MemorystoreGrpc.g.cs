@@ -115,6 +115,30 @@ namespace Google.Cloud.Memorystore.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.StartMigrationRequest> __Marshaller_google_cloud_memorystore_v1_StartMigrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.StartMigrationRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.FinishMigrationRequest> __Marshaller_google_cloud_memorystore_v1_FinishMigrationRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.FinishMigrationRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest> __Marshaller_google_cloud_memorystore_v1_ListTokenAuthUsersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse> __Marshaller_google_cloud_memorystore_v1_ListTokenAuthUsersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest> __Marshaller_google_cloud_memorystore_v1_GetTokenAuthUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.TokenAuthUser> __Marshaller_google_cloud_memorystore_v1_TokenAuthUser = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.TokenAuthUser.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest> __Marshaller_google_cloud_memorystore_v1_ListAuthTokensRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse> __Marshaller_google_cloud_memorystore_v1_ListAuthTokensResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest> __Marshaller_google_cloud_memorystore_v1_GetAuthTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.AuthToken> __Marshaller_google_cloud_memorystore_v1_AuthToken = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.AuthToken.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest> __Marshaller_google_cloud_memorystore_v1_AddTokenAuthUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest> __Marshaller_google_cloud_memorystore_v1_DeleteTokenAuthUserRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest> __Marshaller_google_cloud_memorystore_v1_AddAuthTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest> __Marshaller_google_cloud_memorystore_v1_DeleteAuthTokenRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.ListInstancesRequest, global::Google.Cloud.Memorystore.V1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Memorystore.V1.ListInstancesRequest, global::Google.Cloud.Memorystore.V1.ListInstancesResponse>(
@@ -250,6 +274,70 @@ namespace Google.Cloud.Memorystore.V1 {
         __ServiceName,
         "FinishMigration",
         __Marshaller_google_cloud_memorystore_v1_FinishMigrationRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest, global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse> __Method_ListTokenAuthUsers = new grpc::Method<global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest, global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListTokenAuthUsers",
+        __Marshaller_google_cloud_memorystore_v1_ListTokenAuthUsersRequest,
+        __Marshaller_google_cloud_memorystore_v1_ListTokenAuthUsersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest, global::Google.Cloud.Memorystore.V1.TokenAuthUser> __Method_GetTokenAuthUser = new grpc::Method<global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest, global::Google.Cloud.Memorystore.V1.TokenAuthUser>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetTokenAuthUser",
+        __Marshaller_google_cloud_memorystore_v1_GetTokenAuthUserRequest,
+        __Marshaller_google_cloud_memorystore_v1_TokenAuthUser);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest, global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse> __Method_ListAuthTokens = new grpc::Method<global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest, global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListAuthTokens",
+        __Marshaller_google_cloud_memorystore_v1_ListAuthTokensRequest,
+        __Marshaller_google_cloud_memorystore_v1_ListAuthTokensResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest, global::Google.Cloud.Memorystore.V1.AuthToken> __Method_GetAuthToken = new grpc::Method<global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest, global::Google.Cloud.Memorystore.V1.AuthToken>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAuthToken",
+        __Marshaller_google_cloud_memorystore_v1_GetAuthTokenRequest,
+        __Marshaller_google_cloud_memorystore_v1_AuthToken);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest, global::Google.LongRunning.Operation> __Method_AddTokenAuthUser = new grpc::Method<global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddTokenAuthUser",
+        __Marshaller_google_cloud_memorystore_v1_AddTokenAuthUserRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest, global::Google.LongRunning.Operation> __Method_DeleteTokenAuthUser = new grpc::Method<global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteTokenAuthUser",
+        __Marshaller_google_cloud_memorystore_v1_DeleteTokenAuthUserRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest, global::Google.LongRunning.Operation> __Method_AddAuthToken = new grpc::Method<global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AddAuthToken",
+        __Marshaller_google_cloud_memorystore_v1_AddAuthTokenRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest, global::Google.LongRunning.Operation> __Method_DeleteAuthToken = new grpc::Method<global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteAuthToken",
+        __Marshaller_google_cloud_memorystore_v1_DeleteAuthTokenRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -490,6 +578,102 @@ namespace Google.Cloud.Memorystore.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> FinishMigration(global::Google.Cloud.Memorystore.V1.FinishMigrationRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the token auth users for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse> ListTokenAuthUsers(global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a specific token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.TokenAuthUser> GetTokenAuthUser(global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists all the auth tokens for a specific token auth user.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse> ListAuthTokens(global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a token based auth enabled instance's auth token for a given user.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Memorystore.V1.AuthToken> GetAuthToken(global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AddTokenAuthUser(global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteTokenAuthUser(global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Adds a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> AddAuthToken(global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteAuthToken(global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1451,6 +1635,390 @@ namespace Google.Cloud.Memorystore.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_FinishMigration, null, options, request);
       }
+      /// <summary>
+      /// Lists all the token auth users for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse ListTokenAuthUsers(global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTokenAuthUsers(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the token auth users for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse ListTokenAuthUsers(global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListTokenAuthUsers, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the token auth users for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse> ListTokenAuthUsersAsync(global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListTokenAuthUsersAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the token auth users for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse> ListTokenAuthUsersAsync(global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListTokenAuthUsers, null, options, request);
+      }
+      /// <summary>
+      /// Gets a specific token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.TokenAuthUser GetTokenAuthUser(global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTokenAuthUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a specific token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.TokenAuthUser GetTokenAuthUser(global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetTokenAuthUser, null, options, request);
+      }
+      /// <summary>
+      /// Gets a specific token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.TokenAuthUser> GetTokenAuthUserAsync(global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetTokenAuthUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a specific token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.TokenAuthUser> GetTokenAuthUserAsync(global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetTokenAuthUser, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the auth tokens for a specific token auth user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse ListAuthTokens(global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAuthTokens(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the auth tokens for a specific token auth user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse ListAuthTokens(global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListAuthTokens, null, options, request);
+      }
+      /// <summary>
+      /// Lists all the auth tokens for a specific token auth user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse> ListAuthTokensAsync(global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListAuthTokensAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists all the auth tokens for a specific token auth user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse> ListAuthTokensAsync(global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListAuthTokens, null, options, request);
+      }
+      /// <summary>
+      /// Gets a token based auth enabled instance's auth token for a given user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.AuthToken GetAuthToken(global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAuthToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a token based auth enabled instance's auth token for a given user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Memorystore.V1.AuthToken GetAuthToken(global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAuthToken, null, options, request);
+      }
+      /// <summary>
+      /// Gets a token based auth enabled instance's auth token for a given user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.AuthToken> GetAuthTokenAsync(global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAuthTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a token based auth enabled instance's auth token for a given user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Memorystore.V1.AuthToken> GetAuthTokenAsync(global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAuthToken, null, options, request);
+      }
+      /// <summary>
+      /// Adds a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AddTokenAuthUser(global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddTokenAuthUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AddTokenAuthUser(global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddTokenAuthUser, null, options, request);
+      }
+      /// <summary>
+      /// Adds a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AddTokenAuthUserAsync(global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddTokenAuthUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AddTokenAuthUserAsync(global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddTokenAuthUser, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteTokenAuthUser(global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTokenAuthUser(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteTokenAuthUser(global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteTokenAuthUser, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteTokenAuthUserAsync(global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteTokenAuthUserAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a token auth user for a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteTokenAuthUserAsync(global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteTokenAuthUser, null, options, request);
+      }
+      /// <summary>
+      /// Adds a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AddAuthToken(global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddAuthToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation AddAuthToken(global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AddAuthToken, null, options, request);
+      }
+      /// <summary>
+      /// Adds a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AddAuthTokenAsync(global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AddAuthTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Adds a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> AddAuthTokenAsync(global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AddAuthToken, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAuthToken(global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAuthToken(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation DeleteAuthToken(global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteAuthToken, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAuthTokenAsync(global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteAuthTokenAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a token for a user of a token based auth enabled instance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> DeleteAuthTokenAsync(global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteAuthToken, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override MemorystoreClient NewInstance(ClientBaseConfiguration configuration)
@@ -1481,7 +2049,15 @@ namespace Google.Cloud.Memorystore.V1 {
           .AddMethod(__Method_ExportBackup, serviceImpl.ExportBackup)
           .AddMethod(__Method_BackupInstance, serviceImpl.BackupInstance)
           .AddMethod(__Method_StartMigration, serviceImpl.StartMigration)
-          .AddMethod(__Method_FinishMigration, serviceImpl.FinishMigration).Build();
+          .AddMethod(__Method_FinishMigration, serviceImpl.FinishMigration)
+          .AddMethod(__Method_ListTokenAuthUsers, serviceImpl.ListTokenAuthUsers)
+          .AddMethod(__Method_GetTokenAuthUser, serviceImpl.GetTokenAuthUser)
+          .AddMethod(__Method_ListAuthTokens, serviceImpl.ListAuthTokens)
+          .AddMethod(__Method_GetAuthToken, serviceImpl.GetAuthToken)
+          .AddMethod(__Method_AddTokenAuthUser, serviceImpl.AddTokenAuthUser)
+          .AddMethod(__Method_DeleteTokenAuthUser, serviceImpl.DeleteTokenAuthUser)
+          .AddMethod(__Method_AddAuthToken, serviceImpl.AddAuthToken)
+          .AddMethod(__Method_DeleteAuthToken, serviceImpl.DeleteAuthToken).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -1508,6 +2084,14 @@ namespace Google.Cloud.Memorystore.V1 {
       serviceBinder.AddMethod(__Method_BackupInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.BackupInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.BackupInstance));
       serviceBinder.AddMethod(__Method_StartMigration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.StartMigrationRequest, global::Google.LongRunning.Operation>(serviceImpl.StartMigration));
       serviceBinder.AddMethod(__Method_FinishMigration, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.FinishMigrationRequest, global::Google.LongRunning.Operation>(serviceImpl.FinishMigration));
+      serviceBinder.AddMethod(__Method_ListTokenAuthUsers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersRequest, global::Google.Cloud.Memorystore.V1.ListTokenAuthUsersResponse>(serviceImpl.ListTokenAuthUsers));
+      serviceBinder.AddMethod(__Method_GetTokenAuthUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetTokenAuthUserRequest, global::Google.Cloud.Memorystore.V1.TokenAuthUser>(serviceImpl.GetTokenAuthUser));
+      serviceBinder.AddMethod(__Method_ListAuthTokens, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.ListAuthTokensRequest, global::Google.Cloud.Memorystore.V1.ListAuthTokensResponse>(serviceImpl.ListAuthTokens));
+      serviceBinder.AddMethod(__Method_GetAuthToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.GetAuthTokenRequest, global::Google.Cloud.Memorystore.V1.AuthToken>(serviceImpl.GetAuthToken));
+      serviceBinder.AddMethod(__Method_AddTokenAuthUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.AddTokenAuthUserRequest, global::Google.LongRunning.Operation>(serviceImpl.AddTokenAuthUser));
+      serviceBinder.AddMethod(__Method_DeleteTokenAuthUser, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.DeleteTokenAuthUserRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteTokenAuthUser));
+      serviceBinder.AddMethod(__Method_AddAuthToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.AddAuthTokenRequest, global::Google.LongRunning.Operation>(serviceImpl.AddAuthToken));
+      serviceBinder.AddMethod(__Method_DeleteAuthToken, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Memorystore.V1.DeleteAuthTokenRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteAuthToken));
     }
 
   }

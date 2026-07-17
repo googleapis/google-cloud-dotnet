@@ -75,6 +75,18 @@ namespace Google.Cloud.Memorystore.V1
             StartMigrationOperationsSettings = existing.StartMigrationOperationsSettings.Clone();
             FinishMigrationSettings = existing.FinishMigrationSettings;
             FinishMigrationOperationsSettings = existing.FinishMigrationOperationsSettings.Clone();
+            ListTokenAuthUsersSettings = existing.ListTokenAuthUsersSettings;
+            GetTokenAuthUserSettings = existing.GetTokenAuthUserSettings;
+            ListAuthTokensSettings = existing.ListAuthTokensSettings;
+            GetAuthTokenSettings = existing.GetAuthTokenSettings;
+            AddTokenAuthUserSettings = existing.AddTokenAuthUserSettings;
+            AddTokenAuthUserOperationsSettings = existing.AddTokenAuthUserOperationsSettings.Clone();
+            DeleteTokenAuthUserSettings = existing.DeleteTokenAuthUserSettings;
+            DeleteTokenAuthUserOperationsSettings = existing.DeleteTokenAuthUserOperationsSettings.Clone();
+            AddAuthTokenSettings = existing.AddAuthTokenSettings;
+            AddAuthTokenOperationsSettings = existing.AddAuthTokenOperationsSettings.Clone();
+            DeleteAuthTokenSettings = existing.DeleteAuthTokenSettings;
+            DeleteAuthTokenOperationsSettings = existing.DeleteAuthTokenOperationsSettings.Clone();
             LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
@@ -462,6 +474,174 @@ namespace Google.Cloud.Memorystore.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings FinishMigrationOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ListTokenAuthUsers</c> and <c>MemorystoreClient.ListTokenAuthUsersAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListTokenAuthUsersSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.GetTokenAuthUser</c> and <c>MemorystoreClient.GetTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetTokenAuthUserSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.ListAuthTokens</c> and <c>MemorystoreClient.ListAuthTokensAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListAuthTokensSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.GetAuthToken</c> and <c>MemorystoreClient.GetAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetAuthTokenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.AddTokenAuthUser</c> and <c>MemorystoreClient.AddTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddTokenAuthUserSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.AddTokenAuthUser</c> and
+        /// <c>MemorystoreClient.AddTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddTokenAuthUserOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.DeleteTokenAuthUser</c> and <c>MemorystoreClient.DeleteTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteTokenAuthUserSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.DeleteTokenAuthUser</c> and
+        /// <c>MemorystoreClient.DeleteTokenAuthUserAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteTokenAuthUserOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.AddAuthToken</c> and <c>MemorystoreClient.AddAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings AddAuthTokenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.AddAuthToken</c> and
+        /// <c>MemorystoreClient.AddAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings AddAuthTokenOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>MemorystoreClient.DeleteAuthToken</c> and <c>MemorystoreClient.DeleteAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteAuthTokenSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>MemorystoreClient.DeleteAuthToken</c> and
+        /// <c>MemorystoreClient.DeleteAuthTokenAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteAuthTokenOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -3087,6 +3267,1157 @@ namespace Google.Cloud.Memorystore.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> FinishMigrationAsync(InstanceName name, bool force, st::CancellationToken cancellationToken) =>
             FinishMigrationAsync(name, force, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsers(ListTokenAuthUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsersAsync(ListTokenAuthUsersRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list token auth users from.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsers(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTokenAuthUsersRequest request = new ListTokenAuthUsersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTokenAuthUsers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list token auth users from.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsersAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTokenAuthUsersRequest request = new ListTokenAuthUsersRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTokenAuthUsersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list token auth users from.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsers(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTokenAuthUsersRequest request = new ListTokenAuthUsersRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTokenAuthUsers(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list token auth users from.
+        /// Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsersAsync(InstanceName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListTokenAuthUsersRequest request = new ListTokenAuthUsersRequest
+            {
+                ParentAsInstanceName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListTokenAuthUsersAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TokenAuthUser GetTokenAuthUser(GetTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(GetTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(GetTokenAuthUserRequest request, st::CancellationToken cancellationToken) =>
+            GetTokenAuthUserAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TokenAuthUser GetTokenAuthUser(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTokenAuthUser(new GetTokenAuthUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTokenAuthUserAsync(new GetTokenAuthUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(string name, st::CancellationToken cancellationToken) =>
+            GetTokenAuthUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual TokenAuthUser GetTokenAuthUser(TokenAuthUserName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTokenAuthUser(new GetTokenAuthUserRequest
+            {
+                TokenAuthUserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(TokenAuthUserName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetTokenAuthUserAsync(new GetTokenAuthUserRequest
+            {
+                TokenAuthUserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a basic auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<TokenAuthUser> GetTokenAuthUserAsync(TokenAuthUserName name, st::CancellationToken cancellationToken) =>
+            GetTokenAuthUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokens(ListAuthTokensRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokensAsync(ListAuthTokensRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list auth tokens from.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokens(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthTokensRequest request = new ListAuthTokensRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthTokens(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list auth tokens from.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokensAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthTokensRequest request = new ListAuthTokensRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthTokensAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list auth tokens from.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokens(TokenAuthUserName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthTokensRequest request = new ListAuthTokensRequest
+            {
+                ParentAsTokenAuthUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthTokens(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent to list auth tokens from.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthToken"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokensAsync(TokenAuthUserName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null)
+        {
+            ListAuthTokensRequest request = new ListAuthTokensRequest
+            {
+                ParentAsTokenAuthUserName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            };
+            if (pageToken != null)
+            {
+                request.PageToken = pageToken;
+            }
+            if (pageSize != null)
+            {
+                request.PageSize = pageSize.Value;
+            }
+            return ListAuthTokensAsync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthToken GetAuthToken(GetAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(GetAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(GetAuthTokenRequest request, st::CancellationToken cancellationToken) =>
+            GetAuthTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthToken GetAuthToken(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthToken(new GetAuthTokenRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthTokenAsync(new GetAuthTokenRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(string name, st::CancellationToken cancellationToken) =>
+            GetAuthTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual AuthToken GetAuthToken(AuthTokenName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthToken(new GetAuthTokenRequest
+            {
+                AuthTokenName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(AuthTokenName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetAuthTokenAsync(new GetAuthTokenRequest
+            {
+                AuthTokenName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of token auth user for a token auth enabled instance.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<AuthToken> GetAuthTokenAsync(AuthTokenName name, st::CancellationToken cancellationToken) =>
+            GetAuthTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> AddTokenAuthUser(AddTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(AddTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(AddTokenAuthUserRequest request, st::CancellationToken cancellationToken) =>
+            AddTokenAuthUserAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddTokenAuthUser</c>.</summary>
+        public virtual lro::OperationsClient AddTokenAuthUserOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddTokenAuthUser</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> PollOnceAddTokenAuthUser(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddTokenAuthUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddTokenAuthUser</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> PollOnceAddTokenAuthUserAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddTokenAuthUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> AddTokenAuthUser(string instance, string tokenAuthUser, gaxgrpc::CallSettings callSettings = null) =>
+            AddTokenAuthUser(new AddTokenAuthUserRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(string instance, string tokenAuthUser, gaxgrpc::CallSettings callSettings = null) =>
+            AddTokenAuthUserAsync(new AddTokenAuthUserRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(string instance, string tokenAuthUser, st::CancellationToken cancellationToken) =>
+            AddTokenAuthUserAsync(instance, tokenAuthUser, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> AddTokenAuthUser(InstanceName instance, string tokenAuthUser, gaxgrpc::CallSettings callSettings = null) =>
+            AddTokenAuthUser(new AddTokenAuthUserRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(InstanceName instance, string tokenAuthUser, gaxgrpc::CallSettings callSettings = null) =>
+            AddTokenAuthUserAsync(new AddTokenAuthUserRequest
+            {
+                InstanceAsInstanceName = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="instance">
+        /// Required. The instance resource that this token auth user will be added
+        /// for. Format: projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(InstanceName instance, string tokenAuthUser, st::CancellationToken cancellationToken) =>
+            AddTokenAuthUserAsync(instance, tokenAuthUser, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTokenAuthUser(DeleteTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(DeleteTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(DeleteTokenAuthUserRequest request, st::CancellationToken cancellationToken) =>
+            DeleteTokenAuthUserAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteTokenAuthUser</c>.</summary>
+        public virtual lro::OperationsClient DeleteTokenAuthUserOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteTokenAuthUser</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteTokenAuthUser(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteTokenAuthUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteTokenAuthUser</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteTokenAuthUserAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteTokenAuthUserOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTokenAuthUser(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTokenAuthUser(new DeleteTokenAuthUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTokenAuthUserAsync(new DeleteTokenAuthUserRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteTokenAuthUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteTokenAuthUser(TokenAuthUserName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTokenAuthUser(new DeleteTokenAuthUserRequest
+            {
+                TokenAuthUserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(TokenAuthUserName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteTokenAuthUserAsync(new DeleteTokenAuthUserRequest
+            {
+                TokenAuthUserName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user to delete.
+        /// Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(TokenAuthUserName name, st::CancellationToken cancellationToken) =>
+            DeleteTokenAuthUserAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TokenAuthUser, OperationMetadata> AddAuthToken(AddAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(AddAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(AddAuthTokenRequest request, st::CancellationToken cancellationToken) =>
+            AddAuthTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>AddAuthToken</c>.</summary>
+        public virtual lro::OperationsClient AddAuthTokenOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>AddAuthToken</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<TokenAuthUser, OperationMetadata> PollOnceAddAuthToken(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TokenAuthUser, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddAuthTokenOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>AddAuthToken</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> PollOnceAddAuthTokenAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<TokenAuthUser, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), AddAuthTokenOperationsClient, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TokenAuthUser, OperationMetadata> AddAuthToken(string tokenAuthUser, AuthToken authToken, gaxgrpc::CallSettings callSettings = null) =>
+            AddAuthToken(new AddAuthTokenRequest
+            {
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+                AuthToken = gax::GaxPreconditions.CheckNotNull(authToken, nameof(authToken)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(string tokenAuthUser, AuthToken authToken, gaxgrpc::CallSettings callSettings = null) =>
+            AddAuthTokenAsync(new AddAuthTokenRequest
+            {
+                TokenAuthUser = gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUser, nameof(tokenAuthUser)),
+                AuthToken = gax::GaxPreconditions.CheckNotNull(authToken, nameof(authToken)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(string tokenAuthUser, AuthToken authToken, st::CancellationToken cancellationToken) =>
+            AddAuthTokenAsync(tokenAuthUser, authToken, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<TokenAuthUser, OperationMetadata> AddAuthToken(TokenAuthUserName tokenAuthUser, AuthToken authToken, gaxgrpc::CallSettings callSettings = null) =>
+            AddAuthToken(new AddAuthTokenRequest
+            {
+                TokenAuthUserAsTokenAuthUserName = gax::GaxPreconditions.CheckNotNull(tokenAuthUser, nameof(tokenAuthUser)),
+                AuthToken = gax::GaxPreconditions.CheckNotNull(authToken, nameof(authToken)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(TokenAuthUserName tokenAuthUser, AuthToken authToken, gaxgrpc::CallSettings callSettings = null) =>
+            AddAuthTokenAsync(new AddAuthTokenRequest
+            {
+                TokenAuthUserAsTokenAuthUserName = gax::GaxPreconditions.CheckNotNull(tokenAuthUser, nameof(tokenAuthUser)),
+                AuthToken = gax::GaxPreconditions.CheckNotNull(authToken, nameof(authToken)),
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="tokenAuthUser">
+        /// Required. The name of the token auth user resource that this token will be
+        /// added for.
+        /// </param>
+        /// <param name="authToken">
+        /// Required. The auth token to add.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(TokenAuthUserName tokenAuthUser, AuthToken authToken, st::CancellationToken cancellationToken) =>
+            AddAuthTokenAsync(tokenAuthUser, authToken, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthToken(DeleteAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(DeleteAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(DeleteAuthTokenRequest request, st::CancellationToken cancellationToken) =>
+            DeleteAuthTokenAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteAuthToken</c>.</summary>
+        public virtual lro::OperationsClient DeleteAuthTokenOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteAuthToken</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> PollOnceDeleteAuthToken(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAuthTokenOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteAuthToken</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> PollOnceDeleteAuthTokenAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteAuthTokenOperationsClient, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthToken(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthToken(new DeleteAuthTokenRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthTokenAsync(new DeleteAuthTokenRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteAuthTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthToken(AuthTokenName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthToken(new DeleteAuthTokenRequest
+            {
+                AuthTokenName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(AuthTokenName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteAuthTokenAsync(new DeleteAuthTokenRequest
+            {
+                AuthTokenName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the token auth user resource that this token will be
+        /// deleted from. Format:
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{name}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(AuthTokenName name, st::CancellationToken cancellationToken) =>
+            DeleteAuthTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Memorystore client wrapper implementation, for convenient use.</summary>
@@ -3129,6 +4460,22 @@ namespace Google.Cloud.Memorystore.V1
 
         private readonly gaxgrpc::ApiCall<FinishMigrationRequest, lro::Operation> _callFinishMigration;
 
+        private readonly gaxgrpc::ApiCall<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse> _callListTokenAuthUsers;
+
+        private readonly gaxgrpc::ApiCall<GetTokenAuthUserRequest, TokenAuthUser> _callGetTokenAuthUser;
+
+        private readonly gaxgrpc::ApiCall<ListAuthTokensRequest, ListAuthTokensResponse> _callListAuthTokens;
+
+        private readonly gaxgrpc::ApiCall<GetAuthTokenRequest, AuthToken> _callGetAuthToken;
+
+        private readonly gaxgrpc::ApiCall<AddTokenAuthUserRequest, lro::Operation> _callAddTokenAuthUser;
+
+        private readonly gaxgrpc::ApiCall<DeleteTokenAuthUserRequest, lro::Operation> _callDeleteTokenAuthUser;
+
+        private readonly gaxgrpc::ApiCall<AddAuthTokenRequest, lro::Operation> _callAddAuthToken;
+
+        private readonly gaxgrpc::ApiCall<DeleteAuthTokenRequest, lro::Operation> _callDeleteAuthToken;
+
         /// <summary>
         /// Constructs a client wrapper for the Memorystore service, with the specified gRPC client and settings.
         /// </summary>
@@ -3153,6 +4500,10 @@ namespace Google.Cloud.Memorystore.V1
             BackupInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.BackupInstanceOperationsSettings, logger);
             StartMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.StartMigrationOperationsSettings, logger);
             FinishMigrationOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FinishMigrationOperationsSettings, logger);
+            AddTokenAuthUserOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddTokenAuthUserOperationsSettings, logger);
+            DeleteTokenAuthUserOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTokenAuthUserOperationsSettings, logger);
+            AddAuthTokenOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.AddAuthTokenOperationsSettings, logger);
+            DeleteAuthTokenOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteAuthTokenOperationsSettings, logger);
             LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings, logger);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>("ListInstances", grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
@@ -3205,6 +4556,30 @@ namespace Google.Cloud.Memorystore.V1
             _callFinishMigration = clientHelper.BuildApiCall<FinishMigrationRequest, lro::Operation>("FinishMigration", grpcClient.FinishMigrationAsync, grpcClient.FinishMigration, effectiveSettings.FinishMigrationSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callFinishMigration);
             Modify_FinishMigrationApiCall(ref _callFinishMigration);
+            _callListTokenAuthUsers = clientHelper.BuildApiCall<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse>("ListTokenAuthUsers", grpcClient.ListTokenAuthUsersAsync, grpcClient.ListTokenAuthUsers, effectiveSettings.ListTokenAuthUsersSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListTokenAuthUsers);
+            Modify_ListTokenAuthUsersApiCall(ref _callListTokenAuthUsers);
+            _callGetTokenAuthUser = clientHelper.BuildApiCall<GetTokenAuthUserRequest, TokenAuthUser>("GetTokenAuthUser", grpcClient.GetTokenAuthUserAsync, grpcClient.GetTokenAuthUser, effectiveSettings.GetTokenAuthUserSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetTokenAuthUser);
+            Modify_GetTokenAuthUserApiCall(ref _callGetTokenAuthUser);
+            _callListAuthTokens = clientHelper.BuildApiCall<ListAuthTokensRequest, ListAuthTokensResponse>("ListAuthTokens", grpcClient.ListAuthTokensAsync, grpcClient.ListAuthTokens, effectiveSettings.ListAuthTokensSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListAuthTokens);
+            Modify_ListAuthTokensApiCall(ref _callListAuthTokens);
+            _callGetAuthToken = clientHelper.BuildApiCall<GetAuthTokenRequest, AuthToken>("GetAuthToken", grpcClient.GetAuthTokenAsync, grpcClient.GetAuthToken, effectiveSettings.GetAuthTokenSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetAuthToken);
+            Modify_GetAuthTokenApiCall(ref _callGetAuthToken);
+            _callAddTokenAuthUser = clientHelper.BuildApiCall<AddTokenAuthUserRequest, lro::Operation>("AddTokenAuthUser", grpcClient.AddTokenAuthUserAsync, grpcClient.AddTokenAuthUser, effectiveSettings.AddTokenAuthUserSettings).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callAddTokenAuthUser);
+            Modify_AddTokenAuthUserApiCall(ref _callAddTokenAuthUser);
+            _callDeleteTokenAuthUser = clientHelper.BuildApiCall<DeleteTokenAuthUserRequest, lro::Operation>("DeleteTokenAuthUser", grpcClient.DeleteTokenAuthUserAsync, grpcClient.DeleteTokenAuthUser, effectiveSettings.DeleteTokenAuthUserSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteTokenAuthUser);
+            Modify_DeleteTokenAuthUserApiCall(ref _callDeleteTokenAuthUser);
+            _callAddAuthToken = clientHelper.BuildApiCall<AddAuthTokenRequest, lro::Operation>("AddAuthToken", grpcClient.AddAuthTokenAsync, grpcClient.AddAuthToken, effectiveSettings.AddAuthTokenSettings).WithGoogleRequestParam("token_auth_user", request => request.TokenAuthUser);
+            Modify_ApiCall(ref _callAddAuthToken);
+            Modify_AddAuthTokenApiCall(ref _callAddAuthToken);
+            _callDeleteAuthToken = clientHelper.BuildApiCall<DeleteAuthTokenRequest, lro::Operation>("DeleteAuthToken", grpcClient.DeleteAuthTokenAsync, grpcClient.DeleteAuthToken, effectiveSettings.DeleteAuthTokenSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteAuthToken);
+            Modify_DeleteAuthTokenApiCall(ref _callDeleteAuthToken);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -3243,6 +4618,22 @@ namespace Google.Cloud.Memorystore.V1
         partial void Modify_StartMigrationApiCall(ref gaxgrpc::ApiCall<StartMigrationRequest, lro::Operation> call);
 
         partial void Modify_FinishMigrationApiCall(ref gaxgrpc::ApiCall<FinishMigrationRequest, lro::Operation> call);
+
+        partial void Modify_ListTokenAuthUsersApiCall(ref gaxgrpc::ApiCall<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse> call);
+
+        partial void Modify_GetTokenAuthUserApiCall(ref gaxgrpc::ApiCall<GetTokenAuthUserRequest, TokenAuthUser> call);
+
+        partial void Modify_ListAuthTokensApiCall(ref gaxgrpc::ApiCall<ListAuthTokensRequest, ListAuthTokensResponse> call);
+
+        partial void Modify_GetAuthTokenApiCall(ref gaxgrpc::ApiCall<GetAuthTokenRequest, AuthToken> call);
+
+        partial void Modify_AddTokenAuthUserApiCall(ref gaxgrpc::ApiCall<AddTokenAuthUserRequest, lro::Operation> call);
+
+        partial void Modify_DeleteTokenAuthUserApiCall(ref gaxgrpc::ApiCall<DeleteTokenAuthUserRequest, lro::Operation> call);
+
+        partial void Modify_AddAuthTokenApiCall(ref gaxgrpc::ApiCall<AddAuthTokenRequest, lro::Operation> call);
+
+        partial void Modify_DeleteAuthTokenApiCall(ref gaxgrpc::ApiCall<DeleteAuthTokenRequest, lro::Operation> call);
 
         partial void OnConstruction(Memorystore.MemorystoreClient grpcClient, MemorystoreSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -3285,6 +4676,22 @@ namespace Google.Cloud.Memorystore.V1
         partial void Modify_StartMigrationRequest(ref StartMigrationRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_FinishMigrationRequest(ref FinishMigrationRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListTokenAuthUsersRequest(ref ListTokenAuthUsersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetTokenAuthUserRequest(ref GetTokenAuthUserRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListAuthTokensRequest(ref ListAuthTokensRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetAuthTokenRequest(ref GetAuthTokenRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddTokenAuthUserRequest(ref AddTokenAuthUserRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteTokenAuthUserRequest(ref DeleteTokenAuthUserRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_AddAuthTokenRequest(ref AddAuthTokenRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteAuthTokenRequest(ref DeleteAuthTokenRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists Instances in a given project and location.
@@ -3776,6 +5183,210 @@ namespace Google.Cloud.Memorystore.V1
             Modify_FinishMigrationRequest(ref request, ref callSettings);
             return new lro::Operation<Instance, OperationMetadata>(await _callFinishMigration.Async(request, callSettings).ConfigureAwait(false), FinishMigrationOperationsClient);
         }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public override gax::PagedEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsers(ListTokenAuthUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTokenAuthUsersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse, TokenAuthUser>(_callListTokenAuthUsers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the token auth users for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="TokenAuthUser"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListTokenAuthUsersResponse, TokenAuthUser> ListTokenAuthUsersAsync(ListTokenAuthUsersRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListTokenAuthUsersRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListTokenAuthUsersRequest, ListTokenAuthUsersResponse, TokenAuthUser>(_callListTokenAuthUsers, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override TokenAuthUser GetTokenAuthUser(GetTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTokenAuthUserRequest(ref request, ref callSettings);
+            return _callGetTokenAuthUser.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a specific token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<TokenAuthUser> GetTokenAuthUserAsync(GetTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetTokenAuthUserRequest(ref request, ref callSettings);
+            return _callGetTokenAuthUser.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="AuthToken"/> resources.</returns>
+        public override gax::PagedEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokens(ListAuthTokensRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthTokensRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListAuthTokensRequest, ListAuthTokensResponse, AuthToken>(_callListAuthTokens, request, callSettings);
+        }
+
+        /// <summary>
+        /// Lists all the auth tokens for a specific token auth user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="AuthToken"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListAuthTokensResponse, AuthToken> ListAuthTokensAsync(ListAuthTokensRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListAuthTokensRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListAuthTokensRequest, ListAuthTokensResponse, AuthToken>(_callListAuthTokens, request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override AuthToken GetAuthToken(GetAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthTokenRequest(ref request, ref callSettings);
+            return _callGetAuthToken.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets a token based auth enabled instance's auth token for a given user.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<AuthToken> GetAuthTokenAsync(GetAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetAuthTokenRequest(ref request, ref callSettings);
+            return _callGetAuthToken.Async(request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>AddTokenAuthUser</c>.</summary>
+        public override lro::OperationsClient AddTokenAuthUserOperationsClient { get; }
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, OperationMetadata> AddTokenAuthUser(AddTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddTokenAuthUserRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(_callAddTokenAuthUser.Sync(request, callSettings), AddTokenAuthUserOperationsClient);
+        }
+
+        /// <summary>
+        /// Adds a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, OperationMetadata>> AddTokenAuthUserAsync(AddTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddTokenAuthUserRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, OperationMetadata>(await _callAddTokenAuthUser.Async(request, callSettings).ConfigureAwait(false), AddTokenAuthUserOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteTokenAuthUser</c>.</summary>
+        public override lro::OperationsClient DeleteTokenAuthUserOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteTokenAuthUser(DeleteTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTokenAuthUserRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteTokenAuthUser.Sync(request, callSettings), DeleteTokenAuthUserOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a token auth user for a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteTokenAuthUserAsync(DeleteTokenAuthUserRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteTokenAuthUserRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteTokenAuthUser.Async(request, callSettings).ConfigureAwait(false), DeleteTokenAuthUserOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>AddAuthToken</c>.</summary>
+        public override lro::OperationsClient AddAuthTokenOperationsClient { get; }
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<TokenAuthUser, OperationMetadata> AddAuthToken(AddAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddAuthTokenRequest(ref request, ref callSettings);
+            return new lro::Operation<TokenAuthUser, OperationMetadata>(_callAddAuthToken.Sync(request, callSettings), AddAuthTokenOperationsClient);
+        }
+
+        /// <summary>
+        /// Adds a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<TokenAuthUser, OperationMetadata>> AddAuthTokenAsync(AddAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_AddAuthTokenRequest(ref request, ref callSettings);
+            return new lro::Operation<TokenAuthUser, OperationMetadata>(await _callAddAuthToken.Async(request, callSettings).ConfigureAwait(false), AddAuthTokenOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteAuthToken</c>.</summary>
+        public override lro::OperationsClient DeleteAuthTokenOperationsClient { get; }
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OperationMetadata> DeleteAuthToken(DeleteAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthTokenRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(_callDeleteAuthToken.Sync(request, callSettings), DeleteAuthTokenOperationsClient);
+        }
+
+        /// <summary>
+        /// Deletes a token for a user of a token based auth enabled instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteAuthTokenAsync(DeleteAuthTokenRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteAuthTokenRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OperationMetadata>(await _callDeleteAuthToken.Async(request, callSettings).ConfigureAwait(false), DeleteAuthTokenOperationsClient);
+        }
     }
 
     public partial class ListInstancesRequest : gaxgrpc::IPageRequest
@@ -3787,6 +5398,14 @@ namespace Google.Cloud.Memorystore.V1
     }
 
     public partial class ListBackupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListTokenAuthUsersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListAuthTokensRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -3810,6 +5429,22 @@ namespace Google.Cloud.Memorystore.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Backup> GetEnumerator() => Backups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListTokenAuthUsersResponse : gaxgrpc::IPageResponse<TokenAuthUser>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<TokenAuthUser> GetEnumerator() => TokenAuthUsers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListAuthTokensResponse : gaxgrpc::IPageResponse<AuthToken>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<AuthToken> GetEnumerator() => AuthTokens.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

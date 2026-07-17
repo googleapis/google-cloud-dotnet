@@ -796,6 +796,576 @@ namespace Google.Cloud.Memorystore.V1
         public static bool operator !=(BackupName a, BackupName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>TokenAuthUser</c> resource.</summary>
+    public sealed partial class TokenAuthUserName : gax::IResourceName, sys::IEquatable<TokenAuthUserName>
+    {
+        /// <summary>The possible contents of <see cref="TokenAuthUserName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>.
+            /// </summary>
+            ProjectLocationInstanceTokenAuthUser = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationInstanceTokenAuthUser = new gax::PathTemplate("projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}");
+
+        /// <summary>Creates a <see cref="TokenAuthUserName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="TokenAuthUserName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static TokenAuthUserName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new TokenAuthUserName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="TokenAuthUserName"/> with the pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tokenAuthUserId">The <c>TokenAuthUser</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="TokenAuthUserName"/> constructed from the provided ids.</returns>
+        public static TokenAuthUserName FromProjectLocationInstanceTokenAuthUser(string projectId, string locationId, string instanceId, string tokenAuthUserId) =>
+            new TokenAuthUserName(ResourceNameType.ProjectLocationInstanceTokenAuthUser, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), tokenAuthUserId: gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUserId, nameof(tokenAuthUserId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TokenAuthUserName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tokenAuthUserId">The <c>TokenAuthUser</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TokenAuthUserName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>.
+        /// </returns>
+        public static string Format(string projectId, string locationId, string instanceId, string tokenAuthUserId) =>
+            FormatProjectLocationInstanceTokenAuthUser(projectId, locationId, instanceId, tokenAuthUserId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="TokenAuthUserName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tokenAuthUserId">The <c>TokenAuthUser</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="TokenAuthUserName"/> with pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>.
+        /// </returns>
+        public static string FormatProjectLocationInstanceTokenAuthUser(string projectId, string locationId, string instanceId, string tokenAuthUserId) =>
+            s_projectLocationInstanceTokenAuthUser.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUserId, nameof(tokenAuthUserId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TokenAuthUserName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="tokenAuthUserName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="TokenAuthUserName"/> if successful.</returns>
+        public static TokenAuthUserName Parse(string tokenAuthUserName) => Parse(tokenAuthUserName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="TokenAuthUserName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="tokenAuthUserName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="TokenAuthUserName"/> if successful.</returns>
+        public static TokenAuthUserName Parse(string tokenAuthUserName, bool allowUnparsed) =>
+            TryParse(tokenAuthUserName, allowUnparsed, out TokenAuthUserName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TokenAuthUserName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="tokenAuthUserName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TokenAuthUserName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string tokenAuthUserName, out TokenAuthUserName result) =>
+            TryParse(tokenAuthUserName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="TokenAuthUserName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="tokenAuthUserName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="TokenAuthUserName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string tokenAuthUserName, bool allowUnparsed, out TokenAuthUserName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(tokenAuthUserName, nameof(tokenAuthUserName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationInstanceTokenAuthUser.TryParseName(tokenAuthUserName, out resourceName))
+            {
+                result = FromProjectLocationInstanceTokenAuthUser(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(tokenAuthUserName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private TokenAuthUserName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string instanceId = null, string locationId = null, string projectId = null, string tokenAuthUserId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            InstanceId = instanceId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            TokenAuthUserId = tokenAuthUserId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="TokenAuthUserName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tokenAuthUserId">The <c>TokenAuthUser</c> ID. Must not be <c>null</c> or empty.</param>
+        public TokenAuthUserName(string projectId, string locationId, string instanceId, string tokenAuthUserId) : this(ResourceNameType.ProjectLocationInstanceTokenAuthUser, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), tokenAuthUserId: gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUserId, nameof(tokenAuthUserId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Instance</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string InstanceId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>TokenAuthUser</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string TokenAuthUserId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationInstanceTokenAuthUser: return s_projectLocationInstanceTokenAuthUser.Expand(ProjectId, LocationId, InstanceId, TokenAuthUserId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as TokenAuthUserName);
+
+        /// <inheritdoc/>
+        public bool Equals(TokenAuthUserName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(TokenAuthUserName a, TokenAuthUserName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(TokenAuthUserName a, TokenAuthUserName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>AuthToken</c> resource.</summary>
+    public sealed partial class AuthTokenName : gax::IResourceName, sys::IEquatable<AuthTokenName>
+    {
+        /// <summary>The possible contents of <see cref="AuthTokenName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>
+            /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+            /// .
+            /// </summary>
+            ProjectLocationInstanceTokenAuthUserAuthToken = 1,
+        }
+
+        private static gax::PathTemplate s_projectLocationInstanceTokenAuthUserAuthToken = new gax::PathTemplate("projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}");
+
+        /// <summary>Creates a <see cref="AuthTokenName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="AuthTokenName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static AuthTokenName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new AuthTokenName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="AuthTokenName"/> with the pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tokenAuthUserId">The <c>TokenAuthUser</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authTokenId">The <c>AuthToken</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="AuthTokenName"/> constructed from the provided ids.</returns>
+        public static AuthTokenName FromProjectLocationInstanceTokenAuthUserAuthToken(string projectId, string locationId, string instanceId, string tokenAuthUserId, string authTokenId) =>
+            new AuthTokenName(ResourceNameType.ProjectLocationInstanceTokenAuthUserAuthToken, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), tokenAuthUserId: gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUserId, nameof(tokenAuthUserId)), authTokenId: gax::GaxPreconditions.CheckNotNullOrEmpty(authTokenId, nameof(authTokenId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuthTokenName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tokenAuthUserId">The <c>TokenAuthUser</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authTokenId">The <c>AuthToken</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuthTokenName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// .
+        /// </returns>
+        public static string Format(string projectId, string locationId, string instanceId, string tokenAuthUserId, string authTokenId) =>
+            FormatProjectLocationInstanceTokenAuthUserAuthToken(projectId, locationId, instanceId, tokenAuthUserId, authTokenId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="AuthTokenName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// .
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tokenAuthUserId">The <c>TokenAuthUser</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authTokenId">The <c>AuthToken</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="AuthTokenName"/> with pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// .
+        /// </returns>
+        public static string FormatProjectLocationInstanceTokenAuthUserAuthToken(string projectId, string locationId, string instanceId, string tokenAuthUserId, string authTokenId) =>
+            s_projectLocationInstanceTokenAuthUserAuthToken.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUserId, nameof(tokenAuthUserId)), gax::GaxPreconditions.CheckNotNullOrEmpty(authTokenId, nameof(authTokenId)));
+
+        /// <summary>Parses the given resource name string into a new <see cref="AuthTokenName"/> instance.</summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="authTokenName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="AuthTokenName"/> if successful.</returns>
+        public static AuthTokenName Parse(string authTokenName) => Parse(authTokenName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="AuthTokenName"/> instance; optionally allowing
+        /// an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="authTokenName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="AuthTokenName"/> if successful.</returns>
+        public static AuthTokenName Parse(string authTokenName, bool allowUnparsed) =>
+            TryParse(authTokenName, allowUnparsed, out AuthTokenName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AuthTokenName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="authTokenName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AuthTokenName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string authTokenName, out AuthTokenName result) => TryParse(authTokenName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="AuthTokenName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="authTokenName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="AuthTokenName"/>, or <c>null</c> if parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string authTokenName, bool allowUnparsed, out AuthTokenName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(authTokenName, nameof(authTokenName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectLocationInstanceTokenAuthUserAuthToken.TryParseName(authTokenName, out resourceName))
+            {
+                result = FromProjectLocationInstanceTokenAuthUserAuthToken(resourceName[0], resourceName[1], resourceName[2], resourceName[3], resourceName[4]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(authTokenName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private AuthTokenName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string authTokenId = null, string instanceId = null, string locationId = null, string projectId = null, string tokenAuthUserId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            AuthTokenId = authTokenId;
+            InstanceId = instanceId;
+            LocationId = locationId;
+            ProjectId = projectId;
+            TokenAuthUserId = tokenAuthUserId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="AuthTokenName"/> class from the component parts of pattern
+        /// <c>
+        /// projects/{project}/locations/{location}/instances/{instance}/tokenAuthUsers/{token_auth_user}/authTokens/{auth_token}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="instanceId">The <c>Instance</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="tokenAuthUserId">The <c>TokenAuthUser</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="authTokenId">The <c>AuthToken</c> ID. Must not be <c>null</c> or empty.</param>
+        public AuthTokenName(string projectId, string locationId, string instanceId, string tokenAuthUserId, string authTokenId) : this(ResourceNameType.ProjectLocationInstanceTokenAuthUserAuthToken, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), instanceId: gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)), tokenAuthUserId: gax::GaxPreconditions.CheckNotNullOrEmpty(tokenAuthUserId, nameof(tokenAuthUserId)), authTokenId: gax::GaxPreconditions.CheckNotNullOrEmpty(authTokenId, nameof(authTokenId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>AuthToken</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string AuthTokenId { get; }
+
+        /// <summary>
+        /// The <c>Instance</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string InstanceId { get; }
+
+        /// <summary>
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>TokenAuthUser</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource
+        /// name.
+        /// </summary>
+        public string TokenAuthUserId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectLocationInstanceTokenAuthUserAuthToken: return s_projectLocationInstanceTokenAuthUserAuthToken.Expand(ProjectId, LocationId, InstanceId, TokenAuthUserId, AuthTokenId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as AuthTokenName);
+
+        /// <inheritdoc/>
+        public bool Equals(AuthTokenName other) => ToString() == other?.ToString();
+
+        /// <summary>Determines whether two specified resource names have the same value.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is the same as the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator ==(AuthTokenName a, AuthTokenName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <summary>Determines whether two specified resource names have different values.</summary>
+        /// <param name="a">The first resource name to compare, or null.</param>
+        /// <param name="b">The second resource name to compare, or null.</param>
+        /// <returns>
+        /// true if the value of <paramref name="a"/> is different from the value of <paramref name="b"/>; otherwise,
+        /// false.
+        /// </returns>
+        public static bool operator !=(AuthTokenName a, AuthTokenName b) => !(a == b);
+    }
+
     /// <summary>Resource name for the <c>CertificateAuthority</c> resource.</summary>
     public sealed partial class CertificateAuthorityName : gax::IResourceName, sys::IEquatable<CertificateAuthorityName>
     {
@@ -3296,6 +3866,30 @@ namespace Google.Cloud.Memorystore.V1
         }
     }
 
+    public partial class TokenAuthUser
+    {
+        /// <summary>
+        /// <see cref="gcmv::TokenAuthUserName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::TokenAuthUserName TokenAuthUserName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::TokenAuthUserName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AuthToken
+    {
+        /// <summary>
+        /// <see cref="gcmv::AuthTokenName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::AuthTokenName AuthTokenName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::AuthTokenName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class PscAttachmentDetail
     {
         /// <summary>
@@ -3535,6 +4129,102 @@ namespace Google.Cloud.Memorystore.V1
         public gcmv::InstanceName InstanceName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcmv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListTokenAuthUsersRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public InstanceName ParentAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : InstanceName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetTokenAuthUserRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::TokenAuthUserName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::TokenAuthUserName TokenAuthUserName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::TokenAuthUserName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListAuthTokensRequest
+    {
+        /// <summary>
+        /// <see cref="TokenAuthUserName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public TokenAuthUserName ParentAsTokenAuthUserName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : TokenAuthUserName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetAuthTokenRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::AuthTokenName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::AuthTokenName AuthTokenName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::AuthTokenName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AddTokenAuthUserRequest
+    {
+        /// <summary>
+        /// <see cref="InstanceName"/>-typed view over the <see cref="Instance"/> resource name property.
+        /// </summary>
+        public InstanceName InstanceAsInstanceName
+        {
+            get => string.IsNullOrEmpty(Instance) ? null : InstanceName.Parse(Instance, allowUnparsed: true);
+            set => Instance = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteTokenAuthUserRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::TokenAuthUserName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::TokenAuthUserName TokenAuthUserName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::TokenAuthUserName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AddAuthTokenRequest
+    {
+        /// <summary>
+        /// <see cref="TokenAuthUserName"/>-typed view over the <see cref="TokenAuthUser"/> resource name property.
+        /// </summary>
+        public TokenAuthUserName TokenAuthUserAsTokenAuthUserName
+        {
+            get => string.IsNullOrEmpty(TokenAuthUser) ? null : TokenAuthUserName.Parse(TokenAuthUser, allowUnparsed: true);
+            set => TokenAuthUser = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteAuthTokenRequest
+    {
+        /// <summary>
+        /// <see cref="gcmv::AuthTokenName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcmv::AuthTokenName AuthTokenName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcmv::AuthTokenName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

@@ -10,6 +10,18 @@
         "grpc": {
           "libraryClient": "MemorystoreClient",
           "rpcs": {
+            "AddAuthToken": {
+              "methods": [
+                "AddAuthToken",
+                "AddAuthTokenAsync"
+              ]
+            },
+            "AddTokenAuthUser": {
+              "methods": [
+                "AddTokenAuthUser",
+                "AddTokenAuthUserAsync"
+              ]
+            },
             "BackupInstance": {
               "methods": [
                 "BackupInstance",
@@ -20,6 +32,12 @@
               "methods": [
                 "CreateInstance",
                 "CreateInstanceAsync"
+              ]
+            },
+            "DeleteAuthToken": {
+              "methods": [
+                "DeleteAuthToken",
+                "DeleteAuthTokenAsync"
               ]
             },
             "DeleteBackup": {
@@ -34,6 +52,12 @@
                 "DeleteInstanceAsync"
               ]
             },
+            "DeleteTokenAuthUser": {
+              "methods": [
+                "DeleteTokenAuthUser",
+                "DeleteTokenAuthUserAsync"
+              ]
+            },
             "ExportBackup": {
               "methods": [
                 "ExportBackup",
@@ -44,6 +68,12 @@
               "methods": [
                 "FinishMigration",
                 "FinishMigrationAsync"
+              ]
+            },
+            "GetAuthToken": {
+              "methods": [
+                "GetAuthToken",
+                "GetAuthTokenAsync"
               ]
             },
             "GetBackup": {
@@ -76,6 +106,18 @@
                 "GetSharedRegionalCertificateAuthorityAsync"
               ]
             },
+            "GetTokenAuthUser": {
+              "methods": [
+                "GetTokenAuthUser",
+                "GetTokenAuthUserAsync"
+              ]
+            },
+            "ListAuthTokens": {
+              "methods": [
+                "ListAuthTokens",
+                "ListAuthTokensAsync"
+              ]
+            },
             "ListBackupCollections": {
               "methods": [
                 "ListBackupCollections",
@@ -92,6 +134,12 @@
               "methods": [
                 "ListInstances",
                 "ListInstancesAsync"
+              ]
+            },
+            "ListTokenAuthUsers": {
+              "methods": [
+                "ListTokenAuthUsers",
+                "ListTokenAuthUsersAsync"
               ]
             },
             "RescheduleMaintenance": {
