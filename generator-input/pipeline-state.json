@@ -2737,7 +2737,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-05-04T18:57:32.320851478Z",
-            "lastGeneratedCommit": "c7d917ce502e669569fdf9dbf6701291ceb7929f",
+            "lastGeneratedCommit": "9d6942ad413c2dabec4d211150d406cc46113b69",
             "lastReleasedCommit": "c7d917ce502e669569fdf9dbf6701291ceb7929f",
             "apiPaths": [
                 "google/cloud/redis/cluster/v1"
