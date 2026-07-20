@@ -1893,12 +1893,12 @@
         },
         {
             "id": "Google.Cloud.Kms.V1",
-            "currentVersion": "3.25.0",
+            "currentVersion": "3.26.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-07-06T19:06:52.271325548Z",
+            "releaseTimestamp": "2026-07-20T19:14:40.110013699Z",
             "lastGeneratedCommit": "fe04226e3d76435acbfd3ffb51f6771740e1fb5b",
-            "lastReleasedCommit": "3cb8c7445f4e35a999af03a8c800c64b08d1401a",
+            "lastReleasedCommit": "fe04226e3d76435acbfd3ffb51f6771740e1fb5b",
             "apiPaths": [
                 "google/cloud/kms/v1"
             ],
