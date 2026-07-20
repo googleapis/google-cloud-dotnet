@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.6.0, released 2026-07-20
+
+### New features
+
+- Add user_labels field
+
+### Documentation improvements
+
+- Updated some comments
+
 ## Version 2.5.0, released 2025-11-06
 
 ### New features
