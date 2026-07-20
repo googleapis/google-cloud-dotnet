@@ -4517,12 +4517,12 @@
         },
         {
             "id": "Google.Shopping.Merchant.Inventories.V1",
-            "currentVersion": "1.3.0",
+            "currentVersion": "1.4.0",
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
-            "releaseTimestamp": "2026-04-13T15:50:01.305919086Z",
+            "releaseTimestamp": "2026-07-20T19:53:19.548783136Z",
             "lastGeneratedCommit": "8762e2c5ca67a7d1a4e1f5207c24d7b359ea00ff",
-            "lastReleasedCommit": "6db5d2e6bc3a762fccebbcbcfb8681a6ebaf008e",
+            "lastReleasedCommit": "8762e2c5ca67a7d1a4e1f5207c24d7b359ea00ff",
             "apiPaths": [
                 "google/shopping/merchant/inventories/v1"
             ],

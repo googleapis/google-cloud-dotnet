@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.4.0, released 2026-07-20
+
+### New features
+
+- Export custom_attributes field in LocalInventory and RegionalInventory
+- Add base64_encoded_name field to LocalInventory and RegionalInventory
+
 ## Version 1.3.0, released 2026-04-13
 
 ### New features
