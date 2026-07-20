@@ -9,8 +9,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="ConfigureAwaitChecker.Analyzer" PrivateAssets="All" />
-    <PackageReference Include="Google.Api.Gax.Grpc" />
-    <PackageReference Include="Grpc.Core" PrivateAssets="None" Condition="'$(TargetFramework)'=='net462'" />
+    <PackageReference Include="Google.Api.CommonProtos" />
   </ItemGroup>
   <Import Project="Google.Backstory.csproj.google" Condition="Exists('Google.Backstory.csproj.google')" />
 </Project>

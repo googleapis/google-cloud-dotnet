@@ -2,7 +2,6 @@
   "distribution_name": "Google.Backstory",
   "release_level": "preview",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Backstory/latest",
-  "library_type": "GAPIC_AUTO",
-  "language": "dotnet",
-  "api_shortname": "backstory"
+  "library_type": "OTHER",
+  "language": "dotnet"
 }
