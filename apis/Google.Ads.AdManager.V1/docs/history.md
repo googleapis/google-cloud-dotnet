@@ -1,5 +1,23 @@
 # Version history
 
+## Version 1.0.0-beta07, released 2026-07-20
+
+### New features
+
+- Added AdSpotService
+- Added CdnConfigService
+- Added LiveStreamService
+- Added TargetingPresetService
+- Added SuggestedAdUnitService
+- Added ThirdPartyCompanyService
+- Added `status` and `updateTime` fields to ContentBundle
+- Added write methods for CustomTargetingValue
+- Added `DECLARED_ADVERTISER_DOMAIN` report Dimension
+
+### Documentation improvements
+
+- Normalized documentation on standard methods
+
 ## Version 1.0.0-beta06, released 2026-05-11
 
 ### New features
