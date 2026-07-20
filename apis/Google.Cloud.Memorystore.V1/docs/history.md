@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta09, released 2026-07-20
+
+### New features
+
+- Add support for Basic Auth feature to Memorystore for Valkey
+
 ## Version 1.0.0-beta08, released 2026-07-13
 
 ### New features
