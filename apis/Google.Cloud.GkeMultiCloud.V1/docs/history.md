@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.11.0, released 2026-07-20
+
+### New features
+
+- Update gapic client library for multicloud 1.35
+
 ## Version 2.10.0, released 2025-12-09
 
 ### New features
