@@ -1,5 +1,11 @@
 # Version history
 
+## Version 5.13.0-beta08, released 2026-07-20
+
+### New features
+
+- Define metric instruments and label extraction for built-in telemetry
+
 ## Version 5.13.0-beta07, released 2026-06-22
 
 ### New features
