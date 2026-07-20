@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.8.0, released 2026-07-20
+
+### New features
+
+- [Memorystore for Redis Cluster] add Cluster.AsyncClusterEndpointsDeletionEnabled
+
 ## Version 1.7.0, released 2026-05-04
 
 ### New features
