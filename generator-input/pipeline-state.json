@@ -4996,7 +4996,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-06-08T14:55:31.914956651Z",
-            "lastGeneratedCommit": "6145fa8cc2b137bf4c0ed114e2e39c1157ea9722",
+            "lastGeneratedCommit": "8eb93359ca5706e63626d2989bdd2102b0ac6a2c",
             "lastReleasedCommit": "dae2a496666e372c1ebf56ceb54fe7f467a2c10e",
             "apiPaths": [
                 "google/developers/knowledge/v1"
