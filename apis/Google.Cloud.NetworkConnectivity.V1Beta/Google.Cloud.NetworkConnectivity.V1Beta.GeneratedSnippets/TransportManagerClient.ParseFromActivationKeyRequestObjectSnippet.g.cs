@@ -16,13 +16,13 @@
 
 namespace GoogleCSharpSnippets
 {
-    // [START networkconnectivity_v1beta_generated_TransportManager_GetStatus_async]
+    // [START networkconnectivity_v1beta_generated_TransportManager_ParseFromActivationKey_sync]
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.NetworkConnectivity.V1Beta;
-    using System.Threading.Tasks;
 
     public sealed partial class GeneratedTransportManagerClientSnippets
     {
-        /// <summary>Snippet for GetStatusAsync</summary>
+        /// <summary>Snippet for ParseFromActivationKey</summary>
         /// <remarks>
         /// This snippet has been automatically generated and should be regarded as a code template only.
         /// It will require modifications to work:
@@ -30,19 +30,19 @@ namespace GoogleCSharpSnippets
         /// - It may require specifying regional endpoints when creating the service client as shown in
         ///   https://cloud.google.com/dotnet/docs/reference/help/client-configuration#endpoint.
         /// </remarks>
-        public async Task GetStatusRequestObjectAsync()
+        public void ParseFromActivationKeyRequestObject()
         {
             // Create client
-            TransportManagerClient transportManagerClient = await TransportManagerClient.CreateAsync();
+            TransportManagerClient transportManagerClient = TransportManagerClient.Create();
             // Initialize request argument(s)
-            GetStatusRequest request = new GetStatusRequest
+            ParseFromActivationKeyRequest request = new ParseFromActivationKeyRequest
             {
-                TransportName = TransportName.FromProjectLocationTransport("[PROJECT]", "[LOCATION]", "[TRANSPORT]"),
-                SkipCache = false,
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ActivationKey = "",
             };
             // Make the request
-            GetStatusResponse response = await transportManagerClient.GetStatusAsync(request);
+            ParseFromActivationKeyResponse response = transportManagerClient.ParseFromActivationKey(request);
         }
     }
-    // [END networkconnectivity_v1beta_generated_TransportManager_GetStatus_async]
+    // [END networkconnectivity_v1beta_generated_TransportManager_ParseFromActivationKey_sync]
 }

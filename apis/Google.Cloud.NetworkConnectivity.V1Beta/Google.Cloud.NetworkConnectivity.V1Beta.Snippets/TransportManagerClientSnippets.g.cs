@@ -394,6 +394,99 @@ namespace GoogleCSharpSnippets
             // End snippet
         }
 
+        /// <summary>Snippet for ParseFromActivationKey</summary>
+        public void ParseFromActivationKeyRequestObject()
+        {
+            // Snippet: ParseFromActivationKey(ParseFromActivationKeyRequest, CallSettings)
+            // Create client
+            TransportManagerClient transportManagerClient = TransportManagerClient.Create();
+            // Initialize request argument(s)
+            ParseFromActivationKeyRequest request = new ParseFromActivationKeyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ActivationKey = "",
+            };
+            // Make the request
+            ParseFromActivationKeyResponse response = transportManagerClient.ParseFromActivationKey(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ParseFromActivationKeyAsync</summary>
+        public async Task ParseFromActivationKeyRequestObjectAsync()
+        {
+            // Snippet: ParseFromActivationKeyAsync(ParseFromActivationKeyRequest, CallSettings)
+            // Additional: ParseFromActivationKeyAsync(ParseFromActivationKeyRequest, CancellationToken)
+            // Create client
+            TransportManagerClient transportManagerClient = await TransportManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            ParseFromActivationKeyRequest request = new ParseFromActivationKeyRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ActivationKey = "",
+            };
+            // Make the request
+            ParseFromActivationKeyResponse response = await transportManagerClient.ParseFromActivationKeyAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ParseFromActivationKey</summary>
+        public void ParseFromActivationKey()
+        {
+            // Snippet: ParseFromActivationKey(string, string, CallSettings)
+            // Create client
+            TransportManagerClient transportManagerClient = TransportManagerClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string activationKey = "";
+            // Make the request
+            ParseFromActivationKeyResponse response = transportManagerClient.ParseFromActivationKey(parent, activationKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ParseFromActivationKeyAsync</summary>
+        public async Task ParseFromActivationKeyAsync()
+        {
+            // Snippet: ParseFromActivationKeyAsync(string, string, CallSettings)
+            // Additional: ParseFromActivationKeyAsync(string, string, CancellationToken)
+            // Create client
+            TransportManagerClient transportManagerClient = await TransportManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            string activationKey = "";
+            // Make the request
+            ParseFromActivationKeyResponse response = await transportManagerClient.ParseFromActivationKeyAsync(parent, activationKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ParseFromActivationKey</summary>
+        public void ParseFromActivationKeyResourceNames()
+        {
+            // Snippet: ParseFromActivationKey(LocationName, string, CallSettings)
+            // Create client
+            TransportManagerClient transportManagerClient = TransportManagerClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string activationKey = "";
+            // Make the request
+            ParseFromActivationKeyResponse response = transportManagerClient.ParseFromActivationKey(parent, activationKey);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ParseFromActivationKeyAsync</summary>
+        public async Task ParseFromActivationKeyResourceNamesAsync()
+        {
+            // Snippet: ParseFromActivationKeyAsync(LocationName, string, CallSettings)
+            // Additional: ParseFromActivationKeyAsync(LocationName, string, CancellationToken)
+            // Create client
+            TransportManagerClient transportManagerClient = await TransportManagerClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            string activationKey = "";
+            // Make the request
+            ParseFromActivationKeyResponse response = await transportManagerClient.ParseFromActivationKeyAsync(parent, activationKey);
+            // End snippet
+        }
+
         /// <summary>Snippet for ListTransports</summary>
         public void ListTransportsRequestObject()
         {
@@ -771,6 +864,7 @@ namespace GoogleCSharpSnippets
             GetStatusRequest request = new GetStatusRequest
             {
                 TransportName = TransportName.FromProjectLocationTransport("[PROJECT]", "[LOCATION]", "[TRANSPORT]"),
+                SkipCache = false,
             };
             // Make the request
             GetStatusResponse response = transportManagerClient.GetStatus(request);
@@ -788,6 +882,7 @@ namespace GoogleCSharpSnippets
             GetStatusRequest request = new GetStatusRequest
             {
                 TransportName = TransportName.FromProjectLocationTransport("[PROJECT]", "[LOCATION]", "[TRANSPORT]"),
+                SkipCache = false,
             };
             // Make the request
             GetStatusResponse response = await transportManagerClient.GetStatusAsync(request);

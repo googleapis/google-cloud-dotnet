@@ -13395,6 +13395,309 @@
       ]
     },
     {
+      "regionTag": "networkconnectivity_v1beta_generated_TransportManager_ParseFromActivationKey_sync",
+      "title": "ParseFromActivationKeyRequestObject",
+      "description": "Snippet for ParseFromActivationKey",
+      "file": "TransportManagerClient.ParseFromActivationKeyRequestObjectSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ParseFromActivationKey",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient.ParseFromActivationKey",
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse",
+        "client": {
+          "shortName": "TransportManagerClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient"
+        },
+        "method": {
+          "shortName": "ParseFromActivationKey",
+          "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager.ParseFromActivationKey",
+          "service": {
+            "shortName": "TransportManager",
+            "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 46,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 44,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1beta_generated_TransportManager_ParseFromActivationKey_async",
+      "title": "ParseFromActivationKeyRequestObjectAsync",
+      "description": "Snippet for ParseFromActivationKeyAsync",
+      "file": "TransportManagerClient.ParseFromActivationKeyRequestObjectAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ParseFromActivationKeyAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient.ParseFromActivationKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest",
+            "name": "request"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse>",
+        "client": {
+          "shortName": "TransportManagerClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient"
+        },
+        "method": {
+          "shortName": "ParseFromActivationKey",
+          "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager.ParseFromActivationKey",
+          "service": {
+            "shortName": "TransportManager",
+            "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager"
+          }
+        }
+      },
+      "canonical": true,
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 47,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 45,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1beta_generated_TransportManager_ParseFromActivationKey_sync_flattened",
+      "title": "ParseFromActivationKey",
+      "description": "Snippet for ParseFromActivationKey",
+      "file": "TransportManagerClient.ParseFromActivationKeySnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ParseFromActivationKey",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient.ParseFromActivationKey",
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "activationKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse",
+        "client": {
+          "shortName": "TransportManagerClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient"
+        },
+        "method": {
+          "shortName": "ParseFromActivationKey",
+          "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager.ParseFromActivationKey",
+          "service": {
+            "shortName": "TransportManager",
+            "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 42,
+          "type": "FULL"
+        },
+        {
+          "start": 34,
+          "end": 40,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1beta_generated_TransportManager_ParseFromActivationKey_async_flattened",
+      "title": "ParseFromActivationKeyAsync",
+      "description": "Snippet for ParseFromActivationKeyAsync",
+      "file": "TransportManagerClient.ParseFromActivationKeyAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ParseFromActivationKeyAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient.ParseFromActivationKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "System.String",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "activationKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse>",
+        "client": {
+          "shortName": "TransportManagerClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient"
+        },
+        "method": {
+          "shortName": "ParseFromActivationKey",
+          "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager.ParseFromActivationKey",
+          "service": {
+            "shortName": "TransportManager",
+            "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1beta_generated_TransportManager_ParseFromActivationKey_sync_flattened_resourceNames",
+      "title": "ParseFromActivationKeyResourceNames",
+      "description": "Snippet for ParseFromActivationKey",
+      "file": "TransportManagerClient.ParseFromActivationKeyResourceNamesSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ParseFromActivationKey",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient.ParseFromActivationKey",
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "activationKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse",
+        "client": {
+          "shortName": "TransportManagerClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient"
+        },
+        "method": {
+          "shortName": "ParseFromActivationKey",
+          "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager.ParseFromActivationKey",
+          "service": {
+            "shortName": "TransportManager",
+            "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 43,
+          "type": "FULL"
+        },
+        {
+          "start": 35,
+          "end": 41,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
+      "regionTag": "networkconnectivity_v1beta_generated_TransportManager_ParseFromActivationKey_async_flattened_resourceNames",
+      "title": "ParseFromActivationKeyResourceNamesAsync",
+      "description": "Snippet for ParseFromActivationKeyAsync",
+      "file": "TransportManagerClient.ParseFromActivationKeyResourceNamesAsyncSnippet.g.cs",
+      "language": "C_SHARP",
+      "clientMethod": {
+        "shortName": "ParseFromActivationKeyAsync",
+        "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient.ParseFromActivationKeyAsync",
+        "async": true,
+        "parameters": [
+          {
+            "type": "Google.Api.Gax.ResourceNames.LocationName",
+            "name": "parent"
+          },
+          {
+            "type": "System.String",
+            "name": "activationKey"
+          },
+          {
+            "type": "Google.Api.Gax.Grpc.CallSettings",
+            "name": "callSettings"
+          }
+        ],
+        "resultType": "System.Threading.Tasks.Task<Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse>",
+        "client": {
+          "shortName": "TransportManagerClient",
+          "fullName": "Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerClient"
+        },
+        "method": {
+          "shortName": "ParseFromActivationKey",
+          "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager.ParseFromActivationKey",
+          "service": {
+            "shortName": "TransportManager",
+            "fullName": "google.cloud.networkconnectivity.v1beta.TransportManager"
+          }
+        }
+      },
+      "origin": "API_DEFINITION",
+      "segments": [
+        {
+          "start": 20,
+          "end": 44,
+          "type": "FULL"
+        },
+        {
+          "start": 36,
+          "end": 42,
+          "type": "SHORT"
+        }
+      ]
+    },
+    {
       "regionTag": "networkconnectivity_v1beta_generated_TransportManager_ListTransports_sync",
       "title": "ListTransportsRequestObject",
       "description": "Snippet for ListTransports",
@@ -14038,12 +14341,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 44,
+          "end": 45,
           "type": "FULL"
         },
         {
           "start": 34,
-          "end": 42,
+          "end": 43,
           "type": "SHORT"
         }
       ]
@@ -14087,12 +14390,12 @@
       "segments": [
         {
           "start": 20,
-          "end": 45,
+          "end": 46,
           "type": "FULL"
         },
         {
           "start": 35,
-          "end": 43,
+          "end": 44,
           "type": "SHORT"
         }
       ]

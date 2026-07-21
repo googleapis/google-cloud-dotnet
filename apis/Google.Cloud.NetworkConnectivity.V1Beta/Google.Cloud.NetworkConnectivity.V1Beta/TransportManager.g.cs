@@ -33,7 +33,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
             "cmtjb25uZWN0aXZpdHkvdjFiZXRhL2NvbW1vbi5wcm90bxojZ29vZ2xlL2xv",
             "bmdydW5uaW5nL29wZXJhdGlvbnMucHJvdG8aG2dvb2dsZS9wcm90b2J1Zi9l",
             "bXB0eS5wcm90bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8a",
-            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i9AoKFlJlbW90ZVRy",
+            "H2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipQwKFlJlbW90ZVRy",
             "YW5zcG9ydFByb2ZpbGUSEQoEbmFtZRgBIAEoCUID4EEIEmAKBmxhYmVscxgE",
             "IAMoCzJLLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0",
             "YS5SZW1vdGVUcmFuc3BvcnRQcm9maWxlLkxhYmVsc0VudHJ5QgPgQQMSGAoL",
@@ -48,176 +48,198 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
             "b3J0UHJvZmlsZS5LZXlQcm92aXNpb25pbmdGbG93QgPgQQMSXwoLb3JkZXJf",
             "c3RhdGUYDCABKA4yRS5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0",
             "eS52MWJldGEuUmVtb3RlVHJhbnNwb3J0UHJvZmlsZS5TdGF0ZUID4EEDEhkK",
-            "DGRpc3BsYXlfbmFtZRgNIAEoCUID4EEDGi0KC0xhYmVsc0VudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEi0gEKCUJhbmR3aWR0aBIZChVC",
-            "QU5EV0lEVEhfVU5TUEVDSUZJRUQQABILCgdCUFNfNTBNEAESDAoIQlBTXzEw",
-            "ME0QAhIMCghCUFNfMjAwTRADEgwKCEJQU18zMDBNEAQSDAoIQlBTXzQwME0Q",
-            "BRIMCghCUFNfNTAwTRAGEgoKBkJQU18xRxAHEgoKBkJQU18yRxAIEgoKBkJQ",
-            "U181RxAJEgsKB0JQU18xMEcQChILCgdCUFNfMjBHEAsSCwoHQlBTXzUwRxAM",
-            "EgwKCEJQU18xMDBHEA0iXQoYU2VydmljZUxldmVsQXZhaWxhYmlsaXR5EioK",
-            "JlNFUlZJQ0VfTEVWRUxfQVZBSUxBQklMSVRZX1VOU1BFQ0lGSUVEEAASCAoE",
-            "SElHSBABEgsKB01BWElNVU0QAiJyChNLZXlQcm92aXNpb25pbmdGbG93EiUK",
-            "IUtFWV9QUk9WSVNJT05JTkdfRkxPV19VTlNQRUNJRklFRBAAEg4KCklOUFVU",
-            "X09OTFkQARIPCgtPVVRQVVRfT05MWRACEhMKD0lOUFVUX09SX09VVFBVVBAD",
-            "IjQKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQ0xPU0VEEAES",
-            "CAoET1BFThACOswB6kHIAQo5bmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVh",
-            "cGlzLmNvbS9SZW1vdGVUcmFuc3BvcnRQcm9maWxlElpwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVtb3RlVHJhbnNwb3J0UHJv",
-            "ZmlsZXMve3JlbW90ZV90cmFuc3BvcnRfcHJvZmlsZX0qF3JlbW90ZVRyYW5z",
-            "cG9ydFByb2ZpbGVzMhZyZW1vdGVUcmFuc3BvcnRQcm9maWxlItQBCiJMaXN0",
-            "UmVtb3RlVHJhbnNwb3J0UHJvZmlsZXNSZXF1ZXN0ElEKBnBhcmVudBgBIAEo",
-            "CUJB4EEC+kE7EjluZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29t",
-            "L1JlbW90ZVRyYW5zcG9ydFByb2ZpbGUSFgoJcGFnZV9zaXplGAIgASgFQgPg",
-            "QQESFwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID",
-            "4EEBEhUKCG9yZGVyX2J5GAUgASgJQgPgQQEivAEKI0xpc3RSZW1vdGVUcmFu",
-            "c3BvcnRQcm9maWxlc1Jlc3BvbnNlEmIKGXJlbW90ZV90cmFuc3BvcnRfcHJv",
-            "ZmlsZXMYASADKAsyPy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0",
-            "eS52MWJldGEuUmVtb3RlVHJhbnNwb3J0UHJvZmlsZRIXCg9uZXh0X3BhZ2Vf",
-            "dG9rZW4YAiABKAkSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBBiJzCiBHZXRS",
-            "ZW1vdGVUcmFuc3BvcnRQcm9maWxlUmVxdWVzdBJPCgRuYW1lGAEgASgJQkHg",
-            "QQL6QTsKOW5ldHdvcmtjb25uZWN0aXZpdHkuZ29vZ2xlYXBpcy5jb20vUmVt",
-            "b3RlVHJhbnNwb3J0UHJvZmlsZSK+CwoJVHJhbnNwb3J0EhEKBG5hbWUYASAB",
-            "KAlCA+BBCBI0CgtjcmVhdGVfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1",
-            "Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgDIAEoCzIaLmdvb2ds",
-            "ZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJTCgZsYWJlbHMYBCADKAsyPi5n",
-            "b29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWJldGEuVHJhbnNw",
-            "b3J0LkxhYmVsc0VudHJ5QgPgQQESGAoLZGVzY3JpcHRpb24YBiABKAlCA+BB",
-            "ARJZCg5yZW1vdGVfcHJvZmlsZRgHIAEoCUJB4EEB+kE7CjluZXR3b3JrY29u",
-            "bmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29tL1JlbW90ZVRyYW5zcG9ydFByb2Zp",
-            "bGUSJAoXcHJvdmlkZWRfYWN0aXZhdGlvbl9rZXkYCCABKAlCA+BBARIlChhn",
-            "ZW5lcmF0ZWRfYWN0aXZhdGlvbl9rZXkYCSABKAlCA+BBAxJUCgliYW5kd2lk",
-            "dGgYCiABKA4yPC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52",
-            "MWJldGEuVHJhbnNwb3J0LkJhbmR3aWR0aEID4EEBElUKCnN0YWNrX3R5cGUY",
-            "CyABKA4yPC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWJl",
-            "dGEuVHJhbnNwb3J0LlN0YWNrVHlwZUID4EEBEkwKBXN0YXRlGAwgASgOMjgu",
-            "Z29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFiZXRhLlRyYW5z",
-            "cG9ydC5TdGF0ZUID4EEDEhYKCW10dV9saW1pdBgNIAEoBUID4EEDEhoKDWFk",
-            "bWluX2VuYWJsZWQYDiABKAhCA+BBARI3CgduZXR3b3JrGA8gASgJQibgQQH6",
-            "QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxIeChFhZHZlcnRp",
-            "c2VkX3JvdXRlcxgQIAMoCUID4EEBEh4KEXJlbW90ZV9hY2NvdW50X2lkGBEg",
-            "ASgJQgPgQQESHAoPcGVlcmluZ19uZXR3b3JrGBIgASgJQgPgQQMaLQoLTGFi",
-            "ZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASLSAQoJ",
-            "QmFuZHdpZHRoEhkKFUJBTkRXSURUSF9VTlNQRUNJRklFRBAAEgsKB0JQU181",
-            "ME0QARIMCghCUFNfMTAwTRACEgwKCEJQU18yMDBNEAMSDAoIQlBTXzMwME0Q",
-            "BBIMCghCUFNfNDAwTRAFEgwKCEJQU181MDBNEAYSCgoGQlBTXzFHEAcSCgoG",
-            "QlBTXzJHEAgSCgoGQlBTXzVHEAkSCwoHQlBTXzEwRxAKEgsKB0JQU18yMEcQ",
-            "CxILCgdCUFNfNTBHEAwSDAoIQlBTXzEwMEcQDSJFCglTdGFja1R5cGUSGgoW",
-            "U1RBQ0tfVFlQRV9VTlNQRUNJRklFRBAAEg0KCUlQVjRfT05MWRABEg0KCUlQ",
-            "VjRfSVBWNhACIn4KBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASDAoI",
-            "Q1JFQVRJTkcQARISCg5QRU5ESU5HX0NPTkZJRxACEg8KC1BFTkRJTkdfS0VZ",
-            "EAMSCgoGQUNUSVZFEAQSDAoIREVMRVRJTkcQBRIRCg1ERVBST1ZJU0lPTkVE",
-            "EAY6iQHqQYUBCixuZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29t",
-            "L1RyYW5zcG9ydBI+cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L3RyYW5zcG9ydHMve3RyYW5zcG9ydH0qCnRyYW5zcG9ydHMyCXRy",
-            "YW5zcG9ydCK6AQoVTGlzdFRyYW5zcG9ydHNSZXF1ZXN0EkQKBnBhcmVudBgB",
-            "IAEoCUI04EEC+kEuEixuZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMu",
-            "Y29tL1RyYW5zcG9ydBIWCglwYWdlX3NpemUYAiABKAVCA+BBARIXCgpwYWdl",
-            "X3Rva2VuGAMgASgJQgPgQQESEwoGZmlsdGVyGAQgASgJQgPgQQESFQoIb3Jk",
-            "ZXJfYnkYBSABKAlCA+BBASKTAQoWTGlzdFRyYW5zcG9ydHNSZXNwb25zZRJG",
-            "Cgp0cmFuc3BvcnRzGAEgAygLMjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25u",
-            "ZWN0aXZpdHkudjFiZXRhLlRyYW5zcG9ydBIXCg9uZXh0X3BhZ2VfdG9rZW4Y",
-            "AiABKAkSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBBiJZChNHZXRUcmFuc3Bv",
-            "cnRSZXF1ZXN0EkIKBG5hbWUYASABKAlCNOBBAvpBLgosbmV0d29ya2Nvbm5l",
-            "Y3Rpdml0eS5nb29nbGVhcGlzLmNvbS9UcmFuc3BvcnQiVgoQR2V0U3RhdHVz",
-            "UmVxdWVzdBJCCgRuYW1lGAEgASgJQjTgQQL6QS4KLG5ldHdvcmtjb25uZWN0",
-            "aXZpdHkuZ29vZ2xlYXBpcy5jb20vVHJhbnNwb3J0IsEHChFHZXRTdGF0dXNS",
-            "ZXNwb25zZRJgCg5vdmVyYWxsX3N0YXR1cxgBIAEoDjJILmdvb2dsZS5jbG91",
-            "ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5HZXRTdGF0dXNSZXNwb25z",
-            "ZS5PdmVyYWxsU3RhdHVzEmgKEm9wZXJhdGlvbmFsX3N0YXR1cxgCIAEoDjJM",
-            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5HZXRT",
-            "dGF0dXNSZXNwb25zZS5PcGVyYXRpb25hbFN0YXR1cxJqChNjb25uZWN0aXZp",
-            "dHlfc3RhdHVzGAMgASgOMk0uZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0",
-            "aXZpdHkudjFiZXRhLkdldFN0YXR1c1Jlc3BvbnNlLkNvbm5lY3Rpdml0eVN0",
-            "YXR1cxJfCg5tYWNfc2VjX3N0YXR1cxgEIAEoDjJHLmdvb2dsZS5jbG91ZC5u",
-            "ZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5HZXRTdGF0dXNSZXNwb25zZS5N",
-            "YWNTZWNTdGF0dXMieQoNT3ZlcmFsbFN0YXR1cxIeChpPVkVSQUxMX1NUQVRV",
-            "U19VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEg8KC1BFTkRJTkdfS0VZEAIS",
-            "DwoLQ09ORklHVVJJTkcQAxIQCgxESVNDT05ORUNURUQQBBIICgRET1dOEAUi",
-            "cwoRT3BlcmF0aW9uYWxTdGF0dXMSIgoeT1BFUkFUSU9OQUxfU1RBVFVTX1VO",
-            "U1BFQ0lGSUVEEAASHQoZT1BFUkFUSU9OQUxfU1RBVFVTX0FDVElWRRABEhsK",
-            "F09QRVJBVElPTkFMX1NUQVRVU19ET1dOEAIiggEKEkNvbm5lY3Rpdml0eVN0",
-            "YXR1cxIjCh9DT05ORUNUSVZJVFlfU1RBVFVTX1VOU1BFQ0lGSUVEEAASIQod",
-            "Q09OTkVDVElWSVRZX1NUQVRVU19DT05ORUNURUQQARIkCiBDT05ORUNUSVZJ",
-            "VFlfU1RBVFVTX0RJU0NPTk5FQ1RFRBACIp0BCgxNYWNTZWNTdGF0dXMSHgoa",
-            "TUFDX1NFQ19TVEFUVVNfVU5TUEVDSUZJRUQQABIlCiFNQUNfU0VDX1NUQVRV",
-            "U19BQ1RJVkVfRkFJTF9DTE9TRUQQARIjCh9NQUNfU0VDX1NUQVRVU19BQ1RJ",
-            "VkVfRkFJTF9PUEVOEAISIQodTUFDX1NFQ19TVEFUVVNfTk9UX0NPTkZJR1VS",
-            "RUQQAyLmAQoWQ3JlYXRlVHJhbnNwb3J0UmVxdWVzdBJECgZwYXJlbnQYASAB",
-            "KAlCNOBBAvpBLhIsbmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNv",
-            "bS9UcmFuc3BvcnQSGQoMdHJhbnNwb3J0X2lkGAIgASgJQgPgQQISSgoJdHJh",
-            "bnNwb3J0GAMgASgLMjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZp",
-            "dHkudjFiZXRhLlRyYW5zcG9ydEID4EECEh8KCnJlcXVlc3RfaWQYBCABKAlC",
-            "C+BBAeKMz9cIAggBIrsBChZVcGRhdGVUcmFuc3BvcnRSZXF1ZXN0EjQKC3Vw",
-            "ZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID",
-            "4EEBEkoKCXRyYW5zcG9ydBgCIAEoCzIyLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "Y29ubmVjdGl2aXR5LnYxYmV0YS5UcmFuc3BvcnRCA+BBAhIfCgpyZXF1ZXN0",
-            "X2lkGAMgASgJQgvgQQHijM/XCAIIASJ9ChZEZWxldGVUcmFuc3BvcnRSZXF1",
-            "ZXN0EkIKBG5hbWUYASABKAlCNOBBAvpBLgosbmV0d29ya2Nvbm5lY3Rpdml0",
-            "eS5nb29nbGVhcGlzLmNvbS9UcmFuc3BvcnQSHwoKcmVxdWVzdF9pZBgCIAEo",
-            "CUIL4EEB4ozP1wgCCAEywg8KEFRyYW5zcG9ydE1hbmFnZXISigIKG0xpc3RS",
-            "ZW1vdGVUcmFuc3BvcnRQcm9maWxlcxJLLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
-            "Y29ubmVjdGl2aXR5LnYxYmV0YS5MaXN0UmVtb3RlVHJhbnNwb3J0UHJvZmls",
-            "ZXNSZXF1ZXN0GkwuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHku",
-            "djFiZXRhLkxpc3RSZW1vdGVUcmFuc3BvcnRQcm9maWxlc1Jlc3BvbnNlIlDa",
-            "QQZwYXJlbnSC0+STAkESPy92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xv",
-            "Y2F0aW9ucy8qfS9yZW1vdGVUcmFuc3BvcnRQcm9maWxlcxL3AQoZR2V0UmVt",
-            "b3RlVHJhbnNwb3J0UHJvZmlsZRJJLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29u",
-            "bmVjdGl2aXR5LnYxYmV0YS5HZXRSZW1vdGVUcmFuc3BvcnRQcm9maWxlUmVx",
-            "dWVzdBo/Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0",
-            "YS5SZW1vdGVUcmFuc3BvcnRQcm9maWxlIk7aQQRuYW1lgtPkkwJBEj8vdjFi",
-            "ZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVtb3RlVHJhbnNw",
-            "b3J0UHJvZmlsZXMvKn0S1gEKDkxpc3RUcmFuc3BvcnRzEj4uZ29vZ2xlLmNs",
-            "b3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFiZXRhLkxpc3RUcmFuc3BvcnRz",
-            "UmVxdWVzdBo/Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYx",
-            "YmV0YS5MaXN0VHJhbnNwb3J0c1Jlc3BvbnNlIkPaQQZwYXJlbnSC0+STAjQS",
-            "Mi92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS90cmFu",
-            "c3BvcnRzEsMBCgxHZXRUcmFuc3BvcnQSPC5nb29nbGUuY2xvdWQubmV0d29y",
-            "a2Nvbm5lY3Rpdml0eS52MWJldGEuR2V0VHJhbnNwb3J0UmVxdWVzdBoyLmdv",
-            "b2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5UcmFuc3Bv",
-            "cnQiQdpBBG5hbWWC0+STAjQSMi92MWJldGEve25hbWU9cHJvamVjdHMvKi9s",
-            "b2NhdGlvbnMvKi90cmFuc3BvcnRzLyp9Es8BCglHZXRTdGF0dXMSOS5nb29n",
-            "bGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWJldGEuR2V0U3RhdHVz",
-            "UmVxdWVzdBo6Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYx",
-            "YmV0YS5HZXRTdGF0dXNSZXNwb25zZSJL2kEEbmFtZYLT5JMCPhI8L3YxYmV0",
-            "YS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RyYW5zcG9ydHMvKn06",
-            "Z2V0U3RhdHVzEvoBCg9DcmVhdGVUcmFuc3BvcnQSPy5nb29nbGUuY2xvdWQu",
-            "bmV0d29ya2Nvbm5lY3Rpdml0eS52MWJldGEuQ3JlYXRlVHJhbnNwb3J0UmVx",
-            "dWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ihgHKQR4KCVRy",
-            "YW5zcG9ydBIRT3BlcmF0aW9uTWV0YWRhdGHaQR1wYXJlbnQsdHJhbnNwb3J0",
-            "LHRyYW5zcG9ydF9pZILT5JMCPyIyL3YxYmV0YS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9L3RyYW5zcG9ydHM6CXRyYW5zcG9ydBL8AQoPVXBk",
-            "YXRlVHJhbnNwb3J0Ej8uZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZp",
-            "dHkudjFiZXRhLlVwZGF0ZVRyYW5zcG9ydFJlcXVlc3QaHS5nb29nbGUubG9u",
-            "Z3J1bm5pbmcuT3BlcmF0aW9uIogBykEeCglUcmFuc3BvcnQSEU9wZXJhdGlv",
-            "bk1ldGFkYXRh2kEVdHJhbnNwb3J0LHVwZGF0ZV9tYXNrgtPkkwJJMjwvdjFi",
-            "ZXRhL3t0cmFuc3BvcnQubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3Ry",
-            "YW5zcG9ydHMvKn06CXRyYW5zcG9ydBLhAQoPRGVsZXRlVHJhbnNwb3J0Ej8u",
-            "Z29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFiZXRhLkRlbGV0",
-            "ZVRyYW5zcG9ydFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
-            "aW9uIm7KQSoKFWdvb2dsZS5wcm90b2J1Zi5FbXB0eRIRT3BlcmF0aW9uTWV0",
-            "YWRhdGHaQQRuYW1lgtPkkwI0KjIvdjFiZXRhL3tuYW1lPXByb2plY3RzLyov",
-            "bG9jYXRpb25zLyovdHJhbnNwb3J0cy8qfRpWykEibmV0d29ya2Nvbm5lY3Rp",
-            "dml0eS5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
-            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CpgIKK2NvbS5nb29nbGUuY2xvdWQu",
-            "bmV0d29ya2Nvbm5lY3Rpdml0eS52MWJldGFCFVRyYW5zcG9ydE1hbmFnZXJQ",
-            "cm90b1ABWl1jbG91ZC5nb29nbGUuY29tL2dvL25ldHdvcmtjb25uZWN0aXZp",
-            "dHkvYXBpdjFiZXRhL25ldHdvcmtjb25uZWN0aXZpdHlwYjtuZXR3b3JrY29u",
-            "bmVjdGl2aXR5cGKqAidHb29nbGUuQ2xvdWQuTmV0d29ya0Nvbm5lY3Rpdml0",
-            "eS5WMUJldGHKAidHb29nbGVcQ2xvdWRcTmV0d29ya0Nvbm5lY3Rpdml0eVxW",
-            "MWJldGHqAipHb29nbGU6OkNsb3VkOjpOZXR3b3JrQ29ubmVjdGl2aXR5OjpW",
-            "MWJldGFiBnByb3RvMw=="));
+            "DGRpc3BsYXlfbmFtZRgNIAEoCUID4EEDEmgKDXByb3ZpZGVyX3R5cGUYDiAB",
+            "KA4yTC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWJldGEu",
+            "UmVtb3RlVHJhbnNwb3J0UHJvZmlsZS5Qcm92aWRlclR5cGVCA+BBAxotCgtM",
+            "YWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6AjgBItIB",
+            "CglCYW5kd2lkdGgSGQoVQkFORFdJRFRIX1VOU1BFQ0lGSUVEEAASCwoHQlBT",
+            "XzUwTRABEgwKCEJQU18xMDBNEAISDAoIQlBTXzIwME0QAxIMCghCUFNfMzAw",
+            "TRAEEgwKCEJQU180MDBNEAUSDAoIQlBTXzUwME0QBhIKCgZCUFNfMUcQBxIK",
+            "CgZCUFNfMkcQCBIKCgZCUFNfNUcQCRILCgdCUFNfMTBHEAoSCwoHQlBTXzIw",
+            "RxALEgsKB0JQU181MEcQDBIMCghCUFNfMTAwRxANIl0KGFNlcnZpY2VMZXZl",
+            "bEF2YWlsYWJpbGl0eRIqCiZTRVJWSUNFX0xFVkVMX0FWQUlMQUJJTElUWV9V",
+            "TlNQRUNJRklFRBAAEggKBEhJR0gQARILCgdNQVhJTVVNEAIicgoTS2V5UHJv",
+            "dmlzaW9uaW5nRmxvdxIlCiFLRVlfUFJPVklTSU9OSU5HX0ZMT1dfVU5TUEVD",
+            "SUZJRUQQABIOCgpJTlBVVF9PTkxZEAESDwoLT1VUUFVUX09OTFkQAhITCg9J",
+            "TlBVVF9PUl9PVVRQVVQQAyI0CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
+            "RBAAEgoKBkNMT1NFRBABEggKBE9QRU4QAiJFCgxQcm92aWRlclR5cGUSHQoZ",
+            "UFJPVklERVJfVFlQRV9VTlNQRUNJRklFRBAAEgkKBUNMT1VEEAESCwoHTkVU",
+            "V09SSxACOswB6kHIAQo5bmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlz",
+            "LmNvbS9SZW1vdGVUcmFuc3BvcnRQcm9maWxlElpwcm9qZWN0cy97cHJvamVj",
+            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vcmVtb3RlVHJhbnNwb3J0UHJvZmls",
+            "ZXMve3JlbW90ZV90cmFuc3BvcnRfcHJvZmlsZX0qF3JlbW90ZVRyYW5zcG9y",
+            "dFByb2ZpbGVzMhZyZW1vdGVUcmFuc3BvcnRQcm9maWxlItQBCiJMaXN0UmVt",
+            "b3RlVHJhbnNwb3J0UHJvZmlsZXNSZXF1ZXN0ElEKBnBhcmVudBgBIAEoCUJB",
+            "4EEC+kE7EjluZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29tL1Jl",
+            "bW90ZVRyYW5zcG9ydFByb2ZpbGUSFgoJcGFnZV9zaXplGAIgASgFQgPgQQES",
+            "FwoKcGFnZV90b2tlbhgDIAEoCUID4EEBEhMKBmZpbHRlchgEIAEoCUID4EEB",
+            "EhUKCG9yZGVyX2J5GAUgASgJQgPgQQEivAEKI0xpc3RSZW1vdGVUcmFuc3Bv",
+            "cnRQcm9maWxlc1Jlc3BvbnNlEmIKGXJlbW90ZV90cmFuc3BvcnRfcHJvZmls",
+            "ZXMYASADKAsyPy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52",
+            "MWJldGEuUmVtb3RlVHJhbnNwb3J0UHJvZmlsZRIXCg9uZXh0X3BhZ2VfdG9r",
+            "ZW4YAiABKAkSGAoLdW5yZWFjaGFibGUYAyADKAlCA+BBBiJzCiBHZXRSZW1v",
+            "dGVUcmFuc3BvcnRQcm9maWxlUmVxdWVzdBJPCgRuYW1lGAEgASgJQkHgQQL6",
+            "QTsKOW5ldHdvcmtjb25uZWN0aXZpdHkuZ29vZ2xlYXBpcy5jb20vUmVtb3Rl",
+            "VHJhbnNwb3J0UHJvZmlsZSKPAQodUGFyc2VGcm9tQWN0aXZhdGlvbktleVJl",
+            "cXVlc3QSUQoGcGFyZW50GAEgASgJQkHgQQL6QTsSOW5ldHdvcmtjb25uZWN0",
+            "aXZpdHkuZ29vZ2xlYXBpcy5jb20vUmVtb3RlVHJhbnNwb3J0UHJvZmlsZRIb",
+            "Cg5hY3RpdmF0aW9uX2tleRgCIAEoCUID4EECIoMBCh5QYXJzZUZyb21BY3Rp",
+            "dmF0aW9uS2V5UmVzcG9uc2USYQoYcmVtb3RlX3RyYW5zcG9ydF9wcm9maWxl",
+            "GAEgASgLMj8uZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFi",
+            "ZXRhLlJlbW90ZVRyYW5zcG9ydFByb2ZpbGUizAwKCVRyYW5zcG9ydBIRCgRu",
+            "YW1lGAEgASgJQgPgQQgSNAoLY3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsy",
+            "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSUwoGbGFiZWxzGAQg",
+            "AygLMj4uZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFiZXRh",
+            "LlRyYW5zcG9ydC5MYWJlbHNFbnRyeUID4EEBEhgKC2Rlc2NyaXB0aW9uGAYg",
+            "ASgJQgPgQQESXAoOcmVtb3RlX3Byb2ZpbGUYByABKAlCROBBAeBBBfpBOwo5",
+            "bmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNvbS9SZW1vdGVUcmFu",
+            "c3BvcnRQcm9maWxlEicKF3Byb3ZpZGVkX2FjdGl2YXRpb25fa2V5GAggASgJ",
+            "QgbgQQHgQQUSJQoYZ2VuZXJhdGVkX2FjdGl2YXRpb25fa2V5GAkgASgJQgPg",
+            "QQMSVAoJYmFuZHdpZHRoGAogASgOMjwuZ29vZ2xlLmNsb3VkLm5ldHdvcmtj",
+            "b25uZWN0aXZpdHkudjFiZXRhLlRyYW5zcG9ydC5CYW5kd2lkdGhCA+BBARJV",
+            "CgpzdGFja190eXBlGAsgASgOMjwuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25u",
+            "ZWN0aXZpdHkudjFiZXRhLlRyYW5zcG9ydC5TdGFja1R5cGVCA+BBARJMCgVz",
+            "dGF0ZRgMIAEoDjI4Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5",
+            "LnYxYmV0YS5UcmFuc3BvcnQuU3RhdGVCA+BBAxIWCgltdHVfbGltaXQYDSAB",
+            "KAVCA+BBAxIaCg1hZG1pbl9lbmFibGVkGA4gASgIQgPgQQESOgoHbmV0d29y",
+            "axgPIAEoCUIp4EEB4EEF+kEgCh5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05l",
+            "dHdvcmsSHgoRYWR2ZXJ0aXNlZF9yb3V0ZXMYECADKAlCA+BBARIhChFyZW1v",
+            "dGVfYWNjb3VudF9pZBgRIAEoCUIG4EEB4EEFEhwKD3BlZXJpbmdfbmV0d29y",
+            "axgSIAEoCUID4EEDEj4KA2h1YhgTIAEoCUIx4EEB4EEF+kEoCiZuZXR3b3Jr",
+            "Y29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29tL0h1YhIjChNwc2Nfcm91dGlu",
+            "Z19lbmFibGVkGBQgASgIQgbgQQHgQQUSGwoLYXV0b19hY2NlcHQYFSABKAhC",
+            "BuBBAeBBBRotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUY",
+            "AiABKAk6AjgBItIBCglCYW5kd2lkdGgSGQoVQkFORFdJRFRIX1VOU1BFQ0lG",
+            "SUVEEAASCwoHQlBTXzUwTRABEgwKCEJQU18xMDBNEAISDAoIQlBTXzIwME0Q",
+            "AxIMCghCUFNfMzAwTRAEEgwKCEJQU180MDBNEAUSDAoIQlBTXzUwME0QBhIK",
+            "CgZCUFNfMUcQBxIKCgZCUFNfMkcQCBIKCgZCUFNfNUcQCRILCgdCUFNfMTBH",
+            "EAoSCwoHQlBTXzIwRxALEgsKB0JQU181MEcQDBIMCghCUFNfMTAwRxANIkUK",
+            "CVN0YWNrVHlwZRIaChZTVEFDS19UWVBFX1VOU1BFQ0lGSUVEEAASDQoJSVBW",
+            "NF9PTkxZEAESDQoJSVBWNF9JUFY2EAIifgoFU3RhdGUSFQoRU1RBVEVfVU5T",
+            "UEVDSUZJRUQQABIMCghDUkVBVElORxABEhIKDlBFTkRJTkdfQ09ORklHEAIS",
+            "DwoLUEVORElOR19LRVkQAxIKCgZBQ1RJVkUQBBIMCghERUxFVElORxAFEhEK",
+            "DURFUFJPVklTSU9ORUQQBjqJAepBhQEKLG5ldHdvcmtjb25uZWN0aXZpdHku",
+            "Z29vZ2xlYXBpcy5jb20vVHJhbnNwb3J0Ej5wcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vdHJhbnNwb3J0cy97dHJhbnNwb3J0fSoK",
+            "dHJhbnNwb3J0czIJdHJhbnNwb3J0IroBChVMaXN0VHJhbnNwb3J0c1JlcXVl",
+            "c3QSRAoGcGFyZW50GAEgASgJQjTgQQL6QS4SLG5ldHdvcmtjb25uZWN0aXZp",
+            "dHkuZ29vZ2xlYXBpcy5jb20vVHJhbnNwb3J0EhYKCXBhZ2Vfc2l6ZRgCIAEo",
+            "BUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0ZXIYBCAB",
+            "KAlCA+BBARIVCghvcmRlcl9ieRgFIAEoCUID4EEBIpMBChZMaXN0VHJhbnNw",
+            "b3J0c1Jlc3BvbnNlEkYKCnRyYW5zcG9ydHMYASADKAsyMi5nb29nbGUuY2xv",
+            "dWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWJldGEuVHJhbnNwb3J0EhcKD25l",
+            "eHRfcGFnZV90b2tlbhgCIAEoCRIYCgt1bnJlYWNoYWJsZRgDIAMoCUID4EEG",
+            "IlkKE0dldFRyYW5zcG9ydFJlcXVlc3QSQgoEbmFtZRgBIAEoCUI04EEC+kEu",
+            "CixuZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29tL1RyYW5zcG9y",
+            "dCJvChBHZXRTdGF0dXNSZXF1ZXN0EkIKBG5hbWUYASABKAlCNOBBAvpBLgos",
+            "bmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNvbS9UcmFuc3BvcnQS",
+            "FwoKc2tpcF9jYWNoZRgCIAEoCEID4EEBIsEHChFHZXRTdGF0dXNSZXNwb25z",
+            "ZRJgCg5vdmVyYWxsX3N0YXR1cxgBIAEoDjJILmdvb2dsZS5jbG91ZC5uZXR3",
+            "b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5HZXRTdGF0dXNSZXNwb25zZS5PdmVy",
+            "YWxsU3RhdHVzEmgKEm9wZXJhdGlvbmFsX3N0YXR1cxgCIAEoDjJMLmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5HZXRTdGF0dXNS",
+            "ZXNwb25zZS5PcGVyYXRpb25hbFN0YXR1cxJqChNjb25uZWN0aXZpdHlfc3Rh",
+            "dHVzGAMgASgOMk0uZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHku",
+            "djFiZXRhLkdldFN0YXR1c1Jlc3BvbnNlLkNvbm5lY3Rpdml0eVN0YXR1cxJf",
+            "Cg5tYWNfc2VjX3N0YXR1cxgEIAEoDjJHLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
+            "Y29ubmVjdGl2aXR5LnYxYmV0YS5HZXRTdGF0dXNSZXNwb25zZS5NYWNTZWNT",
+            "dGF0dXMieQoNT3ZlcmFsbFN0YXR1cxIeChpPVkVSQUxMX1NUQVRVU19VTlNQ",
+            "RUNJRklFRBAAEgoKBkFDVElWRRABEg8KC1BFTkRJTkdfS0VZEAISDwoLQ09O",
+            "RklHVVJJTkcQAxIQCgxESVNDT05ORUNURUQQBBIICgRET1dOEAUicwoRT3Bl",
+            "cmF0aW9uYWxTdGF0dXMSIgoeT1BFUkFUSU9OQUxfU1RBVFVTX1VOU1BFQ0lG",
+            "SUVEEAASHQoZT1BFUkFUSU9OQUxfU1RBVFVTX0FDVElWRRABEhsKF09QRVJB",
+            "VElPTkFMX1NUQVRVU19ET1dOEAIiggEKEkNvbm5lY3Rpdml0eVN0YXR1cxIj",
+            "Ch9DT05ORUNUSVZJVFlfU1RBVFVTX1VOU1BFQ0lGSUVEEAASIQodQ09OTkVD",
+            "VElWSVRZX1NUQVRVU19DT05ORUNURUQQARIkCiBDT05ORUNUSVZJVFlfU1RB",
+            "VFVTX0RJU0NPTk5FQ1RFRBACIp0BCgxNYWNTZWNTdGF0dXMSHgoaTUFDX1NF",
+            "Q19TVEFUVVNfVU5TUEVDSUZJRUQQABIlCiFNQUNfU0VDX1NUQVRVU19BQ1RJ",
+            "VkVfRkFJTF9DTE9TRUQQARIjCh9NQUNfU0VDX1NUQVRVU19BQ1RJVkVfRkFJ",
+            "TF9PUEVOEAISIQodTUFDX1NFQ19TVEFUVVNfTk9UX0NPTkZJR1VSRUQQAyLm",
+            "AQoWQ3JlYXRlVHJhbnNwb3J0UmVxdWVzdBJECgZwYXJlbnQYASABKAlCNOBB",
+            "AvpBLhIsbmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNvbS9UcmFu",
+            "c3BvcnQSGQoMdHJhbnNwb3J0X2lkGAIgASgJQgPgQQISSgoJdHJhbnNwb3J0",
+            "GAMgASgLMjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFi",
+            "ZXRhLlRyYW5zcG9ydEID4EECEh8KCnJlcXVlc3RfaWQYBCABKAlCC+BBAeKM",
+            "z9cIAggBIrsBChZVcGRhdGVUcmFuc3BvcnRSZXF1ZXN0EjQKC3VwZGF0ZV9t",
+            "YXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBEkoK",
+            "CXRyYW5zcG9ydBgCIAEoCzIyLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVj",
+            "dGl2aXR5LnYxYmV0YS5UcmFuc3BvcnRCA+BBAhIfCgpyZXF1ZXN0X2lkGAMg",
+            "ASgJQgvgQQHijM/XCAIIASJ9ChZEZWxldGVUcmFuc3BvcnRSZXF1ZXN0EkIK",
+            "BG5hbWUYASABKAlCNOBBAvpBLgosbmV0d29ya2Nvbm5lY3Rpdml0eS5nb29n",
+            "bGVhcGlzLmNvbS9UcmFuc3BvcnQSHwoKcmVxdWVzdF9pZBgCIAEoCUIL4EEB",
+            "4ozP1wgCCAEy4REKEFRyYW5zcG9ydE1hbmFnZXISigIKG0xpc3RSZW1vdGVU",
+            "cmFuc3BvcnRQcm9maWxlcxJLLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVj",
+            "dGl2aXR5LnYxYmV0YS5MaXN0UmVtb3RlVHJhbnNwb3J0UHJvZmlsZXNSZXF1",
+            "ZXN0GkwuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFiZXRh",
+            "Lkxpc3RSZW1vdGVUcmFuc3BvcnRQcm9maWxlc1Jlc3BvbnNlIlDaQQZwYXJl",
+            "bnSC0+STAkESPy92MWJldGEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS9yZW1vdGVUcmFuc3BvcnRQcm9maWxlcxL3AQoZR2V0UmVtb3RlVHJh",
+            "bnNwb3J0UHJvZmlsZRJJLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2",
+            "aXR5LnYxYmV0YS5HZXRSZW1vdGVUcmFuc3BvcnRQcm9maWxlUmVxdWVzdBo/",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5SZW1v",
+            "dGVUcmFuc3BvcnRQcm9maWxlIk7aQQRuYW1lgtPkkwJBEj8vdjFiZXRhL3tu",
+            "YW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovcmVtb3RlVHJhbnNwb3J0UHJv",
+            "ZmlsZXMvKn0SnAIKFlBhcnNlRnJvbUFjdGl2YXRpb25LZXkSRi5nb29nbGUu",
+            "Y2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWJldGEuUGFyc2VGcm9tQWN0",
+            "aXZhdGlvbktleVJlcXVlc3QaRy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5l",
+            "Y3Rpdml0eS52MWJldGEuUGFyc2VGcm9tQWN0aXZhdGlvbktleVJlc3BvbnNl",
+            "InHaQRVwYXJlbnQsYWN0aXZhdGlvbl9rZXmC0+STAlMSUS92MWJldGEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9yZW1vdGVUcmFuc3BvcnRQ",
+            "cm9maWxlczpmcm9tQWN0aXZhdGlvbktleRLWAQoOTGlzdFRyYW5zcG9ydHMS",
+            "Pi5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MWJldGEuTGlz",
+            "dFRyYW5zcG9ydHNSZXF1ZXN0Gj8uZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25u",
+            "ZWN0aXZpdHkudjFiZXRhLkxpc3RUcmFuc3BvcnRzUmVzcG9uc2UiQ9pBBnBh",
+            "cmVudILT5JMCNBIyL3YxYmV0YS97cGFyZW50PXByb2plY3RzLyovbG9jYXRp",
+            "b25zLyp9L3RyYW5zcG9ydHMSwwEKDEdldFRyYW5zcG9ydBI8Lmdvb2dsZS5j",
+            "bG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5HZXRUcmFuc3BvcnRS",
+            "ZXF1ZXN0GjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZpdHkudjFi",
+            "ZXRhLlRyYW5zcG9ydCJB2kEEbmFtZYLT5JMCNBIyL3YxYmV0YS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL3RyYW5zcG9ydHMvKn0SzwEKCUdldFN0",
+            "YXR1cxI5Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0",
+            "YS5HZXRTdGF0dXNSZXF1ZXN0GjouZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25u",
+            "ZWN0aXZpdHkudjFiZXRhLkdldFN0YXR1c1Jlc3BvbnNlIkvaQQRuYW1lgtPk",
+            "kwI+EjwvdjFiZXRhL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovdHJh",
+            "bnNwb3J0cy8qfTpnZXRTdGF0dXMS+gEKD0NyZWF0ZVRyYW5zcG9ydBI/Lmdv",
+            "b2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YS5DcmVhdGVU",
+            "cmFuc3BvcnRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biKGAcpBHgoJVHJhbnNwb3J0EhFPcGVyYXRpb25NZXRhZGF0YdpBHXBhcmVu",
+            "dCx0cmFuc3BvcnQsdHJhbnNwb3J0X2lkgtPkkwI/IjIvdjFiZXRhL3twYXJl",
+            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vdHJhbnNwb3J0czoJdHJhbnNw",
+            "b3J0EvwBCg9VcGRhdGVUcmFuc3BvcnQSPy5nb29nbGUuY2xvdWQubmV0d29y",
+            "a2Nvbm5lY3Rpdml0eS52MWJldGEuVXBkYXRlVHJhbnNwb3J0UmVxdWVzdBod",
+            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24iiAHKQR4KCVRyYW5zcG9y",
+            "dBIRT3BlcmF0aW9uTWV0YWRhdGHaQRV0cmFuc3BvcnQsdXBkYXRlX21hc2uC",
+            "0+STAkkyPC92MWJldGEve3RyYW5zcG9ydC5uYW1lPXByb2plY3RzLyovbG9j",
+            "YXRpb25zLyovdHJhbnNwb3J0cy8qfToJdHJhbnNwb3J0EuEBCg9EZWxldGVU",
+            "cmFuc3BvcnQSPy5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52",
+            "MWJldGEuRGVsZXRlVHJhbnNwb3J0UmVxdWVzdBodLmdvb2dsZS5sb25ncnVu",
+            "bmluZy5PcGVyYXRpb24ibspBKgoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhFP",
+            "cGVyYXRpb25NZXRhZGF0YdpBBG5hbWWC0+STAjQqMi92MWJldGEve25hbWU9",
+            "cHJvamVjdHMvKi9sb2NhdGlvbnMvKi90cmFuc3BvcnRzLyp9GlbKQSJuZXR3",
+            "b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cu",
+            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybUKmAgorY29tLmdv",
+            "b2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxYmV0YUIVVHJhbnNw",
+            "b3J0TWFuYWdlclByb3RvUAFaXWNsb3VkLmdvb2dsZS5jb20vZ28vbmV0d29y",
+            "a2Nvbm5lY3Rpdml0eS9hcGl2MWJldGEvbmV0d29ya2Nvbm5lY3Rpdml0eXBi",
+            "O25ldHdvcmtjb25uZWN0aXZpdHlwYqoCJ0dvb2dsZS5DbG91ZC5OZXR3b3Jr",
+            "Q29ubmVjdGl2aXR5LlYxQmV0YcoCJ0dvb2dsZVxDbG91ZFxOZXR3b3JrQ29u",
+            "bmVjdGl2aXR5XFYxYmV0YeoCKkdvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtDb25u",
+            "ZWN0aXZpdHk6OlYxYmV0YWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.FieldInfoReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkConnectivity.V1Beta.CommonReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile), global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Parser, new[]{ "Name", "Labels", "Description", "Provider", "ProviderSite", "SupportedBandwidths", "Sla", "Flow", "OrderState", "DisplayName" }, null, new[]{ typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.Bandwidth), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ServiceLevelAvailability), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.KeyProvisioningFlow), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile), global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Parser, new[]{ "Name", "Labels", "Description", "Provider", "ProviderSite", "SupportedBandwidths", "Sla", "Flow", "OrderState", "DisplayName", "ProviderType" }, null, new[]{ typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.Bandwidth), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ServiceLevelAvailability), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.KeyProvisioningFlow), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.State), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.ListRemoteTransportProfilesRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.ListRemoteTransportProfilesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.ListRemoteTransportProfilesResponse), global::Google.Cloud.NetworkConnectivity.V1Beta.ListRemoteTransportProfilesResponse.Parser, new[]{ "RemoteTransportProfiles", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetRemoteTransportProfileRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.GetRemoteTransportProfileRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.Transport), global::Google.Cloud.NetworkConnectivity.V1Beta.Transport.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "RemoteProfile", "ProvidedActivationKey", "GeneratedActivationKey", "Bandwidth", "StackType", "State", "MtuLimit", "AdminEnabled", "Network", "AdvertisedRoutes", "RemoteAccountId", "PeeringNetwork" }, null, new[]{ typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.Transport.Types.Bandwidth), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.Transport.Types.StackType), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.Transport.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest.Parser, new[]{ "Parent", "ActivationKey" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse), global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse.Parser, new[]{ "RemoteTransportProfile" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.Transport), global::Google.Cloud.NetworkConnectivity.V1Beta.Transport.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "RemoteProfile", "ProvidedActivationKey", "GeneratedActivationKey", "Bandwidth", "StackType", "State", "MtuLimit", "AdminEnabled", "Network", "AdvertisedRoutes", "RemoteAccountId", "PeeringNetwork", "Hub", "PscRoutingEnabled", "AutoAccept" }, null, new[]{ typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.Transport.Types.Bandwidth), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.Transport.Types.StackType), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.Transport.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsResponse), global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsResponse.Parser, new[]{ "Transports", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetTransportRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.GetTransportRequest.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusRequest.Parser, new[]{ "Name", "SkipCache" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusResponse), global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusResponse.Parser, new[]{ "OverallStatus", "OperationalStatus", "ConnectivityStatus", "MacSecStatus" }, null, new[]{ typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusResponse.Types.OverallStatus), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusResponse.Types.OperationalStatus), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusResponse.Types.ConnectivityStatus), typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusResponse.Types.MacSecStatus) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.CreateTransportRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.CreateTransportRequest.Parser, new[]{ "Parent", "TransportId", "Transport", "RequestId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1Beta.UpdateTransportRequest), global::Google.Cloud.NetworkConnectivity.V1Beta.UpdateTransportRequest.Parser, new[]{ "UpdateMask", "Transport", "RequestId" }, null, null, null, null),
@@ -276,6 +298,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       flow_ = other.flow_;
       orderState_ = other.orderState_;
       displayName_ = other.displayName_;
+      providerType_ = other.providerType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -440,6 +463,21 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "provider_type" field.</summary>
+    public const int ProviderTypeFieldNumber = 14;
+    private global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType providerType_ = global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType.Unspecified;
+    /// <summary>
+    /// Output only. Provider type for this profile.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType ProviderType {
+      get { return providerType_; }
+      set {
+        providerType_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -465,6 +503,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       if (Flow != other.Flow) return false;
       if (OrderState != other.OrderState) return false;
       if (DisplayName != other.DisplayName) return false;
+      if (ProviderType != other.ProviderType) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -482,6 +521,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       if (Flow != global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.KeyProvisioningFlow.Unspecified) hash ^= Flow.GetHashCode();
       if (OrderState != global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.State.Unspecified) hash ^= OrderState.GetHashCode();
       if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (ProviderType != global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType.Unspecified) hash ^= ProviderType.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -534,6 +574,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         output.WriteRawTag(106);
         output.WriteString(DisplayName);
       }
+      if (ProviderType != global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) ProviderType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -578,6 +622,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         output.WriteRawTag(106);
         output.WriteString(DisplayName);
       }
+      if (ProviderType != global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType.Unspecified) {
+        output.WriteRawTag(112);
+        output.WriteEnum((int) ProviderType);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -613,6 +661,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       }
       if (DisplayName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (ProviderType != global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) ProviderType);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -651,6 +702,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       }
       if (other.DisplayName.Length != 0) {
         DisplayName = other.DisplayName;
+      }
+      if (other.ProviderType != global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType.Unspecified) {
+        ProviderType = other.ProviderType;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -712,6 +766,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
             DisplayName = input.ReadString();
             break;
           }
+          case 112: {
+            ProviderType = (global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -770,6 +828,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
           }
           case 106: {
             DisplayName = input.ReadString();
+            break;
+          }
+          case 112: {
+            ProviderType = (global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Types.ProviderType) input.ReadEnum();
             break;
           }
         }
@@ -906,6 +968,24 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         /// Enough capacity to fulfill an order.
         /// </summary>
         [pbr::OriginalName("OPEN")] Open = 2,
+      }
+
+      /// <summary>
+      /// Provider type for this profile.
+      /// </summary>
+      public enum ProviderType {
+        /// <summary>
+        /// Unspecified provider type.
+        /// </summary>
+        [pbr::OriginalName("PROVIDER_TYPE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Represents a Cloud service provider.
+        /// </summary>
+        [pbr::OriginalName("CLOUD")] Cloud = 1,
+        /// <summary>
+        /// Represents a Network service provider.
+        /// </summary>
+        [pbr::OriginalName("NETWORK")] Network = 2,
       }
 
     }
@@ -1745,6 +1825,464 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
   }
 
   /// <summary>
+  /// Message for getting a RemoteTransportProfile from an activation key.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ParseFromActivationKeyRequest : pb::IMessage<ParseFromActivationKeyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ParseFromActivationKeyRequest> _parser = new pb::MessageParser<ParseFromActivationKeyRequest>(() => new ParseFromActivationKeyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ParseFromActivationKeyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParseFromActivationKeyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParseFromActivationKeyRequest(ParseFromActivationKeyRequest other) : this() {
+      parent_ = other.parent_;
+      activationKey_ = other.activationKey_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParseFromActivationKeyRequest Clone() {
+      return new ParseFromActivationKeyRequest(this);
+    }
+
+    /// <summary>Field number for the "parent" field.</summary>
+    public const int ParentFieldNumber = 1;
+    private string parent_ = "";
+    /// <summary>
+    /// Required. Parent value for ParseFromActivationKeyRequest.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Parent {
+      get { return parent_; }
+      set {
+        parent_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "activation_key" field.</summary>
+    public const int ActivationKeyFieldNumber = 2;
+    private string activationKey_ = "";
+    /// <summary>
+    /// Required. The activation key to get the RemoteTransportProfile for.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ActivationKey {
+      get { return activationKey_; }
+      set {
+        activationKey_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ParseFromActivationKeyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ParseFromActivationKeyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Parent != other.Parent) return false;
+      if (ActivationKey != other.ActivationKey) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Parent.Length != 0) hash ^= Parent.GetHashCode();
+      if (ActivationKey.Length != 0) hash ^= ActivationKey.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (ActivationKey.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ActivationKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Parent.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Parent);
+      }
+      if (ActivationKey.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ActivationKey);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Parent.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Parent);
+      }
+      if (ActivationKey.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ActivationKey);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ParseFromActivationKeyRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Parent.Length != 0) {
+        Parent = other.Parent;
+      }
+      if (other.ActivationKey.Length != 0) {
+        ActivationKey = other.ActivationKey;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            ActivationKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Parent = input.ReadString();
+            break;
+          }
+          case 18: {
+            ActivationKey = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Message for response to getting a RemoteTransportProfile from an activation
+  /// key.
+  /// </summary>
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class ParseFromActivationKeyResponse : pb::IMessage<ParseFromActivationKeyResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ParseFromActivationKeyResponse> _parser = new pb::MessageParser<ParseFromActivationKeyResponse>(() => new ParseFromActivationKeyResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ParseFromActivationKeyResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParseFromActivationKeyResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParseFromActivationKeyResponse(ParseFromActivationKeyResponse other) : this() {
+      remoteTransportProfile_ = other.remoteTransportProfile_ != null ? other.remoteTransportProfile_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ParseFromActivationKeyResponse Clone() {
+      return new ParseFromActivationKeyResponse(this);
+    }
+
+    /// <summary>Field number for the "remote_transport_profile" field.</summary>
+    public const int RemoteTransportProfileFieldNumber = 1;
+    private global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile remoteTransportProfile_;
+    /// <summary>
+    /// The RemoteTransportProfile that was parsed from the activation key.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile RemoteTransportProfile {
+      get { return remoteTransportProfile_; }
+      set {
+        remoteTransportProfile_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ParseFromActivationKeyResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ParseFromActivationKeyResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!object.Equals(RemoteTransportProfile, other.RemoteTransportProfile)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (remoteTransportProfile_ != null) hash ^= RemoteTransportProfile.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (remoteTransportProfile_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RemoteTransportProfile);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (remoteTransportProfile_ != null) {
+        output.WriteRawTag(10);
+        output.WriteMessage(RemoteTransportProfile);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (remoteTransportProfile_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(RemoteTransportProfile);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ParseFromActivationKeyResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.remoteTransportProfile_ != null) {
+        if (remoteTransportProfile_ == null) {
+          RemoteTransportProfile = new global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile();
+        }
+        RemoteTransportProfile.MergeFrom(other.RemoteTransportProfile);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            if (remoteTransportProfile_ == null) {
+              RemoteTransportProfile = new global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile();
+            }
+            input.ReadMessage(RemoteTransportProfile);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            if (remoteTransportProfile_ == null) {
+              RemoteTransportProfile = new global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile();
+            }
+            input.ReadMessage(RemoteTransportProfile);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Message describing Transport object.
   /// </summary>
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
@@ -1762,7 +2300,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1799,6 +2337,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       advertisedRoutes_ = other.advertisedRoutes_.Clone();
       remoteAccountId_ = other.remoteAccountId_;
       peeringNetwork_ = other.peeringNetwork_;
+      hub_ = other.hub_;
+      pscRoutingEnabled_ = other.pscRoutingEnabled_;
+      autoAccept_ = other.autoAccept_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1886,8 +2427,8 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     public const int RemoteProfileFieldNumber = 7;
     private string remoteProfile_ = "";
     /// <summary>
-    /// Optional. Name of the remoteTransportProfile that this Transport is
-    /// connecting to.
+    /// Optional. Immutable. Name of the remoteTransportProfile that this Transport
+    /// is connecting to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1902,9 +2443,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     public const int ProvidedActivationKeyFieldNumber = 8;
     private string providedActivationKey_ = "";
     /// <summary>
-    /// Optional. Key used for establishing a connection with the remote transport.
-    /// This key can only be provided if the profile supports an INPUT key flow and
-    /// the resource is in the PENDING_KEY state.
+    /// Optional. Immutable. Key used for establishing a connection with the remote
+    /// transport. This key can only be provided if the profile supports an INPUT
+    /// key flow and the resource is in the PENDING_KEY state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2020,9 +2561,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     public const int NetworkFieldNumber = 15;
     private string network_ = "";
     /// <summary>
-    /// Optional. Resource URI of the Network that will be peered with this
-    /// Transport. This field must be provided during resource creation and cannot
-    /// be changed.
+    /// Optional. Immutable. Resource URI of the Network that will be peered with
+    /// this Transport. This field must be provided during resource creation and
+    /// cannot be changed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2052,8 +2593,8 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     public const int RemoteAccountIdFieldNumber = 17;
     private string remoteAccountId_ = "";
     /// <summary>
-    /// Optional. The user supplied account id for the CSP associated with the
-    /// remote profile.
+    /// Optional. Immutable. The user supplied account id for the CSP associated
+    /// with the remote profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2078,6 +2619,61 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       get { return peeringNetwork_; }
       set {
         peeringNetwork_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "hub" field.</summary>
+    public const int HubFieldNumber = 19;
+    private string hub_ = "";
+    /// <summary>
+    /// Optional. Immutable. The NCC Hub that the Transport should attach to. The
+    /// hub must be in the same project as the Transport. Format:
+    /// `{hub}` or `projects/{project}/locations/global/hubs/{hub}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Hub {
+      get { return hub_; }
+      set {
+        hub_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "psc_routing_enabled" field.</summary>
+    public const int PscRoutingEnabledFieldNumber = 20;
+    private bool pscRoutingEnabled_;
+    /// <summary>
+    /// Optional. Immutable. Controls whether a Routing VPC Spoke should be created
+    /// and attached to the NCC Hub. This will provide Private Service Connect
+    /// (PSC) connectivity through NCC. This can only be set when the Transport is
+    /// first created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool PscRoutingEnabled {
+      get { return pscRoutingEnabled_; }
+      set {
+        pscRoutingEnabled_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "auto_accept" field.</summary>
+    public const int AutoAcceptFieldNumber = 21;
+    private bool autoAccept_;
+    /// <summary>
+    /// Optional. Immutable. Controls whether resources proposed by the Transport
+    /// are automatically accepted on behalf of the user. List of actions that can
+    /// be automatically accepted are:
+    /// 1. VPC Peering creation
+    /// 2. Routing VPC Spoke creation
+    /// 3. Hybrid Spoke creation
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool AutoAccept {
+      get { return autoAccept_; }
+      set {
+        autoAccept_ = value;
       }
     }
 
@@ -2113,6 +2709,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       if(!advertisedRoutes_.Equals(other.advertisedRoutes_)) return false;
       if (RemoteAccountId != other.RemoteAccountId) return false;
       if (PeeringNetwork != other.PeeringNetwork) return false;
+      if (Hub != other.Hub) return false;
+      if (PscRoutingEnabled != other.PscRoutingEnabled) return false;
+      if (AutoAccept != other.AutoAccept) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2137,6 +2736,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       hash ^= advertisedRoutes_.GetHashCode();
       if (RemoteAccountId.Length != 0) hash ^= RemoteAccountId.GetHashCode();
       if (PeeringNetwork.Length != 0) hash ^= PeeringNetwork.GetHashCode();
+      if (Hub.Length != 0) hash ^= Hub.GetHashCode();
+      if (PscRoutingEnabled != false) hash ^= PscRoutingEnabled.GetHashCode();
+      if (AutoAccept != false) hash ^= AutoAccept.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2217,6 +2819,18 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         output.WriteRawTag(146, 1);
         output.WriteString(PeeringNetwork);
       }
+      if (Hub.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Hub);
+      }
+      if (PscRoutingEnabled != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(PscRoutingEnabled);
+      }
+      if (AutoAccept != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(AutoAccept);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2289,6 +2903,18 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         output.WriteRawTag(146, 1);
         output.WriteString(PeeringNetwork);
       }
+      if (Hub.Length != 0) {
+        output.WriteRawTag(154, 1);
+        output.WriteString(Hub);
+      }
+      if (PscRoutingEnabled != false) {
+        output.WriteRawTag(160, 1);
+        output.WriteBool(PscRoutingEnabled);
+      }
+      if (AutoAccept != false) {
+        output.WriteRawTag(168, 1);
+        output.WriteBool(AutoAccept);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2345,6 +2971,15 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       }
       if (PeeringNetwork.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(PeeringNetwork);
+      }
+      if (Hub.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(Hub);
+      }
+      if (PscRoutingEnabled != false) {
+        size += 2 + 1;
+      }
+      if (AutoAccept != false) {
+        size += 2 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2410,6 +3045,15 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       }
       if (other.PeeringNetwork.Length != 0) {
         PeeringNetwork = other.PeeringNetwork;
+      }
+      if (other.Hub.Length != 0) {
+        Hub = other.Hub;
+      }
+      if (other.PscRoutingEnabled != false) {
+        PscRoutingEnabled = other.PscRoutingEnabled;
+      }
+      if (other.AutoAccept != false) {
+        AutoAccept = other.AutoAccept;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2504,6 +3148,18 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
             PeeringNetwork = input.ReadString();
             break;
           }
+          case 154: {
+            Hub = input.ReadString();
+            break;
+          }
+          case 160: {
+            PscRoutingEnabled = input.ReadBool();
+            break;
+          }
+          case 168: {
+            AutoAccept = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2595,6 +3251,18 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
           }
           case 146: {
             PeeringNetwork = input.ReadString();
+            break;
+          }
+          case 154: {
+            Hub = input.ReadString();
+            break;
+          }
+          case 160: {
+            PscRoutingEnabled = input.ReadBool();
+            break;
+          }
+          case 168: {
+            AutoAccept = input.ReadBool();
             break;
           }
         }
@@ -2755,7 +3423,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3120,7 +3788,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3382,7 +4050,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3586,7 +4254,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3607,6 +4275,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetStatusRequest(GetStatusRequest other) : this() {
       name_ = other.name_;
+      skipCache_ = other.skipCache_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -3631,6 +4300,22 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "skip_cache" field.</summary>
+    public const int SkipCacheFieldNumber = 2;
+    private bool skipCache_;
+    /// <summary>
+    /// Optional. If set to true, the response will bypass any caches and return
+    /// the freshest possible data.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool SkipCache {
+      get { return skipCache_; }
+      set {
+        skipCache_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -3647,6 +4332,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         return true;
       }
       if (Name != other.Name) return false;
+      if (SkipCache != other.SkipCache) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -3655,6 +4341,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (SkipCache != false) hash ^= SkipCache.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -3677,6 +4364,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (SkipCache != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(SkipCache);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -3691,6 +4382,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         output.WriteRawTag(10);
         output.WriteString(Name);
       }
+      if (SkipCache != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(SkipCache);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -3703,6 +4398,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       int size = 0;
       if (Name.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (SkipCache != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -3718,6 +4416,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       }
       if (other.Name.Length != 0) {
         Name = other.Name;
+      }
+      if (other.SkipCache != false) {
+        SkipCache = other.SkipCache;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -3742,6 +4443,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
             Name = input.ReadString();
             break;
           }
+          case 16: {
+            SkipCache = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -3763,6 +4468,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
             break;
           case 10: {
             Name = input.ReadString();
+            break;
+          }
+          case 16: {
+            SkipCache = input.ReadBool();
             break;
           }
         }
@@ -3790,7 +4499,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4220,7 +4929,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4565,7 +5274,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4884,7 +5593,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.NetworkConnectivity.V1Beta.TransportManagerReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

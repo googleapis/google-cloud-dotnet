@@ -3274,7 +3274,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2025-11-06T16:50:24.589816909Z",
-            "lastGeneratedCommit": "d90d23fa13599f525245fe446086f83cf8863ca4",
+            "lastGeneratedCommit": "5f60610d3247b12ebcfe1f3d288ba2ed1b41e407",
             "lastReleasedCommit": "0a0dffc19bed400afdeec0f67b1726b6b23173fb",
             "apiPaths": [
                 "google/cloud/tasks/v2beta3"
@@ -4936,7 +4936,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-03-05T08:48:44.844147286Z",
-            "lastGeneratedCommit": "4a5838c27c0ab0afffb3c23bb6e2ed6e34315bd5",
+            "lastGeneratedCommit": "6a884cdff865c7b92ec43918680bf711685f1447",
             "lastReleasedCommit": "5328d7103e480708b3fe2458f90441c3e720a15c",
             "apiPaths": [
                 "google/cloud/networkconnectivity/v1beta"

@@ -52,6 +52,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListRemoteTransportProfilesSettings = existing.ListRemoteTransportProfilesSettings;
             GetRemoteTransportProfileSettings = existing.GetRemoteTransportProfileSettings;
+            ParseFromActivationKeySettings = existing.ParseFromActivationKeySettings;
             ListTransportsSettings = existing.ListTransportsSettings;
             GetTransportSettings = existing.GetTransportSettings;
             GetStatusSettings = existing.GetStatusSettings;
@@ -105,6 +106,25 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetRemoteTransportProfileSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>TransportManagerClient.ParseFromActivationKey</c> and
+        /// <c>TransportManagerClient.ParseFromActivationKeyAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ParseFromActivationKeySettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -661,6 +681,133 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<RemoteTransportProfile> GetRemoteTransportProfileAsync(RemoteTransportProfileName name, st::CancellationToken cancellationToken) =>
             GetRemoteTransportProfileAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ParseFromActivationKeyResponse ParseFromActivationKey(ParseFromActivationKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(ParseFromActivationKeyRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(ParseFromActivationKeyRequest request, st::CancellationToken cancellationToken) =>
+            ParseFromActivationKeyAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ParseFromActivationKeyRequest.
+        /// </param>
+        /// <param name="activationKey">
+        /// Required. The activation key to get the RemoteTransportProfile for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ParseFromActivationKeyResponse ParseFromActivationKey(string parent, string activationKey, gaxgrpc::CallSettings callSettings = null) =>
+            ParseFromActivationKey(new ParseFromActivationKeyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ActivationKey = gax::GaxPreconditions.CheckNotNullOrEmpty(activationKey, nameof(activationKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ParseFromActivationKeyRequest.
+        /// </param>
+        /// <param name="activationKey">
+        /// Required. The activation key to get the RemoteTransportProfile for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(string parent, string activationKey, gaxgrpc::CallSettings callSettings = null) =>
+            ParseFromActivationKeyAsync(new ParseFromActivationKeyRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ActivationKey = gax::GaxPreconditions.CheckNotNullOrEmpty(activationKey, nameof(activationKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ParseFromActivationKeyRequest.
+        /// </param>
+        /// <param name="activationKey">
+        /// Required. The activation key to get the RemoteTransportProfile for.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(string parent, string activationKey, st::CancellationToken cancellationToken) =>
+            ParseFromActivationKeyAsync(parent, activationKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ParseFromActivationKeyRequest.
+        /// </param>
+        /// <param name="activationKey">
+        /// Required. The activation key to get the RemoteTransportProfile for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ParseFromActivationKeyResponse ParseFromActivationKey(gagr::LocationName parent, string activationKey, gaxgrpc::CallSettings callSettings = null) =>
+            ParseFromActivationKey(new ParseFromActivationKeyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ActivationKey = gax::GaxPreconditions.CheckNotNullOrEmpty(activationKey, nameof(activationKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ParseFromActivationKeyRequest.
+        /// </param>
+        /// <param name="activationKey">
+        /// Required. The activation key to get the RemoteTransportProfile for.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(gagr::LocationName parent, string activationKey, gaxgrpc::CallSettings callSettings = null) =>
+            ParseFromActivationKeyAsync(new ParseFromActivationKeyRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ActivationKey = gax::GaxPreconditions.CheckNotNullOrEmpty(activationKey, nameof(activationKey)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. Parent value for ParseFromActivationKeyRequest.
+        /// </param>
+        /// <param name="activationKey">
+        /// Required. The activation key to get the RemoteTransportProfile for.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(gagr::LocationName parent, string activationKey, st::CancellationToken cancellationToken) =>
+            ParseFromActivationKeyAsync(parent, activationKey, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Lists Transports in a given project and location.
@@ -1457,6 +1604,8 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
 
         private readonly gaxgrpc::ApiCall<GetRemoteTransportProfileRequest, RemoteTransportProfile> _callGetRemoteTransportProfile;
 
+        private readonly gaxgrpc::ApiCall<ParseFromActivationKeyRequest, ParseFromActivationKeyResponse> _callParseFromActivationKey;
+
         private readonly gaxgrpc::ApiCall<ListTransportsRequest, ListTransportsResponse> _callListTransports;
 
         private readonly gaxgrpc::ApiCall<GetTransportRequest, Transport> _callGetTransport;
@@ -1495,6 +1644,9 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
             _callGetRemoteTransportProfile = clientHelper.BuildApiCall<GetRemoteTransportProfileRequest, RemoteTransportProfile>("GetRemoteTransportProfile", grpcClient.GetRemoteTransportProfileAsync, grpcClient.GetRemoteTransportProfile, effectiveSettings.GetRemoteTransportProfileSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetRemoteTransportProfile);
             Modify_GetRemoteTransportProfileApiCall(ref _callGetRemoteTransportProfile);
+            _callParseFromActivationKey = clientHelper.BuildApiCall<ParseFromActivationKeyRequest, ParseFromActivationKeyResponse>("ParseFromActivationKey", grpcClient.ParseFromActivationKeyAsync, grpcClient.ParseFromActivationKey, effectiveSettings.ParseFromActivationKeySettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callParseFromActivationKey);
+            Modify_ParseFromActivationKeyApiCall(ref _callParseFromActivationKey);
             _callListTransports = clientHelper.BuildApiCall<ListTransportsRequest, ListTransportsResponse>("ListTransports", grpcClient.ListTransportsAsync, grpcClient.ListTransports, effectiveSettings.ListTransportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListTransports);
             Modify_ListTransportsApiCall(ref _callListTransports);
@@ -1522,6 +1674,8 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
 
         partial void Modify_GetRemoteTransportProfileApiCall(ref gaxgrpc::ApiCall<GetRemoteTransportProfileRequest, RemoteTransportProfile> call);
 
+        partial void Modify_ParseFromActivationKeyApiCall(ref gaxgrpc::ApiCall<ParseFromActivationKeyRequest, ParseFromActivationKeyResponse> call);
+
         partial void Modify_ListTransportsApiCall(ref gaxgrpc::ApiCall<ListTransportsRequest, ListTransportsResponse> call);
 
         partial void Modify_GetTransportApiCall(ref gaxgrpc::ApiCall<GetTransportRequest, Transport> call);
@@ -1548,6 +1702,8 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
         partial void Modify_ListRemoteTransportProfilesRequest(ref ListRemoteTransportProfilesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetRemoteTransportProfileRequest(ref GetRemoteTransportProfileRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ParseFromActivationKeyRequest(ref ParseFromActivationKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListTransportsRequest(ref ListTransportsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1607,6 +1763,30 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
         {
             Modify_GetRemoteTransportProfileRequest(ref request, ref callSettings);
             return _callGetRemoteTransportProfile.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ParseFromActivationKeyResponse ParseFromActivationKey(ParseFromActivationKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ParseFromActivationKeyRequest(ref request, ref callSettings);
+            return _callParseFromActivationKey.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets details of a single RemoteTransportProfile given an activation key.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(ParseFromActivationKeyRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ParseFromActivationKeyRequest(ref request, ref callSettings);
+            return _callParseFromActivationKey.Async(request, callSettings);
         }
 
         /// <summary>

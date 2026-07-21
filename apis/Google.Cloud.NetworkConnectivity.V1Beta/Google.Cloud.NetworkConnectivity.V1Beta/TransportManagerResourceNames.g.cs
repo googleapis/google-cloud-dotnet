@@ -586,6 +586,18 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
         }
     }
 
+    public partial class ParseFromActivationKeyRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class Transport
     {
         /// <summary>
@@ -614,6 +626,13 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta
         {
             get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
             set => Network = value?.ToString() ?? "";
+        }
+
+        /// <summary><see cref="HubName"/>-typed view over the <see cref="Hub"/> resource name property.</summary>
+        public HubName HubAsHubName
+        {
+            get => string.IsNullOrEmpty(Hub) ? null : HubName.Parse(Hub, allowUnparsed: true);
+            set => Hub = value?.ToString() ?? "";
         }
     }
 

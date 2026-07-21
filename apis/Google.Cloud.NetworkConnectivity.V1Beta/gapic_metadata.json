@@ -343,6 +343,12 @@
                 "ListTransportsAsync"
               ]
             },
+            "ParseFromActivationKey": {
+              "methods": [
+                "ParseFromActivationKey",
+                "ParseFromActivationKeyAsync"
+              ]
+            },
             "UpdateTransport": {
               "methods": [
                 "UpdateTransport",

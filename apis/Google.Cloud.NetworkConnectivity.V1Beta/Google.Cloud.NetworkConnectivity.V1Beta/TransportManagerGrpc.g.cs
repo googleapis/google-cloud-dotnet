@@ -72,6 +72,10 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile> __Marshaller_google_cloud_networkconnectivity_v1beta_RemoteTransportProfile = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest> __Marshaller_google_cloud_networkconnectivity_v1beta_ParseFromActivationKeyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse> __Marshaller_google_cloud_networkconnectivity_v1beta_ParseFromActivationKeyResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsRequest> __Marshaller_google_cloud_networkconnectivity_v1beta_ListTransportsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsResponse> __Marshaller_google_cloud_networkconnectivity_v1beta_ListTransportsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsResponse.Parser));
@@ -107,6 +111,14 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
         "GetRemoteTransportProfile",
         __Marshaller_google_cloud_networkconnectivity_v1beta_GetRemoteTransportProfileRequest,
         __Marshaller_google_cloud_networkconnectivity_v1beta_RemoteTransportProfile);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse> __Method_ParseFromActivationKey = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ParseFromActivationKey",
+        __Marshaller_google_cloud_networkconnectivity_v1beta_ParseFromActivationKeyRequest,
+        __Marshaller_google_cloud_networkconnectivity_v1beta_ParseFromActivationKeyResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsResponse> __Method_ListTransports = new grpc::Method<global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsResponse>(
@@ -186,6 +198,18 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile> GetRemoteTransportProfile(global::Google.Cloud.NetworkConnectivity.V1Beta.GetRemoteTransportProfileRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets details of a single RemoteTransportProfile given an activation key.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse> ParseFromActivationKey(global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -386,6 +410,54 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile> GetRemoteTransportProfileAsync(global::Google.Cloud.NetworkConnectivity.V1Beta.GetRemoteTransportProfileRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetRemoteTransportProfile, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single RemoteTransportProfile given an activation key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse ParseFromActivationKey(global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ParseFromActivationKey(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single RemoteTransportProfile given an activation key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse ParseFromActivationKey(global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ParseFromActivationKey, null, options, request);
+      }
+      /// <summary>
+      /// Gets details of a single RemoteTransportProfile given an activation key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ParseFromActivationKeyAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets details of a single RemoteTransportProfile given an activation key.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse> ParseFromActivationKeyAsync(global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ParseFromActivationKey, null, options, request);
       }
       /// <summary>
       /// Lists Transports in a given project and location.
@@ -691,6 +763,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListRemoteTransportProfiles, serviceImpl.ListRemoteTransportProfiles)
           .AddMethod(__Method_GetRemoteTransportProfile, serviceImpl.GetRemoteTransportProfile)
+          .AddMethod(__Method_ParseFromActivationKey, serviceImpl.ParseFromActivationKey)
           .AddMethod(__Method_ListTransports, serviceImpl.ListTransports)
           .AddMethod(__Method_GetTransport, serviceImpl.GetTransport)
           .AddMethod(__Method_GetStatus, serviceImpl.GetStatus)
@@ -708,6 +781,7 @@ namespace Google.Cloud.NetworkConnectivity.V1Beta {
     {
       serviceBinder.AddMethod(__Method_ListRemoteTransportProfiles, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1Beta.ListRemoteTransportProfilesRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.ListRemoteTransportProfilesResponse>(serviceImpl.ListRemoteTransportProfiles));
       serviceBinder.AddMethod(__Method_GetRemoteTransportProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1Beta.GetRemoteTransportProfileRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.RemoteTransportProfile>(serviceImpl.GetRemoteTransportProfile));
+      serviceBinder.AddMethod(__Method_ParseFromActivationKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.ParseFromActivationKeyResponse>(serviceImpl.ParseFromActivationKey));
       serviceBinder.AddMethod(__Method_ListTransports, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.ListTransportsResponse>(serviceImpl.ListTransports));
       serviceBinder.AddMethod(__Method_GetTransport, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1Beta.GetTransportRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.Transport>(serviceImpl.GetTransport));
       serviceBinder.AddMethod(__Method_GetStatus, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusRequest, global::Google.Cloud.NetworkConnectivity.V1Beta.GetStatusResponse>(serviceImpl.GetStatus));
