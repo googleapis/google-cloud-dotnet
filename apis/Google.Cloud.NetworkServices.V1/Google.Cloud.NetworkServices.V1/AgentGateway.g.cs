@@ -28,7 +28,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             "YXkucHJvdG8SH2dvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEaH2dv",
             "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
             "b3VyY2UucHJvdG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3Rv",
-            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIr8PCgxBZ2VudEdh",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIuEPCgxBZ2VudEdh",
             "dGV3YXkSWgoOZ29vZ2xlX21hbmFnZWQYCCABKAsyOy5nb29nbGUuY2xvdWQu",
             "bmV0d29ya3NlcnZpY2VzLnYxLkFnZW50R2F0ZXdheS5Hb29nbGVNYW5hZ2Vk",
             "QgPgQQFIABJWCgxzZWxmX21hbmFnZWQYCSABKAsyOS5nb29nbGUuY2xvdWQu",
@@ -50,60 +50,61 @@ namespace Google.Cloud.NetworkServices.V1 {
             "cnZpY2VzLnYxLkFnZW50R2F0ZXdheS5Hb29nbGVNYW5hZ2VkLkdvdmVybmVk",
             "QWNjZXNzUGF0aEID4EEBImYKEkdvdmVybmVkQWNjZXNzUGF0aBIkCiBHT1ZF",
             "Uk5FRF9BQ0NFU1NfUEFUSF9VTlNQRUNJRklFRBAAEhUKEUFHRU5UX1RPX0FO",
-            "WVdIRVJFEAESEwoPQ0xJRU5UX1RPX0FHRU5UEAIaLgoLU2VsZk1hbmFnZWQS",
-            "HwoMcmVzb3VyY2VfdXJpGAEgASgJQgngQQH6QQMKASoapAQKDU5ldHdvcmtD",
-            "b25maWcSVwoGZWdyZXNzGAEgASgLMkIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtz",
-            "ZXJ2aWNlcy52MS5BZ2VudEdhdGV3YXkuTmV0d29ya0NvbmZpZy5FZ3Jlc3NC",
-            "A+BBARJtChJkbnNfcGVlcmluZ19jb25maWcYAiABKAsyTC5nb29nbGUuY2xv",
-            "dWQubmV0d29ya3NlcnZpY2VzLnYxLkFnZW50R2F0ZXdheS5OZXR3b3JrQ29u",
-            "ZmlnLkRuc1BlZXJpbmdDb25maWdCA+BBARrCAQoGRWdyZXNzEh8KEm5ldHdv",
-            "cmtfYXR0YWNobWVudBgBIAEoCUID4EEBEmkKDHRydXN0X2NvbmZpZxgCIAEo",
-            "CzJOLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuQWdlbnRHYXRl",
-            "d2F5Lk5ldHdvcmtDb25maWcuRWdyZXNzLlRydXN0Q29uZmlnQgPgQQEaLAoL",
-            "VHJ1c3RDb25maWcSHQoQcGVtX2NlcnRpZmljYXRlcxgBIAMoCUID4EECGoUB",
-            "ChBEbnNQZWVyaW5nQ29uZmlnEhQKB2RvbWFpbnMYASADKAlCA+BBAhIbCg50",
-            "YXJnZXRfcHJvamVjdBgCIAEoCUID4EECEj4KDnRhcmdldF9uZXR3b3JrGAMg",
-            "ASgJQibgQQL6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxqF",
-            "AQoWQWdlbnRHYXRld2F5T3V0cHV0Q2FyZBIaCg1tdGxzX2VuZHBvaW50GAEg",
-            "ASgJQgPgQQMSHgoRcm9vdF9jZXJ0aWZpY2F0ZXMYBSADKAlCA+BBAxIvCiJz",
-            "ZXJ2aWNlX2V4dGVuc2lvbnNfc2VydmljZV9hY2NvdW50GAQgASgJQgPgQQMa",
-            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
-            "ASItCghQcm90b2NvbBIYChRQUk9UT0NPTF9VTlNQRUNJRklFRBAAEgcKA01D",
-            "UBABOpUB6kGRAQorbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29tL0Fn",
-            "ZW50R2F0ZXdheRJFcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9j",
-            "YXRpb259L2FnZW50R2F0ZXdheXMve2FnZW50X2dhdGV3YXl9Kg1hZ2VudEdh",
-            "dGV3YXlzMgxhZ2VudEdhdGV3YXlCEQoPZGVwbG95bWVudF9tb2RlIrUBChhM",
-            "aXN0QWdlbnRHYXRld2F5c1JlcXVlc3QSQwoGcGFyZW50GAEgASgJQjPgQQL6",
-            "QS0SK25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9BZ2VudEdhdGV3",
-            "YXkSFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tlbhgDIAEo",
-            "CUID4EEBEiMKFnJldHVybl9wYXJ0aWFsX3N1Y2Nlc3MYBCABKAhCA+BBASKQ",
-            "AQoZTGlzdEFnZW50R2F0ZXdheXNSZXNwb25zZRJFCg5hZ2VudF9nYXRld2F5",
-            "cxgBIAMoCzItLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEuQWdl",
-            "bnRHYXRld2F5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNo",
-            "YWJsZRgDIAMoCSJbChZHZXRBZ2VudEdhdGV3YXlSZXF1ZXN0EkEKBG5hbWUY",
-            "ASABKAlCM+BBAvpBLQorbmV0d29ya3NlcnZpY2VzLmdvb2dsZWFwaXMuY29t",
-            "L0FnZW50R2F0ZXdheSLKAQoZQ3JlYXRlQWdlbnRHYXRld2F5UmVxdWVzdBJD",
-            "CgZwYXJlbnQYASABKAlCM+BBAvpBLRIrbmV0d29ya3NlcnZpY2VzLmdvb2ds",
-            "ZWFwaXMuY29tL0FnZW50R2F0ZXdheRIdChBhZ2VudF9nYXRld2F5X2lkGAIg",
-            "ASgJQgPgQQISSQoNYWdlbnRfZ2F0ZXdheRgDIAEoCzItLmdvb2dsZS5jbG91",
-            "ZC5uZXR3b3Jrc2VydmljZXMudjEuQWdlbnRHYXRld2F5QgPgQQIinAEKGVVw",
-            "ZGF0ZUFnZW50R2F0ZXdheVJlcXVlc3QSNAoLdXBkYXRlX21hc2sYASABKAsy",
-            "Gi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQESSQoNYWdlbnRfZ2F0",
-            "ZXdheRgCIAEoCzItLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEu",
-            "QWdlbnRHYXRld2F5QgPgQQIicQoZRGVsZXRlQWdlbnRHYXRld2F5UmVxdWVz",
-            "dBJBCgRuYW1lGAEgASgJQjPgQQL6QS0KK25ldHdvcmtzZXJ2aWNlcy5nb29n",
-            "bGVhcGlzLmNvbS9BZ2VudEdhdGV3YXkSEQoEZXRhZxgCIAEoCUID4EEBQvIB",
-            "CiNjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZXJ2aWNlcy52MUIRQWdlbnRH",
-            "YXRld2F5UHJvdG9QAVpNY2xvdWQuZ29vZ2xlLmNvbS9nby9uZXR3b3Jrc2Vy",
-            "dmljZXMvYXBpdjEvbmV0d29ya3NlcnZpY2VzcGI7bmV0d29ya3NlcnZpY2Vz",
-            "cGKqAh9Hb29nbGUuQ2xvdWQuTmV0d29ya1NlcnZpY2VzLlYxygIfR29vZ2xl",
-            "XENsb3VkXE5ldHdvcmtTZXJ2aWNlc1xWMeoCIkdvb2dsZTo6Q2xvdWQ6Ok5l",
-            "dHdvcmtTZXJ2aWNlczo6VjFiBnByb3RvMw=="));
+            "WVdIRVJFEAESEwoPQ0xJRU5UX1RPX0FHRU5UEAIaUAoLU2VsZk1hbmFnZWQS",
+            "HwoMcmVzb3VyY2VfdXJpGAEgASgJQgngQQH6QQMKASoSIAoNcmVzb3VyY2Vf",
+            "dXJpcxgCIAMoCUIJ4EEB+kEDCgEqGqQECg1OZXR3b3JrQ29uZmlnElcKBmVn",
+            "cmVzcxgBIAEoCzJCLmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjEu",
+            "QWdlbnRHYXRld2F5Lk5ldHdvcmtDb25maWcuRWdyZXNzQgPgQQESbQoSZG5z",
+            "X3BlZXJpbmdfY29uZmlnGAIgASgLMkwuZ29vZ2xlLmNsb3VkLm5ldHdvcmtz",
+            "ZXJ2aWNlcy52MS5BZ2VudEdhdGV3YXkuTmV0d29ya0NvbmZpZy5EbnNQZWVy",
+            "aW5nQ29uZmlnQgPgQQEawgEKBkVncmVzcxIfChJuZXR3b3JrX2F0dGFjaG1l",
+            "bnQYASABKAlCA+BBARJpCgx0cnVzdF9jb25maWcYAiABKAsyTi5nb29nbGUu",
+            "Y2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkFnZW50R2F0ZXdheS5OZXR3b3Jr",
+            "Q29uZmlnLkVncmVzcy5UcnVzdENvbmZpZ0ID4EEBGiwKC1RydXN0Q29uZmln",
+            "Eh0KEHBlbV9jZXJ0aWZpY2F0ZXMYASADKAlCA+BBAhqFAQoQRG5zUGVlcmlu",
+            "Z0NvbmZpZxIUCgdkb21haW5zGAEgAygJQgPgQQISGwoOdGFyZ2V0X3Byb2pl",
+            "Y3QYAiABKAlCA+BBAhI+Cg50YXJnZXRfbmV0d29yaxgDIAEoCUIm4EEC+kEg",
+            "Ch5jb21wdXRlLmdvb2dsZWFwaXMuY29tL05ldHdvcmsahQEKFkFnZW50R2F0",
+            "ZXdheU91dHB1dENhcmQSGgoNbXRsc19lbmRwb2ludBgBIAEoCUID4EEDEh4K",
+            "EXJvb3RfY2VydGlmaWNhdGVzGAUgAygJQgPgQQMSLwoic2VydmljZV9leHRl",
+            "bnNpb25zX3NlcnZpY2VfYWNjb3VudBgEIAEoCUID4EEDGi0KC0xhYmVsc0Vu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiLQoIUHJvdG9j",
+            "b2wSGAoUUFJPVE9DT0xfVU5TUEVDSUZJRUQQABIHCgNNQ1AQATqVAepBkQEK",
+            "K25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9BZ2VudEdhdGV3YXkS",
+            "RXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9hZ2Vu",
+            "dEdhdGV3YXlzL3thZ2VudF9nYXRld2F5fSoNYWdlbnRHYXRld2F5czIMYWdl",
+            "bnRHYXRld2F5QhEKD2RlcGxveW1lbnRfbW9kZSK1AQoYTGlzdEFnZW50R2F0",
+            "ZXdheXNSZXF1ZXN0EkMKBnBhcmVudBgBIAEoCUIz4EEC+kEtEituZXR3b3Jr",
+            "c2VydmljZXMuZ29vZ2xlYXBpcy5jb20vQWdlbnRHYXRld2F5EhYKCXBhZ2Vf",
+            "c2l6ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARIjChZy",
+            "ZXR1cm5fcGFydGlhbF9zdWNjZXNzGAQgASgIQgPgQQEikAEKGUxpc3RBZ2Vu",
+            "dEdhdGV3YXlzUmVzcG9uc2USRQoOYWdlbnRfZ2F0ZXdheXMYASADKAsyLS5n",
+            "b29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkFnZW50R2F0ZXdheRIX",
+            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkSEwoLdW5yZWFjaGFibGUYAyADKAki",
+            "WwoWR2V0QWdlbnRHYXRld2F5UmVxdWVzdBJBCgRuYW1lGAEgASgJQjPgQQL6",
+            "QS0KK25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9BZ2VudEdhdGV3",
+            "YXkiygEKGUNyZWF0ZUFnZW50R2F0ZXdheVJlcXVlc3QSQwoGcGFyZW50GAEg",
+            "ASgJQjPgQQL6QS0SK25ldHdvcmtzZXJ2aWNlcy5nb29nbGVhcGlzLmNvbS9B",
+            "Z2VudEdhdGV3YXkSHQoQYWdlbnRfZ2F0ZXdheV9pZBgCIAEoCUID4EECEkkK",
+            "DWFnZW50X2dhdGV3YXkYAyABKAsyLS5nb29nbGUuY2xvdWQubmV0d29ya3Nl",
+            "cnZpY2VzLnYxLkFnZW50R2F0ZXdheUID4EECIpwBChlVcGRhdGVBZ2VudEdh",
+            "dGV3YXlSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnBy",
+            "b3RvYnVmLkZpZWxkTWFza0ID4EEBEkkKDWFnZW50X2dhdGV3YXkYAiABKAsy",
+            "LS5nb29nbGUuY2xvdWQubmV0d29ya3NlcnZpY2VzLnYxLkFnZW50R2F0ZXdh",
+            "eUID4EECInEKGURlbGV0ZUFnZW50R2F0ZXdheVJlcXVlc3QSQQoEbmFtZRgB",
+            "IAEoCUIz4EEC+kEtCituZXR3b3Jrc2VydmljZXMuZ29vZ2xlYXBpcy5jb20v",
+            "QWdlbnRHYXRld2F5EhEKBGV0YWcYAiABKAlCA+BBAULyAQojY29tLmdvb2ds",
+            "ZS5jbG91ZC5uZXR3b3Jrc2VydmljZXMudjFCEUFnZW50R2F0ZXdheVByb3Rv",
+            "UAFaTWNsb3VkLmdvb2dsZS5jb20vZ28vbmV0d29ya3NlcnZpY2VzL2FwaXYx",
+            "L25ldHdvcmtzZXJ2aWNlc3BiO25ldHdvcmtzZXJ2aWNlc3BiqgIfR29vZ2xl",
+            "LkNsb3VkLk5ldHdvcmtTZXJ2aWNlcy5WMcoCH0dvb2dsZVxDbG91ZFxOZXR3",
+            "b3JrU2VydmljZXNcVjHqAiJHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2Vydmlj",
+            "ZXM6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway), global::Google.Cloud.NetworkServices.V1.AgentGateway.Parser, new[]{ "GoogleManaged", "SelfManaged", "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Etag", "Protocols", "Registries", "NetworkConfig", "AgentGatewayCard" }, new[]{ "DeploymentMode" }, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.Protocol) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.GoogleManaged), global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.GoogleManaged.Parser, new[]{ "GovernedAccessPath" }, null, new[]{ typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.GoogleManaged.Types.GovernedAccessPath) }, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.SelfManaged), global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.SelfManaged.Parser, new[]{ "ResourceUri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.SelfManaged), global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.SelfManaged.Parser, new[]{ "ResourceUri", "ResourceUris" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.NetworkConfig), global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.NetworkConfig.Parser, new[]{ "Egress", "DnsPeeringConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.NetworkConfig.Types.Egress), global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.NetworkConfig.Types.Egress.Parser, new[]{ "NetworkAttachment", "TrustConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.NetworkConfig.Types.Egress.Types.TrustConfig), global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.NetworkConfig.Types.Egress.Types.TrustConfig.Parser, new[]{ "PemCertificates" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.NetworkConfig.Types.DnsPeeringConfig), global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.NetworkConfig.Types.DnsPeeringConfig.Parser, new[]{ "Domains", "TargetProject", "TargetNetwork" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.AgentGatewayOutputCard), global::Google.Cloud.NetworkServices.V1.AgentGateway.Types.AgentGatewayOutputCard.Parser, new[]{ "MtlsEndpoint", "RootCertificates", "ServiceExtensionsServiceAccount" }, null, null, null, null),
@@ -1127,6 +1128,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SelfManaged(SelfManaged other) : this() {
           resourceUri_ = other.resourceUri_;
+          resourceUris_ = other.resourceUris_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -1152,6 +1154,22 @@ namespace Google.Cloud.NetworkServices.V1 {
           }
         }
 
+        /// <summary>Field number for the "resource_uris" field.</summary>
+        public const int ResourceUrisFieldNumber = 2;
+        private static readonly pb::FieldCodec<string> _repeated_resourceUris_codec
+            = pb::FieldCodec.ForString(18);
+        private readonly pbc::RepeatedField<string> resourceUris_ = new pbc::RepeatedField<string>();
+        /// <summary>
+        /// Optional. List of supported Google Cloud networking proxies in the Project and
+        /// Location.
+        /// resource_uris is mutually exclusive with resource_uri.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<string> ResourceUris {
+          get { return resourceUris_; }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -1168,6 +1186,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             return true;
           }
           if (ResourceUri != other.ResourceUri) return false;
+          if(!resourceUris_.Equals(other.resourceUris_)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -1176,6 +1195,7 @@ namespace Google.Cloud.NetworkServices.V1 {
         public override int GetHashCode() {
           int hash = 1;
           if (ResourceUri.Length != 0) hash ^= ResourceUri.GetHashCode();
+          hash ^= resourceUris_.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -1198,6 +1218,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(10);
             output.WriteString(ResourceUri);
           }
+          resourceUris_.WriteTo(output, _repeated_resourceUris_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -1212,6 +1233,7 @@ namespace Google.Cloud.NetworkServices.V1 {
             output.WriteRawTag(10);
             output.WriteString(ResourceUri);
           }
+          resourceUris_.WriteTo(ref output, _repeated_resourceUris_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -1225,6 +1247,7 @@ namespace Google.Cloud.NetworkServices.V1 {
           if (ResourceUri.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(ResourceUri);
           }
+          size += resourceUris_.CalculateSize(_repeated_resourceUris_codec);
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
           }
@@ -1240,6 +1263,7 @@ namespace Google.Cloud.NetworkServices.V1 {
           if (other.ResourceUri.Length != 0) {
             ResourceUri = other.ResourceUri;
           }
+          resourceUris_.Add(other.resourceUris_);
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -1263,6 +1287,10 @@ namespace Google.Cloud.NetworkServices.V1 {
                 ResourceUri = input.ReadString();
                 break;
               }
+              case 18: {
+                resourceUris_.AddEntriesFrom(input, _repeated_resourceUris_codec);
+                break;
+              }
             }
           }
         #endif
@@ -1284,6 +1312,10 @@ namespace Google.Cloud.NetworkServices.V1 {
                 break;
               case 10: {
                 ResourceUri = input.ReadString();
+                break;
+              }
+              case 18: {
+                resourceUris_.AddEntriesFrom(ref input, _repeated_resourceUris_codec);
                 break;
               }
             }

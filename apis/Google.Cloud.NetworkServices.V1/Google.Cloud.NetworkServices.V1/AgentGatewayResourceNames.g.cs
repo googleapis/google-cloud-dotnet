@@ -299,6 +299,15 @@ namespace Google.Cloud.NetworkServices.V1
                     get => string.IsNullOrEmpty(ResourceUri) ? null : gax::UnparsedResourceName.Parse(ResourceUri);
                     set => ResourceUri = value?.ToString() ?? "";
                 }
+
+                /// <summary>
+                /// <see cref="gax::IResourceName"/>-typed view over the <see cref="ResourceUris"/> resource name
+                /// property.
+                /// </summary>
+                public gax::ResourceNameList<gax::IResourceName> ResourceUrisAsResourceNames
+                {
+                    get => new gax::ResourceNameList<gax::IResourceName>(ResourceUris, s => string.IsNullOrEmpty(s) ? null : gax::UnparsedResourceName.Parse(s));
+                }
             }
 
             public partial class NetworkConfig
