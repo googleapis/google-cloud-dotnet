@@ -97,7 +97,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-13T19:05:48.433869488Z",
-            "lastGeneratedCommit": "98bb4874408e53239fa91a152fdfadedb5123f88",
+            "lastGeneratedCommit": "a8598f68e1be76c31ac74f1cdcbe33fce642094d",
             "lastReleasedCommit": "98bb4874408e53239fa91a152fdfadedb5123f88",
             "apiPaths": [
                 "google/chat/v1"

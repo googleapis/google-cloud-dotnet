@@ -29,7 +29,7 @@ namespace Google.Apps.Chat.V1 {
             "L2FwaS9yZXNvdXJjZS5wcm90bxoaZ29vZ2xlL2NoYXQvdjEvZ3JvdXAucHJv",
             "dG8aGWdvb2dsZS9jaGF0L3YxL3VzZXIucHJvdG8aIGdvb2dsZS9wcm90b2J1",
             "Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
-            "LnByb3RvIpYFCgpNZW1iZXJzaGlwEhEKBG5hbWUYASABKAlCA+BBCBI+CgVz",
+            "LnByb3RvIrYGCgpNZW1iZXJzaGlwEhEKBG5hbWUYASABKAlCA+BBCBI+CgVz",
             "dGF0ZRgCIAEoDjIqLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXAuTWVtYmVy",
             "c2hpcFN0YXRlQgPgQQMSPAoEcm9sZRgHIAEoDjIpLmdvb2dsZS5jaGF0LnYx",
             "Lk1lbWJlcnNoaXAuTWVtYmVyc2hpcFJvbGVCA+BBARIrCgZtZW1iZXIYAyAB",
@@ -37,41 +37,45 @@ namespace Google.Apps.Chat.V1 {
             "ZXIYBSABKAsyFS5nb29nbGUuY2hhdC52MS5Hcm91cEID4EEBSAASNwoLY3Jl",
             "YXRlX3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgbg",
             "QQXgQQESNwoLZGVsZXRlX3RpbWUYCCABKAsyGi5nb29nbGUucHJvdG9idWYu",
-            "VGltZXN0YW1wQgbgQQXgQQEiXgoPTWVtYmVyc2hpcFN0YXRlEiAKHE1FTUJF",
-            "UlNISVBfU1RBVEVfVU5TUEVDSUZJRUQQABIKCgZKT0lORUQQARILCgdJTlZJ",
-            "VEVEEAISEAoMTk9UX0FfTUVNQkVSEAMicAoOTWVtYmVyc2hpcFJvbGUSHwob",
-            "TUVNQkVSU0hJUF9ST0xFX1VOU1BFQ0lGSUVEEAASDwoLUk9MRV9NRU1CRVIQ",
-            "ARIQCgxST0xFX01BTkFHRVIQAhIaChZST0xFX0FTU0lTVEFOVF9NQU5BR0VS",
-            "EAQ6ROpBQQoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEh9zcGFj",
-            "ZXMve3NwYWNlfS9tZW1iZXJzL3ttZW1iZXJ9QgwKCm1lbWJlclR5cGUipQEK",
-            "F0NyZWF0ZU1lbWJlcnNoaXBSZXF1ZXN0EjYKBnBhcmVudBgBIAEoCUIm4EEC",
-            "+kEgEh5jaGF0Lmdvb2dsZWFwaXMuY29tL01lbWJlcnNoaXASMwoKbWVtYmVy",
-            "c2hpcBgCIAEoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBAhId",
-            "ChB1c2VfYWRtaW5fYWNjZXNzGAUgASgIQgPgQQEiowEKF1VwZGF0ZU1lbWJl",
-            "cnNoaXBSZXF1ZXN0EjMKCm1lbWJlcnNoaXAYASABKAsyGi5nb29nbGUuY2hh",
-            "dC52MS5NZW1iZXJzaGlwQgPgQQISNAoLdXBkYXRlX21hc2sYAiABKAsyGi5n",
-            "b29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQISHQoQdXNlX2FkbWluX2Fj",
-            "Y2VzcxgDIAEoCEID4EEBIuoBChZMaXN0TWVtYmVyc2hpcHNSZXF1ZXN0EjYK",
-            "BnBhcmVudBgBIAEoCUIm4EEC+kEgEh5jaGF0Lmdvb2dsZWFwaXMuY29tL01l",
-            "bWJlcnNoaXASFgoJcGFnZV9zaXplGAIgASgFQgPgQQESFwoKcGFnZV90b2tl",
-            "bhgDIAEoCUID4EEBEhMKBmZpbHRlchgFIAEoCUID4EEBEhgKC3Nob3dfZ3Jv",
-            "dXBzGAYgASgIQgPgQQESGQoMc2hvd19pbnZpdGVkGAcgASgIQgPgQQESHQoQ",
-            "dXNlX2FkbWluX2FjY2VzcxgIIAEoCEID4EEBImgKF0xpc3RNZW1iZXJzaGlw",
-            "c1Jlc3BvbnNlEjQKC21lbWJlcnNoaXBzGAEgAygLMhouZ29vZ2xlLmNoYXQu",
-            "djEuTWVtYmVyc2hpcEID4EEGEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJr",
-            "ChRHZXRNZW1iZXJzaGlwUmVxdWVzdBI0CgRuYW1lGAEgASgJQibgQQL6QSAK",
-            "HmNoYXQuZ29vZ2xlYXBpcy5jb20vTWVtYmVyc2hpcBIdChB1c2VfYWRtaW5f",
-            "YWNjZXNzGAMgASgIQgPgQQEibgoXRGVsZXRlTWVtYmVyc2hpcFJlcXVlc3QS",
-            "NAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5jaGF0Lmdvb2dsZWFwaXMuY29tL01l",
-            "bWJlcnNoaXASHQoQdXNlX2FkbWluX2FjY2VzcxgCIAEoCEID4EEBQqgBChJj",
-            "b20uZ29vZ2xlLmNoYXQudjFCD01lbWJlcnNoaXBQcm90b1ABWixjbG91ZC5n",
-            "b29nbGUuY29tL2dvL2NoYXQvYXBpdjEvY2hhdHBiO2NoYXRwYqICC0RZTkFQ",
-            "SVByb3RvqgITR29vZ2xlLkFwcHMuQ2hhdC5WMcoCE0dvb2dsZVxBcHBzXENo",
-            "YXRcVjHqAhZHb29nbGU6OkFwcHM6OkNoYXQ6OlYxYgZwcm90bzM="));
+            "VGltZXN0YW1wQgbgQQXgQQESQAoLYWZmaWxpYXRpb24YCSABKA4yJi5nb29n",
+            "bGUuY2hhdC52MS5NZW1iZXJzaGlwLkFmZmlsaWF0aW9uQgPgQQMiXgoPTWVt",
+            "YmVyc2hpcFN0YXRlEiAKHE1FTUJFUlNISVBfU1RBVEVfVU5TUEVDSUZJRUQQ",
+            "ABIKCgZKT0lORUQQARILCgdJTlZJVEVEEAISEAoMTk9UX0FfTUVNQkVSEAMi",
+            "cAoOTWVtYmVyc2hpcFJvbGUSHwobTUVNQkVSU0hJUF9ST0xFX1VOU1BFQ0lG",
+            "SUVEEAASDwoLUk9MRV9NRU1CRVIQARIQCgxST0xFX01BTkFHRVIQAhIaChZS",
+            "T0xFX0FTU0lTVEFOVF9NQU5BR0VSEAQiXAoLQWZmaWxpYXRpb24SGwoXQUZG",
+            "SUxJQVRJT05fVU5TUEVDSUZJRUQQABIMCghJTlRFUk5BTBABEgwKCEVYVEVS",
+            "TkFMEAISFAoQTUFOQUdFRF9FWFRFUk5BTBADOkTqQUEKHmNoYXQuZ29vZ2xl",
+            "YXBpcy5jb20vTWVtYmVyc2hpcBIfc3BhY2VzL3tzcGFjZX0vbWVtYmVycy97",
+            "bWVtYmVyfUIMCgptZW1iZXJUeXBlIqUBChdDcmVhdGVNZW1iZXJzaGlwUmVx",
+            "dWVzdBI2CgZwYXJlbnQYASABKAlCJuBBAvpBIBIeY2hhdC5nb29nbGVhcGlz",
+            "LmNvbS9NZW1iZXJzaGlwEjMKCm1lbWJlcnNoaXAYAiABKAsyGi5nb29nbGUu",
+            "Y2hhdC52MS5NZW1iZXJzaGlwQgPgQQISHQoQdXNlX2FkbWluX2FjY2VzcxgF",
+            "IAEoCEID4EEBIqMBChdVcGRhdGVNZW1iZXJzaGlwUmVxdWVzdBIzCgptZW1i",
+            "ZXJzaGlwGAEgASgLMhouZ29vZ2xlLmNoYXQudjEuTWVtYmVyc2hpcEID4EEC",
+            "EjQKC3VwZGF0ZV9tYXNrGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxk",
+            "TWFza0ID4EECEh0KEHVzZV9hZG1pbl9hY2Nlc3MYAyABKAhCA+BBASLqAQoW",
+            "TGlzdE1lbWJlcnNoaXBzUmVxdWVzdBI2CgZwYXJlbnQYASABKAlCJuBBAvpB",
+            "IBIeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEhYKCXBhZ2Vfc2l6",
+            "ZRgCIAEoBUID4EEBEhcKCnBhZ2VfdG9rZW4YAyABKAlCA+BBARITCgZmaWx0",
+            "ZXIYBSABKAlCA+BBARIYCgtzaG93X2dyb3VwcxgGIAEoCEID4EEBEhkKDHNo",
+            "b3dfaW52aXRlZBgHIAEoCEID4EEBEh0KEHVzZV9hZG1pbl9hY2Nlc3MYCCAB",
+            "KAhCA+BBASJoChdMaXN0TWVtYmVyc2hpcHNSZXNwb25zZRI0CgttZW1iZXJz",
+            "aGlwcxgBIAMoCzIaLmdvb2dsZS5jaGF0LnYxLk1lbWJlcnNoaXBCA+BBBhIX",
+            "Cg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiawoUR2V0TWVtYmVyc2hpcFJlcXVl",
+            "c3QSNAoEbmFtZRgBIAEoCUIm4EEC+kEgCh5jaGF0Lmdvb2dsZWFwaXMuY29t",
+            "L01lbWJlcnNoaXASHQoQdXNlX2FkbWluX2FjY2VzcxgDIAEoCEID4EEBIm4K",
+            "F0RlbGV0ZU1lbWJlcnNoaXBSZXF1ZXN0EjQKBG5hbWUYASABKAlCJuBBAvpB",
+            "IAoeY2hhdC5nb29nbGVhcGlzLmNvbS9NZW1iZXJzaGlwEh0KEHVzZV9hZG1p",
+            "bl9hY2Nlc3MYAiABKAhCA+BBAUKoAQoSY29tLmdvb2dsZS5jaGF0LnYxQg9N",
+            "ZW1iZXJzaGlwUHJvdG9QAVosY2xvdWQuZ29vZ2xlLmNvbS9nby9jaGF0L2Fw",
+            "aXYxL2NoYXRwYjtjaGF0cGKiAgtEWU5BUElQcm90b6oCE0dvb2dsZS5BcHBz",
+            "LkNoYXQuVjHKAhNHb29nbGVcQXBwc1xDaGF0XFYx6gIWR29vZ2xlOjpBcHBz",
+            "OjpDaGF0OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Apps.Chat.V1.GroupReflection.Descriptor, global::Google.Apps.Chat.V1.UserReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Membership), global::Google.Apps.Chat.V1.Membership.Parser, new[]{ "Name", "State", "Role", "Member", "GroupMember", "CreateTime", "DeleteTime" }, new[]{ "MemberType" }, new[]{ typeof(global::Google.Apps.Chat.V1.Membership.Types.MembershipState), typeof(global::Google.Apps.Chat.V1.Membership.Types.MembershipRole) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.Membership), global::Google.Apps.Chat.V1.Membership.Parser, new[]{ "Name", "State", "Role", "Member", "GroupMember", "CreateTime", "DeleteTime", "Affiliation" }, new[]{ "MemberType" }, new[]{ typeof(global::Google.Apps.Chat.V1.Membership.Types.MembershipState), typeof(global::Google.Apps.Chat.V1.Membership.Types.MembershipRole), typeof(global::Google.Apps.Chat.V1.Membership.Types.Affiliation) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.CreateMembershipRequest), global::Google.Apps.Chat.V1.CreateMembershipRequest.Parser, new[]{ "Parent", "Membership", "UseAdminAccess" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.UpdateMembershipRequest), global::Google.Apps.Chat.V1.UpdateMembershipRequest.Parser, new[]{ "Membership", "UpdateMask", "UseAdminAccess" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Apps.Chat.V1.ListMembershipsRequest), global::Google.Apps.Chat.V1.ListMembershipsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "ShowGroups", "ShowInvited", "UseAdminAccess" }, null, null, null, null),
@@ -128,6 +132,7 @@ namespace Google.Apps.Chat.V1 {
       role_ = other.role_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       deleteTime_ = other.deleteTime_ != null ? other.deleteTime_.Clone() : null;
+      affiliation_ = other.affiliation_;
       switch (other.MemberTypeCase) {
         case MemberTypeOneofCase.Member:
           Member = other.Member.Clone();
@@ -268,6 +273,23 @@ namespace Google.Apps.Chat.V1 {
       }
     }
 
+    /// <summary>Field number for the "affiliation" field.</summary>
+    public const int AffiliationFieldNumber = 9;
+    private global::Google.Apps.Chat.V1.Membership.Types.Affiliation affiliation_ = global::Google.Apps.Chat.V1.Membership.Types.Affiliation.Unspecified;
+    /// <summary>
+    /// Output only. A user's relationship to the Workspace organization that owns
+    /// the space. In spaces owned by consumer accounts, the affiliation of all
+    /// members is `EXTERNAL`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Apps.Chat.V1.Membership.Types.Affiliation Affiliation {
+      get { return affiliation_; }
+      set {
+        affiliation_ = value;
+      }
+    }
+
     private object memberType_;
     /// <summary>Enum of possible cases for the "memberType" oneof.</summary>
     public enum MemberTypeOneofCase {
@@ -311,6 +333,7 @@ namespace Google.Apps.Chat.V1 {
       if (!object.Equals(GroupMember, other.GroupMember)) return false;
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(DeleteTime, other.DeleteTime)) return false;
+      if (Affiliation != other.Affiliation) return false;
       if (MemberTypeCase != other.MemberTypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -326,6 +349,7 @@ namespace Google.Apps.Chat.V1 {
       if (memberTypeCase_ == MemberTypeOneofCase.GroupMember) hash ^= GroupMember.GetHashCode();
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (deleteTime_ != null) hash ^= DeleteTime.GetHashCode();
+      if (Affiliation != global::Google.Apps.Chat.V1.Membership.Types.Affiliation.Unspecified) hash ^= Affiliation.GetHashCode();
       hash ^= (int) memberTypeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -373,6 +397,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(DeleteTime);
       }
+      if (Affiliation != global::Google.Apps.Chat.V1.Membership.Types.Affiliation.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Affiliation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -411,6 +439,10 @@ namespace Google.Apps.Chat.V1 {
         output.WriteRawTag(66);
         output.WriteMessage(DeleteTime);
       }
+      if (Affiliation != global::Google.Apps.Chat.V1.Membership.Types.Affiliation.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) Affiliation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -441,6 +473,9 @@ namespace Google.Apps.Chat.V1 {
       }
       if (deleteTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(DeleteTime);
+      }
+      if (Affiliation != global::Google.Apps.Chat.V1.Membership.Types.Affiliation.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Affiliation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -474,6 +509,9 @@ namespace Google.Apps.Chat.V1 {
           DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         DeleteTime.MergeFrom(other.DeleteTime);
+      }
+      if (other.Affiliation != global::Google.Apps.Chat.V1.Membership.Types.Affiliation.Unspecified) {
+        Affiliation = other.Affiliation;
       }
       switch (other.MemberTypeCase) {
         case MemberTypeOneofCase.Member:
@@ -553,6 +591,10 @@ namespace Google.Apps.Chat.V1 {
             input.ReadMessage(DeleteTime);
             break;
           }
+          case 72: {
+            Affiliation = (global::Google.Apps.Chat.V1.Membership.Types.Affiliation) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -614,6 +656,10 @@ namespace Google.Apps.Chat.V1 {
               DeleteTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(DeleteTime);
+            break;
+          }
+          case 72: {
+            Affiliation = (global::Google.Apps.Chat.V1.Membership.Types.Affiliation) input.ReadEnum();
             break;
           }
         }
@@ -726,6 +772,35 @@ namespace Google.Apps.Chat.V1 {
         /// [Manage space settings](https://support.google.com/chat/answer/13340792).
         /// </summary>
         [pbr::OriginalName("ROLE_ASSISTANT_MANAGER")] RoleAssistantManager = 4,
+      }
+
+      /// <summary>
+      /// Represents the affiliation of a user to the Google Workspace organization
+      /// that owns the space. This enum may have more values added in the future.
+      /// </summary>
+      public enum Affiliation {
+        /// <summary>
+        /// Default value. This value is unused.
+        /// </summary>
+        [pbr::OriginalName("AFFILIATION_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// An account managed by the same Google Workspace organization that owns
+        /// the space.
+        /// </summary>
+        [pbr::OriginalName("INTERNAL")] Internal = 1,
+        /// <summary>
+        /// An account external to the Google Workspace organization that owns the
+        /// space (e.g., a consumer account, or an account managed by a different
+        /// Workspace organization).
+        /// </summary>
+        [pbr::OriginalName("EXTERNAL")] External = 2,
+        /// <summary>
+        /// An account managed by the Workspace organization that owns the space,
+        /// but provisioned for a user who is external to the organization (e.g., a
+        /// Guest user). To learn more about guests, see
+        /// https://support.google.com/chat/answer/16997417.
+        /// </summary>
+        [pbr::OriginalName("MANAGED_EXTERNAL")] ManagedExternal = 3,
       }
 
     }
