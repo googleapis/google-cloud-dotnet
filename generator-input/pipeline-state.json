@@ -547,7 +547,7 @@
             "generationAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseAutomationLevel": "AUTOMATION_LEVEL_AUTOMATIC",
             "releaseTimestamp": "2026-07-14T18:54:10.912836761Z",
-            "lastGeneratedCommit": "70b366e4a2bf0bb6cc484aab44912cfbad4f916f",
+            "lastGeneratedCommit": "c56ab401102f3bf8a97c35774b9866cea53962a0",
             "lastReleasedCommit": "70b366e4a2bf0bb6cc484aab44912cfbad4f916f",
             "apiPaths": [
                 "google/cloud/batch/v1alpha"
